@@ -1,0 +1,325 @@
+\documentclass[11pt,twoside]{book}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{papersize={145mm,200mm}} % 60x84/16 is 145 mm x 200 mm
+\geometry{tmargin=1.5cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
+
+\usepackage{bm} % bold math symbols
+
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{mathtools}
+
+\usepackage{accents}
+\makeatletter
+\newcommand{\scircabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.64\dimexpr(\f@size pt)}{0}\selectfont$\,\circ$}}
+\DeclareRobustCommand{\mathcircabove}{\accentset{\scircabove}}
+\newcommand{\sdotabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\,\bullet$}}
+\DeclareRobustCommand{\mathdotabove}{\accentset{\sdotabove}}
+\newcommand{\sdotdotabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\,\bullet\hspace{-0.25ex}\bullet$}}
+\DeclareRobustCommand{\mathdotdotabove}{\accentset{\sdotdotabove}}
+\makeatother
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.5}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+
+\usepackage{amssymb}
+
+\newcommand\T{{\mathpalette\raiseT\intercal}} % symbol for transpose
+\newcommand\raiseT[2]{\hspace{-0.02em}\raisebox{0.4ex}{$#1#2$}}
+
+\newcommand\cosinematrix[1]{o_{#1}} % or \alpha
+
+\usepackage{xargs}
+\usepackage{xparse}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing,decorations.markings}
+
+\pgfdeclaredecoration{plain brace}{brace}
+{%
+  \state{brace}[width=+\pgfdecoratedremainingdistance, next state=final]
+  {%
+    \pgfpathmoveto{\pgfpointorigin}%
+    {%
+      \pgfpathcurveto%
+        {\pgfqpoint{.15\pgfdecorationsegmentamplitude}{.3\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{.5\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+    }%
+    \pgftransformxshift{+\pgfdecoratedremainingdistance}%
+    \pgfpathlineto{\pgfqpoint{-\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+    {%
+      \pgfpathcurveto%
+        {\pgfqpoint{-.5\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{-.15\pgfdecorationsegmentamplitude}{.3\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{0\pgfdecorationsegmentamplitude}{0\pgfdecorationsegmentamplitude}}%
+    }%
+  }%
+  \state{final}{}%
+}
+
+\newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \node (#1) {};}
+
+% tweak these if you wish
+\newcommand*{\BraceAmplitude}{0.4em}
+\newcommand*{\VerticalOffset}{0.64ex}
+\newcommand*{\HorizontalOffset}{0em}
+\newcommand*{\TextOffset}{0.4ex}
+
+\NewDocumentCommand{\AddUnderBrace}{%
+	O{}	% #1 = draw options
+	O{0,0} % #2 = [x,y] offset for brace
+	O{}	% #3 = node options
+	O{}	% #4 = optional brace options
+	m	% #4 = left tikzmark
+	m	% #5 = right tikzmark
+	m	% #7 = text to place underbrace
+}{%
+\begin{tikzpicture}[overlay, remember picture]
+	\draw [decoration={plain brace, amplitude=\BraceAmplitude, mirror, #4}, decorate, thick, draw=black!80, text=black, #1]
+		($ (#5.base) + (-\HorizontalOffset,-\VerticalOffset) + (#2) $) --
+		($ (#6.base) + (\HorizontalOffset,-\VerticalOffset) + (#2) $)
+	node [below, yshift=-\TextOffset, midway, #3] {#7};
+\end{tikzpicture}%
+}
+
+\NewDocumentCommand{\AddOverBrace}{%
+	O{}	% #1 = draw options
+	O{0,0} % #2 = [x,y] offset for brace
+	O{}	% #3 = node options
+	O{}	% #4 = optional brace options
+	m	% #5 = left tikzmark
+	m	% #6 = right tikzmark
+	m	% #7 = text to place underbrace
+}{%
+\begin{tikzpicture}[overlay, remember picture]
+	\draw [decoration={plain brace, amplitude=\BraceAmplitude, #4}, decorate, thick, draw=black!80, text=black, #1]
+		($ (#5.north) + (-\HorizontalOffset,\VerticalOffset+0.25em) + (#2) $) --
+		($ (#6.north) + (\HorizontalOffset,\VerticalOffset+0.25em) + (#2) $)
+	node [above, yshift=\TextOffset, midway, #3] {#7};
+\end{tikzpicture}%
+}
+
+\newcommandx*{\tikzcancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node[inner sep=-1pt,outer sep=0pt] (tocancel) {#2};
+		\draw[line width=0.25mm,#1] (tocancel.south west) -- (tocancel.north east);
+	}%
+}
+
+\newcommandx*{\tikzbackcancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node[inner sep=-1pt,outer sep=0pt] (tocancel) {#2};
+		\draw[line width=0.25mm,#1] (tocancel.south east) -- (tocancel.north west);
+	}%
+}
+
+\newcommandx*{\tikzcrosscancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node[inner sep=-1pt,outer sep=0pt] (tocancel) {#2};
+		\draw[line width=0.25mm,#1] (tocancel.south west) -- (tocancel.north east);
+		\draw[line width=0.25mm,#1] (tocancel.south east) -- (tocancel.north west);
+	}%
+}
+
+\usepackage{abraces}
+
+\usepackage{verbatim}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{comment}
+\[\begin{array}{r@{\hspace{0.33em}}c@{\hspace{0.25em}}l}
+\mathdotabove{\bm{P}} \hspace{0.2em} & = & \hspace{0.1em} \left(\bm{P}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex} +^{\mathstrut} \bm{P}^{\mathsf{\hspace{0.12ex}A}}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} =
+\hspace{0.1em} \left(\hspace{0.2ex} \tikzmark{StartBracePs} {\bm{E} \operatorname{cos} \vartheta + \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{0.32ex} +^{\mathstrut} \hspace{0.2ex}
+\tikzmark{StartBracePa} {\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \operatorname{sin} \vartheta \hspace{0.2ex}} \tikzmark{EndBracePa} {} \hspace{0.16ex}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} \hspace{-0.05em} = \\[0.4em]
+%
+& = & \hspace{0.2em} \tikzmark{StartBraceDotPs} {\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta + \hspace{-0.2ex} ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \tikzmark{EndBraceDotPs} \hspace{0.64ex} + \\[0.64em]
+& & \hspace{13.2em} + \hspace{0.72ex} \tikzmark{StartBraceDotPa} {\hspace{0.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \operatorname{sin} \vartheta} \tikzmark{EndBraceDotPa} \hspace{0.1em}.
+\end{array}\]
+
+%%[line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+\AddOverBrace[line width=0.75pt]{StartBracePs}{EndBracePs}{${\scriptstyle \bm{P}^{\mathsf{\hspace{0.12ex}S}}}$}
+\AddOverBrace[line width=0.75pt]{StartBracePa}{EndBracePa}{${\scriptstyle \bm{P}^{\mathsf{\hspace{0.12ex}A}}}$}
+\AddUnderBrace[line width=0.75pt]{StartBraceDotPs}{EndBraceDotPs}{${\scriptstyle \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}}}$}
+\AddUnderBrace[line width=0.75pt][-0.1ex,0]{StartBraceDotPa}{EndBraceDotPa}{${\scriptstyle \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}}}$}
+\end{comment}
+
+\begin{comment} % big old version
+\begin{multline*}
+\shoveleft{\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}}
+%
+= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{E} \operatorname{cos} \vartheta \hspace{0.25em} + \hfill} \\
+\shoveright{\hfill + ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \dotp \bm{E} \operatorname{cos} \vartheta \hspace{0.32em} +} \\
+\shoveleft{+ \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) + \hfill} \\
+\shoveright{\hfill + ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) =} \\[0.2ex]
+%
+= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({\operatorname{cos} \vartheta - \operatorname{cos}^2 \vartheta}\hspace{0.1ex}\right) + \\
++ ( \bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k} + \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k} ) \left({1 \!-\! \operatorname{cos} \vartheta}\right)^2 = \\[0.2ex]
+%
+\shoveleft{= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{0.25em} + \hfill} \\
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta - \bm{k} \mathdotabove{\bm{k}} \operatorname{cos}^2 \vartheta + \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^2 \vartheta \hspace{0.25em} + \\
+\shoveright{\hfill + \mathdotabove{\bm{k}} \bm{k} - 2 \, \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^2 \vartheta =}\\[0.2ex]
+%
+= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ \aunderbrace[l1r]{\bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
+- \bm{k} \mathdotabove{\bm{k}} \operatorname{cos}^2 \vartheta
++ \mathdotabove{\bm{k}} \bm{k}
+- \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta}_{\left( \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \:+\: \mathdotabove{\bm{k}} \bm{k} \right) \left({1 \,-\, \operatorname{cos} \vartheta}\right)}
+\end{multline*}
+\end{comment}
+
+\begin{fleqn}[0pt]
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.25ex} = $} \hspace{2em} \hfill} \\[-0.25em]
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= \hspace{0.2ex} \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{E} \operatorname{cos} \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \dotp \bm{E} \operatorname{cos} \vartheta \hspace{0.32em} +$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)$} \hspace{0.2ex} +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}} \\
+%
+\scalebox{0.8}[0.82]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.1ex} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) + ( \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k}$} + \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k} ) \left({1 \!-\! \operatorname{cos} \vartheta}\right)^{\hspace{-0.12ex}2} \hspace{-0.25ex} =$} \\
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta + \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+ \hspace{0.24em} \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta + \mathdotabove{\bm{k}} \bm{k} - 2 \, \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta =$}}\\
+%
+%% \shoveright{\hfill \scalebox{0.8}[0.82]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{0.1ex}
+%% + \hspace{0.1ex} \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)
+%% + \mathdotabove{\bm{k}} \bm{k}
+%% - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta =$}}\\
+%
+\shoveright{\hfill \hspace{4.8em} \scalebox{0.94}[0.96]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{0.1ex}
+%% + \hspace{-0.1ex} ( \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
+- \bm{k} \mathdotabove{\bm{k}} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= ( \hspace{0.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
+( \hspace{0.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \:+$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$ ( \hspace{0.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{0.5ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) $} \hspace{0.2ex} +
+( \hspace{0.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}} \\
+%
+\hspace{3.85em} \scalebox{0.94}[0.96]{$= \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
+\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta +
+%%\hspace{-0.12ex} ( \hspace{0.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{0.2ex}
+\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{0.2ex}
+\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$= ( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} ) \hspace{0.25ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \operatorname{sin} \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex} \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \operatorname{sin} \vartheta =$} \\
+%
+\scalebox{0.78}[0.82]{$= \hspace{.2ex} \tikzbackcancel[black!25]{$\bm{k} \bm{k} \hspace{-0.12ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta$} \hspace{0.12ex}
+- \hspace{-0.1ex} \bm{E} \hspace{-0.16ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{0.25ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \hspace{-0.2ex} \left( \hspace{-0.1ex} \bm{k} \mathdotabove{\bm{k}} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.16ex} + \hspace{.1ex} \tikzbackcancel[black!25]{$\mathdotabove{\bm{k}} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \bm{E}$} ) \hspace{-0.12ex} \right) \hspace{-0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta} \right) =$} \\[-0.25em]
+%
+\hspace{13em} \scalebox{0.94}[0.96]{$= \hspace{-0.16ex} - \hspace{0.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \hspace{0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex} =
+%
+( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \operatorname{sin} \vartheta + \hspace{-0.1ex}
+( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.16ex} \dotp \hspace{-0.16ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{0.1ex} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta = $} \hfill} \\
+%
+\shoveright{\hfill \hspace{16em} \scalebox{0.94}[0.96]{$= ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta \hspace{0.2ex};$}}
+\end{multline*}
+\end{fleqn}
+
+\begin{multline*}
+\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}} \dotp \bm{P}^{\T}$} \hspace{0.25ex}
+\scalebox{0.92}[0.96]{$= \hspace{0.1ex}
+\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}}
++ \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}}
+- \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}}
+- \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex} =$} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$= {\color{black!50}{\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{0.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \\[-0.2em]
+%
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{0.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{0.2ex} {\color{green!50!black}{\hspace{0.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{0.4ex}}} +$} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{0.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}}
+- \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} {\color{green!50!black}{\hspace{0.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{0.4ex}}}
+{\color{black!50}{-\hspace{0.5ex} ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{0.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}} =$} \\[-0.08em]
+%
+\scalebox{0.79}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \hspace{-0.1ex} \hspace{-0.16ex} ( \hspace{0.2ex} \mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex} - \hspace{-0.2ex} \bm{k} \mathdotabove{\bm{k}} \hspace{0.2ex} ) \hspace{0.1ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \hspace{-0.1ex} ( \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{-0.12ex} - \hspace{-0.12ex} \bm{k} \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} ) \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
+%
+\scalebox{0.8}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \bm{E} \hspace{.25ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \bm{k} \hspace{-0.25ex} \times \hspace{-0.32ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.2ex} \bm{k} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
+%
+\scalebox{0.78}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \hspace{-0.16ex} ( \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \bm{k} \hspace{-0.1ex} - \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.16ex} \dotp \hspace{-0.1ex} \bm{k} \hspace{.1ex}$} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex}
++ \hspace{-0.1ex} \bm{k} \hspace{-0.32ex}\times\hspace{-0.25ex}  \mathdotabove{\bm{k}} \hspace{-0.25ex}\times\hspace{-0.42ex} \bm{E} \hspace{.32ex} ({1 \!-\! \operatorname{cos} \vartheta}) = $} \\
+%
+\shoveright{\hfill \hspace{11.2em}\scalebox{.96}[.96]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \bm{E} \hspace{.32ex} ({1 \hspace{-0.2ex} - \hspace{-0.2ex} \operatorname{cos} \vartheta}) \hspace{.1ex}.
+$}}
+\end{multline*}
+
+\newpage
+
+\[
+\cosinematrix{i'k} = \scalebox{0.88}[0.88]{$\left[
+\begin{array}{ccc}
+\cosinematrix{1'1} & \cosinematrix{1'2} & \cosinematrix{1'3} \\
+\cosinematrix{2'1} & \cosinematrix{2'2} & \cosinematrix{2'3} \\
+\cosinematrix{3'1} & \cosinematrix{3'2} & \cosinematrix{3'3}
+\end{array}
+\right]$} \!=\! \scalebox{0.86}[0.88]{$\left[
+\begin{array}{ccc}
+\operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_1, \bm{e}_1) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_1, \bm{e}_2) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_1, \bm{e}_3) \\
+\operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_2, \bm{e}_1) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_2, \bm{e}_2) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_2, \bm{e}_3) \\
+\operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_3, \bm{e}_1) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_3, \bm{e}_2) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_3, \bm{e}_3)
+\end{array}
+\right]$}
+\]\vspace{0.5ex}
+\[
+\left(\cosinematrix{i'k}\right)^{\T} = \scalebox{0.88}[0.88]{$\left[
+\begin{array}{ccc}
+\cosinematrix{1'1} & \cosinematrix{2'1} & \cosinematrix{3'1} \\
+\cosinematrix{1'2} & \cosinematrix{2'2} & \cosinematrix{3'2} \\
+\cosinematrix{1'3} & \cosinematrix{2'3} & \cosinematrix{3'3}
+\end{array}
+\right]$} \!=\! \scalebox{0.86}[0.88]{$\left[
+\begin{array}{ccc}
+\operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_1, \bm{e}_1) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_2, \bm{e}_1) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_3, \bm{e}_1) \\
+\operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_1, \bm{e}_2) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_2, \bm{e}_2) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_3, \bm{e}_2) \\
+\operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_1, \bm{e}_3) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_2, \bm{e}_3) & \operatorname{cos} \scalebox{0.8}[0.8]{$\measuredangle$} (\bm{e}'_3, \bm{e}_3)
+\end{array}
+\right]$}
+\]
+
+\end{document}

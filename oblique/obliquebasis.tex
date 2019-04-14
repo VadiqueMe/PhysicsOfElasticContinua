@@ -1,0 +1,429 @@
+\documentclass[11pt,twoside]{book}
+
+\usepackage{geometry}
+\geometry{papersize={150mm,200mm}}
+\geometry{tmargin=1cm,bmargin=1cm,lmargin=1cm,rmargin=1cm}
+
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage[e]{esvect}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot} % it needs tikz-3dplot.sty in same folder
+\usetikzlibrary{calc}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows, arrows.meta}
+
+\usepackage{xintexpr}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.5}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\usepackage{nicefrac}
+
+\usepackage{gensymb} % for \degree
+
+\usepackage{verbatim}
+
+\usepackage[english]{babel}
+\addto\captionsenglish{\renewcommand{\figurename}{figure}}
+\addto\captionsenglish{\def\figureshortname{fig.}}
+\newcommand\figref[1]{\figureshortname~\ref{#1}}
+
+\usepackage[format=plain]{caption}
+\captionsetup[figure]{%
+font={small,it},labelfont=small,%
+labelsep=newline,justification=centering,singlelinecheck=off,%
+aboveskip=4mm,belowskip=2.5mm}
+
+\newcommand{\lquote}[0]{``}
+\newcommand{\rquote}[0]{''}
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+\tdplotsetmaincoords{45}{125} % orientation of camera
+% three parameters for vector
+\pgfmathsetmacro{\lengthofvector}{2.5}
+\pgfmathsetmacro{\anglefromz}{44}
+\pgfmathsetmacro{\anglefromx}{70}
+
+\begin{tikzpicture}[scale=3.2, tdplot_main_coords] % tdplot_main_coords style to use 3dplot
+
+	\coordinate (O) at (0,0,0);
+
+	% draw axes
+	\draw [line width=0.4pt, blue] (O) -- (1.22,0,0);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.9, above, xshift=-0.6em, yshift=0.1em] {${\bm{e}}_1$};
+
+	\draw [line width=0.4pt, blue] (O) -- (0,1.88,0);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_2$};
+
+	\draw [line width=0.4pt, blue] (O) -- (0,0,1.22);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,0,1)
+		node[pos=0.9, below left, xshift=-0.1em, yshift=0.5em] {${\bm{e}}_3$};
+
+	% draw vector
+	\tdplotsetcoord{V}{\lengthofvector}{\anglefromz}{\anglefromx} % {length}{angle from z}{angle from x}
+		% it also defines projections of point
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.8, above, yshift=0.2em] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	% draw components of vector
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (Vxy);
+	%%\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (V);
+	%%\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (Vx);
+	\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (Vy);
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vx)
+		node[pos=0.5, above, xshift=-0.9em] {${v_1 \hspace{-0.1ex} \bm{e}_1}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vx) -- (Vxy)
+		node[pos=0.53, below left, xshift=0.2em] {${v_2 \bm{e}_2}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vxy) -- (V)
+		node[pos=0.5, above right, yshift=-0.2em] {${v_3 \bm{e}_3}$};
+
+\end{tikzpicture}
+\end{center}
+
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+\begin{center}
+
+\tdplotsetmaincoords{33}{109} % orientation of camera
+% vectors of basis
+\pgfmathsetmacro{\firstlength}{1}
+	\pgfmathsetmacro{\firstanglefromz}{90} % first and second are xy plane
+	\pgfmathsetmacro{\firstanglefromx}{0} % first is just x
+\pgfmathsetmacro{\secondlength}{1}
+	\pgfmathsetmacro{\secondanglefromz}{90} % first and second are xy plane
+	\pgfmathsetmacro{\secondanglefromx}{77} % but second is not orthogonal to first
+\pgfmathsetmacro{\thirdlength}{1}
+	\pgfmathsetmacro{\thirdanglefromz}{-15}
+	\pgfmathsetmacro{\thirdanglefromx}{50}
+% some vector
+\pgfmathsetmacro{\lengthofvector}{2.66}
+	\pgfmathsetmacro{\vectoranglefromz}{33}
+	\pgfmathsetmacro{\vectoranglefromx}{59}
+
+\begin{tikzpicture}[scale=3.2, tdplot_main_coords] % tdplot_main_coords style to use 3dplot
+
+	\coordinate (O) at (0,0,0);
+
+	% draw axes and vectors of basis
+	\tdplotsetcoord{A1}{\firstlength}{\firstanglefromz}{\firstanglefromx}
+	\tdplotsetcoord{A2}{\secondlength}{\secondanglefromz}{\secondanglefromx}
+	\tdplotsetcoord{A3}{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.08*(A1) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A1)
+		node[pos=0.97, above left, inner sep=0pt, outer sep=3pt] {${\bm{a}}_1$};
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.88*(A2) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A2)
+		node[pos=0.93, above, inner sep=0pt, outer sep=6pt] {${\bm{a}}_2$};
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.1*(A3) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A3)
+		node[pos=1.02, below right, inner sep=0pt, outer sep=7pt] {${\bm{a}}_3$};
+
+	% define vector by sperical coordinates {length}{angle from z}{angle from x}
+	% (plusi it defines its projections)
+	\tdplotsetcoord{V}{\lengthofvector}{\vectoranglefromz}{\vectoranglefromx}
+
+	% get components of vector
+	\coordinate (ParallelToThird) at ($ (V) - (A3) $);
+	\coordinate (VcomponentXY) at (intersection of V--ParallelToThird and O--Vxy);
+
+	\coordinate (ParallelToSecond) at ($ (VcomponentXY) - (A2xy) $);
+	\coordinate (ParallelToFirst) at ($ (VcomponentXY) - (A1xy) $);
+
+	\coordinate (Vcomponent1) at (intersection of VcomponentXY--ParallelToSecond and O--A1);
+	\coordinate (Vcomponent2) at (intersection of VcomponentXY--ParallelToFirst and O--A2);
+
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (VcomponentXY); % projection on first & second vectors’ plane
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (VcomponentXY);
+	\draw [line width=0.4pt, dotted, color=black] (VcomponentXY) -- (Vcomponent1);
+	\draw [line width=0.4pt, dotted, color=black] (VcomponentXY) -- (Vcomponent2);
+
+	% draw parallelepiped
+	\coordinate (onPlane23) at ($ (Vcomponent2) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (Vcomponent2) -- (onPlane23);
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (onPlane23);
+
+	\coordinate (onPlane13) at ($ (Vcomponent1) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (Vcomponent1) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (onPlane13);
+
+	\coordinate (onAxis3) at ($ (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=black] (onPlane13) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=black] (onPlane23) -- (onAxis3);
+
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onPlane23);
+
+	% draw components of vector
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcomponent1)
+		node[pos=0.52, above left, fill=white, shape=circle, inner sep=0pt, outer sep=4pt] {${v^1 \hspace{-0.1ex} \bm{a}_1}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vcomponent1) -- (VcomponentXY)
+		node[pos=0.48, below, shape=circle, fill=white, inner sep=-2pt, outer sep=2pt] {${v^2 \hspace{-0.1ex} \bm{a}_2}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(VcomponentXY) -- (V)
+		node[pos=0.52, above right, shape=circle, fill=white, inner sep=0pt, outer sep=7pt] {${v^3 \hspace{-0.1ex} \bm{a}_3}$};
+
+	% draw vector
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.68, above, fill=white, inner sep=1pt, outer sep=5pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+\end{tikzpicture}
+
+\end{center}
+
+\newpage % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+% third is in separate file
+\input{decompositionviaobliquebasis.tex}
+
+\newpage % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+% converts 2D polar coordinates to cartesian
+\newcommand{\polartocartesian}[4]{%
+\def\thecosphi{cos(#2)}%
+\def\thesinphi{sin(#2)}%
+\pgfmathsetmacro{#3}{ ( #1 * \thecosphi ) }%
+\pgfmathsetmacro{#4}{ ( #1 * \thesinphi ) }%
+}
+
+\newcommand{\defpolarcoordpoint}[3]{%
+\polartocartesian{#2}{#3}{\cartesianx}{\cartesiany}%
+\coordinate (#1) at (\cartesianx, \cartesiany);%
+}
+
+% calculates dot product of location vectors of two 2D points specified by cartesian coordinates
+\newcommand{\dotproductcartesian}[5]{%
+\edef\dotproductcartesianxint{ \xinttheexpr round( #1 * #3 + #2 * #4 , 10 ) \relax }%
+\pgfmathsetmacro{#5}{\dotproductcartesianxint}%
+}
+
+% calculates dot product of location vectors of two 2D points specified by polar coordinates
+\newcommand{\dotproductpolar}[5]{%
+\polartocartesian{#1}{#2}{\firstx}{\firsty}%
+\polartocartesian{#3}{#4}{\secondx}{\secondy}%
+%
+\edef\dotproductpolarxint{ \xinttheexpr round( \firstx * \secondx + \firsty * \secondy , 10 ) \relax }%
+\pgfmathsetmacro{#5}{\dotproductpolarxint}%
+}
+
+% vectors of basis
+\pgfmathsetmacro{\firstlength}{1.2}
+	\pgfmathsetmacro{\firstanglefromx}{9}
+\pgfmathsetmacro{\secondlength}{1}
+	\pgfmathsetmacro{\secondanglefromx}{69}
+% the vector
+\pgfmathsetmacro{\lengthofvector}{1.88}
+	\pgfmathsetmacro{\vectoranglefromx}{47}
+
+\def\tikzunit{cm}
+\pgfmathsetmacro\scaleofunits{3.2}
+
+\begin{center}
+\vspace*{1em}\hspace*{-1em}
+\begin{tikzpicture}[x=1\tikzunit, y=1\tikzunit, scale=\scaleofunits]
+
+	\coordinate (O) at (0,0);
+
+	% define vector
+	\defpolarcoordpoint{V}{\lengthofvector}{\vectoranglefromx}
+
+	% define vectors of basis
+	\defpolarcoordpoint{A1}{\firstlength}{\firstanglefromx}
+	\defpolarcoordpoint{A2}{\secondlength}{\secondanglefromx}
+
+	% calculate vectors of cobasis
+
+	% i) get Gram matrix
+	\dotproductpolar{\firstlength}{\firstanglefromx}{\firstlength}{\firstanglefromx}{\firstdotfirst}
+	\dotproductpolar{\firstlength}{\firstanglefromx}{\secondlength}{\secondanglefromx}{\firstdotsecond}
+	\dotproductpolar{\secondlength}{\secondanglefromx}{\secondlength}{\secondanglefromx}{\seconddotsecond}
+
+	% ii) find gramian, that is determinant of Gram matrix, and its reciprocal
+	\edef\gramianxint{ \xinttheexpr round( \firstdotfirst * \seconddotsecond - \firstdotsecond * \firstdotsecond , 10 ) \relax }%
+	\pgfmathsetmacro{\gramian}{\gramianxint}
+	\edef\gramianreciprocalxint{ \xinttheexpr round( 1 / \gramianxint , 10 ) \relax }%
+	\pgfmathsetmacro{\gramianreciprocal}{\gramianreciprocalxint}
+
+	% iii) get inverse of Gram matrix
+	\edef\cofirstdotcofirstxint{ \xinttheexpr round( \gramianreciprocal * \seconddotsecond , 10 ) \relax }%
+	\pgfmathsetmacro{\cofirstdotcofirst}{\cofirstdotcofirstxint}
+	\edef\coseconddotcosecondxint{ \xinttheexpr round( \gramianreciprocal * \firstdotfirst , 10 ) \relax }%
+	\pgfmathsetmacro{\coseconddotcosecond}{\coseconddotcosecondxint}
+	\edef\cofirstdotcosecondxint{ \xinttheexpr round( - \gramianreciprocal * \firstdotsecond , 10 ) \relax }%
+	\pgfmathsetmacro{\cofirstdotcosecond}{\cofirstdotcosecondxint}
+
+	% iv) multiply basis vectors by inverse of Gram matrix to get cobasis vectors
+	\coordinate (coA1) at ($ \cofirstdotcofirst*(A1) + \cofirstdotcosecond*(A2) $);
+	\coordinate (coA2) at ($ \cofirstdotcosecond*(A1) + \coseconddotcosecond*(A2) $);
+
+	% calculate length of each cobasis vector
+	\edef\lengthofcofirstxint{ \xinttheexpr round( sqrt( \cofirstdotcofirst ) , 10 ) \relax }%
+	\pgfmathsetmacro{\lengthofcofirst}{\lengthofcofirstxint}
+	\edef\lengthofcosecondxint{ \xinttheexpr round( sqrt( \coseconddotcosecond ) , 10 ) \relax }%
+	\pgfmathsetmacro{\lengthofcosecond}{\lengthofcosecondxint}
+
+	% draw decomposition of vector by basis vectors
+	\coordinate (ParallelToSecond) at ($ (V) - (A2) $);
+	\coordinate (ParallelToFirst) at ($ (V) - (A1) $);
+	\coordinate (Vcomponent1) at (intersection of V--ParallelToSecond and O--A1);
+	\coordinate (Vcomponent2) at (intersection of V--ParallelToFirst and O--A2);
+
+	\draw [line width=0.4pt, dotted, color=blue] (V) -- (Vcomponent1);
+	\draw [line width=0.4pt, dotted, color=blue] (V) -- (Vcomponent2);
+
+	% draw decomposition by cobasis vectors
+	\coordinate (ParallelToCosecond) at ($ (V) - (coA2) $);
+	\coordinate (ParallelToCofirst) at ($ (V) - (coA1) $);
+	\coordinate (Vcoco1) at (intersection of V--ParallelToCosecond and O--coA1);
+	\coordinate (Vcoco2) at (intersection of V--ParallelToCofirst and O--coA2);
+
+	\draw [line width=0.4pt, dotted, color=red] (V) -- (Vcoco1);
+	\draw [line width=0.4pt, dotted, color=red] (V) -- (Vcoco2);
+
+	% draw projection of vector on a1
+	\coordinate (Vproj1) at (intersection of V--ParallelToCosecond and O--A1);
+	\draw [line width=0.4pt, line cap=round, dash pattern=on 0pt off 4\pgflinewidth, color=red!50!blue]
+		(O) -- (Vproj1)
+		node [pos=0.77, above right, fill=white, shape=circle, inner sep=-3pt, outer sep=1.6pt]
+	{$\scalebox{0.9}{$\mathrm{pro\hspace{-0.05ex}j}$}_{\hspace{0.1ex}\bm{a}_{\hspace{-0.1ex}1}} \hspace{-0.2ex} \bm{v}$};
+
+	\dotproductpolar{\lengthofvector}{\vectoranglefromx}{\firstlength}{\firstanglefromx}{\vectordotfirst}
+	\edef\vectorprojfirstxint{ \xinttheexpr round( \vectordotfirst / \firstlength , 10 ) \relax }%
+	\newcommand*{\vectorprojfirstinunits}{\scaleofunits * \vectorprojfirstxint \tikzunit}
+	\pic [draw, <-, color=red!50!blue, line cap=round, dash pattern=on 0pt off 4\pgflinewidth,
+		angle radius=\vectorprojfirstinunits, angle eccentricity=0.92,
+		"$\scalebox{0.8}{$\displaystyle \frac{v_1}{| \bm{a}_1 |}$}$"]
+	{ angle = coA1--O--A1 };
+
+	\edef\vectorcocofirstxint{ \xinttheexpr round( \vectordotfirst * \lengthofcofirst , 10 ) \relax }%
+	\newcommand*{\vectorcocofirstinunits}{\scaleofunits * \vectorcocofirstxint \tikzunit}
+	\pic [draw, ->, color=red!50!blue, line cap=round, dash pattern=on 0pt off 4\pgflinewidth,
+		angle radius=\vectorcocofirstinunits, angle eccentricity=1.09,
+		"$\scalebox{0.8}{$v_1 | \bm{a}^{\hspace{-0.16ex}1} |$}$"]
+	{ angle = coA1--O--A1 };
+
+	\draw [line width=0.4pt, line cap=round, dash pattern=on 0pt off 4\pgflinewidth, color=red!50!blue]
+		(O) -- ($ \lengthofcofirst*\firstlength*(Vproj1) $);
+
+	\draw [color=blue!50!red, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- ($ \firstdotfirst*(Vproj1) $)
+		node[pos=0.96, above, fill=white, shape=circle, inner sep=-5pt, outer sep=3.2pt]
+	{${v_1 \hspace{-0.1ex} \bm{a}_{\hspace{-0.08ex}1}}$};
+
+	% print information about basis and cobasis
+	\node [fill=white!50, inner sep=0pt, outer sep=2pt] at (0.5, -1.25)
+		{$\scalebox{0.9}{$\begin{array}{r@{\hspace{0.5em}}l}%
+			\bm{a}_1 \hspace{-0.16ex}\dotp \bm{a}_1 = \pgfmathprintnumber[fixed, precision=4]{\firstdotfirst} , & %
+			| \bm{a}_1 | = \pgfmathprintnumber[fixed, precision=4]{\firstlength} \\[0.1em] %
+			%
+			\bm{a}_2 \hspace{-0.16ex}\dotp \bm{a}_2 = \pgfmathprintnumber[fixed, precision=4]{\seconddotsecond} , & %
+			| \bm{a}_2 | = \pgfmathprintnumber[fixed, precision=4]{\secondlength} %
+		\end{array}$}$};
+
+	\node [fill=white!50, inner sep=0pt, outer sep=2pt] at (0.5, -1.6)
+		{$\scalebox{0.9}{$\begin{array}{r@{\hspace{0.5em}}l}%
+			\bm{a}^{\hspace{-0.16ex}1} \hspace{-0.16ex}\dotp \bm{a}^{\hspace{-0.16ex}1} = \pgfmathprintnumber[fixed, precision=4]{\cofirstdotcofirst} , & %
+			| \bm{a}^{\hspace{-0.16ex}1} | = \pgfmathprintnumber[fixed, precision=4]{\lengthofcofirst} \\[0.1em] %
+			%
+			\bm{a}^{\hspace{-0.1ex}2} \hspace{-0.16ex}\dotp \bm{a}^{\hspace{-0.1ex}2} = \pgfmathprintnumber[fixed, precision=4]{\coseconddotcosecond} , & %
+			| \bm{a}^{\hspace{-0.1ex}2} | = \pgfmathprintnumber[fixed, precision=4]{\lengthofcosecond} %
+		\end{array}$}$};
+
+	% draw vectors of basis
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A1)
+		node[pos=0.96, below, shape=circle, inner sep=0pt, outer sep=4pt] {${\bm{a}}_1$};
+
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A2)
+		node[pos=0.86, above left, shape=circle, inner sep=0pt, outer sep=6pt] {${\bm{a}}_2$};
+
+	% draw vectors of cobasis
+	\draw [line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (coA1)
+		node[pos=0.99, above, shape=circle, inner sep=0pt, outer sep=5pt] {${\bm{a}}^{\hspace{-0.16ex}1}$};
+
+	\draw [line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (coA2)
+		node[pos=0.85, above left, shape=circle, inner sep=0pt, outer sep=10pt] {${\bm{a}}^{\hspace{-0.1ex}2}$};
+
+	% draw components of vector
+	\draw [color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcomponent1)
+		node[pos=0.8, above, fill=white, shape=circle, inner sep=-1pt, outer sep=2pt]
+	{${v^{\hspace{-0.08ex}1} \hspace{-0.1ex} \bm{a}_{\hspace{-0.08ex}1}}$};
+
+	\draw [color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcomponent2)
+		node[pos=0.88, above left, shape=circle, fill=white, inner sep=-2pt, outer sep=9pt]
+	{${v^2 \hspace{-0.1ex} \bm{a}_2}$};
+
+	% draw co-components of vector
+	\draw [color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcoco1)
+		node[pos=0.88, below, fill=white, shape=circle, inner sep=-1pt, outer sep=4pt]
+	{${v_{\raisemath{-0.2ex}{1}} \bm{a}^{\hspace{-0.16ex}1}}$};
+
+	\draw [color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcoco2)
+		node[pos=0.82, above left, fill=white, shape=circle, inner sep=-1pt, outer sep=16pt]
+	{${v_{\raisemath{-0.2ex}{2}}  \hspace{0.1ex} \bm{a}^{\hspace{-0.1ex}2}}$};
+
+	% draw vector
+	\draw [line width=1.6pt, line cap=round, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.8, above, shape=circle, fill=white, inner sep=0pt, outer sep=6pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+\end{tikzpicture}
+\end{center}
+
+\end{document}

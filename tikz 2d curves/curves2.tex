@@ -1,0 +1,69 @@
+\documentclass[tikz, margin=10]{standalone}
+
+\usepackage{bm}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric} % for shape=ellipse
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\def\tikzscale{0.8}
+\begin{tikzpicture}[scale=\tikzscale]
+
+\tikzset{
+	elli/.style args={#1:#2and#3}{
+		draw,
+		shape=ellipse,
+		rotate=#1,
+		minimum width=2*#2,
+		minimum height=2*#3,
+		outer sep=0pt,
+	}
+}
+
+%
+% #1 optional parameters for \draw
+% #2 angle of rotation in degrees
+% #3 offset of center as (pointx, pointy) or (name-o-coordinate)
+% #4 length of plus (semi)axis, that is axis which hyperbola crosses
+% #5 length of minus (semi)axis
+% #6 how much of hyperbola to draw in degrees, with 90 you’d reach infinity
+%
+\newcommand\tikzhyperbola[6][thick]{%
+	\draw [#1, rotate around={#2: (0, 0)}, shift=#3]
+		plot [variable = \t, samples=1000, domain=-#6:#6] ({#4 / cos( \t )}, {#5 * tan( \t )});
+	\draw [#1, rotate around={#2: (0, 0)}, shift=#3]
+		plot [variable = \t, samples=1000, domain=-#6:#6] ({-#4 / cos( \t )}, {#5 * tan( \t )});
+}
+
+\def\angle{33}
+\def\bigaxis{3.2cm}
+\def\smallaxis{1.5cm}
+
+\draw [color=blue, line width = 0.4pt, dotted] (-7, 0) -- (7, 0) node [right] {$x_{1}$};
+\draw [color=blue, line width = 0.4pt, dotted] (0, -5) -- (0, 5) node [above] {$x_{2}$};
+
+\coordinate (center) at (-6, 2);
+
+\node [scale=\tikzscale, elli=\angle:\bigaxis and \smallaxis, line width = 1.2pt, color=black, dotted] at (center) (e) {};
+
+\draw [-{stealth}, line width = 1.2pt, color = orange] ([shift={(\angle:-12)}] e.center) -- ([shift={(\angle:12)}] e.center) node [above right] {$\bm{a}_1$};
+\draw [-{stealth}, line width = 1.2pt, color = orange] ([shift={(90+\angle:-8)}] e.center) -- ([shift={(90+\angle:8)}] e.center) node [above left]  {$\bm{a}_2$};
+
+\tikzhyperbola[line width = 1.2pt, color=blue!80!black]{\angle}{(center)}{\bigaxis}{\smallaxis}{77}
+
+\pgfmathsetmacro\axisratio{\smallaxis / \bigaxis}
+
+% asymptotes
+\def\lengthofasymptote{15}
+\draw [color=black!40, line width = 0.4pt, rotate around={\angle + atan( \axisratio ): (center)}]
+	($ (-\lengthofasymptote, 0) + (center) $) -- ++(2*\lengthofasymptote, 0) ;
+\draw [color=black!40, line width = 0.4pt, rotate around={\angle - atan( \axisratio ): (center)}]
+	($ (-\lengthofasymptote, 0) + (center) $) -- ++(2*\lengthofasymptote, 0) ;
+
+\tikzhyperbola[line width = 1.2pt, color=red!80!black]{90+\angle}{(center)}{\smallaxis}{\bigaxis}{76}
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,516 @@
+\en{\chapter{Fundamentals of generic mechanics}}
+
+\ru{\chapter{Основы общей механики}}
+
+\thispagestyle{empty}
+
+\label{chapter:genericmechanics}
+
+\en{\section{Initial concepts}}
+
+\ru{\section{Исходные представления}}
+
+\en{\emph{Discrete approach}}
+
+\ru{\emph{Дискретный подход}}
+
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, systems of~particles~(\inquotes{pointlike masses}, \inquotes{material points}) with masses~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion functions~${\bm{r}_k(t)}$ are considered. Vector function of~time~${\bm{r}_k(t)}$ is measured relative to some reference system~--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
+
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются системы частиц~(\inquotes{точечных масс}, \inquotes{материальных точек}) с~массами~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функциями движения~${\bm{r}_k(t)}$. Векторная функция времени~${\bm{r}_k(t)}$ определяется относительно какой\hbox{-}либо системы отсчёта~--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
+
+\begin{wrapfigure}[10]{o}{.48\textwidth}
+\makebox[.48\textwidth][c]{\begin{minipage}[t]{.44\textwidth}
+\vspace{-0.2em}
+\scalebox{1.1}[1.11]{
+\begin{tikzpicture}[scale=0.9]
+
+	\draw[line width=1.2pt, black] (0,0) -- (3.2,0);
+	\draw[line width=1.2pt, black] (0,0) -- (-1.8,0);
+	\foreach \xground in {-1.65, -1.4, ..., 3.3}
+		\draw [line width=0.4pt, black!80] (\xground,0) -- (\xground-0.2,-0.2);
+
+	\path (-1.1,0) node [shape=coordinate] (clocktower) {};
+	\def\clockradius{0.4}
+	\def\clocksquare{\clockradius + 0.1}
+	\def\clockbase{\clockradius - 0.05}
+	\def\clockheight{0.8}
+	\path (-1.1,\clockheight+\clocksquare) node [shape=coordinate] (clock) {};
+
+	\draw [line width=1.2pt, black] ($ (clocktower) + (\clockbase,0) $) -- ++(up:\clockheight);
+	\draw [line width=1.2pt, black] ($ (clocktower) - (\clockbase,0) $) -- ++(up:\clockheight);
+	\draw [line width=1.2pt, black, rounded corners=1.2pt] ($ (clock) + (\clocksquare,\clocksquare) $) rectangle ($ (clock) - (\clocksquare,\clocksquare) $);
+	\draw [line width=1.2pt, black] ($ (clock) + (\clockbase,\clocksquare) $) arc(0:180:\clockbase);
+
+	\draw [line width=1.2pt, blue] (clock) circle(\clockradius);
+	\draw [line width=1.2pt, blue] (clock) -- ++(\clockradius - 0.2, 0);
+	\draw [line width=1pt, blue, rotate around={-30:(clock)}] (clock) -- ++(0, \clockradius - 0.15);
+
+	\path (0.16,0.2) node [shape=coordinate] (O) {};
+	\path (O) -- ++(-1,-1) node [shape=coordinate] (first) {};
+	\path (O) -- ++(2.4,0) node [shape=coordinate] (second) {};
+	\path (O) -- ++(0,2) node [shape=coordinate] (third) {};
+
+	\draw [line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- (first)
+		node [pos=0.77, below, xshift=4.5mm, yshift=1mm] {$\bm{e}_1$};
+	\draw [line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- (second)
+		node [pos=0.8 ,above, xshift=2mm, yshift=1.2mm] {$\bm{e}_2$};
+ 	\draw [line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- (third)
+		node [pos=0.8, right, xshift=1mm, yshift=1mm] {$\bm{e}_3$};
+
+	\path (2.5,1.6) node [shape=coordinate] (m) {};
+
+	\path (m) node [shape=circle, inner sep=1mm, outer sep=0] (mcirc) {};
+
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=3.6mm]}] (O) -- (mcirc)
+		node [pos=0.52, above] {$\bm{r}$} ;
+
+	\draw [line width=1.6pt, black, fill=black!50] (m) circle (1.6mm) ;
+
+	\path (mcirc) node [xshift=-3.2mm, yshift=3mm] {$m$} ;
+
+	\draw [line width=1pt, blue, fill=white] (O) circle (1.2mm) ;
+
+\end{tikzpicture}}
+\vspace{-1.72em}\caption{}\label{fig:referencesystem}
+\end{minipage}}
+\end{wrapfigure}
+
+\en{Long time ago, some absolute space was accepted as a~reference system: empty at~first, and then filled with continuous elastic medium~--- the~ether. Later it became clear that within the~scope of~classical mechanics any reference systems are usable, but preference is given to inertial systems, where a~point moves without acceleration~(${\mathdotdotabove{\bm{r}} = \bm{0}}$) in the absence of external interactions.}
+
+\ru{Когда\hbox{-}то давно, за~систему отсчёта принималось некое абсолютное пространство: сначала пустое, а~затем заполненное сплошной упругой \hbox{средой}~--- эфиром. Позже стало ясно, что в~пределах классической механики можно пользоваться \hbox{любыми} системами \hbox{отсчёта}, но предпочтение отдаётся инерциальным системам, где \hbox{точка} движется без~ускорения~(${\mathdotdotabove{\bm{r}} = \bm{0}}$) при~отсутствии внешних взаимодействий.}
+
+\en{The measure of interaction in mechanics is a~vector of~force~$\bm{F}$. In~famous Newton’s equation}
+
+\ru{Мерой взаимодействия в~механике является вектор силы~$\bm{F}$. В~известном уравнении Newton’а}
+
+\nopagebreak\vspace{-0.32em}\begin{equation}\label{law:ofnewton}
+m \mathdotdotabove{\bm{r}} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
+\end{equation}
+
+\en{\vspace{-0.25em} \noindent the right\hbox{-}hand side depends only on position, speed and explicitly presented time, as acceleration is directly proportional to force.}
+
+\ru{\vspace{-0.25em} \noindent правая часть зависит лишь от положения, скорости и~явно входящего времени, поскольку ускорение прямо пропорционально силе.}
+
+\en{Remind theses of dynamics of a~system of particles. Force acting on~$k$\hbox{-}th particle}
+
+\ru{Напомним положения динамики системы частиц. Сила, действующая на~$k$\hbox{-}ую частицу}
+
+\nopagebreak\vspace{-0.64em}\begin{equation}\label{forceonparticle}
+\bm{F}_k = \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} + \scalebox{0.84}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.12ex},
+\end{equation}
+
+\en{\vspace{-0.2em} \noindent where the first addend~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ is external force, and the second is sum of~internal ones (${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj}}$ is force from particle with number~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
+
+\ru{\vspace{-0.2em} \noindent где первое слагаемое~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$~--- это внешняя сила, а~второе~--- сумма внутренних (${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj}}$~--- сила от~частицы с~номером~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
+
+\foreignlanguage{russian}{Принимая принцип действия и~противодействия ${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} = - \bm{F}^{\expinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}}$, получим из~\eqref{law:ofnewton} и~\eqref{forceonparticle} закон баланса импульса}
+
+...
+
+
+
+
+\ru{\section{Совершенно жёсткое недеформируемое твёрдое тело}}
+
+\en{\section{Absolutely rigid undeformable solid body}}
+
+\en{\emph{Discrete and continual approaches}}
+
+\ru{\emph{Дискретный и континуальный подходы}}
+
+%% \inquotesx{Абсолютно твёрдое}[,] оно~же \inquotes{абсолютно жёсткое} и~\inquotesx{абсолютно прочное}[---] это несбыточная мечта любого инженера.
+
+\en{\noindent To define position (location) of absolutely rigid~(undeformable) body it’s enough to choose some one of its points, to set location of this point, as well as angular orientation of body~(\figref{fig:bodyoffsetandrotation}).}
+
+\ru{\noindent Для определения положения совершенно жёсткого~(недеформируемого) тела достаточно выбрать какую\hbox{-}либо одну его точку\hbox{-}полюс, задать положение~${\bm{r}(t)}$ этой точки, а~также угловую ориентацию тела~(\figref{fig:bodyoffsetandrotation}).}
+
+\begin{comment}
+\makeatletter
+\newcommand\xofcoordinate[2][center]{{%
+	\pgfpointanchor{#2}{#1}%
+	\pgfmathparse{\pgf@x/\pgf@xx}%
+	\pgfmathprintnumber[precision=2]{\pgfmathresult}%
+}}
+\newcommand\yofcoordinate[2][center]{{%
+	\pgfpointanchor{#2}{#1}%
+	\pgfmathparse{\pgf@y/\pgf@yy}%
+	\pgfmathprintnumber[precision=2]{\pgfmathresult}%
+}}
+\makeatother
+
+\begin{tikzpicture}
+	\coordinate (point0) at (-4.3, 2.5);
+	\coordinate (point1) at (-3.1, 3.2);
+	\coordinate (point2) at (-2, 2.4);
+	\coordinate (point3) at (-0.4, 1.6);
+	\coordinate (point4) at (0.5, 0);
+	\coordinate (point5) at (0, -2);
+	\coordinate (point6) at (-1.5, -3);
+	\coordinate (point7) at (-3, -2.2);
+	\coordinate (point8) at (-3.5, -0.5);
+	\coordinate (point9) at (-4.5, 1);
+
+	\draw [line width=1.2pt, red] plot [smooth cycle, tension=0.8] coordinates {
+		(point0) (point1) (point2) (point3) (point4)
+		(point5) (point6) (point7) (point8) (point9)
+	};
+
+	\newcommand\xyofcoordinate[1]{\xofcoordinate{#1},\,\yofcoordinate{#1}}
+
+	\draw [black, fill=black] (point0) circle (1mm) node [anchor=south east] {\xyofcoordinate{point0}};
+	\draw [black, fill=black] (point1) circle (1mm) node [anchor=south, outer sep=4pt] {\xyofcoordinate{point1}};
+	\draw [black, fill=black] (point2) circle (1mm) node [anchor=south west] {\xyofcoordinate{point2}};
+	\draw [black, fill=black] (point3) circle (1mm) node [anchor=south west] {\xyofcoordinate{point3}};
+	\draw [black, fill=black] (point4) circle (1mm) node [anchor=south west] {\xyofcoordinate{point4}};
+
+	\draw [black,fill=black] (point5) circle (1mm) node [anchor=north west, outer sep=1pt] {\xyofcoordinate{point5}};
+	\draw [black,fill=black] (point6) circle (1mm) node [anchor=north, outer sep=4pt] {\xyofcoordinate{point6}};
+	\draw [black,fill=black] (point7) circle (1mm) node [anchor=north east, outer sep=2pt] {\xyofcoordinate{point7}};
+	\draw [black,fill=black] (point8) circle (1mm) node [anchor=east, outer sep=4pt] {\xyofcoordinate{point8}};
+	\draw [black,fill=black] (point9) circle (1mm) node [anchor=east, outer sep=3pt] {\xyofcoordinate{point9}};
+\end{tikzpicture}
+\end{comment}
+
+\begin{wrapfigure}[16]{o}{.5\textwidth}
+\makebox[.45\textwidth][c]{\begin{minipage}[t]{.45\textwidth}
+\vspace{.1em}
+\scalebox{1.1}[1.11]{
+\begin{tikzpicture}[scale=0.6]
+
+	\def\angleofrotation{36}
+
+	\coordinate (O) at (-1.65, -1.05);
+	\path (O) circle (1.6mm) node [shape=circle, inner sep=.64mm, outer sep=0] (Ocirc) {};
+
+	\coordinate (Oinitial) at (-6, -2.5);
+
+	\coordinate (bodypoint) at (-2, 1.5);
+
+	\coordinate (point0) at (-4.3, 2.5);
+	\coordinate (point1) at (-3.1, 3.2);
+	\coordinate (point2) at (-2, 2.4);
+	\coordinate (point3) at (-0.4, 1.6);
+	\coordinate (point4) at (0.5, 0);
+	\coordinate (point5) at (0, -2);
+	\coordinate (point6) at (-1.5, -3);
+	\coordinate (point7) at (-3, -2.2);
+	\coordinate (point8) at (-3.5, -0.5);
+	\coordinate (point9) at (-4.5, 1);
+
+	%\draw [line width=1pt, blue!25,
+		%style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- ++(-1.386,-0.8);
+	%\draw [line width=1pt, blue!25,
+		%style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- ++(1.386,-0.8);
+ 	%\draw [line width=1pt, blue!25,
+		%style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- ++(0,1.6);
+
+	\begin{scope}[rotate around={-\angleofrotation:(O)}]
+	\draw [line width=1pt, black!50, opacity=50]
+		plot [smooth cycle, tension=0.8] coordinates {
+			(-4.3, 2.5) (-3.1, 3.2) (-2, 2.4) (-0.4, 1.6) (0.5, 0)
+			(0, -2) (-1.5, -3) (-3, -2.2) (-3.5, -0.5) (-4.5, 1)
+		};
+
+	\path (-2, 1.5) circle (2mm) node [shape=circle, inner sep=.9mm, outer sep=0] (previousbodypoint) {};
+
+	\tkzDrawArc[line width=.8pt, color=black!50, opacity=50](O,previousbodypoint)(bodypoint);
+
+	\draw [line width=1pt, black!50, opacity=50, -{Stealth[round, length=4.5mm, width=2.8mm]}]
+		(O) -- (previousbodypoint)
+		node [pos=0.75, color=black!50, opacity=99, right, inner sep=2pt, outer sep=4pt] {$\mathcircabove{\bm{x}}$} ;
+
+	\fill [white] (-2, 1.5) circle (2mm) ;
+	\draw [line width=1pt, black!50, opacity=50] (-2, 1.5) circle (2mm) ;
+	\end{scope}
+
+	\draw [line width=1.6pt, black]
+		plot [smooth cycle, tension=0.8] coordinates {
+			(point0) (point1) (point2) (point3) (point4)
+			(point5) (point6) (point7) (point8) (point9)
+		};
+
+	\draw [line width=1.6pt, black, fill=white] (bodypoint) circle (2mm)
+		node [shape=circle, inner sep=0.9mm, outer sep=0] (pointcirc) {};
+
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=3.6mm]}] (Oinitial) -- (pointcirc)
+		node [pos=0.42, above, xshift=-2mm] {$\bm{R}$};
+
+	\draw [line width=1.6pt, blue, -{Stealth[round, length=5mm, width=3.6mm]}] (Oinitial) -- (Ocirc)
+		node [pos=0.5, above] {$\bm{r}$};
+
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=3.6mm]}] (O) -- (pointcirc)
+		node [pos=0.8, right, inner sep=2.5pt, outer sep=4pt] {$\bm{x}$};
+
+	\draw [line width=1pt, blue, rotate around={\angleofrotation:(O)},
+		style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- ++(-1.386,-0.8);
+	\draw [line width=1pt, blue, rotate around={\angleofrotation:(O)},
+		style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- ++(1.386,-0.8);
+ 	\draw [line width=1pt, blue, rotate around={\angleofrotation:(O)},
+		style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- ++(0,1.6);
+
+	\draw [line width=1pt, blue, fill=white] (O) circle (1.6mm)
+		node [below, outer sep=1.6mm, xshift=2.4mm] {$\bm{e}_i$};
+
+	\draw [line width=1pt, blue,
+		style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (Oinitial) -- ++(-1.386,-0.8);
+	\draw [line width=1pt, blue,
+		style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (Oinitial) -- ++(1.386,-0.8);
+ 	\draw [line width=1pt, blue,
+		style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (Oinitial) -- ++(0,1.6);
+
+	\draw [line width=1pt, blue, fill=white] (Oinitial) circle(1.6mm)
+		node [anchor=north, yshift=-1mm] {$\mathcircabove{\bm{e}}_i$};
+
+\end{tikzpicture}}
+\vspace{-1.6em}\caption{}\label{fig:bodyoffsetandrotation}
+\end{minipage}}
+\end{wrapfigure}
+
+%% \begin{comment} %%
+{\small
+\noindent\leavevmode{\indent} As adjectives the difference between \inquotes{rigid} and \inquotes{solid} is that rigid is stiff (rather than flexible) while solid is in the state of a solid (not fluid). As a~noun solid is a~substance in the fundamental state of matter that retains its size and shape without need of container (as opposed to a~liquid or gas).
+
+\noindent\leavevmode{\indent} A~rigid body is a~solid body in which deformation is zero (or negligibly small, so small it can be neglected). The distance between any two points of a~rigid body remains constant, regardless of external forces exerted on it. A~rigid body is usually considered as a~continuous distribution of mass (modeled as a continuous mass rather than as discrete particles).
+\par}
+%% \end{comment} %%
+
+\foreignlanguage{russian}{В~модели совершенно~(абсолютно) жёсткого твёрдого тела расстояние между любыми двумя точками такого тела остаётся постоянным, не~завися от~внешних сил: деформации нет.}
+
+\foreignlanguage{russian}{Совершенно жёсткое тело рассматривается либо как дискретная совокупность частиц, либо как непрерывное распределение массы (материальный континуум, сплошная среда).}
+
+\foreignlanguage{russian}{Для радиуса\hbox{-}вектора некоторой точки тела имеем}
+
+\begin{equation*}
+\begin{array}{c}
+\bm{R} = \bm{r} + \bm{x} \hspace{.1ex}, \:\:
+\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+\end{array}
+\end{equation*}
+
+
+
+${\mathcircabove{\bm{x}} = x_i \mathcircabove{\bm{e}}_i}$,
+${\bm{x} = x_i \bm{e}_i}$,
+${\mathdotabove{\bm{x}} = x_i \mathdotabove{\bm{e}}_i}$
+
+\foreignlanguage{russian}{Компоненты~${x_i}$ в~совершенно жёстком теле не~зависят от~времени: ${x_i \hspace{-0.16ex} = \const}$.}
+
+${\bm{x} = \bm{P} \hspace{-0.16ex} \dotp \mathcircabove{\bm{x}}}$,
+${\mathdotabove{\bm{x}} = \mathdotabove{\bm{P}} \hspace{-0.16ex} \dotp \mathcircabove{\bm{x}}}$
+
+${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\bm{P}} \hspace{-0.16ex} \dotp x_i \mathcircabove{\bm{e}}_i
+\:\Rightarrow\:
+\mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\bm{P}} \hspace{-0.16ex} \dotp \mathcircabove{\bm{e}}_i}$
+
+
+
+\foreignlanguage{russian}{Вводя псевдовектор угловой скорости~$\bm{\omega}$, ...}
+
+
+
+
+\foreignlanguage{russian}{Пусть ${\mathcircabove{\bm{e}}_i}$~--- ортогональная тройка базисных ортов, неподвижная относительно системы отсчёта.}
+
+\foreignlanguage{russian}{Имея неподвижный базис~${\mathcircabove{\bm{e}}_i}$ и движущийся вместе с~телом базис~${\bm{e}_i}$, ...}
+
+\foreignlanguage{russian}{Если связать с~телом тройку декартовых осей с~ортами~${\bm{e}_i}$ (этот базис движется вместе с~телом), тогда угловая ориентация тела может быть задана тензором поворота ${\bm{P} \equiv \bm{e}_i \mathcircabove{\bm{e}}_i}$.}
+
+...
+
+\foreignlanguage{russian}{Движение тела полностью определяется функциями~${\bm{r}(t)}$ и~${\bm{P}(t)}$.}
+
+...
+
+\foreignlanguage{russian}{Переход от~формул, содержащих суммирование по~дискретным точкам, к~формулам для сплошного тела осуществляется заменой масс частиц на~массу ${\rho \hspace{0.2ex} dV}$ элемента объёма~$dV$ ($\rho$~--- плотность массы), и интегрированием по~всему объёму тела.}
+
+...
+
+
+{\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+Holonomic constraints are relations between position variables (and possibly time) which can be expressed as
+\[ f(q_{1}, q_{2}, q_{3}, \ldots, q_{n}, t) = 0 \]
+
+\noindent where ${\{q_{1},q_{2},q_{3},\ldots,q_{n}\}}$ are $n$ coordinates which describe the system. For example, the motion of a particle constrained to lie on sphere’s surface is subject to a holonomic constraint, but if the particle is able to fall off the sphere under the influence of gravity, the constraint becomes non-holonomic. For the first case the holonomic constraint may be given by the equation: ${r^{2} - a^{2} = 0}$, where $r$ is the distance from the centre of a sphere of radius $a$. Whereas the second non-holonomic case may be given by: ${r^{2} - a^{2} \geq 0}$.
+
+Holonomic constraint depends only on coordinates and time. It does not depend on velocities or any higher time derivative. A~constraint that cannot be expressed as shown above is nonholonomic.
+
+Velocity-dependent constraints like
+\[ \displaystyle f(q_{1}, q_{2}, \ldots, q_{n}, {\dot {q}}_{1}, {\dot {q}}_{2}, \ldots, {\dot {q}}_{n}, t) = 0 \]
+are mostly not holonomic.
+\par}
+
+
+
+\en{\section{Principle of virtual work}}
+
+\ru{\section{Принцип виртуальной работы}}
+
+\label{para:virtualworkprinciple.genericmechanics}
+
+\begin{otherlanguage}{russian}
+
+Виртуальным перемещением частицы с~радиусом\hbox{-}вектором~${\bm{r}_k}$ называется вариация~${\variation{\hspace{.1ex}\bm{r}_k}}$~--- %% н\'{е}которое
+любое (неопределённое) бесконечно малое приращение~${\bm{r}_k}$, происходящее мгновенно вне~времени~(${\variation{t} \hspace{-0.2ex}\equiv\hspace{-0.2ex} 0}$) и~совместимое с~ограничениями\hbox{-}связями. %%~(constraints).
+Если связей нет, то~есть система свободна, тогда виртуальные перемещения ${\variation{\hspace{.1ex}\bm{r}_k}}$ совершенно любые.
+
+Связи бывают голономные~(holonomic, или геометрические), связывающие только положения~(перемещения)~--- это функции лишь координат и, возможно, времени
+\begin{equation}\label{holonomicconstraint}
+c\hspace{.2ex}(\bm{r}, t) = 0
+\end{equation}
+--- и~неголономные~(или дифференциальные), содержащие производные координат по~времени: ${c\hspace{.2ex}(\bm{r}, \mathdotabove{\bm{r}}, t) = 0}$ и~не~интегрируемые до~геометрических связей.
+
+Далее рассматриваем системы, все связи в~которых~--- голономные. В~системе с~голономной связью виртуальные перемещения должны удовлетворять уравнению
+\begin{equation}\label{requirementforvirtualdisplacements}
+\displaystyle \sum_k \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c}}{\partial \hspace{.1ex} \bm{r}_k}$} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.2ex} = 0 \hspace{.16ex}.
+\vspace{-0.25em}\end{equation}
+
+В~несвободных системах все силы делятся на две группы: активные и~реакции связей. Реакция~$\mathboldN_k$ действует со~стороны всех материальных ограничителей на~частицу \inquotes{${\hspace{.05ex}k\hspace{.25ex}}$} и~меняется в~соответствии с~уравнением~\eqref{holonomicconstraint} каждой связи. Принимается предложение об~идеальности связей:
+\begin{equation}\label{idealconstraints}
+\scalebox{0.9}{$\displaystyle \sum_k$} \mathboldN_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0
+\quad \textrm{---}
+\vspace{-0.25em}\end{equation}
+\noindent работа реакций на~любых виртуальных перемещениях равна нулю.
+
+Принцип виртуальной работы выражается уравнением
+\begin{equation}\label{principleofvirtualwork}
+\displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}_k \hspace{-0.12ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.2ex} = 0 \hspace{0.1ex},
+\vspace{-0.32em}\end{equation}
+
+\noindent где~$\bm{F}_k$~--- лишь активные силы.
+
+Дифференциальное вариационное уравнение~\eqref{principleofvirtualwork} может показаться тривиальным следствием закона Ньютона~\eqref{law:ofnewton} и~условия идеальности связей~\eqref{idealconstraints}. Однако содержание~\eqref{principleofvirtualwork} несравненно обширнее. Известно~--- и~читатель вскоре это увидит,~--- что принцип~\eqref{principleofvirtualwork} может быть положен в~основу механики~\cite{gantmacher}. Различные модели упругих тел, описываемые в~этой книге, построены с~опорой на~этот принцип.
+
+Для~примера рассмотрим совершенно жёсткое~(недеформируемое) твёрдое тело.
+
+...
+
+
+Проявилась замечательная особенность~\eqref{principleofvirtualwork}: это уравнение эквивалентно системе такого порядка, каково число степеней свободы системы, то~есть сколько независимых вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ мы имеем. Если в~системе $N$~точек есть $m$ связей, то число степеней свободы ${n = 3N \hspace{-0.25ex} - m}$.
+
+...
+
+
+\en{\section{Balance of momentum, rotational momentum, and~energy}}
+
+\ru{\section{Баланс импульса, момента импульса и~энергии}}
+
+Эти фундаментальные законы баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\inquotes{Изолированная (замкнутая) система~--- это система частиц, взаимодействующих друг с~другом, но ни с какими другими телами.} системе выводится из~однородности пространства \emph{(при любом параллельном переносе замкнутой системы как целого в~пространстве механические свойства этой системы не меняются)}. Сохранение момента импульса~--- следствие изотропии пространства \emph{(при любом повороте замкнутой системы как целого в~пространстве механические свойства этой системы не меняются)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \mathrm{T}(q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \Pi(q)}$ такой системы не~зависит явно от~времени).
+
+Фундаментальные законы баланса можно вывести из принципа виртуальной работы~\eqref{principleofvirtualwork}. Перепишем его в~виде
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{principleofvirtualwork}
+\displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
++ \variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{.1ex},
+\vspace{-0.25em}\end{equation}
+
+\vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил~${\variation{\internalwork}}$.
+
+Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\varvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\varvector{\bm{o}}}$~--- произвольные константы, определяющие трансляцию и~поворот)
+
+\nopagebreak\vspace{-0.8em}\begin{equation}\label{assumptionforvirtualwork}
+\variation{\bm{r}_k} \hspace{-0.16ex}
+= \varvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k
+\hspace{.32ex} \Rightarrow \hspace{.4ex}
+\variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{.1ex}.
+\end{equation}
+
+\vspace{-0.1em} Предпосылки-соображения для~этого предположения таковы.
+
+Первое~--- для случая упругих (потенциальных) внутренних сил. При~этом ${\variation{\internalwork} = -\variation{\Pi}}$~--- вариация потенциала с~противоположным знаком. Достаточно очевидно, что~$\Pi$ меняется лишь при~деформации.
+
+Второе соображение~--- в~том, что суммарный вектор и~суммарный момент внутренних сил равен нулю
+
+\begin{equation*}
+\sum \ldots
+\end{equation*}
+
+...
+
+Принимая~\eqref{assumptionforvirtualwork} и~подставляя в~\eqref{principleofvirtualwork} сначала ${\variation{\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\hspace{-0.1ex}\bm{\rho}}}$ (трансляция), а~затем ${\variation{\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k}$ (поворот), получаем баланс импульса~(...) и баланс момента импульса~(...).
+
+...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Hamilton’s principle and Lagrange’s equations}}
+\ru{\section{Принцип Гамильтона и уравнения Лагранжа}}
+
+\begin{otherlanguage}{russian}
+
+Вариационное уравнение~\eqref{principleofvirtualwork} удовлетворяется в~любой момент времени. Интегрируя его по~какому\hbox{-}либо промежутку
+
+...
+
+Известны уравнения Lagrange’а не~только второго, но~и~первого рода. Рассмотрим их ради методики вывода, много раз применяемой в~этой книге.
+
+При~наличии связей~\eqref{holonomicconstraint} равенство ${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\bm{r}}_k}$ не~следует из~вариационного уравнения~\eqref{principleofvirtualwork}, поскольку виртуальные перемещения~${\variation{\hspace{.1ex}\bm{r}_k}}$ не~являются независимыми. Каждое из $m$ ($m$~--- число связей) условий для~вариаций~\eqref{requirementforvirtualdisplacements} умножим на~некий скаляр~$\lambda_{\alpha}$ (${\alpha = 1, \ldots, m}$) и~добавим к~\eqref{principleofvirtualwork}:
+\begin{equation}
+\displaystyle \sum_{k=1}^{N} \hspace{-0.25ex} \left(^{\mathstrut} \hspace{-0.16ex} \bm{F}_k \right. \hspace{-0.32ex} + \hspace{-0.05ex}
+\scalebox{0.88}[0.92]{$\displaystyle \sum_{\alpha}$} \hspace{.12ex} \lambda_{\alpha} \hspace{.2ex} \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{\alpha}}}{\partial \hspace{.1ex} \bm{r}_k}$}
+- \left. \hspace{-0.25ex} m_k \mathdotdotabove{\bm{r}}_k ^{\mathstrut}\right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0 \hspace{0.1ex},
+\end{equation}
+
+\vspace{-0.2em} \noindent Среди $3N$ вариаций компонент~${\variation{\hspace{.1ex}\bm{r}_k}}$ имеем $m$ зависимых. Но столько~же и~множителей Лагранжа: подберём $\lambda_{\alpha}$ так, чтобы коэффициенты(??как\'{и}е?) при~зависимых вариациях обратились в~нуль. Но при~остальных вариациях коэффициенты(??) также должны быть нулями из\hbox{-}за независимости. Следовательно, все выражения в~скобках~${(\cdots\hspace{-0.2ex})}$ равны нулю~--- это и~есть уравнения Лагранжа первого рода.
+
+Поскольку для каждой частицы
+
+...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Statics}}
+\ru{\section{Статика}}
+
+\begin{otherlanguage}{russian}
+
+Рассмотрим систему со~стационарными (постоянными во~времени) связями
+
+...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Mechanics of relative motion}}
+\ru{\section{Механика относительного движения}}
+
+\begin{otherlanguage}{russian}
+
+До~сих~пор не~ставился вопрос о~системе отсчёта
+
+...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Small oscillations}}
+\ru{\section{Малые колебания}}
+\label{para:smalloscillations}
+
+\begin{otherlanguage}{russian}
+
+Если статика линейно\hbox{-}упругой системы описывается
+
+...
+
+
+\end{otherlanguage}
+
+\section*{\small \wordforbibliography}
+
+\begin{changemargin}{\parindent}{0pt}
+\fontsize{10}{12}\selectfont
+
+\begin{otherlanguage}{russian}
+
+В~длинном списке книг по~общей механике можно найти труды не~только механиков\hbox{-}профессионалов~\cite{goldstein-classicalmechanics, loitsjanskiy.lurie, lurie-analyticalmechanics, olkhovskiy-theoreticalmechanicsforphysicists, treatiseonanalyticaldynamics-by-l.a.pars}, но~и физиков\hbox{-}теоретиков широкой ориентации~\cite{landau.lifshitz-shortcourse, terhaar-hamiltonianmechanics}. Рекомендую курс Ф.\,Р.\;Гантмахера~\cite{gantmacher} с~компактным, но~полным изложением осн\'{о}в.
+
+\end{otherlanguage}
+
+\end{changemargin}

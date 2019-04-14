@@ -1,0 +1,83 @@
+\documentclass[11pt,twoside]{book}
+
+\usepackage{geometry}
+\geometry{papersize={250mm,250mm}}
+\geometry{tmargin=1.5cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
+
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage[e]{esvect}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot} % it needs tikz-3dplot.sty in same folder
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{decorations.markings,decorations.pathmorphing}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\tdplotsetmaincoords{60}{125}
+\begin{tikzpicture}[tdplot_main_coords]
+
+\draw[-{Stealth[round, scale = 1.3]}] (0,0,0) -- (9, 0, 0) node[anchor = north east]{\small$x$};
+\draw[-{Stealth[round, scale = 1.3]}] (0,0,0) -- (0, 7, 0) node[anchor = north west]{\small$y$};
+\draw[-{Stealth[round, scale = 1.3]}] (0,0,0) -- (0, 0, 7) node[anchor = south]{\small$z$};
+
+\shade [ball color = gray!40, opacity = 0.4] (0, 0) circle (3 cm); %% 3 cm is equivalently 3 in coordinate
+
+\coordinate (C) at (0,0,0);
+\coordinate (O) at (4, 20, -4){};
+\coordinate (oext) at (-0.2, -1, --0.2){};
+\coordinate (S) at (1, 2, 2){};
+\coordinate (V) at (1, 4, 3);
+\coordinate (R) at ({8 / 11}, {2 - (18 / 11)}, {2 + (6 / 11)});
+\coordinate (vper) at ({31 / 41}, {4 - (60 / 41)}, {3 + (20 / 41)});
+\coordinate (vpar) at ({51 / 41}, {2 + (60 / 41)}, {2 - (20 / 41)});
+\coordinate (vii) at ({1 / 3}, {5 / 3}, {- 1 / 3});
+
+\filldraw [black] (4, 20, -4) circle (1pt);
+\draw (C) -- (O) node[anchor = west]{observer};
+\draw (O) -- (S);
+\draw [-{Stealth[round, scale = 1.3]}] (C) -- (S);
+\node [anchor = east] at (0.8, 1.6, 1.6) {$\vv{\bm{r}}$};
+\draw [-{Stealth[round, scale = 1.3]}, thick] (S) -- (V) node [above right] {$\vv{\bm{v}}$};
+\draw [dashed] (C) -- (oext);
+
+\node [rotate = -23, anchor = north] at (2, 10, -2) {$ltc$};
+\node [rotate = -30, anchor = south] at (2.5, 11, -1) {$los$};
+
+\coordinate (ltcbl) at (1, -0.4, -1){};
+\coordinate (ltcbr) at (-1, 0, -1){};
+\coordinate (ltctl) at (1, 0, 1){};
+\coordinate (ltctr) at (-1, 0.4, 1){};
+\draw [red] (ltcbl) -- (ltcbr) -- (ltctr) -- (ltctl) -- (ltcbl);
+
+\coordinate (losbl) at (0, {2 - (1/6)}, 1){};
+\coordinate (losbr) at (2, 1.5, 1){};
+\coordinate (lostl) at (0, 2.5, 3){};
+\coordinate (lostr) at (2, {2 + (1/6)}, 3){};
+\draw [blue] (losbl) -- (losbr) -- (lostr) -- (lostl) -- (losbl);
+
+\draw [-{Stealth[round, scale = 1.3]}, color = red, thick] (C) -- (R);
+\draw [dashed] (R) -- (S);
+\node [anchor = east] at (R) {$R$};
+
+\draw [-{Stealth[round, scale = 1.3]}, color = blue, thick] (S) -- (vper);
+\draw [dashed] (vper) -- (V);
+\node [anchor = east] at ({36 / 41}, {3 - (30 / 41)}, {2.5 + (10 / 41)}) {$\vv{\bm{v}}_{\bot}$};
+\draw [-{Stealth[round, scale = 1.3]}, color = blue, thick] (S) -- (vpar);
+\draw [dashed] (vpar) -- (V);
+\node [anchor = north] at ({46 / 41}, {2 + (30 / 41)}, {2 - (10 / 41)}) {$\vv{\bm{v}}_{eos}$};
+\draw [green] ({46 / 41}, {2 + (30 / 41)}, {2 - (10 / 41)}) arc (85:155:1);
+\node [green] at (1.2, 3.4, 2.3) {$\phi$};
+
+\draw [dashed] (S) -- (vii) node [below] {$vii$};
+
+\draw [{Stealth[round, scale = 1.3]}-, gray] (-0.8, -4.2, 0) arc (180:270:1 and 0.8);
+\node [gray] at (2, -4, 0.5) {dwarf galaxy};
+
+\end{tikzpicture}
+
+\end{document}

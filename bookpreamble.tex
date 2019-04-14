@@ -1,0 +1,697 @@
+\usepackage[utf8]{inputenc}
+
+\usepackage[X2,T2A,OT1,T1]{fontenc}
+\usepackage{ucs}
+
+\usepackage[english, ukrainian, russian]{babel}
+
+\RequirePackage{ifthen}
+\newif\ifen
+\newif\ifru
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\ru}[1]{\ifru#1\fi}
+
+\PrerenderUnicode{æ}
+
+\usepackage{newunicodechar}
+\newunicodechar{×}{\ensuremath{\times}}
+
+%%\DeclareTextSymbolDefault{\CYRYAT}{X2}
+%%\DeclareTextSymbolDefault{\CYRFITA}{X2}
+%%\DeclareTextSymbolDefault{\CYRIZH}{X2}
+%%\DeclareTextSymbolDefault{\cyryat}{X2}
+%%\DeclareTextSymbolDefault{\cyrfita}{X2}
+%%\DeclareTextSymbolDefault{\cyrizh}{X2}
+
+% no more "Too many math alphabets used in version normal"
+%%\newcommand\hmmax{0}
+%%\newcommand\bmmax{0}
+
+\usepackage{gensymb}
+
+\usepackage{xargs}
+\usepackage{xparse}
+
+%%\usepackage{calligra}
+\usepackage{frcursive}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{chocolate}{rgb}{0.48, 0.25, 0.0}
+\definecolor{darkcerulean}{rgb}{0.03, 0.27, 0.49}
+\definecolor{darkmagenta}{rgb}{0.55, 0.0, 0.55}
+\definecolor{darksienna}{rgb}{0.24, 0.08, 0.08}
+
+\usepackage[unicode=true,pdfusetitle,%
+	bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,linktocpage=true,%
+	breaklinks=false,pdfborder={0 0 0},backref=false,%
+	colorlinks=true,linkcolor=darkcerulean,citecolor=darkmagenta,urlcolor=darksienna]%
+{hyperref}
+
+\usepackage{microtype}
+
+\usepackage{lettrine}
+\renewcommand{\LettrineFontHook}{\fontseries{b}}
+\renewcommand{\LettrineTextFont}{\normalfont}
+
+\usepackage{calc}
+\usepackage{ulem}
+
+\usepackage{xintexpr}
+
+%%\usepackage{pdflscape}
+
+\usepackage{layouts}
+
+\usepackage{bigstrut}
+
+\usepackage{wrapfig}
+
+\usepackage{multirow}
+%%\usepackage{tabularx}
+%%\usepackage{tabulary}
+\usepackage{longtable}
+
+\usepackage{bm} % bold math symbols
+
+% from newtxmath
+\DeclareFontFamily{U}{ntxmia}{}
+\DeclareFontShape{U}{ntxmia}{m}{it}{<-> ntxmia }{}
+\DeclareFontShape{U}{ntxmia}{b}{it}{<-> ntxbmia }{}
+\DeclareSymbolFont{lettersA}{U}{ntxmia}{m}{it}
+\SetSymbolFont{lettersA}{bold}{U}{ntxmia}{b}{it}
+
+%%\AtBeginDocument{\let\mathbb\boldmathbb}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\boldmathbb}{m}
+{
+	\tl_map_inline:nn { #1 }
+	{
+		\use:c { varbb##1 }
+	}
+}
+\tl_map_inline:nn { ABCDEFGHIJKLMNOPQRSTUVWXYZ }
+{
+	\exp_args:Nc \DeclareMathSymbol{varbb#1}{\mathord}{lettersA}{\int_eval:n { `#1+64 }}
+}
+\exp_args:Nc \DeclareMathSymbol{varbbk}{\mathord}{lettersA}{169}
+\ExplSyntaxOff
+
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{mathtools}
+
+\numberwithin{equation}{section}
+
+\usepackage{abraces}
+
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{mathrsfs}
+
+\usepackage{mathdesign}
+
+\usepackage{graphicx}
+
+\DeclareFontFamily{U}{mymathpazo}{}
+\DeclareFontShape{U}{mymathpazo}{m}{n}{<-> fplmri}{}
+\DeclareFontShape{U}{mymathpazo}{b}{n}{<-> fplmbi}{}
+
+\usepackage{pifont}
+\makeatletter
+\newcommand\Pimathsymbol[3][\mathord]{%
+	#1{\@Pimathsymbol{#2}{#3}}}
+\def\@Pimathsymbol#1#2{\mathchoice
+	{\@Pim@thsymbol{#1}{#2}\tf@size}
+	{\@Pim@thsymbol{#1}{#2}\tf@size}
+	{\@Pim@thsymbol{#1}{#2}\sf@size}
+	{\@Pim@thsymbol{#1}{#2}\ssf@size}}
+\def\@Pim@thsymbol#1#2#3{%
+	\mbox{\fontsize{#3}{#3}\Pisymbol{#1}{#2}}}
+\makeatother
+\newcommand{\varpartial}{\Pimathsymbol[\mathord]{mymathpazo}{182}}
+
+\newcommand\boundary{\hspace{.1ex}\varpartial}
+%%\newcommand\boundary{\reflectbox{\textsf{6}}}
+
+\DeclareMathOperator*{\integral}{\scalerel*{\rotatebox{12}{$\!\textstyle\int\!$}}{\int}} % \rotatebox{8} for vertical line
+\DeclareMathOperator*{\ointegral}{\scalerel*{\rotatebox{12}{$\!\textstyle\oint\!$}}{\oint}} % \rotatebox{8} for vertical line
+
+\newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
+\newcommand{\boldnablacircled}{\mathcircabove{\bm{\nabla}}\hspace{-0.2ex}}
+
+\newcommand\narroweq{\hspace{0.25ex}\scalebox{0.8}[1]{$=$}\hspace{0.25ex}}
+
+\newcommand\const{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{const}}}}
+
+\newcommand\boldconst{{\boldmath \const}}
+
+\let\vec\relax
+
+\usepackage{nicefrac}
+
+\usepackage{upgreek}
+
+\newcommand\variation[1]{\ensuremath\updelta\hspace{-0.1ex}#1}
+\newcommand\varvector[1]{\ensuremath\bm{\updelta}\hspace{-0.125ex}\bm{\mathrm{#1}}}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.55}}
+\newcommand*\bigdot{\mathpalette\dotp@{.64}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+\newcommand\narrowdotp{\hspace{-0.12em}\dotp\hspace{-0.12em}}
+\newcommand\narrowdotdotp{\hspace{-0.12em}\dotdotp\hspace{-0.12em}}
+
+\newcommand\dotdotdotp{\dotp\hspace{-0.16em}\dotp\hspace{-0.16em}\dotp\hspace{0.08em}}
+
+\newcommand\T{{\mathpalette\raiseT\intercal}} % symbol for transpose
+\newcommand\raiseT[2]{\hspace{-0.02em}\raisebox{0.4ex}{$#1#2$}}
+
+\newcommand\Xcompanion{{\mathpalette\lowerXcompanion\times}} % symbol for X-companion
+\newcommand\lowerXcompanion[2]{\hspace{-0.16ex}\raisebox{-0.2ex}{$#1\bm{#2}$}\hspace{-0.24ex}}
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\newcommand\levicivita{\raisemath{0.2ex}{\mathrm{\in}}}
+%%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\bm{\levicivita}}}}
+%%\newcommand\levicivita{\scalebox{1.2}[1]{$\textsf{Є}$}}
+\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\scalebox{1.25}[1]{$\textsf{Є}$}}}\hspace{.05ex}}
+
+\newcommand\stiffnesstensor{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
+
+\newcommand\rotationtensor{\bm{O}}
+
+\usepackage{accents}
+\makeatletter
+\newcommand{\scircabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.64\dimexpr(\f@size pt)}{0}\selectfont$\,\circ$}}
+\DeclareRobustCommand{\mathcircabove}{\accentset{\scircabove}}
+\newcommand{\sdotabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\,\bullet$}}
+\DeclareRobustCommand{\mathdotabove}{\accentset{\sdotabove}}
+\newcommand{\sdotdotabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\,\bullet\hspace{-0.25ex}\bullet$}}
+\DeclareRobustCommand{\mathdotdotabove}{\accentset{\sdotdotabove}}
+\makeatother
+
+\newcommand\cosinematrix[1]{o_{#1}} % or \alpha
+\newcommand\cosinematrixdotted[1]{\mathdotabove{o}_{#1}}
+
+\newcommand\mathboldN{\scalebox{0.9}[1]{\ensuremath{\bm{N}\hspace{-0.1em}}}}
+\newcommand\mathboldM{\scalebox{0.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
+\newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
+
+\newcommand\mathboldae{\pmb{\textit{æ}}}
+
+\newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
+\newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
+
+\newcommand\expexternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}
+\newcommand\expinternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}
+
+\newcommand\internalwork{W^{\hspace{-0.12ex}\expinternal}}
+
+\newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
+\newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
+
+\usepackage{scalerel}
+
+\usepackage{paralist}
+\usepackage{booktabs}
+
+%%\usepackage{indentfirst}
+
+\usepackage{setspace}
+%%\onehalfspacing
+\setstretch{1}
+
+\setlength{\parskip}{0.8mm minus0.2mm} % space between paragraphs
+\setlength{\parindent}{4ex} % offset of first line
+\newlength\negparindent
+\setlength{\negparindent}{-\parindent}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\usepackage{blindtext}
+\usepackage{fancybox}
+\usepackage{rotating}
+\usepackage{placeins}
+\usepackage{wasysym}
+\usepackage{etoolbox}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot} % it needs tikz-3dplot.sty in same folder
+\usetikzlibrary{calc}
+%%\usetikzlibrary{topaths}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{decorations.markings, decorations.pathmorphing, decorations.pathreplacing}
+
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+
+\newcommand{\tikzsl}[1]{\tikz[baseline=(sl.base)] \node [xslant=0.21, inner sep=0pt, outer sep=0pt] (sl) {#1};}
+
+\newcommand\mathtau{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\uptau\hspace{-0.1ex}}}}}
+\newcommand\mathboldtau{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\bm{\uptau}\hspace{-0.1ex}}}}}
+
+\newcommand\cauchystress{\mathboldtau}
+
+\newcommand\firstpiolakirchhoffstress{\bm{T}}
+\newcommand\secondpiolakirchhoffstress{\bm{S}}
+
+\newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
+
+\newcommand\mathboldPhi{\scalebox{1.06}[1]{\tikzsl{\ensuremath{\hspace{-0.16ex}\bm{\Upphi}\hspace{-0.32ex}}}}}
+
+\newcommandx*{\tikzcancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node [inner sep=-1pt, outer sep=0pt] (tocancel) {#2};
+		\draw [line width=0.25mm, #1] (tocancel.south west) -- (tocancel.north east);
+	}%
+}
+
+\newcommandx*{\tikzbackcancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node [inner sep=-1pt, outer sep=0pt] (tocancel) {#2};
+		\draw [line width=0.25mm, #1] (tocancel.south east) -- (tocancel.north west);
+	}%
+}
+
+\newcommandx*{\tikzcrosscancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node [inner sep=-1pt, outer sep=0pt] (tocancel) {#2};
+		\draw [line width=0.25mm, #1] (tocancel.south west) -- (tocancel.north east);
+		\draw [line width=0.25mm, #1] (tocancel.south east) -- (tocancel.north west);
+	}%
+}
+
+\newcommand\widearc[1]{%
+	\tikz[baseline=(wideArcAnchor.base)]{%
+		\node [inner sep=0] (wideArcAnchor) {$#1$}; 
+		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.32ex) $);
+		\coordinate (wideArcAnchorB) at ($ (wideArcAnchor.north east) + (-0.2ex, 0.32ex) $);
+		\draw [line width=.5pt, line cap=round, out=45, in=135]
+			(wideArcAnchorA) to (wideArcAnchorB) ;
+}}
+
+\pgfdeclaredecoration{plain brace}{brace}
+{%
+  \state{brace}[width=+\pgfdecoratedremainingdistance, next state=final]
+  {%
+    \pgfpathmoveto{\pgfpointorigin}%
+    {%
+      \pgfpathcurveto%
+        {\pgfqpoint{.15\pgfdecorationsegmentamplitude}{.3\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{.5\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+    }%
+    \pgftransformxshift{+\pgfdecoratedremainingdistance}%
+    \pgfpathlineto{\pgfqpoint{-\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+    {%
+      \pgfpathcurveto%
+        {\pgfqpoint{-.5\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{-.15\pgfdecorationsegmentamplitude}{.3\pgfdecorationsegmentamplitude}}%
+        {\pgfqpoint{0\pgfdecorationsegmentamplitude}{0\pgfdecorationsegmentamplitude}}%
+    }%
+  }%
+  \state{final}{}%
+}
+
+\newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \node (#1) {};}
+
+% tweak these if you wish
+\newcommand*{\BraceAmplitude}{0.4em}
+\newcommand*{\VerticalOffset}{0.64ex}
+\newcommand*{\HorizontalOffset}{0em}
+\newcommand*{\TextOffset}{0.4ex}
+
+\NewDocumentCommand{\AddUnderBrace}{%
+	O{}	% #1 = draw options
+	O{0,0} % #2 = [x,y] offset for brace
+	O{}	% #3 = node options
+	O{}	% #4 = optional brace options
+	m	% #5 = left tikzmark
+	m	% #6 = right tikzmark
+	m	% #7 = text to place underbrace
+}{%
+\begin{tikzpicture}[overlay, remember picture]
+	\draw [decoration={plain brace, amplitude=\BraceAmplitude, mirror, #4}, decorate, thick, draw=black!80, text=black, #1]
+		($ (#5.base) + (-\HorizontalOffset,-\VerticalOffset) + (#2) $) --
+		($ (#6.base) + (\HorizontalOffset,-\VerticalOffset) + (#2) $)
+	node [below, yshift=-\TextOffset, midway, #3] {#7};
+\end{tikzpicture}%
+}
+
+\NewDocumentCommand{\AddOverBrace}{%
+	O{}	% #1 = draw options
+	O{0,0} % #2 = [x,y] offset for brace
+	O{}	% #3 = node options
+	O{}	% #4 = optional brace options
+	m	% #5 = left tikzmark
+	m	% #6 = right tikzmark
+	m	% #7 = text to place underbrace
+}{%
+\begin{tikzpicture}[overlay, remember picture]
+	\draw [decoration={plain brace, amplitude=\BraceAmplitude, #4}, decorate, thick, draw=black!80, text=black, #1]
+		($ (#5.north) + (-\HorizontalOffset,\VerticalOffset+0.25em) + (#2) $) --
+		($ (#6.north) + (\HorizontalOffset,\VerticalOffset+0.25em) + (#2) $)
+	node [above, yshift=\TextOffset, midway, #3] {#7};
+\end{tikzpicture}%
+}
+
+\newcommandx*\circled[2][1=black!5]{\tikz[baseline=(char.base)]{%
+	\node[shape=circle, fill=#1, inner sep=2pt] (char) {#2};}}
+
+% tune headers and footers
+
+\setlength{\headheight}{12pt}
+\setlength{\footskip}{0pt}
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footers
+\fancyhead[LE,RO]{\vspace*{.66em}\circled[yellow!5]{\small\thepage}}
+\fancyheadoffset[LE]{7.5mm} % move page numbers left on even pages
+\fancyheadoffset[RO]{7.5mm} % move page numbers right on odd pages
+\renewcommand{\headrulewidth}{0pt} % no line in header
+\renewcommand{\footrulewidth}{0pt} % no line in footer
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\vspace*{.66em}\circled[yellow!5]{\small\thepage}}
+\fancyheadoffset[LE]{7.5mm}
+\fancyheadoffset[RO]{7.5mm}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}<{}} % equal-width centered column
+
+% setup captions for figures and tables
+\usepackage[format=plain]{caption}
+
+\captionsetup[figure]{%
+font={small,it},labelfont=small,%
+labelsep=newline,justification=centering,singlelinecheck=off,%
+aboveskip=4mm,belowskip=2.5mm}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+\addto\captionsenglish{\renewcommand{\chaptertitlename}{Chapter}}
+\addto\captionsrussian{\renewcommand{\chaptertitlename}{Глава}}
+\addto\captionsukrainian{\renewcommand{\chaptertitlename}{Розділ}}
+
+\addto\captionsenglish{\def\chaptershortname{chapter}}
+\addto\captionsrussian{\def\chaptershortname{гл.}}
+\addto\captionsukrainian{\def\chaptershortname{розд.}}
+
+\addto\captionsenglish{\renewcommand{\contentsname}{Contents}}
+\addto\captionsrussian{\renewcommand{\contentsname}{Содержание}}
+\addto\captionsukrainian{\renewcommand{\contentsname}{Змiст}}
+
+\addto\captionsenglish{\renewcommand{\figurename}{figure}}
+%%\addto\captionsrussian{\renewcommand{\figurename}{фигура}}
+\addto\captionsrussian{\renewcommand{\figurename}{рисунок}}
+\addto\captionsukrainian{\renewcommand{\figurename}{малюнок}}
+
+\addto\captionsenglish{\def\figureshortname{fig.}}
+%%\addto\captionsrussian{\def\figureshortname{фиг.}}
+\addto\captionsrussian{\def\figureshortname{рис.}}
+\addto\captionsukrainian{\def\figureshortname{мал.}}
+
+\addto\captionsenglish{\def\wordforbibliography{Bibliography}}
+\addto\captionsrussian{\def\wordforbibliography{Библиография}}
+
+\newcommand\pararef[1]{\hyperref[#1]{\S\,\ref*{#1}}}
+\newcommand\chapdotpararef[2]{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}
+\newcommand\chapref[1]{\hyperref[#1]{\chaptershortname\:\ref*{#1}}}
+
+\newcommand\figref[1]{\figureshortname\:\ref{#1}}
+
+\newcommandx*\customref[2][1=]{\hyperref[#2]{#1\ref*{#2}}}
+
+\captionsetup[table]{%
+%labelsep=newline,
+labelsep=period,justification=centering,singlelinecheck=off}
+
+\sloppy
+
+%%\usepackage{showframe} % uncomment to show frames
+
+\renewcommand{\labelitemi}{\raise .36ex\hbox{\tiny${\bullet}$}}
+
+\usepackage[shortlabels]{enumitem}
+\setlist{nolistsep} % no vertical space between list items
+
+% tune lists
+\makeatletter
+\renewcommand{\@listI}{%
+\leftmargin=1.25\parindent
+\rightmargin=0mm
+\labelsep=2mm
+\itemindent=0mm
+\listparindent=0mm
+\parskip=0mm
+\topsep=1mm
+\partopsep=0mm
+\parsep=0mm
+\itemsep=0.5mm}
+\makeatother
+
+%%\usepackage[defaultlines=2,all]{nowidow}
+\raggedbottom
+\widowpenalty=10000 % avoid widows
+\clubpenalty=10000 % avoid orphans (clubs)
+
+\makeatletter
+\@beginparpenalty=10000 % avoid page breaks before lists
+\makeatother
+
+\hyphenpenalty=800 % reduce number of hyphenation
+
+% --------------------------------------------------
+
+% tune footnotes
+
+\renewcommand*\footnoterule{} % no line before footnotes
+
+%%\renewcommand{\thefootnote}{\arabic{footnote})}
+
+\usepackage[symbol, bottom]{footmisc} % use symbols instead of numbers and place footnotes at the very bottom of page
+\setlength{\skip\footins}{1em plus1em} % \footins is the space between the text body and the footnotes
+
+\usepackage{perpage}
+\MakePerPage{footnote} % restart \footnote numbering on every page
+
+\setlength{\footnotesep}{\baselineskip} % space between footnotes
+
+\makeatletter
+\def\@makefnmark{\raisebox{0.8ex}{\hbox{\normalfont\@thefnmark}}}
+\makeatother
+
+\let\originalfootnote\footnote
+\renewcommand{\footnote}[1]{%
+	\renewcommand\footnotesize\small%
+	\originalfootnote{\hspace{0.25em}\parbox[t]{0.88\textwidth}{#1}}}
+
+% --------------------------------------------------
+
+% tune bibliography
+
+\makeatletter
+\renewcommand*{\@biblabel}[1]{#1.\!}
+\g@addto@macro\@openbib@code{\setlength{\itemsep}{0.2em}}
+\makeatother
+
+\addto\captionsenglish{\def\bibliographyname{List of books}}
+\addto\captionsenglish{\renewcommand{\bibname}{List of books}}
+
+\addto\captionsrussian{\def\bibliographyname{Список литературы}}
+\addto\captionsrussian{\renewcommand{\bibname}{Список литературы}}
+
+\addto\captionsukrainian{\def\bibliographyname{Список літератури}}
+\addto\captionsukrainian{\renewcommand{\bibname}{Список літератури}}
+
+% --------------------------------------------------
+
+\renewcommand{\bfdefault}{b} % make bold font narrower
+%%\renewcommand{\bfdefault}{sbc}
+
+\DeclareTextFontCommand{\textboldoblique}{\fontseries{bx}\itshape}
+
+\renewcommand{\labelenumi}{\arabic{enumi}) }
+\renewcommand{\labelenumii}{\alph{enumii}) }
+\renewcommand{\labelenumiii}{\roman{enumiii}) }
+
+% tune titles
+
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\usepackage{titlesec}
+
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+
+\newcommand{\mychapterfont}{\normalfont\fontsize{12}{13}}
+\newcommand{\mysectionfont}{\normalfont\normalsize\bfseries}
+\newcommand{\mysubsectionfont}{\normalfont\normalsize\itshape}
+
+\titleformat{\chapter}[display]
+	{\mychapterfont\filleft}
+	{\vspace{0pt}\textit{\chaptertitlename~\thechapter}}
+	{0.4mm}
+	{\bfseries\MakeUppercase}
+
+\titlespacing*{\chapter}
+	{\parindent}% left
+	{12mm}% before
+	{8mm}% after
+	[\parindent]%right
+
+\titleformat{\section}
+	{\mysectionfont\filleft}{\S\:\thesection.}{.8ex}{}
+
+\titlespacing*{\section}
+	{\parindent}% left
+	{8mm}% before
+	{2mm}% after
+	[\parindent]%right
+
+\titleformat{\subsection}
+	{\mysubsectionfont\filleft}{\thesubsection}{.8ex}{}
+
+\titlespacing*{\subsection}
+	{\parindent}% left
+	{4mm}% before
+	{1mm}% after
+	[\parindent]%right
+
+%%%\usepackage[format=hang,labelsep=period,justification=raggedright,singlelinecheck=true]{caption}
+
+% --------------------------------------------------
+
+% tune table of contents
+
+\usepackage{tocloft}
+
+\setcounter{tocdepth}{1} % chapters & sections, no subsections
+
+\renewcommand{\cfttoctitlefont}{\hfill\mychapterfont\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hspace*{5ex}}
+\setlength\cftaftertoctitleskip{2em}
+
+\setlength{\cftbeforechapskip}{.64em}
+\setlength{\cftbeforesecskip}{.1em} % {\parskip}
+
+\renewcommand{\cftchapafterpnum}{\nopagebreak\vspace{.2em}}
+\preto\section{%
+	\ifnum\value{section}=0\addtocontents{toc}{\vspace{.2em}}\fi
+}
+
+\makeatletter
+\patchcmd{\l@chapter}
+	{\leavevmode}
+	{\leavevmode\renewcommand{\numberline}[1]{\hbox{\normalfont\emph{\@cftbsnum ##1\@cftasnum}}\@cftasnumb}}
+	{}{}
+\makeatother
+
+\renewcommand{\cftchappresnum}{\chaptertitlename~}
+\renewcommand{\cftchapaftersnum}{.~\hspace{.16ex}}
+
+\renewcommand{\cftsecpresnum}{\hfill\hspace{-0.5em}\S\:}
+\renewcommand{\cftsecaftersnum}{.~\hspace{.16ex}}
+\newlength\tocsectionlength
+\settowidth\tocsectionlength{\cftsecpresnum\cftsecaftersnum}
+\addtolength\cftsecnumwidth{\tocsectionlength}
+\addtolength\cftsecnumwidth{-2.4ex}
+
+\renewcommand{\cftpnumalign}{l} % align page numbers left
+
+\makeatletter
+\renewcommand{\@pnumwidth}{3ex}
+\renewcommand{\@tocrmarg}{1.5cm}
+\makeatother
+
+\renewcommand{\cftdotsep}{1.2}
+
+%%\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}\hspace{0.5ex}}
+\renewcommand{\cftchapleader}{\hfill}
+\renewcommand{\cftchapfont}{\fontsize{10}{11}\bfseries}
+\renewcommand{\cftchappagefont}{\fontsize{11}{12}\bfseries}
+
+\renewcommand{\cftsecleader}{\textcolor{black!40}{\cftdotfill{\cftdotsep}}\hspace{0.5ex}}
+\renewcommand{\cftsecfont}{\fontsize{10}{11}\mdseries}
+\renewcommand{\cftsecpagefont}{\fontsize{10}{11}\mdseries}
+
+% --------------------------------------------------
+
+\usepackage[many]{tcolorbox} %%[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left = 0pt,
+	right = 0pt,
+	top = 0pt,
+	bottom = 0pt,
+	colback = gray!10,
+	colframe = white,
+	width = \dimexpr\textwidth\relax,
+	enlarge left by = 0mm,
+	boxsep = 5pt,
+	arc = 0pt, outer arc = 0pt}
+
+\setcounter{totalnumber}{100} % increase number of floats on one page
+
+\newcommand{\lquote}[0]{``}
+\newcommand{\rquote}[0]{''}
+
+\newcommand{\altlquote}[0]{<<}
+\newcommand{\altrquote}[0]{>>}
+
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+\newcommand{\inaltquotes}[1]{\altlquote{#1}\altrquote}
+
+\newcommandx*{\inquotesx}[2][2=]{\lquote{#1}\hbox{\rquote%
+\ifthenelse{\equal{#2}{.}}{\hspace{-0.4ex}.}{}%
+\ifthenelse{\equal{#2}{,}}{\hspace{-0.4ex},}{}%
+\ifthenelse{\equal{#2}{---}}{\hspace{-0.4ex}~---}{}%
+}}
+
+\newcommand{\sectionunnumbered}[1]%
+{%
+	\phantomsection
+	\section*{#1}
+	\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\chapterunnumbered}[1]%
+{%
+	\phantomsection
+	\chapter*{#1}
+	\addcontentsline{toc}{chapter}{#1}
+}
+
+\newcommandx*{\loosetexttr}[2][1=50]{\textls[#1]{#2}}
+
+\newcommand{\replica}[1]{\noindent ---~{#1}}
+\newcommand{\remark}[1]{\emph{({#1})}}
+
+\newcommand{\bigvspace}[0]{\vspace{0.75\vsize}}
+
+\setlength{\arraycolsep}{3.2pt} % default: 5pt

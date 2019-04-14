@@ -1,0 +1,2026 @@
+\en{\chapter{Elements of tensor calculus}}
+
+\ru{\chapter{Элементы тензорного исчисления}}
+
+\thispagestyle{empty}
+
+\label{chapter:elementsoftensorcalculus}
+
+\en{\section{Vectors}}
+
+\ru{\section{Векторы}}
+
+\label{para:vectors}
+
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{M}{ention} of~tensors may scare away the reader, commonly avoiding needless complications. But tensors are introduced just because of their wonderful property of being invariant~--- independent of coordinate systems. I propose to~begin familiarizing with tensors from reminiscences of~vectors.}
+
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{У}{поминание} о~тензорах может отпугнуть читателя, обычно избегающего ненужных сложностей. Но тензоры вводятся лишь из\hbox{-}за своего чудесного свойства инвариантности~--- независимости от систем координат. Знакомство с~тензорами предлагаю начать с~воспоминаний о~векторах.}
+
+\en{Meet ${\bm{v}}$~--- a~vector; it is fully characterized by its length~(modulus, magnitude) and direction in space, but does not depend on units and methods of measurement neither lengths nor directions.}
+
+\ru{Пусть ${\bm{v}}$~--- вектор; он вполне характеризуется своей длиной~(модулем) и~направлением в~пространстве, но не~зависит от~единиц и~методов измерений ни~длин, ни~направлений.}
+
+%%\begin{center}
+\begin{wrapfigure}[12]{o}{0.47\textwidth}
+\makebox[0.47\textwidth][c]{\begin{minipage}[t]{0.47\textwidth}
+\vspace{-1em}
+\hspace{-2em}\scalebox{0.96}[0.96]{
+\tdplotsetmaincoords{45}{125} % set orientation of axes
+% three parameters for vector
+\pgfmathsetmacro{\lengthofvector}{2.5}
+\pgfmathsetmacro{\anglefromz}{44}
+\pgfmathsetmacro{\anglefromx}{70}
+
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords] % tdplot_main_coords style to use 3dplot
+
+	\coordinate (O) at (0,0,0);
+
+	% draw axes
+	\draw [line width=0.4pt, blue] (O) -- (1.22,0,0);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.9, above, xshift=-0.6em, yshift=0.1em] {${\bm{e}}_1$};
+
+	\draw [line width=0.4pt, blue] (O) -- (0,1.88,0);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_2$};
+
+	\draw [line width=0.4pt, blue] (O) -- (0,0,1.22);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,0,1)
+		node[pos=0.9, below left, xshift=-0.1em, yshift=0.5em] {${\bm{e}}_3$};
+
+	% draw vector
+	\tdplotsetcoord{V}{\lengthofvector}{\anglefromz}{\anglefromx} % {length}{angle from z}{angle from x}
+		% it also defines projections of point
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.8, above, yshift=0.2em] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	% draw components of vector
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (Vxy);
+	%%\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (V);
+	%%\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (Vx);
+	\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (Vy);
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vx)
+		node[pos=0.5, above, xshift=-0.9em] {${v_1 \hspace{-0.1ex} \bm{e}_1}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vx) -- (Vxy)
+		node[pos=0.53, below left, xshift=0.3em] {${v_2 \bm{e}_2}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vxy) -- (V)
+		node[pos=0.5, above right, yshift=-0.2em] {${v_3 \bm{e}_3}$};
+
+\end{tikzpicture}}
+\vspace{-1.72em}\caption{}\label{fig:componentsofvector}
+\end{minipage}}
+\end{wrapfigure}
+%%\end{center}
+
+\en{Introduce some cartesian coordinate system with mutually perpendicular unit vectors of basis ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$.
+In such \hbox{a system}, dot products of basis vectors are equal to the~Kronecker~delta:}
+
+\ru{Введём некую декартову систему координат со~взаимно ортогональными ортами базиса ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$. %% (нумерация такова, что тройка~--- правая)
+В~такой \hbox{системе} произведения базисных векторов равны \hbox{дельте}~Kronecker’а:}
+
+\nopagebreak\[ \bm{e}_i \dotp \bm{e}_j = \hspace{.12ex} \delta_{ij} = \hspace{.12ex} \scalebox{0.92}[0.92]{$\begin{cases}
+1, \;i = j \\
+0, \;i \neq j
+\end{cases}$} \]
+
+\en{Decomposing vector~${\bm{v}}$ by basis ${\bm{e}_i}$~(${i = 1, 2, 3}$), we have components of~vector~(\figref{fig:componentsofvector})}
+
+\ru{Разлагая вектор~${\bm{v}}$ по базису ${\bm{e}_i}$~(${i = 1, 2, 3}$), имеем компоненты вектора~(\figref{fig:componentsofvector})}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{vectorcomponents}
+\bm{v} = \scalebox{0.9}[0.9]{$\displaystyle \sum_{i=1}^3$} {v_i \bm{e}_i} \hspace{-0.1ex} \equiv \hspace{.1ex} v_i \bm{e}_i \hspace{0.1ex}, \;\;
+v_i \hspace{-0.1ex} = \bm{v} \dotp \bm{e}_i \hspace{-0.16ex} = |\bm{v}| \operatorname{cos} \measuredangle ({\bm{v}, \bm{e}_i}).
+\end{equation}
+
+{\small\setlength{\abovedisplayskip}{1pt}\setlength{\belowdisplayskip}{1pt}
+
+\en{Here and hereinafter, Einstein’s summation convention is accepted: having an~index repeated twice in a~single term implies summation over this index. More than two times in~the~same term index can’t be repeated. And a~non-repeating index is called free, it’s identical in both parts of~equation. There are examples:}
+
+\ru{Здесь и~далее принимается соглашение о~суммировании~Einstein’а: наличие дважды повторённого индекса в~одночлене подразумевает суммирование по~этому индексу. Более двух раз в~том~же одночлене индекс повторяться не~может. А~неповторяющийся индекс называется свободным, он одинаков в~обеих частях равенства. Вот примеры:}
+
+\nopagebreak\vspace{-0.2em}\[
+\sigma = \tau_{ii} \hspace{0.1ex}, \;\;
+p_j \hspace{-0.16ex} = n_i \tau_{ij} \hspace{0.1ex}, \;\;
+m_i \hspace{-0.16ex} = e_{ijk} \hspace{.16ex} x_j f_k \hspace{0.1ex}, \;\;
+a_i \hspace{-0.16ex} = \lambda b_i + \mu c_i \hspace{0.1ex}.
+\]
+
+\vspace{-0.2ex} \noindent \en{But following equations are incorrect}\ru{Следующие~же равенства некорректны}
+
+\nopagebreak\vspace{-0.2em}\[
+a = b_{kkk} \hspace{0.1ex}, \;\;
+c = f_i + g_k \hspace{0.1ex}, \;\;
+a_{ij} \hspace{-0.25ex} = k_i \gamma_{ij} \hspace{0.1ex}.
+\]
+\par}
+\vspace{.1em}
+
+\en{Vector~${\bm{v}}$ is invariant, it doesn’t depend on any coordinate system. Its decomposition in two cartesian systems with basis unit vectors ${\bm{e}_{i}}$ and~${\bm{e}'_{i}}$ gives}
+
+\ru{Вектор~${\bm{v}}$ инвариантен, он не~зависит ни~от~какой системы координат. Его разложение в~двух декартовых системах с~базисными ортами ${\bm{e}_{i}}$ и~${\bm{e}'_{i}}$ даёт}
+
+\nopagebreak\vspace{-0.8em}\begin{equation*}
+\begin{array}{c}
+\bm{v} = v_{i} \hspace{.1ex} \bm{e}_{i} \hspace{-0.16ex} = v'_{i} \hspace{.1ex} \bm{e}'_{i} \hspace{.1ex}, \\[.2em]
+%
+\bm{v} \dotp \bm{e}_k = \hspace{-0.2ex} \tikzmark{beginComponentOfVector} \,v_k\, \tikzmark{endComponentOfVector} \hspace{-0.4ex} = v'_{i} \hspace{.2ex} \bm{e}'_{i} \dotp \bm{e}_k \hspace{.1ex}, \;\;
+\bm{v} \dotp \bm{e}'_{k} = \hspace{.12ex} v'_{k} = v_i \hspace{.2ex} \bm{e}_i \dotp \bm{e}'_{k} \hspace{.1ex}.
+\end{array}
+\vspace{.5em}\end{equation*}
+\AddUnderBrace[line width=.75pt][0,0][yshift=.12em]%
+{beginComponentOfVector}{endComponentOfVector}%
+{${\scriptstyle v_i \bm{e}_i \hspace{0.2ex}\dotp\hspace{0.32ex} \bm{e}_k \hspace{.2ex}=\hspace{.4ex} v_i \hspace{.1ex} \delta_{ik}}$}
+
+\en{Connection between basis vectors of an~\inquotes{old} and~a~\inquotesx{new}[---] \inquotesx{rotated}[---] orthonormal systems is represented by a~rotation matrix (a~matrix of \inquotes{direction} cosines)~${\cosinematrix{i'k}\hspace{.1ex}}$:}
+
+\ru{Связь между базисными векторами \inquotes{старой} и~\inquotesx{новой}[---] \inquotesx{повёрнутой}[---] ортонормальных систем представима матрицей поворота (матрицей \inquotes{направляющих} косинусов)~${\cosinematrix{i'k}\hspace{.1ex}}$:}
+
+\nopagebreak\vspace{-0.25em}\begin{equation}
+\bm{e}'_{i} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \bm{e}_k \hspace{0.1ex}, \;\:
+(\hspace{0.32ex} \dotp \hspace{.25ex} \bm{e}_k \hspace{0.25ex}) \,\Rightarrow\: \cosinematrix{i'k} \hspace{-0.16ex} = \bm{e}'_{i} \dotp \bm{e}_k \hspace{-0.16ex} = \operatorname{cos} \measuredangle (\bm{e}'_{i} \hspace{.1ex}, \bm{e}_k).
+\end{equation}
+
+\en{\vspace{-0.1em} Matrix of cosines is orthogonal, meaning that it inverses when transposing:}
+
+\ru{\vspace{-0.1em} Матрица косинусов ортогональна, то~есть при~транспонировании она обращается:}
+
+\vspace{-0.64em}\begin{equation}\label{orthogonalityofcosinematricies}
+\cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'k} \hspace{-0.16ex} = \hspace{0.2ex} \cosinematrix{k'i} \hspace{.1ex} \cosinematrix{k'j} \hspace{-0.16ex} = \hspace{0.2ex} \delta_{ij}
+\end{equation}
+
+\vspace{-0.2em} \noindent (\en{proof}\ru{доказательство}: $\delta_{ij} \hspace{-0.16ex} = \bm{e}'_i \hspace{-0.12ex} \dotp \bm{e}'_j \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \bm{e}_k \hspace{-0.12ex} \dotp \cosinematrix{j'n} \hspace{.1ex} \bm{e}_n \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'n} \delta_{kn} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'k} \hspace{0.1ex}$).
+
+\en{\vspace{.2em} Orthogonal transformation of vector components}
+
+\ru{\vspace{.2em} Ортогональное преобразование компонент вектора}
+
+\nopagebreak\vspace{-0.25em}\begin{equation}\label{orthotransform:1}
+v'_i = v_k \hspace{.2ex} \bm{e}_k \hspace{-0.12ex}\dotp \bm{e}'_i \hspace{-0.12ex} = \cosinematrix{i'k} \hspace{.2ex} v_k
+\end{equation}
+
+\en{\vspace{-0.1em}\noindent can be used to define a~vector itself. Suppose that in each orthonormal basis~${\bm{e}_i}$ a~triplet of~numbers~${v_i}$ is given, and on~transition to a~new orthonormal basis it is transformed according to~\eqref{orthotransform:1}; then this triplet of components represents an~invariant object~--- vector~${\bm{v}}$.}
+
+\ru{\vspace{-0.2em}\noindent может быть использовано для определения самог\'{о} вектора. Пусть в~каждом ортонормированном базисе~${\bm{e}_i}$ даётся тройка чисел~${v_i}$, и~при~переходе к~новому ортонормированному базису она преобразуется согласно~\eqref{orthotransform:1}; тогда эта тройка компонент представляет инвариантный объект~--- вектор~${\bm{v}}$.}
+
+\en{Multiplying an~orthogonal matrix by components of any vector retains length~(modulus) of this vector:}
+
+\ru{Умножение ортогональной матрицы на~компоненты любого вектора сохраняет длину~(модуль) этого вектора:}
+
+\nopagebreak \vspace{-0.2em} ${|\bm{v}|^2 \hspace{-0.1ex} = \bm{v} \dotp \bm{v} = v'_i \hspace{.2ex} v'_i \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} v_k \hspace{.2ex} \cosinematrix{i'n} \hspace{.1ex} v_n \hspace{-0.16ex} = v_n v_n \hspace{-0.2ex}}$~\en{--- this conclusion leans on}\ru{--- этот вывод опирается на}~\eqref{orthogonalityofcosinematricies}.
+
+\en{\section{Definition of tensor}}
+
+\ru{\section{Определение тензора}}
+
+\begin{otherlanguage}{russian}
+
+Пусть в~каждом ортонормальном базисе ${\bm{e}_i}$ задана совокупность девяти (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) чисел ${B_{ij}}$~(${i, j = 1, 2, 3}$), преобразующаяся при~переходе к~новому~(\inquotes{повёрнутому}) ортонормальному базису по~закону
+\vspace{-1em}\begin{equation}\label{orthotransform:2}
+B'_{ij} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'n} \hspace{.16ex} B_{kn} \hspace{0.1ex},
+\end{equation}
+
+\vspace{-0.5em} \noindent тогда эта совокупность компонент определяет инвариантный объект~--- тензор второй сложности (второго ранга, второй валентности) ${^2\!\bm{B}}$.
+
+%% Using some orthonormal basis to represent a tensor as set of components. Conversion of tensor’s components from one cartesian basis to another is done through an orthogonal transformation.
+
+Иными словами, тензор ${^2\!\bm{B}}$ проявляется в~каждом базисе матрицей своих компонент ${B_{ij}}$, меняющейся вместе с~базисом согласно \eqref{orthotransform:2}. Распространённые в~литературе попытки заменить тензоры матрицами ведут к~ошибкам, если не~следить за~базисами, которым эти матрицы соответствуют.
+
+Ключевой пример тензора второй сложности~--- диада. Пусть ${\bm{a}}$ и~${\bm{b}}$~--- векторы. В~каждом базисе положим ${D_{ij} \hspace{-0.2ex} \equiv a_i b_j}$. Легко убедиться, что преобразование~\eqref{orthotransform:2} для~${D_{ij}}$ соблюдается. Получившийся тензор ${^2\!\!\,\bm{D}}$ называется диадным произведением~(dyadic product) или просто диадой~(dyad); его пишут как~${\bm{a} \otimes \bm{b}}$ или~${\bm{a} \bm{b}}$. Предпочтём второе.
+
+Ещё~один существенный пример двухвалентного тензора~--- единичный тензор~(он~же~\inquotes{метрический}). Для~любого декартова~(cartesian) базиса положим ${E_{ij} \hspace{-0.2ex} \equiv \hspace{0.12ex} \delta_{ij} \hspace{-0.2ex} = \bm{e}_i \dotp \bm{e}_j}$. Это действительно компоненты тензора, \eqref{orthotransform:2} действует. Назовём этот тензор ${\bm{E}}$.
+
+Неизменность компонент при~повороте базиса делает тензор~${\bm{E}}$ изотропным. Ненулевых векторов с~таким свойством нет (все компоненты нуль\hbox{-}вектора~$\bm{0}$ равны нулю в~любом базисе).
+
+Третий пример связан с~линейным преобразованием векторов: ${\bm{b}}$ есть линейная функция от ${\bm{a}}$. В~каждом базисе имеем ${b_i = c_{ij} a_j}$. Коэффициенты преобразования меняются при~перемене базиса:
+\[
+\scalebox{0.96}[1]{$b\hspace{0.16ex}'_{\hspace{-0.16ex}i} = c\hspace{0.16ex}'_{\hspace{-0.16ex}ij} a'_j = \cosinematrix{i'k} b_k = \cosinematrix{i'k} c_{kn} a_n ,\;
+a_n \hspace{-0.25ex} = \cosinematrix{j'n} a'_j \;\Rightarrow\; c\hspace{0.16ex}'_{\hspace{-0.16ex}ij} \hspace{-0.2ex} = \cosinematrix{i'k} \cosinematrix{j'n} c_{kn}$}.
+\]
+\noindent Видим, что множество матриц ${c_{ij}}$, ${c\hspace{0.16ex}'_{\hspace{-0.16ex}ij}}$, \dots, определяющих одно и~то~же линейное преобразование ${\bm{a}}$ в~${\bm{b}}$, но в~разных базисах, сводится к~одному инвариантному объекту~--- тензору второй сложности ${\hspace{-0.1ex} ^2\hspace{-0.2ex}\bm{c}}$. Многие авторы так и~определяют тензор через линейное преобразование.
+
+Четвёртый пример~--- коэффициенты инвариантной квадратичной формы ${\digamma(\bm{a}) = f_{ij} a_i a_j}$, где ${a_i}$ и~${a_j}$~--- компоненты векторного аргумента~${\bm{a}}$, и~результат~${\digamma}$ не~зависит от базиса. Из равенств ${\digamma' = f'_{ij} a'_i a'_j = \digamma}$ следует~\eqref{orthotransform:2} для~коэффициентов ${f_{ij}}$.
+
+Обратимся теперь к тензорам б\'{о}льших сложностей. Тензор третьей сложности ${^3\!\!\;\bm{C}}$ определяется через совокупность ${3^3 \hspace{-0.24ex}=\hspace{-0.12ex} 27}$ чисел~${C_{ijk}}$, преобразующихся по закону
+\begin{equation}\label{orthotransform:3}
+C\hspace{0.16ex}'_{\hspace{-0.32ex}ijk} = \cosinematrix{i'p} \hspace{.1ex} \cosinematrix{j'q} \hspace{.1ex} \cosinematrix{k'r} \hspace{.16ex} C_{pqr} \hspace{.1ex}.
+\end{equation}
+
+% triad
+
+Простейший пример~--- триада из векторов $\bm{a}$, $\bm{b}$ и~$\bm{c}$:
+\[ C_{ijk} \equiv a_i b_j c_k \:\Leftrightarrow\: {^3\!\!\;\bm{C}} = \bm{a} \bm{b} \bm{c} \hspace{0.1ex}. \]
+
+Отметим, что законы преобразования~\eqref{orthotransform:3} и~\eqref{orthotransform:2}~--- результаты своеобразного \inquotes{повторения} векторного~\eqref{orthotransform:1}. Читатель без труда напишет закон преобразования компонент тензора любой сложности и~для~примера приведёт соответствующую полиаду.
+
+Векторы с~пребразованием компонент~\eqref{orthotransform:1} суть тензоры первой сложности.
+
+В~конце этого параграфа обратимся к~самым простым объектам~--- скалярам, то~есть тензорам нулевой сложности. Скаляр это одно ${(3^0 \hspace{-0.24ex}=\hspace{-0.12ex} 1)}$ число, не~зависящее от~базиса: масса, энергия, температура и~др. Но что такое, например, компоненты~\eqref{vectorcomponents} вектора ${\bm{v} = v_i \bm{e}_i}$ и~${v_i = \bm{v} \dotp \bm{e}_i}$? Если не~скаляры, то~что? Односложно ответить невозможно. В~каждом фиксированном базисе ${\bm{e}_i}$, конечно, векторы, а~${v_i}$~--- скаляры.
+
+\end{otherlanguage}
+
+\en{\section{Operations on tensors}}
+
+\ru{\section{Действия над тензорами}}
+
+\label{para:tensoractions}
+
+\en{There’re four of them.}
+
+\ru{Этих действий четыре.}
+
+\begin{otherlanguage}{russian}
+
+Первое~--- линейная комбинация~--- объединяет в~себе сложение и~умножение на~число. Объекты действия и~результат~--- одинаковой сложности. Комбинирование двух тензоров выглядит так:
+\vspace{-1em}\begin{equation}\label{action:1}
+\lambda a_{ij\ldots} \hspace{-0.2ex} + \hspace{0.2ex} \mu b_{ij\ldots} \hspace{-0.2ex} = \hspace{0.2ex} c_{ij\ldots} \hspace{-0.2ex} \;\Leftrightarrow\; \lambda \bm{a} + \mu \bm{b} = \bm{c}.
+\end{equation}\vspace{-1.4em}
+
+\noindent Здесь $\lambda$ и~$\mu$~--- коэффициенты\hbox{-}скаляры; $\bm{a}$, $\bm{b}$ и~$\bm{c}$~--- тензоры одной и~той~же сложности. Легко показать, что для~компонент~$\bm{c}$ выполняется~\eqref{orthotransform:2}, то есть результат действия это тоже тензор.
+
+\inquotes{Разложение вектора по~базису}~--- представление вектора суммой~${\bm{v} = v_i \bm{e}_i}$~--- это не~что~иное, как линейная комбинация векторов базиса~${\bm{e}_i}$ с~коэффициентами~${v_i}$.
+
+Второе действие это умножение. Сложности сомножителей~--- любые, сложность произведения~--- суммарная. Примеры:
+\begin{equation}\label{action:2}
+\begin{array}{rcl}
+v_i a_{jk} \hspace{-0.16ex} = C_{ijk} & \Leftrightarrow & \bm{v} \, {^2\hspace{-0.2ex}\bm{a}} = {^3\!\!\;\bm{C}},\\[0.1em]
+a_{ij} B_{kem} \hspace{-0.16ex} = D_{ijkem} & \Leftrightarrow & {^2\hspace{-0.2ex}\bm{a}} \, {^3\!\!\,\bm{B}} = {^5\!\!\,\bm{D}}.
+\end{array}\hspace{1.5em}
+\end{equation}
+
+\vspace{-0.1em} Рассмотрев преобразование совокупностей ${C_{ijk}}$ и~${D_{ijkem}}$ при~повороте базиса, видим, что это действительно компоненты тензоров. Простейший пример умножения~--- диадное произведение векторов ${^2\hspace{-0.2em}\bm{A} \hspace{-0.15ex} = \bm{b}\bm{c}}$.
+
+Третье действие называется свёрткой~(contraction). Это действие над одним тензором, других \inquotes{участников} нет. Грубо говоря, свёртка состоит в~суммировании компонент по какой\hbox{-}либо паре индексов. В~результате свёртки сложность тензора уменьшается на~два. Для~тензора, например, третьей сложности~${^3\!\!\,\bm{D}}$ возможны следующие варианты свёртки, приводящие к~векторам~${\bm{a}}$, ${\bm{b}}$ и~${\bm{c}}$:
+\begin{equation}\label{action:3}
+a_{i} = D_{kki},\;\; b_{i} = D_{kik},\;\; c_{i} = D_{ikk} \hspace{0.1ex}.
+\end{equation}
+
+\vspace{-0.16em} При повороте базиса
+\[
+a'_{i} = D'_{kki} = \tikzmark{BeginDeltaPQBrace} {\cosinematrix{k'p} \hspace{.1ex} \cosinematrix{k'q}} \tikzmark{EndDeltaPQBrace} \hspace{.1ex} \cosinematrix{i'r} \hspace{0.16ex} D_{pqr} = \cosinematrix{i'r} \hspace{.16ex} D_{ppr} = \cosinematrix{i'r} \hspace{0.16ex} a_{r},
+\]
+\AddUnderBrace[line width=.75pt][0,-0.2ex]{BeginDeltaPQBrace}{EndDeltaPQBrace}%
+{${\scriptstyle \delta_{pq}}$}
+
+\vspace{-0.25em} \noindent что доказывает тензорный характер результата свёртки.
+
+Для тензора второй сложности возможен лишь один вариант свёртки, приводящий к~скаляру, называемому первым инвариантом или~следом тензора
+\nopagebreak\vspace{-0.16em}\[
+B_{kk} \hspace{-0.2ex} = \mathrm{I}\hspace{0.16ex}(\bm{B}) \equiv \operatorname{tr} \bm{B}.
+\]
+
+\vspace{-0.16em} След единичного тензора (\inquotes{свёртка дельты Кронекера}) есть размерность пространства:
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\operatorname{tr} \bm{E} = \delta_{kk} \hspace{-0.2ex} = \delta_{11} \hspace{-0.2ex} + \delta_{22} \hspace{-0.2ex} + \delta_{33} \hspace{-0.1ex} = 3.
+\end{equation*}
+
+Четвёртое действие именуется по\hbox{-}разному: перестановка индексов, жонглирование индексами, index swap и~др. Из компонент тензора образуется новая совокупность величин с~другой последовательностью индексов, результатом является тензор той~же сложности. Из тензора~${^3\!\!\,\bm{D}}$, например, можно получить тензоры ${^3\!\!\bm{A}}$, ${^3\!\!\,\bm{B}}$, ${^3\!\!\;\bm{C}}$ с~компонентами
+\vspace{0.08em}\begin{equation}\label{action:4}
+\begin{array}{rcl}
+{^3\hspace{-0.25em}\bm{A}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2} & \!\Leftrightarrow\!\! &
+A_{ijk} = D_{jik} \hspace{0.1ex},\\
+{^3\hspace{-0.16em}\bm{B}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3} & \!\Leftrightarrow\!\! & B_{ijk} = D_{kji} \hspace{0.1ex},\\
+{^3\hspace{-0.04em}\bm{C}} = {^3\hspace{-0.16em}\bm{D}}_{2 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3} & \!\Leftrightarrow\!\! & C_{ijk} = D_{ikj} \hspace{0.1ex}.
+\end{array}
+\end{equation}
+
+Для тензора второй сложности возможна лишь одна перестановка, называемая транспонированием: ${B_{ij} = A_{ji} \,\Leftrightarrow\, \bm{B} = \bm{A}^{\hspace{-0.05em}\T}}$\!. Очевидно, ${\left( \bm{A}^{\hspace{-0.05em}\T} \right)^{\hspace{-0.4ex}\T} = \bm{A}}$.
+
+При диадном умножении векторов ${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\!}$.
+
+Представленные четыре действия можно комбинировать в~разных сочетаниях. Чаще всего встречается комбинация умножения и~свёртки~--- dot product; при этом в~инвариантной безындексной записи ставится точка, указывающая на~свёртку по~соответствующим соседним индексам:
+\begin{equation}
+a_i = B_{ij} c_j \,\Leftrightarrow\, \bm{a} = \bm{B} \dotp \bm{c}, \;\;
+A_{ij} = B_{ik} C_{kj} \,\Leftrightarrow\, \bm{A} = \bm{B} \dotp \bm{C}.
+\end{equation}
+
+Определяющее свойство единичного тензора
+\vspace{0.16em}\begin{equation}\label{identifyofidentitytensor}
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = \bm{E} \dotp {^\mathrm{n}\hspace{-0.2ex}\bm{a}} = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\:\:
+\forall \, {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\; \forall \,\mathrm{n \!>\! 0}\,.
+\end{equation}
+
+В~коммутативном скалярном произведении двух векторов точка имеет тот~же смысл:
+\begin{equation}
+\bm{a} \dotp \bm{b} = a_i b_i \hspace{-0.1ex} = b_i a_i \hspace{-0.1ex} = \bm{b} \dotp \bm{a} = \hspace{0.1ex} \operatorname{tr} \bm{a}\bm{b} = \operatorname{tr} \bm{b}\bm{a} \hspace{0.1ex}.
+\end{equation}
+
+Для dot product’а тензоров второй сложности справедливо следующее
+\vspace{-0.5em}\begin{equation}\label{transposeofdotproduct}
+\begin{array}{c}
+\bm{B} \dotp \bm{Q} \hspace{0.1ex} = \left({ \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} }\right)^{\hspace{-0.2ex}\T} \\[0.1em]
+\left({ \bm{B} \dotp \bm{Q}}\right)^{\T} =\hspace{0.2ex} \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
+\end{array}
+\end{equation}
+
+\vspace{-0.36em} \noindent (\,например, для~диад ${\bm{B} = \bm{b}\bm{d}}$ и~${\bm{Q} = \bm{p}\bm{q}}$
+\vspace{0.1em}\[\begin{array}{rcl}
+\left(\hspace{0.1ex} \bm{b}\bm{d} \dotp \bm{p}\bm{q} \hspace{0.1ex}\right)^{\T} & \!=\!\! & \hspace{0.2ex} \bm{p}\bm{q}^{\T} \dotp\hspace{0.4ex} \bm{b}\bm{d}^{\hspace{0.25ex}\T} \\[0.2em]
+d_i p_i \hspace{0.32ex} \bm{b}\bm{q}^{\T} & \!=\!\! & \hspace{0.2ex} \bm{q}\bm{p} \dotp \bm{d} \bm{b} \\[0.1em]
+d_i p_i \hspace{0.32ex} \bm{q}\bm{b} & \!=\!\! & p_i d_i \hspace{0.32ex} \bm{q}\bm{b} \;\; ).
+\end{array}\]
+
+Для вектора и~тензора второй сложности
+\begin{equation}\label{vectortensordotproduct}
+\bm{c} \dotp \bm{B} = \bm{B}^{\T} \hspace{-0.4ex}\dotp \bm{c} , \;\;
+\bm{B} \dotp \bm{c} = \bm{c} \hspace{0.2ex}\dotp \bm{B}^{\T} \hspace{-0.25ex}.
+\end{equation}
+
+\inquotes{Квадрат} тензора второй сложности определяется как
+\begin{equation}\label{exponentiation:two}
+\bm{B}^2 \equiv\hspace{0.2ex} \bm{B} \dotp \bm{B}.
+\end{equation}
+
+Свёртка может повторяться: ${\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} \equiv A_{ij} B_{ji}}$, и~вот немного полезных равенств для~тензоров второй сложности
+\begin{equation}
+\begin{array}{cr}
+\bm{A} \dotdotp \hspace{-0.1ex} \bm{E} = \bm{E} \dotdotp \hspace{-0.1ex} \bm{A} = \operatorname{tr} \bm{A} = A_{jj} \hspace{0.1ex},\\[0.7ex]
+%
+\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} = \bm{B} \dotdotp \hspace{-0.1ex} \bm{A} \hspace{0.1ex}, \:\,
+\bm{A} \dotdotp \bm{B}^{\T} \hspace{-0.2ex} = \bm{A}^{\hspace{-0.16ex}\T} \hspace{-0.2ex} \dotdotp \bm{B} ,
+\\[0.7ex]
+%
+\bm{A} \narrowdotdotp \bm{B} \narrowdotp \bm{C} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \hspace{0.1ex} \bm{C} = \bm{C} \narrowdotdotp \hspace{-0.1ex} \bm{A} \narrowdotp \bm{B} = A_{ij} B_{jk} C_{ki} \hspace{0.1ex},\\[0.6ex]
+%
+\bm{A} \hspace{-0.1ex}\narrowdotdotp \bm{B} \narrowdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} \narrowdotdotp \bm{D} = \\
+\hspace{11.5em} = \bm{D} \narrowdotdotp \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} = A_{ij} B_{jk} C_{kn} D_{ni} \hspace{0.1ex}.
+\end{array}
+\end{equation}
+
+\end{otherlanguage}
+
+\en{\section{Polyadic representation}}
+\ru{\section{Полиадное представление}}
+\label{para:polyadicrepresentation}
+
+\begin{otherlanguage}{russian}
+
+Мы ввели тензоры как некие инвариантные объекты, проявляющиеся в~каждом базисе в~виде совокупности чисел. Такое изложение характерно для большинства руководств по~тензорному исчислению. Индексная запись конструктивна и~проста, если нам достаточно декартовых координат. Но~для~механики упругих тел этого мало, она требует более изящного, мощного и~совершенного аппарата прямого тензорного исчисления, оперирующего лишь с~инвариантными безындексными объектами.
+
+Соотношение ${\bm{v} = v_i \bm{e}_i}$ из~\eqref{vectorcomponents} связывает вектор ${\bm{v}}$ с~базисом~${\bm{e}_i}$ и~компонентами ${v_i}$ вектора в~этом базисе. Вскоре мы установим аналогичное соотношение для~тензора любой сложности.
+
+Рассмотрим тензор ${^2\!\bm{B}}$. В~каждом базисе имеем девять чисел~${B_{ij}}$ и~столько~же диад~${\bm{e}_i \bm{e}_j}$. Линейным комбинированием возможно образовать сумму~${B_{ij} \bm{e}_i \bm{e}_j}$. Это тензор, но каковы его компоненты и~сохранится~ли подобное его представление при повороте базиса?
+
+Компоненты построенной суммы
+\[
+\left( B_{ij} \bm{e}_i \bm{e}_j \right)_{pq} \hspace{-0.2ex} = B_{ij} \delta_{ip} \delta_{jq} \hspace{-0.1ex} = B_{pq}
+\]
+
+\vspace{-0.1em} \noindent это компоненты тензора ${^2\!\bm{B}}$. При повороте же базиса
+\[
+B'_{ij} \bm{e}'_{i} \bm{e}'_{j} \hspace{-0.1ex} = \cosinematrix{i'p} \cosinematrix{j'q} B_{pq} \cosinematrix{i'n} \bm{e}_n \cosinematrix{j'm} \bm{e}_m \hspace{-0.2ex} = \delta_{pn} \delta_{qm} B_{pq} \bm{e}_n \bm{e}_m \hspace{-0.2ex} = B_{pq} \bm{e}_p \bm{e}_q.
+\]
+
+Сомнения отпали~--- приходим к диадному представлению тензора второй сложности
+\begin{equation}\label{polyada:2}
+^2\!\bm{B} = B_{ij} \bm{e}_i \bm{e}_j .
+\end{equation}
+
+\vspace{-0.2em} Для единичного тензора
+\[ \bm{E} = E_{ij} \bm{e}_i \bm{e}_j = \delta_{ij} \bm{e}_i \bm{e}_j = \bm{e}_i \bm{e}_i = \bm{e}_1 \bm{e}_1 + \bm{e}_2 \bm{e}_2 + \bm{e}_3 \bm{e}_3. \]
+
+Полиадные представления типа \eqref{polyada:2} позволяют проще и~с~б\'{о}льшим пониманием оперировать с~тензорами:
+\[ \bm{v} \dotp {^2\!\bm{B}} = v_i\bm{e}_i \dotp B_{jk}\bm{e}_j\bm{e}_k = v_i B_{jk} \delta_{ij} \bm{e}_k = v_i B_{ik} \bm{e}_k, \]\vspace{-1.25em}
+\begin{equation}\label{tensorcomponents}
+\bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_j = \bm{e}_i \dotp B_{pq}\bm{e}_p\bm{e}_q \dotp \bm{e}_j = B_{pq} \delta_{ip} \delta_{qj} = B_{ij} = {^2\!\bm{B}} \dotdotp \bm{e}_j \bm{e}_i.
+\end{equation}
+
+Последняя строчка весьма важна: выражение компонент тензора второй сложности представлено через сам тензор. Закон~\eqref{orthotransform:2} ортогонального преобразования компонент при~повороте базиса оказывается очевидным следствием~\eqref{tensorcomponents}.
+
+Аналогичным образом можно разложить тензор любой сложности по соответствующим базисным полиадам. Например, для тензора третьей сложности
+\vspace{0.2em}\begin{equation}\label{polyada:3}
+\begin{array}{c}
+{^3\!\,\bm{C}} = C_{ijk} \hspace{0.2ex} \bm{e}_i \bm{e}_j \bm{e}_k \hspace{0.1ex},\\[0.8ex]
+C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp {^3\!\,\bm{C}} \dotdotp \bm{e}_k \bm{e}_j = \bm{e}_j \bm{e}_i \dotdotp {^3\!\,\bm{C}} \dotp \bm{e}_k \hspace{0.1ex}.
+\end{array}
+\end{equation}
+
+Используя разложение по~полиадам, легко увидеть справедливость свойства~\eqref{identifyofidentitytensor} \inquotes{единичности} тензора~$\bm{E}$:
+\vspace{0.1em}\[\begin{array}{c}
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q , \;\,  \bm{E} = \bm{e}_e \bm{e}_e \\[0.4em]
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \tikzmark{BeginDeltaEQBrace} {\bm{e}_q \dotp \bm{e}_e} \tikzmark{EndDeltaEQBrace} \bm{e}_e = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \hspace{0.1ex}, \\[1em]
+\bm{E} \dotp {^\mathrm{n}\hspace{-0.2ex}\bm{a}} = \bm{e}_e \bm{e}_e \dotp a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = a_{ij \ldots q} \hspace{0.2ex} \delta_{ei} \hspace{0.2ex} \bm{e}_e \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}}.
+\end{array}\]
+\AddUnderBrace[line width=.75pt]{BeginDeltaEQBrace}{EndDeltaEQBrace}%
+{${\scriptstyle \delta_{eq}}$}
+
+\vspace{-0.5em} Полиадное представление соединяет вместе прямую и~индексную записи. Не~ст\'{о}ит пр\'{о}тиво\-постав\-л\'{я}ть их. Прямая запись компактна, изящна, и~лишь она должна быть в~фундаментальных соотношениях. Но~и~индексная запись полезна: при громоздких выкладках с~тензорами мы не~встретим трудностей.
+
+\end{otherlanguage}
+
+\en{\section{Cross product and Levi\hbox{-}Civita tensor}}
+
+\ru{\section{Векторное произведение и тензор Л\'{е}ви\hbox{-\!}Чив\'{и}ты}}
+
+\label{para:crossproduct+levicivita}
+
+\begin{otherlanguage}{russian}
+
+Сохраним обычные представления о~векторном произведении двух векторов. Оно направлено перпендикулярно плоскости сомножителей, а~длина его равна площади образуемого сомножителями параллелограмма
+\vspace{-0.32em}\[
+\left|\, \bm{a} \times \bm{b} \,\right| = |\bm{a}| \hspace{0.1em} |\bm{b}| \hspace{0.1em} \operatorname{sin} \measuredangle (\bm{a}, \bm{b}) \hspace{0.1ex}.
+\]\vspace{-1.6em}
+
+\begin{wrapfigure}[8]{R}{0.32\textwidth}
+\makebox[0.36\textwidth][c]{\hspace{0.5em}\begin{minipage}[t]{0.36\textwidth}
+\vspace{-1.33em}
+\hspace{1.25em}\scalebox{0.9}[0.9]{\begin{tikzpicture}[scale=0.8]
+	\draw [line width=2pt, black, -{Latex[length=5mm, width=2mm]}]
+		(0,0) -- (2.4,-0.8)
+		node[above=1.2mm, xshift=-2mm] {$\bm{a}$};
+	\draw [line width=2pt, black, -{Latex[length=5mm, width=2mm]}]
+		(0,0) -- (1.6,0.8)
+		node[midway, above=0.8mm] {$\bm{b}$};
+	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
+		(0,0) -- (0,-2.2)
+		node[pos=0.75, right, xshift=0.3mm] {$\bm{c}$};
+ 	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
+ 		(0,0) -- (0,2.2)
+		node[pos=0.8, right, xshift=0.3mm] {$\bm{c}$};
+	\draw [line width=0.4pt, black!50] (2.4, -0.8) -- (4, 0);
+	\draw [line width=0.4pt, black!50] (1.6, 0.8) -- (4, 0);
+\end{tikzpicture}}
+\vspace{-1.6em}\caption{}\label{fig:crossproduct}
+\end{minipage}}
+\end{wrapfigure}
+
+\vspace{0.42em} Cross product~(векторное произведение) ${\bm{c} = \bm{a} \times \bm{b}}$ считается псевдовектором, поскольку тройка векторов ${\bm{a}}$, ${\bm{b}}$ и~${\bm{c}}$ может быть либо \inquotes{правой}, либо \inquotes{левой}~(\figref{fig:crossproduct}). %%Примем первое (правило \inquotes{правого винта}).
+
+Различие векторов и~псевдовекторов ограничивает вид формул: векторы с~псевдовекторами не~складываются. Формула кинематики твёрдого тела ${\bm{v} = \bm{v}_{\raisemath{-0.4ex}{0}} +\hspace{0.2ex} \bm{\omega} \hspace{-0.2ex}\times\hspace{-0.2ex} \bm{r}}$ корректна, поскольку во~втором слагаемом \inaltquotes{два \inquotes{псевдо} взаимно компенсируются}.
+
+Однако векторное произведение можно не~считать самостоятельным действием. Оно сводится к~четырём ранее описанным и~обобщается на~тензоры любой сложности. Покажем это.
+
+Сначала введём символы \hbox{O.\hspace{0.1ex}Veblen’а}~${e_{ijk}}$: ${e_{123} \hspace{-0.15ex}= e_{231} \hspace{-0.15ex}= e_{312} \hspace{-0.15ex}= 1}$, ${e_{213} \hspace{-0.15ex}= e_{321} \hspace{-0.15ex}= e_{132} \hspace{-0.15ex}= -1}$, остальные нули. Символы~${e_{ijk}}$~(${\pm 1}$ или~$0$) не~меняются при круговой перестановке индексов, меняют знак при~перестановке любых двух индексов и~обращаются в~нуль при~совпадении какой\hbox{-}либо пары.
+
+Через символы Веблена определитель~(детерминант) матрицы~${A_{ij}}$ выражается так:
+\[ \operatorname{det} A_{ij} = e_{ijk} A_{1i} A_{2j} A_{3k} = e_{ijk} A_{i1} A_{j2} A_{k3} \hspace{0.1ex} . \]
+
+Далее познакомимся с~абсолютно антисимметричным тензором третьей сложности~--- тензором Levi\hbox{-}Civita\hspace{-0.1ex}’ы
+\vspace{0.1em}\begin{equation}\label{levicivitaintro}
+\levicivitatensor = \levicivita_{ijk} \bm{e}_i \bm{e}_j \bm{e}_k \hspace{0.1ex}, \:\:
+\levicivita_{ijk} \equiv \bm{e}_i \!\times\! \bm{e}_j \dotp \bm{e}_k \hspace{0.1ex}.
+\end{equation}
+
+Абсолютная величина каждой ненулевой компоненты ${\levicivita_{ijk}}$ тензора Леви\hbox{-\!}Чивиты
+равна объёму~\!${\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}}$ параллелепипеда, натянутого на~базис~--- \inquotes{тройному} или~\inquotes{смешанному}~(\inquotes{векторно\hbox{-}скалярному}) произведению базисных векторов.
+
+Тензор~$\levicivitatensor$ антисимметричен по~любой паре индексов, то~есть он полностью антисимметричен~(абсолютно кососимметричен). Это изотропный тензор, ведь его компоненты при~повороте базиса не~меняются.
+Но при~изменении ориентации тройки векторов базиса~(перемене \inquotes{направления винта})
+тензор Леви\hbox{-\!}Чивиты меняет знак и~поэтому является псевдотензором.
+
+Тензор Л\'{е}ви\hbox{-\!}Чив\'{и}ты~$\levicivitatensor$ даёт возможность по\hbox{-}новому взглянуть на~векторное произведение
+\[
+\levicivita_{ijk} = \bm{e}_i \times \bm{e}_j \dotp \bm{e}_k \:\Leftrightarrow\: \bm{e}_i \times \bm{e}_j %%= \levicivita_{pqk} \, \delta_{ip} \, \delta_{jq} \, \bm{e}_k
+= \levicivita_{ijk} \hspace{0.2ex} \bm{e}_k,
+\]\vspace{-1em}
+\begin{equation}
+\bm{a} \times \bm{b} \hspace{0.2ex} = \hspace{0.2ex} a_i \bm{e}_i \times b_j \bm{e}_j \hspace{0.1ex} = \hspace{0.1ex} \levicivita_{ijk} \hspace{0.2ex} a_i \hspace{0.1ex} b_j \hspace{0.1ex} \bm{e}_k \hspace{0.1ex} =\hspace{0.2ex} \bm{b}\bm{a} \hspace{0.1ex} \dotdotp \levicivitatensor.
+\end{equation}
+\noindent Здесь видим лишь dot product~--- комбинацию умножения и~свёртки~--- с~участием тензора~$\levicivitatensor$.
+
+Такие комбинации возможны с~любыми тензорами:
+\vspace{0.4em}\[\begin{array}{c}
+\bm{a} \hspace{0.1ex} \times {^2\hspace{-0.16em}\bm{B}} = a_i \bm{e}_i \times B_{jk} \bm{e}_j \bm{e}_k \hspace{-0.1ex} = \tikzmark{BeginVectorCrossTensor} a_i B_{jk} \hspace{0.1ex} \levicivita_{ijn} \tikzmark{EndVectorCrossTensor} \bm{e}_n \bm{e}_k = - \hspace{.2ex} \levicivitatensor \dotdotp {\bm{a}\hspace{0.12ex}{^2\!\bm{B}}},\\[1.6em]
+%
+{^2\hspace{-0.05ex}\bm{C}} \times \hspace{-0.1ex} \bm{d} \bm{b} = C_{ij} \bm{e}_i \bm{e}_j \hspace{-0.1ex} \times d_p b_q \bm{e}_p \bm{e}_q \hspace{-0.1ex} = \bm{e}_i C_{ij} d_p \tikzmark{BeginTensorCrossTensor} \levicivita_{jpk} \tikzmark{EndTensorCrossTensor} \bm{e}_k b_q \bm{e}_q = \\[1.6em]
+\hspace{12.5em} =
+- \hspace{.2ex} {^2\hspace{-0.05ex}\bm{C}} \hspace{-0.1ex} \bm{d} \hspace{0.12ex} \dotdotp \levicivitatensor \bm{b} \hspace{0.2ex} =
+- \hspace{.2ex} {^2\hspace{-0.05ex}\bm{C}} \dotp \levicivitatensor \dotp \bm{d} \bm{b},\\
+\end{array}\]
+%
+\AddUnderBrace[line width=.75pt][0,-0.2ex]%
+{BeginVectorCrossTensor}{EndVectorCrossTensor}{${\scriptstyle - \levicivita_{nji} \hspace{0.2ex} a_i B_{jk}}$}%
+\AddUnderBrace[line width=.75pt][.2ex,-0.2ex]%
+{BeginTensorCrossTensor}{EndTensorCrossTensor}{${\scriptstyle \;- \levicivita_{pjk} \:=\: - \levicivita_{jkp}}$}%
+%
+\vspace{-0.32em}\begin{equation}\label{iso:twothree}
+\bm{E} \times \hspace{-0.16ex} \bm{E} = \bm{e}_i \bm{e}_i \times \bm{e}_j \bm{e}_j = \hspace{-0.4ex} \tikzmark{BeginECrossE} - \hspace{-0.2ex} \levicivita_{ijk} \bm{e}_i \bm{e}_j \bm{e}_k \tikzmark{EndECrossE} = - \hspace{.2ex} \levicivitatensor \hspace{0.1ex}.
+\end{equation}
+%
+\AddUnderBrace[line width=.75pt][.2ex,-0.2ex]%
+{BeginECrossE}{EndECrossE}{${\scriptstyle \;\;+\levicivita_{ijk} \bm{e}_i \bm{e}_k \bm{e}_j}$}
+
+\vspace{-0.5em} \noindent Последнее равенство представляет собой связь изотропных тензоров второй и~третьей сложности.
+
+Из~\eqref{iso:twothree} и~\eqref{identifyofidentitytensor} ${\forall \, {^\mathrm{n}\hspace{-0.12ex}\bm{\Upsilon}}}$ ${\forall \,\mathrm{n \!>\! 0}}$
+\vspace{0.2em}\begin{equation}\begin{array}{c}
+\bm{E} \hspace{0.1ex} \times \hspace{-0.1ex} {^\mathrm{n}\hspace{-0.12ex}\bm{\Upsilon}} = \bm{E} \hspace{0.1ex} \times \bm{E} \hspace{0.2ex} \dotp {^\mathrm{n}\hspace{-0.12ex}\bm{\Upsilon}} = - \hspace{0.2ex} \levicivitatensor \hspace{0.1ex} \dotp {^\mathrm{n}\hspace{-0.12ex}\bm{\Upsilon}} \hspace{-0.1ex},\\[0.2em]
+{^\mathrm{n}\hspace{-0.12ex}\bm{\Upsilon}} \times \bm{E} = {^\mathrm{n}\hspace{-0.12ex}\bm{\Upsilon}} \dotp \hspace{.05ex} \bm{E} \hspace{0.1ex} \times \bm{E} = - \hspace{0.2ex} {^\mathrm{n}\hspace{-0.12ex}\bm{\Upsilon}} \dotp \levicivitatensor \hspace{0.1ex}.
+\end{array}\end{equation}
+
+А~для~любого тензора первой сложности~(вектора) к~тому~же
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\bm{E} \times \bm{a} = \bm{a} \times \hspace{-0.1ex} \bm{E} = - \hspace{.25ex} \bm{a} \dotp \hspace{-0.1ex} \levicivitatensor = - \hspace{.2ex} \levicivitatensor \dotp \bm{a} \hspace{.1ex}.
+\end{equation}
+
+Для двух векторов
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{crossproductoftwovectors}
+\begin{array}{c}
+\bm{a} \times \bm{b} = \bm{a} \dotp \hspace{-0.1ex} \left( \bm{b} \hspace{-0.1ex} \times \hspace{-0.25ex} \bm{E} \right) = \left( \bm{a} \hspace{-0.1ex} \times \hspace{-0.25ex} \bm{E} \right) \hspace{-0.1ex} \dotp \bm{b} = - \hspace{.25ex} \bm{a} \bm{b} \dotdotp \levicivitatensor = - \hspace{.2ex} \levicivitatensor \dotdotp \bm{a} \bm{b} \hspace{.1ex}, \\[.05em]
+%
+\bm{b} \times \bm{a} = \bm{b} \dotp \hspace{-0.1ex} \left( \bm{a} \hspace{-0.1ex} \times \hspace{-0.25ex} \bm{E} \right) = \left( \bm{b} \hspace{-0.1ex} \times \hspace{-0.25ex} \bm{E} \right)  \hspace{-0.1ex} \dotp \bm{a} = - \hspace{.25ex} \bm{b} \bm{a} \dotdotp \levicivitatensor = - \hspace{.2ex} \levicivitatensor \dotdotp \bm{b} \bm{a} \hspace{.1ex}, \\[.1em]
+%
+\bm{a} \times \bm{b} \hspace{.16ex} = - \hspace{.25ex} \bm{b} \times \bm{a} \hspace{.2ex}.
+\end{array}
+\end{equation}
+
+Когда базис~${\bm{e}_i}$ это \inquotes{правая} тройка взаимно ортогональных векторов единичной длины, тогда~${\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} = \hspace{-0.1ex} 1}$, и~компоненты~$\levicivitatensor$ равны символам Веблена: ${\levicivita_{ijk} \hspace{-0.2ex} = e_{ijk}}$. Если~же тройка~${\bm{e}_i}$ \inquotesx{левая}[,] то~${\levicivita_{ijk} \hspace{-0.2ex} = \hspace{-0.1ex} - \hspace{0.1ex} e_{ijk}}$.
+
+Справедливо такое соотношение
+\nopagebreak\vspace{.1em}
+\begin{equation}\label{doubleveblen}
+e_{ijk} e_{pqr} \hspace{-0.1ex} = \hspace{.2ex}
+\operatorname{det}\hspace{-0.25ex} \left[\begin{array}{ccc}
+\delta_{ip} & \delta_{iq} & \delta_{ir} \\
+\delta_{jp} & \delta_{jq} & \delta_{jr} \\
+\delta_{kp} & \delta_{kq} & \delta_{kr}
+\end{array}\right]
+\end{equation}
+
+\noindent Доказательство начнём с~представлений символов Веблена как определителей:
+\vspace{-0.5em}\[
+e_{ijk} \hspace{-0.1ex} = \hspace{.2ex}
+\operatorname{det}\hspace{-0.25ex} \scalebox{0.96}[0.96]{$\left[\begin{array}{ccc}
+\delta_{i1} & \delta_{i2} & \delta_{i3} \\
+\delta_{j1} & \delta_{j2} & \delta_{j3} \\
+\delta_{k1} & \delta_{k2} & \delta_{k3}
+\end{array}\right]$} \hspace{-0.25ex}, \:\:
+e_{pqr} \hspace{-0.1ex} = \hspace{.2ex}
+\operatorname{det}\hspace{-0.25ex} \scalebox{0.96}[0.96]{$\left[\begin{array}{ccc}
+\delta_{p1} & \delta_{q1} & \delta_{r1} \\
+\delta_{p2} & \delta_{q2} & \delta_{r2} \\
+\delta_{p3} & \delta_{q3} & \delta_{r3}
+\end{array}\right]$} \hspace{-0.25ex}.
+\]
+
+\vspace{-0.16em} \noindent В~левой части~\eqref{doubleveblen} имеем произведение этих определителей. Но~${\operatorname{det} (AB) = (\operatorname{det} A)(\operatorname{det} B)}$~--- определитель произведения матриц равен произведению определителей. В~матрице\hbox{-}произведении элемент~${\left[{\,\cdots\,}\right]}_{11}$ равен~${\delta_{is} \delta_{ps} \hspace{-0.2ex} = \delta_{ip}}$, как~и~в~\eqref{doubleveblen}; легко проверить и~другие фрагменты~\eqref{doubleveblen}.
+
+Свёртка~\eqref{doubleveblen} приводит к~полезным формулам
+\begin{equation}\label{veblencontraction}
+e_{ijk} e_{pqk} \hspace{-0.16ex} = \delta_{ip} \delta_{jq} \hspace{-0.2ex} - \delta_{iq} \delta_{jp} \hspace{.2ex}, \:\,
+e_{ijk} e_{pjk} \hspace{-0.16ex} = 2 \hspace{.16ex} \delta_{ip} \hspace{.2ex}, \:\,
+e_{ijk} e_{ijk} \hspace{-0.16ex} = 6 \hspace{.2ex}.
+\end{equation}
+
+Первая из~формул даёт знакомое представление двойного векторного произведения
+\[\begin{array}{c}
+\bm{a} \times \left(\hspace{0.2ex}{\bm{b} \times \bm{c}}\hspace{0.2ex}\right) = a_i \bm{e}_i \times \levicivita_{pqj} \hspace{.2ex} b_p c_q \bm{e}_j  = \levicivita_{kij} \levicivita_{pqj} \hspace{.2ex} a_i b_p c_q \bm{e}_k = \\[0.2em]
+= \left({\delta_{kp}\delta_{iq} - \delta_{kq}\delta_{ip}}\right) a_i b_p c_q \bm{e}_k = a_i b_k c_i \bm{e}_k \hspace{-0.12ex} - a_i b_i c_k \bm{e}_k \hspace{-0.16ex} = \bm{b}\bm{a} \dotp \bm{c} - \bm{c}\bm{a} \dotp \bm{b} \hspace{.16ex}.
+\end{array}\]\vspace{-0.6em}
+
+\noindent Тем~же путём выводится ${\left(\hspace{0.1ex} \bm{a} \times \bm{b} \hspace{0.2ex}\right) \hspace{-0.1ex} \times \bm{c} = \bm{b}\bm{a} \dotp \bm{c} - \bm{a}\bm{b} \dotp \bm{c}}$\hspace{.16ex}.
+
+И~такие тождества для~любых двух векторов~$\bm{a}$ и~$\bm{b}$
+\nopagebreak\vspace{-0.2em}
+\begin{multline}\label{vectorcrossvectorcrossidentity}
+\left(\hspace{0.1ex} \bm{a} \times \bm{b} \hspace{0.2ex}\right) \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{E}
+= \levicivita_{ijk} \hspace{0.2ex} a_i \hspace{0.1ex} b_j \hspace{0.1ex} \bm{e}_k \hspace{-0.16ex} \times \hspace{-0.1ex} \bm{e}_n \bm{e}_n \hspace{-0.2ex}
+= a_i \hspace{0.1ex} b_j \hspace{.1ex} \levicivita_{ijk} \levicivita_{knq} \hspace{.2ex} \bm{e}_q \bm{e}_n \hspace{-0.2ex} = \\[-0.1em]
+%
+= a_i b_j \hspace{-0.2ex} \left( \delta_{in} \delta_{jq} \hspace{-0.2ex} - \delta_{iq} \delta_{jn} \right) \hspace{-0.2ex} \bm{e}_q \bm{e}_n \hspace{-0.2ex}
+= a_i b_j \bm{e}_j \bm{e}_i \hspace{-0.12ex} - a_i b_j \bm{e}_i \bm{e}_j \hspace{-0.16ex}
+= \bm{b} \bm{a} - \bm{a} \bm{b} \hspace{0.2ex},
+\end{multline}
+
+\vspace{-0.45em}\begin{multline}\label{vectorcrossidentitydotvectorcrossidentity}
+\left(\hspace{0.1ex} \bm{a} \times\hspace{-0.1ex} \bm{E} \hspace{0.16ex}\right) \dotp \left(\hspace{0.12ex} \bm{b} \times\hspace{-0.1ex} \bm{E} \hspace{0.16ex}\right) =
+\left(\hspace{0.1ex} \bm{a} \hspace{0.2ex} \dotp \levicivitatensor \hspace{0.16ex}\right) \hspace{-0.12ex}\dotp \left(\hspace{0.1ex} \bm{b} \hspace{0.2ex} \dotp \levicivitatensor \hspace{0.16ex}\right) = \\[-0.2em]
+%
+= a_i \levicivita_{ipn} \hspace{0.1ex} \bm{e}_p \bm{e}_n \dotp \hspace{0.2ex} b_j \levicivita_{jsk} \hspace{0.1ex} \bm{e}_s \bm{e}_k
+= a_i b_j \levicivita_{ipn} \levicivita_{nkj} \hspace{0.05ex} \bm{e}_p \bm{e}_k = \\[-0.08em]
+%
+= a_i b_j \hspace{-0.2ex} \left( \delta_{ik} \delta_{pj} \hspace{-0.2ex} - \delta_{ij} \delta_{pk} \right) \hspace{-0.2ex} \bm{e}_p \bm{e}_k
+= a_i b_j \bm{e}_j \bm{e}_i \hspace{-0.12ex} - a_i b_i \bm{e}_k \bm{e}_k \hspace{-0.16ex} = \\[-0.18em]
+%
+= \hspace{0.1ex} \bm{b} \bm{a} - \bm{a} \hspace{-0.1ex} \dotp \bm{b} \hspace{0.2ex} \bm{E} \hspace{0.1ex}.
+\end{multline}
+
+\vspace{-0.2em} Ещё одно соотношение между изотропными тензорами второй и~третьей сложности:
+\begin{equation}
+\hspace{4.4em} \levicivitatensor \hspace{0.2ex} \dotdotp \levicivitatensor = \levicivita_{ijk} \bm{e}_i \hspace{0.2ex} \levicivita_{kjn} \bm{e}_n = - 2 \hspace{.2ex} \delta_{in} \hspace{.12ex} \bm{e}_i \bm{e}_n = - 2 \hspace{0.1ex} \bm{E} \hspace{0.1ex}.
+\end{equation}
+
+\end{otherlanguage}
+
+\en{\section{Symmetric and antisymmetric tensors}}
+
+\ru{\section{Симметричные и антисимметричные тензоры}}
+
+\begin{otherlanguage}{russian}
+
+Тензор, не~меняющийся при перестановке какой\hbox{-}либо пары своих индексов, называется симметричным по~этой~паре индексов. Если~же при~перестановке пары индексов тензор меняет свой знак, то он называется антисимметричным по~этой~паре индексов.
+
+Тензор второй сложности ${\bm{B}}$ симметричен, если ${\bm{B} = \bm{B}^\T}$. Когда транспонирование меняет знак тензора, то~есть ${\bm{A}^{\hspace{-0.1em}\T} = - \bm{A}}$, тогда он антисимметричен (кососимметричен).
+
+Любой тензор второй сложности представ\'{и}м суммой симметричной и~антисимметричной частей
+\vspace{0.2em}\begin{equation}\begin{array}{c}
+\bm{C} = \bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.1ex}+\hspace{0.1ex} \bm{C}^{\mathsf{\hspace{0.1ex}A}}\hspace{0.1ex} , \;
+\bm{C}^{\hspace{0.1ex}\T} \hspace{-0.32ex} = \bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.1ex}-\hspace{0.1ex} \bm{C}^{\mathsf{\hspace{0.1ex}A}}\hspace{0.2ex} ; \\[0.2em]
+\bm{C}^{\mathsf{\hspace{0.1ex}S}} \equiv \displaystyle \onehalf \left({\bm{C} + \bm{C}^{\hspace{0.1ex}\T}}\hspace{0.1ex}\right)\!, \;
+\bm{C}^{\mathsf{\hspace{0.1ex}A}} \equiv \displaystyle \onehalf \left({\bm{C} - \bm{C}^{\hspace{0.1ex}\T}}\hspace{0.1ex}\right)\!.
+\end{array}\end{equation}
+
+\noindent Для диады ${\bm{c}\bm{d} \hspace{.1ex} = \bm{c}\bm{d}^{\mathsf{\hspace{.25ex}S}} \hspace{-0.2ex} + \hspace{.1ex} \bm{c}\bm{d}^{\mathsf{\hspace{.25ex}A}} \hspace{-0.16ex} = \hspace{.1ex}
+\smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c}\bm{d} + \hspace{-0.1ex} \bm{d}\bm{c} \hspace{0.1ex} \right)
++ \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c} \bm{d} - \hspace{-0.1ex} \bm{d} \bm{c} \hspace{.1ex} \right)}$.
+
+Произведение двух симметричных тензоров~${\bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{0.1ex}S}}}$ симметрично далеко не~всегда, но~только когда ${\bm{D}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.1ex}\dotp\hspace{0.12ex} \bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.2ex}=\hspace{0.1ex} \bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{0.1ex}S}}\hspace{-0.4ex}}$,
+ведь по~\eqref{transposeofdotproduct} ${\left(\hspace{0.08ex} \bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{0.1ex}S}} \hspace{0.1ex}\right)^{\hspace{-0.32ex}\T} \hspace{-0.16ex} = \hspace{0.1ex} \bm{D}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.1ex}\dotp\hspace{0.12ex} \bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.4ex}}$.
+
+В~нечётномерных пространствах любой антисимметричный тензор второй сложности необрат\'{и}м, его определитель~${\operatorname{det} \bm{A} = 0}$.
+
+Существует взаимно\hbox{-}однозначное соответствие между антисимметричными тензорами второй сложности и~(псевдо)векторами. Матрица компонент кососимметричного тензора определяется тройкой чисел (диагональные компоненты~--- нули, а~недиагональные~--- попарно противоположны). Dot product кососимметричного~${\hspace{-0.2ex}\bm{A}}$ и~какого\hbox{-}либо тензора~${\hspace{-0.2ex}{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}}$ однозначно соответствует cross product’у псевдовектора~$\bm{a}$ и~того~же тензора~${\hspace{-0.2ex}{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}}$
+\nopagebreak\vspace{.2em}\begin{equation}
+\hspace{3.2em} \bm{c} \:= \bm{A} \hspace{0.2ex}\dotp\hspace{0.1ex} {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \;\,\Leftrightarrow\; \bm{a} \hspace{0.2ex}\times {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \:=\, \bm{c} \hspace{0.1ex} \;\:\:
+\forall \bm{A} \!=\! \bm{A}^{\mathsf{\!\,A}} \;\; \forall \, {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \;\; \forall \,\mathrm{n \!>\! 0} \hspace{0.16ex}.
+\end{equation}
+
+Раскроем это соответствие~${\bm{A} \!=\! \bm{A}(\bm{a})}$:
+\nopagebreak\[\begin{array}{r@{\hspace{1ex}}c@{\hspace{1ex}}l}
+\bm{A} \hspace{0.2ex}\dotp\hspace{0.1ex} {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} & = & \bm{a} \hspace{0.2ex}\times {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \\
+%
+A_{hi} \bm{e}_h \bm{e}_i \hspace{0.1ex}\dotp\hspace{0.25ex} \xi_{jk \ldots q} \hspace{0.2ex} \bm{e}_j \bm{e}_k \ldots \bm{e}_q & = & a_{i} \bm{e}_i \times\hspace{0.2ex} \xi_{jk \ldots q} \hspace{0.2ex} \bm{e}_j \bm{e}_k \ldots \bm{e}_q \\[0.1em]
+%
+A_{hj} \hspace{0.2ex} \xi_{jk \ldots q} \hspace{0.2ex} \bm{e}_h \bm{e}_k \ldots \bm{e}_q & = & a_{i} \levicivita_{ijh} \hspace{0.2ex} \xi_{jk \ldots q} \hspace{0.2ex} \bm{e}_h \bm{e}_k \ldots \bm{e}_q \\[0.1em]
+%
+%%A_{hj} & = & a_{i} \levicivita_{ijh} \\[0.1em]
+A_{hj} & = & \! - \, a_{i} \levicivita_{ihj} \\[0.2em]
+\bm{A} & = & \! - \, \bm{a} \dotp \levicivitatensor
+\end{array}\]
+
+Так~же из ${{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{0.2ex}\dotp\hspace{0.1ex} \bm{A} = {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{0.2ex}\times \bm{a}}$ получается ${\bm{A} = - \hspace{0.2ex} \levicivitatensor \dotp \bm{a}}$.
+
+В~общем, для взаимно\hbox{-}однозначного соответствия между~${\hspace{-0.2ex}\bm{A}}$ и~$\bm{a}$ имеем
+\vspace{0.1em}\begin{equation}\label{companionvector}
+\begin{array}{c}
+\bm{A} \:=\, - \, \bm{a} \dotp \levicivitatensor \:=\: \bm{a} \times\hspace{-0.1ex} \bm{E} \:=\, - \, \levicivitatensor \dotp \bm{a} \:=\: \bm{E} \times \bm{a} \hspace{0.1ex},\\[0.4em]
+\bm{a} = \bm{a} \hspace{.1ex} \dotp \bm{E} = \bm{a} \dotp \left( \! - \displaystyle \hspace{0.2ex} \onehalf \hspace{0.5ex} \levicivitatensor \hspace{0.2ex} \dotdotp \levicivitatensor \right) \hspace{-0.4ex} = \displaystyle \onehalf \hspace{.32ex} \bm{A} \dotdotp \levicivitatensor \hspace{0.1ex}.
+\end{array}
+\end{equation}
+
+\noindent Вектор~$\bm{a}$ называется сопутствующим тензору~${\hspace{-0.2ex}\bm{A}}$.
+
+Компоненты кососимметричного~${\hspace{-0.2ex}\bm{A}}$ через компоненты сопутствующего ему псевдовектора~$\bm{a}$
+\vspace{0.2em}\[\begin{array}{c}
+\bm{A} = - \, \levicivitatensor \dotp \bm{a} = - \hspace{0.1ex} \levicivita_{ijk} \hspace{0.1ex} \bm{e}_i \bm{e}_j a_k ,\\[0.3em]
+A_{ij} = - \hspace{0.1ex} \levicivita_{ijk} \hspace{0.1ex} a_k \hspace{0.1em} = \hspace{-0.1em}
+\scalebox{0.9}[0.9]{$\left[ \begin{array}{ccc}
+0 & -a_3 & a_2 \\
+a_3 & 0 & -a_1 \\
+-a_2 & a_1 & 0
+\end{array} \hspace{0.25ex}\right]$}
+\end{array}\]
+
+\vspace{-0.5em} \noindent и~обратно
+\vspace{-0.25em}\[\begin{array}{c}
+\bm{a} = \smalldisplaystyleonehalf \, \bm{A} \dotdotp \levicivitatensor =
+\smalldisplaystyleonehalf \hspace{.25ex} A_{jk} \levicivita_{kji} \hspace{.2ex} \bm{e}_i , \\[0.64em]
+a_{i} \hspace{-0.16ex} = \smalldisplaystyleonehalf \hspace{.32ex} \levicivita_{ikj} \hspace{0.1ex} A_{jk} = \hspace{0.1em}
+\displaystyle \onehalf \scalebox{0.9}[0.9]{$\left[\hspace{-0.25ex} \begin{array}{c}
+\levicivita_{123} \hspace{0.1ex} A_{32} + \levicivita_{132} \hspace{0.1ex} A_{23} \\
+\levicivita_{213} \hspace{0.1ex} A_{31} + \levicivita_{231} \hspace{0.1ex} A_{13} \\
+\levicivita_{312} \hspace{0.1ex} A_{21} + \levicivita_{321} \hspace{0.1ex} A_{12}
+\end{array} \right]$} \hspace{-0.2em} = \hspace{0.1em}
+\displaystyle \onehalf \scalebox{0.9}[0.9]{$\left[\hspace{-0.3ex} \begin{array}{c}
+A_{32} - A_{23} \\
+A_{13} - A_{31} \\
+A_{21} - A_{12}
+\end{array} \right]$} .
+\end{array}\]
+
+Легко запоминающийся вспомогательный \inquotes{псевдовекторный инвариант}~${\!\bm{A}_{\!\bm{\times}}}$ получается из~${\hspace{-0.2ex}\bm{A}}$ заменой диадных произведений на~векторные
+\nopagebreak\vspace{-0.5em}\begin{equation}\label{pseudovectorinvariant}
+\begin{array}{c}
+\bm{A}_{\Xcompanion} \equiv A_{ij} \hspace{.25ex} \bm{e}_i \times \bm{e}_j = - \hspace{0.1ex} \bm{A} \hspace{0.1ex} \dotdotp \levicivitatensor 
+\hspace{.2ex}, \\[.28em]
+%
+\bm{A}_{\Xcompanion} \hspace{-0.16ex} = \left(^{\mathstrut} \hspace{-0.1ex} \bm{a} \times\hspace{-0.1ex} \bm{E} \hspace{.2ex} \right)_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.25ex} = \hspace{-0.12ex}
+- 2 \hspace{0.16ex} \bm{a} \hspace{.2ex},\:\:
+\bm{a} = - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.25ex} \bm{A}_{\Xcompanion} = - \hspace{.2ex} \smalldisplaystyleonehalf \left(^{\mathstrut} \hspace{-0.1ex} \bm{a} \times\hspace{-0.1ex} \bm{E} \hspace{.2ex} \right)_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.2ex}.
+\end{array}
+\end{equation}
+
+Обоснование~\eqref{pseudovectorinvariant}: %% путём раскрытия двойных векторных произведений:
+\nopagebreak\vspace{.1em}\[\begin{array}{c}
+\bm{a} \times\hspace{-0.1ex} \bm{E} = - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex} \bm{A}_{\Xcompanion} \times \bm{E} = - \hspace{.2ex} \smalldisplaystyleonehalf \, A_{ij} \hspace{-0.2ex}
+\left( \hspace{.08ex} \tikzmark{beginFirstCrossProduct} {\bm{e}_i \times \bm{e}_j} \tikzmark{endFirstCrossProduct} \hspace{.16ex} \right)
+\times \bm{e}_k \bm{e}_k = \\[1.5em]
+%
+= - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.32ex} A_{ij} \hspace{.12ex}
+\tikzmark{beginTwoLeviCivitas} \levicivita_{nij} \levicivita_{nkp} \tikzmark{endTwoLeviCivitas}
+\hspace{.32ex} \bm{e}_p \bm{e}_k = - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.32ex} A_{ij} \hspace{-0.1ex} \left( \bm{e}_j \bm{e}_i - \bm{e}_i \bm{e}_j \right) = \\[1em]
+%
+\hspace{13.2em}= - \hspace{.2ex} \smalldisplaystyleonehalf \left({ \bm{A}^{\hspace{-0.1em}\T} \hspace{-0.25ex} - \hspace{-0.2ex} \bm{A} \hspace{0.2ex}}\right) = \bm{A}^{\mathsf{\hspace{-0.1ex}A}} = \bm{A}.
+\end{array}\]
+\AddUnderBrace[line width=.75pt][0,-0.25ex]{beginFirstCrossProduct}{endFirstCrossProduct}%
+{${\scriptstyle \levicivita_{ijn} \bm{e}_n}$}
+\AddUnderBrace[line width=.75pt][.25ex,-0.25ex]{beginTwoLeviCivitas}{endTwoLeviCivitas}%
+{${\scriptstyle \hspace{3.2em}\delta_{jp} \delta_{ik} \,-\; \delta_{ip} \delta_{jk}}$}
+
+\vspace{-0.55em} Сопутствующий вектор можно ввести для любого тензора второй сложности, но лишь антисимметричная часть при~этом даёт вклад: ${\bm{C}^{\hspace{.2ex}\mathsf{A}} \hspace{-0.1ex} = \hspace{-0.1ex} - \hspace{.1ex}\onehalf\hspace{.32ex} \bm{C}_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.16ex} \times \hspace{-0.16ex} \bm{E}}$. Для~симметричного тензора сопутствующий вектор равен ${\bm{0}}$.
+
+С~\eqref{pseudovectorinvariant} разложение какого\hbox{-}либо тензора~$\bm{C}$ на~симметричную и~антисимметричную части выглядит как
+\nopagebreak\vspace{.1em}\begin{equation}\label{symmetricantisymmetricdecompositionofsometensor}
+\bm{C} = \bm{C}^{\mathsf{\hspace{0.1ex}S}} \hspace{-0.24ex} - \hspace{.12ex} \displaystyle \onehalf \hspace{.32ex} \bm{C}_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.16ex} \times \hspace{-0.16ex} \bm{E} \hspace{0.1ex} .
+\end{equation}
+
+\vspace{-0.64em}\noindent Для диады~же
+
+{\centering \eqref{vectorcrossvectorcrossidentity}~$\Rightarrow$~${\left( \bm{c} \hspace{-0.1ex} \times \hspace{-0.2ex} \bm{d} \hspace{.2ex} \right) \hspace{-0.12ex} \times \hspace{-0.25ex} \bm{E} = \bm{d} \bm{c} - \hspace{-0.1ex} \bm{c} \bm{d} \hspace{.1ex} = \hspace{-0.1ex} - \hspace{.1ex} 2 \hspace{.15ex} \bm{c}\bm{d}^{\mathsf{\hspace{.3ex}A}}\hspace{-0.2ex}}$,\hspace{.32em}
+${\left( \bm{c} \bm{d} \hspace{.2ex} \right)_{\hspace{-0.15ex}\Xcompanion} \hspace{-0.32ex} =
+\hspace{0.1ex} \bm{c} \hspace{-0.1ex} \times \hspace{-0.16ex} \bm{d} \hspace{.12ex}}$, \par}
+
+\vspace{-0.05em}\noindent и разложение~её
+\nopagebreak\vspace{-0.4em}\begin{equation}\label{symmetricantisymmetricdecompositionofdyad}
+\hspace*{1em} \bm{c}\bm{d} \hspace{.1ex} = \hspace{.1ex}
+%%\smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c}\bm{d} + \hspace{-0.1ex} \bm{d}\bm{c} \hspace{0.1ex} \right) - \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{d} \bm{c} - \hspace{-0.1ex} \bm{c} \bm{d} \hspace{.2ex} \right) = \hspace{.1ex}
+\smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c}\bm{d} + \hspace{-0.1ex} \bm{d}\bm{c} \hspace{0.1ex} \right)
+- \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c} \hspace{-0.1ex} \times \hspace{-0.2ex} \bm{d} \hspace{.2ex} \right) \hspace{-0.12ex} \times \hspace{-0.25ex} \bm{E} \hspace{0.1ex} .
+\end{equation}
+
+\end{otherlanguage}
+
+\en{\section{Eigenvectors and eigenvalues of tensor}}
+
+\ru{\section{Собственные векторы и собственные числа тензора}}
+
+\label{para:eigenvectorseigenvalues}
+
+\begin{otherlanguage}{russian}
+
+Если для тензора~${^2\!\bm{B}}$ и~ненулевого вектора~${\bm{a}}$
+\nopagebreak\vspace{0.1em}\begin{equation}\label{eigenvalues:eq}
+^2\!\bm{B} \dotp \bm{a} = \lambda \bm{a} \hspace{0.1ex},\:\: \bm{a} \neq \bm{0}
+\end{equation}
+\vspace{-1.2em}\[
+\scalebox{0.92}[0.92]{${^2\!\bm{B}} \dotp \bm{a} = \lambda \bm{E} \dotp \bm{a} \hspace{0.1ex},\;\;
+%%B_{ij} a_j = \lambda \delta_{ij} a_j \hspace{0.1ex},\;\;
+\left(\hspace{0.1ex}
+{^2\!\bm{B} - \lambda \bm{E}}
+\hspace{0.2ex}\right) \hspace{-0.1ex} \dotp \hspace{0.1ex} \bm{a} = \bm{0}$} \hspace{0.1ex},
+\]
+
+\vspace{-0.64em} \noindent то ${\lambda}$ называется собственным числом~(собственным значением, eigenvalue, главным значением)~${^2\!\bm{B}}$, а~определяемая собственным вектором~${\bm{a}}$ ось~--- его собственной~(главной, principal) осью.
+
+В~компонентах имеем матричную задачу на~собственные значения ${(B_{ij} - \lambda \delta_{ij}) \hspace{0.2ex} a_j = 0}$~--- это однородная линейная алгебраическая система, имеющая ненулевые решения при~равенстве нулю определителя ${\operatorname{det}\hspace{0.32ex} (B_{ij} - \lambda \delta_{ij})}$:
+\nopagebreak\vspace{0.1em}\begin{equation}\label{chardetequation}
+\operatorname{det}\! \scalebox{0.9}[0.92]{$\left[
+\begin{array}{ccc}
+B_{11} - \lambda & B_{12} & B_{13} \\
+B_{21} & B_{22} - \lambda & B_{23} \\
+B_{31} & B_{32} & B_{33} - \lambda
+\end{array}
+\right]$} \!= - \lambda^3 \hspace{-0.25ex} + \mathrm{I}\hspace{.25ex} \lambda^2 \hspace{-0.25ex} - \mathrm{II}\hspace{.25ex} \lambda + \mathrm{III} = 0 \hspace{.2ex} ;
+\end{equation}
+
+\vspace{-0.25em}\begin{equation}\label{invariants:2}
+\begin{array}{r@{\hspace{0.4em}}c@{\hspace{0.4em}}l}
+\mathrm{I} & = & \operatorname{tr}\hspace{0.1ex} {^2\!\bm{B}} = B_{kk} = \scalebox{0.92}[0.96]{$B_{11} + B_{22} + B_{33}$},\\[0.1em]
+\mathrm{II} & = & \scalebox{0.92}[0.96]{$B_{11}B_{22} - B_{12}B_{21} + B_{11}B_{33} - B_{13}B_{31} + B_{22}B_{33} - B_{23}B_{32}$},\\[0.1em]
+\mathrm{III} & = & \operatorname{det} \hspace{0.1ex} {^2\!\bm{B}} = \operatorname{det} B_{ij} = e_{ijk} B_{1i} B_{2j} B_{3k} = e_{ijk} B_{i1} B_{j2} B_{k3} \hspace{0.1ex}.
+\end{array}\end{equation}
+
+Корни характеристического уравнения~\eqref{chardetequation}~--- собственные числа~--- не~зависят от~базиса и~потому инвариантны.
+
+Коэффициенты~\eqref{invariants:2} тоже не~зависят от~базиса; они называются первым, вторым и~третьим инвариантами тензора.
+С~первым инвариантом~${\mathrm{I}}$~--- следом тензора~--- мы уже встречались в~\pararef{para:tensoractions}.
+Второй инвариант~${\mathrm{II}}$ это след союзной~(взаимной, adjugate) матрицы~--- транспонированной матрицы дополнений: ${\mathrm{II}\hspace{0.16ex}(\hspace{0.1ex}{^2\!\bm{B}}) \equiv \operatorname{tr} \left({\operatorname{adj}{B_{ij}}}\right)}$.
+Или он~же \hbox{${\mathrm{II}\hspace{0.16ex}(\hspace{0.1ex}{^2\!\bm{B}}) \equiv \hspace{0.2ex} \textstyle \onehalf \hspace{-0.08ex} \scalebox{0.96}[0.96]{$\left[ \left(\operatorname{tr}\hspace{0.1ex} {^2\!\bm{B}}\right)^{\!2} \hspace{-0.5ex} - \operatorname{tr} \left( {^2\!\bm{B}} \dotp \hspace{-0.1ex} {^2\!\bm{B}} \right) \right]$} \hspace{-0.4ex} = \hspace{0.1ex} \textstyle \onehalf \hspace{-0.08ex} \scalebox{0.96}[0.96]{$\left[ \left( B_{kk} \right)^{\hspace{-0.1ex}2} \hspace{-0.4ex} - \hspace{-0.2ex} B_{ij} B_{ji} \hspace{0.2ex}\right]$}}$\hspace{-0.25ex}}.
+И~третий инвариант~${\mathrm{III}}$ это определитель~(детерминант) компонент тензора: %%в~любом \inquotes{правом} ортонормальном или~смешанном базисе:
+${\mathrm{III}\hspace{0.16ex}(\hspace{0.1ex}{^2\!\bm{B}}) \equiv \operatorname{det}\hspace{0.1ex} {^2\!\bm{B}}}$.
+
+Это относилось ко~всем тензорам второй сложности. Для~случая~же симметричного тензора справедливо следующее:\\
+\indent 1$^{\circ}$\hspace{-1ex}.\, Собственные числа симметричного тензора вещественны.\\
+\indent 2$^{\circ}$\hspace{-1ex}.\, Собственные оси для~разных собственных чисел ортогональны.
+
+Первое утверждение доказывается от~противного. Если~$\lambda$~--- компл\'{е}ксный корень~\eqref{chardetequation}, определяющий собственный вектор~$\bm{a}$, то сопряжённое число~$\overline{\lambda}$ также будет корнем. Ему соответствует собственный вектор~$\overline{\bm{a}}$ с~сопряжёнными компонентами. Из~\eqref{eigenvalues:eq} следует равенство
+\[\begin{array}{c}
+\left(\hspace{0.2ex}{\overline{\bm{a}} \, \dotp}\hspace{0.2ex}\right) \hspace{0.5ex} {^2\!\bm{B}} \dotp \bm{a} \hspace{0.2ex} = \lambda \bm{a}, \;\;
+\left(\hspace{0.2ex}{\bm{a} \, \dotp}\hspace{0.2ex}\right) \hspace{0.5ex} {^2\!\bm{B}} \dotp \overline{\bm{a}} \hspace{0.2ex} = \hspace{0.1ex} \overline{\lambda} \, \overline{\bm{a}}
+\;\;\Rightarrow \\[0.5em]
+\Rightarrow\;\; \overline{\bm{a}} \dotp {^2\!\bm{B}} \dotp \bm{a} - \bm{a} \dotp {^2\!\bm{B}} \dotp \overline{\bm{a}} \hspace{0.2ex} = \left(\hspace{0.1ex}{\lambda - \overline{\lambda}}\hspace{0.16em}\right)\hspace{-0.1em} \bm{a} \dotp \overline{\bm{a}} \hspace{0.2ex}.
+\end{array}\]
+\vspace{-0.4em}
+
+\noindent Но слева здесь~--- нуль, поскольку ${\bm{a} \dotp {^2\!\bm{B}} \dotp \bm{c} = \bm{c} \dotp {^2\!\bm{B}^{\T}\!} \dotp \bm{a}}$ и~${{^2\!\bm{B}} = {^2\!\bm{B}^{\T}\!}}$. Поэтому ${\lambda = \overline{\lambda}}$, то~есть вещественно.
+
+Столь~же просто обосновывается~2$^{\circ}$:
+\vspace{0.2em}\[\begin{array}{c}
+\tikzmark{BeginEqualsZeroBrace} {\bm{a}_2 \dotp {^2\!\bm{B}} \dotp \bm{a}_1 - \bm{a}_1 \dotp {^2\!\bm{B}} \dotp \bm{a}_2} \hspace{0.1ex} \tikzmark{EndEqualsZeroBrace} = \hspace{0.2ex} \left(\hspace{0.1ex}{\lambda_1 \!-\! \lambda_2}\right) \bm{a}_1 \dotp \bm{a}_2, \; \lambda_1 \neq \lambda_2 \;\Rightarrow \\[0.2em]
+\hspace{16em} \Rightarrow\; \bm{a}_1 \dotp \bm{a}_2 = 0 \hspace{0.1ex}.
+\end{array}\]
+\AddUnderBrace[line width=.75pt][0.1ex,-0.1ex]%
+{BeginEqualsZeroBrace}{EndEqualsZeroBrace}{${\scriptstyle =\;0}$}
+
+\vspace{-0.64em} При~различных собственных числах собственные векторы единичной длины~${\mathboldae_i}$ образуют ортонормальный базис; каковы~же в~нём компоненты тензора?
+\vspace{0.2em}\[\begin{array}{c}
+{^2\!\bm{B}} \dotp \mathboldae_k = \hspace{0.2ex} \scalebox{0.8}[0.8]{$\tikzcancel[blue]{$\displaystyle\sum_k^{~}$}$}\: \lambda_k \mathboldae_k \hspace{0.1ex}, \:\: k =\hspace{-0.1ex} 1, 2, 3 \\[.9em]
+%
+{^2\!\bm{B}} \dotp \tikzmark{BeginEqualsEBrace} {\mathboldae_k \mathboldae_k} \tikzmark{EndEqualsEBrace} = \scalebox{0.9}[0.9]{$\displaystyle \sum_{\smash{k}}$} \hspace{0.1ex} \lambda_k \mathboldae_k \mathboldae_k
+%%{^2\!\bm{B}} = \displaystyle \sum_{\smash{k}} \lambda_k \mathboldae_k \mathboldae_k
+\end{array}\]
+\AddUnderBrace[line width=.75pt]%
+{BeginEqualsEBrace}{EndEqualsEBrace}{${\scriptstyle \bm{E}}$}
+
+\vspace{-0.25em} В~общем случае ${B_{ij} = \bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_j}$, в~базисе~же ${\mathboldae_1}$, ${\mathboldae_2}$, ${\mathboldae_3}$ единичных взаимно ортогональных ${\mathboldae_i \dotp \mathboldae_j = \delta_{ij}}$ собственных осей симметричного тензора:
+\[\begin{array}{c}
+B_{11} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\lambda_1 \mathboldae_1 \mathboldae_1 + \lambda_2 \mathboldae_2 \mathboldae_2 + \lambda_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_1 = \lambda_1, \\
+B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\lambda_1 \mathboldae_1 \mathboldae_1 + \lambda_2 \mathboldae_2 \mathboldae_2 + \lambda_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_2 = 0 \hspace{0.1ex}, \\[-0.2em]
+\ldots
+\end{array}\]
+\noindent Матрица компонент диагональна и~${{^2\!\bm{B}} = \sum\! \lambda_i \mathboldae_i \mathboldae_i}$. Здесь идёт суммирование по~трём повторяющися индексам, %%и~это естественно,
+ведь используется особенный базис.
+
+Случай кратных главных значений можно рассмотреть с~помощью предельного перехода. При~${\lambda_2 \to \lambda_1}$ любая линейная комбинация ${\bm{a}_1}$ и~${\bm{a}_2}$ в~пределе удовлетворяет~\eqref{eigenvalues:eq}; это значит, что любая ось в~плоскости~${\bm{a}_1, \bm{a}_2}$ становится собственной. Если~же совпадают все три собственных числ\'{а}, то любая ось в~пространстве~--- собственная. При~этом ${{^2\!\bm{B}} = \lambda \bm{E}}$, такие тензоры называются изотропными или шаровыми.
+
+\end{otherlanguage}
+
+\en{\section{Rotation tensor}}
+
+\ru{\section{Тензор поворота}}
+
+\label{para:rotationtensor}
+
+\begin{otherlanguage}{russian}
+
+Соотношение между двумя \inquotes{правыми}~(или двумя \inquotes{левыми}) орто\-нормаль\-ными базисами ${\bm{e}_i}$ и~${\mathcircabove{\bm{e}}_i}$ вполне определено матрицей косинусов~(\pararef{para:vectors})
+\nopagebreak\vspace{-0.5em}\[
+\bm{e}_i \hspace{-0.2ex} = \bm{e}_i \dotp \hspace{0.1ex} \tikzmark{beginEqualsE} \mathcircabove{\bm{e}}_j \mathcircabove{\bm{e}}_j \tikzmark{endEqualsE} \hspace{-0.1ex} = \hspace{0.1ex} \cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \, \mathcircabove{\bm{e}}_j , \:\:
+\cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \hspace{.1ex} \equiv \hspace{.1ex} \bm{e}_i \dotp \mathcircabove{\bm{e}}_j \hspace{0.1ex}.
+\]
+\AddUnderBrace[line width=.75pt][0,-0.2ex]%
+{beginEqualsE}{endEqualsE}{${\scriptstyle \bm{E}}$}
+
+\vspace{-0.32em} \noindent \en{But one may write like this:}\ru{Но~можно напис\'{а}ть и~так:}
+\begin{equation}\label{introductionofrotationtensor}
+\bm{e}_i = \bm{e}_j \hspace{.16ex} \tikzmark{beginEqualsKroneckerDelta} \mathcircabove{\bm{e}}_j \hspace{-0.16ex} \dotp \mathcircabove{\bm{e}}_i \tikzmark{endEqualsKroneckerDelta} = \bm{P} \hspace{-0.16ex} \dotp \mathcircabove{\bm{e}}_i \hspace{0.1ex}, \:\,
+\bm{P} \equiv \bm{e}_j \mathcircabove{\bm{e}}_j = \scalebox{0.96}[1]{$\bm{e}_1 \hspace{-0.1ex} \mathcircabove{\bm{e}}_1 + \bm{e}_2 \mathcircabove{\bm{e}}_2 + \bm{e}_3 \mathcircabove{\bm{e}}_3$} \hspace{0.1ex}.
+\end{equation}
+\AddUnderBrace[line width=.75pt][0.1ex,-0.2ex]%
+{beginEqualsKroneckerDelta}{endEqualsKroneckerDelta}{${\scriptstyle \delta_{ji}}$}
+
+\vspace{-0.32em} \noindent \en{${\bm{P}}$ is called rotation tensor.}\ru{${\bm{P}}$ называется тензором поворота.}
+
+Компоненты ${\bm{P}}$ и~в~начальном~${\mathcircabove{\bm{e}}_i}$, и~в~повёрнутом~${\bm{e}_i}$ базисах образуют одну и~ту~же матрицу, равную транспонированной матрице косинусов~${\cosinematrix{\!j\mathcircabove{i}} = \hspace{.12ex} \mathcircabove{\bm{e}}_i \dotp \bm{e}_j}$\hspace{0.1ex}:
+\begin{equation}\label{componentsofrotationtensor}
+\begin{array}{c}
+\bm{e}_i \dotp \bm{P} \hspace{-0.12ex} \dotp \bm{e}_j =
+\hspace{0.2ex} \tikzmark{beginEqualsKroneckerDeltaPresent} \bm{e}_i \hspace{-0.1ex} \dotp \bm{e}_k \tikzmark{endEqualsKroneckerDeltaPresent} \hspace{0.2ex} \mathcircabove{\bm{e}}_k \hspace{-0.12ex} \dotp \bm{e}_j =
+\hspace{0.2ex} \mathcircabove{\bm{e}}_i \hspace{-0.12ex} \dotp \bm{e}_j , \\[1.4em]
+%
+\mathcircabove{\bm{e}}_i \dotp \bm{P} \hspace{-0.12ex} \dotp \mathcircabove{\bm{e}}_j =
+\hspace{0.2ex} \mathcircabove{\bm{e}}_i \hspace{-0.1ex} \dotp \bm{e}_k \hspace{0.2ex} \tikzmark{beginEqualsKroneckerDeltaPast} \mathcircabove{\bm{e}}_k \hspace{-0.12ex} \dotp \mathcircabove{\bm{e}}_j \tikzmark{endEqualsKroneckerDeltaPast} =
+\hspace{0.2ex} \mathcircabove{\bm{e}}_i \hspace{-0.12ex} \dotp \bm{e}_j , \\[1.5em]
+%
+\bm{P} = \cosinematrix{\!j\mathcircabove{i}} \hspace{0.5ex} {\bm{e}}_i {\bm{e}}_j = \cosinematrix{\!j\mathcircabove{i}} \hspace{0.5ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j \hspace{0.1ex}.
+\end{array}
+\end{equation}
+\AddUnderBrace[line width=.75pt][0.1ex,-0.2ex]%
+{beginEqualsKroneckerDeltaPresent}{endEqualsKroneckerDeltaPresent}{${\scriptstyle \delta_{ik}}$}
+\AddUnderBrace[line width=.75pt][0,-0.2ex]%
+{beginEqualsKroneckerDeltaPast}{endEqualsKroneckerDeltaPast}{${\scriptstyle \delta_{kj}}$}
+
+\vspace{-0.4em} Тензор~$\bm{P}$ связывает два вектора~--- \inquotes{до~поворота}~${\mathcircabove{\bm{r}} = \rho_i \mathcircabove{\bm{e}}_i}$ и~\inquotes{после~поворота}~${\bm{r} = \rho_i \bm{e}_i}$~--- с~теми~же компонентами~$\rho_i$ у~$\bm{r}$ в~актуальном повёрнутом базисе~${\bm{e}_i}$, что~и~у~${\mathcircabove{\bm{r}}}$ в~неподвижном базисе~${\mathcircabove{\bm{e}}_i}$~(\inquotes{вектор вращается вместе с~базисом}): поскольку ${\bm{e}_i = \bm{e}_j \mathcircabove{\bm{e}}_j \dotp \mathcircabove{\bm{e}}_i \:\Leftrightarrow\, \rho_i \bm{e}_i = \bm{e}_j \mathcircabove{\bm{e}}_j \dotp \rho_i \mathcircabove{\bm{e}_i}}$, то
+\begin{equation}\label{rodriguesrotationformula}
+\bm{r} = \bm{P} \dotp\hspace{0.2ex} \mathcircabove{\bm{r}}
+\end{equation}
+
+\vspace{-0.4em} \noindent(эта связь~--- обобщённая \href{https://fr.wikipedia.org/wiki/Rotation_vectorielle#Cas_g%C3%A9n%C3%A9ral}{формула поворота Rodrigues’а}).
+
+\vspace{-0.1em}Поворот~же тензора второй сложности ${\mathcircabove{\bm{C}} = C_{ij} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$ в~текущее~(актуальное) положение~${\bm{C} = C_{ij} \bm{e}_i \bm{e}_j}$ происходит так:
+\begin{equation}
+C_{ij} \bm{e}_i \bm{e}_j = \bm{e}_i \mathcircabove{\bm{e}}_i \dotp C_{pq} \mathcircabove{\bm{e}}_p \mathcircabove{\bm{e}}_q \dotp \mathcircabove{\bm{e}}_j \bm{e}_j \;\Leftrightarrow\; \bm{C} = \bm{P} \dotp\hspace{0.1ex} \mathcircabove{\bm{C}} \dotp \bm{P}^{\T} \hspace{-0.32ex}.
+\end{equation}
+
+Существенное свойство тензора поворота~--- ортогональность~--- выражается равенством
+%%\vspace{-1.4em}\begin{flalign*} && \scalebox{0.8}[0.8]{$\bm{P} \dotp \bm{P}^{\T} \!= \bm{e}_i \mathcircabove{\bm{e}}_i \dotp \mathcircabove{\bm{e}}_i \bm{e}_i = \bm{e}_i \bm{e}_i$} \end{flalign*}\vspace{-1.4em}
+\begin{equation}\label{orthogonalityofrotationtensor}
+\aunderbrace[l1r]{\bm{P}}_{\bm{e}_i \mathcircabove{\bm{e}}_i} \dotp \hspace{0.12em} \aunderbrace[l1r]{\bm{P}^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_j \bm{e}_j}
+\hspace{0.2ex} = \hspace{0.2ex}
+\aunderbrace[l1r]{\bm{P}^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_i \bm{e}_i} \hspace{0.2em} \dotp \aunderbrace[l1r]{\bm{P}}_{\bm{e}_j \mathcircabove{\bm{e}}_j}
+\hspace{-0.2ex} = \hspace{0.4ex}
+\aunderbrace[l1r]{\hspace{0.2ex}\bm{E}\hspace{0.2ex}}_{\mathclap{\begin{subarray}{l} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \\ \bm{e}_i \bm{e}_i \end{subarray}}} \hspace{0.1em},
+\end{equation}\vspace{-0.6em}
+
+\noindent то~есть ${\bm{P}^{\T} \hspace{-0.32ex}= \bm{P}^{\expminusone} \Leftrightarrow \bm{P} = \bm{P}^{\expminusT}\hspace{-0.25ex}}$~--- транспонированный тензор совпадает с~обратным.
+
+Ортогональный тензор не~меняет скалярное произведение векторов, сохраняя дл\'{и}ны и~углы (\inquotes{метрику})
+%% ${\bm{e}_i \dotp \bm{e}_j \hspace{-0.1ex} = \hspace{.1ex} \mathcircabove{\bm{e}}_i \dotp \mathcircabove{\bm{e}}_j}$
+\vspace{0.1em}\begin{equation}\label{rotationtensorkeepsmetrics}
+\left( \bm{P} \hspace{-0.2ex} \dotp \bm{a}\hspace{0.2ex} \right) \dotp \left( \bm{P} \hspace{-0.2ex} \dotp \bm{b}\hspace{0.2ex} \right) =
+\bm{a} \dotp \bm{P}^{\T} \hspace{-0.4ex} \dotp \bm{P} \hspace{-0.1ex} \dotp \hspace{0.1ex} \bm{b} = \bm{a} \dotp \bm{E} \dotp \bm{b} = \bm{a} \dotp \bm{b}
+\hspace{0.1ex}.
+\end{equation}
+
+Для всех ортогональных тензоров ${\left(\operatorname{det} \bm{P}\right)^2 \hspace{-0.1ex} = 1}$:
+\vspace{0.1em}\[
+1 = \operatorname{det} \bm{E} = \operatorname{det} \left({\hspace{-0.1ex} \bm{P} \dotp \bm{P}^{\T} \hspace{0.1ex}}\right) =
+\left({\operatorname{det} \bm{P} \hspace{0.1ex}}\right) \left({\operatorname{det} \bm{P}^{\T} \hspace{0.2ex}}\right) =
+\left(\operatorname{det} \bm{P} \hspace{0.1ex} \right)^2 \hspace{-0.1ex} \!.
+\]
+
+Тензор поворота это ортогональный тензор с~${\operatorname{det} \bm{P} \hspace{-0.1ex} = 1}$. Но не~только лишь тензоры поворота обладают свойством ортогональности. Когда в~\eqref{introductionofrotationtensor} один из базисов \inquotesx{правый}[,] а~другой \inquotesx{левый}[,] имеем комбинацию поворота с~отражением, и~${\operatorname{det} \left( -\bm{E} \dotp \bm{P} \hspace{0.16ex} \right) \hspace{-0.1ex} = -1}$.
+
+У~любого тензора второй сложности в~трёхмерном пространстве по~крайней мере одно  собственное число~--- корень~\eqref{chardetequation}~--- действительное~(некомпл\'{е}ксное). Для тензора поворота оно равно единице
+\vspace{0.25em}\[\begin{array}{c}
+\bm{P} \dotp \bm{a} = \lambda \bm{a} \:\Rightarrow\:
+\tikzmark{BeginPaBrace} \bm{a} \hspace{0.16ex} \dotp \tikzmark{BeginEBrace} \bm{P}^{\T} \tikzmark{EndPaBrace} \hspace{-0.4ex} \dotp \bm{P} \hspace{-0.32ex}\tikzmark{EndEBrace}\hspace{0.32ex} \dotp \hspace{0.16ex} \bm{a} = \lambda \bm{a} \dotp \lambda \bm{a}
+\:\Rightarrow\: \lambda^{\!2} = 1\hspace{0.1ex}.
+\end{array}\]
+\AddOverBrace[line width=.75pt][0.1ex,0.4ex]{BeginPaBrace}{EndPaBrace}{${\scriptstyle \bm{P} \:\dotp\; \bm{a}}$}
+\AddUnderBrace[line width=.75pt][-0.1ex,0.1ex]{BeginEBrace}{EndEBrace}{${\scriptstyle \bm{E}}$}
+
+\vspace{-0.5em} \noindent Соответствующая собственная ось называется осью поворота; теорема Эйлера о~конечном повороте в~том и~состоит, что такая ось существует. Если ${\bm{k}}$~--- орт этой оси, а~${\vartheta}$~--- величина угла поворота, то тензор поворота представ\'{и}м как
+\vspace{0.2em}\begin{equation}\label{eulerfiniterotation}
+\bm{P}\hspace{0.1ex}(\bm{k},\vartheta) = \bm{E} \operatorname{cos} \vartheta + \bm{k} \times\hspace{-0.2ex} \bm{E} \operatorname{sin} \vartheta + \bm{k} \bm{k} \left({1 - \operatorname{cos} \vartheta}\right).
+\end{equation}\vspace{-1.2em}
+
+Доказывается эта формула так. Направление~${\bm{k}}$ при~повороте не~меняется~(${\bm{P} \hspace{-0.16ex}\dotp \bm{k} = \bm{k}\hspace{0.12ex}}$), поэтому на~оси поворота ${\mathcircabove{\bm{e}}_3 \hspace{-0.16ex} = \bm{e}_3 \hspace{-0.16ex} = \bm{k}}$. В~перпендикулярной плоскости~(\figref{fig:eulerfiniterotation}) ${\mathcircabove{\bm{e}}_1 \hspace{-0.16ex} = \bm{e}_1 \operatorname{cos} \vartheta - \bm{e}_2 \operatorname{sin} \vartheta}$, ${\mathcircabove{\bm{e}}_2 \hspace{-0.16ex} = \bm{e}_1 \operatorname{sin} \vartheta + \bm{e}_2 \operatorname{cos} \vartheta}$, ${\bm{P} = \bm{e}_i \mathcircabove{\bm{e}}_i \:\Rightarrow}$~\eqref{eulerfiniterotation}.
+
+% ~ ~ ~ ~ ~
+\input{finiterotation.tex}
+% ~ ~ ~ ~ ~
+
+Из~\eqref{eulerfiniterotation} и~\eqref{rodriguesrotationformula} получаем формулу поворота Родрига в~параметрах~$\bm{k}$ и~$\vartheta$:
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{r} \hspace{0.4ex}=\hspace{0.5ex} \mathcircabove{\bm{r}} \operatorname{cos} \vartheta \hspace{0.4ex}+\hspace{0.4ex} \bm{k} \times \mathcircabove{\bm{r}} \hspace{0.2ex} \operatorname{sin} \vartheta \hspace{0.4ex}+\hspace{0.5ex} \bm{k} \bm{k} \dotp\hspace{0.1ex} \mathcircabove{\bm{r}} \left({1 - \operatorname{cos} \vartheta}\right) \hspace{-0.25ex}.
+\end{equation*}
+
+\vspace{-0.16em} В~параметрах конечного поворота транспонирование, оно~же обращение, тензора~$\bm{P}$ эквивалентно перемене направления поворота~--- знака угла~$\vartheta$
+\[
+\bm{P}^{\T} \hspace{-0.1ex}=\hspace{0.1ex} \bm{P} \hspace{0.1ex} \bigr|_{\vartheta \,=\hspace{0.1ex} -\vartheta} \hspace{-0.1ex} = \bm{E} \operatorname{cos} \vartheta - \bm{k} \times\hspace{-0.2ex} \bm{E} \operatorname{sin} \vartheta + \bm{k} \bm{k} \left({1 - \operatorname{cos} \vartheta}\right) \hspace{-0.32ex}.
+\]
+
+Пусть теперь тензор поворота меняется со~временем: ${\bm{P} \!=\! \bm{P}(t)}$.
+Псевдовектор угловой скорости~${\bm{\omega}}$ вводится через~$\bm{P}$ таким путём.
+Продифференцируем тождество ортогональности~\eqref{orthogonalityofrotationtensor} по~времени\footnote{A~variety of notations are used to denote the full time derivative. In~addition to the Leibniz’s notation ${\frac{dx}{dt}}$, very popular short-hand notation is the \inquotes{over-dot} Newton’s notation ${\mathdotabove{x}}$.}
+\vspace{-0.5em}\[
+\mathdotabove{\bm{P}} \dotp \bm{P}^{\T} \hspace{-0.1ex} + \hspace{0.25ex} \bm{P} \dotp \mathdotabove{\bm{P}}^{\T} \hspace{-0.1ex} = \hspace{0.1ex} {^2\bm{0}} \hspace{0.1ex}.
+\]
+
+\vspace{-0.4em} Тензор ${\mathdotabove{\bm{P}} \dotp \bm{P}^{\T\!}}$ (по~\eqref{transposeofdotproduct} ${\left({ \mathdotabove{\bm{P}} \dotp \bm{P}^{\T} }\right)^{\raisemath{-0.25em}{\!\T}} \hspace{-0.36ex} = \bm{P} \dotp \mathdotabove{\bm{P}}^{\T}}$) оказался анти\-сим\-метрич\-ным, и~согласно~\eqref{companionvector} он представ\'{и}м сопутствующим вектором как ${\mathdotabove{\bm{P}} \dotp \bm{P}^{\T\!} = \bm{\omega} \times \bm{E} = \bm{\omega} \times \bm{P} \dotp \bm{P}^{\T}}$\!. То~есть
+\vspace{0.1em}\begin{equation}\label{angularvelocityvector}
+\mathdotabove{\bm{P}} = \bm{\omega} \times \bm{P}, \;\:\:
+\bm{\omega} \equiv -\, \displaystyle \onehalf \left( \mathdotabove{\bm{P}} \dotp \bm{P}^{\T} \right)_{\hspace{-0.2em}\Xcompanion}
+\vspace{-0.25em}\end{equation}
+
+Помимо этого общего представления~вектора~${\bm{\omega}}$, для~него есть и~другие. Например, через параметры конечного поворота.
+
+Производная~${\mathdotabove{\bm{P}}}$ в~параметрах конечного поворота в~общем случае (оба параметра~--- и~единичный вектор~$\bm{k}$, и~угол~$\vartheta$~--- переменны во~времени):
+\vspace{0.32em}%
+\[\begin{array}{r@{\hspace{0.33em}}c@{\hspace{0.25em}}l}
+\mathdotabove{\bm{P}} \hspace{0.2em} & = & \hspace{0.1em} \left(\bm{P}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex} +^{\mathstrut} \bm{P}^{\mathsf{\hspace{0.12ex}A}}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} =
+\hspace{0.1em} \left(\hspace{0.2ex} \tikzmark{StartBracePs} {\bm{E} \operatorname{cos} \vartheta + \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{0.32ex} +^{\mathstrut} \hspace{0.2ex}
+\tikzmark{StartBracePa} {\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \operatorname{sin} \vartheta \hspace{0.2ex}} \tikzmark{EndBracePa} {} \hspace{0.16ex}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} \hspace{-0.05em} = \\[0.4em]
+%
+& = & \hspace{0.2em} \tikzmark{StartBraceDotPs} {\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta + \hspace{-0.2ex} ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \tikzmark{EndBraceDotPs} \hspace{0.64ex} + \\[0.64em]
+& & \hspace{13.2em} + \hspace{0.72ex} \tikzmark{StartBraceDotPa} {\hspace{0.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \operatorname{sin} \vartheta} \tikzmark{EndBraceDotPa} \hspace{0.1em}.
+\end{array}\]%
+\vspace{-1.2em}
+
+\AddOverBrace[line width=0.75pt][0.12ex,0]{StartBracePs}{EndBracePs}{${\scriptstyle \bm{P}^{\mathsf{\hspace{0.12ex}S}}}$}
+\AddOverBrace[line width=0.75pt][-0.12ex,0]{StartBracePa}{EndBracePa}{${\scriptstyle \bm{P}^{\mathsf{\hspace{0.12ex}A}}}$}
+\AddUnderBrace[line width=0.75pt]{StartBraceDotPs}{EndBraceDotPs}{${\scriptstyle \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}}}$}
+\AddUnderBrace[line width=0.75pt][-0.1ex,0.1ex]{StartBraceDotPa}{EndBraceDotPa}{${\scriptstyle \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}}}$}
+
+\vspace{-1.32em} \noindent Находим
+\vspace{0.2em}\[\begin{array}{r@{\hspace{0.25em}}c@{\hspace{0.4em}}l}
+\mathdotabove{\bm{P}} \dotp \bm{P}^{\T} & = & (\hspace{0.1em} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.16ex} + \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{0.05em}) \hspace{-0.1ex} \dotp \hspace{-0.1ex} (\hspace{0.1em} \bm{P}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.16ex} - \bm{P}^{\mathsf{\hspace{0.12ex}A}} \hspace{0.1ex} \hspace{0.05em}) = \\[0.25em]
+& = & \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}}
++ \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}}
+- \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}}
+- \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}} ,
+\end{array}\]
+
+\vspace{-0.5em} \noindent используя
+\[\scalebox{0.95}[0.96]{$\begin{array}{c}
+\bm{k} \dotp \bm{k} = 1 = \const \,\Rightarrow\:
+\bm{k} \dotp \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \dotp \bm{k} = 0 \;\Leftrightarrow\; \mathdotabove{\bm{k}} \dotp \bm{k} = \bm{k} \dotp \mathdotabove{\bm{k}} = 0 \hspace{0.1ex} ,
+\\[.08em]
+%
+\bm{k} \bm{k} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = \bm{k} \bm{k}, \:\:
+\mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = \mathdotabove{\bm{k}} \bm{k} , \:\:
+\bm{k} \mathdotabove{\bm{k}} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = {\hspace{-0.2ex}^2\bm{0}} \hspace{0.1ex},
+\\[0.16em]
+%
+\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} = \bm{k} - \bm{k} = {\bm{0}} \hspace{0.1ex}, \,\,
+\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} = \bm{k} \bm{k} - \bm{k} \bm{k} = {\hspace{-0.2ex}^2\bm{0}} \hspace{0.1ex},
+\\[0.08em]
+%
+\bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.1ex}
+= \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.2ex} \dotp \bm{k}
+= \bm{k} \hspace{-0.24ex}\times\hspace{-0.2ex} \bm{k} = \bm{0} \hspace{0.1ex}, \,\,
+\bm{k} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.1ex}
+= \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.2ex} \dotp \bm{k} \bm{k}
+= {\hspace{-0.2ex}^2\bm{0}} \hspace{0.1ex},
+\\[0.08em]
+%
+\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.2ex} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.1ex} = \hspace{-0.1ex}
+- \hspace{0.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex},
+\\
+%
+( \bm{a} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.2ex} \dotp \bm{b} = \bm{a} \hspace{-0.16ex}\times\hspace{-0.12ex} \bm{b} \:\,\Rightarrow\,
+( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.2ex} \dotp \bm{k} \bm{k} = \mathdotabove{\bm{k}} \hspace{-0.16ex}\times\hspace{-0.2ex} \bm{k} \bm{k} \hspace{0.1ex},
+\end{array}$}\]
+
+\vspace{-0.4em} \noindent \eqref{vectorcrossidentitydotvectorcrossidentity} $\,\Rightarrow\,$
+\scalebox{0.95}[0.96]{${( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.12ex} = \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E}}$},\hspace{0.4ex}
+%
+\scalebox{0.95}[0.96]{${\displaystyle ( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.12ex} = \bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex} - \tikzbackcancel[black!25]{$\mathdotabove{\bm{k}} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \hspace{0.16ex} \bm{E}$}}$\hspace{0.16ex}},
+
+\noindent \eqref{vectorcrossvectorcrossidentity} $\,\Rightarrow\,$
+\scalebox{0.95}[0.96]{$\mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex} - \hspace{-0.1ex} \bm{k} \mathdotabove{\bm{k}} = \hspace{-0.16ex} ( \bm{k} \hspace{-0.2ex} \times \hspace{-0.24ex} \mathdotabove{\bm{k}} ) \hspace{-0.32ex} \times \hspace{-0.32ex} \bm{E}$},\hspace{0.4ex}
+%
+\scalebox{0.95}[0.96]{${\displaystyle ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.24ex} \bm{k} ) \hspace{.2ex} \bm{k} \hspace{-0.1ex} - \hspace{-0.1ex} \bm{k} \hspace{.16ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.24ex} \bm{k} ) \hspace{-0.12ex} = \bm{k} \hspace{-0.2ex} \times \hspace{-0.32ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.24ex} \bm{k} ) \hspace{-0.32ex} \times \hspace{-0.32ex} \bm{E}}$\hspace{0.16ex}}
+
+\begin{fleqn}[0pt]
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.25ex} = $} \hspace{2em} \hfill} \\[-0.25em]
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= \hspace{0.2ex} \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{E} \operatorname{cos} \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \dotp \bm{E} \operatorname{cos} \vartheta \hspace{0.32em} +$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)$} \hspace{0.2ex} +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}} \\
+%
+\scalebox{0.8}[0.82]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.1ex} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) + ( \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k}$} + \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k} ) \left({1 \!-\! \operatorname{cos} \vartheta}\right)^{\hspace{-0.12ex}2} \hspace{-0.25ex} =$} \\
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta + \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+ \hspace{0.24em} \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta + \mathdotabove{\bm{k}} \bm{k} - 2 \, \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta =$}}\\
+%
+%% \shoveright{\hfill \scalebox{0.8}[0.82]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{0.1ex}
+%% + \hspace{0.1ex} \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)
+%% + \mathdotabove{\bm{k}} \bm{k}
+%% - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta =$}}\\
+%
+\shoveright{\hfill \hspace{4.8em} \scalebox{0.94}[0.96]{$= \left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{0.1ex}
+%% + \hspace{-0.1ex} ( \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
+- \bm{k} \mathdotabove{\bm{k}} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= ( \hspace{0.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
+( \hspace{0.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \:+$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$ ( \hspace{0.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{0.5ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) $} \hspace{0.2ex} +
+( \hspace{0.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}} \\
+%
+\hspace{3.85em} \scalebox{0.94}[0.96]{$= \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
+\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta +
+%%\hspace{-0.12ex} ( \hspace{0.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{0.2ex}
+\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{0.2ex}
+\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$= ( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} ) \hspace{0.25ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \operatorname{sin} \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex} \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \operatorname{sin} \vartheta =$} \\
+%
+\scalebox{0.78}[0.82]{$= \hspace{.2ex} \tikzbackcancel[black!25]{$\bm{k} \bm{k} \hspace{-0.12ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta$} \hspace{0.12ex}
+- \hspace{-0.1ex} \bm{E} \hspace{-0.16ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} ) \hspace{0.25ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \hspace{-0.2ex} \left( \hspace{-0.1ex} \bm{k} \mathdotabove{\bm{k}} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.16ex} + \hspace{.1ex} \tikzbackcancel[black!25]{$\mathdotabove{\bm{k}} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \bm{E}$} ) \hspace{-0.12ex} \right) \hspace{-0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta} \right) =$} \\[-0.25em]
+%
+\hspace{13em} \scalebox{0.94}[0.96]{$= \hspace{-0.16ex} - \hspace{0.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \hspace{0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex} =
+%
+( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \operatorname{sin} \vartheta + \hspace{-0.1ex}
+( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{-0.16ex} \dotp \hspace{-0.16ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} ) \hspace{0.1ex} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta = $} \hfill} \\
+%
+\shoveright{\hfill \hspace{16em} \scalebox{0.94}[0.96]{$= ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta \hspace{0.2ex};$}}
+\end{multline*}
+\end{fleqn}
+
+\begin{multline*}
+\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}} \dotp \bm{P}^{\T}$} \hspace{0.25ex}
+\scalebox{0.92}[0.96]{$= \hspace{0.1ex}
+\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}}
++ \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}S}}
+- \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}}
+- \hspace{0.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{0.12ex}A}} \hspace{-0.25ex} =$} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$= {\color{black!50}{\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} \hspace{0.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{0.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \\[-0.2em]
+%
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{0.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{0.2ex} {\color{green!50!black}{\hspace{0.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{0.4ex}}} +$} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{0.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}}
+- \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} {\color{green!50!black}{\hspace{0.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{0.4ex}}}
+{\color{black!50}{-\hspace{0.5ex} ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \bm{E} ) \hspace{0.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{0.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}} =$} \\[-0.08em]
+%
+\scalebox{0.79}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \hspace{-0.1ex} \hspace{-0.16ex} ( \hspace{0.2ex} \mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex} - \hspace{-0.2ex} \bm{k} \mathdotabove{\bm{k}} \hspace{0.2ex} ) \hspace{0.1ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \hspace{-0.1ex} ( \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{-0.12ex} - \hspace{-0.12ex} \bm{k} \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} ) \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
+%
+\scalebox{0.8}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \bm{E} \hspace{.25ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \bm{k} \hspace{-0.25ex} \times \hspace{-0.32ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.2ex} \bm{k} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
+%
+\scalebox{0.78}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \hspace{-0.16ex} ( \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \bm{k} \hspace{-0.1ex} - \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.16ex} \dotp \hspace{-0.1ex} \bm{k} \hspace{.1ex}$} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex}
++ \hspace{-0.1ex} \bm{k} \hspace{-0.32ex}\times\hspace{-0.25ex}  \mathdotabove{\bm{k}} \hspace{-0.25ex}\times\hspace{-0.42ex} \bm{E} \hspace{.32ex} ({1 \!-\! \operatorname{cos} \vartheta}) = $} \\
+%
+\shoveright{\hfill \hspace{11.2em}\scalebox{.96}[.96]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{0.4ex} \mathdotabove{\vartheta}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \bm{E} \hspace{.1ex} \operatorname{sin} \vartheta
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \bm{E} \hspace{.32ex} ({1 \hspace{-0.2ex} - \hspace{-0.2ex} \operatorname{cos} \vartheta}) \hspace{.1ex}.
+$}}
+\end{multline*}
+
+Этот результат, подставленный в~определение~\eqref{angularvelocityvector} псевдо\-вектора~$\bm{\omega}$, даёт
+
+\nopagebreak\vspace{-0.5em}\begin{equation}
+\bm{\omega} = \bm{k} \hspace{0.2ex} \mathdotabove{\vartheta}
++ \mathdotabove{\bm{k}} \operatorname{sin} \vartheta
++ \bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}} \left( 1 - \operatorname{cos} \vartheta \right) \hspace{-0.4ex}.
+\end{equation}
+
+\vspace{-0.32em} \noindent Вектор~$\bm{\omega}$ получился разложенным по~трём взаимно ортогональным направлениям~--- $\bm{k}$, $\mathdotabove{\bm{k}}$ и~${\bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}}}$. При~неподвижной оси поворота ${\mathdotabove{\bm{k}} = \bm{0} \,\Rightarrow\, \bm{\omega} = \bm{k} \hspace{0.1ex} \mathdotabove{\vartheta}}$.
+
+Ещё одно представление~$\bm{\omega}$ связано с~компонентами тензора поворота~\eqref{componentsofrotationtensor}. Поскольку ${\bm{P} = \cosinematrix{\!j\mathcircabove{i}} \hspace{0.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$, ${\bm{P}^{\T} \hspace{-0.32ex} = \cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \hspace{0.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$, а~векторы начального базиса~${\mathcircabove{\bm{e}}_i}$ неподвижны (со~временем не~меняются), то
+\nopagebreak\vspace{0.25em}\[ \mathdotabove{\bm{P}} = \cosinematrixdotted{\!j\mathcircabove{i}} \hspace{0.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j \hspace{0.1ex}, \:\,
+\mathdotabove{\bm{P}} \dotp \bm{P}^{\T} \hspace{-0.32ex} = \hspace{0.1ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{0.4ex}  \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{0.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j \hspace{0.1ex}, \]
+\nopagebreak\vspace{-0.64em}\begin{equation}
+\bm{\omega} = - \hspace{0.1ex} \smalldisplaystyleonehalf \hspace{0.4ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{0.4ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{0.5ex} \mathcircabove{\bm{e}}_i \hspace{-0.3ex}\times\hspace{-0.3ex} \mathcircabove{\bm{e}}_j \hspace{-0.1ex} =
+\smalldisplaystyleonehalf \hspace{0.2ex} \levicivita_{jik} \hspace{0.32ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{0.4ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{0.4ex} \mathcircabove{\bm{e}}_k \hspace{0.2ex}.
+\end{equation}
+
+\vspace{-0.25em}
+Отметим и~формулы
+\nopagebreak\vspace{.16em}\begin{equation}\label{angularvelocityandbasisvectors}
+\begin{array}{c}
+\eqref{angularvelocityvector} \hspace{.32ex} \Rightarrow\:
+\mathdotabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \times \hspace{-0.1ex} \bm{e}_i \mathcircabove{\bm{e}}_i \:\Rightarrow\:
+\mathdotabove{\bm{e}}_i = \bm{\omega} \times \bm{e}_i \hspace{0.12ex}, \\[.32em]
+%
+\eqref{angularvelocityvector} \hspace{.32ex} \Rightarrow\:
+\bm{\omega} = \hspace{-0.1ex} - \hspace{0.16ex} \smalldisplaystyleonehalf \hspace{-.2ex} \left( \mathdotabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \hspace{-0.1ex} \dotp \mathcircabove{\bm{e}}_j \bm{e}_j \right)_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex}
+= \hspace{-0.1ex} - \hspace{0.16ex} \smalldisplaystyleonehalf \hspace{-.2ex} \left( \mathdotabove{\bm{e}}_i \bm{e}_i \hspace{.1ex} \right)_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.25ex}
+= \smalldisplaystyleonehalf \hspace{0.4ex} \bm{e}_i \hspace{-0.16ex} \times \hspace{-0.1ex} \mathdotabove{\bm{e}}_i \hspace{0.12ex}.
+\end{array}
+\end{equation}
+
+
+
+Comment\footnote{Поворот тела вокруг какой\hbox{-}то оси представляет, казалось~бы, вектор, ведь он имеет численное значение, равное углу поворота, и~направление, совпадающее с~направлением оси вращения, котоpое определяется по~\inquotesx{правилу буравчика}[.] Однако два таких поворота не~складываются как векторы, если только углы поворота не~являются бесконечно малыми.}
+
+На~самом~деле последовательные повороты не~складываются, а~умножаются.
+
+Можно~ли складывать угловые скорости?~--- Да, потому что угол поворота в~$\mathdotabove{\vartheta}$ бесконечно малый.~--- Но только при вращении вокруг неподвижной оси?
+
+...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Variations}}
+\ru{\section{Варьирование}}
+
+\begin{otherlanguage}{russian}
+
+Далее повсеместно будет использоваться сходная с~дифференцированием операция варьирования. Не~отсылая читателя к~курсам вариационного исчисления, ограничимся представлениями о~вариации~${\variation{x}}$ величины~$x$ как о~задаваемом нами бесконечно малом приращении, совместимом с~ограничениями~--- связями~(constraints). Если ограничений для~$x$ нет, то ${\variation{x}}$ произвольна~(случайна). Но когда ${x \!=\! x(y\hspace{-0.1ex})}$~--- функция независимого аргумента~$y$, следует считать ${\variation{x} = x'\hspace{-0.25ex}(y\hspace{-0.1ex}) \hspace{0.1ex} \variation{y}}$.
+
+
+
+{\small
+\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+Here we consider the exact differential of any set of position vectors~$\bm{r}_i$, that are functions of other variables ${\displaystyle \lbrace q_{1},q_{2},...,q_{m}\rbrace }$ and time t.
+
+The actual displacement is the differential
+\[\displaystyle d\bm{r}_{i} = \frac{\partial \bm{r}_{i}}{\partial t} \hspace{.16ex} dt \hspace{.2ex} + \sum_{j=1}^{m} {\frac{\partial \bm{r}_{i}}{\partial q^{\hspace{.1ex}j}}} \hspace{.2ex} dq^{\hspace{.1ex}j}\]
+
+Now, imagine if we have an arbitrary path through the configuration space/manifold. This means it has to satisfy the constraints of the system but not the actual applied forces
+\[\displaystyle \delta \bm{r}_{i}=\sum _{j=1}^{m} {\frac {\partial \bm{r}_{i}}{\partial q^{\hspace{.1ex}j}}} \hspace{.2ex} \delta q^{\hspace{.1ex}j}\]
+
+\par}
+
+
+
+В~записях с~вариациями действуют те~же правила, что и с~дифференциалами. Если, например, ${\variation{x}}$ и~${\variation{y}}$~--- вариации~$x$ и~$y$, а~$u$ и~$v$~--- кон\'{е}чные величины, то следует пис\'{а}ть ${u \variation{x} + v \variation{y} = \variation{w}}$, а~не~$w$~--- даже когда ${\variation{w}}$ не~является вариацией величины~$w$; в~этом случае ${\variation{w}}$ это единое обозначение. Разумеется, при~${u \!=\! u(x,y)}$, ${v \!=\! v(x,y)}$ и~${\partial_x v = \partial_y u}$ (${\hspace{0.16ex}\frac{\partial}{\partial x} v = \frac{\partial}{\partial y} u\hspace{0.16ex}}$) сумма~${\variation{w}}$ будет вариацией некой~$w$.
+
+Варьируя тождество~\eqref{orthogonalityofrotationtensor}, получим ${\variation{\bm{P}} \hspace{-0.08ex} \dotp \bm{P}^{\T} \hspace{-0.2ex} = - \bm{P} \dotp \variation{\bm{P}}^{\T}}$\!. Этот тензор антисимметричен, и~потому выражается через свой сопутствующий вектор~${\varvector{o}}$ как~${\variation{\bm{P}} \hspace{-0.08ex} \dotp \bm{P}^{\T} \hspace{-0.25ex} = \hspace{0.1ex} \varvector{o} \times \bm{E}}$. Приходим к~соотношениям
+\vspace{-0.4em}\begin{equation}
+\variation{\bm{P}} \hspace{-0.1ex} = \varvector{o} \times \bm{P} , \:\:
+\varvector{o} = - \, \displaystyle \onehalf \left( { \variation{\bm{P}} \hspace{-0.08ex} \dotp^{\mathstrut} \bm{P}^{\T} } \right)_{\hspace{-0.25em}\Xcompanion} \hspace{-0.1ex} ,
+\end{equation}
+
+\vspace{-0.5em} \noindent аналогичным~\eqref{angularvelocityvector}. Вектор бесконечно малого поворота~${\varvector{o}}$ это не~\inquotesx{вариация $\bm{\mathrm{o}}$}[,] но единый символ (в~отличие от~${\variation{\bm{P}}}$).
+
+Малый поворот определяется вектором~${\varvector{o}}$, но конечный поворот тоже допускает(?) векторное представление
+
+...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Polar decomposition}}
+\ru{\section{Полярное разложение}}
+\label{para:polardecomposition}
+
+\begin{otherlanguage}{russian}
+
+Любой тензор второй сложности~${\bm{F}}$ с~${\operatorname{det} F_{ij} \neq 0}$ может быть представлен как
+
+...
+
+\newpage ...
+
+
+
+\end{otherlanguage}
+
+
+
+\newpage
+
+\en{\section{Tensors in oblique basis}}
+\ru{\section{Тензоры в косоугольном базисе}}
+
+\begin{otherlanguage}{russian}
+
+До~сих~пор нам было достаточно базиса из~ортогональной тройки единичных векторов~${\bm{e}_i}$. Теперь рассмотрим базис из~трёх любых
+%%\footnote{Без~ущерба для~общности всё~же считаем тройку ${\bm{a}_1}$,~${\bm{a}_2}$,~${\bm{a}_3}$ \inquotesx{правой}[.]}\hspace{-0.2ex}
+линейно независимых~(некомпланарных) векторов~${\bm{a}_i}$.
+
+%%\begin{figure}[!htbp]
+%%\begin{center}
+\begin{wrapfigure}[20]{R}{0.48\textwidth}
+\makebox[0.5\textwidth][c]{\begin{minipage}[t]{0.5\textwidth}
+
+\tdplotsetmaincoords{33}{109} % orientation of camera
+% vectors of basis
+\pgfmathsetmacro{\firstlength}{1}
+	\pgfmathsetmacro{\firstanglefromz}{90} % first and second are xy plane
+	\pgfmathsetmacro{\firstanglefromx}{0} % first is just x
+\pgfmathsetmacro{\secondlength}{1}
+	\pgfmathsetmacro{\secondanglefromz}{90} % first and second are xy plane
+	\pgfmathsetmacro{\secondanglefromx}{77} % but second is not orthogonal to first
+\pgfmathsetmacro{\thirdlength}{1}
+	\pgfmathsetmacro{\thirdanglefromz}{-15}
+	\pgfmathsetmacro{\thirdanglefromx}{50}
+% some vector
+\pgfmathsetmacro{\lengthofvector}{2.66}
+	\pgfmathsetmacro{\vectoranglefromz}{33}
+	\pgfmathsetmacro{\vectoranglefromx}{59}
+
+\vspace{-0.2em}
+\hspace{1.32em}\scalebox{0.96}[0.96]{%
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords] % tdplot_main_coords style to use 3dplot
+
+	\coordinate (O) at (0,0,0);
+
+	% draw axes and vectors of basis
+	\tdplotsetcoord{A1}{\firstlength}{\firstanglefromz}{\firstanglefromx}
+	\tdplotsetcoord{A2}{\secondlength}{\secondanglefromz}{\secondanglefromx}
+	\tdplotsetcoord{A3}{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.08*(A1) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A1)
+		node[pos=0.97, above left, inner sep=0pt, outer sep=3pt] {${\bm{a}}_1$};
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.88*(A2) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A2)
+		node[pos=0.93, above, inner sep=0pt, outer sep=6pt] {${\bm{a}}_2$};
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.1*(A3) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A3)
+		node[pos=1.02, below right, inner sep=0pt, outer sep=7pt] {${\bm{a}}_3$};
+
+	% define vector by sperical coordinates {length}{angle from z}{angle from x}
+	% (plusi it defines its projections)
+	\tdplotsetcoord{V}{\lengthofvector}{\vectoranglefromz}{\vectoranglefromx}
+
+	% get components of vector
+	\coordinate (ParallelToThird) at ($ (V) - (A3) $);
+	\coordinate (VcomponentXY) at (intersection of V--ParallelToThird and O--Vxy);
+
+	\coordinate (ParallelToSecond) at ($ (VcomponentXY) - (A2xy) $);
+	\coordinate (ParallelToFirst) at ($ (VcomponentXY) - (A1xy) $);
+
+	\coordinate (Vcomponent1) at (intersection of VcomponentXY--ParallelToSecond and O--A1);
+	\coordinate (Vcomponent2) at (intersection of VcomponentXY--ParallelToFirst and O--A2);
+
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (VcomponentXY); % projection on first & second vectors’ plane
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (VcomponentXY);
+	\draw [line width=0.4pt, dotted, color=black] (VcomponentXY) -- (Vcomponent1);
+	\draw [line width=0.4pt, dotted, color=black] (VcomponentXY) -- (Vcomponent2);
+
+	% draw parallelepiped
+	\coordinate (onPlane23) at ($ (Vcomponent2) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (Vcomponent2) -- (onPlane23);
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (onPlane23);
+
+	\coordinate (onPlane13) at ($ (Vcomponent1) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (Vcomponent1) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (onPlane13);
+
+	\coordinate (onAxis3) at ($ (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=black] (onPlane13) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=black] (onPlane23) -- (onAxis3);
+
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onPlane23);
+
+	% draw components of vector
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcomponent1)
+		node[pos=0.52, above left, fill=white, shape=circle, inner sep=0pt, outer sep=4pt] {${v^1 \hspace{-0.1ex} \bm{a}_1}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vcomponent1) -- (VcomponentXY)
+		node[pos=0.48, below, shape=circle, fill=white, inner sep=-2pt, outer sep=2pt] {${v^2 \hspace{-0.1ex} \bm{a}_2}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(VcomponentXY) -- (V)
+		node[pos=0.52, above right, shape=circle, fill=white, inner sep=0pt, outer sep=7pt] {${v^3 \hspace{-0.1ex} \bm{a}_3}$};
+
+	% draw vector
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.68, above, fill=white, inner sep=1pt, outer sep=5pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+\end{tikzpicture}}
+\vspace{-0.32em}\caption{}\label{fig:ObliqueCoordinates}
+\end{minipage}}
+\end{wrapfigure}
+%%\end{center}
+%%\end{figure}\vspace{-1.5em}
+
+Декомпозицию~(разложение) вектора~$\bm{v}$ по~базису~${\bm{a}_i}$~(\figref{fig:ObliqueCoordinates}) запишем как линейную комбинацию
+\vspace{-0.6em}\begin{equation}\label{decompositionbyobliquebasis}
+\bm{v} = v^{i} \hspace{-0.1ex} \bm{a}_i \hspace{0.1ex}.
+\end{equation}
+
+\vspace{-0.45em}\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+Соглашение о~суммировании обретает новые положения: повторяющиеся~(\inquotes{немые}) индексы суммирования расположены на~\hbox{разных} уровнях, а~свободные индексы в~обеих частях равенств~--- на~одной высоте (${a_i = \hspace{0.1ex} b_{ij} c^{\hspace{0.2ex}j}}$~--- корректно, ${a_i \hspace{-0.1ex} = \hspace{0.1ex} b_{kk}^{\hspace{0.1ex}i}}$~--- дважды ошибочно).
+
+\vspace{0.1em}\normalsize\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+В~таком базисе уж\'{е} ${\bm{v} \dotp \bm{a}_i \hspace{-0.1ex} = \hspace{0.1ex} v^{k} \bm{a}_k \hspace{-0.1ex} \dotp \bm{a}_i \neq\vspace{0.2ex} v^{i}}$\hspace{-0.25ex}, ведь~тут ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{a}_k \neq\vspace{0.2ex} \delta_{ik}}$.
+
+Дополним~же \hbox{базис}~${\bm{a}_i}$ ещё другой тройкой векторов~\hbox{${\bm{a}^{\hspace{-0.05ex}i}}$\hspace{-0.25ex},} \hbox{называемых} кобазисом или~взаимным базисом, чтобы при~этом
+\vspace{0.1em}\begin{equation}\label{fundamentalpropertyofcobasis}
+\begin{array}{c}
+\bm{a}_i \dotp \bm{a}^{\hspace{0.1ex}j} \hspace{-0.1ex} = \hspace{0.1ex} \delta_i^{\hspace{0.1ex}j} , \:\:
+\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \dotp \bm{a}_j \hspace{-0.1ex} = \hspace{0.1ex} \delta_{\hspace{-0.1ex}j}^{\hspace{0.1ex}i} \hspace{0.16ex}, \\[0.2em]
+\bm{E} = \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.1ex} \bm{a}_i \hspace{-0.1ex} = \bm{a}_i \hspace{0.1ex} \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.2ex}.
+\end{array}\end{equation}
+
+\vspace{-0.1em}\noindent Это~--- основное свойство кобазиса. Орто\-нормирован\-ный~(орто\-нормаль\-ный) базис может быть определён как совпад\'{а}ющий со~своим кобазисом: ${\bm{e}^{\hspace{0.05ex}i} \hspace{-0.2ex} = \bm{e}_{i}}$.
+
+%%\inquotes{В~декартовых координатах}, когда базис~--- отронормальный правый:
+%%\begin{itemize}
+%%\item компоненты единичного~(\inquotes{метрического}) тензора~--- дельта Кронекера,
+%%\item компоненты (псевдо)тензора Л\'{е}ви\hbox{-\!}Чив\'{и}ты~--- символы Веблена.
+%%\end{itemize}
+
+\begin{comment} %%
+\vspace{-0.5em}\[
+\bm{a}_i \dotp \bm{a}^{\hspace{0.1ex}j} \hspace{-0.1ex} = \hspace{-0.2ex}
+\scalebox{0.8}[0.8]{$\left[ \begin{array}{ccc}
+\bm{a}_1 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.1ex}1} & \bm{a}_1 \hspace{-0.1ex} \dotp \bm{a}^2 & \bm{a}_1 \hspace{-0.1ex} \dotp \bm{a}^3 \\
+\bm{a}_2 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.1ex}1} & \bm{a}_2 \hspace{-0.1ex} \dotp \bm{a}^2 & \bm{a}_2 \hspace{-0.1ex} \dotp \bm{a}^3 \\
+\bm{a}_3 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.1ex}1} & \bm{a}_3 \hspace{-0.1ex} \dotp \bm{a}^2 & \bm{a}_3 \hspace{-0.1ex} \dotp \bm{a}^3
+\end{array} \right]$} \!=\!
+\scalebox{0.8}[0.8]{$\left[ \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array} \right]$} \!=
+\hspace{0.1ex} \delta_i^{\hspace{0.1ex}j}
+\]
+\end{comment} %%
+
+Для, к~примеру, первого вектора кобазиса~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$ имеем
+\vspace{0.2em}\[
+\scalebox{0.9}[0.9]{$\left\{\hspace{-0.16em}\begin{array}{l}
+\bm{a}^{\hspace{-0.1ex}1} \hspace{-0.1ex} \dotp \bm{a}_{1} = 1 \\
+\bm{a}^{\hspace{-0.1ex}1} \hspace{-0.1ex} \dotp \bm{a}_{2} = 0 \\
+\bm{a}^{\hspace{-0.1ex}1} \hspace{-0.1ex} \dotp \bm{a}_{3} = 0 \\[0.05em]
+\end{array}\right.$} \,\Rightarrow\hspace{0.32em}
+%
+\scalebox{0.92}[0.92]{$\left\{\hspace{-0.12em}\begin{array}{l}
+\bm{a}^{\hspace{-0.1ex}1} \hspace{-0.1ex} \dotp \hspace{0.2ex} \bm{a}_{1} = 1 \\[0.1em]
+\gamma \hspace{0.1ex} \bm{a}^{\hspace{-0.1ex}1} \hspace{-0.1ex} = \hspace{0.1ex} \bm{a}_2 \hspace{-0.1ex} \times \bm{a}_3 \\[0.08em]
+\end{array}\right.$} \Rightarrow\hspace{0.32em}
+%
+\scalebox{0.96}[0.96]{$\left\{\hspace{-0.11em}\begin{array}{l}
+\bm{a}^{\hspace{-0.1ex}1} \hspace{-0.2ex} =
+\displaystyle \nicefrac{\scalebox{0.95}{$1$}\hspace{0.1ex}}{\scalebox{1.02}{$\gamma$}} \hspace{0.5ex} \bm{a}_2 \hspace{-0.1ex} \times \bm{a}_3 \hspace{0.1ex} \\[0.08em]
+\gamma = \hspace{0.1ex} \bm{a}_2 \hspace{-0.1ex} \times \bm{a}_3 \hspace{0.1ex} \dotp \hspace{0.25ex} \bm{a}_{1} \\[0.08em]
+\end{array}\right.$}
+\]
+
+\vspace{0.05em}\noindent Коэффициент~$\gamma$ получился равным объёму параллелепипеда, построенного на~векторах~$\bm{a}_i$; в~\pararef{para:crossproduct+levicivita} тот~же объём был представлен как~\!${\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{0.16ex}}$, и~это неспроста, поскольку он совпадает с~квадратным корнем из~грамиана~\hbox{$\textsl{g} \hspace{0.1ex} \hspace{0.25ex} \equiv \hspace{0.2ex} \operatorname{det} \textsl{g}_{ij}$\hspace{-0.12ex}}~--- определителя симметричной матрицы~\hbox{J.\,P.\,Gram’а}~${\textsl{g}_{ij} \hspace{-0.1ex} \hspace{0.16ex} \equiv \hspace{0.2ex} \bm{a}_i \dotp \bm{a}_j}$.
+
+%%Матрица Грама~${\textsl{g}_{ik} \hspace{-0.1ex} \equiv \bm{e}_i \dotp \bm{e}_k}$, грамиан~${\textsl{g} \hspace{0.1ex} \equiv \operatorname{det} \textsl{g}_{ik}}$.
+
+Доказательство напоминает вывод~\eqref{doubleveblen}. \inquotes{Тройное} произведение ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{0.1ex} \bm{a}_k}$ в~каком\hbox{-}нибудь орто\-нормаль\-ном базисе~${\bm{e}_i}$ вычисл\'{и}мо как~детерминант~(с~\inquotes{$-$} для~\inquotes{левой} базисной тройки) по~строкам
+\vspace{-0.4em}\[
+\levicivita_{ijk} =\hspace{0.16ex} \bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{0.1ex} \bm{a}_k =
+\hspace{0.1ex} \pm \operatorname{det}\hspace{-0.1ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{0.64em}}c@{\hspace{0.64em}}c}
+\bm{a}_i \narrowdotp\hspace{0.12ex} \bm{e}_1 & \bm{a}_i \narrowdotp\hspace{0.12ex} \bm{e}_2 & \bm{a}_i \narrowdotp\hspace{0.12ex} \bm{e}_3 \\
+\bm{a}_j \narrowdotp\hspace{0.12ex} \bm{e}_1 & \bm{a}_j \narrowdotp\hspace{0.12ex} \bm{e}_2 & \bm{a}_j \narrowdotp\hspace{0.12ex} \bm{e}_3 \\
+\bm{a}_k \narrowdotp\hspace{0.12ex} \bm{e}_1 & \bm{a}_k \narrowdotp\hspace{0.12ex} \bm{e}_2 & \bm{a}_k \narrowdotp\hspace{0.12ex} \bm{e}_3
+\end{array}\hspace{-0.12ex}\right]$}
+\]
+или по~столбцам
+\vspace{-0.4em}\[
+\levicivita_{pqr} =\hspace{0.16ex} \bm{a}_p \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_q \dotp \hspace{0.1ex} \bm{a}_r =
+\hspace{0.1ex} \pm \operatorname{det}\hspace{-0.1ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{0.64em}}c@{\hspace{0.64em}}c}
+\bm{a}_p \narrowdotp\hspace{0.12ex} \bm{e}_1 & \bm{a}_q \narrowdotp\hspace{0.12ex} \bm{e}_1 & \bm{a}_r \narrowdotp\hspace{0.12ex} \bm{e}_1 \\
+\bm{a}_p \narrowdotp\hspace{0.12ex} \bm{e}_2 & \bm{a}_q \narrowdotp\hspace{0.12ex} \bm{e}_2 & \bm{a}_r \narrowdotp\hspace{0.12ex} \bm{e}_2 \\
+\bm{a}_p \narrowdotp\hspace{0.12ex} \bm{e}_3 & \bm{a}_q \narrowdotp\hspace{0.12ex} \bm{e}_3 & \bm{a}_r \narrowdotp\hspace{0.12ex} \bm{e}_3
+\end{array}\hspace{-0.12ex}\right]$} .
+\]
+
+\vspace{0.2em} \noindent Произведение определителей~${\levicivita_{ijk} \levicivita_{pqr}}$ равно определителю произведения матриц, элементы последнего~--- суммы вида ${\bm{a}_i \dotp \bm{e}_s \bm{e}_s \hspace{-0.2ex} \dotp \bm{a}_p \hspace{-0.12ex}= \bm{a}_i \dotp \bm{E} \dotp \bm{a}_p \hspace{-0.12ex}= \bm{a}_i \dotp \bm{a}_p}$ %%\hspace{0.1ex}:
+\[
+\levicivita_{ijk} \levicivita_{pqr} = \hspace{0.25ex}
+\operatorname{det}\hspace{-0.1ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{0.64em}}c@{\hspace{0.64em}}c}
+\bm{a}_i \narrowdotp\hspace{0.12ex} \bm{a}_p & \bm{a}_i \narrowdotp\hspace{0.12ex} \bm{a}_q & \bm{a}_i \narrowdotp\hspace{0.12ex} \bm{a}_r \\
+\bm{a}_j \narrowdotp\hspace{0.12ex} \bm{a}_p & \bm{a}_j \narrowdotp\hspace{0.12ex} \bm{a}_q & \bm{a}_j \narrowdotp\hspace{0.12ex} \bm{a}_r \\
+\bm{a}_k \narrowdotp\hspace{0.12ex} \bm{a}_p & \bm{a}_k \narrowdotp\hspace{0.12ex} \bm{a}_q & \bm{a}_k \narrowdotp\hspace{0.12ex} \bm{a}_r
+\end{array}\hspace{-0.12ex}\right]$} ;
+\]
+
+\vspace{0.12em}\noindent ${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\levicivita_{123} \hspace{0.2ex} \levicivita_{123} \hspace{-0.12ex}= \underset{i,\hspace{0.1ex}j}{\operatorname{det}} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex}= \underset{i,\hspace{0.1ex}j}{\operatorname{det}} \, \textsl{g}_{ij}}$.
+
+\begin{comment} %%
+\[\scalebox{0.92}[0.92]{$\begin{array}{l@{\hspace{0.3em}}c@{\hspace{0.36em}}r}
+\gamma \hspace{0.1ex} \bm{a}^{\hspace{-0.1ex}1} & = & \hspace{0.1ex} \bm{a}_2 \hspace{-0.1ex} \times \bm{a}_3 \hspace{0.1ex} \\[0.2em]
+\gamma \hspace{0.1ex} \bm{a}^2 & = & \hspace{0.1ex} \bm{a}_3 \hspace{-0.1ex} \times \bm{a}_1 \hspace{0.1ex} \\[0.2em]
+\gamma \hspace{0.1ex} \bm{a}^3 & = & \hspace{0.1ex} \bm{a}_1 \hspace{-0.16ex} \times \bm{a}_2 \hspace{0.1ex}
+\end{array}$}\]
+\end{comment} %%
+
+Представляя~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$ и~остальные векторы кобазиза суммой
+\vspace{1.1em}\[\begin{array}{l@{\hspace{0.3em}}c@{\hspace{0.36em}}r}
+2 \hspace{0.1ex} \scalebox{0.95}[0.96]{$\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}$} \hspace{0.5ex} \bm{a}^{\hspace{-0.1ex}1} & = & \bm{a}_2 \times \bm{a}_3 \hspace{0.2ex} \tikzmark{BeginPlusToMinus} - \hspace{0.2ex} \bm{a}_3 \times \bm{a}_2 \tikzmark{EndPlusToMinus} \hspace{0.2ex},
+\end{array}\]%
+\AddOverBrace[line width=.75pt][0,-0.2ex]{BeginPlusToMinus}{EndPlusToMinus}%
+{${\scriptstyle {+ \hspace{0.4ex} \bm{a}_2 \hspace{0.1ex} \times \hspace{0.2ex} \bm{a}_3}}$}
+
+\vspace{-1.2em} \noindent приходим к~общей формуле
+\vspace{0.25em}\begin{equation}\label{basisvectorstocobasisvectors}
+\bm{a}^{\hspace{-0.05ex}i} = \displaystyle \frac{\raisemath{-0.4ex}{1}}{2 \hspace{0.1ex} \scalebox{0.95}[0.96]{$\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}$}} \hspace{0.5ex} e^{ijk} \hspace{0.1ex} \bm{a}_j \hspace{-0.1ex} \times \bm{a}_k \hspace{0.1ex}, \:\:
+\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} \hspace{0.32ex} \equiv \hspace{0.2ex} \bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 \hspace{0.1ex} \dotp \hspace{0.25ex} \bm{a}_3 \hspace{0.2ex}.
+\end{equation}
+\noindent Здесь ${e^{ijk}}$~\hspace{-0.2ex}--- по\hbox{-}прежнему символы Веблена~(${\pm 1}$ или~$0$), и~по~\eqref{veblencontraction} ${e^{ijk} e_{jkn} \hspace{-0.2ex} = 2 \hspace{0.1ex} \delta_n^{\hspace{0.1ex}i}}$. Произведение~${\bm{a}_j \hspace{-0.1ex} \times \bm{a}_k = \hspace{0.1ex} \levicivita_{jkn} \hspace{0.2ex} \bm{a}^n}$\hspace{-0.16ex}, а~компоненты тензора Л\'{е}ви\hbox{-\!}Чив\'{и}ты~${\levicivita_{jkn} = \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} \hspace{0.4ex} e_{jkn}}$. Так что
+\vspace{0.2em}\[\scalebox{0.96}[0.96]{$%
+\begin{array}{l@{\hspace{0.3em}}c@{\hspace{0.36em}}r}
+\bm{a}^{\hspace{-0.1ex}1} & = & \displaystyle \nicefrac{\scalebox{0.95}{$1$}}{\hspace{-0.25ex}\sqrt{\hspace{-0.2ex}\scalebox{0.96}{$\mathstrut{\textsl{g}}$}}} \hspace{0.2ex} \left( \hspace{0.1ex} \bm{a}_2 \hspace{-0.1ex} \times \bm{a}_3 \hspace{0.1ex} \right) \hspace{-0.3ex},
+\end{array}
+\begin{array}{l@{\hspace{0.3em}}c@{\hspace{0.36em}}r}
+\bm{a}^2 & = & \displaystyle \nicefrac{\scalebox{0.95}{$1$}}{\hspace{-0.25ex}\sqrt{\hspace{-0.2ex}\scalebox{0.96}{$\mathstrut{\textsl{g}}$}}} \hspace{0.2ex} \left( \hspace{0.1ex} \bm{a}_3 \hspace{-0.1ex} \times \bm{a}_1 \hspace{0.1ex} \right) \hspace{-0.3ex},
+\end{array}
+\begin{array}{l@{\hspace{0.3em}}c@{\hspace{0.36em}}r}
+\bm{a}^3 & = & \displaystyle \nicefrac{\scalebox{0.95}{$1$}}{\hspace{-0.25ex}\sqrt{\hspace{-0.2ex}\scalebox{0.96}{$\mathstrut{\textsl{g}}$}}} \hspace{0.2ex} \left( \hspace{0.1ex} \bm{a}_1 \hspace{-0.16ex} \times \bm{a}_2 \hspace{0.1ex} \right) \hspace{-0.28ex}.
+\end{array}%
+$}\]
+
+\begin{tcolorbox}
+\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+\emph{Example.} Get cobasis for basis~$\bm{a}_i$ when
+\[ \begin{array}{l}
+\bm{a}_1 = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_2 \hspace{.1ex},\\
+\bm{a}_2 = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_3 \hspace{.1ex},\\
+\bm{a}_3 = \bm{e}_2 \hspace{-0.2ex} + \bm{e}_3 \hspace{.1ex}.
+\end{array} \]
+
+\[
+\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} \hspace{.32ex} =
+\hspace{0.2ex} \bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 \hspace{0.1ex} \dotp \hspace{0.25ex} \bm{a}_3 \hspace{0.2ex} =
+- \operatorname{det}\hspace{-0.1ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
+1 & 1 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 1
+\end{array}\hspace{-0.12ex}\right]$} \hspace{-0.5ex} = 2 \hspace{.25ex};
+\]
+\[
+\bm{a}_2 \hspace{-0.2ex} \times \bm{a}_3 = - \operatorname{det}\hspace{-0.1ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
+1 & 0 & \bm{e}_1 \\
+0 & 1 & \bm{e}_2 \\
+1 & 1 & \bm{e}_3
+\end{array}\hspace{-0.2ex}\right]$} \hspace{-0.5ex} = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_2 \hspace{-0.2ex} - \bm{e}_3 \hspace{.1ex},
+\]
+\[
+\bm{a}_3 \hspace{-0.2ex} \times \bm{a}_1 = - \operatorname{det}\hspace{-0.1ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
+0 & 1 & \bm{e}_1 \\
+1 & 1 & \bm{e}_2 \\
+1 & 0 & \bm{e}_3
+\end{array}\hspace{-0.2ex}\right]$} \hspace{-0.5ex} = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_3 \hspace{-0.2ex} - \bm{e}_2 \hspace{.1ex},
+\]
+\[
+\bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 = - \operatorname{det}\hspace{-0.1ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
+1 & 1 & \bm{e}_1 \\
+1 & 0 & \bm{e}_2 \\
+0 & 1 & \bm{e}_3
+\end{array}\hspace{-0.2ex}\right]$} \hspace{-0.5ex} = \bm{e}_2 \hspace{-0.2ex} + \bm{e}_3 \hspace{-0.2ex} - \bm{e}_1 \hspace{.1ex}
+\]
+
+\vspace{-0.4em}and finally
+\vspace{-0.4em}\[\begin{array}{l}
+\bm{a}^1 \hspace{-0.2ex}=\hspace{.1ex} \smalldisplaystyleonehalf \hspace{-0.12ex} \left(^{\mathstrut} \bm{e}_1 \hspace{-0.2ex} + \bm{e}_2 \hspace{-0.2ex} - \bm{e}_3 \right) \hspace{-0.5ex},\\[.5em]
+\bm{a}^2 \hspace{-0.2ex}=\hspace{.1ex} \smalldisplaystyleonehalf \hspace{-0.12ex} \left(^{\mathstrut} \bm{e}_1 \hspace{-0.2ex} - \bm{e}_2 \hspace{-0.2ex} + \bm{e}_3 \right) \hspace{-0.5ex},\\[.5em]
+\bm{a}^3 \hspace{-0.2ex}=\hspace{.1ex} \smalldisplaystyleonehalf \hspace{-0.12ex} \left(^{\mathstrut} \hspace{-0.2ex} {- \bm{e}_1} \hspace{-0.2ex} + \bm{e}_2 \hspace{-0.2ex} + \bm{e}_3 \right) \hspace{-0.5ex}.
+\end{array}\]
+
+\par\end{tcolorbox}
+
+Имея кобазис, возможно не~только разложить по~нему любой вектор~(\figref{fig:DecompositionOfVector}), но~и найти коэффициенты разложения~\eqref{decompositionbyobliquebasis}:
+\begin{equation}\begin{array}{c}
+\bm{v} = v^{i} \hspace{-0.1ex} \bm{a}_i = v_{i} \hspace{0.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.25ex}, \\[0.16em]
+\bm{v} \dotp \bm{a}^{\hspace{-0.05ex}i} = v^{k} \hspace{-0.1ex} \bm{a}_k \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.05ex}i} = v^{i} \hspace{-0.25ex}, \:\;
+v_{i} \hspace{-0.1ex} = \bm{v} \dotp \bm{a}_i \hspace{0.1ex}.
+\end{array}\end{equation}
+\noindent Коэффициенты~${v_i}$ называются ко\-вариант\-ными компонентами вектора~$\bm{v}$, а~${v^i \hspace{-0.25ex}}$~--- его контра\-вариант\-ными%
+\footnote{Потому что они меняются обратно~(contra) изменению длин базисных векторов~${\bm{a}_i}$.}\hspace{-0.2ex}
+компонентами.
+
+Есть литература о~тензорах, где различают ко\-вариант\-ные и~контра\-вариант\-ные... векторы~(и~\inquotes{ковекторы}). Не~ст\'{о}ит вводить читателя в~заблуждение: вектор\hbox{-}то один и~тот~же, просто при~разложении по~двум разным базисам у~него два набора компонент.
+
+% ~ ~ ~ ~ ~
+\input{decompositionviaobliquebasis.tex}
+% ~ ~ ~ ~ ~
+
+От~векторов перейдём к~тензорам второй сложности. Имеем четыре комплекта диад:
+${\bm{a}_i \hspace{0.1ex} \bm{a}_j}$,
+\hbox{$\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}^{\hspace{0.05ex}j}$\hspace{-0.25ex},}
+\hbox{$\bm{a}_i \hspace{0.1ex} \bm{a}^{\hspace{0.05ex}j}$\hspace{-0.25ex},}
+${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
+Согласующиеся коэффициенты в~декомпозиции тензора называются его контра\-вариант\-ными, ко\-вариант\-ными и~смешан\-ными компонентами:
+\vspace{0.1em}\begin{equation}\begin{array}{c}
+{^2\!\bm{B}} \hspace{0.1ex} =
+B^{\hspace{0.1ex}ij} \hspace{-0.1ex} \bm{a}_i \hspace{0.1ex} \bm{a}_j \hspace{-0.05ex} =
+B_{ij} \hspace{0.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.15ex} =
+B_{\hspace{-0.2ex} \cdot j}^{\hspace{0.1ex}i} \hspace{0.1ex} \bm{a}_i \hspace{0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.15ex} =
+B_{\hspace{-0.1ex}i}^{\hspace{-0.05ex} \cdot j} \hspace{-0.2ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j \hspace{0.1ex}, \\[0.4em]
+%
+B^{\hspace{0.1ex}ij} \hspace{-0.25ex} = \bm{a}^{\hspace{-0.05ex}i} \dotp {^2\!\bm{B}} \dotp \hspace{0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.2ex}, \:\,
+B_{ij} = \bm{a}_i \dotp {^2\!\bm{B}} \dotp \hspace{0.1ex} \bm{a}_j \hspace{0.1ex}, \\[0.25em]
+%
+B_{\hspace{-0.2ex} \cdot j}^{\hspace{0.1ex}i} = \bm{a}^{\hspace{-0.05ex}i} \dotp {^2\!\bm{B}} \dotp \hspace{0.1ex} \bm{a}_j \hspace{0.1ex}, \:\,
+B_{\hspace{-0.1ex}i}^{\hspace{-0.05ex} \cdot j} \hspace{-0.2ex} = \bm{a}_i \dotp {^2\!\bm{B}} \dotp \hspace{0.1ex} \bm{a}^{\hspace{0.1ex}j} \hspace{-0.1ex}.
+\end{array}\end{equation}
+
+\vspace{-0.1em}\noindent Для~двух видов смешанных компонент точка в~индексе это просто свободное место: у~${B_{\hspace{-0.2ex} \cdot j}^{\hspace{0.1ex}i}}$ верхний индекс~\inquotesx{$i\hspace{0.25ex}$}[---] первый, а~ниж\-ний~\inquotesx{$\hspace{-0.1ex}j\hspace{0.25ex}$}[---] второй.
+
+Компоненты единичного~(\inquotes{метрического}) тензора %%~$\bm{E}$
+\vspace{0.1em}\begin{equation}\begin{array}{c}
+\bm{E} = \bm{a}^{k} \hspace{-0.1ex} \bm{a}_{k} \hspace{-0.1ex} = \bm{a}_{k} \hspace{0.1ex} \bm{a}^{k} \hspace{-0.2ex} = \textsl{g}_{jk} \hspace{0.1ex} \bm{a}^{\hspace{0.1ex}j} \hspace{-0.1ex} \bm{a}^{k} \hspace{-0.2ex} = \textsl{g}^{\hspace{0.25ex}jk} \hspace{-0.1ex} \bm{a}_j \bm{a}_k \hspace{-0.32ex}: \\[0.2em]
+%
+\bm{a}_i \dotp \bm{E} \dotp \hspace{0.1ex} \bm{a}^{\hspace{0.1ex}j} \hspace{-0.2ex} = \bm{a}_i \hspace{0.1ex} \dotp \hspace{0.1ex} \bm{a}^{\hspace{0.1ex}j} \hspace{-0.2ex} = \delta_i^{\hspace{0.1ex}j} , \hspace{0.32em}
+\bm{a}^{\hspace{-0.05ex}i} \dotp \bm{E} \dotp \hspace{0.1ex} \bm{a}_j = \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.2ex} \dotp \hspace{0.1ex} \bm{a}_j \hspace{-0.2ex} = \delta_{\hspace{-0.1ex}j}^{\hspace{0.1ex}i} \hspace{0.2ex},
+\\[0.2em]
+%
+\bm{a}_i \dotp \bm{E} \dotp \hspace{0.1ex} \bm{a}_j = \bm{a}_i \dotp \hspace{0.1ex} \bm{a}_j \equiv \hspace{0.16ex} \textsl{g}_{ij} \hspace{0.1ex} , \hspace{0.32em}
+\bm{a}^{\hspace{-0.05ex}i} \dotp \bm{E} \dotp \hspace{0.1ex} \bm{a}^{\hspace{0.1ex}j} \hspace{-0.15ex} = \bm{a}^{\hspace{-0.05ex}i} \dotp \hspace{0.1ex} \bm{a}^{\hspace{0.1ex}j} \hspace{-0.15ex} \hspace{0.1ex} \equiv \hspace{0.16ex} \textsl{g}^{\hspace{0.2ex}ij} \hspace{0.1ex} ; \\[0.2em]
+%
+\scalebox{0.96}[0.97]{$\bm{E} \dotp \hspace{-0.1ex} \bm{E} = \textsl{g}_{ij} \hspace{0.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.1ex} \dotp \hspace{0.1ex} \textsl{g}^{\hspace{0.2ex}nk} \bm{a}_n \bm{a}_k \hspace{-0.1ex} = \textsl{g}_{ij} \hspace{0.1ex} \textsl{g}^{\hspace{0.2ex}jk} \bm{a}^{\hspace{-0.05ex}i} \bm{a}_k \hspace{-0.1ex} = \bm{E}$}
+\:\Rightarrow\: \textsl{g}_{ij} \hspace{0.1ex} \textsl{g}^{\hspace{0.2ex}jk} \hspace{-0.25ex} = \delta_i^{\hspace{0.05ex}k} \hspace{-0.1ex}.
+\end{array}\end{equation}
+
+\vspace{0.1em}\noindent Вдобавок к~\eqref{fundamentalpropertyofcobasis} и~\eqref{basisvectorstocobasisvectors} открылся ещё~один способ найти векторы кобазиса~--- через матрицу~\hbox{$\textsl{g}^{\hspace{.2ex}ij}$\hspace{-0.3ex}}, обратную матрице Грама~${\textsl{g}_{ij}}$. И~наоборот:
+
+\nopagebreak\vspace{-0.12em}
+\begin{equation}\begin{array}{c}
+\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex}
+= \bm{E} \dotp \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.15ex}
+= \textsl{g}^{\hspace{0.25ex}jk} \bm{a}_j \bm{a}_k \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.15ex}
+= \textsl{g}^{\hspace{0.25ex}jk} \bm{a}_j \hspace{.16ex} \delta_{k}^{\hspace{.1ex}i}
+= \textsl{g}^{\hspace{0.25ex}ji} \bm{a}_j \hspace{.1ex} ,
+\\[.25em]
+%
+\bm{a}_i
+= \bm{E} \dotp \bm{a}_i \hspace{-0.1ex}
+= \textsl{g}_{jk} \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.1ex} \bm{a}^{k} \hspace{-0.2ex} \dotp \bm{a}_i \hspace{-0.1ex}
+= \textsl{g}_{jk} \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{.1ex} \delta_{i}^{k}
+= \textsl{g}_{ji} \hspace{.16ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.2ex} .
+\end{array}\end{equation}
+
+\begin{tcolorbox}
+\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+\emph{Example.} Using reversed Gram matrix, get cobasis for basis~$\bm{a}_i$ when
+\[ \begin{array}{l}
+\bm{a}_1 = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_2 \hspace{.1ex},\\
+\bm{a}_2 = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_3 \hspace{.1ex},\\
+\bm{a}_3 = \bm{e}_2 \hspace{-0.2ex} + \bm{e}_3 \hspace{.1ex}.
+\end{array} \]
+
+\[\begin{array}{c}
+\textsl{g}_{ij} \hspace{-0.32ex} = \bm{a}_i \dotp \bm{a}_j \hspace{-0.12ex} = \hspace{-0.16ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
+2 & 1 & 1 \\
+1 & 2 & 1 \\
+1 & 1 & 2
+\end{array}\hspace{-0.12ex}\right]$} \hspace{-0.2ex}, \:\:
+\operatorname{det} \hspace{.12ex} \textsl{g}_{ij} \hspace{-0.25ex} = 4 \hspace{.16ex}, \\
+%
+\operatorname{adj} \hspace{.12ex} \textsl{g}_{ij} \hspace{-0.25ex} = \hspace{-0.16ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
+3 & -1 & -1 \\
+-1 & 3 & -1 \\
+-1 & -1 & 3
+\end{array}\hspace{-0.12ex}\right]^{\hspace{-0.4ex}\scalebox{1.02}{$\T$}}$} \hspace{-0.8ex}, \\
+%
+\textsl{g}^{\hspace{.32ex}ij} \hspace{-0.25ex} = \textsl{g}_{ij}^{\hspace{.4ex}\expminusone} \hspace{-0.12ex} = \displaystyle \frac{\operatorname{adj} \hspace{.12ex} \textsl{g}_{ij}}{\operatorname{det} \hspace{.12ex} \textsl{g}_{ij}} =
+\displaystyle \frac{1}{4} \hspace{.12ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
+3 & -1 & -1 \\
+-1 & 3 & -1 \\
+-1 & -1 & 3
+\end{array}\hspace{-0.12ex}\right]^{\mathstrut}$} \hspace{-0.25ex}.
+\end{array}\]
+
+\vspace{-0.5em}Using ${\bm{a}^i = \textsl{g}^{\hspace{.32ex}ij} \bm{a}_j}$
+\[\begin{array}{l}
+\bm{a}^1 \hspace{-0.2ex}=\hspace{.1ex} \textsl{g}^{\hspace{.2ex}11} \bm{a}_1 \hspace{-0.2ex} + \textsl{g}^{\hspace{.2ex}12} \bm{a}_2 \hspace{-0.2ex} + \textsl{g}^{\hspace{.2ex}13} \bm{a}_3 \hspace{-0.2ex} = \smalldisplaystyleonehalf \bm{e}_1 \hspace{-0.2ex} + \smalldisplaystyleonehalf \bm{e}_2 \hspace{-0.2ex} - \smalldisplaystyleonehalf \bm{e}_3 \hspace{.1ex},\\[.5em]
+%
+\bm{a}^2 \hspace{-0.2ex}=\hspace{.1ex} \textsl{g}^{\hspace{.2ex}21} \bm{a}_1 \hspace{-0.2ex} + \textsl{g}^{\hspace{.2ex}22} \bm{a}_2 \hspace{-0.2ex} + \textsl{g}^{\hspace{.2ex}23} \bm{a}_3 \hspace{-0.2ex} = \smalldisplaystyleonehalf \bm{e}_1 \hspace{-0.2ex} - \smalldisplaystyleonehalf \bm{e}_2 \hspace{-0.2ex} + \smalldisplaystyleonehalf \bm{e}_3 \hspace{.1ex},\\[.5em]
+%
+\bm{a}^3 \hspace{-0.2ex}=\hspace{.1ex} \textsl{g}^{\hspace{.2ex}31} \bm{a}_1 \hspace{-0.2ex} + \textsl{g}^{\hspace{.2ex}32} \bm{a}_2 \hspace{-0.2ex} + \textsl{g}^{\hspace{.2ex}33} \bm{a}_3 \hspace{-0.2ex} = - \smalldisplaystyleonehalf \bm{e}_1 \hspace{-0.2ex} + \smalldisplaystyleonehalf \bm{e}_2 \hspace{-0.2ex} + \smalldisplaystyleonehalf \bm{e}_3 \hspace{.16ex}.
+\end{array}\]
+
+\par\end{tcolorbox}
+
+...
+
+
+Единичный тензор~(unit tensor, identity tensor,  metric tensor)
+
+$\bm{E} \dotp \hspace{0.1ex} \bm{\xi} = \bm{\xi} \hspace{0.1ex} \dotp \bm{E} = \bm{\xi} \quad \forall \bm{\xi}$
+
+$\bm{E} \dotdotp \bm{a} \bm{b} = \bm{a} \bm{b} \dotdotp \bm{E} = \bm{a} \dotp \bm{E} \dotp \bm{b} = \bm{a} \dotp \bm{b}$
+
+$\bm{E} \dotdotp \bm{A} = \bm{A} \dotdotp \bm{E} = \operatorname{tr} \bm{A}$
+
+
+$\bm{E} \dotdotp \hspace{-0.1ex} \bm{A} = \bm{A} \dotdotp \hspace{-0.1ex} \bm{E} = \operatorname{tr} \bm{A} = \operatorname{not anymore} A_{jj}$
+
+Thus for, say, trace of some tensor ${\bm{A} = A_{ij} \bm{r}^i \bm{r}^j}$: $\bm{A} \dotdotp \bm{E} = \operatorname{tr} \bm{A}$, you have
+
+$\bm{A} \dotdotp \bm{E} = A_{ij} \bm{r}^i \bm{r}^j \dotdotp \bm{r}_k \bm{r}^k = A_{ij} \bm{r}^i \dotp \bm{r}^j = A_{ij} \textsl{g}^{\hspace{.32ex}ij}$
+
+
+...
+
+Тензор поворота~(rotation tensor)
+
+$\bm{P} \hspace{-0.2ex} = \hspace{-0.1ex} \bm{a}_i \hspace{.1ex} \mathcircabove{\bm{a}}^i \hspace{-0.2ex} = \hspace{-0.1ex} \bm{a}^{\hspace{-0.16ex}i} \mathcircabove{\bm{a}}_i \hspace{-0.2ex} = \hspace{-0.1ex} \bm{P}^{\expminusT}$
+
+$\bm{P}^{\expminusone} \hspace{-0.4ex} = \hspace{-0.1ex} \mathcircabove{\bm{a}}_i \hspace{.1ex} \bm{a}^{\hspace{-0.16ex}i} \hspace{-0.2ex} = \hspace{-0.1ex} \mathcircabove{\bm{a}}^i \bm{a}_i \hspace{-0.2ex} = \hspace{-0.1ex} \bm{P}^{\T}$
+
+$\bm{P}^{\T} \hspace{-0.4ex} = \hspace{-0.1ex} \mathcircabove{\bm{a}}^i \bm{a}_i \hspace{-0.2ex} = \hspace{-0.1ex} \mathcircabove{\bm{a}}_i \hspace{.1ex} \bm{a}^{\hspace{-0.16ex}i} \hspace{-0.2ex} = \hspace{-0.1ex} \bm{P}^{\expminusone}$
+
+...
+
+
+
+... Характеристическое уравнение~\eqref{chardetequation} быстро приводит к~тождеству Г\kern-0.08em\'{а}мильтона\hbox{--}К\kern-0.04em\'{э}ли~(Cayley\hbox{--}Hamilton)
+\nopagebreak\vspace{.1em}\begin{equation}\label{cayley-hamilton:eq}
+-\bm{B}^{3} \hspace{-0.25ex} + \mathrm{I}\hspace{0.16ex} \bm{B}^{2} \hspace{-0.25ex} - \mathrm{II}\hspace{0.16ex} \bm{B} + \mathrm{III}\hspace{0.16ex} \bm{E} = {^2\bm{0}} \hspace{0.1ex}.
+\end{equation}
+
+\end{otherlanguage}
+
+\en{\section{Tensor functions}}
+
+\ru{\section{Тензорные функции}}
+
+\label{para:tensorfunctions}
+
+\en{In~the~popular conception of~function~${y \!=\! f(x)}$ as of mapping (morphism) ${\smash{f \colon x \mapsto y}}$ an~input~(argument)~$x$ and an~output~(result)~$y$ may be tensors of any complexity.}
+
+\ru{\noindent В~популярном представлении о~функции~${y \!=\! f(x)}$ как отображении (морфизме) ${\smash{f \colon x \mapsto y}}$ прообраз~(аргумент)~$x$ и~образ~(результат)~$y$ могут быть тензорами любой сложности.}
+
+\begin{otherlanguage}{russian}
+
+Рассмотрим хотя~бы скалярную функцию двухвалентного тензора ${\varphi \!=\! \varphi(\bm{B})}$. В~каждом базисе~${\bm{a}_i}$ имеем функцию девяти числовых аргументов~${\varphi(B_{ij})}$; при~переходе к~новому базису ${B_{ij}}$ могуть изменяться лишь~так, чтобы результат~$\varphi$ сохранился. Дифференцирование~$\varphi$ выглядит так:
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+d \varphi = \displaystyle \frac{\partial \varphi}{\partial B_{ij}} \hspace{0.2ex} d B_{ij} = \displaystyle \frac{\partial \varphi}{\partial \bm{B}} \dotdotp d \bm{B}^{\T} \hspace{-0.25ex} , \;\;
+\displaystyle \frac{\partial \varphi}{\partial \bm{B}} \hspace{0.1ex} \equiv \displaystyle \frac{\partial \varphi}{\partial B_{ij}} \hspace{0.25ex} \bm{a}_i \bm{a}_j \hspace{0.1ex}.
+\end{equation}
+
+Тензор~...
+
+...
+
+Но согласно опять\hbox{-}таки~\eqref{cayley-hamilton:eq}
+${\hspace{-0.1ex} -\bm{B}^{2} \hspace{-0.2ex} + \mathrm{I}\hspace{0.16ex} \bm{B} \hspace{-0.1ex} - \mathrm{II}\hspace{0.16ex} \bm{E} + \mathrm{III}\hspace{0.16ex} \bm{B}^{\expminusone} \hspace{-0.25ex} = {^2\bm{0}}}$, поэтому
+
+...
+
+
+
+Скалярная функция~${\varphi(\bm{B})}$ называется изотропной, если она не~чувствительна к~повороту аргумента:
+\nopagebreak\vspace{.1em}\begin{equation*}
+\varphi(\bm{B}) \hspace{-0.12ex} = \varphi ( \rotationtensor \narrowdotp \smash{\mathcircabove{\bm{B}}} \narrowdotp \hspace{.15ex} \rotationtensor^{\hspace{-0.06ex}\T} ) \hspace{-0.2ex} = \varphi(\smash{\mathcircabove{\bm{B}}}) \;\;\,
+\forall \rotationtensor \hspace{-0.2ex}=\hspace{-0.1ex} \bm{a}_i \hspace{.1ex} \mathcircabove{\bm{a}}^i \hspace{-0.2ex} = \hspace{-0.1ex} \bm{a}^{\hspace{-0.16ex}i} \mathcircabove{\bm{a}}_i \hspace{-0.16ex} = \hspace{-0.1ex} \rotationtensor^{\hspace{-0.06ex}\expminusT}
+\end{equation*}
+\par\vspace{-0.25em}\noindent для~любого ортогонального тензора~$\rotationtensor$ (тензора поворота, \pararef{para:rotationtensor}).
+
+Симметричный тензор~${\bm{B}^{\mathsf{\hspace{0.1ex}S}}}$ вполне определяется тройкой инвариантов и~угловой ориентацией собственных осей (они~же взаимно ортогональны, \pararef{para:eigenvectorseigenvalues}). Ясно, что изотропная функция~${\varphi(\bm{B}^{\mathsf{\hspace{0.1ex}S}})}$ симметричного аргумента является функцией лишь инвариантов ${\mathrm{I}\hspace{0.16ex}({\bm{B}^{\mathsf{\hspace{0.1ex}S}}})}$, ${\mathrm{II}\hspace{0.16ex}({\bm{B}^{\mathsf{\hspace{0.1ex}S}}})}$, ${\mathrm{III}\hspace{0.16ex}({\bm{B}^{\mathsf{\hspace{0.1ex}S}}})}$; она дифференцируется согласно~\eqref{fonvccbnmxghjsxmnxjsdjhga}, где транспонирование излишне.
+
+\end{otherlanguage}
+
+\en{\section{Tensor fields. Differentiation}}
+
+\ru{\section{Тензорные поля. Дифференцирование}}
+
+\begin{otherlanguage}{russian}
+
+\begin{changemargin}{\parindent}{\parindent}
+\vspace{-0.15em}
+\small \flushright \textit{\inquotesx{п\'{о}ле}[---]} это тензор, меняющийся от~точки к~точке (переменный по~координатам)
+\par\vspace{.25em}
+\end{changemargin}
+
+\noindent Путь в~каждой точке некоторой области трёхмерного пространства
+% известно значение величины (value of value)
+известна величина~$u$. Тогда имеем поле~${u \!=\! u(\bm{r})}$, где~$\bm{r}$~--- радиус\hbox{-}вектор точки. Например, поле температуры в~среде, поле давления в~идеальной жидкости. Величина~$u$ может~быть тензором любой сложности. Пример векторного поля~--- скорости частиц жидкости.
+
+\end{otherlanguage}
+
+% ~ ~ ~ ~ ~
+\input{curvilinear-coordinates.tex}
+% ~ ~ ~ ~ ~
+
+\begin{otherlanguage}{russian}
+
+Не~только при~решении прикладных задач, но нередко и в~\inquotes{чистой} тео\-рии вместо аргумента~$\bm{r}$ ис\-поль\-зу\-ет\-ся какая-либо трой\-ка криво\-линей\-ных координат~${q^{\hspace{.1ex}i}\hspace{-0.2ex}}$. При~этом ${\bm{r} \!=\! \bm{r}(q^{\hspace{.1ex}i}\hspace{.1ex})}$. Непрерывно меняя лишь одну координату из~трёх, получаем координатную линию. Каждая точка трёхмерного пространства лежит на~пересечении трёх координатных линий (\figref{fig:curvilinearcoordinates}).
+
+{\small
+Commonly used curvilinear coordinate systems include: rectangular, spherical, and cylindrical coordinate systems. These coordinates may be derived from a~set of cartesian coordinates by using a~transformation that is locally invertible (a~one-to-one map) at~each point. This means that one can convert a~point given in a~cartesian coordinate system to its curvilinear coordinates and~back.
+\par}
+
+...
+
+\newpage ...
+
+\newpage ...
+
+\newpage ...
+
+\newpage ...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Integral theorems}}
+
+\ru{\section{Интегральные теоремы}}
+
+\begin{otherlanguage}{russian}
+
+Для векторных полей известны интегральные теоремы Gauss’а и~Stokes’а.
+
+\noindent\leavevmode{\indent}{\small Gauss’ theorem (divergence theorem) enables an~integral taken over a~volume to be replaced by one taken over the closed surface bounding that volume, and vice versa.\par}
+
+\noindent\leavevmode{\indent}{\small Stokes’ theorem enables an~integral taken around a closed curve to be replaced by one taken over \emph{any} surface bounded by that curve. Stokes’ theorem relates a~line integral around a closed path to a surface integral over what is called a~\emph{capping surface} of the path.\par}
+
+Теорема Гаусса о~дивергенции~--- про~то, как заменить объёмный интеграл поверхностным~(и~наоборот). В~этой теореме рассматривается поток (ef)flux вектора через ограничивающую объём~$V$ з\'{а}мкнутую поверхность ${\mathcal{O}(\boundary V)}$ с~единичным вектором внешней нормали~$\bm{n}$
+\begin{equation}
+\ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary V)}} \hspace{-0.1ex} \bm{n} \dotp \bm{a} \hspace{.4ex} d\mathcal{O} \hspace{.12ex} = \integral\displaylimits_V \hspace{-0.3ex} \boldnabla \dotp \bm{a} \hspace{0.4ex} dV \hspace{-0.25ex}.
+\end{equation}
+
+Объём~$V$ нарезается тремя семействами координатных поверхностей на~множество бесконечно малых элементов. Поток через поверхность ${\mathcal{O}(\boundary V)}$ равен сумме потоков через края получившихся элементов. В~бесконечной малости каждый такой элемент~--- маленький локальный дифференциальный кубик~(параллелепипед). ... Поток вектора~$\bm{a}$ через грани малого кубика объёма~$dV$ есть ${\sum_{i = 1}^{6} \bm{n}_i \dotp \bm{a} \hspace{.2ex} \mathcal{O}_i}$, а~через сам этот объём поток равен ${\boldnabla \dotp \bm{a} \hspace{.32ex} dV}$.
+
+Похожая трактовка этой теоремы есть, к примеру, в~курсе Richard’а Feynman’а~\cite{feynman-lecturesonphysics}.
+
+\emph{( рисунок с кубиками )}
+
+to dice~--- нарез\'{а}ть кубиками
+
+small cube, little cube
+
+локально ортонормальные координаты ${\bm{\xi} = \xi_i \hspace{.2ex} \bm{n}_i \hspace{.1ex}}$, ${d\bm{\xi} = d \xi_i \hspace{.2ex} \bm{n}_i}$, ${\boldnabla = \bm{n}_i \partial_i}$
+
+разложение вектора ${\bm{a} = a_i \bm{n}_i \hspace{.1ex}}$
+
+Теорема Стокса о~циркуляции выражается равенством
+
+...
+
+\newpage ...
+
+
+
+\end{otherlanguage}
+
+
+
+\newpage
+
+\en{\section{Curvature tensors}}
+
+\ru{\section{Тензоры кривизны}}
+
+\label{para:curvaturetensors}
+
+\begin{changemargin}{2\parindent}{\parindent}
+\bgroup % to change \parindent locally
+\setlength{\parindent}{\negparindent}
+\setlength{\parskip}{0.8mm minus0.2mm}
+\small
+
+\leavevmode{\indent}The \emph{Riemann curvature tensor} or \emph{Riemann\hbox{--}Christoffel tensor} (after \href{https://en.wikipedia.org/wiki/Bernhard_Riemann}{\textbf{Bernhard Riemann}} and \href{https://en.wikipedia.org/wiki/Elwin_Bruno_Christoffel}{\textbf{Elwin Bruno Christoffel}}) is the most common method used to express the curvature of Riemannian manifolds. It’s a~tensor field, it assigns a~tensor to each point of a~Riemannian manifold, that measures the extent to which the~metric tensor is not locally isometric to that of \inquotes{flat} space. The curvature tensor can also be defined for any pseudo-Riemannian manifold, or any manifold equipped with an~\inquotes{affine connection} (a~choice of such connection makes a~manifold look infinitesimally like affine \inquotes{flat} space).
+
+The \emph{Ricci curvature tensor}, named after \href{https://en.wikipedia.org/wiki/Gregorio_Ricci-Curbastro}{\textbf{Gregorio Ricci\hbox{-}Curbastro}}, represents the amount by which the~volume of a~narrow conical piece of~a~small geodesic ball in a~curved Riemannian manifold deviates from that of the standard ball in \inquotes{flat} space.
+%% It~is the~contraction of~first and~third indices of~the~Riemann curvature tensor: ${\mathscr{R}_{\hspace{-0.1ex}ab} \hspace{-0.16ex} \equiv \mathfrak{R}^{\hspace{.1ex}c}_{\hspace{.1ex}\cdot\hspace{.1ex}acb} \hspace{-0.16ex} = \textsl{g}^{\hspace{.25ex}cd} \hspace{.2ex} \mathfrak{R}_{\hspace{.1ex}cadb}}$.
+
+\vspace{.2em}
+\hfill $\sim$\:\emph{from Wikipedia, the free encyclopedia}
+\par
+\egroup
+\nopagebreak\vspace{.12em}
+\end{changemargin}
+
+\begin{otherlanguage}{russian}
+
+\begin{changemargin}{\parindent}{\parindent}
+{\small
+\noindent \emph{\inquotesx{Мы рассматриваем трёхмерное пространство классической механики, а~метрика у~нас любая невырожденная без кручения}[.]}
+\par}
+\end{changemargin}
+
+\noindent Рассматривая операции тензорного анализа в~криволинейных координатах, мы исходили из~представления радиуса\hbox{-}вектора функцией этих координат: ${\bm{r}(q^{\hspace{.1ex}i})}$. Этой зависимостью порождаются выражения
+векторов локального касательного \hbox{базиса} ${\bm{r}_i \hspace{-0.16ex} \equiv \partial_i \hspace{.12ex} \bm{r}}$\:${( \hspace{.12ex} \partial_i \hspace{-0.1ex} \equiv \smash{\raisemath{0.16em}{\scalebox{0.88}{$\partial$}} \hspace{-0.24ex} / \hspace{-0.32ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial$} q^{\hspace{.1ex}i}}} \hspace{.16ex} )}$,
+компонент ${\textsl{g}_{ij} \hspace{-0.24ex} \equiv \bm{r}_i \hspace{-0.16ex} \dotp \bm{r}_{\hspace{-0.2ex}j}}$ и~${\textsl{g}^{\hspace{.25ex}ij} \hspace{-0.32ex} \equiv \bm{r}^i \hspace{-0.32ex} \dotp \bm{r}^j \hspace{-0.32ex} = \smash{\textsl{g}_{ij}^{\hspace{.4ex}\expminusone}}}$ единичного \inquotes{метрического} тензора~${\bm{E} = \bm{r}_i \bm{r}^i \hspace{-0.2ex} = \bm{r}^i \bm{r}_i}$,
+векторов локального взаимного кокасательного \hbox{базиса} ${\bm{r}^i \hspace{-0.32ex} \dotp \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.16ex} = \delta_j^{\hspace{0.1ex}i}}$, ${\bm{r}^i \hspace{-0.25ex} = \textsl{g}^{\hspace{.25ex}ij} \bm{r}_{\hspace{-0.2ex}j}}$,
+диф\-ферен\-циаль\-ного набла\hbox{-}оператора Hamilton’а ${\smash{\boldnabla \equiv \bm{r}^i \partial_i}}$,
+${\bm{E} = \hspace{-0.25ex} \smash{\boldnabla \bm{r}}}$,
+полного дифференциала ${d \bm{\xi} = d \bm{r} \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.05ex} \bm{\xi}}$,
+частных производных касательного \hbox{базиса} (вторых частных производных~$\bm{r}$) ${\bm{r}_{ij} \hspace{-0.16ex} \equiv \partial_i \partial_j \bm{r} \hspace{-0.1ex} = \partial_i \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}j}}$,
+символов \inquotes{связности} \hbox{Христоффеля}~(\hbox{Christoffel} symbols) ${\Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}k} \hspace{-0.1ex} \equiv \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}^k
+%%\hspace{-0.32ex} = \Gamma_{\hspace{-0.25ex}ijn} \hspace{.25ex} \textsl{g}^{\hspace{.25ex}nk}\hspace{-0.25ex}
+}$ и~${\Gamma_{\hspace{-0.25ex}ijk} \hspace{-0.16ex} \equiv \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}_k
+%%\hspace{-0.2ex} = \Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}n} \hspace{.16ex} \textsl{g}_{nk}
+}$.
+
+Представим теперь, что функция~${\bm{r}(q^{\hspace{.1ex}k})}$ не~известна, но~\hbox{зат\'{о}} в~каждой точке пространства определены шесть независимых элементов положительной симметричной метрической матрицы Грама~${\textsl{g}_{ij}(q^{\hspace{.1ex}k})}$.
+
+Билинейная форма
+
+...
+
+Поскольку шесть функций~${\textsl{g}_{ij}(q^{\hspace{.1ex}k})}$ происходят от векторной функции~${\bm{r}(q^{\hspace{.1ex}k})}$, то между элементами~$\textsl{g}_{ij}$ существуют некие соотношения.
+
+Выражение ${d\bm{r} = d\bm{r} \dotp \hspace{-0.2ex} \tikzmark{beginItsE} \boldnabla \bm{r} \tikzmark{endItsE} = \bm{r}_k \hspace{0.2ex} dq^{\hspace{.1ex}k}}$~--- полный дифференциал. Следовательно, вторые частные производные коммутируют: ${\partial_i \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.2ex} = \partial_j \bm{r}_i}$~(${\bm{r}_{ij} \hspace{-0.2ex} = \bm{r}_{\hspace{-0.2ex}ji}}$).
+Но это необходимое условие уж\'{е} обеспечено симметрией~${\textsl{g}_{ij}}$ (\inquotes{связностью}~$\nabla_{\hspace{-0.32ex}i\hspace{.1ex}}$, её~же часто называют \inquotes{ковариантная производная}~--- а~символы Христоффеля это \inquotes{компоненты связности} в~локальных координатах).
+\AddOverBrace[line width=.75pt][0,0.1ex]{beginItsE}{endItsE}{${\scriptstyle \bm{E}}$}
+
+${\Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}k} \hspace{.2ex} \bm{r}_k \hspace{-0.2ex} = \bm{r}_{ij} \hspace{-0.16ex} \dotp \hspace{.1ex} \bm{r}^k \bm{r}_k \hspace{-0.2ex} = \bm{r}_{ij}}$
+
+$\boldnabla \bm{v} \hspace{-0.16ex}
+= \bm{r}^{i} \partial_i \hspace{-0.32ex} \left( v^{\hspace{.12ex}j} \bm{r}_{\hspace{-0.2ex}j} \right) \hspace{-0.25ex}
+= \bm{r}^{i} \hspace{-0.32ex} \left( \partial_i v^{\hspace{.12ex}j} \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.12ex} + v^{\hspace{.12ex}j} \bm{r}_{ij} \right)$
+
+$\boldnabla \bm{v} \hspace{-0.16ex}
+= \bm{r}^{i} \bm{r}_{\hspace{-0.2ex}j} \nabla_{\hspace{-0.32ex}i\hspace{.1ex}} v^{\hspace{.12ex}j} \hspace{-0.25ex} , \:\:
+\nabla_{\hspace{-0.32ex}i\hspace{.1ex}} v^{\hspace{.12ex}j} \hspace{-0.2ex} \equiv
+\partial_i v^{\hspace{.12ex}j} \hspace{-0.25ex} + \Gamma_{\hspace{-0.25ex}in}^{\hspace{.25ex}j} v^{\hspace{.1ex}n}$
+
+$\boldnabla \bm{r}_i \hspace{-0.2ex}
+= \bm{r}^k \partial_k \bm{r}_i \hspace{-0.2ex}
+= \bm{r}^k \bm{r}_{ki} \hspace{-0.2ex}
+%%= \bm{r}^k \hspace{.2ex} \Gamma_{\hspace{-0.25ex}ki}^{\hspace{.25ex}n} \hspace{.2ex} \bm{r}_n \hspace{-0.2ex}
+= \bm{r}^k \bm{r}_n \hspace{.1ex} \Gamma_{\hspace{-0.25ex}ki}^{\hspace{.25ex}n}
+\hspace{.2ex} , \:\:
+\nabla_{\hspace{-0.32ex}i\hspace{.1ex}} \bm{r}_{n} \hspace{-0.25ex}
+= \Gamma_{\hspace{-0.25ex}in}^{\hspace{.25ex}k} \hspace{.16ex} \bm{r}_k$
+
+\vspace{.25em} \noindent (Добавить) про симметрию $\Gamma_{\hspace{-0.25ex}ijk}$ ...
+
+\begin{multline}
+\Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}n} \hspace{.16ex} \textsl{g}_{nk} \hspace{-0.24ex} = \Gamma_{\hspace{-0.25ex}ijk} \hspace{-0.2ex} = \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}_k \hspace{-0.1ex} = \\[-0.1em]
+%
+= \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \bm{r}_{ij} \hspace{-0.16ex} + \bm{r}_{\hspace{-0.2ex}ji} \right) \hspace{-0.1ex} \dotp \bm{r}_k \hspace{-0.1ex}
++ \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \bm{r}_{\hspace{-0.2ex}jk} \hspace{-0.16ex} - \bm{r}_{kj} \right) \hspace{-0.1ex} \dotp \bm{r}_i \hspace{-0.1ex}
++ \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \bm{r}_{ik} \hspace{-0.16ex} - \bm{r}_{ki} \right) \hspace{-0.1ex} \dotp \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.1ex} = \\[-0.12em]
+%
+= \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \scalebox{0.96}[1]{$\bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}_k \hspace{-0.16ex} + \bm{r}_{ik} \hspace{-0.2ex} \dotp \bm{r}_{\hspace{-0.2ex}j}$} \right) \hspace{-0.16ex}
++ \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \scalebox{0.96}[1]{$\bm{r}_{\hspace{-0.2ex}ji} \hspace{-0.2ex} \dotp \bm{r}_k \hspace{-0.16ex} + \bm{r}_{\hspace{-0.2ex}jk} \hspace{-0.2ex} \dotp \bm{r}_i$} \right) \hspace{-0.16ex}
+- \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \scalebox{0.96}[1]{$\bm{r}_{ki} \hspace{-0.2ex} \dotp \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.16ex} + \bm{r}_{kj} \hspace{-0.2ex} \dotp \bm{r}_i$} \right) \hspace{-0.1ex} = \\[-0.25em]
+%
+= \smalldisplaystyleonehalf \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.2ex}
+\partial_i ( \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.2ex} \dotp \bm{r}_k ) \hspace{-0.16ex}
++ \partial_j ( \bm{r}_{i} \hspace{-0.2ex} \dotp \bm{r}_k ) \hspace{-0.16ex}
+- \partial_k ( \bm{r}_{i} \hspace{-0.2ex} \dotp \bm{r}_{\hspace{-0.2ex}j} )
+\hspace{-0.12ex} \right) \hspace{-0.4ex} = \\[-0.25em]
+%
+= \smalldisplaystyleonehalf \hspace{-0.16ex} \left(
+\partial_i \hspace{.12ex} \textsl{g}_{jk} \hspace{-0.2ex}
++ \partial_j \hspace{.1ex} \textsl{g}_{ik} \hspace{-0.2ex}
+- \partial_k \hspace{.12ex} \textsl{g}_{ij}
+\right) \hspace{-0.4ex} .
+\end{multline}
+
+Все символы Христоффеля тождественно равны нулю лишь в~ортонормальной~(декартовой) системе. (А~какие они для косоугольной?)
+
+Пойдём дальше: ${d\bm{r}_i \hspace{-0.2ex} = d\bm{r} \dotp \hspace{-0.2ex} \boldnabla \bm{r}_i \hspace{-0.2ex} = dq^{\hspace{.1ex}k} \partial_k \bm{r}_i \hspace{-0.2ex} = \bm{r}_{ik} \hspace{0.2ex} dq^{\hspace{.1ex}k}\hspace{-0.25ex}}$~--- тоже полные дифференциалы.
+Поэтому ${\partial_i \partial_j \bm{r}_k \hspace{-0.2ex} = \partial_j \partial_i \bm{r}_k}$~(${\partial_i \bm{r}_{\hspace{-0.2ex}jk} \hspace{-0.2ex} = \partial_j \bm{r}_{ik}}$),
+и~трёхиндексный объект третьих частных производных
+%\nopagebreak\vspace{-0.1em}
+\begin{equation}
+\bm{r}_{ijk} \hspace{-0.1ex} \equiv \hspace{.1ex} \partial_i \partial_j \partial_k \bm{r}
+= \partial_i \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}jk} %%\hspace{-0.4ex} = \partial_k \bm{r}_{ij}
+\end{equation}
+
+\vspace{-0.2em} \noindent симметричен по~первому и~второму индексам (а~не~только по~второму и~третьему). И~тогда равен нулю~${\hspace{-0.16ex}^4\bm{0}}$ следующий тензор четвёртой сложности~--- тензор кривизны Римана\hbox{--}Христоффеля
+\nopagebreak\vspace{.1em}\begin{equation}\label{riemanncurvaturetensor}
+{^4\bm{\mathfrak{R}}} = \hspace{.12ex} \mathfrak{R}_{\hspace{.1ex}ijkn} \hspace{.12ex} \bm{r}^i \bm{r}^j \bm{r}^k \bm{r}^n \hspace{-0.25ex}, \:\:
+\mathfrak{R}_{\hspace{.1ex}ijkn} \hspace{-0.12ex} \equiv \left( \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}jik} \hspace{-0.2ex} - \bm{r}_{ijk} \hspace{.12ex} \right) \hspace{-0.16ex} \dotp \bm{r}_n .
+\end{equation}
+
+
+
+{\small
+The curvature tensor is given in terms of the connection $\nabla$ as
+${ R(u,v)w=\nabla_u\nabla_v w - \nabla_v \nabla_u w - \nabla_{[u,v]} w }$
+where [u,v] is the Lie bracket of vector fields. Occasionally, the curvature tensor is defined with the opposite sign.
+
+If ${u=\partial /\partial x^{i}}$ and ${v=\partial /\partial x^{j}}$ are coordinate vector fields then ${[u,v]=0}$ and therefore the formula simplifies to ${\displaystyle R(u,v)w=\nabla _{u}\nabla _{v}w-\nabla _{v}\nabla _{u}w}$.
+
+The curvature tensor measures noncommutativity of the covariant derivative, and as such is the integrability obstruction for the existence of an isometry with \inquotes{flat} space. The linear transformation ${w\mapsto R(u,v)w}$ is also called the curvature transformation or endomorphism.
+\par}
+
+
+
+Выразим компоненты~${\mathfrak{R}_{\hspace{.1ex}ijkn}}$ через метрическую матрицу~${\textsl{g}_{ij}}$. Начнём с~дифференцирования локального кобазиса:
+\[ \bm{r}^i \hspace{-0.32ex} \dotp \bm{r}_k \hspace{-0.16ex} = \delta_k^{\hspace{0.1ex}i} \;\Rightarrow\:
+\partial_j \bm{r}^i \hspace{-0.32ex} \dotp \bm{r}_k + \hspace{.1ex} \bm{r}^i \hspace{-0.32ex} \dotp \bm{r}_{\hspace{-0.2ex}jk} = 0 \;\Rightarrow\:
+\partial_j \bm{r}^i \hspace{-0.12ex} = - \hspace{.2ex} \Gamma_{\hspace{-0.25ex}jk}^{\hspace{.25ex}i} \hspace{.2ex} \bm{r}^k
+\hspace{-0.4ex}. \]
+
+...
+
+
+Равенство тензора Риччи нулю: ${\hspace{.1ex}\pmb{\scalebox{1.2}[1]{$\mathscr{R}$}} \hspace{-0.16ex} = \hspace{-0.2ex} {^2\bm{0}}}$ (в~компонентах тут шесть уравнений ${\hspace{.1ex}\mathscr{R}_{\hspace{-0.1ex}ij} \hspace{-0.3ex} = \mathscr{R}_{\hspace{-0.1ex}ji} \hspace{-0.2ex} = 0}$)~--- это достаточное условие %%(шесть условий в~компонентах)
+интегрируемости~(\inquotes{совместности}, \inquotes{compatibility}) при определении радиуса-вектора~${\bm{r}(q^{\hspace{.1ex}k})}$ по~полю~${\textsl{g}_{ij}(q^{\hspace{.1ex}k})}$.
+
+\end{otherlanguage}
+
+\section*{\small \wordforbibliography}
+
+\begin{changemargin}{\parindent}{0pt}
+\fontsize{10}{12}\selectfont
+
+\begin{otherlanguage}{russian}
+
+Существует немало книг, в~которых рассматривается лишь аппарат тензорного исчисления~\cite{borisenkotarapov, mcconnell-tensoranalysis, rashevsky-riemanniangeometry, sokolnikov, schouten-tensoranalysis}. Преобладает \inquotes{индексный} подход~--- тензоры трактуются как матрицы компонент, преобразующиеся определённым путём.
+В~книгах А.\,И.\;Лурье~\cite{lurie-nonlinearelasticity, lurie-theoryofelasticity} есть специальные приложения о~тензорах.
+Яркое описание теории векторных полей можно найти у~R.\:Feynman’а~\cite{feynman-lecturesonphysics}.
+Сведения о~тензорном исчислении содержатся и~в~своеобразной и~глубокой книге C.\:Truesdell’а~\cite{truesdell-firstcourse}.
+
+\end{otherlanguage}
+
+\end{changemargin}

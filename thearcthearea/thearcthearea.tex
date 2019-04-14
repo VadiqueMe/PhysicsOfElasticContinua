@@ -1,0 +1,180 @@
+\documentclass[11pt,twoside]{book}
+
+\usepackage{geometry}
+\geometry{papersize={150mm,200mm}}
+\geometry{tmargin=1cm,bmargin=1cm,lmargin=1cm,rmargin=1cm}
+
+\usepackage{amsmath} % \operatorname
+
+\usepackage{bm}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows, arrows.meta}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\newcommand\polygon[2][]{%
+	\pgfmathsetmacro{\onesegmentangle}{360/#2}%
+	\pgfmathsetmacro{\startangle}{0} %%{-90 + \onesegmentangle/2}
+	%%\pgfmathsetmacro{\y}{cos(\onesegmentangle/2)}%
+	\begin{scope}[#1]
+		\foreach \i in {1, 2, ..., #2} {
+			\pgfmathsetmacro{\x}{\startangle + \onesegmentangle*\i}%
+			\draw [line width=0.4pt, color=black, line cap=round, dash pattern=on 0pt off 1pt]
+				(0, 0) -- (\x:1 cm) -- (\x + \onesegmentangle:1 cm) -- cycle;
+			\draw [line width=1.2pt, color=black]
+				(\x:1 cm) -- (\x + \onesegmentangle:1 cm);
+			%%\draw [line width=0.5pt, color=black, fill=yellow!50] (0, 0) -- (\x:1 cm) -- (\x + \onesegmentangle/2:\y cm) -- cycle;
+			%%\draw [line width=0.5pt, color=black, fill=lime!50] (0, 0) -- (\x + \onesegmentangle/2:\y cm) -- (\x + \onesegmentangle:1 cm) -- cycle;
+		}
+	\end{scope}%
+}
+
+\def\tikzunit{cm}
+\pgfmathsetmacro\scaleofunits{3.6}
+
+\begin{center}
+
+\pgfmathsetmacro{\sides}{7}
+
+\begin{tikzpicture}[scale=\scaleofunits]
+
+	\coordinate (O) at (0, 0);
+
+	\draw [line width=0.4pt, color=black, line cap=round, dash pattern=on 0pt off 1pt] (O) circle (1\tikzunit);
+	\polygon{\sides}
+
+	\node [fill=white, shape=circle, inner sep=2pt, outer sep=0pt] at (-0.64, 0) {\scalebox{0.8}[0.8]{$\sides\:$sides}};
+
+	\coordinate (A) at (1\tikzunit, 0);
+	\coordinate (B) at (\onesegmentangle:1\tikzunit);
+
+	\draw [line width=1.2pt, line cap=round, color=blue, -{Stealth[round, length=4mm, width=2.4mm]}] (O) -- (A)
+		node [pos=0.52, below, shape=circle, fill=white, inner sep=0pt, outer sep=2.5pt] {$\bm{a}$} ;
+	\draw [line width=1.2pt, line cap=round, color=blue, -{Stealth[round, length=4mm, width=2.4mm]}] (O) -- (B)
+		node [pos=0.52, above left, shape=circle, fill=white, inner sep=0pt, outer sep=3.2pt] {$\bm{b}$} ;
+	\draw [line width=1.2pt, line cap=round, color=blue, -{Stealth[round, length=4mm, width=2.4mm]}] (A) -- (B)
+		node [pos=0.6, below left, shape=circle, fill=white, inner sep=0pt, outer sep=4pt] {$\bm{s}$} ;
+
+	\pic [draw, color=black, line cap=round,
+		angle radius=\scaleofunits * 0.33 \tikzunit, angle eccentricity=1.22,
+		"$\frac{2\pi}{\sides}$"]
+	{ angle = A--O--B };
+
+\end{tikzpicture}
+
+\pgfmathsetmacro{\sides}{18}
+
+\vspace{2em}
+
+\begin{tikzpicture}[scale=\scaleofunits]
+
+	\coordinate (O) at (0, 0);
+
+	\draw [line width=0.4pt, color=black, line cap=round, dash pattern=on 0pt off 1pt] (O) circle (1\tikzunit);
+	\polygon{\sides}
+
+	\node [fill=white, shape=circle, inner sep=2pt, outer sep=0pt] at (-0.64, 0) {\scalebox{0.8}[0.8]{$\sides\:$sides}};
+
+	\coordinate (A) at (1\tikzunit, 0);
+	\coordinate (B) at (\onesegmentangle:1\tikzunit);
+
+	\draw [line width=1.2pt, line cap=round, color=blue, -{Stealth[round, length=4mm, width=2.4mm]}] (O) -- (A)
+		node [pos=0.55, below, shape=circle, fill=white, inner sep=0pt, outer sep=2.5pt] {$\bm{a}$} ;
+	\draw [line width=1.2pt, line cap=round, color=blue, -{Stealth[round, length=4mm, width=2.4mm]}] (O) -- (B)
+		node [pos=0.55, above left, shape=circle, fill=white, inner sep=0pt, outer sep=3.2pt] {$\bm{b}$} ;
+	\draw [line width=1.2pt, line cap=round, color=blue, -{Stealth[round, length=4mm, width=2.4mm]}] (A) -- (B)
+		node [pos=0.6, below left, shape=circle, fill=white, inner sep=0pt, outer sep=4pt] {$\bm{s}$} ;
+
+	\pic [draw, color=black, line cap=round,
+		angle radius=\scaleofunits * 0.48 \tikzunit, angle eccentricity=1.16,
+		"$\frac{2\pi}{\sides}$"]
+	{ angle = A--O--B };
+
+\end{tikzpicture}
+
+\end{center}
+
+\newpage
+\vspace*{2em}
+
+\def\tikzunit{cm}
+\pgfmathsetmacro\scaleofunits{5}
+
+\begin{center}
+\begin{tikzpicture}[scale=\scaleofunits]
+
+	\pgfmathsetmacro{\angle}{33}
+
+	\coordinate (O) at (0, 0);
+
+	\coordinate (R1) at (1, 0);
+	\coordinate (R2) at (\angle:1\tikzunit);
+
+	\coordinate (unitT) at ($ (R1) + (0,1) $);
+	\coordinate (T) at (intersection of R1--unitT and O--R2);
+
+	\draw [line width=0.4pt, color=black, line cap=round, dash pattern=on 0pt off 1pt] (O) -- (R1);
+	\draw [line width=0.4pt, color=black, line cap=round, dash pattern=on 0pt off 1pt] (O) -- (R2);
+
+	\draw [line width=0.8pt, color=orange, line cap=round] (R2) -- (T)
+		node [pos=0.75, above left, inner sep=0pt, outer sep=0pt] {$r^{\diamond}$};
+
+	\draw [line width=1.2pt, color=magenta, line cap=round] (O) -- (R1)
+		node [pos=0.6, below, inner sep=0pt, outer sep=5pt] {$r$};
+	\draw [line width=1.2pt, color=magenta, line cap=round] (O) -- (R2)
+		node [pos=0.64, above left, inner sep=0pt, outer sep=2pt] {$r$};
+
+	\draw [line width=1.5pt, color=red, line cap=round] (R1) -- (T)
+		node [pos=0.6, below right, inner sep=0pt, outer sep=3.6pt] {$t$};
+
+	\pic [draw, line width=1.6pt, line cap=round, color=blue,
+		angle radius=\scaleofunits * 1 \tikzunit, angle eccentricity=0.95, "$s$"]
+	{ angle = R1--O--R2 };
+	\pic [draw, line width=0.4pt, color=blue,
+		angle radius=\scaleofunits * 0.4 \tikzunit, angle eccentricity=1.11, "$\varphi$"]
+	{ angle = R1--O--R2 };
+
+	\coordinate (unitR2South) at ($ (R2) - (0,1) $);
+	\coordinate (cosR2) at (intersection of R2--unitR2South and O--R1);
+	\coordinate (unitR2East) at ($ (R2) + (1,0) $);
+	\coordinate (cosRd) at (intersection of R2--unitR2East and T--R1);
+
+	\draw [line width=0.4pt, color=magenta, line cap=round, dash pattern=on 0pt off 1pt] (R2) -- (cosR2);
+	\draw [line width=0.4pt, color=orange, line cap=round, dash pattern=on 0pt off 1pt] (R2) -- (cosRd);
+
+	%%\draw [line width=0.8pt, color=black, fill=white] (O) circle (0.016);
+
+\end{tikzpicture}
+\end{center}
+
+\[\begin{array}{c}
+{\color{blue}s} = {\color{magenta}r} {\color{blue}\varphi} \\
+{\color{red}t} = \left( {\color{magenta}r} + {\color{orange}r^{\diamond}} \right) \operatorname{sin} {\color{blue}\varphi} = {\color{magenta}r} \, \textstyle\frac{\operatorname{sin} {\color{blue}\varphi}}{\operatorname{cos} {\color{blue}\varphi}}
+\end{array}\]
+
+\[\begin{array}{c}
+{\color{magenta}r}^2 + {\color{red}t}^2 = \left( {\color{magenta}r} + {\color{orange}r^{\diamond}} \right)^2 \\[0.2em]
+{\color{orange}r^{\diamond}} = \sqrt{{\color{magenta}r}^2 + {\color{red}t}^2 \,} \! - {\color{magenta}r}
+\end{array}\]
+
+\[\begin{array}{c}
+\left( {\color{magenta}r} + {\color{orange}r^{\diamond}} \right) \operatorname{cos} {\color{blue}\varphi} = {\color{magenta}r} \\[0.2em]
+{\color{magenta}r} \left( 1 - {\operatorname{cos} {\color{blue}\varphi}} \right) = {\color{orange}r^{\diamond}} \operatorname{cos} {\color{blue}\varphi} \\[0.2em]
+{\color{orange}r^{\diamond}} = \textstyle\frac{\color{magenta}r}{\operatorname{cos} {\color{blue}\varphi}} - {\color{magenta}r} = \textstyle\frac{{\color{magenta}r} \left( 1 - {\operatorname{cos} {\color{blue}\varphi}} \right)}{\operatorname{cos} {\color{blue}\varphi}}
+\end{array}\]
+
+\[\begin{array}{c}
+{\color{red}t} = \sqrt{{\color{magenta}r}^2 + {\color{red}t}^2 \,} \operatorname{sin} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t}^2 = \left( {\color{magenta}r}^2 + {\color{red}t}^2 \right) \operatorname{sin}^{2\!} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t}^2 \! \left( 1 - \operatorname{sin}^{2\!} {\color{blue}\varphi} \right) = {\color{magenta}r}^2 \operatorname{sin}^{2\!} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t}^2 \operatorname{cos}^{2\!} {\color{blue}\varphi} = {\color{magenta}r}^2 \operatorname{sin}^{2\!} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t} \operatorname{cos} {\color{blue}\varphi} = {\color{magenta}r} \operatorname{sin} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t} = {\color{magenta}r} \, \textstyle\frac{\operatorname{sin} {\color{blue}\varphi}}{\operatorname{cos} {\color{blue}\varphi}} \\[0.2em]
+\end{array}\]
+
+\end{document}

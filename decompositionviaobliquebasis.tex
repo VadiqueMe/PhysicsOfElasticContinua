@@ -1,0 +1,493 @@
+% converts spherical coordinates to cartesian
+\newcommand{\tdsphericaltocartesian}[6]{%
+\def\thecostheta{cos(#2)}%
+\def\thesintheta{sin(#2)}%
+\def\thecosphi{cos(#3)}%
+\def\thesinphi{sin(#3)}%
+\pgfmathsetmacro{#4}{ #1 * \thesintheta * \thecosphi }%
+\pgfmathsetmacro{#5}{ #1 * \thesintheta * \thesinphi }%
+\pgfmathsetmacro{#6}{ #1 * \thecostheta }%
+}
+
+% takes two points as cartesian {x}{y}{z} and calculates cross product of their location vectors
+% placing the result into last three arguments
+\newcommand{\tdcrossproductcartesian}[9]{%
+\def\crossz{ #1 * #5 - #2 * #4 }%
+\def\crossx{ #2 * #6 - #3 * #5 }%
+\def\crossy{ #3 * #4 - #1 * #6 }%
+\pgfmathsetmacro{#7}{\crossx}%
+\pgfmathsetmacro{#8}{\crossy}%
+\pgfmathsetmacro{#9}{\crossz}%
+}
+
+% takes two points as spherical {length}{anglefromz}{anglefromx} and calculates cross product of their location vectors
+% placing the result as cartesian {x}{y}{z} into last three arguments
+\newcommand{\tdcrossproductspherical}[9]{%
+%
+\tdplotsinandcos{\firstsintheta}{\firstcostheta}{#2}%
+\tdplotsinandcos{\firstsinphi}{\firstcosphi}{#3}%
+\def\firstx{ #1 * \firstsintheta * \firstcosphi }%
+\def\firsty{ #1 * \firstsintheta * \firstsinphi }%
+\def\firstz{ #1 * \firstcostheta }%
+%
+\tdplotsinandcos{\secondsintheta}{\secondcostheta}{#5}%
+\tdplotsinandcos{\secondsinphi}{\secondcosphi}{#6}%
+\def\secondx{ #4 * \secondsintheta * \secondcosphi }%
+\def\secondy{ #4 * \secondsintheta * \secondsinphi }%
+\def\secondz{ #4 * \secondcostheta }%
+%
+\def\crossz{ \firstx * \secondy - \firsty * \secondx }%
+\def\crossx{ \firsty * \secondz - \firstz * \secondy }%
+\def\crossy{ \firstz * \secondx - \firstx * \secondz }%
+\pgfmathsetmacro{#7}{\crossx}%
+\pgfmathsetmacro{#8}{\crossy}%
+\pgfmathsetmacro{#9}{\crossz}%
+}
+
+% calculates dot product of location vectors of two points specified by cartesian coordinates
+\newcommand{\tddotproductcartesian}[7]{%
+\edef\tddotproductcartesianxint{ \xinttheexpr round( #1 * #4 + #2 * #5 + #3 * #6 , 10 ) \relax }%
+\pgfmathsetmacro{#7}{\tddotproductcartesianxint}%
+}
+
+% calculates dot product of location vectors of two points specified by spherical coordinates
+\newcommand{\tddotproductspherical}[7]{%
+%
+\tdplotsinandcos{\firstsintheta}{\firstcostheta}{#2}%
+\tdplotsinandcos{\firstsinphi}{\firstcosphi}{#3}%
+\def\firstx{ ( #1 * \firstsintheta * \firstcosphi ) }%
+\def\firsty{ ( #1 * \firstsintheta * \firstsinphi ) }%
+\def\firstz{ ( #1 * \firstcostheta ) }%
+%
+\tdplotsinandcos{\secondsintheta}{\secondcostheta}{#5}%
+\tdplotsinandcos{\secondsinphi}{\secondcosphi}{#6}%
+\def\secondx{ ( #4 * \secondsintheta * \secondcosphi ) }%
+\def\secondy{ ( #4 * \secondsintheta * \secondsinphi ) }%
+\def\secondz{ ( #4 * \secondcostheta ) }%
+%
+\edef\tddotproductsphericalxint{ \xinttheexpr round( \firstx * \secondx + \firsty * \secondy + \firstz * \secondz , 10 ) \relax }%
+\pgfmathsetmacro{#7}{\tddotproductsphericalxint}%
+}
+
+% takes three points as spherical {length}{anglefromz}{anglefromx}
+% and calculates triple product r1 × r2 • r3 of their location vectors
+% the result is placed into \LastThreeDTripleProduct
+\newcommand{\tdtripleproductspherical}[9]{%
+%
+\tdsphericaltocartesian{#1}{#2}{#3}{\firstx}{\firsty}{\firstz}
+\tdsphericaltocartesian{#4}{#5}{#6}{\secondx}{\secondy}{\secondz}
+\tdsphericaltocartesian{#7}{#8}{#9}{\thirdx}{\thirdy}{\thirdz}
+%
+\def\crossz{ ( \firstx * \secondy - \firsty * \secondx ) }%
+\def\crossx{ ( \firsty * \secondz - \firstz * \secondy ) }%
+\def\crossy{ ( \firstz * \secondx - \firstx * \secondz ) }%
+%
+\edef\LastThreeDTripleProduct{ \xinttheexpr round( \crossx * \thirdx + \crossy * \thirdy + \crossz * \thirdz , 10 ) \relax }%
+}
+
+% orientation of camera
+\def\cameraTheta{36} \def\cameraPhi{98}
+%% \def\cameraTheta{89.99} \def\cameraPhi{120}
+	% 90 gives “You asked me to calculate `1/0.0', but I cannot divide any number by zero.”
+\tdplotsetmaincoords{\cameraTheta}{\cameraPhi}
+
+% vectors of basis
+\pgfmathsetmacro{\firstlength}{0.69}
+	\pgfmathsetmacro{\firstanglefromz}{71}
+	\pgfmathsetmacro{\firstanglefromx}{-16}
+\pgfmathsetmacro{\secondlength}{0.88}
+	\pgfmathsetmacro{\secondanglefromz}{86}
+	\pgfmathsetmacro{\secondanglefromx}{77}
+\pgfmathsetmacro{\thirdlength}{0.96}
+	\pgfmathsetmacro{\thirdanglefromz}{-19}
+	\pgfmathsetmacro{\thirdanglefromx}{45}
+
+\tdsphericaltocartesian%
+	{\firstlength}{\firstanglefromz}{\firstanglefromx}%
+	{\firstcartesianx}{\firstcartesiany}{\firstcartesianz}
+\tdsphericaltocartesian%
+	{\secondlength}{\secondanglefromz}{\secondanglefromx}%
+	{\secondcartesianx}{\secondcartesiany}{\secondcartesianz}
+\tdsphericaltocartesian%
+	{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}%
+	{\thirdcartesianx}{\thirdcartesiany}{\thirdcartesianz}
+
+% some but very important vector
+\pgfmathsetmacro{\lengthofvector}{3.33}
+	\pgfmathsetmacro{\vectoranglefromz}{33}
+	\pgfmathsetmacro{\vectoranglefromx}{44}
+
+\tdsphericaltocartesian%
+	{\lengthofvector}{\vectoranglefromz}{\vectoranglefromx}%
+	{\vectorcartesianx}{\vectorcartesiany}{\vectorcartesianz}
+
+\begin{comment} %%
+\begin{minipage}{\textwidth}
+\hfill\[\scalebox{0.9}[0.9]{$\begin{array}{l@{\hspace{0.2\textwidth}}l@{\hspace{1.2em}}l@{\hspace{0.8em}}l}
+\theta = \pgfmathprintnumber{\cameraTheta}\degree \hspace{0.8em}
+\phi = \pgfmathprintnumber{\cameraPhi}\degree
+& \scalebox{1.05}{$\bm{v}^{\varrho} = \pgfmathprintnumber{\lengthofvector}$} &
+	\scalebox{1.05}{$\bm{v}^{\theta} = \pgfmathprintnumber{\vectoranglefromz}\degree$} &
+	\scalebox{1.05}{$\bm{v}^{\phi} = \pgfmathprintnumber{\vectoranglefromx}\degree$} \\[0.25em]
+%
+& {\bm{a}_{1}^{\varrho} = \pgfmathprintnumber{\firstlength}} &
+	{\bm{a}_{1}^{\theta} = \pgfmathprintnumber{\firstanglefromz}\degree} &
+		{\bm{a}_{1}^{\phi} = \pgfmathprintnumber{\firstanglefromx}\degree} \\[0.1em]
+& {\bm{a}_{2}^{\varrho} = \pgfmathprintnumber{\secondlength}} &
+	{\bm{a}_{2}^{\theta} = \pgfmathprintnumber{\secondanglefromz}\degree} &
+		{\bm{a}_{2}^{\phi} = \pgfmathprintnumber{\secondanglefromx}\degree} \\[0.1em]
+& {\bm{a}_{3}^{\varrho} = \pgfmathprintnumber{\thirdlength}} &
+	{\bm{a}_{3}^{\theta} = \pgfmathprintnumber{\thirdanglefromz}\degree} &
+		{\bm{a}_{3}^{\phi} = \pgfmathprintnumber{\thirdanglefromx}\degree}
+\end{array}$}\]
+\end{minipage}
+\end{comment} %%
+
+\begin{figure}[!htbp]
+\begin{center}
+
+\vspace{0.1em}
+\begin{tikzpicture}[scale=3.2, tdplot_main_coords] % tdplot_main_coords style to use 3dplot
+
+	\coordinate (O) at (0,0,0);
+
+	% define axes
+	\tdplotsetcoord{A1}{\firstlength}{\firstanglefromz}{\firstanglefromx}
+	\tdplotsetcoord{A2}{\secondlength}{\secondanglefromz}{\secondanglefromx}
+	\tdplotsetcoord{A3}{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}
+
+	% define vector
+	\tdplotsetcoord{V}{\lengthofvector}{\vectoranglefromz}{\vectoranglefromx} % {length}{angle from z}{angle from x}
+
+	% square root of Gram matrix’ determinant is a1 × a2 • a3
+	\tdtripleproductspherical%
+		{\firstlength}{\firstanglefromz}{\firstanglefromx}%
+		{\secondlength}{\secondanglefromz}{\secondanglefromx}%
+		{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}
+	\edef\sqrtGramian{\xinttheexpr round( \LastThreeDTripleProduct, 10 )\relax}
+	\edef\inverseOfSqrtGramian{\xinttheexpr round( 1 / \sqrtGramian, 10 )\relax}
+
+	\node[fill=white!50, inner sep=0pt, outer sep=2pt] at (1.2,0,-1.6)
+		{$\scalebox{0.9}{$\begin{array}{r}\bm{a}_1 \hspace{-0.4ex} \times \hspace{-0.3ex} \bm{a}_2 \dotp \hspace{0.2ex} \bm{a}_3 \hspace{-0.2ex} = \hspace{-0.2ex} \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} \hspace{0.1ex} = \hspace{-0.2ex} \pgfmathprintnumber[fixed, precision=5]{\sqrtGramian} \\[0.25em]
+		\displaystyle \nicefrac{\scalebox{0.95}{$1$}}{\hspace{-0.25ex}\sqrt{\hspace{-0.2ex}\scalebox{0.96}{$\mathstrut{\textsl{g}}$}}} \hspace{0.1ex} = \hspace{-0.2ex} \pgfmathprintnumber[fixed, precision=5]{\inverseOfSqrtGramian}\end{array}$}$};
+
+	% calculate vectors of cobasis
+	\tdcrossproductspherical%
+		{\firstlength}{\firstanglefromz}{\firstanglefromx}%
+		{\secondlength}{\secondanglefromz}{\secondanglefromx}%
+		{\firstsecondcrossx}{\firstsecondcrossy}{\firstsecondcrossz}
+	\coordinate (cross12) at (\firstsecondcrossx, \firstsecondcrossy, \firstsecondcrossz);
+	\draw [line width=1.25pt, orange, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (cross12)
+		node[pos=0.64, above right, inner sep=0pt, outer sep=6pt]
+		{$\scalebox{0.8}{$\bm{a}_1 \hspace{-0.4ex} \times \hspace{-0.3ex} \bm{a}_2$}$};
+
+	\tdcrossproductspherical%
+		{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}%
+		{\firstlength}{\firstanglefromz}{\firstanglefromx}%
+		{\thirdfirstcrossx}{\thirdfirstcrossy}{\thirdfirstcrossz}
+	\coordinate (cross31) at (\thirdfirstcrossx, \thirdfirstcrossy, \thirdfirstcrossz);
+	\draw [line width=1.25pt, orange, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (cross31)
+		node[pos=0.86, above, inner sep=0pt, outer sep=5pt]
+		{$\scalebox{0.8}{$\bm{a}_3 \hspace{-0.4ex} \times \hspace{-0.3ex} \bm{a}_1$}$};
+
+	\tdcrossproductspherical%
+		{\secondlength}{\secondanglefromz}{\secondanglefromx}%
+		{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}%
+		{\secondthirdcrossx}{\secondthirdcrossy}{\secondthirdcrossz}
+	\coordinate (cross23) at (\secondthirdcrossx, \secondthirdcrossy, \secondthirdcrossz);
+	\draw [line width=1.25pt, orange, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (cross23)
+		node[pos=0.88, below right, inner sep=0pt, outer sep=2.5pt]
+		{$\scalebox{0.8}{$\bm{a}_2 \hspace{-0.4ex} \times \hspace{-0.3ex} \bm{a}_3$}$};
+
+	\coordinate (coA3) at ($ \inverseOfSqrtGramian*(cross12) $);
+	\coordinate (coA2) at ($ \inverseOfSqrtGramian*(cross31) $);
+	\coordinate (coA1) at ($ \inverseOfSqrtGramian*(cross23) $);
+
+	% get vector’s projection on a1 & a2 plane (third co-vector a^3 is normal to that plane)
+	% it’s as deep down parallel to a3 as v^3 = v • a^3 in units of a3
+	\tddotproductcartesian%
+		{\vectorcartesianx}{\vectorcartesiany}{\vectorcartesianz}%
+		{\inverseOfSqrtGramian*\firstsecondcrossx}%
+			{\inverseOfSqrtGramian*\firstsecondcrossy}%
+				{\inverseOfSqrtGramian*\firstsecondcrossz}%
+		{\vectorthirdcoco}
+	% get third co-component and translate it to vector’s head
+	\coordinate (Vcomponent3) at ($ \vectorthirdcoco*(A3) $);
+	\coordinate (VcomponentXY) at ($ (V) - (Vcomponent3) $);
+
+	% decompose vector via initial basis
+	\coordinate (ParallelToSecond) at ($ (VcomponentXY) - (A2) $);
+	\coordinate (ParallelToFirst) at ($ (VcomponentXY) - (A1) $);
+	\coordinate (Vcomponent1) at (intersection of VcomponentXY--ParallelToSecond and O--A1);
+	\coordinate (Vcomponent2) at (intersection of VcomponentXY--ParallelToFirst and O--A2);
+
+	\draw [line width=0.4pt, dotted, color=blue] (O) -- (VcomponentXY); % projection on first & second vectors’ plane
+
+	\draw [line width=0.4pt, dotted, color=blue] (V) -- (VcomponentXY);
+	\draw [line width=0.4pt, dotted, color=blue] (VcomponentXY) -- (Vcomponent1);
+	\draw [line width=0.4pt, dotted, color=blue] (VcomponentXY) -- (Vcomponent2);
+
+	% check a^1 × a^2 direction to be the same as a3
+	\tdcrossproductcartesian%
+		{\inverseOfSqrtGramian*\secondthirdcrossx}%
+			{\inverseOfSqrtGramian*\secondthirdcrossy}%
+				{\inverseOfSqrtGramian*\secondthirdcrossz}%
+		{\inverseOfSqrtGramian*\thirdfirstcrossx}%
+			{\inverseOfSqrtGramian*\thirdfirstcrossy}%
+				{\inverseOfSqrtGramian*\thirdfirstcrossz}%
+		{\CofirstCosecondOrthoX}{\CofirstCosecondOrthoY}{\CofirstCosecondOrthoZ}
+	\coordinate (co1co2ortho) at (\CofirstCosecondOrthoX, \CofirstCosecondOrthoY, \CofirstCosecondOrthoZ);
+	\draw [line width=1.25pt, blue!50, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- ($ \sqrtGramian*(co1co2ortho) $);
+
+	% length of a^3
+	\tddotproductcartesian%
+		{\inverseOfSqrtGramian*\thirdfirstcrossx}%
+			{\inverseOfSqrtGramian*\thirdfirstcrossy}%
+				{\inverseOfSqrtGramian*\thirdfirstcrossz}%
+		{\inverseOfSqrtGramian*\thirdfirstcrossx}%
+			{\inverseOfSqrtGramian*\thirdfirstcrossy}%
+				{\inverseOfSqrtGramian*\thirdfirstcrossz}%
+		{\squaredlengthofthirdcovector}
+	%%\node[fill=white!50, inner sep=0pt, outer sep=4pt] at (0,0,-2.25)
+		%%{$\scalebox{0.9}{$ | \hspace{0.1ex} \bm{a}^{\hspace{-0.1ex}3} \hspace{0.06ex} | \hspace{0.1ex} =
+			%%\sqrt{\pgfmathprintnumber[fixed, precision=5]{\squaredlengthofthirdcovector}} $}$};
+
+	% get vector’s projection on a^1 & a^2 plane (third basis vector a3 is normal to that plane)
+	% it’s as deep down parallel to a^3 as v3 = v • a3 in units of a^3
+	\tddotproductspherical%
+		{\lengthofvector}{\vectoranglefromz}{\vectoranglefromx}%
+		{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}%
+		{\vectorthirdcomponent}
+	% get third co-component and translate it to vector’s head
+	\coordinate (Vcoco3) at ($ \vectorthirdcomponent*(coA3) $);
+	\coordinate (VcocoXY) at ($ (V) - (Vcoco3) $);
+
+	% decompose vector via cobasis
+	%%\coordinate (ParallelToCothird) at ($ (V) - (coA3) $);
+	\coordinate (ParallelToCosecond) at ($ (VcocoXY) - (coA2) $);
+	\coordinate (ParallelToCofirst) at ($ (VcocoXY) - (coA1) $);
+	\coordinate (Vcoco1) at (intersection of VcocoXY--ParallelToCosecond and O--coA1);
+	\coordinate (Vcoco2) at (intersection of VcocoXY--ParallelToCofirst and O--coA2);
+
+	\draw [line width=0.4pt, red] (O) -- (Vcoco2);
+
+	\draw [line width=0.4pt, dotted, color=red] (O) -- (VcocoXY);
+
+	\draw [line width=0.4pt, dotted, color=red] (V) -- (VcocoXY);
+	\draw [line width=0.4pt, dotted, color=red] (VcocoXY) -- (Vcoco1);
+	\draw [line width=0.4pt, dotted, color=red] (VcocoXY) -- (Vcoco2);
+
+	% draw parallelepiped of decomposition
+	\coordinate (onPlane23) at ($ (Vcomponent2) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=blue] (Vcomponent2) -- (onPlane23);
+	\draw [line width=0.4pt, dotted, color=blue] (V) -- (onPlane23);
+
+	\coordinate (onPlane13) at ($ (Vcomponent1) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=blue] (Vcomponent1) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=blue] (V) -- (onPlane13);
+
+	\coordinate (onAxis3) at ($ (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=blue] (O) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=blue] (onPlane13) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=blue] (onPlane23) -- (onAxis3);
+
+	\draw [line width=0.4pt, dotted, color=blue] (O) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=blue] (O) -- (onPlane23);
+
+	% draw co-parallelepiped of co-decomposition
+	\coordinate (onCoplane23) at ($ (Vcoco2) + (V) - (VcocoXY) $);
+	\draw [line width=0.4pt, dotted, color=red] (Vcoco2) -- (onCoplane23);
+	\draw [line width=0.4pt, dotted, color=red] (V) -- (onCoplane23);
+
+	\coordinate (onCoplane13) at ($ (Vcoco1) + (V) - (VcocoXY) $);
+	\draw [line width=0.4pt, dotted, color=red] (Vcoco1) -- (onCoplane13);
+	\draw [line width=0.4pt, dotted, color=red] (V) -- (onCoplane13);
+
+	\coordinate (onCoAxis3) at ($ (V) - (VcocoXY) $);
+	\draw [line width=0.4pt, dotted, color=red] (O) -- (onCoAxis3);
+	\draw [line width=0.4pt, dotted, color=red] (onCoplane13) -- (onCoAxis3);
+	\draw [line width=0.4pt, dotted, color=red] (onCoplane23) -- (onCoAxis3);
+
+	\draw [line width=0.4pt, dotted, color=red] (O) -- (onCoplane13);
+	\draw [line width=0.4pt, dotted, color=red] (O) -- (onCoplane23);
+
+	% draw vectors of cobasis
+	\draw [line width=0.4pt, red] (O) -- ($ 1.01*(coA3) $);
+	\draw [line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (coA3)
+		node[pos=0.8, above right, shape=circle, fill=white, inner sep=-1pt, outer sep=11pt]
+		{${\bm{a}}^{\hspace{-0.1ex}3}$};
+
+	\draw [line width=0.4pt, red] (O) -- ($ 1.01*(coA2) $);
+	\draw [line width=1.25pt, red, -{Latex[round, length=3.6mm, width=3mm]}]
+		(O) -- (coA2)
+		node[pos=0.88, above, shape=circle, fill=white, inner sep=-1pt, outer sep=4pt]
+		{${\bm{a}}^{\hspace{-0.1ex}2}$};
+
+	\draw [line width=0.4pt, red] (O) -- ($ 1.01*(coA1) $);
+	\draw [line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (coA1)
+		node[pos=0.92, below right, shape=circle, fill=white, inner sep=-1pt, outer sep=4pt]
+		{${\bm{a}}^{\hspace{-0.16ex}1}$};
+
+	% draw vectors of basis
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.01*(A1) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A1)
+		node[pos=0.84, above left, shape=circle, fill=white, inner sep=-1pt, outer sep=6pt]
+		{${\bm{a}}_{\hspace{-0.08ex}1}$};
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.01*(A2) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A2)
+		node[pos=0.88, below, shape=circle, fill=white, inner sep=-1pt, outer sep=6pt]
+		{${\bm{a}}_2$};
+	\draw [line width=0.4pt, blue] (O) -- (Vcomponent2);
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.01*(A3) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A3)
+		node[pos=0.71, above left, shape=circle, fill=white, inner sep=-1pt, outer sep=16pt]
+		{${\bm{a}}_3$};
+
+	% draw components of vector
+	\draw [color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcomponent1)
+		node[pos=0.67, above left, fill=white, shape=circle, inner sep=0pt, outer sep=4pt]
+	{${v^{\hspace{-0.08ex}1} \hspace{-0.1ex} \bm{a}_{\hspace{-0.08ex}1}}$};
+
+	\draw [color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vcomponent1) -- (VcomponentXY)
+		node[pos=0.48, above, shape=circle, fill=white, inner sep=-2pt, outer sep=1pt]
+	{${v^2 \hspace{-0.1ex} \bm{a}_2}$};
+
+	\draw [color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(VcomponentXY) -- (V)
+		node[pos=0.77, above right, shape=circle, fill=white, inner sep=-1pt, outer sep=7pt]
+	{${v^3 \hspace{-0.1ex} \bm{a}_3}$};
+
+	% draw co-components of vector
+	\draw [color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcoco1)
+		node[pos=1.02, above left, fill=white, shape=circle, inner sep=-1pt, outer sep=5pt]
+	{${v_{\raisemath{-0.2ex}{1}} \bm{a}^{\hspace{-0.16ex}1}}$};
+
+	\draw [color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vcoco1) -- (VcocoXY)
+		node[pos=0.5, below right, shape=circle, fill=white, inner sep=-2pt, outer sep=7pt]
+	{${v_{\raisemath{-0.2ex}{2}}  \hspace{0.1ex} \bm{a}^{\hspace{-0.1ex}2}}$};
+
+	\draw [color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(VcocoXY) -- (V)
+		node[pos=0.37, above left, shape=circle, fill=white, inner sep=-1pt, outer sep=9pt]
+	{${v_{\raisemath{-0.2ex}{3}} \hspace{0.1ex} \bm{a}^{\hspace{-0.1ex}3}}$};
+
+	% draw vector
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.69, above, shape=circle, fill=white, inner sep=0pt, outer sep=3.33pt]
+			{\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	% calculate a_i • a^j
+	\tddotproductcartesian%
+		{\firstcartesianx}{\firstcartesiany}{\firstcartesianz}%
+		{\inverseOfSqrtGramian*\secondthirdcrossx}%
+			{\inverseOfSqrtGramian*\secondthirdcrossy}%
+				{\inverseOfSqrtGramian*\secondthirdcrossz}%
+		{\FirstDotCofirst}
+	\tddotproductcartesian%
+		{\secondcartesianx}{\secondcartesiany}{\secondcartesianz}%
+		{\inverseOfSqrtGramian*\thirdfirstcrossx}%
+			{\inverseOfSqrtGramian*\thirdfirstcrossy}%
+				{\inverseOfSqrtGramian*\thirdfirstcrossz}%
+		{\SecondDotCosecond}
+	\tddotproductcartesian%
+		{\thirdcartesianx}{\thirdcartesiany}{\thirdcartesianz}%
+		{\inverseOfSqrtGramian*\firstsecondcrossx}%
+			{\inverseOfSqrtGramian*\firstsecondcrossy}%
+				{\inverseOfSqrtGramian*\firstsecondcrossz}%
+		{\ThirdDotCothird}
+	%
+	\tddotproductcartesian%
+		{\secondcartesianx}{\secondcartesiany}{\secondcartesianz}%
+		{\inverseOfSqrtGramian*\secondthirdcrossx}%
+			{\inverseOfSqrtGramian*\secondthirdcrossy}%
+				{\inverseOfSqrtGramian*\secondthirdcrossz}%
+		{\SecondDotCofirst}
+	\tddotproductcartesian%
+		{\firstcartesianx}{\firstcartesiany}{\firstcartesianz}%
+		{\inverseOfSqrtGramian*\thirdfirstcrossx}%
+			{\inverseOfSqrtGramian*\thirdfirstcrossy}%
+				{\inverseOfSqrtGramian*\thirdfirstcrossz}%
+		{\FirstDotCosecond}
+	\tddotproductcartesian%
+		{\thirdcartesianx}{\thirdcartesiany}{\thirdcartesianz}%
+		{\inverseOfSqrtGramian*\secondthirdcrossx}%
+			{\inverseOfSqrtGramian*\secondthirdcrossy}%
+				{\inverseOfSqrtGramian*\secondthirdcrossz}%
+		{\ThirdDotCofirst}
+	\tddotproductcartesian%
+		{\firstcartesianx}{\firstcartesiany}{\firstcartesianz}%
+		{\inverseOfSqrtGramian*\firstsecondcrossx}%
+			{\inverseOfSqrtGramian*\firstsecondcrossy}%
+				{\inverseOfSqrtGramian*\firstsecondcrossz}%
+		{\FirstDotCothird}
+	\tddotproductcartesian%
+		{\secondcartesianx}{\secondcartesiany}{\secondcartesianz}%
+		{\inverseOfSqrtGramian*\firstsecondcrossx}%
+			{\inverseOfSqrtGramian*\firstsecondcrossy}%
+				{\inverseOfSqrtGramian*\firstsecondcrossz}%
+		{\SecondDotCothird}
+	\tddotproductcartesian%
+		{\thirdcartesianx}{\thirdcartesiany}{\thirdcartesianz}%
+		{\inverseOfSqrtGramian*\thirdfirstcrossx}%
+			{\inverseOfSqrtGramian*\thirdfirstcrossy}%
+				{\inverseOfSqrtGramian*\thirdfirstcrossz}%
+		{\ThirdDotCosecond}
+
+	% show a_i • a^j as matrix
+	\node[fill=white!50, inner sep=0pt, outer sep=2pt] at (0,0.8,-4)
+		{$\scalebox{0.9}[0.9]{$
+			\bm{a}_i \dotp \hspace{0.1ex} \bm{a}^{\hspace{0.1ex}j} \hspace{-0.1ex} =
+			\hspace{-0.2ex}\scalebox{0.9}[0.9]{$\left[ \begin{array}{ccc}
+				\bm{a}_1 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.1ex}1} &
+					\bm{a}_1 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.06ex}2} &
+						\bm{a}_1 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.06ex}3} \\
+				\bm{a}_2 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.1ex}1} &
+					\bm{a}_2 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.06ex}2} &
+						\bm{a}_2 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.06ex}3} \\
+				\bm{a}_3 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.1ex}1} &
+					\bm{a}_3 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.06ex}2} &
+						\bm{a}_3 \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.06ex}3}
+			\end{array} \right]$} \!=\!
+			\scalebox{0.9}[0.9]{$\left[ \begin{array}{ccc}
+				\pgfmathprintnumber[fixed, precision=3]{\FirstDotCofirst} &
+					\pgfmathprintnumber[fixed, precision=3]{\FirstDotCosecond} &
+						\pgfmathprintnumber[fixed, precision=3]{\FirstDotCothird} \\
+				\pgfmathprintnumber[fixed, precision=3]{\SecondDotCofirst} &
+					\pgfmathprintnumber[fixed, precision=3]{\SecondDotCosecond} &
+						\pgfmathprintnumber[fixed, precision=3]{\SecondDotCothird} \\
+				\pgfmathprintnumber[fixed, precision=3]{\ThirdDotCofirst} &
+					\pgfmathprintnumber[fixed, precision=3]{\ThirdDotCosecond} &
+						\pgfmathprintnumber[fixed, precision=3]{\ThirdDotCothird}
+			\end{array} \right]$}
+			\hspace{-0.1em} = %%\approx
+			\hspace{0.1ex} \delta_i^{\hspace{0.1ex}j}
+		$}$};
+
+\end{tikzpicture}
+
+\vspace{10mm}\caption{\inquotes{\en{Decomposition of vector in oblique basis}\ru{Разложение вектора в косоугольном базисе}}}\label{fig:DecompositionOfVector}
+
+\end{center}
+\end{figure}

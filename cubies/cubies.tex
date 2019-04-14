@@ -1,0 +1,550 @@
+\documentclass[11pt,twoside]{book}
+
+\usepackage{geometry}
+\geometry{papersize={150mm,200mm}}
+\geometry{tmargin=1cm,bmargin=1cm,lmargin=1cm,rmargin=1cm}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage[e]{esvect}
+
+\usepackage{amsmath}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot} % it needs tikz-3dplot.sty in same folder
+\usetikzlibrary{calc}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows, arrows.meta}
+
+\usepackage{xintexpr}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.5}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\usepackage{nicefrac}
+
+\usepackage{gensymb} % for \degree
+
+\usepackage{verbatim}
+
+\usepackage[english]{babel}
+\addto\captionsenglish{\renewcommand{\figurename}{figure}}
+\addto\captionsenglish{\def\figureshortname{fig.}}
+\newcommand\figref[1]{\figureshortname~\ref{#1}}
+
+\usepackage[format=plain]{caption}
+\captionsetup[figure]{%
+font={small,it},labelfont=small,%
+labelsep=newline,justification=centering,singlelinecheck=off,%
+aboveskip=4mm,belowskip=2.5mm}
+
+\newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
+
+\newcommand\levicivita{\raisemath{0.2ex}{\mathrm{\in}}}
+
+\newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
+\newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
+
+\newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
+\newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
+
+\newcommand{\lquote}[0]{``}
+\newcommand{\rquote}[0]{''}
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\def\locationvector{\bm{r}\hspace{-0.05ex}} % \bm{\xi}
+
+\begin{center}
+\tdplotsetmaincoords{58}{117} % orientation of camera
+
+\pgfmathsetmacro{\semilengthofside}{0.62}
+
+% three spherical parameters for vector
+\pgfmathsetmacro{\lengthofvector}{1.77} % 1.8
+\pgfmathsetmacro{\vectoranglefromz}{-20} % 11
+\pgfmathsetmacro{\vectoranglefromx}{-33} % -26
+
+% and differential of vector
+\pgfmathsetmacro{\lengthofdifferential}{-0.44}
+\pgfmathsetmacro{\differentialanglefromz}{111}
+\pgfmathsetmacro{\differentialanglefromx}{-22} % 8
+
+\begin{tikzpicture}[scale=3.2, tdplot_main_coords] % tdplot_main_coords style to use 3dplot
+
+	\coordinate (O) at ( 0, 0, 0 ) ;
+
+	% draw cube
+
+	\draw [line width=0.4pt, black] (O) -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black] (O) -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black] (O) -- ++(0,0,\semilengthofside);
+
+	\draw [line width=0.4pt, black] (O) -- ++(-\semilengthofside,0,0);
+	\draw [line width=0.4pt, black] (O) -- ++(0,-\semilengthofside,0);
+	\draw [line width=0.4pt, black] (O) -- ++(0,0,-\semilengthofside);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,0) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,0) $)  -- ++(0,-\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,0) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,0) $)  -- ++(0,-\semilengthofside,0);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,0) $)  -- ++(0,0,-\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,0) $)  -- ++(0,0,-\semilengthofside);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,0) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,0) $)  -- ++(-\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,0) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,0) $)  -- ++(-\semilengthofside,0,0);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,-\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,-\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,-\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,0,-\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,-\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,-\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,-\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,-\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,-\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,\semilengthofside,-\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,-\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (0,-\semilengthofside,-\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,-\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (\semilengthofside,0,-\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,-\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=0.4pt, black!25] ($ (O) + (-\semilengthofside,0,-\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+
+	% location vector
+	\coordinate (referencePoint) at ( 1, 1.5, -0.8 ) ;
+
+	\draw [line width=1.6pt, black, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(referencePoint) -- (O)
+		node [pos=0.3, above, inner sep=1pt, outer sep=11pt]
+			{$\locationvector$} ;
+
+	\tdplottransformmainscreen{1}{1.5}{-0.8}
+	\draw [tdplot_screen_coords, line width=1.2pt, color=black, fill=white] (\tdplotresx, \tdplotresy) circle ( 1pt ) ;
+
+	% aξes
+	\def\axislength{2.5}\def\axisbacklength{-2}
+
+	%%\draw [line width=0.5pt, black] ($ (O) + (0, -\semilengthofside, 0) $) -- ++(0, \axisbacklength*\semilengthofside, 0);
+	%%\draw [line width=0.5pt, black] ($ (O) + (-\semilengthofside, 0, 0) $) -- ++(\axisbacklength*\semilengthofside, 0, 0);
+	%%\draw [line width=0.5pt, black] ($ (O) + (0, 0, -\semilengthofside) $) -- ++(0, 0, \axisbacklength*\semilengthofside);
+
+	% draw vector
+	\tdplotsetcoord{a}{\lengthofvector}{\vectoranglefromz}{\vectoranglefromx}
+
+	\coordinate (Otranslatedtopface) at ($ (O) + (0, 0, \semilengthofside) $) ;
+
+	\coordinate (axytranslatedtopface) at ($ (axy) + (0, 0, \semilengthofside) $) ;
+	\coordinate (aexitxy) at (intersection of Otranslatedtopface--axytranslatedtopface and O--a);
+
+	\draw [line width=1.6pt, black, line cap = round]
+		(O) -- (aexitxy) ;
+
+	%%\draw [line width=1.6pt, black!50, line cap = round]
+	%%	($ (O) + (0, \semilengthofside, 0) $) -- ($ (aexitxy) + (0, \semilengthofside, 0) $) ;
+
+	\draw [line width=1.6pt, black!50, line cap = round]
+		($ (O) + (0, -\semilengthofside, 0) $) -- ($ (aexitxy) + (0, -\semilengthofside, 0) $) ;
+
+	\tdplotsetcoord{da}{\lengthofdifferential}{\differentialanglefromz}{\differentialanglefromx}
+
+	\coordinate (aplusda) at ($ (a) + (da) $) ; %%\coordinate (aminusda) at ($ (a) - (da) $) ;
+	\coordinate (aplusday) at ($ (a) + (day) $) ;
+	\coordinate (aminusday) at ($ (a) - (day) $) ;
+	\coordinate (axyplusdaxy) at ($ (axy) + (daxy) $) ;
+	\coordinate (axyminusdaxy) at ($ (axy) - (daxy) $) ;
+
+	\coordinate (axyplusdaxytranslatedtopface) at ($ (axyplusdaxy) + (0, 0, \semilengthofside) $) ;
+	\coordinate (aplusdayexitxy) at (intersection of Otranslatedtopface--axyplusdaxytranslatedtopface and O--aplusday);
+
+	\coordinate (axyminusdaxytranslatedtopface) at ($ (axyminusdaxy) + (0, 0, \semilengthofside) $) ;
+	\coordinate (aminusdayexitxy) at (intersection of Otranslatedtopface--axyminusdaxytranslatedtopface and O--aminusday);
+
+	%%\draw [line width=1.6pt, black, line cap = round]
+	%%	($ (O) + (0, \semilengthofside, 0) $) -- ($ (aplusdaexitxy) + (0, \semilengthofside, 0) $) ;
+
+	\draw [line width=1.6pt, black, line cap = round]
+		($ (O) + (0, -\semilengthofside, 0) $) -- ($ (aminusdayexitxy) + (0, -\semilengthofside, 0) $) ;
+
+	% unit normal vectors, negative
+	\def\normalunit{1.11}
+
+	\draw [line width=1.6pt, black, line cap=round, dotted, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (-\semilengthofside, 0, 0) $) -- ++(-\normalunit * \semilengthofside, 0, 0) ;
+	\draw [line width=1.6pt, black, line cap=round, dotted, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (0, -\semilengthofside, 0) $) -- ++(0, -\normalunit * \semilengthofside, 0)
+		node [pos=0.92, below, inner sep=1pt, outer sep=6.4pt] {$- \bm{n}_1$} ;
+	\draw [line width=1.6pt, black, line cap=round, dotted, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (0, 0, -\semilengthofside) $) -- ++(0, 0, -\normalunit * \semilengthofside)
+		node [pos=0.8, below right, inner sep=1pt, outer sep=3pt] {$- \bm{n}_3$} ;
+
+	% paint cube’s faces
+
+	\fill [opacity=.1, green]
+		(\semilengthofside, -\semilengthofside, \semilengthofside) --
+		(-\semilengthofside, -\semilengthofside, \semilengthofside) --
+		(-\semilengthofside, -\semilengthofside, -\semilengthofside) --
+		(\semilengthofside, -\semilengthofside, -\semilengthofside) --
+		cycle ;
+
+	\fill [opacity=.1, red]
+		(-\semilengthofside, \semilengthofside, \semilengthofside) --
+		(-\semilengthofside, -\semilengthofside, \semilengthofside) --
+		(-\semilengthofside, -\semilengthofside, -\semilengthofside) --
+		(-\semilengthofside, \semilengthofside, -\semilengthofside) --
+		cycle ;
+
+	\fill [opacity=.1, white]
+		(\semilengthofside, \semilengthofside, -\semilengthofside) --
+		(-\semilengthofside, \semilengthofside, -\semilengthofside) --
+		(-\semilengthofside, -\semilengthofside, -\semilengthofside) --
+		(\semilengthofside, -\semilengthofside, -\semilengthofside) --
+		cycle ;
+
+	\fill [opacity=.75, yellow]
+		(\semilengthofside, \semilengthofside, \semilengthofside) --
+		(-\semilengthofside, \semilengthofside, \semilengthofside) --
+		(-\semilengthofside, -\semilengthofside, \semilengthofside) --
+		(\semilengthofside, -\semilengthofside, \semilengthofside) --
+		cycle ;
+
+	\fill [opacity=.75, orange]
+		(\semilengthofside, \semilengthofside, \semilengthofside) --
+		(\semilengthofside, -\semilengthofside, \semilengthofside) --
+		(\semilengthofside, -\semilengthofside, -\semilengthofside) --
+		(\semilengthofside, \semilengthofside, -\semilengthofside) --
+		cycle ;
+
+	\fill [opacity=.75, blue]
+		(\semilengthofside, \semilengthofside, \semilengthofside) --
+		(-\semilengthofside, \semilengthofside, \semilengthofside) --
+		(-\semilengthofside, \semilengthofside, -\semilengthofside) --
+		(\semilengthofside, \semilengthofside, -\semilengthofside) --
+		cycle ;
+
+	% draw visible edges of cube
+
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (-\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (-\semilengthofside,\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,-\semilengthofside,0) $)  -- ++(0,0,\semilengthofside);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,-\semilengthofside,0) $)  -- ++(0,0,-\semilengthofside);
+
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (0,\semilengthofside,\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (0,\semilengthofside,\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (0,-\semilengthofside,\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (0,-\semilengthofside,\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (0,\semilengthofside,-\semilengthofside) $)  -- ++(\semilengthofside,0,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (0,\semilengthofside,-\semilengthofside) $)  -- ++(-\semilengthofside,0,0);
+
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,0,\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,0,\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (-\semilengthofside,0,\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (-\semilengthofside,0,\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,0,-\semilengthofside) $)  -- ++(0,\semilengthofside,0);
+	\draw [line width=1.5pt, white, line cap=round]
+		($ (O) + (\semilengthofside,0,-\semilengthofside) $)  -- ++(0,-\semilengthofside,0);
+
+	% unit normal vectors, positive
+	\draw [line width=1.6pt, black, line cap=round, dotted, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (\semilengthofside, 0, 0) $) -- ++(\normalunit * \semilengthofside, 0, 0) ;
+	\draw [line width=1.6pt, black, line cap=round, dotted, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (0, \semilengthofside, 0) $) -- ++(0, \normalunit * \semilengthofside, 0)
+		node [pos=0.86, below, inner sep=1pt, outer sep=6.4pt] {$\bm{n}_1$} ;
+	\draw [line width=1.6pt, black, line cap=round, dotted, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (0, 0, \semilengthofside) $) -- ++(0, 0, \normalunit * \semilengthofside)
+		node [pos=0.8, above right, inner sep=1pt, outer sep=3.6pt] {$\bm{n}_3$} ;
+
+	% more of vector
+
+	\draw [line width=1.6pt, black, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(aexitxy) -- (a)
+		node [pos=0.85, above left, inner sep=1pt, outer sep=3.33pt]
+			{$\bm{a}$} ;
+
+	\draw [line width=1.6pt, black!50, line cap = round]
+		($ (O) + (0, \semilengthofside, 0) $) -- ($ (aexitxy) + (0, \semilengthofside, 0) $) ;
+
+	\draw [line width=1.6pt, black!50, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (aexitxy) + (0, \semilengthofside, 0) $) -- ($ (a) + (0, \semilengthofside, 0) $) ;
+		%%node [pos=0.82, above left, inner sep=1pt, outer sep=3.33pt] {$\bm{a}$} ;
+
+	\draw [line width=1.6pt, black!50, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (aexitxy) + (0, -\semilengthofside, 0) $) -- ($ (a) + (0, -\semilengthofside, 0) $) ;
+		%%node [pos=0.72, above right, inner sep=1pt, outer sep=9pt] {$\bm{a}$} ;
+
+	\draw [line width=1.6pt, black, line cap = round]
+		($ (O) + (0, \semilengthofside, 0) $) -- ($ (aplusdayexitxy) + (0, \semilengthofside, 0) $) ;
+
+	\draw [line width=1.6pt, blue, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (a) + (0, \semilengthofside, 0) $) -- ($ (aplusday) + (0, \semilengthofside, 0) $)
+		node [pos=0.5, above right, inner sep=1pt, outer sep=3pt]
+			{$\smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 \hspace{-0.2ex}
+				+ \hspace{-0.16ex} \scalebox{0.9}{$\infty^{\hspace{-0.4ex}\expminusone}$}(d\bm{a})$} ;
+
+	\draw [line width=1.6pt, blue, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (a) + (0, -\semilengthofside, 0) $) -- ($ (aminusday) + (0, -\semilengthofside, 0) $)
+		node [pos=2.5, above right, inner sep=1pt, outer sep=-5pt]
+			{$- \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 \hspace{-0.2ex}
+				+ \hspace{-0.16ex} \scalebox{0.9}{$\infty^{\hspace{-0.4ex}\expminusone}$}(d\bm{a})$} ;
+
+	\draw [line width=1.6pt, black, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (aplusdayexitxy) + (0, \semilengthofside, 0) $) -- ($ (aplusday) + (0, \semilengthofside, 0) $)
+		node [pos=0.44, above right, inner sep=1pt, outer sep=19pt]
+			{$\bm{a} + \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1$} ;
+
+	\draw [line width=1.6pt, black, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (aminusdayexitxy) + (0, -\semilengthofside, 0) $) -- ($ (aminusday) + (0, -\semilengthofside, 0) $)
+		node [pos=0.73, above left, inner sep=1pt, outer sep=3pt]
+			{$\bm{a} - \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1$} ;
+
+	% incremented vector
+
+	\draw [line width=1.6pt, black!50, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) $) --
+			($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (a) $)
+		node [pos=0.8, above left, inner sep=1pt, outer sep=1.5pt]
+			{$\bm{a}$} ;
+
+	\coordinate (aplusdaxy) at ($ (a) + (daxy) $) ;
+
+	\draw [line width=1pt, blue, line cap = round]
+		($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (a) $) --
+			($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (aplusday) $) ;
+	\draw [line width=1pt, orange, line cap = round]
+		($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (aplusday) $) --
+			($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (aplusdaxy) $) ;
+	\draw [line width=1pt, yellow, line cap = round]
+		($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (aplusdaxy) $) --
+			($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (aplusda) $) ;
+
+	\draw [line width=1.6pt, magenta, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (a) $) --
+			($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (aplusda) $)
+		node [pos=-0.1, above right, inner sep=1pt, outer sep=10pt, yshift=1.4em]
+			{$\smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \hspace{-0.1ex}
+				+ \hspace{-0.16ex} \scalebox{0.9}{$\infty^{\hspace{-0.4ex}\expminusone}$}(d\bm{a})$} ;
+
+	\draw [line width=1.6pt, black, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
+		($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) $) --
+			($ (O) + (\semilengthofside, \semilengthofside, \semilengthofside) + (aplusda) $) ;
+		%%node [pos=0.32, above right, inner sep=1pt, outer sep=20pt]
+		%%	{$\bm{a} + \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a}$} ;
+
+	% aξes
+	\draw [line width=0.5pt, black, ->]
+		($ (O) + (0, \semilengthofside, 0) $) -- ++(0, \axislength*\semilengthofside, 0)
+		node [pos=0.89, above right, inner sep=1pt, outer sep=2.5pt] {$ \xi_1 $} ;
+	\draw [line width=0.5pt, black, ->]
+		($ (O) + (\semilengthofside, 0, 0) $) -- ++(\axislength*\semilengthofside, 0, 0)
+		node [pos=0.93, below right, inner sep=1pt, outer sep=1pt] {$ \xi_2 $} ;
+	\draw [line width=0.5pt, black, ->]
+		($ (O) + (0, 0, \semilengthofside) $) -- ++(0, 0, 0.66*\axislength*\semilengthofside)
+		node [pos=0.81, above right, inner sep=1pt, outer sep=5pt] {$ \xi_3 $} ;
+
+\end{tikzpicture}
+\end{center}
+
+\[\begin{array}{r@{\hspace{.25em}}c}
+%%\scalebox{0.92}{$ \textstyle \sum \hspace{-0.16ex} \bm{a} \dotp \bm{n} \hspace{.25ex} d\mathcal{O} \hspace{.123ex} \colon $}
+&
+\scalebox{0.95}[0.96]{$ \displaystyle \sum_{i=1}^3 \hspace{-0.25ex}
+\left( \bm{a} + \smalldisplaystyleonehalf \hspace{.16ex} d\bm{a} \dotp \bm{n}_i \bm{n}_i \right) \hspace{-0.28ex} \dotp \bm{n}_i \hspace{.2ex} d\mathcal{O}_i $}
++
+\scalebox{0.95}[0.96]{$\displaystyle \sum_{i=1}^3 \hspace{-0.25ex}
+\left( \bm{a} - \smalldisplaystyleonehalf \hspace{.16ex} d\bm{a} \dotp \bm{n}_i \bm{n}_i \right) \hspace{-0.32ex} \dotp \hspace{-0.1ex} \left( - \bm{n}_i \hspace{.1ex} \right) \hspace{-0.1ex} d\mathcal{O}_i $} \hspace{-0.12ex} = \\[.8em]
+%
+& \hfill = %%\hspace{16em} =
+%%\scalebox{0.92}{$\displaystyle \sum_{i}^{\tiny\mathstrut}$} \hspace{.2ex}
+d \bm{a} \hspace{-0.12ex} \dotp \bm{n}_i \hspace{.2ex} d\mathcal{O}_i \hspace{-0.12ex}
+=
+d a_{i} \hspace{.2ex} d\mathcal{O}_i
+\end{array}\]
+
+\[\begin{array}{c}
+\scalebox{0.95}[0.96]{$ \displaystyle \sum_{i=1}^3 \hspace{-0.25ex}
+\left( \bm{a} + \smalldisplaystyleonehalf \hspace{.16ex} d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i \right) \hspace{-0.28ex} \dotp \bm{n}^{\hspace{-0.16ex}i} \hspace{.2ex} d\mathcal{O}_i $}
++
+\scalebox{0.95}[0.96]{$\displaystyle \sum_{i=1}^3 \hspace{-0.25ex}
+\left( \bm{a} - \smalldisplaystyleonehalf \hspace{.16ex} d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i \right) \hspace{-0.32ex} \dotp \hspace{-0.1ex} \left( - \bm{n}^{\hspace{-0.16ex}i} \hspace{.25ex} \right) \hspace{-0.2ex} d\mathcal{O}_i $} \hspace{-0.12ex} = \\[.8em]
+%
+\hfill = %%\hspace{16em} =
+%%\scalebox{0.92}{$\displaystyle \sum_{i}^{\tiny\mathstrut}$} \hspace{.2ex}
+d \bm{a} \hspace{-0.12ex} \dotp \bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} d\mathcal{O}_i \hspace{-0.12ex}
+=
+d a^{i} \hspace{.1ex} d\mathcal{O}_i
+\end{array}\]
+
+\newpage
+
+\[\begin{array}{c}
+\locationvector \hspace{-0.25ex}=\hspace{-0.25ex} \locationvector ( \hspace{.1ex} \xi^i \hspace{.1ex} )
+{\hspace{.4ex} \not\equiv \textsf{linear} \hspace{.5ex} \xi_i \hspace{.2ex} \bm{n}_i}
+\hspace{.1ex}, \:
+\bm{n}_i \hspace{-0.16ex} = \displaystyle \frac{\raisemath{-0.25em}{\partial \bm{r}}}{\partial \xi^i} = \partial_i \bm{r} , \:
+d\locationvector = d \xi^i \hspace{.1ex} \bm{n}_i \hspace{.1ex}, \:
+\boldnabla = \bm{n}^{\hspace{-0.16ex}i} \partial_i \\
+%
+\bm{a} = a^{\hspace{-0.1ex}i} \bm{n}_i \hspace{.1ex}, \:
+d\bm{a} = d a^{\hspace{-0.1ex}i} \bm{n}_i \\
+%
+d\bm{a} = d\locationvector \dotp \hspace{-0.25ex} \boldnabla \bm{a}
+= d \xi^i \bm{n}_i \hspace{-0.12ex} \dotp \bm{n}^j \partial_j \bm{a}
+= d \xi^i \partial_i \bm{a}
+= \displaystyle \frac{\raisemath{-0.25em}{\partial \bm{a}}}{\partial \xi^i} \hspace{.2ex} d\xi^i \\
+%
+d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \hspace{-0.16ex}
+= d \xi^h \partial_h \bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \hspace{-0.2ex}
+= d \xi^h \partial_h a^i \hspace{-0.2ex}
+= \displaystyle \frac{\raisemath{-0.25em}{\partial a^i}}{\partial \xi^h} \hspace{.2ex} d\xi^h \hspace{-0.2ex}
+= d a^i \\
+%
+%%d\bm{a} =
+%%d\bm{a} \dotp \hspace{-0.1ex} \bm{E}
+%%= d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}_i \hspace{.2ex} \levicivita_{ijk} \hspace{.2ex} \bm{n}_j \hspace{-0.25ex} \times \hspace{-0.16ex} \bm{n}_k \hspace{-0.2ex}
+%%= d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}_i \hspace{.2ex} \levicivita_{ijk} \levicivita_{jkh} \hspace{.2ex} \bm{n}_h \hspace{-0.2ex}
+%%= d\bm{a} \dotp \bm{n}_i \bm{n}_i \\
+%
+d\bm{a} \dotp \hspace{-0.1ex} \bm{E}
+= d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \levicivita_{ijk} \hspace{.2ex} \bm{n}^j \hspace{-0.32ex} \times \hspace{-0.16ex} \bm{n}^k \hspace{-0.2ex}
+= d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \levicivita_{ijk} \levicivita^{jkh} \hspace{.1ex} \bm{n}_h \hspace{-0.2ex}
+= d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i
+\end{array}\]
+
+\[
+\bm{\hat{n}} = ?
+\]
+
+\[\begin{array}{c}
+%%\bm{n}_i \hspace{.2ex} d\mathcal{O}_i \hspace{-0.12ex} = \bm{n}_i \bm{n}_i \hspace{-0.12ex} \dotp d\xi_j \bm{n}_j \hspace{-0.25ex} \times \hspace{-0.16ex} d \xi_k \bm{n}_k
+%%\hspace{.1ex}, \:
+%%d\mathcal{O}_i \hspace{-0.12ex} = \hspace{-0.16ex} \levicivita_{ijk} \hspace{.2ex} d\xi_j \hspace{.12ex} d\xi_k
+%%\\[.25em]
+%
+\bm{n}^{\hspace{-0.16ex}i} d\mathcal{O}_i \hspace{-0.12ex} = \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i \hspace{-0.12ex} \dotp d\xi^j \bm{n}_j \hspace{-0.25ex} \times \hspace{-0.16ex} d \xi^k \bm{n}_k
+\hspace{.1ex}, \:
+d\mathcal{O}_i \hspace{-0.12ex} = \hspace{-0.16ex} \levicivita_{ijk} \hspace{.2ex} d\xi^j \hspace{-0.12ex} d\xi^k
+\end{array}\]
+
+\[\begin{array}{c}
+d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} d\mathcal{O}_i \hspace{-0.12ex}
+= d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i \hspace{-0.12ex} \dotp d\xi^j \bm{n}_j \hspace{-0.25ex} \times \hspace{-0.16ex} d \xi^k \bm{n}_k \hspace{-0.12ex}
+= d a^{\hspace{-0.1ex}i} \levicivita_{ijk} \hspace{.2ex} d\xi^j \hspace{-0.12ex} d\xi^k
+\end{array}\]
+
+\[\begin{array}{c}
+%%d\mathcal{V} = d\xi_i \bm{n}_i \hspace{-0.1ex} \times \hspace{-0.16ex} d \xi_j \bm{n}_j \hspace{-0.12ex} \dotp d \xi_k \bm{n}_k = \hspace{-0.16ex} \levicivita_{ijk} \hspace{.2ex} d\xi_i d\xi_j d\xi_k
+%%\\[.25em]
+d\mathcal{V} = d\xi^i \bm{n}_i \hspace{-0.1ex} \times \hspace{-0.16ex} d \xi^j \bm{n}_j \hspace{-0.12ex} \dotp d \xi^k \bm{n}_k = \hspace{-0.16ex} \levicivita_{ijk} \hspace{.2ex} d\xi^i \hspace{-0.1ex} d\xi^j \hspace{-0.12ex} d\xi^k
+\end{array}\]
+
+\[\begin{array}{c}
+%%\boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.32ex} d\mathcal{V} \hspace{-0.1ex}
+%%= \bm{n}_i \partial_i \hspace{-0.12ex} \dotp a_j \bm{n}_j \hspace{.25ex} d\mathcal{V} \hspace{-0.1ex}
+%%= \partial_i a_i \hspace{.25ex} d\mathcal{V} \\
+%
+\boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.32ex} d\mathcal{V} \hspace{-0.1ex}
+= \bm{n}^{\hspace{-0.16ex}i} \partial_i \hspace{-0.12ex} \dotp a^j \bm{n}_j \hspace{.25ex} d\mathcal{V} \hspace{-0.1ex}
+= \partial_i a^{\hspace{-0.1ex}i} d\mathcal{V}
+\end{array}\]
+
+\[\begin{array}{c}
+da^{\hspace{-0.1ex}i} \hspace{.1ex} d\mathcal{O}_i \hspace{-0.12ex}
+= da^{\hspace{-0.1ex}i} d\xi^j \hspace{-0.12ex} d\xi^k \levicivita_{ijk} \hspace{-0.2ex}
+= d \xi^h \partial_h a^{\hspace{-0.1ex}i} d\xi^j \hspace{-0.12ex} d\xi^k \levicivita_{ijk}
+\\[.2em]
+%
+\partial_h a^{h} d\mathcal{V} \hspace{-0.1ex}
+= \partial_h a^{h} d\xi^i \hspace{-0.1ex} d\xi^j \hspace{-0.12ex} d\xi^k \levicivita_{ijk}
+\end{array}\]
+
+\[\begin{array}{c}
+\partial_h a^{\hspace{-0.1ex}i} d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^j}} \hspace{-0.16ex} {\color{teal}{d\xi^k}} \levicivita_{ijk}
+\quad
+\partial_h a^{h} {\color{teal}{d\xi^i}} \hspace{-0.1ex} {\color{teal}{d\xi^j}} \hspace{-0.16ex} {\color{teal}{d\xi^k}} \levicivita_{ijk}
+\end{array}\]
+
+\[\begin{array}{c}
+\partial_h a^{\hspace{-0.1ex}i} d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^j}} \hspace{-0.16ex} {\color{teal}{d\xi^k}} \levicivita_{ijk}
+= \\
+= \partial_h a^1 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^2}} \hspace{-0.16ex} {\color{teal}{d\xi^3}} \levicivita_{123}
++ \partial_h a^1 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^3}} \hspace{-0.16ex} {\color{teal}{d\xi^2}} \levicivita_{132}
++ \\
++ \partial_h a^2 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^3}} \hspace{-0.16ex} {\color{teal}{d\xi^1}} \levicivita_{231}
++ \partial_h a^2 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^1}} \hspace{-0.16ex} {\color{teal}{d\xi^3}} \levicivita_{213}
++ \\
++ \partial_h a^3 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^1}} \hspace{-0.16ex} {\color{teal}{d\xi^2}} \levicivita_{312}
++ \partial_h a^3 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^2}} \hspace{-0.16ex} {\color{teal}{d\xi^1}} \levicivita_{321}
+= \\
+= \partial_h a^1 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^2}} \hspace{-0.16ex} {\color{teal}{d\xi^3}} \levicivita_{123}
+- \partial_h a^1 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^3}} \hspace{-0.16ex} {\color{teal}{d\xi^2}} \levicivita_{123}
++ \\
++ \partial_h a^2 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^3}} \hspace{-0.16ex} {\color{teal}{d\xi^1}} \levicivita_{123}
+- \partial_h a^2 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^1}} \hspace{-0.16ex} {\color{teal}{d\xi^3}} \levicivita_{123}
++ \\
++ \partial_h a^3 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^1}} \hspace{-0.16ex} {\color{teal}{d\xi^2}} \levicivita_{123}
+- \partial_h a^3 d \xi^h \hspace{-0.1ex} {\color{teal}{d\xi^2}} \hspace{-0.16ex} {\color{teal}{d\xi^1}} \levicivita_{123}
+\end{array}\]
+
+\end{document}

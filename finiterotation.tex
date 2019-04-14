@@ -1,0 +1,138 @@
+\begin{figure}[!htbp]
+
+\vspace*{-0.5em}\[
+\mathcircabove{\bm{e}}_i = \mathcircabove{\bm{e}}_i \dotp \bm{e}_j \bm{e}_j 
+\]
+
+\vspace{-1.5em}\[
+\left[ \begin{array}{c} \mathcircabove{\bm{e}}_1 \\ \mathcircabove{\bm{e}}_2 \\ \mathcircabove{\bm{e}}_3 \end{array} \right] =
+\left[ \begin{array}{ccc}
+\mathcircabove{\bm{e}}_1 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_1 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_1 \dotp \bm{e}_3 \\
+\mathcircabove{\bm{e}}_2 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_2 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_2 \dotp \bm{e}_3 \\
+\mathcircabove{\bm{e}}_3 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_3 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_3 \dotp \bm{e}_3
+\end{array} \right] \hspace{-0.5ex}
+\left[ \hspace{-0.12ex} \begin{array}{c} {\bm{e}}_1 \\ {\bm{e}}_2 \\ {\bm{e}_3} \end{array} \right]
+\]
+
+\vspace{-1.25em}
+
+\begin{center}
+\tdplotsetmaincoords{60}{120} % set orientation of axes
+\pgfmathsetmacro{\angletheta}{42}
+% three parameters for vector
+\pgfmathsetmacro{\lengthofvector}{0.55}
+\pgfmathsetmacro{\anglefromz}{40}
+\pgfmathsetmacro{\anglefromx}{240}
+
+\begin{tikzpicture}[scale=4, tdplot_main_coords] % tdplot_main_coords style to use 3dplot
+
+	\coordinate (O) at (0,0,0);
+
+	% draw initial axes
+	\draw [line width=1.2pt, black, -{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.9, above, xshift=-0.8em] {$\mathcircabove{\bm{e}}_1$};
+
+	\draw [line width=1.2pt, black, -{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above, xshift=1em, yshift=-0.2em] {$\mathcircabove{\bm{e}}_2$};
+
+	\draw [line width=1.2pt, red, -{Stealth[round,length=4mm,width=2.4mm]}]
+		(O) -- (0,0,0.9)
+		node[anchor=south] {$\mathcircabove{\bm{e}}_3 = \bm{e}_3 = \bm{k}$};
+
+	% draw initial vector
+	\tdplotsetcoord{point}{\lengthofvector}{\anglefromz}{\anglefromx} % {length}{angle from z}{angle from x}
+		% it also defines (pointxy), (pointxz), and (pointyz) projections of point
+	\draw [line width=1.2pt, black, -{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (point)
+		node[anchor=south] {$\mathcircabove{\bm{r}}$};
+	% draw its projection on xy plane
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (pointxy);
+	\draw [line width=0.4pt, dotted, color=black] (pointxy) -- (point);
+
+	% draw the angle, and label it
+	% syntax: \tdplotdrawarc[coordinate frame, draw options]{center point}{r}{angle}{end angle}{label options}{label}
+	\tdplotdrawarc [line width=0.5pt, red, ->]
+		{(O)}{0.4}{0}{\angletheta}{anchor=north}{$\vartheta$}
+	\tdplotdrawarc [line width=0.5pt, red, ->]
+		{(O)}{0.4}{90}{90+\angletheta}{anchor=west}{$\vartheta$}
+
+	% rotate coordinates using Euler angles "z(\alpha)y(\beta)z(\gamma)"
+	\tdplotsetrotatedcoords{\angletheta}{0}{0}
+
+	% draw rotated axes
+	\draw [line width=1.2pt, blue, tdplot_rotated_coords, -{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.9, left, xshift=-0.1em] {$\bm{e}_1$};
+
+	\draw [line width=1.2pt, blue, tdplot_rotated_coords, -{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above, xshift=0.2em, yshift=0.2em] {$\bm{e}_2$};
+
+	%%\draw [line width=1.2pt, blue, tdplot_rotated_coords, -{Stealth[round, length=4mm, width=2.4mm]}]
+		%%(O) -- (0,0,0.8) ;
+
+	% draw rotated vector
+	\tdplotsetcoord{rotatedpoint}%
+		{\lengthofvector}{\anglefromz}{\anglefromx+\angletheta}
+	\draw [line width=1.2pt, blue, tdplot_rotated_coords, -{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (rotatedpoint)
+		node[anchor=south] {$\bm{r}$};
+	% draw its projection on xy plane
+	\draw [line width=0.4pt, dotted, color=blue, tdplot_rotated_coords] (O) -- (rotatedpointxy);
+	\draw [line width=0.4pt, dotted, color=blue, tdplot_rotated_coords] (rotatedpointxy) -- (rotatedpoint);
+
+	\tdplotdrawarc [line width=0.5pt, red, ->]
+		{(O)}{0.28}{\anglefromx}{\anglefromx+\angletheta}{anchor=south east, xshift=0.3em, yshift=-0.1em}{$\vartheta$}
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{-1em}\[
+\scalebox{0.8}[0.85]{$\left[ \begin{array}{ccc}
+\mathcircabove{\bm{e}}_1 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_1 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_1 \dotp \bm{e}_3 \\
+\mathcircabove{\bm{e}}_2 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_2 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_2 \dotp \bm{e}_3 \\
+\mathcircabove{\bm{e}}_3 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_3 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_3 \dotp \bm{e}_3
+\end{array} \right]$} \hspace{-0.32ex} = \hspace{-0.2ex}
+%
+\scalebox{0.8}[0.85]{$\left[ \hspace{-0.2ex} \begin{array}{ccc}
+\operatorname{cos} \vartheta & \hspace{-1ex} \operatorname{cos} \left( 90\degree \!+ \vartheta \right) & \operatorname{cos} 90\degree \\
+\operatorname{cos} \left( 90\degree \!- \vartheta \right) & \operatorname{cos} \vartheta & \operatorname{cos} 90\degree \\
+\operatorname{cos} 90\degree & \operatorname{cos} 90\degree & \operatorname{cos} 0\degree
+\end{array} \right]$} \hspace{-0.32ex} = \hspace{-0.2ex}
+%
+\scalebox{0.8}[0.85]{$\left[ \hspace{-0.1ex} \begin{array}{ccc}
+\operatorname{cos} \vartheta & - \operatorname{sin} \vartheta & 0 \\
+\operatorname{sin} \vartheta & \operatorname{cos} \vartheta & 0 \\
+0 & 0 & 1
+\end{array} \right]$}
+\]
+
+\vspace{-0.8em}
+\[\begin{array}{c}
+\mathcircabove{\bm{e}}_1 \hspace{-0.16ex} = \bm{e}_1 \operatorname{cos} \vartheta \hspace{0.1ex} - \hspace{0.1ex} \bm{e}_2 \operatorname{sin} \vartheta \\[0.1em]
+\mathcircabove{\bm{e}}_2 \hspace{-0.16ex} = \bm{e}_1 \operatorname{sin} \vartheta \hspace{0.1ex} + \hspace{0.1ex} \bm{e}_2 \operatorname{cos} \vartheta \\[0.1em]
+\mathcircabove{\bm{e}}_3 \hspace{-0.16ex} = \bm{e}_3 = \bm{k}
+\end{array}\]
+
+\vspace{-1em}
+\begin{multline*}
+\shoveleft{ \bm{P} = \bm{e}_1 \hspace{-0.1ex} \mathcircabove{\bm{e}}_1 + \bm{e}_2 \mathcircabove{\bm{e}}_2 + \bm{e}_3 \mathcircabove{\bm{e}}_3 = \hfill }\\[1.5em]
+%
+= \hspace{0.2ex} \tikzmark{StartBraceE1E1} {\bm{e}_1 \bm{e}_1 \operatorname{cos} \vartheta - \bm{e}_1 \bm{e}_2 \operatorname{sin} \vartheta \hspace{0.2em}} \tikzmark{EndBraceE1E1} \hspace{-0.1ex} + \hspace{0.1ex} \tikzmark{StartBraceE2E2} {\bm{e}_2 \bm{e}_1 \operatorname{sin} \vartheta + \bm{e}_2 \bm{e}_2 \operatorname{cos} \vartheta \hspace{0.2em}} \tikzmark{EndBraceE2E2} \hspace{-0.1ex} + \tikzmark{StartBraceE3E3} {\hspace{0.25ex} \bm{k} \bm{k} \hspace{0.1ex}} \tikzmark{EndBraceE3E3} \hspace{0.1ex} =\\[0.32em]
+%
+= \hspace{0.1ex} \bm{E} \operatorname{cos} \vartheta - \hspace{-0.1ex} \tikzmark{StartBraceKk} {\hspace{0.1ex}\bm{e}_3 \bm{e}_3\hspace{0.1ex}} \tikzmark{EndBraceKk} \hspace{-0.25ex} \operatorname{cos} \vartheta \hspace{0.1ex} + \tikzmark{StartBraceLeviCivita} {\left( \bm{e}_2 \bm{e}_1 - \bm{e}_1 \bm{e}_2 \right)} \tikzmark{EndBraceLeviCivita} \operatorname{sin} \vartheta + \bm{k} \bm{k} \hspace{0.1ex} =\\[1.5em]
+%
+\shoveright{ \hfill = \bm{E} \operatorname{cos} \vartheta + \bm{k} \times\hspace{-0.2ex} \bm{E} \operatorname{sin} \vartheta + \bm{k} \bm{k} \left({1 - \operatorname{cos} \vartheta}\right) }
+\end{multline*}
+
+\AddOverBrace[line width=0.75pt]{StartBraceE1E1}{EndBraceE1E1}{${\scriptstyle \bm{e}_1 \mathcircabove{\bm{e}}_1}$}
+\AddOverBrace[line width=0.75pt]{StartBraceE2E2}{EndBraceE2E2}{${\scriptstyle \bm{e}_2 \mathcircabove{\bm{e}}_2}$}
+\AddOverBrace[line width=0.75pt]{StartBraceE3E3}{EndBraceE3E3}{${\scriptstyle \bm{e}_3 \mathcircabove{\bm{e}}_3}$}
+\AddUnderBrace[line width=0.75pt][-0.1ex,-0.2ex]{StartBraceKk}{EndBraceKk}{${\scriptstyle \bm{k}\bm{k}}$}
+\AddUnderBrace[line width=0.75pt][-0.1ex,-0.2ex][xshift=0.4ex]{StartBraceLeviCivita}{EndBraceLeviCivita}{${\scriptstyle \bm{e}_3 \times \bm{e}_i \bm{e}_i \:=\: \levicivita_{3ij} \bm{e}_j \bm{e}_i}$}
+
+\vspace{-0.5em}
+\caption{\inquotes{\en{Finite rotation}\ru{Конечный поворот}}}\label{fig:eulerfiniterotation}
+\end{figure}
