@@ -35,7 +35,7 @@
 
 \nopagebreak \ru{\vspace{-0.25em}}
 \begin{equation}\label{lineartheory:wholesetofequations}
-\boldnabla \dotp \mathboldtau \hspace{0.15ex} + \bm{f} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}, \:\:
+\boldnabla \dotp \mathboldtau \hspace{.15ex} + \bm{f} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}, \:\:
 \mathboldtau = \displaystyle \frac{\partial\hspace{0.1ex} \Pi^{\mathstrut}}{\partial \mathboldepsilon} = \stiffnesstensor \dotdotp \mathboldepsilon , \:\:
 \mathboldepsilon = \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.2ex}.
 \vspace{0.25em}
@@ -104,9 +104,10 @@ J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hs
 
 Начальные условия в~динамических задачах, когда вместо~$\bm{f}$ имеем ${\bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{0.1ex} \mathdotdotabove{\bm{u}}}$, ставятся как обычно в~механике~--- на~положения и~на~скорости: в~условный момент времени~${t \!=\! 0}$ определены~$\bm{u}$ и~$\mathdotabove{\bm{u}}$.
 
-Как отмечалось в~\chapref{chapter:genericmechanics}, в~основу механики может быть положен d’Alembert\hbox{--}Lagrange principle виртуальной работы. Этот принцип справедлив и~в~линейной теории (внутренние силы в~упругой среде потенциальны: ${\variation{\internalwork} = -\variation{\Pi}}$)
-\vspace{0.1em}\begin{equation}\label{lineartheory:principleofvirtualwork}
-\integral\displaylimits_V \hspace{-0.4ex} \left[^{\mathstrut} \hspace{-0.2ex} \left( \bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{0.1ex} \mathdotdotabove{\bm{u}} \hspace{0.2ex} \right) \dotp \variation{\bm{u}} - \variation{\Pi} \hspace{0.25ex} \right] \hspace{-0.32ex} dV \hspace{-0.2ex} + \hspace{-0.2ex}
+Как отмечалось в~\chapref{chapter:genericmechanics}, в~основу механики может быть положен принцип виртуальной работы~(d’Alembert\hbox{--}Lagrange principle). Этот принцип справедлив и~в~линейной теории (внутренние силы в~упругой среде потенциальны: ${\variation{\internalwork} = -\variation{\Pi}}$)
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{lineartheory:principleofvirtualwork}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \left[^{\mathstrut} \hspace{-0.2ex} \left( \bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{0.1ex} \mathdotdotabove{\bm{u}} \hspace{0.2ex} \right) \dotp \variation{\bm{u}} - \variation{\Pi} \hspace{0.25ex} \right] \hspace{-0.32ex} d\mathcal{V} + \hspace{-0.2ex}
 \integral\displaylimits_{o_2} \hspace{-0.25ex} \bm{p} \dotp \variation{\bm{u}} \hspace{0.25ex} do \hspace{0.2ex} = \hspace{0.1ex} 0 \hspace{0.1ex}, \:\: \bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} 0 \hspace{0.1ex},
 \end{equation}
 
@@ -118,15 +119,15 @@ J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hs
 = \mathboldtau \dotdotp \hspace{-0.12ex} \boldnabla \variation{\bm{u}}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.16ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{0.1ex} \mathboldtau \hspace{-0.1ex} \dotp \variation{\bm{u}} \hspace{0.1ex} \right) - \boldnabla \dotp \mathboldtau \dotp \variation{\bm{u}} \hspace{0.1ex}, \\[0.4em]
 %
-\displaystyle \integral\displaylimits_V \hspace{-0.5ex} \variation{\Pi} \hspace{0.2ex} dV \hspace{-0.2ex} =
-\ointegral\displaylimits_o \hspace{-0.1ex} \bm{n} \dotp \mathboldtau \dotp \variation{\bm{u}} \hspace{0.32ex} do \hspace{0.2ex} - \hspace{-0.1ex}
-\integral\displaylimits_V \hspace{-0.5ex} \boldnabla \dotp \mathboldtau \dotp \variation{\bm{u}} \hspace{0.32ex} dV
+\displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \variation{\Pi} \hspace{0.2ex} d\mathcal{V} =
+\ointegral\displaylimits_{\mathclap{o\hspace{.15ex}(\boundary \mathcal{V})}} \hspace{-0.1ex} \bm{n} \dotp \mathboldtau \dotp \variation{\bm{u}} \hspace{0.32ex} do \hspace{0.2ex} - \hspace{-0.1ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \mathboldtau \dotp \variation{\bm{u}} \hspace{0.32ex} d\mathcal{V}
 \end{array}
 \]
 
 \vspace{-0.2em} \noindent и~левая часть~\eqref{lineartheory:principleofvirtualwork} приобретает вид
 \[
-\integral\displaylimits_V \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.2ex} \boldnabla \dotp \mathboldtau \hspace{0.12ex} + \bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{0.1ex} \mathdotdotabove{\bm{u}} \hspace{0.25ex} \right) \hspace{-0.32ex} \dotp \variation{\bm{u}} \hspace{0.25ex} dV \hspace{-0.2ex} + \hspace{-0.2ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.2ex} \boldnabla \dotp \mathboldtau \hspace{0.12ex} + \bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{0.1ex} \mathdotdotabove{\bm{u}} \hspace{0.25ex} \right) \hspace{-0.32ex} \dotp \variation{\bm{u}} \hspace{0.25ex} d\mathcal{V} + \hspace{-0.2ex}
 \integral\displaylimits_{o_2} \hspace{-0.5ex} \left(^{\mathstrut} \bm{p} - \bm{n} \dotp \mathboldtau \right) \hspace{-0.32ex} \dotp \variation{\bm{u}} \hspace{0.25ex} do \hspace{0.1ex},
 \]
 
@@ -142,8 +143,8 @@ J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hs
 
 Но~сперв\'{а} убедимся в~существовании интеграла энергии~--- выведем уравнение баланса механической энергии в~линейной модели:
 \begin{equation}\label{dynamicsoflineartheory:integralofenergy}
-\integral\displaylimits_V \hspace{-0.42ex} \left(^{\mathstrut} \hspace{-0.2ex} \mathrm{T} + \Pi \right)^{\hspace{-0.12em}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex} dV =
-\integral\displaylimits_V \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{0.25ex} dV \hspace{-0.1ex} + \hspace{-0.12ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.42ex} \left(^{\mathstrut} \hspace{-0.2ex} \mathrm{T} + \Pi \right)^{\hspace{-0.12em}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex} d\mathcal{V} \hspace{.1ex} =
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{0.25ex} d\mathcal{V} + \hspace{-0.12ex}
 \integral\displaylimits_{o_2} \hspace{-0.32ex} \bm{p} \dotp \mathdotabove{\bm{u}} \hspace{0.25ex} do \hspace{.1ex}, \:\:
 \bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} 0 \hspace{.1ex}.
 \end{equation}
@@ -171,7 +172,7 @@ J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hs
 
 Из~\eqref{dynamicsoflineartheory:integralofenergy} следует, что при~отсутствии объёмных и~поверхностных сил (и~закреплении на~$o_1$) полная механическая энергия постоянна. Если в~начальный момент тело находилось в~ненапряжённом состоянии покоя, то
 \nopagebreak\begin{equation}\label{dynamicsoflineartheory:zeroenergyatinitialmoment}
-\scalebox{.96}{$\displaystyle \integral\displaylimits_V$} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.24ex} \mathrm{T} + \Pi \right) \hspace{-0.32ex} dV \hspace{-0.2ex} = \hspace{.16ex} 0 \hspace{.1ex}.
+\scalebox{.96}{$\displaystyle \integral\displaylimits_{\mathcal{V}}$} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.24ex} \mathrm{T} + \Pi \right) \hspace{-0.4ex} d\mathcal{V} = \hspace{.12ex} 0 \hspace{.1ex}.
 \vspace{-0.25em}
 \end{equation}
 
@@ -273,7 +274,7 @@ A^{3233} = A^{3332} \\
 
 \vspace{-0.1em} Тензор жёсткости, как частная производная упругого потенциала~$\Pi$ дважды по~тензору деформаций, симметричен по~первой и~второй паре индексов: ${A^{ijkl} \hspace{-0.16ex} = A^{klij}\hspace{-0.25ex}}$, от~этого у~36 компонент из~${3^4 \hspace{-0.24ex}=\hspace{-0.12ex} 81}$ \inquotesx{есть двойн\'{и}к}[,] и~45 независимы. К~тому~же, из\hbox{-}за симметрии тензора деформаций~$\mathboldepsilon$, тензор~$\stiffnesstensor$ симметричен ещё~и~внутри каждой пары индексов: ${A^{ijkl} \hspace{-0.16ex} = A^{jikl} \hspace{-0.16ex} = A^{ijlk}}$~(${= A^{jilk}}$). Число независимых компонент при~этом снижается до~21:
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}\scalebox{0.82}{$\begin{array}{l}
+\nopagebreak\vspace{-0.25em}\begin{equation*}\scalebox{0.8}{$\begin{array}{l}
 \scalebox{1.16}{$A^{abcd^{\mathstrut}} = A^{cdab} = A^{bacd} = A^{abdc}$} \\[0.2em]
 %
 A^{1111} \\
@@ -381,8 +382,8 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 \textbf{Формула Клапейрона}. При равновесии с~объёмными силами~$\bm{f}$ и~поверхностными~$\bm{p}$ удвоенная энергия деформации равна формально вычисленной работе нагрузок
 \vspace{0.1em}\begin{equation}\label{clapeyron:elasticitytheorem}
 2 \hspace{-0.2em}
-\integral\displaylimits_V \hspace{-0.5ex} \Pi \hspace{0.2ex} dV =
-\integral\displaylimits_V \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{0.25ex} dV +
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Pi \hspace{0.2ex} d\mathcal{V} \hspace{.12ex} =
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{0.25ex} d\mathcal{V} +
 \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \bm{u} \hspace{0.25ex} do \hspace{0.2ex} .
 \end{equation}
 
@@ -396,9 +397,9 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 \tikzmark{beginMinusLoad} \boldnabla \dotp \mathboldtau \tikzmark{endMinusLoad} \dotp \bm{u} \;\Rightarrow \\[.5em]
 \Rightarrow\;\,
 \displaystyle 2 \hspace{-0.16em}
-\integral\displaylimits_V \hspace{-0.5ex} \Pi \hspace{0.2ex} dV =
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Pi \hspace{0.2ex} d\mathcal{V} \hspace{.12ex} =
 \integral\displaylimits_{o_2} \hspace{-0.4ex} \tikzmark{beginSurfaceLoad} \bm{n} \dotp \mathboldtau \tikzmark{endSurfaceLoad} \hspace{0.1ex} \dotp \bm{u} \hspace{0.25ex} do \hspace{.4ex} +
-\integral\displaylimits_V \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{0.25ex} dV
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{0.25ex} d\mathcal{V}
 \hspace{1.8ex}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);
 \end{multline*}%
@@ -407,7 +408,7 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 \AddUnderBrace[line width=.75pt]%
 {beginSurfaceLoad}{endSurfaceLoad}{${\scriptstyle \bm{p}}$}
 
-\vspace{-0.2em} Из~\eqref{clapeyron:elasticitytheorem} следует, что без нагрузки ${\hspace{-0.1ex}\raisemath{.15em}{\scalebox{0.75}{$\smash{\displaystyle\integral\limits_V}$}} \Pi \hspace{0.2ex} dV = 0\vspace{-0.3em}}$. По\-сколь\-ку $\Pi$ положительна, то~$\mathboldtau$ и~$\mathboldepsilon$~--- нули.
+\vspace{-0.2em} Из~\eqref{clapeyron:elasticitytheorem} следует, что без нагрузки ${\hspace{-0.1ex}\raisemath{.15em}{\scalebox{0.75}{$\smash{\displaystyle\integral\limits_{\mathcal{V}}}$}} \Pi \hspace{0.2ex} d\mathcal{V} = 0}$. По\-сколь\-ку $\Pi$ положительна, то~$\mathboldtau$ и~$\mathboldepsilon$~--- нули.
 
 \textbf{Теорема единственности}. Как~и в~динамике~(\pararef{para:uniquenessfordynamicproblem}), допускаем существование двух решений и~ищем их~разность
 
@@ -480,9 +481,9 @@ Concentrated force is useful mathematical idealization, but cannot be found in t
 {\small
 Saint\hbox{-}Venant’s compatibility condition is the integrability conditions for a~symmetric tensor field to be a~strain.
 
-The compatibility conditions in linear elasticity are obtained by observing that there are six strain\hbox{--}displacement relations that are functions of only three unknown displacements. This suggests that the three displacements may be removed from the system of equations without loss of information. The resulting expressions in terms of only the strains provide constraints on the possible forms of a strain field.
+The compatibility conditions in linear elasticity are obtained by observing that there are six strain\hbox{--}displacement relations that are functions of only three unknown displacements. This suggests that the three displacements may be removed from the system of equations without loss of information. The resulting expressions in terms of only the strains provide constraints on the possible forms of a~strain field.
 
-A body that deforms without developing any gaps/overlaps is called a compatible body. Compatibility conditions are mathematical conditions that determine whether a particular deformation will leave a body in a compatible state.
+A body that deforms without developing any gaps/overlaps is called a~compatible body. Compatibility conditions are mathematical conditions that determine whether a~particular deformation will leave a~body in a~compatible state.
 \par}
 
 ...
@@ -514,21 +515,79 @@ A body that deforms without developing any gaps/overlaps is called a compatible 
 \ru{\section{Принцип минимума потенциальной энергии}}
 
 Начнём с~формулировки принципа:
-\begin{equation}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
 \textit{Э} \hspace{0.16ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \equiv \hspace{-0.2ex}
-\integral\displaylimits_V \hspace{-0.64ex}
+\displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex}
 \left(^{\mathstrut} \hspace{-0.1ex}
-\Pi(\boldnabla \bm{u}) - \bm{f} \hspace{-0.1ex} \dotp \bm{u} \right) \hspace{-0.25ex} dV \hspace{-0.2ex} - \hspace{-0.2ex}
+\Pi(\boldnabla \bm{u}) - \bm{f} \hspace{-0.1ex} \dotp \bm{u} \right) \hspace{-0.4ex} d\mathcal{V} \hspace{.1ex}
+- \hspace{-0.2ex}
 \integral\displaylimits_{o_2} \hspace{-0.32ex} \bm{p} \dotp \bm{u} \hspace{0.25ex} do \hspace{0.2ex}
 \hspace{.1ex}\to\hspace{.25ex} \mathrm{min}, \:\:
 \bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.8ex} = \hspace{.1ex} \bm{u}_{\raisemath{-0.1em}{0}} \hspace{0.16ex} .
 \end{equation}
-\noindent Этот функционал, называемый потенциальной энергией системы, принимает наименьшее значение на~истинных перемещениях~--- то~есть на~решении задачи~\eqref{lineartheory:equationsfordisplacement}. При~этом функции~$\bm{u}$ должны удовлетворять геометрическому условию на~${o_1}$~(чтобы не~нарушать связи) и~быть непрерывными (иначе ${\Pi(\boldnabla \bm{u})}$ %% ${\Pi\scalebox{0.96}{$\left(\boldnabla {\bm{u}}^{\mathsf{S}}\hspace{0.1ex}\right)$}}$
+
+\vspace{-0.2em} \noindent Этот функционал, называемый потенциальной энергией системы, принимает наименьшее значение на~истинных перемещениях~--- то~есть на~решении задачи~\eqref{lineartheory:equationsfordisplacement}. При~этом функции~$\bm{u}$ должны удовлетворять геометрическому условию на~${o_1}$~(чтобы не~нарушать связи) и~быть непрерывными (иначе ${\Pi(\boldnabla \bm{u})}$ %% ${\Pi\scalebox{0.96}{$\left(\boldnabla {\bm{u}}^{\mathsf{S}}\hspace{0.1ex}\right)$}}$
 не~будет интегрируемой).
 
-Возьмём какое\hbox{-}либо допустимое поле перемещений
+Для обоснования принципа возьмём какое\hbox{-}либо ещё приемлемое поле перемещений~${\bm{u}'}$ и~найдём разность
+${\textit{Э} \hspace{0.16ex} (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) -
+\textit{Э} \hspace{0.16ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})
+=}$
 
-...
+\nopagebreak\vspace{-0.16em}\begin{equation*}
+= \displaystyle
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.6ex}
+\left(^{\mathstrut} \hspace{-0.1ex}
+\Pi(\boldnabla \bm{u}'\hspace{.1ex}) - \Pi(\boldnabla \bm{u}) - \bm{f} \hspace{-0.1ex} \dotp ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \right) \hspace{-0.32ex} d\mathcal{V} \hspace{.1ex}
+- \hspace{-0.2ex}
+\integral\displaylimits_{o_2} \hspace{-0.32ex} \bm{p} \dotp ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \hspace{0.25ex} do \hspace{.1ex} .
+\vspace{-0.25em}\end{equation*}
+
+\vspace{-0.1em} \noindent Поскольку ${\bm{n} \dotp \mathboldtau \hspace{.16ex} \bigr|_{o_2} \hspace{-0.64ex} = \hspace{.2ex} \bm{p}}$ и~${( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \bm{0}}$, то
+
+\nopagebreak\vspace{-0.5em}\begin{multline*}
+\displaystyle
+\integral\displaylimits_{o_2} \hspace{-0.32ex} \bm{p} \dotp ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \hspace{0.25ex} do \hspace{.1ex}
+=
+\ointegral\displaylimits_{\mathclap{o\hspace{.15ex}(\boundary \mathcal{V})}} \hspace{-0.2ex} \bm{n} \dotp \mathboldtau \hspace{.12ex} \dotp ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \hspace{0.25ex} do \hspace{.1ex}
+= \hspace{-0.1ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \boldnabla \dotp \left(^{\mathstrut} \hspace{-0.2ex} \mathboldtau \hspace{.12ex} \dotp ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \right) \hspace{-0.32ex} d\mathcal{V}
+= \\[-0.1em]
+%
+= \hspace{-0.1ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.2ex} ( \hspace{.1ex} \boldnabla \dotp \mathboldtau \hspace{.12ex} ) \dotp ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \hspace{.25ex} d\mathcal{V} \hspace{.1ex}
++ \hspace{-0.1ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \mathboldtau^{\hspace{.12ex}\T} \hspace{-0.4ex} \dotdotp \hspace{-0.1ex} \boldnabla \hspace{.1ex} ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \hspace{.25ex} d\mathcal{V}
+\end{multline*}
+
+\vspace{-0.5em} \noindent и
+${\textit{Э} \hspace{0.16ex} (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) -
+\textit{Э} \hspace{0.16ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})
+=}$
+
+\nopagebreak\vspace{-0.4em}\begin{multline*}
+= \hspace{-0.2ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex}
+\left(^{\mathstrut} \hspace{-0.1ex}
+\Pi(\boldnabla \bm{u}'\hspace{.1ex}) - \Pi(\boldnabla \bm{u}) -
+( \hspace{.12ex} \hspace{.4ex} \tikzmark{beginBalanceIsZero} \hspace{-0.4ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \mathboldtau \hspace{.15ex} + \bm{f} \hspace{-0.25ex} \tikzmark{endBalanceIsZero} \hspace{.25ex} \hspace{.12ex} ) \hspace{-0.1ex} \dotp \hspace{-0.1ex} ( \bm{u}' \hspace{-0.2ex} - \bm{u} ) \right) \hspace{-0.32ex} d\mathcal{V}
+\hspace{.6ex} -
+\\[-1.2em]
+- \integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \mathboldtau \dotdotp ( \hspace{.1ex} \boldnabla \bm{u}' \hspace{-0.2ex} - \hspace{-0.32ex} \boldnabla \bm{u} ) \hspace{.25ex} d\mathcal{V} .
+\end{multline*}
+%
+\AddUnderBrace[line width=.75pt][0,-0.1em]%
+{beginBalanceIsZero}{endBalanceIsZero}%
+{${\scriptstyle \bm{0}}$}
+
+\vspace{-0.36em} \noindent Тут
+${\Pi(\boldnabla \bm{u}) \hspace{-0.24ex} = \smalldisplaystyleonehalf \hspace{.2ex} \mathboldtau \dotdotp \hspace{-0.2ex} \boldnabla \bm{u}^{\hspace{.08ex}\mathsf{S}}\hspace{-0.32ex}}$,
+${\Pi(\boldnabla \bm{u}'\hspace{.1ex}) \hspace{-0.24ex} = \smalldisplaystyleonehalf \hspace{.2ex} \mathboldtau \dotdotp \hspace{-0.2ex} \boldnabla \bm{u}'^{\hspace{.25ex}\mathsf{S}}\hspace{-0.32ex}}$,
+а~благодаря симметрии %%тензора напряжения
+${\mathboldtau^{\hspace{.12ex}\T} \hspace{-0.32ex} = \mathboldtau}$ ${\hspace{.4ex}\Rightarrow\hspace{.2ex}}$ ${\mathboldtau \dotdotp \hspace{-0.2ex} \boldnabla \bm{a} = \mathboldtau \dotdotp \hspace{-0.2ex} \boldnabla \bm{a}^{\hspace{.08ex}\mathsf{S}} \hspace{.8ex}\forall \bm{a}}$. Поэтому
+
+\nopagebreak ...
 
 
 
@@ -568,7 +627,7 @@ named after \emph{Ernst Hellinger}, \emph{Georg Prange} and \emph{Eric Reissner}
 
 \nopagebreak\vspace{0.32em}
 \href{https://en.wikiversity.org/wiki/Introduction_to_Elasticity/Hu-Washizu_principle}{\textbf{Hu\hbox{--}Washizu Variational Principle}},\\
-named after \emph{Hu Haichang} and \emph{Kyuichiro Washizu}.
+named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 \par
 \egroup
 \nopagebreak\vspace{0.1em}
@@ -578,13 +637,13 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro Washizu}.
 Именами Reissner’а, Prange’а и~Hellinger’а назван такой функционал над~перемещениями и~напряжениями: %% \cite{lurie-theoryofelasticity, rabotnov-mechanicsofdeformable}
 \begin{multline}\label{reissnerhellingervariationalprinciple}
 \shoveleft{\displaystyle \mathcal{R}(\bm{u}, \hspace{-0.32ex}\mathboldtau) \hspace{0.2ex} =
-\integral\displaylimits_V \hspace{-0.4ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
 \left[^{\mathstrut} \hspace{-0.2ex}
 \mathboldtau \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\hspace{0.08ex}\mathsf{S}} \hspace{-0.2ex} - \hspace{0.1ex} \widehat{\Pi}(\hspace{-0.1ex}\mathboldtau\hspace{0.05ex})\hspace{-0.1ex} -
 \bm{f} \hspace{-0.1ex} \dotp \bm{u}
-\hspace{0.1ex} \right] \hspace{-0.25ex} dV \hspace{0.2ex} - \hfill} \\[-1.2em]
+\hspace{0.1ex} \right] \hspace{-0.32ex} d\mathcal{V} \hspace{.5ex} - \hfill} \\[-1.2em]
 %
-\hspace{8em} \displaystyle - \integral\displaylimits_{o_1} \hspace{-0.25ex} \bm{n} \dotp \hspace{-0.1ex} \mathboldtau \dotp \left( \bm{u} - \bm{u}_{\raisemath{-0.1em}{0}} \right) \hspace{-0.1ex} do \hspace{0.2ex} -
+\hspace{8em} \displaystyle - \integral\displaylimits_{o_1} \hspace{-0.25ex} \bm{n} \dotp \hspace{-0.1ex} \mathboldtau \dotp \left( \bm{u} - \bm{u}_{\raisemath{-0.1em}{0}} \right) \hspace{-0.1ex} do \hspace{.2ex} -
 \integral\displaylimits_{o_2} \hspace{-0.2ex} \bm{p} \dotp \bm{u} \hspace{0.25ex} do \hspace{0.2ex}.
 \end{multline}
 
@@ -606,17 +665,17 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro Washizu}.
 \hfil \variation{\mathcal{W}} \hspace{0.1ex} (\bm{u}, \hspace{-0.32ex}\mathboldepsilon, \hspace{-0.32ex}\mathboldtau) = 0 \hspace{0.1ex},\\[-0.1em]
 %
 \shoveleft{\displaystyle \mathcal{W} \hspace{0.2ex} \equiv
-\integral\displaylimits_V \hspace{-0.4ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
 \left[^{\mathstrut} \hspace{-0.2ex}
 \mathboldtau \dotdotp \hspace{-0.4ex} \left( \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{0.08ex}\mathsf{S}} \hspace{-0.2ex} - \mathboldepsilon \hspace{-0.1ex} \right) \hspace{-0.25ex} + \hspace{0.1ex} \Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex})\hspace{-0.1ex} -
 \bm{f} \hspace{-0.1ex} \dotp \bm{u}
-\hspace{0.1ex} \right] \hspace{-0.25ex} dV \hspace{0.2ex} - \hfill} \\[-1.2em]
+\hspace{0.1ex} \right] \hspace{-0.32ex} d\mathcal{V} \hspace{.5ex} - \hfill} \\[-1.2em]
 %
 \hspace{8em} \displaystyle - \integral\displaylimits_{o_1} \hspace{-0.25ex} \bm{n} \dotp \hspace{-0.1ex} \mathboldtau \dotp \left( \bm{u} - \bm{u}_{\raisemath{-0.1em}{0}} \right) \hspace{-0.1ex} do \hspace{0.2ex} -
 \integral\displaylimits_{o_2} \hspace{-0.2ex} \bm{p} \dotp \bm{u} \hspace{0.25ex} do \hspace{0.2ex}.
 \end{multline}
 
-Как и~в~принципе Рейсснера\hbox{--}Хеллингера, здесь нет ограничений ни~в~объёме, ни~на~поверхности, но добавляется третий независимый аргумент~--- $\mathboldepsilon$. Поскольку ${\widehat{\Pi} = \mathboldtau \dotdotp \mathboldepsilon - \Pi}$, то~\eqref{reissnerhellingervariationalprinciple} и~\eqref{huwashizuvariationalprinciple} кажутся почти одним и~тем~же.
+Как и~в~принципе Рейсснера\hbox{--}Хеллингера, здесь нет ограничений ни~в~объёме, ни~на~поверхности, но добавляется третий независимый аргумент~$\mathboldepsilon$. Поскольку ${\widehat{\Pi} = \mathboldtau \dotdotp \mathboldepsilon - \Pi}$, то~\eqref{reissnerhellingervariationalprinciple} и~\eqref{huwashizuvariationalprinciple} кажутся почти одним и~тем~же.
 
 Из~принципа Ху\hbox{--}Васидзу вытекает вся полная система уравнений с~граничными условиями, так~как
 

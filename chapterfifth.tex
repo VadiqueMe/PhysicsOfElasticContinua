@@ -1,23 +1,27 @@
 \en{\chapter{Micropolar three\hbox{-}dimensional continuum}}
 
-\ru{\chapter{Моментная трёхмерная среда}}
+\ru{\chapter{Микрополярная трёхмерная среда}}
 
 \thispagestyle{empty}
+
+\newcommand{\fieldofdisplacements}{\bm{u}}
+\newcommand{\fieldofrotations}{\bm{\varphi}} %% {\bm{\theta}}
 
 \label{chapter:cosseratcontinuum}
 
 \en{\section{Introduction to linear micropolar theory}}
 
-\ru{\section{Введение в линейную моментную теорию}}
+\ru{\section{Введение в линейную микрополярную теорию}}
 
 \begin{otherlanguage}{russian}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{Х}{арактерной} отличительной особенностью классических сред~(\chapref{chapter:nonlinearcontinuum} и~\customref{chapter:linearclassicalelasticity}) является то, что они \inquotesx{состоят из~обычных материальных точек}[.] Частица классического континуума имеет лишь трансляционные степени свободы, её~движение определяется только вектором~${\bm{R}(q^i \hspace{-0.15em}, t)}$. Поэтому силовыми факторами являются силы~--- объёмные и~поверхностные. Моментов нет.
+\lettrine[lines=2, findent=2pt, nindent=0pt]{Х}{арактерной} отличительной особенностью классических сред~(\chapref{chapter:nonlinearcontinuum} и~\customref{chapter:linearclassicalelasticity}) является то, что они \inquotesx{состоят из~обычных материальных точек}[.] Частица классического континуума имеет лишь трансляционные степени свободы, её~движение определяется только вектором~${\bm{R}(q^i \hspace{-0.15em}, t)}$. Поэтому нагрузки~(\inquotes{силовые факторы}) в~такой среде~--- только силы, объёмные и~поверхностные. Моментов нет.
 
 Но не~так~уж трудно построить более сложные модели сплошной среды, в~которых частицы обладают не~только~лишь степенями свободы трансляции, но~и н\'{е}которыми дополнительными. Новые степени свободы связаны и~с~новыми силовыми факторами, а~также новыми уравнениями.
 
 Наиболее естественная из~неклассических моделей трёхмерной среды предложена братьями Cosserat в~1909\:год\'{у}~\cite{cosserat}. Каждая частица континуума Коссера~--- это элементарное твёрдое тело с~шестью степенями свободы. Силовые факторы в~такой среде~--- силы и~моменты. Работа братьев Коссера оставалась незамеченной полвека, но~затем возник интерес к~этой теме~\cite{mindlin.tiersten, nowacki-elasticity}.
 
+%% \begin{comment} %%
 \vspace{2mm}
 
 \begin{tcolorbox}[breakable, enhanced, colback = orange!8, before upper={\parindent3.2ex}, parbox = false]
@@ -43,53 +47,130 @@ The research in the field of the general theories of continuous media conducted 
 \end{tcolorbox}
 
 \vspace{2mm}
+%% \end{comment} %%
 
-Рассмотрим сначала геометрически линейную модель, то~есть случай малых перемещений и~поворотов. Векторные поля перемещений~${\bm{u}(\bm{r},t)}$ и~малых поворотов~${\bm{\theta}(\bm{r},t)}$ независимы. Операторы ${\hspace{-0.2ex}\boldnablacircled\hspace{0.1ex}}$ и~${\hspace{-0.2ex}\boldnabla\hspace{0.1ex}}$~(\chapdotpararef{chapter:nonlinearcontinuum}{para:differentiation}) неразличимы, уравнения \inquotesx{можно пис\'{а}ть в~отсчётной конфигурации}[.] За~основу вывода примем, как и~везде в~этой книге, принцип виртуальной работы:
-\vspace{0.1em}\begin{equation}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{f} \dotp \variation{\bm{u}} + \bm{m} \dotp \variation{\bm{\theta}} + \variation{\internalwork} \hspace{.15ex} \right) \hspace{-0.32ex} d\mathcal{V} +
-\integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\bm{u}} + \mathboldM \hspace{-0.1ex} \dotp \variation{\bm{\theta}} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
+Рассмотрим сначала геометрически линейную модель, то~есть случай малых перемещений и~поворотов. Векторные поля перемещений~${\fieldofdisplacements(\bm{r},t)}$ и~малых поворотов~${\fieldofrotations(\bm{r},t)}$ независимы. Операторы ${\hspace{-0.2ex}\boldnablacircled\hspace{0.1ex}}$ и~${\hspace{-0.2ex}\boldnabla\hspace{0.1ex}}$~(\chapdotpararef{chapter:nonlinearcontinuum}{para:differentiation}) неразличимы, уравнения \inquotesx{можно пис\'{а}ть в~отсчётной конфигурации}[.]
+
+В~основу построения модели положим принцип виртуальной работы:
+%%Вывод строится на~принципе виртуальной работы:
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{f} \dotp \variation{\fieldofdisplacements} + \bm{m} \dotp \variation{\fieldofrotations} + \variation{\internalwork} \hspace{.15ex} \right) \hspace{-0.4ex} d\mathcal{V}
+\hspace{.25ex} +
+\integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\fieldofdisplacements} + \mathboldM \hspace{-0.1ex} \dotp \variation{\fieldofrotations} \right) \hspace{-0.4ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
 \end{equation}
 
-\vspace{-0.25em} \noindent Здесь $\bm{f}$ и~$\bm{m}$~--- внешние силы и~моменты на~единицу объёма; $\bm{p}$ и~$\mathboldM$~--- они~же, но на~единицу поверхности; ${\variation{\internalwork}}$~--- работа внутренних сил на~единицу объёма.
+\vspace{-0.1em} \noindent Здесь $\bm{f}$ и~$\bm{m}$~--- внешние силы и~моменты на~единицу объёма; $\bm{p}$ и~$\mathboldM$~--- они~же, но на~единицу поверхности; ${\variation{\internalwork}}$~--- работа внутренних сил на~единицу объёма.
 
-По\hbox{-}прежнему считаем, что~${\variation{\internalwork} = 0}$ на~перемещениях твёрдого тела, то~есть при
-\begin{equation*}
-\variation{\bm{u}} = \variation{\bm{\theta}} \hspace{-0.2ex} \times \hspace{-0.12ex} \bm{r} + \boldconst , \:\: \variation{\bm{\theta}} = \boldconst \:\Leftrightarrow\;
-\variation{\bm{\upgamma}} = 0 , \:\: \variation{\mathboldae} = 0 ,
-\end{equation*}\vspace{-1.11em}
+По\hbox{-}прежнему полагаем, что~${\variation{\internalwork} = 0}$ при движении тела как целого без деформации:
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\begin{array}{c}
+\variation{\fieldofdisplacements} = \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.12ex} \bm{r} + \boldconst \hspace{.1ex} ,
+\:\,
+\variation{\fieldofrotations} = \boldconst
+\hspace{.64ex}\Rightarrow\hspace{.5ex}
+\variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{.1ex},
+\\[.25em]
+%
+\boldnabla \variation{\fieldofdisplacements}
+= \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.3ex} \boldnabla \bm{r} + \hspace{-0.16ex} {^2\bm{0}} \hspace{.1ex}
+= \hspace{.1ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
+= \hspace{-0.1ex} \bm{E} \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
+%%= - \hspace{-0.2ex} \left( \bm{E} \hspace{-0.2ex} \times \hspace{-0.16ex} \variation{\fieldofrotations} \right)^{\hspace{-0.1ex}\T} \hspace{-0.75ex}
+\hspace{.1ex} ,
+\:\,
+\boldnabla \variation{\fieldofrotations} = {^2\bm{0}} \hspace{.1ex} .
+\end{array}
+\end{equation*}
+
+\vspace{-0.1em} Вводя тензоры деформации~--- тензор относительного смещения между частицами (tensor of relative displacement between particles, stretch tensor)~$\bm{\upgamma}$ и~тензор искривления-скручивания (curvature-twist tensor, wryness tensor)~$\mathboldae$~--- как
+
+\nopagebreak\vspace{-0.5em}
 \begin{equation}\label{deformationtensors:micropolarcontinuum}
-\bm{\upgamma} \hspace{.16ex} \equiv \boldnabla \bm{u} \hspace{.1ex} + \bm{E} \hspace{-0.2ex} \times \hspace{-0.12ex} \bm{\theta} , \:\:
-\mathboldae \hspace{.2ex} \equiv \boldnabla \bm{\theta} .
+\begin{array}{rl}
+{\color{red}{\bm{\upgamma} \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements \hspace{.1ex} - \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} ,}} &
+{\color{red}{\mathboldae \hspace{.16ex} \equiv \boldnabla \fieldofrotations \hspace{.1ex} ,}}
+\\[.2em]
+%
+{\color{red}{\bm{\upgamma} \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements^{\hspace{-0.05ex}\T} \hspace{-0.3ex} + \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} ,}} &
+{\color{red}{\mathboldae \hspace{.16ex} \equiv \boldnabla \fieldofrotations^{\T} \hspace{-0.25ex} ,}}
+\end{array}
 \end{equation}
+%
+\nopagebreak\vspace{-0.25em}
+\begin{equation*}
+\begin{array}{rl}
+\variation{\bm{\upgamma}}
+= \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements} \hspace{.1ex} - \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
+, &
+\variation{\mathboldae} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations} \hspace{.1ex} ,
+\\[.2em]
+%
+\variation{\bm{\upgamma}}^{\T} \hspace{-0.32ex}
+= \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements}^{\hspace{-0.05ex}\T} \hspace{-0.3ex} + \hspace{.1ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
+, &
+\variation{\mathboldae}^{\T} \hspace{-0.32ex} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations}^{\T} \hspace{-0.25ex} ,
+\\[.2em]
+%
+\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.16ex}
+= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements \hspace{.12ex} {\color{red}{\hspace{.5ex} + \hspace{.5ex}}} \hspace{.12ex} 2 \hspace{.16ex} \fieldofrotations \hspace{.1ex}
+, &
+\mathboldae_{\hspace{.1ex}\Xcompanion} \hspace{-0.16ex}
+= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofrotations \hspace{.1ex} ,
+\end{array}
+\end{equation*}
 
-\vspace{-0.55em} Введённые так $\bm{\upgamma}$ и~$\mathboldae$, как нетрудно догадаться, окажутся тензорами деформации.
+\vspace{-0.5em} \noindent имеем нужное отсутствие деформаций
+${\variation{\bm{\upgamma}} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\mathboldae} = \hspace{-0.1ex} {^2\bm{0}}}$.
+
+%%\vspace{-0.32em} Введённые так $\bm{\upgamma}$ и~$\mathboldae$, как нетрудно догадаться, окажутся тензорами деформации.
 
 В~\chapdotpararef{chapter:nonlinearcontinuum}{para:stressesAsLagrangeMultipliers} было показано, что напряжения можно рассматривать как множители Lagrange’а в~принципе виртуальной работы при~${\variation{\internalwork} = 0}$. Поступим так~же и~теперь:
 
 \nopagebreak\vspace{-0.33em}
-\begin{multline}\label{virtualworkprinciple:micropolarcontinuum}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{f} \dotp \variation{\bm{u}} + \bm{m} \dotp \variation{\bm{\theta}} - \mathboldtau \dotdotp \variation{\bm{\upgamma}}^{\hspace{-0.05ex}\T} \hspace{-0.4ex} - \bm{\mu} \dotdotp \variation{\mathboldae}^{\T} \hspace{-0.05ex} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{0.4ex} + \\[-1em]
-+ \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\bm{u}} + \mathboldM \hspace{-0.1ex} \dotp \variation{\bm{\theta}} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
+\begin{multline}\label{virtualworkprinciple.1:micropolarcontinuum}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{f} \dotp \variation{\fieldofdisplacements}
++ \bm{m} \dotp \variation{\fieldofrotations}
+- \mathboldtau \dotdotp \variation{\bm{\upgamma}}^{\T} \hspace{-0.4ex}
+- \bm{\mu} \dotdotp \variation{\mathboldae}^{\T} \hspace{-0.05ex} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{.5ex} + \\[-1.1em]
++ \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\fieldofdisplacements}
++ \mathboldM \hspace{-0.1ex} \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
 \end{multline}
 
 \vspace{-0.2em} \noindent Множители Лагранжа в~каждой точке~--- это несимметричные тензоры второй сложности~$\mathboldtau$ и~$\bm{\mu}$.
 
-Используя равенства
+Используя
 
 ...
 
-\noindent и~теорему о~дивергенции, приведём~\eqref{virtualworkprinciple:micropolarcontinuum} к~виду
+\noindent и~теорему о~дивергенции, приведём~\eqref{virtualworkprinciple.1:micropolarcontinuum} к~виду
 
-...
+\nopagebreak\vspace{-0.33em}
+\begin{multline*}\label{virtualworkprinciple.2:micropolarcontinuum}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} ( \hspace{.12ex} \boldnabla \hspace{-0.1ex} \dotp \mathboldtau + \bm{f} \hspace{.12ex} ) \dotp \variation{\fieldofdisplacements} \hspace{.1ex}
++ ( \hspace{.12ex} \boldnabla \dotp \bm{\mu} \hspace{.1ex} + \mathboldtau_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} ) \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{0.5ex} + \\[-1.1em]
++ \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} ( \hspace{.32ex} \bm{p} - \bm{n} \dotp \mathboldtau \hspace{.2ex} ) \dotp \variation{\fieldofdisplacements} \hspace{.1ex}
++ ( \hspace{.1ex} \mathboldM - \bm{n} \dotp \bm{\mu} \hspace{.1ex} ) \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
+\end{multline*}
 
-Из\hbox{-}за произвольности вариаций~$\variation{\bm{u}}$ и~$\variation{\bm{\theta}}$ в~объёме и~на~поверхности получаем уравнения баланса сил и~моментов, а~также формулы типа Коши, %%Cauchy,
+Из произвольности вариаций~$\variation{\fieldofdisplacements}$ и~$\variation{\fieldofrotations}$ в~объёме и~на~поверхности вытекают уравнения баланса сил и~моментов, а~также формулы типа Коши, %%Cauchy,
 раскрывающие смысл $\mathboldtau$ и~$\bm{\mu}$:
 
-...
+\nopagebreak\begin{equation}\label{micropolar.equilibrium:cauchy-like}
+\boldnabla \hspace{-0.1ex} \dotp \mathboldtau + \bm{f} \hspace{.12ex} = \bm{0} \hspace{.1ex} ,
+\:\:
+\boldnabla \dotp \bm{\mu} \hspace{.1ex} + \mathboldtau_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} = \bm{0} \hspace{.1ex} ,
+\end{equation}%
+\nopagebreak\vspace{-1em}\begin{equation}\label{micropolar.equilibrium:boundaryconditions}
+\bm{n} \dotp \mathboldtau = \bm{p} \hspace{.1ex} ,
+\:\:
+\bm{n} \dotp \bm{\mu} = \mathboldM \hspace{.1ex} .
+\end{equation}
 
-Тензор силовых напряжений удовлетворяет тем~же дифференциальным \inquotes{уравнениям равновесия}\footnote{Кавычки здесь оттого, что уравнениями равновесия вообще\hbox{-}то следует считать всё, что вытекает из принципа виртуальной работы в~статике.} \hspace{-0.5em} и~краевым условиям, что~и в~безмоментной среде. Но~тензор~$\mathboldtau$ несимметричен, поскольку отличны от~нуля моментные напряжения~$\bm{\mu}$ и~нагрузки~$\bm{m}$.
+\vspace{-0.4em} Тензор силовых напряжений~$\mathboldtau$ удовлетворяет тем~же дифференциальным \inquotes{уравнениям равновесия}\footnote{Кавычки здесь оттого, что \emph{уравнения равновесия} это вообще всё, что вытекает из принципа виртуальной работы в~статике.} \hspace{-0.5em} и~краевым условиям, что и в~безмоментной среде. Но~тензор~$\mathboldtau$ несимметричен, поскольку отличны от~нуля моментные напряжения~$\bm{\mu}$ и~нагрузки~$\bm{m}$.
 
-Смысл компонент
+Смысл компонент тензора~$\bm{\mu}$ раскрывается так~же, как и для~$\mathboldtau$. На~площадке c~нормалью
 
 ...
 
@@ -100,7 +181,7 @@ The research in the field of the general theories of continuous media conducted 
 
 \ru{\section{Отношения упругости}}
 
-В~этой книге упругой называем среду с~потенциальными внутренними силами: ${\variation{\internalwork} = -\variation{\Pi}}$, где~$\Pi$~--- энергия деформации на~единицу объёма (по\hbox{-}прежнему рассматриваем геометрически линейную постановку).
+В~этой книге упругой называем среду с~потенциальными внутренними силами: ${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$, где~$\Pi$~--- энергия деформации на~единицу объёма (по\hbox{-}прежнему рассматриваем геометрически линейную постановку).
 
 Располагая соотношениями
 
@@ -113,14 +194,16 @@ The research in the field of the general theories of continuous media conducted 
 %
 \bm{\mu} = \bm{\mu}^{\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.32ex} \bm{\mu}_{\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \;\:
 %
-\mathboldae = \mathboldae^{\hspace{.12ex}\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.32ex} \mathboldae_{\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \\[.5em]
+\mathboldae = \mathboldae^{\hspace{.12ex}\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.32ex} \mathboldae_{\Xcompanion} \hspace{-0.1ex} \times \bm{E} ,
+\\[.6em]
 %
 \bm{\upgamma} = \mathboldepsilon - \displaystyle \onehalf \hspace{.32ex} \bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \:\:
 %
-\mathboldepsilon \equiv \bm{\upgamma}^{\hspace{.16ex}\mathsf{S}} \hspace{-0.4ex} = \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex} , \:\:
+\mathboldepsilon \equiv \bm{\upgamma}^{\hspace{.2ex}\mathsf{S}} \hspace{-0.32ex} = \hspace{-0.2ex} \boldnabla {\fieldofdisplacements}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex} , \:\:
 %
 \bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.16ex}
-= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \bm{u} - 2 \hspace{.16ex} \bm{\theta} \hspace{.15ex}; \\[.5em]
+= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements \hspace{.12ex} + \hspace{.12ex} 2 \hspace{.16ex} \fieldofrotations \hspace{.16ex} ;
+\\[.6em]
 %
 \variation{\Pi} = \ldots
 \end{array}
@@ -164,16 +247,16 @@ The research in the field of the general theories of continuous media conducted 
 Так называется упрощённая моментная модель\footnote{Братья Cosserat называли это cas de trièdre caché (случай скрытого трёхгранника, case of latent trihedron).}\hspace{-0.32em},\hspace{0.24em} в~которой повороты выражаются через перемещения как в~классической среде~\cite{nowacki-elasticity}:
 
 \nopagebreak\vspace{-0.75em}\begin{equation}
-\bm{\theta} = \displaystyle \onehalf \hspace{0.4ex} \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \bm{u} 
+\fieldofrotations = \displaystyle \onehalf \hspace{0.4ex} \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements 
 \:\Leftrightarrow\:
 \bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}
 \:\Leftrightarrow\:
-\bm{\upgamma} = \mathboldepsilon = \hspace{-0.12ex} \boldnabla {\bm{u}}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex}.
+\bm{\upgamma} = \mathboldepsilon = \hspace{-0.12ex} \boldnabla {\fieldofdisplacements}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex}.
 \end{equation}
 
 Равенство~${\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию $\bm{\upgamma}$) возможно понимать как внутреннюю связь~(\chapdotpararef{chapter:nonlinearcontinuum}{para:internalconstraints}). Аргумент~${\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion}}$ исчезает из~энергии~$\Pi$, соотношение упругости для~${\mathboldtau_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано. Его место в~полной системе занимает уравнение связи.
 
-В~классической теории упругости полная система сводится к~одному уравнению для~вектора~$\bm{u}$~(\chapdotpararef{chapter:linearclassicalelasticity}{para:equationsfordisplacement}). В~моментной теории
+В~классической теории упругости полная система сводится к~одному уравнению для~вектора~$\fieldofdisplacements$~(\chapdotpararef{chapter:linearclassicalelasticity}{para:equationsfordisplacement}). В~моментной теории
 
 ...
 

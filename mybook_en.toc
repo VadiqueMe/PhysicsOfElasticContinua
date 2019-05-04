@@ -60,258 +60,282 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {2}Fundamentals of generic mechanics}{51}{chapter.2}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Initial concepts}{51}{section.2.1}
+\contentsline {section}{\numberline {1}Discrete system of particles}{51}{section.2.1}
 \contentsline {section}{\numberline {2}Absolutely rigid undeformable solid body}{52}{section.2.2}
 \contentsline {section}{\numberline {3}Principle of virtual work}{54}{section.2.3}
 \select@language {russian}
-\contentsline {section}{\numberline {4}Balance of momentum, rotational momentum, and~energy}{55}{section.2.4}
+\contentsline {section}{\numberline {4}Balance of momentum, rotational momentum, and~energy}{56}{section.2.4}
 \select@language {english}
-\contentsline {section}{\numberline {5}Hamilton\IeC {\textquoteright }s principle and Lagrange\IeC {\textquoteright }s equations}{56}{section.2.5}
+\contentsline {section}{\numberline {5}Hamilton\IeC {\textquoteright }s principle and Lagrange\IeC {\textquoteright }s equations}{57}{section.2.5}
 \select@language {russian}
 \select@language {english}
-\contentsline {section}{\numberline {6}Statics}{57}{section.2.6}
+\contentsline {section}{\numberline {6}Statics}{58}{section.2.6}
 \select@language {russian}
 \select@language {english}
-\contentsline {section}{\numberline {7}Mechanics of relative motion}{57}{section.2.7}
+\contentsline {section}{\numberline {7}Mechanics of relative motion}{61}{section.2.7}
 \select@language {russian}
 \select@language {english}
-\contentsline {section}{\numberline {8}Small oscillations}{58}{section.2.8}
+\contentsline {section}{\numberline {8}Small oscillations (vibrations)}{61}{section.2.8}
 \select@language {russian}
 \select@language {english}
 \select@language {russian}
 \select@language {english}
-\contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{59}{chapter.3}
+\contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{62}{chapter.3}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Model of continuum. Descriptions of processes}{59}{section.3.1}
+\contentsline {section}{\numberline {1}Model of continuum. Descriptions of processes}{62}{section.3.1}
 \select@language {russian}
-\contentsline {section}{\numberline {2}Differentiation}{60}{section.3.2}
-\contentsline {section}{\numberline {3}Motion gradient}{61}{section.3.3}
-\contentsline {section}{\numberline {4}Tensors and measures of deformation}{61}{section.3.4}
-\contentsline {section}{\numberline {5}Velocity field}{65}{section.3.5}
+\contentsline {section}{\numberline {2}Differentiation}{63}{section.3.2}
+\contentsline {section}{\numberline {3}Motion gradient}{64}{section.3.3}
+\contentsline {section}{\numberline {4}Tensors and measures of deformation}{64}{section.3.4}
+\contentsline {section}{\numberline {5}Velocity field}{68}{section.3.5}
 \select@language {english}
-\contentsline {section}{\numberline {6}Area vector. Surface change}{66}{section.3.6}
-\contentsline {section}{\numberline {7}Forces in continuum. Cauchy stress tensor}{66}{section.3.7}
+\contentsline {section}{\numberline {6}Area vector. Surface change}{69}{section.3.6}
+\contentsline {section}{\numberline {7}Forces in continuum. Cauchy stress tensor}{69}{section.3.7}
 \select@language {russian}
-\contentsline {section}{\numberline {8}Balance of momentum and rotational momentum}{67}{section.3.8}
-\contentsline {section}{\numberline {9}Eigenvalues of Cauchy stress tensor}{68}{section.3.9}
-\contentsline {section}{\numberline {10}Principle of virtual work}{69}{section.3.10}
-\contentsline {section}{\numberline {11}Constitutive relations of elasticity}{71}{section.3.11}
-\contentsline {section}{\numberline {12}Piola\hbox {--}Kirchhoff stress tensors and other measures of~stress}{72}{section.3.12}
+\contentsline {section}{\numberline {8}Balance of momentum and rotational momentum}{70}{section.3.8}
+\contentsline {section}{\numberline {9}Eigenvalues of Cauchy stress tensor}{71}{section.3.9}
+\contentsline {section}{\numberline {10}Principle of virtual work}{72}{section.3.10}
+\contentsline {section}{\numberline {11}Constitutive relations of elasticity}{74}{section.3.11}
+\contentsline {section}{\numberline {12}Piola\hbox {--}Kirchhoff stress tensors and other measures of~stress}{75}{section.3.12}
 \select@language {english}
-\contentsline {section}{\numberline {13}Variation of present configuration}{77}{section.3.13}
+\contentsline {section}{\numberline {13}Variation of present configuration}{80}{section.3.13}
 \select@language {russian}
-\contentsline {section}{\numberline {14}Internal constraints}{77}{section.3.14}
-\contentsline {section}{\numberline {15}Hollow sphere under pressure}{78}{section.3.15}
+\contentsline {section}{\numberline {14}Internal constraints}{80}{section.3.14}
+\contentsline {section}{\numberline {15}Hollow sphere under pressure}{81}{section.3.15}
 \select@language {english}
-\contentsline {section}{\numberline {16}Stresses as Lagrange multipliers}{79}{section.3.16}
+\contentsline {section}{\numberline {16}Stresses as Lagrange multipliers}{82}{section.3.16}
 \select@language {russian}
 \select@language {english}
-\contentsline {chapter}{\numberline {4}Classical linear elasticity}{81}{chapter.4}
+\contentsline {chapter}{\numberline {4}Classical linear elasticity}{84}{chapter.4}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Complete set of equations}{81}{section.4.1}
+\contentsline {section}{\numberline {1}Complete set of equations}{84}{section.4.1}
 \select@language {russian}
-\contentsline {section}{\numberline {2}Uniqueness of the solution of a dynamic problem}{83}{section.4.2}
-\contentsline {section}{\numberline {3}Hooke\IeC {\textquoteright }s ceiiinosssttuv law}{85}{section.4.3}
-\contentsline {section}{\numberline {4}Theorems of statics}{88}{section.4.4}
-\contentsline {section}{\numberline {5}Equations for displacements}{88}{section.4.5}
-\contentsline {section}{\numberline {6}Concentrated force in a limitless medium}{88}{section.4.6}
-\contentsline {section}{\numberline {7}Determining displacements from deformations}{89}{section.4.7}
-\contentsline {section}{\numberline {8}Equations for stresses}{89}{section.4.8}
-\contentsline {section}{\numberline {9}Principle of minimum potential energy}{90}{section.4.9}
-\contentsline {section}{\numberline {10}Principle of minimum complementary energy}{90}{section.4.10}
-\contentsline {section}{\numberline {11}Mixed principles of stationarity}{91}{section.4.11}
-\contentsline {section}{\numberline {12}Antiplane shear}{92}{section.4.12}
-\contentsline {section}{\numberline {13}Twisting of rods}{92}{section.4.13}
-\contentsline {section}{\numberline {14}Plane deformation}{92}{section.4.14}
+\contentsline {section}{\numberline {2}Uniqueness of the solution of a dynamic problem}{86}{section.4.2}
+\contentsline {section}{\numberline {3}Hooke\IeC {\textquoteright }s ceiiinosssttuv law}{88}{section.4.3}
+\contentsline {section}{\numberline {4}Theorems of statics}{90}{section.4.4}
+\contentsline {section}{\numberline {5}Equations for displacements}{91}{section.4.5}
+\contentsline {section}{\numberline {6}Concentrated force in a limitless medium}{91}{section.4.6}
+\contentsline {section}{\numberline {7}Determining displacements from deformations}{91}{section.4.7}
+\contentsline {section}{\numberline {8}Equations for stresses}{92}{section.4.8}
+\contentsline {section}{\numberline {9}Principle of minimum potential energy}{92}{section.4.9}
+\contentsline {section}{\numberline {10}Principle of minimum complementary energy}{93}{section.4.10}
+\contentsline {section}{\numberline {11}Mixed principles of stationarity}{93}{section.4.11}
+\contentsline {section}{\numberline {12}Antiplane shear}{95}{section.4.12}
+\contentsline {section}{\numberline {13}Twisting of rods}{95}{section.4.13}
+\contentsline {section}{\numberline {14}Plane deformation}{95}{section.4.14}
 \select@language {english}
-\contentsline {chapter}{\numberline {5}Micropolar three\hbox {-}dimensional continuum}{94}{chapter.5}
+\contentsline {chapter}{\numberline {5}Micropolar three\hbox {-}dimensional continuum}{96}{chapter.5}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Introduction to linear micropolar theory}{94}{section.5.1}
+\contentsline {section}{\numberline {1}Introduction to linear micropolar theory}{96}{section.5.1}
 \select@language {russian}
-\contentsline {section}{\numberline {2}Relations of elasticity}{97}{section.5.2}
-\contentsline {section}{\numberline {3}Compatibility equations}{98}{section.5.3}
-\contentsline {section}{\numberline {4}Theorems of statics}{98}{section.5.4}
-\contentsline {section}{\numberline {5}Cosserat pseudo-continuum}{98}{section.5.5}
-\contentsline {section}{\numberline {6}Plane deformation}{99}{section.5.6}
-\contentsline {section}{\numberline {7}Nonlinear theory}{99}{section.5.7}
-\contentsline {section}{\numberline {8}Nonlinear model with constrained rotation}{99}{section.5.8}
+\contentsline {section}{\numberline {2}Relations of elasticity}{100}{section.5.2}
+\contentsline {section}{\numberline {3}Compatibility equations}{100}{section.5.3}
+\contentsline {section}{\numberline {4}Theorems of statics}{100}{section.5.4}
+\contentsline {section}{\numberline {5}Cosserat pseudo-continuum}{101}{section.5.5}
+\contentsline {section}{\numberline {6}Plane deformation}{101}{section.5.6}
+\contentsline {section}{\numberline {7}Nonlinear theory}{101}{section.5.7}
+\contentsline {section}{\numberline {8}Nonlinear model with constrained rotation}{102}{section.5.8}
 \select@language {english}
 \select@language {russian}
 \select@language {english}
-\contentsline {chapter}{\numberline {6}Thermoelasticity}{101}{chapter.6}
+\contentsline {chapter}{\numberline {6}Thermoelasticity}{103}{chapter.6}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}First law of thermodynamics}{101}{section.6.1}
+\contentsline {section}{\numberline {1}First law of thermodynamics}{103}{section.6.1}
 \select@language {russian}
 \select@language {english}
-\contentsline {section}{\numberline {2}Second law}{101}{section.6.2}
+\contentsline {section}{\numberline {2}Second law}{103}{section.6.2}
 \select@language {russian}
 \select@language {english}
-\contentsline {section}{\numberline {3}Constitutive equations}{102}{section.6.3}
+\contentsline {section}{\numberline {3}Constitutive equations}{104}{section.6.3}
 \select@language {russian}
 \select@language {english}
-\contentsline {section}{\numberline {4}Heat equation}{102}{section.6.4}
+\contentsline {section}{\numberline {4}Heat equation}{104}{section.6.4}
 \select@language {russian}
 \select@language {english}
-\contentsline {section}{\numberline {5}Linear thermoelasticity}{102}{section.6.5}
+\contentsline {section}{\numberline {5}Linear thermoelasticity}{104}{section.6.5}
 \select@language {russian}
-\contentsline {section}{\numberline {6}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrv } \IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }\IeC {\cyrh }}{102}{section.6.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRT }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{103}{section.6.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrk }\IeC {\cyri }}{103}{section.6.8}
+\contentsline {section}{\numberline {6}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrv } \IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }\IeC {\cyrh }}{104}{section.6.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRT }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{105}{section.6.7}
+\contentsline {section}{\numberline {8}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrk }\IeC {\cyri }}{105}{section.6.8}
 \select@language {english}
-\contentsline {chapter}{\numberline {7}Magnetoelasticity}{104}{chapter.7}
+\contentsline {chapter}{\numberline {7}Magnetoelasticity}{106}{chapter.7}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Electromagnetic field}{104}{section.7.1}
+\contentsline {section}{\numberline {1}Electromagnetic field}{106}{section.7.1}
 \select@language {russian}
-\contentsline {section}{\numberline {2}\IeC {\CYREREV }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra }}{104}{section.7.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRD }\IeC {\cyri }\IeC {\cyrerev }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyri }}{104}{section.7.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra }}{105}{section.7.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyri }}{105}{section.7.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrzh }\IeC {\cyryo }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrsftsn }}{105}{section.7.6}
+\contentsline {section}{\numberline {2}\IeC {\CYREREV }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra }}{106}{section.7.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRD }\IeC {\cyri }\IeC {\cyrerev }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyri }}{106}{section.7.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra }}{107}{section.7.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyri }}{107}{section.7.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrzh }\IeC {\cyryo }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrsftsn }}{107}{section.7.6}
 \select@language {english}
 \select@language {russian}
 \select@language {english}
-\contentsline {chapter}{\numberline {8}Asymptotic methods}{108}{chapter.8}
-\select@language {russian}
+\contentsline {chapter}{\numberline {8}Asymptotic methods}{110}{chapter.8}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Asymptotic decompositions}{108}{section.8.1}
-\contentsline {section}{\numberline {2}Splitting in a linear algebraic system}{108}{section.8.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\CYRP }\IeC {\cyru }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyre }}{109}{section.8.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyro }\IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\CYRV }\IeC {\cyra }\IeC {\cyrn }\hbox {-}\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrr }\hbox {-}\IeC {\CYRP }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrya }}{109}{section.8.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyra }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyrh } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrishrt }}{109}{section.8.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrm }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyri }\IeC {\cyrh } \IeC {\cyrm }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrsh }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrv }}{110}{section.8.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs } \IeC {\cyrm }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyro } \IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrya }\IeC {\cyryu }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrya } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrerev }\IeC {\cyrf }\IeC {\cyrf }\IeC {\cyri }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyri }}{110}{section.8.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRT }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyra }}{110}{section.8.8}
-\select@language {english}
-\contentsline {chapter}{\numberline {9}Rods}{112}{chapter.9}
+\contentsline {section}{\numberline {1}Asymptotic decompositions}{110}{section.8.1}
 \select@language {russian}
-\vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRI }\IeC {\cyrs }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{112}{section.9.1}
-\contentsline {section}{\numberline {2}\IeC {\CYRK }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra } \IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\CYRK }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }}{112}{section.9.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRS }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrf }\IeC {\cyra }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrery } \IeC {\cyri } \IeC {\cyri }\IeC {\cyrh } \IeC {\cyrb }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }}{113}{section.9.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrp } \IeC {\cyrv }\IeC {\cyri }\IeC {\cyrr }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyrsftsn }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyrery } \IeC {\cyri } \IeC {\cyre }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyrs }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrya }}{113}{section.9.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\CYRK }\IeC {\cyri }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyrf }\IeC {\cyra }}{113}{section.9.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRZ }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra } \IeC {\CYREREV }\IeC {\cyrishrt }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }}{114}{section.9.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrv } \IeC {\cyrv }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrya }\IeC {\cyrh }}{114}{section.9.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrs } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }\IeC {\cyrm } \IeC {\cyrb }\IeC {\cyre }\IeC {\cyrz } \IeC {\cyrs }\IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrg }\IeC {\cyra }}{114}{section.9.8}
-\contentsline {section}{\numberline {9}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrh }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra } \IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyri }}{114}{section.9.9}
-\contentsline {section}{\numberline {10}\IeC {\CYRL }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{114}{section.9.10}
-\contentsline {section}{\numberline {11}\IeC {\CYRS }\IeC {\cyrl }\IeC {\cyru }\IeC {\cyrch }\IeC {\cyra }\IeC {\cyrishrt } \IeC {\cyrm }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrt }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{115}{section.9.11}
-\contentsline {section}{\numberline {12}\IeC {\CYRZ }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra } \IeC {\CYRS }\IeC {\cyre }\IeC {\cyrn }-\IeC {\CYRV }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyra }}{115}{section.9.12}
-\contentsline {section}{\numberline {13}\IeC {\CYRO }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrzh }\IeC {\cyryo }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyro } \IeC {\cyrerev }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrg }\IeC {\cyri }\IeC {\cyri }}{115}{section.9.13}
-\contentsline {section}{\numberline {14}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyro }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrishrt }}{115}{section.9.14}
-\contentsline {section}{\numberline {15}\IeC {\CYRA }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrp }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri }}{116}{section.9.15}
-\contentsline {section}{\numberline {16}\IeC {\CYRT }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyri } \IeC {\cyri } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{116}{section.9.16}
 \select@language {english}
-\contentsline {chapter}{\numberline {10}Thin\hbox {-}walled rods}{117}{chapter.10}
+\contentsline {section}{\numberline {2}Splitting in a linear algebraic system}{110}{section.8.2}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {3}Poincar\'{e} method}{111}{section.8.3}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {4}Van der Pol averaging method}{111}{section.8.4}
+\select@language {russian}
+\contentsline {section}{\numberline {5}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyra }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyrh } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrishrt }}{111}{section.8.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrm }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyri }\IeC {\cyrh } \IeC {\cyrm }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrsh }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrv }}{112}{section.8.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs } \IeC {\cyrm }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyro } \IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrya }\IeC {\cyryu }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrya } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrerev }\IeC {\cyrf }\IeC {\cyrf }\IeC {\cyri }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyri }}{112}{section.8.7}
+\select@language {english}
+\contentsline {section}{\numberline {8}Thin bodies}{112}{section.8.8}
+\select@language {russian}
+\select@language {english}
+\contentsline {chapter}{\numberline {9}Rods}{114}{chapter.9}
 \select@language {russian}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd }}{117}{section.10.1}
-\contentsline {section}{\numberline {2}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs } \IeC {\cyrm }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyrery }\IeC {\cyrm } \IeC {\cyrp }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrm }}{117}{section.10.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRP }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg } \IeC {\cyra }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrc }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyrery }}{117}{section.10.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRV }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg }}{118}{section.10.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg }}{118}{section.10.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRCH }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyryo }\IeC {\cyrr }\IeC {\cyrt }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg }}{119}{section.10.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRP }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{119}{section.10.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRI }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyri } \IeC {\cyra }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyra }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrz }\IeC {\cyra }}{119}{section.10.8}
+\contentsline {section}{\numberline {1}\IeC {\CYRI }\IeC {\cyrs }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{114}{section.9.1}
+\contentsline {section}{\numberline {2}\IeC {\CYRK }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra } \IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\CYRK }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }}{114}{section.9.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRS }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrf }\IeC {\cyra }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrery } \IeC {\cyri } \IeC {\cyri }\IeC {\cyrh } \IeC {\cyrb }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs }}{115}{section.9.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrp } \IeC {\cyrv }\IeC {\cyri }\IeC {\cyrr }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyrsftsn }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyrery } \IeC {\cyri } \IeC {\cyre }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyrs }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrya }}{115}{section.9.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\CYRK }\IeC {\cyri }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyrf }\IeC {\cyra }}{115}{section.9.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRZ }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra } \IeC {\CYREREV }\IeC {\cyrishrt }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }}{116}{section.9.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrv } \IeC {\cyrv }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrya }\IeC {\cyrh }}{116}{section.9.7}
+\contentsline {section}{\numberline {8}\IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrs } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }\IeC {\cyrm } \IeC {\cyrb }\IeC {\cyre }\IeC {\cyrz } \IeC {\cyrs }\IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrg }\IeC {\cyra }}{116}{section.9.8}
+\contentsline {section}{\numberline {9}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrh }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra } \IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyri }}{116}{section.9.9}
+\contentsline {section}{\numberline {10}\IeC {\CYRL }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{116}{section.9.10}
+\contentsline {section}{\numberline {11}\IeC {\CYRS }\IeC {\cyrl }\IeC {\cyru }\IeC {\cyrch }\IeC {\cyra }\IeC {\cyrishrt } \IeC {\cyrm }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrt }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{117}{section.9.11}
+\contentsline {section}{\numberline {12}\IeC {\CYRZ }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra } \IeC {\CYRS }\IeC {\cyre }\IeC {\cyrn }-\IeC {\CYRV }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyra }}{117}{section.9.12}
+\contentsline {section}{\numberline {13}\IeC {\CYRO }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrzh }\IeC {\cyryo }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyro } \IeC {\cyrerev }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrg }\IeC {\cyri }\IeC {\cyri }}{117}{section.9.13}
+\contentsline {section}{\numberline {14}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyro }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrishrt }}{117}{section.9.14}
+\contentsline {section}{\numberline {15}\IeC {\CYRA }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrp }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri }}{118}{section.9.15}
+\contentsline {section}{\numberline {16}\IeC {\CYRT }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyri } \IeC {\cyri } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{118}{section.9.16}
 \select@language {english}
-\contentsline {chapter}{\numberline {11}Shells and plates}{121}{chapter.11}
+\contentsline {chapter}{\numberline {10}Thin\hbox {-}walled rods}{119}{chapter.10}
 \select@language {russian}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRG }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrishrt }}{121}{section.11.1}
-\contentsline {section}{\numberline {2}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }}{121}{section.11.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRB }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs } \IeC {\cyrs }\IeC {\cyri }\IeC {\cyrl } \IeC {\cyri } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrv }}{121}{section.11.3}
-\contentsline {section}{\numberline {4}Shells: Relations of elasticity}{121}{section.11.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{121}{section.11.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyra }}{122}{section.11.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrs } \IeC {\cyrm }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrzh }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrya }\IeC {\cyrm }\IeC {\cyri } \IeC {\CYRL }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrzh }\IeC {\cyra }}{122}{section.11.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRC }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyra }}{122}{section.11.8}
-\contentsline {section}{\numberline {9}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRO }\IeC {\cyrb }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyrery }}{123}{section.11.9}
-\contentsline {section}{\numberline {10}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRK }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyre }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyru }\IeC {\cyrs }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrya }}{123}{section.11.10}
-\contentsline {section}{\numberline {11}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri } \IeC {\cyrv }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{123}{section.11.11}
-\contentsline {section}{\numberline {12}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRB }\IeC {\cyre }\IeC {\cyrz }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{123}{section.11.12}
-\contentsline {section}{\numberline {13}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRN }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrb }\IeC {\cyre }\IeC {\cyrz }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{124}{section.11.13}
-\contentsline {section}{\numberline {14}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRI }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrv }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrt } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyri }}{124}{section.11.14}
-\contentsline {section}{\numberline {15}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRO }\IeC {\cyrb }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{124}{section.11.15}
-\contentsline {section}{\numberline {16}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrt }\IeC {\cyri }\IeC {\cyrp }\IeC {\cyra } \IeC {\CYRT }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrsh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrk }\IeC {\cyro } (\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd })}{124}{section.11.16}
-\contentsline {section}{\numberline {17}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya } \IeC {\CYRK }\IeC {\cyri }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyrf }\IeC {\cyra }}{124}{section.11.17}
-\contentsline {section}{\numberline {18}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRA }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrs }\IeC {\cyro }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrsh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrd }\IeC {\cyrv }\IeC {\cyru }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrishrt }}{125}{section.11.18}
-\contentsline {section}{\numberline {19}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyro }\IeC {\cyrt } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyri }}{125}{section.11.19}
-\contentsline {section}{\numberline {20}Plates: Splitting of three-dimensional bending problem}{125}{section.11.20}
-\contentsline {section}{\numberline {21}Plates: Circular plates}{126}{section.11.21}
-\contentsline {section}{\numberline {22}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRP }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyryo }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrs }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrya }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{126}{section.11.22}
+\contentsline {section}{\numberline {1}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd }}{119}{section.10.1}
+\contentsline {section}{\numberline {2}\IeC {\CYRU }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs } \IeC {\cyrm }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyrery }\IeC {\cyrm } \IeC {\cyrp }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrm }}{119}{section.10.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRP }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg } \IeC {\cyra }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrc }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyrery }}{119}{section.10.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRV }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg }}{120}{section.10.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg }}{120}{section.10.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRCH }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyryo }\IeC {\cyrr }\IeC {\cyrt }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrsh }\IeC {\cyra }\IeC {\cyrg }}{121}{section.10.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRP }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{121}{section.10.7}
+\contentsline {section}{\numberline {8}\IeC {\CYRI }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyri } \IeC {\cyra }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyra }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrz }\IeC {\cyra }}{121}{section.10.8}
 \select@language {english}
-\contentsline {chapter}{\numberline {12}Oscillations and waves}{127}{chapter.12}
+\contentsline {chapter}{\numberline {11}Shells and plates}{123}{chapter.11}
 \select@language {russian}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }}{127}{section.12.1}
-\contentsline {section}{\numberline {2}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }}{127}{section.12.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrv }\IeC {\cyro }\IeC {\cyrz }\IeC {\cyrm }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrv }}{127}{section.12.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrk }}{127}{section.12.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRV }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrn }\IeC {\cyrery } \IeC {\cyrv } \IeC {\cyru }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyre }}{128}{section.12.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRV }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrn }\IeC {\cyrery } \IeC {\cyrv } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyrya }\IeC {\cyrh }}{128}{section.12.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRN }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{128}{section.12.7}
+\contentsline {section}{\numberline {1}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRG }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrishrt }}{123}{section.11.1}
+\contentsline {section}{\numberline {2}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }}{123}{section.11.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRB }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs } \IeC {\cyrs }\IeC {\cyri }\IeC {\cyrl } \IeC {\cyri } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrv }}{123}{section.11.3}
+\contentsline {section}{\numberline {4}Shells: Relations of elasticity}{123}{section.11.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{123}{section.11.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyra }}{124}{section.11.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRP }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrs } \IeC {\cyrm }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrzh }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrya }\IeC {\cyrm }\IeC {\cyri } \IeC {\CYRL }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrzh }\IeC {\cyra }}{124}{section.11.7}
+\contentsline {section}{\numberline {8}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRC }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrd }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyra }}{124}{section.11.8}
+\contentsline {section}{\numberline {9}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRO }\IeC {\cyrb }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyrery }}{125}{section.11.9}
+\contentsline {section}{\numberline {10}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRK }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyre }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyru }\IeC {\cyrs }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrya }}{125}{section.11.10}
+\contentsline {section}{\numberline {11}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri } \IeC {\cyrv }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{125}{section.11.11}
+\contentsline {section}{\numberline {12}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRB }\IeC {\cyre }\IeC {\cyrz }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{125}{section.11.12}
+\contentsline {section}{\numberline {13}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRN }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrb }\IeC {\cyre }\IeC {\cyrz }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya }}{126}{section.11.13}
+\contentsline {section}{\numberline {14}\IeC {\CYRO }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrk }\IeC {\cyri }: \IeC {\CYRI }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrv }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrt } \IeC {\cyrk }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyri }}{126}{section.11.14}
+\contentsline {section}{\numberline {15}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRO }\IeC {\cyrb }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{126}{section.11.15}
+\contentsline {section}{\numberline {16}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrt }\IeC {\cyri }\IeC {\cyrp }\IeC {\cyra } \IeC {\CYRT }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrsh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrk }\IeC {\cyro } (\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd })}{126}{section.11.16}
+\contentsline {section}{\numberline {17}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrya } \IeC {\CYRK }\IeC {\cyri }\IeC {\cyrr }\IeC {\cyrh }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyrf }\IeC {\cyra }}{126}{section.11.17}
+\contentsline {section}{\numberline {18}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRA }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrs }\IeC {\cyro }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrsh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrd }\IeC {\cyrv }\IeC {\cyru }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrishrt }}{127}{section.11.18}
+\contentsline {section}{\numberline {19}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyro }\IeC {\cyrt } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrm }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyri }}{127}{section.11.19}
+\contentsline {section}{\numberline {20}Plates: Splitting of three-dimensional bending problem}{127}{section.11.20}
+\contentsline {section}{\numberline {21}Plates: Circular plates}{128}{section.11.21}
+\contentsline {section}{\numberline {22}\IeC {\CYRP }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }: \IeC {\CYRP }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyryo }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrs }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrya }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{128}{section.11.22}
 \select@language {english}
-\contentsline {chapter}{\numberline {13}Stability}{129}{chapter.13}
+\contentsline {chapter}{\numberline {12}Oscillations and waves}{129}{chapter.12}
 \select@language {russian}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRR }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery } \IeC {\cyrk } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyre } \IeC {\cyru }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrishrt }\IeC {\cyrch }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }}{129}{section.13.1}
-\contentsline {section}{\numberline {2}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri } \IeC {\cyro } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyrya }\IeC {\cyrh }}{129}{section.13.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRS }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrya }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrz }\IeC {\cyrk }\IeC {\cyri }}{129}{section.13.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRR }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrd }\IeC {\cyro }\IeC {\cyrp }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrishrt }}{129}{section.13.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrk }\IeC {\cyri }}{129}{section.13.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRN }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri }}{129}{section.13.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRS }\IeC {\cyrl }\IeC {\cyru }\IeC {\cyrch }\IeC {\cyra }\IeC {\cyrishrt } \IeC {\cyrk }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }}{130}{section.13.7}
+\contentsline {section}{\numberline {1}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }}{129}{section.12.1}
+\contentsline {section}{\numberline {2}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }}{129}{section.12.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRM }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrv }\IeC {\cyro }\IeC {\cyrz }\IeC {\cyrm }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrv }}{129}{section.12.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrk }}{129}{section.12.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRV }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrn }\IeC {\cyrery } \IeC {\cyrv } \IeC {\cyru }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyre }}{130}{section.12.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRV }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrn }\IeC {\cyrery } \IeC {\cyrv } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyrya }\IeC {\cyrh }}{130}{section.12.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRN }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrb }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{130}{section.12.7}
 \select@language {english}
-\contentsline {chapter}{\numberline {14}Defects}{131}{chapter.14}
-\vspace {.2em}
-\contentsline {section}{\numberline {1}Volterra dislocations}{131}{section.14.1}
-\select@language {russian}
-\contentsline {section}{\numberline {2}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrd }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyri }}{131}{section.14.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRD }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrya } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrn }\IeC {\cyra } \IeC {\cyrd }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyryu }}{131}{section.14.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRO } \IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyri } \IeC {\cyrd }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrishrt }}{131}{section.14.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRT }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrch }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyrery }}{131}{section.14.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRS }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyra }, \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrv }\IeC {\cyru }\IeC {\cyryu }\IeC {\cyrshch }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrn }\IeC {\cyra } \IeC {\cyrt }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrch }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }}{132}{section.14.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRN }\IeC {\cyre }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrery }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyro } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyryo }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrd }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyri }}{132}{section.14.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRN }\IeC {\cyra }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyrya }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyri } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrt }\IeC {\cyrk }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrsh }\IeC {\cyrk }\IeC {\cyri }}{132}{section.14.8}
-\select@language {english}
-\contentsline {chapter}{\numberline {15}Fractures}{133}{chapter.15}
+\contentsline {chapter}{\numberline {13}Stability}{131}{chapter.13}
 \select@language {russian}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyri }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyri } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }}{133}{section.15.1}
-\contentsline {section}{\numberline {2}\IeC {\CYRA }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrp }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrery } \IeC {\cyrs } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt }}{133}{section.15.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyra } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyri } \IeC {\cyrp }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyri }}{133}{section.15.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrzh }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyra }}{134}{section.15.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRK }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{134}{section.15.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRI }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrg }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrl } \IeC {\CYRR }\IeC {\cyra }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyra }}{134}{section.15.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRO }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrerev }\IeC {\cyrf }\IeC {\cyrf }\IeC {\cyri }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrv } \IeC {\cyri }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }}{134}{section.15.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\CYRB }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrb }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyrt }\IeC {\cyra }}{134}{section.15.8}
-\contentsline {section}{\numberline {9}\IeC {\CYRD }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrk }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrishrt }}{135}{section.15.9}
-\contentsline {section}{\numberline {10}\IeC {\CYRR }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }}{135}{section.15.10}
-\contentsline {section}{\numberline {11}\IeC {\CYRU }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre } \IeC {\cyrv }\IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyri } \IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrzh }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{135}{section.15.11}
-\contentsline {section}{\numberline {12}\IeC {\CYRB }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs } \IeC {\cyrerev }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrg }\IeC {\cyri }\IeC {\cyri } \IeC {\cyrd }\IeC {\cyrl }\IeC {\cyrya } \IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrzh }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{135}{section.15.12}
+\contentsline {section}{\numberline {1}\IeC {\CYRR }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrh }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrery } \IeC {\cyrk } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrm }\IeC {\cyre } \IeC {\cyru }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrishrt }\IeC {\cyrch }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }}{131}{section.13.1}
+\contentsline {section}{\numberline {2}\IeC {\CYRK }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri } \IeC {\cyro } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyrya }\IeC {\cyrh }}{131}{section.13.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRS }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrya }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrn }\IeC {\cyra }\IeC {\cyrg }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrz }\IeC {\cyrk }\IeC {\cyri }}{131}{section.13.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRR }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\cyrd }\IeC {\cyro }\IeC {\cyrp }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrishrt }}{131}{section.13.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRV }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrk }\IeC {\cyri }}{131}{section.13.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRN }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri }}{131}{section.13.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRS }\IeC {\cyrl }\IeC {\cyru }\IeC {\cyrch }\IeC {\cyra }\IeC {\cyrishrt } \IeC {\cyrk }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrh } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }}{132}{section.13.7}
 \select@language {english}
-\contentsline {chapter}{\numberline {16}Composites}{136}{chapter.16}
+\contentsline {chapter}{\numberline {14}Defects}{133}{chapter.14}
+\vspace {.2em}
+\contentsline {section}{\numberline {1}Volterra dislocations}{133}{section.14.1}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {2}Straight\hbox {-}line dislocations}{133}{section.14.2}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {3}Action of stress field on dislocation}{133}{section.14.3}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {4}About movement of dislocations}{134}{section.14.4}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {5}Point defects}{134}{section.14.5}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {6}Force acting on point defect}{134}{section.14.6}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {7}Continuously distributed dislocations}{134}{section.14.7}
+\select@language {russian}
+\select@language {english}
+\contentsline {section}{\numberline {8}Stress during winding of coil}{134}{section.14.8}
+\select@language {russian}
+\select@language {english}
+\select@language {russian}
+\select@language {english}
+\contentsline {chapter}{\numberline {15}Fractures}{136}{chapter.15}
 \select@language {russian}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRV }\IeC {\cyrv }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrs }\IeC {\cyro }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{136}{section.16.1}
-\contentsline {section}{\numberline {2}\IeC {\CYREREV }\IeC {\cyrf }\IeC {\cyrf }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrya }}{136}{section.16.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRK }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyre }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri } \IeC {\cyrd }\IeC {\cyrl }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyrhrdsn }\IeC {\cyryo }\IeC {\cyrm }\IeC {\cyra }}{136}{section.16.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRV }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyrk }\IeC {\cyra } \IeC {\CYRH }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyrl }\IeC {\cyra }}{137}{section.16.4}
-\contentsline {section}{\numberline {5}\IeC {\CYRF }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyru }\IeC {\cyrl }\IeC {\cyrery } \IeC {\CYREREV }\IeC {\cyrsh }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrb }\IeC {\cyri }}{137}{section.16.5}
-\contentsline {section}{\numberline {6}\IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyru }\IeC {\cyrl }\IeC {\cyri } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrery } \IeC {\cyrs }\IeC {\cyro } \IeC {\cyrs }\IeC {\cyrf }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyri } \IeC {\cyrv }\IeC {\cyrk }\IeC {\cyrl }\IeC {\cyryu }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }\IeC {\cyrm }\IeC {\cyri }}{137}{section.16.6}
-\contentsline {section}{\numberline {7}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrs }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{137}{section.16.7}
-\contentsline {section}{\numberline {8}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrp } \IeC {\CYRH }\IeC {\cyra }\IeC {\cyrsh }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyra }\hbox {--}\IeC {\CYRSH }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyra }}{138}{section.16.8}
+\contentsline {section}{\numberline {1}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyri }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyri } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrch }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }}{136}{section.15.1}
+\contentsline {section}{\numberline {2}\IeC {\CYRA }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrp }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrery } \IeC {\cyrs } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrishrt }}{136}{section.15.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyra } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyri } \IeC {\cyrp }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrishrt } \IeC {\cyrd }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyri }}{136}{section.15.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrzh }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyra }}{137}{section.15.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRK }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrr }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{137}{section.15.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRI }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrg }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrl } \IeC {\CYRR }\IeC {\cyra }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyra }}{137}{section.15.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRO }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre } \IeC {\cyrk }\IeC {\cyro }\IeC {\cyrerev }\IeC {\cyrf }\IeC {\cyrf }\IeC {\cyri }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrv } \IeC {\cyri }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyri }}{137}{section.15.7}
+\contentsline {section}{\numberline {8}\IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn } \IeC {\CYRB }\IeC {\cyra }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyrb }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyrt }\IeC {\cyra }}{137}{section.15.8}
+\contentsline {section}{\numberline {9}\IeC {\CYRD }\IeC {\cyre }\IeC {\cyrf }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyrishrt } \IeC {\cyrk }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrishrt }}{138}{section.15.9}
+\contentsline {section}{\numberline {10}\IeC {\CYRR }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyrt } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }}{138}{section.15.10}
+\contentsline {section}{\numberline {11}\IeC {\CYRU }\IeC {\cyrp }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrg }\IeC {\cyro }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyre } \IeC {\cyrv }\IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyri } \IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrzh }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{138}{section.15.11}
+\contentsline {section}{\numberline {12}\IeC {\CYRB }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrs } \IeC {\cyrerev }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrg }\IeC {\cyri }\IeC {\cyri } \IeC {\cyrd }\IeC {\cyrl }\IeC {\cyrya } \IeC {\cyrd }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrzh }\IeC {\cyru }\IeC {\cyrshch }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrs }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrshch }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrery }}{138}{section.15.12}
 \select@language {english}
-\contentsline {chapter}{\numberline {17}Periodic structures}{139}{chapter.17}
+\contentsline {chapter}{\numberline {16}Composites}{139}{chapter.16}
 \select@language {russian}
 \vspace {.2em}
-\contentsline {section}{\numberline {1}\IeC {\CYRO }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra }}{139}{section.17.1}
-\contentsline {section}{\numberline {2}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyra }}{139}{section.17.2}
-\contentsline {section}{\numberline {3}\IeC {\CYRV }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrk }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyra }}{139}{section.17.3}
-\contentsline {section}{\numberline {4}\IeC {\CYRS }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra } \IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyrya }}{139}{section.17.4}
+\contentsline {section}{\numberline {1}\IeC {\CYRV }\IeC {\cyrv }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrs }\IeC {\cyro }\IeC {\cyro }\IeC {\cyrb }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrzh }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{139}{section.16.1}
+\contentsline {section}{\numberline {2}\IeC {\CYREREV }\IeC {\cyrf }\IeC {\cyrf }\IeC {\cyre }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyrya }}{139}{section.16.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRK }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyre }\IeC {\cyrv }\IeC {\cyrery }\IeC {\cyre } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri } \IeC {\cyrd }\IeC {\cyrl }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrv }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrsftsn }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyro }\IeC {\cyrb }\IeC {\cyrhrdsn }\IeC {\cyryo }\IeC {\cyrm }\IeC {\cyra }}{139}{section.16.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRV }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyrk }\IeC {\cyra } \IeC {\CYRH }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyrl }\IeC {\cyra }}{140}{section.16.4}
+\contentsline {section}{\numberline {5}\IeC {\CYRF }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrm }\IeC {\cyru }\IeC {\cyrl }\IeC {\cyrery } \IeC {\CYREREV }\IeC {\cyrsh }\IeC {\cyre }\IeC {\cyrl }\IeC {\cyrb }\IeC {\cyri }}{140}{section.16.5}
+\contentsline {section}{\numberline {6}\IeC {\CYRM }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyru }\IeC {\cyrl }\IeC {\cyri } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyrery } \IeC {\cyrs }\IeC {\cyro } \IeC {\cyrs }\IeC {\cyrf }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyri } \IeC {\cyrv }\IeC {\cyrk }\IeC {\cyrl }\IeC {\cyryu }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }\IeC {\cyrm }\IeC {\cyri }}{140}{section.16.6}
+\contentsline {section}{\numberline {7}\IeC {\CYRM }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrd } \IeC {\cyrs }\IeC {\cyra }\IeC {\cyrm }\IeC {\cyro }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyrl }\IeC {\cyra }\IeC {\cyrs }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrya }}{140}{section.16.7}
+\contentsline {section}{\numberline {8}\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrc }\IeC {\cyri }\IeC {\cyrp } \IeC {\CYRH }\IeC {\cyra }\IeC {\cyrsh }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyra }\hbox {--}\IeC {\CYRSH }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyrm }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyra }}{141}{section.16.8}
+\select@language {english}
+\contentsline {chapter}{\numberline {17}Periodic structures}{142}{chapter.17}
+\select@language {russian}
+\vspace {.2em}
+\contentsline {section}{\numberline {1}\IeC {\CYRO }\IeC {\cyrd }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrz }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra }}{142}{section.17.1}
+\contentsline {section}{\numberline {2}\IeC {\CYRT }\IeC {\cyrr }\IeC {\cyryo }\IeC {\cyrh }\IeC {\cyrm }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrd }\IeC {\cyra }}{142}{section.17.2}
+\contentsline {section}{\numberline {3}\IeC {\CYRV }\IeC {\cyro }\IeC {\cyrl }\IeC {\cyro }\IeC {\cyrk }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrya } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyra }}{142}{section.17.3}
+\contentsline {section}{\numberline {4}\IeC {\CYRS }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrk }\IeC {\cyra } \IeC {\cyrp }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyri }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyro }\IeC {\cyrg }\IeC {\cyro } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrzh }\IeC {\cyrn }\IeC {\cyrya }}{142}{section.17.4}
 \select@language {english}
 \select@language {russian}
 \select@language {english}
-\contentsline {chapter}{List of books}{140}{section.17.4}
+\contentsline {chapter}{List of books}{143}{section.17.4}
 \select@language {russian}
 \select@language {english}

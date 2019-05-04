@@ -6,17 +6,15 @@
 
 \label{chapter:genericmechanics}
 
-\en{\section{Initial concepts}}
+\en{\section{Discrete system of particles}} %% Initial concepts. Discrete approach
 
-\ru{\section{Исходные представления}}
+\ru{\section{Дискретная система частиц}} %% Исходные представления. Дискретный подход
 
-\en{\emph{Discrete approach}}
+\label{para:initialconcepts.discreteapproach}
 
-\ru{\emph{Дискретный подход}}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, systems of~particles~(\inquotes{pointlike masses}, \inquotes{material points}) are considered. In a~system of~$N$ particles each particle has mass~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion function~${\bm{r}_k(t)}$. Function~${\bm{r}_k(t)}$ is measured relative to some reference system~--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
 
-\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, systems of~particles~(\inquotes{pointlike masses}, \inquotes{material points}) with masses~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion functions~${\bm{r}_k(t)}$ are considered. Vector function of~time~${\bm{r}_k(t)}$ is measured relative to some reference system~--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
-
-\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются системы частиц~(\inquotes{точечных масс}, \inquotes{материальных точек}) с~массами~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функциями движения~${\bm{r}_k(t)}$. Векторная функция времени~${\bm{r}_k(t)}$ определяется относительно какой\hbox{-}либо системы отсчёта~--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются системы частиц~(\inquotes{точеч\-ных масс}, \inquotes{материальных точек}). В~системе $N$ \hbox{частиц} каждая частица имеет массу~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функцию движения~${\bm{r}_k(t)}$. Функция~${\bm{r}_k(t)}$ измеряется отно\-си\-тель\-но н\'{е}которой системы отсчёта~--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
 
 \begin{wrapfigure}[10]{o}{.48\textwidth}
 \makebox[.48\textwidth][c]{\begin{minipage}[t]{.44\textwidth}
@@ -83,27 +81,49 @@
 
 \ru{Мерой взаимодействия в~механике является вектор силы~$\bm{F}$. В~известном уравнении Newton’а}
 
-\nopagebreak\vspace{-0.32em}\begin{equation}\label{law:ofnewton}
+\nopagebreak\vspace{-0.25em}\begin{equation}\label{law:ofnewton}
 m \mathdotdotabove{\bm{r}} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
 \end{equation}
 
-\en{\vspace{-0.25em} \noindent the right\hbox{-}hand side depends only on position, speed and explicitly presented time, as acceleration is directly proportional to force.}
+\en{\vspace{-0.2em} \noindent the right\hbox{-}hand side depends only on position, speed and explicitly presented time, as acceleration is directly proportional to force.}
 
-\ru{\vspace{-0.25em} \noindent правая часть зависит лишь от положения, скорости и~явно входящего времени, поскольку ускорение прямо пропорционально силе.}
+\ru{\vspace{-0.2em} \noindent правая часть зависит лишь от положения, скорости и~явно входящего времени, поскольку ускорение прямо пропорционально силе.}
 
 \en{Remind theses of dynamics of a~system of particles. Force acting on~$k$\hbox{-}th particle}
 
 \ru{Напомним положения динамики системы частиц. Сила, действующая на~$k$\hbox{-}ую частицу}
 
 \nopagebreak\vspace{-0.64em}\begin{equation}\label{forceonparticle}
-\bm{F}_k = \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} + \scalebox{0.84}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.12ex},
+\bm{F}_k = \bm{F}^{\expexternal}_{\hspace{-0.16ex}k}
+\hspace{.1ex} + \hspace{.2ex}
+\scalebox{0.84}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.2ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.12ex},
 \end{equation}
 
 \en{\vspace{-0.2em} \noindent where the first addend~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ is external force, and the second is sum of~internal ones (${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj}}$ is force from particle with number~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
 
 \ru{\vspace{-0.2em} \noindent где первое слагаемое~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$~--- это внешняя сила, а~второе~--- сумма внутренних (${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj}}$~--- сила от~частицы с~номером~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
 
-\foreignlanguage{russian}{Принимая принцип действия и~противодействия ${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} = - \bm{F}^{\expinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}}$, получим из~\eqref{law:ofnewton} и~\eqref{forceonparticle} закон баланса импульса}
+\foreignlanguage{russian}{Принимая принцип действия и~противодействия ${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} = - \bm{F}^{\expinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}\hspace{-0.16ex}}$, получаем из~\eqref{law:ofnewton} и~\eqref{forceonparticle} баланс импульса}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{balanceoftranslationalmomentum.discrete}
+\left( \displaystyle \sum_{\smash{k}} m_k \hspace{.2ex} \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \right)^{\hspace{-0.28em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.12ex}
+= \hspace{.16ex}
+\displaystyle \sum_{\smash{k}} \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex}.
+\end{equation}
+
+\foreignlanguage{russian}{Считая также, что внутренние взаимодействия между частицами центральны, то~есть}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \times \left( \bm{r}_k \hspace{-0.12ex} - \bm{r}_{\hspace{-0.16ex}j} \right) = \bm{0} \hspace{.1ex},
+\end{equation*}
+
+\vspace{-0.2em} \noindent \foreignlanguage{russian}{приходим к~балансу момента импульса}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{balanceofrotationalmomentum.discrete}
+\left( \displaystyle \sum_{\smash{k}} \bm{r}_k \hspace{-0.12ex} \times m_k \hspace{.2ex} \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \right)^{\hspace{-0.25em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.12ex}
+= \hspace{.16ex}
+\displaystyle \sum_{\smash{k}} \bm{r}_k \hspace{-0.12ex} \times \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex}.
+\end{equation}
 
 ...
 
@@ -351,42 +371,48 @@ are mostly not holonomic.
 \begin{otherlanguage}{russian}
 
 Виртуальным перемещением частицы с~радиусом\hbox{-}вектором~${\bm{r}_k}$ называется вариация~${\variation{\hspace{.1ex}\bm{r}_k}}$~--- %% н\'{е}которое
-любое (неопределённое) бесконечно малое приращение~${\bm{r}_k}$, происходящее мгновенно вне~времени~(${\variation{t} \hspace{-0.2ex}\equiv\hspace{-0.2ex} 0}$) и~совместимое с~ограничениями\hbox{-}связями. %%~(constraints).
+любое (неопределённое) бесконечно малое приращение~${\bm{r}_k}$, происходящее мгновенно %% вне~времени~(${\variation{t} \hspace{-0.2ex}\equiv\hspace{-0.2ex} 0}$)
+и~совместимое с~ограничениями\hbox{-}связями. %%~(constraints).
 Если связей нет, то~есть система свободна, тогда виртуальные перемещения ${\variation{\hspace{.1ex}\bm{r}_k}}$ совершенно любые.
 
 Связи бывают голономные~(holonomic, или геометрические), связывающие только положения~(перемещения)~--- это функции лишь координат и, возможно, времени
-\begin{equation}\label{holonomicconstraint}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{holonomicconstraint}
 c\hspace{.2ex}(\bm{r}, t) = 0
 \end{equation}
---- и~неголономные~(или дифференциальные), содержащие производные координат по~времени: ${c\hspace{.2ex}(\bm{r}, \mathdotabove{\bm{r}}, t) = 0}$ и~не~интегрируемые до~геометрических связей.
+
+\vspace{-0.12em} \noindent --- и~неголономные~(или дифференциальные), содержащие производные координат по~времени: ${c\hspace{.2ex}(\bm{r}, \mathdotabove{\bm{r}}, t) = 0}$ и~не~интегрируемые до~геометрических связей.
 
 Далее рассматриваем системы, все связи в~которых~--- голономные. В~системе с~голономной связью виртуальные перемещения должны удовлетворять уравнению
-\begin{equation}\label{requirementforvirtualdisplacements}
-\displaystyle \sum_k \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c}}{\partial \hspace{.1ex} \bm{r}_k}$} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.2ex} = 0 \hspace{.16ex}.
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{requirementforvirtualdisplacements}
+\displaystyle \sum_k \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c}}{\partial \hspace{.1ex} \bm{r}_k}$} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0 \hspace{.16ex}.
 \vspace{-0.25em}\end{equation}
 
 В~несвободных системах все силы делятся на две группы: активные и~реакции связей. Реакция~$\mathboldN_k$ действует со~стороны всех материальных ограничителей на~частицу \inquotes{${\hspace{.05ex}k\hspace{.25ex}}$} и~меняется в~соответствии с~уравнением~\eqref{holonomicconstraint} каждой связи. Принимается предложение об~идеальности связей:
-\begin{equation}\label{idealconstraints}
-\scalebox{0.9}{$\displaystyle \sum_k$} \mathboldN_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0
+
+\nopagebreak\begin{equation}\label{idealconstraints}
+\scalebox{0.9}{$\displaystyle \sum_k$} \hspace{.2ex} \mathboldN_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0
 \quad \textrm{---}
 \vspace{-0.25em}\end{equation}
 \noindent работа реакций на~любых виртуальных перемещениях равна нулю.
 
 Принцип виртуальной работы выражается уравнением
-\begin{equation}\label{principleofvirtualwork}
-\displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}_k \hspace{-0.12ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.2ex} = 0 \hspace{0.1ex},
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{discrete:principleofvirtualwork}
+\displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}_k \hspace{-0.12ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0 \hspace{0.1ex},
 \vspace{-0.32em}\end{equation}
 
-\noindent где~$\bm{F}_k$~--- лишь активные силы.
+\noindent где~${\bm{F}_k}$~--- лишь активные силы.
 
-Дифференциальное вариационное уравнение~\eqref{principleofvirtualwork} может показаться тривиальным следствием закона Ньютона~\eqref{law:ofnewton} и~условия идеальности связей~\eqref{idealconstraints}. Однако содержание~\eqref{principleofvirtualwork} несравненно обширнее. Известно~--- и~читатель вскоре это увидит,~--- что принцип~\eqref{principleofvirtualwork} может быть положен в~основу механики~\cite{gantmacher}. Различные модели упругих тел, описываемые в~этой книге, построены с~опорой на~этот принцип.
+Дифференциальное вариационное уравнение~\eqref{discrete:principleofvirtualwork} может показаться тривиальным следствием закона Ньютона~\eqref{law:ofnewton} и~условия идеальности связей~\eqref{idealconstraints}. Однако содержание~\eqref{discrete:principleofvirtualwork} несравненно обширнее. Известно~--- и~читатель вскоре это увидит,~--- что принцип~\eqref{discrete:principleofvirtualwork} может быть положен в~основу механики~\cite{gantmacher}. Различные модели упругих тел, описываемые в~этой книге, построены с~опорой на~этот принцип.
 
 Для~примера рассмотрим совершенно жёсткое~(недеформируемое) твёрдое тело.
 
 ...
 
 
-Проявилась замечательная особенность~\eqref{principleofvirtualwork}: это уравнение эквивалентно системе такого порядка, каково число степеней свободы системы, то~есть сколько независимых вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ мы имеем. Если в~системе $N$~точек есть $m$ связей, то число степеней свободы ${n = 3N \hspace{-0.25ex} - m}$.
+Проявилась замечательная особенность~\eqref{discrete:principleofvirtualwork}: это уравнение эквивалентно системе такого порядка, каково число степеней свободы системы, то~есть сколько независимых вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ мы имеем. Если в~системе $N$~точек есть $m$ связей, то число степеней свободы ${n = 3N \hspace{-0.25ex} - m}$.
 
 ...
 
@@ -395,29 +421,30 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 
 \ru{\section{Баланс импульса, момента импульса и~энергии}}
 
-Эти фундаментальные законы баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\inquotes{Изолированная (замкнутая) система~--- это система частиц, взаимодействующих друг с~другом, но ни с какими другими телами.} системе выводится из~однородности пространства \emph{(при любом параллельном переносе замкнутой системы как целого в~пространстве механические свойства этой системы не меняются)}. Сохранение момента импульса~--- следствие изотропии пространства \emph{(при любом повороте замкнутой системы как целого в~пространстве механические свойства этой системы не меняются)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \mathrm{T}(q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \Pi(q)}$ такой системы не~зависит явно от~времени).
+Эти фундаментальные законы баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\footnote{Изолированная (замкнутая) система~--- это система частиц, взаимодействующих друг с~другом, но ни с~какими другими телами.} системе выводится из~однородности пространства \emph{(при любом параллельном переносе~--- трансляции~--- замкнутой системы как целого свойства этой системы не~меняются)}. Сохранение момента импульса~--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \mathrm{T}(q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \Pi(q)}$ такой системы не~зависит явно от~времени).
 
-Фундаментальные законы баланса можно вывести из принципа виртуальной работы~\eqref{principleofvirtualwork}. Перепишем его в~виде
+Фундаментальные законы баланса можно вывести из принципа виртуальной работы~\eqref{discrete:principleofvirtualwork}. Перепишем его в~виде
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{principleofvirtualwork}
-\displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
-+ \variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{.1ex},
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{discrete:principleofvirtualwork.externalinternal}
+\displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
++ \variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex},
 \vspace{-0.25em}\end{equation}
 
-\vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил~${\variation{\internalwork}}$.
+\vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил
+${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.1ex}}$.
 
-Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\varvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\varvector{\bm{o}}}$~--- произвольные константы, определяющие трансляцию и~поворот)
+\vspace{-0.1em} Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\varvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\varvector{\bm{o}}}$~--- произвольные константы, определяющие трансляцию и~поворот)
 
 \nopagebreak\vspace{-0.8em}\begin{equation}\label{assumptionforvirtualwork}
-\variation{\bm{r}_k} \hspace{-0.16ex}
+\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex}
 = \varvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k
 \hspace{.32ex} \Rightarrow \hspace{.4ex}
-\variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{.1ex}.
+\variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex}.
 \end{equation}
 
 \vspace{-0.1em} Предпосылки-соображения для~этого предположения таковы.
 
-Первое~--- для случая упругих (потенциальных) внутренних сил. При~этом ${\variation{\internalwork} = -\variation{\Pi}}$~--- вариация потенциала с~противоположным знаком. Достаточно очевидно, что~$\Pi$ меняется лишь при~деформации.
+Первое~--- для случая упругих (потенциальных) внутренних сил. При~этом ${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$~--- вариация потенциала с~противоположным знаком. Достаточно очевидно, что~$\Pi$ меняется лишь при~деформации.
 
 Второе соображение~--- в~том, что суммарный вектор и~суммарный момент внутренних сил равен нулю
 
@@ -427,7 +454,7 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 
 ...
 
-Принимая~\eqref{assumptionforvirtualwork} и~подставляя в~\eqref{principleofvirtualwork} сначала ${\variation{\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\hspace{-0.1ex}\bm{\rho}}}$ (трансляция), а~затем ${\variation{\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k}$ (поворот), получаем баланс импульса~(...) и баланс момента импульса~(...).
+Принимая~\eqref{assumptionforvirtualwork} и~подставляя в~\eqref{discrete:principleofvirtualwork.externalinternal} сначала ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\hspace{-0.1ex}\bm{\rho}}}$ (трансляция), а~затем ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k}$ (поворот), получаем баланс импульса~(...) и баланс момента импульса~(...).
 
 ...
 
@@ -436,24 +463,84 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 \end{otherlanguage}
 
 \en{\section{Hamilton’s principle and Lagrange’s equations}}
+
 \ru{\section{Принцип Гамильтона и уравнения Лагранжа}}
 
 \begin{otherlanguage}{russian}
 
-Вариационное уравнение~\eqref{principleofvirtualwork} удовлетворяется в~любой момент времени. Интегрируя его по~какому\hbox{-}либо промежутку
+Вариационное уравнение~\eqref{discrete:principleofvirtualwork} удовлетворяется в~любой момент времени. Проинтегрируем его\footnote{%
+%%${ \variation{\mathrm{T}} = \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\bm{r}}_k} \hspace{-0.5ex} }$ , \hspace{-0.1ex}
+${%
+\left(
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.4ex}
+\right)^{\hspace{-0.25em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+= \hspace{.2ex}
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
++ \hspace{-0.16ex} \tikzmark{beginVariationOfKineticEnergy} \hspace{.32ex} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\bm{r}}_k} \tikzmark{endVariationOfKineticEnergy}
+}$
+\\[.5em]
+${%
+- \hspace{.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.25ex} dt \hspace{.4ex}
+= \hspace{-0.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \hspace{-0.1ex} \variation{\mathrm{T}} \hspace{.1ex} dt \hspace{.16ex}
+- \hspace{.12ex} \left[ \hspace{.2ex}
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.2ex}
+\right]_{\hspace{-0.25ex}t_1}^{\hspace{-0.25ex}t_2}
+}$}%
+\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKineticEnergy}{endVariationOfKineticEnergy}{${\scriptstyle \variation{\mathrm{T}}}$}
+%
+по~какому\hbox{-}либо промежутку ${\left[\hspace{.15ex} t_1, t_2 \hspace{.15ex}\right]}$
+
+\nopagebreak\vspace{-0.25em}\begin{equation}
+\displaystyle \integral\displaylimits_{t_1}^{\raisemath{.12em}{t_2}}
+\hspace{-0.4ex}
+\left( \hspace{-0.32ex} \variation{\mathrm{T}}
++ \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.32ex} \right) \hspace{-0.4ex} dt \hspace{.25ex}
+- \left[ \hspace{.2ex} \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.2ex} \right]_{\hspace{-0.32ex}t_1}^{\hspace{-0.32ex}t_2}
+\hspace{-0.75ex} = 0 \hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.16em} \noindent Без ущерба для общности можно принять ${\variation{\hspace{.1ex}\bm{r}_k}\hspace{.1ex}(t_1) \hspace{-0.1ex} = \variation{\hspace{.1ex}\bm{r}_k}\hspace{.1ex}(t_2) \hspace{-0.1ex} = \bm{0}}$, тогда внеинтегральный член исчезает.
+
+Вводятся обобщённые координаты~$q_i$~(${i = 1, \ldots, n}$~--- число степеней свободы). Векторы-радиусы становятся функциями \hbox{вида} ${\bm{r}_k(q_i, t)}$, тождественно удовлетворяющими уравнениям связей~\eqref{holonomicconstraint}. Если связи стационарны, то~есть~\eqref{holonomicconstraint} не~содержат $t$, то остаётся~${\bm{r}_k(q_i)}$. Кинетическая энергия превращается в~функцию ${\mathrm{T}(q_i, \mathdotabove{q}_i, t)}$, где явно входящее $t$ характерно лишь для нестационарных связей.
+
+Весьма существенно понятие обобщённых сил~${Q_{\hspace{-0.1ex}i}}$. Они вводятся через выражение виртуальной работы
+
+\nopagebreak\vspace{-0.25em}\begin{equation}
+\scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex}
+\bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
+= \hspace{-0.1ex} \scalebox{0.92}[0.96]{$\displaystyle \sum_{i}$} \hspace{.16ex} Q_{\hspace{-0.1ex}i} \hspace{.12ex} \variation{q_i} \hspace{.1ex} ,
+\:\:
+Q_{\hspace{-0.1ex}i} \equiv
+\scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex}
+\bm{F}_k \hspace{-0.1ex} \dotp \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \bm{r}_k}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.16ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.15em} \noindent Ст\'{о}ит подчеркнуть происхождение обобщённых сил через работу. Установив набор обобщённых координат системы, следует сгруппировать приложенные силы~${\bm{F}_k}$ в~комплексы~${Q_{\hspace{-0.1ex}i}}$.
+
+Если силы потенциальны с~энергией~${\Pi \!=\! \Pi(q_i, t)}$, то
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\scalebox{0.92}[0.96]{$\displaystyle \sum_{i}$} \hspace{.16ex} Q_{\hspace{-0.1ex}i} \hspace{.12ex} \variation{q_i} \hspace{-0.1ex}
+= - \hspace{.16ex} \variation{\Pi} \hspace{.1ex} ,
+\:\:
+Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.16ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.15em} \noindent Явное присутствие $t$ может быть при нестационарности связей или зависимости физических полей от~времени.
 
 ...
 
 Известны уравнения Lagrange’а не~только второго, но~и~первого рода. Рассмотрим их ради методики вывода, много раз применяемой в~этой книге.
 
-При~наличии связей~\eqref{holonomicconstraint} равенство ${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\bm{r}}_k}$ не~следует из~вариационного уравнения~\eqref{principleofvirtualwork}, поскольку виртуальные перемещения~${\variation{\hspace{.1ex}\bm{r}_k}}$ не~являются независимыми. Каждое из $m$ ($m$~--- число связей) условий для~вариаций~\eqref{requirementforvirtualdisplacements} умножим на~некий скаляр~$\lambda_{\alpha}$ (${\alpha = 1, \ldots, m}$) и~добавим к~\eqref{principleofvirtualwork}:
-\begin{equation}
-\displaystyle \sum_{k=1}^{N} \hspace{-0.25ex} \left(^{\mathstrut} \hspace{-0.16ex} \bm{F}_k \right. \hspace{-0.32ex} + \hspace{-0.05ex}
-\scalebox{0.88}[0.92]{$\displaystyle \sum_{\alpha}$} \hspace{.12ex} \lambda_{\alpha} \hspace{.2ex} \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{\alpha}}}{\partial \hspace{.1ex} \bm{r}_k}$}
-- \left. \hspace{-0.25ex} m_k \mathdotdotabove{\bm{r}}_k ^{\mathstrut}\right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0 \hspace{0.1ex},
+При~наличии связей~\eqref{holonomicconstraint} равенство ${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\bm{r}}_k}$ не~следует из~вариационного уравнения~\eqref{discrete:principleofvirtualwork}, ведь тогда виртуальные перемещения~${\variation{\hspace{.1ex}\bm{r}_k}}$ не независимы. Каждое из $m$ ($m$~--- число связей) условий для~вариаций~\eqref{requirementforvirtualdisplacements} умножим на~некий скаляр~$\lambda_{\alpha}$ (${\alpha = 1, \ldots, m}$) и~добавим к~\eqref{discrete:principleofvirtualwork}:
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\displaystyle \sum_{k=1}^{N} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.16ex} \bm{F}_k \right. \hspace{-0.32ex} + \hspace{-0.05ex}
+\scalebox{0.88}[0.92]{$ \displaystyle \sum_{\alpha=1}^{m} $} \hspace{.16ex} \lambda_{\alpha} \hspace{.2ex} \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{\alpha}}}{\partial \hspace{.1ex} \bm{r}_k}$}
+- \left. \hspace{-0.25ex} m_k \mathdotdotabove{\bm{r}}_k ^{\mathstrut}\right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0 \hspace{0.1ex} .
 \end{equation}
 
-\vspace{-0.2em} \noindent Среди $3N$ вариаций компонент~${\variation{\hspace{.1ex}\bm{r}_k}}$ имеем $m$ зависимых. Но столько~же и~множителей Лагранжа: подберём $\lambda_{\alpha}$ так, чтобы коэффициенты(??как\'{и}е?) при~зависимых вариациях обратились в~нуль. Но при~остальных вариациях коэффициенты(??) также должны быть нулями из\hbox{-}за независимости. Следовательно, все выражения в~скобках~${(\cdots\hspace{-0.2ex})}$ равны нулю~--- это и~есть уравнения Лагранжа первого рода.
+\vspace{-0.1em} \noindent Среди $3N$ компонент вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ зависимых $m$. Но столько~же и~множителей Лагранжа: подберём $\lambda_{\alpha}$ так, чтобы коэффициенты(??как\'{и}е?) при~зависимых вариациях обратились в~нуль. Но при~остальных вариациях коэффициенты(??) также должны быть нулями из\hbox{-}за независимости. Следовательно, все выражения в~скобках~${(\cdots\hspace{-0.2ex})}$ равны нулю~--- это и~есть уравнения Лагранжа первого рода.
 
 Поскольку для каждой частицы
 
@@ -464,24 +551,102 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 \end{otherlanguage}
 
 \en{\section{Statics}}
+
 \ru{\section{Статика}}
+
+\label{para:statics}
 
 \begin{otherlanguage}{russian}
 
-Рассмотрим систему со~стационарными (постоянными во~времени) связями
+Рассмотрим систему со~стационарными (постоянными во~времени) связями при статических (не~меняющихся со~временем) активных силах ${\bm{F}_k}$. В~равновесии ${\bm{r}_k \hspace{-0.12ex} = \boldconst}$, и формулировка принципа виртуальной работы следующая:
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{statics.discrete:principleofvirtualwork}
+\displaystyle \sum_{\smash{k}} \hspace{-0.1ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0
+\:\Leftrightarrow\:
+Q_{\hspace{-0.1ex}i} \hspace{-0.1ex} = 0 \hspace{.1ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.2em} \noindent Существенны обе стороны этого положения: и вариационное уравнение, и равенство нулю обобщённых сил.
+
+Соотношения~\eqref{statics.discrete:principleofvirtualwork}~--- это самые общие уравнения статики. В~литературе распространено узкое представление об~уравнениях равновесия как балансе сил и~моментов. Но при~этом нужно понимать, что набор уравнений равновесия точно соответствует обобщённым координатам. Главный вектор и~главный момент в~уравнениях равновесия фигурируют, поскольку у~системы есть степени свободы трансляции и~поворота. Особенная популярность сил и~моментов связана не~столько с~известностью статики совершенно жёсткого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~перемещениях системы как жёсткого целого равна нулю в~любой среде.
+
+Пусть в~системе действуют два вида сил: потенциальные с~энергией от~обобщённых координат ${\Pi(q_i)}$ и~дополнительные внешние~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$. Из~\eqref{statics.discrete:principleofvirtualwork} следуют уравнения равновесия
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{staticequilibriumwithpotentialenergy}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} = \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.12em} \noindent Здесь содержится нелинейная в~общем случае задача статики о~связи положения равновесия~$q_i$ с~нагрузками~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
+
+В~линейной системе с~квадратичным потенциалом вида ${\Pi = \smalldisplaystyleonehalf \hspace{.2ex} C_{ik} \hspace{.12ex} q_{k} \hspace{.1ex} q_{i}}$
+
+\nopagebreak\vspace{-1.25em}\begin{equation}\label{staticsoflineardiscretesystem}
+\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} C_{ik} \hspace{.12ex} q_k
+= \hspace{.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.1ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.2em} \noindent Тут фигурируют матрица жёсткости~$C_{ik}$ и столбцы координат~${q_k}$ и~нагрузок~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
+
+Сказанное возможно обобщить и~на~континуальные линейные упругие среды.
+
+Матрица жёсткости~${C_{ik}}$ обычно бывает положительной (таков\'{о} свойство конструкций). % в~природе и~технике).
+Тогда ${\operatorname{det} \hspace{.16ex} C_{ik} > 0}$, линейная алгебраическая система~\eqref{staticsoflineardiscretesystem} однозначно разрешима, а~решение её можно заменить минимизацией квадратичной формы
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{discrete:potentialenergyofsystem}
+\textit{Э} \hspace{.16ex} (q_j) \hspace{.1ex}
+\equiv \hspace{.1ex}
+\Pi - \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex}
+\mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q_i
+%
+= \hspace{.1ex}
+\smalldisplaystyleonehalf \hspace{.32ex}
+\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i,k}}$} \hspace{.2ex}
+%%\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex}
+\hspace{.1ex} q_{i} \hspace{.1ex} C_{ik} \hspace{.1ex} q_{k}
+- \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex}
+\mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q_i
+%
+\hspace{.1ex}\to\hspace{.25ex} \mathrm{min} \hspace{.16ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.1em} Бывает однако, что конструкция неудачно спроектирована, тогда матрица жёсткости сингулярна~(необратима) %%(noninvertible)
+и~${\operatorname{det} \hspace{.16ex} C_{ik} = \hspace{.1ex} 0}$ (или~же весьма близок к~нулю~--- nearly singular матрица с~${\operatorname{det} \hspace{.16ex} C_{ik} \approx \hspace{.1ex} 0}$). Тогда решение линейной проблемы статики~\eqref{staticsoflineardiscretesystem} существует лишь при ортогональности столбца нагрузок~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$ всем линейно независимым решениям однородной сопряжённой системы
 
 ...
 
+Известные теоремы статики линейно упругих систем легко доказываются в~случае конечного числа степеней свободы. Теорема \href{https://en.wikipedia.org/wiki/Beno%C3%AEt_Paul_%C3%89mile_Clapeyron}{Клапейрона} выражается равенством
 
+...
+
+Но вернёмся к~проблеме~\eqref{staticequilibriumwithpotentialenergy}, иногда называемой теоремой Лагранжа. Её можно обратить преобразованием Лежандра
+
+\nopagebreak\vspace{-0.16em}\begin{equation}\label{Castigliano:theorem}
+q_i \hspace{.1ex} = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\Pi}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $} \hspace{.16ex} ,
+\:\:
+\widehat{\Pi}(\mathcircabove{Q}_{\hspace{-0.1ex}i})
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q_i - \Pi
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.2em} \noindent Это теорема \href{https://en.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Кастильяно}, $\widehat{\Pi}$ называется дополнительной энергией. В~линейной системе \eqref{staticsoflineardiscretesystem} ${\Rightarrow}$ ${\widehat{\Pi} = \Pi}$. Теорема~\eqref{Castigliano:theorem} бывает очень полезна~--- когда легко находится~${\widehat{\Pi}(\mathcircabove{Q}_{\hspace{-0.1ex}i})}$. Встречаются так называемые статически определимые системы, в~которых все внутренние силы удаётся найти лишь из баланса сил и~моментов. Для них \eqref{Castigliano:theorem} эффективна.
+
+В~отличие от линейной задачи~\eqref{staticsoflineardiscretesystem}, нелинейная задача~\eqref{staticequilibriumwithpotentialenergy} может не~иметь решений вовсе или~же иметь их н\'{е}сколько.
+
+...
+
+Разговор о~статике в~общей механике закончим принципом д’Аламбера~(d’Alembert’s principle): уравнения динамики отличаются от~статических лишь наличием дополнительных \inquotes{фиктивных сил инерции}~${m_k \mathdotdotabove{\bm{r}}_k}$. Принцип д’Аламбера очевиден, но бездумное его применение может привести к~ошибкам. Например, уравнения вязкой жидкости в~статике и~динамике отличаются не~только лишь инерционными членами. Для упругих~же сред принцип д’Аламбера полностью справедлив.
 
 \end{otherlanguage}
 
 \en{\section{Mechanics of relative motion}}
+
 \ru{\section{Механика относительного движения}}
+
+\label{para:mechanicsofrelativemotion}
 
 \begin{otherlanguage}{russian}
 
-До~сих~пор не~ставился вопрос о~системе отсчёта
+До~сих~пор не~ставился вопрос о~системе отсчёта, всё рассматривалось в~некой \inquotes{абсолютной} системе или одной из инерциальных систем~(\pararef{para:initialconcepts.discreteapproach}). Теперь представим себе две системы: \inquotes{абсолютную} и~подвижную
 
 ...
 
@@ -489,13 +654,24 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 
 \end{otherlanguage}
 
-\en{\section{Small oscillations}}
-\ru{\section{Малые колебания}}
+\en{\section{Small oscillations (vibrations)}}
+
+\ru{\section{Малые колебания (вибрации)}}
+
 \label{para:smalloscillations}
 
 \begin{otherlanguage}{russian}
 
-Если статика линейно\hbox{-}упругой системы описывается
+Если статика линейной системы описывается уравнениями~\eqref{staticsoflineardiscretesystem}, то в~динамике имеем
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{dynamicsoflineardiscretesystem}
+\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.2ex} A_{ik} \hspace{.12ex} \mathdotdotabove{q}_k + C_{ik} \hspace{.12ex} q_k \right)
+\hspace{-0.25ex} = \hspace{.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i}(t) \hspace{.1ex} ,
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.2em} \noindent где ${A_{ik}}$~--- симметричная и~положительная \inquotesx{матрица кинетической энергии}[.]
+
+Изучение колеблющейся системы обычно начинают с~нормальных~(главных) колебаний
 
 ...
 
@@ -509,7 +685,7 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 
 \begin{otherlanguage}{russian}
 
-В~длинном списке книг по~общей механике можно найти труды не~только механиков\hbox{-}профессионалов~\cite{goldstein-classicalmechanics, loitsjanskiy.lurie, lurie-analyticalmechanics, olkhovskiy-theoreticalmechanicsforphysicists, treatiseonanalyticaldynamics-by-l.a.pars}, но~и физиков\hbox{-}теоретиков широкой ориентации~\cite{landau.lifshitz-shortcourse, terhaar-hamiltonianmechanics}. Рекомендую курс Ф.\,Р.\;Гантмахера~\cite{gantmacher} с~компактным, но~полным изложением осн\'{о}в.
+В~длинном списке книг по~общей механике можно найти труды не~только механиков\hbox{-}профессионалов~\cite{goldstein-classicalmechanics, loitsjanskiy.lurie, lurie-analyticalmechanics, olkhovskiy-theoreticalmechanicsforphysicists, treatiseonanalyticaldynamics-by-l.a.pars}, но~и физиков\hbox{-}теоретиков широкой ориентации~\cite{landau.lifshitz-shortcourse, terhaar-hamiltonianmechanics}. Интересен курс Ф.\,Р.\;Гантмахера~\cite{gantmacher} с~компактным, но~полным изложением осн\'{о}в.
 
 \end{otherlanguage}
 

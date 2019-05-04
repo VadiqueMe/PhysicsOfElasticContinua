@@ -346,29 +346,33 @@ d_i p_i \hspace{0.32ex} \bm{q}\bm{b} & \!=\!\! & p_i d_i \hspace{0.32ex} \bm{q}\
 
 Свёртка может повторяться: ${\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} \equiv A_{ij} B_{ji}}$, и~вот немного полезных равенств для~тензоров второй сложности
 \begin{equation}
-\begin{array}{cr}
-\bm{A} \dotdotp \hspace{-0.1ex} \bm{E} = \bm{E} \dotdotp \hspace{-0.1ex} \bm{A} = \operatorname{tr} \bm{A} = A_{jj} \hspace{0.1ex},\\[0.7ex]
+\begin{array}{c}
+\bm{A} \dotdotp \hspace{-0.1ex} \bm{E} = \bm{E} \dotdotp \hspace{-0.1ex} \bm{A} = \operatorname{tr} \bm{A} = A_{jj} \hspace{0.1ex} ,
+\\[.2em]
 %
 \bm{A} \dotdotp \hspace{-0.1ex} \bm{B} = \bm{B} \dotdotp \hspace{-0.1ex} \bm{A} \hspace{0.1ex}, \:\,
 \bm{A} \dotdotp \bm{B}^{\T} \hspace{-0.2ex} = \bm{A}^{\hspace{-0.16ex}\T} \hspace{-0.2ex} \dotdotp \bm{B} ,
-\\[0.7ex]
+\\[.2em]
 %
-\bm{A} \narrowdotdotp \bm{B} \narrowdotp \bm{C} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \hspace{0.1ex} \bm{C} = \bm{C} \narrowdotdotp \hspace{-0.1ex} \bm{A} \narrowdotp \bm{B} = A_{ij} B_{jk} C_{ki} \hspace{0.1ex},\\[0.6ex]
+\bm{A} \narrowdotdotp \bm{B} \narrowdotp \bm{C} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \hspace{0.1ex} \bm{C} = \bm{C} \narrowdotdotp \hspace{-0.1ex} \bm{A} \narrowdotp \bm{B} = A_{ij} B_{jk} C_{ki} \hspace{0.1ex} ,
+\\[.15em]
 %
-\bm{A} \hspace{-0.1ex}\narrowdotdotp \bm{B} \narrowdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} \narrowdotdotp \bm{D} = \\
-\hspace{11.5em} = \bm{D} \narrowdotdotp \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} = A_{ij} B_{jk} C_{kn} D_{ni} \hspace{0.1ex}.
+\bm{A} \hspace{-0.1ex}\narrowdotdotp \bm{B} \narrowdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} \narrowdotdotp \bm{D} = \hspace*{2.5em} \\
+\hspace{10.5em} = \bm{D} \narrowdotdotp \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} = A_{ij} B_{jk} C_{kn} D_{ni} \hspace{0.1ex}.
 \end{array}
 \end{equation}
 
 \end{otherlanguage}
 
 \en{\section{Polyadic representation}}
+
 \ru{\section{Полиадное представление}}
+
 \label{para:polyadicrepresentation}
 
 \begin{otherlanguage}{russian}
 
-Мы ввели тензоры как некие инвариантные объекты, проявляющиеся в~каждом базисе в~виде совокупности чисел. Такое изложение характерно для большинства руководств по~тензорному исчислению. Индексная запись конструктивна и~проста, если нам достаточно декартовых координат. Но~для~механики упругих тел этого мало, она требует более изящного, мощного и~совершенного аппарата прямого тензорного исчисления, оперирующего лишь с~инвариантными безындексными объектами.
+Мы ввели тензоры как некие инвариантные объекты, проявляющиеся в~каждом базисе в~виде совокупности чисел. Такое изложение характерно для большинства руководств по~тензорному исчислению. Индексная запись конструктивна, когда достаточно декартовых координат. Но~для~физики упругих тел этого мало, она требует более изящного, мощного и~совершенного аппарата прямого тензорного исчисления, оперирующего лишь с~инвариантными безындексными объектами.
 
 Соотношение ${\bm{v} = v_i \bm{e}_i}$ из~\eqref{vectorcomponents} связывает вектор ${\bm{v}}$ с~базисом~${\bm{e}_i}$ и~компонентами ${v_i}$ вектора в~этом базисе. Вскоре мы установим аналогичное соотношение для~тензора любой сложности.
 
@@ -381,21 +385,33 @@ d_i p_i \hspace{0.32ex} \bm{q}\bm{b} & \!=\!\! & p_i d_i \hspace{0.32ex} \bm{q}\
 
 \vspace{-0.1em} \noindent это компоненты тензора ${^2\!\bm{B}}$. При повороте же базиса
 \[
-B'_{ij} \bm{e}'_{i} \bm{e}'_{j} \hspace{-0.1ex} = \cosinematrix{i'p} \cosinematrix{j'q} B_{pq} \cosinematrix{i'n} \bm{e}_n \cosinematrix{j'm} \bm{e}_m \hspace{-0.2ex} = \delta_{pn} \delta_{qm} B_{pq} \bm{e}_n \bm{e}_m \hspace{-0.2ex} = B_{pq} \bm{e}_p \bm{e}_q.
+B'_{ij} \bm{e}'_{i} \bm{e}'_{j} \hspace{-0.1ex} = \cosinematrix{i'p} \cosinematrix{j'q} B_{pq} \cosinematrix{i'n} \bm{e}_n \cosinematrix{j'm} \bm{e}_m \hspace{-0.2ex} = \delta_{pn} \delta_{qm} B_{pq} \bm{e}_n \bm{e}_m \hspace{-0.2ex} = B_{pq} \bm{e}_p \bm{e}_q \hspace{.1ex} .
 \]
 
 Сомнения отпали~--- приходим к диадному представлению тензора второй сложности
 \begin{equation}\label{polyada:2}
-^2\!\bm{B} = B_{ij} \bm{e}_i \bm{e}_j .
+^2\!\bm{B} = B_{ij} \bm{e}_i \bm{e}_j \hspace{.1ex} .
 \end{equation}
 
 \vspace{-0.2em} Для единичного тензора
-\[ \bm{E} = E_{ij} \bm{e}_i \bm{e}_j = \delta_{ij} \bm{e}_i \bm{e}_j = \bm{e}_i \bm{e}_i = \bm{e}_1 \bm{e}_1 + \bm{e}_2 \bm{e}_2 + \bm{e}_3 \bm{e}_3. \]
+\[ \bm{E} =
+E_{ij} \hspace{.16ex} \bm{e}_i \bm{e}_j \hspace{-0.1ex} =
+\delta_{ij} \hspace{.16ex} \bm{e}_i \bm{e}_j \hspace{-0.1ex} =
+\bm{e}_i \bm{e}_i \hspace{-0.1ex} =
+\bm{e}_1 \bm{e}_1 + \bm{e}_2 \bm{e}_2 + \bm{e}_3 \bm{e}_3
+\hspace{.1ex} . \]
 
 Полиадные представления типа \eqref{polyada:2} позволяют проще и~с~б\'{о}льшим пониманием оперировать с~тензорами:
-\[ \bm{v} \dotp {^2\!\bm{B}} = v_i\bm{e}_i \dotp B_{jk}\bm{e}_j\bm{e}_k = v_i B_{jk} \delta_{ij} \bm{e}_k = v_i B_{ik} \bm{e}_k, \]\vspace{-1.25em}
+\[ \bm{v} \dotp {^2\!\bm{B}} =
+v_i\bm{e}_i \dotp B_{jk}\bm{e}_j\bm{e}_k \hspace{-0.1ex} =
+v_i B_{jk} \delta_{ij} \bm{e}_k \hspace{-0.1ex} =
+v_i B_{ik} \bm{e}_k \hspace{.1ex} , \]\vspace{-1.25em}
 \begin{equation}\label{tensorcomponents}
-\bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_j = \bm{e}_i \dotp B_{pq}\bm{e}_p\bm{e}_q \dotp \bm{e}_j = B_{pq} \delta_{ip} \delta_{qj} = B_{ij} = {^2\!\bm{B}} \dotdotp \bm{e}_j \bm{e}_i.
+\bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_j \hspace{-0.1ex} =
+\bm{e}_i \dotp B_{pq}\bm{e}_p\bm{e}_q \dotp \bm{e}_j \hspace{-0.1ex} =
+B_{pq} \delta_{ip} \delta_{qj} =
+B_{ij} =
+{^2\!\bm{B}} \dotdotp \bm{e}_j \bm{e}_i \hspace{.1ex} .
 \end{equation}
 
 Последняя строчка весьма важна: выражение компонент тензора второй сложности представлено через сам тензор. Закон~\eqref{orthotransform:2} ортогонального преобразования компонент при~повороте базиса оказывается очевидным следствием~\eqref{tensorcomponents}.
@@ -410,8 +426,12 @@ C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp
 
 Используя разложение по~полиадам, легко увидеть справедливость свойства~\eqref{identifyofidentitytensor} \inquotes{единичности} тензора~$\bm{E}$:
 \vspace{0.1em}\[\begin{array}{c}
-{^\mathrm{n}\hspace{-0.2ex}\bm{a}} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q , \;\,  \bm{E} = \bm{e}_e \bm{e}_e \\[0.4em]
-{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \tikzmark{BeginDeltaEQBrace} {\bm{e}_q \dotp \bm{e}_e} \tikzmark{EndDeltaEQBrace} \bm{e}_e = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \hspace{0.1ex}, \\[1em]
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q , \;\,  \bm{E} = \bm{e}_e \bm{e}_e
+\\[.4em]
+%
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \tikzmark{BeginDeltaEQBrace} {\bm{e}_q \dotp \bm{e}_e} \tikzmark{EndDeltaEQBrace} \bm{e}_e = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \hspace{0.1ex},
+\\[1.1em]
+%
 \bm{E} \dotp {^\mathrm{n}\hspace{-0.2ex}\bm{a}} = \bm{e}_e \bm{e}_e \dotp a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = a_{ij \ldots q} \hspace{0.2ex} \delta_{ei} \hspace{0.2ex} \bm{e}_e \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}}.
 \end{array}\]
 \AddUnderBrace[line width=.75pt]{BeginDeltaEQBrace}{EndDeltaEQBrace}%
@@ -463,7 +483,7 @@ C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp
 
 Однако векторное произведение можно не~считать самостоятельным действием. Оно сводится к~четырём ранее описанным и~обобщается на~тензоры любой сложности. Покажем это.
 
-Сначала введём символы \hbox{O.\hspace{0.1ex}Veblen’а}~${e_{ijk}}$: ${e_{123} \hspace{-0.15ex}= e_{231} \hspace{-0.15ex}= e_{312} \hspace{-0.15ex}= 1}$, ${e_{213} \hspace{-0.15ex}= e_{321} \hspace{-0.15ex}= e_{132} \hspace{-0.15ex}= -1}$, остальные нули. Символы~${e_{ijk}}$~(${\pm 1}$ или~$0$) не~меняются при круговой перестановке индексов, меняют знак при~перестановке любых двух индексов и~обращаются в~нуль при~совпадении какой\hbox{-}либо пары.
+Сначала введём символы перестановки (permutation symbols) \hbox{O.\hspace{0.1ex}Veblen’а}~${e_{ijk}}$: ${e_{123} \hspace{-0.15ex}= e_{231} \hspace{-0.15ex}= e_{312} \hspace{-0.15ex}= 1}$, ${e_{213} \hspace{-0.15ex}= e_{321} \hspace{-0.15ex}= e_{132} \hspace{-0.15ex}= -1}$, остальные нули. Символы~${e_{ijk}}$~(${\pm 1}$ или~$0$) не~меняются при круговой перестановке индексов, меняют знак при~перестановке любых двух индексов и~обращаются в~нуль при~совпадении какой\hbox{-}либо пары.
 
 Через символы Веблена определитель~(детерминант) матрицы~${A_{ij}}$ выражается так:
 \[ \operatorname{det} A_{ij} = e_{ijk} A_{1i} A_{2j} A_{3k} = e_{ijk} A_{i1} A_{j2} A_{k3} \hspace{0.1ex} . \]
@@ -1203,6 +1223,7 @@ Comment\footnote{Поворот тела вокруг какой\hbox{-}то о�
 \end{otherlanguage}
 
 \en{\section{Variations}}
+
 \ru{\section{Варьирование}}
 
 \begin{otherlanguage}{russian}
@@ -1245,7 +1266,9 @@ Now, imagine if we have an arbitrary path through the configuration space/manifo
 \end{otherlanguage}
 
 \en{\section{Polar decomposition}}
+
 \ru{\section{Полярное разложение}}
+
 \label{para:polardecomposition}
 
 \begin{otherlanguage}{russian}
@@ -1265,6 +1288,7 @@ Now, imagine if we have an arbitrary path through the configuration space/manifo
 \newpage
 
 \en{\section{Tensors in oblique basis}}
+
 \ru{\section{Тензоры в косоугольном базисе}}
 
 \begin{otherlanguage}{russian}
@@ -1829,7 +1853,7 @@ Commonly used curvilinear coordinate systems include: rectangular, spherical, an
 
 Теорема Гаусса о~дивергенции~--- про~то, как заменить объёмный интеграл поверхностным~(и~наоборот). В~этой теореме рассматривается поток (ef)flux вектора через ограничивающую объём~$V$ з\'{а}мкнутую поверхность ${\mathcal{O}(\boundary V)}$ с~единичным вектором внешней нормали~$\bm{n}$
 \begin{equation}
-\ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary V)}} \hspace{-0.1ex} \bm{n} \dotp \bm{a} \hspace{.4ex} d\mathcal{O} \hspace{.12ex} = \integral\displaylimits_V \hspace{-0.3ex} \boldnabla \dotp \bm{a} \hspace{0.4ex} dV \hspace{-0.25ex}.
+\ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary V)}} \hspace{-0.1ex} \bm{n} \dotp \bm{a} \hspace{.4ex} d\mathcal{O} \hspace{.12ex} = \integral\displaylimits_{V} \hspace{-0.3ex} \boldnabla \dotp \bm{a} \hspace{0.4ex} dV \hspace{-0.25ex}.
 \end{equation}
 
 Объём~$V$ нарезается тремя семействами координатных поверхностей на~множество бесконечно малых элементов. Поток через поверхность ${\mathcal{O}(\boundary V)}$ равен сумме потоков через края получившихся элементов. В~бесконечной малости каждый такой элемент~--- маленький локальный дифференциальный кубик~(параллелепипед). ... Поток вектора~$\bm{a}$ через грани малого кубика объёма~$dV$ есть ${\sum_{i = 1}^{6} \bm{n}_i \dotp \bm{a} \hspace{.2ex} \mathcal{O}_i}$, а~через сам этот объём поток равен ${\boldnabla \dotp \bm{a} \hspace{.32ex} dV}$.
@@ -1892,7 +1916,7 @@ The \emph{Ricci curvature tensor}, named after \href{https://en.wikipedia.org/wi
 \par}
 \end{changemargin}
 
-\noindent Рассматривая операции тензорного анализа в~криволинейных координатах, мы исходили из~представления радиуса\hbox{-}вектора функцией этих координат: ${\bm{r}(q^{\hspace{.1ex}i})}$. Этой зависимостью порождаются выражения
+\noindent Рассматривая операции тензорного анализа в~криволинейных координатах, мы исходили из~представления вектора\hbox{-}радиуса функцией этих координат: ${\bm{r}(q^{\hspace{.1ex}i})}$. Этой зависимостью порождаются выражения
 векторов локального касательного \hbox{базиса} ${\bm{r}_i \hspace{-0.16ex} \equiv \partial_i \hspace{.12ex} \bm{r}}$\:${( \hspace{.12ex} \partial_i \hspace{-0.1ex} \equiv \smash{\raisemath{0.16em}{\scalebox{0.88}{$\partial$}} \hspace{-0.24ex} / \hspace{-0.32ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial$} q^{\hspace{.1ex}i}}} \hspace{.16ex} )}$,
 компонент ${\textsl{g}_{ij} \hspace{-0.24ex} \equiv \bm{r}_i \hspace{-0.16ex} \dotp \bm{r}_{\hspace{-0.2ex}j}}$ и~${\textsl{g}^{\hspace{.25ex}ij} \hspace{-0.32ex} \equiv \bm{r}^i \hspace{-0.32ex} \dotp \bm{r}^j \hspace{-0.32ex} = \smash{\textsl{g}_{ij}^{\hspace{.4ex}\expminusone}}}$ единичного \inquotes{метрического} тензора~${\bm{E} = \bm{r}_i \bm{r}^i \hspace{-0.2ex} = \bm{r}^i \bm{r}_i}$,
 векторов локального взаимного кокасательного \hbox{базиса} ${\bm{r}^i \hspace{-0.32ex} \dotp \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.16ex} = \delta_j^{\hspace{0.1ex}i}}$, ${\bm{r}^i \hspace{-0.25ex} = \textsl{g}^{\hspace{.25ex}ij} \bm{r}_{\hspace{-0.2ex}j}}$,
@@ -2017,7 +2041,7 @@ The curvature tensor measures noncommutativity of the covariant derivative, and 
 \begin{otherlanguage}{russian}
 
 Существует немало книг, в~которых рассматривается лишь аппарат тензорного исчисления~\cite{borisenkotarapov, mcconnell-tensoranalysis, rashevsky-riemanniangeometry, sokolnikov, schouten-tensoranalysis}. Преобладает \inquotes{индексный} подход~--- тензоры трактуются как матрицы компонент, преобразующиеся определённым путём.
-В~книгах А.\,И.\;Лурье~\cite{lurie-nonlinearelasticity, lurie-theoryofelasticity} есть специальные приложения о~тензорах.
+\inquotes{Прямой} подход к~тензорам излагается, например, в~приложениях книг А.\,И.\;Лурье~\cite{lurie-nonlinearelasticity, lurie-theoryofelasticity}.
 Яркое описание теории векторных полей можно найти у~R.\:Feynman’а~\cite{feynman-lecturesonphysics}.
 Сведения о~тензорном исчислении содержатся и~в~своеобразной и~глубокой книге C.\:Truesdell’а~\cite{truesdell-firstcourse}.
 

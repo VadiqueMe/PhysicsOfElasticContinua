@@ -475,7 +475,7 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 \ru{Согласно принципу виртуальной работы для некоего конечного объёма сплошной среды}
 
 \nopagebreak\ru{\vspace{-0.1em}}\begin{equation}\label{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \left(^{\mathstrut} \hspace{-0.1ex} \rho \bm{f} \dotp \variation{\bm{R}} \hspace{.16ex} + \variation{\internalwork} \right) \hspace{-0.3ex} d\mathcal{V}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.1ex} \rho \bm{f} \dotp \variation{\bm{R}} \hspace{.16ex} + \variation{\internalwork} \right) \hspace{-0.3ex} d\mathcal{V}
 + \ointegral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.2ex} \mathboldN \dotp \cauchystress \dotp \variation{\bm{R}} \hspace{0.4ex} dO = \hspace{0.1ex} 0 \hspace{0.1ex}.
 \end{equation}
 
@@ -500,7 +500,7 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
 \left(^{\mathstrut} \hspace{-0.2ex} \boldnabla \dotp \cauchystress + \rho \bm{f} \right) \hspace{-0.32ex} \dotp \variation{\bm{R}} \hspace{.2ex}
 + \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.1ex}\T} \hspace{-0.32ex}
-+ \variation{\internalwork}
++ \hspace{.1ex} \variation{\internalwork}
 = \hspace{.1ex} 0 \hspace{.1ex}.
 \end{equation}
 
@@ -512,10 +512,10 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 \variation{\bm{R}} = \boldconst \hspace{.1ex} + \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R} \hspace{.1ex}, \:
 \varvector{o} = \boldconst
 \hspace{.4ex}\Rightarrow\hspace{.2ex}
-\variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{0.1ex}.
+\variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{.1ex}.
 \end{equation}
 
-\vspace{-0.1em} \en{Assuming}\ru{Полагая} ${\varvector{\bm{o}} \hspace{-0.1ex} = \bm{0}}$, ${\variation{\bm{R}} = \boldconst}$ (\en{just translation}\ru{лишь трансляция}) ${\Rightarrow}$~${\boldnabla \hspace{.1ex} \variation{\bm{R}} = \hspace{-0.12ex} {^2\bm{0}}}$,
+\vspace{-0.1em} \en{Assuming}\ru{Полагая} ${\varvector{\bm{o}} \hspace{-0.1ex} = \bm{0}}$, ${\variation{\bm{R}} = \boldconst}$ (\en{just translation}\ru{лишь трансляция}) ${\Rightarrow}$~${\hspace{-0.2ex}\boldnabla \hspace{.1ex} \variation{\bm{R}} = \hspace{-0.12ex} {^2\bm{0}}}$,
 \en{from}\ru{из}~\eqref{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
 \en{and}\ru{и}~\eqref{princlipleofvirtualwork.worknullifies:nonlinearmomentlesscontinuum}
 \en{ensues balance of~forces~(of~momentum)}\ru{следует баланс сил~(импульса)}
@@ -524,15 +524,22 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 \boldnabla \dotp \cauchystress + \rho \bm{f} \hspace{-0.1ex} = \bm{0}
 \end{equation*}
 
-\vspace{-0.5em} \noindent ??? \en{and}\ru{и} ??? ${\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.1ex}\T} \hspace{-0.32ex} = 0}$ ???
+\vspace{-0.5em} \noindent ??? \en{and}\ru{и} ??? ${\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.32ex} = 0}$ ???
 
 \en{If}\ru{Если} ${\variation{\bm{R}} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R}}$ (\en{just rotation}\ru{лишь поворот}), \en{then}\ru{то}
 
-\begin{equation*}
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\begin{array}{c}
 \boldnabla \hspace{.1ex} \variation{\bm{R}}
 = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.32ex} \boldnabla \hspace{-0.2ex} \bm{R}
 = \varvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
-= \hspace{-0.2ex} - \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
+= \hspace{-0.1ex} \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
+= - \hspace{-0.2ex} \left( \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o} \right)^{\hspace{-0.1ex}\T} \hspace{-0.64ex} ,
+\\[.25em]
+%
+\boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.25ex}
+= - \hspace{.1ex} \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
+\end{array}
 \end{equation*}
 
 
