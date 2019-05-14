@@ -36,11 +36,15 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 Но~может~быть эффективно и~иное описание~--- пространственное~(или эйлерово), при~котором рассматриваются процессы не~в~частицах среды, а~в~точках пространства. Полагая, например, ${\rho \!=\! \rho \hspace{.16ex} (\hspace{-0.1ex}\bm{R}, t)}$, мы следим за~происходящим в~этом месте и~не~смущаемся непрерывным уходом и~приходом частиц.
 
+\end{otherlanguage}
+
 \en{\section{Differentiation}}
 
 \ru{\section{Дифференцирование}}
 
 \label{para:differentiation}
+
+\begin{otherlanguage}{russian}
 
 Имея зависимости ${\varphi \!=\! \varphi(\bm{r})}$, ${\bm{r} \!=\! \bm{r}(q^{i})}$, можно ввести базис ${\bm{r}_i \equiv \partial_i \bm{r}}$~${(\partial_i \equiv \frac{\partial}{\partial q^i})}$, взаимный базис ${\bm{r}^i}$ и~оператор Гамильтона
 \vspace{-0.12em}\begin{equation}
@@ -68,6 +72,8 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 \vspace{-0.1em} Не~ст\'{о}ит противопоставлять материальное и~пространственное описание. Далее будут использоваться оба в~зависимости от~ситуации.
 
+\end{otherlanguage}
+
 \newpage
 
 \en{\section{Motion gradient}}
@@ -75,6 +81,8 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 \ru{\section{Градиент движения}}
 
 \label{para:motiongradient}
+
+\begin{otherlanguage}{russian}
 
 При ${t = \const}$
 
@@ -127,12 +135,15 @@ d\bm{r} = d\bm{R} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \bold
 
 
 
+\end{otherlanguage}
 
 \en{\section{Tensors and measures of deformation}}
 
 \ru{\section{Тензоры и меры деформации}}
 
 \label{para:deformationtensors}
+
+\begin{otherlanguage}{russian}
 
 Градиент движения~$\bm{F}$ характеризует и~деформацию тела, и~поворот тела как~целого. \inquotes{Чистыми}~же тензорами деформации являются~${\bm{U}\hspace{-0.25ex}}$ и~${\bm{V}\hspace{-0.4ex}}$, а~также их вторые степени
 \nopagebreak\vspace{.12em}\begin{equation}\label{deformationmeasures}
@@ -207,7 +218,7 @@ c_{ij} = {\frac{\partial X_{K}}{\partial x_{i}}}{\frac{\partial X_{K}}{\partial 
 
 \subsection*{Finite strain tensors}
 
-The concept of \emph{strain} is used to evaluate how much a given displacement differs locally from a~body displacement as a~whole (a~\inquotes{rigid body displacement}). One of such strains for large deformations is the \emph{Lagrangian finite strain tensor}, also called the \emph{Green\hbox{--}Lagrangian strain tensor} or \emph{Green\hbox{--}Saint\hbox{-}Venant strain tensor}, defined as
+The concept of \emph{strain} is used to evaluate how much a given displacement differs locally from a~body displacement as a~whole (a~\inquotes{rigid body displacement}). One of such strains for large deformations is the \emph{Lagrangian finite strain tensor}, also called the \emph{Green\hbox{--}Lagrangian strain tensor} or \emph{Green\hbox{--}Saint\hbox{-\hspace{-0.2ex}}Venant strain tensor}, defined as
 
 ${\displaystyle \bm{C} = \onehalf (\bm{G} - \bm{E})
 \quad {\text{or}} \quad
@@ -275,9 +286,15 @@ which do not belong to the Seth\hbox{--}Hill class, but have the same 2nd\hbox{-
 
 
 
+\end{otherlanguage}
+
 \en{\section{Velocity field}}
 
 \ru{\section{Поле скоростей}}
+
+\label{para:velocityfield}
+
+\begin{otherlanguage}{russian}
 
 Этот вопрос рассматривается во~всех курсах механики сплошной среды, но в~теории упругости можно обойтись без него. Среди различных моделей материального континуума упругое твёрдое тело выделяется тем, что полная система уравнений для~него выводится единой логически стройной процедурой (о~ней~--- ниже). Но чтобы читатель лучше увидел преимущества этой процедуры, мы пока следуем традиционным для механики сплошной среды путём.
 
@@ -288,7 +305,7 @@ which do not belong to the Seth\hbox{--}Hill class, but have the same 2nd\hbox{-
 
 
 
-В~теории упругости дискуссии о~поворотах не~будет~--- истинное представление появится в~ходе логически стройных выкладок без дополнительных гипотез.
+Для упругих сред дискуссия о~поворотах не~нужна, истинное представление появляется в~ходе логически стройных выкладок без добавочных гипотез.
 
 \end{otherlanguage}
 
@@ -359,9 +376,17 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 \begin{otherlanguage}{russian}
 
-Поскольку частицы безмоментного континуума~--- точки лишь с~трансляционными степенями свободы, то соответствующими обобщёнными силами будут только векторы сил (без моментов).
+% forces are
+% • linear force
+% • angular torque (moment, moment of force)
 
-На~элементарный объём~$d\mathcal{V}$ действует некая сила~${\rho \bm{f} d\mathcal{V}}$; \hbox{если}~$\bm{f}$~--- массовая сила (действующая на~единицу массы), то~${\rho \bm{f}}$~--- объёмная. Например: силы тяжести, силы инерции в~неинерциальных системах отсчёта, электромагнитные силы при~наличии в~среде зарядов и~токов.
+Поскольку частицы этой модели континуума~--- точки лишь с~трансляционными степенями свободы, то среди обобщённых сил нет моментов.
+
+% forces are
+% • body force, within a force field
+% • contact force, by direct physical contact
+
+На~элементарный объём~$d\mathcal{V}$ действует некая сила~${\rho \bm{f} d\mathcal{V}}$; \hbox{если}~$\bm{f}$~--- массовая сила (действующая на~единицу массы), то~${\rho \bm{f}}$~--- объёмная. Такие силы происходят от силовых полей, например: силы тяжести, силы инерции в~неинерциальных системах отсчёта, электромагнитные силы при~наличии в~среде зарядов и~токов.
 
 На~элементарную поверхность~$dO\hspace{-0.12ex}$ действует поверхностная сила~${\bm{p} \hspace{0.2ex} dO\hspace{-0.12ex}}$. Это может~быть давление, трение, электростатическая сила при~сосредоточенных на~поверхности зарядах.
 
@@ -377,11 +402,16 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 ...
 
 
+
+\end{otherlanguage}
+
 \en{\section{Balance of momentum and rotational momentum}}
 
 \ru{\section{Баланс импульса и момента импульса}}
 
 \label{para:balanceinelasticcontinuum}
+
+\begin{otherlanguage}{russian}
 
 Рассмотрим какой\hbox{-}либо кон\'{е}чный объём~$\mathcal{V}$ среды, ограниченный поверхностью~${O(\boundary \mathcal{V})}$. Формулировка баланса импульса такова
 
@@ -448,10 +478,13 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 
 
+\end{otherlanguage}
 
 \en{\section{Eigenvalues of Cauchy stress tensor}}
 
 \ru{\section{Собственные числа тензора напряжения Коши}}
+
+\begin{otherlanguage}{russian}
 
 Как и~любой симметричный тензор, $\cauchystress$ имеет три вещественных собственных числ\'{а} $\sigma_i$, называемых главными напряжениями (principal stresses), а~также ортогональную тройку собственных векторов единичной длины $\bm{e}_i$. В~представлении ${\cauchystress = \sum \hspace{-0.16ex} \sigma_i \hspace{.16ex} \bm{e}_i \bm{e}_i}$ можно считать ${\sigma_1 \hspace{-0.1ex} \geq \sigma_2 \geq \sigma_3}$, а~тройку~${\bm{e}_i}$~--- \inquotesx{правой}[.]
 
@@ -463,6 +496,8 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 
 Чтобы замкнуть систему уравнений модели сплошной среды, нужно добавить определяющие отношения~--- уравнения состояния, связывающие напряжение с~деформацией (и~другие необходимые связи). Однако, для упругой среды такой длинный путь построения модели излишен, в~чём читатель и~убедится далее.
+
+\end{otherlanguage}
 
 \en{\section{Principle of virtual work}}
 
@@ -524,30 +559,33 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 \boldnabla \dotp \cauchystress + \rho \bm{f} \hspace{-0.1ex} = \bm{0}
 \end{equation*}
 
-\vspace{-0.5em} \noindent ??? \en{and}\ru{и} ??? ${\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.32ex} = 0}$ ???
+\vspace{-0.5em} \noindent \textcolor{red}{???} \en{and}\ru{и} \textcolor{red}{???} ${\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.32ex} = 0}$ \textcolor{red}{???}
 
-\en{If}\ru{Если} ${\variation{\bm{R}} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R}}$ (\en{just rotation}\ru{лишь поворот}), \en{then}\ru{то}
+\en{If}\ru{Если} ${\variation{\bm{R}} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R}}$ (\en{just rotation}\ru{лишь поворот}) \en{with}\ru{с}~${\varvector{\bm{o}} \hspace{-0.1ex} = \boldconst}$, \en{then}\ru{то}
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\begin{array}{c}
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\begin{array}{r@{\hspace{.8ex}}l}
+\eqrefwithchapdotpara{gradientofcrossproductoftwovectors}{chapter:elementsoftensorcalculus}{para:differentiationoftensorfields}
+\,\Rightarrow &
 \boldnabla \hspace{.1ex} \variation{\bm{R}}
-= \varvector{o} \hspace{-0.2ex} \times \hspace{-0.32ex} \boldnabla \hspace{-0.2ex} \bm{R}
-= \varvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
-= \hspace{-0.1ex} \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
-= - \hspace{-0.2ex} \left( \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o} \right)^{\hspace{-0.1ex}\T} \hspace{-0.64ex} ,
+= {^2\bm{0}}
+- \hspace{-0.2ex} \boldnabla \hspace{-0.2ex} \bm{R} \times \hspace{-0.2ex} \varvector{o}
+= - \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
+= - \hspace{.2ex} \varvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
+\hspace{.1ex} ,
 \\[.25em]
 %
-\boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.25ex}
-= - \hspace{.1ex} \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
+& \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.32ex}
+= \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
+= \varvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
 \end{array}
 \end{equation*}
 
 
 ...
 
-
-
-Упругой называется среда с~потенциальными внутренними силами: ${\variation{\internalwork} = - \rho \hspace{.2ex} \variation{\widetilde{\Pi}}}$.
+\en{In an~elastic continuum internal forces are potential}\ru{В~упругой среде внутренние силы потенциальны}:
+${\variation{\internalwork} = - \rho \hspace{.2ex} \variation{\widetilde{\Pi}}}$.
 
 ...
 
@@ -558,6 +596,8 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 \end{equation}
 
 ...
+
+\begin{otherlanguage}{russian}
 
 Вид потенциала ${\widetilde{\Pi}}$ на~единицу \hbox{массы} per mass unit пока неизвестен, но очевидно что ${\widetilde{\Pi}}$ определяется деформацией.
 
@@ -599,6 +639,7 @@ When we apply energy methods in elasticity, we implicitly assume that a~body ret
 
 
 
+\end{otherlanguage}
 
 \en{\section{Constitutive relations of elasticity}}
 
@@ -607,6 +648,8 @@ When we apply energy methods in elasticity, we implicitly assume that a~body ret
 \en{Fundamental relation of~elasticity}\ru{Фундаментальное соотношение упругости}~\eqref{fundamentalrelationofelasticity}
 
 ...
+
+\begin{otherlanguage}{russian}
 
 \noindent Начальная конфигурация считается естественной (natural configuration)~--- недеформированной ненапряжённой: ${\bm{C} = \hspace{-0.1ex} {^2\bm{0}} \hspace{.4ex} \Leftrightarrow \hspace{.2ex} \cauchystress = \hspace{-0.2ex} {^2\bm{0}}}$, поэтому в~$\Pi$ нет линейных членов.
 
@@ -624,6 +667,8 @@ Rubber\hbox{-}like material (elastomer)
 
 
 
+\end{otherlanguage}
+
 \newpage
 
 \en{\section{Piola\hbox{--}Kirchhoff stress tensors and other measures of~stress}}
@@ -631,6 +676,8 @@ Rubber\hbox{-}like material (elastomer)
 \ru{\section{Тензоры напряжения Пиолы\hbox{--}Кирхгофа и~другие меры напряжения}}
 
 \label{para:piolakirchhoffstresstensor}
+
+\begin{otherlanguage}{russian}
 
 Соотношение Нансона ${\mathboldN dO = J \hspace{.1ex} \bm{n} do \dotp \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.1ex}}$ между векторами бесконечно малой площадки в~отсчётной~(${\bm{n} do}$) и~в~актуальной~(${\mathboldN dO}$) конфигурациях%
 \footnote{По\hbox{-}прежнему ${\bm{F}\hspace{-0.12ex}}$~--- градиент движения и~${J \hspace{-0.1ex} \equiv \operatorname{det} \bm{F}\hspace{-0.12ex}}$~--- якобиан.}
@@ -756,7 +803,6 @@ The quantity ${\bm{\kappa} = J \cauchystress}$ is called the \emph{Kirchhoff str
 
 \end{otherlanguage}
 
-
 \en{Here’s balance of~forces~(of~momentum) with tensor~${\hspace{.1ex}\firstpiolakirchhoffstress}$ for any undeformed volume~$\mathcircabove{V}$}
 
 \ru{Вот баланс сил~(импульса) с~тензором~${\hspace{.1ex}\firstpiolakirchhoffstress}$ для любого недеформированного объёма~$\mathcircabove{V}$}
@@ -879,7 +925,6 @@ The 2nd~Piola\hbox{--}Kirchhoff stress tensor is energy conjugate to the Green\h
 
 
 
-
 \newpage
 
 \en{\section{Variation of present configuration}}
@@ -933,18 +978,21 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 ...
 
-Введённый здесь тензор~$\bm{\Theta}$~\cite{lurie-nonlinearelasticity} связан с~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$ так~же, как $\cauchystress$ с~$\firstpiolakirchhoffstress$ (${\cauchystress = \hspace{-0.1ex} J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress\hspace{.2ex}}$). Учитывая(??синоним??) ...
+Введённый здесь тензор~$\bm{\Theta}$~\cite{lurie-nonlinearelasticity} связан с~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$ так~же, как $\cauchystress$ с~$\firstpiolakirchhoffstress$ (${\cauchystress = \hspace{-0.1ex} J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress\hspace{.2ex}}$). Учитывая\textcolor{red}{(??синоним??)} ...
 
 ...
 
 
 
+\end{otherlanguage}
 
 \en{\section{Internal constraints}}
 
 \ru{\section{Внутренние связи}}
 
 \label{para:internalconstraints}
+
+\begin{otherlanguage}{russian}
 
 До~сих~пор деформация считалась свободной, мера деформации~$\bm{C}$ могла быть любой. Однако, существуют материалы со~значительным сопротивлением некоторым видам деформации. Резина, например, изменению формы сопротивляется намного меньше, чем изменению объёма~--- некоторые виды резины можно считать несжимаемым материалом.
 
@@ -954,11 +1002,15 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 
 
+\end{otherlanguage}
+
 \en{\section{Hollow sphere under pressure}}
 
 \ru{\section{Полая сфера под действием давления}}
 
 \label{para:hollowsphereunderpressure}
+
+\begin{otherlanguage}{russian}
 
 Решение этой относительно простой задачи описано во~многих книгах. В~отсчётной~(ненапряжённой) конфигурации имеем сферу с~внутренним радиусом~${r \!=\! r_0}$ и~наружным~${r \!=\! r_1}$. Давление равно $p_0$ внутри и~$p_1$ снаружи.
 
@@ -1035,14 +1087,18 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 Подобное введение напряжений показано в~книге~\cite{rabotnov-mechanicsofdeformable}. Новых результатов тут нет, но интересна сама возможность одновременного вывода тех уравнений механики сплошной среды, которые традиционно считались независимыми. В~следующих главах эта техника используется для построения новых континуальных моделей.
 
+\end{otherlanguage}
+
 \section*{\small \wordforbibliography}
 
 \begin{changemargin}{\parindent}{0pt}
 \fontsize{10}{12}\selectfont
 
+\begin{otherlanguage}{russian}
+
 Глубина изложения нелинейной безмоментной упругости характерна для книг А.\,И.\:Лурье~\cite{lurie-nonlinearelasticity, lurie-theoryofelasticity}. Оригинальность как~основных идей, так~и~стиля присуща книге C.\:Truesdell’а~\cite{truesdell-firstcourse}. Много ценной информации можно найти у~К.\,Ф.\:Черн\'{ы}х~\cite{chernyh-nonlinearelasticity}. Ст\'{о}ит отметить и~книгу Л.\,М.\:Зубова~\cite{zubov}. Монография Ю.\,Н.\:Работнова~\cite{rabotnov-mechanicsofdeformable}, где напряжения представлены как множители Лагранжа, очень интересна и~своеобразна. О~применении нелинейной теории упругости в~смежных областях рассказано в~книге C.\:Teodosiu~\cite{teodosiu-crystaldefects}. Повышенным математическим уровнем отличается монография Ph.\:Ciarlet~\cite{ciarlet-mathematicalelasticity}.
 \par
 
-\end{changemargin}
-
 \end{otherlanguage}
+
+\end{changemargin}

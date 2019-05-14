@@ -24,9 +24,9 @@
 
 \label{para:wholesetofequations.lineartheory}
 
-\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{E}{quations} of~nonlinear elasticity, even in simplest cases, bring to mathematically complicated problems. Therefore the~linear theory is applied everywhere. Its equations were concluded in the first half of~the~\hbox{XIX$^{\textrm{th}}$\hspace{-0.2ex}}~century by Cauchy, Navier, Lam\'{e}, Clapeyron, Poisson, Saint\hbox{-}Venant, George Green and other scientists.}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{E}{quations} of~nonlinear elasticity, even in simplest cases, bring to mathematically complicated problems. Therefore the~linear theory is applied everywhere. Its equations were concluded in the first half of~the~\hbox{XIX$^{\textrm{th}}$\hspace{-0.2ex}}~century by Cauchy, Navier, Lam\'{e}, Clapeyron, Poisson, Saint\hbox{-\hspace{-0.2ex}}Venant, George Green and other scientists.}
 
-\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{У}{равнения} нелинейной упругости, даже в~самых простых случаях, приводят к~математически сложным задачам. Поэтому повсеместно применяется линейная теория. Её~уравнения были выведены в~первой половине \hbox{XIX$^{\textrm{го}}$\hspace{-0.2ex}}~века Cauchy, Navier, Lam\'{e}, Clapeyron’ом, Poisson’ом, Saint\hbox{-}Venant’ом, George Green’ом и~другими учёными.}
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{У}{равнения} нелинейной упругости, даже в~самых простых случаях, приводят к~математически сложным задачам. Поэтому повсеместно применяется линейная теория. Её~уравнения были выведены в~первой половине \hbox{XIX$^{\textrm{го}}$\hspace{-0.2ex}}~века Cauchy, Navier, Lam\'{e}, Clapeyron’ом, Poisson’ом, Saint\hbox{-\hspace{-0.2ex}}Venant’ом, George Green’ом и~другими учёными.}
 %% --- в~основном французского происхождения~(кроме G.\:Green’а).
 
 \en{The~complete set~(system) of~equations of~classical linear theory in~direct invariant tensor notation is:}
@@ -45,7 +45,7 @@
 \en{Here}\ru{Здесь}
 $\mathboldtau$~\en{is stress tensor}\ru{--- тензор напряжения},
 $\bm{f}$~\en{is vector of~volume forces}\ru{--- вектор объёмных сил},
-$\mathboldepsilon$~\en{is linear deformation tensor}\ru{--- линейный тензор деформации},
+$\mathboldepsilon$~\en{is linear deformation tensor}\ru{--- тензор линейной деформации},
 ${\Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex})\hspace{-0.1ex}}$~\en{is elastic energy of~deformation per volume unit}\ru{--- упругая энергия деформации единицы объёма},
 ${\stiffnesstensor}$~\en{is stiffness tensor (tetravalent)}\ru{--- тензор жёсткости (четырёхвалентный)}.
 
@@ -67,7 +67,7 @@ ${\stiffnesstensor}$~\en{is stiffness tensor (tetravalent)}\ru{--- тензор 
 
 Если такой вывод кажется читателю слишком формальным и~мало\-нагляд\-ным, возможно исходить из~уравнений %%~\chapref{chapter:nonlinearcontinuum}
 
-\nopagebreak\vspace{0.1em}\begin{equation}\label{nonlinear:setofequations}
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{nonlinear:setofequations}
 \begin{array}{c}
 \boldnabla \dotp \mathboldtau \hspace{0.15ex} + \rho \bm{f} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}, \:\:
 \boldnabla = \bm{F}^{-\T} \hspace{-0.2ex} \dotp \boldnablacircled , \:\:
@@ -91,13 +91,13 @@ J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hs
 
 Невозможно сказать в~общем случае, насколько мал должен~быть параметр~$\lambda$~--- ответ зависит от~ситуации и~определяется лишь тем, описывает линейная модель интересующий эффект или~нет. Когда, например, интересна связь частот\'{ы} свободных колебаний упругого тела с~амплитудой, то нужна уж\'{е} нелинейная модель.
 
-Линейная задача ставится в~начальном объёме~\hbox{$\mathcircabove{V}$\hspace{-0.12em}}, ограниченном поверхностью~$o$ с~вектором пл\'{о}щади~${\bm{n} do}$.
+Линейная задача ставится в~начальном объёме~\hbox{$\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}$\hspace{-0.12em}}, ограниченном поверхностью~$o$ с~вектором пл\'{о}щади~${\bm{n} do}$ (\inquotes{принцип начальных размеров}).
 
-Краевые~(граничные) условия часто предполагаются такими: на~\hbox{части~${o_1}$} поверхности известны перемещения~(кинематическое краевое условие), а~на~другой \hbox{части~${o_2}$}~--- силы~(статическое краевое условие) %%уравнение равновесия на~поверхности
-\vspace{-0.75em}\begin{equation}
+Краевые~(граничные) условия чаще всего предполагаются такими: на~\hbox{части~${o_1}$} поверхности известны перемещения~(кинематическое краевое условие), а~на~другой \hbox{части~${o_2}$}~--- силы~(статическое краевое условие) %%уравнение равновесия на~поверхности
+
+\nopagebreak\vspace{-0.64em}\begin{equation}
 \bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} \bm{u}_{\raisemath{-0.1em}{0}} \hspace{0.16ex} , \:\:
 \bm{n} \dotp \mathboldtau \hspace{.2ex} \bigr|_{o_2} \hspace{-0.64ex} = \hspace{.2ex} \bm{p} \hspace{.16ex} .
-\vspace{-0.1em}
 \end{equation}
 
 Но встречаются и~более сложные комбинации, если знаем одно\-времен\-но некоторые компоненты как~$\bm{u}$, так~и~${\mathboldtau_{\hspace{-0.1ex}n} \hspace{-0.25ex} = \bm{n} \dotp \mathboldtau}$. Для примера, на~плоской грани~${x = \const}$ при~вдавливании штампа с~гладкой поверхностью ${u_x \hspace{-0.32ex} = v (y , \hspace{-0.1ex} z)}$, ${\mathtau_{xy} \hspace{-0.2ex} = \mathtau_{xz} \hspace{-0.2ex} = 0}$ (функция~$v$ определяется формой штампа).
@@ -153,7 +153,7 @@ J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hs
 \nopagebreak\vspace{-0.12em}\[\begin{array}{c}
 \mathdotabove{\mathrm{T}} =^{\displaystyle \mathstrut^{\displaystyle \mathstrut}} \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \rho \hspace{0.2ex} \mathdotabove{\bm{u}} \dotp^{\mathstrut} \hspace{-0.16ex} \mathdotabove{\bm{u}} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex}
 = \smalldisplaystyleonehalf \hspace{0.2ex} \rho \hspace{-0.1ex} \left( \mathdotabove{\bm{u}} \dotp \mathdotdotabove{\bm{u}} + \mathdotdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}} \right) \hspace{-0.12ex} =
-\rho \hspace{0.2ex} \mathdotabove{\bm{u}} \dotp \mathdotdotabove{\bm{u}} \hspace{0.1ex}, \\[.5em]
+\rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotdotabove{\bm{u}} \hspace{.1ex} , \\[.5em]
 %
 \mathdotabove{\Pi} \hspace{0.1ex} = \hspace{0.1ex} \smash{\smalldisplaystyleonehalf} \hspace{-0.25ex} \tikzmark{beginDerivativeOfElasticPotential} \left( \hspace{.1ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \mathboldepsilon \hspace{.1ex} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-1.2ex} \tikzmark{endDerivativeOfElasticPotential} \hspace{.8ex}
 = \mathboldtau \dotdotp \mathdotabove{\mathboldepsilon}
@@ -272,7 +272,7 @@ A^{3233} = A^{3332} \\
 \end{array}$}\]
 \end{comment} %%
 
-\vspace{-0.1em} Тензор жёсткости, как частная производная упругого потенциала~$\Pi$ дважды по~тензору деформаций, симметричен по~первой и~второй паре индексов: ${A^{ijkl} \hspace{-0.16ex} = A^{klij}\hspace{-0.25ex}}$, от~этого у~36 компонент из~${3^4 \hspace{-0.24ex}=\hspace{-0.12ex} 81}$ \inquotesx{есть двойн\'{и}к}[,] и~45 независимы. К~тому~же, из\hbox{-}за симметрии тензора деформаций~$\mathboldepsilon$, тензор~$\stiffnesstensor$ симметричен ещё~и~внутри каждой пары индексов: ${A^{ijkl} \hspace{-0.16ex} = A^{jikl} \hspace{-0.16ex} = A^{ijlk}}$~(${= A^{jilk}}$). Число независимых компонент при~этом снижается до~21:
+\vspace{-0.1em} Тензор жёсткости, как частная производная упругого потенциала~$\Pi$ дважды по~тому~же тензору~$\mathboldepsilon$, симметричен по~первой и~второй паре индексов: ${A^{ijkl} \hspace{-0.16ex} = A^{klij}\hspace{-0.25ex}}$, от~этого у~36 компонент из~${3^4 \hspace{-0.24ex}=\hspace{-0.12ex} 81}$ \inquotesx{есть двойн\'{и}к}[,] и~45 независимы. К~тому~же, из\hbox{-}за симметрии тензора линейной деформации~$\mathboldepsilon$, тензор~$\stiffnesstensor$ симметричен ещё~и~внутри каждой пары индексов: ${A^{ijkl} \hspace{-0.16ex} = A^{jikl} \hspace{-0.16ex} = A^{ijlk}}$~(${= A^{jilk}}$). Число независимых компонент при~этом снижается до~21:
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}\scalebox{0.8}{$\begin{array}{l}
 \scalebox{1.16}{$A^{abcd^{\mathstrut}} = A^{cdab} = A^{bacd} = A^{abdc}$} \\[0.2em]
@@ -355,20 +355,24 @@ a_{15} \hspace{-0.2ex} = a_{16} \hspace{-0.2ex} = a_{25} \hspace{-0.2ex} = a_{26
 \noindent --- число независимых констант упало до~13.
 
 Пусть далее плоскостей симметрии две: ${z = \const}$ и~${y = \const}$. Поскольку~$\Pi$ не~чувствительна к~знакам~$\varepsilon_{yx}$ и~$\varepsilon_{yz}$, вдобавок к~\eqref{zeroconstants:oneplaneofsymmetry} имеем
-\vspace{-0.8em}\begin{equation}\label{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}
+
+\nopagebreak\vspace{-1.1em}\begin{equation}\label{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}
 a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56} \hspace{-0.2ex} = 0
 \end{equation}
 
-\vspace{-0.64em}\noindent --- осталось 9~констант.
+\vspace{-0.25em}\noindent --- осталось 9~констант.
 
-Ортотропным~(ортогонально анизотропным) называется материал с~тремя ортогональными плоскостями симметрии~--- пусть это координатные плоскости~$x$, $y$, $z$. Легко увидеть, что \eqref{zeroconstants:oneplaneofsymmetry} и~\eqref{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}~--- это весь набор нулевых констант и~в~этом случае. Итак, ортотропный материал характеризуется девятью константами, и~\inquotes{для~ортотропности} достаточно двух перпендикулярных плоскостей симметрии. Форма упругой энергии упрощается до
-\[ \begin{array}{c}
-\Pi =^{\mathstrut^{\mathstrut}} \smalldisplaystyleonehalf a_1 \varepsilon^2_{x} + \smalldisplaystyleonehalf a_2 \varepsilon^2_{y} + \smalldisplaystyleonehalf a_3 \varepsilon^2_{z} + \smalldisplaystyleonehalf a_4 \varepsilon^2_{xy} + \smalldisplaystyleonehalf a_5 \varepsilon^2_{xz} + \smalldisplaystyleonehalf a_6 \varepsilon^2_{yz} \hspace{0.25ex} + \\[.32em]
+Ортотропным~(ортогонально анизотропным) называется материал с~тремя ортогональными плоскостями симметрии~--- пусть это координатные плоскости~$x$, $y$, $z$. Легко увидеть, что \eqref{zeroconstants:oneplaneofsymmetry} и~\eqref{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}~--- это весь набор нулевых констант и~в~этом случае. Итак, ортотропный материал характеризуется девятью константами, и~\inquotes{для~ортотропности} достаточно двух перпендикулярных плоскостей симметрии. Вид упругой энергии упрощается до
+
+\nopagebreak\vspace{-0.25em}\begin{multline*}
+\Pi =^{\mathstrut^{\mathstrut}} \smalldisplaystyleonehalf a_1 \varepsilon^2_{x} + \smalldisplaystyleonehalf a_2 \varepsilon^2_{y} + \smalldisplaystyleonehalf a_3 \varepsilon^2_{z} + \smalldisplaystyleonehalf a_4 \varepsilon^2_{xy} + \smalldisplaystyleonehalf a_5 \varepsilon^2_{xz} + \smalldisplaystyleonehalf a_6 \varepsilon^2_{yz} \hspace{0.25ex} + \\[-0.1em]
+%
 + \hspace{0.5ex} a_{12} \varepsilon_{x} \varepsilon_{y} + a_{13} \varepsilon_{x} \varepsilon_{z} + a_{23} \varepsilon_{y} \varepsilon_{z} \hspace{0.1ex} .
-\end{array} \]
+\end{multline*}
+
 В~ортотропном материале сдвиговые~(угловые) деформации $\varepsilon_{xy}$, $\varepsilon_{xz}$, $\varepsilon_{yz}$ никак не~влияют на нормальные напряжения ${\sigma_x \hspace{-0.25ex} = \raisemath{0.16em}{\scalebox{0.88}{$\partial \hspace{0.1ex} \Pi$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial \varepsilon_x$}}}$, ${\sigma_y \hspace{-0.25ex} = \raisemath{0.16em}{\scalebox{0.88}{$\partial \hspace{0.1ex} \Pi$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial \varepsilon_y$}}}$, ${\sigma_z \hspace{-0.25ex} = \raisemath{0.16em}{\scalebox{0.88}{$\partial \hspace{0.1ex} \Pi$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial \varepsilon_z$}}}$ (и~наоборот). Популярный ортотропный материал~--- древесина; её упругие свойства различны по~трём взаимно перпендикулярным направлениям: по~радиусу, вдоль~окружности и~по~высоте ствола.
 
-Ещё~один случай анизотропии~---
+Ещё~один случай анизотропии~--- трансверсально изотропный (transversely isotropic) материал. Он характеризуется
 
 ...
 
@@ -414,6 +418,12 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 
 ...
 
+Единственность решения, установленная G.\:Kirchhoff’ом в~\cite{kirchhoff:crelle56}, противоречит, казалось~бы, повседневному опыту. Представим себе прямой стержень, закреплённый на~одном конце и~сжатый продольной силой на~другом (?? рис. 13 ??). При достаточно большой нагрузке задача статики должна иметь два решения~--- \inquotes{прямое} и~\inquotesx{изогнутое}[.] Но такое противоречие объяснимо нелинейностью задачи. При~м\'{а}лой~же нагрузке решение единственно и~описывается линейными уравнениями.
+
+\textbf{Теорема взаимности работ}. Для тела с~закреплением на~части поверхности
+
+...
+
 
 
 \en{\section{Equations for displacements}}
@@ -423,7 +433,8 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 \label{para:equationsfordisplacement}
 
 Полная система~\eqref{lineartheory:wholesetofequations} содержит неизвестные $\mathboldtau$, $\mathboldepsilon$ и~$\bm{u}$. Исключая $\mathboldtau$ и~$\mathboldepsilon$, приходим к~постановке в~перемещениях (симметризация~${\boldnabla \bm{u}}$ тут излишняя)
-\vspace{-0.5em}\begin{equation}\label{lineartheory:equationsfordisplacement}
+
+\nopagebreak\vspace{-0.75em}\begin{equation}\label{lineartheory:equationsfordisplacement}
 \begin{array}{c}
 \boldnabla \dotp \left( \hspace{0.1ex} \stiffnesstensor \dotdotp \hspace{-0.12ex} \boldnabla \bm{u} \hspace{0.1ex} \right) + \hspace{0.1ex} \bm{f} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}; \\[.4em]
 \bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} \bm{u}_{\raisemath{-0.1em}{0}} \hspace{0.16ex} , \:\:
@@ -439,6 +450,12 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 %% \footnote{По\hbox{-}прежнему под~$\bm{f}$ подразумеваем сумму обычной силы и~даламберовой силы инерции~${(- \rho \mathdotdotabove{\bm{u}}\hspace{0.25ex})}$.}
 
 В~изотропном теле~\eqref{lineartheory:equationsfordisplacement} принимает вид
+
+...
+
+Общее решение однородного уравнения (...) нашёл \href{https://de.wikipedia.org/wiki/Heinz_Neuber}{Heinz Neuber}
+
+\href{https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BF%D0%BA%D0%BE%D0%B2%D0%B8%D1%87,_%D0%9F%D1%91%D1%82%D1%80_%D0%A4%D1%91%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87}{П.\,Ф.\:Папкович}
 
 ...
 
@@ -479,7 +496,7 @@ Concentrated force is useful mathematical idealization, but cannot be found in t
 ...
 
 {\small
-Saint\hbox{-}Venant’s compatibility condition is the integrability conditions for a~symmetric tensor field to be a~strain.
+Saint\hbox{-\hspace{-0.2ex}}Venant’s compatibility condition is the integrability conditions for a~symmetric tensor field to be a~strain.
 
 The compatibility conditions in linear elasticity are obtained by observing that there are six strain\hbox{--}displacement relations that are functions of only three unknown displacements. This suggests that the three displacements may be removed from the system of equations without loss of information. The resulting expressions in terms of only the strains provide constraints on the possible forms of a~strain field.
 
@@ -488,7 +505,22 @@ A body that deforms without developing any gaps/overlaps is called a~compatible 
 
 ...
 
-Все уравнения линейной теории должны иметь аналог~(перво\-источ\-ник) в~нелинейной. Чтобы найти его для~\eqref{incompatibilityequalszero}, вспомним тензор деформации Коши\hbox{--}Грина~(\chapdotpararef{chapter:nonlinearcontinuum}{para:deformationtensors}) и~тензоры кривизны~(\chapdotpararef{chapter:elementsoftensorcalculus}{para:curvaturetensors})
+\begin{equation*}
+\operatorname{inc} \mathboldepsilon \equiv
+\hspace{-0.1ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.25ex} \left( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \mathboldepsilon \right)^{\T}
+\end{equation*}
+
+Контур здесь произволен, так что приходим к~соотношению
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{incompatibilityequalszero}
+\operatorname{inc} \mathboldepsilon = {^2\bm{0}} \hspace{.1ex} ,
+\end{equation}
+
+\vspace{-0.4em} \noindent называемому уравнением совместности деформаций.
+
+...
+
+Все уравнения линейной теории имеют аналог~(перво\-источ\-ник) в~нелинейной. Чтобы найти его для~\eqref{incompatibilityequalszero}, вспомним тензор деформации Cauchy\hbox{--}Green’а~(\chapdotpararef{chapter:nonlinearcontinuum}{para:deformationtensors}) и~тензоры кривизны~(\chapdotpararef{chapter:elementsoftensorcalculus}{para:curvaturetensors})
 
 ...
 
@@ -514,6 +546,8 @@ A body that deforms without developing any gaps/overlaps is called a~compatible 
 
 \ru{\section{Принцип минимума потенциальной энергии}}
 
+\label{para:principleofminimumpotentialenergy}
+
 Начнём с~формулировки принципа:
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
@@ -523,7 +557,7 @@ A body that deforms without developing any gaps/overlaps is called a~compatible 
 \Pi(\boldnabla \bm{u}) - \bm{f} \hspace{-0.1ex} \dotp \bm{u} \right) \hspace{-0.4ex} d\mathcal{V} \hspace{.1ex}
 - \hspace{-0.2ex}
 \integral\displaylimits_{o_2} \hspace{-0.32ex} \bm{p} \dotp \bm{u} \hspace{0.25ex} do \hspace{0.2ex}
-\hspace{.1ex}\to\hspace{.25ex} \mathrm{min}, \:\:
+\hspace{.1ex}\to\hspace{.25ex} \mathrm{min} \hspace{.1ex}, \:\:
 \bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.8ex} = \hspace{.1ex} \bm{u}_{\raisemath{-0.1em}{0}} \hspace{0.16ex} .
 \end{equation}
 
@@ -700,7 +734,9 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 \ru{\section{Кручение стержней}}
 
-Эта задача, тщательно изученная Сен\hbox{-}Венаном, рассматривается едва~ли не~во~всех книгах по классической теории упругости. Речь идёт о~цилиндре какого\hbox{-}либо сечения, нагруженном лишь поверхностными силами на торцах
+\label{para:twistingofrods.saintvenant}
+
+Эта задача, тщательно изученная Saint\hbox{-\hspace{-0.2ex}}Venant’ом, рассматривается едва~ли не~во~всех книгах по классической теории упругости. Речь идёт о~цилиндре какого\hbox{-}либо сечения, нагруженном лишь поверхностными силами на торцах
 
 ...
 

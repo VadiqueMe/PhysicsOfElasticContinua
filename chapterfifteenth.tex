@@ -6,15 +6,42 @@
 
 \label{chapter:fractures}
 
+\newcommand{\tensilestrength}{\sigma_{\hspace{-0.25ex}*}}
+\newcommand{\stressdeviator}{\bm{s}}
+
+\en{\section{Traditional criteria of toughness}} % of robustness
+
+\ru{\section{Традиционные критерии прочности}}
+
 \begin{otherlanguage}{russian}
 
-\section{Традиционные критерии прочности}
+\lettrine[lines=2, findent=2pt, nindent=0pt]{К}{ак} судить о~прочности тела после определения напряжения в~нём? При одноосном растяжении напряжением~$\sigma$ есть, очевидно, некий предел прочности~${\tensilestrength}$, выше которого материал разрушается. Прочность считают достаточной при~${\sigma \leq \tensilestrength / \hspace{.1ex} k}$, где~$k$~--- так называемый коэффициент запаса. Но такой подход не~является вполне удовлетворительным, поскольку определяемые из~опыта значения~${\tensilestrength}$ имеют большой разброс, а выбор коэффициента запаса нередко становится административным актом. Тем не~менее подобные взгляды на~анализ прочности широк\'{о} распространены; воздерживаясь от критики, отметим наиболее известные.
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{К}{ак} судить о~прочности тела после определения напряжения в~нём? При одноосном растяжении напряжением~$\sigma$ есть, очевидно, некий предел прочности~${\sigma_{\!*}}$. Прочность считают достаточной при~${\sigma \leq \sigma_{\!*} / k}$, где~$k$~--- так называемый коэффициент запаса. Но такой подход не~является вполне удовлетворительным, поскольку определяемые из~опыта
+\textbf{Критерий максимального нормального напряжения}: разрушение происходит при~${\sigma_1 \hspace{-0.12ex} = \tensilestrength}$ (наибольшее из главных напряжений достигает предельного значения). Но это положение несправедливо для одноосного сжатия, при котором ${\sigma_1 \hspace{-0.12ex} = 0}$.
+
+\textbf{Критерий максимального касательного напряжения}: разрушение наступает при ${\sigma_1 \hspace{-0.16ex} - \sigma_3 \hspace{-0.1ex} = \tensilestrength}$ ($\sigma_3$~--- наименьшее из главных напряжений). Это более соответствует началу пластического течения.
+
+\textbf{Критерий максимального удлинения}: наибольшее из собственных значений тензора деформации ${\varepsilon_1 \hspace{-0.12ex} = \varepsilon_*}$. Это приемлемо и~при~сжатии с~${\varepsilon_1 \hspace{-0.12ex} > 0}$.
+
+\textbf{Критерий энергии деформации}: ${\Pi = \Pi_*}$. Здесь учитывается, что разрушение требует энергии, а источником её может~быть лишь сам\'{о} деформированное тело. Однако достаточный запас энергии~--- необходимое, но не~единственное условие разрушения; должен включиться некий механизм преобразования упругой энергии в~работу разрушения.
+
+%% maximum distortion energy criterion
+\textbf{Критерий энергии формоизменения (von~Mises yield criterion)}: ${\stressdeviator \dotdotp \stressdeviator = 2 \hspace{.12ex} \tau_{\!*}^2\hspace{-0.5ex}}$, ${\, \stressdeviator \equiv \mathboldtau - \frac{1}{3} \hspace{.25ex} \bm{E} \operatorname{tr} \mathboldtau}$ (\inquotes{девиатор напряжений}). Здесь не~играет роли энергия объёмной деформации.
+\href{https://en.wikipedia.org/wiki/Richard_von_Mises}{Richard von~Mises} предложил этот критерий как гладкую аппроксимацию условия Tresca.
+
+\textbf{Криторий Мора}. Представим себе множество предельных состояний ...
 
 ...
 
-\section{Антиплоская деформация среды с трещиной}
+
+
+\end{otherlanguage}
+
+\en{\section{Antiplane deformation of continuum with a crack}}
+
+\ru{\section{Антиплоская деформация среды с трещиной}}
+
+\begin{otherlanguage}{russian}
 
 Любая регулярная функция компл\'{е}ксного переменного~${z = x + iy}$ содержит в~себе решение какой\hbox{-}либо антиплоской задачи статики без ...
 
@@ -22,7 +49,13 @@
 
 
 
-\section{Трещина при плоской деформации}
+\end{otherlanguage}
+
+\en{\section{Crack in plane deformation}}
+
+\ru{\section{Трещина при плоской деформации}}
+
+\begin{otherlanguage}{russian}
 
 Рассмотрим плоскую область произвольного очертания с трещиной внутри; нагрузка приложена и~\inquotesx{в~объёме}[,] и на~внешней границе. Как и~при антиплоской деформации, решение строится в~два этапа
 
@@ -30,7 +63,13 @@
 
 
 
-\section{Трещинодвижущая сила}
+\end{otherlanguage}
+
+\en{\section{Crack driving force}}
+
+\ru{\section{Трещинодвижущая сила}}
+
+\begin{otherlanguage}{russian}
 
 Это едва~ли не~основное понятие механики трещин. Рассмотрим его, следуя
 
@@ -38,7 +77,13 @@
 
 
 
-\section{Критерий роста трещины}
+\end{otherlanguage}
+
+\en{\section{Criterion of crack growth}}
+
+\ru{\section{Критерий роста трещины}}
+
+\begin{otherlanguage}{russian}
 
 Связанная с~энергией~$\textit{Э}$ трещинодвижущая сила~$F$~--- не~единственное воздействие на~фронт трещины. Должна быть ещё некая сила сопротивления~$F_{*}$; рост трещины начинается при~условии
 
@@ -46,17 +91,43 @@
 
 
 
-\section{Интеграл Райса}
+\end{otherlanguage}
 
-Одно из самых известных
+\en{\section{J-integral}}
+
+\ru{\section{J-интеграл}}
+
+% The theoretical concept of J-integral was developed in 1967 by G. P. Cherepanov and in 1968 by J. R. Rice independently, who showed that an energetic contour path integral (called J) was independent of the path around a crack.
+
+% https://en.wikipedia.org/wiki/J-integral
+
+% G. P. Cherepanov, The propagation of cracks in a continuous medium, Journal of Applied Mathematics and Mechanics, 31(3), 1967, pp. 503–512.
+
+% J. R. Rice, A Path Independent Integral and the Approximate Analysis of Strain Concentration by Notches and Cracks, Journal of Applied Mechanics, 35, 1968, pp. 379–386.
+
+% https://en.wikipedia.org/wiki/James_R._Rice
+
+\begin{otherlanguage}{russian}
+
+Одно из самых известных понятий в~механике трещин выражается интегралом
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+J = \ldots
+\end{equation}
 
 ...
 
 
 
-\section{Определение коэффициентов интенсивности}
+\end{otherlanguage}
 
-Расчёт прочности тела с~трещиной сводится к~определению коэффициентов интенсивности. Методы расчёта таких коэффициентов~--- как~аналитические, так~и~численные~--- хорошо освещены в~литературе.
+\en{\section{Stress intensity factors}}
+
+\ru{\section{Коэффициенты интенсивности напряжений}}
+
+\begin{otherlanguage}{russian}
+
+Расчёт прочности тела с~трещиной сводится к~определению коэффициентов интенсивности напряжений. Методы расчёта таких коэффициентов~--- как~аналитические, так~и~численные~--- хорошо освещены в~литературе.
 
 Рассмотрм ещё один подход к~задачам механики трещин, разработанный
 
@@ -64,7 +135,15 @@
 
 
 
-\section{Модель Баренблатта}
+\end{otherlanguage}
+
+\en{\section{Model of Barenblatt}}
+
+\ru{\section{Модель Баренблатта}}
+
+% https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B5%D0%BD%D0%B1%D0%BB%D0%B0%D1%82%D1%82,_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9_%D0%98%D1%81%D0%B0%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%87
+
+\begin{otherlanguage}{russian}
 
 Неограниченный рост напряжений на фронте трещины вызывает некоторые сомнения. Желательно \inquotes{дать поддержку} сингулярным решениям какими\hbox{-}либо дополнительными построениями или использованием иной модели. И~эту поддержку дала работа
 
@@ -72,19 +151,47 @@
 
 
 
-\section{Деформационный критерий}
+\end{otherlanguage}
+
+\en{\section{Deformational criterion}}
+
+\ru{\section{Деформационный критерий}}
+
+\begin{otherlanguage}{russian}
+
+D.\,S.\;Dugdale\footnote{\textbf{Dugdale~D.\:S.} Yielding of~steel sheets containing slits~//~Journal of the Mechanics and Physics of~Solids. 1960, Volume~8, Issue~2, pages 100\hbox{--}104.
+}\hspace{-0.4ex}, а~также М.\,Я.\;Леонов и В.\,В.\;Панасюк\footnote{\textbf{Леонов~М.\:Я.}, \textbf{Панасюк~В.\:В.} Развитие мельчайших трещин в~твёрдом теле~//~Прикладная механика. 1959, Т.\:5, №\,4, с.\:391\hbox{--}401.} предложили модель, напоминающую построения Баренблатта. Также есть силы сцепления~$q$ и равен нулю итоговый коэффициент интенсивности напряжений. Но, во\hbox{-}первых, $q$ имеет иной вид:
+
+...
+
+Второе отличие рассматриваемой модели~--- в~формулировке критерия прочности: трещина начинает расти, когда расхождение берегов в~конце свободного участка достигает критического значения~$\delta_{*}$ (этот параметр~--- константа материала), то~есть при
 
 ...
 
 
 
-\section{Рост трещин}
+\end{otherlanguage}
+
+\en{\section{Growth of cracks}}
+
+\ru{\section{Рост трещин}}
+
+\begin{otherlanguage}{russian}
+
+%%\textbf{1}.
+Пусть нагрузка на~тело с~трещиной выросла настолько, что выполняется условие
 
 ...
 
 
 
-\section{Упругое поле впереди движущейся трещины}
+\end{otherlanguage}
+
+\en{\section{Elastic field ahead of a moving crack}}
+
+\ru{\section{Упругое поле перед движущейся трещиной}}
+
+\begin{otherlanguage}{russian}
 
 Рассмотрим этот вопрос
 
@@ -92,20 +199,39 @@
 
 
 
-\section{Баланс энергии для движущейся трещины}
+\end{otherlanguage}
+
+\en{\section{Balance of energy for a moving crack}}
+
+\ru{\section{Баланс энергии для движущейся трещины}}
+
+\begin{otherlanguage}{russian}
+
+Уравнение баланса энергии в~линейной теории (${\Pi = \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \stiffnesstensor \dotdotp \mathboldepsilon}$, ${\mathrm{T} = \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$):
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.42ex} \left(^{\mathstrut} \hspace{-0.2ex} \mathrm{T} + \Pi \right)^{\hspace{-0.12em}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex} d\mathcal{V} \hspace{.2ex}
+= \hspace{-0.1ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.25ex} d\mathcal{V} \hspace{.16ex}
++ \hspace{-0.1ex}
+\integral\displaylimits_{\mathcal{O}} \hspace{-0.32ex} \bm{n} \dotp \mathboldtau \dotp \mathdotabove{\bm{u}} \hspace{.25ex} d\mathcal{O}.
+\end{equation}
 
 ...
 
 
 
-\vspace{8mm}
-\hfill\begin{minipage}[b]{0.95\linewidth}
+\end{otherlanguage}
+
+\section*{\small \wordforbibliography}
+
+\begin{changemargin}{\parindent}{0pt}
 \fontsize{10}{12}\selectfont
 
-\section*{\wordforbibliography}
+\begin{otherlanguage}{russian}
 
-Список книг по~механике трещин уж\'{е} вел\'{и}к. В~нём нельзя не~отметить ...
-
-\end{minipage}
+Список книг по~механике трещин уж\'{е} вел\'{и}к. В~нём ст\'{о}ит отметить работы Л.\,М.\;Качанова~\cite{kachanov-fracturemechanics}, Н.\,Ф.\;Морозова~\cite{morozov-fractures}, В.\,З.\;Партона и Е.\,М.\;Морозова~\cite{parton.morozov-destructionofelastoplastic}, Г.\,П.\;Черепанова~\cite{cherepanov-fragilefracture}. Обзор статей есть у~... Экспериментальные данные представлены, например, в~\cite{kerstein.klyushnikov.lomakin.shesterikov-experimentalfracturemechanics}.
 
 \end{otherlanguage}
+
+\end{changemargin}

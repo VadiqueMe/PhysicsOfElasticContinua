@@ -181,10 +181,11 @@
 
 \newcommand\levicivita{\raisemath{0.2ex}{\mathrm{\in}}}
 %%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\bm{\levicivita}}}}
-%%\newcommand\levicivita{\scalebox{1.2}[1]{$\textsf{Є}$}}
-\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\scalebox{1.25}[1]{$\textsf{Є}$}}}\hspace{.05ex}}
+%%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\scalebox{1.25}[1]{$\textsf{Є}$}}}\hspace{.05ex}}
+\newcommand\levicivitatensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
 \newcommand\stiffnesstensor{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
+\newcommand\stiffnesstensorC{{^4\bm{\mathcal{C}}}}
 
 \newcommand\rotationtensor{\bm{O}}
 
@@ -442,6 +443,8 @@ aboveskip=4mm,belowskip=2.5mm}
 \newcommand\figref[1]{\figureshortname\:\ref{#1}}
 
 \newcommandx*\customref[2][1=]{\hyperref[#2]{#1\ref*{#2}}}
+
+\newcommand\eqrefwithchapdotpara[3]{\text{(\hyperref[#1]{\ref*{#1}},\:\chapdotpararef{#2}{#3})}}
 
 \captionsetup[table]{%
 %labelsep=newline,

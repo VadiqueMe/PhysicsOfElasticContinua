@@ -1,0 +1,52 @@
+\documentclass[11pt, twoside]{book}
+
+\usepackage{geometry}
+\geometry{papersize={14.5cm,20cm}} % 60x84/16 is 145 mm x 200 mm
+%%\geometry{papersize={145mm,215mm}} % 60x90/16 is 145 mm x 215 mm
+%%\geometry{papersize={145mm,1600mm}}
+%%\geometry{papersize={145mm,16383pt}} % maximum height
+\geometry{tmargin=1.45cm,bmargin=1.4cm,outer=1.5cm,inner=1.5cm}
+
+\input{bookpreamble.tex}
+
+\hypersetup{pdftitle={Physics of elastic continua (Физика упругих сред)}}
+\hypersetup{pdfauthor={Vadique}}
+
+\usepackage{verbatim} % for \begin(comment) ... \end{comment}
+
+\entrue
+%%\rutrue
+
+\begin{document}
+
+\input{mycoverpage.tex}
+
+%%\input{secondinfopage.tex}
+
+\pagestyle{empty}
+
+\cleardoublepage
+
+\en{\selectlanguage{english}}
+\ru{\selectlanguage{russian}}
+
+\tableofcontents
+\thispagestyle{plain}
+\newpage
+
+\pagestyle{plain}
+
+% space above and below equations
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+
+\setcounter{chapter}{14}
+
+\input{chapterfifteenth.tex}
+
+%% \begin{comment} %%
+\newpage
+\input{listofbooks.tex}
+%% \end{comment} %%
+
+\end{document}

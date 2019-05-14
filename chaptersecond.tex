@@ -433,12 +433,15 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 \vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил
 ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.1ex}}$.
 
-\vspace{-0.1em} Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\varvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\varvector{\bm{o}}}$~--- произвольные константы, определяющие трансляцию и~поворот)
+\vspace{-0.1em} Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\varvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\varvector{\bm{o}}}$~--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
 
-\nopagebreak\vspace{-0.8em}\begin{equation}\label{assumptionforvirtualwork}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{assumptionforvirtualwork}
 \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex}
 = \varvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k
-\hspace{.32ex} \Rightarrow \hspace{.4ex}
+\hspace{.1ex} , \:
+\varvector{\hspace{-0.1ex}\bm{\rho}} = \boldconst \hspace{.1ex} , \:
+\varvector{\bm{o}} = \boldconst
+\hspace{.4ex} \Rightarrow \hspace{.32ex}
 \variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex}.
 \end{equation}
 
@@ -475,18 +478,18 @@ ${%
 \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.4ex}
 \right)^{\hspace{-0.25em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
 = \hspace{.2ex}
-\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
-+ \hspace{-0.16ex} \tikzmark{beginVariationOfKineticEnergy} \hspace{.32ex} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\bm{r}}_k} \tikzmark{endVariationOfKineticEnergy}
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k}
++ \hspace{-0.2ex} \tikzmark{beginVariationOfKinetic} \hspace{.32ex} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\bm{r}}_k} \tikzmark{endVariationOfKinetic}
 }$
 \\[.5em]
 ${%
 - \hspace{.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.25ex} dt \hspace{.4ex}
 = \hspace{-0.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \hspace{-0.1ex} \variation{\mathrm{T}} \hspace{.1ex} dt \hspace{.16ex}
-- \hspace{.12ex} \left[ \hspace{.2ex}
-\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.2ex}
+- \hspace{-0.1ex} \left[ \hspace{.2ex}
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.16ex}
 \right]_{\hspace{-0.25ex}t_1}^{\hspace{-0.25ex}t_2}
 }$}%
-\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKineticEnergy}{endVariationOfKineticEnergy}{${\scriptstyle \variation{\mathrm{T}}}$}
+\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKinetic}{endVariationOfKinetic}{${\scriptstyle \variation{\mathrm{T}}}$}
 %
 по~какому\hbox{-}либо промежутку ${\left[\hspace{.15ex} t_1, t_2 \hspace{.15ex}\right]}$
 
@@ -494,9 +497,9 @@ ${%
 \displaystyle \integral\displaylimits_{t_1}^{\raisemath{.12em}{t_2}}
 \hspace{-0.4ex}
 \left( \hspace{-0.32ex} \variation{\mathrm{T}}
-+ \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.32ex} \right) \hspace{-0.4ex} dt \hspace{.25ex}
-- \left[ \hspace{.2ex} \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.2ex} \right]_{\hspace{-0.32ex}t_1}^{\hspace{-0.32ex}t_2}
-\hspace{-0.75ex} = 0 \hspace{.1ex} .
++ \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.32ex} \right) \hspace{-0.5ex} dt \hspace{.16ex}
+- \hspace{-0.1ex} \left[ \hspace{.2ex} \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.16ex} \right]_{\hspace{-0.32ex}t_1}^{\hspace{-0.32ex}t_2}
+\hspace{-0.8ex} = 0 \hspace{.1ex} .
 \end{equation}
 
 \vspace{-0.16em} \noindent Без ущерба для общности можно принять ${\variation{\hspace{.1ex}\bm{r}_k}\hspace{.1ex}(t_1) \hspace{-0.1ex} = \variation{\hspace{.1ex}\bm{r}_k}\hspace{.1ex}(t_2) \hspace{-0.1ex} = \bm{0}}$, тогда внеинтегральный член исчезает.
@@ -540,7 +543,7 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 - \left. \hspace{-0.25ex} m_k \mathdotdotabove{\bm{r}}_k ^{\mathstrut}\right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0 \hspace{0.1ex} .
 \end{equation}
 
-\vspace{-0.1em} \noindent Среди $3N$ компонент вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ зависимых $m$. Но столько~же и~множителей Лагранжа: подберём $\lambda_{\alpha}$ так, чтобы коэффициенты(??как\'{и}е?) при~зависимых вариациях обратились в~нуль. Но при~остальных вариациях коэффициенты(??) также должны быть нулями из\hbox{-}за независимости. Следовательно, все выражения в~скобках~${(\cdots\hspace{-0.2ex})}$ равны нулю~--- это и~есть уравнения Лагранжа первого рода.
+\vspace{-0.1em} \noindent Среди $3N$ компонент вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ зависимых $m$. Но столько~же и~множителей Лагранжа: подберём $\lambda_{\alpha}$ так, чтобы коэффициенты\textcolor{red}{(??как\'{и}е?)} при~зависимых вариациях обратились в~нуль. Но при~остальных вариациях коэффициенты\textcolor{red}{(??)} также должны быть нулями из\hbox{-}за независимости. Следовательно, все выражения в~скобках~${(\cdots\hspace{-0.2ex})}$ равны нулю~--- это и~есть уравнения Лагранжа первого рода.
 
 Поскольку для каждой частицы
 
@@ -561,27 +564,43 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 Рассмотрим систему со~стационарными (постоянными во~времени) связями при статических (не~меняющихся со~временем) активных силах ${\bm{F}_k}$. В~равновесии ${\bm{r}_k \hspace{-0.12ex} = \boldconst}$, и формулировка принципа виртуальной работы следующая:
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{statics.discrete:principleofvirtualwork}
-\displaystyle \sum_{\smash{k}} \hspace{-0.1ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0
-\:\Leftrightarrow\:
-Q_{\hspace{-0.1ex}i} \hspace{-0.1ex} = 0 \hspace{.1ex} .
+\scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.25ex}
+\bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0
+\:\,\Leftrightarrow\:
+\scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.25ex}
+\bm{F}_k \hspace{-0.1ex} \dotp \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \bm{r}_k}}{\raisemath{-0.1em}{\partial q_i}} $}
+= Q_{\hspace{-0.1ex}i} \hspace{-0.1ex} = 0 \hspace{.1ex} .
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.2em} \noindent Существенны обе стороны этого положения: и вариационное уравнение, и равенство нулю обобщённых сил.
+\vspace{-0.15em} \noindent Существенны обе стороны этого положения: и вариационное уравнение, и равенство нулю обобщённых сил.
 
-Соотношения~\eqref{statics.discrete:principleofvirtualwork}~--- это самые общие уравнения статики. В~литературе распространено узкое представление об~уравнениях равновесия как балансе сил и~моментов. Но при~этом нужно понимать, что набор уравнений равновесия точно соответствует обобщённым координатам. Главный вектор и~главный момент в~уравнениях равновесия фигурируют, поскольку у~системы есть степени свободы трансляции и~поворота. Особенная популярность сил и~моментов связана не~столько с~известностью статики совершенно жёсткого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~перемещениях системы как жёсткого целого равна нулю в~любой среде.
+Соотношения~\eqref{statics.discrete:principleofvirtualwork}~--- это самые общие уравнения статики. В~литературе распространено узкое представление об~уравнениях равновесия как балансе сил и~моментов. Но при~этом нужно понимать, что набор уравнений равновесия точно соответствует обобщённым координатам.
+\en{Resultant force}\ru{Результирующая сила~(также называемая \inquotes{равнодействующей силой} или \inquotes{главным вектором})}
+\en{and}\ru{и}~\en{resultant couple}\ru{результирующий~(\inquotes{главный}) момент (пара сил)}
+в~уравнениях равновесия фигурируют\footnote{\en{Since describing composition of~any system of forces}\ru{Со времён описания приведения любой системы сил}, \en{acting on the~same absolutely rigid body}\ru{действующей на~одно и~то~же совершенно жёсткое тело}, \en{into a~single force}\ru{к~одной силе} \en{and}\ru{и} \en{a~single couple~(about a~chosen point)}\ru{одной паре~(вокруг выбранной точки)} \en{in the~book}\ru{в~книге}
+\href{https://gallica.bnf.fr/ark:/12148/bpt6k6213152z.texteImage}{\inquotes{Éléments de~statique}}
+\en{by }\href{https://en.wikipedia.org/wiki/Louis_Poinsot}{Louis\ru{’а} Poinsot}.}\hspace{-1ex},
+поскольку у~системы есть степени свободы трансляции и~поворота. Огромная популярность сил и~моментов связана не~столько с~известностью статики совершенно жёсткого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~перемещениях системы как жёсткого целого равна нулю в~любой среде.
 
 Пусть в~системе действуют два вида сил: потенциальные с~энергией от~обобщённых координат ${\Pi(q_i)}$ и~дополнительные внешние~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$. Из~\eqref{statics.discrete:principleofvirtualwork} следуют уравнения равновесия
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{staticequilibriumwithpotentialenergy}
-\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} = \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.1ex} .
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} = \mathcircabove{Q}_{\hspace{-0.1ex}i}
+\hspace{.1ex},
 \end{equation}
+\nopagebreak\vspace{.1em}\begin{equation*}
+d\Pi = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.2ex} dq_i
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} dq_i
+\hspace{.1ex} .
+\end{equation*}
 
-\vspace{-0.12em} \noindent Здесь содержится нелинейная в~общем случае задача статики о~связи положения равновесия~$q_i$ с~нагрузками~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
+\vspace{-0.5em} \noindent Здесь содержится нелинейная в~общем случае задача статики о~связи положения равновесия~$q_i$ с~нагрузками~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
 
 В~линейной системе с~квадратичным потенциалом вида ${\Pi = \smalldisplaystyleonehalf \hspace{.2ex} C_{ik} \hspace{.12ex} q_{k} \hspace{.1ex} q_{i}}$
 
 \nopagebreak\vspace{-1.25em}\begin{equation}\label{staticsoflineardiscretesystem}
-\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} C_{ik} \hspace{.12ex} q_k
+\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} C_{ik} \hspace{.12ex} q_k \hspace{-0.1ex}
 = \hspace{.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.1ex} .
 \vspace{-0.1em}\end{equation}
 
@@ -614,21 +633,49 @@ Q_{\hspace{-0.1ex}i} \hspace{-0.1ex} = 0 \hspace{.1ex} .
 
 ...
 
-Известные теоремы статики линейно упругих систем легко доказываются в~случае конечного числа степеней свободы. Теорема \href{https://en.wikipedia.org/wiki/Beno%C3%AEt_Paul_%C3%89mile_Clapeyron}{Клапейрона} выражается равенством
+Известные теоремы статики линейно упругих систем легко доказываются в~случае конечного числа степеней свободы. Теорема \href{https://en.wikipedia.org/wiki/Beno%C3%AEt_Paul_%C3%89mile_Clapeyron}{Clapeyron’а} выражается равенством
 
 ...
 
-Но вернёмся к~проблеме~\eqref{staticequilibriumwithpotentialenergy}, иногда называемой теоремой Лагранжа. Её можно обратить преобразованием Лежандра
+Но вернёмся к~проблеме~\eqref{staticequilibriumwithpotentialenergy}, иногда называемой теоремой Lagrange’а. Её можно обратить преобразованием Лежандра Legendre (involution) transform(ation):
 
-\nopagebreak\vspace{-0.16em}\begin{equation}\label{Castigliano:theorem}
-q_i \hspace{.1ex} = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\Pi}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $} \hspace{.16ex} ,
-\:\:
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\begin{array}{c}\small
+d \hspace{-0.1ex} \left( \hspace{-0.1ex} \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q_i \hspace{-0.12ex} \right) \hspace{-0.5ex}
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.25ex} d \hspace{-0.25ex} \left( \hspace{-0.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q_i \right) \hspace{-0.3ex}
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{-0.16ex} \left(
+q_i \hspace{.2ex} d \mathcircabove{Q}_{\hspace{-0.1ex}i}
++ \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} dq_i \right)
+\hspace{-0.64ex} ,
+\\[1.25em]
+%
+\small
+d \hspace{-0.1ex} \left( \hspace{-0.1ex} \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q_i \hspace{-0.12ex} \right) \hspace{-0.4ex}
+- \hspace{.1ex} \tikzmark{beginLegendreOfPotential} \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} dq_i \tikzmark{endLegendreOfPotential}
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex} q_i \hspace{.2ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
+\hspace{.2ex} ,
+\\[1em]
+%
+\small
+d \hspace{-0.1ex} \left( \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q_i - \Pi \hspace{-0.1ex} \right) \hspace{-0.5ex}
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex} q_i \hspace{.2ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.4ex}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\Pi}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $}
+\hspace{.25ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
+%
+\hspace{.33ex} ;
+\end{array}\end{equation*}%
+\AddOverBrace[line width=.75pt][-0.3ex,0.3em]{beginLegendreOfPotential}{endLegendreOfPotential}{${\scriptstyle d\Pi}$}
+
+\nopagebreak\vspace{-0.33em}\begin{equation}\label{Castigliano:theorem}
+q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\Pi}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $} \hspace{.2ex} ,
+\:\;
 \widehat{\Pi}(\mathcircabove{Q}_{\hspace{-0.1ex}i})
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q_i - \Pi
 \hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.2em} \noindent Это теорема \href{https://en.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Кастильяно}, $\widehat{\Pi}$ называется дополнительной энергией. В~линейной системе \eqref{staticsoflineardiscretesystem} ${\Rightarrow}$ ${\widehat{\Pi} = \Pi}$. Теорема~\eqref{Castigliano:theorem} бывает очень полезна~--- когда легко находится~${\widehat{\Pi}(\mathcircabove{Q}_{\hspace{-0.1ex}i})}$. Встречаются так называемые статически определимые системы, в~которых все внутренние силы удаётся найти лишь из баланса сил и~моментов. Для них \eqref{Castigliano:theorem} эффективна.
+\vspace{-0.1em} \noindent Это теорема \href{https://en.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Castigliano}, $\widehat{\Pi}$ называется дополнительной энергией. В~линейной системе \eqref{staticsoflineardiscretesystem} ${\Rightarrow}$ ${\widehat{\Pi} = \Pi}$. Теорема~\eqref{Castigliano:theorem} бывает очень полезна~--- когда легко находится~${\widehat{\Pi}(\mathcircabove{Q}_{\hspace{-0.1ex}i})}$. Встречаются так называемые статически определимые системы, в~которых все внутренние силы удаётся найти лишь из баланса сил и~моментов. Для них \eqref{Castigliano:theorem} эффективна.
 
 В~отличие от линейной задачи~\eqref{staticsoflineardiscretesystem}, нелинейная задача~\eqref{staticequilibriumwithpotentialenergy} может не~иметь решений вовсе или~же иметь их н\'{е}сколько.
 

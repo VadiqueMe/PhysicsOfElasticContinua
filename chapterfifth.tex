@@ -7,6 +7,12 @@
 \newcommand{\fieldofdisplacements}{\bm{u}}
 \newcommand{\fieldofrotations}{\bm{\varphi}} %% {\bm{\theta}}
 
+\newcommand{\distortiontensor}{\bm{\upgamma}}
+\newcommand{\wrynesstensor}{\bm{\kappa}\hspace{-0.1ex}} %% {\mathboldae}
+
+\newcommand{\forcestresstensor}{\mathboldtau}
+\newcommand{\couplestresstensor}{\bm{\mu}}
+
 \label{chapter:cosseratcontinuum}
 
 \en{\section{Introduction to linear micropolar theory}}
@@ -15,7 +21,7 @@
 
 \begin{otherlanguage}{russian}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{Х}{арактерной} отличительной особенностью классических сред~(\chapref{chapter:nonlinearcontinuum} и~\customref{chapter:linearclassicalelasticity}) является то, что они \inquotesx{состоят из~обычных материальных точек}[.] Частица классического континуума имеет лишь трансляционные степени свободы, её~движение определяется только вектором~${\bm{R}(q^i \hspace{-0.15em}, t)}$. Поэтому нагрузки~(\inquotes{силовые факторы}) в~такой среде~--- только силы, объёмные и~поверхностные. Моментов нет.
+\lettrine[lines=2, findent=2pt, nindent=0pt]{Х}{арактерная} отличительная особенность классических упругих сред~(\chapref{chapter:nonlinearcontinuum} и~\customref{chapter:linearclassicalelasticity})~--- то, что они состоят \inquotesx{из простых материальных точек}[.] Частица классического континуума имеет лишь трансляционные степени свободы, её~движение определяется только вектором~${\bm{R}(q^i \hspace{-0.15em}, t)}$. Поэтому нагрузки~(\inquotes{силовые факторы}) в~такой среде~--- только силы, объёмные и~поверхностные. Моментов нет.
 
 Но не~так~уж трудно построить более сложные модели сплошной среды, в~которых частицы обладают не~только~лишь степенями свободы трансляции, но~и н\'{е}которыми дополнительными. Новые степени свободы связаны и~с~новыми силовыми факторами, а~также новыми уравнениями.
 
@@ -74,57 +80,47 @@ The research in the field of the general theories of continuous media conducted 
 \\[.25em]
 %
 \boldnabla \variation{\fieldofdisplacements}
-= \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.3ex} \boldnabla \bm{r} + \hspace{-0.16ex} {^2\bm{0}} \hspace{.1ex}
-= \hspace{.1ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
-= \hspace{-0.1ex} \bm{E} \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
-%%= - \hspace{-0.2ex} \left( \bm{E} \hspace{-0.2ex} \times \hspace{-0.16ex} \variation{\fieldofrotations} \right)^{\hspace{-0.1ex}\T} \hspace{-0.75ex}
+= \hspace{-0.25ex} \boldnabla \variation{\fieldofrotations} %%{^2\bm{0}}
+\hspace{-0.2ex} \times \hspace{-0.2ex} \bm{r}
+- \hspace{-0.25ex} \boldnabla \bm{r} \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
+= - \bm{E} \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
+= - \hspace{.2ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
 \hspace{.1ex} ,
 \:\,
 \boldnabla \variation{\fieldofrotations} = {^2\bm{0}} \hspace{.1ex} .
 \end{array}
 \end{equation*}
 
-\vspace{-0.1em} Вводя тензоры деформации~--- тензор относительного смещения между частицами (tensor of relative displacement between particles, stretch tensor)~$\bm{\upgamma}$ и~тензор искривления-скручивания (curvature-twist tensor, wryness tensor)~$\mathboldae$~--- как
+\vspace{-0.1em} Вводя тензоры деформации~--- тензор относительного смещения между частицами (tensor of relative displacement between particles, distortion tensor, strain tensor)~$\distortiontensor$ и~тензор искривления-скручивания (curvature-twist tensor, wryness tensor)~$\wrynesstensor$~--- как
 
-\nopagebreak\vspace{-0.5em}
+\nopagebreak\vspace{-0.1em}
 \begin{equation}\label{deformationtensors:micropolarcontinuum}
 \begin{array}{rl}
-{\color{red}{\bm{\upgamma} \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements \hspace{.1ex} - \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} ,}} &
-{\color{red}{\mathboldae \hspace{.16ex} \equiv \boldnabla \fieldofrotations \hspace{.1ex} ,}}
-\\[.2em]
-%
-{\color{red}{\bm{\upgamma} \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements^{\hspace{-0.05ex}\T} \hspace{-0.3ex} + \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} ,}} &
-{\color{red}{\mathboldae \hspace{.16ex} \equiv \boldnabla \fieldofrotations^{\T} \hspace{-0.25ex} ,}}
+\distortiontensor \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements \hspace{.1ex} + \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} , &
+\wrynesstensor \hspace{.16ex} \equiv \boldnabla \fieldofrotations \hspace{.1ex} ,
 \end{array}
 \end{equation}
 %
-\nopagebreak\vspace{-0.25em}
+\nopagebreak\vspace{-0.85em}
 \begin{equation*}
 \begin{array}{rl}
-\variation{\bm{\upgamma}}
-= \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements} \hspace{.1ex} - \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
+\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.16ex}
+= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements \hspace{.12ex} - \hspace{.12ex} 2 \hspace{.16ex} \fieldofrotations \hspace{.1ex}
 , &
-\variation{\mathboldae} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations} \hspace{.1ex} ,
-\\[.2em]
-%
-\variation{\bm{\upgamma}}^{\T} \hspace{-0.32ex}
-= \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements}^{\hspace{-0.05ex}\T} \hspace{-0.3ex} + \hspace{.1ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
-, &
-\variation{\mathboldae}^{\T} \hspace{-0.32ex} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations}^{\T} \hspace{-0.25ex} ,
-\\[.2em]
-%
-\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.16ex}
-= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements \hspace{.12ex} {\color{red}{\hspace{.5ex} + \hspace{.5ex}}} \hspace{.12ex} 2 \hspace{.16ex} \fieldofrotations \hspace{.1ex}
-, &
-\mathboldae_{\hspace{.1ex}\Xcompanion} \hspace{-0.16ex}
+\wrynesstensor_{\hspace{.1ex}\Xcompanion} \hspace{-0.16ex}
 = \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofrotations \hspace{.1ex} ,
+\\[.3em]
+%
+\variation{\distortiontensor}
+= \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements} \hspace{.1ex}
++ \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
+, &
+\variation{\wrynesstensor} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations} \hspace{.1ex} ,
 \end{array}
 \end{equation*}
 
-\vspace{-0.5em} \noindent имеем нужное отсутствие деформаций
-${\variation{\bm{\upgamma}} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\mathboldae} = \hspace{-0.1ex} {^2\bm{0}}}$.
-
-%%\vspace{-0.32em} Введённые так $\bm{\upgamma}$ и~$\mathboldae$, как нетрудно догадаться, окажутся тензорами деформации.
+\vspace{-0.56em} \noindent имеем нужное отсутствие деформаций
+${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\wrynesstensor} = \hspace{-0.1ex} {^2\bm{0}}}$.
 
 В~\chapdotpararef{chapter:nonlinearcontinuum}{para:stressesAsLagrangeMultipliers} было показано, что напряжения можно рассматривать как множители Lagrange’а в~принципе виртуальной работы при~${\variation{\internalwork} = 0}$. Поступим так~же и~теперь:
 
@@ -132,45 +128,132 @@ ${\variation{\bm{\upgamma}} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\math
 \begin{multline}\label{virtualworkprinciple.1:micropolarcontinuum}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{f} \dotp \variation{\fieldofdisplacements}
 + \bm{m} \dotp \variation{\fieldofrotations}
-- \mathboldtau \dotdotp \variation{\bm{\upgamma}}^{\T} \hspace{-0.4ex}
-- \bm{\mu} \dotdotp \variation{\mathboldae}^{\T} \hspace{-0.05ex} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{.5ex} + \\[-1.1em]
+- \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.4ex}
+- \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.05ex} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{.5ex} + \\[-1.1em]
 + \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\fieldofdisplacements}
 + \mathboldM \hspace{-0.1ex} \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
 \end{multline}
 
-\vspace{-0.2em} \noindent Множители Лагранжа в~каждой точке~--- это несимметричные тензоры второй сложности~$\mathboldtau$ и~$\bm{\mu}$.
+\vspace{-0.2em} \noindent Множители Лагранжа в~каждой точке~--- это несимметричные тензоры второй сложности~$\forcestresstensor$ и~$\couplestresstensor$.
 
-Используя
+Преобразуем ${- \hspace{.2ex} \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T}}$ и~${- \hspace{.2ex} \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T}}$
 
-...
+\nopagebreak\begin{equation*}
+\begin{array}{rl}
+\variation{\distortiontensor}^{\T} \hspace{-0.32ex}
+= \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements}^{\hspace{-0.05ex}\T} \hspace{-0.3ex}
+- \hspace{.1ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
+, &
+\variation{\wrynesstensor}^{\T} \hspace{-0.32ex} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations}^{\T} \hspace{-0.25ex} ,
+\\[.25em]
+%
+- \hspace{.2ex} \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.32ex}
+= - \hspace{.2ex} \forcestresstensor \dotdotp \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements}^{\hspace{-0.05ex}\T} \hspace{-0.3ex}
++ \forcestresstensor \dotdotp \hspace{-0.32ex} \left( \hspace{.12ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.12ex} \right) \hspace{-0.25ex}
+, &
+- \hspace{.2ex} \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.32ex}
+= - \hspace{.2ex} \couplestresstensor \dotdotp \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations}^{\T} \hspace{-0.25ex} .
+\end{array}
+\end{equation*}
 
-\noindent и~теорему о~дивергенции, приведём~\eqref{virtualworkprinciple.1:micropolarcontinuum} к~виду
+\noindent Используя
+
+\nopagebreak\vspace{-1em}\begin{equation*}
+\eqrefwithchapdotpara{pseudovectorinvariant}{chapter:elementsoftensorcalculus}{para:tensors.symmetric+skewsymmetric} \:\Rightarrow\,
+\bm{A}_{\Xcompanion} \hspace{-0.1ex} = - \hspace{.1ex} \bm{A} \dotdotp \levicivitatensor
+\hspace{.1ex} ,
+\end{equation*}
+
+\nopagebreak\vspace{-0.5em}\begin{multline*}
+\bm{A} \dotdotp \hspace{-0.25ex} \left( \hspace{.1ex} \bm{b} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex} \right)
+= \bm{A} \dotdotp \hspace{-0.32ex} \left( \hspace{.1ex} \bm{E} \hspace{-0.12ex} \times \bm{b} \hspace{.1ex} \right)
+= \bm{A} \dotdotp \hspace{-0.32ex} \left( \hspace{-0.1ex} - \hspace{.2ex} \levicivitatensor \dotp \bm{b} \hspace{.1ex} \right) =
+\\[-0.2em]
+%
+\hspace*{\fill} = \left( \hspace{-0.1ex} - \hspace{.1ex} \bm{A} \dotdotp \levicivitatensor \hspace{.1ex} \right) \hspace{-0.2ex} \dotp \hspace{.1ex} \bm{b}
+\hspace{.12ex} = \bm{A}_{\Xcompanion} \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{b}
+\hspace{.64ex} \Rightarrow
+\end{multline*}
+
+\nopagebreak\vspace{-0.5em}\begin{equation*}
+\Rightarrow \hspace{.64ex}
+\forcestresstensor \dotdotp \hspace{-0.25ex} \left( \hspace{.12ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.12ex} \right)
+= \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} \dotp \hspace{.1ex} \variation{\fieldofrotations}
+\end{equation*}
+
+\vspace{-0.8em} \noindent и \inquotes{product rule}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}\begin{array}{c}
+\boldnabla \dotp \left( \hspace{.1ex} \forcestresstensor \dotp \variation{\fieldofdisplacements} \right)
+= \left( \hspace{.12ex} \boldnabla \dotp \forcestresstensor \hspace{.12ex} \right) \hspace{-0.16ex} \dotp \variation{\fieldofdisplacements}
++ \forcestresstensor \dotdotp \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements}^{\hspace{-0.05ex}\T} \hspace{-0.3ex} ,
+\\[.25em]
+%
+\boldnabla \dotp \left( \hspace{.1ex} \couplestresstensor \dotp \variation{\fieldofrotations} \right)
+= \left( \hspace{.12ex} \boldnabla \dotp \couplestresstensor \hspace{.12ex} \right) \hspace{-0.16ex} \dotp \variation{\fieldofrotations}
++ \couplestresstensor \dotdotp \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations}^{\hspace{-0.05ex}\T} \hspace{-0.3ex} ,
+\end{array}\end{equation*}
+
+\vspace{-0.4em} \noindent получаем
+
+\nopagebreak\vspace{-0.4em}\begin{equation*}
+\begin{array}{c}
+- \hspace{.2ex} \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.32ex}
+= \left( \hspace{.12ex} \boldnabla \dotp \forcestresstensor \hspace{.12ex} \right) \hspace{-0.16ex} \dotp \variation{\fieldofdisplacements}
+- \hspace{-0.15ex} \boldnabla \dotp \left( \hspace{.1ex} \forcestresstensor \dotp \variation{\fieldofdisplacements} \right) \hspace{.1ex}
++ \hspace{.1ex} \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} \dotp \hspace{.1ex} \variation{\fieldofrotations} \hspace{.1ex} ,
+\\[.25em]
+%
+- \hspace{.2ex} \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.32ex}
+= \left( \hspace{.12ex} \boldnabla \dotp \couplestresstensor \hspace{.12ex} \right) \hspace{-0.16ex} \dotp \variation{\fieldofrotations}
+- \hspace{-0.15ex} \boldnabla \dotp \left( \hspace{.1ex} \couplestresstensor \dotp \variation{\fieldofrotations} \right) \hspace{-0.25ex} .
+\end{array}
+\end{equation*}
+
+\vspace{-0.25em} \noindent После интегрирования с~применением теоремы о~дивергенции\footnote{${\bm{a} \dotp (\bm{B} \dotp \bm{c} \hspace{.1ex}) = (\bm{a} \dotp \bm{B}) \hspace{-0.1ex} \dotp \bm{c} = \bm{a} \dotp \bm{B} \dotp \bm{c}}$}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\displaystyle
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \left( \forcestresstensor \dotp \variation{\fieldofdisplacements} \right) \hspace{-0.1ex} d\mathcal{V}
+=
+\ointegral\displaylimits_{\mathclap{o\hspace{.15ex}(\boundary \mathcal{V})}} \hspace{-0.1ex} \bm{n} \dotp \forcestresstensor \dotp \variation{\fieldofdisplacements} \hspace{.32ex} do
+\hspace{.1ex} ,
+\:\:
+%
+\displaystyle
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \left( \hspace{.1ex} \couplestresstensor \dotp \variation{\fieldofrotations} \right) \hspace{-0.1ex} d\mathcal{V}
+=
+\ointegral\displaylimits_{\mathclap{o\hspace{.15ex}(\boundary \mathcal{V})}} \hspace{-0.1ex} \bm{n} \dotp \couplestresstensor \dotp \variation{\fieldofrotations} \hspace{.32ex} do
+%%\hspace{.1ex} ,
+\end{equation*}
+
+\vspace{-0.25em} \noindent \eqref{virtualworkprinciple.1:micropolarcontinuum} приобретает вид
 
 \nopagebreak\vspace{-0.33em}
 \begin{multline*}\label{virtualworkprinciple.2:micropolarcontinuum}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} ( \hspace{.12ex} \boldnabla \hspace{-0.1ex} \dotp \mathboldtau + \bm{f} \hspace{.12ex} ) \dotp \variation{\fieldofdisplacements} \hspace{.1ex}
-+ ( \hspace{.12ex} \boldnabla \dotp \bm{\mu} \hspace{.1ex} + \mathboldtau_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} ) \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{0.5ex} + \\[-1.1em]
-+ \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} ( \hspace{.32ex} \bm{p} - \bm{n} \dotp \mathboldtau \hspace{.2ex} ) \dotp \variation{\fieldofdisplacements} \hspace{.1ex}
-+ ( \hspace{.1ex} \mathboldM - \bm{n} \dotp \bm{\mu} \hspace{.1ex} ) \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} ( \hspace{.12ex} \boldnabla \hspace{-0.1ex} \dotp \forcestresstensor + \bm{f} \hspace{.12ex} ) \dotp \variation{\fieldofdisplacements} \hspace{.1ex}
++ ( \hspace{.12ex} \boldnabla \dotp \couplestresstensor \hspace{.1ex} + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} ) \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{0.5ex} + \\[-1.1em]
++ \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} ( \hspace{.32ex} \bm{p} - \bm{n} \dotp \forcestresstensor \hspace{.2ex} ) \dotp \variation{\fieldofdisplacements} \hspace{.1ex}
++ ( \hspace{.1ex} \mathboldM - \bm{n} \dotp \couplestresstensor \hspace{.1ex} ) \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
 \end{multline*}
 
-Из произвольности вариаций~$\variation{\fieldofdisplacements}$ и~$\variation{\fieldofrotations}$ в~объёме и~на~поверхности вытекают уравнения баланса сил и~моментов, а~также формулы типа Коши, %%Cauchy,
-раскрывающие смысл $\mathboldtau$ и~$\bm{\mu}$:
+Из произвольности вариаций~$\variation{\fieldofdisplacements}$ и~$\variation{\fieldofrotations}$ (и~в~объёме, и~на~поверхности) вытекают уравнения баланса сил и~моментов, а~также \textcolor{magenta}{формулы типа Коши}, %%Cauchy
+раскрывающие смысл $\forcestresstensor$ и~$\couplestresstensor$:
 
 \nopagebreak\begin{equation}\label{micropolar.equilibrium:cauchy-like}
-\boldnabla \hspace{-0.1ex} \dotp \mathboldtau + \bm{f} \hspace{.12ex} = \bm{0} \hspace{.1ex} ,
+\boldnabla \hspace{-0.1ex} \dotp \forcestresstensor + \bm{f} \hspace{.12ex} = \bm{0} \hspace{.1ex} ,
 \:\:
-\boldnabla \dotp \bm{\mu} \hspace{.1ex} + \mathboldtau_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} = \bm{0} \hspace{.1ex} ,
+\boldnabla \dotp \couplestresstensor \hspace{.1ex} + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} = \bm{0} \hspace{.1ex} ,
 \end{equation}%
 \nopagebreak\vspace{-1em}\begin{equation}\label{micropolar.equilibrium:boundaryconditions}
-\bm{n} \dotp \mathboldtau = \bm{p} \hspace{.1ex} ,
+\bm{n} \dotp \forcestresstensor = \bm{p} \hspace{.1ex} ,
 \:\:
-\bm{n} \dotp \bm{\mu} = \mathboldM \hspace{.1ex} .
+\bm{n} \dotp \couplestresstensor = \mathboldM \hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.4em} Тензор силовых напряжений~$\mathboldtau$ удовлетворяет тем~же дифференциальным \inquotes{уравнениям равновесия}\footnote{Кавычки здесь оттого, что \emph{уравнения равновесия} это вообще всё, что вытекает из принципа виртуальной работы в~статике.} \hspace{-0.5em} и~краевым условиям, что и в~безмоментной среде. Но~тензор~$\mathboldtau$ несимметричен, поскольку отличны от~нуля моментные напряжения~$\bm{\mu}$ и~нагрузки~$\bm{m}$.
+\vspace{-0.4em} Тензор силового напряжения~$\forcestresstensor$ удовлетворяет тем~же дифференциальным \inquotes{уравнениям равновесия}\footnote{Кавычки здесь оттого, что \emph{уравнения равновесия} это вообще всё, что вытекает из принципа виртуальной работы в~статике.} \hspace{-0.5em} и~краевым условиям, что и в~безмоментной среде. \en{But tensor}\ru{Но~тензор}~$\forcestresstensor$ \en{is asymmetric here}\ru{тут несимметричен}, \en{and}\ru{и~появляются} \en{couple stresses}\ru{моментные напряжения}~$\couplestresstensor$\en{ appear}.
 
-Смысл компонент тензора~$\bm{\mu}$ раскрывается так~же, как и для~$\mathboldtau$. На~площадке c~нормалью
+\en{Meaning of~components}\ru{Смысл компонент} \en{of~couple stress tensor}\ru{тензора моментного напряжения}~$\couplestresstensor$ \en{is revealed similarly as for}\ru{раскрывается так~же, как и для}~$\forcestresstensor$. На~площ\'{а}дке c~нормалью
 
 ...
 
@@ -188,21 +271,22 @@ ${\variation{\bm{\upgamma}} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\math
 ...
 
 ..., разлагая тензоры деформаций и~напряжений на~симметричные и~антисимметричные части
-\begin{equation}
+
+\nopagebreak\begin{equation}
 \begin{array}{c}
-\mathboldtau = \mathboldtau^{\hspace{.32ex}\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.2ex} \mathboldtau_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \;\:
+\forcestresstensor = \forcestresstensor^{\hspace{.32ex}\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.2ex} \forcestresstensor_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \;\:
 %
-\bm{\mu} = \bm{\mu}^{\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.32ex} \bm{\mu}_{\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \;\:
+\couplestresstensor = \couplestresstensor^{\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.32ex} \couplestresstensor_{\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \;\:
 %
-\mathboldae = \mathboldae^{\hspace{.12ex}\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.32ex} \mathboldae_{\Xcompanion} \hspace{-0.1ex} \times \bm{E} ,
+\wrynesstensor = \wrynesstensor^{\hspace{.12ex}\mathsf{S}} \hspace{-0.25ex} - \displaystyle \onehalf \hspace{.32ex} \wrynesstensor_{\Xcompanion} \hspace{-0.1ex} \times \bm{E} ,
 \\[.6em]
 %
-\bm{\upgamma} = \mathboldepsilon - \displaystyle \onehalf \hspace{.32ex} \bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \:\:
+\distortiontensor = \mathboldepsilon - \displaystyle \onehalf \hspace{.32ex} \distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E} , \:\:
 %
-\mathboldepsilon \equiv \bm{\upgamma}^{\hspace{.2ex}\mathsf{S}} \hspace{-0.32ex} = \hspace{-0.2ex} \boldnabla {\fieldofdisplacements}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex} , \:\:
+\mathboldepsilon \equiv \distortiontensor^{\hspace{.2ex}\mathsf{S}} \hspace{-0.32ex} = \hspace{-0.2ex} \boldnabla {\fieldofdisplacements}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex} , \:\:
 %
-\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.16ex}
-= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements \hspace{.12ex} + \hspace{.12ex} 2 \hspace{.16ex} \fieldofrotations \hspace{.16ex} ;
+\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.16ex}
+= \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements \hspace{.12ex} - \hspace{.12ex} 2 \hspace{.16ex} \fieldofrotations \hspace{.16ex} ;
 \\[.6em]
 %
 \variation{\Pi} = \ldots
@@ -212,7 +296,7 @@ ${\variation{\bm{\upgamma}} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\math
 ...
 
 
-Если формально устремить $h$ к~нулю, то исчезает вклад $\mathboldae$ в~$\Pi$, а~с~ним и моментные напряжения. При~отсутствии моментной нагрузки~$\bm{m}$ тензор~$\mathboldtau$ становится симметричным, и мы приходим к~классической модели. Использование неклассической моментной модели естественно в~тех случаях, когда в~реальном материале есть некий минимальный объём, ...
+Если формально устремить $h$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\Pi$, а~с~ним и моментные напряжения. При~отсутствии моментной нагрузки~$\bm{m}$ тензор~$\forcestresstensor$ становится симметричным, и мы приходим к~классической модели. Использование неклассической моментной модели естественно в~тех случаях, когда в~реальном материале есть некий минимальный объём, ...
 
 ...
 
@@ -244,17 +328,17 @@ ${\variation{\bm{\upgamma}} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\math
 
 \label{para:caseoflatenttrihedron.smalldisplacementsandrotations}
 
-Так называется упрощённая моментная модель\footnote{Братья Cosserat называли это cas de trièdre caché (случай скрытого трёхгранника, case of latent trihedron).}\hspace{-0.32em},\hspace{0.24em} в~которой повороты выражаются через перемещения как в~классической среде~\cite{nowacki-elasticity}:
+Так называется упрощённая моментная модель\footnote{\ru{Братья }Cosserat\en{ brothers} \en{called it}\ru{называли это} cas de trièdre caché (\ru{случай скрытого трёхгранника, }case of latent trihedron).}\hspace{-0.32em},\hspace{0.24em} в~которой повороты выражаются через перемещения как в~классической среде: %%~\cite{nowacki-elasticity}:
 
-\nopagebreak\vspace{-0.75em}\begin{equation}
+\nopagebreak\vspace{-0.1em}\begin{equation}
 \fieldofrotations = \displaystyle \onehalf \hspace{0.4ex} \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements 
 \:\Leftrightarrow\:
-\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}
+\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}
 \:\Leftrightarrow\:
-\bm{\upgamma} = \mathboldepsilon = \hspace{-0.12ex} \boldnabla {\fieldofdisplacements}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex}.
+\distortiontensor = \mathboldepsilon = \hspace{-0.12ex} \boldnabla {\fieldofdisplacements}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex}.
 \end{equation}
 
-Равенство~${\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию $\bm{\upgamma}$) возможно понимать как внутреннюю связь~(\chapdotpararef{chapter:nonlinearcontinuum}{para:internalconstraints}). Аргумент~${\bm{\upgamma}_{\hspace{-0.16ex}\Xcompanion}}$ исчезает из~энергии~$\Pi$, соотношение упругости для~${\mathboldtau_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано. Его место в~полной системе занимает уравнение связи.
+Равенство~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию~$\distortiontensor$) возможно понимать как внутреннюю связь~(\chapdotpararef{chapter:nonlinearcontinuum}{para:internalconstraints}). Аргумент~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$ исчезает из~энергии~$\Pi$, соотношение упругости для~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано. Его место в~полной системе занимает уравнение связи.
 
 В~классической теории упругости полная система сводится к~одному уравнению для~вектора~$\fieldofdisplacements$~(\chapdotpararef{chapter:linearclassicalelasticity}{para:equationsfordisplacement}). В~моментной теории
 
@@ -292,7 +376,7 @@ ${\variation{\bm{\upgamma}} = \hspace{-0.1ex} {^2\bm{0}}}$ и~${\variation{\math
 
 \label{para:caseoflatenttrihedron.largedisplacementsandrotations}
 
-Вспомним переход к~модели со~стеснённым вращением в~линейной теории~(\pararef{para:caseoflatenttrihedron.smalldisplacementsandrotations}). Разделились соотношения упругости для~симметричной части тензора силовых напряжений
+Вспомним переход к~модели со~стеснённым вращением в~линейной теории~(\pararef{para:caseoflatenttrihedron.smalldisplacementsandrotations}). Разделились соотношения упругости для~симметричной части тензора силового напряжения
 
 ...
 
