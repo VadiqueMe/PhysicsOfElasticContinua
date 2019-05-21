@@ -9,7 +9,7 @@
 % version 2005/12/01 or later.
 %
 % This work has the LPPL maintenance status `maintained'.
-% 
+%
 % The Current Maintainer of this work is Jeffrey D. Hein.
 %
 % This work consists of the files 3dplot.sty and 3dplot.tex
@@ -67,11 +67,11 @@ Documentation for the 3dplot.sty package can be found at `<http://www.heinjd.com
 \pgfmathsetmacro{\thetavec}{30}
 \pgfmathsetmacro{\phivec}{60}
 
-%start tikz picture, and use the tdplot_main_coords style to implement the display 
+%start tikz picture, and use the tdplot_main_coords style to implement the display
 %coordinate transformation provided by 3dplot
 \begin{tikzpicture}[scale=5,tdplot_main_coords]
 
-%set up some coordinates 
+%set up some coordinates
 %-----------------------
 \coordinate (O) at (0,0,0);
 
@@ -89,7 +89,7 @@ Documentation for the 3dplot.sty package can be found at `<http://www.heinjd.com
 \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
 \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
 
-%draw a vector from origin to point (P) 
+%draw a vector from origin to point (P)
 \draw[-stealth,color=red] (O) -- (P);
 
 %draw projection on xy plane, and a connecting line
@@ -128,7 +128,7 @@ Documentation for the 3dplot.sty package can be found at `<http://www.heinjd.com
 \draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,0,.5) node[anchor=south]{$z'$};
 
 %WARNING:  coordinates defined by the \coordinate command (eg. (O), (P), etc.)
-%cannot be used in rotated coordinate frames.  Use only literal coordinates.  
+%cannot be used in rotated coordinate frames.  Use only literal coordinates.
 
 %draw some vector, and its projection, in the rotated coordinate frame
 \draw[-stealth,color=blue,tdplot_rotated_coords] (0,0,0) -- (.2,.2,.2);

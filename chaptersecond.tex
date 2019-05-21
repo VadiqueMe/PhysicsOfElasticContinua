@@ -12,9 +12,9 @@
 
 \label{para:initialconcepts.discreteapproach}
 
-\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, systems of~particles~(\inquotes{pointlike masses}, \inquotes{material points}) are considered. In a~system of~$N$ particles each particle has mass~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion function~${\bm{r}_k(t)}$. Function~${\bm{r}_k(t)}$ is measured relative to some reference system~--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, systems of~particles~(\inquotesx{pointlike masses}[,] \inquotes{material points}) are considered. In a~system of~$N$ particles each particle has mass~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion function~${\bm{r}_k(t)}$. Function~${\bm{r}_k(t)}$ is measured relative to some reference system~--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
 
-\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются системы частиц~(\inquotes{точеч\-ных масс}, \inquotes{материальных точек}). В~системе $N$ \hbox{частиц} каждая частица имеет массу~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функцию движения~${\bm{r}_k(t)}$. Функция~${\bm{r}_k(t)}$ измеряется отно\-си\-тель\-но н\'{е}которой системы отсчёта~--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются системы частиц~(\inquotesx{точеч\-ных масс}[,] \inquotes{материальных точек}). В~системе $N$ \hbox{частиц} каждая частица имеет массу~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функцию движения~${\bm{r}_k(t)}$. Функция~${\bm{r}_k(t)}$ измеряется отно\-си\-тель\-но н\'{е}которой системы отсчёта~--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
 
 \begin{wrapfigure}[10]{o}{.48\textwidth}
 \makebox[.48\textwidth][c]{\begin{minipage}[t]{.44\textwidth}
@@ -403,7 +403,7 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 \displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}_k \hspace{-0.12ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0 \hspace{0.1ex},
 \vspace{-0.32em}\end{equation}
 
-\noindent где~${\bm{F}_k}$~--- лишь активные силы.
+\noindent где~${\bm{F}_k}$~--- лишь активные силы, без реакций связей.
 
 Дифференциальное вариационное уравнение~\eqref{discrete:principleofvirtualwork} может показаться тривиальным следствием закона Ньютона~\eqref{law:ofnewton} и~условия идеальности связей~\eqref{idealconstraints}. Однако содержание~\eqref{discrete:principleofvirtualwork} несравненно обширнее. Известно~--- и~читатель вскоре это увидит,~--- что принцип~\eqref{discrete:principleofvirtualwork} может быть положен в~основу механики~\cite{gantmacher}. Различные модели упругих тел, описываемые в~этой книге, построены с~опорой на~этот принцип.
 
@@ -433,14 +433,14 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 \vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил
 ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.1ex}}$.
 
-\vspace{-0.1em} Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\varvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\varvector{\bm{o}}}$~--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
+\vspace{-0.1em} Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\constvarvector{\bm{o}}}$~--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{assumptionforvirtualwork}
 \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex}
-= \varvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k
+= \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k
 \hspace{.1ex} , \:
-\varvector{\hspace{-0.1ex}\bm{\rho}} = \boldconst \hspace{.1ex} , \:
-\varvector{\bm{o}} = \boldconst
+\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconst \hspace{.1ex} , \:
+\constvarvector{\bm{o}} = \boldconst
 \hspace{.4ex} \Rightarrow \hspace{.32ex}
 \variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex}.
 \end{equation}
@@ -457,7 +457,7 @@ ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaysty
 
 ...
 
-Принимая~\eqref{assumptionforvirtualwork} и~подставляя в~\eqref{discrete:principleofvirtualwork.externalinternal} сначала ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\hspace{-0.1ex}\bm{\rho}}}$ (трансляция), а~затем ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \varvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k}$ (поворот), получаем баланс импульса~(...) и баланс момента импульса~(...).
+Принимая~\eqref{assumptionforvirtualwork} и~подставляя в~\eqref{discrete:principleofvirtualwork.externalinternal} сначала ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ (трансляция), а~затем ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k}$ (поворот), получаем баланс импульса~(...) и баланс момента импульса~(...).
 
 ...
 
@@ -681,7 +681,7 @@ q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 ...
 
-Разговор о~статике в~общей механике закончим принципом д’Аламбера~(d’Alembert’s principle): уравнения динамики отличаются от~статических лишь наличием дополнительных \inquotes{фиктивных сил инерции}~${m_k \mathdotdotabove{\bm{r}}_k}$. Принцип д’Аламбера очевиден, но бездумное его применение может привести к~ошибкам. Например, уравнения вязкой жидкости в~статике и~динамике отличаются не~только лишь инерционными членами. Для упругих~же сред принцип д’Аламбера полностью справедлив.
+Разговор о~статике в~общей механике закончим принципом \hbox{д’\hspace{-0.2ex}Аламбера}~(\hbox{d’\hspace{-0.2ex}Alembert}’s principle): уравнения динамики отличаются от~статических лишь наличием дополнительных \inquotes{фиктивных сил инерции}~${m_k \mathdotdotabove{\bm{r}}_k}$. Принцип \hbox{д’\hspace{-0.2ex}Аламбера} очевиден, но бездумное его применение может привести к~ошибкам. Например, уравнения вязкой жидкости в~статике и~динамике отличаются не~только лишь инерционными членами. Для упругих~же сред принцип \hbox{д’\hspace{-0.2ex}Аламбера} полностью справедлив.
 
 \end{otherlanguage}
 

@@ -54,14 +54,25 @@ ${\stiffnesstensor}$~\en{is stiffness tensor (tetravalent)}\ru{--- тензор 
 \ru{Уравнения~\eqref{lineartheory:wholesetofequations} точные, они могут быть получены варьированием из~нелинейной теории. Варьирование от~произвольной конфигурации описано в~\chapdotpararef{chapter:nonlinearcontinuum}{para:variationofconfiguration}. Линейная теория~--- результат варьирования от~ненапряжённой отсчётной конфигурации. При~этом}
 
 \nopagebreak\begin{equation}\begin{array}{c}
-\bm{F} = \bm{E} \hspace{0.1ex}, \:\;
-\variation{\hspace{.12ex}\bm{C}} = \mathboldepsilon \equiv \boldnabla \hspace{.12ex} \variation{\bm{R}}^{\hspace{0.2ex}\mathsf{S}} \hspace{-0.2ex}, \:\;
-\mathboldtau = {\hspace{-0.2ex}^2\bm{0}} \hspace{0.1ex}, \\[0.1em]
-\bm{\Theta} = \variation{\hspace{.1ex}\firstpiolakirchhoffstress} = \displaystyle \frac{\partial^2 \hspace{0.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{0.1ex} \bm{C} \hspace{0.1ex} \partial \hspace{0.1ex} \bm{C}}} \dotdotp \variation{\hspace{.12ex}\bm{C}} , \:\:
-\boldnabla \dotp \bm{\Theta} \hspace{0.15ex} + \hspace{0.1ex} \rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}.
+\bm{F} = \bm{E} \hspace{.1ex} ,
+\:\;
+\variation{\hspace{.12ex}\bm{C}} = \mathboldepsilon \equiv \boldnabla \hspace{.12ex} \variation{\bm{R}}^{\hspace{0.2ex}\mathsf{S}} \hspace{-0.2ex} ,
+\:\;
+\mathboldtau = {\hspace{-0.2ex}^2\bm{0}}
+\hspace{.1ex} ,
+\\[.1em]
+%
+\varbivalent{\hspace{-0.2ex}\cauchystress}
+= \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
+= \displaystyle \frac{\partial^2 \hspace{.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{0.1ex} \bm{C}}} \dotdotp \variation{\hspace{.12ex}\bm{C}} ,
+\:\:
+\boldnabla \dotp \varbivalent{\hspace{-0.2ex}\cauchystress} \hspace{.1ex}
++ \hspace{.1ex} \rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
+= \hspace{.1ex} \bm{0}
+\hspace{.1ex} .
 \end{array}\end{equation}
 
-\noindent \en{It remains to~change}\ru{Остаётся поменять} ${\variation{\bm{R}}}$ \en{to}\ru{на}~$\bm{u}$, $\bm{\Theta}$ \en{to}\ru{на}~$\mathboldtau$, ${\scalebox{0.98}[1]{$\raisemath{0.16em}{\scalebox{0.92}[0.92]{$\partial^2 \hspace{0.1ex} \Pi$}} / \hspace{-0.1ex} \raisemath{-0.32em}{\scalebox{0.92}[0.92]{$\partial \hspace{0.1ex} \bm{C} \hspace{0.1ex} \partial \hspace{0.1ex} \bm{C}$}}\hspace{0.12ex}$}}$ \en{to}\ru{на}~$\stiffnesstensor$, \en{and}\ru{а}~${\rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}}$ \en{to}\ru{на}~$\bm{f}$\hspace{-0.2ex}.
+\noindent \en{It remains to~change}\ru{Остаётся поменять} ${\variation{\bm{R}}}$ \en{to}\ru{на}~$\bm{u}$, $\varbivalent{\hspace{-0.2ex}\cauchystress}$ \en{to}\ru{на}~$\mathboldtau$, ${\scalebox{0.98}[1]{$\raisemath{0.16em}{\scalebox{0.92}[0.92]{$\partial^2 \hspace{0.1ex} \Pi$}} / \hspace{-0.1ex} \raisemath{-0.32em}{\scalebox{0.92}[0.92]{$\partial \hspace{0.1ex} \bm{C} \hspace{0.1ex} \partial \hspace{0.1ex} \bm{C}$}}\hspace{0.12ex}$}}$ \en{to}\ru{на}~$\stiffnesstensor$, \en{and}\ru{а}~${\rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}}$ \en{to}\ru{на}~$\bm{f}$\hbox{\hspace{-0.2ex}.}
 
 \begin{otherlanguage}{russian}
 
@@ -78,18 +89,18 @@ ${\stiffnesstensor}$~\en{is stiffness tensor (tetravalent)}\ru{--- тензор 
 \vspace{0.12em}\end{equation}
 Полагая перемещение~$\bm{u}$ м\'{а}лым, перейдём от~\eqref{nonlinear:setofequations} к~\eqref{lineartheory:wholesetofequations}.
 
-Или вот как. Вместо $\bm{u}$ взять $\lambda \bm{u}$, тут ${\lambda \hspace{-0.1ex}\to 0}$~--- формальный малый параметр. А~неизвестные представить рядами по~целым степеням~$\lambda$
+Или вот как. Вместо $\bm{u}$ взять $\smallparameter \bm{u}$, тут ${\smallparameter \hspace{-0.1ex}\to 0}$~--- некоторый весьма малый параметр. А~неизвестные представить рядами по~целым степеням~$\smallparameter$
 \vspace{0.1em}\[\begin{array}{c}
-\mathboldtau \hspace{0.1ex} = \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \lambda \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex}, \:\:
-\bm{C} = \bm{C}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \lambda \bm{C}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex}, \\[0.1em]
-\boldnabla \hspace{0.1ex} = \boldnablacircled \hspace{0.1ex} + \lambda \boldnabla^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex} , \:\:
-\bm{F} = \bm{E} + \hspace{-0.1ex} \lambda \boldnablacircled {\bm{u}}^{\T} \hspace{-0.3ex}, \:\:
-J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots
+\mathboldtau \hspace{0.1ex} = \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex}, \:\:
+\bm{C} = \bm{C}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \bm{C}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex}, \\[0.1em]
+\boldnabla \hspace{0.1ex} = \boldnablacircled \hspace{0.1ex} + \smallparameter \boldnabla^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex} , \:\:
+\bm{F} = \bm{E} + \hspace{-0.1ex} \smallparameter \boldnablacircled {\bm{u}}^{\T} \hspace{-0.3ex}, \:\:
+J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots
 \end{array}\]
 
-\noindent Для первых~(\inquotes{нулевых}) членов этих разложений и~получается~\eqref{lineartheory:wholesetofequations}. В~\hbox{книге~\cite{truesdell-firstcourse}} си\'{е} названо формальным приближением.
+\noindent Для первых~(\inquotes{нулевых}) членов этих разложений и~получается~\eqref{lineartheory:wholesetofequations}. В~\hbox{книге~\cite{truesdell-firstcourse}} си\'{е} названо \inquotesx{формальным приближением}[.]
 
-Невозможно сказать в~общем случае, насколько мал должен~быть параметр~$\lambda$~--- ответ зависит от~ситуации и~определяется лишь тем, описывает линейная модель интересующий эффект или~нет. Когда, например, интересна связь частот\'{ы} свободных колебаний упругого тела с~амплитудой, то нужна уж\'{е} нелинейная модель.
+Невозможно сказать в~общем случае, насколько мал должен~быть параметр~$\smallparameter$~--- ответ зависит от~ситуации и~определяется лишь тем, описывает линейная модель интересующий эффект или~нет. Когда, например, интересна связь частот\'{ы} свободных колебаний упругого тела с~амплитудой, то нужна уж\'{е} нелинейная модель.
 
 Линейная задача ставится в~начальном объёме~\hbox{$\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}$\hspace{-0.12em}}, ограниченном поверхностью~$o$ с~вектором пл\'{о}щади~${\bm{n} do}$ (\inquotes{принцип начальных размеров}).
 
@@ -104,7 +115,7 @@ J = 1 + \hspace{-0.1ex} \lambda J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(1)}} \hs
 
 Начальные условия в~динамических задачах, когда вместо~$\bm{f}$ имеем ${\bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{0.1ex} \mathdotdotabove{\bm{u}}}$, ставятся как обычно в~механике~--- на~положения и~на~скорости: в~условный момент времени~${t \!=\! 0}$ определены~$\bm{u}$ и~$\mathdotabove{\bm{u}}$.
 
-Как отмечалось в~\chapref{chapter:genericmechanics}, в~основу механики может быть положен принцип виртуальной работы~(d’Alembert\hbox{--}Lagrange principle). Этот принцип справедлив и~в~линейной теории (внутренние силы в~упругой среде потенциальны: ${\variation{\internalwork} = -\variation{\Pi}}$)
+Как отмечалось в~\chapref{chapter:genericmechanics}, в~основу механики может быть положен принцип виртуальной работы~(\hbox{d’\hspace{-0.2ex}Alembert--Lagrange} principle). Этот принцип справедлив и~в~линейной теории (внутренние силы в~упругой среде потенциальны: ${\variation{\internalwork} = -\variation{\Pi}}$)
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{lineartheory:principleofvirtualwork}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \left[^{\mathstrut} \hspace{-0.2ex} \left( \bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{0.1ex} \mathdotdotabove{\bm{u}} \hspace{0.2ex} \right) \dotp \variation{\bm{u}} - \variation{\Pi} \hspace{0.25ex} \right] \hspace{-0.32ex} d\mathcal{V} + \hspace{-0.2ex}
@@ -412,13 +423,13 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 \AddUnderBrace[line width=.75pt]%
 {beginSurfaceLoad}{endSurfaceLoad}{${\scriptstyle \bm{p}}$}
 
-\vspace{-0.2em} Из~\eqref{clapeyron:elasticitytheorem} следует, что без нагрузки ${\hspace{-0.1ex}\raisemath{.15em}{\scalebox{0.75}{$\smash{\displaystyle\integral\limits_{\mathcal{V}}}$}} \Pi \hspace{0.2ex} d\mathcal{V} = 0}$. По\-сколь\-ку $\Pi$ положительна, то~$\mathboldtau$ и~$\mathboldepsilon$~--- нули.
+\vspace{-0.2em} Из~\eqref{clapeyron:elasticitytheorem} следует, что без нагрузки ${\hspace{-0.1ex}\raisemath{.15em}{\scalebox{0.75}{$\smash{\displaystyle\integral\limits_{\mathcal{V}}}$}} \Pi \hspace{0.2ex} d\mathcal{V} = 0}$. По\-сколь\-ку $\Pi$ положительна, $\mathboldtau$ и~$\mathboldepsilon$ без нагрузки~--- нули.
 
 \textbf{Теорема единственности}. Как~и в~динамике~(\pararef{para:uniquenessfordynamicproblem}), допускаем существование двух решений и~ищем их~разность
 
 ...
 
-Единственность решения, установленная G.\:Kirchhoff’ом в~\cite{kirchhoff:crelle56}, противоречит, казалось~бы, повседневному опыту. Представим себе прямой стержень, закреплённый на~одном конце и~сжатый продольной силой на~другом (?? рис. 13 ??). При достаточно большой нагрузке задача статики должна иметь два решения~--- \inquotes{прямое} и~\inquotesx{изогнутое}[.] Но такое противоречие объяснимо нелинейностью задачи. При~м\'{а}лой~же нагрузке решение единственно и~описывается линейными уравнениями.
+Единственность решения, установленная G.\:Kirchhoff’ом\footnote{\bibauthor{Kirchhoff,}[Gustav~R.] \href{https://opacplus.bsb-muenchen.de/Vta2/bsb10525510/bsb:2960444?page=291}{Über das~Gleichgewicht und die~Bewegung eines unendlich dünnen elastischen Stabes~//~Journal für die reine und angewandte Mathematik (Crelle’s journal), 56. Band (1859). Seiten 285\hbox{--}313.}}\hspace{-0.8ex}, противоречит, казалось~бы, повседневному опыту. Представим себе прямой стержень, закреплённый на~одном конце и~сжатый продольной силой на~другом (?? рис. 13 ??). При достаточно большой нагрузке задача статики должна иметь два решения~--- \inquotes{прямое} и~\inquotesx{изогнутое}[.] Но такое противоречие объяснимо нелинейностью задачи. При~м\'{а}лой~же нагрузке решение единственно и~описывается линейными уравнениями.
 
 \textbf{Теорема взаимности работ}. Для тела с~закреплением на~части поверхности
 
@@ -650,7 +661,7 @@ ${\mathboldtau^{\hspace{.12ex}\T} \hspace{-0.32ex} = \mathboldtau}$ ${\hspace{.4
 \begin{changemargin}{2\parindent}{\parindent}
 \bgroup % to change \parindent locally
 \setlength{\parindent}{\negparindent}
-\small 
+\small
 
 \hspace{\parindent}\href{https://en.wikiversity.org/wiki/Introduction_to_Elasticity/Hellinger-Reissner_principle}{\textbf{Prange\hbox{--}Hellinger\hbox{--}Reissner Variational Principle}},\\
 named after \emph{Ernst Hellinger}, \emph{Georg Prange} and \emph{Eric Reissner}.
@@ -748,7 +759,7 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 \label{para:planedeformation.linearclassicalelasticity}
 
-Этот термин означает лишь то, что вектор~$\bm{u}$ параллелен плоскости $x_1, x_2$ и~не~зависит от~$z$
+Этот термин означает лишь то, что вектор~$\bm{u}$ параллелен плоскости ${x_1, x_2}$ и~не~зависит от~третьей координаты~$z$
 
 ...
 

@@ -36,12 +36,21 @@
 \usepackage{frcursive}
 
 \usepackage[usenames,dvipsnames]{xcolor}
+
 \definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
 \definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
 \definecolor{chocolate}{rgb}{0.48, 0.25, 0.0}
 \definecolor{darkcerulean}{rgb}{0.03, 0.27, 0.49}
 \definecolor{darkmagenta}{rgb}{0.55, 0.0, 0.55}
 \definecolor{darksienna}{rgb}{0.24, 0.08, 0.08}
+
+\makeatletter
+\def\mathcolor#1#{\@mathcolor{#1}}
+\def\@mathcolor#1#2#3{%
+	\protect\leavevmode
+	\begingroup\color#1{#2}#3\endgroup
+}
+\makeatother
 
 \usepackage[unicode=true,pdfusetitle,%
 	bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,linktocpage=true,%
@@ -146,7 +155,11 @@
 
 \newcommand\const{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{const}}}}
 
-\newcommand\boldconst{{\boldmath \const}}
+\newcommand\boldconst{\mathcolor{green!50!black}{\boldmath \const}}
+
+\newcommand\eigenvalue{\eta\hspace{.1ex}}
+
+\newcommand\smallparameter{\upnu}
 
 \let\vec\relax
 
@@ -155,7 +168,13 @@
 \usepackage{upgreek}
 
 \newcommand\variation[1]{\ensuremath\updelta\hspace{-0.1ex}#1}
-\newcommand\varvector[1]{\ensuremath\bm{\updelta}\hspace{-0.125ex}\bm{\mathrm{#1}}}
+
+\makeatletter
+\newcommand\boldvari@tion[2]{\ensuremath\mathcolor{#2}{\bm{\updelta}\hspace{-0.125ex}\bm{\mathrm{#1}}}}
+\newcommand\varvector[1]{\boldvari@tion{#1}{teal}}
+\newcommand\constvarvector[1]{\boldvari@tion{#1}{green!50!black}}
+\newcommand\varbivalent[1]{\boldvari@tion{#1}{orange!90!black}}
+\makeatother
 
 \makeatletter
 \newcommand*\dotp{\mathpalette\dotp@{.55}}
@@ -239,7 +258,7 @@
 \setlength{\negparindent}{-\parindent}
 
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
-\let\endchangemargin=\endlist 
+\let\endchangemargin=\endlist
 
 \usepackage{blindtext}
 \usepackage{fancybox}
@@ -297,7 +316,7 @@
 
 \newcommand\widearc[1]{%
 	\tikz[baseline=(wideArcAnchor.base)]{%
-		\node [inner sep=0] (wideArcAnchor) {$#1$}; 
+		\node [inner sep=0] (wideArcAnchor) {$#1$};
 		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.32ex) $);
 		\coordinate (wideArcAnchorB) at ($ (wideArcAnchor.north east) + (-0.2ex, 0.32ex) $);
 		\draw [line width=.5pt, line cap=round, out=45, in=135]
@@ -450,28 +469,46 @@ aboveskip=4mm,belowskip=2.5mm}
 %labelsep=newline,
 labelsep=period,justification=centering,singlelinecheck=off}
 
+\newcommandx*{\bibauthor}[3][2=,3=]{\textbf{#1%
+\ifthenelse{\equal{#2}{}}{}{~#2}%
+\ifthenelse{\equal{#3}{}}{}{\:#3}%
+}}
+
 \sloppy
 
 %%\usepackage{showframe} % uncomment to show frames
 
-\renewcommand{\labelitemi}{\raise .36ex\hbox{\tiny${\bullet}$}}
+% tune lists
 
 \usepackage[shortlabels]{enumitem}
 \setlist{nolistsep} % no vertical space between list items
 
-% tune lists
+%%\renewcommand{\labelitemi}{\raise .36ex\hbox{\tiny${\bullet}$}}
+\renewcommand{\labelitemi}{\pmb{\checkmark}}
+
+\newlength\mylistlabelsep
+\setlength{\mylistlabelsep}{1.2mm} %% 2mm
+
+\newlength\listlabelwithsep
+\addtolength{\listlabelwithsep}{\mylistlabelsep} % add \labelsep
+\addtolength{\listlabelwithsep}{\widthof{\labelitemi}}
+
+\newlength\listleftindent
+\setlength{\listleftindent}{\parindent}
+\addtolength{\listleftindent}{\listlabelwithsep}
+
 \makeatletter
 \renewcommand{\@listI}{%
-\leftmargin=1.25\parindent
-\rightmargin=0mm
-\labelsep=2mm
-\itemindent=0mm
-\listparindent=0mm
-\parskip=0mm
-\topsep=1mm
-\partopsep=0mm
-\parsep=0mm
-\itemsep=0.5mm}
+	\leftmargin=\listleftindent
+	\rightmargin=0mm
+	\labelsep=\mylistlabelsep
+	\itemindent=0mm
+	\listparindent=0mm
+	\parskip=0mm
+	\topsep=1mm
+	\partopsep=0mm
+	\parsep=0mm
+	\itemsep=0.5mm}
 \makeatother
 
 %%\usepackage[defaultlines=2,all]{nowidow}
@@ -496,19 +533,26 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \usepackage[symbol, bottom]{footmisc} % use symbols instead of numbers and place footnotes at the very bottom of page
 \setlength{\skip\footins}{1em plus1em} % \footins is the space between the text body and the footnotes
 
-\usepackage{perpage}
-\MakePerPage{footnote} % restart \footnote numbering on every page
-
 \setlength{\footnotesep}{\baselineskip} % space between footnotes
 
 \makeatletter
-\def\@makefnmark{\raisebox{0.8ex}{\hbox{\normalfont\@thefnmark}}}
+\def\@fnsymbol#1{\ensuremath{\ifcase #1 %
+	\or {*} %
+	\or {*}{*} %
+	\or {*}{*}{*} %
+	\or {*}{*}{*}{*} %
+	\else {\infty} %% \else \@ctrerr
+\fi}}
+\def\@makefnmark{\raisebox{.8ex}{\hbox{\normalfont\@thefnmark}}}
 \makeatother
+
+\usepackage{perpage}
+\MakePerPage{footnote} % restart \footnote numbering on every page
 
 \let\originalfootnote\footnote
 \renewcommand{\footnote}[1]{%
 	\renewcommand\footnotesize\small%
-	\originalfootnote{\hspace{0.25em}\parbox[t]{0.88\textwidth}{#1}}}
+	\originalfootnote{\hspace{.25em}\parbox[t]{0.88\textwidth}{#1}}}
 
 % --------------------------------------------------
 

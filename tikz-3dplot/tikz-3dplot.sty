@@ -10,7 +10,7 @@
 % version 2005/12/01 or later.
 %
 % This work has the LPPL maintenance status `maintained'.
-% 
+%
 % The Current Maintainer of this work is Jeffrey D. Hein.
 %
 % This work consists of the files 3dplot.sty and 3dplot_documentation.tex
@@ -18,7 +18,7 @@
 %Description
 %-----------
 
-%tikz-3dplot.sty - package for plotting three dimensional axes and coordinates in TikZ.  The user can specify orientation of the display, and also define rotated coordinate systems within the 3d display coordinate system.  
+%tikz-3dplot.sty - package for plotting three dimensional axes and coordinates in TikZ.  The user can specify orientation of the display, and also define rotated coordinate systems within the 3d display coordinate system.
 
 %Created 2009-11-07 by Jeff Hein.  Last updated: 2010-07-30
 %----------------------------------------------------------
@@ -91,11 +91,11 @@
 %
 	%\pgfmathsubtract{#2}{#1}
 	%\pgfmathparse{ abs(#2 - #1)}
-	
+
 	%\typeout{ #2, #1, \pgfmathresult, #3 }
-	
+
 	\pgfmathparse{ abs(#2 - #1)<#3 }
-	
+
 	%\typeout{ \pgfmathresult }
 	\ifthenelse{\equal{\pgfmathresult}{1}}{#4}{#5}
 }
@@ -153,7 +153,7 @@
 %determines the rotation matrix for transformation from the rotation coordinate frame to the main coordinate frame.  This also defines the rotation to produce the rotated coordinate frame.
 \newcommand{\tdplotcalctransformrotmain}{%
 %perform some trig for the Euler transformation
-\tdplotsinandcos{\sinalpha}{\cosalpha}{\tdplotalpha} 
+\tdplotsinandcos{\sinalpha}{\cosalpha}{\tdplotalpha}
 \tdplotsinandcos{\sinbeta}{\cosbeta}{\tdplotbeta}
 \tdplotsinandcos{\singamma}{\cosgamma}{\tdplotgamma}
 %
@@ -199,7 +199,7 @@
 %determines the rotation matrix for transformation from the main coordinate frame to the rotated coordinate frame.
 \newcommand{\tdplotcalctransformmainrot}{%
 %perform some trig for the Euler transformation
-\tdplotsinandcos{\sinalpha}{\cosalpha}{\tdplotalpha} 
+\tdplotsinandcos{\sinalpha}{\cosalpha}{\tdplotalpha}
 \tdplotsinandcos{\sinbeta}{\cosbeta}{\tdplotbeta}
 \tdplotsinandcos{\singamma}{\cosgamma}{\tdplotgamma}
 %
@@ -469,7 +469,7 @@
 	\tdplotcrossprod(\ax,\ay,\az)(\bx,\by,\bz)
 
 	%DEBUG: show the cross product
-	%\draw[->,blue] (\tdplotvertexx,\tdplotvertexy,\tdplotvertexz) 
+	%\draw[->,blue] (\tdplotvertexx,\tdplotvertexy,\tdplotvertexz)
 		-- ++(\tdplotresx,\tdplotresy,\tdplotresz);
 
 	%get angles for this vector
@@ -504,7 +504,7 @@
 		{
 			\pgfmathsetmacro{\tdplotstartphi}{\tdplotstartphi - 360}
 		}
-		
+
 	%\typeout{startphi: \tdplotstartphi}
 	%\typeout{endphi: \tdplotresphi}
 
@@ -517,7 +517,7 @@
 
 
 %	\tdplotsphericalsurfaceplot[fill mode]{theta step size}{phi step size}{r}
-%draws a surface in spherical polar coordinates given by r(\theta,\phi), where angular ranges and steps are defined.  
+%draws a surface in spherical polar coordinates given by r(\theta,\phi), where angular ranges and steps are defined.
 %#1: draw styles
 %#2: theta segments
 %#3: phi segments
@@ -527,7 +527,7 @@
 %#7: x axis instructions, to be rendered when \phi = 0
 %#8: y axis instructions, to be rendered when \phi = 90
 %#9: z axis instructions, to be rendered when plotting is half done
-%TODO: fix axes drawing function when the main display axis phi is at 0, 90, etc.  
+%TODO: fix axes drawing function when the main display axis phi is at 0, 90, etc.
 \newcommand{\tdplotsphericalsurfaceplot}[9][literal]{%
 %
 	\typeout{3dplot: processing 3d surface plot...}
@@ -554,7 +554,7 @@
 		\pgfmathsetmacro{\viewphistep}{\leftright * \origviewphistep}
 		\pgfmathsetmacro{\viewphiinc}{\viewphistart + \viewphistep}
 		\pgfmathsetmacro{\viewphiend}{\viewphistart + \leftright * 90 - \viewphistep}
-		
+
 		%sweep over phi
 		\foreach \curphi in{\viewphistart,\viewphiinc,...,\viewphiend}
 		{
@@ -576,7 +576,7 @@
 			}
 		}
 	}
-	
+
 	%now that the back half is done, draw the z axis
 	\begin{scope}[opacity=1]
 		#9 %draw z axis content
@@ -590,7 +590,7 @@
 		\pgfmathsetmacro{\viewphistart}{\originalphi + \leftright * 90}
 		\pgfmathsetmacro{\viewphiinc}{\viewphistart + \viewphistep}
 		\pgfmathsetmacro{\viewphiend}{\viewphistart + \leftright * 90 - \viewphistep}
-		
+
 		%sweep over phi
 		\foreach \curphi in{\viewphistart,\viewphiinc,...,\viewphiend}
 		{
@@ -638,7 +638,7 @@
 	\pgfmathsetmacro{\nextphi}{\curphi + \tdplotsuperfudge*\viewphistep}
 
 	\begin{scope}[opacity=1]
-	
+
 		%\typeout{ ----------------------------------- }
 
 		%check if the current phi angle is in position to draw the x axis
@@ -676,20 +676,20 @@
 		%test to see if this value is within the specified angular range
 		\pgfmathparse{\tdplottheta > \tdplotuppertheta}
 		\pgfmathsetmacro{\logictest}{1 - \pgfmathresult}
-		
+
 		\pgfmathparse{\tdplottheta < \tdplotlowertheta}
 		\pgfmathsetmacro{\logictest}{\logictest * (1 - \pgfmathresult)}
 
 		\pgfmathsetmacro{\tdplottheta}{\tdplottheta + \viewthetastep}
 		\pgfmathparse{\tdplottheta > \tdplotuppertheta}
 		\pgfmathsetmacro{\logictest}{\logictest * (1 - \pgfmathresult)}
-		
+
 		\pgfmathparse{\tdplottheta < \tdplotlowertheta}
 		\pgfmathsetmacro{\logictest}{\logictest * (1 - \pgfmathresult)}
 
 		\pgfmathparse{\tdplotphi > \tdplotupperphi}
 		\pgfmathsetmacro{\logictest}{\logictest * (1 - \pgfmathresult)}
-		
+
 		\pgfmathparse{\tdplotphi < \tdplotlowerphi}
 		\pgfmathsetmacro{\logictest}{\logictest * (1 - \pgfmathresult)}
 
@@ -702,7 +702,7 @@
 
 		\pgfmathparse{\tdplotphi > \tdplotupperphi}
 		\pgfmathsetmacro{\logictest}{\logictest * (1 - \pgfmathresult)}
-		
+
 		\pgfmathparse{\tdplotphi < \tdplotlowerphi}
 		\pgfmathsetmacro{\logictest}{\logictest * (1 - \pgfmathresult)}
 
@@ -716,7 +716,7 @@
 			\ifthenelse{\equal{\logictest}{1.0}}{%
 			\pgfmathsetmacro{\radius}{#1}
 			\pgfmathsetmacro{\tdplotr}{\radius*360}  %factor of 360 lets the radius change hue through one full cycle for each unit radius
-			
+
 			\pgfmathlessthan{\radius}{0}
 			\pgfmathsetmacro{\phaseshift}{180 * \pgfmathresult}
 
@@ -760,7 +760,7 @@
 		\pgfmathsetmacro{\radius}{abs(#1)}
 		\pgfpathlineto{\pgfpointspherical{\curlongitude}{\curlatitude - \viewthetastep}{\radius}}
 		\pgfpathclose
-	
+
 		\pgfusepath{fill,stroke}
 		}{}
 	}
@@ -786,7 +786,7 @@
 	\pgfmathdivide{\tdplotphi}{360}
 	\definecolor{tdplotfillcolor}{hsb}{\pgfmathresult, 1, 1}
 	\color{tdplotfillcolor}
-	
+
 	\pgfmathsetmacro{\tdplotstarty}{\tdploty + \tdplotphi * \tdplotyscale}
 	\pgfmathsetmacro{\tdplotstopy}{\tdplotstarty + \tdplothuestep * \tdplotyscale}
 	\pgfmathsetmacro{\tdplotstartx}{\tdplotx}

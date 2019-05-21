@@ -24,7 +24,7 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 \vspace{-0.5em}\noindent \en{where}\ru{где} $\rho$~\en{is volumetric mass density}\ru{--- объёмная плотность массы}.
 
-С~непрерывным распределением массы связано лишь первое и~простейшее представление о~сплошной среде как множестве~(пространстве) материальных точек. Возможны и~более сложные модели, в~которых частицы обладают степенями свободы не~только трансляции, но~и поворота, внутренней деформации и~др. Отметив, что подобные модели вызывают всё б\'{о}льший интерес, ограничимся пока простейшим классическим представлением о~среде как состоящей из~точек.
+С~непрерывным распределением массы связано лишь первое и~простое представление о~сплошной среде как множестве~(пространстве) материальных точек. Возможны и~более сложные модели, в~которых частицы обладают степенями свободы не~только трансляции, но~и поворота, внутренней деформации и~другими. Отметив, что подобные модели притягивают всё б\'{о}льший интерес, в~этой главе ограничимся классическим представлением о~среде как состоящей из~простых точек.
 
 В~каждый момент времени~$t$ деформируемое тело занимает некий объём~$V$ пространства. Вводя какие\hbox{-}либо криволинейные координаты~${q^{\hspace{.1ex}i}}$, считаем
 \begin{equation}
@@ -46,12 +46,14 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 \begin{otherlanguage}{russian}
 
-Имея зависимости ${\varphi \!=\! \varphi(\bm{r})}$, ${\bm{r} \!=\! \bm{r}(q^{i})}$, можно ввести базис ${\bm{r}_i \equiv \partial_i \bm{r}}$~${(\partial_i \equiv \frac{\partial}{\partial q^i})}$, взаимный базис ${\bm{r}^i}$ и~оператор Гамильтона
-\vspace{-0.12em}\begin{equation}
-\boldnablacircled = \bm{r}^i \partial_i \hspace{0.1ex},
+Имея зависимости ${\varphi \!=\! \varphi(\bm{r})}$, ${\bm{r} \!=\! \bm{r}(q^{i})}$, вводится базис ${\bm{r}_i \equiv \partial_i \bm{r}}$~${(\partial_i \equiv \frac{\partial}{\partial q^i})}$, взаимный базис ${\bm{r}^i}$ и~оператор Hamilton’а
+
+\nopagebreak\vspace{-0.4em}\begin{equation}
+\bm{E} = \bm{r}^i \bm{r}_i \hspace{-0.1ex} = \bm{r}^i \partial_i \bm{r} = \hspace{-0.25ex} \boldnablacircled \bm{r} , \:\,
+\boldnablacircled \equiv \hspace{.1ex} \bm{r}^i \partial_i \hspace{.1ex} ,
 \end{equation}
 
-\vspace{-0.8em}\noindent так что ${d\varphi = d\bm{r} \dotp \hspace{-0.1ex} \boldnablacircled \varphi}$.
+\vspace{-0.2em}\noindent так что ${d\varphi = d\bm{r} \dotp \hspace{-0.1ex} \boldnablacircled \varphi}$.
 
 Если
 
@@ -64,7 +66,7 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 \vspace{-0.25em}\noindent (\inquotes{$\varphi$ есть~$\Upsilon$ на~единицу массы}). Кажущееся сложным вычисление~${\mathdotabove{\Upsilon}}$ ($\mathcal{V}$ деформируется) оказывается элементарным благодаря~\eqref{hxasgdafshjsadjvrtiruiwp}:
 \begin{equation}\label{volumeintegralinbothconfigurations}
-\Upsilon = \hspace{-0.2ex} \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \! \mathcircabove{\rho} \hspace{0.1ex} \varphi \hspace{0.2ex} d\mathcircabove{\mathcal{V}} 
+\Upsilon = \hspace{-0.2ex} \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \! \mathcircabove{\rho} \hspace{0.1ex} \varphi \hspace{0.2ex} d\mathcircabove{\mathcal{V}}
 \;\Rightarrow\;
 \mathdotabove{\Upsilon} = \hspace{-0.2ex} \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \! \mathcircabove{\rho} \hspace{0.1ex} \mathdotabove{\varphi} \hspace{0.2ex} d\mathcircabove{\mathcal{V}} =
 \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.1ex} \mathdotabove{\varphi} \hspace{0.2ex} d\mathcal{V} .
@@ -86,7 +88,7 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 При ${t = \const}$
 
-\nopagebreak\vspace{-0.4em}
+\nopagebreak\vspace{-0.2em}
 \begin{equation*}
 \begin{array}{c@{\hspace*{4em}}}
 d\bm{R} = d\bm{r} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposed} \boldnablacircled \hspace{-0.16ex} \bm{R} \tikzmark{endFtransposed} = \hspace{-0.2ex} \tikzmark{beginMotionGradient} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}\T} \tikzmark{endMotionGradient} \hspace{-0.4ex} \dotp d\bm{r} \\[.2em]
@@ -486,7 +488,8 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 \begin{otherlanguage}{russian}
 
-Как и~любой симметричный тензор, $\cauchystress$ имеет три вещественных собственных числ\'{а} $\sigma_i$, называемых главными напряжениями (principal stresses), а~также ортогональную тройку собственных векторов единичной длины $\bm{e}_i$. В~представлении ${\cauchystress = \sum \hspace{-0.16ex} \sigma_i \hspace{.16ex} \bm{e}_i \bm{e}_i}$ можно считать ${\sigma_1 \hspace{-0.1ex} \geq \sigma_2 \geq \sigma_3}$, а~тройку~${\bm{e}_i}$~--- \inquotesx{правой}[.]
+Как и~любой симметричный тензор, $\cauchystress$ имеет три вещественных собственных числ\'{а} $\sigma_i$, называемых главными напряжениями (principal stresses), а~также ортогональную тройку собственных векторов единичной длины $\bm{e}_i$.
+\en{In~representation}\ru{В~представлении} ${\cauchystress = \sum \hspace{-0.16ex} \sigma_i \hspace{.16ex} \bm{e}_i \bm{e}_i}$ \en{most often}\ru{чаще всего} \en{indices are sorted as}\ru{индексы сортируются как} ${\sigma_1 \hspace{-0.1ex} \geq \sigma_2 \geq \sigma_3}$, а~тройка~${\bm{e}_i}$~--- \inquotesx{правая}[.]
 
 Известна теорема о~кругах Мора (Mohr’s circles)%
 \footnote{Mohr’s circles, named after Christian Otto Mohr, is a~two-dimensional graphical representation of transformation for the Cauchy stress tensor.}
@@ -499,9 +502,9 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 \end{otherlanguage}
 
-\en{\section{Principle of virtual work}}
+\en{\section{Principle of virtual work (without Lagrange multipliers)}}
 
-\ru{\section{Принцип виртуальной работы}}
+\ru{\section{Принцип виртуальной работы (без множителей Лагранжа)}}
 
 \label{para:virtualworkprinciple.elastic}
 
@@ -544,13 +547,14 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 \ru{Когда тело виртуально движется как жёсткое целое, работа внутренних сил обнуляется}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{princlipleofvirtualwork.worknullifies:nonlinearmomentlesscontinuum}
-\variation{\bm{R}} = \boldconst \hspace{.1ex} + \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R} \hspace{.1ex}, \:
-\varvector{o} = \boldconst
+\variation{\bm{R}} = \constvarvector{\hspace{-0.1ex}\bm{\rho}} + \constvarvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R} \hspace{.1ex}, \:
+\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconst \hspace{.1ex}, \:
+\constvarvector{o} = \boldconst
 \hspace{.4ex}\Rightarrow\hspace{.2ex}
 \variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{.1ex}.
 \end{equation}
 
-\vspace{-0.1em} \en{Assuming}\ru{Полагая} ${\varvector{\bm{o}} \hspace{-0.1ex} = \bm{0}}$, ${\variation{\bm{R}} = \boldconst}$ (\en{just translation}\ru{лишь трансляция}) ${\Rightarrow}$~${\hspace{-0.2ex}\boldnabla \hspace{.1ex} \variation{\bm{R}} = \hspace{-0.12ex} {^2\bm{0}}}$,
+\vspace{-0.1em} \en{Assuming}\ru{Полагая} ${\constvarvector{o} \hspace{-0.1ex} = \bm{0}}$, ${\variation{\bm{R}} = \boldconst}$ (\en{just translation}\ru{лишь трансляция}) ${\Rightarrow}$~${\hspace{-0.2ex}\boldnabla \hspace{.1ex} \variation{\bm{R}} = \hspace{-0.12ex} {^2\bm{0}}}$,
 \en{from}\ru{из}~\eqref{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
 \en{and}\ru{и}~\eqref{princlipleofvirtualwork.worknullifies:nonlinearmomentlesscontinuum}
 \en{ensues balance of~forces~(of~momentum)}\ru{следует баланс сил~(импульса)}
@@ -561,7 +565,7 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 
 \vspace{-0.5em} \noindent \textcolor{red}{???} \en{and}\ru{и} \textcolor{red}{???} ${\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.32ex} = 0}$ \textcolor{red}{???}
 
-\en{If}\ru{Если} ${\variation{\bm{R}} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R}}$ (\en{just rotation}\ru{лишь поворот}) \en{with}\ru{с}~${\varvector{\bm{o}} \hspace{-0.1ex} = \boldconst}$, \en{then}\ru{то}
+\en{If}\ru{Если} ${\variation{\bm{R}} = \constvarvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{R}}$ (\en{just rotation}\ru{лишь поворот}) \en{with}\ru{с}~${\constvarvector{o} \hspace{-0.1ex} = \boldconst}$, \en{then}\ru{то}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{r@{\hspace{.8ex}}l}
@@ -569,15 +573,15 @@ ${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхно
 \,\Rightarrow &
 \boldnabla \hspace{.1ex} \variation{\bm{R}}
 = {^2\bm{0}}
-- \hspace{-0.2ex} \boldnabla \hspace{-0.2ex} \bm{R} \times \hspace{-0.2ex} \varvector{o}
-= - \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
-= - \hspace{.2ex} \varvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
+- \hspace{-0.2ex} \boldnabla \hspace{-0.2ex} \bm{R} \times \hspace{-0.2ex} \constvarvector{o}
+= - \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
+= - \hspace{.2ex} \constvarvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
 \hspace{.1ex} ,
 \\[.25em]
 %
 & \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.16ex}\T} \hspace{-0.32ex}
-= \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \varvector{o}
-= \varvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
+= \bm{E} \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
+= \constvarvector{o} \hspace{-0.16ex} \times \hspace{-0.24ex} \bm{E}
 \end{array}
 \end{equation*}
 
@@ -613,7 +617,17 @@ ${\variation{\internalwork} = - \rho \hspace{.2ex} \variation{\widetilde{\Pi}}}$
 
 Полным аналогом~(...) является равенство
 
+...
 
+
+
+\end{otherlanguage}
+
+\en{\section{Constitutive relations of elasticity}}
+
+\ru{\section{Определяющие отношения упругости}}
+
+\en{Fundamental relation of~elasticity}\ru{Фундаментальное соотношение упругости}~\eqref{fundamentalrelationofelasticity}
 
 ...
 
@@ -634,18 +648,6 @@ When we apply energy methods in elasticity, we implicitly assume that a~body ret
 \[ \Pi({\boldsymbol{\bm{C}}}) \geq 0~~{\text{with}}~~\Pi({\boldsymbol{\bm{C}}}) = 0~~{\text{iff}}~~{\boldsymbol{\bm{C}}} = 0 \]
 
 \par}
-
-...
-
-
-
-\end{otherlanguage}
-
-\en{\section{Constitutive relations of elasticity}}
-
-\ru{\section{Определяющие отношения упругости}}
-
-\en{Fundamental relation of~elasticity}\ru{Фундаментальное соотношение упругости}~\eqref{fundamentalrelationofelasticity}
 
 ...
 
@@ -684,10 +686,13 @@ Rubber\hbox{-}like material (elastomer)
 %%якобиан (определитель Якоби, Jacobian determinant)
 
 \nopagebreak\vspace{-0.12em}\begin{equation*}
-\eqref{areachange:nansonformula} \:\Rightarrow\,
-\mathboldN dO \dotp \cauchystress = J \hspace{.1ex} \bm{n} do \dotp \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress
+\eqref{areachange:nansonformula}
 \:\Rightarrow\,
-\mathboldN \dotp \cauchystress \hspace{.25ex} dO = \hspace{.1ex} \bm{n} \dotp J \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.2ex} do
+\mathboldN dO \dotp \cauchystress
+= J \hspace{.1ex} \bm{n} do \dotp \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress
+\:\Rightarrow\,
+\mathboldN \dotp \cauchystress \hspace{.25ex} dO
+= \hspace{.1ex} \bm{n} \dotp J \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.2ex} do
 \end{equation*}
 
 % gives dual expression of surface force
@@ -784,7 +789,7 @@ J^{\hspace{.12ex}\expminusone} \bm{F} \hspace{-0.1ex} \dotp \secondpiolakirchhof
 \begin{equation*}
 \variation{\secondpiolakirchhoffstress}
 = \scalebox{0.92}{$ \displaystyle \frac{\partial \hspace{.1ex} \bm{S}}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.12ex}\bm{C}}
-= \scalebox{0.92}{$ \displaystyle \frac{\partial^2 \hspace{0.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{0.1ex} \bm{C} \hspace{0.1ex} \partial \hspace{0.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.12ex}\bm{C}} 
+= \scalebox{0.92}{$ \displaystyle \frac{\partial^2 \hspace{0.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{0.1ex} \bm{C} \hspace{0.1ex} \partial \hspace{0.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.12ex}\bm{C}}
 \end{equation*}
 
 \begin{equation*}
@@ -955,11 +960,19 @@ ${\boldnablacircled \hspace{-0.08ex}
 = \hspace{-0.32ex} \boldnablacircled \hspace{-0.16ex} \bm{R} \hspace{.1ex} \dotp \hspace{-0.16ex} \boldnabla \hspace{-0.25ex}
 = \hspace{-0.1ex} \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex} \dotp \hspace{-0.12ex} \boldnabla}$} и~(...), получаем
 
-\nopagebreak\vspace{-0.05em}\begin{equation}\begin{array}{c}
-\mathcircabove{\rho} \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}} \hspace{0.16ex} + \hspace{-0.1ex} \boldnablacircled \hspace{-0.12ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress} = \bm{0} \hspace{0.1ex}, \:\,
+\nopagebreak\vspace{-0.05em}\begin{equation}\label{variationsforcurrentconfiguration}
+\begin{array}{c}
+\mathcircabove{\rho} \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
++ \hspace{-0.1ex} \boldnablacircled \hspace{-0.12ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
+= \bm{0}
+\hspace{.1ex} , \:\,
 %
-\variation{\hspace{.1ex}\firstpiolakirchhoffstress} \hspace{-0.1ex} = \hspace{-0.2ex} \left( \hspace{0.1ex} \scalebox{0.92}{$ \displaystyle \frac{\partial^2 \hspace{0.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{0.1ex} \bm{C} \hspace{0.1ex} \partial \hspace{0.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.12ex}\bm{C}} \hspace{-0.16ex} \right) \hspace{-0.32ex} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.24ex} + \hspace{0.1ex}
-\displaystyle \frac{\partial \hspace{0.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{0.1ex} \bm{C}}} \dotp \variation{\bm{F}}^{\hspace{.1ex}\T} \hspace{-0.4ex} , \\[1em]
+\variation{\hspace{.1ex}\firstpiolakirchhoffstress} \hspace{-0.1ex}
+= \hspace{-0.2ex} \left( \hspace{0.1ex} \scalebox{0.92}{$ \displaystyle \frac{\partial^2 \hspace{0.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{0.1ex} \bm{C} \hspace{0.1ex} \partial \hspace{0.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.12ex}\bm{C}} \hspace{-0.16ex} \right) \hspace{-0.32ex} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.24ex}
++ \hspace{.1ex}
+\displaystyle \frac{\partial \hspace{0.1ex} \Pi}{\raisemath{-0.1em}{\partial \hspace{0.1ex} \bm{C}}} \dotp \variation{\bm{F}}^{\hspace{.1ex}\T}
+\hspace{-0.4ex} ,
+\\[1em]
 %
 \variation{\bm{F}}^{\hspace{.1ex}\T} \hspace{-0.5ex}
 = \variation{\hspace{.1ex} \boldnablacircled \hspace{-0.16ex} \bm{R}}
@@ -967,7 +980,8 @@ ${\boldnablacircled \hspace{-0.08ex}
 = \hspace{-0.12ex} \bm{F}^{\hspace{.1ex}\T} \hspace{-0.25ex} \dotp \boldnabla \hspace{.1ex} \variation{\bm{R}} \hspace{.16ex},
 \:\,
 \variation{\bm{F}} \hspace{-0.2ex} = \variation{\hspace{.1ex} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{0.12ex}\T}} \hspace{-0.4ex}
-= \hspace{-0.2ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{0.12ex}\T} \hspace{-0.25ex} \dotp \bm{F} \hspace{-0.1ex},
+= \hspace{-0.2ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{0.12ex}\T} \hspace{-0.25ex} \dotp \bm{F}
+\hspace{-0.1ex} ,
 \\[.5em]
 %
 \variation{\hspace{.12ex}\bm{C}} = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.32ex} \dotp \hspace{.1ex} \mathboldepsilon \dotp \bm{F} ,
@@ -978,7 +992,26 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 ...
 
-Введённый здесь тензор~$\bm{\Theta}$~\cite{lurie-nonlinearelasticity} связан с~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$ так~же, как $\cauchystress$ с~$\firstpiolakirchhoffstress$ (${\cauchystress = \hspace{-0.1ex} J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress\hspace{.2ex}}$). Учитывая\textcolor{red}{(??синоним??)} ...
+\begin{equation*}\begin{array}{c}
+\eqref{areachange:nansonformula}
+\:\Rightarrow\:
+%
+\bm{n} \hspace{.1ex} do = J^{\hspace{.12ex}\expminusone} \mathboldN \hspace{.1ex} dO \hspace{-0.1ex} \dotp \bm{F}
+\:\Rightarrow\:
+%
+\bm{n} \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} do
+= J^{\hspace{.12ex}\expminusone} \mathboldN \hspace{-0.1ex} \dotp \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} dO
+\,\Rightarrow
+\\[.2em]
+%
+\Rightarrow\:
+\bm{n} \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} do
+= \mathboldN \dotp \varbivalent{\hspace{-0.2ex}\cauchystress} \hspace{.25ex} dO ,
+\:\:
+\varbivalent{\hspace{-0.2ex}\cauchystress} \equiv J^{\hspace{.12ex}\expminusone} \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress}
+\end{array}\end{equation*}
+
+\vspace{-0.2em} \noindent --- введённый так тензор~${\varbivalent{\hspace{-0.2ex}\cauchystress}}$ связан с~вариацией~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$ как $\cauchystress$ связан с~$\firstpiolakirchhoffstress$ (${\cauchystress = \hspace{-0.1ex} J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress\hspace{.2ex}}$). Из~\eqref{variationsforcurrentconfiguration} и ...
 
 ...
 
@@ -1076,7 +1109,7 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 \ru{\noindent Но~$\variation{\bm{R}}$ случайна на~поверхности и~в~объёме, так что}
 
-\begin{equation*}
+\nopagebreak\vspace{-0.1em}\begin{equation*}
 \bm{p} =^{\mathstrut} \mathboldN \hspace{0.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \hspace{0.2ex}, \:\:
 \boldnabla \hspace{0.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \hspace{0.25ex} + \hspace{0.2ex} \rho \bm{f} = \hspace{0.2ex} \bm{0}
 \end{equation*}

@@ -15,12 +15,17 @@
 \usepackage{verbatim} % for \begin(comment) ... \end{comment}
 
 \entrue
+%%\rutrue
 
 \begin{document}
 
 \input{mycoverpage.tex}
 
-\input{secondinfopage.tex}
+%%\input{secondinfopage.tex}
+
+\pagestyle{empty}
+
+\cleardoublepage
 
 \en{\selectlanguage{english}}
 \ru{\selectlanguage{russian}}
@@ -29,62 +34,19 @@
 \thispagestyle{plain}
 \newpage
 
+\pagestyle{plain}
+
 % space above and below equations
 \setlength{\abovedisplayskip}{2pt}
 \setlength{\belowdisplayskip}{2pt}
 
-\vspace*{20mm}
-\input{chaptertensors.tex}
+\setcounter{chapter}{7}
 
-\newpage
-\input{chaptersecond.tex}
-
-\newpage
-\input{chapterthird.tex}
-
-\newpage
-\input{chapterfourth.tex}
-
-\newpage
-\input{chapterfifth.tex}
-
-\newpage
-\input{chapterthermoelasticity.tex}
-
-\newpage
-\input{chaptermagnetoelasticity.tex}
-
-\newpage
 \input{chapterasymptoticmethods.tex}
 
-\newpage
-\input{chapterrods.tex}
-
-\newpage
-\input{chapterthinwalledrods.tex}
-
-\newpage
-\input{chaptershellsandplates.tex}
-
-\newpage
-\input{chaptertwelfth.tex}
-
-\newpage
-\input{chapterstability.tex}
-
-\newpage
-\input{chapterfourteenth.tex}
-
-\newpage
-\input{chapterfifteenth.tex}
-
-\newpage
-\input{chaptersixteenth.tex}
-
-\newpage
-\input{chapterseventeenth.tex}
-
+%% \begin{comment} %%
 \newpage
 \input{listofbooks.tex}
+%% \end{comment} %%
 
 \end{document}

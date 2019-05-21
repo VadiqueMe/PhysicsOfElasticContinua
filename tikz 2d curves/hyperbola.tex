@@ -7,7 +7,7 @@
 \begin{tikzpicture}[scale=1]
     \pgfmathsetmacro{\e}{1.44022} % eccentricity
     \pgfmathsetmacro{\a}{1}
-    \pgfmathsetmacro{\b}{(\a*sqrt((\e)^2-1)} 
+    \pgfmathsetmacro{\b}{(\a*sqrt((\e)^2-1)}
     \draw plot[domain=-4:4] ({\a*cosh(\x)},{\b*sinh(\x)});
     \draw plot[domain=-4:4] ({-\a*cosh(\x)},{\b*sinh(\x)});
 \end{tikzpicture}
