@@ -144,11 +144,15 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(
 
 \vspace{-0.4em} \noindent что, конечно~же, равно нулю. Отметим краевое условие ${\bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} 0}$: виртуальные перемещения согласованы с~этой связью~--- ${\variation{\bm{u}} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} 0}$.
 
+\end{otherlanguage}
+
 \en{\section{Uniqueness of the solution of a dynamic problem}}
 
-\ru{\section{Единственность решения динамической задачи}}
+\ru{\section{Уникальность решения динамической проблемы}}
 
 \label{para:uniquenessfordynamicproblem}
+
+\begin{otherlanguage}{russian}
 
 Как~обычно в~линейной математической физике~\cite{lurie-theoryofelasticity, tihonovsamarsky-mathphysicsequations}, теорема единственности доказывается от~противного. Допустим, что есть два решения: ${\bm{u}_1 (\bm{r}, t)}$ и~${\bm{u}_2 (\bm{r}, t)}$. Составим разность~${\bm{u}^{\hspace{-0.1ex}*} \hspace{-0.2ex} \equiv \hspace{0.12ex} \bm{u}_1 \hspace{-0.32ex} - \bm{u}_2}$ и~докажем, что она равна нулю.
 
@@ -213,11 +217,15 @@ ${\Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex}) \hspace{-0.2ex}=\hspace{0.
 
 Разумеется, эти соображения лишены математической стройности, характерной, например, для~монографии Philippe Ciarlet~\cite{ciarlet-mathematicalelasticity}.
 
+\end{otherlanguage}
+
 \en{\section{Hooke’s ceiiinosssttuv law}}
 
 \ru{\section{Закон Гука ceiiinosssttuv}}
 
 \label{para:hookelaw}
+
+\begin{otherlanguage}{russian}
 
 \nopagebreak\vspace{-2.5em} ${\small \mathboldtau \hspace{0.1ex} = \displaystyle \frac{\raisemath{-0.2em}{\partial\hspace{0.1ex} \Pi}}{\raisemath{0.04em}{\partial \mathboldepsilon}} = \stiffnesstensor \dotdotp \mathboldepsilon}$ \nopagebreak\vspace{.55em}
 
@@ -389,21 +397,44 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 
 
 
+\end{otherlanguage}
+
 \en{\section{Theorems of statics}}
 
 \ru{\section{Теоремы статики}}
 
-\noindent\leavevmode{\indent}%
-\textbf{Формула Клапейрона}. При равновесии с~объёмными силами~$\bm{f}$ и~поверхностными~$\bm{p}$ удвоенная энергия деформации равна формально вычисленной работе нагрузок
-\vspace{0.1em}\begin{equation}\label{clapeyron:elasticitytheorem}
+\subsection*{\ru{Теорема }Clapeyron’\ru{а}\en{s theorem}}
+
+% Benoît Paul Émile Clapeyron
+% Mémoire sur le travail des forces élastiques dans un corps solide élastique déformé par l’action de forces extérieures
+% Comptes rendus hebdomadaires des séances de l’Académie des sciences, Tome XLVI, Janvier–Juin 1858
+
+\en{In~equilibrium}\ru{В~равновесии}
+\en{with external forces}\ru{с~внешними силами},
+\ru{объёмными}\en{volume ones}~$\bm{f}$
+\ru{и~поверхностными}\en{and surface ones}~$\bm{p}$,
+\en{the work of~these forces}\ru{работа этих сил}~(\inquotesx{\en{statically frozen}\ru{статически замороженных}}[---] \en{constant along time}\ru{постоянных во~времени})
+\en{through actual displacements}\ru{на~актуальных перемещениях}
+\ru{равна}\en{is equal to}
+\en{the doubled}\ru{удвоенной}\footnote{%
+%%\emph{(i)}~\bibauthor{Gabriel Lam\'{e}} et \bibauthor{Benoît Paul \'{E}mile Clapeyron}.
+%%\href{https://gallica.bnf.fr/ark:/12148/bpt6k33093/f475.image}{M\'{e}moire sur l'\'{e}quilibre int\'{e}rieur des~corps solides homog\'{e}nes~//
+%%Memoires present\'{e}s par Divers Savants, IV, 1833. 465\hbox{--}562~pp.}
+%%\emph{(ii)}~
+\bibauthor{Benoît Paul \'{E}mile Clapeyron}.
+\href{https://gallica.bnf.fr/ark:/12148/bpt6k3003h/f208.image}{M\'{e}moire sur le travail des forces \'{e}lastiques dans un corps solide \'{e}lastique d\'{e}form\'{e} par l’action de~forces ext\'{e}rieures~//
+Comptes rendus, XLVI, Janvier--Juin 1858. 208\hbox{--}212~pp.}
+}\hspace{-0.4ex}
+\en{energy of~deformation}\ru{энергии деформации}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{clapeyron:elasticitytheorem}
 2 \hspace{-0.2em}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Pi \hspace{0.2ex} d\mathcal{V} \hspace{.12ex} =
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{0.25ex} d\mathcal{V} +
 \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \bm{u} \hspace{0.25ex} do \hspace{0.2ex} .
 \end{equation}
 
-%% Доказательство умещается в~одной строке:
-\vspace{-0.64em}\begin{multline*}
+\vspace{-0.55em}\begin{multline*}
 \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
 \hspace{2.5ex}
 2 \hspace{0.1ex} \Pi \hspace{0.1ex} = \mathboldtau \dotdotp \mathboldepsilon =
@@ -423,25 +454,154 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 \AddUnderBrace[line width=.75pt]%
 {beginSurfaceLoad}{endSurfaceLoad}{${\scriptstyle \bm{p}}$}
 
-\vspace{-0.2em} Из~\eqref{clapeyron:elasticitytheorem} следует, что без нагрузки ${\hspace{-0.1ex}\raisemath{.15em}{\scalebox{0.75}{$\smash{\displaystyle\integral\limits_{\mathcal{V}}}$}} \Pi \hspace{0.2ex} d\mathcal{V} = 0}$. По\-сколь\-ку $\Pi$ положительна, $\mathboldtau$ и~$\mathboldepsilon$ без нагрузки~--- нули.
+\begin{otherlanguage}{russian}
 
-\textbf{Теорема единственности}. Как~и в~динамике~(\pararef{para:uniquenessfordynamicproblem}), допускаем существование двух решений и~ищем их~разность
+\vspace{-0.2em} Из~\eqref{clapeyron:elasticitytheorem} следует, что без нагрузки
+${\hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.1em}{\mathcal{V}}} \hspace{.25ex} \Pi \hspace{.2ex} d\mathcal{V} = 0}$.
+По\-сколь\-ку $\Pi$ положительна, то и напряжение~$\mathboldtau$, и~деформация~$\mathboldepsilon$ без нагрузки~--- нулевые.
+
+\inquotes{\en{Paradox of elastostatics}\ru{Парадокс эластостатики}}
+
+Накопленная потенциальная энергия деформации равна всего половине работы внешних сил.
+
+{\small
+\en{Clapeyron’s theorem, taken literally, implies that the elastic stored energy accounts for only half of the energy spent to load the body; the remaining half of the work done to the body by the external forces is unaccounted for and is lost somewhere in reaching the equilibrium.}
+
+\ru{Теорема Clapeyron’а, взятая буквально, подразумевает, что запасённая упругая энергия составляет только половину энергии, потраченной на деформацию тела; оставшаяся половина работы, совершённой над телом внешними силами, не учитывается и теряется где-то по достижении равновесия.}
+\par}
+
+{\small
+\en{This apparent paradox is reached within the framework of purely conservative linear elasticity. Alternatively, however, within elastostatics the common characterization of the work done to reach equilibrium is conceptually ambiguous, and a novel interpretation may be needed.}
+
+\ru{Этот кажущийся парадокс достигается в рамках чисто консервативной линейной упругости. В качестве альтернативы, однако, в эластостатике общая характеристика работы, совершённой для достижения равновесия, концептуально неоднозначна, и может быть нужна новая интерпретация.}
+
+\bibauthor{Roger Fosdick} and \bibauthor{Lev Truskinovsky}.
+\href{http://www.cityu.edu.hk/ma/ws2007/notes/FTJElast.pdf}{About Clapeyron’s Theorem in Linear Elasticity~// Journal of~Elasticity, Volume 72, July 2003. Pages 145\hbox{--}172.}
+\par}
+
+Для решения парадокса в~теории распространена концепция \inquotes{медленного постепенного статического нагружения} (\inquotes{slow gradual application of the load}).
+
+\subsection*{\en{Theorem for the uniqueness of solution}\ru{Теорема об~уникальности решения}}
+
+Как~и в~динамике~(\pararef{para:uniquenessfordynamicproblem}), допускаем существование двух решений и~ищем их~разность
 
 ...
 
-Единственность решения, установленная G.\:Kirchhoff’ом\footnote{\bibauthor{Kirchhoff,}[Gustav~R.] \href{https://opacplus.bsb-muenchen.de/Vta2/bsb10525510/bsb:2960444?page=291}{Über das~Gleichgewicht und die~Bewegung eines unendlich dünnen elastischen Stabes~//~Journal für die reine und angewandte Mathematik (Crelle’s journal), 56. Band (1859). Seiten 285\hbox{--}313.}}\hspace{-0.8ex}, противоречит, казалось~бы, повседневному опыту. Представим себе прямой стержень, закреплённый на~одном конце и~сжатый продольной силой на~другом (?? рис. 13 ??). При достаточно большой нагрузке задача статики должна иметь два решения~--- \inquotes{прямое} и~\inquotesx{изогнутое}[.] Но такое противоречие объяснимо нелинейностью задачи. При~м\'{а}лой~же нагрузке решение единственно и~описывается линейными уравнениями.
+\end{otherlanguage}
 
-\textbf{Теорема взаимности работ}. Для тела с~закреплением на~части поверхности
+% ~ ~ ~ ~ ~
+\input{deformedrod.tex}
+% ~ ~ ~ ~ ~
+
+\begin{otherlanguage}{russian}
+
+\en{The uniqueness of solution}\ru{Единственность решения}, \en{determined by}\ru{определённая} G.\:Kirchhoff\ru{’ом}\footnote{\bibauthor{Gustav Robert Kirchhoff}. \href{https://opacplus.bsb-muenchen.de/Vta2/bsb10525510/bsb:2960444?page=291}{Über das~Gleich\-gewicht und die~Bewe\-gung eines unendlich dünnen elastischen Stabes~//~Journal für die reine und angewandte Mathematik (Crelle’s journal), 56. Band (1859). Seiten 285\hbox{--}313.}}\hbox{\hspace{-0.5ex},} \en{is contrary to, as it seems, the everyday experience}\ru{противоречит, казалось~бы, повседневному опыту}.
+\en{Imagine}\ru{Вообразим} \en{straight}\ru{прямой} \en{rod}\ru{стержень}, закреплённый на~одном конце и~сжатый продольной силой на~другом~(\figref{fig:deformedrod}). Когда нагрузка достаточно больш\'{а}я, задача статики имеет два решения~--- \inquotes{прямое} и \inquotesx{изогнутое}[.]
+Но такое противоречие объясняется нелинейностью задачи. При~м\'{а}лой~же нагрузке решение единственно и~может быть описано линейными уравнениями.
+
+\subsection*{\en{Reciprocal work theorem}\ru{Теорема о~взаимности работ}}
+
+{\small
+\inquotes{возможная работа сил первого состояния на соответствующих перемещениях, вызванных силами второго состояния, равна возможной работе сил второго состояния на соответствующих перемещениях, вызванных силами первого состояния}
+\par}
+
+Для т\'{е}ла с~закреплением на~части поверхности~${o_1}$ рассматриваются две проблемы: первая с~нагрузками $\bm{f}_1$, $\bm{p}_1$ и~вторая с~нагрузками $\bm{f}_2$, $\bm{p}_2$. Словесная формулировка теоремы та~же, что и~в~\chapdotpararef{chapter:genericmechanics}{para:statics}. Метаматическая запись
+
+...
+
+{\small
+Betti’s theorem, also known as reciprocal work theorem, discovered by Enrico Betti in 1872, states that for a linear elastic structure subject to two sets of forces ${P_i}$ ${(i = 1, ..., m)}$ and ${Q_j}$ ${(j = 1, 2, ..., n)}$, the work done by the set $P$ through the displacements produced by the set $Q$ is equal to the work done by the set $Q$ through the displacements produced by the set $P$. This theorem has applications in structural engineering where it is used to define influence lines and derive the boundary element method.
+\par}
+
+...
+
+\begin{wrapfigure}[10]{o}{.45\textwidth}
+\makebox[.5\textwidth][c]{\begin{minipage}[t]{.4\textwidth}
+\vspace{-1.2em}
+
+% parameter #1 is height of beam
+\newcommand\drawrodbeam[1]%
+{
+	\draw [line width=1.2pt, black] (-0.5, 0) -- (0.5, 0) ;
+	\foreach \xground in {-0.36, -0.16, ..., 0.5}
+		\draw [line width=0.4pt, black!80] (\xground, 0) -- (\xground - 0.2, -0.2) ;
+
+	\draw [line width=2pt, line cap=round, black] (0, 0) -- (0, #1) ;
+}
+
+\tikzstyle{force line} =
+	[line width=1.5pt, red, line cap=round, -{Triangle[round, length=3.6mm, width=2.4mm]}]
+
+\tikzstyle{unitforce line} =
+	[line width=1.5pt, blue, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{Triangle[round, length=3.6mm, width=2.4mm]}]
+
+\begin{tikzpicture}[scale=0.8]
+
+	\def\beamheight{5}
+	\def\beamxshift{2}
+	\def\forcelength{1}
+
+	\pgfmathsetmacro{\firstforceposition}{\beamheight}
+	\pgfmathsetmacro{\secondforceposition}{0.6 * \beamheight}
+
+	\drawrodbeam{\beamheight}
+
+	\draw [force line]
+		( -\forcelength, \firstforceposition ) -- ( 0, \firstforceposition )
+		node [pos=0.25, below, inner sep=0, outer sep=5pt]
+			{${P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}}}$} ;
+
+	\draw [force line]
+		( -\forcelength, \secondforceposition ) -- ( 0, \secondforceposition )
+		node [pos=0.25, below, inner sep=0, outer sep=5pt]
+			{${P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}}$} ;
+
+	\pgfmathsetmacro\secondxshift{\beamxshift}
+
+	\begin{scope}[xshift=\secondxshift cm, yshift=0cm]
+		\drawrodbeam{\beamheight}
+	\end{scope}
+
+	\draw [unitforce line]
+		( \secondxshift - \forcelength, \firstforceposition ) -- ( \secondxshift, \firstforceposition )
+		node [pos=0.25, below, inner sep=0, outer sep=5pt] {$1$} ;
+
+	\pgfmathsetmacro\thirdxshift{\beamxshift + \beamxshift}
+
+	\begin{scope}[xshift=\thirdxshift cm, yshift=0cm]
+		\drawrodbeam{\beamheight}
+	\end{scope}
+
+	\draw [unitforce line]
+		( \thirdxshift - \forcelength, \secondforceposition ) -- ( \thirdxshift, \secondforceposition )
+		node [pos=0.25, below, inner sep=0, outer sep=5pt] {$1$} ;
+
+\end{tikzpicture}
+\vspace{-0.1em}\caption{}\label{fig:exampleofapplicationofreciprocalworktheorem}
+\end{minipage}}
+\end{wrapfigure}
+
+Теорема о~взаимности работ Enrico Betti находит неожиданные и~эффективные применения. Как иллюстрацию рассмотрим защёмленный одним концом~(\inquotes{консольный}) стержень-балку, изгибаемый силами величиной~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}}$ и~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}$~(\figref{fig:exampleofapplicationofreciprocalworktheorem}). Используя линейность задачи, перемещения возможно найти как
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}\begin{array}{c}
+u_1 = \ldots \hspace{.1ex} ,
+\\
+u_2 = \ldots \hspace{.1ex} .
+\end{array}\end{equation*}
 
 ...
 
 
+
+\end{otherlanguage}
 
 \en{\section{Equations for displacements}}
 
 \ru{\section{Уравнения в перемещениях}}
 
 \label{para:equationsfordisplacement}
+
+\begin{otherlanguage}{russian}
 
 Полная система~\eqref{lineartheory:wholesetofequations} содержит неизвестные $\mathboldtau$, $\mathboldepsilon$ и~$\bm{u}$. Исключая $\mathboldtau$ и~$\mathboldepsilon$, приходим к~постановке в~перемещениях (симметризация~${\boldnabla \bm{u}}$ тут излишняя)
 
@@ -472,6 +632,8 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 
 
 
+\end{otherlanguage}
+
 \en{\section{Concentrated force in a limitless medium}}
 
 \ru{\section{Сосредоточенная сила в неограниченной среде}}
@@ -480,19 +642,23 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 Concentrated force is useful mathematical idealization, but cannot be found in the real world, where all forces are either body forces acting over a~volume or surface forces acting over an~area.
 \par}
 
+\begin{otherlanguage}{russian}
+
 Начнём с~риторического вопроса: почему упругое тело сопротивляется приложенной нагрузке, выдерживает её? Удачный ответ можно найти ...
 
 ...
 
 
 
-
+\end{otherlanguage}
 
 \en{\section{Determining displacements from deformations}}
 
 \ru{\section{Определение перемещений по деформациям}}
 
 \label{para:displacementsfromdeformations}
+
+\begin{otherlanguage}{russian}
 
 Разложив градиент перемещения на~симметричную и~антисимметричную части
 \nopagebreak\vspace{.1em}\begin{equation}
@@ -537,9 +703,13 @@ A body that deforms without developing any gaps/overlaps is called a~compatible 
 
 
 
+\end{otherlanguage}
+
 \en{\section{Equations for stresses}}
 
 \ru{\section{Уравнения в напряжениях}}
+
+\begin{otherlanguage}{russian}
 
 Баланс сил
 \nopagebreak\vspace{-0.32em}\begin{equation}\label{balanceofforces}
@@ -552,12 +722,15 @@ A body that deforms without developing any gaps/overlaps is called a~compatible 
 
 
 
+\end{otherlanguage}
 
 \en{\section{Principle of minimum potential energy}}
 
 \ru{\section{Принцип минимума потенциальной энергии}}
 
 \label{para:principleofminimumpotentialenergy}
+
+\begin{otherlanguage}{russian}
 
 Начнём с~формулировки принципа:
 
@@ -637,10 +810,13 @@ ${\mathboldtau^{\hspace{.12ex}\T} \hspace{-0.32ex} = \mathboldtau}$ ${\hspace{.4
 
 
 
+\end{otherlanguage}
 
 \en{\section{Principle of minimum complementary energy}}
 
 \ru{\section{Принцип минимума дополнительной энергии}}
+
+\begin{otherlanguage}{russian}
 
 Дополнительной энергией называется следующий функционал над~полем напряжений:
 
@@ -651,6 +827,8 @@ ${\mathboldtau^{\hspace{.12ex}\T} \hspace{-0.32ex} = \mathboldtau}$ ${\hspace{.4
 ...
 
 Принцип минимума дополнительной работы очень полезен, например, для~получения некоторых оценок приближённых решений. Но для~вычислительной практики его роль не~столь весома, как принципа Лагранжа.
+
+\end{otherlanguage}
 
 \en{\section{Mixed principles of stationarity}}
 
@@ -667,20 +845,23 @@ ${\mathboldtau^{\hspace{.12ex}\T} \hspace{-0.32ex} = \mathboldtau}$ ${\hspace{.4
 named after \emph{Ernst Hellinger}, \emph{Georg Prange} and \emph{Eric Reissner}.
 \par
 
-\nopagebreak\vspace{0.16em}
+\nopagebreak\vspace{.16em}
 {\scriptsize \noindent Working independently of Hellinger and Prange, Eric Reissner published his famous six\hbox{-}page paper \inquotes{On a~variational theorem in~elasticity} in~1950. In this paper he develops~--- without, however, considering Hamilton\hbox{--}Jacobi theory~--- a~variational principle same to that of~Prange and~Hellinger.\par}
 
-\nopagebreak\vspace{0.32em}
+\nopagebreak\vspace{.32em}
 \href{https://en.wikiversity.org/wiki/Introduction_to_Elasticity/Hu-Washizu_principle}{\textbf{Hu\hbox{--}Washizu Variational Principle}},\\
 named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 \par
 \egroup
-\nopagebreak\vspace{0.1em}
+\nopagebreak\vspace{.1em}
 \end{changemargin}
 
+\begin{otherlanguage}{russian}
+
 \noindent
-Именами Reissner’а, Prange’а и~Hellinger’а назван такой функционал над~перемещениями и~напряжениями: %% \cite{lurie-theoryofelasticity, rabotnov-mechanicsofdeformable}
-\begin{multline}\label{reissnerhellingervariationalprinciple}
+Именами Reissner’а, Prange’а и~Hellinger’а назван такой функционал над~перемещениями и~напряжениями:
+
+\nopagebreak\vspace{-0.25em}\begin{multline}\label{reissnerhellingervariationalprinciple}
 \shoveleft{\displaystyle \mathcal{R}(\bm{u}, \hspace{-0.32ex}\mathboldtau) \hspace{0.2ex} =
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
 \left[^{\mathstrut} \hspace{-0.2ex}
@@ -696,7 +877,7 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 ...
 
 
-Преимущество принципа Рейсснера\hbox{--}Хеллингера~--- в~свободе варьирования. Но имеется и~некий изъян: у~функционала нет экстремума на~истинном решении, а~лишь стационарность.
+Преимущество принципа Рейсснера\hbox{--}Хеллингера~--- в~свободе варьирования. Но есть и~изъян: у~функционала нет экстремума на~истинном решении, а~лишь стационарность.
 
 Принцип можно использовать для~построения приближённых решений методом Ритца~(Ritz method). Задавая аппроксимации
 
@@ -704,9 +885,9 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 ...
 
 
-Вариационный принцип Ху\hbox{--}Васидзу~\cite{washizu} %% \cite{washizu, rabotnov-mechanicsofdeformable}
-формулируется так:
-\nopagebreak\vspace{0.1em}\begin{multline}\label{huwashizuvariationalprinciple}
+Принцип Ху\hbox{--}Васидзу~\cite{washizu} формулируется так:
+
+\nopagebreak\vspace{-0.2em}\begin{multline}\label{huwashizuvariationalprinciple}
 \hfil \variation{\mathcal{W}} \hspace{0.1ex} (\bm{u}, \hspace{-0.32ex}\mathboldepsilon, \hspace{-0.32ex}\mathboldtau) = 0 \hspace{0.1ex},\\[-0.1em]
 %
 \shoveleft{\displaystyle \mathcal{W} \hspace{0.2ex} \equiv
@@ -729,9 +910,13 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 Об~истории открытия вариационных принципов и~соотношении~их написано, например, у~Ю.\,Н.\;Работнова~\cite{rabotnov-mechanicsofdeformable}.
 
+\end{otherlanguage}
+
 \en{\section{Antiplane shear}} % Antiplane deformation % Antiplane strain
 
 \ru{\section{Антиплоский сдвиг}} % Антиплоская деформация
+
+\begin{otherlanguage}{russian}
 
 Это тот раздел линейной теории упругости, где нетривиальные результаты получаются простыми математическими средствами. Нетривиальным в~теории упругости я считаю, например, что \inquotes{деление силы на~площадь} может дать сколь угодно больш\'{у}ю погрешность при определении напряжений.
 
@@ -741,11 +926,15 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 
 
+\end{otherlanguage}
+
 \en{\section{Twisting of rods}} % torsion twisting of rods
 
 \ru{\section{Кручение стержней}}
 
 \label{para:twistingofrods.saintvenant}
+
+\begin{otherlanguage}{russian}
 
 Эта задача, тщательно изученная Saint\hbox{-\hspace{-0.2ex}}Venant’ом, рассматривается едва~ли не~во~всех книгах по классической теории упругости. Речь идёт о~цилиндре какого\hbox{-}либо сечения, нагруженном лишь поверхностными силами на торцах
 
@@ -753,11 +942,15 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 
 
+\end{otherlanguage}
+
 \en{\section{Plane deformation}}
 
 \ru{\section{Плоская деформация}}
 
 \label{para:planedeformation.linearclassicalelasticity}
+
+\begin{otherlanguage}{russian}
 
 Этот термин означает лишь то, что вектор~$\bm{u}$ параллелен плоскости ${x_1, x_2}$ и~не~зависит от~третьей координаты~$z$
 
@@ -765,6 +958,7 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 
 
+\end{otherlanguage}
 
 \vspace{8mm}
 \hfill\begin{minipage}[b]{0.95\linewidth}
@@ -772,8 +966,10 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 \section*{\wordforbibliography}
 
+\begin{otherlanguage}{russian}
+
 Можно назвать несколько десятков книг по~классической теории упругости, представляющих несомненный интерес несмотря на~возрастающую отдалённость во~времени. Подробные литературные указания содержатся в~фундаментальной монографии ...
 
-\end{minipage}
-
 \end{otherlanguage}
+
+\end{minipage}

@@ -173,7 +173,7 @@
 \newcommand\boldvari@tion[2]{\ensuremath\mathcolor{#2}{\bm{\updelta}\hspace{-0.125ex}\bm{\mathrm{#1}}}}
 \newcommand\varvector[1]{\boldvari@tion{#1}{teal}}
 \newcommand\constvarvector[1]{\boldvari@tion{#1}{green!50!black}}
-\newcommand\varbivalent[1]{\boldvari@tion{#1}{orange!90!black}}
+\newcommand\varbivalent[1]{\boldvari@tion{#1}{cyan!66!black}}
 \makeatother
 
 \makeatletter
@@ -277,6 +277,9 @@
 
 \usepackage{tkz-euclide}
 \usetkzobj{all}
+
+\usepgfmodule{nonlineartransformations}
+\usepgflibrary{curvilinear}
 
 \newcommand{\tikzsl}[1]{\tikz[baseline=(sl.base)] \node [xslant=0.21, inner sep=0pt, outer sep=0pt] (sl) {#1};}
 
@@ -469,9 +472,9 @@ aboveskip=4mm,belowskip=2.5mm}
 %labelsep=newline,
 labelsep=period,justification=centering,singlelinecheck=off}
 
-\newcommandx*{\bibauthor}[3][2=,3=]{\textbf{#1%
-\ifthenelse{\equal{#2}{}}{}{~#2}%
-\ifthenelse{\equal{#3}{}}{}{\:#3}%
+\newcommandx*{\bibauthor}[3][2=,3=]{\textbf{\hbox{#1}%
+\ifthenelse{\equal{#2}{}}{}{~\hbox{#2}}%
+\ifthenelse{\equal{#3}{}}{}{\:\hbox{#3}}%
 }}
 
 \sloppy
@@ -559,18 +562,18 @@ labelsep=period,justification=centering,singlelinecheck=off}
 % tune bibliography
 
 \makeatletter
-\renewcommand*{\@biblabel}[1]{#1.\!}
-\g@addto@macro\@openbib@code{\setlength{\itemsep}{0.2em}}
+\renewcommand*{\@biblabel}[1]{#1.}
+\g@addto@macro\@openbib@code{\setlength{\itemsep}{.2em}}
 \makeatother
 
-\addto\captionsenglish{\def\bibliographyname{List of books}}
-\addto\captionsenglish{\renewcommand{\bibname}{List of books}}
+\addto\captionsenglish{\def\bibliographyname{List of publications}}
+\addto\captionsenglish{\renewcommand{\bibname}{List of publications}}
 
-\addto\captionsrussian{\def\bibliographyname{Список литературы}}
-\addto\captionsrussian{\renewcommand{\bibname}{Список литературы}}
+\addto\captionsrussian{\def\bibliographyname{Список публикаций}}
+\addto\captionsrussian{\renewcommand{\bibname}{Список публикаций}}
 
-\addto\captionsukrainian{\def\bibliographyname{Список літератури}}
-\addto\captionsukrainian{\renewcommand{\bibname}{Список літератури}}
+\addto\captionsukrainian{\def\bibliographyname{Список публікацій}}
+\addto\captionsukrainian{\renewcommand{\bibname}{Список публікацій}}
 
 % --------------------------------------------------
 

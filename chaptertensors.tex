@@ -187,19 +187,25 @@ v'_i = v_k \hspace{.2ex} \bm{e}_k \hspace{-0.12ex}\dotp \bm{e}'_i \hspace{-0.12e
 
 \label{para:tensoranditscomponents}
 
-\begin{otherlanguage}{russian}
+\en{When in each orthonormal basis~${\bm{e}_i}$ we have a~set of~nine (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) numbers ${B_{ij}}$~(${i, j = 1, 2, 3}$), which is transformed during transition to~a~new~(rotated) orthonormal basis as}
 
-Пусть в~каждом ортонормальном базисе ${\bm{e}_i}$ имеем совокупность девяти (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) чисел ${B_{ij}}$~(${i, j = 1, 2, 3}$), преобразующуюся при~переходе к~новому~(\inquotes{повёрнутому}) ортонормальному базису как
+\ru{Когда в~каждом ортонормальном базисе~${\bm{e}_i}$ имеем совокупность девяти (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) чисел ${B_{ij}}$~(${i, j = 1, 2, 3}$), преобразующуюся при~переходе к~новому~(повёрнутому) ортонормальному базису как}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{orthotransform:2}
 B'_{ij} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'n} \hspace{.16ex} B_{kn} \hspace{0.1ex},
 \end{equation}
 
-\vspace{-0.2em} \noindent тогда эта совокупность компонент представляет инвариантный объект~--- тензор второй сложности (второй валентности, бивалентный) ${^2\!\bm{B}}$.
+\vspace{-0.2em} \noindent
+\en{then this set of~components represents an~invariant object~--- a~tensor of~second complexity (of~second valence, bivalent)}\ru{тогда эта совокупность компонент представляет инвариантный объект~--- тензор второй сложности (второй валентности, бивалентный)}
+${^2\!\bm{B}}$.
 
 %% Using some orthonormal basis to represent a tensor as set of components. Conversion of tensor’s components from one cartesian basis to another is done through an orthogonal transformation.
 
-Иными словами, тензор ${^2\!\bm{B}}$ проявляется в~каждом базисе матрицей своих компонент ${B_{ij}}$, меняющейся вместе с~базисом согласно \eqref{orthotransform:2}. Распространённые в~литературе попытки заменить тензоры матрицами ведут к~ошибкам, если не~следить за~базисами, которым эти матрицы соответствуют.
+\en{In other words, tensor~${^2\!\bm{B}}$ reveals in each basis as matrix of its components~${B_{ij}}$, changing along with a~basis according to~\eqref{orthotransform:2}. Attempts, widespread in literature, to~replace tensors with matrices lead to mistakes if you don’t track the basis to which these matrices correspond.}
+
+\ru{Иными словами, тензор~${^2\!\bm{B}}$ проявляется в~каждом базисе матрицей своих компонент~${B_{ij}}$, меняющейся вместе с~базисом согласно~\eqref{orthotransform:2}. Распространённые в~литературе попытки заменить тензоры матрицами ведут к~ошибкам, если не~следить за~базисом, которому эти матрицы соответствуют.}
+
+\begin{otherlanguage}{russian}
 
 Ключевой пример тензора второй сложности~--- диада. Пусть ${\bm{a}}$ и~${\bm{b}}$~--- векторы. В~каждом базисе положим ${D_{ij} \hspace{-0.2ex} \equiv a_i b_j}$. Легко убедиться, что преобразование~\eqref{orthotransform:2} для~${D_{ij}}$ справедливо. Получившийся тензор ${^2\!\!\,\bm{D}}$ называется диадным произведением~(dyadic product) или просто диадой~(dyad); его пишут как~${\bm{a} \otimes \bm{b}}$ или~${\bm{a} \bm{b}}$. Предпочтём второе.
 
@@ -490,7 +496,7 @@ C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp
 \end{minipage}}
 \end{wrapfigure}
 
-\vspace{-0.1em} Cross product~(векторное произведение) ${\bm{c} = \bm{a} \times \bm{b}}$ считается псевдовектором, поскольку тройка векторов ${\bm{a}}$, ${\bm{b}}$ и~${\bm{c}}$ может быть либо \inquotes{правой}, либо \inquotes{левой}~(\figref{fig:crossproduct}).
+\vspace{-0.1em} Cross product~(векторное произведение) ${\bm{c} = \bm{a} \times \bm{b}}$ считается псевдовектором, поскольку тройка векторов ${\bm{a}}$, ${\bm{b}}$ и~${\bm{c}}$ может быть либо \inquotesx{правой}[,] либо \inquotes{левой}~(\figref{fig:crossproduct}).
 
 Различие векторов и~псевдовекторов ограничивает вид формул: векторы с~псевдовекторами не~складываются. Формула кинематики абсолютно жёсткого недеформируемого тела ${\bm{v} = \bm{v}_{\raisemath{-0.1em}{0}} + \hspace{.2ex} \bm{\omega} \hspace{-0.15ex}\times\hspace{-0.15ex} \bm{r}}$ корректна, поскольку во~втором слагаемом \inaltquotes{два \inquotes{псевдо} взаимно компенсируются}.
 
@@ -1328,16 +1334,85 @@ Now, imagine if we have an arbitrary path through the configuration space/manifo
 
 \begin{otherlanguage}{russian}
 
-Любой тензор второй сложности~${\bm{F}}$ с~${\operatorname{det} F_{ij} \neq 0}$ может быть представлен как
+Любой тензор второй сложности~${\bm{F}}$ с~${\operatorname{det} F_{ij} \hspace{-0.16ex} \neq 0}$~(не~сингулярный) может быть представлен как
 
 ...
 
-\newpage ...
+\begin{tcolorbox}
+\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
 
+\emph{Example.} Polar decompose tensor~${\bm{C} = C_{ij} \bm{e}_i \bm{e}_j}$, where $\bm{e}_k$ are mutually orthogonal unit vectors of basis, and $C_{ij}$ are tensor’s components
+
+\begin{equation*}
+C_{ij} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+-5 & 20 & 11 \\
+10 & -15 & 23 \\
+-3 & -5 & 10
+\end{array}\hspace{-0.2ex}\right]$}
+\end{equation*}
+
+\begin{equation*}
+\rotationtensor = O_{ij} \bm{e}_i \bm{e}_j \hspace{-0.2ex}
+= \bm{O}_1 \hspace{-0.2ex} \dotp \bm{O}_2
+\end{equation*}
+
+\begin{equation*}
+O_{ij} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+0 & \nicefrac{3}{5} & \nicefrac{4}{5} \\
+0 & \nicefrac{4}{5} & - \hspace{.2ex} \nicefrac{3}{5} \\
+-1 & 0 & 0
+\end{array}\hspace{-0.4ex}\right]$}
+\hspace{-0.25ex} = \hspace{-0.25ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+0 & \mathcolor{red!33!white}{0} & 1 \\
+\mathcolor{red!33!white}{0} & \mathcolor{red!77!black}{1} & \mathcolor{red!33!white}{0} \\
+-1 & \mathcolor{red!33!white}{0} & 0
+\end{array}\hspace{-0.2ex}\right]$}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\mathcolor{red!77!black}{1} & \mathcolor{red!33!white}{0} & \mathcolor{red!33!white}{0} \\
+\mathcolor{red!33!white}{0} & \nicefrac{4}{5} & - \hspace{.2ex} \nicefrac{3}{5} \\
+\mathcolor{red!33!white}{0} & \nicefrac{3}{5} & \nicefrac{4}{5}
+\end{array}\hspace{-0.4ex}\right]$}
+\end{equation*}
+
+\begin{equation*}\begin{array}{c}
+\bm{C} = \rotationtensor \hspace{-0.1ex} \dotp \bm{S_{\smash{\mathsf{R}}}}
+\hspace{.1ex} , \:\:
+\rotationtensor^{\T}\hspace{-0.5ex} \dotp \bm{C} = \bm{S_{\smash{\mathsf{R}}}}
+\end{array}\end{equation*}
+
+\begin{equation*}\begin{array}{c}
+\bm{C} = \bm{S_{\smash{\mathsf{L}}}} \hspace{-0.25ex} \dotp \rotationtensor
+\hspace{.1ex} , \:\:
+\bm{C} \dotp \rotationtensor^{\T}\hspace{-0.5ex} = \bm{S_{\smash{\mathsf{L}}}}
+\end{array}\end{equation*}
+
+\begin{equation*}
+S_{\smash{\mathsf{R}}\hspace{.15ex}ij} \hspace{-0.1ex} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+3 & 5 & -10 \\
+5 & 0 & 25 \\
+-10 & 25 & -5
+\end{array}\hspace{-0.2ex}\right]$}
+\end{equation*}
+
+\begin{equation*}
+S_{\smash{\mathsf{L}}\hspace{.15ex}ij} \hspace{-0.1ex} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\nicefrac{104}{5} & \nicefrac{47}{5} & 5 \\
+\nicefrac{47}{5} & - \hspace{.2ex} \nicefrac{129}{5} & -10 \\
+5 & -10 & 3
+\end{array}\hspace{-0.2ex}\right]$}
+\end{equation*}
+
+\par\end{tcolorbox}
+
+...
 
 
 \end{otherlanguage}
-
 
 
 \newpage
@@ -2158,7 +2233,7 @@ The curvature tensor measures noncommutativity of the covariant derivative, and 
 
 \begin{otherlanguage}{russian}
 
-Существует немало книг, в~которых рассматривается лишь аппарат тензорного исчисления~\cite{borisenkotarapov, mcconnell-tensoranalysis, rashevsky-riemanniangeometry, sokolnikov, schouten-tensoranalysis}. Преобладает \inquotes{индексный} подход~--- тензоры трактуются как матрицы компонент, преобразующиеся определённым путём.
+Существует немало книг, в~которых рассматривается лишь аппарат тензорного исчисления~\cite{mcconnell-tensoranalysis, schouten-tensoranalysis, borisenko.tarapov, rashevsky-riemanniangeometry, sokolnikov-tensoranalysis}. Преобладает \inquotes{индексный} подход~--- тензоры трактуются как матрицы компонент, преобразующиеся определённым путём.
 \inquotes{Прямой} подход к~тензорам излагается, например, в~приложениях книг А.\,И.\;Лурье~\cite{lurie-nonlinearelasticity, lurie-theoryofelasticity}.
 Яркое описание теории векторных полей можно найти у~R.\:Feynman’а~\cite{feynman-lecturesonphysics}.
 Сведения о~тензорном исчислении содержатся и~в~своеобразной и~глубокой книге C.\:Truesdell’а~\cite{truesdell-firstcourse}.
