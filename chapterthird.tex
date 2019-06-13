@@ -18,18 +18,16 @@
 \lettrine[lines=2, findent=2pt, nindent=0pt]{В}{ещества} имеют дискретное строение, и~модель системы частиц с~массами~${m_k}$ и~радиусами\hbox{-}векторами~${\bm{R}_k (t)}$ может показаться подходящей, несмотря на невообразимое число степеней свободы~--- тем~более что объёмы памяти и~быстродействие компьютеров характеризуются тоже астрономическими числами.
 
 И~всё~же предпочтение ст\'{о}ит отдать качественно иной модели~--- модели сплошной среды~(материального континуума), в~которой масса распределена по~объёму непрерывно: в~объёме~$\mathcal{V}$ содержится масса
-\vspace{-0.25em}\begin{equation}
+
+\nopagebreak\vspace{-0.5em}\begin{equation}
 m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 \end{equation}
 
-\vspace{-0.5em}\noindent \en{where}\ru{где} $\rho$~\en{is volumetric mass density}\ru{--- объёмная плотность массы}.
+\vspace{-0.25em}\noindent \en{where}\ru{где} $\rho$~\en{is volumetric mass density}\ru{--- объёмная плотность массы}.
 
 С~непрерывным распределением массы связано лишь первое и~простое представление о~сплошной среде как множестве~(пространстве) материальных точек. Возможны и~более сложные модели, в~которых частицы обладают степенями свободы не~только трансляции, но~и поворота, внутренней деформации и~другими. Отметив, что подобные модели притягивают всё б\'{о}льший интерес, в~этой главе ограничимся классическим представлением о~среде как состоящей из~простых точек.
 
-В~каждый момент времени~$t$ деформируемое тело занимает некий объём~$V$ пространства. Вводя какие\hbox{-}либо криволинейные координаты~${q^{\hspace{.1ex}i}}$, считаем
-\begin{equation}
-\bm{R} = \bm{R}(q^{\hspace{.1ex}i}, t) \hspace{.1ex}.
-\end{equation}
+В~каждый момент времени~$t$ деформируемое тело занимает некий объём~$V$ пространства. Вводя какие\hbox{-}либо криволинейные координаты~${q^{\hspace{.1ex}i}\hspace{-0.4ex}}$, считаем ${\bm{R} \hspace{-0.25ex} = \hspace{-0.4ex} \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t)}$.
 
 ...
 
@@ -84,18 +82,17 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 \label{para:motiongradient}
 
-\begin{otherlanguage}{russian}
+Having motion function~${\bm{R} \hspace{-0.25ex} = \hspace{-0.4ex} \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t)}$, ${\bm{r}(q^{\hspace{.1ex}i}) \equiv \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, 0)}$, differential \inquotes{nabla} operators ${\boldnabla \equiv \bm{R}^{\hspace{.1ex}i} \partial_i}$, ${\boldnablacircled \equiv \bm{r}^{\hspace{-0.05ex}i} \partial_i}$, and looking at relations for certain infinitesimal vector in two configurations, current~${d\bm{R}}$ and~initial~${d\bm{r}}$
+%%${t = \const}$
 
-При ${t = \const}$
-
-\nopagebreak\vspace{-0.2em}
-\begin{equation*}
-\begin{array}{c@{\hspace*{4em}}}
+\nopagebreak\vspace{1.3em}
+\begin{equation}
+\begin{array}{c}
 d\bm{R} = d\bm{r} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposed} \boldnablacircled \hspace{-0.16ex} \bm{R} \tikzmark{endFtransposed} = \hspace{-0.2ex} \tikzmark{beginMotionGradient} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}\T} \tikzmark{endMotionGradient} \hspace{-0.4ex} \dotp d\bm{r} \\[.2em]
 %
 d\bm{r} = d\bm{R} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \boldnabla \bm{r} \tikzmark{endFtransposedinverse} = \hspace{-0.2ex} \tikzmark{beginFinverse} \boldnabla \bm{r}^{\T} \hspace{-0.4ex} \tikzmark{endFinverse} \dotp d\bm{R}
 \end{array}
-\end{equation*}%
+\end{equation}%
 \AddOverBrace[line width=.75pt][0,0.6ex]%
 {beginFtransposed}{endFtransposed}{${\begin{array}{c}
 \hspace{.12em} \scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\T}$} \\[-0.4em]
@@ -108,24 +105,66 @@ d\bm{r} = d\bm{R} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \bold
 \end{array}}$}
 \AddUnderBrace[line width=.75pt][0,0.2ex][yshift=.32em]%
 {beginFtransposedinverse}{endFtransposedinverse}{${\begin{array}{c}
-\scriptstyle \bm{R}^{\hspace{.04ex}i} \bm{r}_{\hspace{-0.12ex}i} \\[-0.16em]
+\scriptstyle \bm{R}^{\hspace{.05ex}i} \bm{r}_{\hspace{-0.12ex}i} \\[-0.16em]
 \scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\expminusT}$}
 \end{array}}$}
 \AddUnderBrace[line width=.75pt][0,0.2ex][yshift=.32em]%
 {beginFinverse}{endFinverse}{${\begin{array}{c}
-\scriptstyle \bm{r}_{\hspace{-0.12ex}i} \bm{R}^{\hspace{.04ex}i} \\[-0.16em]
+\scriptstyle \bm{r}_{\hspace{-0.12ex}i} \bm{R}^{\hspace{.05ex}i} \\[-0.16em]
 \scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\expminusone}$}
 \end{array}}$}
 
 \vspace{1.5em}
 
-Располагая функцией движения~...
+\noindent here comes to~mind to introduce the \inquotes{motion gradient}\footnote{\en{Tensor}\ru{Тензору}~$\bm{F}$ \en{doesn’t well suit}\ru{не~вполне подходит} \en{its}\ru{его} \en{more popular}\ru{более популярное} \en{name}\ru{название} \inquotesx{\en{deformation gradient}\ru{градиент деформации}}[,] \en{because}\ru{поскольку} \en{it describes}\ru{он описывает} \en{not only the deformation itself}\ru{не~только сам\'{у} деформацию}, \en{but also the rotation of a~body as a~whole without deformation}\ru{но~и поворот тела как~целого без деформации}.}\hbox{\hspace{-0.6ex},} picking one of these tensor multipliers for it: ${\bm{F} \equiv \hspace{-0.2ex} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}\T} \hspace{-0.32ex} = \bm{R}_{\hspace{.1ex}i} \bm{r}^{\hspace{-0.05ex}i} \hspace{-0.4ex}}$.
+
+
 
 ...
 
-\noindent называемый градиентом движения или градиентом деформации\footnote{Тензору~$\bm{F}$ не~вполне подходит его более популярное название \inquotesx{deformation gradient}[,] поскольку он описывает не~только деформацию, но~и поворот тела как~целого без деформации.}\hspace{-0.5em}.
+\en{For cartesian coordinates}\ru{Для декартовых координат} \en{with orthonormal basis}\ru{с~ортонормальным базисом}~${\bm{e}_i \hspace{-0.16ex} = \boldconst}$
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{R} = \hspace{-0.15ex} X_{\hspace{-0.1ex}i}(t) \hspace{.2ex} \bm{e}_i
+\hspace{.1ex} , \:\;
+\bm{r} = \hspace{-0.15ex} X_{\hspace{-0.1ex}i}(0) \hspace{.2ex} \bm{e}_i \hspace{-0.16ex} = x_i \hspace{.1ex} \bm{e}_i
+\hspace{.1ex} , \:\:
+x_i \hspace{-0.1ex} \equiv \hspace{-0.1ex} X_{\hspace{-0.1ex}i}(0)
+\hspace{.1ex} ,
+\end{equation*}
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+\boldnablacircled \hspace{-0.1ex}
+= \bm{e}_i \hspace{.2ex} \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial}}{\partial x_i} $} \hspace{-0.1ex}
+= \bm{e}_i \hspace{.15ex} \mathcircabove{\partial}_i
+\hspace{.1ex} , \:\:
+%
+\boldnabla \hspace{-0.1ex}
+= \bm{e}_i \hspace{.2ex} \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial}}{\partial \hspace{-0.2ex} X_{\hspace{-0.1ex}i}} $} \hspace{-0.1ex}
+= \bm{e}_i \hspace{.15ex} \partial_i
+\hspace{.1ex} ,
+\end{equation*}
+
+\nopagebreak\vspace{-0.4em}\begin{equation*}
+\begin{array}{c}
+\boldnablacircled \hspace{-0.16ex} \bm{R}
+= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{R}}}{\partial x_i} $} \hspace{-0.1ex}
+= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} ( \hspace{-0.1ex} X_{\hspace{-0.3ex}j} \hspace{.2ex} \bm{e}_j )}}{\partial x_i} $}
+=  \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{-0.1ex} X_{\hspace{-0.3ex}j}}}{\partial x_i} $} \hspace{.25ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \mathcircabove{\partial}_i \hspace{.1ex} X_{\hspace{-0.3ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
+\hspace{.1ex} ,
+\\[.66em]
+%
+\boldnabla \bm{r}
+= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{r}}}{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}i}} $} \hspace{-0.1ex}
+= \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial x_{\hspace{-0.2ex}j}}}{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}i}} $} \hspace{.25ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \partial_i \hspace{.1ex} x_{\hspace{-0.2ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
+\end{array}
+\end{equation*}
 
 ...
+
+\begin{otherlanguage}{russian}
 
 По~теореме о~полярном разложении~(\chapdotpararef{chapter:elementsoftensorcalculus}{para:polardecomposition}), градиент движения разлож\'{и}м на тензор поворота~$\rotationtensor$ и~симметричные положительные тензоры ${\bm{U}\hspace{-0.25ex}}$ и~${\bm{V}\hspace{-0.2ex}}$:
 
@@ -155,129 +194,182 @@ d\bm{r} = d\bm{R} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \bold
 \end{array}
 \end{equation}
 
-\vspace{-0.25em} \noindent Это тензор деформации Green’а~(или правый тензор Cauchy--Green’а)~$\bm{G}$ и~тензор деформации Finger’а~(или левый тензор Cauchy--Green’а)~$\mathboldPhi$. Пре\-иму\-щест\-во $\bm{G}$ и~$\mathboldPhi$ перед ${\bm{U}\hspace{-0.25ex}}$ и~${\bm{V}\hspace{-0.25ex}}$~--- в~алгебраической связи с~$\bm{F}$, без извлечения корня.
+\vspace{-0.25em} \noindent Это тензор деформации Green’а~(или правый тензор Cauchy--Green’а)~$\bm{G}$ и~тензор деформации Finger’а~(или левый тензор Cauchy--Green’а)~$\mathboldPhi$. Пре\-иму\-щест\-во $\bm{G}$ и~$\mathboldPhi$ перед ${\bm{U}\hspace{-0.25ex}}$ и~${\bm{V}\hspace{-0.25ex}}$~--- алгебраическая связь с~$\bm{F}$, без извлечения корня.
 
-Рассмотрим компоненты $\bm{G}$ и~$\mathboldPhi$:
-
+Компоненты $\bm{G}$ и~$\mathboldPhi$:
 
 ...
 
-\vspace{1cm}
-
-{\small%
-\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
-
-\noindent \textbf{\emph{from Wikipedia, the free encyclopedia}}~--- \href{https://en.wikipedia.org/wiki/Finite_strain_theory}{Finite strain theory}
+\end{otherlanguage}
 
 \subsection*{The right Cauchy\hbox{--}Green deformation tensor}
 
-In 1839, George Green introduced a deformation tensor known as the right Cauchy\hbox{--}Green deformation tensor or Green’s deformation tensor, defined as:
-\[ \displaystyle \bm{G} = \bm{F}^{\hspace{.1ex}\T} \!\dotp \bm{F} = \bm{U}^{2}
+In 1839 \textcolor{red}{(??publication)}, George Green introduced a deformation tensor known as the right Cauchy\hbox{--}Green deformation tensor or Green’s deformation tensor, defined as
+\[
+\bm{G}
+= \bm{F}^{\hspace{.1ex}\T} \hspace{-0.5ex} \dotp \bm{F}
+= \bm{U}^{2}
 \quad {\text{or}} \quad
-G_{IJ} = F_{kI}\,F_{kJ} = {\frac{\partial x_{k}}{\partial X_{I}}}{\frac{\partial x_{k}}{\partial X_{J}}}. \]
+G_{ij} \hspace{-0.2ex}
+= F_{k' i} \hspace{.25ex} F_{k' \hspace{-0.15ex}j} \hspace{-0.15ex}
+= \frac{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}{\partial x_{i}} \hspace{.15ex} \frac{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}{\partial x_{\hspace{-0.2ex}j}}
+\hspace{.1ex} .
+\]
 
-Physically, the Cauchy\hbox{--}Green tensor gives the square of local change in distances due to deformation: ${\displaystyle d\bm{x} ^{2}=d\bm{X} \dotp \bm{G} \dotp d\bm{X} \,\!}$
+This tensor \textcolor{magenta}{gives the \inquotes{square} of local change in distances} due to deformation: ${\displaystyle d\bm{r} \dotp d\bm{r} = d\bm{R} \dotp \bm{G} \dotp d\bm{R}}$
 
-Invariants of ${\bm{G}}$ are often used in expressions for strain energy density functions. The most commonly used invariants are
-\[{\displaystyle {\begin{aligned}I_{1}^{G} & \equiv G_{II}=\lambda_{1}^{2}+\lambda_{2}^{2}+\lambda_{3}^{2}\\
-I_{2}^{G} & \equiv {\tfrac {1}{2}}\left[(G_{JJ})^{2} - G_{IK} G_{KI}\right] = \lambda_{1}^{2}\lambda_{2}^{2}+\lambda_{2}^{2}\lambda_{3}^{2}+\lambda_{3}^{2}\lambda_{1}^{2}\\
-I_{3}^{G} & \equiv \det(\bm{G} )=\lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}\end{aligned}}}\]
-where $\lambda_{i}\,\!$ are stretch ratios for the unit fibers that are initially oriented along the eigenvector directions of the right (reference) stretch tensor (these are not generally aligned with the three axis of the coordinate systems).
+Invariants of ${\bm{G}}$ are often used in expressions for strain energy density. The most popular invariants are
+\[
+\begin{array}{r@{\hspace{.25em}}c@{\hspace{.33em}}l}
+\mathrm{I}\hspace{.16ex}(\bm{G}) & \equiv &
+\operatorname{tr} \hspace{.1ex} \bm{G}
+= G_{ii} \hspace{-0.2ex} = \lambda_{1}^{2} + \lambda_{2}^{2} + \lambda_{3}^{2}
+\\[.25em]
+%
+\mathrm{II}\hspace{.16ex}(\bm{G}) & \equiv &
+\smalldisplaystyleonehalf \bigl( G_{\hspace{-0.25ex}j\hspace{-0.1ex}j}^{\hspace{.25ex}2} \hspace{-0.1ex} - G_{ik} G_{ki} \hspace{.1ex} \bigr) \hspace{-0.25ex}
+= \lambda_{1}^{2}\lambda_{2}^{2} + \lambda_{2}^{2}\lambda_{3}^{2} + \lambda_{3}^{2}\lambda_{1}^{2}
+\\[.4em]
+%
+\mathrm{III}\hspace{.16ex}(\bm{G}) & \equiv &
+\operatorname{det} \hspace{.1ex} \bm{G}
+= \lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}
+\end{array}
+\]
+where ${\lambda_{i}\hspace{-0.2ex}}$ are stretch ratios for unit fibers that are initially oriented along directions of eigenvectors of the right stretch tensor~${\bm{U}\hspace{-0.2ex}}$.
 
 \subsection*{The inverse of Green’s deformation tensor}
 
 It is the inverse of the right Cauchy\hbox{--}Green deformation tensor
-\[ \displaystyle ^2\hspace{-0.4ex}\bm{f} = \bm{G}^{\expminusone} = \bm{F}^{\expminusone} \! \dotp \bm{F}^{\expminusT}
-\quad {\text{or}} \quad
-f_{IJ}={\frac{\partial X_{I}}{\partial x_{k}}}{\frac{\partial X_{J}}{\partial x_{k}}} \]
 
-The International Union of Pure and Applied Chemistry (IUPAC) recommends that this tensor be called the Finger tensor. However, that nomenclature is not universally accepted in applied mechanics.
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+{^2\hspace{-0.4ex}\bm{f}}
+= \bm{G}^{\expminusone} \hspace{-0.25ex}
+= \bm{F}^{\expminusone} \hspace{-0.4ex} \dotp \bm{F}^{\expminusT}
+\quad {\text{or}} \quad
+f_{ij} \hspace{-0.2ex} = \frac{\partial x_{i}}{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}} \hspace{.15ex} \frac{\partial x_{\hspace{-0.2ex}j}}{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}
+\end{equation*}
+
+The International Union of Pure and Applied Chemistry (IUPAC) recommends that this tensor be called the Finger tensor. However, that isn’t universally accepted in applied mechanics.
 
 \subsection*{The left Cauchy\hbox{--}Green or Finger deformation tensor}
 
 Reversing the order of multiplication in the formula for the right Green–Cauchy deformation tensor leads to the left Cauchy\hbox{--}Green deformation tensor which is defined as:
-\[ \displaystyle \bm{\Phi} = \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} = \bm{V}^{2}
+\[
+\bm{\Phi}
+= \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex}
+= \bm{V}^{2}
 \quad {\text{or}} \quad
-\Phi_{ij}={\frac{\partial x_{i}}{\partial X_{K}}}{\frac{\partial x_{j}}{\partial X_{K}}} \]
+\Phi_{ij} \hspace{-0.2ex}
+= \frac{\partial X_{i}}{\partial x_{\mathcircabove{k}}} \hspace{.15ex} \frac{\partial X_{j}}{\partial x_{\mathcircabove{k}}}
+\]
 
 The left Cauchy\hbox{--}Green deformation tensor is often called the Finger deformation tensor, named after Josef Finger (1894).
 
-Invariants of ${\bm{\Phi}}\,\!$ are also used in the expressions for strain energy density functions. The conventional invariants are defined as
-\[ \displaystyle {\begin{aligned}I_{1} & \equiv \Phi_{ii} = \lambda_{1}^{2}+\lambda_{2}^{2}+\lambda_{3}^{2}\\
-I_{2} & \equiv {\tfrac {1}{2}} \left( \Phi_{ii}^{2} - \Phi_{jk}\Phi_{kj} \right) = \lambda_{1}^{2}\lambda_{2}^{2} + \lambda_{2}^{2}\lambda_{3}^{2}+\lambda_{3}^{2}\lambda_{1}^{2}\\
-I_{3} & \equiv \det \bm{\Phi} = J^{2} = \lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}\end{aligned}} \]
-where $J \equiv \det{\bm{F}}$ is the determinant of the motion gradient.
-
-For incompressible materials, a slightly different set of invariants is used:
-\[ \displaystyle {\bar {I}}_{1} \equiv J^{-2/3}I_{1}~;~~{\bar {I}}_{2} \equiv J^{-4/3}I_{2}~;~~J=1~. \]
+Invariants of ${\bm{\Phi}}\,\!$ are also used in expressions for strain energy density functions. The conventional invariants are defined as
+\[
+{\begin{aligned}
+I_{1} & \equiv \Phi_{ii} = \lambda_{1}^{2}+\lambda_{2}^{2}+\lambda_{3}^{2}
+\\
+%
+I_{2} & \equiv {\tfrac{1}{2}} \left( \Phi_{ii}^{2} - \Phi_{jk}\Phi_{kj} \right) = \lambda_{1}^{2}\lambda_{2}^{2} + \lambda_{2}^{2}\lambda_{3}^{2}+\lambda_{3}^{2}\lambda_{1}^{2}
+\\
+%
+I_{3} & \equiv \det \bm{\Phi} = J^{2} = \lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}
+\end{aligned}}
+\]
+where ${J \equiv \det{\bm{F}}}$ is determinant of the motion gradient.
 
 \subsection*{The Cauchy deformation tensor}
 
-Earlier in 1828, Augustin Louis Cauchy introduced a deformation tensor defined as the inverse of the left Cauchy\hbox{--}Green deformation tensor, $\bm{\Phi}^{\expminusone}\,\!$. This tensor has also been called the Piola tensor and the Finger tensor in the rheology and fluid dynamics literature.
-\[ \displaystyle ^2\hspace{-0.2ex}\bm{c} = \bm{\Phi}^{\expminusone} = \bm{F}^{\expminusT} \!\dotp \bm{F}^{\expminusone}
+Earlier in 1828 \textcolor{red}{(?publication)}, Augustin Louis Cauchy introduced deformation tensor defined as the inverse of the left Cauchy\hbox{--}Green deformation tensor, $\bm{\Phi}^{\expminusone}\!$. This tensor is also called Piola tensor and Finger tensor in rheology and fluid dynamics literature.
+\[
+{^2\hspace{-0.2ex}\bm{c}} = \bm{\Phi}^{\expminusone} \hspace{-0.25ex}
+= \bm{F}^{\expminusT} \hspace{-0.4ex} \dotp \bm{F}^{\expminusone}
 \quad {\text{or}} \quad
-c_{ij} = {\frac{\partial X_{K}}{\partial x_{i}}}{\frac{\partial X_{K}}{\partial x_{j}}} \]
+c_{ij} \hspace{-0.2ex}
+= \frac{\partial x_{\mathcircabove{k}}}{\partial X_{i}} \hspace{.15ex} \frac{\partial x_{\mathcircabove{k}}}{\partial X_{j}}
+\]
 
 \subsection*{Finite strain tensors}
 
-The concept of \emph{strain} is used to evaluate how much a given displacement differs locally from a~body displacement as a~whole (a~\inquotes{rigid body displacement}). One of such strains for large deformations is the \emph{Lagrangian finite strain tensor}, also called the \emph{Green\hbox{--}Lagrangian strain tensor} or \emph{Green\hbox{--}Saint\hbox{-\hspace{-0.2ex}}Venant strain tensor}, defined as
+The concept of \emph{strain} is used to evaluate how much a given displacement differs locally from a~body displacement as a~whole (a~\inquotes{rigid body displacement}). One of such strains for large deformations is the \emph{Green strain tensor}, also called \emph{Green\hbox{--}Lagrangian strain tensor} or \emph{Green\hbox{--}Saint\hbox{-\hspace{-0.2ex}}Venant strain tensor}, defined as
 
-${\displaystyle \bm{C} = \onehalf (\bm{G} - \bm{E})
+${ \displaystyle \bm{C} = \onehalf (\bm{G} - \bm{E})
 \quad {\text{or}} \quad
-C_{KL} = \onehalf \left( {\frac{\partial x_{j}}{\partial X_{K}}}{\frac{\partial x_{j}}{\partial X_{L}}} - \delta_{KL} \right)}$
+\mathcolor{red}{C_{KL} = \onehalf \left( {\frac{\partial x_{j}}{\partial X_{K}}}{\frac{\partial x_{j}}{\partial X_{L}}} - \delta_{KL} \right)} }$
 
-or as a function of the displacement gradient tensor
+\noindent or as function of the displacement gradient tensor
 
-${\displaystyle \bm{C} = \onehalf \left[(\nabla_{\!X}\bm{u})^{\T}\! + \nabla_{\!X}\bm{u} + (\nabla_{\!X}\bm{u})^{\T}\! \dotp \nabla_{\!X}\bm{u} \right]}$
+\nopagebreak
+${ \displaystyle \bm{C} = \onehalf \left[ (\boldnabla\bm{u})^{\T}\! + \boldnabla\bm{u} + (\boldnabla\bm{u})^{\T}\! \dotp \boldnabla\bm{u} \right] }$
 
-or
+\noindent or
 
-${\displaystyle C_{KL} = \onehalf \left({\frac{\partial u_{K}}{\partial X_{L}}} + {\frac{\partial u_{L}}{\partial X_{K}}} + {\frac{\partial u_{M}}{\partial X_{K}}}{\frac{\partial u_{M}}{\partial X_{L}}}\right)}$
+\nopagebreak
+${ \mathcolor{red}{\displaystyle C_{KL} = \onehalf \left({\frac{\partial u_{K}}{\partial X_{L}}} + {\frac{\partial u_{L}}{\partial X_{K}}} + {\frac{\partial u_{M}}{\partial X_{K}}}{\frac{\partial u_{M}}{\partial X_{L}}}\right)} }$
 
 The Green\hbox{--}Lagrangian strain tensor is a measure of how much $\bm{G}$ differs from $\bm{E}$.
 
-The \emph{Eulerian\hbox{--}Almansi finite strain tensor}, referenced to the deformed configuration, i.e. Eulerian description, is defined as
-\[ \displaystyle ^2\hspace{-0.2ex}\bm{e} = \onehalf (\bm{E} - \bm{c}) = \onehalf (\bm{E} - \bm{\Phi}^{\expminusone})
+The \emph{Almansi strain tensor}, referenced to the deformed configuration (Eulerian description), is defined as
+\[
+{^2\hspace{-0.2ex}\bm{e}} = \onehalf (\bm{E} - \bm{c}) = \onehalf (\bm{E} - \bm{\Phi}^{\expminusone})
 \quad {\text{or}} \quad
-e_{rs} = \onehalf \left( \delta _{rs} - {\frac{\partial X_{M}}{\partial x_{r}}}{\frac{\partial X_{M}}{\partial x_{s}}} \right) \]
+\mathcolor{red}{e_{rs} = \onehalf \left( \delta _{rs} - {\frac{\partial X_{M}}{\partial x_{r}}}{\frac{\partial X_{M}}{\partial x_{s}}} \right)}
+\]
 
-or as a function of the displacement gradients we have
+\noindent or as function of the displacement gradients
 
-${\displaystyle e_{ij} = \onehalf \left( {\frac{\partial u_{i}}{\partial x_{j}}} + {\frac{\partial u_{j}}{\partial x_{i}}} - {\frac{\partial u_{k}}{\partial x_{i}}}{\frac{\partial u_{k}}{\partial x_{j}}} \right)}$
+\nopagebreak
+${ \mathcolor{red}{\displaystyle e_{ij} = \onehalf \left( {\frac{\partial u_{i}}{\partial x_{j}}} + {\frac{\partial u_{j}}{\partial x_{i}}} - {\frac{\partial u_{k}}{\partial x_{i}}}{\frac{\partial u_{k}}{\partial x_{j}}} \right)} }$
 
-\subsection*{Seth\hbox{--}Hill family of generalized strain tensors}
+\subsection*{Seth\hbox{--}Hill family of abstract strain tensors}
 
-B. R. Seth was the first to show that the Green and Almansi strain tensors are special cases of a more general strain measure. The idea was further expanded upon by Rodney Hill in~1968. The Seth\hbox{--}Hill family of strain measures (also called Doyle\hbox{--}Ericksen tensors) can be expressed as
-\[ \displaystyle \bm{D}_{(m)} = \frac{1}{2m} (\bm{U}^{2m} \! - \bm{E}) = \frac{1}{2m} \left[\bm{G}^{m} \! - \bm{E} \right] \]
+B. R. Seth was the first to show that the Green and Almansi strain tensors are special cases of a more abstract strain measure. The idea was further expanded upon by Rodney Hill in~1968 \textcolor{red}{(publication??)}. The Seth\hbox{--}Hill family of strain measures (also called Doyle\hbox{--}Ericksen tensors) is expressed as
 
-For different values of~$m$ we have:
-\[ \textstyle \begin{array}{r@{\hspace{0.1em}}ll}
-\bm{D}_{(1)} & = \onehalf (\bm{U}^{2} - \bm{E}) = \onehalf (\bm{G} - \bm{E}) & \text{\scalebox{0.8}{Green\hbox{--}Lagrangian strain tensor}} \\
-\bm{D}_{(1/2)} & = (\bm{U} - \bm{E}) = \bm{G}^{1/2} - \bm{E} & \text{\scalebox{0.8}{Biot strain tensor}} \\
-\bm{D}_{(0)} & = \ln \bm{U} = \onehalf\, \ln \bm{G} & \text{\scalebox{0.8}{Logarithmic strain, Natural~(True) strain, or Hencky strain}} \\
-\bm{D}_{(-1)} & = \onehalf \left[ \bm{E} - \bm{U}^{-2} \right] & \text{\scalebox{0.8}{Almansi strain}}
-\end{array} \]
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\displaystyle \bm{D}_{(m)} \hspace{-0.2ex}
+= \frac{\raisebox{-0.2em}{1}}{2m} \left( \hspace{.1ex} \bm{U}^{2m} \hspace{-0.4ex} - \bm{E} \hspace{.2ex} \right)
+= \frac{\raisebox{-0.2em}{1}}{2m} \left( \bm{G}^{m} \hspace{-0.4ex} - \bm{E} \hspace{.1ex} \right) \end{equation*}
+
+\vspace{.1em} \noindent \en{For various values of}\ru{Для разных значений}~$m$
+\en{it gives}\ru{это даёт}
+
+\nopagebreak\begin{equation*}
+\begin{array}{r@{\hspace{0.1em}}ll}
+\bm{D}_{(1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \bm{U}^{2} \hspace{-0.25ex} - \bm{E} \right) = \smalldisplaystyleonehalf (\bm{G} - \bm{E}) & \text{\scalebox{0.92}[0.92]{Green strain tensor}}
+\\[.4em]
+\bm{D}_{(\nicefrac{1}{2})} & = \bm{U} \hspace{-0.15ex} - \bm{E} = \bm{G}^{\hspace{.1ex}\nicefrac{1}{2}} \hspace{-0.25ex} - \bm{E} & \text{\scalebox{0.92}[0.92]{Biot strain tensor}}
+\\[.4em]
+\bm{D}_{(0)} & = \ln \bm{U} = \smalldisplaystyleonehalf \ln \bm{G} & \text{\scalebox{0.92}[0.92]{logarithmic strain, Hencky strain}}
+\\[.4em]
+\bm{D}_{(-\hspace{-0.1ex}1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \hspace{-0.1ex} \bm{E} - \bm{U}^{-2} \hspace{.1ex} \right) & \text{\scalebox{0.92}[0.92]{Almansi strain}}
+\end{array}
+\end{equation*}
 
 The second\hbox{-}order approximation of these tensors is
-\[ \displaystyle \bm{D}_{(m)} = \bm{\varepsilon} + \tfrac{1}{2} (\nabla \bm{u} )^{\T}\! \dotp \nabla \bm{u} - (1 - m) \hspace{0.2ex} {\bm{\varepsilon}}^{\T}\! \dotp \bm{\varepsilon} \]
-where $\bm{\varepsilon}$ is the infinitesimal strain tensor.
+\[ \bm{D}_{(m)} \hspace{-0.2ex} =
+\mathboldepsilon + \smalldisplaystyleonehalf (\nabla \bm{u} )^{\T}\! \dotp \nabla \bm{u} - (1 - m) \hspace{0.2ex} \mathboldepsilon \dotp \mathboldepsilon \]
 
-Many other different definitions of tensors $\bm{D}$ are admissible, provided that they all satisfy the conditions that:
+\vspace{-0.25em} \noindent where ${\mathboldepsilon \equiv \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$ is the infinitesimal strain tensor.
+
+Many other different definitions of measures~$\bm{D}$ are possible, provided that they satisfy these conditions:
 
 \begin{itemize}
-\item $\bm{D}$ vanishes for all rigid\hbox{-}body motions
-\item the dependence of~$\bm{D}$ on the displacement gradient tensor ${\nabla \bm{u}}$ is continuous, continuously differentiable and monotonic
-\item it is also desired that $\bm{D}$ reduces to the infinitesimal strain tensor~$\bm{\varepsilon}$ as the norm ${| \nabla\bm{u}| \to 0}$
+\item $\bm{D}$ vanishes for any movement of a~body as a~rigid whole
+\item dependence of~$\bm{D}$ on displacement gradient tensor~${\nabla \bm{u}}$ is continuous, continuously differentiable and monotonic
+\item it’s desired that $\bm{D}$ reduces to the infinitesimal strain tensor~${\mathboldepsilon}$ when ${\boldnabla \bm{u} \to 0}$
 \end{itemize}
 
-An example is the set of tensors
-\[ \displaystyle \bm{D}^{(n)} = \left( {\bm{U}}^{n} - {\bm{U}}^{-n} \right) / 2n \]
-which do not belong to the Seth\hbox{--}Hill class, but have the same 2nd\hbox{-}order approximation as the Seth\hbox{--}Hill measures at ${m=0}$ for any value of $n$.
+\noindent For example, tensors from the set
+\[ \displaystyle \bm{D}^{(n)} \hspace{-0.32ex} = \left( {\bm{U}}^{n} \hspace{-0.4ex} - {\bm{U}}^{-n} \right) \hspace{-0.4ex} / \hspace{.25ex} 2n \]
+aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2nd\hbox{-}order approximation as Seth\hbox{--}Hill measures with~${m=0}$.
 
-\par}
+\vspace{.4em} \noindent \hfill \textbf{\emph{Wikipedia, the free encyclopedia}}~--- \href{https://en.wikipedia.org/wiki/Finite_strain_theory}{Finite strain theory}
 
 \vspace{1cm}
 
+\begin{otherlanguage}{russian}
 
 ...
 
@@ -298,7 +390,9 @@ which do not belong to the Seth\hbox{--}Hill class, but have the same 2nd\hbox{-
 
 \begin{otherlanguage}{russian}
 
-Этот вопрос рассматривается во~всех курсах механики сплошной среды, но в~теории упругости можно обойтись без него. Среди различных моделей материального континуума упругое твёрдое тело выделяется тем, что полная система уравнений для~него выводится единой логически стройной процедурой (о~ней~--- ниже). Но чтобы читатель лучше увидел преимущества этой процедуры, мы пока следуем традиционным для механики сплошной среды путём.
+Этот вопрос рассматривается во~всех курсах механики сплошной среды, но в~теории упругости можно обойтись и~без него.
+Среди разных моделей материального континуума упругое твёрдое тело выделяется тем, что полная система уравнений для~него выводится единой логически стройной процедурой (о~ней~--- ниже).
+Но чтобы читатель лучше увидел преимущества этой процедуры, мы пока следуем традиционным для механики сплошной среды путём.
 
 Итак, имеем поле скоростей в~пространственном описании
 
@@ -321,9 +415,9 @@ which do not belong to the Seth\hbox{--}Hill class, but have the same 2nd\hbox{-
 
 \ru{Возьмём бесконечно м\'{а}лую площ\'{а}дку. Вектор пл\'{о}щади по~длине равен пл\'{о}щади площ\'{а}дки и направлен по~нормали к~ней.}
 
-\en{In~the~reference~(undeformed, initial, \inquotes{material}) configuration, the area vector can be represented as~${\bm{n} do}$. Surface’s area~$do$ is infinitely small, and~$\bm{n}$ is unit normal vector.}
+\en{In~the~reference~(undeformed, original, initial, \inquotes{material}) configuration, the area vector can be represented as~${\bm{n} do}$. Surface’s area~$do$ is infinitely small, and~$\bm{n}$ is unit normal vector.}
 
-\ru{В~отсчётной~(недеформированной, начальной, \inquotes{материальной}) конфигурации вектор пл\'{о}щади представ\'{и}м как~${\bm{n} do}$. Пл\'{о}щадь~$do$ бесконечно мал\'{а}, а~$\bm{n}$~--- единичный вектор нормали.}
+\ru{В~отсчётной~(недеформированной, оригинальной, начальной, \inquotes{материальной}) конфигурации вектор пл\'{о}щади представ\'{и}м как~${\bm{n} do}$. Пл\'{о}щадь~$do$ бесконечно мал\'{а}, а~$\bm{n}$~--- единичный вектор нормали.}
 
 \en{In~the~present~(actual, deformed, current, \inquotes{spatial}) configuration, the~same surface has area vector~${\mathboldN dO}$.}
 
@@ -661,7 +755,8 @@ When we apply energy methods in elasticity, we implicitly assume that a~body ret
 
 Rubber\hbox{-}like material (elastomer)
 
-Материалу типа резины~(эластомеру) характерны больш\'{и}е деформации, и~функция~${\Pi\hspace{.12ex}(\mathrm{I}, \mathrm{II}, \mathrm{III})}$ для~него бывает весьма сложной~\cite{haroldalexander-rubberlike}.
+Материалу типа резины~(эластомеру) характерны больш\'{и}е деформации, и~функция~${\Pi\hspace{.12ex}(\mathrm{I}, \mathrm{II}, \mathrm{III})}$ для~него бывает весьма сложной\footnote{\bibauthor{Harold Alexander}. \href{https://kundoc.com/pdf-a-constitutive-relation-for-rubber-like-materials-.html}{A~constitutive relation for rubber-like ma\-te\-ri\-als~// International Journal of~Engineering Science, volume~6 (September 1968), pages 549\hbox{--}563.}}\hbox{\hspace{-0.5ex}.}
+% https://www.researchgate.net/publication/232329906_A_constitutive_relation_for_rubber-like_materials
 
 При~больш\'{и}х деформациях исчезают преимущества использования~$\bm{u}$ и~$\bm{C}$~--- проще остаться с~радиусом\hbox{-}вектором $\bm{R}$ ...
 
@@ -695,9 +790,7 @@ Rubber\hbox{-}like material (elastomer)
 = \hspace{.1ex} \bm{n} \dotp J \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.2ex} do
 \end{equation*}
 
-% gives dual expression of surface force
-
-\vspace{-0.2em} \noindent даёт двоякое выражение поверхностной силы
+\vspace{-0.2em} \noindent \en{gives dual expression of surface force}\ru{даёт двоякое выражение поверхностной силы}
 
 \nopagebreak\vspace{-0.16em}\begin{equation}\label{dualexpressionofsurfaceforce}
 \mathboldN \dotp \cauchystress \hspace{.25ex} dO
@@ -732,15 +825,16 @@ J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffs
 \Pi \hspace{-0.32ex}=\hspace{-0.25ex} \Pi(\boldnablacircled \hspace{-0.16ex} \bm{R}\hspace{.1ex})
 \end{equation}
 
-\vspace{-0.2em} \noindent --- этот немного неожиданный результат получился благодаря коммутативности $\variation$ и~$\smash{\boldnablacircled}$ ($\boldnabla$ и~$\variation$ не~коммутируют).
+\vspace{-0.2em} \noindent --- этот немного неожиданный результат получился благодаря коммутативности $\variation$ и~$\smash{\hspace{-0.1ex}\boldnablacircled\hspace{.1ex}}$: ${\boldnablacircled \hspace{.1ex} \variation{\bm{R}}^{\hspace{.2ex}\T} \hspace{-0.4ex} = \variation{\hspace{.1ex} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{.12ex}\T}}\hspace{-0.25ex}}$ ($\boldnabla$ \en{and}\ru{и}~$\variation$ \en{don’t commute}\ru{не~коммутируют}).
 
 % энергетически сопряжённый с ... = energy conjugate to ...
-Тензор~$\firstpiolakirchhoffstress$ оказался энергетически сопряжённым с~${\hspace{-0.2ex}\smash{\boldnablacircled} \hspace{-0.16ex} \bm{R}}$ (и~${\bm{F}\hspace{.1ex}}$)
+
+Тензор~$\firstpiolakirchhoffstress$ оказался энергетически сопряжённым с~${\bm{F} \equiv \hspace{-0.1ex} \smash{\boldnablacircled} \hspace{-0.16ex} \bm{R}^{\hspace{.12ex}\T}}$
 
 \nopagebreak\vspace{-0.12em}\begin{equation}
 \firstpiolakirchhoffstress \hspace{-0.1ex}
-= \scalebox{0.92}{$ \displaystyle \frac{\partial \hspace{.1ex} \Pi}{\raisemath{-0.4em}{\partial \hspace{.1ex} \smash{\boldnablacircled} \hspace{-0.16ex} \bm{R}}} $}
-= \scalebox{0.92}{$ \displaystyle \frac{\partial \hspace{.1ex} \Pi}{\raisemath{-0.25em}{\partial \bm{F}^{\hspace{.1ex}\T}}} $} \hspace{.25ex}.
+= \scalebox{0.92}{$ \displaystyle \frac{\partial \hspace{.1ex} \Pi}{\raisemath{-0.4em}{\partial \hspace{.1ex} \smash{\boldnablacircled} \hspace{-0.16ex} \bm{R}^{\hspace{.12ex}\T}}} $}
+= \scalebox{0.92}{$ \displaystyle \frac{\hspace{.2ex} \partial \hspace{.1ex} \Pi \hspace{.2ex}}{\raisemath{-0.25em}{\partial \bm{F}}} $} \hspace{.25ex}.
 \vspace{.1em}\end{equation}
 
 Второй~(симметричный) тензор напряжения Пиолы--Кирх\-гофа $\secondpiolakirchhoffstress$ энергетически сопряжён с~${\bm{G} \equiv \hspace{-0.1ex} \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F}}$ и~${\bm{C} \hspace{-0.1ex} \equiv \smalldisplaystyleonehalf \hspace{.1ex} (\bm{G} - \hspace{-0.12ex} \bm{E} \hspace{.1ex})}$
@@ -764,9 +858,15 @@ d\bm{G} \hspace{-0.12ex} = 2 \hspace{.2ex} d \bm{C}
 Связь между первым и~вторым тензорами
 
 \nopagebreak\vspace{-0.12em}\begin{equation*}
-\secondpiolakirchhoffstress \hspace{-0.1ex} = \firstpiolakirchhoffstress \hspace{-0.1ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT}
+\secondpiolakirchhoffstress \hspace{-0.1ex}
+= \firstpiolakirchhoffstress \hspace{-0.1ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT} \hspace{-0.4ex}
+= \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.25ex} \dotp \firstpiolakirchhoffstress^{\hspace{.1ex}\T}
+%
 \hspace{.2ex} \Leftrightarrow \hspace{.64ex}
+%
 \firstpiolakirchhoffstress = \secondpiolakirchhoffstress \dotp \bm{F}^{\hspace{.1ex}\T}
+\hspace{-0.4ex} , \:\:
+\firstpiolakirchhoffstress^{\hspace{.1ex}\T} \hspace{-0.4ex} = \bm{F} \dotp \secondpiolakirchhoffstress
 \end{equation*}
 
 \vspace{-0.2em} \noindent и между тензором~$\secondpiolakirchhoffstress$ и~тензором напряжения Cauchy~$\cauchystress$
@@ -808,19 +908,19 @@ The quantity ${\bm{\kappa} = J \cauchystress}$ is called the \emph{Kirchhoff str
 
 \end{otherlanguage}
 
-\en{Here’s balance of~forces~(of~momentum) with tensor~${\hspace{.1ex}\firstpiolakirchhoffstress}$ for any undeformed volume~$\mathcircabove{V}$}
+\en{Here’s balance of~forces~(of~momentum) with tensor~${\hspace{.1ex}\firstpiolakirchhoffstress}$ for any undeformed volume~$\mathcircabove{\mathcal{V}}$}
 
-\ru{Вот баланс сил~(импульса) с~тензором~${\hspace{.1ex}\firstpiolakirchhoffstress}$ для любого недеформированного объёма~$\mathcircabove{V}$}
+\ru{Вот баланс сил~(импульса) с~тензором~${\hspace{.1ex}\firstpiolakirchhoffstress}$ для любого недеформированного объёма~$\mathcircabove{\mathcal{V}}$}
 
 \nopagebreak\ru{\vspace{-0.12em}}\begin{equation*}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \rho \bm{f} \hspace{.1ex} d\mathcal{V} $} + \hspace{-0.2ex}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.5ex} \mathboldN \hspace{-0.12ex} \dotp \hspace{-0.1ex} \cauchystress \hspace{.2ex} dO $}
 = \hspace{-0.2ex}
-\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.4ex} \mathcircabove{\rho} \bm{f} \hspace{.12ex} d \mathcircabove{V} $} + \hspace{-0.2ex}
-\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{o \hspace{.1ex} (\boundary \smash{\mathcircabove{V}})}} \hspace{-0.5ex} \bm{n} \hspace{-0.12ex} \dotp \firstpiolakirchhoffstress \hspace{.2ex} do $}
+\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.4ex} \mathcircabove{\rho} \bm{f} \hspace{.12ex} d \mathcircabove{\mathcal{V}} $} + \hspace{-0.2ex}
+\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{o \hspace{.1ex} (\boundary \smash{\mathcircabove{\mathcal{V}}})}} \hspace{-0.5ex} \bm{n} \hspace{-0.12ex} \dotp \firstpiolakirchhoffstress \hspace{.2ex} do $}
 = \hspace{-0.2ex}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.5ex}
-\left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \bm{f} \hspace{-0.12ex} + \hspace{-0.4ex} \boldnablacircled \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} d \mathcircabove{V} $} \hspace{-0.25ex}
+\left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \bm{f} \hspace{-0.12ex} + \hspace{-0.4ex} \boldnablacircled \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} d \mathcircabove{\mathcal{V}} $} \hspace{-0.25ex}
 = \bm{0}
 \vspace{-0.25em}\end{equation*}
 
@@ -830,20 +930,20 @@ The quantity ${\bm{\kappa} = J \cauchystress}$ is called the \emph{Kirchhoff str
 \boldnablacircled \dotp \hspace{.12ex} \firstpiolakirchhoffstress + \hspace{.1ex} \mathcircabove{\rho} \bm{f} = \hspace{.1ex} \bm{0} \hspace{.12ex}.
 \end{equation}
 
-\en{Advantages of this equation in comparison with~\eqref{balanceoftranslationalmomentum.local} are: here figures the known mass density~${\hspace{-0.1ex}\mathcircabove{\rho}}$ of undeformed volume~${\hspace{-0.1ex}\mathcircabove{V}\hspace{-0.25ex}}$, and the operator~${\hspace{-0.16ex}\boldnablacircled \equiv \bm{r}^i \partial_i}$ is defined through known vectors~${\bm{r}^i\hspace{-0.25ex}}$. Appearance of~${\hspace{.16ex}\firstpiolakirchhoffstress}$ reflects specific property of an~elastic solid body~--- \inquotes{to~preserve} the~reference configuration. In~fluid mechanics, for example, tensor~${\hspace{.16ex}\firstpiolakirchhoffstress}$ is unlikely useful.}
+\en{Advantages of this equation in comparison with~\eqref{balanceoftranslationalmomentum.local} are: here figures the known mass density~${\hspace{-0.1ex}\mathcircabove{\rho}}$ of undeformed volume~${\hspace{-0.1ex}\mathcircabove{\mathcal{V}}\hspace{-0.25ex}}$, and the operator~${\hspace{-0.16ex}\boldnablacircled \equiv \bm{r}^i \partial_i}$ is defined through known vectors~${\bm{r}^i\hspace{-0.25ex}}$. Appearance of~${\hspace{.16ex}\firstpiolakirchhoffstress}$ reflects specific property of an~elastic solid body~--- \inquotes{to~preserve} its reference configuration. In~fluid mechanics, for example, tensor~${\hspace{.16ex}\firstpiolakirchhoffstress}$ is unlikely useful.}
 
-\ru{Преимущества этого уравнения в~сравнении с~\eqref{balanceoftranslationalmomentum.local}: здесь фигурирует известная плотность~${\hspace{-0.1ex}\mathcircabove{\rho}}$ массы недеформированного объёма~${\hspace{-0.1ex}\mathcircabove{V}\hspace{-0.25ex}}$, и~оператор~${\hspace{-0.16ex}\boldnablacircled \equiv \bm{r}^i \partial_i}$ определяется через известные векторы~${\bm{r}^i\hspace{-0.25ex}}$. Появление~${\hspace{.16ex}\firstpiolakirchhoffstress}$ отражает специфическое свойство упругого твёрдого тела~--- \inquotes{сохранять} отсчётную конфигурацию. В~механике жидкости, к~примеру, тензор~${\hspace{.16ex}\firstpiolakirchhoffstress}$ едва~ли полезен.}
+\ru{Преимущества этого уравнения в~сравнении с~\eqref{balanceoftranslationalmomentum.local}: здесь фигурирует известная плотность~${\hspace{-0.1ex}\mathcircabove{\rho}}$ массы недеформированного объёма~${\hspace{-0.1ex}\mathcircabove{\mathcal{V}}\hspace{-0.25ex}}$, и~оператор~${\hspace{-0.16ex}\boldnablacircled \equiv \bm{r}^i \partial_i}$ определяется через известные векторы~${\bm{r}^i\hspace{-0.25ex}}$. Появление~${\hspace{.16ex}\firstpiolakirchhoffstress}$ отражает специфическое свойство упругого твёрдого тела~--- \inquotes{сохранять} свою отсчётную конфигурацию. В~механике жидкости, к~примеру, тензор~${\hspace{.16ex}\firstpiolakirchhoffstress}$ едва~ли полезен.}
 
-\en{Principle of virtual work for an~arbitrary volume~$\mathcircabove{V}$ of~elastic (${\variation{\internalwork} = -\variation{\Pi}}$) continuum:}
+\en{Principle of virtual work for an~arbitrary volume~$\mathcircabove{\mathcal{V}}$ of~elastic (${\variation{\internalwork} = -\variation{\Pi}}$) continuum:}
 
-\ru{Принцип виртуальной работы для произвольного объёма~$\mathcircabove{V}$ упругой (${\variation{\internalwork} = -\variation{\Pi}}$) среды:}
+\ru{Принцип виртуальной работы для произвольного объёма~$\mathcircabove{\mathcal{V}}$ упругой (${\variation{\internalwork} = -\variation{\Pi}}$) среды:}
 
 \nopagebreak\vspace{-0.16em}\ru{\vspace{-0.2em}}\begin{equation*}
 \begin{array}{c}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.5ex}
-\left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \bm{f} \dotp \variation{\bm{R}} - \variation{\Pi} \right) \hspace{-0.4ex} d \mathcircabove{V} $}
+\left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \bm{f} \dotp \variation{\bm{R}} - \variation{\Pi} \right) \hspace{-0.4ex} d \mathcircabove{\mathcal{V}} $}
 \hspace{-0.1ex} + \hspace{-0.25ex}
-\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{o \hspace{.1ex} (\boundary \smash{\mathcircabove{V}})}} \hspace{-0.4ex} \bm{n} \dotp \firstpiolakirchhoffstress \hspace{-0.16ex} \dotp \variation{\bm{R}} \hspace{.4ex} do $}
+\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{o \hspace{.1ex} (\boundary \smash{\mathcircabove{\mathcal{V}}})}} \hspace{-0.4ex} \bm{n} \dotp \firstpiolakirchhoffstress \hspace{-0.16ex} \dotp \variation{\bm{R}} \hspace{.4ex} do $}
 = 0 \hspace{.1ex} , \\[.1em]
 %
 \boldnablacircled \hspace{-0.1ex} \dotp \hspace{-0.1ex} \left( \hspace{.12ex} \firstpiolakirchhoffstress \hspace{-0.12ex} \dotp \variation{\bm{R}} \hspace{.12ex} \right)
@@ -899,7 +999,7 @@ In terms of components in an orthonormal basis, the first Piola\hbox{--}Kirchhof
 T_{iL} = J \, \tau_{ik}~F_{Lk}^{-1} = J \, \tau_{ik} \, \frac{\partial X_{L}}{\partial x_{k}}
 \]
 
-Because it relates different coordinate systems, the 1st~Piola\hbox{--}Kirchhoff stress is a two-point tensor. In general, it is not symmetric. The 1st~Piola\hbox{--}Kirchhoff stress is the 3D generalization of the 1D concept of engineering stress.
+Because it relates different coordinate systems, the 1st~Piola\hbox{--}Kirchhoff stress is a two-point tensor. In common, it’s not symmetric. The 1st~Piola\hbox{--}Kirchhoff stress is the 3D generalization of the 1D concept of engineering stress.
 
 If the material rotates without a change in stress (rigid rotation), the components of the 1st Piola\hbox{--}Kirchhoff stress tensor will vary with material orientation.
 

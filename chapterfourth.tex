@@ -35,10 +35,10 @@
 
 \nopagebreak \ru{\vspace{-0.25em}}
 \begin{equation}\label{lineartheory:wholesetofequations}
-\boldnabla \dotp \mathboldtau \hspace{.15ex} + \bm{f} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}, \:\:
-\mathboldtau = \displaystyle \frac{\partial\hspace{0.1ex} \Pi^{\mathstrut}}{\partial \mathboldepsilon} = \stiffnesstensor \dotdotp \mathboldepsilon , \:\:
-\mathboldepsilon = \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.2ex}.
-\vspace{0.25em}
+\boldnabla \dotp \mathboldtau \hspace{.15ex} + \bm{f} = \hspace{.1ex} \bm{0} \hspace{.1ex}, \:\:
+\mathboldtau = \displaystyle \frac{\partial\hspace{.1ex} \Pi^{\mathstrut}}{\partial \mathboldepsilon} = \stiffnesstensor \dotdotp \mathboldepsilon , \:\:
+\mathboldepsilon = \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.2ex}.
+\vspace{.25em}
 \end{equation}
 
 \nopagebreak \vspace{-0.1em} \en{\vspace{-0.1em}} \noindent
@@ -90,8 +90,8 @@ ${\stiffnesstensor}$~\en{is stiffness tensor (tetravalent)}\ru{--- тензор 
 Полагая перемещение~$\bm{u}$ м\'{а}лым, перейдём от~\eqref{nonlinear:setofequations} к~\eqref{lineartheory:wholesetofequations}.
 
 Или вот как. Вместо $\bm{u}$ взять $\smallparameter \bm{u}$, тут ${\smallparameter \hspace{-0.1ex}\to 0}$~--- некоторый весьма малый параметр. А~неизвестные представить рядами по~целым степеням~$\smallparameter$
-\vspace{0.1em}\[\begin{array}{c}
-\mathboldtau \hspace{0.1ex} = \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex}, \:\:
+\vspace{.1em}\[\begin{array}{c}
+\mathboldtau \hspace{.1ex} = \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \mathboldtau^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex}, \:\:
 \bm{C} = \bm{C}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \bm{C}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex}, \\[0.1em]
 \boldnabla \hspace{0.1ex} = \boldnablacircled \hspace{0.1ex} + \smallparameter \boldnabla^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.1ex} + \ldots \hspace{0.1ex} , \:\:
 \bm{F} = \bm{E} + \hspace{-0.1ex} \smallparameter \boldnablacircled {\bm{u}}^{\T} \hspace{-0.3ex}, \:\:
@@ -192,7 +192,7 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{0.1ex}\scalebox{0.66}[0.66]{(
 \end{equation}
 
 \vspace{-0.1em} Кинетическая энергия положительна: ${\mathrm{T} \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ при~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} 0}$ и~обращается в~нуль лишь когда~${\mathdotabove{\bm{u}} = 0}$~--- это следует из~самог\'{о} её определения~${\mathrm{T} = \smalldisplaystyleonehalf \hspace{.2ex} \rho \hspace{0.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$. Потенциальная энергия, при~м\'{а}лых деформациях с~тензором~$\mathboldepsilon$ представляемая квадратичной формой
-${\Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex}) \hspace{-0.2ex}=\hspace{0.1ex} \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \mathboldepsilon}$, тоже положительна: ${\Pi \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ при~${\mathboldepsilon \hspace{-0.1ex} \neq \hspace{-0.1ex} 0}$. Таково априорное требование положительной определённости к~тензору~$\stiffnesstensor$. Это одно из \inquotes{дополнительных неравенств в~теории упругости}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
+${\Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex}) \hspace{-0.2ex}=\hspace{0.1ex} \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \mathboldepsilon}$, тоже положительна: ${\Pi \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ при~${\mathboldepsilon \hspace{-0.1ex} \neq \hspace{-0.1ex} 0}$. Таково априорное требование положительной определённости к~тензору жёсткости~$\stiffnesstensor$. Это одно из \inquotes{дополнительных неравенств в~теории упругости}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
 
 \en{And since~$\mathrm{T}$ and~$\Pi$ are positive, from~\eqref{dynamicsoflineartheory:zeroenergyatinitialmoment} ensues}
 
@@ -202,11 +202,12 @@ ${\Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex}) \hspace{-0.2ex}=\hspace{0.
 \mathrm{T} = 0 \hspace{.1ex}, \; \Pi = 0
 \:\,\Rightarrow\,\:
 \mathdotabove{\bm{u}} = 0 \hspace{.1ex}, \; \mathboldepsilon = \hspace{-0.25ex} \boldnabla {\bm{u}}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.2ex} = 0
-\:\,\Rightarrow\,\:
-\bm{u} = \bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.25ex} + \hspace{.1ex} \bm{\omega}^{\circ} \hspace{-0.4ex} \times \bm{r} ,
+\:\,\Rightarrow\:
+\bm{u} = \bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.25ex} + \hspace{.1ex} \bm{\vartheta}^{\circ} \hspace{-0.4ex} \times \bm{r} ,
 \end{equation*}
 
-\vspace{-0.25em} \noindent где~${\bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.32ex}}$ и~${\bm{\omega}^{\circ} \hspace{-0.5ex}}$~--- некоторые константы. При~закреплении на~${o_1}$ ${\bm{u} \hspace{.16ex} \rvert_{\raisemath{-0.1em}{o_1}} \hspace{-0.5ex} = \hspace{.1ex} 0 \hspace{.1ex} \,\Rightarrow\, \bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.25ex} = 0}$ и~${\bm{\omega}^{\circ} \hspace{-0.25ex} = 0}$.
+\vspace{-0.25em} \noindent где~${\bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.32ex}}$ и~${\bm{\vartheta}^{\circ} \hspace{-0.5ex}}$~--- некоторые константы.
+При~закреплении на~${o_1}$ ${\bm{u} \hspace{.16ex} \rvert_{\raisemath{-0.1em}{o_1}} \hspace{-0.5ex} = \hspace{.1ex} 0 \hspace{.1ex} \,\Rightarrow\, \bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.3ex} = 0}$ и~${\bm{\vartheta}^{\circ} \hspace{-0.3ex} = 0}$.
 
 Теперь вспомним о~двух решениях~${\bm{u}_1\hspace{-0.25ex}}$ и~${\bm{u}_2}$. Их~разность ${\bm{u}^{\hspace{-0.1ex}*}}$ есть решение полностью однородной задачи (в~краевых и~в~начальных условиях~--- нули, и~в~объёме ${\bm{f} = 0}$). Поэтому ${\bm{u}^{\hspace{-0.1ex}*} \hspace{-0.32ex} = 0}$~--- единственность доказана.
 
@@ -403,6 +404,8 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 
 \ru{\section{Теоремы статики}}
 
+\label{para:theoremsofstatics}
+
 \subsection*{\ru{Теорема }Clapeyron’\ru{а}\en{s theorem}}
 
 % Benoît Paul Émile Clapeyron
@@ -479,7 +482,15 @@ ${\hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.1em}{\
 \href{http://www.cityu.edu.hk/ma/ws2007/notes/FTJElast.pdf}{About Clapeyron’s Theorem in Linear Elasticity~// Journal of~Elasticity, Volume 72, July 2003. Pages 145\hbox{--}172.}
 \par}
 
-Для решения парадокса в~теории распространена концепция \inquotes{медленного постепенного статического нагружения} (\inquotes{slow gradual application of the load}).
+Для решения парадокса в~теории распространена концепция \inquotes{бесконечномедленного постепенного статического нагружения} (\inquotes{infinitely slow gradual application of the load}).
+
+{\small
+Статика рассматривает \inquotes{замороженное} равновесие, оно вне времени. Динамика~же нагружения до~равновесия это предыстория. В~линейной теории в~равновесии работа внешних сил на актуальных перемещениях, затраченная на~деформацию, равна удвоенной внутренней потенциальной энергии деформации. \inquotes{Запасается} всего половина потраченной энергии. Вторая половина это дополнительная энергия, она теряется до~обретения равновесия на~динамику~--- на~кинетическую энергию частиц (на \inquotes{диссипацию}), на~колебания и~волны. Так в~теории. Однако, в~реальности не~бывает ни~моментального \inquotes{мёртвого} нагружения, ни~бесконечномедленного \inquotes{следящего}. Это две крайности. Реальная динамика нагружения всегда где\hbox{-}то между ними. Посему теоретическая дополнительная энергия всегда больше той реальной \inquotes{диссипативной} кинетической, которая сопутствовала процессу нагружения, и~в~линейной теории она численно равна упругому потенциалу~--- половине работы внешних сил, той самой второй половине.
+
+В~области~же бесконечномалых вариаций и~виртуальных работ, работа реальных внешних сил на виртуальных перемещениях точно равна вариации упругого потенциала. А~упругая среда есть такая, в~которой вариация работы сил внутренних (напряжений) на виртуальных деформациях это минус вариация потенциала.
+
+${- \hspace{.1ex} \variation{\internalwork} \hspace{-0.2ex} = \variation{\Pi} = \variation{\externalwork} \hspace{-0.25ex}}$, когда варьируются только перемещения (нагрузки не варьируются). Потому в~принципе виртуальной работы и~варьируются лишь перемещения, чтобы виртуальная работа внешних неварьируемых реальных сил на вариациях перемещений была равна минус вариации внутренней энергии (и, для упругой среды, вариации упругого потенциала).
+\par}
 
 \subsection*{\en{Theorem for the uniqueness of solution}\ru{Теорема об~уникальности решения}}
 
@@ -501,11 +512,7 @@ ${\hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.1em}{\
 
 \subsection*{\en{Reciprocal work theorem}\ru{Теорема о~взаимности работ}}
 
-{\small
-\inquotes{возможная работа сил первого состояния на соответствующих перемещениях, вызванных силами второго состояния, равна возможной работе сил второго состояния на соответствующих перемещениях, вызванных силами первого состояния}
-\par}
-
-Для т\'{е}ла с~закреплением на~части поверхности~${o_1}$ рассматриваются две проблемы: первая с~нагрузками $\bm{f}_1$, $\bm{p}_1$ и~вторая с~нагрузками $\bm{f}_2$, $\bm{p}_2$. Словесная формулировка теоремы та~же, что и~в~\chapdotpararef{chapter:genericmechanics}{para:statics}. Метаматическая запись
+Для т\'{е}ла с~закреплением на~части поверхности~${o_1}$ рассматриваются два варианта: первый с~нагрузками $\bm{f}_1$, $\bm{p}_1$ и~второй с~нагрузками $\bm{f}_2$, $\bm{p}_2$. Словесная формулировка теоремы та~же, что и~в~\chapdotpararef{chapter:genericmechanics}{para:statics}. Метаматическая запись
 
 ...
 
@@ -603,11 +610,11 @@ u_2 = \ldots \hspace{.1ex} .
 
 \begin{otherlanguage}{russian}
 
-Полная система~\eqref{lineartheory:wholesetofequations} содержит неизвестные $\mathboldtau$, $\mathboldepsilon$ и~$\bm{u}$. Исключая $\mathboldtau$ и~$\mathboldepsilon$, приходим к~постановке в~перемещениях (симметризация~${\boldnabla \bm{u}}$ тут излишняя)
+\en{The~complete set of equations}\ru{Полный набор уравнений}~\eqref{lineartheory:wholesetofequations} содержит неизвестные $\mathboldtau$, $\mathboldepsilon$ и~$\bm{u}$. Исключая $\mathboldtau$ и~$\mathboldepsilon$, приходим к~постановке в~перемещениях (симметризация~${\hspace{-0.2ex} \boldnabla \bm{u}}$ тут излишняя, ведь ${\stiffnesstensor_{\hspace{.12ex} 3 \scalebox{0.6}[0.8]{$\rightleftarrows$} 4} \hspace{-0.2ex} = \stiffnesstensor}$)
 
-\nopagebreak\vspace{-0.75em}\begin{equation}\label{lineartheory:equationsfordisplacement}
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{lineartheory:equationsfordisplacement}
 \begin{array}{c}
-\boldnabla \dotp \left( \hspace{0.1ex} \stiffnesstensor \dotdotp \hspace{-0.12ex} \boldnabla \bm{u} \hspace{0.1ex} \right) + \hspace{0.1ex} \bm{f} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}; \\[.4em]
+\boldnabla \dotp \left( \stiffnesstensor \dotdotp \hspace{-0.12ex} \boldnabla \bm{u} \hspace{0.1ex} \right) + \hspace{0.1ex} \bm{f} = \hspace{0.1ex} \bm{0} \hspace{0.1ex}; \\[.4em]
 \bm{u} \hspace{0.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} \bm{u}_{\raisemath{-0.1em}{0}} \hspace{0.16ex} , \:\:
 \bm{n} \dotp %%\tikzmark{TauTensorBegin}
 \stiffnesstensor \hspace{-0.08ex} \dotdotp \hspace{-0.24ex} \boldnabla \bm{u}
@@ -865,7 +872,7 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 \shoveleft{\displaystyle \mathcal{R}(\bm{u}, \hspace{-0.32ex}\mathboldtau) \hspace{0.2ex} =
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
 \left[^{\mathstrut} \hspace{-0.2ex}
-\mathboldtau \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\hspace{0.08ex}\mathsf{S}} \hspace{-0.2ex} - \hspace{0.1ex} \widehat{\Pi}(\hspace{-0.1ex}\mathboldtau\hspace{0.05ex})\hspace{-0.1ex} -
+\mathboldtau \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\hspace{0.08ex}\mathsf{S}} \hspace{-0.2ex} - \hspace{0.1ex} \widehat{\Pi}(\hspace{-0.1ex}\mathboldtau\hspace{.1ex})\hspace{-0.1ex} -
 \bm{f} \hspace{-0.1ex} \dotp \bm{u}
 \hspace{0.1ex} \right] \hspace{-0.32ex} d\mathcal{V} \hspace{.5ex} - \hfill} \\[-1.2em]
 %
@@ -918,9 +925,33 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 \begin{otherlanguage}{russian}
 
-Это тот раздел линейной теории упругости, где нетривиальные результаты получаются простыми математическими средствами. Нетривиальным в~теории упругости я считаю, например, что \inquotes{деление силы на~площадь} может дать сколь угодно больш\'{у}ю погрешность при определении напряжений.
+\newcommand\antiplanedisplacement{\mathcolor{red}{\upupsilon}}
 
-Рассматривается изотропная среда в~декартовой системе ...
+Это та проблема линейной теории упругости, где простыми выкладками получаются нетривиальные результаты. Нетривиальное в~теории упругости это, например, когда \inquotes{деление силы на~площадь} даёт бесконечно больш\'{у}ю погрешность в~нахождении напряжения.
+
+Рассматривается изотропная среда в~декартовых координатах $x_i$ ($x_1$ и~$x_2$ в~плоскости, $\mathcolor{blue}{x_3}$) с~базисными ортами
+${\bm{e}_i \hspace{-0.2ex} = \partial_i \bm{r}}$\hbox{\hspace{-0.12ex},}
+${\bm{r} = x_i \bm{e}_i}$,
+${\bm{e}_i \bm{e}_i \hspace{-0.2ex} = \bm{E} \,\Leftrightarrow\hspace{.25ex} \bm{e}_i \hspace{-0.1ex} \dotp \bm{e}_j \hspace{-0.2ex} = \delta_{ij}}$.
+В~случае анти\-плос\-кой деформации (анти\-плос\-кого сдвига) поле перемещений~$\bm{u}$ параллельно координате $\mathcolor{blue}{x_3}$:
+${\bm{u} = \antiplanedisplacement \mathcolor{blue}{\bm{e}_3}}$, и~$\antiplanedisplacement$ не~зависит от~$\mathcolor{blue}{x_3}$: ${\antiplanedisplacement \!=\! \antiplanedisplacement(x_1, x_2)}$, ${\partial_{\mathcolor{blue}{3}} \antiplanedisplacement \hspace{-0.1ex} = 0}$.
+
+Деформация
+
+\nopagebreak\vspace{-0.33em}\begin{equation*}
+\mathboldepsilon \equiv
+\hspace{-0.1ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.2ex}
+= \hspace{-0.2ex} \boldnabla \hspace{.1ex} \bigl( \antiplanedisplacement \mathcolor{blue}{\bm{e}_3} \hspace{.1ex} \bigr)^{\hspace{-0.2ex}\mathsf{S}} \hspace{-0.25ex}
+= \mathcolor{blue}{\bm{e}_3} \hspace{-0.12ex} \boldnabla \hspace{.1ex} \antiplanedisplacement^{\hspace{.2ex}\mathsf{S}} \hspace{-0.25ex}
++ \antiplanedisplacement \hspace{.1ex} \tikzmark{beginZero2} \boldnabla \mathcolor{blue}{\bm{e}_3}\tikzmark{endZero2}^{\mathsf{S}} \hspace{-0.2ex}
+= \smalldisplaystyleonehalf \hspace{.1ex} \bigl( \boldnabla \hspace{.1ex} \antiplanedisplacement \hspace{.2ex} \mathcolor{blue}{\bm{e}_3} \hspace{-0.1ex} + \mathcolor{blue}{\bm{e}_3} \hspace{-0.2ex} \boldnabla \hspace{.1ex} \antiplanedisplacement \bigr)
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][.2ex, -0.1ex]%
+{beginZero2}{endZero2}{${\scriptstyle {^2\bm{0}}}$}%
+
+...
+
+Возможна неоднородность среды в~плоскости ${x_1, x_2}$: ${\mu \!=\! \mu(x_1, x_2)}$, ${\partial_{\mathcolor{blue}{3}} \hspace{.1ex} \mu \hspace{-0.1ex} = 0}$.
 
 ...
 
@@ -936,7 +967,7 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 \begin{otherlanguage}{russian}
 
-Эта задача, тщательно изученная Saint\hbox{-\hspace{-0.2ex}}Venant’ом, рассматривается едва~ли не~во~всех книгах по классической теории упругости. Речь идёт о~цилиндре какого\hbox{-}либо сечения, нагруженном лишь поверхностными силами на торцах
+Эта задача, тщательно изученная Saint\hbox{-\hspace{-0.2ex}}Venant’ом, рассматривается едва~ли не~в~каждой книге по классической теории упругости. Речь идёт о~цилиндре какого\hbox{-}либо сечения, нагруженном лишь поверхностными силами на торцах
 
 ...
 
@@ -952,7 +983,7 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 
 \begin{otherlanguage}{russian}
 
-Этот термин означает лишь то, что вектор~$\bm{u}$ параллелен плоскости ${x_1, x_2}$ и~не~зависит от~третьей координаты~$z$
+Тут вектор перемещения~$\bm{u}$ параллелен плоскости ${x_1, x_2}$ и~не~зависит от~третьей координаты~$z$
 
 ...
 

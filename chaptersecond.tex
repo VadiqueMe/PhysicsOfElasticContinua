@@ -637,7 +637,7 @@ d\Pi = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
 
 ...
 
-Теорема о~взаимности работ (\inquotes{работа~${W_{12}}$ сил первого состояния на~перемещениях второго равна~${W_{21}}$}) мгновенно выводится из~\eqref{staticsoflineardiscretesystem}:
+\en{Reciprocal work theorem}\ru{Теорема о~взаимности работ} (\inquotes{работа~${W_{12}}$ сил первого варианта на~перемещениях от сил второго равна работе~${W_{21}}$ сил второго варианта на~перемещениях от сил первого}) мгновенно выводится из~\eqref{staticsoflineardiscretesystem}:
 
 (...)
 
@@ -717,16 +717,33 @@ q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 \begin{otherlanguage}{russian}
 
-Если статика линейной системы описывается уравнениями~\eqref{staticsoflineardiscretesystem}, то в~динамике имеем
+Если статика линейной системы описывается уравнением~\eqref{staticsoflineardiscretesystem}, то в~динамике имеем
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{dynamicsoflineardiscretesystem}
-\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.2ex} A_{ik} \hspace{.12ex} \mathdotdotabove{q}_k + C_{ik} \hspace{.12ex} q_k \right)
-\hspace{-0.25ex} = \hspace{.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i}(t) \hspace{.1ex} ,
+\nopagebreak\vspace{-0.4em}\begin{equation}\label{dynamicsoflineardiscretesystem}
+\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.2ex} A_{ik} \hspace{.12ex} \mathdotdotabove{q}_k + C_{ik} \hspace{.12ex} q_k \right) \hspace{-0.4ex}
+= \hspace{.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i}(t) \hspace{.1ex} ,
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.2em} \noindent где ${A_{ik}}$~--- симметричная и~положительная \inquotesx{матрица кинетической энергии}[.]
+\vspace{-0.25em} \noindent где ${A_{ik}}$~--- симметричная и~положительная \inquotesx{матрица кинетической энергии}[.]
 
-Изучение колеблющейся системы обычно начинают с~нормальных~(главных) колебаний
+Изучение колеблющейся системы чаще всего начинают с~нормальных колебаний~(гармоник)~--- собственных~(свободных, без воздействий извне) синусоидальных колебаний вида ${q_k \hspace{-0.1ex} (t) \hspace{-0.2ex} = \widearc{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t}$. Постоянные~${\widearc{q}_{\hspace{-0.1ex}k}\hspace{-0.12ex}}$~--- формы~(или моды) колебаний, ${\omega_k\hspace{-0.1ex}}$~--- собственные частоты. Этот набор находится из задачи на~собственные значения
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\begin{array}{c}
+\mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{-0.15ex} = 0 \hspace{.1ex} ,
+\:\;
+\mathdotdotabove{q}_k \hspace{-0.12ex} = - \hspace{.2ex} \omega_k^2 \hspace{.25ex} \widearc{q}_{\hspace{-0.1ex}k} \hspace{-0.1ex} \operatorname{sin} \omega_k \hspace{.1ex} t \hspace{.1ex} ,
+\:\;
+\eqref{dynamicsoflineardiscretesystem}
+\:\: \Rightarrow
+\\[.3em]
+%
+\Rightarrow \:\,
+\scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \Bigl( \hspace{-0.2ex} C_{ik} \hspace{-0.1ex} - \hspace{-0.2ex} A_{ik} \hspace{.25ex} \omega_k^2 \hspace{.16ex} \Bigr) \hspace{.12ex}
+\widearc{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t
+= 0
+\end{array}
+\end{equation}
 
 ...
 
@@ -740,7 +757,7 @@ q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 \begin{otherlanguage}{russian}
 
-В~длинном списке книг по~общей механике можно найти труды не~только механиков\hbox{-}профессионалов~\cite{goldstein-classicalmechanics, loitsjanskiy.lurie, lurie-analyticalmechanics, olkhovskiy-theoreticalmechanicsforphysicists, treatiseonanalyticaldynamics-by-l.a.pars}, но~и физиков\hbox{-}теоретиков широкой ориентации~\cite{landau.lifshitz-shortcourse, terhaar-hamiltonianmechanics}. Интересен курс Ф.\,Р.\;Гантмахера~\cite{gantmacher} с~компактным, но~полным изложением осн\'{о}в.
+В~длинном списке книг по~общей механике можно найти труды не~только механиков\hbox{-}профессионалов~\cite{goldstein-classicalmechanics, treatiseonanalyticaldynamics-by-l.a.pars, loitsjanskiy.lurie, lurie-analyticalmechanics, olkhovskiy-theoreticalmechanicsforphysicists}, но~и физиков\hbox{-}теоретиков широкой ориентации~\cite{landau.lifshitz-shortcourse, terhaar-hamiltonianmechanics}. Интересен курс Ф.\,Р.\;Гантмахера~\cite{gantmacher} с~компактным, но~полным изложением осн\'{о}в.
 
 \end{otherlanguage}
 

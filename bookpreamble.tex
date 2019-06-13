@@ -58,6 +58,8 @@
 	colorlinks=true,linkcolor=darkcerulean,citecolor=darkmagenta,urlcolor=darksienna]%
 {hyperref}
 
+\usepackage{bookmark}
+
 \usepackage{microtype}
 
 \usepackage{lettrine}
@@ -150,6 +152,7 @@
 
 \newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
 \newcommand{\boldnablacircled}{\mathcircabove{\bm{\nabla}}\hspace{-0.2ex}}
+\newcommand{\boldnablaflat}{\mathtwoabove{\bm{\nabla}}\hspace{-0.2ex}}
 
 \newcommand\narroweq{\hspace{0.25ex}\scalebox{0.8}[1]{$=$}\hspace{0.25ex}}
 
@@ -203,22 +206,34 @@
 %%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\scalebox{1.25}[1]{$\textsf{Є}$}}}\hspace{.05ex}}
 \newcommand\levicivitatensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
-\newcommand\stiffnesstensor{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
+\newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
+\newcommand\stiffnesstensorB{{^4\hspace{-0.2ex}\bm{\mathcal{B}}}}
 \newcommand\stiffnesstensorC{{^4\bm{\mathcal{C}}}}
+
+\newcommand\stiffnesstensor{\stiffnesstensorA}
+\newcommand\pliabilitytensor{\stiffnesstensorB}
 
 \newcommand\rotationtensor{\bm{O}}
 
 \usepackage{accents}
+
 \makeatletter
+
 \newcommand{\scircabove}{%
 	\hbox{\fontfamily{lmr}\fontsize{.64\dimexpr(\f@size pt)}{0}\selectfont$\,\circ$}}
 \DeclareRobustCommand{\mathcircabove}{\accentset{\scircabove}}
+
 \newcommand{\sdotabove}{%
 	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\,\bullet$}}
 \DeclareRobustCommand{\mathdotabove}{\accentset{\sdotabove}}
 \newcommand{\sdotdotabove}{%
 	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\,\bullet\hspace{-0.25ex}\bullet$}}
 \DeclareRobustCommand{\mathdotdotabove}{\accentset{\sdotdotabove}}
+
+\newcommand{\stwoabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}2$}}
+\DeclareRobustCommand{\mathtwoabove}{\accentset{\stwoabove}}
+
 \makeatother
 
 \newcommand\cosinematrix[1]{o_{#1}} % or \alpha
@@ -226,6 +241,7 @@
 
 \newcommand\mathboldN{\scalebox{0.9}[1]{\ensuremath{\bm{N}\hspace{-0.1em}}}}
 \newcommand\mathboldM{\scalebox{0.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
+\newcommand\mathboldU{\scalebox{0.9}[1]{\ensuremath{\bm{U}\hspace{-0.1ex}}}}
 \newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
 
 \newcommand\mathboldae{\pmb{\textit{æ}}}
@@ -237,6 +253,7 @@
 \newcommand\expinternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}
 
 \newcommand\internalwork{W^{\hspace{-0.12ex}\expinternal}}
+\newcommand\externalwork{W^{\hspace{-0.12ex}\expexternal}}
 
 \newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
 \newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
@@ -294,6 +311,9 @@
 \newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
 
 \newcommand\mathboldPhi{\scalebox{1.06}[1]{\tikzsl{\ensuremath{\hspace{-0.16ex}\bm{\Upphi}\hspace{-0.32ex}}}}}
+
+\newcommand{\fieldofdisplacements}{\bm{u}}
+\newcommand{\fieldofrotations}{\bm{\varphi}} %% {\bm{\theta}}
 
 \newcommandx*{\tikzcancel}[2][1=black]{%
 	\tikz[baseline=(tocancel.base)]{%

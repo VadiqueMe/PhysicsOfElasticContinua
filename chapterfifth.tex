@@ -11,9 +11,6 @@
 
 \newcommand{\motiongradient}{\bm{F}}
 
-\newcommand{\fieldofdisplacements}{\bm{u}}
-\newcommand{\fieldofrotations}{\bm{\varphi}} %% {\bm{\theta}}
-
 \newcommand{\distortiontensor}{\bm{\upgamma}}
 \newcommand{\wrynesstensor}{\bm{\kappa}\hspace{-0.1ex}} %% {\mathboldae}
 
@@ -57,7 +54,8 @@ Thus an elastic continuum has been described such that its points possess the or
 
 The theory of the brothers E.~and~F.\;Cosserat remained unnoticed and was not duly appreciated during their lifetime. This was so because the presentation was very general (the theory was non-linear, including large deformations) and because its frames exceeded the frames of the theory of elasticity. They attempted to construct the unified field theory, containing mechanics, optics and electrodynamics and combined by a general principle of the least action.
 
-The research in the field of the general theories of continuous media conducted in the last fifteen years, drew the attention of the scientists to Cosserats’ work. Looking for the new models, describing more precisely the behaviour of the real elastic media, the models similar to, or identical with that of Cosserats’ have been encountered. Here, we mention, first of all, the papers by C.\:Truesdell and R.\,A.\;Toupin [\textit{\textboldoblique{C.\:Truesdell} and \textboldoblique{R.\,A.\;Toupin}. The classical field theories. Encyclopædia of Physics, Chapter 1, Springer\hbox{-}Verlag, Berlin, 1960}], G.\:Grioli [\textit{\textboldoblique{Grioli~G.} Elasticité asymmetrique. Ann. di Mat. Pura et Appl. Ser. IV, 50 (1960)}], R.\,D.\;Mindlin and H.\,F.\;Tiersten [\textit{\textboldoblique{Mindlin, R.\,D.}; \textboldoblique{Tiersten, H.\,F.} Effects of couple-stresses in linear elasticity. Arch. Rational Mech. Anal. 11. 1962. 415\hbox{--}448}]. At the beginning the author’s attention was concentrated on the simplified theory of elasticity, so called the Cosserat pseudo-continuum. By this name we understand a continuum for which the asymmetric force stresses and moment stresses occur, however, the deformation is determined by the displacement vector $\bm{u}$ only. Here we assume, as in the classical theory of elasticity, that $\bm{\varphi} = \onehalf \operatorname{curl} \bm{u}$. It is interesting to notice that this model was also considered by the Cosserats who called it the model with the latent trihedron.
+The research in the field of the general theories of continuous media conducted in the last fifteen years, drew the attention of the scientists to Cosserats’ work. Looking for the new models, describing more precisely the behaviour of the real elastic media, the models similar to, or identical with that of Cosserats’ have been encountered. Here, we mention, first of all, the papers by C.\:Truesdell and R.\,A.\;Toupin [\textit{\textboldoblique{C.\:Truesdell} and \textboldoblique{R.\,A.\;Toupin}. The classical field theories. Encyclopædia of Physics, Chapter 1, Springer\hbox{-}Verlag, Berlin, 1960}], G.\:Grioli [\textit{\textboldoblique{Grioli~G.} Elasticité asymmetrique. Ann. di Mat. Pura et Appl. Ser. IV, 50 (1960)}], R.\,D.\;Mindlin and H.\,F.\;Tiersten [\textit{\textboldoblique{Mindlin, R.\,D.}; \textboldoblique{Tiersten, H.\,F.} Effects of couple-stresses in linear elasticity. Arch. Rational Mech. Anal. 11. 1962. 415\hbox{--}448}].
+%%At the beginning the author’s attention was concentrated on the simplified theory of elasticity, so called the Cosserat pseudo-continuum. By this name we understand a continuum for which the asymmetric force stresses and moment stresses occur, however, the deformation is determined by the displacement vector $\bm{u}$ only. Here we assume, as in the classical theory of elasticity, that $\bm{\varphi} = \onehalf \operatorname{curl} \bm{u}$. It is interesting to notice that this model was also considered by the Cosserats who called it the model with the latent trihedron.
 \par
 \end{tcolorbox}
 
@@ -66,15 +64,14 @@ The research in the field of the general theories of continuous media conducted 
 
 Рассмотрим сначала геометрически линейную модель, то~есть случай малых перемещений и~поворотов. Векторные поля перемещений~${\fieldofdisplacements(\bm{r},t)}$ и~малых поворотов~${\fieldofrotations(\bm{r},t)}$ независимы. Операторы ${\hspace{-0.2ex}\boldnablacircled\hspace{0.1ex}}$ и~${\hspace{-0.2ex}\boldnabla\hspace{0.1ex}}$~(\chapdotpararef{chapter:nonlinearcontinuum}{para:differentiation}) неразличимы, уравнения \inquotesx{можно пис\'{а}ть в~исходной конфигурации}[.]
 
-В~основу построения модели положим принцип виртуальной работы:
-%%Вывод строится на~принципе виртуальной работы:
+В~основу построения модели положим принцип виртуальной работы (\inquotes{работа реальных внешних сил на виртуальных перемещениях равна с~обратным знаком работе внутренних сил~--- реальных напряжений на~виртуальных деформациях})
 
-\nopagebreak\vspace{-0.1em}\begin{equation}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{f} \dotp \variation{\fieldofdisplacements} + \bm{m} \dotp \variation{\fieldofrotations} + \variation{\internalwork} \hspace{.1ex} \right) \hspace{-0.4ex} d\mathcal{V}
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{f} \dotp \variation{\fieldofdisplacements} + \bm{m} \dotp \variation{\fieldofrotations} \right) \hspace{-0.4ex} d\mathcal{V}
 \hspace{.25ex} +
 \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\fieldofdisplacements} + \mathboldM \hspace{-0.1ex} \dotp \variation{\fieldofrotations} \right) \hspace{-0.4ex} do \hspace{.12ex}
-= \hspace{.1ex} 0 \hspace{.1ex}.
-\end{equation}
+= - \hspace{-0.5ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \variation{\internalwork} \hspace{.1ex} d\mathcal{V} .
+\end{equation*}
 
 \vspace{-0.1em} \noindent Здесь
 $\bm{f}$ и~$\bm{m}$~--- внешние силы и~моменты \en{per volume unit}\ru{на~единицу объёма};
@@ -326,11 +323,24 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and}\ru{и}~$
 ...
 
 Если устремить $h$ к~нулю, исчезает вклад $\wrynesstensor$ в~$\Pi$, а~с~ним и моментные напряжения~$\couplestresstensor$.
-Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$, тогда тензор~$\forcestresstensor$ становится симметричным (${\boldnabla \dotp {\color{black!40}{\couplestresstensor}} \hspace{.1ex} + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} + {\color{black!40}{\bm{m}}} \hspace{.1ex} = \bm{0} \,\Rightarrow \hspace{.2ex} \forcestresstensor_{\Xcompanion} \hspace{-0.2ex} = \bm{0}}$), и модель превращается в~классическую.
-
-Использование~же микрополярной модели естественно в~тех случаях, когда реальный материал имеет некий минимальный объём, \inquotesx{внутрь которого \textcolor{magenta}{нельзя проникать}}[.] Такая ситуация возникает нередко: поликристаллы, композиты с~\inquotes{представительным} объёмом, полимеры с~большими молекулами.
+Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$, тогда тензор~${\hspace{-0.1ex}\forcestresstensor}$ становится симметричным:
+${\boldnabla \dotp {\color{black!40}{\couplestresstensor}} \hspace{.1ex}
++ \forcestresstensor_{\Xcompanion} \hspace{-0.1ex}
++ {\color{black!40}{\bm{m}}} \hspace{.1ex}
+= \bm{0}}$,
+${{\color{black!40}{\couplestresstensor}} = \hspace{-0.15ex} {^2\bm{0}}}$,
+${{\color{black!40}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresstensor_{\Xcompanion} \hspace{-0.2ex} = \bm{0}}$,
+и модель превращается в~классическую.
 
 \end{otherlanguage}
+
+\en{Yet using of}\ru{Использование~же} \en{micropolar model}\ru{микрополярной модели} \en{is natural}\ru{естественно} \en{in~case}\ru{в~случае},
+\en{when}\ru{когда} \en{the~real material}\ru{реальный материал} \en{has a~certain smallest volume}\ru{имеет некий наименьший объём},
+\inquotesx{\en{which is impossible to~enter into}\ru{в~который невозможно войти}}[.]
+\en{And}\ru{И}~\en{such situation}\ru{такая ситуация} \en{occurs}\ru{возникает} \ru{нередко}\en{quite often}:
+\en{composites}\ru{композиты} \en{with}\ru{с}~\inquotes{\en{representative}\ru{представительным}} \en{volume}\ru{объёмом},
+\en{polycrystalline materials}\ru{поликристаллические материалы},
+\en{polymers}\ru{полимеры} \en{with}\ru{с}~\en{large molecules}\ru{большими молекулами}~(\en{macro\-molecules}\ru{макро\-молекулами}).
 
 \en{\section{Compatibility equations}}
 

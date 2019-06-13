@@ -6,46 +6,163 @@
 
 \label{chapter:shellsandplates}
 
+\en{\section{Surface geometry}}
+
+\ru{\section{Геометрия поверхности}}
+
 \begin{otherlanguage}{russian}
 
-\section{Оболочки: Геометрия поверхностей}
+\lettrine[lines=2, findent=2pt, nindent=0pt]{П}{оверхность} в~трёхмерном пространстве определяется функцией вектора\hbox{-}радиуса точек поверхности от~двух координат ${\bm{r} \!=\! \bm{r}(q^{\hspace{.1ex}\alpha})}$, ${\alpha = 1, 2}$. Непрерывное изменение одной из координат~${q^1\hspace{-0.25ex}}$ при постоянной другой~${q^2\hspace{-0.25ex}}$ даёт координатную линию~${q^1\hspace{-0.25ex}}$. Пере\-сече\-ние двух координатных линий однозначно определяет точку поверхности. Векторы
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{П}{оверхность} в~трёхмерном пространстве определяется заданием вектора\hbox{-}радиуса как функции двух координат ${\bm{r} \!=\! \bm{r}(q^{\hspace{.16ex}\alpha})}$, ${\alpha = 1, 2}$. Фиксировав одну координату~--- пусть ...
+\nopagebreak\vspace{-0.5em}\begin{equation*}
+\bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.16ex} \equiv \partial_{\hspace{-0.1ex}\alpha} \bm{r}
+, \;\;
+\partial_{\hspace{-0.1ex}\alpha} \hspace{-0.16ex} \equiv \textstyle\frac{\partial \bm{r}}{\partial q^\alpha}
+\end{equation*}
 
+\vspace{-0.2em} \noindent лежат на~касательных к~координатным линиям. Они являются базисом для представления любого вектора~$\mathtwoabove{\bm{v}}$ в~касательной плоскости как линейной комбинации
 
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\mathtwoabove{\bm{v}} = v^\alpha \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.16ex} = v_\alpha \bm{r}^\alpha
+\hspace{-0.4ex} , \;\;
+v^\alpha \hspace{-0.25ex} = \mathtwoabove{\bm{v}} \dotp \bm{r}^\alpha
+\hspace{-0.4ex} , \:\;
+v_\alpha \hspace{-0.2ex} = \mathtwoabove{\bm{v}} \dotp \bm{r}_{\hspace{-0.2ex}\alpha}
+\end{equation*}
 
+\vspace{-0.25em} \noindent (введён взаимный базис в~касательной плоскости: ${\bm{r}^\alpha \hspace{-0.25ex} \dotp \bm{r}_{\hspace{-0.2ex}\beta} \hspace{-0.2ex} = \delta^\alpha_{\hspace{-0.2ex}\beta}}$).
 
-\section{Оболочки: Модель оболочки}
+Добавление в~каждой точке поверхности единичного вектора нормали~${\bm{n}(q^{\hspace{.1ex}\alpha})}$
+% field of unit normal vectors
 
-Располагая моделями трёхмерного моментного континуума, стержней и~пластин, не~так~уж сложно разобраться в~механике оболочек. Как~геометрический объект, оболочка определяется ...
+\nopagebreak\vspace{-1em}\begin{equation*}
+\bm{n} = \scalebox{.92}{$
+\displaystyle \frac{\bm{r}_1 \hspace{-0.15ex} \times \bm{r}_2}%
+{\hspace{.4ex} | \hspace{.2ex} \bm{r}_1 \hspace{-0.15ex} \times \bm{r}_2 \hspace{.2ex} | \hspace{.4ex}}
+$}
+%%\hspace{.25ex} ,
+\end{equation*}
+
+\vspace{-0.1em} \noindent даёт разложение для любого вектора (и~вообще любого тензора) в~пространстве, например~${\bm{u} = u^\alpha \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} + u_n \bm{n}}$.
+
+Единичные (\inquotes{метрические}) тензоры~$\bm{E}$ в~пространстве и~$\mathtwoabove{\bm{e}}$ в~касательной плоскости
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+\bm{E} = \mathtwoabove{\bm{e}} + \bm{n} \bm{n}
+\hspace{.1ex} , \:\:
+\mathtwoabove{\bm{e}} \hspace{.1ex} \equiv \bm{E} - \bm{n} \bm{n} = \bm{r}_{\hspace{-0.2ex}\alpha} \bm{r}^\alpha \hspace{-0.25ex} = \bm{r}^\alpha \bm{r}_{\hspace{-0.2ex}\alpha}
+\hspace{.1ex} .
+\vspace{-0.2em}
+\end{equation*}
+
+Представление вектора\hbox{-}радиуса точки пространства на~рас\-стоя\-нии~$h$~(${\frac{\partial h}{\partial q^{\alpha}} \hspace{-0.2ex} = 0}$) от~поверхности
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{R}(q^{\hspace{.1ex}\alpha} \hspace{-0.4ex}, h) = \hspace{.1ex} \bm{r}(q^{\hspace{.1ex}\alpha}) + \hspace{.1ex} h \hspace{.1ex} \bm{n}(q^{\hspace{.1ex}\alpha})
+\end{equation*}
+
+\vspace{-0.5em} \noindent определяет базис
+
+\nopagebreak\vspace{-0.8em}\begin{equation*}
+\begin{array}{c}
+\bm{R}_n \hspace{-0.2ex} = \bm{n} = \bm{R}^n \hspace{-0.25ex} ,
+\\[.1em]
+\bm{R}_\alpha \hspace{-0.2ex} \equiv \partial_{\hspace{-0.1ex}\alpha} \bm{R}
+= \partial_{\hspace{-0.1ex}\alpha} \bm{r} + h \hspace{.2ex} \partial_{\hspace{-0.1ex}\alpha} \bm{n}
+= \bm{r}_{\hspace{-0.2ex}\alpha} + \hspace{.1ex} h \hspace{.2ex} \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.2ex} \dotp \bm{r}^\beta \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\beta} \bm{n}
+\hspace{.1ex} .
+\end{array}
+\end{equation*}
+
+...
+
+\[
+\bm{R}_\alpha \hspace{-0.2ex}
+= \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} \dotp \hspace{-0.1ex}
+\left(
+\bm{r}^\beta \bm{r}_{\hspace{-0.2ex}\beta}
++ h \hspace{.2ex} \bm{r}^\beta \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\beta} \bm{n}
+\right) \hspace{-0.25ex}
+= \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} \dotp \hspace{-0.1ex}
+\left(
+\mathtwoabove{\bm{e}} + h \hspace{.1ex} \boldnablaflat \bm{n}
+\right) \hspace{-0.25ex}
+= \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} \dotp \hspace{-0.1ex}
+\left(
+\mathtwoabove{\bm{e}} - h \hspace{.1ex} \mathtwoabove{\bm{c}}
+\hspace{.2ex} \right)
+\]
+
+${\mathtwoabove{\bm{c}} \equiv - \boldnablaflat \bm{n}}$
+
+...
+
+\noindent кобазис и~дифференциальный оператор \inquotes{набла}
+
+${\boldnabla \equiv \bm{R}^{\hspace{.1ex}i} \hspace{-0.1ex} \partial_i}$
+
+${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\alpha}}$
 
 ...
 
 
 
 
-\section{Оболочки: Баланс сил и моментов}
+\end{otherlanguage}
 
-При~${\variation{\bm{u}} = \boldconst}$ и~${\variation{\bm{\theta}} = \bm{0}}$~(трансляция) ...
+\en{\section{Model of a~shell}}
+
+\ru{\section{Модель оболочки}}
+
+\begin{otherlanguage}{russian}
+
+Располагая моделями трёхмерного моментного континуума, \textcolor{magenta}{стержней и~пластин}, не~так~уж тяжело разобраться в~механике оболочек. Как~геометрический объект, оболочка определяется ...
 
 ...
 
 
 
+
+
+
+
+\end{otherlanguage}
+
+\en{\section{Balance of forces and moments for a~shell}}
+
+\ru{\section{Баланс сил и моментов для оболочки}}
+
+\begin{otherlanguage}{russian}
+
+При~${\variation{\fieldofdisplacements} = \boldconst}$ и~${\variation{\fieldofrotations} = \bm{0}}$~(трансляция) ...
+
+...
+
+
+
+\end{otherlanguage}
 
 \en{\section{Shells: Relations of elasticity}}
 
 \ru{\section{Оболочки: Отношения упругости}}
 
-Локальное соотношение~\eqref{somereftwothree} после вывода уравнений баланса ...
+\begin{otherlanguage}{russian}
+
+Локальное соотношение~\eqref{somereftwothreeeee} после вывода уравнений баланса ...
 
 ...
 
 
 
-\section{Оболочки: Классическая теория}
+\end{otherlanguage}
 
-Вышеизложенная теория (напоминающая балку Тимошенко и~континуумы Коссера) рассматривает~$\bm{\theta}$ независимо от~$\bm{u}$. Но обыденный опыт подсказывает: материальный элемент, нормальный к~срединной поверхности до~деформации, остаётся таковым и~после (кинематическая гипотеза Кирхгофа). В~классической теории Кирхгофа, Арона и~Лява $\bm{\theta}$ выражается через~$\bm{u}$, что в~конце концов позволяет всё свести к~одному векторному уравнению для~$\bm{u}$.
+\en{\section{Classical theory of shells}}
+
+\ru{\section{Классическая теория оболочек}}
+
+\begin{otherlanguage}{russian}
+
+Вышеизложенная теория (напоминающая балку Тимошенко и~континуумы Коссера) рассматривает~$\fieldofrotations$ независимо от~$\fieldofdisplacements$. Но обыденный опыт подсказывает: материальный элемент, нормальный к~срединной поверхности до~деформации, остаётся таковым и~после (кинематическая гипотеза Кирхгофа). В~классической теории Кирхгофа, Арона и~Лява $\fieldofrotations$ выражается через~$\fieldofdisplacements$, что в~конце концов позволяет всё свести к~одному векторному уравнению для~$\fieldofdisplacements$.
 
 Предположим, что в~основе классической теории лежит внутренняя связь
 
@@ -53,23 +170,41 @@
 
 
 
-\section{Оболочки: Пластина}
+\end{otherlanguage}
 
-Это простейший вырожденный случай оболочки. Орт ${\bm{n} = \bm{k}}$ направлен по декартовой оси~$z$, в~качестве координат ...
+\en{\section{Shells: A plate}}
 
-...
+\ru{\section{Оболочки: Пластина}}
 
+\begin{otherlanguage}{russian}
 
-
-\section{Оболочки: Подход с множителями Лагранжа}
-
-Уязвимым местом нашего изложения теории оболочек являются формулы
+Это простейший случай оболочки. Орт ${\bm{n} = \bm{k}}$ направлен по декартовой оси~$z$, в~качестве координат ...
 
 ...
 
 
 
-\section{Оболочки: Цилиндрическая оболочка}
+\end{otherlanguage}
+
+\en{\section{Shells: Approach with Lagrange multipliers}}
+
+\ru{\section{Оболочки: Подход с множителями Лагранжа}}
+
+\begin{otherlanguage}{russian}
+
+Уязвимым местом этого изложения теории оболочек являются формулы
+
+...
+
+
+
+\end{otherlanguage}
+
+\en{\section{Cylindrical shell}}
+
+\ru{\section{Цилиндрическая оболочка}}
+
+\begin{otherlanguage}{russian}
 
 Существуют разные уравнения цилиндрической оболочки. Приводятся громоздкие выкладки с~отбрасыванием некоторых малых членов, и~не~всегда ясно, какие именно члены действительно можно отбросить.
 
@@ -81,7 +216,13 @@
 
 
 
-\section{Оболочки: Общие теоремы}
+\end{otherlanguage}
+
+\en{\section{Shells: Common theorems}}
+
+\ru{\section{Оболочки: Общие теоремы}}
+
+\begin{otherlanguage}{russian}
 
 Пусть край закреплён
 
@@ -89,7 +230,13 @@
 
 
 
-\section{Оболочки: Краевые условия}
+\end{otherlanguage}
+
+\en{\section{Shells: Boundary conditions}}
+
+\ru{\section{Оболочки: Краевые условия}}
+
+\begin{otherlanguage}{russian}
 
 В~рамках рассматриваемого прямого подхода к~оболочкам как материальным поверхностям наиболее надёжным способом вывода граничных условий представляется вариационный. Исходим из вариационного уравнения:
 
@@ -97,7 +244,15 @@
 
 
 
-\section{Оболочки: Оболочки вращения}
+\end{otherlanguage}
+
+\en{\section{Shells of revolution}}
+
+\ru{\section{Оболочки вращения}}
+
+\noindent \emph{Surface of~revolution (reference surface of shell of revolution) is created by rotating a~plane curve (the~meridian, the~generatrix) about a~straight line in the~plane of curve (an~axis of~rotation).}
+
+\begin{otherlanguage}{russian}
 
 Разберёмся в~геометрии поверхности вращения~( рис. ?? 29 ?? ). Меридиан можно задать зависимостью декартовых координат
 
@@ -105,7 +260,13 @@
 
 
 
-\section{Оболочки: Безмоментная теория}
+\end{otherlanguage}
+
+\en{\section{Momentless theory of shells}}
+
+\ru{\section{Безмоментная теория оболочек}}
+
+\begin{otherlanguage}{russian}
 
 В~отличие от~пластины, оболочка способна выдерживать нормальную распределённую нагрузку без появления внутренних моментов. В~безмоментном состоянии напряжения равномерно распределены по~толщине оболочки, безмоментные оболочечные конструкции можно считать оптимально спроектированными.
 
@@ -115,15 +276,27 @@
 
 
 
-\section{Оболочки: Нелинейная безмоментная теория}
+\end{otherlanguage}
 
-Вышеизложенная безмоментная теория допускает простое и~корректное нелинейное обобщение. Материальная поверхность состоит из~частиц
+\en{\section{Shells: Nonlinear momentless theory}}
+
+\ru{\section{Оболочки: Нелинейная безмоментная теория}}
+
+\begin{otherlanguage}{russian}
+
+Вышеизложенную безмоментную теорию оболочек возможно просто и~корректно обобщить на нелинейную постановку. Материальная поверхность состоит из~частиц
 
 ...
 
 
 
-\section{Оболочки: Иной вариант классической теории}
+\end{otherlanguage}
+
+\en{\section{Shells: Other variant of classical theory}}
+
+\ru{\section{Оболочки: Иной вариант классической теории}}
+
+\begin{otherlanguage}{russian}
 
 %% \noindent \emph{(добавлено в~готовую рукопись перед изданием 1999го года)}
 
@@ -133,17 +306,29 @@
 
 
 
+\end{otherlanguage}
 
-\section{Пластины: Общие представления}
+\en{\section{Plates: Overall concepts}}
+
+\ru{\section{Пластины: Общие представления}}
+
 \label{para:overviewofplates}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{П}{ластиной} называется тонкое трёхмерное тело, ограниченное двумя параллельными плоскостями и~боковой цилиндрической поверхностью (рисунок ?? 26 ???). В~декартовой системе $x_1$,\;$x_2$,\;$z$ поперечная координата ...
+\begin{otherlanguage}{russian}
+
+\lettrine[lines=2, findent=2pt, nindent=0pt]{П}{ластиной} называется тонкое трёхмерное тело, ограниченное двумя параллельными плоскостями и~боковой цилиндрической поверхностью (рисунок ?? 26 ???). В~декартовых координатах ${x_1, x_2, z}$ поперечная координата ...
 
 ...
 
 
 
-\section{Пластины: Модель типа Тимошенко (прямой подход)}
+\end{otherlanguage}
+
+\en{\section{Timoshenko-like model of a~plate (direct approach)}}
+
+\ru{\section{Модель пластины типа Тимошенко (прямой подход)}}
+
+\begin{otherlanguage}{russian}
 
 Пластина рассматривается как материальная плоскость, частицы которой
 
@@ -151,7 +336,13 @@
 
 
 
-\section{Пластины: Классическая теория Кирхгофа}
+\end{otherlanguage}
+
+\en{\section{Kirchhoff’s classical theory of plates}}
+
+\ru{\section{Классическая теория пластин Кирхгофа}}
+
+\begin{otherlanguage}{russian}
 
 Принимается внутренняя связь
 
@@ -159,7 +350,13 @@
 
 
 
-\section{Пластины: Асимптотическое соотношение двумерных моделей}
+\end{otherlanguage}
+
+\en{\section{Plates: Asymptotic matching of two-dimensional models}}
+
+\ru{\section{Пластины: Асимптотическое сопоставление двумерных моделей}}
+
+\begin{otherlanguage}{russian}
 
 При малой толщине из теории типа Тимошенко вытекает классическая. Толщина~$h$ определяется отношением жёсткостей. Перепишем
 
@@ -167,11 +364,17 @@
 
 
 
-\section{Пластины: Вариационный переход от трёхмерной модели}
+\end{otherlanguage}
+
+\en{\section{Plates: Variational transition from three-dimensional model}}
+
+\ru{\section{Пластины: Вариационный переход от трёхмерной модели}}
+
+\begin{otherlanguage}{russian}
 
 Используя вариационные принципы Лагранжа или Рейсснера--Хеллингера с~аппроксимацией решения по~толщине, можно получить двумерные вариационные постановки. Из~них вытекают и~соотношения внутри области, и~естественные краевые условия.
 
-Для примера рассмотрим построение модели типа Тимошенко с~аппроксимацией перемещений
+Для примера построим модель типа Тимошенко с~аппроксимацией перемещений
 
 ...
 
@@ -180,9 +383,13 @@
 
 Рассмотренные вариационные переходы легко обобщаются на~случаи неоднородности и~анизотропии материала, температурных деформаций, динамики. Достоинство принципа Рейсснера--Хеллингера~--- в~явном представлении напряжений. \hbox{Зато} принцип Лагранжа примен\'{и}м к~нелинейным задачам (\customref[глава~]{chapter:nonlinearcontinuum} содержит трёхмерную постановку).
 
+\end{otherlanguage}
+
 \en{\section{Plates: Splitting of three-dimensional bending problem}} % Asymptotic splitting
 
 \ru{\section{Пластины: Ращепление трёхмерной задачи изгиба}} % Асимптотическое ращепление
+
+\begin{otherlanguage}{russian}
 
 Двумерная классическая теория изгиба пластин легко выводится из трёхмерной постановки с~малым параметром. Представив радиус\hbox{-}вектор в~объёме
 
@@ -190,9 +397,13 @@
 
 
 
-\en{\section{Plates: Circular plates}} % Round plates
+\end{otherlanguage}
 
-\ru{\section{Пластины: Круглые пластины}}
+\en{\section{Circular plates}} % Round plates
+
+\ru{\section{Круглые пластины}}
+
+\begin{otherlanguage}{russian}
 
 В~качестве иллюстрации рассмотрим широко представленный в~литературе вопрос об~уравнениях теории Кирхгофа в~полярных координатах. Имеем
 
@@ -200,7 +411,13 @@
 
 
 
-\section{Пластины: Плоское напряжённое состояние}
+\end{otherlanguage}
+
+\en{\section{Plates: Plane stress}}
+
+\ru{\section{Пластины: Плоское напряжение}}
+
+\begin{otherlanguage}{russian}
 
 Это вторая из~двух задач, о~которых говорилось в~\pararef{para:overviewofplates}. Силы
 

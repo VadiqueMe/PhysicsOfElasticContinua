@@ -1,0 +1,202 @@
+\documentclass[tikz,margin=5]{standalone}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot} % needs tikz-3dplot.sty in same folder
+\usetikzlibrary{fpu}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing}
+
+\usepackage{bm}
+
+\begin{document}
+
+%%\begin{center}
+
+\def\cameraanglez{33}
+\tdplotsetmaincoords{44}{\cameraanglez} % orientation of camera
+
+\def\rodheight{10}
+\def\rodradius{0.2}
+
+%%\pgfmathsetmacro{\beginanglez}{\cameraanglez}
+%%\pgfmathsetmacro{\endanglez}{\cameraanglez - 180}
+
+\pgfmathsetmacro{\rotationbeginangle}{-88} % 0
+\pgfmathsetmacro{\rotationendangle}{155} % 360
+
+\tikzset{%
+	tangent/.style={
+		decoration={
+			markings,% switch on markings
+			mark=
+			at position #1
+			with
+			{
+				\def\numberoftangent{\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}}
+				\coordinate (tangent point-\numberoftangent) at (0, 0);
+				\coordinate (tangent unit vector-\numberoftangent) at (1, 0);
+				\coordinate (tangent orthogonal unit vector-\numberoftangent) at (0, 1);
+			}
+		},
+		postaction=decorate
+	},
+	use tangent/.style={
+		shift=(tangent point-#1),
+		x=(tangent unit vector-#1),
+		y=(tangent orthogonal unit vector-#1)
+	},
+	use tangent/.default=1
+}
+
+\tikzset{%
+	show curve controls/.style={
+		postaction={
+			decoration={
+				show path construction,
+				curveto code={
+					\fill [black, opacity=.5]
+						(\tikzinputsegmentfirst) circle (.4ex)
+						(\tikzinputsegmentlast) circle (.4ex) ;
+					\draw [black, opacity=.5, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+						(\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta)
+						(\tikzinputsegmentlast) -- (\tikzinputsegmentsupportb) ;
+					\fill [magenta, opacity=.5, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+						(\tikzinputsegmentsupporta) circle [radius=.4ex]
+						(\tikzinputsegmentsupportb) circle [radius=.4ex] ;
+				}
+			},
+			decorate
+}	}	}
+
+\tikzset{pics/meridian/.style={code={
+
+	% meine ebene Kurve
+	\draw [ line width=\ebeneKurveThickness, color=\ebeneKurveColor, opacity=\ebeneKurveOpacity
+		, line cap=round
+		, tdplot_rotated_coords
+		%%, show curve controls
+		]
+		( 0, 0, 2.25 )
+		.. controls ( 0, 0.5, 1.75 ) and ( 0, 1.5, 1.7 ) ..
+		( 0, 2, 1.7 )
+		.. controls ( 0, 2.5, 1.7 ) and ( 0, 3.5, 1.7 ) ..
+		( 0, 5, 2.7 )
+		.. controls ( 0, 8, 4.7 ) and ( 0, 10, 8 ) ..
+		( 0, 16, 6 );
+
+}}}
+
+\tikzset{pics/dottedmeridian/.style={code={
+
+	% meine ebene Kurve
+	\draw [ line width=\ebeneKurveThickness, color=\ebeneKurveColor, opacity=\ebeneKurveOpacity
+		, line cap=round, dash pattern=on 0pt off 1.5\pgflinewidth
+		, tdplot_rotated_coords
+		%%, show curve controls
+		]
+		( 0, 0, 2.25 )
+		.. controls ( 0, 0.5, 1.75 ) and ( 0, 1.5, 1.7 ) ..
+		( 0, 2, 1.7 )
+		.. controls ( 0, 2.5, 1.7 ) and ( 0, 3.5, 1.7 ) ..
+		( 0, 5, 2.7 )
+		.. controls ( 0, 8, 4.7 ) and ( 0, 10, 8 ) ..
+		( 0, 16, 6 );
+
+}}}
+
+\pgfmathsetmacro{\rotationanglefrom}{\rotationbeginangle} % - 1
+\pgfmathsetmacro{\rotationangleto}{\rotationendangle + 1}
+\pgfmathsetmacro{\stepsofrotation}{ abs( \rotationendangle - \rotationbeginangle ) + 1 } % + 2
+
+\tikzset{pics/beginparallel/.style={code={
+
+	\draw [ line width=\parallelThickness, color=\parallelColor
+		, line cap=round, dash pattern=on 0pt off 1.5\pgflinewidth
+		, domain=\rotationanglefrom:\rotationangleto ]
+		plot [ samples=\stepsofrotation ] ( { 2.25*sin(\x) }, 0, { 2.25*cos(\x) } ) ;
+
+}}}
+
+\tikzset{pics/midparallel/.style={code={
+
+	\draw [ line width=\parallelThickness, color=\parallelColor
+		, line cap=round %%, dash pattern=on 0pt off 1.5\pgflinewidth
+		, domain=\rotationanglefrom:\rotationangleto ]
+		plot [ samples=\stepsofrotation ] ( { 2.7*sin(\x) }, 5, { 2.7*cos(\x) } ) ;
+
+}}}
+
+\tikzset{pics/endparallel/.style={code={
+
+	\draw [ line width=\parallelThickness, color=\parallelColor
+		, line cap=round, dash pattern=on 0pt off 1.5\pgflinewidth
+		, domain=\rotationanglefrom:\rotationangleto ]
+		plot [ samples=\stepsofrotation ] ( { 6*sin(\x) }, 16, { 6*cos(\x) } ) ;
+
+}}}
+
+\tikzset{pics/axisofrotation/.style={code={
+
+	% draw axis
+	\draw [line width=0.5pt, blue, line cap=round, dash pattern=on 2cm off 2pt on \the\pgflinewidth off 2pt]
+		( 0, -2, 0 ) -- ( 0, 20, 0 ) ;
+
+}}}
+
+\tikzset{pics/axisofradius/.style={code={
+
+	% draw axis
+	\draw [line width=0.5pt, blue, line cap=round]
+		( 0, 0, -6 ) -- ( 0, 0, 6 ) ;
+
+}}}
+
+\begin{tikzpicture}[scale=1
+	, tdplot_main_coords % use 3dplot
+	, /pgf/fpu, /pgf/fpu/output format=fixed % use fpu
+	]
+
+	\def\ebeneKurveThickness{2.5pt} ;
+	\def\ebeneKurveColor{lime!66!yellow} ;
+	\def\ebeneKurveOpacity{0.4} ;
+
+	\pgfmathsetmacro{\loopbeginangle}{\rotationbeginangle}
+	\pgfmathsetmacro{\loopendangle}{\rotationendangle}
+	\pgfmathsetmacro{\loopstepangle}{\loopbeginangle + 2}
+	\foreach \angle in {\loopbeginangle, \loopstepangle, ..., \loopendangle} {
+		\tdplotsetrotatedcoords{0}{\angle}{0} ;
+		\pic (rotated) {meridian} ;
+	}
+
+	\def\ebeneKurveColor{lime!88!black} ;
+	\def\ebeneKurveThickness{1.2pt} ;
+	\def\ebeneKurveOpacity{1} ;
+	\tdplotsetrotatedcoords{0}{\rotationbeginangle}{0} ;
+	\pic (begin) {dottedmeridian} ;
+	\tdplotsetrotatedcoords{0}{\rotationendangle}{0} ;
+	\pic (end) {dottedmeridian} ;
+
+	\def\parallelColor{lime!88!black} ;
+	\def\parallelThickness{1.2pt} ;
+	\pic (i) {beginparallel} ;
+	\pic (i) {endparallel} ;
+
+	\def\parallelColor{black} ;
+	\pic (i) {midparallel} ;
+
+	\tdplotsetrotatedcoords{0}{0}{0} ;
+	\def\ebeneKurveColor{black} ;
+	\def\ebeneKurveThickness{1.2pt} ;
+	\def\ebeneKurveOpacity{1} ;
+
+	\pic (i) {meridian} ;
+	\pic (i) {axisofrotation} ;
+	\pic (i) {axisofradius} ;
+
+\end{tikzpicture}
+
+%%\end{center}
+
+\end{document}

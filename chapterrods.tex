@@ -21,6 +21,13 @@
 
 ...
 
+\en{In approximate applied theories of~rods}\ru{В~приближённых прикладных теориях стержней} (\inquotes{\en{strength of~materials}\ru{сопротивление материалов}}) фигурируют сосредоточенные силы~$\bm{Q}$ и~моменты~$\mathboldM$. С~тензором напряжения они связаны соотношениями
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\bm{Q}(s) = \ldots \hspace{.1ex} ,
+\:\:
+\mathboldM(s) = \ldots \hspace{.1ex} .
+\end{equation}
 
 ...
 
@@ -140,7 +147,7 @@
 
 \begin{otherlanguage}{russian}
 
-Модель Kirchhoff’а с~${\Gamma \hspace{-0.25ex}=\hspace{-0.2ex} 0}$ не~описывает наипростейший случай растяжения\hbox{--}сжатия прямого стержня. Эта неприятность исчезнет, если смягчить связь: запретить лишь поперечный сдвиг, но разрешить растяжение, то~есть
+Модель Kirchhoff’а с~${\Gamma \hspace{-0.25ex}=\hspace{-0.2ex} 0}$ не~описывает наипростейший случай растяжения\hbox{--}сжатия прямого стержня. Эта неприятность исчезнет, если смягчить связь: \textcolor{magenta}{запретить} лишь поперечный сдвиг, но \textcolor{magenta}{разрешить} растяжение, то~есть
 
 ...
 
@@ -154,7 +161,28 @@
 
 \begin{otherlanguage}{russian}
 
-Этот вопрос выходит за~рамки главы, поскольку нить проще стержня: её частицы суть \inquotes{простые} материальные точки лишь c~трансляционными степенями свободы. Соответственно, ...
+\en{Flexible thread~(chain)}\ru{Гибкая нить~(цепь)} \en{is simpler than rod}\ru{проще стержня}:
+\en{its particles are}\ru{её частицы суть} \inquotes{\ru{простые}\en{simple}} \en{material points}\ru{материальные точки} лишь c~трансляционными степенями свободы.
+Поэтому среди нагрузок нет моментов, только \inquotes{линейные} силы~--- внешние распределённые~$\bm{q}$ и~внутренние сосредоточенные~$\bm{Q}$.
+Движение нити полностью определяется одним вектором-радиусом~${\bm{r}(s,t)}$, а~инерционные свойства~--- линейной плотностью~${\rho\hspace{.12ex}(s)}$.
+% linear density
+
+Вот принцип виртуальной работы для куск\'{а} нити ${s_0 \leq s \leq s_1}$
+
+\nopagebreak\vspace{-0.25em}\begin{equation}
+\scalebox{0.95}{$
+\displaystyle \integral\displaylimits_{\raisemath{.05em}{\mathclap{s_0}}}^{\raisemath{.15em}{\mathclap{s_1}}}
+$}
+\hspace{-0.25ex} \Bigl( \hspace{-0.1ex}
+\bigl( \bm{q} - \hspace{-0.12ex} \rho \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.36ex} \bigr)
+\hspace{-0.25ex} \dotp \variation{\bm{r}}
+- \variation{\Pi}
+\Bigr) ds
+\hspace{.1ex} + \Bigl[
+\bm{Q} \hspace{-0.1ex} \dotp \variation{\bm{r}}
+\hspace{.12ex} \Bigr]_{\hspace{-0.25ex}s_0}^{\hspace{-0.25ex}s_1}
+\hspace{-0.4ex} = 0 \hspace{.1ex} .
+\end{equation}
 
 ...
 
