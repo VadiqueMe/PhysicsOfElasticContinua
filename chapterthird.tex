@@ -25,6 +25,8 @@ m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 
 \vspace{-0.25em}\noindent \en{where}\ru{где} $\rho$~\en{is volumetric mass density}\ru{--- объёмная плотность массы}.
 
+Real matter is modelled as a~continuum, \en{which can be thought of as}\ru{который может быть мыслим как} \en{an~infinite set}\ru{бесконечное множество} \en{of~vanishingly small}\ru{исчезающе м\'{а}лых} \en{particles}\ru{частиц}, joined together.
+
 С~непрерывным распределением массы связано лишь первое и~простое представление о~сплошной среде как множестве~(пространстве) материальных точек. Возможны и~более сложные модели, в~которых частицы обладают степенями свободы не~только трансляции, но~и поворота, внутренней деформации и~другими. Отметив, что подобные модели притягивают всё б\'{о}льший интерес, в~этой главе ограничимся классическим представлением о~среде как состоящей из~простых точек.
 
 В~каждый момент времени~$t$ деформируемое тело занимает некий объём~$V$ пространства. Вводя какие\hbox{-}либо криволинейные координаты~${q^{\hspace{.1ex}i}\hspace{-0.4ex}}$, считаем ${\bm{R} \hspace{-0.25ex} = \hspace{-0.4ex} \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t)}$.
@@ -116,13 +118,26 @@ d\bm{r} = d\bm{R} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \bold
 
 \vspace{1.5em}
 
-\noindent here comes to~mind to introduce the \inquotes{motion gradient}\footnote{\en{Tensor}\ru{Тензору}~$\bm{F}$ \en{doesn’t well suit}\ru{не~вполне подходит} \en{its}\ru{его} \en{more popular}\ru{более популярное} \en{name}\ru{название} \inquotesx{\en{deformation gradient}\ru{градиент деформации}}[,] \en{because}\ru{поскольку} \en{it describes}\ru{он описывает} \en{not only the deformation itself}\ru{не~только сам\'{у} деформацию}, \en{but also the rotation of a~body as a~whole without deformation}\ru{но~и поворот тела как~целого без деформации}.}\hbox{\hspace{-0.6ex},} picking one of these tensor multipliers for it: ${\bm{F} \equiv \hspace{-0.2ex} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}\T} \hspace{-0.32ex} = \bm{R}_{\hspace{.1ex}i} \bm{r}^{\hspace{-0.05ex}i} \hspace{-0.4ex}}$.
-
+\noindent here comes to~mind to introduce the \inquotes{motion gradient}\footnote{\en{Tensor}\ru{Тензору}~$\bm{F}$ \en{doesn’t well suit}\ru{не~вполне подходит} \en{its}\ru{его} \en{more popular}\ru{более популярное} \en{name}\ru{название} \inquotesx{\en{deformation gradient}\ru{градиент деформации}}[,] \en{because}\ru{поскольку} \en{this tensor}\ru{этот тензор} \en{describes}\ru{описывает} \en{not only the~deformation itself}\ru{не~только сам\'{у} деформацию}, \en{but also the rotation of a~body as a~whole without deformation}\ru{но~и поворот тела как~целого без деформации}.}\hbox{\hspace{-0.6ex},} picking one of these tensor multipliers for it: ${\bm{F} \equiv \hspace{-0.2ex} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}\T} \hspace{-0.32ex} = \bm{R}_{\hspace{.1ex}i} \bm{r}^{\hspace{-0.05ex}i} \hspace{-0.4ex}}$.
 
 
 ...
 
-\en{For cartesian coordinates}\ru{Для декартовых координат} \en{with orthonormal basis}\ru{с~ортонормальным базисом}~${\bm{e}_i \hspace{-0.16ex} = \boldconst}$
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{E}
+= \tikzmark{unitTensorAsOriginalDerivativeBegin} \hspace{-0.25ex} \boldnablacircled \bm{r} \tikzmark{unitTensorAsOriginalDerivativeEnd}
+= \tikzmark{unitTensorAsCurrentDerivativeBegin} \hspace{-0.25ex} \boldnabla \hspace{-0.16ex} \bm{R} \tikzmark{unitTensorAsCurrentDerivativeEnd}
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0.1ex,0.2ex]%
+{unitTensorAsOriginalDerivativeBegin}{unitTensorAsOriginalDerivativeEnd}%
+{${ \scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{r}}}{\partial \bm{r}} $} }$}%
+\AddUnderBrace[line width=.75pt][0.1ex,0.2ex]%
+{unitTensorAsCurrentDerivativeBegin}{unitTensorAsCurrentDerivativeEnd}%
+{${ \scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{-0.15ex} \bm{R}}}{\partial \hspace{-0.15ex} \bm{R}} $} }$}
+
+...
+
+\en{For cartesian coordinates}\ru{Для декартовых координат} \en{with orthonormal basis}\ru{с~ортонормальным базисом} ${\bm{e}_i \hspace{-0.16ex} = \boldconst}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \bm{R} = \hspace{-0.15ex} X_{\hspace{-0.1ex}i}(t) \hspace{.2ex} \bm{e}_i
@@ -186,7 +201,7 @@ x_i \hspace{-0.1ex} \equiv \hspace{-0.1ex} X_{\hspace{-0.1ex}i}(0)
 
 \begin{otherlanguage}{russian}
 
-Градиент движения~$\bm{F}$ характеризует и~деформацию тела, и~поворот тела как~целого. \inquotes{Чистыми}~же тензорами деформации являются~${\bm{U}\hspace{-0.25ex}}$ и~${\bm{V}\hspace{-0.4ex}}$, а~также их вторые степени
+\en{Motion gradient}\ru{Градиент движения}~$\bm{F}$ характеризует и~деформацию тела, и~поворот тела как~целого. \inquotes{Чистыми}~же тензорами деформации являются~${\bm{U}\hspace{-0.25ex}}$ и~${\bm{V}\hspace{-0.4ex}}$, а~также их вторые степени
 \nopagebreak\vspace{.12em}\begin{equation}\label{deformationmeasures}
 \begin{array}{c}
 \bm{U}^2 \hspace{-0.32ex} = \bm{U} \hspace{-0.32ex} \dotp \bm{U} \hspace{-0.25ex} = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.5ex} \dotp \bm{F} \equiv \bm{G} , \\[.1ex]
@@ -204,17 +219,21 @@ x_i \hspace{-0.1ex} \equiv \hspace{-0.1ex} X_{\hspace{-0.1ex}i}(0)
 
 \subsection*{The right Cauchy\hbox{--}Green deformation tensor}
 
-In 1839 \textcolor{red}{(??publication)}, George Green introduced a deformation tensor known as the right Cauchy\hbox{--}Green deformation tensor or Green’s deformation tensor, defined as
-\[
+\href{https://en.wikipedia.org/wiki/George_Green_(mathematician)}{George Green} introduced\footnote{%
+\bibauthor{Green, George}. \href{https://hdl.handle.net/2027/mdp.39015027059651?urlappend=\%3Bseq=133}{(1839) On the~propagation of~light in crystallized media~//~Transactions of the~Cambridge Philosophical Society, 1842, vol.\:7, part~II, pages 121\hbox{--}140.}
+}\hspace{-0.25ex}
+a deformation tensor known as the right Cauchy\hbox{--}Green deformation tensor or Green’s deformation tensor
+
+\nopagebreak\begin{equation*}
 \bm{G}
 = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.5ex} \dotp \bm{F}
 = \bm{U}^{2}
-\quad {\text{or}} \quad
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
 G_{ij} \hspace{-0.2ex}
 = F_{k' i} \hspace{.25ex} F_{k' \hspace{-0.15ex}j} \hspace{-0.15ex}
 = \frac{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}{\partial x_{i}} \hspace{.15ex} \frac{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}{\partial x_{\hspace{-0.2ex}j}}
 \hspace{.1ex} .
-\]
+\end{equation*}
 
 This tensor \textcolor{magenta}{gives the \inquotes{square} of local change in distances} due to deformation: ${\displaystyle d\bm{r} \dotp d\bm{r} = d\bm{R} \dotp \bm{G} \dotp d\bm{R}}$
 
@@ -246,7 +265,7 @@ It is the inverse of the right Cauchy\hbox{--}Green deformation tensor
 {^2\hspace{-0.4ex}\bm{f}}
 = \bm{G}^{\expminusone} \hspace{-0.25ex}
 = \bm{F}^{\expminusone} \hspace{-0.4ex} \dotp \bm{F}^{\expminusT}
-\quad {\text{or}} \quad
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
 f_{ij} \hspace{-0.2ex} = \frac{\partial x_{i}}{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}} \hspace{.15ex} \frac{\partial x_{\hspace{-0.2ex}j}}{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}
 \end{equation*}
 
@@ -259,9 +278,9 @@ Reversing the order of multiplication in the formula for the right Green–Cauch
 \bm{\Phi}
 = \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex}
 = \bm{V}^{2}
-\quad {\text{or}} \quad
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
 \Phi_{ij} \hspace{-0.2ex}
-= \frac{\partial X_{i}}{\partial x_{\mathcircabove{k}}} \hspace{.15ex} \frac{\partial X_{j}}{\partial x_{\mathcircabove{k}}}
+= \frac{\partial \hspace{-0.1ex} X_{i}}{\partial x_{\mathcircabove{k}}} \hspace{.15ex} \frac{\partial \hspace{-0.1ex} X_{\hspace{-0.15ex}j}}{\partial x_{\mathcircabove{k}}}
 \]
 
 The left Cauchy\hbox{--}Green deformation tensor is often called the Finger deformation tensor, named after Josef Finger (1894).
@@ -282,46 +301,75 @@ where ${J \equiv \det{\bm{F}}}$ is determinant of the motion gradient.
 
 \subsection*{The Cauchy deformation tensor}
 
-Earlier in 1828 \textcolor{red}{(?publication)}, Augustin Louis Cauchy introduced deformation tensor defined as the inverse of the left Cauchy\hbox{--}Green deformation tensor, $\bm{\Phi}^{\expminusone}\!$. This tensor is also called Piola tensor and Finger tensor in rheology and fluid dynamics literature.
-\[
+Earlier in 1828 \textcolor{red}{(?publication)}, Augustin Louis Cauchy introduced deformation tensor defined as the inverse of the left Cauchy\hbox{--}Green deformation tensor, ${\bm{\Phi}^{\expminusone}}$
+
+\nopagebreak\vspace{-0.4em}\begin{equation*}
 {^2\hspace{-0.2ex}\bm{c}} = \bm{\Phi}^{\expminusone} \hspace{-0.25ex}
 = \bm{F}^{\expminusT} \hspace{-0.4ex} \dotp \bm{F}^{\expminusone}
-\quad {\text{or}} \quad
-c_{ij} \hspace{-0.2ex}
-= \frac{\partial x_{\mathcircabove{k}}}{\partial X_{i}} \hspace{.15ex} \frac{\partial x_{\mathcircabove{k}}}{\partial X_{j}}
-\]
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+c_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \frac{\partial x_{\mathcircabove{k}}}{\partial \hspace{-0.1ex} X_{i}} \hspace{.15ex} \frac{\partial x_{\mathcircabove{k}}}{\partial \hspace{-0.1ex} X_{\hspace{-0.15ex}j}}
+\end{equation*}
+
+This tensor is also called Piola tensor and Finger tensor in rheology and fluid dynamics literature.
 
 \subsection*{Finite strain tensors}
 
 The concept of \emph{strain} is used to evaluate how much a given displacement differs locally from a~body displacement as a~whole (a~\inquotes{rigid body displacement}). One of such strains for large deformations is the \emph{Green strain tensor}, also called \emph{Green\hbox{--}Lagrangian strain tensor} or \emph{Green\hbox{--}Saint\hbox{-\hspace{-0.2ex}}Venant strain tensor}, defined as
 
-${ \displaystyle \bm{C} = \onehalf (\bm{G} - \bm{E})
-\quad {\text{or}} \quad
-\mathcolor{red}{C_{KL} = \onehalf \left( {\frac{\partial x_{j}}{\partial X_{K}}}{\frac{\partial x_{j}}{\partial X_{L}}} - \delta_{KL} \right)} }$
+\nopagebreak\begin{equation*}
+\displaystyle \bm{C} = \smalldisplaystyleonehalf ( \bm{G} - \bm{E} \hspace{.1ex} )
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \hspace{-0.25ex} \left( \frac{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}{\partial x_{i}} \hspace{.15ex} \frac{\partial \hspace{-0.1ex} X_{\hspace{-0.1ex}k'}}{\partial x_{\hspace{-0.2ex}j}} - \delta_{i\hspace{-0.1ex}j} \hspace{-0.2ex} \right)
+\end{equation*}
 
 \noindent or as function of the displacement gradient tensor
 
-\nopagebreak
-${ \displaystyle \bm{C} = \onehalf \left[ (\boldnabla\bm{u})^{\T}\! + \boldnabla\bm{u} + (\boldnabla\bm{u})^{\T}\! \dotp \boldnabla\bm{u} \right] }$
+\nopagebreak\begin{equation*}
+\displaystyle \bm{C} = \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \hspace{-0.1ex}
+\boldnablacircled\bm{u}
++ \hspace{-0.1ex} \boldnablacircled\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
++ \hspace{-0.1ex} \boldnablacircled\bm{u} \dotp \hspace{-0.1ex} \boldnablacircled\bm{u}^{\hspace{-0.1ex}\T}
+\right)
+\end{equation*}
 
-\noindent or
+\noindent in cartesian coordinates
 
-\nopagebreak
-${ \mathcolor{red}{\displaystyle C_{KL} = \onehalf \left({\frac{\partial u_{K}}{\partial X_{L}}} + {\frac{\partial u_{L}}{\partial X_{K}}} + {\frac{\partial u_{M}}{\partial X_{K}}}{\frac{\partial u_{M}}{\partial X_{L}}}\right)} }$
+\nopagebreak\begin{equation*}
+\displaystyle C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \hspace{-0.25ex} \left(
+\frac{\partial u_{\hspace{-0.1ex}j}}{\partial x_{i}}
++ \frac{\partial u_{i}}{\partial x_{\hspace{-0.2ex}j}}
++ \frac{\partial u_{k}}{\partial x_{i}} \frac{\partial u_{k}}{\partial x_{\hspace{-0.2ex}j}}
+\right)
+\end{equation*}
 
-The Green\hbox{--}Lagrangian strain tensor is a measure of how much $\bm{G}$ differs from $\bm{E}$.
+The Green\hbox{--}Lagrangian strain tensor measures how much $\bm{G}$ differs from~$\bm{E}$.
 
-The \emph{Almansi strain tensor}, referenced to the deformed configuration (Eulerian description), is defined as
-\[
-{^2\hspace{-0.2ex}\bm{e}} = \onehalf (\bm{E} - \bm{c}) = \onehalf (\bm{E} - \bm{\Phi}^{\expminusone})
-\quad {\text{or}} \quad
-\mathcolor{red}{e_{rs} = \onehalf \left( \delta _{rs} - {\frac{\partial X_{M}}{\partial x_{r}}}{\frac{\partial X_{M}}{\partial x_{s}}} \right)}
-\]
+The \emph{Almansi strain tensor}, referenced to the deformed configuration (\inquotes{Eulerian description}), is defined as
 
-\noindent or as function of the displacement gradients
+\nopagebreak\vspace{-0.5em}\begin{equation*}
+{^2\hspace{-0.2ex}\bm{a}} = \smalldisplaystyleonehalf ( \bm{E} - \hspace{-0.15ex} {^2\hspace{-0.2ex}\bm{c}} \hspace{.1ex} ) = \smalldisplaystyleonehalf (\bm{E} - \bm{\Phi}^{\expminusone})
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+a_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \hspace{-0.25ex} \left( \hspace{-0.4ex} \delta _{i\hspace{-0.1ex}j} - \frac{\partial x_{\mathcircabove{k}}}{\partial \hspace{-0.1ex} X_{i}} \hspace{.15ex} \frac{\partial x_{\mathcircabove{k}}}{\partial \hspace{-0.1ex} X_{\hspace{-0.15ex}j}} \right)
+\end{equation*}
 
-\nopagebreak
-${ \mathcolor{red}{\displaystyle e_{ij} = \onehalf \left( {\frac{\partial u_{i}}{\partial x_{j}}} + {\frac{\partial u_{j}}{\partial x_{i}}} - {\frac{\partial u_{k}}{\partial x_{i}}}{\frac{\partial u_{k}}{\partial x_{j}}} \right)} }$
+\vspace{-0.4em} \noindent or as function of the displacement gradient
+
+\nopagebreak\begin{equation*}
+{^2\hspace{-0.2ex}\bm{a}} = \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \hspace{-0.1ex}
+\boldnabla\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
++ \hspace{-0.1ex} \boldnabla\bm{u}
+- \hspace{-0.1ex} \boldnabla\bm{u} \dotp \hspace{-0.1ex} \boldnabla\bm{u}^{\hspace{-0.1ex}\T}
+\right)
+\end{equation*}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\displaystyle a_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \hspace{-0.25ex} \left(
+\frac{\partial u_{i}}{\partial \hspace{-0.1ex} X_{\hspace{-0.15ex}j}}
++ \frac{\partial u_{\hspace{-0.1ex}j}}{\partial \hspace{-0.1ex} X_{i}}
+- \frac{\partial u_{k}}{\partial X_{i}} \frac{\partial u_{k}}{\partial \hspace{-0.1ex} X_{\hspace{-0.15ex}j}}
+\right)
+\end{equation*}
 
 \subsection*{Seth\hbox{--}Hill family of abstract strain tensors}
 
@@ -332,7 +380,7 @@ B. R. Seth was the first to show that the Green and Almansi strain tensors are s
 = \frac{\raisebox{-0.2em}{1}}{2m} \left( \hspace{.1ex} \bm{U}^{2m} \hspace{-0.4ex} - \bm{E} \hspace{.2ex} \right)
 = \frac{\raisebox{-0.2em}{1}}{2m} \left( \bm{G}^{m} \hspace{-0.4ex} - \bm{E} \hspace{.1ex} \right) \end{equation*}
 
-\vspace{.1em} \noindent \en{For various values of}\ru{Для разных значений}~$m$
+\vspace{.1em} \noindent \en{For various}\ru{Для разных}~$m$
 \en{it gives}\ru{это даёт}
 
 \nopagebreak\begin{equation*}
@@ -349,7 +397,9 @@ B. R. Seth was the first to show that the Green and Almansi strain tensors are s
 
 The second\hbox{-}order approximation of these tensors is
 \[ \bm{D}_{(m)} \hspace{-0.2ex} =
-\mathboldepsilon + \smalldisplaystyleonehalf (\nabla \bm{u} )^{\T}\! \dotp \nabla \bm{u} - (1 - m) \hspace{0.2ex} \mathboldepsilon \dotp \mathboldepsilon \]
+\mathboldepsilon
++ \smalldisplaystyleonehalf \hspace{.1ex} \boldnabla\bm{u} \dotp \hspace{-0.1ex} \boldnabla\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
+- (1 - m) \hspace{0.2ex} \mathboldepsilon \dotp \mathboldepsilon \]
 
 \vspace{-0.25em} \noindent where ${\mathboldepsilon \equiv \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$ is the infinitesimal strain tensor.
 
@@ -390,12 +440,24 @@ aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2
 
 \begin{otherlanguage}{russian}
 
-Этот вопрос рассматривается во~всех курсах механики сплошной среды, но в~теории упругости можно обойтись и~без него.
+\en{This topic}\ru{Эта тема} рассматривается во~всех курсах механики сплошной среды, но в~теории упругости можно обойтись и~без неё.
 Среди разных моделей материального континуума упругое твёрдое тело выделяется тем, что полная система уравнений для~него выводится единой логически стройной процедурой (о~ней~--- ниже).
-Но чтобы читатель лучше увидел преимущества этой процедуры, мы пока следуем традиционным для механики сплошной среды путём.
+Но чтобы читатель лучше увидел преимущества этой процедуры, идём пока традиционным для механики сплошной среды путём.
 
-Итак, имеем поле скоростей в~пространственном описании
+Итак, есть поле скоростей в~пространственном описании ${\bm{v} \equiv \mathdotabove{\bm{R}} = \bm{v}(\bm{R}, t)}$.
+\en{Decomposing}\ru{Разлагая} \en{tensor}\ru{тензор} ${\hspace{-0.1ex}\boldnabla \bm{v} \hspace{-0.16ex} = \hspace{-0.2ex} \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}} = \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}i} \partial_i \mathdotabove{\bm{R}} = \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}i} \hspace{-0.2ex} \mathdotabove{\bm{R}}_i}$%
+\kern-0.15ex\footnote{For sufficiently smooth functions, partial derivatives always commute, space and time ones too. Thus
 
+\nopagebreak\vspace{-0.6em}\begin{equation*}
+\scalebox{0.92}{$\displaystyle
+\frac{\raisemath{-0.2em}{\partial}}{\partial q^i} \frac{\raisemath{-0.2em}{\partial \hspace{-0.1ex} \bm{R}}}{\partial t}
+= \frac{\raisemath{-0.2em}{\partial}}{\partial t} \frac{\raisemath{-0.2em}{\partial \hspace{-0.1ex} \bm{R}}}{\partial q^i}
+$}
+\hspace{.8em} \text{\en{or}\ru{или}} \hspace{.8em}
+\partial_i \mathdotabove{\bm{R}} = \hspace{-0.1ex} \mathdotabove{\bm{R}}_i
+\end{equation*}
+}
+\en{into symmetric and skew-symmetric parts}\ru{на симметричную и~кососимметричную части},
 
 ...
 
@@ -413,13 +475,13 @@ aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2
 
 \en{Take an~infinitesimal surface. The area vector by length is equal to~surface’s area and is directed along normal to~surface.}
 
-\ru{Возьмём бесконечно м\'{а}лую площ\'{а}дку. Вектор пл\'{о}щади по~длине равен пл\'{о}щади площ\'{а}дки и направлен по~нормали к~ней.}
+\ru{Возьмём бесконечно м\'{а}лую площ\'{а}дку. Вектор пл\'{о}щади по~длине равен пл\'{о}щади площ\'{а}дки и направлен по~нормали к~площ\'{а}дке.}
 
-\en{In~the~reference~(undeformed, original, initial, \inquotes{material}) configuration, the area vector can be represented as~${\bm{n} do}$. Surface’s area~$do$ is infinitely small, and~$\bm{n}$ is unit normal vector.}
+\en{In~the~undeformed~(reference, original, initial, \inquotes{material}) configuration, the area vector can be represented as~${\bm{n} do}$. Surface’s area~$do$ is infinitely small, and~$\bm{n}$ is unit normal vector.}
 
-\ru{В~отсчётной~(недеформированной, оригинальной, начальной, \inquotes{материальной}) конфигурации вектор пл\'{о}щади представ\'{и}м как~${\bm{n} do}$. Пл\'{о}щадь~$do$ бесконечно мал\'{а}, а~$\bm{n}$~--- единичный вектор нормали.}
+\ru{В~недеформированной~(отсчётной, оригинальной, начальной, \inquotes{материальной}) конфигурации вектор пл\'{о}щади представ\'{и}м как~${\bm{n} do}$. Пл\'{о}щадь~$do$ бесконечно мал\'{а}, а~$\bm{n}$~--- единичный вектор нормали.}
 
-\en{In~the~present~(actual, deformed, current, \inquotes{spatial}) configuration, the~same surface has area vector~${\mathboldN dO}$.}
+\en{In~the~present~(current, actual, deformed, \inquotes{spatial}) configuration, the~same surface has area vector~${\mathboldN dO}$.}
 
 \ru{В~текущей~(актуальной, деформированной, \inquotes{пространственной}) конфигурации та~же площ\'{а}дка имеет вектор пл\'{о}щади~${\mathboldN dO}$.}
 
@@ -482,11 +544,11 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 % • body force, within a force field
 % • contact force, by direct physical contact
 
-На~элементарный объём~$d\mathcal{V}$ действует некая сила~${\rho \bm{f} d\mathcal{V}}$; \hbox{если}~$\bm{f}$~--- массовая сила (действующая на~единицу массы), то~${\rho \bm{f}}$~--- объёмная. Такие силы происходят от силовых полей, например: силы тяжести, силы инерции в~неинерциальных системах отсчёта, электромагнитные силы при~наличии в~среде зарядов и~токов.
+На~элементарный объём~$d\mathcal{V}$ действует некая сила~${\rho \bm{f} d\mathcal{V}}$; \hbox{если}~$\bm{f}$~--- массовая сила (действующая на~единицу массы), то~${\rho \bm{f}}$~--- объёмная. Такие силы происходят от силовых полей, например: гравитационные силы (\inquotes{силы тяжести}), силы инерции в~неинерциальных системах отсчёта, электромагнитные силы при~наличии в~среде зарядов и~токов.
 
-На~элементарную поверхность~$dO\hspace{-0.12ex}$ действует поверхностная сила~${\bm{p} \hspace{0.2ex} dO\hspace{-0.12ex}}$. Это может~быть давление, трение, электростатическая сила при~сосредоточенных на~поверхности зарядах.
+На~элементарную поверхность~${dO\hspace{-0.12ex}}$ действует поверхностная сила~${\bm{p} \hspace{0.2ex} dO\hspace{-0.12ex}}$. Это может~быть давление, трение, электростатическая сила при~сосредоточенных на~поверхности зарядах.
 
-В~сплошной среде, как в~любой механической системе, различают силы внешние и~внутренние. Со~времён Euler’а и~Cauchy считают, что внутренние силы в~среде~--- это поверхностные силы близкодействия: на~любой бесконечно малой площ\'{а}дке~${\mathboldN dO\hspace{-0.12ex}}$ внутри тела действует сила~${\cauchystress_{\hspace{-0.2ex}\raisemath{-0.1em}{N}\hspace{0.1ex}} dO\hspace{-0.12ex}}$. Уточним: действует с~той стороны, куда направлена нормаль~$\mathboldN$.
+\en{In a~material continuum}\ru{В~материальном континууме}, \en{as in any mechanical system}\ru{как в~любой механической системе}, различают силы внешние и~внутренние. Со~времён Euler’а и~Cauchy считают, что внутренние силы в~среде~--- это поверхностные силы близкодействия: на~любой бесконечно малой площ\'{а}дке~${\mathboldN dO\hspace{-0.12ex}}$ внутри тела действует сила~${\cauchystress_{\hspace{-0.2ex}\raisemath{-0.1em}{N}\hspace{0.1ex}} dO\hspace{-0.12ex}}$. Уточним: действует с~той стороны, куда направлена нормаль~$\mathboldN$.
 
 Вектор~${\cauchystress_{\hspace{-0.2ex}\raisemath{-0.1em}{N}}\hspace{-0.1ex}}$ называется вектором напряжения на~площадке с~нормалью~$\mathboldN$. Согласно закону о~действии и~противодействии, ${\cauchystress_{\hspace{-0.2ex}\raisemath{-0.1em}{N}}\hspace{-0.1ex}}$ меняет знак, если~$\mathboldN$ направить в~противоположную сторону.
 (В~некоторых книгах последнее утверждение доказывается через баланс импульса для бесконечно короткого цилиндра с~основаниями ${\mathboldN dO\hspace{-0.12ex}}$ и~${- \hspace{0.1ex} \mathboldN dO\hspace{-0.12ex}}$.)

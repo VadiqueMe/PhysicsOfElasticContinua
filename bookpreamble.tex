@@ -1,6 +1,6 @@
 \usepackage[utf8]{inputenc}
 
-\usepackage[X2,T2A,OT1,T1]{fontenc}
+\usepackage[T2A,OT1,T1]{fontenc}
 \usepackage{ucs}
 
 \usepackage[english, ukrainian, russian]{babel}
@@ -15,13 +15,6 @@
 
 \usepackage{newunicodechar}
 \newunicodechar{×}{\ensuremath{\times}}
-
-%%\DeclareTextSymbolDefault{\CYRYAT}{X2}
-%%\DeclareTextSymbolDefault{\CYRFITA}{X2}
-%%\DeclareTextSymbolDefault{\CYRIZH}{X2}
-%%\DeclareTextSymbolDefault{\cyryat}{X2}
-%%\DeclareTextSymbolDefault{\cyrfita}{X2}
-%%\DeclareTextSymbolDefault{\cyrizh}{X2}
 
 % no more "Too many math alphabets used in version normal"
 %%\newcommand\hmmax{0}
@@ -162,7 +155,7 @@
 
 \newcommand\eigenvalue{\eta\hspace{.1ex}}
 
-\newcommand\smallparameter{\upnu}
+\newcommand\smallparameter{\upchi}
 
 \let\vec\relax
 
@@ -193,13 +186,17 @@
 \newcommand\T{{\mathpalette\raiseT\intercal}} % symbol for transpose
 \newcommand\raiseT[2]{\hspace{-0.02em}\raisebox{0.4ex}{$#1#2$}}
 
-\newcommand\Xcompanion{{\mathpalette\lowerXcompanion\times}} % symbol for X-companion
+% symbol for X-companion
+\newcommand\Xcompanion{{\mathpalette\lowerXcompanion\times}}
 \newcommand\lowerXcompanion[2]{\hspace{-0.16ex}\raisebox{-0.2ex}{$#1\bm{#2}$}\hspace{-0.24ex}}
 
 \makeatletter
 \newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
 \newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
 \makeatother
+
+% symbol for trace dot
+\newcommand\tracedot{\hspace{-0.1ex}\raisemath{-0.4ex}{\scalebox{.64}{$\bullet$}}\hspace{-0.1ex}}
 
 \newcommand\levicivita{\raisemath{0.2ex}{\mathrm{\in}}}
 %%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\bm{\levicivita}}}}
@@ -236,6 +233,8 @@
 
 \makeatother
 
+\newcommand\mathdotbelow[1]{\underaccent{\scalebox{.5}{$\bullet$}}{#1}}
+
 \newcommand\cosinematrix[1]{o_{#1}} % or \alpha
 \newcommand\cosinematrixdotted[1]{\mathdotabove{o}_{#1}}
 
@@ -257,6 +256,9 @@
 
 \newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
 \newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
+
+\newcommand\onefourth{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{4}}}
+\newcommand\smalldisplaystyleonefourth{\scalebox{0.8}{$\displaystyle \onefourth$}\hspace{.1ex}}
 
 \usepackage{scalerel}
 

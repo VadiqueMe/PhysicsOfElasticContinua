@@ -10,9 +10,9 @@
 \vspace{-2em}
 {\noindent \small
 
-\en{Geometrically linear model: displacements are small. Operators ${\hspace{-0.2ex}\boldnablacircled\hspace{0.1ex}}$ and~${\hspace{-0.2ex}\boldnabla\hspace{0.1ex}}$ are indistinguishable: \inquotesx{equations can be written in the reference configuration}[.]}
+\en{Geometrically linear model: displacements are small. Operators ${\hspace{-0.2ex}\boldnablacircled\hspace{.1ex}}$ and~${\hspace{-0.2ex}\boldnabla\hspace{.1ex}}$ are indistinguishable: \inquotesx{equations can~be written in the~reference configuration}[.]}
 
-\ru{Геометрически линейная модель: перемещения м\'{а}лые. Операторы ${\hspace{-0.2ex}\boldnablacircled\hspace{0.1ex}}$ и~${\hspace{-0.2ex}\boldnabla\hspace{0.1ex}}$ неразличимы: \inquotesx{уравнения можно пис\'{а}ть в~отсчётной конфигурации}[.]}
+\ru{Геометрически линейная модель: перемещения м\'{а}лые. Операторы ${\hspace{-0.2ex}\boldnablacircled\hspace{.1ex}}$ и~${\hspace{-0.2ex}\boldnabla\hspace{.1ex}}$ неразличимы: \inquotesx{уравнения можно пис\'{а}ть в~отсчётной конфигурации}[.]}
 
 \par}
 \vspace{-1em}
@@ -424,6 +424,9 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 %%\href{https://gallica.bnf.fr/ark:/12148/bpt6k33093/f475.image}{M\'{e}moire sur l'\'{e}quilibre int\'{e}rieur des~corps solides homog\'{e}nes~//
 %%Memoires present\'{e}s par Divers Savants, IV, 1833. 465\hbox{--}562~pp.}
 %%\emph{(ii)}~
+%
+% \inquotesx{Ce produit repr\'{e}sentait d’ailleurs le~double de la~force vive que le~ressort pouvait absorber par l’effet de sa flexion et qui \'{e}tait la~mesure naturelle de~sa~puissance}[.]
+%
 \bibauthor{Benoît Paul \'{E}mile Clapeyron}.
 \href{https://gallica.bnf.fr/ark:/12148/bpt6k3003h/f208.image}{M\'{e}moire sur le travail des forces \'{e}lastiques dans un corps solide \'{e}lastique d\'{e}form\'{e} par l’action de~forces ext\'{e}rieures~//
 Comptes rendus, XLVI, Janvier--Juin 1858. 208\hbox{--}212~pp.}
@@ -463,9 +466,11 @@ Comptes rendus, XLVI, Janvier--Juin 1858. 208\hbox{--}212~pp.}
 ${\hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.1em}{\mathcal{V}}} \hspace{.25ex} \Pi \hspace{.2ex} d\mathcal{V} = 0}$.
 По\-сколь\-ку $\Pi$ положительна, то и напряжение~$\mathboldtau$, и~деформация~$\mathboldepsilon$ без нагрузки~--- нулевые.
 
-\inquotes{\en{Paradox of elastostatics}\ru{Парадокс эластостатики}}
+\en{Paradox of elastostatics}\ru{Парадокс эластостатики}
 
 Накопленная потенциальная энергия деформации равна всего половине работы внешних сил.
+
+Accumulated potential energy of deformation accounts for (is equal to) only half the~work done by the~external forces, acting through displacements from the~unstressed configuration to the~equilibrium.
 
 {\small
 \en{Clapeyron’s theorem, taken literally, implies that the elastic stored energy accounts for only half of the energy spent to load the body; the remaining half of the work done to the body by the external forces is unaccounted for and is lost somewhere in reaching the equilibrium.}
@@ -482,12 +487,14 @@ ${\hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.1em}{\
 \href{http://www.cityu.edu.hk/ma/ws2007/notes/FTJElast.pdf}{About Clapeyron’s Theorem in Linear Elasticity~// Journal of~Elasticity, Volume 72, July 2003. Pages 145\hbox{--}172.}
 \par}
 
-Для решения парадокса в~теории распространена концепция \inquotes{бесконечномедленного постепенного статического нагружения} (\inquotes{infinitely slow gradual application of the load}).
+There is always heating due to energy dissipation.
+
+Для решения парадокса в~теории распространена концепция \inquotes{бесконечно медленного постепенного статического нагружения} (\inquotes{infinitely slow gradual application of the load}).
 
 {\small
-Статика рассматривает \inquotes{замороженное} равновесие, оно вне времени. Динамика~же нагружения до~равновесия это предыстория. В~линейной теории в~равновесии работа внешних сил на актуальных перемещениях, затраченная на~деформацию, равна удвоенной внутренней потенциальной энергии деформации. \inquotes{Запасается} всего половина потраченной энергии. Вторая половина это дополнительная энергия, она теряется до~обретения равновесия на~динамику~--- на~кинетическую энергию частиц (на \inquotes{диссипацию}), на~колебания и~волны. Так в~теории. Однако, в~реальности не~бывает ни~моментального \inquotes{мёртвого} нагружения, ни~бесконечномедленного \inquotes{следящего}. Это две крайности. Реальная динамика нагружения всегда где\hbox{-}то между ними. Посему теоретическая дополнительная энергия всегда больше той реальной \inquotes{диссипативной} кинетической, которая сопутствовала процессу нагружения, и~в~линейной теории она численно равна упругому потенциалу~--- половине работы внешних сил, той самой второй половине.
+Статика рассматривает \inquotes{замороженное} равновесие, оно вне времени. Динамика~же нагружения до~равновесия это предыстория. В~линейной теории в~равновесии работа внешних сил на актуальных перемещениях, затраченная на~деформацию, равна удвоенной внутренней потенциальной энергии деформации. \inquotes{Запасается} всего половина потраченной энергии. Вторая половина это дополнительная энергия, она теряется до~обретения равновесия на~динамику~--- на~кинетическую энергию частиц (на \inquotes{диссипацию}), на~колебания и~волны. Так в~теории. Однако, в~реальности не~бывает ни~моментального \inquotes{мёртвого} нагружения, ни~бесконечно медленного \inquotes{следящего}. Это две крайности. Реальная динамика нагружения всегда где\hbox{-}то между ними. Посему теоретическая дополнительная энергия всегда больше той реальной \inquotes{диссипативной} кинетической, которая сопутствовала процессу нагружения, и~в~линейной теории она численно равна упругому потенциалу~--- половине работы внешних сил, той самой второй половине.
 
-В~области~же бесконечномалых вариаций и~виртуальных работ, работа реальных внешних сил на виртуальных перемещениях точно равна вариации упругого потенциала. А~упругая среда есть такая, в~которой вариация работы сил внутренних (напряжений) на виртуальных деформациях это минус вариация потенциала.
+В~области~же бесконечно малых вариаций и~виртуальных работ, работа реальных внешних сил на виртуальных перемещениях точно равна вариации упругого потенциала. А~упругая среда есть такая, в~которой вариация работы сил внутренних (напряжений) на виртуальных деформациях это минус вариация потенциала.
 
 ${- \hspace{.1ex} \variation{\internalwork} \hspace{-0.2ex} = \variation{\Pi} = \variation{\externalwork} \hspace{-0.25ex}}$, когда варьируются только перемещения (нагрузки не варьируются). Потому в~принципе виртуальной работы и~варьируются лишь перемещения, чтобы виртуальная работа внешних неварьируемых реальных сил на вариациях перемещений была равна минус вариации внутренней энергии (и, для упругой среды, вариации упругого потенциала).
 \par}
@@ -932,7 +939,7 @@ named after \emph{Hu Haichang} and \emph{Kyuichiro\;Washizu}.
 Рассматривается изотропная среда в~декартовых координатах $x_i$ ($x_1$ и~$x_2$ в~плоскости, $\mathcolor{blue}{x_3}$) с~базисными ортами
 ${\bm{e}_i \hspace{-0.2ex} = \partial_i \bm{r}}$\hbox{\hspace{-0.12ex},}
 ${\bm{r} = x_i \bm{e}_i}$,
-${\bm{e}_i \bm{e}_i \hspace{-0.2ex} = \bm{E} \,\Leftrightarrow\hspace{.25ex} \bm{e}_i \hspace{-0.1ex} \dotp \bm{e}_j \hspace{-0.2ex} = \delta_{ij}}$.
+${\bm{e}_i \bm{e}_i \hspace{-0.2ex} = \bm{E} \,\Leftrightarrow\hspace{.25ex} \bm{e}_i \hspace{-0.1ex} \dotp \bm{e}_j \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j}}$.
 В~случае анти\-плос\-кой деформации (анти\-плос\-кого сдвига) поле перемещений~$\bm{u}$ параллельно координате $\mathcolor{blue}{x_3}$:
 ${\bm{u} = \antiplanedisplacement \mathcolor{blue}{\bm{e}_3}}$, и~$\antiplanedisplacement$ не~зависит от~$\mathcolor{blue}{x_3}$: ${\antiplanedisplacement \!=\! \antiplanedisplacement(x_1, x_2)}$, ${\partial_{\mathcolor{blue}{3}} \antiplanedisplacement \hspace{-0.1ex} = 0}$.
 

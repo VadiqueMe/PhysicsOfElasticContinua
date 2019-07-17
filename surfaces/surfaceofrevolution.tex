@@ -2,53 +2,51 @@
 
 \usepackage{tikz}
 \usepackage{tikz-3dplot} % needs tikz-3dplot.sty in same folder
-\usetikzlibrary{fpu}
 \usetikzlibrary{calc}
 \usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{angles, quotes}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.text}
 
+\usepackage{amsmath}
 \usepackage{bm}
+
+\usepackage{verbatim}
+
+\makeatletter
+\def\mathcolor#1#{\@mathcolor{#1}}
+\def\@mathcolor#1#2#3{%
+	\protect\leavevmode
+	\begingroup\color#1{#2}#3\endgroup
+}
+\makeatother
+
+\newcommand\const{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{const}}}}
+\newcommand\boldconst{\mathcolor{green!50!black}{\boldmath \const}}
+%%\newcommand\textconst{\scalebox{0.92}[0.98]{\textsf{const}}}
+
+\newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
 
 \begin{document}
 
 %%\begin{center}
 
-\def\cameraanglez{33}
-\tdplotsetmaincoords{44}{\cameraanglez} % orientation of camera
+\def\cameraanglesecond{66} % 66 % 90 for plane of meridian, 0 for plane of parallèle
+\def\cameraanglefirst{42} % 42 % 90 for plane of parallèle or meridian
+\tdplotsetmaincoords{\cameraanglefirst}{\cameraanglesecond} % orientation of camera
 
-\def\rodheight{10}
-\def\rodradius{0.2}
+\pgfmathsetmacro{\revolutionbeginangle}{-82} % 0
+\pgfmathsetmacro{\revolutionendangle}{199} % 360
 
-%%\pgfmathsetmacro{\beginanglez}{\cameraanglez}
-%%\pgfmathsetmacro{\endanglez}{\cameraanglez - 180}
-
-\pgfmathsetmacro{\rotationbeginangle}{-88} % 0
-\pgfmathsetmacro{\rotationendangle}{155} % 360
-
-\tikzset{%
-	tangent/.style={
-		decoration={
-			markings,% switch on markings
-			mark=
-			at position #1
-			with
-			{
-				\def\numberoftangent{\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}}
-				\coordinate (tangent point-\numberoftangent) at (0, 0);
-				\coordinate (tangent unit vector-\numberoftangent) at (1, 0);
-				\coordinate (tangent orthogonal unit vector-\numberoftangent) at (0, 1);
-			}
-		},
-		postaction=decorate
-	},
-	use tangent/.style={
-		shift=(tangent point-#1),
-		x=(tangent unit vector-#1),
-		y=(tangent orthogonal unit vector-#1)
-	},
-	use tangent/.default=1
-}
+\def\enlargetext{1.5}
+\def\enlargeless{0.8}
+\pgfmathsetmacro{\enlargelesstext}{\enlargeless * \enlargetext}
 
 \tikzset{%
 	show curve controls/.style={
@@ -70,130 +68,581 @@
 			decorate
 }	}	}
 
-\tikzset{pics/meridian/.style={code={
+\tikzset{pics/boldmeridianfirst/.style={code={
 
-	% meine ebene Kurve
+	% meine ebene Kurve, first part
 	\draw [ line width=\ebeneKurveThickness, color=\ebeneKurveColor, opacity=\ebeneKurveOpacity
 		, line cap=round
 		, tdplot_rotated_coords
 		%%, show curve controls
 		]
-		( 0, 0, 2.25 )
-		.. controls ( 0, 0.5, 1.75 ) and ( 0, 1.5, 1.7 ) ..
-		( 0, 2, 1.7 )
-		.. controls ( 0, 2.5, 1.7 ) and ( 0, 3.5, 1.7 ) ..
-		( 0, 5, 2.7 )
-		.. controls ( 0, 8, 4.7 ) and ( 0, 10, 8 ) ..
-		( 0, 16, 6 );
+		( 0, -2, 2.25 )
+		.. controls ( 0, -1.5, 1.75 ) and ( 0, -0.5, 1.7 ) ..
+		( 0, 0, 1.7 )
+		.. controls ( 0, 0.5, 1.7 ) and ( 0, 1.5, 1.5 ) ..
+		( 0, 3, 2.7 ) ;
+		%%{ [turn] ( 0, -1, 0 ) coordinate(tangentm1) ( 0, 0, 0 ) coordinate(tangent0) ( 0, 1, 0 ) coordinate(tangentp1) } ;
+
+}}}
+
+\tikzset{pics/boldmeridiansecond/.style={code={
+
+	% meine ebene Kurve, 2nd part
+	\draw [ line width=\ebeneKurveThickness, color=\ebeneKurveColor, opacity=\ebeneKurveOpacity
+		, line cap=round
+		, tdplot_rotated_coords
+		, postaction={decorate, decoration = {text along path,
+			text align = {left indent = {0.84\dimexpr\pgfdecoratedpathlength\relax}},
+			text format delimiters = {<}{>},
+			text = {<\normalsize>{\scalebox{\enlargelesstext}{$\varphi = \const$}}},
+			raise = 1.2ex}}
+		]
+		( 0, 3, 2.7 )
+		.. controls ( 0, 6, 5.1 ) and ( 0, 8, 7 ) ..
+		( 0, 15, 6 ) ;
 
 }}}
 
 \tikzset{pics/dottedmeridian/.style={code={
 
-	% meine ebene Kurve
+	% meine ebene Kurve, dotted
 	\draw [ line width=\ebeneKurveThickness, color=\ebeneKurveColor, opacity=\ebeneKurveOpacity
 		, line cap=round, dash pattern=on 0pt off 1.5\pgflinewidth
 		, tdplot_rotated_coords
 		%%, show curve controls
 		]
-		( 0, 0, 2.25 )
-		.. controls ( 0, 0.5, 1.75 ) and ( 0, 1.5, 1.7 ) ..
-		( 0, 2, 1.7 )
-		.. controls ( 0, 2.5, 1.7 ) and ( 0, 3.5, 1.7 ) ..
-		( 0, 5, 2.7 )
-		.. controls ( 0, 8, 4.7 ) and ( 0, 10, 8 ) ..
-		( 0, 16, 6 );
+		( 0, -2, 2.25 )
+		.. controls ( 0, -1.5, 1.75 ) and ( 0, -0.5, 1.7 ) ..
+		( 0, 0, 1.7 )
+		.. controls ( 0, 0.5, 1.7 ) and ( 0, 1.5, 1.5 ) ..
+		( 0, 3, 2.7 )
+		.. controls ( 0, 6, 5.1 ) and ( 0, 8, 7 ) ..
+		( 0, 15, 6 );
 
 }}}
 
-\pgfmathsetmacro{\rotationanglefrom}{\rotationbeginangle} % - 1
-\pgfmathsetmacro{\rotationangleto}{\rotationendangle + 1}
-\pgfmathsetmacro{\stepsofrotation}{ abs( \rotationendangle - \rotationbeginangle ) + 1 } % + 2
+\tikzset{pics/planeofmeridian/.style={code={
 
-\tikzset{pics/beginparallel/.style={code={
+	\def\meridianplaneheight{7.7}
+	\def\meridianxibegin{-2}
+	\def\meridianxiend{15}
 
-	\draw [ line width=\parallelThickness, color=\parallelColor
+	\fill [color=yellow!40!white, opacity=.5]
+		( 0, \meridianxibegin, 0 )
+		-- ( 0, \meridianxiend, 0 )
+		-- ( 0, \meridianxiend, \meridianplaneheight )
+		-- ( 0, \meridianxibegin, \meridianplaneheight ) ;
+
+}}}
+
+\pgfmathsetmacro{\rotationanglefrom}{\revolutionbeginangle - 0.5}
+\pgfmathsetmacro{\rotationangleto}{\revolutionendangle + 0.5}
+\pgfmathsetmacro{\stepsofrotation}{ abs( \revolutionendangle - \revolutionbeginangle ) + 2 }
+\pgfmathsetmacro{\stepsofrotationfirst}{ abs( \revolutionbeginangle ) + 1 }
+\pgfmathsetmacro{\stepsofrotationsecond}{ abs( \revolutionendangle ) + 1 }
+
+\tikzset{pics/paralleleBefore/.style={code={
+
+	\draw [ line width=\paralleleThickness, color=\paralleleColor
+		, line cap=round
+		, domain=\rotationanglefrom:0 ]
+		plot [ samples=\stepsofrotationfirst ] ( { \paralleleRadius*sin(\x) }, \paralleleXi, { \paralleleRadius*cos(\x) } ) ;
+
+}}}
+
+%%\tikzset{pics/paralleleAfter/.style={code={
+
+	%%\draw [ line width=\paralleleThickness, color=\paralleleColor
+		%%, line cap=round
+		%%, domain=0:\rotationangleto ]
+		%%plot [ samples=\stepsofrotationsecond ] ( { \paralleleRadius*sin(\x) }, \paralleleXi, { \paralleleRadius*cos(\x) } ) ;
+
+%%}}}
+
+\tikzset{pics/paralleleConstCoodrinate/.style={code={
+
+	\draw [ line width=\paralleleThickness, color=\paralleleColor
+		, line cap=round
+		, domain=0:\rotationangleto
+		, postaction={decorate, decoration = {text along path,
+			text align = {left indent = {0.42\dimexpr\pgfdecoratedpathlength\relax}},
+			text format delimiters = {<}{>},
+			text = {<\normalsize>{\scalebox{\enlargelesstext}{$s = \const$}}},
+			%%reverse path,
+			raise = 1.1ex}}
+		]
+		plot [ samples=\stepsofrotationsecond ] ( { \paralleleRadius*sin(\x) }, \paralleleXi, { \paralleleRadius*cos(\x) } ) ;
+
+}}}
+
+\tikzset{pics/dottedparalleleBefore/.style={code={
+
+	\draw [ line width=\paralleleThickness, color=\paralleleColor
 		, line cap=round, dash pattern=on 0pt off 1.5\pgflinewidth
-		, domain=\rotationanglefrom:\rotationangleto ]
-		plot [ samples=\stepsofrotation ] ( { 2.25*sin(\x) }, 0, { 2.25*cos(\x) } ) ;
+		, domain=\rotationanglefrom:0 ]
+		plot [ samples=\stepsofrotationfirst ] ( { \paralleleRadius*sin(\x) }, \paralleleXi, { \paralleleRadius*cos(\x) } ) ;
 
 }}}
 
-\tikzset{pics/midparallel/.style={code={
+\tikzset{pics/dottedparalleleAfter/.style={code={
 
-	\draw [ line width=\parallelThickness, color=\parallelColor
-		, line cap=round %%, dash pattern=on 0pt off 1.5\pgflinewidth
-		, domain=\rotationanglefrom:\rotationangleto ]
-		plot [ samples=\stepsofrotation ] ( { 2.7*sin(\x) }, 5, { 2.7*cos(\x) } ) ;
-
-}}}
-
-\tikzset{pics/endparallel/.style={code={
-
-	\draw [ line width=\parallelThickness, color=\parallelColor
+	\draw [ line width=\paralleleThickness, color=\paralleleColor
 		, line cap=round, dash pattern=on 0pt off 1.5\pgflinewidth
-		, domain=\rotationanglefrom:\rotationangleto ]
-		plot [ samples=\stepsofrotation ] ( { 6*sin(\x) }, 16, { 6*cos(\x) } ) ;
+		, domain=0:\rotationangleto ]
+		plot [ samples=\stepsofrotationsecond ] ( { \paralleleRadius*sin(\x) }, \paralleleXi, { \paralleleRadius*cos(\x) } ) ;
+
+}}}
+
+\tikzset{pics/parallelesBefore/.style={code={
+
+	% parallèles before 0°
+	\def\paralleleColor{lime!88!black}
+	\def\paralleleThickness{1.2pt}
+	\def\paralleleRadius{2.25}
+	\def\paralleleXi{-2}
+	\pic (i) {dottedparalleleBefore} ;
+	\def\paralleleRadius{6}
+	\def\paralleleXi{15}
+	\pic (i) {dottedparalleleBefore} ;
+	\def\paralleleColor{black}
+	\def\paralleleRadius{2.7}
+	\def\paralleleXi{3}
+	\pic (i) {paralleleBefore} ;
+
+}}}
+
+\tikzset{pics/parallelesAfter/.style={code={
+
+	% parallèles after 0°
+	\def\paralleleColor{lime!88!black}
+	\def\paralleleThickness{1.2pt}
+	\def\paralleleRadius{2.25}
+	\def\paralleleXi{-2}
+	\pic (i) {dottedparalleleAfter} ;
+	\def\paralleleRadius{6}
+	\def\paralleleXi{15}
+	\pic (i) {dottedparalleleAfter} ;
+	\def\paralleleColor{black}
+	\def\paralleleRadius{2.7}
+	\def\paralleleXi{3}
+	\pic (i) {paralleleConstCoodrinate} ;
 
 }}}
 
 \tikzset{pics/axisofrotation/.style={code={
 
-	% draw axis
-	\draw [line width=0.5pt, blue, line cap=round, dash pattern=on 2cm off 2pt on \the\pgflinewidth off 2pt]
-		( 0, -2, 0 ) -- ( 0, 20, 0 ) ;
+	\draw [ line width=0.5pt, -{Stealth[round, length=2.5mm, width=2mm]}, blue
+		, line cap=round, dash pattern=on 2cm off 2pt on \the\pgflinewidth off 2pt ]
+		( 0, -3.5, 0 ) -- ( 0, 18.5, 0 )
+	node [ pos=0.98, above, inner sep=0pt, outer sep=6pt ]
+		{\scalebox{\enlargetext}{$ \xi $}}
+	;
 
 }}}
 
 \tikzset{pics/axisofradius/.style={code={
 
-	% draw axis
-	\draw [line width=0.5pt, blue, line cap=round]
-		( 0, 0, -6 ) -- ( 0, 0, 6 ) ;
+	\ifthenelse{\NOT \cameraanglefirst = 0}
+	{%
+	\draw [ line width=0.5pt, -{Stealth[round, length=2.5mm, width=2mm]}, blue, line cap=round ]
+		( 0, \originalxicoordinate, -5 ) -- ( 0, \originalxicoordinate, 11 )
+	node [ pos=0.93, above left, inner sep=0pt, outer sep=5.5pt ]
+		{\scalebox{\enlargetext}{$ \rho $}}
+	;
+	} {}
+
+}}}
+
+\tikzset{pics/axisofangleandziaxis/.style={code={
+
+	\tdplotsetrotatedcoords{0}{\phiAngle}{0} ;
+	\draw [ line width=0.5pt, -{Stealth[round, length=2.5mm, width=2mm]}, blue, line cap=round
+		, tdplot_rotated_coords ]
+		( 0, \originalxicoordinate, 0 ) -- ( 0, \originalxicoordinate, 6 )
+	node [ pos=0.85, above left, shape=circle, inner sep=0pt, outer sep=16pt ]
+		{\scalebox{\enlargetext}{$ y $}} ;
+
+	\pgfmathsetmacro{\ziaxisAngle}{\phiAngle + 90}
+	\tdplotsetrotatedcoords{0}{\ziaxisAngle}{0} ;
+	\draw [ line width=0.5pt, -{Stealth[round, length=2.5mm, width=2mm]}, blue, line cap=round
+		, tdplot_rotated_coords ]
+		( 0, \originalxicoordinate, 0 ) -- ( 0, \originalxicoordinate, 4 )
+	node [ pos=0.8, below, shape=circle, inner sep=0pt, outer sep=7pt ]
+		{\scalebox{\enlargetext}{$ z $}} ;
 
 }}}
 
 \begin{tikzpicture}[scale=1
 	, tdplot_main_coords % use 3dplot
-	, /pgf/fpu, /pgf/fpu/output format=fixed % use fpu
 	]
 
-	\def\ebeneKurveThickness{2.5pt} ;
-	\def\ebeneKurveColor{lime!66!yellow} ;
-	\def\ebeneKurveOpacity{0.4} ;
+	%
+	\def\generateSurface{1}
+	%
+	\def\surfaceAngleStep{2}
 
-	\pgfmathsetmacro{\loopbeginangle}{\rotationbeginangle}
-	\pgfmathsetmacro{\loopendangle}{\rotationendangle}
-	\pgfmathsetmacro{\loopstepangle}{\loopbeginangle + 2}
-	\foreach \angle in {\loopbeginangle, \loopstepangle, ..., \loopendangle} {
+	\ifthenelse{\generateSurface = 1}
+	{%
+	\def\ebeneKurveThickness{2.5pt}
+	\def\ebeneKurveColor{lime!66!yellow}
+	\def\ebeneKurveOpacity{0.5}
+
+	\pgfmathsetmacro{\loopbeginangle}{\revolutionbeginangle}
+	\pgfmathsetmacro{\loopendangle}{\revolutionendangle}
+
+	\pgfmathsetmacro{\loopstepangle}{\loopbeginangle + \surfaceAngleStep}
+	\foreach \angle in {\loopbeginangle, \loopstepangle, ..., 0} {
 		\tdplotsetrotatedcoords{0}{\angle}{0} ;
-		\pic (rotated) {meridian} ;
+		\pic (rotated) {dottedmeridian} ;
 	}
+	} {}
 
-	\def\ebeneKurveColor{lime!88!black} ;
-	\def\ebeneKurveThickness{1.2pt} ;
-	\def\ebeneKurveOpacity{1} ;
-	\tdplotsetrotatedcoords{0}{\rotationbeginangle}{0} ;
+	\def\ebeneKurveColor{lime!88!black}
+	\def\ebeneKurveThickness{1.2pt}
+	\def\ebeneKurveOpacity{1}
+	\tdplotsetrotatedcoords{0}{\revolutionbeginangle}{0} ;
 	\pic (begin) {dottedmeridian} ;
-	\tdplotsetrotatedcoords{0}{\rotationendangle}{0} ;
+
+	\pic (b) {parallelesBefore} ;
+
+	\def\bezierpointbeginy{3} \def\bezierpointendy{6}
+	\def\bezierpointbeginz{2.7} \def\bezierpointendz{5.1}
+	\pgfmathsetmacro{\bezierpointlengthy}{\bezierpointendy - \bezierpointbeginy}
+	\pgfmathsetmacro{\bezierpointlengthz}{\bezierpointendz - \bezierpointbeginz}
+
+	\coordinate (pointOfInterest) at ( 0, \bezierpointbeginy, \bezierpointbeginz ) ;
+
+	\pgfmathsetmacro{\tangentlengthy}{0.8 * \bezierpointlengthy}
+	\pgfmathsetmacro{\tangentlengthz}{\bezierpointlengthz * \tangentlengthy / \bezierpointlengthy}
+	\pgfmathsetmacro{\tangentToMeridianY}{\bezierpointbeginy + \tangentlengthy}
+	\pgfmathsetmacro{\tangentToMeridianZ}{\bezierpointbeginz + \tangentlengthz}
+
+	\coordinate (tangentToMeridian) at ( 0, \tangentToMeridianY, \tangentToMeridianZ ) ;
+
+	\pgfmathsetmacro{\firstlinelengthy}{1.6 * \bezierpointlengthy}
+	\pgfmathsetmacro{\firstlinelengthz}{\bezierpointlengthz * \firstlinelengthy / \bezierpointlengthy}
+
+	% tangent plane (1st part)
+	\ifthenelse{\NOT \cameraanglefirst = 90 \OR \NOT \cameraanglesecond = 90}
+	{%
+	\pgfmathsetmacro{\secondlinelengthminus}{-1.25}
+
+	\fill [color=cyan!33!white, opacity=.25]
+		(pointOfInterest) { [rounded corners=0.5cm] --
+		( \secondlinelengthminus, \bezierpointbeginy, \bezierpointbeginz ) } --
+		( 0, \bezierpointbeginy + \firstlinelengthy, \bezierpointbeginz + \firstlinelengthz )
+		-- cycle ;
+	} {}
+
+	% plane of meridian (meridional plane)
+	\pic (m) {planeofmeridian} ;
+
+	\ifthenelse{\generateSurface = 1}
+	{%
+	\def\ebeneKurveThickness{2.5pt}
+	\def\ebeneKurveColor{lime!66!yellow}
+	\def\ebeneKurveOpacity{0.5}
+
+	\pgfmathsetmacro{\loopstepangle}{\surfaceAngleStep}
+	\foreach \angle in {0, \loopstepangle, ..., \loopendangle} {
+		\tdplotsetrotatedcoords{0}{\angle}{0} ;
+		\pic (rotated) {dottedmeridian} ;
+	}
+	} {}
+
+	\def\ebeneKurveColor{lime!88!black}
+	\def\ebeneKurveThickness{1.2pt}
+	\def\ebeneKurveOpacity{1}
+	\tdplotsetrotatedcoords{0}{\revolutionendangle}{0} ;
 	\pic (end) {dottedmeridian} ;
 
-	\def\parallelColor{lime!88!black} ;
-	\def\parallelThickness{1.2pt} ;
-	\pic (i) {beginparallel} ;
-	\pic (i) {endparallel} ;
+	\pic (a) {parallelesAfter} ;
 
-	\def\parallelColor{black} ;
-	\pic (i) {midparallel} ;
+	\def\originalxicoordinate{0.66}
+	\def\phiAngle{-42}
 
-	\tdplotsetrotatedcoords{0}{0}{0} ;
-	\def\ebeneKurveColor{black} ;
-	\def\ebeneKurveThickness{1.2pt} ;
-	\def\ebeneKurveOpacity{1} ;
-
-	\pic (i) {meridian} ;
 	\pic (i) {axisofrotation} ;
 	\pic (i) {axisofradius} ;
+	\pic (i) {axisofangleandziaxis} ;
+
+	\tdplotsetrotatedcoords{0}{0}{0} ;
+	\def\ebeneKurveColor{black}
+	\def\ebeneKurveThickness{1.2pt}
+	\def\ebeneKurveOpacity{1}
+
+	% meridian
+	\pic (i) {boldmeridianfirst} ;
+	\pic (i) {boldmeridiansecond} ;
+
+	% parametric coordinate
+	\def\ebeneKurveColor{blue}
+	\def\ebeneKurveThickness{0.5pt}
+	\def\ebeneKurveOpacity{1}
+	\def\shiftOfParamatericCoordinate{0.4}
+	\def\lengthOfParamatericCoordinate{2.2}
+	\begin{scope}
+		\clip ( 0, \originalxicoordinate, 0 )
+			-- ( 0, \lengthOfParamatericCoordinate, 0 )
+			-- ( 0, \lengthOfParamatericCoordinate, 10 )
+			-- ( 0, \originalxicoordinate, 10 )
+			-- cycle ;
+
+		\path ( 0, 0, \shiftOfParamatericCoordinate ) pic (s) {boldmeridianfirst} ;
+	\end{scope}
+	\draw [ line width=0.5pt, color=blue, fill=white ]
+		( 0, \originalxicoordinate, 1.69 + \shiftOfParamatericCoordinate ) circle ( 2pt ) ;
+	\draw [ line width=0.5pt, color=blue, -{Stealth[round, length=2.5mm, width=2mm]} ]
+		( 0, \lengthOfParamatericCoordinate, 2.16 + \shiftOfParamatericCoordinate )
+		-- ( 0, \lengthOfParamatericCoordinate + 0.2, 2.16 + \shiftOfParamatericCoordinate + 0.16 )
+	node [ pos=0, above left, inner sep=0pt, outer sep=3pt ]
+		{\scalebox{\enlargetext}{$ s $}} ;
+
+	% angular coordinate, phi is the angle to the plane of meridian
+	\tdplotdefinepoints%
+		( 0, \originalxicoordinate, 0 )%
+		( 4 * sin( \phiAngle ), \originalxicoordinate, 4 * cos( \phiAngle ) )%
+		( 0, \originalxicoordinate, 1 )
+	\tdplotdrawpolytopearc[color=blue, -{To[length=1.7mm, width=2mm]}]{4}%
+		{anchor=south, outer sep=4pt, blue}%
+		{\scalebox{\enlargetext}{$ \varphi $}}
+	\draw [ line width=0.5pt, color=blue, fill=white ]
+		( { 4 * sin( \phiAngle ) }, \originalxicoordinate, { 4 * cos( \phiAngle ) } ) circle ( 2pt ) ;
+
+	% psi angle to tangent
+	\ifthenelse{\NOT \cameraanglesecond = 0 \AND \NOT \cameraanglefirst = 0}
+	{%
+	\coordinate (pointXi) at ( 0, \bezierpointbeginy + 3, \bezierpointbeginz ) ;
+
+	\tdplotdefinepoints%
+		( 0, \bezierpointbeginy, \bezierpointbeginz )%
+		( 0, \bezierpointbeginy + 3, \bezierpointbeginz )%
+		( 0, \tangentToMeridianY, \tangentToMeridianZ )
+	\tdplotdrawpolytopearc[-{To[length=1.7mm, width=2mm]}]{2}{anchor=west}{\scalebox{\enlargetext}{$ \psi $}}
+
+	\draw [line width=0.5pt, blue, line cap=round]
+		(pointOfInterest) -- (pointXi) ;
+	} {}
+
+	% tangent plane (2nd part)
+	\ifthenelse{\NOT \cameraanglefirst = 90 \OR \NOT \cameraanglesecond = 90}
+	{%
+	\pgfmathsetmacro{\secondlinelengthplus}{4.4}
+
+	\fill [color=cyan!33!white, opacity=.25]
+		(pointOfInterest) { [rounded corners=1cm] --
+		( \secondlinelengthplus, \bezierpointbeginy, \bezierpointbeginz ) } --
+		( 0, \bezierpointbeginy + \firstlinelengthy, \bezierpointbeginz + \firstlinelengthz )
+		-- cycle ;
+	} {}
+
+	% tangent vectors
+
+	\draw [line width=1.25pt, color=orange, -{Latex[round, length=4mm, width=2.5mm]}]
+		(pointOfInterest) -- (tangentToMeridian)
+	node [above left, pos=0.77, shape=circle, inner sep=0pt, outer sep=2pt]
+		{\scalebox{\enlargetext}{$ \bm{t} \hspace{-0.1ex} \equiv \hspace{-0.2ex}
+		\scalebox{\enlargeless}{$ \displaystyle\frac{\raisemath{-0.2em}%
+			{\partial {\bm{r}}}}{\partial s} $} $}} ;
+
+	\ifthenelse{\NOT \cameraanglefirst = 90 \OR \NOT \cameraanglesecond = 90}
+	{%
+	\pgfmathsetmacro{\tangenttoparallelelength}{2.8}
+	\draw [line width=1.25pt, color=magenta, -{Latex[round, length=4mm, width=2.5mm]}]
+		(pointOfInterest) -- ( \tangenttoparallelelength, \bezierpointbeginy, \bezierpointbeginz )
+	node [above right, pos=0.6, shape=circle, inner sep=0pt, outer sep=-1.5pt]
+		{\scalebox{\enlargetext}{$ \bm{e}_{\varphi} \hspace{-0.4ex}
+		\equiv \hspace{-0.2ex}
+		\scalebox{\enlargeless}{$ \displaystyle\frac{\raisemath{-0.1em}%
+			{\partial \smash{\bm{e}_{\hspace{-0.15ex}\rho}}}}{\partial \varphi} $} $}} ;
+	} {}
+
+	% normal vector
+
+	\pgfmathsetmacro{\normallengthz}{2.4}
+	\pgfmathsetmacro{\normallengthy}{- \normallengthz * \bezierpointlengthz / \bezierpointlengthy}
+	\pgfmathsetmacro{\normalToMeridianY}{\bezierpointbeginy + \normallengthy}
+	\pgfmathsetmacro{\normalToMeridianZ}{\bezierpointbeginz + \normallengthz}
+
+	\coordinate (normalToMeridian) at ( 0, \normalToMeridianY, \normalToMeridianZ ) ;
+
+	\draw [line width=1.25pt, color=red, -{Latex[round, length=4mm, width=2.5mm]}]
+		(pointOfInterest) -- (normalToMeridian)
+	node [above right, pos=0.97
+		, inner sep=1pt, outer sep=3.3pt
+		, shape=circle %%, fill=white
+		] {\scalebox{\enlargetext}{$ \bm{n} $}} ;
+
+	% xi and rho unit vectors
+
+	\draw [line width=1.25pt, color=blue!75!black, -{Latex[round, length=4mm, width=2.5mm]}]
+		( 0, 6.6, 0 ) -- ++( 0, 2.7, 0 )
+	node [above, pos=0.51
+		, inner sep=1pt, outer sep=1pt
+		, shape=circle %%, fill=white
+		] {\scalebox{\enlargetext}{$ \bm{e}_{\hspace{-0.1ex}\xi} $}} ;
+
+	\draw [line width=1.25pt, color=blue!75!black, -{Latex[round, length=4mm, width=2.5mm]}]
+		( 0, \originalxicoordinate, 5.5 ) -- ++( 0, 0, 3.3 )
+	node [right, pos=0.5
+		, inner sep=1pt, outer sep=2pt
+		, shape=circle %%, fill=white
+		] {\scalebox{\enlargetext}{$ \bm{e}_{\hspace{-0.2ex}\rho}\scalebox{\enlargeless}{$(\varphi)$} $}} ;
+
+	% point of interest
+	\fill [blue] (pointOfInterest) circle ( 2.4pt ) ;
+
+	% psi angle to normal
+	\ifthenelse{\NOT \cameraanglesecond = 0 \AND \NOT \cameraanglefirst = 0}
+	{%
+	\coordinate (pointRho) at ( 0, \bezierpointbeginy, \bezierpointbeginz + 3 ) ;
+
+	\tdplotdefinepoints%
+		( 0, \bezierpointbeginy, \bezierpointbeginz )%
+		( 0, \bezierpointbeginy, \bezierpointbeginz + 3 )%
+		( 0, \normalToMeridianY, \normalToMeridianZ )
+	\tdplotdrawpolytopearc[-{To[length=1.7mm, width=2mm]}]{2.2}{anchor=south}{\scalebox{\enlargetext}{$ \psi $}}
+
+	\draw [line width=0.5pt, blue, line cap=round]
+		(pointOfInterest) -- (pointRho) ;
+
+	} {}
+
+	% location vector of point
+	\draw [line width=1.25pt, color=blue, -{Latex[round, length=4mm, width=2.5mm]}]
+		( 0, \originalxicoordinate, 0 ) -- (pointOfInterest)
+	node [below right, pos=0.65
+		, inner sep=1pt, outer sep=1pt
+		, shape=circle %%, fill=white
+		] {\scalebox{\enlargetext}{$ \bm{r}\scalebox{\enlargeless}{$(\varphi, s)$} $}} ;
+
+\end{tikzpicture}
+
+\vspace*{.5cm}
+
+\begin{equation*}\begin{array}{c}
+q^1 \hspace{-0.2ex} = \varphi
+\hspace{.1ex} , \:\:
+q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
+\\[.4em]
+\xi \hspace{-0.4ex}=\hspace{-0.32ex} \xi(s)
+\hspace{.1ex} , \:\:
+\rho \hspace{-0.32ex}=\hspace{-0.4ex} \rho\hspace{.1ex}(s)
+\hspace{.1ex} , \:
+\scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.12em}{\partial \hspace{-0.1ex} \rho}}{\partial \varphi} $} = 0
+\\[.6em]
+\bm{e}_{\xi} \hspace{-0.25ex} = \hspace{-0.1ex} \boldconst
+\hspace{.1ex} , \:\:
+%%\bm{e}_{\hspace{-0.1ex}\rho} \hspace{-0.45ex}=\hspace{-0.32ex}
+\bm{e}_{\hspace{-0.1ex}\rho}(\varphi) \hspace{-0.2ex}
+= \bm{e}_y \hspace{-0.2ex} \operatorname{cos} \varphi + \bm{e}_{\hspace{-0.1ex}z} \hspace{-0.2ex} \operatorname{sin} \varphi
+\end{array}\end{equation*}
+
+\begin{equation*}\begin{array}{c}
+\bm{r}(q^1 \hspace{-0.44ex}, q^{\hspace{.05ex}2}) \hspace{-0.2ex} = \bm{r}(\varphi, s) \hspace{-0.2ex}
+= \xi(s) \hspace{.1ex} \bm{e}_{\xi} + \rho\hspace{.1ex}(s) \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}\rho}(\varphi)
+\\[.3em]
+\bm{r} = \xi \bm{e}_{\xi} + \rho \hspace{.15ex} \bm{e}_{\hspace{-0.1ex}\rho}
+\end{array}\end{equation*}
+
+\begin{equation*}\begin{array}{c}
+\bm{r}_1 \hspace{-0.2ex} = \partial_1 \hspace{-0.1ex} \bm{r}
+= \partial_{\hspace{-0.1ex}\varphi} \bm{r}
+= \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \bm{r}}}{\partial \varphi} $}
+= \hspace{-0.1ex} \rho \hspace{.2ex} \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \bm{e}_{\hspace{-0.1ex}\rho}}}{\partial \varphi} $}
+= \hspace{-0.1ex} \rho \hspace{.15ex} \bm{e}_{\varphi}
+\hspace{.1ex} , \:\,
+\bm{e}_{\varphi} \hspace{-0.2ex} \equiv
+\scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \bm{e}_{\hspace{-0.1ex}\rho}}}{\partial \varphi} $}
+= - \hspace{-0.2ex} \operatorname{sin} \varphi \hspace{.2ex} \bm{e}_y \hspace{-0.1ex} + \hspace{.1ex} \operatorname{cos} \varphi \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}z}
+\\[.8em]
+%
+\bm{r}_2 \hspace{-0.2ex} = \partial_2 \bm{r}
+= \partial_{\hspace{-0.2ex}s} \bm{r}
+= \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \bm{r}}}{\partial s} $}
+= \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \xi}}{\partial s} $} \hspace{.2ex} \bm{e}_{\xi} \hspace{-0.1ex}
++ \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{-0.1ex} \rho}}{\partial s} $} \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}\rho} \hspace{-0.15ex}
+= \hspace{.1ex} \bm{t}
+\end{array}\end{equation*}
+
+\begin{equation*}\begin{array}{c}
+\bm{r}^1 \hspace{-0.25ex} = \rho^{\hspace{-0.2ex}\expminusone} \hspace{-0.1ex} \bm{e}_{\varphi}
+\\[.25em]
+\bm{r}^2 \hspace{-0.2ex} = \hspace{.1ex} \bm{t}
+\end{array}\end{equation*}
+
+\vspace{-0.5em}
+\begin{equation*}\begin{array}{c}
+\bm{r}_3 \hspace{-0.2ex} = \bm{r}^3 \hspace{-0.24ex}
+= \bm{n}
+= \bm{e}_{\varphi} \hspace{-0.25ex} \times \bm{t}
+\end{array}\end{equation*}
+
+\tikzset{
+	mark position/.style args={#1(#2)}{
+		postaction={ decorate,
+			decoration={
+				markings,
+				mark=at position #1 with \coordinate (#2);
+}	}	}	}
+
+\def\tikzunit{cm}
+\pgfmathsetmacro\scaleofunits{2.5}
+
+\begin{tikzpicture}[scale=\scaleofunits]
+
+	\def\dxilength{1.2}
+	\def\drhomultiplier{0.8}
+
+	\draw [line width=0.5pt, color=blue, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+		( 0, 0 ) -- ( 1.77, 0 ) ;
+
+	\draw [line width=0.5pt, color=orange, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+		( 0, 0 ) -- ( 1.42, \drhomultiplier * 1.42 ) ;
+
+	\draw [line width=0.6pt, color=blue, line cap=round]
+		( 0, 0 ) -- ( \dxilength, 0 )
+	node [pos=0.57, below, inner sep=0pt, outer sep=2.5pt] {$ d \xi $} ;
+
+	\draw [line width=0.6pt, color=blue, line cap=round]
+		( \dxilength, 0 ) -- ( \dxilength, \drhomultiplier*\dxilength )
+	node [pos=0.52, right, inner sep=0pt, outer sep=2pt] {$ d \hspace{-0.16ex} \rho $} ;
+
+	\draw [line width=1.2pt, color=black, domain=0:\dxilength, line cap=round, mark position=0.66(fornode)]
+		plot [samples=100] (\x, {\drhomultiplier*sin(deg(\x))}) ;
+	\node at (fornode) [black, below right, inner sep=0pt, outer sep=1.6pt]
+		{$ \scalebox{.66}{$\Delta$} s $} ;
+
+	%%\pgfmathsetmacro{\argumentatmid}{.5 * \dxilength}
+	%%\pgfmathsetmacro{\resultatmid}{\drhomultiplier*sin(deg(\argumentatmid))}
+	%%\pgfmathsetmacro{\dybydxatmid}{\drhomultiplier*cos(deg(\argumentatmid))}
+	%%\pgfmathsetmacro{\neighborhoodradius}{\resultatmid / \dybydxatmid}
+	%%\draw [line width=1.2pt, color=yellow, line cap=round]
+		%%( -\neighborhoodradius + \argumentatmid, - \neighborhoodradius*\dybydxatmid + \resultatmid )
+		%%-- ++( 2*\neighborhoodradius, 2*\neighborhoodradius*\dybydxatmid )
+	%%node [pos=0.5, above left, inner sep=0pt, outer sep=1.6pt]
+		%%{$ ds $} ;
+
+	\draw [line width=1.2pt, color=orange, domain=0:\dxilength, line cap=round, mark position=0.6(fornode)]
+		plot [samples=10] (\x, 0.8*\x) ;
+	\node at (fornode) [orange, above left, inner sep=0pt, outer sep=1.6pt]
+		{$ ds $} ;
+
+	\coordinate (O) at ( 0, 0 );
+	\coordinate (xi) at ( \dxilength, 0 );
+	\coordinate (ds) at ( \dxilength, \drhomultiplier*\dxilength );
+
+	\pic [draw, line width=0.5pt, color=black, -{To},
+		angle radius=\scaleofunits * 1.72 \tikzunit, angle eccentricity=1.05, "$\psi$"]
+	{ angle = xi--O--ds };
+
+	\node [black, inner sep=0pt, outer sep=0pt] at ( .8, -0.66 )
+		{$ \begin{array}{c}
+		\scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.1ex} \xi}}{d s} $}
+		\hspace{-0.1ex} = \operatorname{cos} \psi
+		\\[.66em]
+		\scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{-0.06ex} \rho}}{d s} $}
+		\hspace{-0.1ex} = \operatorname{sin} \psi
+		\end{array} $} ;
 
 \end{tikzpicture}
 

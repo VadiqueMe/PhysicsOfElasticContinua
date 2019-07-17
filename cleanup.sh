@@ -3,8 +3,8 @@
 rm -vf *.log
 rm -vf *.synctex*
 
-find . -iname "*.log" -type f -print0 | xargs -0 rm -v
-find . -iname "*.synctex*" -type f -print0 | xargs -0 rm -v
+find . -iname "*.log" -type f -print0 | xargs -0 rm -v 2>/dev/null
+find . -iname "*.synctex*" -type f -print0 | xargs -0 rm -v 2>/dev/null
 
 rm -f LICENSE.aux
 

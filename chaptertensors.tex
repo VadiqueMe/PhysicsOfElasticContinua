@@ -12,15 +12,12 @@
 
 \label{para:vectors}
 
-\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{M}{ention} of~tensors may scare away the reader, commonly avoiding needless complications. But tensors are introduced just because of their wonderful property of being invariant~--- independent of coordinate systems. I propose to~begin familiarizing with tensors from reminiscences of~vectors.}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{M}{ention} of~tensors may scare away the reader, commonly avoiding needless complications. But tensors are introduced just because of their wonderful property of being invariant~--- independent from coordinate systems. I propose to~begin familiarizing with tensors via reminiscences about vectors.}
 
-\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{У}{поминание} о~тензорах может отпугнуть читателя, обычно избегающего ненужных сложностей. Но тензоры вводятся лишь из\hbox{-}за своего чудесного свойства инвариантности~--- независимости от систем координат. Знакомство с~тензорами предлагаю начать с~воспоминаний о~векторах.}
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{У}{поминание} о~тензорах может отпугнуть читателя, обычно избегающего ненужных сложностей. Но тензоры вводятся лишь из\hbox{-}за своего чудесного свойства инвариантности~--- независимости от систем координат. Предлагаю начать знакомство с~тензорами через воспоминания о~векторах.}
 
-\en{Meet ${\bm{v}}$~--- a~vector; it is fully characterized by its length~(modulus, magnitude) and direction in space, but does not depend on units and methods of measurement neither lengths nor directions.}
+\en{Here’s}\ru{Вот} \en{vector}\ru{вектор}~$\bm{v}$, \en{it is pretty well characterized by its length~(modulus, magnitude) and direction in space}\ru{он вполне характеризуется своей длиной~(модулем) и~направлением в~пространстве}, \en{but}\ru{но} \en{does not depend on}\ru{не~зависит от} \en{methods}\ru{методов} \en{and}\ru{и}~\en{units}\ru{единиц} \en{of~measurements}\ru{измерений} \en{of neither lengths nor directions}\ru{ни~длин, ни~направлений}.
 
-\ru{Пусть ${\bm{v}}$~--- вектор; он вполне характеризуется своей длиной~(модулем) и~направлением в~пространстве, но не~зависит от~единиц и~методов измерений ни~длин, ни~направлений.}
-
-%%\begin{center}
 \begin{wrapfigure}[12]{o}{0.47\textwidth}
 \makebox[0.47\textwidth][c]{\begin{minipage}[t]{0.47\textwidth}
 \vspace{-1em}
@@ -83,15 +80,14 @@
 \vspace{-1.72em}\caption{}\label{fig:componentsofvector}
 \end{minipage}}
 \end{wrapfigure}
-%%\end{center}
 
-\en{Introduce some cartesian coordinate system with mutually perpendicular unit vectors of basis ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$.
+\en{Introduce a~cartesian coordinate system with mutually perpendicular unit vectors of~basis ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$.
 In such \hbox{a system}, dot products of basis vectors are equal to the~Kronecker~delta:}
 
-\ru{Введём некую декартову систему координат со~взаимно ортогональными ортами базиса ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$.
+\ru{Введём декартову систему координат со~взаимно ортогональными ортами базиса ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$.
 В~такой \hbox{системе} произведения базисных векторов равны \hbox{дельте}~Kronecker’а:}
 
-\nopagebreak\[ \bm{e}_i \dotp \bm{e}_j = \hspace{.12ex} \delta_{ij} = \hspace{.12ex} \scalebox{0.92}[0.92]{$\begin{cases}
+\nopagebreak\[ \bm{e}_i \dotp \bm{e}_j \hspace{-0.12ex} = \hspace{.12ex} \delta_{i\hspace{-0.1ex}j} = \hspace{.12ex} \scalebox{0.92}[0.92]{$\begin{cases}
 1, \;i = j \\
 0, \;i \neq j
 \end{cases}$} \]
@@ -101,15 +97,16 @@ In such \hbox{a system}, dot products of basis vectors are equal to the~Kronecke
 \ru{Разлагая вектор~${\bm{v}}$ по базису ${\bm{e}_i}$~(${i = 1, 2, 3}$), имеем компоненты вектора~(\figref{fig:componentsofvector})}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{vectorcomponents}
-\bm{v} = \scalebox{0.9}[0.9]{$\displaystyle \sum_{i=1}^3$} {v_i \bm{e}_i} \hspace{-0.1ex} \equiv \hspace{.1ex} v_i \bm{e}_i \hspace{0.1ex}, \;\;
+\bm{v} = \scalebox{0.9}[0.9]{$\displaystyle \sum_{i=1}^3$} \hspace{.25ex} {v_i \bm{e}_i} \hspace{-0.1ex} \equiv \hspace{.1ex} v_i \bm{e}_i
+\hspace{.1ex} , \;\;
 v_i \hspace{-0.1ex} = \bm{v} \dotp \bm{e}_i \hspace{-0.16ex} = |\bm{v}| \operatorname{cos} \measuredangle ({\bm{v}, \bm{e}_i}).
 \end{equation}
 
 {\small\setlength{\abovedisplayskip}{1pt}\setlength{\belowdisplayskip}{1pt}
 
-\en{Here and hereinafter, Einstein’s summation convention is accepted: having an~index repeated twice in a~single term implies summation over this index. More than two times in~the~same term index can’t be repeated. And a~non-repeating index is called free, it’s identical in both parts of~equation. There are examples:}
+\en{Here and hereinafter, Einstein’s summation convention is accepted: having an~index repeated twice in a~single term implies summation over this index. Index can’t be repeated more than two times in~the~same term. And a~non-repeating index is called free, it’s identical in both parts of~equation. There are examples:}
 
-\ru{Здесь и~далее принимается соглашение о~суммировании~Einstein’а: наличие дважды повторённого индекса в~одночлене подразумевает суммирование по~этому индексу. Более двух раз в~том~же одночлене индекс повторяться не~может. А~неповторяющийся индекс называется свободным, он одинаков в~обеих частях равенства. Вот примеры:}
+\ru{Здесь и~далее принимается соглашение о~суммировании~Einstein’а: наличие дважды повторённого индекса в~одночлене подразумевает суммирование по~этому индексу. Индекс не~может повторяться более двух раз в~одном и~том~же одночлене. А~неповторяющийся индекс называется свободным, он одинаков в~обеих частях равенства. Вот примеры:}
 
 \nopagebreak\vspace{-0.2em}\[
 \sigma = \tau_{ii} \hspace{0.1ex}, \;\;
@@ -118,11 +115,11 @@ m_i \hspace{-0.16ex} = e_{ijk} \hspace{.16ex} x_j f_k \hspace{0.1ex}, \;\;
 a_i \hspace{-0.16ex} = \lambda b_i + \mu c_i \hspace{0.1ex}.
 \]
 
-\vspace{-0.2ex} \noindent \en{But following equations are incorrect}\ru{Следующие~же равенства некорректны}
+\vspace{-0.2ex} \noindent \en{But these equations are incorrect}\ru{Эти~же равенства некорректны}
 
 \nopagebreak\vspace{-0.2em}\[
-a = b_{kkk} \hspace{0.1ex}, \;\;
-c = f_i + g_k \hspace{0.1ex}, \;\;
+a = b_{kkk} \hspace{.1ex}, \;\;
+c = f_i + g_k \hspace{.1ex}, \;\;
 a_{ij} \hspace{-0.25ex} = k_i \gamma_{ij} \hspace{0.1ex}.
 \]
 \par}
@@ -144,9 +141,9 @@ a_{ij} \hspace{-0.25ex} = k_i \gamma_{ij} \hspace{0.1ex}.
 {beginComponentOfVector}{endComponentOfVector}%
 {${\scriptstyle v_i \bm{e}_i \hspace{0.2ex}\dotp\hspace{0.32ex} \bm{e}_k \hspace{.2ex}=\hspace{.4ex} v_i \hspace{.1ex} \delta_{ik}}$}
 
-\en{Connection between basis vectors of an~\inquotes{old} and~a~\inquotesx{new}[---] \inquotesx{rotated}[---] orthonormal systems is represented by a~rotation matrix (a~matrix of \inquotes{direction} cosines)~${\cosinematrix{i'k}\hspace{.1ex}}$:}
+\en{Orthonormal basis vectors of an~\inquotes{old} and~a~\inquotesx{new}[---] rotated~--- cartesian coordiantes are connected via rotation matrix (matrix of~\inquotes{direction} cosines) ${\cosinematrix{i'k}\hspace{.1ex}}$:}
 
-\ru{Связь между базисными векторами \inquotes{старой} и~\inquotesx{новой}[---] \inquotesx{повёрнутой}[---] ортонормальных систем представима матрицей поворота (матрицей \inquotes{направляющих} косинусов)~${\cosinematrix{i'k}\hspace{.1ex}}$:}
+\ru{Ортонормальные базисные векторы \inquotes{старых} и~\inquotesx{новых}[---] повёрнутых~--- декартовых координат связываются через матрицу поворота (матрицу \inquotes{направляющих} косинусов) ${\cosinematrix{i'k}\hspace{.1ex}}$:}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}
 \bm{e}'_{i} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \bm{e}_k \hspace{0.1ex}, \;\:
@@ -155,25 +152,23 @@ a_{ij} \hspace{-0.25ex} = k_i \gamma_{ij} \hspace{0.1ex}.
 
 \en{\vspace{-0.1em} Matrix of cosines is orthogonal, meaning that it inverses when transposing:}
 
-\ru{\vspace{-0.1em} Матрица косинусов ортогональна, то~есть при~транспонировании она обращается:}
+\ru{\vspace{-0.1em} Матрица косинусов ортогональна, то~есть она обращается при~транспонировании:}
 
 \vspace{-0.64em}\begin{equation}\label{orthogonalityofcosinematricies}
-\cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'k} \hspace{-0.16ex} = \hspace{0.2ex} \cosinematrix{k'i} \hspace{.1ex} \cosinematrix{k'j} \hspace{-0.16ex} = \hspace{0.2ex} \delta_{ij}
+\cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'k} \hspace{-0.16ex} = \hspace{.2ex} \cosinematrix{k'i} \hspace{.1ex} \cosinematrix{k'j} \hspace{-0.16ex} = \hspace{.2ex} \delta_{i\hspace{-0.1ex}j}
 \end{equation}
 
-\vspace{-0.2em} \noindent (\en{proof}\ru{доказательство}: $\delta_{ij} \hspace{-0.16ex} = \bm{e}'_i \hspace{-0.12ex} \dotp \bm{e}'_j \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \bm{e}_k \hspace{-0.12ex} \dotp \cosinematrix{j'n} \hspace{.1ex} \bm{e}_n \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'n} \delta_{kn} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'k} \hspace{0.1ex}$).
+\vspace{-0.2em} \noindent (\en{proof}\ru{доказательство}: $\delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex} = \bm{e}'_i \hspace{-0.12ex} \dotp \bm{e}'_j \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \bm{e}_k \hspace{-0.12ex} \dotp \cosinematrix{j'n} \hspace{.1ex} \bm{e}_n \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'n} \delta_{kn} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'k} \hspace{0.1ex}$).
 
-\en{\vspace{.2em} Orthogonal transformation of vector components}
-
-\ru{\vspace{.2em} Ортогональное преобразование компонент вектора}
+\vspace{.2em} \en{Orthogonal transformation of vector components}\ru{Ортогональное преобразование компонент вектора}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{orthotransform:1}
 v'_i = v_k \hspace{.2ex} \bm{e}_k \hspace{-0.12ex}\dotp \bm{e}'_i \hspace{-0.12ex} = \cosinematrix{i'k} \hspace{.2ex} v_k
 \end{equation}
 
-\en{\vspace{-0.1em}\noindent can be used to define a~vector itself. Suppose that in each orthonormal basis~${\bm{e}_i}$ a~triplet of~numbers~${v_i}$ is given, and on~transition to a~new orthonormal basis it is transformed according to~\eqref{orthotransform:1}; then this triplet of components represents an~invariant object~--- vector~${\bm{v}}$.}
+\en{\vspace{-0.1em}\noindent can be used to define a~vector itself. Suppose that in each orthonormal basis~${\bm{e}_i}$ a~triplet of~numbers~${v_i}$ is known, and on~transition to a~new orthonormal basis it is transformed according to~\eqref{orthotransform:1}; then this triplet of components represents an~invariant object~--- vector~${\bm{v}}$.}
 
-\ru{\vspace{-0.2em}\noindent может быть использовано для определения самог\'{о} вектора. Пусть в~каждом ортонормированном базисе~${\bm{e}_i}$ даётся тройка чисел~${v_i}$, и~при~переходе к~новому ортонормированному базису она преобразуется согласно~\eqref{orthotransform:1}; тогда эта тройка компонент представляет инвариантный объект~--- вектор~${\bm{v}}$.}
+\ru{\vspace{-0.2em}\noindent может быть использовано для определения самог\'{о} вектора. Пусть в~каждом ортонормированном базисе~${\bm{e}_i}$ известна тройка чисел~${v_i}$, и~при~переходе к~новому ортонормированному базису она преобразуется согласно~\eqref{orthotransform:1}; тогда эта тройка компонент представляет инвариантный объект~--- вектор~${\bm{v}}$.}
 
 \en{Multiplying an~orthogonal matrix by components of any vector retains length~(modulus) of this vector:}
 
@@ -187,61 +182,140 @@ v'_i = v_k \hspace{.2ex} \bm{e}_k \hspace{-0.12ex}\dotp \bm{e}'_i \hspace{-0.12e
 
 \label{para:tensoranditscomponents}
 
-\en{When in each orthonormal basis~${\bm{e}_i}$ we have a~set of~nine (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) numbers ${B_{ij}}$~(${i, j = 1, 2, 3}$), which is transformed during transition to~a~new~(rotated) orthonormal basis as}
+%% Conversion of tensor’s components from one orthonormal basis to another is done through an orthogonal transformation.
 
-\ru{Когда в~каждом ортонормальном базисе~${\bm{e}_i}$ имеем совокупность девяти (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) чисел ${B_{ij}}$~(${i, j = 1, 2, 3}$), преобразующуюся при~переходе к~новому~(повёрнутому) ортонормальному базису как}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{W}{hen} in each orthonormal basis~${\bm{e}_i}$ we have a~set of~nine (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) numbers ${B_{ij}}$~(${i, j = 1, 2, 3}$), which is transformed during transition to~a~new~(rotated) orthonormal basis as}
+
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{К}{огда} в~каждом ортонормальном базисе~${\bm{e}_i}$ имеем набор девяти (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) чисел ${B_{ij}}$~(${i, j = 1, 2, 3}$), преобразующийся при~переходе к~новому~(повёрнутому) ортонормальному базису как}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{orthotransform:2}
-B'_{ij} \hspace{-0.16ex} = \cosinematrix{i'k} \hspace{.1ex} \cosinematrix{j'n} \hspace{.16ex} B_{kn} \hspace{0.1ex},
+B'_{ij} \hspace{-0.16ex} = \cosinematrix{i'm} \hspace{.1ex} \cosinematrix{j'n} \hspace{.16ex} B_{mn} \hspace{0.1ex},
 \end{equation}
 
 \vspace{-0.2em} \noindent
-\en{then this set of~components represents an~invariant object~--- a~tensor of~second complexity (of~second valence, bivalent)}\ru{тогда эта совокупность компонент представляет инвариантный объект~--- тензор второй сложности (второй валентности, бивалентный)}
-${^2\!\bm{B}}$.
+\en{then this set of~components represents an~invariant object~--- tensor of~second complexity (of~second valence, bivalent)}\ru{тогда этот набор компонент представляет инвариантный объект~--- тензор второй сложности (второй валентности, бивалентный)}
+${\hspace{-0.1ex}^2\!\bm{B}}$.
 
-%% Using some orthonormal basis to represent a tensor as set of components. Conversion of tensor’s components from one cartesian basis to another is done through an orthogonal transformation.
+\en{In other words}\ru{Иными словами}, \en{tensor}\ru{тензор}~${^2\!\bm{B}}$ \en{reveals in every basis as a~collection (matrix) of its components}\ru{проявляется в~каждом базисе совокупностью (матрицей) своих компонент}~${B_{ij}}$, \en{changing along with a~basis according to}\ru{меняющейся вместе с~базисом согласно}~\eqref{orthotransform:2}.
+\en{Widespread in literature}\ru{Широк\'{о} распространённая в~литературе} \en{substitution}\ru{подмена} \en{of tensors for matrices}\ru{тензоров матрицами} \en{leads to mistakes}\ru{ведёт к~ошибкам,} \en{if you don’t track the~basis}\ru{если вы не~следите за~базисом,} \en{to which these matrices correspond}\ru{которому эти матрицы соответствуют}.
 
-\en{In other words, tensor~${^2\!\bm{B}}$ reveals in each basis as a~set~(matrix) of its components~${B_{ij}}$, changing along with a~basis according to~\eqref{orthotransform:2}. Attempts, widespread in literature, to~replace tensors with matrices lead to mistakes if you don’t track a~basis to which these matrices correspond.}
+% dyad
 
-\ru{Иными словами, тензор~${^2\!\bm{B}}$ проявляется в~каждом базисе набором~(матрицей) своих компонент~${B_{ij}}$, меняющейся вместе с~базисом согласно~\eqref{orthotransform:2}. Распространённые в~литературе попытки заменить тензоры матрицами ведут к~ошибкам, если не~следить за~базисом, которому эти матрицы соответствуют.}
+\en{The key example}\ru{Ключевой пример} \en{of second complexity tensor}\ru{тензора второй сложности}\en{ is}\ru{~---} \en{a~dyad}\ru{диада}.
+\en{Having two vectors}\ru{Имея два вектора} ${\bm{a} \hspace{-0.2ex} = \hspace{-0.2ex}  a_i \bm{e}_i}$ \en{and}\ru{и}~${\bm{b} \hspace{-0.2ex} = \hspace{-0.2ex} b_i \bm{e}_i}$,
+\en{in each basis}\ru{в~каждом базисе}~${\bm{e}_i}$ \en{assume}\ru{пол\'{о}жим} ${d_{ij} \hspace{-0.2ex} \equiv a_i b_j}$.
+\en{It’s easy to~see}\ru{Легко увидеть} \en{how components}\ru{как компоненты}~${d_{ij}}$ \en{transform}\ru{преобразуются} \en{according to}\ru{согласно}~\eqref{orthotransform:2}:
 
-\begin{otherlanguage}{russian}
+\nopagebreak\vspace{-0.3em}\begin{equation*}
+\scalebox{0.96}[1]{$
+a'_i \hspace{-0.2ex} = \cosinematrix{i'm} a_m
+, \;
+b\kern+0.1ex'_{\hspace{-0.2ex}j} \hspace{-0.2ex} = \cosinematrix{j'n} b_n
+\hspace{-0.2ex} \:\Rightarrow\: \hspace{-0.1ex}
+d\kern+0.1ex'_{\hspace{-0.1ex}ij} \hspace{-0.2ex} = a'_i b\kern+0.1ex'_{\hspace{-0.2ex}j} \hspace{-0.2ex}
+= \cosinematrix{i'm} a_m \cosinematrix{j'n} b_n \hspace{-0.2ex}
+= \cosinematrix{i'm} \cosinematrix{j'n} d_{mn}
+$} .
+\end{equation*}
 
-Ключевой пример тензора второй сложности~--- диада. Пусть ${\bm{a}}$ и~${\bm{b}}$~--- векторы. В~каждом базисе положим ${D_{ij} \hspace{-0.2ex} \equiv a_i b_j}$. Легко убедиться, что преобразование~\eqref{orthotransform:2} для~${D_{ij}}$ справедливо. Получившийся тензор ${^2\!\!\,\bm{D}}$ называется диадным произведением~(dyadic product) или просто диадой~(dyad); его пишут как~${\bm{a} \otimes \bm{b}}$ или~${\bm{a} \bm{b}}$. Предпочтём второе.
+\vspace{-0.25em} \noindent \en{Resulting}\ru{Получающийся} \en{tensor}\ru{тензор}~${^2\hspace{-0.25ex}\bm{d}}$
+\en{is called}\ru{называется} \ru{диадным произведением~(}dyadic product\ru{)} \en{or}\ru{или} \en{just}\ru{просто} \ru{диадой~(}dyad\ru{)}
+\en{and}\ru{и} \en{is written as}\ru{пишется как}~${\bm{a} \hspace{-0.15ex} \otimes \hspace{-0.15ex} \bm{b}}$ \en{or}\ru{или}~${\bm{a} \bm{b}}$.
+\en{I choose notation}\ru{Я выбираю запись} ${^2\hspace{-0.25ex}\bm{d} = \hspace{-0.1ex} \bm{a} \bm{b}}$ \en{without}\ru{без} \en{symbol}\ru{символа}~${\otimes}$.
 
-Ещё~один существенный пример двухвалентного тензора~--- единичный тензор~(он~же~\inquotes{метрический}). Для~любого декартова~(cartesian) базиса положим ${E_{ij} \hspace{-0.2ex} \equiv \hspace{0.12ex} \delta_{ij} \hspace{-0.2ex} = \bm{e}_i \dotp \bm{e}_j}$. Это действительно компоненты тензора, \eqref{orthotransform:2} действует. Назовём этот тензор ${\bm{E}}$.
+% unit tensor
 
-Неизменность компонент при~повороте базиса делает тензор~${\bm{E}}$ изотропным. Ненулевых векторов с~таким свойством нет (все компоненты нуль\hbox{-}вектора~$\bm{0}$ равны нулю в~любом базисе).
+\en{Essential example}\ru{Существенный пример} \en{of a~bivalent tensor}\ru{двухвалентного тензора}\ru{~---}\en{ is}
+\en{the~unit tensor}\ru{единичный тензор}~(\en{other names}\ru{другие именования}\ru{~---}\en{ are} \en{identity tensor}\ru{тождественный тензор} \en{and}\ru{и} \en{metric tensor}\ru{метрический тензор}).
+\en{Let}\ru{Пусть} \en{for any}\ru{для~любого} \en{orthonormal}\ru{отронормального}~(\ru{декартова, }cartesian) \en{basis}\ru{базиса}
+${E_{ij} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{e}_i \dotp \bm{e}_{\hspace{-0.15ex}j} \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j}}$.
+\en{These are really components of~tensor}\ru{Это действительно компоненты тензора}, \eqref{orthotransform:2} \en{is actual}\ru{актуально}:
+${E\kern+0.1ex'_{\hspace{-0.12ex}mn} \hspace{-0.25ex} = \cosinematrix{m'\hspace{-0.1ex}i} \cosinematrix{n'\hspace{-0.2ex}j} E_{ij} \hspace{-0.2ex} = \cosinematrix{m'\hspace{-0.1ex}i} \cosinematrix{n'\hspace{-0.1ex}i} \hspace{-0.2ex} = \delta_{mn}}$.
+\en{I write}\ru{Я пишу} \en{this tensor}\ru{этот тензор} \en{as}\ru{как}~${\bm{E}}$
+(\en{other popular choices}\ru{другие популярные варианты}\ru{~---}\en{ are} $\bm{I}$ \en{and}\ru{и}~${\hspace{-0.1ex} ^2\hspace{-0.1ex}\bm{1}}$).
 
-Третий пример связан с~линейным преобразованием векторов: ${\bm{b}}$ есть линейная функция от ${\bm{a}}$. В~каждом базисе имеем ${b_i = c_{ij} a_j}$. Коэффициенты преобразования меняются при~перемене базиса:
-\[
-\scalebox{0.96}[1]{$b\hspace{0.16ex}'_{\hspace{-0.16ex}i} = c\hspace{0.16ex}'_{\hspace{-0.16ex}ij} a'_j = \cosinematrix{i'k} b_k = \cosinematrix{i'k} c_{kn} a_n ,\;
-a_n \hspace{-0.25ex} = \cosinematrix{j'n} a'_j \;\Rightarrow\; c\hspace{0.16ex}'_{\hspace{-0.16ex}ij} \hspace{-0.2ex} = \cosinematrix{i'k} \cosinematrix{j'n} c_{kn}$}.
-\]
-\noindent Видим, что множество матриц ${c_{ij}}$, ${c\hspace{0.16ex}'_{\hspace{-0.16ex}ij}}$, \dots, определяющих одно и~то~же линейное преобразование ${\bm{a}}$ в~${\bm{b}}$, но в~разных базисах, сводится к~одному инвариантному объекту~--- тензору второй сложности ${\hspace{-0.1ex} ^2\hspace{-0.2ex}\bm{c}}$. Многие авторы так и~определяют тензор через линейное преобразование.
+\en{Immutability of~components upon any rotation of a~basis}\ru{Неизменяемость компонент при~любом повороте базиса} \en{makes tensor}\ru{делает тензор}~${\bm{E}}$ \en{isotropic}\ru{изотропным}. \en{There are no non\hbox{-}null vectors with such property}\ru{Ненулевых векторов с~таким свойством нет} (\en{all components}\ru{все компоненты} \en{of null vector}\ru{нуль\hbox{-}вектора}~$\bm{0}$ \en{are zero}\ru{равны нулю} \en{in any basis}\ru{в~любом базисе}).
 
-Четвёртый пример~--- коэффициенты инвариантной квадратичной формы ${\digamma(\bm{a}) = f_{\hspace{-0.2ex}ij} \hspace{.2ex} a_i a_j}$, где ${a_i}$ и~${a_j}$~--- компоненты векторного аргумента~${\bm{a}}$, и~результат~${\digamma}$ не~зависит от базиса. Из равенств ${\digamma' = f'_{\hspace{-0.2ex}ij} \hspace{.2ex} a'_i a'_j = \digamma}$ следует~\eqref{orthotransform:2} для~коэффициентов ${f_{\hspace{-0.2ex}ij}}$.
+% linear transformation
 
-Обратимся теперь к тензорам б\'{о}льших сложностей. Тензор третьей валентности ${^3\!\!\;\bm{C}}$ представляется через совокупность ${3^3 \hspace{-0.24ex}=\hspace{-0.12ex} 27}$ чисел~${C_{ijk}}$, преобразующихся как
+\en{The next example is related to a~linear transformation of~vectors}\ru{Следующий пример связан с~линейным преобразованием векторов}.
+\en{If}\ru{Если} ${\bm{b} \hspace{-0.2ex} = \hspace{-0.2ex} b_i \bm{e}_i}$ \en{is}\ru{есть} \en{linear}\ru{линейная} (\en{preserving}\ru{сохраняющая} \en{addition}\ru{сложение} \en{and}\ru{и} \en{multiplication by number}\ru{умножение на~число}) \en{function}\ru{функция} \en{of}\ru{от}~${\bm{a} \hspace{-0.2ex} = \hspace{-0.2ex} a_{\hspace{-0.15ex}j} \bm{e}_{\hspace{-0.2ex}j}}$, \en{then}\ru{то} ${b_i \hspace{-0.2ex} = c_{ij} a_{\hspace{-0.15ex}j}}$ \en{in every basis}\ru{в~каждом базисе}. \en{Transformation coefficients}\ru{Коэффициенты преобразования}~${c_{ij}}$ \en{alter when a~basis rotates}\ru{меняются, когда базис вращается}:
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{orthotransform:3}
-C\hspace{0.16ex}'_{\hspace{-0.32ex}ijk}
+\nopagebreak\vspace{-0.3em}\begin{equation*}
+\scalebox{0.96}[1]{$
+b\hspace{.16ex}'_{\hspace{-0.16ex}i}
+= c\hspace{.16ex}'_{\hspace{-0.16ex}ij} a'_{\hspace{-0.15ex}j}
+= \cosinematrix{i'k} b_k
+= \cosinematrix{i'k} c_{kn} a_n
+, \;
+a_n \hspace{-0.25ex} = \cosinematrix{j'n} a'_{\hspace{-0.15ex}j}
+\:\Rightarrow\:
+c\hspace{0.16ex}'_{\hspace{-0.16ex}ij} \hspace{-0.2ex}
+= \cosinematrix{i'k} \cosinematrix{j'n} c_{kn}
+$} .
+\end{equation*}
+
+\vspace{-0.25em} \noindent \en{It turns out that}\ru{Оказывается,} \en{a~set of~matrices}\ru{множество матриц}~${c_{ij}}$, ${c\hspace{0.16ex}'_{\hspace{-0.16ex}ij}}$, \dots, \en{describing}\ru{описывающих} \en{the~same}\ru{одно и~то~же} \en{linear transformation}\ru{линейное преобразование} ${\bm{a} \mapsto \bm{b}}$, \en{but in various bases}\ru{но в~разных базисах}, \en{represents}\ru{представляет} \en{a~single invariant object}\ru{один инвариантный объект}\;--- \en{tensor of second complexity}\ru{тензор второй сложности}~${\hspace{-0.1ex} ^2\hspace{-0.2ex}\bm{c}}$.
+\en{And many}\ru{И~многие} \en{book authors}\ru{авторы книг} \en{introduce}\ru{вводят} \en{tensors}\ru{тензоры} \en{in that way}\ru{таким путём}, \en{by means of}\ru{посредством} \en{linear transformations}\ru{линейных преобразований}.
+
+% bilinear form
+
+\en{And}\ru{И} \en{the~last example}\ru{последний пример}\en{ is}\ru{~---} \en{about}\ru{о} \en{a~bilinear form}\ru{билинейной форме} ${\digamma \hspace{-0.2ex} = f_{\hspace{-0.1ex}i\hspace{-0.1ex}j} \hspace{.2ex} a_i b_{\hspace{-0.1ex}j}}$,
+\en{where}\ru{где}
+${f_{\hspace{-0.1ex}i\hspace{-0.1ex}j}}$\ru{~---}\en{ are} \en{coefficients}\ru{коэффициенты},
+${a_i}$ \en{and}\ru{и}~${b_{\hspace{-0.1ex}j}}$\ru{~---}\en{ are} \en{components of vector arguments}\ru{компоненты векторных аргументов} ${\bm{a} \hspace{-0.2ex} = \hspace{-0.2ex} a_i \bm{e}_i}$ \en{and}\ru{и}~${\bm{b} \hspace{-0.2ex} = \hspace{-0.2ex} b_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j}}$.
+\en{The~result}\ru{Результат}~${\digamma \hspace{-0.15ex}}$ \en{is invariant}\ru{инвариантен} (\en{independent from basis}\ru{независим от базиса}),
+${\digamma' \hspace{-0.2ex} = f\hspace{.1ex}'_{\hspace{-0.5ex}i\hspace{-0.1ex}j} \hspace{.2ex} a'_i b\hspace{.1ex}'_{\hspace{-0.2ex}j} \hspace{-0.1ex} = \digamma \hspace{-0.2ex}}$,
+\en{this gives transformation}\ru{это даёт преобразование}~\eqref{orthotransform:2} \en{for coefficients}\ru{для коэффициентов}~${f_{\hspace{-0.1ex}i\hspace{-0.1ex}j}}$:
+
+\nopagebreak\vspace{-0.15em}\begin{equation*}
+f\hspace{.1ex}'_{\hspace{-0.5ex}i\hspace{-0.1ex}j} \hspace{.2ex} a'_i b\hspace{.1ex}'_{\hspace{-0.2ex}j} \hspace{-0.1ex} = f_{\hspace{-0.1ex}mn} \hspace{.4ex} \tikzmark{beginComponentOfFirstVector} \hspace{-0.2ex} a_m \tikzmark{endComponentOfFirstVector} \hspace{.2ex} \tikzmark{beginComponentOfSecondVector} b_n \hspace{-0.2ex} \tikzmark{endComponentOfSecondVector}
+\;\Rightarrow\;
+f\hspace{.1ex}'_{\hspace{-0.5ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} = \cosinematrix{i'm} \hspace{.1ex} \cosinematrix{j'n} \hspace{.16ex} f_{\hspace{-0.1ex}mn}
+\hspace{.1ex} .
+\end{equation*}
+\AddUnderBrace[line width=.75pt][-0.1ex, -0.1ex][xshift=-0.44em, yshift=.1em]%
+{beginComponentOfFirstVector}{endComponentOfFirstVector}{${\scriptstyle \cosinematrix{\hspace{-0.1ex}i'\hspace{-0.2ex}m} a'_i}$}
+\AddUnderBrace[line width=.75pt][.1ex, -0.1ex][xshift=.44em, yshift=.1em]%
+{beginComponentOfSecondVector}{endComponentOfSecondVector}{${\scriptstyle \cosinematrix{\hspace{-0.2ex}j'\hspace{-0.2ex}n} b\hspace{.1ex}'_{\hspace{-0.2ex}j}}$}
+
+\vspace{-0.1em} \noindent \en{If}\ru{Если} ${f_{\hspace{-0.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j}}$, \en{then}\ru{то} ${\digamma \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j} \hspace{.1ex} a_i b_{\hspace{-0.1ex}j} \hspace{-0.2ex} = a_i b_i}$\:--- \en{scalar product}\ru{скалярное произведение} (\en{inner product}\ru{внутреннее произведение}, dot product) \en{of~two vectors}\ru{двух векторов}.
+\en{When}\ru{Когда} \en{both arguments}\ru{оба агрумента} \en{are the~same}\ru{одинаковые}~(${\bm{b} = \bm{a}}$), \en{such}\ru{такой} \en{homogeneous polynomial}\ru{однородный многочлен~(полином)} \en{of~second degree}\ru{второй степени} (\en{quadratic}\ru{квадратный}) \en{of~vector components}\ru{от~компонент вектора} ${\digamma \hspace{-0.2ex} = f_{\hspace{-0.1ex}i\hspace{-0.1ex}j} \hspace{.2ex} a_i a_{\hspace{-0.15ex}j}}$ \en{is called}\ru{называется} \en{a~quadratic form}\ru{квадратичной формой}.
+
+% more complex tensors
+
+\en{Now for more complex tensors}\ru{Теперь для более сложных тензоров} (\en{of~valence larger than two}\ru{валентности больше двух}).
+\en{Tensor of~third complexity}\ru{Тензор третьей сложности}\;${^3\hspace{-0.1ex}\bm{C}}$ \en{is represented by a~collection of}\ru{представляется совокупностью} ${3^3 \hspace{-0.25ex} = \hspace{-0.1ex} 27}$ \en{numbers}\ru{чисел} ${C_{i\hspace{-0.1ex}jk}}$, \en{transforming as}\ru{преобразующихся как}
+
+\nopagebreak\en{\vspace{-0.5em}}\ru{\vspace{-0.1em}}\begin{equation}\label{orthotransform:3}
+C\hspace{0.16ex}'_{\hspace{-0.32ex}i\hspace{-0.1ex}jk} \hspace{-0.2ex}
 = \cosinematrix{i'p} \hspace{.1ex} \cosinematrix{j'q} \hspace{.1ex} \cosinematrix{k'r} \hspace{.16ex} C_{pqr}
 \hspace{.1ex} .
 \end{equation}
 
 % triad
 
-Простейший пример~--- триада из векторов $\bm{a}$, $\bm{b}$ и~$\bm{c}$:
-\[ C_{ijk} \equiv a_i b_j c_k \:\Leftrightarrow\: {^3\!\!\;\bm{C}} = \bm{a} \bm{b} \bm{c} \hspace{0.1ex}. \]
+\en{The primary example}\ru{Первичный пример}\ru{~---}\en{ is} \en{a~triad}\ru{триада} \en{of~three vectors}\ru{от трёх векторов} ${\bm{a} \hspace{-0.2ex} = \hspace{-0.2ex} a_i \bm{e}_i}$, ${\bm{b} \hspace{-0.2ex} = \hspace{-0.2ex} b_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j}}$ \en{and}\ru{и}~${\bm{c} \hspace{-0.2ex} = \hspace{-0.2ex} c_k \bm{e}_k}$:
 
-Отметим, что ортогональные преобразования~\eqref{orthotransform:3} и~\eqref{orthotransform:2}~--- результаты своеобразного \inquotes{повторения} векторного~\eqref{orthotransform:1}. Читатель без труда напишет преобразование компонент тензора любой сложности и~для~примера приведёт соответствующую полиаду.
+\nopagebreak\vspace{-0.8em}\begin{equation*}
+t_{i\hspace{-0.1ex}jk} \hspace{-0.2ex} \equiv a_i b_{\hspace{-0.1ex}j} c_k
+\:\Leftrightarrow\:
+{^3\bm{t}} = \bm{a} \bm{b} \bm{c}
+\hspace{.1ex} .
+\end{equation*}
 
-Векторы с~пребразованием компонент~\eqref{orthotransform:1} суть тензоры первой сложности.
+\en{It is seen that}\ru{Видно, что} \en{orthogonal transformations}\ru{ортогональные преобразования}~\eqref{orthotransform:3} \en{and}\ru{и}~\eqref{orthotransform:2}\ru{~---}\en{ are} \en{results of}\ru{результаты} \inquotes{\en{repeating}\ru{повторения}} \en{vector’s}\ru{векторного}~\eqref{orthotransform:1}.
+\en{The~reader}\ru{Читатель} \en{will easily compose}\ru{легко сост\'{а}вит} \en{a~transformation of~components}\ru{преобразование компонент} \en{for}\ru{для} \en{tensor of any complexity}\ru{тензора любой сложности} \en{and}\ru{и} \en{will write}\ru{нап\'{и}шет} \en{a~corresponding polyad}\ru{соответствующую полиаду} \en{as~an~example}\ru{как~пример}.
 
-В~конце этого параграфа обратимся к~самым простым объектам~--- скалярам, то~есть тензорам нулевой сложности. Скаляр это одно ${(3^0 \hspace{-0.24ex}=\hspace{-0.12ex} 1)}$ число, не~зависящее от~базиса: масса, энергия, температура и~др. Но что такое, например, компоненты~\eqref{vectorcomponents} вектора ${\bm{v} = v_i \bm{e}_i}$ и~${v_i = \bm{v} \dotp \bm{e}_i}$? Если не~скаляры, то~что? Односложно ответить невозможно. В~каждом фиксированном базисе ${\bm{e}_i}$, конечно, векторы, а~${v_i}$~--- скаляры.
+\en{Vectors}\ru{Векторы} \en{with transformation}\ru{с~пребразованием}~\eqref{orthotransform:1} \en{are}\ru{суть} \en{tensors}\ru{тензоры} \en{of first complexity}\ru{первой сложности}.
 
-\end{otherlanguage}
+\en{In~the~end}\ru{Напоследок} \en{consider}\ru{рассмотрим} \en{the~least complex objects}\ru{наименее сложные объекты}\:--- \en{scalars}\ru{скаляры}, \en{they are}\ru{они~же} \en{tensors}\ru{тензоры} \en{of~zeroth complexity}\ru{нулевой сложности}.
+\en{A~scalar}\ru{Скаляр} \en{is}\ru{это} \en{a~single}\ru{одно} ${(3^0 \hspace{-0.24ex}=\hspace{-0.12ex} 1)}$ \en{number}\ru{число}, \en{which doesn’t depend on basis}\ru{которое не~зависит от~базиса}: \en{energy}\ru{энергия}, \en{mass}\ru{масса}, \en{temperature}\ru{температура} \en{et~al.}\ru{и~др.}
+\en{But what are}\ru{Но что такое} \en{components}\ru{компоненты}, \en{for example}\ru{к~примеру}, \en{of~vector}\ru{вектора} ${\bm{v} = v_i \bm{e}_i}$, ${v_i = \bm{v} \dotp \bm{e}_i}$?
+\en{If}\ru{Если} \en{not scalars}\ru{не~скаляры}, \en{then}\ru{то} \en{what}\ru{что}?
+%%Односложно ответить невозможно.
+\en{Here could be no plain answer}\ru{Здесь не~может быть простого ответа}.
+\en{In~each particular basis}\ru{В~каждом отдельном базисе}, ${\bm{e}_i}$\ru{~---}\en{ are} \en{vectors}\ru{векторы} \en{and}\ru{и}~${v_i}$\ru{~---}\en{ are} \en{scalars}\ru{скаляры}.
 
 \en{\section{Operations with tensors}}
 
@@ -249,11 +323,9 @@ C\hspace{0.16ex}'_{\hspace{-0.32ex}ijk}
 
 \label{para:operationswithtensors}
 
-\en{There’re four of them.}
+\en{There’re four of them}\ru{Этих действий четыре}.
 
-\ru{Таких действий четыре.}
-
-\en{The first~--- linear combination~--- aggregates addition and~multiplication by~number. Arguments of this operation and its result are of the same complexity. Combining two tensors looks like this:}
+\en{The first~--- linear combination~--- aggregates addition and~multiplication by~number. Arguments of this operation and its result are of the~same complexity. Combining two tensors looks like this:}
 
 \ru{Первое~--- линейная комбинация~--- объединяет сложение и~умножение на~число. Аргументы этого действия и~его результат~--- одинаковой сложности. Комбинирование двух тензоров выглядит так:}
 
@@ -264,25 +336,38 @@ C\hspace{0.16ex}'_{\hspace{-0.32ex}ijk}
 \vspace{-0.1em} \noindent \en{Here}\ru{Здесь}
 $\lambda$ \en{and}\ru{и}~$\mu$~\en{are}\ru{---} \en{scalar coefficients}\ru{коэффициенты\hbox{-}скаляры};
 $\bm{a}$, $\bm{b}$ \en{and}\ru{и}~$\bm{c}$~\en{are}\ru{---} \en{tensors of same complexity}\ru{тензоры одной и~той~же сложности}.
-\en{It’s easy to show}\ru{Легко показать,} \en{that}\ru{что} \en{components}\ru{компоненты} \en{of~the~result}\ru{результата}~$\bm{c}$ \en{satisfy}\ru{удовлетворяют} \en{orthogonal transformation}\ru{ортогональному преобразованию} \en{like}\ru{вида}~\eqref{orthotransform:2}.
+\en{It’s easy to show}\ru{Легко показать,} \en{that}\ru{что} \en{components}\ru{компоненты} \en{of~the~result}\ru{результата}~$\bm{c}$ \en{satisfy}\ru{удовлетворяют} \en{an~orthogonal transformation}\ru{ортогональному преобразованию} \en{like}\ru{вида}~\eqref{orthotransform:2}.
 
-\begin{otherlanguage}{russian}
+\inquotesx{\en{Decomposition of~vector by~basis}\ru{Разложение вектора по~базису}}[---] \en{representation}\ru{представление} \en{of a~vector}\ru{вектора} \en{as the~sum}\ru{суммой}~${\bm{v} = v_i \bm{e}_i}$~--- \en{is nothing more but}\ru{это не~что~иное как} \en{the~linear combination}\ru{линейная комбинация} \en{of~basis vectors}\ru{векторов базиса}~${\bm{e}_i}$ \en{with coefficients}\ru{с~коэффициентами}~${v_i}$.
 
-\inquotesx{Разложение вектора по~базису}[---] представление вектора суммой~${\bm{v} = v_i \bm{e}_i}$~--- это не~что~иное, как линейная комбинация векторов базиса~${\bm{e}_i}$ с~коэффициентами~${v_i}$.
+\en{The second operation is multiplication~(tensor product, direct product). It~takes arguments of~any complexities, returning result of cumulative complexity. Examples:}
 
-Второе действие это умножение. Сложности сомножителей~--- любые, сложность произведения~--- суммарная. Примеры:
-\begin{equation}\label{action:2}
+\ru{Второе действие это умножение~(тензорное произведение, прямое произведение). Оно принимает аргументы любых сложностей, возвращая результат суммарной сложности. Примеры:}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{action:2}
 \begin{array}{rcl}
-v_i a_{jk} \hspace{-0.16ex} = C_{ijk} & \Leftrightarrow & \bm{v} \, {^2\hspace{-0.2ex}\bm{a}} = {^3\!\!\;\bm{C}},\\[0.1em]
-a_{ij} B_{kem} \hspace{-0.16ex} = D_{ijkem} & \Leftrightarrow & {^2\hspace{-0.2ex}\bm{a}} \, {^3\!\!\,\bm{B}} = {^5\!\!\,\bm{D}}.
+v_i a_{jk} \hspace{-0.16ex} = C_{ijk} & \Leftrightarrow & \bm{v} \, {^2\hspace{-0.2ex}\bm{a}} = {^3\hspace{-0.15ex}\bm{C}},
+\\[.1em]
+a_{ij} B_{abc} \hspace{-0.16ex} = D_{ijabc} & \Leftrightarrow & {^2\hspace{-0.2ex}\bm{a}} \hspace{.25ex} {^3\hspace{-0.33ex}\bm{B}} = {^5\hspace{-0.33ex}\bm{D}}.
 \end{array}\hspace{1.5em}
 \end{equation}
 
-\vspace{-0.1em} Рассмотрев преобразование совокупностей ${C_{ijk}}$ и~${D_{ijkem}}$ при~повороте базиса, видим, что это действительно компоненты тензоров. Простейший пример умножения~--- диадное произведение векторов ${^2\hspace{-0.2em}\bm{A} \hspace{-0.15ex} = \bm{b}\bm{c}}$.
+\vspace{-0.1em}
+\en{Transformation of a~collection of result’s components}\ru{Преобразование совокупности компонент результата}, \en{such as}\ru{такой как}~${C_{ijk} \hspace{-0.16ex} = v_i a_{jk}}$, \en{during rotation of~basis}\ru{при повороте базиса}\en{ is}\ru{~---} \en{orthogonal}\ru{ортогональное}, \en{similar to}\ru{подобное}~\eqref{orthotransform:3}, \en{thus}\ru{посему} \en{here’s no~doubt that this collection is a~set of tensor components}\ru{тут нет сомнений, что эта совокупность есть набор компонент тензора}.
 
-Третье действие называется свёрткой~(contraction). Это действие над одним тензором, других \inquotes{участников} нет. Грубо говоря, свёртка состоит в~суммировании компонент по какой\hbox{-}либо паре индексов. В~результате свёртки сложность тензора уменьшается на~два. Для~тензора, например, третьей сложности~${^3\!\!\,\bm{D}}$ возможны следующие варианты свёртки, приводящие к~векторам~${\bm{a}}$, ${\bm{b}}$ и~${\bm{c}}$:
-\begin{equation}\label{action:3}
-a_{i} = D_{kki},\;\; b_{i} = D_{kik},\;\; c_{i} = D_{ikk} \hspace{0.1ex}.
+\en{Primary}\ru{Первичный} \en{and}\ru{и} \en{already known}\ru{уж\'{е} знакомый} (\en{from}\ru{по}~\pararef{para:tensoranditscomponents}) \en{subtype of~multiplication}\ru{подвид умножения}\en{ is}\ru{~---} \en{the~dyadic product of two vectors}\ru{диадное произведение двух векторов}
+${^2\hspace{-0.25em}\bm{A} \hspace{-0.15ex} = \bm{b}\bm{c}}$.
+
+\begin{otherlanguage}{russian}
+
+Третье действие называется свёрткой~(contraction). Это действие над одним тензором, других \inquotes{участников} нет. Грубо говоря, свёртка состоит в~суммировании компонент по какой\hbox{-}либо паре индексов. В~результате свёртки сложность тензора уменьшается на~два. Для~тензора, например, третьей сложности~${^3\hspace{-0.33ex}\bm{D}}$ возможны следующие варианты свёртки, приводящие к~векторам~${\bm{a}}$, ${\bm{b}}$ и~${\bm{c}}$:
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{action:3}
+a_{i} = D_{kki} \hspace{.1ex} ,
+\;\;
+b_{i} = D_{kik} \hspace{.1ex} ,
+\;\;
+c_{i} = D_{ikk} \hspace{.1ex} .
 \end{equation}
 
 \vspace{-0.16em} При повороте базиса
@@ -295,98 +380,133 @@ a'_{i} = D'_{kki} = \tikzmark{BeginDeltaPQBrace} {\cosinematrix{k'p} \hspace{.1e
 \vspace{-0.25em} \noindent что доказывает тензорный характер результата свёртки.
 
 Для тензора второй сложности возможен лишь один вариант свёртки, приводящий к~скаляру, называемому первым инвариантом или~следом тензора
-\nopagebreak\vspace{-0.16em}\[
-B_{kk} \hspace{-0.2ex} = \mathrm{I}\hspace{0.16ex}(\bm{B}) \equiv \operatorname{tr} \bm{B}.
-\]
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{B}\tracedot \hspace{.1ex} \equiv \hspace{.1ex}
+\operatorname{tr} \bm{B} \hspace{.1ex} \equiv \hspace{.1ex}
+\mathrm{I}\hspace{0.16ex}(\bm{B})
+= B_{kk}
+\hspace{.1ex} .
+\end{equation*}
 
 \vspace{-0.16em} След единичного тензора (\inquotes{свёртка дельты Кронекера}) есть размерность пространства:
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\operatorname{tr} \bm{E} = \delta_{kk} \hspace{-0.2ex} = \delta_{11} \hspace{-0.2ex} + \delta_{22} \hspace{-0.2ex} + \delta_{33} \hspace{-0.1ex} = 3.
+\operatorname{tr} \bm{E} = \bm{E}\tracedot = \delta_{kk} \hspace{-0.2ex} = \delta_{11} \hspace{-0.2ex} + \delta_{22} \hspace{-0.2ex} + \delta_{33} \hspace{-0.1ex} = 3.
 \end{equation*}
 
-Четвёртое действие именуется по\hbox{-}разному: перестановка индексов, жонглирование индексами, index swap и~др. Из компонент тензора образуется новая совокупность величин с~другой последовательностью индексов, результатом является тензор той~же сложности. Из тензора~${^3\!\!\,\bm{D}}$, например, можно получить тензоры ${^3\!\!\bm{A}}$, ${^3\!\!\,\bm{B}}$, ${^3\!\!\;\bm{C}}$ с~компонентами
-\vspace{0.08em}\begin{equation}\label{action:4}
+Четвёртое действие именуется по\hbox{-}разному: перестановка индексов, жонглирование индексами, index swap, index juggling и~др.
+Из компонент тензора образуется новая совокупность величин с~другой последовательностью индексов, результатом является тензор той~же сложности.
+Из тензора~${^3\hspace{-0.16em}\bm{D}}$, например, могут быть получены тензоры ${^3\hspace{-0.28em}\bm{A}}$, ${^3\hspace{-0.15em}\bm{B}}$, ${^3\hspace{-0.05em}\bm{C}}$ с~компонентами
+
+\nopagebreak\vspace{-0.16em}\begin{equation}\label{action:4}
 \begin{array}{rcl}
-{^3\hspace{-0.25em}\bm{A}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2} & \!\Leftrightarrow\!\! &
+{^3\hspace{-0.28em}\bm{A}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2}
+& \!\Leftrightarrow\!\! &
 A_{ijk} = D_{jik} \hspace{.1ex},
 \\
-{^3\hspace{-0.16em}\bm{B}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3} & \!\Leftrightarrow\!\! & B_{ijk} = D_{kji} \hspace{.1ex},
+{^3\hspace{-0.15em}\bm{B}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3}
+& \!\Leftrightarrow\!\! & B_{ijk} = D_{kji} \hspace{.1ex},
 \\
-{^3\hspace{-0.04em}\bm{C}} = {^3\hspace{-0.16em}\bm{D}}_{2 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3} & \!\Leftrightarrow\!\! & C_{ijk} = D_{ikj} \hspace{.1ex}.
+{^3\hspace{-0.05em}\bm{C}} = {^3\hspace{-0.16em}\bm{D}}_{2 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3}
+& \!\Leftrightarrow\!\! & C_{ijk} = D_{ikj} \hspace{.1ex}.
 \end{array}
 \end{equation}
 
-Для тензора второй сложности возможна лишь одна перестановка, называемая транспонированием: ${B_{ij} = A_{ji} \,\Leftrightarrow\, \bm{B} = \bm{A}^{\hspace{-0.05em}\T}}$\!. Очевидно, ${\left( \bm{A}^{\hspace{-0.05em}\T} \right)^{\hspace{-0.4ex}\T} = \bm{A}}$.
+\en{For a~bivalent tensor,}\ru{Для бивалентного тензора}
+\en{the only one permutation is possible}\ru{возможна лишь одна перестановка},
+\en{which is named transposition}\ru{именуемая транспонированием}:
+${\bm{A}^{\hspace{-0.05em}\T} \hspace{-0.15ex} \equiv \bm{A}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2} = \hspace{-0.1ex} \bm{B}
+\hspace{.4ex}\Leftrightarrow\hspace{.25ex}
+B_{ij} \hspace{-0.1ex} = A_{ji}}$.
+\en{Obviously}\ru{Очевидно}
+${\bigl( \hspace{-0.1ex} \bm{A}^{\hspace{-0.05em}\T} \hspace{.15ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.2ex} = \bm{A}}$.
 
-При диадном умножении векторов ${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\!}$.
+При диадном умножении векторов ${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\hspace{-0.4ex}}$.
 
-Представленные четыре действия можно комбинировать в~разных сочетаниях. Чаще всего встречается комбинация умножения и~свёртки~--- dot product; при этом в~инвариантной безындексной записи ставится точка, указывающая на~свёртку по~соответствующим соседним индексам:
+Представленные четыре действия комбинируются в~разных сочетаниях. Комбинация умножения и~свёртки~--- dot product~--- самая частая, в~инвариантной безындексной записи она обозначается точкой, показывающей свёртку по~соседним индексам:
 \begin{equation}
-a_i = B_{ij} c_j \,\Leftrightarrow\, \bm{a} = \bm{B} \dotp \bm{c}, \;\;
+a_i = B_{ij} c_j \,\Leftrightarrow\, \bm{a} = \bm{B} \dotp \bm{c} \hspace{.1ex}, \;\:
 A_{ij} = B_{ik} C_{kj} \,\Leftrightarrow\, \bm{A} = \bm{B} \dotp \bm{C}.
 \end{equation}
 
 Определяющее свойство единичного тензора
-\vspace{0.16em}\begin{equation}\label{identifyofidentitytensor}
-{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = \bm{E} \dotp {^\mathrm{n}\hspace{-0.2ex}\bm{a}} = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\:\:
-\forall \, {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\; \forall \,\mathrm{n \!>\! 0}\,.
+
+\nopagebreak\vspace{-0.15em}\begin{equation}\label{identifyofidentitytensor}
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = \bm{E} \dotp \hspace{-0.15ex} {^\mathrm{n}\hspace{-0.2ex}\bm{a}} = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\:\:
+\forall \, {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\; \forall \hspace{.1ex} \mathrm{n \!>\! 0}
+\hspace{.1ex}.
 \end{equation}
 
 В~коммутативном скалярном произведении двух векторов точка имеет тот~же смысл:
-\begin{equation}
-\bm{a} \dotp \bm{b} = a_i b_i \hspace{-0.1ex} = b_i a_i \hspace{-0.1ex} = \bm{b} \dotp \bm{a} = \hspace{0.1ex} \operatorname{tr} \bm{a}\bm{b} = \operatorname{tr} \bm{b}\bm{a} \hspace{0.1ex}.
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\bm{a} \dotp \bm{b}
+= ( \bm{a} \bm{b} )\hspace{.1ex}\tracedot \hspace{-0.1ex}
+= \hspace{.1ex} \operatorname{tr} \bm{a}\bm{b}
+= a_i b_i \hspace{-0.2ex}
+= b_i a_i \hspace{-0.2ex}
+= \hspace{.1ex} \operatorname{tr} \bm{b}\bm{a}
+= ( \bm{b} \bm{a} )\hspace{.1ex}\tracedot \hspace{-0.1ex}
+= \bm{b} \dotp \bm{a}
+\hspace{.1ex} .
 \end{equation}
 
 Для dot product’а тензоров второй сложности справедливо следующее
-\vspace{-0.5em}\begin{equation}\label{transposeofdotproduct}
+
+\nopagebreak\vspace{-0.8em}\begin{equation}\label{transposeofdotproduct}
 \begin{array}{c}
-\bm{B} \dotp \bm{Q} \hspace{0.1ex} = \left({ \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} }\right)^{\hspace{-0.2ex}\T} \\[0.1em]
-\left({ \bm{B} \dotp \bm{Q}}\right)^{\T} =\hspace{0.2ex} \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
+\bm{B} \dotp \bm{Q} \hspace{.1ex} = \left({ \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} }\right)^{\hspace{-0.25ex}\T}
+\\[.1em]
+\left({ \bm{B} \dotp \bm{Q}}\right)^{\hspace{-0.1ex}\T} \hspace{-0.3ex} = \hspace{.2ex} \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
 \end{array}
 \end{equation}
 
-\vspace{-0.36em} \noindent (\,например, для~диад ${\bm{B} = \bm{b}\bm{d}}$ и~${\bm{Q} = \bm{p}\bm{q}}$
-\vspace{0.1em}\[\begin{array}{rcl}
-\left(\hspace{0.1ex} \bm{b}\bm{d} \dotp \bm{p}\bm{q} \hspace{0.1ex}\right)^{\T} & \!=\!\! & \hspace{0.2ex} \bm{p}\bm{q}^{\T} \dotp\hspace{0.4ex} \bm{b}\bm{d}^{\hspace{0.25ex}\T} \\[0.2em]
-d_i p_i \hspace{0.32ex} \bm{b}\bm{q}^{\T} & \!=\!\! & \hspace{0.2ex} \bm{q}\bm{p} \dotp \bm{d} \bm{b} \\[0.1em]
-d_i p_i \hspace{0.32ex} \bm{q}\bm{b} & \!=\!\! & p_i d_i \hspace{0.32ex} \bm{q}\bm{b} \;\; ).
-\end{array}\]
+\vspace{-0.1em} \noindent (\hspace{.25ex}например, для~диад ${\bm{B} \hspace{-0.1ex} = \bm{b}\bm{d}}$ и~${\bm{Q} \hspace{-0.1ex} = \bm{p}\bm{q}}$
 
-Для вектора и~тензора второй сложности
-\begin{equation}\label{vectortensordotproduct}
-\bm{c} \dotp \bm{B} = \bm{B}^{\T} \hspace{-0.4ex}\dotp \bm{c} , \;\;
-\bm{B} \dotp \bm{c} = \bm{c} \hspace{0.2ex}\dotp \bm{B}^{\T} \hspace{-0.25ex}.
-\end{equation}
+\nopagebreak\vspace{-0.2em}\begin{equation*}\begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
+\left(\hspace{.1ex} \bm{b}\bm{d} \dotp \bm{p}\bm{q} \hspace{.1ex}\right)^{\hspace{-0.1ex}\T} & \hspace{-0.5ex} = & \hspace{-0.1ex} \bm{p}\bm{q}^{\T} \hspace{-0.25ex} \dotp \bm{b}\bm{d}^{\hspace{.25ex}\T}
+\\[.2em]
+d_i p_i \hspace{.25ex} \bm{b}\bm{q}^{\T} & \hspace{-0.5ex} = & \hspace{-0.1ex} \bm{q}\bm{p} \dotp \bm{d} \bm{b}
+\\[.1em]
+d_i p_i \hspace{.25ex} \bm{q}\bm{b} & = & p_i d_i \hspace{.25ex} \bm{q}\bm{b} \;\; ).
+\end{array}\end{equation*}
 
 \end{otherlanguage}
 
-\en{Tensor of~second valence \inquotes{squared} is defined as}
+\en{For vector and bivalent tensor}\ru{Для вектора и~бивалентного тензора}
 
-\ru{Тензор второй валентности \inquotes{в~квадрате} определяется как}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{vectortensordotproduct}
+\bm{c} \dotp \bm{B} = \bm{B}^{\T} \hspace{-0.4ex}\dotp \bm{c} , \;\;
+\bm{B} \dotp \bm{c} = \bm{c} \hspace{.2ex}\dotp \bm{B}^{\T} \hspace{-0.3ex}.
+\end{equation}
+
+\en{Tensor of~second valence \inquotes{squared} is}
+
+\ru{Тензор второй валентности \inquotes{в~квадрате} это}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{exponentiation:two}
-\bm{B}^2 \equiv\hspace{0.2ex} \bm{B} \dotp \bm{B}.
+\bm{B}^2 \equiv\hspace{.2ex} \bm{B} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{B} .
 \end{equation}
 
 \en{Contraction can be repeated}\ru{Свёртка может повторяться}:
 ${\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} \equiv A_{ij} B_{ji}}$,
-\en{and here are poco useful equations for tensors of~second complexity}\ru{и~вот немного полезных равенств для~тензоров второй сложности}
+\en{and here are poco useful equations for second complexity tensors}\ru{и~вот немного полезных равенств для~тензоров второй сложности}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
 \begin{array}{c}
-\bm{A} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \bm{E} = \bm{E} \dotdotp \hspace{-0.1ex} \bm{A} = \operatorname{tr} \bm{A} = A_{jj} \hspace{0.1ex} ,
+\bm{A} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \bm{E} = \bm{E} \dotdotp \hspace{-0.1ex} \bm{A} = \bm{A}\hspace{.15ex}\tracedot = A_{jj} \hspace{.1ex} ,
 \\[.2em]
 %
-\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} = \bm{B} \dotdotp \hspace{-0.1ex} \bm{A} \hspace{0.1ex}, \:\,
+\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} = \bm{B} \dotdotp \hspace{-0.1ex} \bm{A} \hspace{.1ex}, \:\,
 \bm{A} \dotdotp \bm{B}^{\T} \hspace{-0.2ex} = \bm{A}^{\hspace{-0.16ex}\T} \hspace{-0.2ex} \dotdotp \bm{B} ,
 \\[.2em]
 %
-\bm{A} \narrowdotdotp \bm{B} \narrowdotp \bm{C} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \hspace{0.1ex} \bm{C} = \bm{C} \narrowdotdotp \hspace{-0.1ex} \bm{A} \narrowdotp \bm{B} = A_{ij} B_{jk} C_{ki} \hspace{0.1ex} ,
+\bm{A} \narrowdotdotp \bm{B} \narrowdotp \bm{C} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \hspace{.1ex} \bm{C} = \bm{C} \narrowdotdotp \hspace{-0.1ex} \bm{A} \narrowdotp \bm{B} = A_{ij} B_{jk} C_{ki} \hspace{.1ex} ,
 \\[.15em]
 %
 \bm{A} \hspace{-0.1ex}\narrowdotdotp \bm{B} \narrowdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} \narrowdotdotp \bm{D} = \hspace*{2.5em} \\
-\hspace{10.5em} = \bm{D} \narrowdotdotp \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} = A_{ij} B_{jk} C_{kn} D_{ni} \hspace{0.1ex}.
+\hspace{10.5em} = \bm{D} \narrowdotdotp \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} = A_{ij} B_{jk} C_{kh} D_{hi} \hspace{.1ex}.
 \end{array}
 \end{equation}
 
@@ -399,25 +519,31 @@ ${\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} \equiv A_{ij} B_{ji}}$,
 \en{In}\ru{В}~\pararef{para:tensoranditscomponents}\en{, a~tensor was presented as some invariant object, showing itself in every basis as a~collection of numbers~(components)}\ru{ тензор был представлен как некий инвариантный объект, проявляющий себя в~каждом базисе совокупностью чисел~(компонент)}.
 \hbox{\en{Such}\ru{Такое}} \en{representation is typical for majority of~books about tensors}\ru{представление характерно для большинства книг о~тензорах}.
 \en{Index notation}\ru{Индексная запись} \en{can be constructive}\ru{может быть конструктивна}, \en{especially when cartesian coordinates are sufficient}\ru{особенно когда достаточно декартовых координат}, \en{but quite often it is not}\ru{но весьма часто это не~так}.
-\en{The relevant case is---}\ru{Подходящий случай~---} \en{physics of~elastic continua}\ru{физика упругих сред}: \en{it needs more elegant, more powerful and~perfect apparatus of direct tensor calculus, operating just with indexless invariant objects}\ru{ей нужен более изящн\hbox{ь\kern-0.066emi}й, более мощный и~совершенный аппарат прямого тензорного исчисления, оперирующий лишь с~безындексными инвариантными объектами}.
+\en{And}\ru{И} \en{the relevant case is}\ru{подходящий случай\:---} \en{physics of~elastic continua}\ru{физика упругих сред}: \en{it needs more elegant, more powerful and~perfect apparatus of direct tensor calculus, operating just with indexless invariant objects}\ru{ей нужен более изящн\hbox{ь\kern-0.066emi}й, более мощный и~совершенный аппарат прямого тензорного исчисления, оперирующий лишь с~безындексными инвариантными объектами}.
 
-\en{Relation}\ru{Отношение} ${\bm{v} = v_i \bm{e}_i}$ \en{from}\ru{из}~\eqref{vectorcomponents} \en{links}\ru{связывает} \en{vector}\ru{вектор}~${\bm{v}}$ \en{with basis}\ru{с~базисом}~${\bm{e}_i}$ \en{and vector’s components}\ru{и~компонентами}~${v_i}$ \en{in that basis}\ru{вектора в~том базисе}.
+\en{Relation}\ru{Отношение} ${\bm{v} = v_i \bm{e}_i}$ \en{from}\ru{из}~\eqref{vectorcomponents} \en{connects}\ru{соединяет} \en{vector}\ru{вектор}~${\bm{v}}$ \en{with basis}\ru{с~базисом}~${\bm{e}_i}$ \en{and vector’s components}\ru{и~компонентами}~${v_i}$ \en{in that basis}\ru{вектора в~том базисе}.
 \en{Soon we will get similar relation for a~tensor of any complexity}\ru{Вскоре мы получим похожее соотношение для~тензора любой сложности}.
 
-\begin{otherlanguage}{russian}
+\en{Any bivalent tensor}\ru{Любой бивалентный тензор} ${^2\!\bm{B}}$
+\en{is described}\ru{описывается} \en{by nine components}\ru{девятью компонентами}~${B_{ij}}$ \en{in~each basis}\ru{в~каждом базисе}.
+\en{The~number}\ru{Число} \en{of~various dyads}\ru{различных диад}~${\bm{e}_i \bm{e}_{\hspace{-0.15ex}j}}$ \en{in the~same basis}\ru{в~том~же с\'{а}мом базисе}\ru{\:---}\en{ is} \en{nine}\ru{тоже девять}~($3^2$)\en{ too}.
+\en{Linear combining}\ru{Линейное комбинирование} \en{of these dyads}\ru{этих диад} \en{with coefficients}\ru{с~коэффициентами}~${B_{ij}}$
+\en{gives the~sum}\ru{даёт сумму}~${B_{ij} \bm{e}_i \bm{e}_{\hspace{-0.15ex}j}}$.
+\en{This is tensor}\ru{Это тензор},\,--- \en{but what are its components}\ru{но каков\'{ы} его компоненты}, \en{and}\ru{и} \en{how does this representation change (or doesn’t change)}\ru{как это представление меняется (или не~меняется)} \en{with a~rotation of~basis}\ru{с~поворотом базиса}?
 
-\en{Consider bivalent tensor}\ru{Рассмотрим бивалентный тензор} ${^2\!\bm{B}}$.
-В~каждом базисе имеем девять чисел~${B_{ij}}$ и~столько~же диад~${\bm{e}_i \bm{e}_j}$. Линейным комбинированием возможно образовать сумму~${B_{ij} \bm{e}_i \bm{e}_j}$. Это тензор, но каковы его компоненты и~сохранится~ли подобное его представление при повороте базиса?
+\en{Components of the constructed sum}\ru{Компоненты построенной суммы}
 
-Компоненты построенной суммы
-\[
-\left( B_{ij} \bm{e}_i \bm{e}_j \right)_{pq} \hspace{-0.2ex} = B_{ij} \delta_{ip} \delta_{jq} \hspace{-0.1ex} = B_{pq}
-\]
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\left( B_{ij} \bm{e}_i \bm{e}_j \right)_{pq} \hspace{-0.2ex} = B_{ij} \hspace{.1ex} \delta_{ip} \delta_{jq} \hspace{-0.1ex} = B_{pq}
+\end{equation*}
 
-\vspace{-0.1em} \noindent это компоненты тензора ${^2\!\bm{B}}$. При повороте же базиса
-\[
+\vspace{-0.2em} \noindent \en{are components}\ru{суть компоненты} \en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$. \en{And with a~rotation}\ru{С~поворотом~же} \en{of~basis}\ru{базиса}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
 B'_{ij} \bm{e}'_{i} \bm{e}'_{j} \hspace{-0.1ex} = \cosinematrix{i'p} \cosinematrix{j'q} B_{pq} \cosinematrix{i'n} \bm{e}_n \cosinematrix{j'm} \bm{e}_m \hspace{-0.2ex} = \delta_{pn} \delta_{qm} B_{pq} \bm{e}_n \bm{e}_m \hspace{-0.2ex} = B_{pq} \bm{e}_p \bm{e}_q \hspace{.1ex} .
-\]
+\end{equation*}
+
+\begin{otherlanguage}{russian}
 
 Сомнения отпали~--- приходим к диадному представлению тензора второй сложности
 \begin{equation}\label{polyada:2}
@@ -427,7 +553,7 @@ B'_{ij} \bm{e}'_{i} \bm{e}'_{j} \hspace{-0.1ex} = \cosinematrix{i'p} \cosinematr
 \vspace{-0.2em} Для единичного тензора
 \[ \bm{E} =
 E_{ij} \hspace{.16ex} \bm{e}_i \bm{e}_j \hspace{-0.1ex} =
-\delta_{ij} \hspace{.16ex} \bm{e}_i \bm{e}_j \hspace{-0.1ex} =
+\delta_{i\hspace{-0.1ex}j} \hspace{.16ex} \bm{e}_i \bm{e}_j \hspace{-0.1ex} =
 \bm{e}_i \bm{e}_i \hspace{-0.1ex} =
 \bm{e}_1 \bm{e}_1 + \bm{e}_2 \bm{e}_2 + \bm{e}_3 \bm{e}_3
 \hspace{.1ex} . \]
@@ -437,7 +563,7 @@ E_{ij} \hspace{.16ex} \bm{e}_i \bm{e}_j \hspace{-0.1ex} =
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \bm{v} \dotp {^2\!\bm{B}} =
 v_i\bm{e}_i \dotp B_{jk}\bm{e}_j\bm{e}_k \hspace{-0.1ex} =
-v_i B_{jk} \delta_{ij} \bm{e}_k \hspace{-0.1ex} =
+v_i B_{jk} \delta_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_k \hspace{-0.1ex} =
 v_i B_{ik} \bm{e}_k \hspace{.1ex} ,
 \end{equation*}\vspace{-1.25em}
 \begin{equation}\label{tensorcomponents}
@@ -454,20 +580,21 @@ B_{ij} =
 
 \nopagebreak\begin{equation}\label{polyada:3}
 \begin{array}{c}
-{^3\!\,\bm{C}} = C_{ijk} \hspace{0.2ex} \bm{e}_i \bm{e}_j \bm{e}_k \hspace{0.1ex},\\[0.8ex]
-C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp {^3\!\,\bm{C}} \dotdotp \bm{e}_k \bm{e}_j = \bm{e}_j \bm{e}_i \dotdotp {^3\!\,\bm{C}} \dotp \bm{e}_k \hspace{0.1ex}.
+{^3\!\,\bm{C}} = C_{ijk} \hspace{.2ex} \bm{e}_i \bm{e}_j \bm{e}_k \hspace{.1ex},
+\\[.8ex]
+C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp {^3\!\,\bm{C}} \dotdotp \bm{e}_k \bm{e}_j = \bm{e}_j \bm{e}_i \dotdotp {^3\!\,\bm{C}} \dotp \bm{e}_k \hspace{.1ex}.
 \end{array}
 \end{equation}
 
 Используя разложение по~полиадам, легко увидеть справедливость свойства~\eqref{identifyofidentitytensor} \inquotes{единичности} тензора~$\bm{E}$:
-\vspace{0.1em}\[\begin{array}{c}
-{^\mathrm{n}\hspace{-0.2ex}\bm{a}} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q , \;\,  \bm{E} = \bm{e}_e \bm{e}_e
+\vspace{.1em}\[\begin{array}{c}
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} = a_{ij \ldots q} \hspace{.4ex} \bm{e}_i \hspace{.2ex} \bm{e}_j \ldots \bm{e}_q , \;\,  \bm{E} = \bm{e}_e \bm{e}_e
 \\[.4em]
 %
-{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \tikzmark{BeginDeltaEQBrace} {\bm{e}_q \dotp \bm{e}_e} \tikzmark{EndDeltaEQBrace} \bm{e}_e = a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \hspace{0.1ex},
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \bm{E} = a_{ij \ldots q} \hspace{.4ex} \bm{e}_i \hspace{.2ex} \bm{e}_j \ldots \tikzmark{BeginDeltaEQBrace} {\bm{e}_q \dotp \bm{e}_e} \tikzmark{EndDeltaEQBrace} \bm{e}_e = a_{ij \ldots q} \hspace{.4ex} \bm{e}_i \hspace{.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \hspace{.1ex},
 \\[1.1em]
 %
-\bm{E} \dotp {^\mathrm{n}\hspace{-0.2ex}\bm{a}} = \bm{e}_e \bm{e}_e \dotp a_{ij \ldots q} \hspace{0.4ex} \bm{e}_i \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = a_{ij \ldots q} \hspace{0.2ex} \delta_{ei} \hspace{0.2ex} \bm{e}_e \hspace{0.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}}.
+\bm{E} \dotp {^\mathrm{n}\hspace{-0.2ex}\bm{a}} = \bm{e}_e \bm{e}_e \dotp a_{ij \ldots q} \hspace{.4ex} \bm{e}_i \hspace{.2ex} \bm{e}_j \ldots \bm{e}_q = a_{ij \ldots q} \hspace{.2ex} \delta_{ei} \hspace{.2ex} \bm{e}_e \hspace{.2ex} \bm{e}_j \ldots \bm{e}_q = {^\mathrm{n}\hspace{-0.2ex}\bm{a}}.
 \end{array}\]
 \AddUnderBrace[line width=.75pt]{BeginDeltaEQBrace}{EndDeltaEQBrace}%
 {${\scriptstyle \delta_{eq}}$}
@@ -482,13 +609,11 @@ C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp
 
 \label{para:crossproduct+levicivita}
 
-\begin{otherlanguage}{russian}
-
 \en{By habitual notions}\ru{По~привычным представлениям},
 \en{a~cross product of two vectors}\ru{векторное произведение двух векторов}
 \en{is a~vector}\ru{есть вектор},
-направленный перпендикулярно плоскости сомножителей,
-длина которого равна площади образуемого сомножителями параллелограмма
+\en{heading perpendicular to the~plane of~multipliers}\ru{направленный перпендикулярно плоскости сомножителей},
+\en{whose length is equal to}\ru{длина которого равна} \en{the~area}\ru{площади} \en{of~parallelogram}\ru{параллелограмма}, \en{spanned by}\ru{охватываемого} \en{multipliers}\ru{сомножителями}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \left|\, \bm{a} \times \bm{b} \,\right| = |\bm{a}| \hspace{.1em} |\bm{b}| \hspace{.1em} \operatorname{sin} \measuredangle (\bm{a}, \bm{b})
@@ -518,11 +643,22 @@ C_{ijk} = {^3\!\,\bm{C}} \dotdotdotp \bm{e}_k \bm{e}_j \bm{e}_i = \bm{e}_i \dotp
 \end{minipage}}
 \end{wrapfigure}
 
-\vspace{-0.1em} Cross product~(векторное произведение) ${\bm{c} = \bm{a} \times \bm{b}}$ считается псевдовектором, поскольку тройка векторов ${\bm{a}}$, ${\bm{b}}$ и~${\bm{c}}$ может быть либо \inquotesx{правой}[,] либо \inquotes{левой}~(\figref{fig:crossproduct}).
+\vspace{-0.1em} Cross product\ru{~(векторное произведение)}
+${\bm{c} = \bm{a} \times \bm{b}}$
+\en{is considered a~pseudovector}\ru{считается псевдовектором},
+\en{since}\ru{поскольку} \en{a~triple of~vectors}\ru{тройка векторов} ${\bm{a}}$, ${\bm{b}}$ \en{and}\ru{и}~${\bm{c}}$ \en{may be}\ru{может быть} \en{either}\ru{либо} \inquotesx{\en{right-handed}\ru{правой}}[,] \en{either}\ru{либо} \inquotes{\en{left-handed}\ru{левой}}~(\figref{fig:crossproduct}).
 
-Различие векторов и~псевдовекторов \textcolor{magenta}{ограничивает} вид формул: векторы с~псевдовекторами не~складываются. Формула кинематики абсолютно жёсткого недеформируемого тела ${\bm{v} = \bm{v}_{\raisemath{-0.1em}{0}} + \hspace{.1ex} \bm{\omega} \hspace{-0.15ex}\times\hspace{-0.15ex} \bm{r}}$ корректна, поскольку во~втором слагаемом \inaltquotes{два \inquotes{псевдо} взаимно компенсируются}.
+\en{Otherness}\ru{Инаковость} \en{of~pseudovectors}\ru{псевдовекторов} \en{narrows}\ru{сужает} \en{the~variety}\ru{разнообразие} \en{of~formulas}\ru{формул}:
+\en{pseudovector is not additive with vector}\ru{псевдовектор не~складывается с~вектором}.
+\en{Formula of kinematics of~absolutely rigid undeformable body}\ru{Формула кинематики абсолютно жёсткого недеформируемого тела}
+${\bm{v} = \bm{v}_{\raisemath{-0.1em}{0}} + \hspace{.1ex} \bm{\omega} \hspace{-0.15ex}\times\hspace{-0.15ex} \bm{r}}$
+\en{is correct}\ru{корректна}, \en{because}\ru{поскольку}
+$\bm{\omega}$\en{ is pseudovector there}\ru{ там~--- псевдовектор},
+\en{and}\ru{и} \en{in a~cross product}\ru{в~векторном произведении} \en{two}\ru{два} \inquotes{\en{pseudo}\ru{псевдо}} \en{mutually compensate each other}\ru{взаимно компенсируют друг друга}.
 
-\en{However}\ru{Впрочем}, \en{the cross product is not entirely separate operation}\ru{векторное произведение это не~совсем отдельная операция}.
+\begin{otherlanguage}{russian}
+
+\en{However}\ru{Впрочем}, \en{the~cross product}\ru{векторное произведение} \en{is not}\ru{не~есть} \en{one more new}\ru{ещё одно новое}, \en{entirely distinct operation}\ru{полностью отдельное действие}.
 Оно сводится к~четырём ранее описанным~(\pararef{para:operationswithtensors}) и~обобщается на~тензоры любой сложности. Покажем это.
 
 Сначала введём символ перестановки (permutation symbol) \hbox{O.\hspace{0.1ex}Veblen’а}~${e_{ijk}}$: ${e_{123} \hspace{-0.15ex}= e_{231} \hspace{-0.15ex}= e_{312} \hspace{-0.15ex}= 1}$, ${e_{213} \hspace{-0.15ex}= e_{321} \hspace{-0.15ex}= e_{132} \hspace{-0.15ex}= -1}$, остальные нули. Символ~${e_{ijk}}$~(${\pm 1}$ или~$0$) меняет знак при~перестановке любых двух индексов, не~меняется при двойной~(\inquotes{круговой}) перестановке индексов и~обращается в~нуль при~совпадении какой\hbox{-}либо пары.
@@ -711,7 +847,7 @@ e_{ijk} e_{ijk} \hspace{-0.16ex} = 6 \hspace{.2ex}.
 = a_i \levicivita_{ipn} \hspace{0.1ex} \bm{e}_p \bm{e}_n \dotp \hspace{0.2ex} b_j \levicivita_{jsk} \hspace{0.1ex} \bm{e}_s \bm{e}_k
 = a_i b_j \levicivita_{ipn} \levicivita_{nkj} \hspace{0.05ex} \bm{e}_p \bm{e}_k = \\[-0.08em]
 %
-= a_i b_j \hspace{-0.2ex} \left( \delta_{ik} \delta_{pj} \hspace{-0.2ex} - \delta_{ij} \delta_{pk} \right) \hspace{-0.2ex} \bm{e}_p \bm{e}_k
+= a_i b_j \hspace{-0.2ex} \left( \delta_{ik} \delta_{pj} \hspace{-0.2ex} - \delta_{i\hspace{-0.1ex}j} \delta_{pk} \right) \hspace{-0.2ex} \bm{e}_p \bm{e}_k
 = a_i b_j \bm{e}_j \bm{e}_i \hspace{-0.12ex} - a_i b_i \bm{e}_k \bm{e}_k \hspace{-0.16ex} = \\[-0.18em]
 %
 = \hspace{0.1ex} \bm{b} \bm{a} - \bm{a} \hspace{-0.1ex} \dotp \bm{b} \hspace{0.2ex} \bm{E} \hspace{0.1ex}.
@@ -889,15 +1025,15 @@ ${\left( \bm{c} \bm{d} \hspace{.2ex} \right)_{\hspace{-0.15ex}\Xcompanion} \hspa
 \end{equation}
 \vspace{-1.2em}\[
 \scalebox{0.92}[0.92]{${^2\!\bm{B}} \dotp \bm{a} = \eigenvalue \bm{E} \dotp \bm{a} \hspace{0.1ex},\;\;
-%%B_{ij} a_j = \eigenvalue \delta_{ij} a_j \hspace{0.1ex},\;\;
+%%B_{ij} a_j = \eigenvalue \delta_{i\hspace{-0.1ex}j} a_j \hspace{0.1ex},\;\;
 \left(\hspace{0.1ex}
 {^2\!\bm{B} - \eigenvalue \bm{E}}
 \hspace{0.2ex}\right) \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a} = \bm{0}$} \hspace{.1ex},
 \]
 
-\vspace{-0.64em} \noindent то $\eigenvalue$ называется собственным числом~(собственным значением, eigenvalue, главным значением)~${^2\!\bm{B}}$, а~определяемая собственным вектором~$\bm{a}$ ось~(направление)~--- его собственной~(главной, principal) осью~(направлением).
+\vspace{-0.64em} \noindent то $\eigenvalue$ называется собственным числом~(собственным значением, eigenvalue, proper value, главным значением)~${^2\!\bm{B}}$, а~определяемая собственным вектором~$\bm{a}$ ось~(направление)~--- его собственной~(главной, principal) осью~(направлением).
 
-В~компонентах это матричная задача на~собственные значения ${( B_{ij} \hspace{-0.12ex} - \eigenvalue \delta_{ij} ) \hspace{.25ex} a_j \hspace{-0.1ex} = 0}$~--- однородная линейная алгебраическая система, имеющая ненулевые решения при~равенстве нулю определителя ${\operatorname{det}\hspace{.32ex} ( B_{ij} \hspace{-0.12ex} - \eigenvalue \delta_{ij} )}$:
+В~компонентах это матричная задача на~собственные значения ${( B_{ij} \hspace{-0.12ex} - \eigenvalue \delta_{i\hspace{-0.1ex}j} ) \hspace{.25ex} a_j \hspace{-0.1ex} = 0}$~--- однородная линейная алгебраическая система, имеющая ненулевые решения при~равенстве нулю определителя ${\operatorname{det}\hspace{.32ex} ( B_{ij} \hspace{-0.12ex} - \eigenvalue \delta_{i\hspace{-0.1ex}j} )}$:
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{chardetequation}
 \operatorname{det}\! \scalebox{0.9}[0.92]{$\left[
@@ -916,13 +1052,21 @@ B_{31} & B_{32} & B_{33} \hspace{-0.16ex} - \eigenvalue
 \mathrm{III} & = & \operatorname{det} \hspace{.1ex} {^2\!\bm{B}} = \operatorname{det} B_{ij} = e_{ijk} \hspace{.1ex} B_{1i} B_{2j} B_{3k} = e_{ijk} \hspace{.1ex} B_{i1} B_{j2} B_{k3} \hspace{.1ex} .
 \end{array}\end{equation}
 
-Корни характеристического уравнения~\eqref{chardetequation}~--- собственные числа~--- не~зависят от~базиса и~потому инвариантны.
+\en{Roots}\ru{Корни} \en{of characteristic equation}\ru{характеристического уравнения}~\eqref{chardetequation}~--- собственные числа~--- не~зависят от~базиса и~потому инвариантны.
 
 Коэффициенты~\eqref{invariants:2} тоже не~зависят от~базиса; они называются первым, вторым и~третьим инвариантами тензора.
 С~первым инвариантом~${\mathrm{I}}$~--- следом тензора~--- мы уже встречались в~\pararef{para:operationswithtensors}.
 Второй инвариант~${\mathrm{II}}$ это след союзной~(взаимной, adjugate) матрицы~--- транспонированной матрицы дополнений: ${\mathrm{II}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \equiv \hspace{.1ex} \operatorname{tr} \left({\operatorname{adj}{B_{ij}}}\right)}$.
-Или он~же \hbox{${\mathrm{II}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \equiv \hspace{.2ex} \textstyle \onehalf \hspace{-0.08ex} \scalebox{0.96}[0.96]{$\left[ \left(\operatorname{tr}\hspace{.1ex} {^2\!\bm{B}}\right)^{\!2} \hspace{-0.5ex} - \operatorname{tr} \left( {^2\!\bm{B}} \dotp \hspace{-0.1ex} {^2\!\bm{B}} \right) \right]$} \hspace{-0.4ex} = \hspace{.1ex} \textstyle \onehalf \hspace{-0.08ex} \scalebox{0.96}[0.96]{$\left[ \left( B_{kk} \right)^{\hspace{-0.1ex}2} \hspace{-0.4ex} - \hspace{-0.2ex} B_{ij} B_{ji} \hspace{.2ex}\right]$}}$\hspace{-0.25ex}}.
-И~третий инвариант~${\mathrm{III}}$ это определитель~(детерминант) компонент тензора: %%в~любом \inquotes{правом} ортонормальном или~смешанном базисе:
+Или он~же
+%%${ \operatorname{tr} \left( {^2\!\bm{B}} \dotp \hspace{-0.1ex} {^2\!\bm{B}} \right) = {^2\!\bm{B}} \dotdotp \hspace{-0.1ex} {^2\!\bm{B}} = B_{ij} B_{ji} }$
+\hbox{${\mathrm{II}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \equiv \hspace{.2ex} \smalldisplaystyleonehalf \scalebox{0.96}[0.96]{$\left[
+\left(\operatorname{tr}\hspace{.1ex} {^2\!\bm{B}}\right)^{\!2} \hspace{-0.5ex}
+- {^2\!\bm{B}} \dotdotp \hspace{-0.1ex} {^2\!\bm{B}} \hspace{.16ex}
+\right]$} \hspace{-0.4ex} = \hspace{.1ex} \smalldisplaystyleonehalf \scalebox{0.96}[0.96]{$\left[
+\left( B_{kk} \right)^{\hspace{-0.1ex}2} \hspace{-0.4ex}
+- \hspace{-0.2ex} B_{ij} B_{ji} \hspace{.2ex}
+\right]$}}$\hspace{-0.25ex}}.
+И~третий инвариант~${\mathrm{III}}$ это определитель~(детерминант) компонент тензора:
 ${\mathrm{III}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \equiv \operatorname{det}\hspace{.1ex} {^2\!\bm{B}}}$.
 
 Это относилось ко~всем тензорам второй сложности. Для~случая~же симметричного тензора справедливо следующее:\\
@@ -964,7 +1108,7 @@ ${\mathrm{III}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \equiv \operatorname{det
 \AddUnderBrace[line width=.75pt]%
 {BeginEqualsEBrace}{EndEqualsEBrace}{${\scriptstyle \bm{E}}$}
 
-\vspace{-0.25em} В~общем случае ${B_{ij} = \bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_j}$, в~базисе~же ${\mathboldae_1}$, ${\mathboldae_2}$, ${\mathboldae_3}$ единичных взаимно ортогональных ${\mathboldae_i \dotp \mathboldae_j = \delta_{ij}}$ собственных осей симметричного тензора:
+\vspace{-0.25em} В~общем случае ${B_{ij} = \bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_j}$, в~базисе~же ${\mathboldae_1}$, ${\mathboldae_2}$, ${\mathboldae_3}$ единичных взаимно ортогональных ${\mathboldae_i \dotp \mathboldae_j = \delta_{i\hspace{-0.1ex}j}}$ собственных осей симметричного тензора:
 \[\begin{array}{c}
 B_{11} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_1 = \eigenvalue_1, \\
 B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_2 = 0 \hspace{0.1ex}, \\[-0.2em]
@@ -1034,17 +1178,22 @@ B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1
 C_{ij} \bm{e}_i \bm{e}_j = \bm{e}_i \mathcircabove{\bm{e}}_i \dotp C_{pq} \mathcircabove{\bm{e}}_p \mathcircabove{\bm{e}}_q \dotp \mathcircabove{\bm{e}}_j \bm{e}_j \;\Leftrightarrow\; \bm{C} = \bm{P} \dotp\hspace{0.1ex} \mathcircabove{\bm{C}} \dotp \bm{P}^{\T} \hspace{-0.32ex}.
 \end{equation}
 
-Существенное свойство тензора поворота~--- ортогональность~--- выражается равенством
-%%\vspace{-1.4em}\begin{flalign*} && \scalebox{0.8}[0.8]{$\bm{P} \dotp \bm{P}^{\T} \!= \bm{e}_i \mathcircabove{\bm{e}}_i \dotp \mathcircabove{\bm{e}}_i \bm{e}_i = \bm{e}_i \bm{e}_i$} \end{flalign*}\vspace{-1.4em}
-\begin{equation}\label{orthogonalityofrotationtensor}
-\aunderbrace[l1r]{\bm{P}}_{\bm{e}_i \mathcircabove{\bm{e}}_i} \dotp \hspace{0.12em} \aunderbrace[l1r]{\bm{P}^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_j \bm{e}_j}
-\hspace{0.2ex} = \hspace{0.2ex}
-\aunderbrace[l1r]{\bm{P}^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_i \bm{e}_i} \hspace{0.2em} \dotp \aunderbrace[l1r]{\bm{P}}_{\bm{e}_j \mathcircabove{\bm{e}}_j}
-\hspace{-0.2ex} = \hspace{0.4ex}
-\aunderbrace[l1r]{\hspace{0.2ex}\bm{E}\hspace{0.2ex}}_{\mathclap{\begin{subarray}{l} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \\ \bm{e}_i \bm{e}_i \end{subarray}}} \hspace{0.1em},
-\end{equation}\vspace{-0.6em}
+\end{otherlanguage}
 
-\noindent то~есть ${\bm{P}^{\T} \hspace{-0.32ex}= \bm{P}^{\expminusone} \Leftrightarrow \bm{P} = \bm{P}^{\expminusT}\hspace{-0.25ex}}$~--- транспонированный тензор совпадает с~обратным.
+\en{Essential property}\ru{Существенное свойство} \en{of a~rotation tensor}\ru{тензора поворота}\:--- \en{orthogonality}\ru{ортогональность}\:--- \en{is expressed as}\ru{выражается как}
+
+\nopagebreak\vspace{-0.8em}\begin{equation}\label{orthogonalityofrotationtensor}
+\aunderbrace[l1r]{\bm{P}}_{\bm{e}_i \mathcircabove{\bm{e}}_i} \hspace{.1em} \dotp \hspace{.1em} \aunderbrace[l1r]{\bm{P}^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_j \bm{e}_j}
+\hspace{.2ex} = \hspace{.2ex}
+\aunderbrace[l1r]{\bm{P}^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_i \bm{e}_i} \hspace{.2em} \dotp \aunderbrace[l1r]{\bm{P}}_{\bm{e}_j \mathcircabove{\bm{e}}_j}
+\hspace{-0.2ex} = \hspace{.3ex}
+\aunderbrace[l1r]{\hspace{.2ex}\bm{E}\hspace{.2ex}}_{\mathclap{\begin{subarray}{l} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \\ \bm{e}_i \bm{e}_i \end{subarray}}}
+\hspace{.1em} ,
+\end{equation}
+
+\vspace{-0.1em} \noindent \en{that~is}\ru{то~есть} \en{the~transposed tensor}\ru{транспонированный тензор} \en{coincides}\ru{совпадает} \en{with}\ru{с}~\en{the~reciprocal tensor}\ru{обратным тензором}: ${\bm{P}^{\T} \hspace{-0.32ex}= \bm{P}^{\expminusone} \Leftrightarrow \bm{P} = \bm{P}^{\expminusT}\hspace{-0.25ex}}$.
+
+\begin{otherlanguage}{russian}
 
 Ортогональный тензор не~меняет скалярное произведение векторов, сохраняя дл\'{и}ны и~углы (\inquotes{метрику})
 %% ${\bm{e}_i \dotp \bm{e}_j \hspace{-0.1ex} = \hspace{.1ex} \mathcircabove{\bm{e}}_i \dotp \mathcircabove{\bm{e}}_j}$
@@ -1054,16 +1203,20 @@ C_{ij} \bm{e}_i \bm{e}_j = \bm{e}_i \mathcircabove{\bm{e}}_i \dotp C_{pq} \mathc
 \hspace{0.1ex}.
 \end{equation}
 
-Для всех ортогональных тензоров ${\left(\operatorname{det} \bm{P}\right)^2 \hspace{-0.1ex} = 1}$:
-\vspace{0.1em}\[
-1 = \operatorname{det} \bm{E} = \operatorname{det} \left({\hspace{-0.1ex} \bm{P} \dotp \bm{P}^{\T} \hspace{0.1ex}}\right) =
-\left({\operatorname{det} \bm{P} \hspace{0.1ex}}\right) \left({\operatorname{det} \bm{P}^{\T} \hspace{0.2ex}}\right) =
-\left(\operatorname{det} \bm{P} \hspace{0.1ex} \right)^2 \hspace{-0.1ex} \!.
-\]
+Для всех ортогональных тензоров ${\left(\operatorname{det} \rotationtensor\hspace{.1ex}\right)^2 \hspace{-0.1ex} = 1}$:
 
-Тензор поворота это ортогональный тензор с~${\operatorname{det} \bm{P} \hspace{-0.1ex} = 1}$. Но не~только лишь тензоры поворота обладают свойством ортогональности. Когда в~\eqref{introductionofrotationtensor} один из базисов \inquotesx{правый}[,] а~другой \inquotesx{левый}[,] имеем комбинацию поворота с~отражением, и~${\operatorname{det} \left( -\bm{E} \dotp \bm{P} \hspace{0.16ex} \right) \hspace{-0.1ex} = -1}$.
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+1 = \operatorname{det} \bm{E} = \operatorname{det} \left({\hspace{-0.1ex} \rotationtensor \dotp \rotationtensor^{\T} \hspace{.2ex}}\right) =
+\left({\operatorname{det} \rotationtensor \hspace{.1ex}}\right) \left({\operatorname{det} \rotationtensor^{\T} \hspace{.2ex}}\right) =
+\left(\operatorname{det} \rotationtensor \hspace{.1ex} \right)^2
+\hspace{-0.1ex} \!.
+\end{equation*}
 
-У~любого тензора второй сложности в~трёхмерном пространстве как минимум одно собственное число~--- корень~\eqref{chardetequation}~--- действительное~(некомпл\'{е}ксное).
+Тензор поворота это ортогональный тензор \en{with}\ru{с}~${\operatorname{det} \bm{P} \hspace{-0.1ex} = 1}$.
+Но не~только лишь тензоры поворота обладают свойством ортогональности.
+\en{When}\ru{Когда} в~\eqref{introductionofrotationtensor} один из базисов \inquotesx{правый}[,] а~другой \inquotesx{левый}[,] \en{then it’s}\ru{тогда это} \en{combination of a~rotation and a~reflection}\ru{комбинация поворота и~отражения} (\inquotes{rotoreflection}) ${\rotationtensor = -\bm{E} \dotp \bm{P}}$ \en{with}\ru{с}~${\operatorname{det} \left( -\bm{E} \dotp \bm{P} \hspace{0.16ex} \right) \hspace{-0.1ex} = -1}$.
+
+У~любого бивалентного тензора в~трёхмерном пространстве как минимум одно собственное число~--- корень~\eqref{chardetequation}~--- действительное~(некомпл\'{е}ксное).
 Для тензора поворота оно равно единице
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}\begin{array}{c}
@@ -1322,7 +1475,7 @@ $}}
 
 
 
-Comment\footnote{Поворот тела вокруг какой\hbox{-}то оси представляет, казалось~бы, вектор, ведь он имеет численное значение, равное углу поворота, и~направление, совпадающее с~направлением оси вращения, котоpое определяется по~\inquotesx{правилу буравчика}[.] Однако два таких поворота не~складываются как векторы, если только углы поворота не~являются бесконечно малыми.}
+Comment\footnote{Поворот тела вокруг какой\hbox{-}то оси представляет, казалось~бы, вектор, ведь он имеет численное значение, равное углу поворота, и~направление, совпадающее с~направлением оси вращения, котоpое определяется по~\inquotesx{правилу буравчика}[.] Однако два таких поворота не~складываются как векторы, когда углы поворота не~бесконечно м\'{а}лые.}
 
 На~самом~деле последовательные повороты не~складываются, а~умножаются.
 
@@ -1944,9 +2097,9 @@ $\bm{P}^{\T} \hspace{-0.4ex} = \hspace{-0.1ex} \mathcircabove{\bm{a}}^i \bm{a}_i
 
 \label{para:tensorfunctions}
 
-\en{In~the~popular conception of~function~${y \!=\! f(x)}$ as of mapping (morphism) ${\smash{f \colon x \mapsto y}}$ an~input~(argument)~$x$ and an~output~(result)~$y$ may be tensors of any complexity.}
+\en{In~the~popular conception of~function~${y \!=\! f(x)}$ as of mapping (morphism) ${\smash{f \colon x \mapsto y}}$ an~input~(argument)~$x$ and an~output~(result)~$y$ may be tensors of any complexities.}
 
-\ru{\noindent В~популярном представлении о~функции~${y \!=\! f(x)}$ как отображении (морфизме) ${\smash{f \colon x \mapsto y}}$ прообраз~(аргумент)~$x$ и~образ~(результат)~$y$ могут быть тензорами любой сложности.}
+\ru{\noindent В~популярном представлении о~функции~${y \!=\! f(x)}$ как отображении (морфизме) ${\smash{f \colon x \mapsto y}}$ прообраз~(аргумент)~$x$ и~образ~(результат)~$y$ могут быть тензорами любых сложностей.}
 
 \begin{otherlanguage}{russian}
 
@@ -1995,7 +2148,7 @@ ${\hspace{-0.1ex} -\bm{B}^{2} \hspace{-0.2ex} + \mathrm{I}\hspace{0.16ex} \bm{B}
 
 \noindent Путь в~каждой точке некоторой области трёхмерного пространства
 % известно значение величины (value of value)
-известна величина~$q$. Тогда имеем поле~${q \!=\! q(\bm{r})}$, где~$\bm{r}$~--- радиус\hbox{-}вектор точки. Например, поле температуры в~среде, поле давления в~идеальной жидкости. Величина~$q$ может~быть тензором любой сложности. Пример векторного поля~--- скорости частиц жидкости.
+известна величина~$\varsigma$. Тогда имеем поле~${\varsigma \!=\! \varsigma(\bm{r})}$, где~$\bm{r}$~--- радиус\hbox{-}вектор точки. Например, поле температуры в~среде, поле давления в~идеальной жидкости. Величина~$\varsigma$ может~быть тензором любой сложности. Пример векторного поля~--- скорости частиц жидкости.
 
 \end{otherlanguage}
 
@@ -2140,7 +2293,7 @@ small cube, little cube
 \setlength{\parskip}{0.8mm minus0.2mm}
 \small
 
-\leavevmode{\indent}The \emph{Riemann curvature tensor} or \emph{Riemann\hbox{--}Christoffel tensor} (after \href{https://en.wikipedia.org/wiki/Bernhard_Riemann}{\textbf{Bernhard Riemann}} and \href{https://en.wikipedia.org/wiki/Elwin_Bruno_Christoffel}{\textbf{Elwin Bruno Christoffel}}) is the most common method used to express the curvature of Riemannian manifolds. It’s a~tensor field, it assigns a~tensor to each point of a~Riemannian manifold, that measures the extent to which the~metric tensor is not locally isometric to that of \inquotes{flat} space. The curvature tensor can also be defined for any pseudo-Riemannian manifold, or any manifold equipped with an~\inquotes{affine connection} (a~choice of such connection makes a~manifold look infinitesimally like affine \inquotes{flat} space).
+\leavevmode{\indent}The \emph{Riemann curvature tensor} or \emph{Riemann\hbox{--}Christoffel tensor} (after \href{https://en.wikipedia.org/wiki/Bernhard_Riemann}{\textbf{Bernhard Riemann}} and \href{https://en.wikipedia.org/wiki/Elwin_Bruno_Christoffel}{\textbf{Elwin Bruno Christoffel}}) is the most common method used to express the curvature of Riemannian manifolds. It’s a~tensor field, it assigns a~tensor to each point of a~Riemannian manifold, that measures the extent to which the~metric tensor is not locally isometric to that of \inquotes{flat} space. The curvature tensor measures noncommutativity of the covariant derivative, and as such is the integrability obstruction for the existence of an isometry with \inquotes{flat} space. The curvature tensor can also be defined for any pseudo-Riemannian manifold, or any manifold equipped with an~\inquotes{affine connection} (a~choice of such connection makes a~manifold look infinitesimally like affine \inquotes{flat} space).
 
 The \emph{Ricci curvature tensor}, named after \href{https://en.wikipedia.org/wiki/Gregorio_Ricci-Curbastro}{\textbf{Gregorio Ricci\hbox{-}Curbastro}}, represents the amount by which the~volume of a~narrow conical piece of~a~small geodesic ball in a~curved Riemannian manifold deviates from that of the standard ball in \inquotes{flat} space.
 %% It~is the~contraction of~first and~third indices of~the~Riemann curvature tensor: ${\mathscr{R}_{\hspace{-0.1ex}ab} \hspace{-0.16ex} \equiv \mathfrak{R}^{\hspace{.1ex}c}_{\hspace{.1ex}\cdot\hspace{.1ex}acb} \hspace{-0.16ex} = \textsl{g}^{\hspace{.25ex}cd} \hspace{.2ex} \mathfrak{R}_{\hspace{.1ex}cadb}}$.
@@ -2154,13 +2307,7 @@ The \emph{Ricci curvature tensor}, named after \href{https://en.wikipedia.org/wi
 
 \begin{otherlanguage}{russian}
 
-\begin{changemargin}{\parindent}{\parindent}
-{\small
-\noindent \emph{\inquotesx{Мы рассматриваем трёхмерное пространство классической механики, а~метрика у~нас любая невырожденная без кручения}[.]}
-\par}
-\end{changemargin}
-
-\noindent Рассматривая операции тензорного анализа в~криволинейных координатах, мы исходили из~представления вектора\hbox{-}радиуса функцией этих координат: ${\bm{r}(q^{\hspace{.1ex}i})}$. Этой зависимостью порождаются выражения
+\noindent Рассматривая операции тензорного анализа в~криволинейных координатах, мы исходили из~представления вектора\hbox{-}радиуса функцией этих координат: ${\bm{r} \!=\! \bm{r}(q^{\hspace{.1ex}i})}$. Этой зависимостью порождаются выражения
 векторов локального касательного \hbox{базиса} ${\bm{r}_i \hspace{-0.16ex} \equiv \partial_i \hspace{.12ex} \bm{r}}$\:${( \hspace{.12ex} \partial_i \hspace{-0.1ex} \equiv \smash{\raisemath{0.16em}{\scalebox{0.88}{$\partial$}} \hspace{-0.24ex} / \hspace{-0.32ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial$} q^{\hspace{.1ex}i}}} \hspace{.16ex} )}$,
 компонент ${\textsl{g}_{ij} \hspace{-0.24ex} \equiv \bm{r}_i \hspace{-0.16ex} \dotp \bm{r}_{\hspace{-0.2ex}j}}$ и~${\textsl{g}^{\hspace{.25ex}ij} \hspace{-0.32ex} \equiv \bm{r}^i \hspace{-0.32ex} \dotp \bm{r}^j \hspace{-0.32ex} = \smash{\textsl{g}_{ij}^{\hspace{.4ex}\expminusone}}}$ единичного \inquotes{метрического} тензора~${\bm{E} = \bm{r}_i \bm{r}^i \hspace{-0.2ex} = \bm{r}^i \bm{r}_i}$,
 векторов локального взаимного кокасательного \hbox{базиса} ${\bm{r}^i \hspace{-0.32ex} \dotp \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.16ex} = \delta_j^{\hspace{0.1ex}i}}$, ${\bm{r}^i \hspace{-0.25ex} = \textsl{g}^{\hspace{.25ex}ij} \bm{r}_{\hspace{-0.2ex}j}}$,
@@ -2169,8 +2316,8 @@ ${\bm{E} = \hspace{-0.25ex} \smash{\boldnabla \bm{r}}}$,
 полного дифференциала ${d \bm{\xi} = d \bm{r} \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.05ex} \bm{\xi}}$,
 частных производных касательного \hbox{базиса} (вторых частных производных~$\bm{r}$) ${\bm{r}_{ij} \hspace{-0.16ex} \equiv \partial_i \partial_j \bm{r} \hspace{-0.1ex} = \partial_i \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}j}}$,
 символов \inquotes{связности} \hbox{Христоффеля}~(\hbox{Christoffel} symbols) ${\Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}k} \hspace{-0.1ex} \equiv \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}^k
-%%\hspace{-0.32ex} = \Gamma_{\hspace{-0.25ex}ijn} \hspace{.25ex} \textsl{g}^{\hspace{.25ex}nk}\hspace{-0.25ex}
-}$ и~${\Gamma_{\hspace{-0.25ex}ijk} \hspace{-0.16ex} \equiv \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}_k
+%%\hspace{-0.32ex} = \Gamma_{\hspace{-0.25ex}ij\mathdotbelow{n}} \hspace{.25ex} \textsl{g}^{\hspace{.25ex}nk}\hspace{-0.25ex}
+}$ и~${\Gamma_{\hspace{-0.25ex}ij\mathdotbelow{k}} \hspace{-0.16ex} \equiv \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}_k
 %%\hspace{-0.2ex} = \Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}n} \hspace{.16ex} \textsl{g}_{nk}
 }$.
 
@@ -2178,13 +2325,23 @@ ${\bm{E} = \hspace{-0.25ex} \smash{\boldnabla \bm{r}}}$,
 
 Билинейная форма
 
-...
+\nopagebreak ...
 
 Поскольку шесть функций~${\textsl{g}_{ij}(q^{\hspace{.1ex}k})}$ происходят от векторной функции~${\bm{r}(q^{\hspace{.1ex}k})}$, то между элементами~$\textsl{g}_{ij}$ существуют некие соотношения.
 
-\en{Expression}\ru{Выражение} ${d\bm{r} = d\bm{r} \dotp \hspace{-0.2ex} \tikzmark{beginItsE} \boldnabla \bm{r} \tikzmark{endItsE} = \bm{r}_k \hspace{0.2ex} dq^{\hspace{.1ex}k}}$~--- \en{exact differential}\ru{полный дифференциал}. Следовательно, вторые частные производные коммутируют: ${\partial_i \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.2ex} = \partial_j \bm{r}_i}$~(${\bm{r}_{ij} \hspace{-0.2ex} = \bm{r}_{\hspace{-0.2ex}ji}}$).
-Но это необходимое условие уж\'{е} обеспечено симметрией~${\textsl{g}_{ij}}$ (\inquotes{\en{connection}\ru{связностью}}~$\nabla_{\hspace{-0.32ex}i\hspace{.1ex}}$, её~же часто называют \inquotes{\en{covariant derivative}\ru{ковариантная производная}}~--- а~символы Христоффеля это \inquotes{\en{components of connection}\ru{компоненты связности}} \en{in local coordinates}\ru{в~локальных координатах}).
-\AddOverBrace[line width=.75pt][0,0.1ex]{beginItsE}{endItsE}{${\scriptstyle \bm{E}}$}
+\en{Expression}\ru{Выражение} ${d\bm{r} = d\bm{r} \dotp \hspace{-0.2ex} \tikzmark{beginItsUnitTensorE} \boldnabla \bm{r} \tikzmark{endItsUnitTensorE} = \bm{r}_k \hspace{0.2ex} dq^{\hspace{.1ex}k}}$\en{ is}\ru{~---} \en{exact differential}\ru{полный дифференциал}. Следовательно, вторые частные производные коммутируют: ${\partial_i \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}j} \hspace{-0.2ex} = \partial_j \bm{r}_i}$~(${\bm{r}_{ij} \hspace{-0.2ex} = \bm{r}_{\hspace{-0.2ex}ji}}$).
+Но это необходимое условие уж\'{е} обеспечено симметрией~${\textsl{g}_{ij}}$ (\inquotes{\en{connection}\ru{связностью}}~$\nabla_{\hspace{-0.32ex}i\hspace{.1ex}}$, её~же часто называют \inquotes{\en{covariant derivative}\ru{ковариантная производная}}~--- а~символы Христоффеля это \inquotes{\en{components of~connection}\ru{компоненты связности}} \en{in local coordinates}\ru{в~локальных координатах}).
+\AddOverBrace[line width=.75pt][0,0.1ex]{beginItsUnitTensorE}{endItsUnitTensorE}{${\scriptstyle \bm{E}}$}
+
+\vspace{1.2em}\begin{equation*}
+\bm{r}_{ij} \hspace{-0.1ex} = \hspace{.1ex}
+\tikzmark{beginChristoffelSymbolOne} \bm{r}_{ij} \hspace{-0.15ex} \dotp \tikzmark{beginEtensorUpDown} \bm{r}^{k} \hspace{-0.4ex} \tikzmark{endChristoffelSymbolOne} \hspace{.4ex} \bm{r}_{\hspace{-0.1ex}k} \tikzmark{endEtensorUpDown} \hspace{-0.2ex}
+= \tikzmark{beginChristoffelSymbolOther} \bm{r}_{ij} \hspace{-0.15ex} \dotp \tikzmark{beginEtensorDownUp} \bm{r}_{\hspace{-0.1ex}k} \tikzmark{endChristoffelSymbolOther} \bm{r}^k \tikzmark{endEtensorDownUp}
+\end{equation*}%
+\AddOverBrace[line width=.75pt][0,0.2ex]{beginEtensorUpDown}{endEtensorUpDown}{${\scriptstyle \bm{E}}$}%
+\AddOverBrace[line width=.75pt][0,0.2ex]{beginEtensorDownUp}{endEtensorDownUp}{${\scriptstyle \bm{E}}$}%
+\AddUnderBrace[line width=.75pt][0,-0.1ex]{beginChristoffelSymbolOne}{endChristoffelSymbolOne}{${\scriptstyle \Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}k}}$}%
+\AddUnderBrace[line width=.75pt][0,-0.1ex]{beginChristoffelSymbolOther}{endChristoffelSymbolOther}{${\scriptstyle \Gamma_{\hspace{-0.25ex}ij\mathdotbelow{k}}}$}
 
 ${\Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}k} \hspace{.2ex} \bm{r}_k \hspace{-0.2ex} = \bm{r}_{ij} \hspace{-0.16ex} \dotp \hspace{.1ex} \bm{r}^k \bm{r}_k \hspace{-0.2ex} = \bm{r}_{ij}}$
 
@@ -2206,10 +2363,12 @@ $\boldnabla \bm{r}_i \hspace{-0.2ex}
 \nabla_{\hspace{-0.32ex}i\hspace{.1ex}} \bm{r}_{n} \hspace{-0.25ex}
 = \Gamma_{\hspace{-0.25ex}in}^{\hspace{.25ex}k} \hspace{.16ex} \bm{r}_k$
 
-\vspace{.25em} \noindent (Добавить) про симметрию $\Gamma_{\hspace{-0.25ex}ijk}$ ...
+\vspace{.2em} Christoffel symbols describe a~metric connection, that is how the~basis changes from point to~point.
+
+\vspace{.2em} \noindent \textcolor{cyan}{добавить:} симметрия ${ \Gamma_{\hspace{-0.25ex}ij\mathdotbelow{k}} = \Gamma_{\hspace{-0.33ex}ji\mathdotbelow{k}} }$, поэтому ${3^3 \hspace{-0.2ex} - 3 \hspace{-0.2ex}\cdot\hspace{-0.2ex} 3 = 18}$ разных~(независимых) ${\Gamma_{\hspace{-0.25ex}ij\mathdotbelow{k}}}$
 
 \begin{multline}
-\Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}n} \hspace{.16ex} \textsl{g}_{nk} \hspace{-0.24ex} = \Gamma_{\hspace{-0.25ex}ijk} \hspace{-0.2ex} = \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}_k \hspace{-0.1ex} = \\[-0.1em]
+\Gamma_{\hspace{-0.25ex}ij}^{\hspace{.25ex}n} \hspace{.16ex} \textsl{g}_{nk} \hspace{-0.24ex} = \Gamma_{\hspace{-0.25ex}ij\mathdotbelow{k}} \hspace{-0.2ex} = \bm{r}_{ij} \hspace{-0.2ex} \dotp \bm{r}_k \hspace{-0.1ex} = \\[-0.1em]
 %
 = \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \bm{r}_{ij} \hspace{-0.16ex} + \bm{r}_{\hspace{-0.2ex}ji} \right) \hspace{-0.1ex} \dotp \bm{r}_k \hspace{-0.1ex}
 + \smalldisplaystyleonehalf \hspace{-0.2ex} \left( \bm{r}_{\hspace{-0.2ex}jk} \hspace{-0.16ex} - \bm{r}_{kj} \right) \hspace{-0.1ex} \dotp \bm{r}_i \hspace{-0.1ex}
@@ -2236,32 +2395,23 @@ $\boldnabla \bm{r}_i \hspace{-0.2ex}
 
 Пойдём дальше: ${d\bm{r}_i \hspace{-0.2ex} = d\bm{r} \dotp \hspace{-0.2ex} \boldnabla \bm{r}_i \hspace{-0.2ex} = dq^{\hspace{.1ex}k} \partial_k \bm{r}_i \hspace{-0.2ex} = \bm{r}_{ik} \hspace{0.2ex} dq^{\hspace{.1ex}k}\hspace{-0.25ex}}$~--- тоже полные дифференциалы.
 Поэтому ${\partial_i \partial_j \bm{r}_k \hspace{-0.2ex} = \partial_j \partial_i \bm{r}_k}$~(${\partial_i \bm{r}_{\hspace{-0.2ex}jk} \hspace{-0.2ex} = \partial_j \bm{r}_{ik}}$),
-и~трёхиндексный объект третьих частных производных
-%\nopagebreak\vspace{-0.1em}
+и~трёхиндексный объект из~векторов третьих частных производных
+
+\nopagebreak\vspace{-0.5em}
 \begin{equation}
 \bm{r}_{ijk} \hspace{-0.1ex} \equiv \hspace{.1ex} \partial_i \partial_j \partial_k \bm{r}
 = \partial_i \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}jk} %%\hspace{-0.4ex} = \partial_k \bm{r}_{ij}
 \end{equation}
 
 \vspace{-0.2em} \noindent симметричен по~первому и~второму индексам (а~не~только по~второму и~третьему). И~тогда равен нулю~${\hspace{-0.16ex}^4\bm{0}}$ следующий тензор четвёртой сложности~--- тензор кривизны Римана\hbox{--}Христоффеля
-\nopagebreak\vspace{.1em}\begin{equation}\label{riemanncurvaturetensor}
-{^4\bm{\mathfrak{R}}} = \hspace{.12ex} \mathfrak{R}_{\hspace{.1ex}ijkn} \hspace{.12ex} \bm{r}^i \bm{r}^j \bm{r}^k \bm{r}^n \hspace{-0.25ex}, \:\:
-\mathfrak{R}_{\hspace{.1ex}ijkn} \hspace{-0.12ex} \equiv \left( \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}jik} \hspace{-0.2ex} - \bm{r}_{ijk} \hspace{.12ex} \right) \hspace{-0.16ex} \dotp \bm{r}_n .
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{riemanncurvaturetensor}
+{^4\bm{\mathfrak{R}}} = \hspace{.12ex} \mathfrak{R}_{\hspace{.1ex}hijk} \hspace{.12ex} \bm{r}^h \bm{r}^i \bm{r}^j \bm{r}^k \hspace{-0.25ex},
+\:\:
+\mathfrak{R}_{\hspace{.1ex}hijk} \hspace{-0.12ex} \equiv
+\bm{r}_h \hspace{-0.15ex} \dotp \left( \hspace{.12ex} \bm{r}_{\hspace{-0.2ex}jik} \hspace{-0.2ex} - \bm{r}_{ijk} \hspace{.12ex} \right)
+\hspace{-0.3ex} .
 \end{equation}
-
-
-
-{\small
-The curvature tensor is given in terms of the connection $\nabla$ as
-${ R(u,v)w=\nabla_u\nabla_v w - \nabla_v \nabla_u w - \nabla_{[u,v]} w }$
-where [u,v] is the Lie bracket of vector fields. Occasionally, the curvature tensor is defined with the opposite sign.
-
-If ${u=\partial /\partial x^{i}}$ and ${v=\partial /\partial x^{j}}$ are coordinate vector fields then ${[u,v]=0}$ and therefore the formula simplifies to ${\displaystyle R(u,v)w=\nabla _{u}\nabla _{v}w-\nabla _{v}\nabla _{u}w}$.
-
-The curvature tensor measures noncommutativity of the covariant derivative, and as such is the integrability obstruction for the existence of an isometry with \inquotes{flat} space. The linear transformation ${w\mapsto R(u,v)w}$ is also called the curvature transformation or endomorphism.
-\par}
-
-
 
 Выразим компоненты~${\mathfrak{R}_{\hspace{.1ex}ijkn}}$ через метрическую матрицу~${\textsl{g}_{ij}}$. Начнём с~дифференцирования локального кобазиса:
 \[ \bm{r}^i \hspace{-0.32ex} \dotp \bm{r}_k \hspace{-0.16ex} = \delta_k^{\hspace{0.1ex}i} \;\Rightarrow\:
@@ -2271,9 +2421,57 @@ The curvature tensor measures noncommutativity of the covariant derivative, and 
 
 ...
 
+Шесть независимых компонент:
+${\mathfrak{R}_{\hspace{.1ex}1212}}$, ${\mathfrak{R}_{\hspace{.1ex}1213}}$, ${\mathfrak{R}_{\hspace{.1ex}1223}}$, ${\mathfrak{R}_{\hspace{.1ex}1313}}$, ${\mathfrak{R}_{\hspace{.1ex}1323}}$, ${\mathfrak{R}_{\hspace{.1ex}2323}}$.
 
-Равенство тензора Риччи нулю: ${\hspace{.1ex}\pmb{\scalebox{1.2}[1]{$\mathscr{R}$}} \hspace{-0.16ex} = \hspace{-0.2ex} {^2\bm{0}}}$ (в~компонентах тут шесть уравнений ${\hspace{.1ex}\mathscr{R}_{\hspace{-0.1ex}ij} \hspace{-0.3ex} = \mathscr{R}_{\hspace{-0.1ex}ji} \hspace{-0.2ex} = 0}$)~--- это достаточное условие %%(шесть условий в~компонентах)
-интегрируемости~(\inquotes{совместности}, \inquotes{compatibility}) при определении радиуса-вектора~${\bm{r}(q^{\hspace{.1ex}k})}$ по~полю~${\textsl{g}_{ij}(q^{\hspace{.1ex}k})}$.
+...
+
+\en{Symmetric}\ru{Симметричный} \en{bivalent}\ru{бивалентный} \ru{тензор кривизны }Ricci\en{ curvature tensor}
+
+\begin{equation*}
+\hspace{.1ex}\pmb{\scalebox{1.2}[1]{$\mathscr{R}$}} \equiv
+\smalldisplaystyleonefourth \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}abij} \hspace{.2ex} \bm{r}^a \hspace{-0.3ex} \times \hspace{-0.15ex} \bm{r}^b \bm{r}^i \hspace{-0.3ex} \times \hspace{-0.15ex} \bm{r}^j \hspace{-0.25ex}
+= \smalldisplaystyleonefourth \hspace{.15ex} \levicivita^{abp} \levicivita^{ijq} \hspace{.25ex} \mathfrak{R}_{\hspace{.1ex}abij} \hspace{.2ex} \bm{r}_{\hspace{-0.2ex}p} \bm{r}_{\hspace{-0.2ex}q} \hspace{-0.2ex}
+= \mathscr{R}^{\hspace{.1ex}pq} \hspace{.1ex} \bm{r}_{\hspace{-0.2ex}p} \bm{r}_{\hspace{-0.2ex}q}
+\end{equation*}
+
+\vspace{-0.2em} \noindent (\en{coefficient}\ru{коэффициент}~$\onefourth$ \en{is used here for convenience}\ru{используется тут для удобства}) \en{with components}\ru{с~компонентами}
+
+\vspace{.1em}\begin{equation*}
+\begin{array}{ccc}
+\mathscr{R}^{\hspace{.1ex}11} \hspace{-0.3ex} =
+\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}2323}
+\hspace{.2ex} ,
+&
+&
+\\[.6em]
+%
+\mathscr{R}^{\hspace{.1ex}21} \hspace{-0.3ex} =
+\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1323}
+\hspace{.2ex} ,
+&
+\mathscr{R}^{\hspace{.1ex}22} \hspace{-0.3ex} =
+\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1313}
+\hspace{.2ex} ,
+&
+\\[.6em]
+%
+\mathscr{R}^{\hspace{.1ex}31} \hspace{-0.3ex} =
+\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1223}
+\hspace{.2ex} ,
+&
+\mathscr{R}^{\hspace{.1ex}32} \hspace{-0.3ex} =
+\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1213}
+\hspace{.2ex} ,
+&
+\mathscr{R}^{\hspace{.1ex}33} \hspace{-0.3ex} =
+\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1212}
+\hspace{.2ex} .
+\end{array}
+\end{equation*}
+
+Равенство тензора Риччи нулю
+${\hspace{.1ex}\pmb{\scalebox{1.2}[1]{$\mathscr{R}$}} \hspace{-0.16ex} = \hspace{-0.2ex} {^2\bm{0}}}$ (в~компонентах это шесть уравнений ${\hspace{.1ex}\mathscr{R}^{\hspace{.1ex}ij} \hspace{-0.3ex} = \mathscr{R}^{\hspace{.1ex}ji} \hspace{-0.3ex} = 0}$) \en{is}\ru{есть} \en{necessary condition}\ru{необходимое условие} \en{of~integrability}\ru{интегрируемости}~(\ru{\inquotes{совместности}, }\inquotes{compatibility}) при определении вектора-радиуса~${\bm{r}(q^{\hspace{.1ex}k})}$ по~полю~${\textsl{g}_{ij}(q^{\hspace{.1ex}k})}$.
 
 \end{otherlanguage}
 
@@ -2284,8 +2482,8 @@ The curvature tensor measures noncommutativity of the covariant derivative, and 
 
 \begin{otherlanguage}{russian}
 
-Существует немало книг, в~которых рассматривается лишь аппарат тензорного исчисления~\cite{mcconnell-tensoranalysis, schouten-tensoranalysis, borisenko.tarapov, rashevsky-riemanniangeometry, sokolnikov-tensoranalysis}. Преобладает \inquotes{индексный} подход~--- тензоры трактуются как матрицы компонент, преобразующиеся определённым путём.
-\inquotes{Прямой} подход к~тензорам излагается, например, в~приложениях книг А.\,И.\;Лурье~\cite{lurie-nonlinearelasticity, lurie-theoryofelasticity}.
+\en{There’re many books}\ru{Существует много книг}, \en{where only the~apparatus of~tensor calculus is described}\ru{где описывается только аппарат тензорного исчисления}~\cite{mcconnell-tensoranalysis, schouten-tensoranalysis, borisenko.tarapov, rashevsky-riemanniangeometry, sokolnikov-tensoranalysis}. \en{However}\ru{Однако}, \inquotes{\en{the~index approach}\ru{индексный подход}} \en{prevails}\ru{преобладает}~--- \en{tensors are treated as matrices of~components}\ru{тензоры трактуются как матрицы компонент}, \en{transforming in a~known way}\ru{преобразующиеся известным путём}.
+\inquotes{\en{The direct approach}\ru{Прямой подход}} \en{to~tensors}\ru{к~тензорам} излагается, например, в~приложениях книг А.\,И.\;Лурье~\cite{lurie-nonlinearelasticity, lurie-theoryofelasticity}.
 Яркое описание теории векторных полей можно найти у~R.\:Feynman’а~\cite{feynman-lecturesonphysics}.
 Сведения о~тензорном исчислении содержатся и~в~своеобразной и~глубокой книге C.\:Truesdell’а~\cite{truesdell-firstcourse}.
 
