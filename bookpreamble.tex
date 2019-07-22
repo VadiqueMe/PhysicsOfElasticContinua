@@ -247,6 +247,7 @@
 
 \newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
 \newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
+\newcommand\expminustwo{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\hspace{.1ex}\raisemath{.1ex}{2}}
 
 \newcommand\expexternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}
 \newcommand\expinternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}
@@ -418,25 +419,28 @@
 
 % tune headers and footers
 
-\setlength{\headheight}{12pt}
+\setlength{\headheight}{5mm}
 \setlength{\footskip}{0pt}
 
 \usepackage{fancyhdr}
 
+\newlength\pagenumberoffset
+\addtolength{\pagenumberoffset}{9mm}
+
 \fancypagestyle{plain}{%
 \fancyhf{} % clear all header and footers
-\fancyhead[LE,RO]{\vspace*{.66em}\circled[yellow!5]{\small\thepage}}
-\fancyheadoffset[LE]{7.5mm} % move page numbers left on even pages
-\fancyheadoffset[RO]{7.5mm} % move page numbers right on odd pages
+\fancyhead[LE,RO]{\circled[yellow!5]{\small\thepage}}
+\fancyheadoffset[LE]{\pagenumberoffset} % move page numbers left on even pages
+\fancyheadoffset[RO]{\pagenumberoffset} % move page numbers right on odd pages
 \renewcommand{\headrulewidth}{0pt} % no line in header
 \renewcommand{\footrulewidth}{0pt} % no line in footer
 }
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\vspace*{.66em}\circled[yellow!5]{\small\thepage}}
-\fancyheadoffset[LE]{7.5mm}
-\fancyheadoffset[RO]{7.5mm}
+\fancyhead[LE,RO]{\circled[yellow!5]{\small\thepage}}
+\fancyheadoffset[LE]{\pagenumberoffset}
+\fancyheadoffset[RO]{\pagenumberoffset}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -501,7 +505,7 @@ labelsep=period,justification=centering,singlelinecheck=off}
 
 \sloppy
 
-%%\usepackage{showframe} % uncomment to show frames
+%\usepackage{showframe} % uncomment to show frames
 
 % tune lists
 
