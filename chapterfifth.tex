@@ -132,7 +132,7 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 
 \vspace{-0.1em} \en{Introducing deformation tensors}\ru{Вводя тензоры деформации}\:---
 \en{tensor of relative displacement between particles}\ru{тензор относительного смещения между частицами} (distortion tensor, strain tensor)~$\distortiontensor$
-\en{and}\ru{и}~\en{curvature-twist tensor}\ru{тензор искривления-скручивания} (\ru{curvature-twist tensor, }wryness tensor)~$\wrynesstensor$\:--- \en{as}\ru{как}
+\en{and}\ru{и}~\en{curvature-twist tensor}\ru{тензор искривления-скручивания} (\ru{curvature-twist tensor, }torsion-flexure tensor, wryness tensor)~$\wrynesstensor$\:--- \en{as}\ru{как}
 
 \nopagebreak\vspace{-0.1em}
 \begin{equation}\label{deformationtensors:micropolarcontinuum}
@@ -179,7 +179,6 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and}\ru{и}~$
 \begin{otherlanguage}{russian}
 
 \vspace{-0.2em} \noindent Множители Лагранжа в~каждой точке\:--- это несимметричные тензоры второй сложности~$\forcestresstensor$ и~$\couplestresstensor$.
-%%энергетически сопрягаемые с~$\distortiontensor$ и~$\wrynesstensor$
 
 Преобразуем ${- \hspace{.2ex} \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T}}$ и~${- \hspace{.2ex} \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T}}$
 
@@ -308,6 +307,9 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and}\ru{и}~$
 
 ...
 
+eccentricity vector~$\mathboldoe$
+
+...
 
 
 
@@ -358,8 +360,11 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and}\ru{и}~$
 
 %% The classical isotropic linear elastic material behavior is presented by two material parameters, for example, the Young’s modulus and the Poisson’s ratio, while the isotropic Cosserat continuum needs six material parameters
 
+%% to describe such a material, even when assumed to be linear elastic, homogeneous and isotropic, it requires six independent material constants, in contrast to only two such constants for the classical continuum
 
 ...
+
+material’s intrinsic (internal) length scale $h$
 
 Если устремить $h$ к~нулю, исчезает вклад $\wrynesstensor$ в~$\Pi$, а~с~ним и моментные напряжения~$\couplestresstensor$.
 Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$, тогда тензор~${\hspace{-0.1ex}\forcestresstensor}$ становится симметричным:
@@ -493,21 +498,23 @@ ${{\color{black!40}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresste
 \hspace{-0.5ex} ,
 \end{equation*}
 
-\vspace{-0.1em} \noindent где тройка векторов~${\bm{a}_{\hspace{-0.12ex}j}(q^i\hspace{-0.4ex}, t)}$ жёстко связана с~каждой частицей, показывая угловую ориентацию относительно как\hbox{-}либо выбираемых\footnote{Один из вариантов: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.4ex} = \initialvector_{\hspace{-0.2ex}j} \hspace{-0.1ex} \equiv \partial_j \currentvector}$.
+\vspace{-0.1em} \noindent где тройка векторов~${\bm{a}_{\hspace{-0.12ex}j}(q^i\hspace{-0.4ex}, t)}$ жёстко связана с~каждой частицей, показывая угловую ориентацию относительно как\hbox{-}либо выбираемых\footnote{%
+Один из вариантов: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.4ex} = \initialvector_{\hspace{-0.2ex}j} \hspace{-0.1ex} \equiv \partial_j \currentvector}$.
 Другое предложение: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.2ex}}$ это ортонормальная тройка собственных векторов тензора инерции частицы. %% (но как обосновать такой выбор в~статике?)
-Вообще, ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.2ex}}$ могут быть любой тройкой линейно независимых векторов.}\hspace{-0.25ex}
+Вообще, ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.2ex}}$ могут быть любой тройкой линейно независимых векторов.
+}\hspace{-0.2ex}
 векторов~${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j}(q^i) \equiv \bm{a}_{\hspace{-0.12ex}j}(q^i\hspace{-0.4ex}, 0)}$,
 ${\bm{a}_{\hspace{-0.12ex}j} \hspace{-0.2ex} = \rotationtensor \hspace{-0.1ex} \dotp \hspace{.2ex} \mathcircabove{\bm{a}}_{\hspace{-0.12ex}j}}$;
 ${\bm{a}^j\hspace{-0.2ex}}$\:--- тройка взаимных векторов:
 ${\bm{a}_{\hspace{-0.12ex}j} \bm{a}^j \hspace{-0.25ex} = \hspace{-0.15ex} \bm{a}^j \bm{a}_{\hspace{-0.12ex}j} \hspace{-0.25ex} = \hspace{-0.2ex} \bm{E}}$
 (${t\!=\!0}$, ${\mathcircabove{\bm{a}}^j}$: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \mathcircabove{\bm{a}}^j \hspace{-0.25ex} = \hspace{-0.15ex} \mathcircabove{\bm{a}}^j \mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.25ex} = \hspace{-0.2ex} \bm{E}}$).
-Движение среды полностью определяется функциями ${\currentvector(q^i\hspace{-0.4ex}, t)}$ и~${\rotationtensor(q^i\hspace{-0.4ex}, t)}$.
+Движение среды полностью определяется функциями ${\currentvector(q^i\hspace{-0.4ex}, t)}$ \en{and}\ru{и}~${\rotationtensor(q^i\hspace{-0.4ex}, t)}$.
 
 Имея представления ${\initialvector(q^i)}$ и~${\currentvector(q^i\hspace{-0.4ex}, t)}$,
 вводим базис~${\currentvector_i \equiv \partial_i \currentvector}\hspace{-0.2ex}$,
 взаимный базис~${\currentvector^i}$: ${\currentvector_{\hspace{-0.2ex}j} \hspace{-0.2ex} \dotp \currentvector^i \hspace{-0.25ex} = \delta^{\hspace{.1ex}i}_{\hspace{-0.2ex}j}}$,
-дифференциальные операторы~$\boldnablacircled$ и~${\hspace{-0.16ex}\boldnabla}\hspace{-0.1ex}$,
-а~также градиент движения~$\motiongradient$
+\en{differential operators}\ru{дифференциальные операторы}~$\boldnablacircled$ \en{and}\ru{и}~${\hspace{-0.16ex}\boldnabla}\hspace{-0.1ex}$,
+а~также \en{motion gradient}\ru{градиент движения}~$\motiongradient$
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
 \boldnablacircled \equiv \initialvector^{\hspace{.1ex}i} \partial_i
@@ -538,31 +545,31 @@ ${\bm{a}_{\hspace{-0.12ex}j} \bm{a}^j \hspace{-0.25ex} = \hspace{-0.15ex} \bm{a}
 \end{multline}
 
 \vspace{-0.2em} \noindent \en{Here}\ru{Здесь}
-$\rho$~\en{is mass density}\ru{--- плотность массы};
-$\bm{f}$ и~$\bm{m}$\:--- внешние сила и~момент \en{per mass unit}\ru{на~единицу массы};
-$\bm{p}$ и~$\mathboldM$\:--- они~же \en{per surface unit}\ru{на~единицу поверхности};
+$\rho$\ru{\:---}\en{~is} \en{mass density}\ru{плотность массы};
+$\bm{f}$ \en{and}\ru{и}~$\bm{m}$\ru{\:---}\en{~are} \en{external}\ru{внешние} \en{force}\ru{сила} \en{and}\ru{и}~\en{moment}\ru{момент} \en{per mass unit}\ru{на~единицу массы};
+$\bm{p}$ \en{and}\ru{и}~$\mathboldM$\:--- они~же \en{per surface unit}\ru{на~единицу поверхности};
 ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренних сил \en{per volume unit}\ru{на~единицу объёма} в~текущей конфигурации.
 Вектор м\'{а}лого поворота~$\littlerotationvector$
 
 \nopagebreak\vspace{-0.5em}\begin{multline*}
 \scalebox{0.98}{$ \rotationtensor \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = \bm{E}
 \:\Rightarrow\,
-\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex}
-= - \hspace{.2ex} \rotationtensor \hspace{-0.1ex} \dotp \variation{\rotationtensor}^{\T}
+\variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex}
+= - \hspace{.2ex} \rotationtensor \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\rotationtensor}^{\T}
 \Rightarrow $}
 \\[-0.15em]
 %
 \scalebox{0.98}{$ \Rightarrow\,
-\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.25ex}
+\variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.25ex}
 = \hspace{.1ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
 = \hspace{.1ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \rotationtensor \hspace{-0.1ex} \dotp \rotationtensor^{\T}
 \Rightarrow\,
-\variation{\rotationtensor} \hspace{-0.1ex} = \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \rotationtensor , $}
+\variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} = \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \rotationtensor , $}
 \end{multline*}
 
 \vspace{-0.4em}\begin{equation*}
 \littlerotationvector = - \, \smalldisplaystyleonehalf \hspace{.1ex}
-\scalebox{1}{$ \left( \variation{\rotationtensor} \hspace{-0.1ex} \dotp^{\mathstrut} \hspace{-0.1ex} \rotationtensor^{\T} \hspace{.1ex} \right)_{\hspace{-0.15em}\Xcompanion} $}
+\scalebox{1}{$ \left( \variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} \dotp^{\mathstrut} \hspace{-0.1ex} \rotationtensor^{\T} \hspace{.1ex} \right)_{\hspace{-0.15em}\Xcompanion} $}
 \end{equation*}
 
 \vspace{-0.1em} При движении среды как жёсткого целого нет деформаций, и~работа~$\variation{\internalwork}\hspace{-0.2ex}$ внутренних сил равна нулю:

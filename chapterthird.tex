@@ -23,7 +23,7 @@
 m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
 \end{equation}
 
-\vspace{-0.25em}\noindent \en{where}\ru{где} $\rho$~\en{is volumetric mass density}\ru{--- объёмная плотность массы}.
+\vspace{-0.25em}\noindent \en{where}\ru{где} ${\rho\hspace{.1ex}}$\ru{\:---}\en{ is} \en{volume(tric) mass density}\ru{объёмная плотность массы}.
 
 Real matter is modelled as a~continuum, \en{which can be thought of as}\ru{который может быть мыслим как} \en{an~infinite set}\ru{бесконечное множество} \en{of~vanishingly small}\ru{исчезающе м\'{а}лых} \en{particles}\ru{частиц}, joined together.
 
@@ -558,16 +558,11 @@ aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2
 
 \label{para:velocityfield}
 
-\newcommand{\strainratetensor}{\bm{\mathcal{S}}}
-\newcommand{\strainratetensorcomponents}[1]{\mathcal{S}_{#1}}
-\newcommand{\vorticitytensor}{\scalebox{0.88}[1.0]{$\bm{\mathcal{W}}$}}
-\newcommand{\vorticityvector}{\bm{w}}
-
 \en{This topic}\ru{Эта тема} \en{is discussed}\ru{обсуждается} \en{in nearly any}\ru{в~почти любой} \en{book}\ru{книге} \en{about~continuum mechanics}\ru{о~механике сплошной среды}, \en{however}\ru{однако} \en{for}\ru{для} \en{solid elastic continua}\ru{твёрдых упругих сред} \en{it’s not very vital}\ru{она не~столь насущна}.
 \en{Among various}\ru{Среди разных} \en{models of~material continuum}\ru{моделей материального континуума}, \en{an elastic solid body}\ru{упругое твёрдое тело} \en{is distinguished}\ru{выделяется} \en{by interesting possibility}\ru{интересной возможностью} \en{of~deriving}\ru{вывода} \en{the~complete set}\ru{полного набора}~(\en{system}\ru{системы}) \en{of~equations}\ru{уравнений} \en{for it}\ru{для него} \en{via single logically flawless procedure}\ru{единой логически безупречной процедурой}.
 \en{But now}\ru{Но пока} \en{we follow the~way}\ru{мы идём путём}, \en{usual}\ru{обычным} \en{for}\ru{для} \en{fluid continuum mechanics}\ru{механики сплошной текучей среды}.
 
-\en{So}\ru{Итак}, \en{there’s}\ru{есть} \en{velocity field}\ru{поле скоростей} \en{in spatial description}\ru{в~пространственном описании} ${\bm{v} \equiv \mathdotabove{\bm{R}} = \bm{v}(\bm{R}, t)}$.
+\en{So}\ru{Итак}, \en{there’s}\ru{есть} \en{velocity field}\ru{поле скоростей} \en{in spatial description}\ru{в~пространственном описании} ${\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\bm{R}} = \bm{v}(\bm{R}, t)}$.
 \en{Decomposition}\ru{Разложение} \en{of~tensor}\ru{тензора} ${\hspace{-0.1ex}\boldnabla \bm{v} \hspace{-0.16ex} = \hspace{-0.2ex} \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}} = \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}i} \partial_i \mathdotabove{\bm{R}} = \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}i} \hspace{-0.2ex} \mathdotabove{\bm{R}}_i}$%
 \kern-0.15ex\footnote{For sufficiently smooth functions, partial derivatives always commute, space and time ones too. Thus
 
@@ -584,7 +579,7 @@ $}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}}
-= \hspace{-0.2ex} \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}}^{\hspace{.25ex}\mathsf{S}} \hspace{-0.25ex}
+= \hspace{-0.2ex} \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}}^{\hspace{.3ex}\mathsf{S}} \hspace{-0.25ex}
 - \hspace{.1ex} \smalldisplaystyleonehalf \hspace{-0.33ex} \left( \hspace{-0.2ex} \boldnabla \hspace{-0.15ex}\times\hspace{-0.25ex} \mathdotabove{\bm{R}} \right) \hspace{-0.4ex} \times \hspace{-0.2ex} \bm{E}
 \end{equation*}
 
@@ -597,7 +592,7 @@ $}
 \\[.333em]
 %
 \strainratetensor \equiv \hspace{-0.12ex} \boldnabla {\bm{v}}^{\hspace{.2ex}\mathsf{S}} \hspace{-0.32ex}
-=  \hspace{-0.2ex} \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}}^{\hspace{.25ex}\mathsf{S}} \hspace{-0.32ex}
+=  \hspace{-0.2ex} \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}}^{\hspace{.3ex}\mathsf{S}} \hspace{-0.32ex}
 = \smalldisplaystyleonehalf \hspace{-0.33ex} \left( \hspace{-0.3ex} \bm{R}^{\hspace{.1ex}i} \hspace{-0.2ex} \mathdotabove{\bm{R}}_i \hspace{-0.1ex} + \hspace{-0.1ex} \mathdotabove{\bm{R}}_i \bm{R}^{\hspace{.1ex}i} \right)
 \hspace{-0.44ex} ,
 \\[.44em]
@@ -685,7 +680,7 @@ G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
 \end{array}
 \end{equation}
 
-\en{Applying volume transformation~\eqref{volumechange}, we have}
+\en{Applying transformation of~volume~\eqref{volumechange}, we have}
 
 \ru{Применяя преобразование объёма~\eqref{volumechange}, имеем}
 
@@ -717,10 +712,11 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 % forces are
 % • linear force
-% • angular torque (moment, moment of force)
+% • angular torque (moment, moment of force, couple)
 
-\en{Since}\ru{Поскольку} \en{particles of this model of~continuum}\ru{частицы этой модели континуума}\en{ are}\ru{\:---} \en{points with only translational degrees of~freedom}\ru{точки лишь с~трансляционными степенями свободы}, %%(translational degrees of freedom arise from a~particle’s ability to move freely in space)
-\ru{то }\en{there’re no moments among generalized forces}\ru{среди обобщённых сил нет моментов}.
+\en{Since}\ru{Поскольку} \en{particles of this model of~continuum}\ru{частицы этой модели континуума}\en{ are}\ru{\:---} \en{points with only translational degrees of~freedom}\ru{точки лишь с~трансляционными степенями свободы}%
+\footnote{\en{Translational degrees of~freedom}\ru{Трансляционные степени свободы} \en{arise}\ru{возникают} \en{from}\ru{из} \en{a~particle’s ability}\ru{способности частицы} \en{to~move freely in~space}\ru{свободно двигаться в~пространстве}.}\hbox{\hspace{-0.5ex},}
+\ru{то }\en{there’re no moments among generalized forces}\ru{среди обобщённых сил нет моментов}, \en{there’re no applied external couples}\ru{нет никаких приложенных внешних пар сил} \en{neither in~volume nor on~surface}\ru{ни в~объёме, ни по~поверхности}.
 
 % forces are
 % • body force, within a force field
@@ -728,7 +724,7 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 \begin{otherlanguage}{russian}
 
-На~элементарный объём~$d\mathcal{V}$ действует некая сила~${\rho \bm{f} d\mathcal{V}}$; \hbox{если}~$\bm{f}$\:--- массовая сила (действующая на~единицу массы), то~${\rho \bm{f}}$\:--- объёмная. Такие силы происходят от силовых полей, например: гравитационные силы (\inquotes{силы тяжести}), силы инерции в~неинерциальных системах отсчёта, электромагнитные силы при~наличии в~среде зарядов и~токов.
+На~элементарный объём~$d\mathcal{V}$ действует сила~${\rho \bm{f} d\mathcal{V}}$; \hbox{если}~$\bm{f}$\:--- массовая сила (действующая на~единицу массы), то~${\rho \bm{f}}$\:--- объёмная. Такие силы происходят от силовых полей, например: гравитационные силы (\inquotes{силы тяжести}), силы инерции в~неинерциальных системах отсчёта, электромагнитные силы при~наличии в~среде зарядов и~токов.
 
 На~элементарную поверхность~${dO\hspace{-0.12ex}}$ действует поверхностная сила~${\bm{p} \hspace{0.2ex} dO\hspace{-0.12ex}}$. Это может~быть давление, трение, электростатическая сила при~сосредоточенных на~поверхности зарядах.
 
@@ -854,13 +850,14 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 \nopagebreak\ru{\vspace{-0.1em}}\begin{equation}\label{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.1ex} \rho \bm{f} \dotp \variation{\bm{R}} \hspace{.16ex} + \variation{\internalwork} \right) \hspace{-0.3ex} d\mathcal{V}
-+ \ointegral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.2ex} \mathboldN \dotp \cauchystress \dotp \variation{\bm{R}} \hspace{0.4ex} dO = \hspace{0.1ex} 0 \hspace{0.1ex}.
++ \ointegral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.2ex} \mathboldN \dotp \cauchystress \dotp \variation{\bm{R}} \hspace{.4ex} dO = \hspace{.1ex} 0
+\hspace{.1ex} .
 \end{equation}
 
 \vspace{-0.1em} \noindent \en{Here}\ru{Здесь}
 ${\variation{\internalwork}}$\;\en{is work of~internal forces per volume unit in current configuration}\ru{--- работа внутренних сил на~единицу объёма в~текущей конфигурации};
-$\bm{f}$~\en{is mass force}\ru{--- массовая сила}, \en{with dynamics}\ru{с~динамикой} ${\left( \bm{f} \hspace{-0.1ex} - \mathdotabove{\bm{v}} \right)}$;
-${\mathboldN \dotp \cauchystress}$~\en{is surface force}\ru{--- поверхностная сила}.
+$\bm{f}$\ru{\:---}\en{ is} \en{mass force}\ru{массовая сила}, \en{with dynamics}\ru{с~динамикой} ${\left( \bm{f} \hspace{-0.1ex} - \mathdotabove{\bm{v}} \right)}$;
+${\mathboldN \dotp \cauchystress}$\ru{\:---}\en{ is} \en{surface force}\ru{поверхностная сила}.
 
 %%Transforming surface integral by the divergence theorem
 %%Преобразуя поверхностный интеграл по~теореме о~дивергенции
@@ -934,7 +931,7 @@ ${\variation{\internalwork} = - \rho \hspace{.2ex} \variation{\widetilde{\Pi}}}$
 ...
 
 \begin{equation}
-\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{0.25ex}\mathsf{S}} \hspace{-0.25ex}
+\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.25ex}\mathsf{S}} \hspace{-0.25ex}
 = \hspace{-0.2ex} - \hspace{.2ex} \variation{\internalwork}
 = \rho \hspace{.2ex} \variation{\widetilde{\Pi}}
 \end{equation}
@@ -1332,7 +1329,7 @@ ${\boldnablacircled \hspace{-0.08ex}
 %
 \variation{\hspace{.12ex}\bm{C}} = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.32ex} \dotp \hspace{.1ex} \mathboldepsilon \dotp \bm{F} ,
 \:\,
-\mathboldepsilon \hspace{0.1ex} \equiv \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{0.2ex}\mathsf{S}} \hspace{-0.2ex} .
+\mathboldepsilon \hspace{0.1ex} \equiv \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.25ex}\mathsf{S}} \hspace{-0.2ex} .
 \end{array}
 \end{equation}
 
@@ -1379,6 +1376,21 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 ...
 
+for incompressible materials ${\Pi \hspace{-0.4ex} = \hspace{-0.33ex} \Pi(\mathrm{I}, \mathrm{II})}$
+
+Mooney\hbox{--}Rivlin model of incompressible material
+\[
+\Pi = c_1 \bigl( \mathrm{I} - 3\bigr) + c_2 \bigl( \mathrm{II} - 3\bigr)
+\]
+
+incompressible Treloar (neo-Hookean) material
+\[
+c_2 \hspace{-0.16ex} = 0
+\;\;\Rightarrow\;\;
+\Pi = c_1 \bigl( \mathrm{I} - 3\bigr)
+\]
+
+...
 
 
 \end{otherlanguage}
@@ -1420,25 +1432,25 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 Полагаем, что внутренние силы не~совершают работу при~виртуальном движении тела как целого\:--- когда нет деформации от бесконечно малых виртуальных перемещений~${\variation{\bm{R}}}$ частиц тела:
 \begin{equation}\label{stressesAsLagrangeMultipliers:zerovirtualmovements}
-\boldnabla^{\displaystyle \mathstrut} \hspace{.1ex} \variation{\bm{R}}^{\hspace{0.25ex}\mathsf{S}} \hspace{-0.1ex} = {^2\bm{0}} \hspace{.4ex}\Rightarrow\hspace{.25ex}
+\boldnabla^{\displaystyle \mathstrut} \hspace{.1ex} \variation{\bm{R}}^{\hspace{.25ex}\mathsf{S}} \hspace{-0.1ex} = {^2\bm{0}} \hspace{.4ex}\Rightarrow\hspace{.25ex}
 \variation{\internalwork} \hspace{-0.2ex} = 0 \hspace{0.1ex}.
 \end{equation}
 
 \vspace{-0.1em} Отбросив~${\variation{\internalwork}}$ в~\eqref{stressesAsLagrangeMultipliers:variations} при~условии~\eqref{stressesAsLagrangeMultipliers:zerovirtualmovements}, получим вариационное уравнение со~связью. Приём с~множителями Лагранжа даёт возможность считать вариации~${\variation{\bm{R}}}$ независимыми. Поскольку в~каждой точке связь представлена симметричным тензором второй сложности, то таким~же тензором будут и~множители Лагранжа~${\hspace{-0.16ex} ^2\hspace{-0.2ex}\bm{\lambda}}$. Приходим к~уравнению
 \begin{equation}\label{stressesAsLagrangeMultipliers:variationstoo}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.32ex} \left( \hspace{.1ex} \rho \bm{f} \dotp \variation{\bm{R}} \hspace{0.1ex} - \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.1ex} \boldnabla \hspace{0.1ex} \variation{\bm{R}}^{\hspace{0.25ex}\mathsf{S}} \right) \hspace{-0.32ex} d\mathcal{V} +
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.32ex} \left( \hspace{.1ex} \rho \bm{f} \dotp \variation{\bm{R}} \hspace{0.1ex} - \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.1ex} \boldnabla \hspace{0.1ex} \variation{\bm{R}}^{\hspace{.25ex}\mathsf{S}} \right) \hspace{-0.32ex} d\mathcal{V} +
 \integral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.2ex} \bm{p} \dotp \variation{\bm{R}} \hspace{0.4ex} dO = \hspace{0.2ex} 0 \hspace{0.1ex}.
 \vspace{-0.25em}\end{equation}
 
 \vspace{-0.16em} Благодаря симметрии~${^2\hspace{-0.2ex}\bm{\lambda}}$ имеем\footnote{${%
 \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \bm{X} \hspace{-0.2ex} =
-\hspace{0.1ex} \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \bm{X}^{\T} \hspace{-0.4ex} =
-\hspace{0.1ex} \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \bm{X}^{\hspace{0.08ex}\mathsf{S}}
+\hspace{.1ex} \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \bm{X}^{\T} \hspace{-0.4ex} =
+\hspace{.1ex} \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \bm{X}^{\hspace{.08ex}\mathsf{S}}
 \hspace{-0.25ex}}$, ${\hspace{0.4em}
 \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{0.1ex} {\bm{B}} \hspace{-0.1ex} \dotp \bm{a} \hspace{0.16ex} \right) = \left( \hspace{0.1ex} \boldnabla \dotp \bm{B} \hspace{0.1ex} \right) \hspace{-0.1ex} \dotp \bm{a} \hspace{0.1ex} + \bm{B}^{\T} \hspace{-0.25ex} \dotdotp \boldnabla \bm{a}
 }$}
 \nopagebreak\vspace{.1em}\begin{equation*}
-{^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.1ex} \boldnabla \hspace{0.1ex} \variation{\bm{R}}^{\hspace{0.2ex}\mathsf{S}} \hspace{-0.1ex} =
+{^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.1ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.2ex}\mathsf{S}} \hspace{-0.1ex} =
 %%{^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.1ex} \boldnabla \hspace{0.1ex} \variation{\bm{R}}^{\hspace{0.1ex}\T} \hspace{-0.12ex} =
 \boldnabla^{\mathstrut} \hspace{-0.1ex} \dotp \left( \hspace{0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \dotp \variation{\bm{R}} \hspace{0.2ex} \right)
 - \boldnabla \hspace{0.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \dotp \variation{\bm{R}} \hspace{0.2ex}.

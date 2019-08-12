@@ -6,20 +6,20 @@
 
 \label{chapter:genericmechanics}
 
-\en{\section{Discrete system of particles}} %% Initial concepts. Discrete approach
+\en{\section{Discrete collection of particles}} %% Initial concepts. Discrete approach
 
-\ru{\section{Дискретная система частиц}} %% Исходные представления. Дискретный подход
+\ru{\section{Дискретная совокупность частиц}} %% Исходные представления. Дискретный подход
 
 \label{para:initialconcepts.discreteapproach}
 
-\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, systems of~particles~(\inquotesx{pointlike masses}[,] \inquotes{material points}) are considered. In a~system of~$N$ particles each particle has mass~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion function~${\bm{r}_k(t)}$. Function~${\bm{r}_k(t)}$ is measured relative to some reference system\:--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, collections of~particles (\inquotesx{pointlike masses}[,] \inquotes{material points}) are considered. In a~collection of~$N$ particles each particle has its mass~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion function~${\bm{r}_k(t)}$. Function~${\bm{r}_k(t)}$ is measured relative to some reference system\:--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
 
-\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются системы частиц~(\inquotesx{точеч\-ных масс}[,] \inquotes{материальных точек}). В~системе $N$ \hbox{частиц} каждая частица имеет массу~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функцию движения~${\bm{r}_k(t)}$. Функция~${\bm{r}_k(t)}$ измеряется отно\-си\-тель\-но н\'{е}которой системы отсчёта\:--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются совокупности частиц (\inquotesx{точеч\-ных масс}[,] \inquotes{материальных точек}). В~совокупности $N$~\hbox{частиц} каждая частица имеет свою массу~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функцию движения~${\bm{r}_k(t)}$. Функция~${\bm{r}_k(t)}$ измеряется отно\-си\-тель\-но н\'{е}которой системы отсчёта\:--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
 
 \begin{wrapfigure}[10]{o}{.48\textwidth}
 \makebox[.48\textwidth][c]{\begin{minipage}[t]{.44\textwidth}
 \vspace{-0.2em}
-\scalebox{1.1}[1.11]{
+\scalebox{1.1}{
 \begin{tikzpicture}[scale=0.9]
 
 	\draw[line width=1.2pt, black] (0,0) -- (3.2,0);
@@ -82,21 +82,18 @@
 \ru{Мерой взаимодействия в~механике является вектор силы~$\bm{F}$. В~известном уравнении Newton’а}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{law:ofnewton}
-m \mathdotdotabove{\bm{r}} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
+m \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.1ex} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
 \end{equation}
 
-\en{\vspace{-0.2em} \noindent the right\hbox{-}hand side depends only on position, speed and explicitly presented time, as acceleration is directly proportional to force.}
-
-\ru{\vspace{-0.2em} \noindent правая часть зависит лишь от положения, скорости и~явно входящего времени, поскольку ускорение прямо пропорционально силе.}
+\vspace{-0.2em} \noindent \en{the~right\hbox{-}hand side}\ru{правая часть} \en{depends only on}\ru{зависит лишь от} \en{position}\ru{положения}, \en{velocity}\ru{скорости} \en{and}\ru{и}~\en{explicitly presented time}\ru{явно входящего времени}, \en{whereas acceleration}\ru{тогда как ускорение}~$\mathdotdotabove{\bm{r}}$ \en{is directly proportional to~force}\ru{прямо пропорционально силе}~$\bm{F}$.
 
 \en{Remind theses of dynamics of a~system of particles. Force acting on~$k$\hbox{-}th particle}
 
 \ru{Напомним положения динамики системы частиц. Сила, действующая на~$k$\hbox{-}ую частицу}
 
-\nopagebreak\vspace{-0.64em}\begin{equation}\label{forceonparticle}
-\bm{F}_k = \bm{F}^{\expexternal}_{\hspace{-0.16ex}k}
-\hspace{.1ex} + \hspace{.2ex}
-\scalebox{0.84}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.2ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.12ex},
+\nopagebreak\en{\vspace{-0.7em}}\ru{\vspace{-0.2em}}\begin{equation}\label{forceonparticle}
+\bm{F}_k \hspace{-0.1ex} = \bm{F}^{\expexternal}_{\hspace{-0.16ex}k}
+ + \scalebox{0.88}{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.2ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.12ex},
 \end{equation}
 
 \en{\vspace{-0.2em} \noindent where the first addend~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ is external force, and the second is sum of~internal ones (${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj}}$ is force from particle with number~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
@@ -128,21 +125,25 @@ m \mathdotdotabove{\bm{r}} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
 ...
 
 
-
+\newpage
 
 \ru{\section{Совершенно жёсткое недеформируемое твёрдое тело}}
 
 \en{\section{Absolutely rigid undeformable solid body}}
 
-\en{\emph{Discrete and continual approaches}}
-
-\ru{\emph{Дискретный и континуальный подходы}}
-
 %% \inquotesx{Абсолютно твёрдое}[,] оно~же \inquotes{абсолютно жёсткое} и~\inquotesx{абсолютно прочное}[---] это несбыточная мечта любого инженера.
 
-\en{\noindent To define position (location) of absolutely rigid~(undeformable) body it’s enough to choose some one of its points, to set location of this point, as well as angular orientation of body~(\figref{fig:bodyoffsetandrotation}).}
+\en{The distance}\ru{Расстояние} \en{between}\ru{между} \en{any two points}\ru{любыми двумя точками} \en{of an~absolutely rigid solid body}\ru{совершенно~(абсолютно) жёсткого твёрдого тела} \en{remains constant}\ru{остаётся постоянным}, \en{regardless of external forces exerted on it}\ru{независимо от действующих на~него внешних сил}: \en{there’s no deformation}\ru{деформации тут нет}.
 
-\ru{\noindent Для определения положения совершенно жёсткого~(недеформируемого) тела достаточно выбрать какую\hbox{-}либо одну его точку\hbox{-}полюс, задать положение~${\bm{r}(t)}$ этой точки, а~также угловую ориентацию тела~(\figref{fig:bodyoffsetandrotation}).}
+%% \begin{comment} %%
+{\small
+\noindent\leavevmode{\indent} The difference between \inquotes{rigid} and~\inquotes{solid} is that rigid is stiff (not flexible) while solid is in the state of a solid (not fluid). Solid is a~substance in the fundamental state of matter that retains its size and shape without need of container (as opposed to a~fluid).
+
+\noindent\leavevmode{\indent} An~absolutely rigid body is a~solid body in which deformation is zero (or negligibly small, so small it can be neglected).
+\par}
+%% \end{comment} %%
+
+\en{To define position (location)}\ru{Для определения положения (места)} \en{of an~absolutely rigid~(undeformable) body}\ru{совершенно жёсткого~(недеформируемого) тела} \en{it’s enough}\ru{достаточно} \en{to choose}\ru{выбрать} \en{some one of its points}\ru{какую\hbox{-}либо одну его точку}\:--- \inquotesx{\en{the~pole}\ru{полюс}}[,] \en{to~set location}\ru{установить положение}~${\bm{r}(t)}$ \en{of~this point}\ru{этой точки}, \en{as well as angular orientation}\ru{а~также угловую ориентацию} \en{of a~body}\ru{тела}~(\figref{fig:bodyoffsetandrotation}).
 
 \begin{comment}
 \makeatletter
@@ -191,10 +192,10 @@ m \mathdotdotabove{\bm{r}} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
 \end{tikzpicture}
 \end{comment}
 
-\begin{wrapfigure}[16]{o}{.5\textwidth}
+\begin{wrapfigure}[13]{o}{.5\textwidth}
 \makebox[.45\textwidth][c]{\begin{minipage}[t]{.45\textwidth}
-\vspace{.1em}
-\scalebox{1.1}[1.11]{
+\vspace{-0.8em}
+\scalebox{1.1}{
 \begin{tikzpicture}[scale=0.6]
 
 	\def\angleofrotation{36}
@@ -286,62 +287,97 @@ m \mathdotdotabove{\bm{r}} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
 \end{minipage}}
 \end{wrapfigure}
 
-%% \begin{comment} %%
-{\small
-\noindent\leavevmode{\indent} As adjectives the difference between \inquotes{rigid} and \inquotes{solid} is that rigid is stiff (rather than flexible) while solid is in the state of a solid (not fluid). As a~noun solid is a~substance in the fundamental state of matter that retains its size and shape without need of container (as opposed to a~liquid or gas).
+%%\emph{\en{Discrete and continual approaches}\ru{Дискретный и континуальный подходы}}.
+\en{An~absolutely rigid body}\ru{Совершенно жёсткое тело} \en{is mostly modeled}\ru{чаще всего моделируется} \en{using}\ru{с~использованием} \inquotesx{\en{the~continual approach}\ru{континуального подхода}}[---] \en{as}\ru{как} \en{a~continuous distribution of~mass}\ru{непрерывное распределение массы} (\en{material continuum}\ru{материальный континуум, сплошная среда}), \en{rather than using}\ru{вместо использования} \inquotesx{\en{the~discrete approach}\ru{дискретного подхода}}[---] \en{modeling}\ru{моделирования} \en{as}\ru{как} \en{a~discrete collection}\ru{дискретной совокупности} \en{of~body’s particles}\ru{частиц тела}.
 
-\noindent\leavevmode{\indent} A~rigid body is a~solid body in which deformation is zero (or negligibly small, so small it can be neglected). The distance between any two points of a~rigid body remains constant, regardless of external forces exerted on it. A~rigid body is usually considered as a~continuous distribution of mass (modeled as a continuous mass rather than as discrete particles).
-\par}
-%% \end{comment} %%
+\en{Transition from formulas}\ru{Переход от~формул}, \en{containing}\ru{содержащих} \en{summation over discrete points}\ru{суммирование по~дискретным точкам}, \en{to formulas for a~continuous body}\ru{к~формулам для сплошного тела} \en{is made}\ru{осуществляется} \en{by replacing}\ru{заменой} \en{masses of~particles}\ru{масс частиц} \en{with mass}\ru{на~массу} ${dm \hspace{-0.1ex} = \hspace{-0.15ex} \rho \hspace{.2ex} d\mathcal{V}}$ \en{of~volume element}\ru{элемента объёма}~${d\mathcal{V}}$~($\rho$\ru{\:---}\en{~is}~\en{mass density}\ru{плотность массы}), \en{and}\ru{и}~\en{integration over the~whole volume of a~body}\ru{интегрированием по~всему объёму тела}.
 
-\foreignlanguage{russian}{В~модели совершенно~(абсолютно) жёсткого твёрдого тела расстояние между любыми двумя точками такого тела остаётся постоянным, не~завися от~внешних сил: деформации нет.}
-
-\foreignlanguage{russian}{Совершенно жёсткое тело рассматривается либо как дискретная совокупность частиц, либо как непрерывное распределение массы (материальный континуум, сплошная среда).}
-
-\foreignlanguage{russian}{Для радиуса\hbox{-}вектора некоторой точки тела имеем}
-
-\begin{equation*}
-\begin{array}{c}
-\bm{R} = \bm{r} + \bm{x} \hspace{.1ex}, \:\:
-\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
-\end{array}
-\end{equation*}
-
-
-
-${\mathcircabove{\bm{x}} = x_i \mathcircabove{\bm{e}}_i}$,
-${\bm{x} = x_i \bm{e}_i}$,
-${\mathdotabove{\bm{x}} = x_i \mathdotabove{\bm{e}}_i}$
-
-\foreignlanguage{russian}{Компоненты~${x_i}$ в~совершенно жёстком теле не~зависят от~времени: ${x_i \hspace{-0.16ex} = \const}$.}
-
-${\bm{x} = \bm{P} \hspace{-0.16ex} \dotp \mathcircabove{\bm{x}}}$,
-${\mathdotabove{\bm{x}} = \mathdotabove{\bm{P}} \hspace{-0.16ex} \dotp \mathcircabove{\bm{x}}}$
-
-${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\bm{P}} \hspace{-0.16ex} \dotp x_i \mathcircabove{\bm{e}}_i
-\:\Rightarrow\:
-\mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\bm{P}} \hspace{-0.16ex} \dotp \mathcircabove{\bm{e}}_i}$
-
-
-
-\foreignlanguage{russian}{Вводя псевдовектор угловой скорости~$\bm{\omega}$, ...}
-
-
-
-
-\foreignlanguage{russian}{Пусть ${\mathcircabove{\bm{e}}_i}$\:--- ортогональная тройка базисных ортов, неподвижная относительно системы отсчёта.}
+\foreignlanguage{russian}{${\mathcircabove{\bm{e}}_i}$\:--- ортонормальная тройка векторов базиса, неподвижная относительно системы отсчёта}
 
 \foreignlanguage{russian}{Имея неподвижный базис~${\mathcircabove{\bm{e}}_i}$ и движущийся вместе с~телом базис~${\bm{e}_i}$, ...}
 
-\foreignlanguage{russian}{Если связать с~телом тройку декартовых осей с~ортами~${\bm{e}_i}$ (этот базис движется вместе с~телом), тогда угловая ориентация тела может быть задана тензором поворота ${\bm{P} \equiv \bm{e}_i \mathcircabove{\bm{e}}_i}$.}
+\foreignlanguage{russian}{Если связать с~телом тройку декартовых осей с~ортами~${\bm{e}_i}$ (этот базис движется вместе с~телом), тогда угловая ориентация тела может быть задана тензором поворота ${\rotationtensor \equiv \bm{e}_i \mathcircabove{\bm{e}}_i}$.}
+
+\en{Motion of a~body}\ru{Движение тела} \en{is completely defined}\ru{полностью определяется} \en{by functions}\ru{функциями}~${\bm{r}(t)}$ \en{and}\ru{и}~${\rotationtensor(t)}$.
+
+\foreignlanguage{russian}{Вектор\hbox{-}радиус некоторой точки тела}
+
+\begin{equation*}
+\bm{R} = \bm{r} + \bm{x}
+\hspace{.1ex} ,
+\end{equation*}
+
+${\mathcircabove{\bm{x}} = x_i \hspace{.1ex} \mathcircabove{\bm{e}}_i}$,
+${\bm{x} = x_i \hspace{.1ex} \bm{e}_i}$
+
+\eqref{rodriguesrotationformula}, \chapdotpararef{chapter:elementsoftensorcalculus}{para:rotationtensor}
+
+${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \mathcircabove{\bm{x}}}$
+
+\begin{equation*}
+\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+\hspace{.1ex} ,
+\end{equation*}
+
+\en{For an~absolutely rigid body}\ru{Для совершенно жёсткого тела}, \en{components}\ru{компоненты}~${x_i}$ \en{don’t depend on~time}\ru{не~зависят от~времени}~(${x_i \hspace{-0.16ex} = \const}$) \en{and}\ru{и}~${\mathdotabove{\bm{x}} = x_i \hspace{.1ex} \mathdotabove{\bm{e}}_i}$
+
+${\mathdotabove{\bm{x}} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \mathcircabove{\bm{x}}}$
+
+${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp x_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\:\Rightarrow\:
+\mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \mathcircabove{\bm{e}}_i}$
 
 ...
 
-\foreignlanguage{russian}{Движение тела полностью определяется функциями~${\bm{r}(t)}$ и~${\bm{P}(t)}$.}
+\[
+\hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.6ex} \bm{r} \hspace{.1ex} dm = \hspace{.1ex} \bm{r} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.6ex} dm = \hspace{.1ex} \bm{r} m
+\]
+
+\[
+\hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.6ex} \bm{x} \hspace{.1ex} dm = \hspace{.15ex} \bm{\Xi} \hspace{.2ex} m
+\hspace{.1ex} , \:\:
+\bm{\Xi} \hspace{.1ex} \equiv m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.6ex} \bm{x} \hspace{.1ex} dm
+\]
+
+\en{mass of~a~whole body}\ru{масса всего тела} ${m = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.55ex}\mathcal{V}} \hspace{.3ex} dm = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.55ex}\mathcal{V}} \hspace{.3ex} \rho \hspace{.2ex} d\mathcal{V}}$
+
+\en{eccentricity vector}\ru{вектор экцентриситета}\hbox{~\hspace{.2ex}}$\bm{\Xi}$
+
+$\bm{\Xi}$ becomes the~null vector when the~chosen \inquotes{pole} is \en{the~center of~mass}\ru{центр масс} (\en{the~unique point}\ru{уникальная точка} \en{within a~body}\ru{внутри тела})
+
+\[
+\bm{\Xi} = \bm{0}
+\hspace{.6ex} \Leftrightarrow \hspace{.5ex}
+\bm{r} = \mathboldrcursive
+\]
+
+\[
+\bm{x} = \hspace{-0.1ex} \bm{R} - \bm{r}
+, \hspace{1ex}
+\bm{\Xi} \hspace{.2ex} m = \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{R} - \hspace{-0.1ex} \mathboldrcursive \hspace{.15ex} \bigr) dm = \bm{0}
+\hspace{.5ex} \Rightarrow \hspace{.6ex}
+\mathboldrcursive = m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.7ex} \bm{R} \hspace{.25ex} dm
+\]
 
 ...
 
-\foreignlanguage{russian}{Переход от~формул, содержащих суммирование по~дискретным точкам, к~формулам для сплошного тела осуществляется заменой масс частиц на~массу ${\rho \hspace{0.2ex} dV}$ элемента объёма~$dV$ ($\rho$\:--- плотность массы), и интегрированием по~всему объёму тела.}
+\en{Introducing}\ru{Вводя} \en{(pseudo)vector}\ru{(псевдо)вектор} \en{of~angular velocity}\ru{угловой скорости}~$\bm{\omega}$, ...
+
+...
+
+\en{tensor of~inertia}\ru{тензор инерции}~${\inertiatensor}$
+
+\nopagebreak\[
+\inertiatensor \equiv \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{x} \narrowdotp \bm{x} \bm{E} - \bm{x} \bm{x} \bigr) \hspace{.1ex} dm
+\]
+
+\[
+\inertiatensor = \inertiatensorcomponents{ab} \hspace{.1ex} \bm{e}_a \bm{e}_b
+\hspace{.1ex} , \hspace{.8ex}
+\mathdotabove{\inertiatensor}
+= \inertiatensorcomponents{ab} \bigl( \mathdotabove{\bm{e}}_a \bm{e}_b \hspace{-0.1ex} + \bm{e}_a \mathdotabove{\bm{e}}_b \hspace{.12ex} \bigr) \hspace{-0.4ex}
+= \inertiatensorcomponents{ab} \bigl( \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_a \bm{e}_b \hspace{-0.1ex} + \bm{e}_a \hspace{.2ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_b \hspace{.12ex} \bigr)
+\]
 
 ...
 
@@ -421,9 +457,9 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 
 \ru{\section{Баланс импульса, момента импульса и~энергии}}
 
-Эти фундаментальные законы баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\footnote{Изолированная (замкнутая) система\:--- это система частиц, взаимодействующих друг с~другом, но ни с~какими другими телами.} системе выводится из~однородности пространства \emph{(при любом параллельном переносе\:--- трансляции\:--- замкнутой системы как целого свойства этой системы не~меняются)}. Сохранение момента импульса\:--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \mathrm{T}(q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \Pi(q)}$ такой системы не~зависит явно от~времени).
+Эти уравнения баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\footnote{Изолированная (замкнутая) система\:--- это система частиц, взаимодействующих друг с~другом, но ни с~какими другими телами.}\hspace{-0.25ex} системе выводится из~однородности пространства \emph{(при любом параллельном переносе\:--- трансляции\:--- замкнутой системы как целого свойства этой системы не~меняются)}. Сохранение момента импульса\:--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \mathrm{T}(q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \Pi(q)}$ такой системы не~зависит явно от~времени).
 
-Фундаментальные законы баланса можно вывести из принципа виртуальной работы~\eqref{discrete:principleofvirtualwork}. Перепишем его в~виде
+Уравнения баланса можно вывести из принципа виртуальной работы~\eqref{discrete:principleofvirtualwork}. Перепишем его в~виде
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{discrete:principleofvirtualwork.externalinternal}
 \displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}

@@ -147,6 +147,8 @@
 \newcommand{\boldnablacircled}{\mathcircabove{\bm{\nabla}}\hspace{-0.2ex}}
 \newcommand{\boldnablaflat}{\mathtwoabove{\bm{\nabla}}\hspace{-0.2ex}}
 
+\newcommand*\Laplacian{\mathop{}\!\mathbin\bigtriangleup\hspace{.04ex}}
+
 \newcommand\narroweq{\hspace{0.25ex}\scalebox{0.8}[1]{$=$}\hspace{0.25ex}}
 
 \newcommand\const{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{const}}}}
@@ -203,6 +205,11 @@
 %%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\scalebox{1.25}[1]{$\textsf{Є}$}}}\hspace{.05ex}}
 \newcommand\levicivitatensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
+\newcommand\rotationtensor{\bm{O}}
+
+\newcommand\inertiatensor{\bm{\mathfrak{I}}}
+\newcommand{\inertiatensorcomponents}[1]{\mathfrak{I}_{\hspace{-0.1ex}#1}\hspace{.1ex}}
+
 \newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
 \newcommand\stiffnesstensorB{{^4\hspace{-0.2ex}\bm{\mathcal{B}}}}
 \newcommand\stiffnesstensorC{{^4\bm{\mathcal{C}}}}
@@ -210,7 +217,10 @@
 \newcommand\stiffnesstensor{\stiffnesstensorA}
 \newcommand\pliabilitytensor{\stiffnesstensorB}
 
-\newcommand\rotationtensor{\bm{O}}
+\newcommand{\strainratetensor}{\bm{\mathcal{S}}}
+\newcommand{\strainratetensorcomponents}[1]{\mathcal{S}_{#1}}
+\newcommand{\vorticitytensor}{\scalebox{0.88}[1.0]{$\bm{\mathcal{W}}$}}
+\newcommand{\vorticityvector}{\bm{w}}
 
 \usepackage{accents}
 
@@ -243,7 +253,10 @@
 \newcommand\mathboldU{\scalebox{0.9}[1]{\ensuremath{\bm{U}\hspace{-0.1ex}}}}
 \newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
 
-\newcommand\mathboldae{\pmb{\textit{æ}}}
+\newcommand\mathboldae{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{æ}$}}}}
+\newcommand\mathboldoe{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{œ}$}}}}
+
+\newcommand\mathboldrcursive{\ensuremath{\pmb{\text{\fontfamily{frc}\slshape\selectfont r}}}}
 
 \newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
 \newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
@@ -456,6 +469,7 @@ labelsep=newline,justification=centering,singlelinecheck=off,%
 aboveskip=4mm,belowskip=2.5mm}
 
 \usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 

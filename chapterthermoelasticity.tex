@@ -6,31 +6,126 @@
 
 \label{chapter:thermoelasticity}
 
+\newcommand{\temperaturefield}{\varTheta} % {\hspace{.2ex} T}
+\newcommand{\temperaturegradient}{\boldnabla \temperaturefield}
+
 \en{\section{First law of thermodynamics}}
 
 \ru{\section{Первый закон термодинамики}}
 
-\begin{otherlanguage}{russian}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{H}{itherto}}\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{Д}{о}~сих~пор} \en{modeling}\ru{моделирование} \en{was limited to mechanics only}\ru{было ограничено только механикой}.
+\en{I\kern-0.12ext is widely known}\ru{Широк\'{о} известно}, \en{however}\ru{однако}, \en{that a~change in~temperature causes deformation}\ru{что изменение температуры вызывает деформацию}.
+\en{Temperature}\ru{Температурная} \en{deformation}\ru{деформация} \en{and}\ru{и}~\en{stress}\ru{напряжение} \en{often}\ru{часто} \en{play}\ru{играют} \en{the~primary role}\ru{первичную роль} \en{and}\ru{и}~\en{can lead}\ru{могут приводить} \en{to~a~breakage}\ru{к~поломке}.
 
-{\small
-The first law of thermodynamics is a~version of the law of~conservation of~energy, adapted for thermodynamic systems. The law of~conservation of~energy states that the total energy of an~isolated system is constant; energy can be transformed from one form to another, but can be neither created nor destroyed.
-\par}
+\en{So effective in~mechanics}\ru{Столь эффективный в~механике}, \en{the principle of~virtual work}\ru{принцип виртуальной работы} \en{is not~applicable}\ru{не~примен\'{и}м} \en{to~thermomechanics}\ru{к~термо\-механике}%
+\footnote{\en{Analogue}\ru{Аналог} \en{of the~principle of virtual work}\ru{принципа виртуальной работы} \en{will be presented}\ru{будет представлен} \en{below}\ru{ниже}.}\hbox{\hspace{-0.5ex}.}
+\en{Considering thermal effects}\ru{Рассматривая тепловые эффекты}, \en{it’s possible}\ru{возможно} \en{to~lean on}\ru{опираться на}~\en{the~two laws of~thermodynamics}\ru{два закона термодинамики}.
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{Д}{о}~сих~пор мы ограничивались рамками механики и~не~рассматривали тепловые эффекты. Общеизвестно, однако, что изменение температуры вызывает деформацию тел. Температурные деформации и~обусловленные ими напряжения часто играют первостепенную роль и~могут приводить к~разрушению конструкций.
+\en{The~first}\ru{Первый}, \en{discovered by}\ru{открытый}
+\href{https://en.wikipedia.org/wiki/James_Prescott_Joule}{Joule}\ru{’ем},
+\href{https://en.wikipedia.org/wiki/Julius_von_Mayer}{Mayer}\ru{’ом},
+\en{and}\ru{и}~\href{https://en.wikipedia.org/wiki/Hermann_von_Helmholtz}{Helmholtz}\ru{’ем},\ru{\:---}
+\ru{это}\en{is} \en{adapted version}\ru{адаптированная версия} \en{of }\en{the~balance of~energy}\ru{баланса энергии}:
+\en{rate of internal energy change}\ru{скорость изменения внутренней энергии}~${\mathdotabove{E}\hspace{.1ex}}$
+\en{is equal}\ru{равна} \en{to the~sum}\ru{сумме} \en{of }\en{power of external forces}\ru{мощности внешних сил}~$P^{\expexternal}$ \en{and}\ru{и}~\en{rate of heat supply}\ru{скорости подвода тепла}~$\mathdotabove{Q}$
 
-Принцип виртуальной работы, столь эффективный в~механике, не~имеет места в~термо\-механике~(хотя ниже мы увидим аналог этого принципа). Вводя в~рассмотрение температуру, можно опираться на~два закона термодинамики.
+\nopagebreak\en{\vspace{-0.8em}}\begin{equation}
+\mathdotabove{E} = P^{\expexternal} \hspace{-0.1ex} + \mathdotabove{Q}
+\hspace{.1ex} .
+\end{equation}
 
-Первый закон, открытый ...
+\vspace{-0.1em} \en{Internal energy}\ru{Внутренняя энергия}~$E$ \en{is}\ru{есть} \en{the~sum}\ru{сумма} \en{of the~}\en{kinetic}\ru{кинетической} \en{and}\ru{и}~\en{potential}\ru{потенциальной} \en{energies}\ru{энергий} \en{of~particles}\ru{частиц}. \en{For}\ru{Для} \en{any}\ru{любого} \en{finite}\ru{конечного} \en{volume}\ru{объёма} \en{of~material continuum}\ru{материального континуума}
+
+\nopagebreak\ru{\vspace{-0.4em}}\begin{equation}
+E = \hspace{-0.44ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \hspace{-0.14ex} \left(^{\mathstrut}
+\smalldisplaystyleonehalf \hspace{.2ex} \mathdotabove{\bm{R}} \dotp \hspace{-0.23ex} \mathdotabove{\bm{R}} \hspace{.12ex} + e
+\right) \hspace{-0.4ex} d\mathcal{V} .
+\end{equation}
+
+\vspace{-0.5em} \noindent \en{With balance of~mass}\ru{С~балансом массы}
+${dm \hspace{-0.15ex} = \hspace{-0.2ex} \rho \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex} = \hspace{-0.2ex} \rho\hspace{.1ex}' \hspace{-0.2ex} d\mathcal{V}\hspace{.2ex}'\hspace{-0.5ex}}$,
+${m \hspace{-0.1ex} = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.05em}{\mathcal{V}}} \hspace{.3ex} \rho \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex} = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.05em}{\mathcal{V}}} \hspace{.3ex} \rho\hspace{.1ex}' \hspace{-0.2ex} d\mathcal{V}\hspace{.2ex}'\hspace{-0.25ex}}$
+\en{and}\ru{и}
+${\mathdotabove{\Psi} = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.05em}{\mathcal{V}}} \hspace{.3ex} \rho \hspace{.2ex} \mathdotabove{\psi} \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex} = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{.05em}{\mathcal{V}}} \hspace{.3ex} \rho \hspace{.1ex}' \mathdotabove{\psi} \hspace{.2ex} d\mathcal{V}\hspace{.2ex}'\hspace{-0.5ex}}$,
+\en{it’s easy to get}\ru{легко получить} \en{time derivative of~energy}\ru{производную энергии по~времени}
+
+\nopagebreak\en{\vspace{-0.25em}}\ru{\vspace{-0.8em}}\begin{equation}
+\mathdotabove{E} = \hspace{-0.44ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.3ex} \mathdotdotabove{\bm{R}} \dotp \hspace{-0.23ex} \mathdotabove{\bm{R}} \hspace{.12ex} + \mathdotabove{e}
+\right) \hspace{-0.4ex} d\mathcal{V} .
+\end{equation}
+
+\en{Power of~external forces}\ru{Мощность внешних сил} \en{for}\ru{для} \en{some}\ru{некоторого} \en{finite}\ru{конечного} \en{volume}\ru{объёма} \en{of~continuum}\ru{континуума}
+(\en{momentless}\ru{безмоментного}\:--- \en{in this chapter}\ru{в~этой главе} \en{only momentless model is considered}\ru{рассматривается лишь безмоментная модель})
+
+\nopagebreak\vspace{-0.33em}\begin{multline}
+P^{\expexternal} \hspace{-0.1ex}
+= \hspace{-0.4ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \bm{f} \dotp \hspace{-0.1ex} \mathdotabove{\bm{R}} \hspace{.4ex} d\mathcal{V}
++ \hspace{-0.1ex} \ointegral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.2ex} \mathboldN \dotp \cauchystress \hspace{.1ex} \dotp \hspace{-0.1ex} \mathdotabove{\bm{R}} \hspace{.4ex} dO
+= \hspace{-0.4ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.7ex}
+\scalebox{0.95}{$ \left(^{\mathstrut} \hspace{-0.1ex}
+\rho \hspace{-0.06ex} \bm{f} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \mathdotabove{\bm{R}} \hspace{.2ex}
++ \hspace{-0.1ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \bigl( \hspace{-0.1ex} \cauchystress \hspace{.1ex} \dotp \hspace{-0.16ex} \mathdotabove{\bm{R}} \hspace{.2ex} \bigr) \hspace{-0.25ex}
+\right) $} d\mathcal{V} \hspace{-0.1ex} =
+\\[-0.4em]
+%
+= \hspace{-0.4ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.7ex} 
+\left(^{\mathstrut} \hspace{-0.2ex}
+\bigl( \hspace{.1ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \mathboldtau + \hspace{-0.1ex} \rho \bm{f} \hspace{.15ex} \bigr) \hspace{-0.2ex} \dotp \hspace{-0.1ex} \mathdotabove{\bm{R}} \hspace{.2ex}
++ \mathboldtau \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.16ex} \mathdotabove{\bm{R}}^{\hspace{.3ex}\mathsf{S}}
+\right) \hspace{-0.33ex} d\mathcal{V} .
+\end{multline}
+
+\vspace{-0.1em} \noindent \en{As before}\ru{Как и~раньше}~(\chapref{chapter:nonlinearcontinuum})
+${\mathboldtau\hspace{.1ex}}$\ru{\:---}\en{ is} \ru{тензор напряжения }Cauchy\en{ stress tensor},
+%%${\rho\hspace{.1ex}}$\ru{\:---}\en{ is} \en{volume(tric) mass density}\ru{объёмная плотность массы},
+$\bm{f}$\ru{\:---}\en{ is} \en{mass force}\ru{массовая сила} (\en{without}\ru{без} \en{inertial part}\ru{инерционной части} ${- \mathdotdotabove{\bm{R}} \hspace{.2ex}}$, \en{which}\ru{которая} \en{is included}\ru{содержится} \en{in}\ru{в}~$\mathdotabove{E}$),
+${\mathboldN \dotp \cauchystress}$\ru{\:---}\en{ is} \en{surface force}\ru{поверхностная сила}.
+\en{Upon expanding divergence}\ru{При раскрытии дивергенции}~${\hspace{-0.16ex}\boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \bigl( \hspace{-0.1ex} \cauchystress \hspace{.1ex} \dotp \hspace{-0.1ex} \mathdotabove{\bm{R}} \hspace{.2ex} \bigr)\hspace{-0.2ex}}$ \ru{использована }\en{the~symmetry}\ru{симметрия}~\en{of~}${\hspace{-0.1ex}\mathboldtau}$\en{ is used}.
+\en{Denominating}\ru{Обозначая}
+\en{velocity}\ru{скорость} \en{as}\ru{как}~${\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\bm{R}} \hspace{.15ex}}$
+\en{and}\ru{и}
+\en{strain rate tensor}\ru{тензор скорости деформации} \en{as}\ru{как}~${\strainratetensor \equiv \hspace{-0.15ex} \boldnabla {\bm{v}}^{\hspace{.2ex}\mathsf{S}}\hspace{-0.25ex}}$,
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+P^{\expexternal} \hspace{-0.1ex}
+= \hspace{-0.4ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.7ex} \left(^{\mathstrut} \hspace{-0.2ex}
+\bigl( \hspace{.1ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \mathboldtau + \hspace{-0.1ex} \rho \bm{f} \hspace{.15ex} \bigr) \hspace{-0.25ex} \dotp \bm{v} \hspace{.1ex}
++ \mathboldtau \dotdotp \strainratetensor
+\right) \hspace{-0.33ex} d\mathcal{V} .
+\vspace{-0.1em}\end{equation*}
+
+\en{Heat arrives in a~volume of~continuum by two ways}\ru{Тепло прибывает в~объём среды двумя путями}.
+\en{The~first}\ru{Первый}\ru{\:---}\en{ is} \en{a~surface heat transfer}\ru{поверхностная передача тепла} (heat conduction, \en{thermal conductivity}\ru{теплопроводность}, \en{convection}\ru{конвекция}, \en{diffusion}\ru{диффузия}), \en{occurring}\ru{происходящая} \en{via matter}\ru{через материю}, \en{upon contact of~two media}\ru{при контакте двух сред}.
+\en{This}\ru{Это} \en{can be described by heat flux vector}\ru{может быть описано вектором потока \hbox{тепла}}~$\bm{h}$.
+\en{Through}\ru{Через} \en{an~infinitesimal area}\ru{бесконечно м\'{а}лую площ\'{а}дку} \en{in}\ru{в}~\en{current configuration}\ru{текущей конфигурации} ${\hspace{-0.1ex} \mathboldN dO}$ \en{towards}\ru{в~направлении} \en{normal vector}\ru{вектора нормали}~${\hspace{-0.1ex}\mathboldN}$ \en{per unit of~time}\ru{в~единицу времени} \en{passes}\ru{проходит} \en{heat flux}\ru{тепловой поток} ${\bm{h} \dotp \hspace{-0.1ex} \mathboldN dO}$.
+\en{For}\ru{Для} \en{a~surface}\ru{поверхности} \en{with finite dimensions}\ru{конечных размеров} \en{this expression}\ru{это выражение} \en{needs to be integrated}\ru{нужно проинтегрировать}.
+\en{I\kern-0.12ext’s usually assumed}\ru{Обычно полагают}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\bm{h} = - \hspace{.15ex} {^2\hspace{-0.16ex}\bm{k}} \dotp \hspace{-0.25ex} \temperaturegradient ,
+\end{equation}
+
+\vspace{-0.25em} \noindent \en{where}\ru{где}
+$\temperaturefield$\ru{\:---}\en{ is} \en{temperature}\ru{температура}~(\en{temperature field}\ru{поле температуры});
+${^2\hspace{-0.16ex}\bm{k}}$\ru{\:---}\en{ is} \en{thermal conductivity tensor}\ru{тензор коэффициентов теплопроводности} \en{as property of the~material}\ru{как свойство материала}, \en{for isotropic material}\ru{для~изотропного материала} ${\hspace{-0.12ex} {^2\hspace{-0.16ex}\bm{k}} = k \bm{E}}$ \en{and}\ru{и}~${\bm{h} = - \hspace{.2ex} k \hspace{.2ex} \temperaturegradient \hspace{-0.2ex}}$.
+
+\en{The~second way}\ru{Второй путь}\ru{\:---}\en{ is} \en{a~volume heat transfer}\ru{объёмная передача тепла} (\ru{тепловое излучение, }thermal radiation).
+\en{Solar energy}\ru{Солнечная энергия}, \en{flame of a~bonfire}\ru{пламя костра}, \en{a~microwave oven}\ru{микроволновая печь}\ru{\:---}\en{ are} \en{familiar examples}\ru{знакомые примеры} \en{of~pervasive heating}\ru{проникающего нагрева} \en{by radiation}\ru{излучением}.
+\en{Thermal radiation}\ru{Тепловое излучение} \en{occurs}\ru{происходит} \en{via electromagnetic waves}\ru{через электромагнитные волны} \en{and}\ru{и} \en{doesn’t need}\ru{не нуждается} \en{an~intervening medium}\ru{в~промежуточной среде}.
+\en{Heat}\ru{Тепло} \en{is radiated~(emitted)}\ru{излучается~(эмитируется)} \en{by any matter}\ru{любой материей}~(\en{with temperature}\ru{с~температурой} \en{above the~absolute zero}\ru{выше абсолютного нуля}~$0$\:K).
+\en{Rate}\ru{Скорость} \en{of heat transfer}\ru{передачи тепла} \en{by~radiation}\ru{излучением} \en{per mass unit}\ru{на~единицу массы}~$b$ \en{or}\ru{или} \en{per volume unit}\ru{на~единицу объёма}~${\hspace{-0.1ex}B \hspace{-0.2ex} = \hspace{-0.25ex} \rho \hspace{.15ex} b}$ \en{is~assumed as~known}\ru{считается известной}.
+
+\en{Therefore}\ru{В~результате}, \en{rate of heat supply}\ru{скорость подвода тепла} \en{for}\ru{для} \en{a~finite volume}\ru{конечного объёма}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\mathdotabove{Q} =
+- \hspace{-0.1ex} \ointegral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.2ex} \mathboldN \hspace{-0.08ex} \dotp \bm{h} \hspace{.3ex} dO \hspace{.1ex}
++ \hspace{-0.25ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.55ex} \rho \hspace{.2ex} b \hspace{.3ex} d\mathcal{V} \hspace{.1ex}
+= \hspace{-0.25ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.7ex} \left(^{\mathstrut} \hspace{-0.8ex} - \hspace{-0.5ex} \boldnabla \hspace{-0.15ex} \dotp \bm{h} + \hspace{-0.1ex} \rho \hspace{.2ex} b \right) \hspace{-0.4ex} d\mathcal{V} .
+\end{equation}
 
 ...
 
-Тепло поступает в~объём двумя путями. Первый\:--- теплопроводность, определяемая вектором потока тепла~$\bm{h}$. Предполагается, что через площ\'{а}дку
-
-...
-
-
-
-\end{otherlanguage}
 
 \en{\section{Second law}}
 
@@ -38,7 +133,13 @@ The first law of thermodynamics is a~version of the law of~conservation of~energ
 
 \begin{otherlanguage}{russian}
 
-В~популярных курсах физики распространено следующее представление о~законах термодинамики: приращение энергии~$dE$ равно сумме работы внешних сил~$dA$ и~подведённого тепла~$dQ$. Величина~$dQ$ не~является полным дифференциалом, но~отношение~${\raisemath{.16em}{dQ}/\hspace{.1ex}\raisemath{-0.16em}{T}}$ становится таковым\:--- дифференциалом энтропии~$dS$. Далее тепловые процессы делятся на ...
+В~\textcolor{magenta}{курсах} физики распространено такое представление о~законах термодинамики: \en{change in internal energy}\ru{изменение внутренней энергии}~${dE}$ \en{is equal to}\ru{равно} \en{the~sum of}\ru{сумме} \en{work of~external forces}\ru{работы внешних сил}~${\partial\hspace{.1ex}\externalwork\hspace{-0.1ex}}$ \en{and}\ru{и}~\en{supplied heat}\ru{подведённого тепла}~${\partial\hspace{.1ex}Q}$, ${dE \hspace{-0.1ex} = \partial\hspace{.1ex}\externalwork\hspace{-0.2ex} + \partial\hspace{.1ex}Q}$.
+\en{Work}\ru{Работа}~${\partial\hspace{.1ex}\externalwork\hspace{-0.1ex}}$ \en{and}\ru{и}~\en{heat}\ru{теплота}~${\partial\hspace{.1ex}Q}$ \en{are}\ru{суть} \href{https://en.wikipedia.org/wiki/Inexact_differential}{\ru{неполные дифференциалы}\en{inexact differentials}}%
+\footnote{%
+\en{Because}\ru{Так~как} \en{work}\ru{работа} \en{and}\ru{и}~\en{heat}\ru{теплота} \en{depend}\ru{зависят} \en{on the~path of the~process}\ru{от~пути протекания процесса} (\en{are path functions}\ru{являются функциями пути}), \en{they}\ru{они} \en{can’t be}\ru{не~могут быть} \en{full (exact) differentials}\ru{полными (точными) дифференциалами}, \en{contrasting}\ru{контрастируя} \en{with the~concept}\ru{с~концепцией} \en{of the~exact differential}\ru{полного дифференциала}, \en{expressed via}\ru{выражаемого через} \en{the~gradient of~another function}\ru{градиент другой функции} \en{and}\ru{и}~\en{therefore}\ru{потом\'{у}} \en{path independent}\ru{независимого от~пути}.
+}\hbox{\hspace{-0.5ex},} \en{but}\ru{но}~\en{quotient}\ru{частное}~${\raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$ \en{becomes}\ru{становится} \en{exact differential}\ru{полным дифференциалом}\:--- \en{differential of~entropy}\ru{дифференциалом энтропии}~${dS}$.
+Далее тепловые процессы делятся на обратимые, в~которых ${dS \hspace{-0.2ex} = \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$, и~необратимые с~характерным \en{inequality}\ru{неравенством} \en{of~}Clausius\ru{’а} ${dS \hspace{-0.2ex} \geq \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$.
+Но как ...
 
 ...
 
@@ -52,7 +153,7 @@ The first law of thermodynamics is a~version of the law of~conservation of~energ
 
 \begin{otherlanguage}{russian}
 
-К~законам баланса импульса, момента импульса и~термодинамики необходимо добавить ...
+К~балансу импульса, балансу момента импульса и~законам термодинамики нужно добавить
 
 ...
 
@@ -106,13 +207,13 @@ The heat equation is a parabolic partial differential equation that describes th
 
 \end{otherlanguage}
 
-\en{\section{Temperature stresses}}
+\en{\section{Thermal stress}}
 
-\ru{\section{Температурные напряжения}}
+\ru{\section{Температурное напряжение}}
 
 \begin{otherlanguage}{russian}
 
-Эти напряжения ст\'{о}ит рассмотреть детально, хотя они и~определяются очевидным образом полями перемещений и~температуры. При равновесии свободного тела без внешних нагрузок
+Это напряжение ст\'{о}ит рассмотреть детально, хотя оно и~определяется очевидным образом полями перемещений и~температуры. При равновесии свободного тела без внешних нагрузок
 
 ...
 
@@ -126,24 +227,28 @@ The heat equation is a parabolic partial differential equation that describes th
 
 \begin{otherlanguage}{russian}
 
-Поскольку при данной\textcolor{red}{???(постоянной??)(конкретной??)} температуре уравнения термоупругости выглядят как в~механике
+(Поскольку) при фиксированной температуре уравнения термоупругости выглядят как в~механике
 
 ...
 
+...
 
+Более сложные вариационные постановки для нестационарных задач можно найти, например, в~книге~\cite{belyaev.ryadno}.
 
 \end{otherlanguage}
 
-\vspace{8mm}
-\hfill\begin{minipage}[b]{0.95\linewidth}
-\fontsize{10}{12}\selectfont
+\section*{\small \wordforbibliography}
 
-\section*{\wordforbibliography}
+\begin{changemargin}{\parindent}{0pt}
+\fontsize{10}{12}\selectfont
 
 \begin{otherlanguage}{russian}
 
-В~формировании новых взглядов на~термодинамику сплошной среды велика роль C.\:Truesdell’а~\cite{truesdell-firstcourse}. Чёткое изложение основных законов ...
+Шириной и~глубиной описания термоупругости выделяются книги \hbox{W\hspace{-0.2ex}.\:Nowacki}~\cite{nowacki-problemsofthermoelasticity, nowacki-elasticity}, книга E.\:Melan’а и~H.\:Parkus’а~\cite{parkus.melan-waermespannungen} и~моно\-графия H.\:Parkus’а~\cite{parkus-waermespannungen}.
+C.\:Truesdell~\cite{truesdell-firstcourse} внёс большой вклад в~создание и~распространение новых взглядов на~термодинамику сплошной среды.
+Чёткое изложение основных законов есть у~C.\:Teodosiu~\cite{teodosiu-crystaldefects}.
+Методы расчёта температурных полей представлены у~Н.\,М.\;Беляева и~А.\,А.\;Рядно~\cite{belyaev.ryadno}.
 
 \end{otherlanguage}
 
-\end{minipage}
+\end{changemargin}
