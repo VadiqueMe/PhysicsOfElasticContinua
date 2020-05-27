@@ -76,22 +76,20 @@
 
 \ru{\section{Принцип виртуальной работы и его следствия}}
 
+\noindent
+\en{For a~piece of~rod}\ru{Для куск\'{а} стержня} ${s_0 \leq s \leq s_1}$ \en{formulation of the~principle is as~follows}\ru{формулировка принципа таков\'{а}}
+
 \begin{otherlanguage}{russian}
-
-\en{\noindent For a~piece of~rod ${s_0 \leq s \leq s_1}$ formulation of the~principle is as~follows}
-
-\ru{\noindent Для куск\'{а} стержня ${s_0 \leq s \leq s_1}$ формулировка принципа таков\'{а}}
 
 ...
 
 
-\en{Conventionally $\bm{a}$ is the~tensor of~stiffness for bending and~twisting, $\bm{b}$ is the~tensor of~stiffness for (ex)tension and~shear, and~$\bm{c}$ is the~tensor of crosslinks.}
+\en{Conventionally}\ru{Условно}
+$\bm{a}$ \en{is}\ru{есть} \en{the~tensor of~stiffness for bending and~twisting}\ru{тензор жёсткости на~изгиб и~кручение},
+$\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear}\ru{тензор жёсткости на~растяжение и~сдвиг},
+\en{and}\ru{а}~$\bm{c}$\en{ is}\ru{\:---} \en{the~tensor of~crosslinks}\ru{тензор перекрёстных связей}.
 
-\ru{Условно $\bm{a}$ это тензор жёсткости на~изгиб и~кручение, $\bm{b}$\:--- тензор жёсткости на~растяжение и~сдвиг, а~$\bm{c}$\:--- тензор перекрёстных связей.}
-
-\en{Stiffness tensors rotate together with particle:}
-
-\ru{Тензоры жёсткости поворачиваются вместе с~частицей:}
+\en{Stiffness tensors}\ru{Тензоры жёсткости} \en{rotate together with particle}\ru{поворачиваются вместе с~частицей}:
 
 ...
 
@@ -165,15 +163,15 @@
 
 \begin{otherlanguage}{russian}
 
-\en{Flexible thread~(chain)}\ru{Гибкая нить~(цепь)} \en{is simpler than rod}\ru{проще стержня}:
-\en{its particles are}\ru{её частицы суть} \inquotes{\ru{простые}\en{simple}} \en{material points}\ru{материальные точки} лишь c~трансляционными степенями свободы.
+\en{A~flexible thread~(chain)}\ru{Гибкая нить~(цепь)} \en{is simpler than a~rod}\ru{проще стержня}:
+\en{its particles}\ru{её частицы} \en{are}\ru{суть} \inquotes{\ru{простые}\en{simple}} \en{material points}\ru{материальные точки} \en{with only translational degrees of~freedom}\ru{с~лишь трансляционными степенями свободы}.
 Поэтому среди нагрузок нет моментов, только \inquotes{линейные} силы\:--- внешние распределённые~$\bm{q}$ и~внутренние сосредоточенные~$\bm{Q}$.
 Движение нити полностью определяется одним вектором-радиусом~${\bm{r}(s,t)}$, а~инерционные свойства\:--- линейной плотностью~${\rho\hspace{.12ex}(s)}$.
 % linear density
 
 Вот принцип виртуальной работы для куск\'{а} нити ${s_0 \leq s \leq s_1}$
 
-\nopagebreak\vspace{-0.25em}\begin{equation}
+\nopagebreak\vspace{-0.2em}\begin{equation}
 \scalebox{0.95}{$
 \displaystyle \integral\displaylimits_{\raisemath{.05em}{\mathclap{s_0}}}^{\raisemath{.15em}{\mathclap{s_1}}}
 $}
@@ -182,10 +180,11 @@ $}
 \hspace{-0.25ex} \dotp \variation{\bm{r}}
 - \variation{\Pi}
 \Bigr) ds
-\hspace{.1ex} + \Bigl[
+\hspace{.1ex} + \hspace{-0.1ex} \Bigl[ \hspace{.1ex}
 \bm{Q} \hspace{-0.1ex} \dotp \variation{\bm{r}}
-\hspace{.12ex} \Bigr]_{\hspace{-0.25ex}s_0}^{\hspace{-0.25ex}s_1}
-\hspace{-0.4ex} = 0 \hspace{.1ex} .
+\hspace{.15ex} \Bigr]_{\hspace{-0.25ex}s_0}^{\hspace{-0.25ex}s_1}
+\hspace{-0.33ex} = 0
+\hspace{.1ex} .
 \end{equation}
 
 ...
@@ -252,24 +251,26 @@ $}
 
 Для определения тензоров жёсткости~$\bm{a}$, $\bm{b}$ и~$\bm{c}$ одномерной модели достаточно решений трёхмерных задач для стержня. Но тут возникают два вопроса: какие именно задачи рассматривать и что нужно взять из решений?
 
-Проблема Saint\hbox{-\hspace{-0.2ex}}Venant’а выделяется среди прочих, ведь оттуда берётся жёсткость на~кручение.
+\ru{Проблема }Saint\hbox{-\hspace{-0.2ex}}Venant’\en{s}\ru{а}\en{ problem} выделяется среди прочих, ведь оттуда берётся жёсткость на~кручение.
 
-Вдобавок есть много точных решений, получаемых таким путём: задаётся поле~${\bm{u}(\bm{r})}$, определяется~${\widearc{\mathboldtau} = \stiffnesstensorC \dotdotp \hspace{-0.12ex} \boldnabla \bm{u}}$, затем находятся объёмные~${\bm{f} = - \boldnabla \dotp \widearc{\mathboldtau}}$ и~поверхностные~${\bm{p} = \bm{n} \dotp \widearc{\mathboldtau}}$ нагрузки.
+Вдобавок есть много точных решений, получаемых таким путём: задаётся поле~${\bm{u}(\bm{r})}$, определяется~${\widearc{\mathboldtau} = \stiffnesstensorC \dotdotp \hspace{-0.12ex} \boldnabla \bm{u}}$, затем находятся объёмные~${\bm{f} \hspace{-0.1ex} = - \hspace{.1ex} \boldnabla \dotp \widearc{\mathboldtau}\hspace{.1ex}}$ и~поверхностные~${\bm{p} = \bm{n} \dotp \widearc{\mathboldtau}\hspace{.1ex}}$ нагрузки.
 
-Но что делать с~решением? Ясно, что $\mathboldQ$ и~$\mathboldM$ в~стержне\:--- это интегралы по~сечению~(...). И совсем не~ясно, что считать перемещением и~поворотом в~одномерной модели. Если предложить, например, такой вариант (индекс у~$\bm{u}$ это размерность модели)
+Но что делать с~решением? Ясно, что $\mathboldQ$ и~$\mathboldM$ в~стержне\:--- это интегралы по~сечению~(...). И совсем не~ясно, что считать перемещением и~поворотом в~одномерной модели. Если предложить, например, такой вариант (индекс у~$\bm{u}$\:--- размерность модели)
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-\bm{u}_1(z) = \surfaceexpminusone \hspace{-0.4ex} \integral\displaylimits_{\surface} \hspace{-0.5ex} \bm{u}_3(\bm{x},z) \hspace{.25ex} d\surface \hspace{-0.1ex},
-\:\:
-\bm{\theta}(z) = \smalldisplaystyleonehalf \hspace{.4ex} \surfaceexpminusone \hspace{-0.4ex} \integral\displaylimits_{\surface} \hspace{-0.5ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.15ex} \bm{u}_3 \hspace{.25ex} d\surface \hspace{-0.1ex},
+\bm{u}_{\raisemath{-0.2ex}{1}}\hspace{-0.15ex}(z) \hspace{-0.1ex} = \hspace{.1ex} \surfaceexpminusone \hspace{-0.4ex} \integral\displaylimits_{\surface} \hspace{-0.5ex} \bm{u}_{\raisemath{-0.2ex}{3}}\hspace{-0.05ex}(\bm{x},z) \hspace{.25ex} d\surface
+\hspace{.15ex} ,
+\:\;
+\bm{\theta}(z) \hspace{-0.1ex} = \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.4ex} \surfaceexpminusone \hspace{-0.4ex} \integral\displaylimits_{\surface} \hspace{-0.5ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.15ex} \bm{u}_{\raisemath{-0.2ex}{3}} \hspace{.2ex} d\surface
+\hspace{.15ex} ,
 \end{equation*}
 
 \vspace{-0.2em} \noindent то чем другие возможные представления хуже?
 
-Помимо $\mathboldQ$ и~$\mathboldM$, есть ещё величина, не вызывающая сомнений\:--- упругая энергия. Естественно потребовать, чтобы в~одно\-мерной и в~трёх\-мерной моделях энергии на~единицу длины совпали. При этом, чтобы уйти от~различий в~трактовках $\bm{u}_1$ и~$\bm{\theta}$, будем исходить из дополнительной энергии~${\widehat{\Pi}(\mathboldM, \mathboldQ)}$:
+Помимо $\mathboldQ$ и~$\mathboldM$, есть ещё величина, не вызывающая сомнений\:--- упругая энергия. Естественно потребовать, чтобы в~одно\-мерной и в~трёх\-мерной моделях энергии на~единицу длины совпали. При этом, чтобы уйти от~различий в~трактовках ${\bm{u}_{\raisemath{-0.2ex}{1}}}$ и~$\bm{\theta}$, будем исходить из \en{complementary energy}\ru{дополнительной энергии}~${\widehat{\Pi}(\mathboldM, \mathboldQ)}$:
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-\widehat{\Pi}(\mathboldM, \mathboldQ) = \hspace{-0.2ex} \integral\displaylimits_{\surface} \hspace{-0.4ex} \Pi_3 \hspace{.2ex} d\surface
+\widehat{\Pi}(\mathboldM, \mathboldQ) = \hspace{-0.2ex} \integral\displaylimits_{\surface} \hspace{-0.4ex} \Pi_{\raisemath{-0.2ex}{3}} \hspace{.2ex} d\surface
 \end{equation*}
 
 ...

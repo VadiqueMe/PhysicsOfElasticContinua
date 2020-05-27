@@ -12,9 +12,9 @@
 
 \label{para:initialconcepts.discreteapproach}
 
-\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, collections of~particles (\inquotesx{pointlike masses}[,] \inquotes{material points}) are considered. In a~collection of~$N$ particles each particle has its mass~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ and motion function~${\bm{r}_k(t)}$. Function~${\bm{r}_k(t)}$ is measured relative to some reference system\:--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
+\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{I}{n} generic mechanics, collections of~particles (\inquotesx{pointlike masses}[,] \inquotes{material points}) are considered. In a~collection of~$N$ particles each particle has its mass~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \constant}$ and motion function~${\bm{r}_k(t)}$. Function~${\bm{r}_k(t)}$ is measured relative to some reference system\:--- a~solid body with a~clock~(\figref{fig:referencesystem}).}
 
-\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются совокупности частиц (\inquotesx{точеч\-ных масс}[,] \inquotes{материальных точек}). В~совокупности $N$~\hbox{частиц} каждая частица имеет свою массу~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \const}$ и~функцию движения~${\bm{r}_k(t)}$. Функция~${\bm{r}_k(t)}$ измеряется отно\-си\-тель\-но н\'{е}которой системы отсчёта\:--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
+\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{\hspace{-0.25ex}} общей механике рассматриваются совокупности частиц (\inquotesx{точеч\-ных масс}[,] \inquotes{материальных точек}). В~совокупности $N$~\hbox{частиц} каждая частица имеет свою массу~${m_k \hspace{-0.2ex}=\hspace{-0.1ex} \constant}$ и~функцию движения~${\bm{r}_k(t)}$. Функция~${\bm{r}_k(t)}$ измеряется отно\-си\-тель\-но н\'{е}которой системы отсчёта\:--- твёрдого тела с~часами~(\figref{fig:referencesystem}).}
 
 \begin{wrapfigure}[10]{o}{.48\textwidth}
 \makebox[.48\textwidth][c]{\begin{minipage}[t]{.44\textwidth}
@@ -44,14 +44,14 @@
 	\draw [line width=1pt, blue, rotate around={-30:(clock)}] (clock) -- ++(0, \clockradius - 0.15);
 
 	\path (0.16,0.2) node [shape=coordinate] (O) {};
-	\path (O) -- ++(-1,-1) node [shape=coordinate] (first) {};
-	\path (O) -- ++(2.4,0) node [shape=coordinate] (second) {};
+	\path (O) -- ++(2.4,0) node [shape=coordinate] (first) {};
+	\path (O) -- ++(-1,-1) node [shape=coordinate] (second) {};
 	\path (O) -- ++(0,2) node [shape=coordinate] (third) {};
 
 	\draw [line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- (first)
-		node [pos=0.77, below, xshift=4.5mm, yshift=1mm] {$\bm{e}_1$};
+		node [pos=0.8, above, xshift=2mm, yshift=1.2mm] {$\bm{e}_1$};
 	\draw [line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- (second)
-		node [pos=0.8 ,above, xshift=2mm, yshift=1.2mm] {$\bm{e}_2$};
+		node [pos=0.77, below, xshift=4.5mm, yshift=1mm] {$\bm{e}_2$};
  	\draw [line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}] (O) -- (third)
 		node [pos=0.8, right, xshift=1mm, yshift=1mm] {$\bm{e}_3$};
 
@@ -77,9 +77,8 @@
 
 \ru{Когда\hbox{-}то давно, за~систему отсчёта принималось некое абсолютное пространство: сначала пустое, а~затем заполненное сплошной упругой \hbox{средой}\:--- эфиром. Позже стало ясно, что в~пределах классической механики можно пользоваться \hbox{любыми} системами \hbox{отсчёта}, но предпочтение отдаётся инерциальным системам, где \hbox{точка} движется без~ускорения~(${\mathdotdotabove{\bm{r}} = \bm{0}}$) при~отсутствии внешних взаимодействий.}
 
-\en{The measure of interaction in mechanics is a~vector of~force~$\bm{F}$. In~famous Newton’s equation}
-
-\ru{Мерой взаимодействия в~механике является вектор силы~$\bm{F}$. В~известном уравнении Newton’а}
+\en{The measure of interaction in mechanics is a~vector of~force}\ru{Мерой взаимодействия в~механике является вектор силы}~$\bm{F}$.
+\en{In~famous Newton’s equation}\ru{В~известном уравнении Newton’а}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{law:ofnewton}
 m \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.1ex} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
@@ -92,26 +91,28 @@ m \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.1ex} = \bm{F} ( \bm{r}, \mathd
 \ru{Напомним положения динамики системы частиц. Сила, действующая на~$k$\hbox{-}ую частицу}
 
 \nopagebreak\en{\vspace{-0.7em}}\ru{\vspace{-0.2em}}\begin{equation}\label{forceonparticle}
-\bm{F}_k \hspace{-0.1ex} = \bm{F}^{\expexternal}_{\hspace{-0.16ex}k}
- + \scalebox{0.88}{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.2ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.12ex},
+\bm{F}_k \hspace{-0.1ex} = \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}
+ + \scalebox{0.88}{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.12ex},
 \end{equation}
 
-\en{\vspace{-0.2em} \noindent where the first addend~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ is external force, and the second is sum of~internal ones (${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj}}$ is force from particle with number~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
+\en{\vspace{-0.2em} \noindent where the first addend~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$ is external force, and the second is sum of~internal ones (${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}}$ is force from particle with number~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
 
-\ru{\vspace{-0.2em} \noindent где первое слагаемое~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$\:--- это внешняя сила, а~второе\:--- сумма внутренних (${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj}}$\:--- сила от~частицы с~номером~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
+\ru{\vspace{-0.2em} \noindent где первое слагаемое~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$\:--- это внешняя сила, а~второе\:--- сумма внутренних (${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}}$\:--- сила от~частицы с~номером~\inquotes{$\hspace{-0.1ex}j\hspace{0.25ex}$}).}
 
-\foreignlanguage{russian}{Принимая принцип действия и~противодействия ${\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} = - \bm{F}^{\expinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}\hspace{-0.16ex}}$, получаем из~\eqref{law:ofnewton} и~\eqref{forceonparticle} баланс импульса}
+\en{Applying}\ru{Применяя} \en{the~action\hbox{--}reaction principle}\ru{принцип действия\hbox{--}противодействия (action\hbox{--}reaction principle)}
+${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = - \bm{F}^{\smthinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}\hspace{-0.16ex}}$,
+\foreignlanguage{russian}{получаем из~\eqref{law:ofnewton} и~\eqref{forceonparticle} баланс импульса}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{balanceoftranslationalmomentum.discrete}
 \left( \displaystyle \sum_{\smash{k}} m_k \hspace{.2ex} \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \right)^{\hspace{-0.28em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.12ex}
 = \hspace{.16ex}
-\displaystyle \sum_{\smash{k}} \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex}.
+\displaystyle \sum_{\smash{k}} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex}.
 \end{equation}
 
 \foreignlanguage{russian}{Считая также, что внутренние взаимодействия между частицами центральны, то~есть}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-\bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \times \left( \bm{r}_k \hspace{-0.12ex} - \bm{r}_{\hspace{-0.16ex}j} \right) = \bm{0} \hspace{.1ex},
+\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \times \left( \hspace{.12ex} \bm{r}_k \hspace{-0.12ex} - \bm{r}_{\hspace{-0.16ex}j} \right) = \bm{0} \hspace{.1ex},
 \end{equation*}
 
 \vspace{-0.2em} \noindent \foreignlanguage{russian}{приходим к~балансу момента импульса}
@@ -119,7 +120,7 @@ m \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.1ex} = \bm{F} ( \bm{r}, \mathd
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{balanceofrotationalmomentum.discrete}
 \left( \displaystyle \sum_{\smash{k}} \bm{r}_k \hspace{-0.12ex} \times m_k \hspace{.2ex} \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \right)^{\hspace{-0.25em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.12ex}
 = \hspace{.16ex}
-\displaystyle \sum_{\smash{k}} \bm{r}_k \hspace{-0.12ex} \times \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex}.
+\displaystyle \sum_{\smash{k}} \bm{r}_k \hspace{-0.12ex} \times \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.12ex}.
 \end{equation}
 
 ...
@@ -143,7 +144,7 @@ m \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.1ex} = \bm{F} ( \bm{r}, \mathd
 \par}
 %% \end{comment} %%
 
-\en{To define position (location)}\ru{Для определения положения (места)} \en{of an~absolutely rigid~(undeformable) body}\ru{совершенно жёсткого~(недеформируемого) тела} \en{it’s enough}\ru{достаточно} \en{to choose}\ru{выбрать} \en{some one of its points}\ru{какую\hbox{-}либо одну его точку}\:--- \inquotesx{\en{the~pole}\ru{полюс}}[,] \en{to~set location}\ru{установить положение}~${\bm{r}(t)}$ \en{of~this point}\ru{этой точки}, \en{as well as angular orientation}\ru{а~также угловую ориентацию} \en{of a~body}\ru{тела}~(\figref{fig:bodyoffsetandrotation}).
+\en{To define position (location)}\ru{Для определения положения (места)} \en{of an~absolutely rigid undeformable body}\ru{совершенно жёсткого недеформируемого тела} \en{it’s enough}\ru{достаточно} \en{to choose}\ru{выбрать} \en{some one of its points}\ru{какую\hbox{-}либо одну его точку}\:--- \inquotesx{\en{the~pole}\ru{полюс}}[,] \en{to~set location}\ru{установить положение}~${\bm{r}(t)}$ \en{of~this point}\ru{этой точки}, \en{as well as angular orientation}\ru{а~также угловую ориентацию} \en{of a~body}\ru{тела}~(\figref{fig:bodyoffsetandrotation}).
 
 \begin{comment}
 \makeatletter
@@ -290,9 +291,11 @@ m \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.1ex} = \bm{F} ( \bm{r}, \mathd
 %%\emph{\en{Discrete and continual approaches}\ru{Дискретный и континуальный подходы}}.
 \en{An~absolutely rigid body}\ru{Совершенно жёсткое тело} \en{is mostly modeled}\ru{чаще всего моделируется} \en{using}\ru{с~использованием} \inquotesx{\en{the~continual approach}\ru{континуального подхода}}[---] \en{as}\ru{как} \en{a~continuous distribution of~mass}\ru{непрерывное распределение массы} (\en{material continuum}\ru{материальный континуум, сплошная среда}), \en{rather than using}\ru{вместо использования} \inquotesx{\en{the~discrete approach}\ru{дискретного подхода}}[---] \en{modeling}\ru{моделирования} \en{as}\ru{как} \en{a~discrete collection}\ru{дискретной совокупности} \en{of~body’s particles}\ru{частиц тела}.
 
-\en{Transition from formulas}\ru{Переход от~формул}, \en{containing}\ru{содержащих} \en{summation over discrete points}\ru{суммирование по~дискретным точкам}, \en{to formulas for a~continuous body}\ru{к~формулам для сплошного тела} \en{is made}\ru{осуществляется} \en{by replacing}\ru{заменой} \en{masses of~particles}\ru{масс частиц} \en{with mass}\ru{на~массу} ${dm \hspace{-0.1ex} = \hspace{-0.15ex} \rho \hspace{.2ex} d\mathcal{V}}$ \en{of~volume element}\ru{элемента объёма}~${d\mathcal{V}}$~($\rho$\ru{\:---}\en{~is}~\en{mass density}\ru{плотность массы}), \en{and}\ru{и}~\en{integration over the~whole volume of a~body}\ru{интегрированием по~всему объёму тела}.
+\en{A~formula}\ru{Формула} \en{with summation over discrete points}\ru{с~суммированием по~дискретным точкам} \en{turns}\ru{превращается} \en{into a~formula for a~continuous body}\ru{в~формулу для сплошного тела} \en{by replacing}\ru{путём замены} \en{masses of~particles}\ru{масс частиц} \en{with mass}\ru{на~массу} ${dm \hspace{-0.1ex} = \hspace{-0.15ex} \rho \hspace{.2ex} d\mathcal{V}}$ \en{of~volume element}\ru{элемента объёма}~${d\mathcal{V}}$~($\rho$\ru{\:---}\en{~is}~\en{mass density}\ru{плотность массы}) \en{and}\ru{и}~\en{integrating over the~whole volume of~a~body}\ru{интегрирования по~всему объёму тела}.
 
 \foreignlanguage{russian}{${\mathcircabove{\bm{e}}_i}$\:--- ортонормальная тройка векторов базиса, неподвижная относительно системы отсчёта}
+
+Any movement of an~absolutely rigid body is a~rotation, a~translation\footnote{a translation can be thought of as a rotation with the revolution center at infinity}, or a~combination of both.
 
 \foreignlanguage{russian}{Имея неподвижный базис~${\mathcircabove{\bm{e}}_i}$ и движущийся вместе с~телом базис~${\bm{e}_i}$, ...}
 
@@ -312,16 +315,16 @@ ${\bm{x} = x_i \hspace{.1ex} \bm{e}_i}$
 
 \eqref{rodriguesrotationformula}, \chapdotpararef{chapter:elementsoftensorcalculus}{para:rotationtensor}
 
-${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \mathcircabove{\bm{x}}}$
+${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \mathcircabove{\bm{x}}}$
 
 \begin{equation*}
 \mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
 \hspace{.1ex} ,
 \end{equation*}
 
-\en{For an~absolutely rigid body}\ru{Для совершенно жёсткого тела}, \en{components}\ru{компоненты}~${x_i}$ \en{don’t depend on~time}\ru{не~зависят от~времени}~(${x_i \hspace{-0.16ex} = \const}$) \en{and}\ru{и}~${\mathdotabove{\bm{x}} = x_i \hspace{.1ex} \mathdotabove{\bm{e}}_i}$
+\en{For an~absolutely rigid body}\ru{Для совершенно жёсткого тела}, \en{components}\ru{компоненты}~${x_i}$ \en{don’t depend on~time}\ru{не~зависят от~времени}~(${x_i \hspace{-0.16ex} = \constant}$) \en{and}\ru{и}~${\mathdotabove{\bm{x}} = x_i \hspace{.1ex} \mathdotabove{\bm{e}}_i}$
 
-${\mathdotabove{\bm{x}} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \mathcircabove{\bm{x}}}$
+${\mathdotabove{\bm{x}} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \hspace{.1ex} \mathcircabove{\bm{x}}}$
 
 ${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp x_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
 \:\Rightarrow\:
@@ -381,6 +384,28 @@ $\bm{\Xi}$ becomes the~null vector when the~chosen \inquotes{pole} is \en{the~ce
 
 ...
 
+\subsection*{Work}
+
+\[
+W(\bm{F}\hspace{-0.25ex}, \bm{u}) \hspace{-0.1ex} = \bm{F} \hspace{-0.2ex} \dotp \bm{u}
+\]
+
+by \inquotes{product rule}
+
+\nopagebreak\[
+d \hspace{.1ex} W \hspace{-0.33ex} = d\bm{F} \hspace{-0.1ex} \dotp \bm{u} \hspace{.12ex} + \bm{F} \hspace{-0.1ex} \dotp d\bm{u}
+\]
+
+by definition of full differential
+
+\nopagebreak\[
+d \hspace{.1ex} W \hspace{-0.33ex}  = \hspace{.08ex} \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{F}} \hspace{-0.1ex} \dotp d \bm{F} + \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{u}} \hspace{-0.1ex} \dotp d \bm{u}
+\]
+
+${\displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{F}} \hspace{-0.1ex} = \bm{u}}$,
+${\displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{u}} \hspace{-0.1ex} = \bm{F}}$
+
+...
 
 {\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
 
@@ -462,22 +487,25 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 Уравнения баланса можно вывести из принципа виртуальной работы~\eqref{discrete:principleofvirtualwork}. Перепишем его в~виде
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{discrete:principleofvirtualwork.externalinternal}
-\displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\expexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
+\displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
 + \variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex},
 \vspace{-0.25em}\end{equation}
 
-\vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\expexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил
-${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\expinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.1ex}}$.
+\vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил
+${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.1ex}}$.
 
 \vspace{-0.1em} Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\constvarvector{\bm{o}}}$\:--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{assumptionforvirtualwork}
+\begin{array}{l}
 \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex}
 = \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k
-\hspace{.1ex} , \:
-\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconst \hspace{.1ex} , \:
-\constvarvector{\bm{o}} = \boldconst
-\hspace{.4ex} \Rightarrow \hspace{.32ex}
+\hspace{.1ex} ,
+\\
+\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant \hspace{.1ex} , \:
+\constvarvector{\bm{o}} = \boldconstant
+\end{array}
+\hspace{.3ex} \Rightarrow \hspace{.6ex}
 \variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex}.
 \end{equation}
 
@@ -597,7 +625,7 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 
 \begin{otherlanguage}{russian}
 
-Рассмотрим систему со~стационарными (постоянными во~времени) связями при статических (не~меняющихся со~временем) активных силах ${\bm{F}_k}$. В~равновесии ${\bm{r}_k \hspace{-0.12ex} = \boldconst}$, и формулировка принципа виртуальной работы следующая:
+Рассмотрим систему со~стационарными (постоянными во~времени) связями при статических (не~меняющихся со~временем) активных силах ${\bm{F}_k}$. В~равновесии ${\bm{r}_k \hspace{-0.12ex} = \boldconstant}$, и формулировка принципа виртуальной работы следующая:
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{statics.discrete:principleofvirtualwork}
 \scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.25ex}
@@ -737,10 +765,151 @@ q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 \begin{otherlanguage}{russian}
 
-До~сих~пор не~ставился вопрос о~системе отсчёта, всё рассматривалось в~некой \inquotes{абсолютной} системе или одной из инерциальных систем~(\pararef{para:initialconcepts.discreteapproach}). Теперь представим себе две системы: \inquotes{абсолютную} и~подвижную
+До~этого не~ставился вопрос о~системе отсчёта, всё рассматривалось в~некой \inquotes{абсолютной} системе или одной из инерциальных систем~(\pararef{para:initialconcepts.discreteapproach}). Теперь представим себе две системы: \inquotes{абсолютную} и~\inquotes{подвижную}
 
 ...
 
+\begin{equation*}
+\begin{array}{c}
+\bm{R} = \bm{r} + \bm{x}
+\\
+\bm{r} = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\hspace{.1ex} , \:\:
+\bm{x} = x_i \bm{e}_i
+\\
+\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+\\
+\mathdotabove{\bm{r}} = \hspace{-0.1ex}
+\mathdotabove{\rho}_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\hspace{.1ex} , \:\:
+\mathdotabove{\bm{x}} = \hspace{-0.15ex} \bigl( x_i \bm{e}_i \bigr)^{\hspace{-0.15ex}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+= \mathdotabove{x}_i \bm{e}_i \hspace{-0.1ex} + x_i \mathdotabove{\bm{e}}_i
+\end{array}
+\end{equation*}
+
+${x_i \hspace{-0.1ex} \neq \constant}$ $\Rightarrow$ ${\mathdotabove{x}_i \hspace{-0.1ex} \neq 0}$
+
+\en{By}\ru{По}~\eqrefwithchapdotpara{angularvelocityandbasisvectors}{chapter:elementsoftensorcalculus}{para:rotationtensor}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{e}_i
+\hspace{.33ex} \Rightarrow \hspace{.4ex}
+x_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} x_i \bm{e}_i \hspace{-0.1ex}
+= \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{x}
+\end{equation*}
+
+${
+\mathdotabove{\bm{x}} = \mathdotabove{x}_i \bm{e}_i + \hspace{.1ex} \bm{\omega} \hspace{-0.16ex} \times \hspace{-0.16ex} \bm{x}
+}$
+
+\begin{equation*}
+\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+= \hspace{-0.2ex} \tikzmark{beginEVelocity} \hspace{.25ex} \mathdotabove{\bm{r}} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \tikzmark{endEVelocity}
+\hspace{.4ex} \tikzmark{beginRelativeVelocity} \hspace{-0.4ex} - \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} + \hspace{.1ex} \mathdotabove{\bm{x}} \hspace{-0.33ex} \tikzmark{endRelativeVelocity}
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0,0]{beginEVelocity}{endEVelocity}{${ \scriptstyle \bm{v}_{\hspace{-0.1ex}e} }$}
+\AddUnderBrace[line width=.75pt][.4ex,0][xshift=.2ex]{beginRelativeVelocity}{endRelativeVelocity}{${ \scriptstyle \bm{v}_{r\kern-0.1exel} }$}
+
+${
+\mathdotabove{\bm{x}} \hspace{.1ex} - \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} = \mathdotabove{x}_i \bm{e}_i
+\equiv \hspace{.1ex} \bm{v}_{r\kern-0.1exel}
+}$\:--- relative velocity,
+${
+\mathdotabove{\bm{r}} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x}
+\equiv \hspace{.1ex} \bm{v}_{\hspace{-0.1ex}e}
+}$
+
+\begin{equation}
+\bm{v} = \bm{v}_{\hspace{-0.1ex}e} \hspace{-0.1ex} + \bm{v}_{r\kern-0.1exel}
+\end{equation}
+
+...
+
+\begin{equation*}
+\begin{array}{c}
+\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+\\
+\mathdotdotabove{\bm{R}} = \mathdotdotabove{\bm{r}} + \mathdotdotabove{\bm{x}}
+\\
+\bm{w} \equiv \hspace{.1ex} \mathdotabove{\bm{v}} = \hspace{-0.15ex} \mathdotdotabove{\bm{R}} = \mathdotdotabove{\bm{r}} + \mathdotdotabove{\bm{x}}
+\\
+\mathdotdotabove{\bm{r}} = \hspace{-0.1ex}
+\mathdotdotabove{\rho}_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\hspace{.1ex} , \:\:
+\mathdotdotabove{\bm{x}} = \hspace{-0.15ex} \bigl( x_i \bm{e}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); \hspace{.2ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.2ex}
+= \hspace{-0.15ex} \bigl( \mathdotabove{x}_i \bm{e}_i \hspace{-0.1ex} + x_i \mathdotabove{\bm{e}}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotdotabove{x}_i \bm{e}_i \hspace{-0.1ex} + \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
++ \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex} + x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+\end{array}
+\end{equation*}
+
+\nopagebreak\begin{equation*}
+\mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.12ex} \bm{e}_i
+\hspace{.33ex} \Rightarrow \hspace{.4ex}
+\mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+= \hspace{-0.15ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{.1ex} \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{-0.1ex} + \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{-0.1ex}
++ \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{.1ex} \bigr)
+\end{equation*}
+
+\nopagebreak\begin{equation*}
+x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+= x_i \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{.1ex} \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.12ex} \times \hspace{-0.12ex} x_i \bm{e}_i
++ \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} x_i \bm{e}_i \hspace{.1ex} \bigr) \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.12ex} \times \hspace{-0.12ex} \bm{x}
++ \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr)
+\end{equation*}
+
+\nopagebreak\begin{equation*}
+\mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.12ex} \bm{e}_i
+\hspace{.33ex} \Rightarrow \hspace{.4ex}
+\mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
+= \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \mathdotabove{x}_i \bm{e}_i \hspace{-0.1ex}
+= \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{v}_{r\kern-0.1exel}
+\end{equation*}
+
+${
+\mathdotdotabove{x}_i \bm{e}_i
+\equiv \hspace{.1ex} \bm{w}_{r\kern-0.1exel}
+}$\:--- relative acceleration
+
+${
+2 \hspace{.2ex} \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
+= 2 \hspace{.33ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{v}_{r\kern-0.1exel} \hspace{-0.1ex}
+\equiv \hspace{.1ex} \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or}
+}$\:--- Coriolis acceleration
+
+\begin{equation*}
+\mathdotdotabove{\bm{x}}
+= \bm{w}_{r\kern-0.1exel} \hspace{-0.1ex}
++ \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or} \hspace{-0.1ex}
++ x_i \mathdotdotabove{\bm{e}}_i
+\end{equation*}
+
+\begin{equation*}
+\begin{array}{c}
+\bigl( x_i \mathdotabove{\bm{e}}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex} + x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.12ex}
+= \hspace{.12ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or} \hspace{-0.15ex} + x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+\\[.2em]
+%
+\bigl( x_i \mathdotabove{\bm{e}}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \hspace{-0.15ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} + \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \mathdotabove{\bm{x}}
+\end{array}
+\end{equation*}
+
+\begin{equation*}
+\bm{\omega} \hspace{-0.12ex} \times \hspace{-0.12ex} \mathdotabove{\bm{x}}
+= \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \mathdotabove{x}_i \bm{e}_i + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr) \hspace{-0.15ex}
+= \hspace{-0.2ex} \tikzmark{beginCoriolisHalf} \hspace{.2ex} \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \mathdotabove{x}_i \bm{e}_i \hspace{.2ex} \tikzmark{endCoriolisHalf} \hspace{-0.25ex}
++ \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr)
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0,-0.1em]{beginCoriolisHalf}{endCoriolisHalf}{${\scalebox{0.8}{$ \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.15ex} = \smalldisplaystyleonehalf \hspace{.1ex} \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or} $}}$}
+
+...
 
 
 \end{otherlanguage}
@@ -762,7 +931,16 @@ q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 \vspace{-0.25em} \noindent где ${A_{ik}}$\:--- симметричная и~положительная \inquotesx{матрица кинетической энергии}[.]
 
-Изучение колеблющейся системы чаще всего начинают с~нормальных колебаний~(гармоник)\:--- собственных~(свободных, без воздействий извне) синусоидальных колебаний вида ${q_k \hspace{-0.1ex} (t) \hspace{-0.2ex} = \widearc{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t}$. Постоянные~${\widearc{q}_{\hspace{-0.1ex}k}\hspace{-0.12ex}}$\:--- формы~(или моды) колебаний, ${\omega_k\hspace{-0.1ex}}$\:--- собственные частоты. Этот набор находится из задачи на~собственные значения
+{\small%
+A normal mode of an oscillating system is a pattern of motion in which all parts of the system move sinusoidally with the same frequency and with a fixed phase relation. The free motion described by the normal modes takes place at fixed frequencies. These fixed frequencies of the normal modes of a system are known as its natural frequencies or resonant frequencies.
+
+A physical object, such as a building, bridge, or molecule, has a set of normal modes and their natural frequencies that depend on its structure, materials and boundary conditions. In music, normal modes of vibrating instruments (strings, air pipes, drums, etc.) are called "harmonics" or "overtones".
+
+The most general motion of a system is a superposition of its normal modes. The modes are normal in the sense that they can move independently, that is to say that an excitation of one mode will never cause motion of a different mode. In mathematical terms, normal modes are orthogonal to each other.
+\par}
+
+Изучение колеблющейся системы чаще всего начинают с~нормальных колебаний~(гармоник)\:--- собственных~(свободных, без воздействий извне) синусоидальных колебаний вида ${q_k \hspace{-0.1ex} (t) \hspace{-0.2ex} = \widearc{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t}$.
+\en{Constants}\ru{Постоянные}~${\widearc{q}_{\hspace{-0.1ex}k}\hspace{-0.12ex}}$\en{ are}\ru{\:---} формы~(\en{modes}\ru{моды}) \en{of~oscillation}\ru{колебания}, ${\omega_k\hspace{-0.1ex}}$\en{ are}\ru{\:---} собственные частоты. Этот набор находится из задачи на~собственные значения
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
 \begin{array}{c}

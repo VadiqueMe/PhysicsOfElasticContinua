@@ -32,12 +32,6 @@
 \newcommand\stiffnesstensor{\stiffnesstensorA}
 \newcommand\pliabilitytensor{\stiffnesstensorB}
 
-\newcommand\expexternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}
-\newcommand\expinternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}
-
-%%\newcommand\internalwork{W^{\hspace{-0.12ex}\expinternal}}
-%%\newcommand\externalwork{W^{\hspace{-0.12ex}\expexternal}}
-
 \usepackage{tikz}
 \usetikzlibrary{calc}
 
@@ -182,8 +176,9 @@
 
 \begin{equation*}\begin{array}{c}
 \mathboldtau \dotdotp \mathboldepsilon
+= \mathboldepsilon \dotdotp \mathboldtau
 = \hspace{.1ex}
-\Pi(\mathboldepsilon) \hspace{-0.1ex} + \hspace{.1ex} \widehat{\Pi}(\hspace{-0.1ex}\mathboldtau\hspace{.12ex}) \hspace{-0.1ex}
+\Pi(\mathboldepsilon) \hspace{-0.1ex} + \hspace{.1ex} \widehat{\Pi}(\hspace{-0.1ex}\mathboldtau\hspace{.12ex})
 \\[.4em]
 %
 \Pi(\mathboldepsilon) \hspace{-0.1ex}
