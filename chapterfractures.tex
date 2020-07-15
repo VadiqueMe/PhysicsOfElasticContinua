@@ -6,7 +6,7 @@
 
 \label{chapter:fractures}
 
-\newcommand{\tensilestrength}{\sigma_{\hspace{-0.25ex}*}}
+\newcommand{\tensilestrength}{\mathsigma_{\hspace{-0.2ex}*}}
 \newcommand{\stressdeviator}{\bm{s}}
 
 \en{\section{Traditional criteria of toughness}} % of robustness
@@ -15,22 +15,32 @@
 
 \begin{otherlanguage}{russian}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{К}{ак} судить о~прочности тела после определения напряжения в~нём? При одноосном растяжении напряжением~$\sigma$ есть, очевидно, некий \inquotes{предел прочности}~${\tensilestrength}$, выше которого материал разрушается. Прочность считают достаточной при~${\sigma \leq \tensilestrength / \hspace{.1ex} k}$, где $k$ есть так называемый коэффициент запаса. Но такой подход не~вполне удовлетворяет, поскольку получаемые из~опытов значения~${\tensilestrength}$ \en{have a~big scatter}\ru{имеют большой разброс}, а~выбор коэффициента запаса \en{sometimes becomes a~bureaucratic act}\ru{временами становится бюрократическим актом}. Тем не~менее подобные взгляды на~анализ прочности широк\'{о} распространены. Воздерживаясь от критики, ст\'{о}ит упомянуть самые популярные из~них.
+\lettrine[lines=2, findent=2pt, nindent=0pt]{К}{ак} судить о~прочности тела после определения напряжения в~нём? При одноосном растяжении напряжением~$\mathsigma$ есть, очевидно, некий \inquotes{предел прочности}~${\tensilestrength}$, выше которого материал разрушается. Прочность считают достаточной при~${\mathsigma \hspace{.1ex} \leq \tensilestrength / \hspace{.1ex} k}$, где $k$ есть так называемый коэффициент запаса. Но такой подход не~вполне удовлетворяет, поскольку получаемые из~опытов значения~${\tensilestrength}$ \en{have a~big scatter}\ru{имеют большой разброс}, а~выбор коэффициента запаса \en{sometimes becomes a~bureaucratic act}\ru{временами становится бюрократическим актом}. Тем не~менее подобные взгляды на~анализ прочности широк\'{о} распространены. Воздерживаясь от критики, ст\'{о}ит упомянуть самые популярные из~них.
 
-\textbf{Критерий максимального нормального напряжения}: разрушение происходит при~${\sigma_1 \hspace{-0.12ex} = \tensilestrength}$ (наибольшее из главных напряжений достигает предельного значения). Но это положение несправедливо для одноосного сжатия, при котором ${\sigma_1 \hspace{-0.12ex} = 0}$.
+\textbold{Критерий максимального нормального напряжения}:
+разрушение происходит при~${\mathsigma_1 \hspace{-0.15ex} = \tensilestrength}$ (наибольшее из главных напряжений достигает предельного значения).
+Но это положение несправедливо для одноосного сжатия, при котором ${\mathsigma_1 \hspace{-0.15ex} = 0}$.
 
-\textbf{Критерий максимального касательного напряжения (Tresca criterion)}: разрушение наступает при ${\sigma_1 \hspace{-0.16ex} - \sigma_3 \hspace{-0.1ex} = \tensilestrength}$ ($\sigma_3$\:--- наименьшее из главных напряжений). Это более соответствует началу пластического течения.
+\textbold{Критерий максимального касательного напряжения (Tresca criterion)}:
+разрушение наступает при ${\mathsigma_1 \hspace{-0.15ex} - \mathsigma_3 \hspace{-0.1ex} = \tensilestrength}$ ($\mathsigma_3$\:--- наименьшее из главных напряжений).
+Это более соответствует началу пластического течения.
 
-\textbf{Критерий максимального удлинения}: наибольшее из собственных значений тензора деформации ${\varepsilon_1 \hspace{-0.12ex} = \varepsilon_*}$. Это приемлемо и~при~сжатии с~${\varepsilon_1 \hspace{-0.12ex} > 0}$.
+\textbold{Критерий максимального удлинения}: наибольшее из собственных значений тензора деформации ${\mathepsilon_1 \hspace{-0.2ex} = \mathepsilon_*}$. Это приемлемо и~при~сжатии с~${\mathepsilon_1 \hspace{-0.12ex} > 0}$.
 
-\textbf{Критерий энергии деформации}: ${\Pi = \Pi_*}$. Здесь учитывается, что разрушение требует энергии, а источником её может~быть лишь сам\'{о} деформированное тело. Однако достаточный запас энергии\:--- необходимое, но не~единственное условие разрушения; должен включиться некий механизм преобразования упругой энергии в~работу разрушения.
+\textbold{Критерий энергии деформации}:
+${\Pi = \Pi_*}$.
+Здесь учитывается, что разрушение требует энергии, а источником её может~быть лишь сам\'{о} деформированное тело.
+Однако достаточный запас энергии\:--- необходимое, но не~единственное условие разрушения; должен включиться некий механизм преобразования упругой энергии в~работу разрушения.
 
 %% maximum distortion energy criterion
-\textbf{Критерий энергии формоизменения (von~Mises yield criterion)}: ${\stressdeviator \dotdotp \stressdeviator = 2 \hspace{.12ex} \tau_{\!*}^2\hspace{-0.5ex}}$, ${\, \stressdeviator \equiv \mathboldtau - \frac{1}{3} \hspace{.25ex} \bm{E} \operatorname{tr} \mathboldtau}$ (\inquotes{девиатор напряжений}). Здесь не~играет роли энергия объёмной деформации.
+\textbold{Критерий энергии формоизменения (von~Mises yield criterion)}:
+${\stressdeviator \dotdotp \stressdeviator = 2 \mathtau_{*}^{\hspace{.25ex}2}}$, ${\, \stressdeviator \equiv \cauchystress - \frac{1}{3} \hspace{.25ex} \bm{E} \operatorname{tr} \cauchystress}$ (\inquotes{девиатор напряжений}).
+Здесь не~играет роли энергия объёмной деформации.
 \href{https://en.wikipedia.org/wiki/Richard_von_Mises}{Richard von~Mises} предложил\footnote{\bibauthor{R.}[von~Mises]. \href{https://gdz.sub.uni-goettingen.de/id/PPN252457811_1913?tify=\%7B"pages":\%5B602\%5D,"view":"info"\%7D}{Mechanik der festen K\"{o}rper im plastisch-deformablen Zustand~// Nachrichten von der K\"{o}niglichen Gesellschaft der Wissenschaften zu~Göttingen, Mathematisch-physikalische Klasse, 1913. Seiten 582\hbox{--}592.}}\hspace{-0.25ex}
 этот критерий как гладкую аппроксимацию условия \href{https://en.wikipedia.org/wiki/Henri_Tresca}{Henri Tresca}.
 
-\textbf{Критерий Mohr’а}. Представим себе множество предельных состояний ...
+\textbold{Критерий Mohr’а}.
+Представим себе множество предельных состояний ...
 
 ...
 
@@ -38,9 +48,9 @@
 
 \end{otherlanguage}
 
-\en{\section{Antiplane deformation of continuum with a crack}}
+\en{\section{Antiplane deformation of continuum with a~crack}}
 
-\ru{\section{Антиплоская деформация среды с трещиной}}
+\ru{\section{Антиплоская деформация среды с~трещиной}}
 
 \begin{otherlanguage}{russian}
 
@@ -66,7 +76,7 @@
 
 \end{otherlanguage}
 
-\en{\section{Crack driving force}}
+\en{\section{Crack\hbox{-}driving force}}
 
 \ru{\section{Трещинодвижущая сила}}
 
@@ -179,7 +189,7 @@ D.\,S.\;Dugdale\footnote{\bibauthor{Dugdale,}[D.][S.] Yielding of~steel sheets c
 
 \begin{otherlanguage}{russian}
 
-%%\textbf{1}.
+%%\textbold{1}.
 Пусть нагрузка на~тело с~трещиной выросла настолько, что выполняется условие
 
 ...
@@ -215,7 +225,7 @@ D.\,S.\;Dugdale\footnote{\bibauthor{Dugdale,}[D.][S.] Yielding of~steel sheets c
 = \hspace{-0.1ex}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.25ex} d\mathcal{V} \hspace{.16ex}
 + \hspace{-0.1ex}
-\integral\displaylimits_{\mathcal{O}} \hspace{-0.32ex} \bm{n} \dotp \mathboldtau \dotp \mathdotabove{\bm{u}} \hspace{.25ex} d\mathcal{O} .
+\integral\displaylimits_{\mathcal{O}} \hspace{-0.32ex} \bm{n} \dotp \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.25ex} d\mathcal{O} .
 \end{equation}
 
 ...

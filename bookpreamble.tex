@@ -78,33 +78,26 @@
 %%\usepackage{tabulary}
 \usepackage{longtable}
 
+\newcommand\textbold[1]{{\fontfamily{cmr}\fontseries{b}\selectfont{}#1}}
+\newcommand\textboldextended[1]{{\fontfamily{cmr}\fontseries{bx}\selectfont{}#1}}
+
+%%\renewcommand{\bfdefault}{b} % make bold font narrower
+%%\renewcommand{\bfdefault}{sbc}
+
+\DeclareTextFontCommand{\textboldoblique}{\fontseries{bx}\itshape}
+
 \usepackage{bm} % bold math symbols
 
-% from newtxmath
-\DeclareFontFamily{U}{ntxmia}{}
-\DeclareFontShape{U}{ntxmia}{m}{it}{<-> ntxmia }{}
-\DeclareFontShape{U}{ntxmia}{b}{it}{<-> ntxbmia }{}
-\DeclareSymbolFont{lettersA}{U}{ntxmia}{m}{it}
-\SetSymbolFont{lettersA}{bold}{U}{ntxmia}{b}{it}
-
-%%\AtBeginDocument{\let\mathbb\boldmathbb}
-
-\ExplSyntaxOn
-\NewDocumentCommand{\boldmathbb}{m}
-{
-	\tl_map_inline:nn { #1 }
-	{
-		\use:c { varbb##1 }
-	}
-}
-\tl_map_inline:nn { ABCDEFGHIJKLMNOPQRSTUVWXYZ }
-{
-	\exp_args:Nc \DeclareMathSymbol{varbb#1}{\mathord}{lettersA}{\int_eval:n { `#1+64 }}
-}
-\exp_args:Nc \DeclareMathSymbol{varbbk}{\mathord}{lettersA}{169}
-\ExplSyntaxOff
-
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%%\AtBeginDocument{\let\boldmathbb\mathbb}
+%%\usepackage{bbm}
+%%\AtBeginDocument{\let\boldmathbb\mathbbm}
+\usepackage{dsfont}
+\AtBeginDocument{\let\boldmathbb\mathds}
+
 \usepackage{nccmath}
 \usepackage{mathtools}
 
@@ -112,7 +105,6 @@
 
 \usepackage{abraces}
 
-\usepackage{amssymb}
 \usepackage{wasysym}
 \usepackage{mathrsfs}
 
@@ -198,6 +190,9 @@
 \newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
 \makeatother
 
+\newcommand*{\lineover}[1]{\overline{\raisebox{0pt}[1.2\height]{\ensuremath{#1}}}}
+\newcommand*{\lineoverlower}[1]{\overline{\raisebox{0pt}[1.1\height]{\ensuremath{#1}}}}
+
 % symbol for trace dot
 \newcommand\tracedot{\hspace{-0.1ex}\raisemath{-0.4ex}{\scalebox{.64}{$\bullet$}}\hspace{-0.1ex}}
 
@@ -209,6 +204,7 @@
 \newcommand\rotationtensor{\bm{O}}
 
 \newcommand\inertiatensor{\bm{\mathfrak{I}}}
+\newcommand\inertiascalar{\mathfrak{I}}
 \newcommand{\inertiatensorcomponents}[1]{\mathfrak{I}_{\hspace{-0.1ex}#1}\hspace{.1ex}}
 
 \newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
@@ -255,18 +251,26 @@
 \newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
 
 \newcommand\mathboldae{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{æ}$}}}}
-\newcommand\mathboldoe{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{œ}$}}}}
+\newcommand\mathboldoe{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{œ}$}}\hspace{.1ex}}}
 
 \newcommand\mathboldalpha{\scalebox{0.88}[1]{\ensuremath{\bm{\alpha}}}}
 
 \newcommand\mathboldrcursive{\ensuremath{\pmb{\text{\textcursive{\slshape r}}}}}
 
+\newcommand\hcursive{\smash{\scalebox{0.9}[0.9]{$\text{\textcursive{\slshape h}}$}\hspace{.5ex}}}
+
+\newcommand\elcursive{\smash{\scalebox{0.9}[0.9]{$\text{\textcursive{\slshape l}}$}\hspace{.5ex}}}
+\newcommand\elcursivesub[1]{\smash{\scalebox{0.9}[0.9]{$\text{\textcursive{\slshape l}}$}_{\raisemath{-0.22ex}{\hspace{.1ex}#1}}}}
+
+\newcommand\realpart[1]{\operatorname{{\Re}e}\hspace{.16ex}{#1}}
+\newcommand\imaginarypart[1]{\operatorname{{\Im}m}\hspace{.16ex}{#1}}
+
 \newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
 \newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
 \newcommand\expminustwo{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\hspace{.1ex}\raisemath{.1ex}{2}}
 
-\newcommand\smthexternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}
-\newcommand\smthinternal{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}
+\newcommand\smthexternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}}
+\newcommand\smthinternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}}
 
 \newcommand\internalwork{W^{\hspace{-0.12ex}\smthinternal}}
 \newcommand\externalwork{W^{\hspace{-0.12ex}\smthexternal}}
@@ -289,7 +293,9 @@
 \setstretch{1}
 
 \setlength{\parskip}{0.8mm minus0.2mm} % space between paragraphs
-\setlength{\parindent}{4ex} % offset of first line
+
+\def\horizontalindent{4ex}
+\setlength{\parindent}{\horizontalindent} % offset of the first line
 \newlength\negparindent
 \setlength{\negparindent}{-\parindent}
 
@@ -318,16 +324,23 @@
 
 \newcommand{\tikzsl}[1]{\tikz[baseline=(sl.base)] \node [xslant=0.21, inner sep=0pt, outer sep=0pt] (sl) {#1};}
 
+\newcommand\mathsigma{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\hspace{-0.15ex}\upsigma\hspace{-0.1ex}}}}}
+\newcommand\mathboldsigma{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\hspace{-0.1ex}\bm{\upsigma}\hspace{-0.1ex}}}}}
+
 \newcommand\mathtau{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\uptau\hspace{-0.1ex}}}}}
 \newcommand\mathboldtau{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\bm{\uptau}\hspace{-0.1ex}}}}}
 
 \newcommand\cauchystress{\mathboldtau}
-\newcommand\tractionvector[1]{\mathboldtau_{\hspace{-0.2ex}\raisemath{-0.1em}{#1}\hspace{-0.1ex}}}
 \newcommand\cauchystresscomponents{\mathtau}
+
+\newcommand\tractionvector[1]{\mathboldtau_{\hspace{-0.2ex}\raisemath{-0.1em}{#1}\hspace{-0.1ex}}}
+
+\newcommand\linearstress{\mathboldsigma}
 
 \newcommand\firstpiolakirchhoffstress{\bm{T}}
 \newcommand\secondpiolakirchhoffstress{\bm{S}}
 
+\newcommand\mathepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\upvarepsilon\hspace{-0.1ex}}}}}}
 \newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
 
 \newcommand\mathboldPhi{\scalebox{1.06}[1]{\tikzsl{\ensuremath{\hspace{-0.16ex}\bm{\Upphi}\hspace{-0.32ex}}}}}
@@ -481,7 +494,7 @@ aboveskip=4mm,belowskip=2.5mm}
 \addto\captionsrussian{\renewcommand{\chaptertitlename}{Глава}}
 \addto\captionsukrainian{\renewcommand{\chaptertitlename}{Розділ}}
 
-\addto\captionsenglish{\def\chaptershortname{chapter}}
+\addto\captionsenglish{\def\chaptershortname{chapter\hspace{.28ex}}}
 \addto\captionsrussian{\def\chaptershortname{гл.}}
 \addto\captionsukrainian{\def\chaptershortname{розд.}}
 
@@ -516,10 +529,10 @@ aboveskip=4mm,belowskip=2.5mm}
 %labelsep=newline,
 labelsep=period,justification=centering,singlelinecheck=off}
 
-\newcommandx*{\bibauthor}[3][2=,3=]{\textbf{\hbox{#1}%
-\ifthenelse{\equal{#2}{}}{}{~\hbox{#2}}%
-\ifthenelse{\equal{#3}{}}{}{\:\hbox{#3}}%
-}}
+\newcommandx*{\bibauthor}[3][2=,3=]{\mbox{\textbold{#1}}%
+\ifthenelse{\equal{#2}{}}{}{~\mbox{\textbold{#2}}}%
+\ifthenelse{\equal{#3}{}}{}{\:\mbox{\textbold{#3}}}%
+}
 
 \sloppy
 
@@ -621,11 +634,6 @@ labelsep=period,justification=centering,singlelinecheck=off}
 
 % --------------------------------------------------
 
-\renewcommand{\bfdefault}{b} % make bold font narrower
-%%\renewcommand{\bfdefault}{sbc}
-
-\DeclareTextFontCommand{\textboldoblique}{\fontseries{bx}\itshape}
-
 \renewcommand{\labelenumi}{\arabic{enumi}) }
 \renewcommand{\labelenumii}{\alph{enumii}) }
 \renewcommand{\labelenumiii}{\roman{enumiii}) }
@@ -687,8 +695,9 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \setcounter{tocdepth}{1} % chapters & sections, no subsections
 
 \renewcommand{\cfttoctitlefont}{\hfill\mychapterfont\comfortaa\bfseries\MakeUppercase}
-\renewcommand{\cftaftertoctitle}{\hspace{5ex}}
-\setlength\cftaftertoctitleskip{2em}
+\renewcommand{\cftaftertoctitle}{\hspace{\horizontalindent}}
+\setlength\cftbeforetoctitleskip{4em} % 2.5em
+\setlength\cftaftertoctitleskip{3.3em} % 2.5em
 
 \setlength{\cftbeforechapskip}{.64em}
 \setlength{\cftbeforesecskip}{.1em} % {\parskip}
@@ -753,11 +762,11 @@ labelsep=period,justification=centering,singlelinecheck=off}
 
 \setcounter{totalnumber}{100} % increase number of floats on one page
 
-\newcommand{\lquote}[0]{``}
-\newcommand{\rquote}[0]{''}
+\newcommand{\lquote}[0]{“} % {``}
+\newcommand{\rquote}[0]{”} % {''}
 
-\newcommand{\altlquote}[0]{<<}
-\newcommand{\altrquote}[0]{>>}
+\newcommand{\altlquote}[0]{«} % {<<}
+\newcommand{\altrquote}[0]{»} % {>>}
 
 \newcommand{\inquotes}[1]{\lquote{#1}\rquote}
 \newcommand{\inaltquotes}[1]{\altlquote{#1}\altrquote}
@@ -765,7 +774,7 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \newcommandx*{\inquotesx}[2][2=]{\lquote{#1}\hbox{\rquote%
 \ifthenelse{\equal{#2}{.}}{\hspace{-0.4ex}.}{}%
 \ifthenelse{\equal{#2}{,}}{\hspace{-0.4ex},}{}%
-\ifthenelse{\equal{#2}{---}}{\hspace{-0.4ex}~---}{}%
+\ifthenelse{\equal{#2}{---}}{\hspace{-0.5ex}~---}{}%
 }}
 
 \newcommand{\sectionunnumbered}[1]%

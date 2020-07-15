@@ -14,10 +14,10 @@
 
 \lettrine[lines=2, findent=2pt, nindent=0pt]{В}{ещества} имеют дискретное строение, и~модель системы частиц с~массами~${m_k}$ и~радиусами\hbox{-}векторами~${\bm{R}_k (t)}$ может показаться подходящей, несмотря на невообразимое число степеней свободы\:--- тем~более что объёмы памяти и~быстродействие компьютеров характеризуются тоже астрономическими числами.
 
-И~всё~же предпочтение ст\'{о}ит отдать качественно иной модели\:--- модели сплошной среды~(материального континуума), в~которой масса распределена по~объёму непрерывно: в~объёме~$\mathcal{V}$ содержится масса
+И~всё~же предпочтение ст\'{о}ит отдать качественно иной модели\:--- модели сплошной среды~(материального контину\kern-0.11exума), в~которой масса распределена по~объёму непрерывно: в~объёме~$\mathcal{V}$ содержится масса
 
 \nopagebreak\vspace{-0.5em}\begin{equation}
-m =\! \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.2ex} d\mathcal{V},
+m = \hspace{-0.5ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \hspace{.2ex} d\mathcal{V} ,
 \end{equation}
 
 \vspace{-0.25em}\noindent \en{where}\ru{где} ${\rho\hspace{.1ex}}$\ru{\:---}\en{ is} \en{volume(tric) mass density}\ru{объёмная плотность массы}.
@@ -26,9 +26,25 @@ Real matter is modelled as a~continuum, \en{which can be thought of as}\ru{ко�
 
 С~непрерывным распределением массы связано лишь первое и~простое представление о~сплошной среде как множестве~(пространстве) материальных точек. Возможны и~более сложные модели, в~которых частицы обладают степенями свободы не~только трансляции, но~и поворота, внутренней деформации и~другими. Отметив, что подобные модели притягивают всё б\'{о}льший интерес, в~этой главе ограничимся классическим представлением о~среде как состоящей из~\inquotesx{простых точек}[.]
 
-В~каждый момент времени~$t$ среда~(деформируемое тело) занимает некий объём~$\mathcal{V}$ пространства. Вводя какие\hbox{-}либо криволинейные координаты~${q^{\hspace{.1ex}i}\hspace{-0.4ex}}$, считаем ${\bm{R} \hspace{-0.25ex} = \hspace{-0.4ex} \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t)}$.
+В~каждый момент времени~$t$ среда~(деформируемый контину\kern-0.11exум) занимает некий объём~${\mathcal{V}\hspace{.1ex}}$ пространства. Этот объём движется и~деформируется, но набор частиц в~нём постоянен\:--- \en{the~balance of~mass}\ru{баланс массы} (\inquotes{\en{matter is neither created nor annihilated}\ru{материя не~создаётся и~не~аннигилируется}})
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{balanceofmass}
+dm \hspace{-0.15ex} = \hspace{-0.2ex} \rho \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex} = \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.22ex} d\mathcircabove{\mathcal{V}} ,
+\hspace{.8em}
+%
+m = \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \rho \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex}
+= \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.22ex} d\mathcircabove{\mathcal{V}} ,
+\end{equation}
+
+\vspace{-0.6em} \noindent \en{where}\ru{где} $\mathcircabove{\rho}$ \en{and}\ru{и}~${d\mathcircabove{\mathcal{V}}}$\ru{\:---}\en{ are} \en{mass density}\ru{плотность массы} \en{and}\ru{и}~\en{infinitesimal volume}\ru{бесконечно\-малый объём} \en{at the~initial moment}\ru{в~начальный момент}, \en{in~the~so\hbox{-}called initial~(original, reference, \inquotes{material}) configuration}\ru{в~так называемой начальной~(оригинальной, отсчётной, \inquotes{материальной}) конфигурации}.
 
 % the Lagrangian description
+
+Вводя какие\hbox{-}либо криволинейные координаты~${q^{\hspace{.1ex}i}\hspace{-0.4ex}}$, считаем
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{materialcoordinates}
+\bm{R} \hspace{-0.25ex} = \hspace{-0.4ex} \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t) .
+\end{equation}
 
 ...
 
@@ -62,11 +78,11 @@ Real matter is modelled as a~continuum, \en{which can be thought of as}\ru{ко�
 Jaumann derivative (\inquotes{corotational time derivative}). The corotational time derivative was first introduced by Jaumann\footnote{%
 \bibauthor{Gustav Jaumann}. \href{http://www.physikdidaktik.uni-karlsruhe.de/download/jaumann_1911.pdf}{Geschlossenes System phy\-si\-ka\-li\-scher und che\-mi\-scher Differential\-gesetze (I.\;Mit\-teilung)~//~Sitzungs\-berichte der~Kaiser\-lichen Akademie der~Wissen\-schaften in~Wien, Mathematisch\hbox{-}naturwissenschaftliche Klasse, Abteilung~IIa, Band~CXX, 1911. Seiten 385\hbox{--}530.}}
 
-\begin{tcolorbox}[breakable, enhanced, colback = orange!8, before upper={\parindent3.2ex}, parbox = false]
+\nopagebreak\begin{tcolorbox}[breakable, enhanced, colback = orange!8, before upper={\parindent3.2ex}, parbox = false]
 \small%
 \setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}%
 
-Es sei ${\frac{\partial}{\partial t}}$ der Operator der \loosetexttr[66]{lokalen Fluxion}, d.\:i. der partiellen Fluxion in einem gegen das Koordinatensystem ruhenden Punkte des Raumes. Ferner sei ${\frac{d}{dt}}$ der Operator der \loosetexttr[66]{totalen Fluxion}, welcher definiert wird durch
+Es sei ${\frac{\partial}{\partial t}}$ der~Operator der~\loosetexttr[80]{lokalen Fluxion}, d.\:i. der~partiellen Fluxion in einem gegen das~Koordinatensystem ruhenden Punkte des~Raumes. Ferner sei ${\frac{d}{dt}}$ der~Operator der~\loosetexttr[80]{totalen Fluxion}, welcher definiert wird durch
 
 \nopagebreak\vspace{.1em}\begin{equation*}
 \begin{array}{r@{\hspace{.66ex}}c@{\hspace{.75ex}}l}
@@ -81,7 +97,7 @@ Es sei ${\frac{\partial}{\partial t}}$ der Operator der \loosetexttr[66]{lokalen
 \end{array}
 \end{equation*}
 
-Endlich verwenden wir die \loosetexttr[66]{körperliche Fluxion} eines Skalars:
+Endlich verwenden wir die~\loosetexttr[80]{körperliche Fluxion} eines Skalars:
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \scalebox{0.92}[0.92]{$\displaystyle\frac{\raisemath{-0.125em}{\delta}}{\delta t}$} \hspace{.15ex} a
@@ -101,9 +117,12 @@ ${
 ...
 
 Пусть~${\varphi(\bm{r},t)}$\:--- какое\hbox{-}либо поле. Найдём скорость изменения интеграла по~объёму
-\[ \Upsilon \equiv \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.1ex} \varphi \hspace{0.2ex} d\mathcal{V} \]
 
-\vspace{-0.25em}\noindent (\inquotes{$\varphi$ есть~$\Upsilon$ на~единицу массы}). Кажущееся сложным вычисление~${\mathdotabove{\Upsilon}}$ (ведь $\mathcal{V}$ деформируется) на~с\'{а}мом деле весьма простое благодаря~\eqref{hxasgdafshjsadjvrtiruiwp}:
+\nopagebreak\vspace{-0.5em}\begin{equation*}
+\Upsilon \equiv \hspace{-0.2ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.1ex} \rho \hspace{.1ex} \varphi \hspace{.2ex} d\mathcal{V}
+\end{equation*}
+
+\vspace{-0.25em}\noindent (\inquotes{$\varphi$ есть~$\Upsilon$ на~единицу массы}). Кажущееся сложным вычисление~${\mathdotabove{\Upsilon}}$ (ведь $\mathcal{V}$ деформируется) на~с\'{а}мом деле весьма простое благодаря~\eqref{balanceofmass}:
 \begin{equation}\label{volumeintegralinbothconfigurations}
 \Upsilon = \hspace{-0.2ex} \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \! \mathcircabove{\rho} \hspace{0.1ex} \varphi \hspace{0.2ex} d\mathcircabove{\mathcal{V}}
 \;\Rightarrow\;
@@ -111,7 +130,7 @@ ${
 \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \! \rho \hspace{0.1ex} \mathdotabove{\varphi} \hspace{0.2ex} d\mathcal{V} .
 \end{equation}
 
-\vspace{-0.1em} Не~ст\'{о}ит противопоставлять материальное и~пространственное описание. Далее будут использоваться оба в~зависимости от~ситуации.
+\vspace{-0.1em} Не~ст\'{о}ит противопоставлять материальное и~пространственное описания. Далее будут использоваться оба в~зависимости от~ситуации.
 
 \end{otherlanguage}
 
@@ -125,7 +144,7 @@ ${
 
 \en{Having}\ru{Имея} \en{motion function}\ru{функцию движения}~${\bm{R} \narroweq \hspace{-0.1ex} \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t)}$, ${\bm{r}(q^{\hspace{.1ex}i}) \equiv \bm{R}(q^{\hspace{.1ex}i} \hspace{-0.3ex}, 0)}$,
 \ru{операторы }\inquotes{\en{nabla}\ru{набла}}\en{ operators} ${\boldnabla \equiv \bm{R}^{\hspace{.1ex}i} \partial_i}$, ${\boldnablacircled \equiv \bm{r}^{\hspace{-0.05ex}i} \partial_i}$
-\en{and}\ru{и} \en{looking}\ru{гл\'{я}дя} \en{at differential relations}\ru{на дифференциальные отношения} \en{for}\ru{для} \en{a~certain}\ru{какого\hbox{-}либо} \en{infinitesimal vector}\ru{бесконечномалого вектора} \en{in two configurations}\ru{в~двух конфигурациях}, \en{current}\ru{текущей}~${d\bm{R}}$ \en{and}\ru{и}~\en{initial}\ru{начальной}~${d\bm{r}}$
+\en{and}\ru{и} \en{looking}\ru{гл\'{я}дя} \en{at differential relations}\ru{на дифференциальные отношения} \en{for}\ru{для} \en{a~certain}\ru{какого\hbox{-}либо} \en{infinitesimal vector}\ru{бесконечномалого вектора} \en{in two configurations}\ru{в~двух конфигурациях}, \en{current}\ru{текущей} \en{with}\ru{с}~${d\bm{R}}$ \en{and}\ru{и}~\en{initial}\ru{начальной} \en{with}\ru{с}~${d\bm{r}}$
 
 \nopagebreak\en{\vspace{1.3em}}\ru{\vspace{2.1em}}
 \begin{equation}
@@ -266,9 +285,9 @@ x_i \hspace{-0.1ex} \equiv \hspace{-0.1ex} X_{\hspace{-0.1ex}i}(0)
 
 \end{otherlanguage}
 
-\en{\section{Tensors and measures of deformation}}
+\en{\section{Measures (tensors) of deformation}}
 
-\ru{\section{Тензоры и меры деформации}}
+\ru{\section{Меры (тензоры) деформации}}
 
 \label{para:deformationtensors}
 
@@ -279,15 +298,15 @@ x_i \hspace{-0.1ex} \equiv \hspace{-0.1ex} X_{\hspace{-0.1ex}i}(0)
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{deformationtensors.nonlinear}
 \begin{array}{c}
-\bm{U}^2 \hspace{-0.3ex}
-= \bm{U} \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{U} \hspace{-0.2ex}
+\hspace*{-2.33em} \bigl( \hspace{.1ex} \bm{U}^{\hspace{.1ex}2} \hspace{-0.3ex} = \hspace{.22ex} \bigr) \hspace{.8ex}
+\bm{U} \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{U} \hspace{-0.2ex}
 = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F}
 \equiv \bm{G}
 \hspace{.1ex} ,
 \\[.1em]
 %
-\bm{V}^2 \hspace{-0.3ex}
-= \bm{V} \hspace{-0.3ex} \dotp \bm{V} \hspace{-0.25ex}
+\hspace*{-2.33em} \bigl( \hspace{.1ex} \bm{V}^{\hspace{.04ex}2} \hspace{-0.3ex} = \hspace{.22ex} \bigr) \hspace{.8ex}
+\bm{V} \hspace{-0.3ex} \dotp \bm{V} \hspace{-0.25ex}
 = \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.36ex}
 \equiv \mathboldPhi
 \hspace{.1ex} .
@@ -578,7 +597,7 @@ Many other different definitions of measures~$\bm{D}$ are possible, provided tha
 \[ \displaystyle \bm{D}^{(n)} \hspace{-0.32ex} = \left( {\bm{U}}^{n} \hspace{-0.4ex} - {\bm{U}}^{-n} \right) \hspace{-0.4ex} / \hspace{.25ex} 2n \]
 aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2nd\hbox{-}order approximation as Seth\hbox{--}Hill measures with~${m=0}$.
 
-\vspace{.4em} \noindent \hfill \textbf{\emph{Wikipedia, the free encyclopedia}}\:--- \href{https://en.wikipedia.org/wiki/Finite_strain_theory}{Finite strain theory}
+\vspace{.4em} \noindent \hfill \textboldoblique{Wikipedia, the free encyclopedia}\:--- \href{https://en.wikipedia.org/wiki/Finite_strain_theory}{Finite strain theory}
 
 \vspace{1cm}
 
@@ -602,7 +621,7 @@ aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2
 \label{para:velocityfield}
 
 \en{This topic}\ru{Эта тема} \en{is discussed}\ru{обсуждается} \en{in nearly any}\ru{в~почти любой} \en{book}\ru{книге} \en{about~continuum mechanics}\ru{о~механике сплошной среды}, \en{however}\ru{однако} \en{for}\ru{для} \en{solid elastic continua}\ru{твёрдых упругих сред} \en{it’s not very vital}\ru{она не~столь насущна}.
-\en{Among various}\ru{Среди разных} \en{models of~material continuum}\ru{моделей материального континуума}, \en{an elastic solid body}\ru{упругое твёрдое тело} \en{is distinguished}\ru{выделяется} \en{by interesting possibility}\ru{интересной возможностью} \en{of~deriving}\ru{вывода} \en{the~complete set}\ru{полного набора}~(\en{system}\ru{системы}) \en{of~equations}\ru{уравнений} \en{for it}\ru{для него} \en{via single logically flawless procedure}\ru{единой логически безупречной процедурой}.
+\en{Among various}\ru{Среди разных} \en{models of~material continuum}\ru{моделей материального контину\kern-0.11exума}, \en{an elastic solid body}\ru{упругое твёрдое тело} \en{is distinguished}\ru{выделяется} \en{by interesting possibility}\ru{интересной возможностью} \en{of~deriving}\ru{вывода} \en{the~complete set}\ru{полного набора}~(\en{system}\ru{системы}) \en{of~equations}\ru{уравнений} \en{for it}\ru{для него} \en{via single logically flawless procedure}\ru{единой логически безупречной процедурой}.
 \en{But now}\ru{Но пока} \en{we follow the~way}\ru{мы идём путём}, \en{usual}\ru{обычным} \en{for}\ru{для} \en{fluid continuum mechanics}\ru{механики сплошной текучей среды}.
 
 \en{So}\ru{Итак}, \en{there’s}\ru{есть} \en{velocity field}\ru{поле скоростей} \en{in spatial description}\ru{в~пространственном описании} ${\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\bm{R}} = \bm{v}(\bm{R}, t)}$.
@@ -708,7 +727,7 @@ G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
 
 \en{With enough precision these infinitesimal surfaces are parallelograms}
 
-\ru{С~достаточной точностью эти бесконечно малые площ\'{а}дки суть параллелограммы}
+\ru{С~достаточной точностью эти бесконечномалые площ\'{а}дки суть параллелограммы}
 
 \nopagebreak\vspace{-0.1em}\en{\vspace{-0.32em}}
 \begin{equation}\label{areavectorascrossproduct}
@@ -757,7 +776,7 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 % • linear force
 % • angular torque (moment, moment of force, couple)
 
-\en{Since}\ru{Поскольку} \en{particles of this model of~continuum}\ru{частицы этой модели континуума}\en{ are}\ru{\:---} \en{points with only translational degrees of~freedom}\ru{точки лишь с~трансляционными степенями свободы}%
+\en{Since}\ru{Поскольку} \en{particles of this model of~continuum}\ru{частицы этой модели контину\kern-0.11exума}\en{ are}\ru{\:---} \en{points with only translational degrees of~freedom}\ru{точки лишь с~трансляционными степенями свободы}%
 \footnote{\en{Translational degrees of~freedom}\ru{Трансляционные степени свободы} \en{arise}\ru{возникают} \en{from}\ru{из} \en{a~particle’s ability}\ru{способности частицы} \en{to~move freely in~space}\ru{свободно двигаться в~пространстве}.}\hbox{\hspace{-0.5ex},}
 \ru{то }\en{there’re no moments among generalized forces}\ru{среди обобщённых сил нет моментов}, \en{there’re no applied external couples}\ru{нет никаких приложенных внешних пар сил} \en{neither in~volume nor on~surface}\ru{ни в~объёме, ни по~поверхности}.
 
@@ -771,7 +790,7 @@ d\mathcal{V} \hspace{-0.2ex} = J d\mathcircabove{\mathcal{V}} \:\Rightarrow\,
 
 На~бесконечно малую поверхность~${dO\hspace{-0.12ex}}$ действует поверхностная сила~${\bm{p} \hspace{0.2ex} dO\hspace{-0.12ex}}$. Это может~быть \en{contact pressure}\ru{контактное давление} \en{or/and}\ru{или/и}~\en{friction}\ru{трение}, электростатическая сила при~сосредоточенных на~поверхности зарядах.
 
-\en{In the~material continuum}\ru{В~материальном континууме}, \en{as in any mechanical system}\ru{как в~любой механической системе}, \en{external and~internal forces are distinguished}\ru{различаются силы внешние и~внутренние}.
+\en{In the~material continuum}\ru{В~материальном контину\kern-0.11exуме}, \en{as in any mechanical system}\ru{как в~любой механической системе}, \en{external and~internal forces are distinguished}\ru{различаются силы внешние и~внутренние}.
 Со~времён Euler’а и~Cauchy принимают, что внутренние силы в~среде\:--- это поверхностные силы близкодействия:
 на~любой бесконечно малой площ\'{а}дке~${\mathboldN dO\hspace{-0.12ex}}$ внутри тела действует сила~${\tractionvector{N}\hspace{.16ex} dO\hspace{-0.12ex}}$.
 Уточняя: действует с~той стороны, куда направлена единичная нормаль~$\mathboldN$.
@@ -786,7 +805,7 @@ ${\tractionvector{-N} = - \hspace{.2ex} \tractionvector{N}}$.
 \en{And it turns out}\ru{И~оказывается}, \en{the~infinite set}\ru{бесконечное множество} \en{of~all vectors}\ru{всех векторов}~$\tractionvector{N}$ \en{is completely determined}\ru{полностью определяется} \en{by the~only one second complexity tensor}\ru{одним-единственным тензором второй сложности}\:--- \ru{тензором напряжения }Cauchy\en{ stress tensor}~$\cauchystress$.
 Рассмотрим содержащийся во~многих книгах вывод этого утверждения.
 
-На~поверхности бесконечно малого материального тетраэдра ...
+На~поверхности бесконечномалого материального тетраэдра ...
 
 
 ...
@@ -798,7 +817,7 @@ ${\tractionvector{-N} = - \hspace{.2ex} \tractionvector{N}}$.
 
 \ru{\section{Баланс импульса и момента импульса}}
 
-\label{para:balanceinelasticcontinuum}
+\label{para:balance.elasticcontinuum}
 
 \begin{otherlanguage}{russian}
 
@@ -930,8 +949,8 @@ ${\cauchystress = \bm{e}_{i} \tractionvector{i}\hspace{.12ex}}$, ${\bm{e}_i \hsp
 
 \begin{otherlanguage}{russian}
 
-Как и~любой симметричный тензор, $\cauchystress$ имеет три вещественных собственных числ\'{а} $\sigma_i$, называемых главными напряжениями (principal stresses), а~также ортогональную тройку собственных векторов единичной длины $\bm{e}_i$.
-\en{In~representation}\ru{В~представлении} ${\cauchystress = \hspace{-0.2ex} \sum \hspace{-0.16ex} \sigma_i \hspace{.16ex} \bm{e}_i \bm{e}_i}$ \en{most often}\ru{чаще всего} \en{indices are sorted as}\ru{индексы сортируются как} ${\sigma_1 \hspace{-0.1ex} \geq \sigma_2 \geq \sigma_3}$, а~тройка~${\bm{e}_i}$\:--- \inquotesx{правая}[.]
+Как и~любой симметричный тензор, $\cauchystress$ имеет три вещественных собственных числ\'{а} $\mathsigma_i$, называемых главными напряжениями (principal stresses), а~также ортогональную тройку собственных векторов единичной длины $\bm{e}_i$.
+\en{In~representation}\ru{В~представлении} ${\cauchystress = \hspace{-0.2ex} \sum \hspace{-0.16ex} \mathsigma_i \hspace{.16ex} \bm{e}_i \bm{e}_i}$ \en{most often}\ru{чаще всего} \en{indices are sorted as}\ru{индексы сортируются как} ${\mathsigma_1 \hspace{-0.1ex} \geq \mathsigma_2 \geq \mathsigma_3}$, а~тройка~${\bm{e}_i}$\:--- \inquotesx{правая}[.]
 
 Известна теорема о~кругах Мора (Mohr’s circles)%
 \footnote{Mohr’s circles, named after Christian Otto Mohr, is a~two-dimensional graphical representation of transformation for the Cauchy stress tensor.}
@@ -940,7 +959,7 @@ ${\cauchystress = \bm{e}_{i} \tractionvector{i}\hspace{.12ex}}$, ${\bm{e}_i \hsp
 
 
 
-Чтобы замкнуть набор (систему) уравнений модели сплошной среды, нужно добавить определяющие отношения~(constitutive relations)\:--- уравнения, связывающие напряжение с~деформацией (и~другие необходимые связи). Однако, \en{for}\ru{для} \en{a~solid elastic continuum}\ru{твёрдого упругого континуума} такой длинный путь построения модели излишен, что читатель и~увидит ниже.
+Чтобы замкнуть набор (систему) уравнений модели сплошной среды, нужно добавить определяющие отношения~(constitutive relations)\:--- уравнения, связывающие напряжение с~деформацией (и~другие необходимые связи). Однако, \en{for}\ru{для} \en{a~solid elastic continuum}\ru{твёрдого упругого контину\kern-0.11exума} такой длинный путь построения модели излишен, что читатель и~увидит ниже.
 
 \end{otherlanguage}
 
@@ -1154,10 +1173,10 @@ ${ \bm{R}^{\hspace{.1ex}i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystress 
 
 {\small
 
-\[ \Pi({\boldsymbol{\bm{C}}}) = \displaystyle \integral_{\raisemath{-0.25em}{\hspace{-0.1ex}\scalebox{0.85}{$0$}}}^{\raisemath{.15em}{\bm{C}}} \hspace{-0.25ex} \mathboldtau \hspace{.1ex} \dotdotp d \hspace{.1ex} \boldsymbol{\bm{C}} \]
+\[ \Pi({\boldsymbol{\bm{C}}}) = \displaystyle \integral_{\raisemath{-0.25em}{\hspace{-0.1ex}\scalebox{0.85}{$0$}}}^{\raisemath{.15em}{\bm{C}}} \hspace{-0.25ex} \cauchystress \hspace{.1ex} \dotdotp d \hspace{.1ex} \boldsymbol{\bm{C}} \]
 
 If the strain energy density is path independent, then it acts as a~potential for stress, that is
-\[ \displaystyle \mathboldtau = {\frac{\partial \Pi(\bm{C})}{\partial \bm{C}}} \]
+\[ \displaystyle \cauchystress = {\frac{\partial \Pi(\bm{C})}{\partial \bm{C}}} \]
 
 For adiabatic processes, ${\Pi}$ is equal to the change in internal energy per unit volume.
 
@@ -1364,9 +1383,7 @@ The quantity ${\bm{\kappa} = J \cauchystress}$ is called the \emph{Kirchhoff str
 
 \ru{Преимущества этого уравнения в~сравнении с~\eqref{balanceoftranslationalmomentum.local}: здесь фигурирует известная плотность~${\hspace{-0.1ex}\mathcircabove{\rho}}$ массы недеформированного объёма~${\hspace{-0.1ex}\mathcircabove{\mathcal{V}}\hspace{-0.25ex}}$, и~оператор~${\hspace{-0.16ex}\boldnablacircled \equiv \bm{r}^i \partial_i}$ определяется через известные векторы~${\bm{r}^i\hspace{-0.25ex}}$. Появление~${\hspace{.16ex}\firstpiolakirchhoffstress}$ отражает специфическое свойство упругого твёрдого тела\:--- \inquotes{сохранять} свою отсчётную конфигурацию. В~механике жидкости, к~примеру, тензор~${\hspace{.16ex}\firstpiolakirchhoffstress}$ едва~ли полезен.}
 
-\en{Principle of virtual work for an~arbitrary volume~$\mathcircabove{\mathcal{V}}$ of~elastic (${\variation{\internalwork} = -\variation{\Pi}}$) continuum:}
-
-\ru{Принцип виртуальной работы для произвольного объёма~$\mathcircabove{\mathcal{V}}$ упругой (${\variation{\internalwork} = -\variation{\Pi}}$) среды:}
+\en{Principle of virtual work}\ru{Принцип виртуальной работы} \en{for an~arbitrary volume}\ru{для произвольного объёма}~$\mathcircabove{\mathcal{V}}$ \en{of~the~elastic}\ru{упругой} (${\variation{\internalwork} = - \hspace{.2ex} \variation{\Pi}}$) \en{continuum}\ru{среды}:
 
 \nopagebreak\vspace{-0.16em}\ru{\vspace{-0.2em}}\begin{equation*}
 \begin{array}{c}
@@ -1476,7 +1493,7 @@ The 2nd~Piola\hbox{--}Kirchhoff stress tensor is energy conjugate to the Green\h
 \begin{otherlanguage}{russian}
 
 Прежде упругая среда рассматривалась в~двух конфигурациях: отсчётной с~радиусами\hbox{-}векторами~$\bm{r}$ и~актуальной с~$\bm{R}$.
-\hbox{Теперь} представим~себе малое изменение текущей конфигурации с~бесконечномалыми приращениями
+\hbox{Теперь} представим~себе малое изменение текущей конфигурации с~бесконечно\-малыми приращениями
 радиуса\hbox{-}вектора~$\variation{\bm{R}}$,
 вектора массовых сил~${\variation{\hspace{-0.2ex}\bm{f}}\hspace{-0.2ex}}$,
 первого тензора напряжения Piola--Kirchhoff\ru{’а}~${\variation{\hspace{.1ex}\firstpiolakirchhoffstress}}$
@@ -1553,7 +1570,7 @@ ${\boldnablacircled \hspace{-0.08ex}
 
 ...
 
-
+... корректируя коэффициенты линейной функции~${\varbivalent{\hspace{-0.2ex}\cauchystress}\hspace{.15ex}(\boldnabla \hspace{.1ex} \variation{\bm{R}}\hspace{.1ex})}$.
 
 \end{otherlanguage}
 

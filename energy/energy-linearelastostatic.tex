@@ -41,7 +41,9 @@
 
 \newcommand{\tikzsl}[1]{\tikz[baseline=(sl.base)] \node [xslant=0.21, inner sep=0pt, outer sep=0pt] (sl) {#1};}
 
+\newcommand\mathboldsigma{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\hspace{-0.1ex}\bm{\upsigma}\hspace{-0.1ex}}}}}
 \newcommand\mathboldtau{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\bm{\uptau}\hspace{-0.1ex}}}}}
+\newcommand\linearstress{\mathboldsigma}
 
 \newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
 
@@ -81,7 +83,7 @@
 	\draw [line width=0.8pt, color=black!25, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
 		(\lastxboxmid, 0) -- (\lastxboxmid, \lastyboxmid)
 		node [pos=0.5, rotate=-90, inner sep=1pt, outer sep=0pt, color=black, fill=yellow!75!white]
-		{$\,\:\mathboldtau\hspace{.2ex}(\mathboldepsilon) \hspace{-0.2ex} = \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor\;$} ;
+		{$\,\:\linearstress\hspace{.2ex}(\mathboldepsilon) \hspace{-0.2ex} = \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor\;$} ;
 
 	\draw [line width=0.8pt, color=black!25, line cap=round]
 		(\lastxstep, 0) -- (\lastxstep, \lastystep) ;
@@ -97,7 +99,7 @@
 	\draw [line width=0.8pt, color=black!25, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
 		(0, \lastyboxmid) -- (\lastxboxmid, \lastyboxmid)
 		node [pos=0.5, inner sep=1pt, outer sep=0pt, color=black, fill=lime!25!white]
-		{$\,\:\mathboldepsilon(\hspace{-0.1ex}\mathboldtau\hspace{.1ex}) \hspace{-0.2ex} = \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \mathboldtau\;$} ;
+		{$\,\:\mathboldepsilon(\hspace{-0.1ex}\linearstress\hspace{.1ex}) \hspace{-0.2ex} = \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \linearstress\;$} ;
 
 	\draw [line width=0.8pt, color=black!25, line cap=round]
 		(0, \lastystep) -- (\lastxstep, \lastystep) ;
@@ -106,7 +108,7 @@
 	\draw [line width=0.8pt, color=black!25, line cap=round]
 		(0, \lastystep) -- (0, \taulength)
 		node [pos=0.5, anchor=north, rotate=-90, inner sep=0, outer sep=4pt, color=black]
-		{\scalebox{1.1}[1.1]{$\variation{\hspace{-0.1ex}\mathboldtau}$}} ;
+		{\scalebox{1.1}[1.1]{$\variation{\hspace{-0.1ex}\linearstress}$}} ;
 
 	\fill [color=black] (\lastxboxmid, \lastyboxmid) circle ( 2pt ) ;
 
@@ -125,16 +127,16 @@
 \vspace{-2em}
 
 \begin{equation*}\begin{array}{c}
-\variation{\bigl( \hspace{-0.2ex} \mathboldtau \dotdotp \mathboldepsilon \bigr)} \hspace{-0.2ex}
-= \mathboldtau \dotdotp \variation{\mathboldepsilon} + \variation{\hspace{-0.1ex}\mathboldtau} \dotdotp \mathboldepsilon
+\variation{\hspace{.1ex}\bigl( \hspace{-0.2ex} \linearstress \dotdotp \mathboldepsilon \bigr)} \hspace{-0.2ex}
+= \linearstress \dotdotp \variation{\mathboldepsilon} + \variation{\hspace{-0.1ex}\linearstress} \dotdotp \mathboldepsilon
 = \variation{\Pi} + \variation{\widehat{\Pi}}
 \\[.3em]
 %
-\variation{\Pi} = \mathboldtau \dotdotp \variation{\mathboldepsilon}
+\variation{\Pi} = \linearstress \dotdotp \variation{\mathboldepsilon}
 = \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \variation{\mathboldepsilon} ,
 \:\:
-\variation{\widehat{\Pi}} = \variation{\hspace{-0.1ex}\mathboldtau} \dotdotp \mathboldepsilon
-= \mathboldtau \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \variation{\hspace{-0.1ex}\mathboldtau}
+\variation{\widehat{\Pi}} = \variation{\hspace{-0.1ex}\linearstress} \dotdotp \mathboldepsilon
+= \linearstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \variation{\hspace{-0.1ex}\linearstress}
 \end{array}\end{equation*}
 
 %%\vspace{1em}
@@ -156,7 +158,7 @@
 	\draw [line width=1pt, color=black, line cap=round]
 		(0, 0) -- (0, \taulength)
 		node [pos=0.98, anchor=east, inner sep=0, outer sep=5pt]
-		{\scalebox{1.2}[1.2]{$\mathboldtau$}} ;
+		{\scalebox{1.2}[1.2]{$\linearstress$}} ;
 
 	\draw [line width=1pt, color=black, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
 		(0, 0) -- (\epsilonlength, \taulength) ;
@@ -175,20 +177,20 @@
 \vspace{-2em}
 
 \begin{equation*}\begin{array}{c}
-\mathboldtau \dotdotp \mathboldepsilon
-= \mathboldepsilon \dotdotp \mathboldtau
+\linearstress \dotdotp \mathboldepsilon
+= \mathboldepsilon \dotdotp \linearstress
 = \hspace{.1ex}
-\Pi(\mathboldepsilon) \hspace{-0.1ex} + \hspace{.1ex} \widehat{\Pi}(\hspace{-0.1ex}\mathboldtau\hspace{.12ex})
+\Pi(\mathboldepsilon) \hspace{-0.1ex} + \hspace{.1ex} \widehat{\Pi}(\hspace{-0.1ex}\linearstress\hspace{.12ex})
 \\[.4em]
 %
 \Pi(\mathboldepsilon) \hspace{-0.1ex}
-= \smalldisplaystyleonehalf \hspace{.2ex} \mathboldtau\hspace{.2ex}(\mathboldepsilon) \hspace{-0.2ex} \dotdotp \mathboldepsilon
+= \smalldisplaystyleonehalf \hspace{.2ex} \linearstress\hspace{.2ex}(\mathboldepsilon) \hspace{-0.2ex} \dotdotp \mathboldepsilon
 = \smalldisplaystyleonehalf \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \mathboldepsilon
 \\[.4em]
 %
-\widehat{\Pi}(\hspace{-0.1ex}\mathboldtau\hspace{.12ex}) \hspace{-0.1ex}
-= \smalldisplaystyleonehalf \hspace{.2ex} \mathboldtau \dotdotp \mathboldepsilon(\hspace{-0.1ex}\mathboldtau\hspace{.12ex}) \hspace{-0.1ex}
-= \smalldisplaystyleonehalf \hspace{.15ex} \mathboldtau \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \mathboldtau
+\widehat{\Pi}(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
+= \smalldisplaystyleonehalf \hspace{.2ex} \linearstress \dotdotp \mathboldepsilon(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
+= \smalldisplaystyleonehalf \hspace{.15ex} \linearstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \linearstress
 \end{array}\end{equation*}
 
 \end{document}

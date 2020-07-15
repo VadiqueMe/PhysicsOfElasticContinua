@@ -1,0 +1,232 @@
+\documentclass[11pt,twoside]{book}
+
+\usepackage{geometry}
+\geometry{papersize={150mm,200mm}}
+\geometry{tmargin=1cm,bmargin=1cm,lmargin=1cm,rmargin=1cm}
+
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage[e]{esvect}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot} % it needs tikz-3dplot.sty in same folder
+\usetikzlibrary{calc}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows, arrows.meta}
+
+\usepackage{xintexpr}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.5}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\usepackage{nicefrac}
+
+\usepackage{gensymb} % for \degree
+
+\usepackage{verbatim}
+
+\usepackage[english]{babel}
+\addto\captionsenglish{\renewcommand{\figurename}{figure}}
+\addto\captionsenglish{\def\figureshortname{fig.}}
+\newcommand\figref[1]{\figureshortname~\ref{#1}}
+
+\usepackage[format=plain]{caption}
+\captionsetup[figure]{%
+font={small,it},labelfont=small,%
+labelsep=newline,justification=centering,singlelinecheck=off,%
+aboveskip=4mm,belowskip=2.5mm}
+
+\newcommand{\lquote}[0]{``}
+\newcommand{\rquote}[0]{''}
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+
+\tdplotsetmaincoords{45}{125} % orientation of camera
+
+% three parameters for vector
+\pgfmathsetmacro{\lengthofvector}{2.5}
+\pgfmathsetmacro{\anglefromz}{44}
+\pgfmathsetmacro{\anglefromx}{70}
+
+\begin{tikzpicture}[scale=3.2, tdplot_main_coords] % use 3dplot
+
+	\coordinate (O) at (0,0,0);
+
+	% draw axes
+	\draw [line width=0.4pt, blue] (O) -- (1.22,0,0);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.9, above, xshift=-0.6em, yshift=0.1em] {${\bm{e}}_1$};
+
+	\draw [line width=0.4pt, blue] (O) -- (0,1.88,0);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_2$};
+
+	\draw [line width=0.4pt, blue] (O) -- (0,0,1.22);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,0,1)
+		node[pos=0.9, below left, xshift=-0.1em, yshift=0.5em] {${\bm{e}}_3$};
+
+	% draw vector
+	\tdplotsetcoord{V}{\lengthofvector}{\anglefromz}{\anglefromx} % {length}{angle from z}{angle from x}
+		% it also defines projections of point
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.8, above, yshift=0.2em] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	% draw components of vector
+	%%\draw [line width=0.4pt, dotted, color=black] (O) -- (Vxy);
+	%%\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (V);
+	%%\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (Vx);
+	\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (Vy);
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vx)
+		node[pos=0.5, above, xshift=-0.9em] {${v_1 \hspace{-0.1ex} \bm{e}_1}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vx) -- (Vxy)
+		node[pos=0.53, below left, xshift=0.2em] {${v_2 \bm{e}_2}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vxy) -- (V)
+		node[pos=0.5, above right, yshift=-0.2em] {${v_3 \bm{e}_3}$};
+
+\end{tikzpicture}
+
+\vspace{3cm}
+
+\tdplotsetmaincoords{35}{75} % orientation of camera
+
+\begin{tikzpicture}[scale=3.2, tdplot_main_coords]
+
+	\coordinate (O) at (0, 0, 0) ;
+
+	% three coordinates of vector
+	\pgfmathsetmacro{\Vx}{0.88}
+	\pgfmathsetmacro{\Vy}{1.33}
+	\pgfmathsetmacro{\Vz}{2.2}
+	\coordinate (Vx) at (\Vx, 0, 0) ;
+	\coordinate (Vy) at (0, \Vy, 0) ;
+	\coordinate (Vz) at (0, 0, \Vz) ;
+	\coordinate (V) at ($ (Vx) + (Vy) + (Vz) $) ;
+
+	% draw vector
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.93, below right, inner sep=0pt, outer sep=4.4pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	\tdplotsetrotatedcoords{21}{-15}{-43} % 3-2-3 rotation sequence
+	\begin{scope}[tdplot_rotated_coords]
+
+	% draw axes
+
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.86, above left, inner sep=0pt, outer sep=2.5pt] {${\bm{e}}_1$};
+
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above, inner sep=0pt, outer sep=5pt] {${\bm{e}}_3$};
+
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,0,1)
+		node[pos=0.92, below left, inner sep=0pt, outer sep=3.3pt] {${\bm{e}}_2$};
+
+	%%\draw [line width=0.4pt, dotted, color=blue] (1,0,0) -- (0,1,0);
+	%%\draw [line width=0.4pt, dotted, color=blue] (0,1,0) -- (0,0,1);
+	%%\draw [line width=0.4pt, dotted, color=blue] (0,0,1) -- (1,0,0);
+
+	\end{scope}
+
+	% get projections of vector
+	\tdplottransformmainrot{\Vx}{\Vy}{\Vz}
+	\pgfmathsetmacro{\Vrotx}{\tdplotresx}
+	\pgfmathsetmacro{\Vroty}{\tdplotresy}
+	\pgfmathsetmacro{\Vrotz}{\tdplotresz}
+	%%\draw [tdplot_rotated_coords, line width=1.6pt, blue, -{Stealth[round, length=5mm, width=2.8mm]}]
+		%%(O) -- (\Vrotx, \Vroty, \Vrotz)
+		%%node[pos=0.8, above left, inner sep=0pt, outer sep=2.5pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	% draw components of vector
+
+	\draw [tdplot_rotated_coords, color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (\Vrotx, 0, 0)
+		node[pos=0.48, below right, inner sep=0pt, outer sep=2.5pt] {${v_1 \hspace{-0.1ex} \bm{e}_1}$};
+
+	\draw [tdplot_rotated_coords, color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, 0) -- (\Vrotx, 0, \Vrotz)
+		node[pos=0.58, below left, inner sep=0pt, outer sep=3.3pt] {${v_2 \bm{e}_2}$};
+
+	\draw [tdplot_rotated_coords, color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, \Vrotz) -- (\Vrotx, \Vroty, \Vrotz)
+		node[pos=0.5, above, inner sep=0pt, outer sep=3.5pt] {${v_3 \bm{e}_3}$};
+
+	\tdplotsetrotatedcoords{2}{-8}{28} % 3-2-3 rotation sequence
+
+	% draw axes
+
+	\draw [tdplot_rotated_coords, line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.86, above right, inner sep=0pt, outer sep=1.3pt] {${\bm{e}'\hspace{-0.6ex}}_{\raisemath{-0.15ex}{1}}$};
+
+	\draw [tdplot_rotated_coords, line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above left, inner sep=0pt, outer sep=2.7pt] {${\bm{e}'\hspace{-0.6ex}}_{\raisemath{-0.15ex}{3}}$};
+
+	\draw [tdplot_rotated_coords, line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,0,1)
+		node[pos=0.98, below right, inner sep=0pt, outer sep=4.4pt] {${\bm{e}'\hspace{-0.6ex}}_{\raisemath{-0.15ex}{2}}$};
+
+	%%\draw [tdplot_rotated_coords, line width=0.4pt, dotted, color=red] (1,0,0) -- (0,1,0);
+	%%\draw [tdplot_rotated_coords, line width=0.4pt, dotted, color=red] (0,1,0) -- (0,0,1);
+	%%\draw [tdplot_rotated_coords, line width=0.4pt, dotted, color=red] (0,0,1) -- (1,0,0);
+
+	% get projections of vector
+	\tdplottransformmainrot{\Vx}{\Vy}{\Vz}
+	\pgfmathsetmacro{\Vrotx}{\tdplotresx}
+	\pgfmathsetmacro{\Vroty}{\tdplotresy}
+	\pgfmathsetmacro{\Vrotz}{\tdplotresz}
+
+	% draw components of vector
+
+	\draw [tdplot_rotated_coords, color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (\Vrotx, 0, 0)
+		node[pos=0.81, below left, inner sep=0pt, outer sep=2pt] {${v'_{\raisemath{-0.15ex}{\hspace{-0.1ex}1}} \hspace{-0.1ex} \bm{e}'_{\raisemath{-0.15ex}{1}}}$};
+
+	\draw [tdplot_rotated_coords, color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, 0) -- (\Vrotx, 0, \Vrotz)
+		node[pos=0.44, above right, inner sep=0pt, outer sep=3.3pt] {${v'_{\raisemath{-0.15ex}{\hspace{-0.1ex}2}} \bm{e}'_{\raisemath{-0.15ex}{2}}}$};
+
+	\draw [tdplot_rotated_coords, color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, \Vrotz) -- (\Vrotx, \Vroty, \Vrotz)
+		node[pos=0.26, below right, inner sep=0pt, outer sep=1pt] {${v'_{\raisemath{-0.15ex}{\hspace{-0.1ex}3}} \bm{e}'_{\raisemath{-0.15ex}{3}}}$};
+
+\end{tikzpicture}
+
+\end{center}
+
+\end{document}

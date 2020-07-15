@@ -57,16 +57,20 @@ aboveskip=4mm,belowskip=2.5mm}
 \begin{tikzpicture}[scale=0.999]
 	\draw [line width=2pt, black, -{Latex[length=5mm, width=2mm]}]
 		(0,0) -- (2.4,-0.8)
-		node[above=1.2mm, xshift=-2mm] {$\bm{a}$};
+		node[above=1.4mm, xshift=-1.8mm] {$\bm{a}$};
 	\draw [line width=2pt, black, -{Latex[length=5mm, width=2mm]}]
 		(0,0) -- (1.6,0.8)
 		node[midway, above=0.8mm] {$\bm{b}$};
 	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
+		(0,0) -- (0,-1.95);
+	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
 		(0,0) -- (0,-2.2)
-		node[pos=0.75, right, xshift=0.3mm] {$\bm{c}$};
+		node[pos=0.75, right, xshift=0.4mm] {$\bm{c}$};
+	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
+		(0,0) -- (0,1.95);
 	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
 		(0,0) -- (0,2.2)
-		node[pos=0.8, right, xshift=0.3mm] {$\bm{c}$};
+		node[pos=0.8, right, xshift=0.4mm] {$\bm{c}$};
 	\draw [line width=0.4pt, black!50] (2.4, -0.8) -- (4, 0);
 	\draw [line width=0.4pt, black!50] (1.6, 0.8) -- (4, 0);
 \end{tikzpicture}
