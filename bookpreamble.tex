@@ -203,9 +203,10 @@
 
 \newcommand\rotationtensor{\bm{O}}
 
-\newcommand\inertiatensor{\bm{\mathfrak{I}}}
+\newcommand\inertiatensor{{\hspace{-0.1ex}^2}\bm{\mathfrak{I}}}
 \newcommand\inertiascalar{\mathfrak{I}}
 \newcommand{\inertiatensorcomponents}[1]{\mathfrak{I}_{\hspace{-0.1ex}#1}\hspace{.1ex}}
+\newcommand\inertiatensordotabove{{\hspace{-0.1ex}^2}\mathdotabove{\bm{\mathfrak{I}}}}
 
 \newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
 \newcommand\stiffnesstensorB{{^4\hspace{-0.2ex}\bm{\mathcal{B}}}}
@@ -316,6 +317,24 @@
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{arrows, arrows.meta}
 \usetikzlibrary{decorations.markings, decorations.pathmorphing, decorations.pathreplacing}
+
+\tikzset {
+	set arrow inside/.code={\pgfqkeys{/tikz/arrow inside}{#1}},
+	set arrow inside={end/.initial=>, opt/.initial=},
+	/pgf/decoration/Mark/.style={
+		mark/.expanded=at position #1 with {
+			\noexpand\arrow[\pgfkeysvalueof{/tikz/arrow inside/opt}]{\pgfkeysvalueof{/tikz/arrow inside/end}}
+		}
+	},
+	arrow inside/.style 2 args={
+		set arrow inside={#1},
+		postaction={
+			decorate,decoration={
+				markings,Mark/.list={#2}
+			}
+		}
+	},
+}
 
 \usepackage{tkz-euclide}
 

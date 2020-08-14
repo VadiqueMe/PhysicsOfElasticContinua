@@ -29,7 +29,7 @@
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Симметричные и антисимметричные тензоры}{25}{section.1.7}%
+\contentsline {section}{\numberline {7}Симметричные и антисимметричные тензоры}{26}{section.1.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {8}Собственные векторы и собственные числа тензора}{28}{section.1.8}%
@@ -142,7 +142,7 @@
 \contentsline {section}{\numberline {1}Полный набор уравнений}{100}{section.4.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Уникальность решения динамической проблемы}{102}{section.4.2}%
+\contentsline {section}{\numberline {2}Уникальность решения в~динамике}{102}{section.4.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {3}Закон Гука ceiiinosssttuv}{104}{section.4.3}%
@@ -153,10 +153,10 @@
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Уравнения в перемещениях}{110}{section.4.5}%
+\contentsline {section}{\numberline {5}Уравнения в перемещениях}{111}{section.4.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Сосредоточенная сила в неограниченной среде}{111}{section.4.6}%
+\contentsline {section}{\numberline {6}Сосредоточенная сила в бесконечной среде}{111}{section.4.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {7}Нахождение перемещений по деформациям}{111}{section.4.7}%
@@ -194,8 +194,6 @@
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {3}Уравнения совместности}{123}{section.5.3}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
 \contentsline {section}{\numberline {4}Теоремы статики}{123}{section.5.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
@@ -208,7 +206,7 @@
 \contentsline {section}{\numberline {7}Нелинейная теория}{124}{section.5.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Нелинейная модель со стеснённым вращением}{126}{section.5.8}%
+\contentsline {section}{\numberline {8}Нелинейная модель со стеснённым вращением}{127}{section.5.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}

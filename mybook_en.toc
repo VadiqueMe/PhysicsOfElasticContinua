@@ -32,10 +32,10 @@
 \contentsline {section}{\numberline {7}Symmetric and antisymmetric tensors}{25}{section.1.7}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {8}Eigenvectors and eigenvalues of tensor}{27}{section.1.8}%
+\contentsline {section}{\numberline {8}Eigenvectors and eigenvalues of tensor}{28}{section.1.8}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {9}Rotation tensor}{29}{section.1.9}%
+\contentsline {section}{\numberline {9}Rotation tensor}{30}{section.1.9}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \babel@toc {russian}{}
@@ -142,7 +142,7 @@
 \contentsline {section}{\numberline {1}Complete set of equations}{97}{section.4.1}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {2}Uniqueness of the solution of dynamic problem}{99}{section.4.2}%
+\contentsline {section}{\numberline {2}Uniqueness of the solution in dynamics}{99}{section.4.2}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {3}Hooke’s ceiiinosssttuv law}{101}{section.4.3}%
@@ -156,7 +156,7 @@
 \contentsline {section}{\numberline {5}Equations for displacements}{107}{section.4.5}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {6}Concentrated force in a limitless medium}{108}{section.4.6}%
+\contentsline {section}{\numberline {6}Concentrated force in an infinite medium}{108}{section.4.6}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {7}Finding displacements by deformations}{108}{section.4.7}%
@@ -194,15 +194,13 @@
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {3}Compatibility equations}{120}{section.5.3}%
-\babel@toc {russian}{}
-\babel@toc {english}{}
 \contentsline {section}{\numberline {4}Theorems of statics}{120}{section.5.4}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {5}Cosserat pseudocontinuum}{120}{section.5.5}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {6}Plane deformation}{120}{section.5.6}%
+\contentsline {section}{\numberline {6}Plane deformation}{121}{section.5.6}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {7}Nonlinear theory}{121}{section.5.7}%

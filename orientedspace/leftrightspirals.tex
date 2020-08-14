@@ -1,0 +1,93 @@
+\documentclass[border=10pt]{standalone}
+
+\usepackage{bm}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usepackage{tikz-3dplot} % needs tikz-3dplot.sty in same folder
+
+\tikzset {
+	set arrow inside/.code={\pgfqkeys{/tikz/arrow inside}{#1}},
+	set arrow inside={end/.initial=>, opt/.initial=},
+	/pgf/decoration/Mark/.style={
+		mark/.expanded=at position #1 with {
+			\noexpand\arrow[\pgfkeysvalueof{/tikz/arrow inside/opt}]{\pgfkeysvalueof{/tikz/arrow inside/end}}
+		}
+	},
+	arrow inside/.style 2 args={
+		set arrow inside={#1},
+		postaction={
+			decorate,decoration={
+				markings,Mark/.list={#2}
+			}
+		}
+	},
+}
+
+\begin{document}
+
+\tdplotsetmaincoords{46}{140} % orientation of camera
+
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords] % use 3dplot
+
+\pgfmathsetmacro{\spiralradius}{0.69}
+\pgfmathsetmacro{\verticaladvance}{0.5}
+
+\pgfmathsetmacro{\unitvectorlength}{1.2}
+
+\begin{scope}[xshift=-3em]
+
+\coordinate (O) at (0, 0, 0);
+
+% basis vectors
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (\unitvectorlength, 0, 0)
+	node[pos=0.9, above, xshift=-0.8em] {${\bm{e}}_2$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, \unitvectorlength, 0)
+	node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_1$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, 0, \unitvectorlength)
+	node[pos=0.9, left, yshift=0.5em] {${\bm{e}}_3$};
+
+\pgfmathsetmacro{\verticalshift}{-0.1}
+\pgfmathsetmacro{\initialangle}{-35}
+\pgfmathsetmacro{\lengthincircles}{2.15 * 360 + \initialangle}
+
+\draw[domain=\initialangle:\lengthincircles, variable=\t, line width=0.8pt]
+	plot [samples=120]
+	( {\spiralradius*sin(\t)}, {\spiralradius*cos(\t)}, {\verticaladvance*\t/360 + \verticalshift} )
+	[ arrow inside = {}{0.1, 1} ] ;
+
+\end{scope}
+
+\begin{scope}[xshift=3em]
+
+\coordinate (O) at (0, 0, 0);
+
+% basis vectors
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (\unitvectorlength, 0, 0)
+	node[pos=0.9, above, xshift=-0.8em] {${\bm{e}}_1$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, \unitvectorlength, 0)
+	node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_2$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, 0, \unitvectorlength)
+	node[pos=0.9, left, yshift=0.5em] {${\bm{e}}_3$};
+
+\pgfmathsetmacro{\verticalshift}{0.02}
+\pgfmathsetmacro{\initialangle}{-125}
+\pgfmathsetmacro{\lengthincircles}{2.15 * 360 + \initialangle}
+
+\draw[domain=\initialangle:\lengthincircles, variable=\t, line width=0.8pt]
+	plot [samples=120]
+	( {-\spiralradius*sin(\t)}, {\spiralradius*cos(\t)}, {\verticaladvance*\t/360 + \verticalshift} )
+	[ arrow inside = {}{0.1, 1} ] ;
+
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}

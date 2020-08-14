@@ -66,10 +66,6 @@ The research in the field of the general theories of continuous media conducted 
 \en{vector fields}\ru{векторные поля} \en{of~displacements}\ru{перемещений}~${\fieldofdisplacements(\bm{r},t)}$ \en{and}\ru{и}~\en{rotations}\ru{поворотов}~${\fieldofrotations(\bm{r},t)}$ \en{are mutually independent}\ru{взаимно независимы}.
 \en{I\kern-0.12ext~is also called the~model with free rotation}\ru{Это также называется моделью со~свободным вращением (free rotation)}.
 
-% pseudocontinuum, or a~model with constrained rotation
-% псевдоконтину\kern-0.11exум, или модель со~стеснённым вращением (constrained rotation)
-% \pararef{para:caseoflatenttrihedron.smalldisplacementsandrotations}
-
 \en{Consider at~first}\ru{Рассмотрим сперв\'{а}}
 \en{geometrically linear model}\ru{геометрически линейную модель},
 \en{that’s}\ru{то~есть} \en{the~case}\ru{случай} \en{of~}\en{small}\ru{м\'{а}лых} \en{displacements}\ru{перемещений} \en{and}\ru{и}~\en{small}\ru{м\'{а}лых} \en{rotations}\ru{поворотов}.
@@ -137,8 +133,9 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 \nopagebreak\vspace{-0.1em}
 \begin{equation}\label{deformationtensors:micropolarcontinuum}
 \begin{array}{rl}
-\distortiontensor \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements \hspace{.1ex} + \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} , &
-\wrynesstensor \hspace{.16ex} \equiv \boldnabla \fieldofrotations \hspace{.1ex} ,
+\distortiontensor \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements \hspace{.1ex} + \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex} , &
+\wrynesstensor \hspace{.16ex} \equiv \boldnabla \fieldofrotations
+\hspace{.1ex} ,
 \end{array}
 \end{equation}
 %
@@ -173,7 +170,8 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 - \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.05ex} \right) \hspace{-0.32ex} d\mathcal{V} \hspace{.5ex} + \\[-1.1em]
 %
 + \integral\displaylimits_o \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\fieldofdisplacements}
-+ \mathboldM \hspace{-0.1ex} \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} do \hspace{0.12ex} = \hspace{0.1ex} 0 \hspace{0.1ex}.
++ \mathboldM \hspace{-0.1ex} \dotp \variation{\fieldofrotations} \right) \hspace{-0.32ex} do \hspace{.12ex} = \hspace{.1ex} 0
+\hspace{.1ex} .
 \end{multline}
 
 \begin{otherlanguage}{russian}
@@ -285,9 +283,11 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 \en{From randomness}\ru{Из случайности} \en{of~variations}\ru{вариаций}~$\variation{\fieldofdisplacements}$ \en{and}\ru{и}~$\variation{\fieldofrotations}$ \en{inside a~volume}\ru{в~объёме} \en{ensues}\ru{вытекает} \en{the~balance}\ru{баланс} \en{of~forces}\ru{сил} \en{and}\ru{и}~\en{moments}\ru{моментов}
 
 \nopagebreak\vspace{-0.15em}\begin{equation}\label{micropolar.equilibrium:cauchy-like}
-\boldnabla \hspace{-0.1ex} \dotp \forcestresstensor + \bm{f} \hspace{.12ex} = \hspace{.1ex} \bm{0} \hspace{.1ex} ,
+\boldnabla \hspace{-0.1ex} \dotp \forcestresstensor + \bm{f} \hspace{.12ex} = \hspace{.1ex} \bm{0}
+\hspace{.1ex} ,
 \:\;
-\boldnabla \dotp \couplestresstensor \hspace{.1ex} + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} = \hspace{.1ex} \bm{0} \hspace{.1ex} ,
+\boldnabla \dotp \couplestresstensor \hspace{.1ex} + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} + \bm{m} \hspace{.1ex} = \hspace{.1ex} \bm{0}
+\hspace{.1ex} ,
 \end{equation}
 
 \vspace{-0.2em} \noindent \en{and}\ru{а} \en{from randomness}\ru{из случайности} \en{on a~surface}\ru{на~поверхности}\:--- \en{boundary conditions}\ru{краевые условия}
@@ -329,11 +329,11 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$,
 где~$\Pi$\:--- энергия деформации на~единицу объёма
 (\en{continuing to~model}\ru{продолжая моделировать} \en{the~geometrically linear material}\ru{геометрически линейный материал}, ${\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}\hspace{.12ex}}$).
 
-Располагая соотношениями (...)
+Имея соотношения (...)
 
 ...
 
-\begin{multline}
+\begin{multline}\label{micropolar.constitutiveequations}
 \hspace*{4em}
 \variation{\Pi} = - \hspace{.25ex} \variation{\internalwork} \hspace{-0.15ex}
 = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.25ex}
@@ -344,9 +344,9 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$,
 \Rightarrow \hspace{.88ex}
 \forcestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \Pi^{\mathstrut}}}{\partial \distortiontensor}$}
 \hspace{.15ex} ,
-\hspace{.77ex}
+\hspace{.8ex}
 \couplestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \Pi^{\mathstrut}}}{\partial \wrynesstensor}$}
-\hspace{.15ex} .
+\hspace{.2ex} .
 \hspace*{3.33em}
 \end{multline}
 
@@ -415,16 +415,37 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 
 ...
 
-material’s intrinsic (internal) length scale $\hcursive$
+Соотношения~\eqref{micropolar.constitutiveequations} обращаются преобразованием Лежандра
 
-Если устремить $\hcursive$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\Pi$, а~с~ним и моментные напряжения~$\couplestresstensor$.
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\begin{array}{c}
+\distortiontensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\Pi}^{\mathstrut}}}{\partial \forcestresstensor}$}
+\hspace{.15ex} ,
+\hspace{.8ex}
+\wrynesstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\Pi}^{\mathstrut}}}{\partial \couplestresstensor}$}
+\hspace{.2ex} ,
+\\[.8em]
+%
+\widehat{\Pi}(\hspace{-0.1ex} \forcestresstensor, \couplestresstensor \hspace{.12ex}) \hspace{-0.12ex}
+= \forcestresstensor \dotdotp \distortiontensor^{\T} \hspace{-0.25ex}
++ \hspace{.1ex} \couplestresstensor \dotdotp \wrynesstensor^{\T} \hspace{-0.2ex}
+- \hspace{.1ex} \Pi(\distortiontensor , \wrynesstensor \hspace{.12ex})
+\hspace{.1ex} .
+\end{array}
+\end{equation}
+
+...
+
+material’s intrinsic (internal) length scale $\elcursive$
+
+Если устремить $\elcursive$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\Pi$, а~с~ним и моментные напряжения~$\couplestresstensor$.
 Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$, тогда тензор~${\hspace{-0.1ex}\forcestresstensor}$ становится симметричным:
-${\boldnabla \dotp {\color{black!40}{\couplestresstensor}} \hspace{.1ex}
+${\boldnabla \dotp {\color{black!66}{\couplestresstensor}} \hspace{.1ex}
 + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex}
-+ {\color{black!40}{\bm{m}}} \hspace{.1ex}
++ {\color{black!66}{\bm{m}}} \hspace{.1ex}
 = \bm{0}}$,
-${{\color{black!40}{\couplestresstensor}} = \hspace{-0.15ex} {^2\bm{0}}}$,
-${{\color{black!40}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresstensor_{\Xcompanion} \hspace{-0.2ex} = \bm{0}}$,
+${{\color{black!66}{\couplestresstensor}} = \hspace{-0.15ex} {^2\bm{0}}}$,
+${{\color{black!66}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresstensor_{\Xcompanion} \hspace{-0.2ex} = \bm{0}}$,
 и модель превращается в~классическую безмоментную.
 
 \end{otherlanguage}
@@ -443,15 +464,33 @@ ${{\color{black!40}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresste
 
 \label{para:compatibilityequations.cosseratcontinuum}
 
-\begin{otherlanguage}{russian}
+\en{Having}\ru{Имея} \en{identity}\ru{тождество}
+${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm{0}}$~${\forall \bm{a}}$
+\en{and}\ru{и}~\en{definitions of deformation ten\-sors}\ru{определения тензоров деформации}~\eqref{deformationtensors:micropolarcontinuum},
 
-Из~выражений тензоров деформации~\eqref{deformationtensors:micropolarcontinuum} следует
+\nopagebreak\vspace{-0.8em}\begin{equation}
+\begin{array}{r@{\hspace{1ex}}c@{\hspace{1ex}}l}
+\wrynesstensor \hspace{.16ex} \equiv \boldnabla \fieldofrotations
+& \hspace{.1ex} \Rightarrow &
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \wrynesstensor \hspace{.1ex} = {^2}\bm{0}
+\hspace{.1ex} ,
+\\[.3em]
+%
+\distortiontensor \hspace{.1ex} - \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.25ex} \bm{E} \hspace{.12ex} = \hspace{-0.1ex} \boldnabla \fieldofdisplacements \hspace{.1ex}
+& \hspace{.1ex} \Rightarrow &
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.2ex} \bigl(
+\distortiontensor \hspace{.1ex} - \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.25ex} \bm{E} \hspace{.12ex}
+\bigr) \hspace{-0.22ex}
+= {^2}\bm{0}
+\hspace{.8ex} ...
+\end{array}
+\end{equation}
+
+%%\begin{otherlanguage}{russian}
 
 ...
 
-
-
-\end{otherlanguage}
+%%\end{otherlanguage}
 
 \en{\section{Theorems of statics}}
 
@@ -459,7 +498,10 @@ ${{\color{black!40}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresste
 
 \begin{otherlanguage}{russian}
 
-Теоремы статики линейных консервативных систем, легко выводимые при конечном числе степеней свободы
+Теоремы статики линейных консервативных систем, легко выводимые для конечного числа степеней свободы
+(минимальность энергии, теорема Clapeyron’а, \en{reciprocal work theorem}\ru{теорема о~взаимности работ} \en{et~al.}\ru{и~др.}\:--- \chapdotpararef{chapter:genericmechanics}{para:statics}),
+справедливы и~для континуальных линейных упругих сред~(\chapref{chapter:linearclassicalelasticity}),
+\en{including}\ru{включая} \en{the~micropolar model of~continuum}\ru{микрополярную модель контину\kern-0.11exума}~(\en{a~medium with force couples}\ru{среду с~парами сил}, \en{moments}\ru{моментами}).
 
 ...
 
@@ -473,17 +515,21 @@ ${{\color{black!40}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresste
 
 \label{para:caseoflatenttrihedron.smalldisplacementsandrotations}
 
-\begin{otherlanguage}{russian}
+\en{Besides}\ru{Помимо} \en{the~model with free rotation}\ru{модели со~свободным вращением} (\inquotes{\en{the~truly micropolar continuum}\ru{истинно микрополярного контину\kern-0.11exума}}), \en{there is}\ru{существует} \en{the~simplified model}\ru{упрощённая модель} \en{of a~medium with force couples}\ru{среды с~парами сил}, \en{in which}\ru{в~которой} \en{rotations}\ru{повороты} \en{are expressed}\ru{выражаются} \en{via displacements}\ru{через перемещения} \en{as in the~classical momentless continuum}\ru{как в~классическом безмоментном контину\kern-0.11exуме}:
 
-Так называется упрощённая моментная модель\footnote{\ru{Братья }Cosserat\en{ brothers} \en{called it}\ru{называли это} cas de trièdre caché (\ru{случай скрытого трёхгранника, }case of latent trihedron).}\hspace{-0.32em},\hspace{0.24em} в~которой повороты выражаются через перемещения как в~классической среде: %%~\cite{nowacki-elasticity}:
-
-\nopagebreak\vspace{-0.1em}\begin{equation}
-\fieldofrotations = \displaystyle \onehalf \hspace{0.4ex} \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements
-\:\Leftrightarrow\:
+\nopagebreak\vspace{-0.15em}\begin{equation}
+\fieldofrotations = \smalldisplaystyleonehalf \hspace{.2ex} \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements
+\hspace{.6ex}\Leftrightarrow\hspace{.6ex}
 \distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}
-\:\Leftrightarrow\:
-\distortiontensor = \mathboldepsilon = \hspace{-0.12ex} \boldnabla {\fieldofdisplacements}^{\hspace{0.1ex}\mathsf{S}} \hspace{-0.25ex}.
+\hspace{.6ex}\Leftrightarrow\hspace{.6ex}
+\distortiontensor = \mathboldepsilon = \hspace{-0.12ex} \boldnabla {\fieldofdisplacements}^{\hspace{.1ex}\mathsf{S}}
+%%\hspace{-0.25ex} .
 \end{equation}
+
+\vspace{-0.2em}\noindent
+--- \en{the~model}\ru{модель} \en{with }\ru{со~стеснённым вращением (}constrained rotation\ru{)}\footnote{\ru{Братья }Cosserat\en{ brothers} \en{called it}\ru{называли это} cas de trièdre caché (\ru{случай скрытого трёхгранника, }case of latent trihedron).}\hspace{-0.32em}.
+
+\begin{otherlanguage}{russian}
 
 Равенство~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию~$\distortiontensor$) возможно понимать как внутреннюю связь~(\chapdotpararef{chapter:nonlinearcontinuum}{para:internalconstraints}). Аргумент~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$ исчезает из~энергии~$\Pi$, соотношение упругости для~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано. Его место в~полной системе занимает уравнение связи.
 

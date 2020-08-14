@@ -1,0 +1,77 @@
+\documentclass[border=10pt]{standalone}
+
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage[e]{esvect}
+
+\usepackage{tikz}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows, arrows.meta}
+
+\usepackage{xintexpr}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.5}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.2em}}
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\usepackage{nicefrac}
+
+\usepackage{gensymb} % for \degree
+
+\usepackage{verbatim}
+
+\usepackage[english]{babel}
+\addto\captionsenglish{\renewcommand{\figurename}{figure}}
+\addto\captionsenglish{\def\figureshortname{fig.}}
+\newcommand\figref[1]{\figureshortname~\ref{#1}}
+
+\usepackage[format=plain]{caption}
+\captionsetup[figure]{%
+font={small,it},labelfont=small,%
+labelsep=newline,justification=centering,singlelinecheck=off,%
+aboveskip=4mm,belowskip=2.5mm}
+
+\newcommand{\lquote}[0]{“} % {``}
+\newcommand{\rquote}[0]{”} % {''}
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.999]
+
+\draw [line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (2.4,-0.8)
+	node[above=1.7mm, xshift=-1.8mm] {$\bm{a}$};
+\draw [line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (1.6,0.8)
+	node[midway, above=0.8mm] {$\bm{b}$};
+
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,-1.93);
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,-2.2)
+	node[pos=0.8, right, inner sep=1pt, outer sep=5pt] {$\bm{c}$};
+
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,1.93);
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,2.2)
+	node[pos=0.82, right, inner sep=1pt, outer sep=5pt] {$\bm{c}$};
+
+\draw [line width=0.5pt, black!50] (2.4, -0.8) -- (4, 0);
+\draw [line width=0.5pt, black!50] (1.6, 0.8) -- (4, 0);
+
+\end{tikzpicture}
+
+\end{document}

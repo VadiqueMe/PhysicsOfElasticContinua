@@ -83,7 +83,7 @@ ${\stiffnesstensor}$\ru{\:---}\en{~is} \en{stiffness tensor}\ru{тензор ж�
 \boldnabla \dotp \varbivalent{\hspace{-0.2ex}\cauchystress} \hspace{.1ex}
 + \hspace{.1ex} \rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
 = \hspace{.1ex} \bm{0}
-\hspace{.1ex} .
+\hspace{.11ex} .
 \end{array}
 \end{equation}
 
@@ -193,32 +193,31 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1
 
 \end{otherlanguage}
 
-\en{\section{Uniqueness of the solution of dynamic problem}}
+\en{\section{Uniqueness of the solution in dynamics}}
 
-\ru{\section{Уникальность решения динамической проблемы}}
+\ru{\section{Уникальность решения в~динамике}}
 
 \label{para:uniquenessfordynamicproblem}
 
-\begin{otherlanguage}{russian}
+\en{As is typical}\ru{Как это обычно} \en{for}\ru{для} \en{linear mathematical physics}\ru{линейной математической физики}~\cite{lurie-theoryofelasticity, tihonovsamarsky-mathphysicsequations}, \en{the~uniqueness theorem}\ru{теорема единственности} \en{is proven}\ru{доказывается} \inquotesx{\en{by~contradiction}\ru{от~противного}}[.]
+\en{Assume}\ru{Предположим, что} \en{there are}\ru{существуют} \en{some}\ru{какие-либо} \en{two solutions}\ru{два решения}: ${\bm{u}_1 (\bm{r}, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\bm{r}, t)}$.
+\en{If}\ru{Если} \en{difference}\ru{разность}~${\bm{u}^{\hspace{-0.1ex}*} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}_1 \hspace{-0.4ex} - \bm{u}_2}$ \en{will be equal to}\ru{окажется равной}~$\bm{0}$, \en{then}\ru{тогда} \en{these solutions}\ru{эти решения} \en{coincide}\ru{совпадают}, \en{that is}\ru{то есть} \en{the~solution is unique}\ru{решение единственно}.
 
-Как~обычно в~линейной математической физике~\cite{lurie-theoryofelasticity, tihonovsamarsky-mathphysicsequations}, теорема единственности доказывается \inquotesx{от~противного}[.]
-Допустим, что существуют какие-либо два решения: ${\bm{u}_1 (\bm{r}, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\bm{r}, t)}$.
-Если разность~${\bm{u}^{\hspace{-0.1ex}*} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}_1 \hspace{-0.4ex} - \bm{u}_2}$ окажется равной~$\bm{0}$, тогда эти решения совпадают, то есть решение единственно.
+\en{But first}\ru{Но сперв\'{а}} \en{we’ll make sure}\ru{убедимся} \en{the~existence}\ru{в~существовании} \en{of the~energy integral}\ru{интеграла энергии}\:--- \en{by deriving}\ru{путём вывода} \en{the balance of~energy equation}\ru{уравнения баланса механической энергии} \en{for the~classical linear model}\ru{для~классической линейной модели}
 
-Но~сперв\'{а} убедимся в~существовании интеграла энергии\:--- выведем уравнение баланса механической энергии для~линейной модели
-
-\nopagebreak\vspace{-0.8em}\begin{equation}\label{dynamicsoflineartheory:integralofenergy}
-\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.2ex} \mathrm{T} + \Pi \right)^{\hspace{-0.12em}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex} d\mathcal{V} \hspace{.1ex} =
-\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{0.25ex} d\mathcal{V} + \hspace{-0.12ex}
-\displaystyle\integral\displaylimits_{o_2} \hspace{-0.32ex} \bm{p} \dotp \mathdotabove{\bm{u}} \hspace{.25ex} do
-\hspace{.1ex} ,
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{dynamicsoflineartheory:integralofenergy}
+\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.6ex} \left(^{\mathstrut} \hspace{-0.2ex} \mathrm{T} + \Pi \right)^{\hspace{-0.14em}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.33ex} d\mathcal{V}
+=
+\hspace{-0.15ex} \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.25ex} d\mathcal{V} + \hspace{-0.15ex}
+\displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \mathdotabove{\bm{u}} \hspace{.25ex} do
+\hspace{.15ex} ,
 \end{equation}
 %
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \begin{array}{c}
 \bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \bm{0}
-\hspace{.1ex} ,
-\hspace{.6em}
+\hspace{.11ex} ,
+\hspace*{.6em}
 %
 \bm{n} \dotp \linearstress \hspace{.2ex} \bigr|_{o_2} \hspace{-0.64ex} = \hspace{.2ex} \bm{p}
 \hspace{.15ex} ,
@@ -233,7 +232,8 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1
 \end{array}
 \end{equation*}
 
-\vspace{-0.2em} Слева имеем
+\vspace{-0.2em}
+\en{For}\ru{Для} \en{the~left\hbox{-}hand side}\ru{левой части} \en{we have}\ru{имеем}
 
 \nopagebreak\vspace{-0.4em}\begin{equation*}\begin{array}{c}
 \mathdotabove{\mathrm{T}} =^{\displaystyle \mathstrut^{\displaystyle \mathstrut}} \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \hspace{.15ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp^{\mathstrut} \hspace{-0.16ex} \mathdotabove{\bm{u}} \hspace{.15ex} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex}
@@ -263,7 +263,7 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1
 {${\scalebox{0.75}{$ - \hspace{.2ex} ( \hspace{.12ex} \bm{f} \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) $}}$}
 
 \nopagebreak \vspace{-0.6em} \noindent
-(использован баланс импульса ${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} - \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} = \bm{0}}$),
+(\ru{использован }\en{balance of~momentum}\ru{баланс импульса} ${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} - \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} = \bm{0}}$\en{ is used}),
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \mathdotabove{\mathrm{T}} + \mathdotabove{\Pi} \hspace{.1ex}
@@ -273,7 +273,7 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1
 \end{equation*}
 
 \vspace{-0.2em} \noindent
-Применяя далее теорему о~дивергенции
+\en{Applying the~divergence theorem}\ru{Применяя теорему о~дивергенции}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \scalebox{.9}{$ \displaystyle \integral\displaylimits_{\mathcal{V}} $} \hspace{-0.2ex} \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.15ex} \right) \hspace{-0.15ex} d\mathcal{V}
@@ -282,9 +282,11 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1
 \end{equation*}
 
 \vspace{-0.33em}\noindent
-и~краевое условие ${\bm{n} \dotp \linearstress = \bm{p}}$ на~$o_2$, убеждаемся, что~\eqref{dynamicsoflineartheory:integralofenergy} удовлетворено.
+\en{and}\ru{и}~\en{boundary condition}\ru{краевое условие} ${\bm{n} \dotp \linearstress = \bm{p}}$ \en{on}\ru{на}~$o_2$, \en{we get}\ru{получаем}~\eqref{dynamicsoflineartheory:integralofenergy}.
 
-Из~\eqref{dynamicsoflineartheory:integralofenergy} следует, что без нагрузок (когда нет ни объёмных, ни поверхностных сил) полная механическая энергия постоянна:
+\begin{otherlanguage}{russian}
+
+Из~\eqref{dynamicsoflineartheory:integralofenergy} следует, что без нагрузок (\en{when}\ru{когда} \en{there’re no volume nor surface forces}\ru{нет ни объёмных, ни поверхностных сил})\en{,} \en{the~full mechanical energy}\ru{полная механическая энергия} \en{is constant}\ru{постоянна}:
 \nopagebreak\begin{equation}\label{dynamicsoflineartheory:fullenergyisconstantwithoutloads}
 \bm{f} \hspace{-0.1ex} = \bm{0}
 \hspace{1.1ex} \text{\en{and}\ru{и}} \hspace{1.2ex}
@@ -307,10 +309,12 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1
 \end{equation*}
 
 \vspace{-0.1em}
-Кинетическая энергия положительна: ${\mathrm{T} \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ при~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} \bm{0}}$ и~обращается в~нуль лишь когда~${\mathdotabove{\bm{u}} = \bm{0}}$\:--- это следует из~самог\'{о} определения ${\mathrm{T} \equiv \smalldisplaystyleonehalf \hspace{.2ex} \rho \hspace{0.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$.
-Потенциальная энергия, при~м\'{а}лых деформациях с~тензором~$\mathboldepsilon$ представляемая квадратичной формой
-${\Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \mathboldepsilon}$, тоже положительна: ${\Pi \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ при~${\mathboldepsilon \hspace{-0.1ex} \neq \hspace{-0.1ex} {^2\bm{0}}}$.
-\en{Such is}\ru{Таков\'{о}} \en{a~priori requirement}\ru{априорное требование} \en{of~positive definiteness}\ru{положительной определённости} \en{for}\ru{для}~\en{stiffness tensor}\ru{тензора жёсткости}~$\stiffnesstensor$.
+\en{Kinetic energy}\ru{Кинетическая энергия} \en{is positive}\ru{положительна}: ${\mathrm{T} \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} \bm{0}}$ \en{and}\ru{и}~\en{turns to zero}\ru{обращается в~нуль} \en{only when}\ru{лишь когда}~${\mathdotabove{\bm{u}} = \bm{0}}$\:--- \en{this follows}\ru{это следует} \en{from the~very definition}\ru{из~самог\'{о} определения}
+${\mathrm{T} \equiv \smalldisplaystyleonehalf \hspace{.2ex} \rho \hspace{0.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$.
+\en{Potential energy}\ru{Потенциальная энергия}, при~м\'{а}лых деформациях с~тензором~$\mathboldepsilon$ представляемая квадратичной формой
+${\Pi(\hspace{-0.1ex}\mathboldepsilon\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \mathboldepsilon}$,
+\en{is positive too}\ru{тоже положительна}: ${\Pi \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\mathboldepsilon \hspace{-0.1ex} \neq \hspace{-0.1ex} {^2\bm{0}}}$.
+\en{Such is}\ru{Таков\'{о}} \en{a~priori requirement}\ru{априорное требование} \en{of~the~positive definiteness}\ru{положительной определённости} \en{for}\ru{для}~\en{stiffness tensor}\ru{тензора жёсткости}~$\stiffnesstensor$.
 Это одно из \inquotes{дополнительных неравенств в~теории упругости}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
 
 \en{And since}\ru{А~поскольку}~$\mathrm{T}$ \en{and}\ru{и}~$\Pi$ \en{are positive}\ru{положительны}, \en{from}\ru{из}~\eqref{dynamicsoflineartheory:fullenergyiszero} \en{ensues}\ru{вытекает}
@@ -737,11 +741,11 @@ Reciprocal work theorem, also known as Betti’s theorem, discovered by Enrico B
 
 ...
 
-\begin{wrapfigure}[10]{o}{.45\textwidth}
-\makebox[.5\textwidth][c]{\begin{minipage}[t]{.4\textwidth}
-\vspace{-1.2em}
+\begin{wrapfigure}[12]{o}{.42\textwidth}
+\makebox[.42\textwidth][c]{\begin{minipage}[t]{.42\textwidth}
+\vspace{-1.5em}
 
-% parameter #1 is height of beam
+% parameter #1 is the height of beam
 \newcommand\drawrodbeam[1]%
 {
 	\draw [line width=1.2pt, black] (-0.5, 0) -- (0.5, 0) ;
@@ -752,30 +756,39 @@ Reciprocal work theorem, also known as Betti’s theorem, discovered by Enrico B
 }
 
 \tikzstyle{force line} =
-	[line width=1.5pt, red, line cap=round, -{Triangle[round, length=3.6mm, width=2.4mm]}]
+	[line width=1.25pt, red, line cap=round, -{Triangle[round, length=3.2mm, width=2mm]}]
 
 \tikzstyle{unitforce line} =
-	[line width=1.5pt, blue, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{Triangle[round, length=3.6mm, width=2.4mm]}]
+	[line width=1.25pt, blue, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{Triangle[round, length=3.2mm, width=2mm]}]
 
 \begin{tikzpicture}[scale=0.8]
 
 	\def\beamheight{5}
-	\def\beamxshift{2}
-	\def\forcelength{1}
+	\def\beamxshift{1.9}
+	\def\firstforcelength{0.9}
+	\def\secondforcelength{1.1}
+	\def\firstunitforcelength{0.54}
+	\def\secondunitforcelength{0.72}
 
 	\pgfmathsetmacro{\firstforceposition}{\beamheight}
 	\pgfmathsetmacro{\secondforceposition}{0.6 * \beamheight}
 
 	\drawrodbeam{\beamheight}
 
-	\draw [force line]
-		( -\forcelength, \firstforceposition ) -- ( 0, \firstforceposition )
-		node [pos=0.25, below, inner sep=0, outer sep=5pt]
+	\foreach \loadpos in { 0, 0.3, ..., 1 }
+		\draw [force line]
+			( -\firstforcelength, \firstforceposition - \loadpos ) -- ( 0, \firstforceposition - \loadpos ) ;
+
+	\node at ( -\firstforcelength, \firstforceposition - 0.5 )
+		[left, inner sep=0, outer sep=3.3pt, red]
 			{${P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}}}$} ;
 
-	\draw [force line]
-		( -\forcelength, \secondforceposition ) -- ( 0, \secondforceposition )
-		node [pos=0.25, below, inner sep=0, outer sep=5pt]
+	\foreach \loadpos in { 0, 0.3, ..., 0.6 }
+		\draw [force line]
+			( -\secondforcelength, \secondforceposition - \loadpos ) -- ( 0, \secondforceposition - \loadpos ) ;
+
+	\node at ( -\secondforcelength, \secondforceposition - 0.3 )
+		[left, inner sep=0, outer sep=3.3pt, red]
 			{${P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}}$} ;
 
 	\pgfmathsetmacro\secondxshift{\beamxshift}
@@ -784,9 +797,13 @@ Reciprocal work theorem, also known as Betti’s theorem, discovered by Enrico B
 		\drawrodbeam{\beamheight}
 	\end{scope}
 
-	\draw [unitforce line]
-		( \secondxshift - \forcelength, \firstforceposition ) -- ( \secondxshift, \firstforceposition )
-		node [pos=0.25, below, inner sep=0, outer sep=5pt] {$1$} ;
+	\foreach \loadpos in { 0, 0.3, ..., 1 }
+		\draw [unitforce line]
+			( \secondxshift - \firstunitforcelength, \firstforceposition - \loadpos )
+			-- ( \secondxshift, \firstforceposition - \loadpos ) ;
+
+	\node at ( \secondxshift - \firstunitforcelength, \firstforceposition - 0.5 )
+		[left, inner sep=0, outer sep=3.2pt, blue] {$ 1 $} ;
 
 	\pgfmathsetmacro\thirdxshift{\beamxshift + \beamxshift}
 
@@ -794,16 +811,22 @@ Reciprocal work theorem, also known as Betti’s theorem, discovered by Enrico B
 		\drawrodbeam{\beamheight}
 	\end{scope}
 
-	\draw [unitforce line]
-		( \thirdxshift - \forcelength, \secondforceposition ) -- ( \thirdxshift, \secondforceposition )
-		node [pos=0.25, below, inner sep=0, outer sep=5pt] {$1$} ;
+	\foreach \loadpos in { 0, 0.3, ..., 0.6 }
+		\draw [unitforce line]
+			( \thirdxshift - \secondunitforcelength, \secondforceposition - \loadpos )
+			-- ( \thirdxshift, \secondforceposition - \loadpos ) ;
+
+	\node at ( \thirdxshift - \secondunitforcelength, \secondforceposition - 0.3 )
+		[left, inner sep=0, outer sep=3.2pt, blue] {$ 1 $} ;
 
 \end{tikzpicture}
-\vspace{-0.1em}\caption{}\label{fig:exampleofapplicationofreciprocalworktheorem}
+\vspace{-1.5em}\caption{}\label{fig:exampleofapplicationofreciprocalworktheorem}
 \end{minipage}}
 \end{wrapfigure}
 
-Теорема о~взаимности работ Enrico Betti находит неожиданные и~эффективные применения. Как иллюстрацию рассмотрим защёмленный одним концом~(\inquotes{консольный}) стержень-балку, изгибаемый силами величиной~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}}$ и~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}$~(\figref{fig:exampleofapplicationofreciprocalworktheorem}). Используя линейность задачи, перемещения возможно найти как
+\ru{Теорема о~взаимности работ }Betti\en{’s reciprocal work theorem} находит неожиданные и~эффективные применения.
+\en{For example}\ru{Для примера}\en{,} \en{consider}\ru{рассмотрим} \en{a~rod-beam}\ru{стержень-балку}\ru{,} \en{clamped}\ru{защёмленную} \en{at one end}\ru{на одн\'{о}м конце}~(\inquotes{\en{cantilever}\ru{консольную}}) \en{and}\ru{и} \en{bent}\ru{изгибаемую} \en{by two forces}\ru{двумя силами} \en{with}\ru{с}~\en{integral values}\ru{интегральными значениями}~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}}$ \en{and}\ru{и}~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}$~(\figref{fig:exampleofapplicationofreciprocalworktheorem}).
+Из\hbox{-}за линейности задачи, перемещения могут быть найдены как
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}\begin{array}{c}
 u_1 = \ldots \hspace{.1ex} ,
@@ -825,16 +848,22 @@ u_2 = \ldots \hspace{.1ex} .
 
 \begin{otherlanguage}{russian}
 
-\en{The~complete set of equations}\ru{Полный набор уравнений}~\eqref{lineartheory:wholesetofequations} содержит неизвестные $\linearstress$, $\mathboldepsilon$ и~$\bm{u}$. Исключая $\linearstress$ и~$\mathboldepsilon$, приходим к~постановке в~перемещениях (симметризация~${\hspace{-0.2ex} \boldnabla \bm{u}}$ тут излишняя, ведь ${\stiffnesstensor_{\hspace{.12ex} 3 \scalebox{0.6}[0.8]{$\rightleftarrows$} 4} \hspace{-0.2ex} = \stiffnesstensor}$)
+\en{The~complete set of equations}\ru{Полный набор уравнений}~\eqref{lineartheory:wholesetofequations} \en{contains unknowns}\ru{содержит неизвестные} $\linearstress$, $\mathboldepsilon$ \en{and}\ru{и}~$\bm{u}$.
+\en{Excluding}\ru{Исключая} $\linearstress$ \en{and}\ru{и}~$\mathboldepsilon$, приходим к~постановке в~перемещениях
+(симметризация~${\hspace{-0.2ex} \boldnabla \bm{u}}$ тут лишняя, ведь ${\stiffnesstensor_{\hspace{.12ex} 3 \scalebox{0.6}[0.8]{$\rightleftarrows$} 4} \hspace{-0.25ex} = \stiffnesstensor}$)
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{lineartheory:equationsfordisplacement}
 \begin{array}{c}
-\boldnabla \dotp \left( \stiffnesstensor \dotdotp \hspace{-0.12ex} \boldnabla \bm{u} \hspace{.1ex} \right) + \hspace{.1ex} \bm{f} = \hspace{.1ex} \bm{0} \hspace{.1ex}; \\[.4em]
-\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{0.2ex} \bm{u}_{\raisemath{-0.1em}{0}} \hspace{.16ex} , \:\:
+\boldnabla \dotp \left( \stiffnesstensor \dotdotp \hspace{-0.12ex} \boldnabla \bm{u} \hspace{.1ex} \right) + \hspace{.1ex} \bm{f} = \hspace{.1ex} \bm{0}
+\hspace{.16ex} , \\[.4em]
+%
+\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \bm{u}_{\raisemath{-0.1em}{0}}
+\hspace{.16ex} , \:\:
 \bm{n} \dotp %%\tikzmark{TauTensorBegin}
 \stiffnesstensor \hspace{-0.08ex} \dotdotp \hspace{-0.24ex} \boldnabla \bm{u}
 %%\tikzmark{TauTensorEnd}
-\hspace{0.25ex} \bigr|_{o_2} \hspace{-0.64ex} = \hspace{0.2ex} \bm{p} \hspace{.16ex} .
+\hspace{.25ex} \bigr|_{o_2} \hspace{-0.64ex} = \hspace{.2ex} \bm{p}
+\hspace{.16ex} .
 \end{array}
 \end{equation}%
 %%\AddOverBrace[line width=.75pt][-0.1ex,0.1em]%
@@ -856,9 +885,9 @@ u_2 = \ldots \hspace{.1ex} .
 
 \end{otherlanguage}
 
-\en{\section{Concentrated force in a limitless medium}}
+\en{\section{Concentrated force in an infinite medium}}
 
-\ru{\section{Сосредоточенная сила в неограниченной среде}}
+\ru{\section{Сосредоточенная сила в бесконечной среде}}
 
 {\small
 Concentrated force is useful mathematical idealization, but cannot be found in the real world, where all forces are either body forces acting over a~volume or surface forces acting over an~area.
@@ -1238,7 +1267,8 @@ ${\bm{u} = \antiplanedisplacement \hspace{.12ex} \mathcolor{blue}{\bm{e}_3}}$, �
 
 \begin{otherlanguage}{russian}
 
-Эта задача, тщательно изученная Saint\hbox{-\hspace{-0.2ex}}Venant’ом, рассматривается едва~ли не~в~каждой книге по классической теории упругости. Речь идёт о~цилиндре какого\hbox{-}либо сечения, нагруженном лишь поверхностными силами на торцах
+Эта задача, тщательно изученная Saint\hbox{-\hspace{-0.2ex}}Venant’ом, рассматривается едва~ли не~в~каждой книге по классической упругости.
+Речь идёт о~цилиндре какого\hbox{-}либо сечения, нагруженном лишь поверхностными силами на торцах
 
 ...
 

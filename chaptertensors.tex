@@ -1039,24 +1039,29 @@ A'_{i\hspace{-0.1ex}j} \hspace{-0.16ex} = \cosinematrix{i'\hspace{-0.1ex}m} \hsp
 \vspace{-1.2em}
 \hspace{1.25em}\scalebox{0.9}[0.9]{%
 \begin{tikzpicture}[scale=0.8]
-	\draw [line width=2pt, black, -{Latex[length=5mm, width=2mm]}]
-		(0,0) -- (2.4,-0.8)
-		node[above=1.4mm, xshift=-1.8mm] {$\bm{a}$};
-	\draw [line width=2pt, black, -{Latex[length=5mm, width=2mm]}]
-		(0,0) -- (1.6,0.8)
-		node[midway, above=0.8mm] {$\bm{b}$};
-	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
-		(0,0) -- (0,-1.95);
-	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
-		(0,0) -- (0,-2.2)
-		node[pos=0.75, right, xshift=0.4mm] {$\bm{c}$};
-	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
-		(0,0) -- (0,1.95);
-	\draw [line width=2pt,blue,-{Latex[length=5mm, width=2mm]}]
-		(0,0) -- (0,2.2)
-		node[pos=0.8, right, xshift=0.4mm] {$\bm{c}$};
-	\draw [line width=0.4pt, black!50] (2.4, -0.8) -- (4, 0);
-	\draw [line width=0.4pt, black!50] (1.6, 0.8) -- (4, 0);
+
+\draw [line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (2.4,-0.8)
+	node[above=1.7mm, xshift=-1.8mm] {$\bm{a}$};
+\draw [line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (1.6,0.8)
+	node[midway, above=0.8mm] {$\bm{b}$};
+
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,-1.93);
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,-2.2)
+	node[pos=0.8, right, inner sep=1pt, outer sep=5pt] {$\bm{c}$};
+
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,1.93);
+\draw [line width=1.77pt, blue, -{Stealth[round, length=4.5mm, width=3mm]}]
+	(0,0) -- (0,2.2)
+	node[pos=0.82, right, inner sep=1pt, outer sep=5pt] {$\bm{c}$};
+
+\draw [line width=0.5pt, black!50] (2.4, -0.8) -- (4, 0);
+\draw [line width=0.5pt, black!50] (1.6, 0.8) -- (4, 0);
+
 \end{tikzpicture}
 }\vspace{-1.6em}\caption{}\label{fig:crossproduct}
 \end{minipage}}
@@ -1068,12 +1073,19 @@ A'_{i\hspace{-0.1ex}j} \hspace{-0.16ex} = \cosinematrix{i'\hspace{-0.1ex}m} \hsp
 \en{a~cross product}\ru{векторное произведение}
 \en{may be}\ru{может быть} \en{oriented}\ru{ориентировано}
 \en{in~either of~two possible ways}\ru{любым из~двух возможных способов}~(\figref{fig:crossproduct}).
+\en{Since}\ru{Поскольку} \en{the~orientation}\ru{ориентация} \en{of~product}\ru{произведения} ${\bm{c} = \bm{a} \times \bm{b}}$ \en{is determined}\ru{определяется}\:--- \en{yet except a~sign}\ru{пока кроме знака}\:--- \en{by multipliers}\ru{сомножителями}, \en{the~sequential triple of~vectors}\ru{последовательная тройка векторов} $\bm{a}$, $\bm{b}$ \en{and}\ru{и}~$\bm{c}$ is what is going to be oriented: \en{one direction out of two}\ru{одно направление из двух} is to be chosen as \inquotesx{\en{positive}\ru{положительное}}[.]
 
-... \en{the~sequential triple of~vectors}\ru{последовательная тройка векторов} $\bm{a}$, $\bm{b}$ \en{and}\ru{и}~$\bm{c}$ \en{as from}\ru{как из} ${\bm{c} = \bm{a} \times \bm{b}}$ is what is going to be oriented
+And when vectors are measured using some basis~$\bm{e}_i$ thus represented as linear combinations like ${\bm{a} = a_i \bm{e}_i}$, \en{then}\ru{тогда} \en{the~sequential triple of~basis vectors}\ru{последовательная тройка векторов базиса} $\bm{e}_1$, $\bm{e}_2$, $\bm{e}_3$ is what is going to be oriented.
+This means that the sequence of vectors in a~basis is significant.
+Two bases with different sequences of the same basis vectors differ by some permutation.
 
-... when vectors are measured using some basis, \en{the~sequential triple of~basis vectors}\ru{последовательная тройка векторов базиса} $\bm{e}_1$, $\bm{e}_2$, $\bm{e}_3$ is what is going to be oriented
+{\small%
+The orientation of a~basis in the~space is the (kind of) asymmetry that makes a reflection impossible to replicate by means of a rotation in that space (without lifting to a~more\hbox{-}dimensional space).
+It’s impossible to turn the left hand of a human figure into the right hand by applying a rotation, only by reflecting the figure in a mirror.
 
-\en{one direction out of two}\ru{одно направление из двух} \en{is chosen as}\ru{выбирается как} \inquotes{\en{positive}\ru{положительное}}
+An orientation of the~space is an arbitrary choice of which sequences of~basis vectors are \inquotes{positively} oriented and which are \inquotes{negatively} oriented.
+
+In the three-dimensional Euclidean space, the two possible basis orientations are commonly called right-handed (right-chiral) and left-handed (left-chiral).
 
 %%\en{oriented}\ru{ориентирована}
 %%\en{either}\ru{либо} \en{positively}\ru{положительно}, \en{either}\ru{либо} \en{negatively}\ru{отрицательно}
@@ -1081,20 +1093,81 @@ A'_{i\hspace{-0.1ex}j} \hspace{-0.16ex} = \cosinematrix{i'\hspace{-0.1ex}m} \hsp
 %%\inquotes{\en{right-handed or right-chiral}\ru{правая}}
 %%\inquotes{\en{left-handed or left-chiral}\ru{левая}}
 
-{\small%
-The orientation of a~basis in the~space is the (kind of) asymmetry that makes a reflection impossible to replicate by means of a rotation in that space (without lifting to a~more\hbox{-}dimensional space).
-It’s impossible to turn the left hand of a human figure into the right hand by applying a rotation, but it is possible to do so by reflecting the figure in a mirror.
-
-An orientation of the~space is an arbitrary choice of which \textcolor{magenta}{ordered} bases are \inquotes{positively} oriented and which are \inquotes{negatively} oriented.
-
-In the three-dimensional Euclidean space, the two possible basis orientations are commonly called right-handed (right-chiral) and left-handed (left-chiral).
-
-... chiral (adjective) = asymmetric in such a way that the thing and its \en{mirror image}\ru{зеркальное отражение} are not \en{superimposable}\ru{совмещаются}, cannot be superposed on its mirror image by any combination of rotations and translations
-
 %%хиральность chirality χειρομορφία (χειρ = hand = рука)
 
-The sequence of vectors in a~basis is significant. Two bases with different sequences of the same vectors differ by some permutation.
+... chiral (adjective) = asymmetric in such a way that the thing and its \en{mirror image}\ru{зеркальное отражение} are not \en{superimposable}\ru{совмещаются}, cannot be superposed on its mirror image by any combination of rotations and translations
 \par}
+
+\begin{figure}[htb!]
+\begin{center}
+
+\tdplotsetmaincoords{46}{140} % orientation of camera
+
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords] % use 3dplot
+
+\pgfmathsetmacro{\spiralradius}{0.69}
+\pgfmathsetmacro{\verticaladvance}{0.5}
+
+\pgfmathsetmacro{\unitvectorlength}{1.2}
+
+\begin{scope}[xshift=-2.8em]
+
+\coordinate (O) at (0, 0, 0);
+
+% basis vectors
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (\unitvectorlength, 0, 0)
+	node[pos=0.9, above, xshift=-0.8em] {${\bm{e}}_2$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, \unitvectorlength, 0)
+	node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_1$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, 0, \unitvectorlength)
+	node[pos=0.9, left, yshift=0.5em] {${\bm{e}}_3$};
+
+\pgfmathsetmacro{\verticalshift}{-0.1}
+\pgfmathsetmacro{\initialangle}{-35}
+\pgfmathsetmacro{\lengthincircles}{2.15 * 360 + \initialangle}
+
+\draw[domain=\initialangle:\lengthincircles, variable=\t, line width=0.8pt]
+	plot [samples=120]
+	( {\spiralradius*sin(\t)}, {\spiralradius*cos(\t)}, {\verticaladvance*\t/360 + \verticalshift} )
+	[ arrow inside = {}{0.1, 1} ] ;
+
+\end{scope}
+
+\begin{scope}[xshift=2.8em]
+
+\coordinate (O) at (0, 0, 0);
+
+% basis vectors
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (\unitvectorlength, 0, 0)
+	node[pos=0.9, above, xshift=-0.8em] {${\bm{e}}_1$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, \unitvectorlength, 0)
+	node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_2$};
+\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+	(O) -- (0, 0, \unitvectorlength)
+	node[pos=0.9, left, yshift=0.5em] {${\bm{e}}_3$};
+
+\pgfmathsetmacro{\verticalshift}{0.02}
+\pgfmathsetmacro{\initialangle}{-125}
+\pgfmathsetmacro{\lengthincircles}{2.15 * 360 + \initialangle}
+
+\draw[domain=\initialangle:\lengthincircles, variable=\t, line width=0.8pt]
+	plot [samples=120]
+	( {-\spiralradius*sin(\t)}, {\spiralradius*cos(\t)}, {\verticaladvance*\t/360 + \verticalshift} )
+	[ arrow inside = {}{0.1, 1} ] ;
+
+\end{scope}
+
+\end{tikzpicture}
+
+\end{center}
+\vspace{-1.2em}\caption{}\label{fig:leftrightspirals}
+\vspace{-1.1em}
+\end{figure}
 
 \en{A~pseudo\-vector}\ru{Псевдо\-вектор}~(\en{axial}\ru{аксиальный} \en{vector}\ru{вектор})\en{ is}\ru{\:---} \en{a~vector\hbox{-}like}\ru{похожий на~вектор} \en{three\hbox{-}dimensional}\ru{трёх\-мерный} \en{object}\ru{объект,}
 \en{that is invariant under any rotation}\ru{инвариантный при любом повороте},
@@ -1103,7 +1176,7 @@ The sequence of vectors in a~basis is significant. Two bases with different sequ
 
 {\small%
 \begin{otherlanguage}{russian}
-При отражении направление полностью инвариантного (полярного) вектора, как и все пространство, изменяется (в~общем случае).
+Кроме редких случаев, направление полностью инвариантного (полярного) вектора, как и все пространство, при отражении изменяется.
 
 Псевдовектор (аксиальный вектор), в~отличие от (полярного) вектора, не меняет при отражении компоненту, ортогональную плоскости отражения, и оказывается \inquotes{перевёрнутым} относительно полярных векторов и геометрии всего пространства. Это происходит потому, что при изменении знака каждого векторного произведения (что соответствует отражению) меняется знак/направление и каждого аксиального вектора.
 \end{otherlanguage}%
@@ -2266,7 +2339,7 @@ $}}
 {\small
 \setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
 
-Here we consider the exact differential of any set of position vectors~$\bm{r}_i$, that are functions of other variables ${\displaystyle \lbrace q_{1},q_{2},...,q_{m}\rbrace }$ and time t.
+Here we consider the~exact differential of any set of position vectors~$\bm{r}_i$, that are functions of other variables ${\displaystyle \lbrace q_{1}, q_{2}, ..., q_{m}\rbrace }$ and time~$t$.
 
 The actual displacement is the differential
 \[\displaystyle d\bm{r}_{i} = \frac{\partial \bm{r}_{i}}{\partial t} \hspace{.16ex} dt \hspace{.2ex} + \sum_{j=1}^{m} {\frac{\partial \bm{r}_{i}}{\partial q^{\hspace{.1ex}j}}} \hspace{.2ex} dq^{\hspace{.1ex}j}\]
