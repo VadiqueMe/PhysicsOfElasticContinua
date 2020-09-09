@@ -10,19 +10,22 @@
 
 \ru{\section{Модель сплошной среды. Описания процессов}}
 
-\begin{otherlanguage}{russian}
+\lettrine[lines=2, findent=2pt, nindent=0pt]{\en{A}\ru{С}}{\en{ccording}\ru{огласно}} \en{to~}\href{https://en.wikipedia.org/wiki/Atomic_theory}{\en{the~atomic theory}\ru{атомной теории}}, \en{a~substance}\ru{вещество} \en{is composed}\ru{состоит} \en{of discrete particles}\ru{из дискретных частиц}\:--- \en{atoms}\ru{атомов}.
+\en{Therefore}\ru{Поэтому} \en{a~model}\ru{модель} \en{of a~system of~particles}\ru{системы частиц} \en{with }\ru{с~}\en{masses}\ru{массами}~${m_k}$ \en{and}\ru{и}~\en{position vectors}\ru{радиусами-векторами}~${\bm{R}_k (t)}$ \en{may seem suitable}\ru{может показаться подходящей} \en{yet despite}\ru{даже несмотр\'{я} на} \en{an~unimaginable}\ru{невообразимое} \en{number of degrees of freedom}\ru{число степеней свободы}, \en{because}\ru{так как} \en{amounts of~memory}\ru{объёмы памяти} \en{and}\ru{и}~\en{speed}\ru{быстрота} \en{of~computers}\ru{компьютеров} \en{are characterized}\ru{характеризуются} \en{also}\ru{тоже} \en{by }\en{astronomical numbers}\ru{астрономическими числами}.
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{В}{ещества} имеют дискретное строение, и~модель системы частиц с~массами~${m_k}$ и~радиусами\hbox{-}векторами~${\bm{R}_k (t)}$ может показаться подходящей, несмотря на невообразимое число степеней свободы\:--- тем~более что объёмы памяти и~быстродействие компьютеров характеризуются тоже астрономическими числами.
+\en{But anyway,}\ru{Но~всё~же} \en{it’s worth choosing}\ru{ст\'{о}ит выбрать} \en{a~}\en{fundamentally}\ru{фундаментально} \en{and}\ru{и}~\en{qualitatively}\ru{качественно} \en{different model}\ru{иную модель}\:--- \en{a~model of material continuum}\ru{модель сплошной среды~(материального контину\kern-0.11exума)}, \en{where mass}\ru{где масса} \en{is distributed}\ru{распределена} \en{in volume}\ru{в~объёме} \en{continuously}\ru{непрерывно}: \en{volume}\ru{объём}~$\mathcal{V}$ \en{contains}\ru{содержит} \en{mass}\ru{массу}
 
-И~всё~же предпочтение ст\'{о}ит отдать качественно иной модели\:--- модели сплошной среды~(материального контину\kern-0.11exума), в~которой масса распределена по~объёму непрерывно: в~объёме~$\mathcal{V}$ содержится масса
-
-\nopagebreak\vspace{-0.5em}\begin{equation}
-m = \hspace{-0.5ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \hspace{.2ex} d\mathcal{V} ,
+\nopagebreak\vspace{-0.2em}\ru{\vspace{-0.8em}}\begin{equation}
+m = \hspace{-0.5ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \rho \hspace{.2ex} d\mathcal{V}
+, \hspace{.5em}
+dm = \rho \hspace{.15ex} d \mathcal{V} ,
 \end{equation}
 
-\vspace{-0.25em}\noindent \en{where}\ru{где} ${\rho\hspace{.1ex}}$\ru{\:---}\en{ is} \en{volume(tric) mass density}\ru{объёмная плотность массы}.
+\vspace{-0.25em}\noindent \en{here}\ru{здесь} ${\rho\hspace{.1ex}}$\ru{\:---}\en{ is} \en{volume(tric) mass density}\ru{объёмная плотность массы}.
 
-Real matter is modelled as a~continuum, \en{which can be thought of as}\ru{который может быть мыслим как} \en{an~infinite set}\ru{бесконечное множество} \en{of~vanishingly small}\ru{исчезающе м\'{а}лых} \en{particles}\ru{частиц}, joined together.
+\en{Real matter}\ru{Реальная материя} \en{is modelled}\ru{моделируется} \en{as}\ru{как} \en{a~continuum}\ru{контину\kern-0.11exум}, \en{which can be thought of as}\ru{который может быть мыслим как} \en{an~infinite set}\ru{бесконечное множество} \en{of~vanishingly small}\ru{исчезающе м\'{а}лых} \en{particles}\ru{частиц}, \en{joined together}\ru{соединённых вместе}.
+
+\begin{otherlanguage}{russian}
 
 С~непрерывным распределением массы связано лишь первое и~простое представление о~сплошной среде как множестве~(пространстве) материальных точек. Возможны и~более сложные модели, в~которых частицы обладают степенями свободы не~только трансляции, но~и поворота, внутренней деформации и~другими. Отметив, что подобные модели притягивают всё б\'{о}льший интерес, в~этой главе ограничимся классическим представлением о~среде как состоящей из~\inquotesx{простых точек}[.]
 
@@ -178,7 +181,7 @@ d\bm{r} = d\bm{R} \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \bold
 \vspace{1.5em}
 
 \noindent \en{here comes to~mind}\ru{приходит на~ум} \en{to introduce}\ru{ввести} \en{the }\inquotes{\en{motion gradient}\ru{градиент движения}}\footnote{%
-\en{Tensor}\ru{Тензору}~$\bm{F}$ \en{doesn’t well suit}\ru{не~вполне подходит} \en{its}\ru{его} \en{more popular}\ru{более популярное} \en{name}\ru{название} \inquotesx{\en{deformation gradient}\ru{градиент деформации}}[,] \en{because}\ru{поскольку} \en{this tensor}\ru{этот тензор} \en{describes}\ru{описывает} \en{not only the~deformation itself}\ru{не~только сам\'{у} деформацию}, \en{but also the rotation of a~body as a~whole without deformation}\ru{но~и поворот тела как~целого без деформации}.
+\en{Tensor}\ru{Тензору}~$\bm{F}$ \en{doesn’t well suit}\ru{не~вполне подходит} \en{its}\ru{его} \en{more popular}\ru{более популярное} \en{name}\ru{название} \inquotesx{\en{deformation gradient}\ru{градиент деформации}}[,] \en{because}\ru{поскольку} \en{this tensor}\ru{этот тензор} \en{describes}\ru{описывает} \en{not only the~deformation itself}\ru{не~только сам\'{у} деформацию}, \en{but also the rotation of a~body as a~whole without de\-for\-ma\-tion}\ru{но~и поворот тела как~целого без деформации}.
 }%
 \hbox{\hspace{-0.6ex},} \en{picking}\ru{взяв} one of these tensor multipliers for it: ${\bm{F} \equiv \hspace{-0.2ex} \boldnablacircled \hspace{-0.16ex} \bm{R}^{\hspace{.1ex}\T} \hspace{-0.32ex} = \bm{R}_{\hspace{.1ex}i} \bm{r}^{\hspace{-0.05ex}i} \hspace{-0.4ex}}$.
 
@@ -567,13 +570,13 @@ B. R. Seth was the first to show that the Green and Almansi strain tensors are s
 
 \nopagebreak\begin{equation*}
 \begin{array}{r@{\hspace{0.1em}}ll}
-\bm{D}_{(1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \bm{U}^{2} \hspace{-0.25ex} - \bm{E} \right) = \smalldisplaystyleonehalf (\bm{G} - \bm{E}) & \text{\scalebox{0.92}[0.92]{Green strain tensor}}
+\bm{D}_{(1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \bm{U}^{2} \hspace{-0.25ex} - \bm{E} \right) = \smalldisplaystyleonehalf (\bm{G} - \bm{E}) & \text{\scalebox{0.9}{Green strain tensor}}
 \\[.4em]
-\bm{D}_{(\nicefrac{1}{2})} & = \bm{U} \hspace{-0.15ex} - \bm{E} = \bm{G}^{\hspace{.1ex}\nicefrac{1}{2}} \hspace{-0.25ex} - \bm{E} & \text{\scalebox{0.92}[0.92]{Biot strain tensor}}
+\bm{D}_{(\nicefrac{1}{2})} & = \bm{U} \hspace{-0.15ex} - \bm{E} = \bm{G}^{\hspace{.1ex}\nicefrac{1}{2}} \hspace{-0.25ex} - \bm{E} & \text{\scalebox{0.9}{Biot strain tensor}}
 \\[.4em]
-\bm{D}_{(0)} & = \ln \bm{U} = \smalldisplaystyleonehalf \ln \bm{G} & \text{\scalebox{0.92}[0.92]{logarithmic strain, Hencky strain}}
+\bm{D}_{(0)} & = \ln \bm{U} = \smalldisplaystyleonehalf \ln \bm{G} & \text{\scalebox{0.9}{logarithmic strain, Hencky strain}}
 \\[.4em]
-\bm{D}_{(-\hspace{-0.1ex}1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \hspace{-0.1ex} \bm{E} - \bm{U}^{-2} \hspace{.1ex} \right) & \text{\scalebox{0.92}[0.92]{Almansi strain}}
+\bm{D}_{(-\hspace{-0.1ex}1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \hspace{-0.1ex} \bm{E} - \bm{U}^{-2} \hspace{.1ex} \right) & \text{\scalebox{0.9}{Almansi strain}}
 \end{array}
 \end{equation*}
 
@@ -581,7 +584,7 @@ The second\hbox{-}order approximation of these tensors is
 \[ \bm{D}_{(m)} \hspace{-0.2ex} =
 \mathboldepsilon
 + \smalldisplaystyleonehalf \hspace{.1ex} \boldnabla\bm{u} \dotp \hspace{-0.1ex} \boldnabla\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
-- (1 - m) \hspace{0.2ex} \mathboldepsilon \dotp \mathboldepsilon \]
+- (1 - m) \hspace{.2ex} \mathboldepsilon \dotp \mathboldepsilon \]
 
 \vspace{-0.25em} \noindent where ${\mathboldepsilon \equiv \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$ is the infinitesimal strain tensor.
 
@@ -1002,7 +1005,7 @@ ${ \bm{R}^{\hspace{.1ex}i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystress 
 + \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\bm{R}}^{\hspace{.1ex}\T}
 \end{equation*}
 
-\vspace{-0.1em} \noindent \en{and randomness of}\ru{и~случайность}~${\mathcal{V}\hspace{-0.2ex}}$, \en{we get the local differential edition of}\ru{получаем локальную дифференциальную формулировку}~\eqref{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
+\vspace{-0.1em} \noindent \en{and randomness of}\ru{и~случайность}~${\mathcal{V}\hspace{-0.2ex}}$, \en{we get}\ru{получаем} \en{the local differential version of}\ru{локальную дифференциальную версию}~\eqref{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
 \left(^{\mathstrut} \hspace{-0.2ex} \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \rho \bm{f} \right) \hspace{-0.4ex} \dotp \variation{\bm{R}} \hspace{.2ex}

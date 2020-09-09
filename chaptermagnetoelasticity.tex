@@ -4,6 +4,9 @@
 
 \thispagestyle{empty}
 
+\newcommand{\chargedensity}{\varrho} %% {\uprho}
+\newcommand{\currentdensity}{\bm{j}} %% {\bm{\jmath}}
+
 \label{chapter:magnetoelasticity}
 
 \begin{changemargin}{\parindent}{\parindent}
@@ -27,81 +30,115 @@
 
 \newcommand\expminustwelve{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1\kern-0.07ex2}}
 
-\en{\section{Electromagnetic field. Electromagnetic waves}}
+\en{\section{Electromagnetic field}}
 
-\ru{\section{Электромагнитное поле. Электромагнитные волны}}
+\ru{\section{Электромагнитное поле}}
 
 \label{para:electromagneticfieldandwaves}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{\en{H}\ru{В}}{\en{ere}\ru{от}}\en{ is} \en{an~overview}\ru{опис\'{а}ние} \en{of the~theory of electromagnetism}\ru{теории электромагнетизма}.
+\lettrine[lines=2, findent=2pt, nindent=0pt]{\en{H}\ru{В}}{\en{ere}\ru{от}}\en{ is} \en{the~summary}\ru{краткое изложение} \en{of the~theory of electromagnetism}\ru{теории электромагнетизма}.
 
-\noindent \hspace{\parindent} \en{This theory}\ru{Эта теория} \en{considers}\ru{рассматривает} \en{two vector fields}\ru{два векторных поля}: \en{electric}\ru{электрическое}~${\hspace{.1ex}\boldmathbb{E}(\bm{r}, t)}$ \en{and}\ru{и}~\en{magnetic}\ru{магнитное}~${\hspace{.1ex}\boldmathbb{B}(\bm{r}, t)}$.
-\en{What are}\ru{Что такое} \en{vector}\ru{вектор}~${\hspace{.1ex}\boldmathbb{E}}$ \en{and}\ru{и}~\en{pseudo\-vector}\ru{псевдо\-вектор}~${\hspace{.1ex}\boldmathbb{B}}$ \en{is seen}\ru{в\'{и}дно} \en{from}\ru{из} \en{the~expression}\ru{выражения} \en{of electromagnetic force}\ru{электромагнитной силы} (\href{https://en.wikipedia.org/wiki/Lorentz_force}{\en{Lorentz force}\ru{силы Lorentz’а}}) ${\hspace{-0.1ex}\bm{F}(\bm{r}, \bm{v}, t, q)}$, \en{acting on}\ru{действующей на}~\en{a~point charge}\ru{точечный заряд}\:--- \en{a~particle}\ru{частицу} \en{of infinitesimal size}\ru{бесконечно-малого размера}, \en{that contains}\ru{содержащую} \en{electric charge}\ru{электрический заряд}~$q$ \en{and}\ru{и}~\en{moves}\ru{движущуюся} \en{with velocity}\ru{со~скоростью}~${\bm{v}}$
+\noindent \hspace{\parindent} \en{This theory}\ru{Эта теория} \en{describes}\ru{описывает} \en{two vector fields}\ru{два векторных поля}:
+\en{electric}\ru{электрическое}~${\hspace{.1ex}\boldmathbb{E}(\bm{r}, t)}$ \en{and}\ru{и}~\en{magnetic}\ru{магнитное}~${\hspace{.1ex}\boldmathbb{B}(\bm{r}, t)}$.
+\en{What are}\ru{Что такое} \en{vector}\ru{вектор}~${\hspace{.1ex}\boldmathbb{E}}$ \en{and}\ru{и}~\en{pseudo\-vector}\ru{псевдо\-вектор}~${\hspace{.1ex}\boldmathbb{B}}$ \en{is seen}\ru{в\'{и}дно} \en{from}\ru{из} \en{the~expression}\ru{выражения} \en{of electromagnetic force}\ru{электромагнитной силы} (\href{https://en.wikipedia.org/wiki/Lorentz_force}{\en{Lorentz force}\ru{силы Lorentz’а}}) ${\hspace{-0.1ex}\bm{F}(\bm{r}, \mathdotabove{\bm{r}}, t, q)}$, \en{acting on}\ru{действующей на}~\en{a~point charge}\ru{точечный заряд}\:--- \en{a~particle}\ru{частицу} \en{of infinitesimal size}\ru{бесконечно-малого размера}\ru{,} \en{that contains}\ru{содержащую} \en{electric charge}\ru{электрический заряд}~$q$ \en{and}\ru{и}~\en{moves}\ru{движущуюся} \en{with velocity}\ru{со~скоростью}~${\bm{v} \equiv \mathdotabove{\bm{r}}}$
 
-\nopagebreak\vspace{-0.15em}\begin{equation}\label{electromagneticforce}
+\nopagebreak\vspace{-0.25em}\begin{equation}\label{electromagneticforce}
 \bm{F} = \hspace{.12ex} q \hspace{.2ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{.2ex} + \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \bigr)
 \hspace{-0.1ex} .
 \end{equation}
 
-\vspace{-0.15em} \noindent \en{In~essence}\ru{По~сути}, \en{the~part}\ru{часть} \en{of the~electromagnetic force}\ru{электромагнитной силы}\ru{,} \en{arising from interaction}\ru{возникающая от взаимо\-действия} \en{with a~moving charge}\ru{с~движущимся зарядом}\:--- \en{magnetic force}\ru{магнитная сила}~${q \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}}$\:--- \en{reveals}\ru{являет} \en{magnetic field}\ru{магнитное поле}~${\hspace{.1ex}\boldmathbb{B}}$, \en{while}\ru{в~то время как} \en{the~other part}\ru{другая часть}\:--- \en{electric force}\ru{электрическая сила}~${q \hspace{.2ex} \boldmathbb{E}}$\:--- \en{reveals}\ru{являет} \en{electric field}\ru{электрическое поле}~${\hspace{.1ex}\boldmathbb{E}}$.
+\vspace{-0.2em} \noindent \en{In~essence}\ru{По~сути}, \en{the~part}\ru{часть} \en{of the~electromagnetic force}\ru{электромагнитной силы}\ru{,} \en{arising from interaction}\ru{возникающая от взаимо\-действия} \en{with a~moving charge}\ru{с~движущимся зарядом}\:--- \en{magnetic force}\ru{магнитная сила}~${q \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}}$\:--- \en{reveals}\ru{являет} \en{magnetic field}\ru{магнитное поле}~${\hspace{.1ex}\boldmathbb{B}}$, \en{while}\ru{в~то время как} \en{the~other part}\ru{другая часть}\:--- \en{electric force}\ru{электрическая сила}~${q \hspace{.1ex} \boldmathbb{E}}$\:--- \en{reveals}\ru{являет} \en{electric field}\ru{электрическое поле}~${\hspace{.1ex}\boldmathbb{E}}$.
 
-\vspace{-0.1em} \en{Acute question}\ru{Острый вопрос}: \en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\bm{v} \equiv \mathdotabove{\bm{r}}\hspace{.1ex}}$ \en{of a~charged particle}\ru{зар\'{я}женной частицы}\en{ measured}, \en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of~relativity}\ru{специальной теории относительности}}.
+\vspace{-0.1em} \en{Acute question}\ru{Острый вопрос}: \en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\bm{v} \equiv \mathdotabove{\bm{r}}\hspace{.1ex}}$ \en{of a~charged particle}\ru{заряжённой частицы}\en{ measured}, \en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of~relativity}\ru{специальной теории относительности}}%
+\footnote{%
+\bibauthor{Albert Einstein}.
+\href{http://users.physik.fu-berlin.de/~kleinert/files/1905_17_891-921.pdf}{Zur Elektrodynamik bewegter Körper.~//
+Annalen der~Physik, IV\kern-0.33ex.\:Folge, Band~17, 1905. Seiten 891\hbox{--}921.}
+}\hspace{-0.55ex}.
 
 the~classical concept about the~existence of~absolute space and~time as the~preferred frame of~reference
 
-...
-
-\en{charge density}\ru{плотность заряда} ${\uprho\hspace{.1ex}(\bm{r}, t)}$
-
-\en{vector of~density of~a~current}\ru{вектор плотности тока} ${\bm{j}(\bm{r}, t)}$
+a~vacuum is a~space without matter, \inquotes{free space}
 
 ...
 
-% ponderomotive force
+\en{continuous charge distribution}\ru{непрерывное распределение заряда}
 
-\en{In a~continuum}\ru{В~сплошной среде} \en{with charges and~currents}\ru{с~зарядами и~токами} \en{acts}\ru{действует} \en{the~}\en{volume}\ru{объёмная} \ru{\inquotes{пондеромоторная} (}\inquotes{ponderomotive}\ru{)} \en{force}\ru{сила}
+\en{charge density}\ru{плотность заряда} (\en{electric charge}\ru{электрический заряд} \en{per volume unit}\ru{на единицу объёма}) ${\chargedensity\hspace{.1ex}(\bm{r}, t)}$
 
-\nopagebreak\en{\vspace{-1em}}\ru{\vspace{-0.2em}}\begin{equation}\label{ponderomotiveforce}
-\bm{f} = \uprho \hspace{.16ex} \boldmathbb{E} \hspace{.1ex} + \hspace{.1ex} \bm{j} \hspace{-0.16ex} \times \hspace{-0.2ex} \boldmathbb{B}
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+dq = \chargedensity \hspace{.15ex} d \mathcal{V}
+, \hspace{.5em}
+q = \hspace{-0.5ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.3ex} \chargedensity \hspace{.15ex} d\mathcal{V}
+\end{equation*}
+
+\en{the~density of~electric current}\ru{плотность электрического тока} \en{is}\ru{есть} \en{the~flux of~electric charge}\ru{поток электрического заряда}
+${\currentdensity(\bm{r}, t) \hspace{-0.1ex} \equiv \chargedensity \hspace{.1ex} \mathdotabove{\bm{r}} \equiv \chargedensity \hspace{.1ex} \bm{v}}$
+
+\foreignlanguage{russian}{в ваку\kern-0.11exуме нет $\chargedensity$ и~$\currentdensity$}
+
+in a~region with no charges (${\chargedensity = 0}$) and no currents (${\currentdensity = \bm{0}}$), such as in a~vacuum, ...
+
+...
+
+\en{ponderomotive force}\ru{пондеромоторная сила} is electromagnetic force (Lorentz force) per volume unit
+
+\en{In}\ru{В} \en{a~material continuum}\ru{материальном контину\kern-0.11exуме} \en{with }\ru{с~}\en{charges}\ru{зарядами} \en{and}\ru{и}~\en{currents}\ru{токами} \en{acts}\ru{действует} \en{the~}\en{volume}\ru{объёмная} \ru{\inquotes{пондеромоторная} (}\inquotes{ponderomotive}\ru{)} \en{force}\ru{сила}
+
+\nopagebreak\vspace{-0.2em}\en{\vspace{-0.7em}}\begin{equation}\label{ponderomotive.electromagneticforcepervolumeunit}
+\bm{f} = \chargedensity \hspace{.16ex} \boldmathbb{E} \hspace{.1ex} + \hspace{.1ex} \currentdensity \hspace{-0.16ex} \times \hspace{-0.2ex} \boldmathbb{B}
 \end{equation}
 
-\vspace{-0.1em} \noindent --- \en{the~continual version of}\ru{континуальная версия}~\eqref{electromagneticforce}.
-
-% Maxwell stress tensor
-
-\en{Plus}\ru{Плюс} \en{another description exists}\ru{существует другое описание}\:--- \en{the so\hbox{-}called}\ru{так называемый} \href{https://en.wikipedia.org/wiki/Maxwell_stress_tensor}{\ru{тензор напряжения }Maxwell\ru{’а}\en{ stress tensor}}
-
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{maxwellstresstensor:definition}
-\maxwellstress \equiv \hspace{.12ex}
-\vacuumpermittivity \hspace{-0.33ex} \left(
-\boldmathbb{E} \hspace{.1ex} \boldmathbb{E} + c^{\hspace{.16ex}2} \hspace{.3ex} \boldmathbb{B} \boldmathbb{B}
-- \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} + c^{\hspace{.16ex}2} \hspace{.3ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \bigr) \hspace{-0.06ex} \bm{E} \hspace{.05ex}
-\right)
-\end{equation}
+\vspace{-0.22em} \noindent --- \en{it is}\ru{это} \en{the~differential}\ru{дифференциальная}~(\en{local}\ru{локальная}, \en{microscopic}\ru{микроскопическая}, \en{continual}\ru{континуальная}) \en{version of}\ru{версия}~\eqref{electromagneticforce}.
 
 ...
+
+% Maxwell’s equations
 
 \en{Electromagnetic phenomena}\ru{Электромагнитные явления} \en{are usually described}\ru{обыкновенно описываются} \ru{уравнениями }\en{by }Maxwell’\en{s}\ru{а}\en{ equations}.
-\ru{Уравнения }\href{https://en.wikipedia.org/wiki/James_Clerk_Maxwell}{Maxwell}’\en{s}\ru{а}\en{ equations} \en{are}\ru{суть}
+\en{Differential}\ru{Дифференциальные} \en{versions of~}\ru{версии }\ru{уравнений }\href{https://en.wikipedia.org/wiki/James_Clerk_Maxwell}{Maxwell}’\en{s}\ru{а}\en{ equations} \en{are}\ru{суть}
 
-\nopagebreak\vspace{.1em}\begin{equation}\label{maxwell.equations}
-\begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
-\boldnabla \dotp \hspace{.12ex} \boldmathbb{E} & = & \smash{\displaystyle \frac{\uprho}{\raisemath{.16em}{\vacuumpermittivity}}}
-\\[.6em]
+\nopagebreak\en{\vspace{.15em}}\ru{\vspace{-0.8em}}
+\refstepcounter{equation}
+\begin{align*}
+\hspace*{5em} \boldnabla \dotp \hspace{.12ex} \boldmathbb{E} &= \smash{\displaystyle \frac{\chargedensity}{\raisemath{.16em}{\vacuumpermittivity}}}
+\hspace{.1em} &
+\pushright{\scalebox{0.9}{\begin{minipage}[c]{.5\textwidth}\setstretch{0.96}
+\ru{теорема }Gauss’\en{s}\ru{а}\en{ theorem} \en{for elec\-tric\-i\-ty}\ru{для электричества}
+\end{minipage}}}
+\tag{$\theequation^{\raisemath{.15em}{\alpha}}$}\label{maxwell.equations:gauss.electric}
+\\[.25em]
 %
-\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} & = & - \hspace{.2ex} \mathdotabove{\boldmathbb{B}}
-\\[.6em]
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} &= - \hspace{.2ex} \mathdotabove{\boldmathbb{B}}
+\hspace{.1em} &
+\pushright{\scalebox{0.9}{\begin{minipage}[c]{.5\textwidth}\setstretch{0.96}
+\ru{уравнение }Maxwell\ru{’а}--Faraday\ru{’я}\en{ equation}\\
+(\ru{закон индукции }Faraday’\en{s}\ru{я}\en{ law of~induction})
+\end{minipage}}}
+\tag{$\theequation^{\raisemath{.15em}{\beta}}$}\label{maxwell.equations:faraday.induction}
+\\[.25em]
 %
-\boldnabla \dotp \hspace{.12ex} \boldmathbb{B} & = & \hspace{.1ex} 0
-\\[.6em]
+\boldnabla \dotp \hspace{.12ex} \boldmathbb{B} &= \hspace{.1ex} 0
+\hspace{.1em} &
+\pushright{\scalebox{0.9}{\begin{minipage}[c]{.5\textwidth}\setstretch{0.96}
+\ru{теорема }Gauss’\en{s}\ru{а}\en{ theorem} \en{for mag\-net\-ism}\ru{для магнетизма}
+\end{minipage}}}
+\tag{$\theequation^{\raisemath{.15em}{\gamma}}$}\label{maxwell.equations:gauss.magnetic}
+\\[.25em]
 %
-c^{\hspace{.16ex}2} \hspace{.4ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} & = & \smash{\displaystyle \frac{\bm{j}}{\raisemath{.16em}{\vacuumpermittivity}} + \hspace{.1ex} \mathdotabove{\boldmathbb{E}}}
-\end{array}
-\end{equation}
+c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} &= \smash{\displaystyle \frac{\currentdensity}{\raisemath{.16em}{\vacuumpermittivity}} + \hspace{.1ex} \mathdotabove{\boldmathbb{E}}}
+\hspace{.1em} &
+\pushright{\scalebox{0.9}{\begin{minipage}[c]{.5\textwidth}\setstretch{0.96}\raggedright
+\ru{циркуляционный закон }Ampère’\en{s}\ru{а}\en{ circuital law}
+\en{with }\ru{со~}\ru{слагаемым }Maxwell’\en{s}\ru{а}\en{ term}~${\smash{\mathdotabove{\boldmathbb{E}}}}$
+\en{for the~balance of electric charge}\ru{для баланса электрического заряда}
+\end{minipage}}}
+\tag{$\theequation^{\raisemath{.15em}{\delta}}$}\label{maxwell.equations:ampere.circuital.with.addition}
+\end{align*}
 
 ...
 
-speed of~light in vacuum
+\en{speed of~light in vacuum}\ru{скорость света в~ваку\kern-0.11exуме}
 ${c = 299\:792\:458}$~\raisebox{.3em}{\en{m}\ru{м}}\hspace{-0.2ex}/\hspace{-0.25ex}\raisebox{-0.2em}{\en{s}\ru{с}}
 
 \inquotesx{electric constant}[,] \href{https://en.wikipedia.org/wiki/Vacuum_permittivity}{vacuum permittivity} $\vacuumpermittivity$
@@ -110,98 +147,270 @@ ${\vacuumpermittivity \hspace{-0.12ex} \approx 8.8541878 \hspace{-0.25ex}\cdot\h
 
 \inquotesx{magnetic constant}[,] \href{https://en.wikipedia.org/wiki/Vacuum_permeability}{vacuum permeability}~${\vacuumpermeability \hspace{-0.24ex} = \hspace{-0.08ex} \smash{\scalebox{0.9}{$\displaystyle \frac{\raisemath{-0.16em}{1}}{\raisemath{-0.1em}{\vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2}}}$}}}$
 
-\nopagebreak\vspace{-0.1em}\begin{equation*}
-\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} = \vacuumpermeability \hspace{.1ex} \bm{j} + \vacuumpermeability \hspace{.1ex} \vacuumpermittivity \hspace{.1ex} \mathdotabove{\boldmathbb{E}}
+...
+
+\en{With}\ru{С}~$\vacuumpermeability$ \en{equation}\ru{уравнение}~\eqref{maxwell.equations:ampere.circuital.with.addition} \en{is sometimes written as}\ru{иногда пишется как}
+
+\nopagebreak\vspace{-0.3em}\begin{equation*}
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}
+= \vacuumpermeability \hspace{.2ex} \currentdensity + \vacuumpermeability \hspace{.1ex} \vacuumpermittivity \hspace{.1ex} \mathdotabove{\boldmathbb{E}}
+\hspace{.88em}\text{\en{or}\ru{или}}\hspace{.8em}
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}
+= \vacuumpermeability \hspace{.2ex} \currentdensity + \hspace{.1ex} \smash{\raisemath{.07em}{\scalebox{0.84}{$\displaystyle \frac{\raisemath{-0.16em}{1}}{\raisemath{-0.1em}c^{\hspace{.16ex}2}}$}}} \hspace{.1ex} \mathdotabove{\boldmathbb{E}}
+\hspace{.2ex} .
 \end{equation*}
 
 ...
 
-Ampère’s circuital law (with Maxwell’s addition) (with Maxwell’s additional time-dependent term)
+% balance of charge
+
+\en{The~balance of electric charge}\ru{Баланс электрического заряда}\:--- \href{https://en.wikipedia.org/wiki/Continuity_equation}{\en{the~continuity equation}\ru{уравнение непрерывности (сплошности, неразрывности)}} \en{for}\ru{для} \en{electric charge}\ru{электрического заряда}\:--- \en{mathematically follows}\ru{математически следует} \en{from}\ru{из} \ru{уравнений }Maxwell’\en{s}\ru{а}\en{ equations}
+
+\nopagebreak\vspace{.2em}\begin{equation*}
+\left.\begin{array}{r@{\hspace{.6em}}c@{\hspace{.6em}}l}
+\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \eqref{maxwell.equations:ampere.circuital.with.addition}
+& \Rightarrow &
+c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \dotp \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \hspace{.1ex} \bigr) \hspace{-0.1ex}
+= \hspace{.1ex} \smash{\displaystyle \frac{\boldnabla \hspace{-0.15ex} \dotp \currentdensity}{\raisemath{.16em}{\vacuumpermittivity}}} \hspace{.1ex} + \boldnabla \dotp \hspace{.1ex} \mathdotabove{\boldmathbb{E}}
+\\[.5em]
+%
+\eqref{maxwell.equations:gauss.electric}^{\hspace{-0.05ex}\tikz[baseline=-0.4ex]\draw[black, fill=black] (0,0) circle (.28ex);}
+& \Rightarrow &
+\boldnabla \dotp \hspace{.1ex} \mathdotabove{\boldmathbb{E}} \hspace{.1ex} = \smash{\displaystyle \frac{\mathdotabove{\chargedensity}}{\raisemath{.16em}{\vacuumpermittivity}}}
+\\[.64em]
+%
+& &
+\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \bm{a} \bigr) \hspace{-0.3ex} = 0 \:\:\forall \bm{a}
+\hspace{.1ex} , \hspace{.55em}
+\currentdensity \equiv \chargedensity \hspace{.1ex} \mathdotabove{\bm{r}}
+\end{array}\hspace{.1ex}\right\rbrace
+\hspace{.5ex}\Rightarrow\hspace*{4em}
+\end{equation*}
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{continuity.balanceofelectriccharge}
+\hspace*{1em}\Rightarrow\hspace{.7ex}
+\boldnabla \hspace{-0.15ex} \dotp \hspace{-0.15ex} \bigl( \chargedensity \hspace{.1ex} \mathdotabove{\bm{r}} \hspace{.1ex} \bigr) \hspace{-0.3ex} + \mathdotabove{\chargedensity} \hspace{.1ex} = 0
+\hspace{.1ex} .
+\vspace{-0.5em}\end{equation}
+
+% Maxwell stress tensor
+
+\en{Besides}\ru{Помимо} \en{the~ponderomotive force vector}\ru{вектора пондеромоторной силы}~\eqref{ponderomotive.electromagneticforcepervolumeunit}, \en{with which}\ru{с~которой} \en{the~electro\-magnetic field}\ru{электро\-магнитное поле} \en{acts on the~continuum}\ru{действует на~контину\kern-0.11exум}, \en{another expression of~interaction exists}\ru{существует и~другое выражение взаимо\-действия}\:--- \en{the~bivalent}\ru{бивалентный} \href{https://en.wikipedia.org/wiki/Maxwell_stress_tensor}{\inquotes{Maxwell\ru{’овский}} \en{stress tensor}\ru{тензор напряжения}}
+
+\nopagebreak\en{\vspace{-0.1em}}\ru{\vspace{-0.25em}}\begin{equation}\label{maxwellstresstensor:definition}
+\maxwellstress \equiv \hspace{.12ex}
+\vacuumpermittivity \hspace{-0.33ex} \left(
+\boldmathbb{E} \hspace{.1ex} \boldmathbb{E} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \boldmathbb{B}
+- \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \bigr) \hspace{-0.06ex} \bm{E} \hspace{.05ex}
+\right) \hspace{-0.22em} .
+\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{It derives}\ru{Он выводится} \en{from}\ru{из}~\eqref{ponderomotive.electromagneticforcepervolumeunit} \en{and}\ru{и} \ru{уравнений }Maxwell’\en{s}\ru{а}\en{ equations}
+
+\nopagebreak\vspace{-0.1em}\begin{align*}
+\eqref{maxwell.equations:gauss.electric}
+& \hspace{.27em}\Rightarrow\hspace{.35em}
+\chargedensity = \vacuumpermittivity \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{E}
+\\[-0.1em]
+%
+\eqref{maxwell.equations:ampere.circuital.with.addition}
+& \hspace{.27em}\Rightarrow\hspace{.35em}
+\currentdensity = \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{B} - \vacuumpermittivity \hspace{.1ex} \mathdotabove{\boldmathbb{E}}
+\end{align*}
+%
+\nopagebreak\vspace{-1.2em}\begin{multline*}
+\eqref{ponderomotive.electromagneticforcepervolumeunit}
+\hspace{.27em}\Rightarrow\hspace{.35em}
+\bm{f} = \hspace{.1ex} \vacuumpermittivity \hspace{-0.1ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{E} \hspace{.16ex} \boldmathbb{E} \hspace{.2ex}
++ \bigl( \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{B} - \vacuumpermittivity \hspace{.1ex} \mathdotabove{\boldmathbb{E}} \hspace{.1ex} \bigr) \hspace{-0.44ex} \times \hspace{-0.2ex} \boldmathbb{B} =
+\\[-0.15em]
+%
+= \hspace{.1ex} \vacuumpermittivity \hspace{-0.1ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{E} \hspace{.16ex} \boldmathbb{E} \hspace{.2ex}
++ \hspace{.1ex} \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{B} \hspace{.1ex} \bigr) \hspace{-0.44ex} \times \hspace{-0.2ex} \boldmathbb{B} \hspace{.1ex}
+- \hspace{.1ex} \vacuumpermittivity \hspace{.1ex} \mathdotabove{\boldmathbb{E}} \hspace{-0.15ex} \times \hspace{-0.2ex} \boldmathbb{B}
+\end{multline*}
+
+\vspace{-0.1em}\begin{equation*}
+\left.
+\begin{array}{c}
+\bigl( \hspace{.1ex} \boldmathbb{E} \times \hspace{-0.15ex} \boldmathbb{B} \hspace{.1ex} \bigr)^{\hspace{-0.1em}\tikz[baseline=-0.4ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+= \hspace{.1ex} \mathdotabove{\boldmathbb{E}} \times \hspace{-0.15ex} \boldmathbb{B} \hspace{.1ex} + \hspace{.1ex} \boldmathbb{E} \times \hspace{-0.15ex} \mathdotabove{\boldmathbb{B}}
+\\[.15em]
+\eqref{maxwell.equations:faraday.induction}
+\hspace{.27em}\Rightarrow\hspace{.33em}
+\mathdotabove{\boldmathbb{B}} = - \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{E}
+\end{array}
+\hspace{-0.1em} \right\rbrace
+%
+\hspace{.1em} \Rightarrow \hspace{.22em}
+%
+\mathdotabove{\boldmathbb{E}} \times \hspace{-0.15ex} \boldmathbb{B} \hspace{.1ex}
+= \hspace{-0.1ex} \bigl( \hspace{.1ex} \boldmathbb{E} \times \hspace{-0.15ex} \boldmathbb{B} \hspace{.1ex} \bigr)^{\hspace{-0.1em}\tikz[baseline=-0.4ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
++ \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \times \hspace{-0.4ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{E} \hspace{.1ex} \bigr)
+\end{equation*}
+
+\noindent
+\en{Then}\ru{Тогда}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{f} = \hspace{.1ex} \vacuumpermittivity \hspace{-0.1ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{E} \hspace{.1ex} \boldmathbb{E} \hspace{.2ex}
+- \hspace{.1ex} \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.2ex} \times \hspace{-0.4ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{B} \hspace{.1ex} \bigr) \hspace{-0.2ex}
+- \hspace{.1ex} \vacuumpermittivity \hspace{.12ex} \boldmathbb{E} \hspace{-0.15ex} \times \hspace{-0.4ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{E} \hspace{.1ex} \bigr) \hspace{-0.2ex}
+- \hspace{.1ex} \vacuumpermittivity \hspace{-0.07ex} \bigl( \hspace{.1ex} \boldmathbb{E} \times \hspace{-0.15ex} \boldmathbb{B} \hspace{.1ex} \bigr)^{\hspace{-0.1em}\tikz[baseline=-0.4ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+\end{equation*}
+
+\vspace{-0.1em}\noindent
+\en{For}\ru{Для} \en{the~symmetry}\ru{симметрии} \en{with}\ru{с}~${\boldnabla \hspace{-0.1ex} \dotp \boldmathbb{E} \hspace{.1ex} \boldmathbb{E}}$, \en{the~null vector}\ru{нуль\hbox{-}вектор}
+
+\nopagebreak\vspace{-0.1em}\begin{align*}
+\eqref{maxwell.equations:gauss.magnetic}
+& \hspace{.27em}\Rightarrow\hspace{.25em}
+\boldnabla \hspace{-0.1ex} \dotp \boldmathbb{B} \boldmathbb{B} = \hspace{.1ex} \bm{0}
+\hspace{.1ex} , \hspace{.4em}
+c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{B} \boldmathbb{B} = \hspace{.1ex} \bm{0}
+\end{align*}
+
+\nopagebreak\vspace{-0.2em}\noindent
+\en{is added}\ru{добавляется} \en{to}\ru{к}~${\bm{f}\hspace{-0.1ex}}$.
 
 ...
 
+\begin{align*}
 \eqrefwithchapdotpara{divergenceofdyadicproducoftwovectors}{chapter:elementsoftensorcalculus}{para:differentiationoftensorfields}
-$\Rightarrow$
-${
+& \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{-0.16ex} \dotp \hspace{-0.2ex} \bigl( \hspace{-0.05ex} \bm{a} \bm{a} \bigr) \hspace{-0.33ex}
 = \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.18ex} \dotp \hspace{-0.1ex} \bm{a} \bigr) \hspace{-0.1ex} \bm{a} \hspace{.1ex} + \bm{a} \hspace{-0.07ex} \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.1ex} \bm{a}
-}$
-
+\\[-0.1em]
+%
 \eqrefwithchapdotpara{gradientofdotproductoftwovectors}{chapter:elementsoftensorcalculus}{para:differentiationoftensorfields}
-$\Rightarrow$
-${
+& \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{.1ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = 2 \hspace{.16ex} \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bm{a}
-}$
+\end{align*}
 
-${
+\begin{equation*}
 \boldnabla \hspace{-0.16ex} \dotp \hspace{-0.12ex} \bigl( \hspace{-0.05ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \hspace{.1ex} \bm{E} \hspace{.12ex} \bigr) \hspace{-0.33ex}
 = \hspace{-0.15ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.22ex}  \bm{E} \hspace{.13ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = \hspace{-0.15ex} \boldnabla \hspace{.1ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = 2 \hspace{.16ex} \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bm{a}
-}$
+\end{equation*}
 
 \begin{multline*}
 \boldnabla \hspace{-0.05ex} \dotp \hspace{-0.1ex} \maxwellstress =
 \hspace{.1ex} \vacuumpermittivity \Bigl( \hspace{-0.2ex}
 \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldmathbb{E} \hspace{.1ex} \boldmathbb{E} \hspace{.1ex} \bigr) \hspace{-0.22ex}
-+ \hspace{.1ex} c^{\hspace{.16ex}2} \hspace{.3ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldmathbb{B} \boldmathbb{B} \bigr) \hspace{-0.22ex}
++ \hspace{.1ex} c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldmathbb{B} \boldmathbb{B} \bigr) \hspace{-0.22ex}
 - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.1ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} \hspace{.1ex} \bm{E} \hspace{.1ex}
-+ c^{\hspace{.16ex}2} \hspace{.3ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \bm{E} \hspace{.15ex} \bigr) \hspace{-0.2ex}
++ c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \bm{E} \hspace{.15ex} \bigr) \hspace{-0.2ex}
 \Bigr) \hspace{-0.33ex} =
 \\[-0.25em]
 %
 = \hspace{.1ex} \vacuumpermittivity \Bigl( \hspace{-0.2ex}
 \boldnabla \hspace{-0.15ex} \dotp \boldmathbb{E} \hspace{.1ex} \boldmathbb{E} \hspace{.1ex}
 + \boldmathbb{E} \dotp \hspace{-0.22ex} \boldnabla \hspace{.2ex} \boldmathbb{E} \hspace{.1ex}
-+ c^{\hspace{.16ex}2} \hspace{.3ex} \boldnabla \hspace{-0.15ex} \dotp \boldmathbb{B} \boldmathbb{B}
-+ c^{\hspace{.16ex}2} \hspace{.3ex} \boldmathbb{B} \hspace{-0.1ex} \dotp \hspace{-0.22ex} \boldnabla \hspace{.2ex} \boldmathbb{B} \Bigr. \hspace{.3ex} -
++ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.15ex} \dotp \boldmathbb{B} \boldmathbb{B}
++ c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.1ex} \dotp \hspace{-0.22ex} \boldnabla \hspace{.2ex} \boldmathbb{B} \Bigr. \hspace{.3ex} -
 \\[-0.55em]
 %
 - \hspace{-0.2ex} \Bigl. \boldnabla \hspace{.2ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} \hspace{.1ex}
-- c^{\hspace{.16ex}2} \hspace{.3ex} \boldnabla \hspace{.2ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \hspace{-0.1ex}
+- c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{.2ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \hspace{-0.1ex}
 \Bigr)
 \end{multline*}
 
 ...
 
-to derive wave equations
+\en{\section{Electromagnetic waves}}
+
+\ru{\section{Электромагнитные волны}}
+
+To derive wave equations
 
 \nopagebreak\begin{equation*}
-\begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
+\begin{array}{r@{\hspace{.5em}}c@{\hspace{.5em}}r@{\hspace{.3em}}c@{\hspace{.3em}}l}
+\boldnabla \hspace{-0.25ex} \times \hspace{-0.25ex} \eqref{maxwell.equations:faraday.induction}
+& \Rightarrow &
 \boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} \hspace{.1ex} \bigr) \hspace*{-0.3ex} &
 = &
 - \hspace{.1ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \mathdotabove{\boldmathbb{B}}
 \\[.1em]
+%
+\boldnabla \hspace{-0.25ex} \times \hspace{-0.25ex} \eqref{maxwell.equations:ampere.circuital.with.addition}
+& \Rightarrow &
 \boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \bigr) \hspace*{-0.3ex} &
 = &
-\boldnabla \hspace{-0.12ex} \times \hspace{-0.33ex} \biggl( \displaystyle \frac{\bm{j}}{\raisemath{-0.1em}{ \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} }} + \hspace{.1ex} \displaystyle \frac{\raisemath{-0.12em}{ \mathdotabove{\boldmathbb{E}} }}{\raisemath{-0.1em}{ c^{\hspace{.16ex}2} }} \biggr)
+\boldnabla \hspace{-0.12ex} \times \hspace{-0.33ex} \biggl( \displaystyle \frac{\currentdensity}{\raisemath{-0.1em}{ \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} }} + \hspace{.1ex} \displaystyle \frac{\raisemath{-0.12em}{ \mathdotabove{\boldmathbb{E}} }}{\raisemath{-0.1em}{ c^{\hspace{.16ex}2} }} \biggr)
 \end{array}
 \end{equation*}
-
-${\boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} \hspace{.1ex} \bigr) \hspace{-0.25ex} = \hspace{-0.1ex} \boldnabla \boldnabla \dotp \hspace{.12ex} \boldmathbb{E} \hspace{.1ex} - \Laplacian \hspace{.05ex} \boldmathbb{E}}$
-
-${\boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \bigr) \hspace{-0.25ex} = \hspace{-0.1ex} \boldnabla \boldnabla \dotp \hspace{.12ex} \boldmathbb{B} \hspace{.1ex} - \Laplacian \hspace{.05ex} \boldmathbb{B}}$
 
 \nopagebreak\begin{equation*}
-\begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
-\boldnabla \dotp \hspace{.12ex} \boldmathbb{E} & = & \displaystyle \frac{\uprho}{\raisemath{.16em}{\vacuumpermittivity}}
-\\[.5em]
-\boldnabla \dotp \hspace{.12ex} \boldmathbb{B} & = & \hspace{.1ex} 0
+\begin{array}{r@{\hspace{.4em}}r@{\hspace{.5em}}c@{\hspace{.5em}}l}
+%
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \mathdotabove{\boldmathbb{E}} \hspace{.1ex}
+= \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} \hspace{.1ex} \bigr)^{\hspace{-0.2ex}\tikz[baseline=-0.4ex]\draw[black, fill=black] (0,0) circle (.28ex);}
+\hspace{-0.33ex} , &
+\eqref{maxwell.equations:faraday.induction}
+& \Rightarrow &
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \mathdotabove{\boldmathbb{E}} \hspace{.1ex}
+= - \hspace{.15ex} \mathdotdotabove{\boldmathbb{B}}
+\\[.1em]
+%
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \mathdotabove{\boldmathbb{B}}
+= \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \bigr)^{\hspace{-0.2ex}\tikz[baseline=-0.4ex]\draw[black, fill=black] (0,0) circle (.28ex);}
+\hspace{-0.33ex} , &
+\eqref{maxwell.equations:ampere.circuital.with.addition}
+& \Rightarrow &
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \mathdotabove{\boldmathbb{B}}
+= \displaystyle \frac{\currentdensity^{\hspace{.1ex}\tikz[baseline=-0.36ex]\draw[black, fill=black] (0,0) circle (.28ex);}}{\raisemath{-0.1em}{ \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} }} + \hspace{.1ex} \displaystyle \frac{\raisemath{-0.12em}{ \mathdotdotabove{\boldmathbb{E}} }}{\raisemath{-0.1em}{ c^{\hspace{.16ex}2} }}
 \end{array}
 \end{equation*}
 
+${
+\boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} \hspace{.1ex} \bigr) \hspace{-0.25ex}
+= \hspace{-0.1ex} \boldnabla \boldnabla \dotp \hspace{.12ex} \boldmathbb{E} \hspace{.1ex} - \Laplacian \hspace{.05ex} \boldmathbb{E}
+}$
+
+${
+\boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \bigr) \hspace{-0.25ex}
+= \hspace{-0.1ex} \boldnabla \boldnabla \dotp \hspace{.12ex} \boldmathbb{B} \hspace{.1ex} - \Laplacian \hspace{.05ex} \boldmathbb{B}
+}$
+
+\begin{align*}
+\Laplacian \hspace{.05ex} \boldmathbb{E} - \hspace{-0.15ex} \boldnabla \tikzmark{beginElectricGaussInWaves} \boldnabla \dotp \hspace{.12ex} \boldmathbb{E} \tikzmark{endElectricGaussInWaves} \hspace{.2ex}
+&= %%\hspace{-0.1ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \mathdotabove{\boldmathbb{B}}
+\hspace{.1ex} \displaystyle\frac{\raisemath{-0.12em}{ \mathdotdotabove{\boldmathbb{E}} }}{\raisemath{-0.1em}{ c^{\hspace{.16ex}2} }}
++ \hspace{.1ex} \displaystyle\frac{\currentdensity^{\hspace{.1ex}\tikz[baseline=-0.36ex]\draw[black, fill=black] (0,0) circle (.28ex);}}{\raisemath{-0.1em}{ \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} }}
+\\[.2em]
+%
+\Laplacian \hspace{.05ex} \boldmathbb{B} - \hspace{-0.15ex} \boldnabla \tikzmark{beginMagneticGaussInWaves} \boldnabla \dotp \hspace{.12ex} \boldmathbb{B} \tikzmark{endMagneticGaussInWaves} \hspace{.1ex}
+&=
+\hspace{.1ex} \displaystyle\frac{\raisemath{-0.12em}{ \mathdotdotabove{\boldmathbb{B}} }}{\raisemath{-0.1em}{ c^{\hspace{.16ex}2} }}
+- \hspace{.1ex} \displaystyle\frac{ \boldnabla \hspace{-0.33ex} \times \hspace{-0.25ex} \currentdensity }{\raisemath{-0.1em}{ \vacuumpermittivity \hspace{.1ex} c^{\hspace{.16ex}2} }}
+\end{align*}%
+\AddUnderBrace[line width=.75pt][0.2ex, 0.1ex][xshift=0.55em, yshift=.25ex]{beginElectricGaussInWaves}{endElectricGaussInWaves}{${%
+\scalebox{0.77}{$ \raisemath{.36em}{\chargedensity} \hspace{-0.25ex} / \hspace{-0.3ex} \raisemath{-0.22em}{\vacuumpermittivity
+} \hspace{.4ex}\eqref{maxwell.equations:gauss.electric} $}%
+}$}%
+\AddUnderBrace[line width=.75pt][0.2ex, 0.1ex][xshift=0.75em, yshift=.3ex]{beginMagneticGaussInWaves}{endMagneticGaussInWaves}{${%
+\scalebox{0.77}{$ 0 \hspace{.7ex}\eqref{maxwell.equations:gauss.magnetic} $}%
+}$}
 
 ...
 
-${\boldnabla \dotp \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \bm{a} \bigr) \hspace{-0.24ex} = 0 \:\:\forall \bm{a}}$
+% potential formulation
 
-${\boldnabla \hspace{-0.15ex} \times \hspace{-0.25ex} \boldnabla \alpha = \bm{0} \:\:\forall \alpha}$
+${\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \bm{a} \bigr) \hspace{-0.3ex} = 0 \:\:\forall \bm{a}}$
+
+${
+\boldnabla \hspace{-0.2ex} \times \hspace{-0.28ex} \boldnabla = \hspace{.08ex} \bm{0}
+\hspace{.1ex} , \hspace{.33em}
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.25ex} \boldnabla \alpha = \bm{0} \:\:\forall \alpha
+}$
 
 vector potential $\boldmathbb{A}$
 
 \nopagebreak\[
 \boldnabla \dotp \hspace{.12ex} \boldmathbb{B} = \hspace{.1ex} 0
+\;\;\eqref{maxwell.equations:gauss.magnetic}
 \hspace{.4em} \Leftrightarrow \hspace{.4em}
 \boldmathbb{B} =  \hspace{-0.1ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.12ex} \boldmathbb{A}
 \]
@@ -212,18 +421,20 @@ potential~${\boldmathbb{A}}$ is not unique and has gauge freedom ${\boldmathbb{A
 \boldmathbb{B} =  \hspace{-0.1ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \bigl( \boldmathbb{A} + \hspace{-0.2ex} \boldnabla a \hspace{.1ex} \bigr)
 \hspace{.25em} \Leftrightarrow \hspace{.27em}
 \boldnabla \dotp \hspace{.12ex} \boldmathbb{B} = \hspace{.1ex} 0
+\;\;\eqref{maxwell.equations:gauss.magnetic}
 \]
 
 scalar potential $\upphi$
 
 \nopagebreak\begin{multline}
 \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} = - \hspace{.2ex} \mathdotabove{\boldmathbb{B}}
+\;\;\eqref{maxwell.equations:faraday.induction}
 \hspace{.4em} \Rightarrow \hspace{.3em}
 \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{E} = - \hspace{.2ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \bigl( \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr)
 \hspace{.4em} \Rightarrow
 \\[-0.1em]
 \Rightarrow \hspace{.3em}
-\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \bigl( \hspace{.1ex} \boldmathbb{E} + \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace{-0.4ex} = 0
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \bigl( \hspace{.1ex} \boldmathbb{E} + \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace{-0.4ex} = \bm{0}
 \hspace{.4em} \Rightarrow \hspace{.25em}
 - \boldnabla \upphi = \hspace{.1ex} \boldmathbb{E} + \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a}
 \hspace{.4em} \Rightarrow
@@ -236,34 +447,39 @@ scalar potential $\upphi$
 And
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{electromagnetic.firstequationofwave}
-\boldnabla \dotp \hspace{.12ex} \boldmathbb{E} = \displaystyle \frac{\uprho}{\raisemath{.16em}{\vacuumpermittivity}}
+\boldnabla \dotp \hspace{.12ex} \boldmathbb{E} = \displaystyle \frac{\chargedensity}{\raisemath{.16em}{\vacuumpermittivity}}
+\;\;\eqref{maxwell.equations:gauss.electric}
 \hspace{.44em} \Rightarrow
 %
 \begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
-- \hspace{-0.1ex} \Laplacian \bigl( \upphi \hspace{-0.1ex} + \mathdotabove{a} \hspace{.1ex} \bigr) \hspace{-0.2ex} - \hspace{-0.15ex} \boldnabla \hspace{-0.1ex} \dotp \mathdotabove{\boldmathbb{A}} & = & \scalebox{0.9}{$\displaystyle \frac{\uprho}{\raisemath{.16em}{\vacuumpermittivity}}$}
+- \hspace{-0.1ex} \Laplacian \bigl( \upphi \hspace{-0.1ex} + \mathdotabove{a} \hspace{.1ex} \bigr) \hspace{-0.2ex} - \hspace{-0.15ex} \boldnabla \hspace{-0.1ex} \dotp \mathdotabove{\boldmathbb{A}} & = & \scalebox{0.9}{$\displaystyle \frac{\chargedensity}{\raisemath{.16em}{\vacuumpermittivity}}$}
 \\[.66em]
-- \hspace{-0.1ex} \Laplacian \upphi - \hspace{-0.15ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \bigl( \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace*{-0.33ex} & = & \scalebox{0.9}{$\displaystyle \frac{\uprho}{\raisemath{.16em}{\vacuumpermittivity}}$}
+- \hspace{-0.1ex} \Laplacian \upphi - \hspace{-0.15ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \bigl( \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace*{-0.33ex} & = & \scalebox{0.9}{$\displaystyle \frac{\chargedensity}{\raisemath{.16em}{\vacuumpermittivity}}$}
 \end{array}
 \end{equation}
 
 ${\boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{A} \bigr) \hspace{-0.25ex} = \hspace{-0.1ex} \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} - \Laplacian \hspace{.05ex} \boldmathbb{A}}$
 
-${\boldnabla \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla a - \hspace{-0.15ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla \boldnabla a = 0}$ (partial derivatives of a~smooth function commute)
+${\boldnabla \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla a - \hspace{-0.2ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla \boldnabla a = \bm{0}}$ (partial derivatives of a~smooth function commute)
 
-\nopagebreak\vspace{-0.1em}\begin{multline}\label{electromagnetic.secondequationofwave}
-c^{\hspace{.16ex}2} \hspace{.4ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}
-= \displaystyle \frac{\bm{j}}{\raisemath{.16em}{\vacuumpermittivity}} + \hspace{.1ex} \mathdotabove{\boldmathbb{E}}
-\hspace{.44em} \Rightarrow \hspace{.33em}
-%
-c^{\hspace{.16ex}2} \hspace{.4ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{A} \bigr) \hspace{-0.25ex}
-= \displaystyle \frac{\bm{j}}{\raisemath{.16em}{\vacuumpermittivity}} - \hspace{-0.15ex} \boldnabla \hspace{.1ex} \bigl( \mathdotabove{\upphi} \hspace{-0.1ex} + \mathdotdotabove{a} \hspace{.2ex} \bigr) \hspace{-0.3ex} - \mathdotdotabove{\boldmathbb{A}}
+\nopagebreak\vspace{-0.4em}\begin{multline}\label{electromagnetic.secondequationofwave}
+c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}
+= \displaystyle \frac{\currentdensity}{\raisemath{.16em}{\vacuumpermittivity}} + \hspace{.1ex} \mathdotabove{\boldmathbb{E}}
+\;\;\eqref{maxwell.equations:ampere.circuital.with.addition}
 \hspace{.44em} \Rightarrow
 %
 \\[-0.4em]
 %
 \Rightarrow \hspace{.33em}
-c^{\hspace{.16ex}2} \bigl( \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} - \Laplacian \hspace{.05ex} \boldmathbb{A} \bigr) \hspace{-0.25ex}
-= \displaystyle \frac{\bm{j}}{\raisemath{.16em}{\vacuumpermittivity}} - \hspace{-0.15ex} \boldnabla \mathdotabove{\upphi} - \hspace{-0.15ex} \boldnabla \hspace{.1ex} \mathdotdotabove{a} \hspace{.1ex} - \mathdotdotabove{\boldmathbb{A}}
+c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{A} \bigr) \hspace{-0.15ex}
+= \hspace{.1ex} \displaystyle \frac{\currentdensity}{\raisemath{.16em}{\vacuumpermittivity}} - \hspace{-0.15ex} \boldnabla \hspace{.1ex} \bigl( \mathdotabove{\upphi} \hspace{-0.1ex} + \mathdotdotabove{a} \hspace{.2ex} \bigr) \hspace{-0.3ex} - \mathdotdotabove{\boldmathbb{A}}
+\hspace{.44em} \Rightarrow
+%
+\\[-0.4em]
+%
+\Rightarrow \hspace{.33em}
+c^{\hspace{.16ex}2} \bigl( \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} - \Laplacian \hspace{.05ex} \boldmathbb{A} \bigr) \hspace{-0.15ex}
+= \hspace{.1ex} \displaystyle \frac{\currentdensity}{\raisemath{.16em}{\vacuumpermittivity}} - \hspace{-0.15ex} \boldnabla \mathdotabove{\upphi} - \hspace{-0.15ex} \boldnabla \hspace{.1ex} \mathdotdotabove{a} \hspace{.1ex} - \mathdotdotabove{\boldmathbb{A}}
 \hspace{.2ex} .
 \end{multline}
 
@@ -272,26 +488,26 @@ c^{\hspace{.16ex}2} \bigl( \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmath
 \nopagebreak\vspace{-0.25em}\begin{gather*}
 \left.
 \begin{array}{r@{\hspace{.55em}}c@{\hspace{.55em}}l}
-- \boldnabla \hspace{.1ex} \mathdotdotabove{a} \hspace{.1ex} = \hspace{-0.2ex} \boldnabla \mathdotabove{\upphi} + c^{\hspace{.16ex}2} \hspace{.3ex} \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A}
+- \boldnabla \hspace{.1ex} \mathdotdotabove{a} \hspace{.1ex} = \hspace{-0.2ex} \boldnabla \mathdotabove{\upphi} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A}
 & \Rightarrow &
 %
-\mathdotdotabove{a} \hspace{.1ex} = - \hspace{.4ex} \mathdotabove{\upphi} - c^{\hspace{.16ex}2} \hspace{.3ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A}
+\mathdotdotabove{a} \hspace{.1ex} = - \hspace{.4ex} \mathdotabove{\upphi} - c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A}
 %
-\\[.25em]
+\\[.2em]
 %
-- \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \bigl( \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace{-0.3ex}
-= \scalebox{0.9}{$\displaystyle \frac{\raisemath{-0.16em}{1}}{\raisemath{-0.1em}{c^{\hspace{.16ex}2}}}$} \hspace{.12ex} \mathdotdotabove{\upphi}
+- \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.2ex} \bigl( \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace{-0.2ex}
+= \raisemath{.07em}{\scalebox{0.84}{$\displaystyle \frac{\raisemath{-0.16em}{1}}{\raisemath{-0.1em}c^{\hspace{.16ex}2}}$}} \hspace{.16ex} \mathdotdotabove{\upphi}
 & \Rightarrow &
 %
-\mathdotabove{\upphi} = \hspace{-0.1ex} - \hspace{.2ex} c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \bigl( \boldmathbb{A} + \hspace{-0.2ex} \boldnabla a \hspace{.1ex} \bigr)
+\mathdotabove{\upphi} = \hspace{-0.1ex} - \hspace{.3ex} c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.2ex} \bigl( \boldmathbb{A} + \hspace{-0.2ex} \boldnabla a \hspace{.1ex} \bigr)
 \end{array}
 \hspace{-0.2em} \right\rbrace \hspace{.1em} \Rightarrow
 %
-\\[-0.1em]
+\\
 %
 \Rightarrow \hspace{.4em}
-c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \boldmathbb{A} + c^{\hspace{.16ex}2} \hspace{-0.4ex} \Laplacian \hspace{.07ex} a
-- c^{\hspace{.16ex}2} \hspace{.3ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} = \hspace{.15ex} \mathdotdotabove{a}
+c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.12ex} \boldmathbb{A} + c^{\hspace{.16ex}2} \hspace{-0.4ex} \Laplacian \hspace{.07ex} a
+- c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} = \hspace{.15ex} \mathdotdotabove{a}
 \hspace{.16ex} ,
 \end{gather*}
 
@@ -309,7 +525,7 @@ c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \hspace{.3em} \Rightarrow \hspace{.3em}
 \mathdotdotabove{a} = 0
 \hspace{.1ex} , \:\:
-\mathdotabove{\upphi} + c^{\hspace{.16ex}2} \hspace{.3ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} = 0
+\mathdotabove{\upphi} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} = 0
 \end{equation*}
 
 \vspace{-0.2em} \noindent --- \href{https://en.wikipedia.org/wiki/Lorenz_gauge_condition}{\ru{условие калибровки }Lorenz\ru{’а}\en{ gauge condition}}, \en{which}\ru{которое} \en{gives}\ru{даёт} \en{the~same}\ru{такой~же} \en{effect}\ru{эффект}, \en{being just a~particular}\ru{будучи лишь частным}\:--- \href{https://en.wikipedia.org/wiki/Harmonic_function}{\en{harmonic}\ru{гармоническим}}\:--- \en{case}\ru{случаем}~\en{of~}\eqref{gaugeadditioniswave}.
@@ -318,10 +534,10 @@ c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 \nopagebreak\begin{equation}
 \begin{array}{c}
-- \hspace{-0.1ex} \Laplacian \upphi + \scalebox{0.9}{$\displaystyle \frac{\raisemath{-0.16em}{1}}{\raisemath{-0.1em}{c^{\hspace{.16ex}2}}}$} \hspace{.12ex} \mathdotdotabove{\upphi} = \smash{\displaystyle \frac{\uprho}{\raisemath{.16em}{\vacuumpermittivity}}}
+- \hspace{-0.1ex} \Laplacian \upphi + \raisemath{.07em}{\scalebox{0.84}{$\displaystyle \frac{\raisemath{-0.16em}{1}}{\raisemath{-0.1em}c^{\hspace{.16ex}2}}$}} \hspace{.16ex} \mathdotdotabove{\upphi} = \smash{\displaystyle \frac{\chargedensity}{\raisemath{.16em}{\vacuumpermittivity}}}
 \hspace{.1ex} ,
 \\[.5em]
-- \hspace{.25ex} c^{\hspace{.16ex}2} \hspace{-0.4ex} \Laplacian \hspace{.05ex} \boldmathbb{A} = \displaystyle \frac{\bm{j}}{\raisemath{.16em}{\vacuumpermittivity}} - \mathdotdotabove{\boldmathbb{A}}
+- \hspace{.3ex} c^{\hspace{.16ex}2} \hspace{-0.4ex} \Laplacian \hspace{.05ex} \boldmathbb{A} = \displaystyle \frac{\currentdensity}{\raisemath{.16em}{\vacuumpermittivity}} - \mathdotdotabove{\boldmathbb{A}}
 \hspace{.2ex} .
 \end{array}
 \end{equation}
@@ -336,21 +552,23 @@ c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 \begin{otherlanguage}{russian}
 
-Рассмотрение этого вопроса полезно для последующего опис\'{а}ния магнетизма. В~статике
+Рассмотрение этого вопроса полезно и для последующего опис\'{а}ния магнетизма. В~статике
 
-\nopagebreak\vspace{-0.1ex}\begin{equation*}
+\nopagebreak\vspace{-0.2em}\begin{equation*}
 \bm{v} \equiv \mathdotabove{\bm{r}} = \bm{0}
-\hspace{.44em} \Rightarrow \hspace{.4em}
+\hspace{.44em} \Rightarrow \hspace{.33em}
 \boldmathbb{B} = \bm{0}
 \end{equation*}
 
 ...
 
-Объёмная (пондеромоторная, ponderomotive) сила, с~которой электростатическое поле действует на~среду ...
+\en{The~}\en{volume}\ru{Объёмная} \inquotes{\en{ponderomotive}\ru{пондеромоторная}} \en{force}\ru{сила}, с~которой электростатическое поле действует на~среду ...
 
-\ru{Тензор напряжения }Maxwell\ru{’а}\en{ stress tensor}~\eqref{maxwellstresstensor:definition} \en{in~electrostatics}\ru{в~электростатике}
+...
 
-\nopagebreak\vspace{-0.1em}\begin{equation*}
+\ru{Тензор напряжения }Maxwell\ru{’а}\en{ stress tensor}~\eqref{maxwellstresstensor:definition} \en{in~electrostatics}\ru{в~электростатике}\en{ is}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
 \maxwellstress = \vacuumpermittivity \hspace{-0.2ex} \left( \boldmathbb{E} \boldmathbb{E} - \smalldisplaystyleonehalf \hspace{.2ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \boldmathbb{E} \hspace{.1ex} \bm{E} \hspace{.1ex} \right)
 \end{equation*}
 
@@ -369,7 +587,7 @@ c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 ...
 
-В~диэлектриках нет свободных зарядов: \en{charge density}\ru{плотность заряда}~${\uprho = 0}$. Здесь вводится плотность дипольного момента
+В~диэлектриках нет свободных зарядов: \en{charge density}\ru{плотность заряда}~${\chargedensity = 0}$. Здесь вводится плотность дипольного момента
 
 ...
 
@@ -418,9 +636,9 @@ c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 В~электротехнике распространены обмотки всевозможной формы, в~которых провод намотан так, что образуется некое массивное тело. Такие обмотки есть в~статоре генератора автомобиля~(да~и в~роторе), в~больших промышленных электромагнитах и~в~магнитных системах установок \href{https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BA%D0%B0%D0%BC%D0%B0%D0%BA}{\inquotes{токам\'{а}к}~(\textboldextended{то}роидальная \textboldextended{ка}мера с~\textboldextended{ма}гнитными \textboldextended{к}атушками)} для управляемого термоядерного синтеза\:--- примеров много. Сочетание токопровода и~изоляции образует периодический композит, и~одной из~главных нагрузок для него является пондеромоторная магнитная сила. Рассчитывая деформации и~механические напряжения в~обмотке, начинают с~определения магнитных сил. Поскольку распределение токов задано известной геометрией проводов, достаточно интегрирования по~формуле~Био\hbox{-}Савара~\eqref{law:biosavar}. Термин \inquotes{магнитоупругость} при~этом неуместен, так~как задачи магнитостатики и~упругости решаются раздельно.
 
-Однако при~деформации обмотки меняются и~поле~$\bm{j}$, и~вызываемое им поле~$\boldmathbb{B}$. Объёмная сила становится равной
+Однако при~деформации обмотки меняются и~поле~$\currentdensity$, и~вызываемое им поле~$\boldmathbb{B}$. Объёмная сила становится равной
 \begin{equation}
-\bm{f} = \left( \hspace{.16ex} \bm{j} \times \boldmathbb{B} \right)_0 + \dots
+\bm{f} = \left( \hspace{.16ex} \currentdensity \times \boldmathbb{B} \right)_0 + \dots
 \end{equation}
 \noindent \textcolor{magenta}{Подчёркнутое слагаемое} соответствует недеформированному состоянию. Обусловленное деформацией изменение объёмной силы линейно связано с~малым перемещением~$\bm{u}$, поэтому матричное~(после дискретизации) уравнение в~перемещениях можно представить в~виде
 \begin{equation}
@@ -432,11 +650,13 @@ c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 Но особенно важна роль магнитной жёсткости в~задачах устойчивости. Поскольку магнитные силы потенциальны, матрица~$C_m$ симметрична, и~критические параметры могут быть найдены статическим методом Euler’а.
 
-Как иллюстрацию рассмотрим простую задачу о~балке в~продольном магнитном поле. Балка располагается на~декартовой оси~$z$, концы~${z \narroweq 0}$ и~${z \narroweq l}$ закреплены, магнитная индукция ${\boldmathbb{B} = B\bm{k} = \boldconstant}$, по~балке течёт постоянный~(по~величине) ток~$I$. В~классической модели балки при~равных жёсткостях на~изгиб для~прогиба ${\bm{u} = u_x\bm{i} \hspace{.12ex} + u_y\bm{j}}$ легко получить следующую постановку:
+Как иллюстрацию рассмотрим простую задачу о~балке в~продольном магнитном поле.
+Балка располагается на~декартовой оси~$z$, концы~${z \narroweq 0}$ и~${z \narroweq l}$ закреплены, магнитная индукция ${\boldmathbb{B} = B\bm{k} = \boldconstant}$, по~балке течёт постоянный~(по~величине) ток~$I$.
+В~классической модели балки при~равных жёсткостях на~изгиб для~прогиба ${\bm{u} = u_1 \bm{e}_1 \hspace{.16ex} + u_2 \bm{e}_2}$ легко получить следующую постановку:
 
 ...
 
-Вводя компл\'{е}ксную комбинацию~${u \equiv u_x \hspace{-0.16ex} + \mathrm{i} u_y}$, будем иметь
+Вводя компл\'{е}ксную комбинацию~${u \equiv u_1 \hspace{-0.16ex} + \mathrm{i} u_2}$, будем иметь
 
 ...
 
@@ -449,7 +669,7 @@ c^{\hspace{.16ex}2} \hspace{.33ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 ...
 
 
-\noindent Наименьший положительный корень~${x_1 \hspace{-0.2ex} = 3.666}$, так~что критическая комбинация параметров такова:
+\noindent Наименьший положительный корень~${x = 3.666}$, так~что критическая комбинация параметров такова:
 \[
 \left( I \hspace{-0.25ex} B \hspace{.1ex} {l^3} \hspace{-0.2ex} / a \hspace{.1ex} \right)_{\hspace{-0.32ex}*} \hspace{-0.32ex} = \hspace{.1ex} 394.2 \hspace{.12ex}.
 \]
