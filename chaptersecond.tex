@@ -12,11 +12,11 @@
 
 \label{para:initialconcepts.discreteapproach}
 
-\en{\lettrine[lines=2, findent=2pt, nindent=0pt]{G}{eneric}}\ru{\lettrine[lines=2, findent=2pt, nindent=0pt]{О}{бщая}} \en{mechanics}\ru{механика} \en{models}\ru{моделирует} \en{physical objects}\ru{физические объекты}\en{ by}\ru{,} \en{discretizing them}\ru{дискретизируя их} \en{into }\ru{в~}\en{a~collection of~particles}\ru{совокупность частиц} (\inquotesx{\en{pointlike masses}\ru{точеч\-ных масс}}[,] \inquotes{\en{material points}\ru{материальных точек}}%
+\en{\dropcap{G}{eneric}}\ru{\dropcap{О}{бщая}} \en{mechanics}\ru{механика} \en{models}\ru{моделирует} \en{physical objects}\ru{физические объекты}\en{ by}\ru{,} \en{discretizing them}\ru{дискретизируя их} \en{into }\ru{в~}\en{a~collection of~particles}\ru{совокупность частиц} (\inquotesx{\en{pointlike masses}\ru{точеч\-ных масс}}[,] \inquotes{\en{material points}\ru{материальных точек}}%
 \footnote{\en{Point mass}\ru{Точечная масса} (\en{pointlike mass, }\en{material point}\ru{материальная точка})\en{ is}\ru{\:--- это} \en{the~concept}\ru{концепт} \en{of an~object}\ru{объекта}, \en{typically}\ru{типично} \en{matter}\ru{материи}, \en{that}\ru{который} \en{has}\ru{имеет} \en{nonzero mass}\ru{ненулевую массу} \en{and}\ru{и}~\en{is}\ru{является}~(\en{or}\ru{или} \en{is being thought of as}\ru{мыслится}) \en{infinitesimal}\ru{бесконечно-малым} \en{in~its}\ru{по~своем\'{у}} \en{volume}\ru{объёму}~(\en{dimensions}\ru{размерам}).%
 }).
-\en{In}\ru{В}~\en{a~collection}\ru{совокупности} \en{of }${N\hspace{-0.25ex}}$~\en{particles,}\ru{\hbox{частиц}} \en{each}\ru{каждая} $k$\hbox{-}\en{th}\ru{ая} \en{particle}\ru{частица} \en{has its nonzero mass}\ru{имеет свою ненулевую массу}~${m_k \hspace{-0.25ex} = \hspace{-0.1ex} \constant > \hspace{-0.1ex} 0}$ \en{and}\ru{и}~\en{motion function}\ru{функцию движения}~${\bm{r}_k(t)}$.
-\en{Function}\ru{Функция}~${\bm{r}_k(t)}$ \en{is measured}\ru{измеряется} \en{relative to some reference system}\ru{отно\-си\-тель\-но н\'{е}которой системы отсчёта}\:--- \en{a~solid body}\ru{твёрдого тела} \en{with a~clock}\ru{с~часами}~(\figref{fig:referencesystem}).
+\en{In}\ru{В}~\en{a~collection}\ru{совокупности} \en{of }${N\hspace{-0.25ex}}$~\en{particles,}\ru{\hbox{частиц}} \en{each}\ru{каждая} $k$\hbox{-}\en{th}\ru{ая} \en{particle}\ru{частица} \en{has its nonzero mass}\ru{имеет свою ненулевую массу}~${m_k \hspace{-0.25ex} = \hspace{-0.1ex} \constant > \hspace{-0.1ex} 0}$ \en{and}\ru{и}~\en{motion function}\ru{функцию движения}~${\locationvector_{k}(t)}$.
+\en{Function}\ru{Функция}~${\locationvector_{k}(t)}$ \en{is measured}\ru{измеряется} \en{relative to some reference system}\ru{отно\-си\-тель\-но н\'{е}которой системы отсчёта}\:--- \en{a~solid body}\ru{твёрдого тела} \en{with a~clock}\ru{с~часами}~(\figref{fig:referencesystem}).
 
 \begin{wrapfigure}[8]{r}{.4\textwidth}
 \makebox[.42\textwidth][c]{\begin{minipage}[t]{.43\textwidth}
@@ -65,7 +65,7 @@
 	\path (m) node [shape=circle, inner sep=1mm, outer sep=0] (mcirc) {};
 
 	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=3.6mm]}] (O) -- (mcirc)
-		node [pos=0.5, above] {$\bm{r}$} ;
+		node [pos=0.5, above] {$\locationvector$} ;
 
 	\draw [line width=1.6pt, black, fill=black!50] (m) circle (1.6mm) ;
 
@@ -78,17 +78,17 @@
 \end{minipage}}
 \end{wrapfigure}
 
-\en{Long time ago}\ru{Когда\hbox{-}то давно}, \en{the~reference system}\ru{системой отсчёта} \en{was}\ru{было} \en{some absolute space}\ru{некое абсолютное пространство}: \en{empty at~first}\ru{сначала пустое}, \en{and then}\ru{а~затем} \en{filled with the~continuous elastic medium}\ru{заполненное сплошной упругой \hbox{средой}}\:--- \en{the~ether}\ru{эфиром}.
-\en{Later it became clear}\ru{Позже стало ясно,} \en{that}\ru{что} \en{in classical mechanics}\ru{в~классической механике} \ru{могут быть использованы }\en{any reference systems}\ru{любые системы отсчёта}\en{ can be used}, \en{but}\ru{но} \en{the~preference is given to}\ru{предпочтение отдаётся} \en{so~called}\ru{так называемым} \inquotes{\en{inertial}\ru{инерциальным}} \en{systems}\ru{системам}, \en{where}\ru{где} \en{a~point}\ru{\hbox{точка}} \en{moves without acceleration}\ru{движется без~ускорения}~(${\mathdotdotabove{\bm{r}} = \bm{0}}$) \en{in the~absence of external interactions}\ru{в~отсутствии внешних взаимодействий}.
+\en{Long time ago}\ru{Когда\hbox{-}то давно}, \en{the~reference system}\ru{системой отсчёта} \en{was}\ru{было} \en{some absolute space}\ru{некое абсолютное пространство}: \en{empty at~first}\ru{сначала пустое}, \en{and then}\ru{а~затем} \en{filled with the~continuous elastic medium}\ru{заполненное сплошной упругой \hbox{средой}}\:--- \en{the~æther}\ru{эфиром~(æther)}.
+\en{Later it became clear}\ru{Позже стало ясно,} \en{that}\ru{что} \en{in classical mechanics}\ru{в~классической механике} \ru{могут быть использованы }\en{any reference systems}\ru{любые системы отсчёта}\en{ can be used}, \en{but}\ru{но} \en{the~preference is given to}\ru{предпочтение отдаётся} \en{so~called}\ru{так называемым} \inquotes{\en{inertial}\ru{инерциальным}} \en{systems}\ru{системам}, \en{where}\ru{где} \en{a~point}\ru{\hbox{точка}} \en{moves without acceleration}\ru{движется без~ускорения}~(${\mathdotdotabove{\locationvector} = \bm{0}}$) \en{in the~absence of external interactions}\ru{в~отсутствии внешних взаимодействий}.
 
 \en{The measure of interaction in mechanics is a~vector of~force}\ru{Мерой взаимодействия в~механике является вектор силы}~${\bm{F}\hspace{-0.2ex}}$.
 \en{In}\ru{В}~\en{the~widely known}\ru{широко известном} \ru{уравнении }Newton’\en{s}\ru{а}\en{ equation}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{law:ofnewton}
-m \hspace{.2ex} \mathdotdotabove{\bm{r}} \hspace{.12ex} = \bm{F} ( \bm{r}, \mathdotabove{\bm{r}}, t )
+m \hspace{.2ex} \mathdotdotabove{\locationvector} \hspace{.12ex} = \bm{F} ( \locationvector, \mathdotabove{\locationvector}, t )
 \end{equation}
 
-\vspace{-0.25em} \noindent \en{the~right\hbox{-}hand side}\ru{правая часть} \en{can depend only on}\ru{может зависеть лишь от} \en{position}\ru{положения}, \en{velocity}\ru{скорости} \en{and}\ru{и}~\en{explicitly presented time}\ru{явно входящего времени}, \en{whereas acceleration}\ru{тогда как ускорение}~$\mathdotdotabove{\bm{r}}$ \en{is directly proportional to~force}\ru{прямо пропорционально силе}~$\bm{F}$ \en{with coefficient}\ru{с~коэффициентом}~${\raisemath{-0.1em}{\scalebox{1.2}{$\nicefrac{1}{m}$}}\hspace{.1ex}}$.
+\vspace{-0.25em} \noindent \en{the~right\hbox{-}hand side}\ru{правая часть} \en{can depend only on}\ru{может зависеть лишь от} \en{position}\ru{положения}, \en{velocity}\ru{скорости} \en{and}\ru{и}~\en{explicitly presented time}\ru{явно входящего времени}, \en{whereas acceleration}\ru{тогда как ускорение}~$\mathdotdotabove{\locationvector}$ \en{is directly proportional to~force}\ru{прямо пропорционально силе}~$\bm{F}$ \en{with coefficient}\ru{с~коэффициентом}~${\raisemath{-0.1em}{\scalebox{1.2}{$\nicefrac{1}{m}$}}\hspace{.1ex}}$.
 
 \en{Here’re}\ru{Вот} \en{theses}\ru{тезисы} \en{of dynamics of a~collection of particles}\ru{динамики совокупности частиц}.
 
@@ -162,19 +162,19 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 % draw position vectors
 
 \draw [radiiline, line width=1.2pt, black!55] (O) -- (m1circle)
-	node [red, pos=0.56, below right, inner sep=3pt, outer sep=0] {$\bm{r}_1$} ;
+	node [red, pos=0.56, below right, inner sep=3pt, outer sep=0] {$\locationvector_1$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (O) -- (m2circle)
-	node [magenta, pos=0.54, above, inner sep=4.7pt, outer sep=0] {$\bm{r}_2$} ;
+	node [magenta, pos=0.54, above, inner sep=4.7pt, outer sep=0] {$\locationvector_2$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (m2circle) -- (m1circle)
-	node [black, pos=0.55, above right, inner sep=3.3pt, outer sep=0] {$\mathcolor{red}{\bm{r}_1} \hspace{-0.25ex} - \mathcolor{magenta}{\bm{r}_2}$} ;
+	node [black, pos=0.55, above right, inner sep=3.3pt, outer sep=0] {$\mathcolor{red}{\locationvector_1} \hspace{-0.25ex} - \mathcolor{magenta}{\locationvector_2}$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (m3circle) -- (m2circle)
-	node [black, pos=0.47, above left, inner sep=2.6pt, outer sep=0] {$\mathcolor{magenta}{\bm{r}_2} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\bm{r}_3}$} ;
+	node [black, pos=0.47, above left, inner sep=2.6pt, outer sep=0] {$\mathcolor{magenta}{\locationvector_2} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\locationvector_3}$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (m3circle) -- (m1circle)
-	node [black, pos=0.49, below left, inner sep=2.1pt, outer sep=0] {$\mathcolor{red}{\bm{r}_1} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\bm{r}_3}$} ;
+	node [black, pos=0.49, below left, inner sep=2.1pt, outer sep=0] {$\mathcolor{red}{\locationvector_1} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\locationvector_3}$} ;
 
 % draw force vectors
 
@@ -232,22 +232,22 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 \end{equation}
 
 \vspace{-0.25em}\noindent
-\en{where}\ru{где} \en{the first addend}\ru{первое слагаемое}~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$\en{ is}\ru{\:--- это} \en{external force}\ru{внешняя сила}, \en{and }\ru{а~}\en{the second}\ru{второе}\en{ is}\ru{\:---} \en{sum of~internal ones}\ru{сумма внутренних} (${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}}$ \en{is}\ru{есть} \en{force from particle}\ru{сила от~частицы} \en{with number}\ru{с~номером}~\inquotes{$\hspace{-0.1ex}j\hspace{.25ex}$}).
+\en{where}\ru{где} \en{the~first addend}\ru{первое слагаемое}~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$\en{ is}\ru{\:--- это} \en{external force}\ru{внешняя сила}, \en{and }\ru{а~}\en{the~second}\ru{второе}\en{ is}\ru{\:---} \en{the~sum of~internal ones}\ru{сумма внутренних} (${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}}$ \en{is}\ru{есть} \en{force from particle}\ru{сила от~частицы} \en{with number}\ru{с~номером}~\inquotes{$\hspace{-0.1ex}j\hspace{.25ex}$}).
 
 \en{From}\ru{Из}~\eqref{law:ofnewton} \en{and}\ru{и}~\eqref{forceonparticle}
 \en{together with }\ru{вместе с~}\en{the~action--re\-action principle}\ru{принципом действия--про\-ти\-во\-действия}
 
 \nopagebreak\vspace{-0.12em}\begin{equation}\label{actionreactionprinciple}
 \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = - \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}
-\hspace{-0.16ex} ,
+%%\hspace{-0.16ex} ,
 \end{equation}
 
 \vspace{-0.15em}\noindent
 \en{ensues}\ru{вытекает} \en{the~balance of~momentum}\ru{баланс импульса}
 
 \nopagebreak\ru{\vspace{-0.1em}}\begin{equation}\label{balanceoftranslationalmomentum.discrete}
-\biggl( \displaystyle \sum_{\smash{k}} m_k \hspace{.2ex} \mathdotabove{\bm{r}}_k \hspace{-0.2ex} \biggr)^{\hspace{-0.2em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
-= \hspace{.12ex} \displaystyle \sum_{\smash{k}} m_k \hspace{.2ex} \mathdotdotabove{\bm{r}}_k
+\biggl( \displaystyle \sum_{\smash{k}} m_k \hspace{.2ex} \mathdotabove{\locationvector}_k \hspace{-0.2ex} \biggr)^{\hspace{-0.2em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+= \hspace{.12ex} \displaystyle \sum_{\smash{k}} m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_k
 = \displaystyle \sum_{\smash{k}} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}
 \hspace{-0.15ex} .
 \end{equation}
@@ -256,9 +256,9 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 \en{Assuming also that}\ru{Полагая также, что} \en{internal interactions}\ru{внутренние взаимодействия} \en{between particles}\ru{между частицами} \en{are central}\ru{центральны}, \en{that~is}\ru{то~есть}
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
-\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{.15ex} \parallel \hspace{.1ex} \bigl( \hspace{.1ex} \bm{r}_k \hspace{-0.15ex} - \bm{r}_{\hspace{-0.16ex}j} \bigr)
+\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{.15ex} \parallel \hspace{.1ex} \bigl( \hspace{.1ex} \locationvector_k \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \bigr)
 \hspace{.33em} \Leftrightarrow \hspace{.33em}
-\bigl( \hspace{.1ex} \bm{r}_k \hspace{-0.15ex} - \bm{r}_{\hspace{-0.16ex}j} \bigr) \hspace{-0.15ex} \times \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = \bm{0}
+\bigl( \hspace{.1ex} \locationvector_k \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \bigr) \hspace{-0.15ex} \times \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = \bm{0}
 \hspace{.1ex} ,
 \end{equation*}
 
@@ -266,9 +266,9 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 \en{we come to }\ru{приходим к~}\en{the~balance of~rotational momentum}\ru{балансу момента импульса}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{balanceofrotationalmomentum.discrete}
-\biggl( \displaystyle \sum_{\smash{k}} \bm{r}_k \hspace{-0.12ex} \times m_k \hspace{.2ex} \mathdotabove{\bm{r}}_k \hspace{-0.2ex} \biggr)^{\hspace{-0.2em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+\biggl( \displaystyle \sum_{\smash{k}} \locationvector_k \hspace{-0.12ex} \times m_k \hspace{.2ex} \mathdotabove{\locationvector}_k \hspace{-0.2ex} \biggr)^{\hspace{-0.2em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
 = \hspace{.16ex}
-\displaystyle \sum_{\smash{k}} \bm{r}_k \hspace{-0.12ex} \times \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}
+\displaystyle \sum_{\smash{k}} \locationvector_k \hspace{-0.12ex} \times \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}
 \hspace{-0.15ex} .
 \end{equation}
 
@@ -281,19 +281,17 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 
 \en{\section{Absolutely rigid undeformable solid body}}
 
-%% \inquotesx{Абсолютно твёрдое}[,] оно~же \inquotes{абсолютно жёсткое} и~\inquotesx{абсолютно прочное}[---] это несбыточная мечта любого инженера.
+\label{para:absolutelyrigidundeformablesolidbody}
 
-\en{The distance}\ru{Расстояние} \en{between}\ru{между} \en{any two points}\ru{любыми двумя точками} \en{of an~absolutely rigid solid body}\ru{совершенно~(абсолютно) жёсткого твёрдого тела} \en{remains constant}\ru{остаётся постоянным}, \en{regardless of external forces exerted on it}\ru{независимо от действующих на~него внешних сил}: \en{there’s no deformation}\ru{деформации тут нет}.
+%% \inquotesx{Абсолютно твёрдое}[,] оно~же \inquotes{абсолютно жёсткое} и~\inquotesx{абсолютно прочное}[---] несбыточная мечта каждого инженера.
 
-%% \begin{comment} %%
-{\small
-\noindent\leavevmode{\indent} The difference between \inquotes{rigid} and~\inquotes{solid} is that rigid is stiff (not flexible) while solid is in the state of a solid (not fluid). Solid is a~substance in the fundamental state of matter that retains its size and shape without need of container (as opposed to a~fluid).
+An~absolutely rigid (undeformable) \en{body}\ru{тело} is a~solid\footnote{%
+\inquotes{Rigid} is stiff and not flexible while \inquotes{solid} is not fluid.
+\en{A~solid substance}\ru{Твёрдое вещество} \en{retains}\ru{сохраняет} \en{its size and shape}\ru{свой размер и~форму} \en{without container}\ru{без контейнера} (\en{as~opposed to a~fluid substance}\ru{в~отличие от текучего вещества}).%
+}\hspace{-0.2ex} body in which \en{deformation}\ru{деформация} \en{is zero}\ru{нулевая} (\en{or}\ru{или} \en{negligibly small}\ru{пренебрежимо мала}\:--- \en{so small}\ru{так мала,} \en{that it can be neglected}\ru{что ею можно пренебречь}).
+\en{The~distance}\ru{Расстояние} \en{between}\ru{между} \en{any two points}\ru{любыми двумя точками} \en{of an~absolutely rigid solid body}\ru{совершенно~(абсолютно) жёсткого твёрдого тела} \en{remains constant}\ru{остаётся постоянным} \en{regardless of external forces exerted on it}\ru{независимо от действующих на~него внешних сил}: \en{there’s no deformation}\ru{деформации тут нет}.
 
-\noindent\leavevmode{\indent} An~absolutely rigid body is a~solid body in which deformation is zero (or negligibly small, so small it can be neglected).
-\par}
-%% \end{comment} %%
-
-\en{To define position (location)}\ru{Для определения положения (места)} \en{of an~absolutely rigid undeformable body}\ru{совершенно жёсткого недеформируемого тела} \en{it’s enough}\ru{достаточно} \en{to choose}\ru{выбрать} \en{some one of its points}\ru{какую\hbox{-}либо одну его точку}\:--- \inquotesx{\en{the~pole}\ru{полюс}}[,] \en{to~set location}\ru{установить положение}~${\bm{r}(t)}$ \en{of~this point}\ru{этой точки}, \en{as well as angular orientation}\ru{а~также угловую ориентацию} \en{of a~body}\ru{тела}~(\figref{fig:bodyoffsetandrotation}).
+\en{To define a~location (position, place)}\ru{Для определения положения (позиции, места)} \en{of an~undeformable body}\ru{недеформируемого тела} \en{it’s enough}\ru{достаточно} \en{to choose}\ru{выбрать} \en{some one of its points}\ru{какую\hbox{-}либо одну его точку}\:--- \inquotesx{\en{the~pole}\ru{полюс}}[,] \en{to~set location}\ru{установить положение}~${\locationvector(t)}$ \en{of~this point}\ru{этой точки}, \en{as well as angular orientation}\ru{а~также угловую ориентацию} \en{of a~body}\ru{тела}~(\figref{fig:bodyoffsetandrotation}).
 
 \begin{comment}
 \makeatletter
@@ -404,10 +402,10 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 		node [shape=circle, inner sep=0.9mm, outer sep=0] (pointcirc) {};
 
 	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=3.6mm]}] (Oinitial) -- (pointcirc)
-		node [pos=0.42, above, xshift=-2mm] {$\bm{R}$};
+		node [pos=0.42, above, xshift=-2mm] {$\advancedlocationvector$};
 
 	\draw [line width=1.6pt, blue, -{Stealth[round, length=5mm, width=3.6mm]}] (Oinitial) -- (Ocirc)
-		node [pos=0.5, above] {$\bm{r}$};
+		node [pos=0.5, above] {$\locationvector$};
 
 	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=3.6mm]}] (O) -- (pointcirc)
 		node [pos=0.8, right, inner sep=2.5pt, outer sep=4pt] {$\bm{x}$};
@@ -444,18 +442,18 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 
 \foreignlanguage{russian}{${\mathcircabove{\bm{e}}_i}$\:--- ортонормальная тройка векторов базиса, неподвижная относительно системы отсчёта}
 
-Any movement of an~absolutely rigid body is a~rotation, a~translation\footnote{a translation can be thought of as a rotation with the revolution center at infinity}, or a~combination of both.
+Any movement of an~absolutely rigid body is a~rotation, a~translation~(linear motion)\footnote{A~translation can also be thought of as a~rotation with the~revolution center at infinity.}\hspace{-0.5ex}, or some combination of~both.
 
 \foreignlanguage{russian}{Имея неподвижный базис~${\mathcircabove{\bm{e}}_i}$ и движущийся вместе с~телом базис~${\bm{e}_i}$, ...}
 
 \foreignlanguage{russian}{Если связать с~телом тройку декартовых осей с~ортами~${\bm{e}_i}$ (этот базис движется вместе с~телом), тогда угловая ориентация тела может быть задана тензором поворота ${\rotationtensor \equiv \bm{e}_i \mathcircabove{\bm{e}}_i}$.}
 
-\en{Motion of a~body}\ru{Движение тела} \en{is completely defined}\ru{полностью определяется} \en{by functions}\ru{функциями}~${\bm{r}(t)}$ \en{and}\ru{и}~${\rotationtensor(t)}$.
+\en{Then}\ru{Тогда} \en{any motion of a~body}\ru{любое движение тела} \en{is completely defined}\ru{полностью определяется} \en{by functions}\ru{функциями}~${\locationvector(t)}$ \en{and}\ru{и}~${\rotationtensor(t)}$.
 
 \foreignlanguage{russian}{Вектор\hbox{-}радиус некоторой точки тела}
 
 \begin{equation*}
-\bm{R} = \bm{r} + \bm{x}
+\advancedlocationvector = \locationvector + \bm{x}
 \hspace{.1ex} ,
 \end{equation*}
 
@@ -467,11 +465,11 @@ ${\bm{x} = x_i \hspace{.1ex} \bm{e}_i}$
 ${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \mathcircabove{\bm{x}}}$
 
 \begin{equation*}
-\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+\mathdotabove{\advancedlocationvector} = \mathdotabove{\locationvector} + \mathdotabove{\bm{x}}
 \hspace{.1ex} ,
 \end{equation*}
 
-\en{For an~absolutely rigid body}\ru{Для совершенно жёсткого тела}, \en{components}\ru{компоненты}~${x_i}$ \en{don’t depend on~time}\ru{не~зависят от~времени}~(${x_i \hspace{-0.16ex} = \constant}$) \en{and}\ru{и}~${\mathdotabove{\bm{x}} = x_i \hspace{.1ex} \mathdotabove{\bm{e}}_i}$
+\en{For an~absolutely rigid body}\ru{Для совершенно жёсткого тела}, \en{components}\ru{компоненты}~${x_i}$ \en{don’t depend on~time}\ru{не~зависят от~времени}: ${x_i \hspace{-0.16ex} = \constant(t)}$ \en{and}\ru{и}~${\mathdotabove{\bm{x}} = x_i \hspace{.1ex} \mathdotabove{\bm{e}}_i}$
 
 ${\mathdotabove{\bm{x}} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \hspace{.1ex} \mathcircabove{\bm{x}}}$
 
@@ -482,7 +480,9 @@ ${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} 
 ...
 
 \[
-\hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.6ex} \bm{r} \hspace{.1ex} dm = \hspace{.1ex} \bm{r} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.6ex} dm = \hspace{.1ex} \bm{r} m
+\hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.6ex} \locationvector \hspace{.1ex} dm
+= \hspace{.1ex} \locationvector \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.6ex} dm
+= \hspace{.1ex} \locationvector m
 \]
 
 \[
@@ -495,63 +495,96 @@ ${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} 
 
 \en{eccentricity vector}\ru{вектор экцентриситета}\hbox{~\hspace{.2ex}}$\bm{\Xi}$
 
-$\bm{\Xi}$ becomes the~null vector when the~chosen \inquotes{pole} is \en{the~center of~mass}\ru{центр масс} (\en{the~unique point}\ru{уникальная точка} \en{within a~body}\ru{внутри тела})
+$\bm{\Xi}$ becomes the~null vector when the~chosen \inquotes{pole} is \en{the~center of~mass}\ru{центр масс} (\en{the~unique point}\ru{уникальная точка} \en{within a~body}\ru{внутри тела}) \en{with }\ru{с~}\en{location vector}\ru{вектором положения}~${\mathboldrcursive}$
 
 \[
 \bm{\Xi} = \bm{0}
 \hspace{.6ex} \Leftrightarrow \hspace{.5ex}
-\bm{r} = \mathboldrcursive
+\locationvector = \mathboldrcursive
 \]
 
 \[
-\bm{x} = \hspace{-0.1ex} \bm{R} - \bm{r}
+\bm{x} = \hspace{-0.1ex} \advancedlocationvector - \locationvector
 , \hspace{1ex}
-\bm{\Xi} \hspace{.2ex} m = \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{R} - \hspace{-0.1ex} \mathboldrcursive \hspace{.15ex} \bigr) dm = \bm{0}
+\bm{\Xi} \hspace{.2ex} m = \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \advancedlocationvector - \hspace{-0.1ex} \mathboldrcursive \hspace{.15ex} \bigr) dm = \bm{0}
 \hspace{.5ex} \Rightarrow \hspace{.6ex}
-\mathboldrcursive = m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.7ex} \bm{R} \hspace{.25ex} dm
+\mathboldrcursive = m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.7ex} \advancedlocationvector \hspace{.25ex} dm
 \]
 
 ...
 
 \en{Introducing}\ru{Вводя} \en{(pseudo)vector}\ru{(псевдо)вектор} \en{of~angular velocity}\ru{угловой скорости}~$\bm{\omega}$, ...
 
+\[
+\mathdotabove{\bm{e}}_i \hspace{-0.16ex}
+= \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i
+\]
+
 ...
 
 \en{inertia tensor}\ru{тензор инерции}~${\inertiatensor}$
 
-\nopagebreak\[
-\inertiatensor \equiv \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{x} \narrowdotp \bm{x} \bm{E} - \bm{x} \bm{x} \bigr) \hspace{.1ex} dm
-\]
+\nopagebreak\begin{equation*}
+\inertiatensor
+\equiv
+- \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{x} \hspace{-0.1ex} \times \hspace{-0.22ex} \UnitDyad \hspace{.1ex} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.2ex} \bigl( \bm{x} \hspace{-0.1ex} \times \hspace{-0.22ex} \UnitDyad \hspace{.1ex} \bigr) \hspace{.1ex} dm
+=
+\hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{x} \narrowdotp \bm{x} \UnitDyad - \bm{x} \bm{x} \bigr) \hspace{.1ex} dm
+\end{equation*}
 
-\[
+It is assumed (can be proven?) that the~inertia tensor changes only due to a~rotation
+
+\vspace{-0.1em}\begin{equation*}
+\inertiatensor = \rotationtensor \hspace{-0.1ex} \dotp \inertiatensorcircabove \dotp \rotationtensor^{\hspace{-0.1ex}\T}
+\end{equation*}
+
+\vspace{-0.1em}\noindent
+and its components in basis~${\bm{e}_i}$ (moving together with a~body) don’t change over time
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
 \inertiatensor = \inertiatensorcomponents{ab} \hspace{.1ex} \bm{e}_a \bm{e}_b
 \hspace{.1ex} , \hspace{.8ex}
+\inertiatensorcomponents{ab} \hspace{-0.2ex} = \constant(t)
+\vspace{-0.2em}
+\end{equation*}
+
+\vspace{-0.1em}\noindent
+thus the~time derivative is
+
+\nopagebreak\vspace{-0.2em}\begin{multline*}
 \inertiatensordotabove
 = \inertiatensorcomponents{ab} \bigl( \hspace{.1ex} \mathdotabove{\bm{e}}_a \bm{e}_b \hspace{-0.1ex} + \bm{e}_a \mathdotabove{\bm{e}}_b \hspace{.12ex} \bigr) \hspace{-0.33ex}
-= \inertiatensorcomponents{ab} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_a \bm{e}_b \hspace{-0.1ex} + \bm{e}_a \hspace{.2ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_b \hspace{.12ex} \bigr)
-\]
+= \inertiatensorcomponents{ab} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_a \bm{e}_b \hspace{-0.1ex} + \bm{e}_a \hspace{.2ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_b \hspace{.12ex} \bigr) \hspace{-0.33ex}
+=
+\\[-0.1em]
+%
+= \inertiatensorcomponents{ab} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_a \bm{e}_b \hspace{-0.1ex} - \bm{e}_a \hspace{.2ex} \bm{e}_b \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{\omega} \hspace{.12ex} \bigr) \hspace{-0.33ex}
+= \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \inertiatensor \hspace{.1ex} - \inertiatensor \times \bm{\omega}
+\end{multline*}
 
 ...
 
 \subsection*{Work}
 
-\[
-W(\bm{F}\hspace{-0.25ex}, \bm{u}) \hspace{-0.1ex} = \bm{F} \hspace{-0.2ex} \dotp \bm{u}
+\begin{equation*}
+W \hspace{-0.12ex} ( \hspace{-0.08ex} \bm{F} \hspace{-0.25ex}, \bm{u} ) \hspace{-0.1ex} = \bm{F} \hspace{-0.2ex} \dotp \bm{u}
+\end{equation*}
+
+as the~exact~(full) differential
+
+\nopagebreak\[
+d \hspace{.1ex} W \hspace{-0.33ex}  = \hspace{.08ex} \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \hspace{-0.1ex} \bm{F}} \hspace{-0.1ex} \dotp d \bm{F} + \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{u}} \hspace{-0.1ex} \dotp d \bm{u}
 \]
 
 by \inquotes{product rule}
 
 \nopagebreak\[
-d \hspace{.1ex} W \hspace{-0.33ex} = d\bm{F} \hspace{-0.1ex} \dotp \bm{u} \hspace{.12ex} + \bm{F} \hspace{-0.1ex} \dotp d\bm{u}
+d \hspace{.1ex} W \hspace{-0.33ex}
+= d \hspace{.15ex} \bigl( \hspace{-0.1ex} \bm{F} \hspace{-0.2ex} \dotp \bm{u} \bigr) \hspace{-0.25ex}
+= d\bm{F} \hspace{-0.1ex} \dotp \bm{u} \hspace{.12ex} + \bm{F} \hspace{-0.1ex} \dotp d\bm{u}
 \]
 
-by definition of full differential
-
-\nopagebreak\[
-d \hspace{.1ex} W \hspace{-0.33ex}  = \hspace{.08ex} \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{F}} \hspace{-0.1ex} \dotp d \bm{F} + \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{u}} \hspace{-0.1ex} \dotp d \bm{u}
-\]
-
-${\displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{F}} \hspace{-0.1ex} = \bm{u}}$,
+${\displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \hspace{-0.1ex} \bm{F}} \hspace{-0.1ex} = \bm{u}}$,
 ${\displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{u}} \hspace{-0.1ex} = \bm{F}}$
 
 ...
@@ -563,7 +596,7 @@ Holonomic constraints are relations between position variables (and possibly tim
 
 \noindent where ${\{q_{1},q_{2},q_{3},\ldots,q_{n}\}}$ are $n$ coordinates which describe the system. For example, the motion of a particle constrained to lie on sphere’s surface is subject to a holonomic constraint, but if the particle is able to fall off the sphere under the influence of gravity, the constraint becomes non-holonomic. For the first case the holonomic constraint may be given by the equation: ${r^{2} - a^{2} = 0}$, where $r$ is the distance from the centre of a sphere of radius $a$. Whereas the second non-holonomic case may be given by: ${r^{2} - a^{2} \geq 0}$.
 
-Holonomic constraint depends only on coordinates and time. I\kern-0.12ext does not depend on velocities or any higher time derivative. A~constraint that cannot be expressed as shown above is nonholonomic.
+Holonomic constraint depends only on coordinates and time. It does not depend on velocities or any higher time derivative. A~constraint that cannot be expressed as shown above is nonholonomic.
 
 Velocity-dependent constraints like
 \[ \displaystyle f(q_{1}, q_{2}, \ldots, q_{n}, {\dot {q}}_{1}, {\dot {q}}_{2}, \ldots, {\dot {q}}_{n}, t) = 0 \]
@@ -580,29 +613,32 @@ are mostly not holonomic.
 
 \begin{otherlanguage}{russian}
 
-Виртуальным перемещением частицы с~радиусом\hbox{-}вектором~${\bm{r}_k}$ называется вариация~${\variation{\hspace{.1ex}\bm{r}_k}}$\:--- %% н\'{е}которое
-любое (неопределённое) бесконечно малое приращение~${\bm{r}_k}$, происходящее мгновенно %% вне~времени~(${\variation{t} \hspace{-0.2ex}\equiv\hspace{-0.2ex} 0}$)
+Виртуальным перемещением частицы с~вектором\hbox{-}радиусом~${\locationvector_k}$ называется вариация~${\variation{\hspace{.1ex}\locationvector_k}}$\:--- %% н\'{е}которое
+любое (неопределённое) бесконечно малое приращение~${\locationvector_k}$, происходящее мгновенно %% вне~времени~(${\variation{t} \hspace{-0.2ex}\equiv\hspace{-0.2ex} 0}$)
 и~совместимое с~ограничениями\hbox{-}связями. %%~(constraints).
-Если связей нет, то~есть система свободна, тогда виртуальные перемещения ${\variation{\hspace{.1ex}\bm{r}_k}}$ совершенно любые.
+Если связей нет, то~есть система свободна, тогда виртуальные перемещения ${\variation{\hspace{.1ex}\locationvector_k}}$ совершенно любые.
 
 Связи бывают голономные~(holonomic, или геометрические), связывающие только положения~(перемещения)\:--- это функции лишь координат и, возможно, времени
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{holonomicconstraint}
-c\hspace{.2ex}(\bm{r}, t) = 0
+c\hspace{.2ex}(\locationvector, t) = 0
 \end{equation}
 
-\vspace{-0.12em} \noindent --- и~неголономные~(или дифференциальные), содержащие производные координат по~времени: ${c\hspace{.2ex}(\bm{r}, \mathdotabove{\bm{r}}, t) = 0}$ и~не~интегрируемые до~геометрических связей.
+\vspace{-0.12em} \noindent --- и~неголономные~(или дифференциальные), содержащие производные координат по~времени: ${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$ и~не~интегрируемые до~геометрических связей.
 
-Далее рассматриваем системы, все связи в~которых\:--- голономные. В~системе с~голономной связью виртуальные перемещения должны удовлетворять уравнению
+Далее рассматриваем системы, все связи в~которых\:--- голономные.
+В~системе с~голономной связью виртуальные перемещения должны удовлетворять уравнению
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{requirementforvirtualdisplacements}
-\displaystyle \sum_k \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c}}{\partial \hspace{.1ex} \bm{r}_k}$} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0 \hspace{.16ex}.
+\displaystyle \sum_k \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c}}{\partial \hspace{.1ex} \locationvector_k}$} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex} = 0 \hspace{.16ex}.
 \vspace{-0.25em}\end{equation}
 
-В~несвободных системах все силы делятся на две группы: активные и~реакции связей. Реакция~$\mathboldN_k$ действует со~стороны всех материальных ограничителей на~частицу \inquotes{${\hspace{.05ex}k\hspace{.25ex}}$} и~меняется в~соответствии с~уравнением~\eqref{holonomicconstraint} каждой связи. Принимается предложение об~идеальности связей:
+В~несвободных системах все силы делятся на две группы: активные и~реакции связей.
+Реакция~$\mathboldN_k$ действует со~стороны всех материальных ограничителей на~частицу \inquotes{${\hspace{.05ex}k\hspace{.25ex}}$} и~меняется согласно уравнению~\eqref{holonomicconstraint} для каждой связи.
+Принимается предложение об~идеальности связей:
 
 \nopagebreak\begin{equation}\label{idealconstraints}
-\scalebox{0.9}{$\displaystyle \sum_k$} \hspace{.2ex} \mathboldN_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0
+\scalebox{0.9}{$\displaystyle \sum_k$} \hspace{.2ex} \mathboldN_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.16ex} = 0
 \quad \textrm{---}
 \vspace{-0.25em}\end{equation}
 \noindent работа реакций на~любых виртуальных перемещениях равна нулю.
@@ -610,7 +646,7 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 Принцип виртуальной работы выражается уравнением
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{discrete:principleofvirtualwork}
-\displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}_k \hspace{-0.12ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0 \hspace{0.1ex},
+\displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}_k \hspace{-0.12ex} - m_k \mathdotdotabove{\locationvector}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex} = 0 \hspace{0.1ex},
 \vspace{-0.32em}\end{equation}
 
 \noindent где~${\bm{F}_k}$\:--- лишь активные силы, без реакций связей.
@@ -622,7 +658,8 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 ...
 
 
-Проявилась замечательная особенность~\eqref{discrete:principleofvirtualwork}: это уравнение эквивалентно системе такого порядка, каково число степеней свободы системы, то~есть сколько независимых вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ мы имеем. Если в~системе $N$~точек есть $m$ связей, то число степеней свободы ${n = 3N \hspace{-0.25ex} - m}$.
+Проявилась замечательная особенность~\eqref{discrete:principleofvirtualwork}: это уравнение эквивалентно системе такого порядка, каково число степеней свободы системы, то~есть сколько независимых вариаций~${\variation{\hspace{.1ex}\locationvector_k}}$ мы имеем.
+Если в~системе $N$~точек есть $m$ связей, то число степеней свободы ${n = 3N \hspace{-0.25ex} - m}$.
 
 ...
 
@@ -631,24 +668,27 @@ c\hspace{.2ex}(\bm{r}, t) = 0
 
 \ru{\section{Баланс импульса, момента импульса и~энергии}}
 
-Эти уравнения баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\footnote{Изолированная (замкнутая) система\:--- это система частиц, взаимодействующих друг с~другом, но ни с~какими другими телами.}\hspace{-0.25ex} системе выводится из~однородности пространства \emph{(при любом параллельном переносе\:--- трансляции\:--- замкнутой системы как целого свойства этой системы не~меняются)}. Сохранение момента импульса\:--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \mathrm{T}(q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \Pi(q)}$ такой системы не~зависит явно от~времени).
+Эти уравнения баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\footnote{Изолированная (замкнутая) система\:--- это система частиц, взаимодействующих друг с~другом, но ни с~какими другими телами.}\hspace{-0.25ex} системе выводится из~однородности пространства \emph{(при любом параллельном переносе\:--- трансляции\:--- замкнутой системы как целого свойства этой системы не~меняются)}. Сохранение момента импульса\:--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \kinetic \hspace{.1ex} (q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \hspace{-0.1ex} \potential(q)}$ такой системы не~зависит явно от~времени).
 
-Уравнения баланса можно вывести из принципа виртуальной работы~\eqref{discrete:principleofvirtualwork}. Перепишем его в~виде
+Уравнения баланса могут быть выведены из принципа виртуальной работы~\eqref{discrete:principleofvirtualwork}.
+Перепишем его в~виде
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{discrete:principleofvirtualwork.externalinternal}
-\displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\bm{r}}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
+\displaystyle \sum_k \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\locationvector}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex}
 + \variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex},
 \vspace{-0.25em}\end{equation}
 
-\vspace{-0.1em} \noindent где выделены внешние силы~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил
-${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.1ex}}$.
+\vspace{-0.1em}\noindent
+где выделены внешние силы~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$ и~виртуальная работа внутренних сил
+${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.1ex}}$.
 
-\vspace{-0.1em} Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\constvarvector{\bm{o}}}$\:--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
+\vspace{-0.1em}
+Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\constvarvector{\bm{o}}}$\:--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{assumptionforvirtualwork}
 \begin{array}{l}
-\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex}
-= \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k
+\variation{\hspace{.1ex}\locationvector_k} \hspace{-0.16ex}
+= \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \locationvector_k
 \hspace{.1ex} ,
 \\
 \constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant \hspace{.1ex} , \:
@@ -660,7 +700,9 @@ ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaysty
 
 \vspace{-0.1em} Предпосылки-соображения для~этого предположения таковы.
 
-Первое\:--- для случая упругих (потенциальных) внутренних сил. При~этом ${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$\:--- вариация потенциала с~противоположным знаком. Достаточно очевидно, что~$\Pi$ меняется лишь при~деформации.
+Первое\:--- для случая упругих (потенциальных) внутренних сил.
+При~этом ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potential}}$\:--- вариация потенциала с~противоположным знаком.
+Достаточно очевидно, что~$\potential$ меняется лишь при~деформации.
 
 Второе соображение\:--- в~том, что суммарный вектор и~суммарный момент внутренних сил равен нулю
 
@@ -670,7 +712,7 @@ ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaysty
 
 ...
 
-Принимая~\eqref{assumptionforvirtualwork} и~подставляя в~\eqref{discrete:principleofvirtualwork.externalinternal} сначала ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ (трансляция), а~затем ${\variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{r}_k}$ (поворот), получаем баланс импульса~(...) и баланс момента импульса~(...).
+Принимая~\eqref{assumptionforvirtualwork} и~подставляя в~\eqref{discrete:principleofvirtualwork.externalinternal} сначала ${\variation{\hspace{.1ex}\locationvector_k} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ (трансляция), а~затем ${\variation{\hspace{.1ex}\locationvector_k} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \locationvector_k}$ (поворот), получаем баланс импульса~(...) и баланс момента импульса~(...).
 
 ...
 
@@ -684,79 +726,95 @@ ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaysty
 
 \begin{otherlanguage}{russian}
 
-Вариационное уравнение~\eqref{discrete:principleofvirtualwork} удовлетворяется в~любой момент времени. Проинтегрируем его\footnote{%
-%%${ \variation{\mathrm{T}} = \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\bm{r}}_k} \hspace{-0.5ex} }$ , \hspace{-0.1ex}
+Вариационное уравнение~\eqref{discrete:principleofvirtualwork} удовлетворяется в~любой момент времени.
+Проинтегрируем его\footnote{%
+${ \mathcolor{magenta}{\variation{\kinetic} = \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\locationvector}_k}} \hspace{-0.5ex} }$ , \hspace{-0.1ex}
 ${%
 \left(
-\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.4ex}
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.4ex}
 \right)^{\hspace{-0.25em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
 = \hspace{.2ex}
-\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k}
-+ \hspace{-0.2ex} \tikzmark{beginVariationOfKinetic} \hspace{.32ex} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\bm{r}}_k} \tikzmark{endVariationOfKinetic}
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_k}
++ \hspace{-0.2ex} \tikzmark{beginVariationOfKinetic} \hspace{.32ex} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\locationvector}_k} \tikzmark{endVariationOfKinetic}
 }$
 \\[.5em]
 ${%
-- \hspace{.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.25ex} dt \hspace{.4ex}
-= \hspace{-0.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \hspace{-0.1ex} \variation{\mathrm{T}} \hspace{.1ex} dt \hspace{.16ex}
+- \hspace{.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.25ex} dt \hspace{.4ex}
+= \hspace{-0.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \hspace{-0.1ex} \variation{\kinetic} \hspace{.1ex} dt \hspace{.16ex}
 - \hspace{-0.1ex} \left[ \hspace{.2ex}
-\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.16ex}
+\scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.16ex}
 \right]_{\hspace{-0.25ex}t_1}^{\hspace{-0.25ex}t_2}
 }$}%
-\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKinetic}{endVariationOfKinetic}{${\scriptstyle \variation{\mathrm{T}}}$}
+\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKinetic}{endVariationOfKinetic}{${\scriptstyle \variation{\kinetic}}$}
 %
 по~какому\hbox{-}либо промежутку ${\left[\hspace{.15ex} t_1, t_2 \hspace{.15ex}\right]}$
 
 \nopagebreak\vspace{-0.25em}\begin{equation}
 \displaystyle \integral\displaylimits_{t_1}^{\raisemath{.12em}{t_2}}
-\hspace{-0.4ex}
-\left( \hspace{-0.32ex} \variation{\mathrm{T}}
-+ \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.32ex} \right) \hspace{-0.5ex} dt \hspace{.16ex}
-- \hspace{-0.1ex} \left[ \hspace{.2ex} \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\bm{r}}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{.16ex} \right]_{\hspace{-0.32ex}t_1}^{\hspace{-0.32ex}t_2}
-\hspace{-0.8ex} = 0 \hspace{.1ex} .
+\hspace{-0.8ex}
+\left( \hspace{-0.25ex} \variation{\kinetic}
++ \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.33ex} \right) \hspace{-0.5ex} dt \hspace{.1ex}
+- \hspace{-0.2ex} \left[ \hspace{.2ex} \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.16ex} \right]_{\hspace{-0.32ex}t_1}^{\hspace{-0.32ex}t_2}
+\hspace{-0.8ex} = 0
+\hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.16em} \noindent Без ущерба для общности можно принять ${\variation{\hspace{.1ex}\bm{r}_k}\hspace{.1ex}(t_1) \hspace{-0.1ex} = \variation{\hspace{.1ex}\bm{r}_k}\hspace{.1ex}(t_2) \hspace{-0.1ex} = \bm{0}}$, тогда внеинтегральный член исчезает.
+\vspace{-0.16em}\noindent
+Без ущерба для общности можно принять ${\variation{\hspace{.1ex}\locationvector_k}\hspace{.1ex}(t_1) \hspace{-0.1ex} = \variation{\hspace{.1ex}\locationvector_k}\hspace{.1ex}(t_2) \hspace{-0.1ex} = \bm{0}}$, тогда внеинтегральный член исчезает.
 
-Вводятся обобщённые координаты~$q_i$~(${i = 1, \ldots, n}$\:--- число степеней свободы). Векторы-радиусы становятся функциями \hbox{вида} ${\bm{r}_k(q_i, t)}$, тождественно удовлетворяющими уравнениям связей~\eqref{holonomicconstraint}. Если связи стационарны, то~есть~\eqref{holonomicconstraint} не~содержат $t$, то остаётся~${\bm{r}_k(q_i)}$. Кинетическая энергия превращается в~функцию ${\mathrm{T}(q_i, \mathdotabove{q}_i, t)}$, где явно входящее $t$ характерно лишь для нестационарных связей.
+Вводятся обобщённые координаты~$q_i$~(${i = 1, \ldots, n}$\:--- число степеней свободы).
+Векторы-радиусы становятся функциями \hbox{вида} ${\locationvector_{k}(q_i, t)}$, тождественно удовлетворяющими уравнениям связей~\eqref{holonomicconstraint}.
+Если связи стационарны, то~есть~\eqref{holonomicconstraint} не~содержат $t$, то остаётся~${\locationvector_{k}(q_i)}$.
+Кинетическая энергия превращается в~функцию ${\kinetic \hspace{.1ex} (q_i, \mathdotabove{q}_i, t)}$, где явно входящее~$t$ характерно лишь для нестационарных связей.
 
-Весьма существенно понятие обобщённых сил~${Q_{\hspace{-0.1ex}i}}$. Они вводятся через выражение виртуальной работы
+Весьма существенно понятие обобщённых сил~${Q_{\hspace{-0.1ex}i}}$.
+Они вводятся через выражение виртуальной работы
 
 \nopagebreak\vspace{-0.25em}\begin{equation}
 \scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex}
-\bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex}
+\bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex}
 = \hspace{-0.1ex} \scalebox{0.92}[0.96]{$\displaystyle \sum_{i}$} \hspace{.16ex} Q_{\hspace{-0.1ex}i} \hspace{.12ex} \variation{q_i} \hspace{.1ex} ,
 \:\:
 Q_{\hspace{-0.1ex}i} \equiv
 \scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex}
-\bm{F}_k \hspace{-0.1ex} \dotp \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \bm{r}_k}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.16ex} .
+\bm{F}_k \hspace{-0.1ex} \dotp \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \locationvector_k}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.16ex} .
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.15em} \noindent Ст\'{о}ит подчеркнуть происхождение обобщённых сил через работу. Установив набор обобщённых координат системы, следует сгруппировать приложенные силы~${\bm{F}_k}$ в~комплексы~${Q_{\hspace{-0.1ex}i}}$.
+\vspace{-0.15em}\noindent
+Ст\'{о}ит подчеркнуть происхождение обобщённых сил через работу.
+Установив набор обобщённых координат системы, следует сгруппировать приложенные силы~${\bm{F}_k}$ в~комплексы~${Q_{\hspace{-0.1ex}i}}$.
 
-Если силы потенциальны с~энергией~${\Pi \!=\! \Pi(q_i, t)}$, то
+Если силы потенциальны с~энергией~${\potential \!=\! \potential(q_i, t)}$, то
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \scalebox{0.92}[0.96]{$\displaystyle \sum_{i}$} \hspace{.16ex} Q_{\hspace{-0.1ex}i} \hspace{.12ex} \variation{q_i} \hspace{-0.1ex}
-= - \hspace{.16ex} \variation{\Pi} \hspace{.1ex} ,
+= - \hspace{.16ex} \variation{\potential} \hspace{.1ex} ,
 \:\:
-Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.16ex} .
+Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.16ex} .
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.15em} \noindent Явное присутствие $t$ может быть при нестационарности связей или зависимости физических полей от~времени.
+\vspace{-0.15em}\noindent
+Явное присутствие $t$ может быть при нестационарности связей или зависимости физических полей от~времени.
 
 ...
 
-Известны уравнения Lagrange’а не~только второго, но~и~первого рода. Рассмотрим их ради методики вывода, много раз применяемой в~этой книге.
+Известны уравнения Lagrange’а не~только второго, но~и~первого рода.
+Рассмотрим их ради методики вывода, много раз применяемой в~этой книге.
 
-При~наличии связей~\eqref{holonomicconstraint} равенство ${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\bm{r}}_k}$ не~следует из~вариационного уравнения~\eqref{discrete:principleofvirtualwork}, ведь тогда виртуальные перемещения~${\variation{\hspace{.1ex}\bm{r}_k}}$ не независимы. Каждое из $m$ ($m$\:--- число связей) условий для~вариаций~\eqref{requirementforvirtualdisplacements} умножим на~некий скаляр~$\lambda_{\alpha}$ (${\alpha = 1, \ldots, m}$) и~добавим к~\eqref{discrete:principleofvirtualwork}:
+При~наличии связей~\eqref{holonomicconstraint} равенство ${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\locationvector}_k}$ не~следует из~вариационного уравнения~\eqref{discrete:principleofvirtualwork}, ведь тогда виртуальные перемещения~${\variation{\hspace{.1ex}\locationvector_k}}$ не независимы.
+Каждое из $m$ ($m$\:--- число связей) условий для~вариаций~\eqref{requirementforvirtualdisplacements} умножим на~некий скаляр~$\lambda_{\alpha}$ (${\alpha = 1, \ldots, m}$) и~добавим к~\eqref{discrete:principleofvirtualwork}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \displaystyle \sum_{k=1}^{N} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.16ex} \bm{F}_k \right. \hspace{-0.32ex} + \hspace{-0.05ex}
-\scalebox{0.88}[0.92]{$ \displaystyle \sum_{\alpha=1}^{m} $} \hspace{.16ex} \lambda_{\alpha} \hspace{.2ex} \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{\alpha}}}{\partial \hspace{.1ex} \bm{r}_k}$}
-- \left. \hspace{-0.25ex} m_k \mathdotdotabove{\bm{r}}_k ^{\mathstrut}\right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.16ex} = 0 \hspace{0.1ex} .
+\scalebox{0.88}[0.92]{$ \displaystyle \sum_{\alpha=1}^{m} $} \hspace{.16ex} \lambda_{\alpha} \hspace{.2ex} \scalebox{0.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{\alpha}}}{\partial \hspace{.1ex} \locationvector_k}$}
+- \left. \hspace{-0.25ex} m_k \mathdotdotabove{\locationvector}_k ^{\mathstrut}\right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.16ex} = 0
+\hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.1em} \noindent Среди $3N$ компонент вариаций~${\variation{\hspace{.1ex}\bm{r}_k}}$ зависимых $m$. Но столько~же и~множителей Лагранжа: подберём $\lambda_{\alpha}$ так, чтобы коэффициенты\textcolor{red}{(??как\'{и}е?)} при~зависимых вариациях обратились в~нуль. Но при~остальных вариациях коэффициенты\textcolor{red}{(??)} также должны быть нулями из\hbox{-}за независимости. Следовательно, все выражения в~скобках~${(\cdots\hspace{-0.2ex})}$ равны нулю\:--- это и~есть уравнения Лагранжа первого рода.
+\vspace{-0.1em} \noindent Среди $3N$ компонент вариаций~${\variation{\hspace{.1ex}\locationvector_k}}$ зависимых $m$.
+Но столько~же и~множителей Лагранжа: подберём $\lambda_{\alpha}$ так, чтобы коэффициенты\textcolor{red}{(??как\'{и}е?)} при~зависимых вариациях обратились в~нуль.
+Но при~остальных вариациях коэффициенты\textcolor{red}{(??)} также должны быть нулями из\hbox{-}за независимости.
+Следовательно, все выражения в~скобках~${(\cdots\hspace{-0.2ex})}$ равны нулю\:--- это и~есть уравнения Lagrange’а первого рода.
 
 Поскольку для каждой частицы
 
@@ -774,60 +832,68 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 
 \begin{otherlanguage}{russian}
 
-Рассмотрим систему со~стационарными (постоянными во~времени) связями при статических (не~меняющихся со~временем) активных силах ${\bm{F}_k}$. В~равновесии ${\bm{r}_k \hspace{-0.12ex} = \boldconstant}$, и формулировка принципа виртуальной работы следующая:
+Рассмотрим систему со~стационарными (постоянными во~времени) связями при статических (не~меняющихся со~временем) активных силах ${\bm{F}_k}$.
+В~равновесии ${\locationvector_k \hspace{-0.12ex} = \boldconstant}$, и формулировка принципа виртуальной работы следующая:
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{statics.discrete:principleofvirtualwork}
 \scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.25ex}
-\bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\bm{r}_k} \hspace{-0.1ex} = 0
+\bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex} = 0
 \:\,\Leftrightarrow\:
 \scalebox{0.92}[0.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.25ex}
-\bm{F}_k \hspace{-0.1ex} \dotp \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \bm{r}_k}}{\raisemath{-0.1em}{\partial q_i}} $}
+\bm{F}_k \hspace{-0.1ex} \dotp \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \locationvector_k}}{\raisemath{-0.1em}{\partial q_i}} $}
 = Q_{\hspace{-0.1ex}i} \hspace{-0.1ex} = 0 \hspace{.1ex} .
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.15em} \noindent Существенны обе стороны этого положения: и вариационное уравнение, и равенство нулю обобщённых сил.
+\vspace{-0.15em}\noindent
+Существенны обе стороны этого положения: и вариационное уравнение, и равенство нулю обобщённых сил.
 
-Соотношения~\eqref{statics.discrete:principleofvirtualwork}\:--- это самые общие уравнения статики. В~литературе распространено узкое представление об~уравнениях равновесия как балансе сил и~моментов. Но при~этом нужно понимать, что набор уравнений равновесия точно соответствует обобщённым координатам.
-\en{Resultant force}\ru{Результирующая сила~(также называемая \inquotes{равнодействующей силой} или \inquotes{главным вектором})}
-\en{and}\ru{и}~\en{resultant couple}\ru{результирующий~(\inquotes{главный}) момент (пара сил)}
-в~уравнениях равновесия фигурируют\footnote{\en{Since describing a~composition of~any system of forces}\ru{Со~времён описания приведения любой системы сил}, \en{acting on the~same absolutely rigid body}\ru{действующей на~одно и~то~же совершенно жёсткое тело}, \en{into a~single force}\ru{к~одной силе} \en{and}\ru{и} \en{a~single couple~(about a~chosen point)}\ru{одной паре~(вокруг выбранной точки)} \en{in the~book}\ru{в~книге}
+Соотношения~\eqref{statics.discrete:principleofvirtualwork}\:--- это самые общие уравнения статики.
+В~литературе распространено узкое представление об~уравнениях равновесия как балансе сил и~моментов.
+Но при~этом нужно понимать, что набор уравнений равновесия точно соответствует обобщённым координатам.
+\en{The~resultant force}\ru{Результирующая сила}~(также называемая \inquotes{равнодействующей силой} или \inquotes{главным вектором})
+\en{and}\ru{и}~\en{the~resultant couple}\ru{результирующая пара сил}~(\inquotes{главный момент})
+в~уравнениях равновесия фигурируют\footnote{\en{Since}\ru{Со~времён} \textcolor{magenta}{\en{describing a~composition}\ru{описания приведения}} \en{of~any system of forces}\ru{любой системы сил}, \en{acting on the~same absolutely rigid body}\ru{действующей на~одно и~то~же совершенно жёсткое тело}, \en{\textcolor{magenta}{into} a~single force}\ru{к~одной силе} \en{and}\ru{и} \en{a~single couple~(about a~chosen point)}\ru{одной паре~(вокруг выбранной точки)} \en{in the~book}\ru{в~книге}
 \href{https://gallica.bnf.fr/ark:/12148/bpt6k6213152z.texteImage}{\inquotes{Éléments de~statique}}
-\en{by }\href{https://en.wikipedia.org/wiki/Louis_Poinsot}{Louis\ru{’а} Poinsot}.}\hspace{-1ex},
-поскольку у~системы есть степени свободы трансляции и~поворота. Огромная популярность сил и~моментов связана не~столько с~известностью статики совершенно жёсткого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~перемещениях системы как жёсткого целого равна нулю в~любой среде.
+\en{by }\href{https://en.wikipedia.org/wiki/Louis_Poinsot}{Louis\ru{’а} Poinsot}.}\hbox{\hspace{-0.5ex},}
+поскольку у~системы есть степени свободы трансляции и~поворота.
+Огромная популярность сил и~моментов связана не~столько с~известностью статики совершенно недеформируемого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~перемещениях системы как жёсткого целого равна нулю в~любой среде.
 
-Пусть в~системе действуют два вида сил: потенциальные с~энергией от~обобщённых координат ${\Pi(q_i)}$ и~дополнительные внешние~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$. Из~\eqref{statics.discrete:principleofvirtualwork} следуют уравнения равновесия
+Пусть в~системе действуют два вида сил: потенциальные с~энергией от~обобщённых координат ${\potential(q_i)}$ и~дополнительные внешние~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
+Из~\eqref{statics.discrete:principleofvirtualwork} следуют уравнения равновесия
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{staticequilibriumwithpotentialenergy}
-\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} = \mathcircabove{Q}_{\hspace{-0.1ex}i}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial q_i}} $} = \mathcircabove{Q}_{\hspace{-0.1ex}i}
 \hspace{.1ex},
 \end{equation}
 \nopagebreak\vspace{.1em}\begin{equation*}
-d\Pi = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
-\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \Pi}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.2ex} dq_i
+d\potential = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial q_i}} $} \hspace{.2ex} dq_i
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} dq_i
 \hspace{.1ex} .
 \end{equation*}
 
-\vspace{-0.5em} \noindent Здесь содержится нелинейная в~общем случае задача статики о~связи положения равновесия~$q_i$ с~нагрузками~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
+\vspace{-0.5em}\noindent
+Здесь содержится нелинейная в~общем случае задача статики о~связи положения равновесия~$q_i$ с~нагрузками~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
 
-В~линейной системе с~квадратичным потенциалом вида ${\Pi = \smalldisplaystyleonehalf \hspace{.2ex} C_{ik} \hspace{.12ex} q_{k} \hspace{.1ex} q_{i}}$
+В~линейной системе с~квадратичным потенциалом вида ${\potential = \smalldisplaystyleonehalf \hspace{.2ex} C_{ik} \hspace{.12ex} q_{k} \hspace{.1ex} q_{i}}$
 
 \nopagebreak\vspace{-1.25em}\begin{equation}\label{staticsoflineardiscretesystem}
 \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} C_{ik} \hspace{.12ex} q_k \hspace{-0.1ex}
 = \hspace{.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.1ex} .
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.2em} \noindent Тут фигурируют матрица жёсткости~$C_{ik}$ и столбцы координат~${q_k}$ и~нагрузок~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
+\vspace{-0.2em}\noindent
+Тут фигурируют матрица жёсткости~$C_{ik}$ и столбцы координат~${q_k}$ и~нагрузок~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
 
 Сказанное возможно обобщить и~на~континуальные линейные упругие среды.
 
-Матрица жёсткости~${C_{ik}}$ обычно бывает положительной (таков\'{о} свойство конструкций). % в~природе и~технике).
+Матрица жёсткости~${C_{ik}}$ обычно бывает положительной (таков\'{о} свойство конструкций и~в~природе, и~в~технике).
 Тогда ${\operatorname{det} \hspace{.16ex} C_{ik} > 0}$, линейная алгебраическая система~\eqref{staticsoflineardiscretesystem} однозначно разрешима, а~решение её можно заменить минимизацией квадратичной формы
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{discrete:potentialenergyofsystem}
-\textit{Э} \hspace{.16ex} (q_j) \hspace{.1ex}
+\potentialenergyfunctional \hspace{.2ex} (q_j) \hspace{.1ex}
 \equiv \hspace{.1ex}
-\Pi - \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex}
+\potential - \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex}
 \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q_i
 %
 = \hspace{.1ex}
@@ -841,8 +907,10 @@ d\Pi = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
 \hspace{.1ex}\to\hspace{.25ex} \mathrm{min} \hspace{.16ex} .
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.1em} Бывает однако, что конструкция неудачно спроектирована, тогда матрица жёсткости сингулярна~(необратима) %%(noninvertible)
-и~${\operatorname{det} \hspace{.16ex} C_{ik} = \hspace{.1ex} 0}$ (или~же весьма близок к~нулю\:--- nearly singular матрица с~${\operatorname{det} \hspace{.16ex} C_{ik} \approx \hspace{.1ex} 0}$). Тогда решение линейной проблемы статики~\eqref{staticsoflineardiscretesystem} существует лишь при ортогональности столбца нагрузок~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$ всем линейно независимым решениям однородной сопряжённой системы
+\vspace{-0.1em}
+Бывает однако, что конструкция неудачно спроектирована, тогда матрица жёсткости сингулярна~(необратима) %%(noninvertible)
+и~${\operatorname{det} \hspace{.16ex} C_{ik} = \hspace{.1ex} 0}$ (или~же весьма близок к~нулю\:--- nearly singular матрица с~${\operatorname{det} \hspace{.16ex} C_{ik} \approx \hspace{.1ex} 0}$).
+Тогда решение линейной проблемы статики~\eqref{staticsoflineardiscretesystem} существует лишь при ортогональности столбца нагрузок~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$ всем линейно независимым решениям однородной сопряжённой системы
 
 ...
 
@@ -858,7 +926,8 @@ d\Pi = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
 
 ...
 
-Но вернёмся к~проблеме~\eqref{staticequilibriumwithpotentialenergy}, иногда называемой теоремой Lagrange’а. Её можно обратить преобразованием Лежандра Legendre (involution) transform(ation):
+Но вернёмся к~проблеме~\eqref{staticequilibriumwithpotentialenergy}, иногда называемой теоремой Lagrange’а.
+Её можно обратить преобразованием Лежандра Legendre (involution) transform(ation):
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \begin{array}{c}\small
@@ -878,31 +947,39 @@ d \hspace{-0.1ex} \left( \hspace{-0.1ex} \scalebox{0.95}[1]{$\displaystyle \sum_
 \\[1em]
 %
 \small
-d \hspace{-0.1ex} \left( \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q_i - \Pi \hspace{-0.1ex} \right) \hspace{-0.5ex}
+d \hspace{-0.1ex} \left( \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q_i - \potential \hspace{-0.1ex} \right) \hspace{-0.5ex}
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex} q_i \hspace{.2ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.4ex}
-\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\Pi}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\potential}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $}
 \hspace{.25ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
 %
 \hspace{.33ex} ;
 \end{array}\end{equation*}%
-\AddOverBrace[line width=.75pt][-0.3ex,0.3em]{beginLegendreOfPotential}{endLegendreOfPotential}{${\scriptstyle d\Pi}$}
+\AddOverBrace[line width=.75pt][-0.3ex,0.3em]{beginLegendreOfPotential}{endLegendreOfPotential}{${\scriptstyle d\potential}$}
 
 \nopagebreak\vspace{-0.33em}\begin{equation}\label{Castigliano:theorem}
-q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\Pi}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $} \hspace{.2ex} ,
+q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\potential}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $} \hspace{.2ex} ,
 \:\;
-\widehat{\Pi}(\mathcircabove{Q}_{\hspace{-0.1ex}i})
-= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q_i - \Pi
+\widehat{\potential}(\mathcircabove{Q}_{\hspace{-0.1ex}i})
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q_i - \potential
 \hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.1em} \noindent Это теорема \href{https://en.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Castigliano}, $\widehat{\Pi}$ называется дополнительной энергией. В~линейной системе \eqref{staticsoflineardiscretesystem} ${\Rightarrow}$ ${\widehat{\Pi} = \Pi}$. Теорема~\eqref{Castigliano:theorem} бывает очень полезна\:--- когда легко находится~${\widehat{\Pi}(\mathcircabove{Q}_{\hspace{-0.1ex}i})}$. Встречаются так называемые статически определимые системы, в~которых все внутренние силы удаётся найти лишь из баланса сил и~моментов. Для них \eqref{Castigliano:theorem} эффективна.
+\vspace{-0.1em}\noindent
+Это теорема \href{https://en.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Castigliano}, $\widehat{\potential}$ называется дополнительной энергией.
+В~линейной системе \eqref{staticsoflineardiscretesystem} ${\Rightarrow}$ ${\widehat{\potential} = \potential}$.
+Теорема~\eqref{Castigliano:theorem} бывает очень полезна\:--- когда легко находится~${\widehat{\potential}(\mathcircabove{Q}_{\hspace{-0.1ex}i})}$.
+Встречаются так называемые статически определимые системы, в~которых все внутренние силы удаётся найти лишь из баланса сил и~моментов.
+Для них \eqref{Castigliano:theorem} эффективна.
 
 В~отличие от линейной задачи~\eqref{staticsoflineardiscretesystem}, нелинейная задача~\eqref{staticequilibriumwithpotentialenergy} может не~иметь решений вовсе или~же иметь их н\'{е}сколько.
 
 ...
 
-Разговор о~статике в~общей механике закончим принципом \hbox{д’\hspace{-0.2ex}Аламбера}~(\hbox{d’\hspace{-0.2ex}Alembert}’s principle): уравнения динамики отличаются от~статических лишь наличием дополнительных \inquotes{фиктивных сил инерции}~${m_k \mathdotdotabove{\bm{r}}_k}$. Принцип \hbox{д’\hspace{-0.2ex}Аламбера} очевиден, но бездумное его применение может привести к~ошибкам. Например, уравнения вязкой жидкости в~статике и~в~динамике отличаются не~только лишь инерционными членами. Для упругих~же сред принцип \hbox{д’\hspace{-0.2ex}Аламбера} полностью справедлив.
+Разговор о~статике в~общей механике закончим принципом \hbox{д’\hspace{-0.2ex}Аламбера}~(\hbox{d’\hspace{-0.2ex}Alembert}’s principle): уравнения динамики отличаются от~статических лишь наличием дополнительных \inquotes{фиктивных сил инерции}~${m_k \mathdotdotabove{\locationvector}_k}$.
+Принцип \hbox{д’\hspace{-0.2ex}Аламбера} очевиден, но бездумное его применение может привести к~ошибкам.
+Например, уравнения вязкой жидкости в~статике и~в~динамике отличаются не~только лишь инерционными членами.
+Для упругих~же сред принцип \hbox{д’\hspace{-0.2ex}Аламбера} полностью справедлив.
 
 \end{otherlanguage}
 
@@ -914,21 +991,22 @@ q_i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 \begin{otherlanguage}{russian}
 
-До~этого не~ставился вопрос о~системе отсчёта, всё рассматривалось в~некой \inquotes{абсолютной} системе или одной из инерциальных систем~(\pararef{para:initialconcepts.discreteapproach}). Теперь представим себе две системы: \inquotes{абсолютную} и~\inquotes{подвижную}
+До~этого не~ставился вопрос о~системе отсчёта, всё рассматривалось в~некой \inquotes{абсолютной} системе или одной из инерциальных систем~(\pararef{para:initialconcepts.discreteapproach}).
+Теперь представим себе две системы: \inquotes{абсолютную} и~\inquotes{подвижную}
 
 ...
 
 \begin{equation*}
 \begin{array}{c}
-\bm{R} = \bm{r} + \bm{x}
+\advancedlocationvector = \locationvector + \bm{x}
 \\
-\bm{r} = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\locationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
 \hspace{.1ex} , \:\:
 \bm{x} = x_i \bm{e}_i
 \\
-\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+\mathdotabove{\advancedlocationvector} = \mathdotabove{\locationvector} + \mathdotabove{\bm{x}}
 \\
-\mathdotabove{\bm{r}} = \hspace{-0.1ex}
+\mathdotabove{\locationvector} = \hspace{-0.1ex}
 \mathdotabove{\rho}_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
 \hspace{.1ex} , \:\:
 \mathdotabove{\bm{x}} = \hspace{-0.15ex} \bigl( x_i \bm{e}_i \bigr)^{\hspace{-0.15ex}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
@@ -952,8 +1030,8 @@ ${
 }$
 
 \begin{equation*}
-\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
-= \hspace{-0.2ex} \tikzmark{beginEVelocity} \hspace{.25ex} \mathdotabove{\bm{r}} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \tikzmark{endEVelocity}
+\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\advancedlocationvector} = \mathdotabove{\locationvector} + \mathdotabove{\bm{x}}
+= \hspace{-0.2ex} \tikzmark{beginEVelocity} \hspace{.25ex} \mathdotabove{\locationvector} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \tikzmark{endEVelocity}
 \hspace{.4ex} \tikzmark{beginRelativeVelocity} \hspace{-0.4ex} - \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} + \hspace{.1ex} \mathdotabove{\bm{x}} \hspace{-0.33ex} \tikzmark{endRelativeVelocity}
 \end{equation*}%
 \AddUnderBrace[line width=.75pt][0,0]{beginEVelocity}{endEVelocity}{${ \scriptstyle \bm{v}_{\hspace{-0.1ex}e} }$}
@@ -964,7 +1042,7 @@ ${
 \equiv \hspace{.1ex} \bm{v}_{r\kern-0.1exel}
 }$\:--- relative velocity,
 ${
-\mathdotabove{\bm{r}} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x}
+\mathdotabove{\locationvector} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x}
 \equiv \hspace{.1ex} \bm{v}_{\hspace{-0.1ex}e}
 }$
 
@@ -976,13 +1054,13 @@ ${
 
 \begin{equation*}
 \begin{array}{c}
-\mathdotabove{\bm{R}} = \mathdotabove{\bm{r}} + \mathdotabove{\bm{x}}
+\mathdotabove{\advancedlocationvector} = \mathdotabove{\locationvector} + \mathdotabove{\bm{x}}
 \\
-\mathdotdotabove{\bm{R}} = \mathdotdotabove{\bm{r}} + \mathdotdotabove{\bm{x}}
+\mathdotdotabove{\advancedlocationvector} = \mathdotdotabove{\locationvector} + \mathdotdotabove{\bm{x}}
 \\
-\bm{w} \equiv \hspace{.1ex} \mathdotabove{\bm{v}} = \hspace{-0.15ex} \mathdotdotabove{\bm{R}} = \mathdotdotabove{\bm{r}} + \mathdotdotabove{\bm{x}}
+\bm{w} \equiv \hspace{.1ex} \mathdotabove{\bm{v}} = \hspace{-0.15ex} \mathdotdotabove{\advancedlocationvector} = \mathdotdotabove{\locationvector} + \mathdotdotabove{\bm{x}}
 \\
-\mathdotdotabove{\bm{r}} = \hspace{-0.1ex}
+\mathdotdotabove{\locationvector} = \hspace{-0.1ex}
 \mathdotdotabove{\rho}_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
 \hspace{.1ex} , \:\:
 \mathdotdotabove{\bm{x}} = \hspace{-0.15ex} \bigl( x_i \bm{e}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); \hspace{.2ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.2ex}

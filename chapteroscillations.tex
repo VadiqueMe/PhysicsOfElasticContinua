@@ -12,7 +12,7 @@
 
 \begin{otherlanguage}{russian}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{Д}{инамическая} задача классической линейной упругости
+\dropcap{Д}{инамическая} задача классической линейной упругости
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{classiclinearelasticity:problem}
 \begin{array}{c}
@@ -32,14 +32,15 @@
 \end{array}
 \end{equation}
 
-\vspace{.2em} Согласно общей теории~(\chapdotpararef{chapter:genericmechanics}{para:smalloscillations}), начинаем с~анализа \en{of~harmonics}\ru{гармоник}~(\en{ortho\-gonal oscillations}\ru{орто\-гональ\-ных колебаний}):
+\vspace{.2em}
+Согласно общей теории~(\chapdotpararef{chapter:genericmechanics}{para:smalloscillations}), начинаем с~анализа \en{of~harmonics}\ru{гармоник}~(\en{ortho\-gonal oscillations}\ru{орто\-гональ\-ных колебаний}):
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
 \bm{f} = \bm{0} \hspace{.1ex} ,
 \:\;
 \bm{p} = \bm{0} \hspace{.1ex} ,
 \:\;
-\bm{u}(\bm{r}, t) \hspace{-0.2ex} = \mathboldU(\bm{r}) \operatorname{sin} \omega t
+\bm{u}(\locationvector, t) \hspace{-0.2ex} = \mathboldU(\locationvector) \operatorname{sin} \omega t
 \hspace{.1ex} ,
 \end{equation*}
 
@@ -50,9 +51,10 @@
 \hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.2em} \noindent Значения~$\omega$, при которых однородная задача имеет нетривиальное решение\:--- это \en{natural}\ru{натуральные} \en{resonant}\ru{резонансные} \en{frequencies}\ru{частоты}, \en{and}\ru{а}~${\mathboldU(\bm{r})}$\ru{\:---}\en{ are} \en{ortho\-gonal}\ru{орто\-гональ\-ные}~(\en{normal}\ru{нормальные}) \inquotesx{\en{modes}\ru{моды}}[.]
+\vspace{-0.2em}\noindent
+Значения~$\omega$, при которых однородная задача имеет нетривиальное решение\:--- это \en{natural}\ru{натуральные} \en{resonant}\ru{резонансные} \en{frequencies}\ru{частоты}, \en{and}\ru{а}~${\mathboldU(\locationvector)}$\ru{\:---}\en{ are} \en{ortho\-gonal}\ru{орто\-гональ\-ные}~(\en{normal}\ru{нормальные}) \inquotesx{\en{modes}\ru{моды}}[.]
 
-\en{Time independent}\ru{Независимое от~времени}~\eqref{oscillations:equationsforharmonics} \en{looks like}\ru{выглядит как} \en{equation}\ru{уравнение} \en{of~linear elasto\-statics}\ru{линейной эласто\-статики} \eqrefwithchapdotpara{lineartheory:equationsfordisplacement}{chapter:linearclassicalelasticity}{para:equationsfordisplacement} \en{with the~volume load equal to}\ru{с~объёмной нагрузкой, равной}~${\omega^2 \hspace{-0.2ex} \rho \hspace{.25ex} \mathboldU \hspace{-0.1ex}}$.
+\en{Time independent}\ru{Независимое от~времени}~\eqref{oscillations:equationsforharmonics} \en{looks like}\ru{выглядит как} \en{equation}\ru{уравнение} \en{of~linear elasto\-statics}\ru{линейной эласто\-статики} \eqrefwithchapdotpara{lineartheory:equationsfordisplacements}{chapter:linearclassicalelasticity}{para:equationsfordisplacements.linearelasticity} \en{with the~volume load equal to}\ru{с~объёмной нагрузкой, равной}~${\omega^2 \hspace{-0.2ex} \rho \hspace{.25ex} \mathboldU \hspace{-0.1ex}}$.
 Поверхностная нагрузка на~${o_2}$\:--- нуль.
 Тождество Clapeyron’а~\eqrefwithchapdotpara{clapeyron:elasticitytheorem}{chapter:linearclassicalelasticity}{para:theoremsofstatics} даёт
 
@@ -64,10 +66,11 @@
 = \hspace{.1ex}
 2 \hspace{-0.2em}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex}
-\Pi \bigl( \scalebox{0.9}{$\boldnabla \hspace{.1ex} \mathboldU \hspace{.2ex}^{\mathsf{S}}$} \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} .
+\potential \bigl( \scalebox{0.9}{$\boldnabla \hspace{.1ex} \mathboldU \hspace{.2ex}^{\mathsf{S}}$} \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} .
 \end{equation}
 
-\vspace{-0.2em} \noindent \en{It also means}\ru{Это также значит} ${\omega^2 \hspace{-0.2ex} \geq 0}$, \en{with zero}\ru{с~нулём} \en{for}\ru{для} \en{motion}\ru{движения}~$\mathboldU$ \en{of~a~continuum}\ru{контину\kern-0.11exума} \en{as a~rigid whole}\ru{как жёсткого целого}.
+\vspace{-0.2em}\noindent
+\en{It also means}\ru{Это также значит} ${\omega^2 \hspace{-0.2ex} \geq 0}$, \en{with zero}\ru{с~нулём} \en{for}\ru{для} \en{motion}\ru{движения}~$\mathboldU$ \en{of~a~continuum}\ru{контину\kern-0.11exума} \en{as a~rigid whole}\ru{как жёсткого целого}.
 С~закреплением хотя~бы малой части поверхности \en{all}\ru{все}~${\omega_i \hspace{-0.1ex} > 0}$.
 
 \en{But}\ru{Но} \en{here was assumed that}\ru{тут предполагалось, что} ${\omega^2\hspace{-0.1ex}}$ \en{and}\ru{и}~$\mathboldU$ \en{are real}\ru{вещественны}.

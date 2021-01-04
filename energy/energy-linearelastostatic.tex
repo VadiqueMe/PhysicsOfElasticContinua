@@ -20,7 +20,7 @@
 \newcommand*\bigdot{\mathpalette\dotp@{.64}}
 \newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
-\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.20em}}
 
 \newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
 \newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
@@ -31,6 +31,8 @@
 
 \newcommand\stiffnesstensor{\stiffnesstensorA}
 \newcommand\pliabilitytensor{\stiffnesstensorB}
+
+\newcommand\potential{\Pi}
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -46,6 +48,7 @@
 \newcommand\linearstress{\mathboldsigma}
 
 \newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
+\newcommand\infinitesimaldeformation{\mathboldepsilon}
 
 \pagestyle{empty}
 
@@ -83,7 +86,7 @@
 	\draw [line width=0.8pt, color=black!25, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
 		(\lastxboxmid, 0) -- (\lastxboxmid, \lastyboxmid)
 		node [pos=0.5, rotate=-90, inner sep=1pt, outer sep=0pt, color=black, fill=yellow!75!white]
-		{$\,\:\linearstress\hspace{.2ex}(\mathboldepsilon) \hspace{-0.2ex} = \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor\;$} ;
+		{$\,\:\linearstress\hspace{.2ex}(\infinitesimaldeformation) \hspace{-0.2ex} = \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor\;$} ;
 
 	\draw [line width=0.8pt, color=black!25, line cap=round]
 		(\lastxstep, 0) -- (\lastxstep, \lastystep) ;
@@ -92,14 +95,14 @@
 	\draw [line width=0.8pt, color=black!25, line cap=round]
 		(\lastxstep, 0) -- (\epsilonlength, 0)
 		node [pos=0.5, anchor=north, inner sep=0, outer sep=4pt, color=black]
-		{\scalebox{1.1}[1.1]{$\variation{\mathboldepsilon}$}} ;
+		{\scalebox{1.1}[1.1]{$\variation{\infinitesimaldeformation}$}} ;
 
 	\fill [lime!25!white] (0, \lastystep) -- (\lastxstep, \lastystep) -- (\lastxstep, \taulength) -- (0, \taulength) -- cycle ;
 
 	\draw [line width=0.8pt, color=black!25, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
 		(0, \lastyboxmid) -- (\lastxboxmid, \lastyboxmid)
 		node [pos=0.5, inner sep=1pt, outer sep=0pt, color=black, fill=lime!25!white]
-		{$\,\:\mathboldepsilon(\hspace{-0.1ex}\linearstress\hspace{.1ex}) \hspace{-0.2ex} = \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \linearstress\;$} ;
+		{$\,\:\infinitesimaldeformation(\hspace{-0.1ex}\linearstress\hspace{.1ex}) \hspace{-0.2ex} = \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \linearstress\;$} ;
 
 	\draw [line width=0.8pt, color=black!25, line cap=round]
 		(0, \lastystep) -- (\lastxstep, \lastystep) ;
@@ -127,15 +130,15 @@
 \vspace{-2em}
 
 \begin{equation*}\begin{array}{c}
-\variation{\hspace{.1ex}\bigl( \hspace{-0.2ex} \linearstress \dotdotp \mathboldepsilon \bigr)} \hspace{-0.2ex}
-= \linearstress \dotdotp \variation{\mathboldepsilon} + \variation{\hspace{-0.1ex}\linearstress} \dotdotp \mathboldepsilon
-= \variation{\Pi} + \variation{\widehat{\Pi}}
+\variation{\hspace{.1ex}\bigl( \hspace{-0.2ex} \linearstress \dotdotp \infinitesimaldeformation \bigr)} \hspace{-0.2ex}
+= \linearstress \dotdotp \variation{\infinitesimaldeformation} + \variation{\hspace{-0.1ex}\linearstress} \dotdotp \infinitesimaldeformation
+= \variation{\potential} + \variation{\widehat{\potential}}
 \\[.3em]
 %
-\variation{\Pi} = \linearstress \dotdotp \variation{\mathboldepsilon}
-= \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \variation{\mathboldepsilon} ,
+\variation{\potential} = \linearstress \dotdotp \variation{\infinitesimaldeformation}
+= \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \variation{\infinitesimaldeformation} ,
 \:\:
-\variation{\widehat{\Pi}} = \variation{\hspace{-0.1ex}\linearstress} \dotdotp \mathboldepsilon
+\variation{\widehat{\potential}} = \variation{\hspace{-0.1ex}\linearstress} \dotdotp \infinitesimaldeformation
 = \linearstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \variation{\hspace{-0.1ex}\linearstress}
 \end{array}\end{equation*}
 
@@ -153,7 +156,7 @@
 	\draw [line width=1pt, color=black, line cap=round]
 		(0, 0) -- (\epsilonlength, 0)
 		node [pos=0.99, anchor=north, inner sep=0, outer sep=6pt]
-		{\scalebox{1.2}[1.2]{$\mathboldepsilon$}} ;
+		{\scalebox{1.2}[1.2]{$\infinitesimaldeformation$}} ;
 
 	\draw [line width=1pt, color=black, line cap=round]
 		(0, 0) -- (0, \taulength)
@@ -165,11 +168,11 @@
 
 	\draw (0.7 * \epsilonlength, 0.3 * \taulength) circle (0.1)
 		node [color=black, anchor=center, shape=circle, fill=white, outer sep=5pt, inner sep=2pt]
-		{\scalebox{1.5}[1.5]{$\Pi$}} ;
+		{\scalebox{1.5}[1.5]{$\potential$}} ;
 
 	\draw (0.3 * \epsilonlength, 0.7 * \taulength) circle (0.1)
 		node [color=black, anchor=center, shape=circle, fill=white, outer sep=5pt, inner sep=2pt]
-		{\scalebox{1.5}[1.5]{$\widehat{\Pi}$}} ;
+		{\scalebox{1.5}[1.5]{$\widehat{\potential}$}} ;
 
 \end{tikzpicture}
 \end{center}
@@ -177,19 +180,19 @@
 \vspace{-2em}
 
 \begin{equation*}\begin{array}{c}
-\linearstress \dotdotp \mathboldepsilon
-= \mathboldepsilon \dotdotp \linearstress
+\linearstress \dotdotp \infinitesimaldeformation
+= \infinitesimaldeformation \dotdotp \linearstress
 = \hspace{.1ex}
-\Pi(\mathboldepsilon) \hspace{-0.1ex} + \hspace{.1ex} \widehat{\Pi}(\hspace{-0.1ex}\linearstress\hspace{.12ex})
+\potential(\infinitesimaldeformation) \hspace{-0.1ex} + \hspace{.1ex} \widehat{\potential}(\hspace{-0.1ex}\linearstress\hspace{.12ex})
 \\[.4em]
 %
-\Pi(\mathboldepsilon) \hspace{-0.1ex}
-= \smalldisplaystyleonehalf \hspace{.2ex} \linearstress\hspace{.2ex}(\mathboldepsilon) \hspace{-0.2ex} \dotdotp \mathboldepsilon
-= \smalldisplaystyleonehalf \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \mathboldepsilon
+\potential(\infinitesimaldeformation) \hspace{-0.1ex}
+= \smalldisplaystyleonehalf \hspace{.2ex} \linearstress\hspace{.2ex}(\infinitesimaldeformation) \hspace{-0.2ex} \dotdotp \infinitesimaldeformation
+= \smalldisplaystyleonehalf \hspace{.25ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \infinitesimaldeformation
 \\[.4em]
 %
-\widehat{\Pi}(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
-= \smalldisplaystyleonehalf \hspace{.2ex} \linearstress \dotdotp \mathboldepsilon(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
+\widehat{\potential}(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
+= \smalldisplaystyleonehalf \hspace{.2ex} \linearstress \dotdotp \infinitesimaldeformation(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
 = \smalldisplaystyleonehalf \hspace{.15ex} \linearstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \linearstress
 \end{array}\end{equation*}
 

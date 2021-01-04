@@ -4,15 +4,12 @@
 
 \thispagestyle{empty}
 
-\newcommand{\currentvector}{\bm{r}} %% {\bm{R}}
-\newcommand{\initialvector}{\mathcircabove{\bm{r}}} %% {\bm{r}}
-
 \newcommand{\littlerotationvector}{\varvector{\bm{\varphi}}}
 
 \newcommand{\motiongradient}{\bm{F}}
 
 \newcommand{\distortiontensor}{\bm{\upgamma}}
-\newcommand{\wrynesstensor}{\bm{\kappa}\hspace{-0.1ex}} %% {\mathboldae}
+\newcommand{\wrynesstensor}{\bm{\kappa}\hspace{-0.1ex}}
 
 \newcommand{\forcestresstensor}{\mathboldtau}
 \newcommand{\couplestresstensor}{\bm{\mu}}
@@ -25,13 +22,22 @@
 
 \label{para:introtolinearmicropolar}
 
+%% micropolar elasticity, couple\hbox{-}stress elasticity, asymmetric (non\hbox{-}symmetric) elasticity, Cosserat elasticity
+
 \begin{otherlanguage}{russian}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{Х}{арактерная} отличительная особенность классических упругих сред~(\chapref{chapter:nonlinearcontinuum} и~\customref{chapter:linearclassicalelasticity})\:--- то, что они состоят \inquotesx{из простых материальных точек}[.] Частица классического контину\kern-0.11exума имеет лишь трансляционные степени свободы, её~движение определяется только вектором~${\bm{R}(q^i \hspace{-0.15em}, t)}$. Поэтому нагрузки~(\inquotes{силовые факторы}) в~такой среде\:--- только силы, объёмные и~поверхностные. Моментов нет.
+\dropcap{Х}{арактерная} отличительная особенность классических упругих сред~(\chapref{chapter:nonlinearcontinuum} и~\customref{chapter:linearclassicalelasticity})\:--- то, что они состоят \inquotesx{из простых материальных точек}[.]
+Частица классического контину\kern-0.11exума имеет лишь трансляционные степени свободы, её~движение определяется только вектором~${\currentlocationvector(q^i \hspace{-0.15em}, t)}$.
+Поэтому нагрузки~(\inquotes{силовые факторы}) в~такой среде\:--- только силы, объёмные и~поверхностные.
+Моментов нет.
 
-Но не~так~уж трудно построить более сложные модели сплошной среды, в~которых частицы обладают не~только~лишь степенями свободы трансляции, но~и н\'{е}которыми дополнительными. Новые степени свободы связаны и~с~новыми нагрузками.
+Но не~так~уж трудно построить более сложные модели сплошной среды, в~которых частицы обладают не~только~лишь степенями свободы трансляции, но~и н\'{е}которыми дополнительными.
+Новые степени свободы связаны и~с~новыми нагрузками.
 
-Наиболее естественная из~неклассических моделей трёхмерной среды предложена братьями Cosserat в~1909\:год\'{у}~\cite{cosserat}. Каждая частица контину\kern-0.11exума Коссера есть бесконечномалое твёрдое тело с~шестью степенями свободы, тремя трансляционными и тремя вращательными. Нагрузки в~такой среде\:--- силы и~моменты. Работа братьев Коссера оставалась незамеченной полвека, но~затем возник интерес к~этой теме~\cite{mindlin.tiersten, nowacki-elasticity}.
+Наиболее естественная из~неклассических моделей трёхмерной среды предложена братьями Cosserat в~1909\:год\'{у}~\cite{cosserat}.
+Каждая частица контину\kern-0.11exума Cosserat есть бесконечномалое совершенно твёрдое тело с~шестью степенями свободы\:--- тремя трансляционными и тремя вращательными.
+Нагрузки в~такой среде\:--- силы и~моменты.
+Работа братьев Cosserat оставалась незамеченной полвека, но~затем возник интерес к~этой теме~\cite{mindlin.tiersten, nowacki-elasticity}.
 
 \end{otherlanguage}
 
@@ -63,28 +69,24 @@ The research in the field of the general theories of continuous media conducted 
 %% \end{comment} %%
 
 \en{In the~truly micropolar continuum,}\ru{В~истинно микрополярном контину\kern-0.11exуме}
-\en{vector fields}\ru{векторные поля} \en{of~displacements}\ru{перемещений}~${\fieldofdisplacements(\bm{r},t)}$ \en{and}\ru{и}~\en{rotations}\ru{поворотов}~${\fieldofrotations(\bm{r},t)}$ \en{are mutually independent}\ru{взаимно независимы}.
-\en{I\kern-0.12ext~is also called the~model with free rotation}\ru{Это также называется моделью со~свободным вращением (free rotation)}.
+\en{vector fields}\ru{векторные поля} \en{of~displacements}\ru{перемещений}~${\fieldofdisplacements(\locationvector,t)}$ \en{and}\ru{и}~\en{rotations}\ru{поворотов}~${\fieldofrotations(\locationvector,t)}$ \en{are mutually independent}\ru{взаимно независимы}.
+\en{It~is also called the~model with free rotation}\ru{Это также называется моделью со~свободным вращением (free rotation)}.
 
 \en{Consider at~first}\ru{Рассмотрим сперв\'{а}}
-\en{geometrically linear model}\ru{геометрически линейную модель},
+\en{the~geometrically linear model}\ru{геометрически линейную модель},
 \en{that’s}\ru{то~есть} \en{the~case}\ru{случай} \en{of~}\en{small}\ru{м\'{а}лых} \en{displacements}\ru{перемещений} \en{and}\ru{и}~\en{small}\ru{м\'{а}лых} \en{rotations}\ru{поворотов}.
 \en{Here}\ru{Здесь} \en{operators}\ru{операторы}
-${\hspace{-0.2ex} \boldnablacircled
-%%\hspace{-0.1ex} \equiv \initialvector^{\hspace{.1ex}i} \partial_i
-\hspace{.1ex}}$
-\en{and}\ru{и}~${\hspace{-0.2ex} \boldnabla
-%%\hspace{-0.1ex} \equiv \currentvector^i \partial_i
-\hspace{.1ex}}$
-%%(\chapdotpararef{chapter:nonlinearcontinuum}{para:differentiation})
+${\hspace{-0.2ex} \boldnablacircled \hspace{.1ex}}$
+\en{and}\ru{и}~${\hspace{-0.2ex} \boldnabla \hspace{.1ex}}$
 \en{are indistinguishable}\ru{неразличимы},
-\en{equations}\ru{уравнения} \inquotes{\en{can be written in the~initial configuration}\ru{можно пис\'{а}ть в~исходной конфигурации}}
-(${\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}\hspace{-0.1ex}}$, ${\rho \hspace{-0.12ex} = \hspace{-0.22ex} \mathcircabove{\rho}\hspace{.33ex}}$),
-$\variation$ \en{and}\ru{и} ${\hspace{-0.2ex}\boldnabla}$ \en{commute}\ru{коммутируют}
+${\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}\hspace{-0.1ex}}$,
+${\rho \hspace{-0.12ex} = \hspace{-0.22ex} \mathcircabove{\rho}\hspace{.2ex}}$\:---
+\en{equations}\ru{уравнения} \inquotes{\en{can be written in the~initial configuration}\ru{можно пис\'{а}ть в~начальной конфигурации}},
+\en{operators}\ru{операторы} $\variation$ \en{and}\ru{и}~${\hspace{-0.2ex}\boldnabla}$ \en{commute}\ru{коммутируют}
 (${\variation{\boldnabla \fieldofdisplacements} \hspace{-0.1ex} = \hspace{-0.3ex} \boldnabla \variation{\fieldofdisplacements}}$,
 ${\variation{\boldnabla \hspace{-0.12ex} \fieldofrotations} \hspace{-0.1ex} = \hspace{-0.3ex} \boldnabla \variation{\fieldofrotations}}$).
 
-\en{As foundation}\ru{Как основу} \en{for building this~model}\ru{построения этой модели} \en{we put}\ru{пол\'{о}жим} \en{the~principle of~virtual work}\ru{принцип виртуальной работы}
+\en{As the~foundation}\ru{Как основу} \en{for building this~model}\ru{построения этой модели} \en{we put}\ru{пол\'{о}жим} \en{the~principle of~virtual work}\ru{принцип виртуальной работы}
 (\inquotes{\en{the~variation of~work of~real external forces on virtual displacements is equal with negative sign to the~variation of~work of~internal forces}\ru{вариация работы реальных внешних сил на виртуальных перемещениях равна с~обратным знаком вариации работы внутренних сил}\;--- \en{real stresses on virtual deformations}\ru{реальных напряжений на~виртуальных деформациях}})
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
@@ -96,16 +98,17 @@ ${\variation{\boldnabla \hspace{-0.12ex} \fieldofrotations} \hspace{-0.1ex} = \h
 
 \begin{otherlanguage}{russian}
 
-\vspace{-0.1em} \noindent Здесь
+\vspace{-0.1em}\noindent
+\en{Here}\ru{Здесь}
 $\bm{f}$ и~$\bm{m}$\:--- внешние силы и~моменты \en{per volume unit}\ru{на~единицу объёма};
-$\bm{p}$ и~$\mathboldM$\:--- они~же, но \en{per surface unit}\ru{на~единицу поверхности} (поверхностные нагрузки действуют лишь на~н\'{е}которой части~$o$ поверхности~$\boundary{\mathcal{V}}$\hbox{\hspace{-0.12ex},} ограничивающей объём~$\mathcal{V}$);
+$\bm{p}$ и~$\mathboldM$\:--- они~же, но \en{per surface unit}\ru{на~единицу поверхности} (поверхностные нагрузки действуют лишь на~н\'{е}которой части~$o$ поверхности~$\boundary{\mathcal{V}}$\hbox{\hspace{-0.1ex},} ограничивающей объём~$\mathcal{V}$);
 ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренних сил \en{per volume unit}\ru{на~единицу объёма}.
 
 По\hbox{-}прежнему полагаем, что~${\variation{\internalwork}\hspace{-0.2ex}}$ обнуляется при движении тела как целого без деформации:
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{c}
-\variation{\fieldofdisplacements} = \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.12ex} \bm{r} + \boldconstant \hspace{.1ex} ,
+\variation{\fieldofdisplacements} = \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.12ex} \locationvector + \boldconstant \hspace{.1ex} ,
 \:\,
 \variation{\fieldofrotations} = \boldconstant
 \hspace{.64ex}\Rightarrow\hspace{.5ex}
@@ -114,10 +117,10 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 %
 \boldnabla \variation{\fieldofdisplacements}
 = \hspace{-0.25ex} \boldnabla \variation{\fieldofrotations} %%{^2\bm{0}}
-\hspace{-0.2ex} \times \hspace{-0.2ex} \bm{r}
-- \hspace{-0.25ex} \boldnabla \bm{r} \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
-= - \bm{E} \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
-= - \hspace{.2ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
+\hspace{-0.2ex} \times \hspace{-0.2ex} \locationvector
+- \hspace{-0.25ex} \boldnabla \locationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
+= - \UnitDyad \hspace{-0.2ex} \times \hspace{-0.2ex} \variation{\fieldofrotations}
+= - \hspace{.2ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
 \hspace{.1ex} ,
 \:\,
 \boldnabla \variation{\fieldofrotations} = {^2\bm{0}} \hspace{.1ex} .
@@ -126,14 +129,15 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 
 \end{otherlanguage}
 
-\vspace{-0.1em} \en{Introducing deformation tensors}\ru{Вводя тензоры деформации}\:---
+\vspace{-0.1em}
+\en{Introducing deformation tensors}\ru{Вводя тензоры деформации}\:---
 \en{tensor of relative displacement between particles}\ru{тензор относительного смещения между частицами} (distortion tensor, strain tensor)~$\distortiontensor$
 \en{and}\ru{и}~\en{curvature-twist tensor}\ru{тензор искривления-скручивания} (\ru{curvature-twist tensor, }torsion-flexure tensor, wryness tensor)~$\wrynesstensor$\:--- \en{as}\ru{как}
 
 \nopagebreak\vspace{-0.1em}
 \begin{equation}\label{deformationtensors:micropolarcontinuum}
 \begin{array}{rl}
-\distortiontensor \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements \hspace{.1ex} + \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex} , &
+\distortiontensor \hspace{.16ex} \equiv \boldnabla \fieldofdisplacements \hspace{.1ex} + \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.2ex} \UnitDyad \hspace{.1ex} , &
 \wrynesstensor \hspace{.16ex} \equiv \boldnabla \fieldofrotations
 \hspace{.1ex} ,
 \end{array}
@@ -151,7 +155,7 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 %
 \variation{\distortiontensor}
 = \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements} \hspace{.1ex}
-+ \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
++ \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad \hspace{.1ex}
 , &
 \variation{\wrynesstensor} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations} \hspace{.1ex} ,
 \end{array}
@@ -184,14 +188,14 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 \begin{array}{rl}
 \variation{\distortiontensor}^{\T} \hspace{-0.32ex}
 = \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements}^{\hspace{-0.05ex}\T} \hspace{-0.3ex}
-- \hspace{.1ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex}
+- \hspace{.1ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad \hspace{.1ex}
 , &
 \variation{\wrynesstensor}^{\T} \hspace{-0.32ex} = \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations}^{\T} \hspace{-0.25ex} ,
 \\[.25em]
 %
 - \hspace{.2ex} \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.32ex}
 = - \hspace{.2ex} \forcestresstensor \dotdotp \hspace{-0.16ex} \boldnabla \variation{\fieldofdisplacements}^{\hspace{-0.05ex}\T} \hspace{-0.3ex}
-+ \forcestresstensor \dotdotp \hspace{-0.32ex} \left( \hspace{.12ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.12ex} \right) \hspace{-0.25ex}
++ \forcestresstensor \dotdotp \hspace{-0.32ex} \left( \hspace{.12ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad \hspace{.12ex} \right) \hspace{-0.25ex}
 , &
 - \hspace{.2ex} \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.32ex}
 = - \hspace{.2ex} \couplestresstensor \dotdotp \hspace{-0.16ex} \boldnabla \variation{\fieldofrotations}^{\T} \hspace{-0.25ex} .
@@ -207,8 +211,8 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 \end{equation*}
 
 \nopagebreak\vspace{-0.5em}\begin{multline*}
-\bm{A} \dotdotp \hspace{-0.25ex} \left( \hspace{.1ex} \bm{b} \times \hspace{-0.2ex} \bm{E} \hspace{.1ex} \right)
-= \bm{A} \dotdotp \hspace{-0.32ex} \left( \hspace{.1ex} \bm{E} \hspace{-0.12ex} \times \bm{b} \hspace{.1ex} \right)
+\bm{A} \dotdotp \hspace{-0.25ex} \left( \hspace{.1ex} \bm{b} \times \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right)
+= \bm{A} \dotdotp \hspace{-0.32ex} \left( \hspace{.1ex} \UnitDyad \hspace{-0.12ex} \times \bm{b} \hspace{.1ex} \right)
 = \bm{A} \dotdotp \hspace{-0.32ex} \left( \hspace{-0.1ex} - \hspace{.2ex} \levicivitatensor \dotp \bm{b} \hspace{.1ex} \right) =
 \\[-0.2em]
 %
@@ -219,7 +223,7 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 
 \nopagebreak\vspace{-0.4em}\begin{equation*}
 \Rightarrow \hspace{.64ex}
-\forcestresstensor \dotdotp \hspace{-0.25ex} \left( \hspace{.12ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} \hspace{.12ex} \right)
+\forcestresstensor \dotdotp \hspace{-0.25ex} \left( \hspace{.12ex} \variation{\fieldofrotations} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad \hspace{.12ex} \right)
 = \forcestresstensor_{\Xcompanion} \hspace{-0.1ex} \dotp \hspace{.1ex} \variation{\fieldofrotations}
 \end{equation*}
 
@@ -258,14 +262,14 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 \displaystyle
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \left( \forcestresstensor \dotp \variation{\fieldofdisplacements} \right) \hspace{-0.1ex} d\mathcal{V}
 =
-\ointegral\displaylimits_{\mathclap{\widearc{o}\hspace{.15ex}(\boundary \mathcal{V})}} \hspace{-0.1ex} \bm{n} \dotp \forcestresstensor \dotp \variation{\fieldofdisplacements} \hspace{.32ex} do
+\ointegral\displaylimits_{\mathclap{\widearc{o}\hspace{.1ex}(\boundary \mathcal{V})}} \hspace{-0.1ex} \bm{n} \dotp \forcestresstensor \dotp \variation{\fieldofdisplacements} \hspace{.32ex} do
 \hspace{.1ex} ,
 \:\:
 %
 \displaystyle
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \left( \hspace{.1ex} \couplestresstensor \dotp \variation{\fieldofrotations} \right) \hspace{-0.1ex} d\mathcal{V}
 =
-\ointegral\displaylimits_{\mathclap{\widearc{o}\hspace{.15ex}(\boundary \mathcal{V})}} \hspace{-0.1ex} \bm{n} \dotp \couplestresstensor \dotp \variation{\fieldofrotations} \hspace{.32ex} do
+\ointegral\displaylimits_{\mathclap{\widearc{o}\hspace{.1ex}(\boundary \mathcal{V})}} \hspace{-0.1ex} \bm{n} \dotp \couplestresstensor \dotp \variation{\fieldofrotations} \hspace{.32ex} do
 %%\hspace{.1ex} ,
 \end{equation*}
 
@@ -312,7 +316,7 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 
 \en{eccentricity vector}\ru{вектор эксцентриситета}~$\mathboldoe$ \en{and}\ru{и} \en{inertia tensor}\ru{тензор инерции}~${\inertiatensor}$
 
-\en{For an~isotropic medium}\ru{Для изотропной среды} ${\mathboldoe = \bm{0}}$, ${\inertiatensor = \inertiascalar \bm{E}}$.
+\en{For an~isotropic medium}\ru{Для изотропной среды} ${\mathboldoe = \bm{0}}$, ${\inertiatensor = \inertiascalar \UnitDyad}$.
 
 ...
 
@@ -325,8 +329,8 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 \begin{otherlanguage}{russian}
 
 В~этой книге упругой называется среда с~потенциальными внутренними силами:
-${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$,
-где~$\Pi$\:--- энергия деформации на~единицу объёма
+${\variation{\internalwork} = - \hspace{.16ex} \variation{\potential}}$,
+где~$\potential$\:--- энергия деформации на~единицу объёма
 (\en{continuing to~model}\ru{продолжая моделировать} \en{the~geometrically linear material}\ru{геометрически линейный материал}, ${\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}\hspace{.12ex}}$).
 
 Имея соотношения (...)
@@ -335,17 +339,17 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$,
 
 \begin{multline}\label{micropolar.constitutiveequations}
 \hspace*{4em}
-\variation{\Pi} = - \hspace{.25ex} \variation{\internalwork} \hspace{-0.15ex}
+\variation{\potential} = - \hspace{.25ex} \variation{\internalwork} \hspace{-0.15ex}
 = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.25ex}
 + \hspace{.1ex} \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T}
 \hspace{.6ex} \Rightarrow
 \\[-0.1em]
 %
 \Rightarrow \hspace{.88ex}
-\forcestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \Pi^{\mathstrut}}}{\partial \distortiontensor}$}
+\forcestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potential^{\mathstrut}}}{\partial \distortiontensor}$}
 \hspace{.15ex} ,
 \hspace{.8ex}
-\couplestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \Pi^{\mathstrut}}}{\partial \wrynesstensor}$}
+\couplestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potential^{\mathstrut}}}{\partial \wrynesstensor}$}
 \hspace{.2ex} .
 \hspace*{3.33em}
 \end{multline}
@@ -356,35 +360,35 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\Pi}}$,
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{c}
-\distortiontensor = \distortiontensor^{\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.32ex} \distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E}
+\distortiontensor = \distortiontensor^{\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.32ex} \distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.1ex} \times \UnitDyad
 \hspace{.1ex} , \:\:
 %
-\wrynesstensor \hspace{.1ex} = \wrynesstensor^{\hspace{.12ex}\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.32ex} \wrynesstensor_{\hspace{.15ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E}
+\wrynesstensor \hspace{.1ex} = \wrynesstensor^{\hspace{.12ex}\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.32ex} \wrynesstensor_{\hspace{.15ex}\Xcompanion} \hspace{-0.1ex} \times \UnitDyad
 \hspace{.1ex} ,
 \\[.6em]
 %
-\variation{\distortiontensor}^{\T} \hspace{-0.33ex} = \hspace{.1ex} \variation{\distortiontensor}^{\hspace{.2ex}\mathsf{S}} \hspace{-0.1ex} + \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.32ex} \variation{\distortiontensor}_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E}
+\variation{\distortiontensor}^{\T} \hspace{-0.33ex} = \hspace{.1ex} \variation{\distortiontensor}^{\hspace{.2ex}\mathsf{S}} \hspace{-0.1ex} + \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.32ex} \variation{\distortiontensor}_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.1ex} \times \UnitDyad
 \hspace{.1ex} , \:\:
 %
-\variation{\wrynesstensor}^{\T} \hspace{-0.33ex} = \hspace{.1ex} \variation{\wrynesstensor}^{\hspace{.12ex}\mathsf{S}} \hspace{-0.1ex} + \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.32ex} \variation{\wrynesstensor}_{\hspace{.15ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E}
+\variation{\wrynesstensor}^{\T} \hspace{-0.33ex} = \hspace{.1ex} \variation{\wrynesstensor}^{\hspace{.12ex}\mathsf{S}} \hspace{-0.1ex} + \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.32ex} \variation{\wrynesstensor}_{\hspace{.15ex}\Xcompanion} \hspace{-0.1ex} \times \UnitDyad
 \hspace{.1ex} ,
 \\[.6em]
 %
-\forcestresstensor = \forcestresstensor^{\hspace{.32ex}\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.2ex} \forcestresstensor_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.1ex} \times \bm{E}
+\forcestresstensor = \forcestresstensor^{\hspace{.32ex}\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.2ex} \forcestresstensor_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.1ex} \times \UnitDyad
 \hspace{.1ex} , \;\:
 %
-\couplestresstensor = \couplestresstensor^{\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.32ex} \couplestresstensor_{\Xcompanion} \hspace{-0.1ex} \times \bm{E}
+\couplestresstensor = \couplestresstensor^{\mathsf{S}} \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \hspace{.32ex} \couplestresstensor_{\Xcompanion} \hspace{-0.1ex} \times \UnitDyad
 \hspace{.1ex} ,
 \end{array}
 \end{equation*}
 
 \noindent преобразуем выражение
-${\variation{\Pi} = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.3ex}
+${\variation{\potential} = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.3ex}
 + \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.25ex}}$
 как
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
-\variation{\Pi} = \ldots
+\variation{\potential} = \ldots
 \end{equation}
 
 ...
@@ -402,7 +406,7 @@ ${\variation{\Pi} = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\
 \end{equation*}
 
 \begin{equation*}
-\mathboldepsilon \equiv \distortiontensor^{\hspace{.2ex}\mathsf{S}} \hspace{-0.32ex} = \hspace{-0.2ex} \boldnabla {\fieldofdisplacements}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.25ex} , \:\:
+\infinitesimaldeformation \equiv \distortiontensor^{\hspace{.2ex}\mathsf{S}} \hspace{-0.32ex} = \hspace{-0.2ex} \boldnabla {\fieldofdisplacements}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.25ex} , \:\:
 \end{equation*}
 
 ...
@@ -419,17 +423,17 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \begin{array}{c}
-\distortiontensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\Pi}^{\mathstrut}}}{\partial \forcestresstensor}$}
+\distortiontensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potential}^{\mathstrut}}}{\partial \forcestresstensor}$}
 \hspace{.15ex} ,
 \hspace{.8ex}
-\wrynesstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\Pi}^{\mathstrut}}}{\partial \couplestresstensor}$}
+\wrynesstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potential}^{\mathstrut}}}{\partial \couplestresstensor}$}
 \hspace{.2ex} ,
 \\[.8em]
 %
-\widehat{\Pi}(\hspace{-0.1ex} \forcestresstensor, \couplestresstensor \hspace{.12ex}) \hspace{-0.12ex}
+\widehat{\potential}(\hspace{-0.1ex} \forcestresstensor, \couplestresstensor \hspace{.12ex}) \hspace{-0.12ex}
 = \forcestresstensor \dotdotp \distortiontensor^{\T} \hspace{-0.25ex}
 + \hspace{.1ex} \couplestresstensor \dotdotp \wrynesstensor^{\T} \hspace{-0.2ex}
-- \hspace{.1ex} \Pi(\distortiontensor , \wrynesstensor \hspace{.12ex})
+- \hspace{.1ex} \potential(\distortiontensor , \wrynesstensor \hspace{.12ex})
 \hspace{.1ex} .
 \end{array}
 \end{equation}
@@ -438,7 +442,7 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 
 material’s intrinsic (internal) length scale $\elcursive$
 
-Если устремить $\elcursive$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\Pi$, а~с~ним и моментные напряжения~$\couplestresstensor$.
+Если устремить $\elcursive$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\potential$, а~с~ним и моментные напряжения~$\couplestresstensor$.
 Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$, тогда тензор~${\hspace{-0.1ex}\forcestresstensor}$ становится симметричным:
 ${\boldnabla \dotp {\color{black!66}{\couplestresstensor}} \hspace{.1ex}
 + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex}
@@ -476,10 +480,10 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 \hspace{.1ex} ,
 \\[.3em]
 %
-\distortiontensor \hspace{.1ex} - \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.25ex} \bm{E} \hspace{.12ex} = \hspace{-0.1ex} \boldnabla \fieldofdisplacements \hspace{.1ex}
+\distortiontensor \hspace{.1ex} - \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.25ex} \UnitDyad \hspace{.12ex} = \hspace{-0.1ex} \boldnabla \fieldofdisplacements \hspace{.1ex}
 & \hspace{.1ex} \Rightarrow &
 \boldnabla \hspace{-0.15ex} \times \hspace{-0.2ex} \bigl(
-\distortiontensor \hspace{.1ex} - \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.25ex} \bm{E} \hspace{.12ex}
+\distortiontensor \hspace{.1ex} - \hspace{.1ex} \fieldofrotations \hspace{-0.12ex} \times \hspace{-0.25ex} \UnitDyad \hspace{.12ex}
 \bigr) \hspace{-0.22ex}
 = {^2}\bm{0}
 \hspace{.8ex} ...
@@ -522,7 +526,7 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 \hspace{.6ex}\Leftrightarrow\hspace{.6ex}
 \distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}
 \hspace{.6ex}\Leftrightarrow\hspace{.6ex}
-\distortiontensor = \mathboldepsilon = \hspace{-0.12ex} \boldnabla {\fieldofdisplacements}^{\hspace{.1ex}\mathsf{S}}
+\distortiontensor = \infinitesimaldeformation = \hspace{-0.12ex} \boldnabla {\fieldofdisplacements}^{\hspace{.1ex}\mathsf{S}}
 %%\hspace{-0.25ex} .
 \end{equation}
 
@@ -531,9 +535,12 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 
 \begin{otherlanguage}{russian}
 
-Равенство~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию~$\distortiontensor$) возможно понимать как внутреннюю связь~(\chapdotpararef{chapter:nonlinearcontinuum}{para:internalconstraints}). Аргумент~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$ исчезает из~энергии~$\Pi$, соотношение упругости для~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано. Его место в~полной системе занимает уравнение связи.
+Равенство~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию~$\distortiontensor$) возможно понимать как внутреннюю связь~(\chapdotpararef{chapter:nonlinearcontinuum}{para:internalconstraints}).
+Аргумент~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$ исчезает из~энергии~$\potential$, соотношение упругости для~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано.
+Его место в~полной системе занимает уравнение связи.
 
-В~классической теории упругости полная система сводится к~одному уравнению для~вектора~$\fieldofdisplacements$~(\chapdotpararef{chapter:linearclassicalelasticity}{para:equationsfordisplacement}). В~моментной теории
+В~классической (линейной безмоментной) теории упругости полная система сводится к~одному уравнению для~вектора~$\fieldofdisplacements$~(\chapdotpararef{chapter:linearclassicalelasticity}{para:equationsfordisplacements.linearelasticity}).
+В~моментной теории
 
 ...
 
@@ -549,12 +556,14 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 
 \begin{otherlanguage}{russian}
 
-Все переменные в~этой постановке не~зависят от декартовой координаты~${z \equiv x_3}$~(орт оси\:--- $\bm{k}$). Перемещения и~силы перпендикулярны оси~$z$, а~повороты и~моменты\:--- параллельны ей:
+Все переменные в~этой постановке не~зависят от декартовой координаты~${z \equiv x_3}$~(орт оси\:--- $\bm{k}$).
+Перемещения и~силы перпендикулярны оси~$z$, а~повороты и~моменты\:--- параллельны ей:
 
 ...
 
 
-Это краткое изложение плоской задачи относится к~модели с~независимыми поворотами. Псевдоконтину\kern-0.11exум Коссера (модель со~стеснённым вращением) получается либо при наложении внутренней связи~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$, либо при предельном переходе ...
+Это краткое изложение плоской задачи относится к~модели с~независимыми поворотами.
+Псевдоконтину\kern-0.11exум Коссера (модель со~стеснённым вращением) получается либо при наложении внутренней связи~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$, либо при предельном переходе ...
 
 Подробнее о~плоской моментной задаче написано в~книгах Н.\,Ф.\;Морозова~\cite{morozov-twodimensionalproblems, morozov-fractures}.
 
@@ -580,10 +589,11 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 \item вывод соотношений упругости между напряжением и~деформацией.
 \end{itemize}
 
-\vspace{-0.16em} \noindent Этот традиционный путь очень сокращается, если опираться на принцип виртуальной работы.
+\vspace{-0.16em}\noindent
+Этот традиционный путь очень сокращается, если опираться на принцип виртуальной работы.
 
-Как и в~\chapref{chapter:nonlinearcontinuum}, среда состоит из~частиц с~материальными координатами~$q^i$ и вектором\hbox{-}радиусом~${\currentvector(q^i\hspace{-0.4ex}, t)}$.
-В~начальной~(исходной, отсчётной) конфигурации ${\currentvector(q^i\hspace{-0.4ex}, 0) \hspace{-0.12ex} \equiv \hspace{.12ex} \initialvector(q^i)}$.
+Как и в~\chapref{chapter:nonlinearcontinuum}, среда состоит из~частиц с~материальными координатами~$q^i$ и вектором\hbox{-}радиусом~${\currentlocationvector(q^i\hspace{-0.4ex}, t)}$.
+В~начальной~(исходной, отсчётной) конфигурации ${\currentlocationvector(q^i\hspace{-0.4ex}, 0) \hspace{-0.12ex} \equiv \hspace{.12ex} \initiallocationvector(q^i)}$.
 Но кроме трансляции, частицы имеют независимые степени свободы поворота, описываемого ортогональным тензором
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
@@ -596,7 +606,7 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 \end{equation*}
 
 \vspace{-0.1em} \noindent где тройка векторов~${\bm{a}_{\hspace{-0.12ex}j}(q^i\hspace{-0.4ex}, t)}$ жёстко связана с~каждой частицей, показывая угловую ориентацию относительно как\hbox{-}либо выбираемых\footnote{%
-Один из вариантов: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.4ex} = \initialvector_{\hspace{-0.2ex}j} \hspace{-0.1ex} \equiv \partial_j \currentvector}$.
+Один из вариантов: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.4ex} = \initiallocationvector_{\hspace{-0.2ex}j} \hspace{-0.1ex} \equiv \partial_j \currentlocationvector}$.
 Другое предложение: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.2ex}}$ это ортонормальная тройка собственных векторов тензора инерции частицы. %% (но как обосновать такой выбор в~статике?)
 Вообще, ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.2ex}}$ могут быть любой тройкой линейно-независимых векторов.
 }\hspace{-0.2ex}
@@ -606,29 +616,29 @@ ${\bm{a}_{\hspace{-0.12ex}j} \hspace{-0.2ex} = \rotationtensor \hspace{-0.1ex} \
 ${\bm{a}^j\hspace{-0.2ex}}$\:--- тройка взаимных векторов:
 ${\bm{a}_{\hspace{-0.12ex}j} \bm{a}^j \hspace{-0.25ex}
 = \hspace{-0.15ex} \bm{a}^j \hspace{-0.2ex} \bm{a}_{\hspace{-0.12ex}j} \hspace{-0.25ex}
-= \hspace{-0.2ex} \bm{E}}$
-(${t\!=\!0}$, ${\mathcircabove{\bm{a}}^j}$: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \mathcircabove{\bm{a}}^j \hspace{-0.25ex} = \hspace{-0.15ex} \mathcircabove{\bm{a}}^j \mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.25ex} = \hspace{-0.2ex} \bm{E}}$).
-Движение среды полностью определяется функциями ${\currentvector(q^i\hspace{-0.4ex}, t)}$ \en{and}\ru{и}~${\rotationtensor(q^i\hspace{-0.4ex}, t)}$.
+= \hspace{-0.2ex} \UnitDyad}$
+(${t\!=\!0}$, ${\mathcircabove{\bm{a}}^j}$: ${\mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \mathcircabove{\bm{a}}^j \hspace{-0.25ex} = \hspace{-0.15ex} \mathcircabove{\bm{a}}^j \mathcircabove{\bm{a}}_{\hspace{-0.12ex}j} \hspace{-0.25ex} = \hspace{-0.2ex} \UnitDyad}$).
+Движение среды полностью определяется функциями ${\currentlocationvector(q^i\hspace{-0.4ex}, t)}$ \en{and}\ru{и}~${\rotationtensor(q^i\hspace{-0.4ex}, t)}$.
 
-Имея представления ${\initialvector(q^i)}$ и~${\currentvector(q^i\hspace{-0.4ex}, t)}$,
-вводим базис~${\currentvector_i \equiv \partial_i \currentvector}\hspace{-0.2ex}$,
-взаимный базис~${\currentvector^i}$: ${\currentvector_{\hspace{-0.2ex}j} \hspace{-0.2ex} \dotp \currentvector^i \hspace{-0.25ex} = \delta^{\hspace{.1ex}i}_{\hspace{-0.2ex}j}}$,
+Имея представления ${\initiallocationvector(q^i)}$ и~${\currentlocationvector(q^i\hspace{-0.4ex}, t)}$,
+вводим базис~${\currentlocationvector_i \equiv \partial_i \currentlocationvector}\hspace{-0.2ex}$,
+взаимный базис~${\currentlocationvector^i}$: ${\currentlocationvector_{\hspace{-0.2ex}j} \hspace{-0.2ex} \dotp \currentlocationvector^i \hspace{-0.25ex} = \delta^{\hspace{.1ex}i}_{\hspace{-0.2ex}j}}$,
 \en{differential operators}\ru{дифференциальные операторы}~$\boldnablacircled$ \en{and}\ru{и}~${\hspace{-0.16ex}\boldnabla}\hspace{-0.1ex}$,
 а~также \en{motion gradient}\ru{градиент движения}~$\motiongradient$
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
-\boldnablacircled \equiv \initialvector^{\hspace{.1ex}i} \partial_i
+\boldnablacircled \equiv \initiallocationvector^{\hspace{.1ex}i} \partial_i
 \hspace{.1ex} ,
 \:\;
-\boldnabla \equiv \currentvector^i \partial_i
+\boldnabla \equiv \currentlocationvector^i \partial_i
 \hspace{.1ex} ,
 \:\;
 \boldnabla = \motiongradient^{\expminusT} \hspace{-0.32ex} \dotp \boldnablacircled
 ,
 \:\;
 \motiongradient \equiv \hspace{-0.16ex}
-\boldnablacircled \currentvector^{\T} \hspace{-0.5ex}
-= \currentvector_i \hspace{.2ex} \initialvector^{\hspace{.1ex}i}
+\boldnablacircled \currentlocationvector^{\T} \hspace{-0.5ex}
+= \currentlocationvector_i \hspace{.2ex} \initiallocationvector^{\hspace{.1ex}i}
 \hspace{-0.25ex} .
 \end{equation}
 
@@ -636,10 +646,10 @@ ${\bm{a}_{\hspace{-0.12ex}j} \bm{a}^j \hspace{-0.25ex}
 
 \nopagebreak\vspace{-0.3em}\begin{multline}
 \hspace*{2em}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \hspace{-0.1ex} \rho \hspace{.2ex} \bigl( \bm{f} \dotp \variation{\currentvector} + \bm{m} \dotp \littlerotationvector \hspace{.1ex} \bigr) \hspace{-0.1ex} + \hspace{.1ex} \variation{\internalwork} \hspace{.1ex} \right) \hspace{-0.3ex} d\mathcal{V}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex} \left(^{\mathstrut} \hspace{-0.1ex} \rho \hspace{.2ex} \bigl( \bm{f} \dotp \variation{\currentlocationvector} + \bm{m} \dotp \littlerotationvector \hspace{.1ex} \bigr) \hspace{-0.1ex} + \hspace{.1ex} \variation{\internalwork} \hspace{.1ex} \right) \hspace{-0.3ex} d\mathcal{V}
 \hspace{.5ex} + \\[-1.2em]
 %
-+ \integral\displaylimits_{\mathcal{O}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\currentvector} + \mathboldM \hspace{-0.1ex} \dotp \littlerotationvector \right) \hspace{-0.3ex} d\mathcal{O} \hspace{.1ex}
++ \integral\displaylimits_{\mathcal{O}} \hspace{-0.64ex} \left(^{\mathstrut} \bm{p} \dotp \variation{\currentlocationvector} + \mathboldM \hspace{-0.1ex} \dotp \littlerotationvector \right) \hspace{-0.3ex} d\mathcal{O} \hspace{.1ex}
 = \hspace{.1ex} 0 \hspace{.1ex} .
 \hspace*{2em}
 \end{multline}
@@ -652,7 +662,7 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 Вектор м\'{а}лого поворота~$\littlerotationvector$
 
 \nopagebreak\vspace{-0.5em}\begin{multline*}
-\scalebox{0.98}{$ \rotationtensor \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = \bm{E}
+\scalebox{0.98}{$ \rotationtensor \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = \UnitDyad
 \:\Rightarrow\,
 \variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex}
 = - \hspace{.2ex} \rotationtensor \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\rotationtensor}^{\T}
@@ -661,7 +671,7 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 %
 \scalebox{0.98}{$ \Rightarrow\,
 \variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.25ex}
-= \hspace{.1ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
+= \hspace{.1ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
 = \hspace{.1ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \rotationtensor \hspace{-0.1ex} \dotp \rotationtensor^{\T}
 \Rightarrow\,
 \variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} = \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \rotationtensor , $}
@@ -672,13 +682,14 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 \scalebox{1}{$ \left( \variation{\hspace{.1ex}\rotationtensor} \hspace{-0.1ex} \dotp^{\mathstrut} \hspace{-0.1ex} \rotationtensor^{\T} \hspace{.1ex} \right)_{\hspace{-0.15em}\Xcompanion} $}
 \end{equation*}
 
-\vspace{-0.1em} При движении среды как жёсткого целого нет деформаций, и~работа~$\variation{\internalwork}\hspace{-0.2ex}$ внутренних сил равна нулю:
+\vspace{-0.1em}
+При движении среды как жёсткого целого нет деформаций, и~работа~$\variation{\internalwork}\hspace{-0.2ex}$ внутренних сил равна нулю:
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{c}
-\variation{\currentvector}
+\variation{\currentlocationvector}
 = \boldconstant \hspace{.1ex}
-+ \hspace{.1ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.12ex} \bm{r} ,
++ \hspace{.1ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.12ex} \locationvector ,
 \:\,
 \littlerotationvector = \boldconstant
 \hspace{.64ex}\Rightarrow\hspace{.5ex}
@@ -690,39 +701,40 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 = {^2\bm{0}}
 \hspace{.1ex} ,
 \:\,
-\boldnabla \variation{\currentvector}
+\boldnabla \variation{\currentlocationvector}
 = \hspace{-0.25ex} \boldnabla \littlerotationvector %%{^2\bm{0}}
-\hspace{-0.2ex} \times \hspace{-0.2ex} \bm{r}
-- \hspace{-0.25ex} \boldnabla \bm{r} \hspace{-0.2ex} \times \hspace{-0.2ex} \littlerotationvector
-= - \bm{E} \hspace{-0.2ex} \times \hspace{-0.2ex} \littlerotationvector
-= - \hspace{.2ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
+\hspace{-0.2ex} \times \hspace{-0.2ex} \locationvector
+- \hspace{-0.25ex} \boldnabla \locationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \littlerotationvector
+= - \UnitDyad \hspace{-0.2ex} \times \hspace{-0.2ex} \littlerotationvector
+= - \hspace{.2ex} \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
 \hspace{.1ex} ,
 \\[.25em]
 %
-\boldnabla \variation{\currentvector}
-+ \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E}
+\boldnabla \variation{\currentlocationvector}
++ \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
 = {^2\bm{0}}
 \hspace{.1ex} .
 \end{array}
 \end{equation*}
 
-К~нагрузкам. Несимметричные тензоры напряжения, силового~$\forcestresstensor$ и моментного~$\couplestresstensor$, введём как множители Lagrange’а:
+К~нагрузкам.
+Несимметричные тензоры напряжения, силового~$\forcestresstensor$ и моментного~$\couplestresstensor$, введём как множители Lagrange’а:
 
 \nopagebreak\vspace{-0.3em}\begin{multline}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.64ex}
 \left(^{\mathstrut} \hspace{-0.1ex}
 \rho \hspace{.2ex} \bigl(
-\bm{f} \dotp \variation{\currentvector}
+\bm{f} \dotp \variation{\currentlocationvector}
 + \bm{m} \dotp \littlerotationvector
 \hspace{.1ex} \bigr) \hspace{-0.2ex}
-- \forcestresstensor \dotdotp \hspace{-0.1ex} \bigl( \hspace{.16ex} \boldnabla \variation{\currentvector} + \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.25ex} \bm{E} \hspace{.2ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.5ex}
+- \forcestresstensor \dotdotp \hspace{-0.1ex} \bigl( \hspace{.16ex} \boldnabla \variation{\currentlocationvector} + \littlerotationvector \hspace{-0.2ex} \times \hspace{-0.25ex} \UnitDyad \hspace{.2ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.5ex}
 - \couplestresstensor \dotdotp \hspace{-0.16ex} \boldnabla \littlerotationvector^{\T}
 \right) \hspace{-0.3ex} d\mathcal{V}
 \hspace{.5ex} + \\[-1.2em]
 %
 + \integral\displaylimits_{\mathcal{O}} \hspace{-0.64ex}
 \left(^{\mathstrut}
-\bm{p} \dotp \variation{\currentvector}
+\bm{p} \dotp \variation{\currentlocationvector}
 + \mathboldM \hspace{-0.1ex} \dotp \littlerotationvector
 \right) \hspace{-0.3ex} d\mathcal{O} \hspace{.1ex}
 = \hspace{.1ex} 0 \hspace{.1ex} .
@@ -732,9 +744,13 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 
 ...
 
-Отсюда вытекают уравнения баланса сил и~моментов в~объёме и~краевые условия в~виде \textcolor{magenta}{формул типа Cauchy}. Они по~существу те~же, что и в~линейной теории.
+Отсюда вытекают уравнения баланса сил и~моментов в~объёме и~краевые условия в~виде \textcolor{magenta}{формул типа Cauchy}.
+Они по~существу те~же, что и в~линейной теории.
 
-Найдём теперь тензоры деформации. Их можно вводить по\hbox{-}разному, если требовать лишь одного\:--- нечувствительности к~движению среды как жёсткого целого. Читатель найдёт не~один вариант таких тензоров. Однако, вид тензоров деформации \inquotes{подсказывает} принцип виртуальной работы.
+Найдём теперь тензоры деформации.
+Их можно вводить по\hbox{-}разному, если требовать лишь одного\:--- нечувствительности к~движению среды как жёсткого целого.
+Читатель найдёт не~один вариант таких тензоров.
+Однако, вид тензоров деформации \inquotes{подсказывает} принцип виртуальной работы.
 
 ...
 
@@ -750,7 +766,9 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 
 \begin{otherlanguage}{russian}
 
-Вспомним переход к~модели со~стеснённым вращением в~линейной теории~(\pararef{para:caseoflatenttrihedron.smalldisplacementsandrotations}). Разделились соотношения упругости для~симметричной части тензора силового напряжения ${\forcestresstensor^{\hspace{.32ex}\mathsf{S}}}\hspace{-0.2ex}$ и~кососимметричной его части~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$. Возникла внутренняя связь~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$
+Вспомним переход к~модели со~стеснённым вращением в~линейной теории~(\pararef{para:caseoflatenttrihedron.smalldisplacementsandrotations}).
+Разделились соотношения упругости для~симметричной части тензора силового напряжения ${\forcestresstensor^{\hspace{.32ex}\mathsf{S}}}\hspace{-0.2ex}$ и~кососимметричной его части~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$.
+Возникла внутренняя связь~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$
 
 ...
 
@@ -766,7 +784,10 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 
 \begin{otherlanguage}{russian}
 
-Все работы по~моментной теории упругости упоминают книгу братьев Eugène et~François Cosserat~\cite{cosserat}, где~трёх\-мерной среде посвящена одна глава из~шести. Переведённая монография \hbox{W\hspace{-0.2ex}.\:Nowacki}~\cite{nowacki-elasticity} была одной из первых книг на~русском языке с~изложением линейной моментной теории. Ранее эта область представлялась статьями\:--- например, R.\,D.\:Mindlin’а и~H.\,F.\:Tiersten’а~\cite{mindlin.tiersten}. Краткое изложение моментной теории, но с~подробным рассмотрением задач содержится в~книгах Н.\,Ф.\:Морозова~\cite{morozov-twodimensionalproblems, morozov-fractures}.
+Все работы по~моментной теории упругости упоминают книгу братьев Eugène et~François Cosserat~\cite{cosserat}, где~трёх\-мерной среде посвящена одна глава из~шести.
+Переведённая монография \hbox{W\hspace{-0.2ex}.\:Nowacki}~\cite{nowacki-elasticity} была одной из первых книг на~русском языке с~изложением линейной моментной теории.
+Ранее эта область представлялась статьями\:--- например, R.\,D.\:Mindlin’а и~H.\,F.\:Tiersten’а~\cite{mindlin.tiersten}.
+Краткое изложение моментной теории, но с~подробным рассмотрением задач содержится в~книгах Н.\,Ф.\:Морозова~\cite{morozov-twodimensionalproblems, morozov-fractures}.
 
 \end{otherlanguage}
 

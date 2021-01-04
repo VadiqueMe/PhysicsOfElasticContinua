@@ -1,0 +1,120 @@
+\documentclass[tikz, margin=10mm]{standalone}
+
+\usepackage{tikz}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+
+\def\beamlength{12}
+\pgfmathsetmacro\halfbeamlength{\beamlength / 2}
+
+% beam
+
+\newcommand{\halfell}{ \raisebox{.3em}{$\ell$} \hspace{-0.4ex} / \hspace{-0.4ex} \raisebox{-0.33em}{\scalebox{0.88}{$2$}} }
+
+\draw [line width=3pt, line cap=round, color=black]
+	(0, 0) -- (\halfbeamlength, 0)
+		node [pos=0.49, above, shape=circle, fill=white, inner sep=-2pt, outer sep=10pt] {\scalebox{2}{$ \halfell $}} ;
+
+\draw [line width=3pt, line cap=round, color=black]
+	(\halfbeamlength, 0) -- (\beamlength, 0)
+		node [pos=0.49, above, shape=circle, fill=white, inner sep=-2pt, outer sep=10pt] {\scalebox{2}{$ \halfell $}} ;
+
+% constraints
+
+\def\clamplength{1.33}
+
+\tikzstyle{constraint line} = [line width=2pt, color=blue, line cap=round]
+\tikzstyle{constraint hatch} = [line width=.5pt, blue]
+
+\draw [constraint line] (0, 0) -- (0, \clamplength / 2) ;
+\draw [constraint line] (0, 0) -- (0, - \clamplength / 2) ;
+
+\def\clamphatchsize{.33}
+\pgfmathsetmacro\hatchamplitude{( \clamplength / 2 ) - .1}
+\pgfmathsetmacro\hatchstep{.33}
+\pgfmathsetmacro\nexthatch{\hatchamplitude - \hatchstep}
+\foreach \ycap in {\hatchamplitude, \nexthatch, ..., -\hatchamplitude}
+	\draw [constraint hatch] (0, \ycap) -- (-\clamphatchsize, \ycap - \clamphatchsize) ;
+
+% external loads
+
+\def\forceheight{1.2}
+
+\tikzstyle{force line} =
+	[line width=2pt, red, line cap=round, -{Triangle[round, length=15pt, width=9pt]}]
+
+\draw [force line] (\beamlength, \forceheight) -- (\beamlength, 0)
+	node [pos=0.7, above left, shape=circle, fill=white, inner sep=-2pt, outer sep=12pt] {\scalebox{2}{$F$}} ;
+
+\draw [force line] (\halfbeamlength, \forceheight) -- (\halfbeamlength, 0)
+	node [pos=0.7, above left, shape=circle, fill=white, inner sep=-2pt, outer sep=12pt] {\scalebox{2}{$F$}} ;
+
+% epure of bending moments
+
+\def\epurelvl{-2}
+
+\def\momentFl{2}
+\pgfmathsetmacro\justF{\momentFl / \beamlength}
+
+\tikzstyle{epure line} = [line width=1.5pt, color=black, line cap=round]
+\tikzstyle{epure hatch} = [line width=.5pt, color=black]
+\tikzstyle{epure aux} = [line width=1pt, color=black, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+
+\draw [epure aux] (0, 0) -- (0, \epurelvl) ;
+\draw [epure aux] (\halfbeamlength, 0) -- (\halfbeamlength, \epurelvl) ;
+\draw [epure aux] (\beamlength, 0) -- (\beamlength, \epurelvl) ;
+
+\pgfmathsetmacro\halfmomentFl{\justF * \halfbeamlength}
+\pgfmathsetmacro\maxmoment{( 1 + (\halfbeamlength / \beamlength) ) * \momentFl}
+
+\pgfmathsetmacro\epurehatchstep{\halfbeamlength / 9}
+
+\pgfmathsetmacro\nextxhatchsecondhalf{\beamlength - \epurehatchstep}
+\foreach \xhatch in {\beamlength, \nextxhatchsecondhalf, ..., \halfbeamlength}
+	\pgfmathsetmacro\righttoleftx{\beamlength - \xhatch}
+	\pgfmathsetmacro\currentmoment{\justF * \righttoleftx}
+	\draw [epure hatch] (\xhatch, \epurelvl) -- (\xhatch, \epurelvl - \currentmoment) ;
+
+\draw [epure hatch, color=gray] (\beamlength, \epurelvl) -- (0, \epurelvl - \momentFl) ;
+
+\pgfmathsetmacro\nextxhatchfirsthalf{\halfbeamlength - \epurehatchstep}
+\foreach \xhatch in {\halfbeamlength, \nextxhatchfirsthalf, ..., 0}
+	\pgfmathsetmacro\righttoleftx{\halfbeamlength - \xhatch}
+	\pgfmathsetmacro\oldpartofcurrentmoment{\momentFl * ( 1 - ( \xhatch / \beamlength ) )}
+	\pgfmathsetmacro\newpartofcurrentmoment{\justF * \righttoleftx}
+	\draw [epure hatch] (\xhatch, \epurelvl) -- (\xhatch, \epurelvl - \oldpartofcurrentmoment - \newpartofcurrentmoment) ;
+
+\draw [epure hatch, color=gray] (\halfbeamlength, \epurelvl) -- (0, \epurelvl - \halfmomentFl) ;
+
+\draw [epure line] (0, \epurelvl) -- (\beamlength, \epurelvl) ;
+
+\draw [epure line] (0, \epurelvl) -- ++(0, -\maxmoment) ;
+\draw [epure line] (\halfbeamlength, \epurelvl) -- ++(0, -\halfmomentFl) ;
+
+\draw [epure line] (0, \epurelvl - \maxmoment) -- (\halfbeamlength, \epurelvl - \halfmomentFl) -- (\beamlength, \epurelvl) ;
+
+% text
+
+\newcommand{\threeseconds}{\raisebox{.22ex}{$ \raisebox{.3em}{\scalebox{0.7}{$3$}} \hspace{-0.4ex} / \hspace{-0.46ex} \raisebox{-0.25em}{\scalebox{0.7}{$2$}}\hspace{.15ex} $}}
+
+\newcommand\internalmoment{\scalebox{.9}[1]{$ \mathcal{M} $}}
+
+\draw [epure aux] (\halfbeamlength, \epurelvl) -- (\halfbeamlength, \epurelvl - \halfmomentFl - 0.3)
+	node [pos=1, below, xshift=-0.1em, shape=circle, fill=white, inner sep=-2pt, outer sep=4pt]
+	{\scalebox{2}{$\displaystyle\frac{\raisebox{-0.2em}{$F\hspace{-0.2ex}\ell$}}{2}$}} ;
+
+\draw [epure aux] (0, \epurelvl) -- (0, \epurelvl - \maxmoment)
+	node [pos=0.48, left, shape=circle, fill=white, inner sep=-2pt, outer sep=8pt]
+	{\scalebox{2}{$\threeseconds F\hspace{-0.2ex}\ell$}} ;
+
+\node [right, shape=circle, draw=black, line width=.5pt, fill=white, inner sep=2.5pt, outer sep=10pt]
+	at (\beamlength, \epurelvl) {\scalebox{2}{$ \internalmoment $}} ;
+
+\end{tikzpicture}
+
+\end{document}

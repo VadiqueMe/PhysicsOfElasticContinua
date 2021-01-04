@@ -380,15 +380,15 @@ aboveskip=4mm,belowskip=2.5mm}
 	\edef\vectorprojfirstxint{ \xinttheexpr round( \vectordotfirst / \firstlength , 10 ) \relax }%
 	\newcommand*{\vectorprojfirstinunits}{\scaleofunits * \vectorprojfirstxint \tikzunit}
 	\pic [draw, <-, color=red!50!blue, line cap=round, dash pattern=on 0pt off 4\pgflinewidth,
-		angle radius=\vectorprojfirstinunits, angle eccentricity=0.92,
-		"$\scalebox{0.8}{$\displaystyle \frac{v_1}{| \bm{a}_1 |}$}$"]
+		angle radius=\vectorprojfirstinunits, angle eccentricity=0.91,
+		"$\scalebox{0.8}{$\displaystyle \frac{v_1}{\| \bm{a}_1 \|}$}$"]
 	{ angle = coA1--O--A1 };
 
 	\edef\vectorcocofirstxint{ \xinttheexpr round( \vectordotfirst * \lengthofcofirst , 10 ) \relax }%
 	\newcommand*{\vectorcocofirstinunits}{\scaleofunits * \vectorcocofirstxint \tikzunit}
 	\pic [draw, ->, color=red!50!blue, line cap=round, dash pattern=on 0pt off 4\pgflinewidth,
-		angle radius=\vectorcocofirstinunits, angle eccentricity=1.09,
-		"$\scalebox{0.8}{$v_1 | \bm{a}^{\hspace{-0.16ex}1} |$}$"]
+		angle radius=\vectorcocofirstinunits, angle eccentricity=1.1,
+		"$\scalebox{0.8}{$v_1 \| \bm{a}^{\hspace{-0.16ex}1} \|$}$"]
 	{ angle = coA1--O--A1 };
 
 	\draw [line width=0.4pt, line cap=round, dash pattern=on 0pt off 4\pgflinewidth, color=red!50!blue]
@@ -404,19 +404,19 @@ aboveskip=4mm,belowskip=2.5mm}
 	\node [fill=white!50, inner sep=0pt, outer sep=2pt] at (0.5, -1.25)
 		{$\scalebox{0.9}{$\begin{array}{r@{\hspace{0.5em}}l}%
 			\bm{a}_1 \hspace{-0.16ex}\dotp \bm{a}_1 = \pgfmathprintnumber[fixed, precision=4]{\firstdotfirst} , & %
-			| \bm{a}_1 | = \pgfmathprintnumber[fixed, precision=4]{\firstlength} \\[0.1em] %
+			\| \bm{a}_1 \| = \pgfmathprintnumber[fixed, precision=4]{\firstlength} \\[0.1em] %
 			%
 			\bm{a}_2 \hspace{-0.16ex}\dotp \bm{a}_2 = \pgfmathprintnumber[fixed, precision=4]{\seconddotsecond} , & %
-			| \bm{a}_2 | = \pgfmathprintnumber[fixed, precision=4]{\secondlength} %
+			\| \bm{a}_2 \| = \pgfmathprintnumber[fixed, precision=4]{\secondlength} %
 		\end{array}$}$};
 
 	\node [fill=white!50, inner sep=0pt, outer sep=2pt] at (0.5, -1.6)
 		{$\scalebox{0.9}{$\begin{array}{r@{\hspace{0.5em}}l}%
 			\bm{a}^{\hspace{-0.16ex}1} \hspace{-0.16ex}\dotp \bm{a}^{\hspace{-0.16ex}1} = \pgfmathprintnumber[fixed, precision=4]{\cofirstdotcofirst} , & %
-			| \bm{a}^{\hspace{-0.16ex}1} | = \pgfmathprintnumber[fixed, precision=4]{\lengthofcofirst} \\[0.1em] %
+			\| \bm{a}^{\hspace{-0.16ex}1} \| = \pgfmathprintnumber[fixed, precision=4]{\lengthofcofirst} \\[0.1em] %
 			%
 			\bm{a}^{\hspace{-0.1ex}2} \hspace{-0.16ex}\dotp \bm{a}^{\hspace{-0.1ex}2} = \pgfmathprintnumber[fixed, precision=4]{\coseconddotcosecond} , & %
-			| \bm{a}^{\hspace{-0.1ex}2} | = \pgfmathprintnumber[fixed, precision=4]{\lengthofcosecond} %
+			\| \bm{a}^{\hspace{-0.1ex}2} \| = \pgfmathprintnumber[fixed, precision=4]{\lengthofcosecond} %
 		\end{array}$}$};
 
 	% draw vectors of basis

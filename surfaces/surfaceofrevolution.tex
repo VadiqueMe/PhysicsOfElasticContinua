@@ -22,9 +22,8 @@
 }
 \makeatother
 
-\newcommand\const{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{const}}}}
-\newcommand\boldconst{\mathcolor{green!50!black}{\boldmath \const}}
-%%\newcommand\textconst{\scalebox{0.92}[0.98]{\textsf{const}}}
+\newcommand\constant{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{constant}}}}
+\newcommand\boldconstant{\mathcolor{green!50!black}{\boldmath \constant}}
 
 \newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
 
@@ -33,12 +32,17 @@
 \newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
 \makeatother
 
+\newcommand\locationvector{\bm{r}}
+
+\newcommand\differentialindex[1]{{\hspace{-0.1ex}\scalebox{0.63}{$\mathcolor{black!70}{\partial}$} #1}}
+
 \begin{document}
 
 %%\begin{center}
 
 \def\cameraanglesecond{66} % 66 % 90 for plane of meridian, 0 for plane of parallèle
 \def\cameraanglefirst{42} % 42 % 90 for plane of parallèle or meridian
+
 \tdplotsetmaincoords{\cameraanglefirst}{\cameraanglesecond} % orientation of camera
 
 \pgfmathsetmacro{\revolutionbeginangle}{-82} % 0
@@ -92,9 +96,9 @@
 		, line cap=round
 		, tdplot_rotated_coords
 		, postaction={decorate, decoration = {text along path,
-			text align = {left indent = {0.84\dimexpr\pgfdecoratedpathlength\relax}},
+			text align = {left indent = {0.8\dimexpr\pgfdecoratedpathlength\relax}},
 			text format delimiters = {<}{>},
-			text = {<\normalsize>{\scalebox{\enlargelesstext}{$\varphi = \const$}}},
+			text = {<\normalsize>{\scalebox{\enlargelesstext}{$\varphi = \constant$}}},
 			raise = 1.2ex}}
 		]
 		( 0, 3, 2.7 )
@@ -165,9 +169,9 @@
 		, line cap=round
 		, domain=0:\rotationangleto
 		, postaction={decorate, decoration = {text along path,
-			text align = {left indent = {0.42\dimexpr\pgfdecoratedpathlength\relax}},
+			text align = {left indent = {0.38\dimexpr\pgfdecoratedpathlength\relax}},
 			text format delimiters = {<}{>},
-			text = {<\normalsize>{\scalebox{\enlargelesstext}{$s = \const$}}},
+			text = {<\normalsize>{\scalebox{\enlargelesstext}{$s = \constant$}}},
 			%%reverse path,
 			raise = 1.1ex}}
 		]
@@ -442,7 +446,7 @@
 	node [above left, pos=0.77, shape=circle, inner sep=0pt, outer sep=2pt]
 		{\scalebox{\enlargetext}{$ \bm{t} \hspace{-0.1ex} \equiv \hspace{-0.2ex}
 		\scalebox{\enlargeless}{$ \displaystyle\frac{\raisemath{-0.2em}%
-			{\partial {\bm{r}}}}{\partial s} $} $}} ;
+			{\partial {\locationvector}}}{\partial s} $} $}} ;
 
 	\ifthenelse{\NOT \cameraanglefirst = 90 \OR \NOT \cameraanglesecond = 90}
 	{%
@@ -513,7 +517,7 @@
 	node [below right, pos=0.65
 		, inner sep=1pt, outer sep=1pt
 		, shape=circle %%, fill=white
-		] {\scalebox{\enlargetext}{$ \bm{r}\scalebox{\enlargeless}{$(\varphi, s)$} $}} ;
+		] {\scalebox{\enlargetext}{$ \locationvector\scalebox{\enlargeless}{$(\varphi, s)$} $}} ;
 
 \end{tikzpicture}
 
@@ -530,7 +534,7 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 \hspace{.1ex} , \:
 \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.12em}{\partial \hspace{-0.1ex} \rho}}{\partial \varphi} $} = 0
 \\[.6em]
-\bm{e}_{\xi} \hspace{-0.25ex} = \hspace{-0.1ex} \boldconst
+\bm{e}_{\xi} \hspace{-0.25ex} = \hspace{-0.1ex} \boldconstant
 \hspace{.1ex} , \:\:
 %%\bm{e}_{\hspace{-0.1ex}\rho} \hspace{-0.45ex}=\hspace{-0.32ex}
 \bm{e}_{\hspace{-0.1ex}\rho}(\varphi) \hspace{-0.2ex}
@@ -538,16 +542,16 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 \end{array}\end{equation*}
 
 \begin{equation*}\begin{array}{c}
-\bm{r}(q^1 \hspace{-0.44ex}, q^{\hspace{.05ex}2}) \hspace{-0.2ex} = \bm{r}(\varphi, s) \hspace{-0.2ex}
+\locationvector(q^1 \hspace{-0.44ex}, q^{\hspace{.05ex}2}) \hspace{-0.2ex} = \locationvector(\varphi, s) \hspace{-0.2ex}
 = \xi(s) \hspace{.1ex} \bm{e}_{\xi} + \rho\hspace{.1ex}(s) \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}\rho}(\varphi)
 \\[.3em]
-\bm{r} = \xi \bm{e}_{\xi} + \rho \hspace{.15ex} \bm{e}_{\hspace{-0.1ex}\rho}
+\locationvector = \xi \bm{e}_{\xi} + \rho \hspace{.15ex} \bm{e}_{\hspace{-0.1ex}\rho}
 \end{array}\end{equation*}
 
 \begin{equation*}\begin{array}{c}
-\bm{r}_1 \hspace{-0.2ex} = \partial_1 \hspace{-0.1ex} \bm{r}
-= \partial_{\hspace{-0.1ex}\varphi} \bm{r}
-= \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \bm{r}}}{\partial \varphi} $}
+\locationvector_\differentialindex{1} \hspace{-0.2ex} = \partial_1 \hspace{-0.1ex} \locationvector
+= \partial_{\hspace{-0.1ex}\varphi} \locationvector
+= \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \locationvector}}{\partial \varphi} $}
 = \hspace{-0.1ex} \rho \hspace{.2ex} \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \bm{e}_{\hspace{-0.1ex}\rho}}}{\partial \varphi} $}
 = \hspace{-0.1ex} \rho \hspace{.15ex} \bm{e}_{\varphi}
 \hspace{.1ex} , \:\,
@@ -556,23 +560,23 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 = - \hspace{-0.2ex} \operatorname{sin} \varphi \hspace{.2ex} \bm{e}_y \hspace{-0.1ex} + \hspace{.1ex} \operatorname{cos} \varphi \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}z}
 \\[.8em]
 %
-\bm{r}_2 \hspace{-0.2ex} = \partial_2 \bm{r}
-= \partial_{\hspace{-0.2ex}s} \bm{r}
-= \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \bm{r}}}{\partial s} $}
+\locationvector_\differentialindex{2} \hspace{-0.2ex} = \partial_2 \locationvector
+= \partial_{\hspace{-0.2ex}s} \locationvector
+= \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \locationvector}}{\partial s} $}
 = \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \xi}}{\partial s} $} \hspace{.2ex} \bm{e}_{\xi} \hspace{-0.1ex}
 + \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{-0.1ex} \rho}}{\partial s} $} \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}\rho} \hspace{-0.15ex}
 = \hspace{.1ex} \bm{t}
 \end{array}\end{equation*}
 
 \begin{equation*}\begin{array}{c}
-\bm{r}^1 \hspace{-0.25ex} = \rho^{\hspace{-0.2ex}\expminusone} \hspace{-0.1ex} \bm{e}_{\varphi}
+\locationvector^1 \hspace{-0.25ex} = \rho^{\hspace{-0.2ex}\expminusone} \hspace{-0.1ex} \bm{e}_{\varphi}
 \\[.25em]
-\bm{r}^2 \hspace{-0.2ex} = \hspace{.1ex} \bm{t}
+\locationvector^2 \hspace{-0.2ex} = \hspace{.1ex} \bm{t}
 \end{array}\end{equation*}
 
 \vspace{-0.5em}
 \begin{equation*}\begin{array}{c}
-\bm{r}_3 \hspace{-0.2ex} = \bm{r}^3 \hspace{-0.24ex}
+\locationvector_\differentialindex{3} \hspace{-0.2ex} = \locationvector^3 \hspace{-0.24ex}
 = \bm{n}
 = \bm{e}_{\varphi} \hspace{-0.25ex} \times \bm{t}
 \end{array}\end{equation*}
@@ -590,8 +594,9 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 
 \begin{tikzpicture}[scale=\scaleofunits]
 
-	\def\dxilength{1.2}
-	\def\drhomultiplier{0.8}
+	\def\sinelength{1.2}
+	\def\dxilength{0.33}
+	\def\drhomultiplier{0.77}
 
 	\draw [line width=0.5pt, color=blue, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
 		( 0, 0 ) -- ( 1.77, 0 ) ;
@@ -601,16 +606,19 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 
 	\draw [line width=0.6pt, color=blue, line cap=round]
 		( 0, 0 ) -- ( \dxilength, 0 )
-	node [pos=0.57, below, inner sep=0pt, outer sep=2.5pt] {$ d \xi $} ;
+	node [pos=0.55, below, inner sep=0pt, outer sep=3.3pt] {$ d \xi $} ;
 
 	\draw [line width=0.6pt, color=blue, line cap=round]
 		( \dxilength, 0 ) -- ( \dxilength, \drhomultiplier*\dxilength )
-	node [pos=0.52, right, inner sep=0pt, outer sep=2pt] {$ d \hspace{-0.16ex} \rho $} ;
+	node [pos=0.5, right, inner sep=0pt, outer sep=2.2pt] {$ d \hspace{-0.16ex} \rho $} ;
 
-	\draw [line width=1.2pt, color=black, domain=0:\dxilength, line cap=round, mark position=0.66(fornode)]
+	\draw [line width=1.2pt, color=black, domain=0:\sinelength, line cap=round, mark position=0.69(fornode)]
 		plot [samples=100] (\x, {\drhomultiplier*sin(deg(\x))}) ;
-	\node at (fornode) [black, below right, inner sep=0pt, outer sep=1.6pt]
-		{$ \scalebox{.66}{$\Delta$} s $} ;
+	\node at (fornode) [black, below right, inner sep=0pt, outer sep=2.5pt]
+		{$ s $} ; %%\scalebox{.66}{$\Delta$}
+
+	\draw [line width=0.5pt, color=blue, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+		( \sinelength, 0 ) -- ( \sinelength, \drhomultiplier*\sinelength ) ;
 
 	%%\pgfmathsetmacro{\argumentatmid}{.5 * \dxilength}
 	%%\pgfmathsetmacro{\resultatmid}{\drhomultiplier*sin(deg(\argumentatmid))}
@@ -623,7 +631,7 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 		%%{$ ds $} ;
 
 	\draw [line width=1.2pt, color=orange, domain=0:\dxilength, line cap=round, mark position=0.6(fornode)]
-		plot [samples=10] (\x, 0.8*\x) ;
+		plot [samples=10] (\x, \drhomultiplier*\x) ;
 	\node at (fornode) [orange, above left, inner sep=0pt, outer sep=1.6pt]
 		{$ ds $} ;
 

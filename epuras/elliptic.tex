@@ -1,0 +1,790 @@
+\documentclass[tikz, margin=10mm]{standalone}
+
+\usepackage{tikz}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+
+\usepackage{xargs}
+\usepackage{xifthen}
+
+\usepackage{bm}
+
+\usepackage{graphicx}
+\usepackage{scalerel}
+\usepackage{amsmath}
+\DeclareMathOperator*{\integral}{\scalerel*{\rotatebox{12}{$\!\textstyle\int\!$}}{\int}} % \rotatebox{8} for vertical line
+\DeclareMathOperator*{\ointegral}{\scalerel*{\rotatebox{12}{$\!\textstyle\oint\!$}}{\oint}}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.55}}
+\newcommand*\bigdot{\mathpalette\dotp@{.64}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.20em}}
+
+\newcommand\mathboldM{\scalebox{0.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
+\newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
+
+\makeatletter
+\def\mathcolor#1#{\@mathcolor{#1}}
+\def\@mathcolor#1#2#3{%
+	\protect\leavevmode
+	\begingroup\color#1{#2}#3\endgroup
+}
+\makeatother
+
+\usepackage{comfortaa}
+
+%%\usepackage{verbatim}
+
+\begin{document}
+
+\begin{tikzpicture}[scale = 1]
+
+\def\textscale{2}
+\pgfmathsetmacro\smalltextscale{.84*\textscale}
+
+\def\secondbeamxshift{20cm}
+
+\node [ above, inner sep=0pt, outer sep=0pt ]
+	at ( \secondbeamxshift / 2, 9 )
+	{\scalebox{2}{ \comfortaa{Le problème de Vadique à propos d'une poutre elliptique} }} ;
+
+\def\beamlinewidth{3pt}
+\tikzstyle{beam line} = [ line width=\beamlinewidth, line cap=round, color=black ]
+
+\def\dottedbeamlinewidth{2pt}
+\tikzstyle{dotted beam line} = [ line width=\dottedbeamlinewidth, line cap=round, color=black, dash pattern=on 0pt off 1.5\pgflinewidth ]
+
+\def\beamlength{12}
+\pgfmathsetmacro\halfbeamlength{\beamlength / 2}
+\def\beamlengtha{\halfbeamlength}
+\pgfmathsetmacro\beamlengthb{\beamlengtha * 2/3}
+
+\newcommand\beamcoordinate{s}
+
+\newcommand\beamfx[1]{\beamlengtha * cos(#1)}
+\newcommand\beamfy[1]{\beamlengthb * sin(#1)}
+
+\def\qlscale{1} % forces/moments scale
+\pgfmathsetmacro\justq{\qlscale / \beamlength}
+
+\newcommand\extforcex[1]{0}
+\newcommand\extforcey[1]{-\justq}
+
+\newcommand\altextforcex[1]{-\justq * (\beamlengthb / \beamlengtha) * cos(#1)}
+\newcommand\altextforcey[1]{-\justq * sin(#1)}
+
+%
+% beam
+%
+
+\newcommand\drawbeam{%
+	\draw [ beam line ]
+		plot [ variable=\s, domain=0:180, samples=200 ]
+		( {\beamfx{\s}}, {\beamfy{\s}} ) ;
+}
+
+\drawbeam
+
+\begin{scope}[xshift = \secondbeamxshift]
+\drawbeam
+\end{scope}
+
+\tikzstyle{aux dashed} = [ line width=1pt, color=black, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth ]
+
+\newcommand\drawlengths{%
+\draw [aux dashed] ( 0, 0 ) -- ++( \beamlengtha, 0 )
+	node [ pos=0.47, above, fill=white, inner sep=-2pt, outer sep=8pt ]
+	{\scalebox{\textscale}{$ a $}} ;
+\draw [aux dashed] ( 0, 0 ) -- ++( -\beamlengtha, 0 )
+	node [ pos=0.48, above, fill=white, inner sep=-2pt, outer sep=8pt ]
+	{\scalebox{\textscale}{$ a $}} ;
+\draw [aux dashed] ( 0, 0 ) -- ++( 0, \beamlengthb )
+	node [ pos=0.61, left, fill=white, inner sep=-2pt, outer sep=8pt ]
+	{\scalebox{\textscale}{$ b $}} ;
+}
+
+\tikzstyle{location vector} =
+	[line width=1.5pt, color=black, line cap=round, -{Triangle[round, length=16pt, width=8pt]}]
+
+\pgfmathsetmacro\functionstextypos{\beamlengthb + 3}
+
+\newcommand\drawbeamparticlelocation{%
+\draw [ location vector ]
+	( 0, 0 ) -- ( {\beamfx{54}}, {\beamfy{54}} )
+	node [ pos=.66, above left, inner sep=0pt, outer sep=1pt ]
+	{\scalebox{\textscale}{$ \bm{r} \hspace{-0.1ex} (\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) $}} ;
+
+\node [ anchor=west, color=black, inner sep=0pt, outer sep=0pt ]
+	at ( -\beamlengtha, \functionstextypos )
+	{\scalebox{\smalltextscale}{$ \begin{array}{l}
+r_{\hspace{-0.33ex}\raisebox{-0.1em}{$\scriptstyle \eta$}} \hspace{-0.1ex} (\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) \hspace{-0.3ex} = \hspace{-0.1ex} a \cos \beamcoordinate \\
+r_{\hspace{-0.33ex}\raisebox{-0.1em}{$\scriptstyle \zeta$}} \hspace{-0.1ex} (\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) \hspace{-0.3ex} = \hspace{-0.1ex} b \sin \beamcoordinate
+\end{array} $}} ;
+}
+
+\tikzstyle{aux line} = [ line width=1pt, color=black ]
+
+\def\initialpositioncircleradius{2.5pt}
+\def\showcoordinatelength{.1*\beamlength}
+\def\showbeamcoordinatecoefficient{.88}
+
+\newcommand\drawcoordinates{%
+\draw [ aux line, -{To[round, length=8pt, width=10pt]} ]
+	( 0, 0 ) -- ++( \showcoordinatelength, 0 )
+	node [ pos=.8, below, inner sep=0pt, outer sep=11pt ]
+		{\scalebox{\textscale}{$ \eta $}} ;
+\draw [ aux line, -{To[round, length=8pt, width=10pt]} ]
+	( 0, 0 ) -- ++( 0, \showcoordinatelength )
+	node [ pos=.8, left, inner sep=0pt, outer sep=8pt ]
+		{\scalebox{\textscale}{$ \zeta $}} ;
+
+\draw [ aux line, fill=white ] ( 0, 0 ) circle ( \initialpositioncircleradius ) ;
+
+\draw [ aux line, -{To[round, length=8pt, width=10pt]} ]
+	plot [ variable=\s, domain=0:24, samples=100 ]
+	( {\showbeamcoordinatecoefficient * \beamfx{\s}}, {\showbeamcoordinatecoefficient * \beamfy{\s}} ) ;
+\node [ left, inner sep=0pt, outer sep=8pt ]
+	at ( {\showbeamcoordinatecoefficient * \beamfx{9}}, {\showbeamcoordinatecoefficient * \beamfy{9}} )
+	{\scalebox{\textscale}{$ \beamcoordinate $}} ;
+
+\draw [ aux line, fill=white ] ( \showbeamcoordinatecoefficient * \beamlengtha, 0 ) circle ( \initialpositioncircleradius ) ;
+}
+
+\drawlengths
+\drawbeamparticlelocation
+\drawcoordinates
+
+\begin{scope}[xshift = \secondbeamxshift]
+\drawlengths
+\drawbeamparticlelocation
+\drawcoordinates
+\end{scope}
+
+%
+% external loads
+%
+
+\def\extloadcolor{orange!66!red}
+
+\tikzstyle{continuous load vector} =
+	[ line width=2pt, \extloadcolor, line cap=round, -{Triangle[round, length=13pt, width=8pt]} ]
+
+\tikzstyle{continuous load level} =
+	[ line width=1.5pt, \extloadcolor, opacity=.8, line cap=round ]
+
+\tikzstyle{dashed load level} =
+	[ line width=1.5pt, \extloadcolor, opacity=.8, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth ]
+
+\tikzstyle{concentrated load vector} =
+	[ line width=2pt, red, line cap=round, -{Triangle[round, length=15pt, width=9pt]} ]
+
+\pgfmathsetmacro\continuousloadscale{15}
+
+\def\extforcexshift{0}
+\def\extforceyshift{0}
+
+\newcommand\extforcebeginsatx[1]{{ \beamfx{#1} - \continuousloadscale * ( \extforcefx{#1} ) + \extforcexshift }}
+\newcommand\extforcebeginsaty[1]{{ \beamfy{#1} - \continuousloadscale * ( \extforcefy{#1} ) + \extforceyshift }}
+S
+\newcommand\extloadtext{\bm{q}(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})}
+
+\def\howmanyforcelinesoneachhalf{12}
+
+\newcommand\drawextload{%
+\pgfmathsetmacro\qstep{90 / ( \howmanyforcelinesoneachhalf - 1)}
+
+\pgfmathsetmacro\qfrom{90}
+\pgfmathsetmacro\qnext{\qfrom + \qstep}
+\pgfmathsetmacro\qlast{180 - 1*\qstep}
+\foreach \q in {\qfrom, \qnext, ..., \qlast}
+	\pgfmathsetmacro\sq{\q} %% 180 - \q
+	\draw [ continuous load vector ]
+	( \extforcebeginsatx{\sq}, \extforcebeginsaty{\sq} ) --
+	++( {\continuousloadscale * ( \extforcefx{\sq} )}, {\continuousloadscale * ( \extforcefy{\sq} )} ) ;
+
+\pgfmathsetmacro\qfrom{90 - \qstep}
+\pgfmathsetmacro\qnext{90 - 2*\qstep}
+\pgfmathsetmacro\qlast{0 + 1*\qstep}
+\foreach \q in {\qfrom, \qnext, ..., \qlast}
+	\pgfmathsetmacro\sq{\q} %% 180 - \q
+	\draw [ continuous load vector ]
+		( \extforcebeginsatx{\sq}, \extforcebeginsaty{\sq} ) --
+		++( {\continuousloadscale * ( \extforcefx{\sq} )}, {\continuousloadscale * ( \extforcefy{\sq} )} ) ;
+
+\draw [ continuous load level ]
+	plot [ variable=\s, domain=0:180, samples=100 ] ( \extforcebeginsatx{\s}, \extforcebeginsaty{\s} ) ;
+\node [ above, color=\extloadcolor, inner sep=0pt, outer sep=7pt ]
+	at ( \extforcebeginsatx{89}, \extforcebeginsaty{89} )
+	{\scalebox{\textscale}{$ \extloadtext $}} ;
+}
+
+\def\extforcefx{\extforcex}
+\def\extforcefy{\extforcey}
+\drawextload
+
+\node [ anchor=east, color=\extloadcolor, inner sep=0pt, outer sep=0pt ]
+	at ( \beamlengtha, \functionstextypos )
+	{\scalebox{\smalltextscale}{$ \begin{array}{l}
+q_{\raisebox{-0.1em}{$\scriptstyle \eta$}} \hspace{-0.1ex} (\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) \hspace{-0.3ex} = \hspace{-0.1ex} 0 \\
+q_{\raisebox{-0.1em}{$\scriptstyle \zeta$}} \hspace{-0.1ex} (\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) \hspace{-0.3ex} = \hspace{-0.1ex} - \hspace{.1ex} q
+\end{array} $}} ;
+
+\begin{scope}[xshift = \secondbeamxshift]
+\def\extforcefx{\altextforcex}
+\def\extforcefy{\altextforcey}
+\drawextload
+
+\node [ anchor=east, color=\extloadcolor, inner sep=0pt, outer sep=0pt ]
+	at ( \beamlengtha, \functionstextypos )
+	{\scalebox{\smalltextscale}{$ \begin{array}{l}
+q_{\raisebox{-0.1em}{$\scriptstyle \eta$}} \hspace{-0.1ex} (\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) \hspace{-0.3ex} = \hspace{-0.1ex} - \raisebox{-0.1em}{\scalebox{1.4}{$ \textstyle\frac{\scalebox{.7}{$b$}}{\scalebox{.7}{\raisebox{.15em}{$a$}}} $}} \hspace{.1ex} q \cos \beamcoordinate \\
+q_{\raisebox{-0.1em}{$\scriptstyle \zeta$}} \hspace{-0.1ex} (\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) \hspace{-0.3ex} = \hspace{-0.1ex} - \hspace{.1ex} q \sin \beamcoordinate
+\end{array} $}} ;
+\end{scope}
+
+%
+% constraints and reactions of constraints
+%
+
+\input{constraints.include}
+
+\pgfmathsetmacro\reactionstextscale{.9*\textscale}
+
+\def\reactionlength{1.6}
+
+\def\beamcopypos{-\beamlengthb - 3.3}
+
+\newcommand\verticalreactionequalsto{ \raisebox{-0.2ex}{$ \raisebox{.3em}{\scalebox{.84}{$ \pi $}} \hspace{-0.54ex} / \hspace{-0.45ex} \raisebox{-0.25em}{\scalebox{.76}{$ 2 $}} $} \hspace{.2ex} q }
+
+\newcommand\drawbeamwithreactions{%
+	%%\draw [ aux dashed ] ( -\beamlengtha, 0 ) -- ++( 0, \beamcopypos ) ;
+	%%\draw [ aux dashed ] ( \beamlengtha, 0 ) -- ++( 0, \beamcopypos ) ;
+
+	\draw [ beam line ]
+		plot [ variable=\s, domain=0:180, samples=200 ]
+		( {\beamfx{\s}}, {\beamfy{\s} + \beamcopypos} ) ;
+
+	% copy external load
+	\def\extforceyshift{\beamcopypos}
+	\renewcommand\extloadtext{\bm{q}\vphantom{()}}
+	\drawextload
+
+	\draw [ concentrated load vector, color=blue ]
+		( \beamlengtha, \beamcopypos - \reactionlength ) -- ++( 0, \reactionlength )
+		node [ pos=.3, left, inner sep=0pt, outer sep=7pt ]
+		{\scalebox{\reactionstextscale}{$
+\scalebox{.75}{$ \displaystyle\frac{\raisebox{-0.2em}{$ 1 $}}{\raisebox{.02em}{$ 2 $}} $}
+\scalebox{.7}{$ \displaystyle\integral_{\scalebox{.77}{$\hspace{.2em}0$}}^{\scalebox{.88}{$\hspace{.2em}\pi$}} $}
+\hspace{-0.25ex} {-} \hspace{.1ex} q_{\raisebox{-0.1em}{$\scriptstyle \zeta$}} d\beamcoordinate
+\hspace{-0.1ex} = \hspace{-0.1ex}
+\verticalreactionequalsto
+		$}} ;
+	\draw [ concentrated load vector, color=blue ]
+		( -\beamlengtha, \beamcopypos - \reactionlength ) -- ++( 0, \reactionlength )
+		node [ pos=.3, right, inner sep=0pt, outer sep=7pt ]
+		{\scalebox{\reactionstextscale}{$
+\hspace{-0.1em}\verticalreactionequalsto
+\hspace{-0.1ex} = \hspace{-0.1ex}
+\scalebox{.75}{$ \displaystyle\frac{\raisebox{-0.2em}{$ 1 $}}{\raisebox{.02em}{$ 2 $}} $}
+\scalebox{.7}{$ \displaystyle\integral_{\scalebox{.77}{$\hspace{.2em}0$}}^{\scalebox{.88}{$\hspace{.2em}\pi$}} $}
+\hspace{-0.25ex} {-} \hspace{.1ex} q_{\raisebox{-0.1em}{$\scriptstyle \zeta$}} d\beamcoordinate
+		$}} ;
+}
+
+% redraw beams after loads and middle hinges before clamps
+\drawbeam
+\begin{scope}[xshift = \secondbeamxshift]
+\drawbeam
+\end{scope}
+
+% reverse the parameter
+%%\draw [ beam line, color=red ]
+%%		plot [ variable=\s, domain=0:100, samples=200 ]
+%%		( {\beamfx{(180 - \s)}}, {\beamfy{(180 - \s)}} ) ;
+
+\def\extforcefx{\extforcex}
+\def\extforcefy{\extforcey}
+\drawbeamwithreactions
+
+\def\zeroloadlength{.9}
+
+\pgfmathsetmacro\zeroloadbeginx{\beamlengtha + \zeroloadlength}
+\def\zeroloadendx{\beamlengtha}
+\draw [ concentrated load vector, color=blue ]
+	( \zeroloadbeginx, \beamcopypos ) -- ( \zeroloadendx, \beamcopypos )
+	node [ pos=0, above right, inner sep=-2pt, outer sep=-9pt ]
+	{\scalebox{\reactionstextscale}{$
+0 \hspace{-0.1ex} = \hspace{-0.4ex}
+\scalebox{.7}{$ \displaystyle\integral_{\scalebox{.77}{$\hspace{.2em}0$}}^{\scalebox{.88}{$\hspace{.2em}\pi$}} $}
+\hspace{-0.1ex} q_{\raisebox{-0.1em}{$\scriptstyle \eta$}} d\beamcoordinate
+	$}} ;
+
+\addpinnedendhingeat{(\beamlengtha, 0)}[flip]
+\addmovablehingeat{(-\beamlengtha, 0)}
+
+\begin{scope}[xshift = \secondbeamxshift]
+\def\extforcefx{\altextforcex}
+\def\extforcefy{\altextforcey}
+
+\renewcommand\verticalreactionequalsto{q}
+\drawbeamwithreactions
+
+\pgfmathsetmacro\zeroloadbeginx{-\beamlengtha - \zeroloadlength}
+\def\zeroloadendx{-\beamlengtha}
+\draw [ concentrated load vector, color=blue ]
+	( \zeroloadbeginx, \beamcopypos ) -- ( \zeroloadendx, \beamcopypos )
+	node [ pos=.2, below left, inner sep=-2pt, outer sep=-3pt ]
+	{\scalebox{\reactionstextscale}{$
+\scalebox{.7}{$ \displaystyle\integral_{\scalebox{.77}{$\hspace{.2em}0$}}^{\scalebox{.88}{$\hspace{.2em}\pi$}} $}
+\hspace{-0.25ex} {-} \hspace{.1ex} q_{\raisebox{-0.1em}{$\scriptstyle \eta$}} d\beamcoordinate
+\hspace{-0.15ex} = \hspace{-0.1ex} 0
+	$}} ;
+
+\addpinnedendhingeat{(-\beamlengtha, 0)}
+\addmovablehingeat{(\beamlengtha, 0)}
+\end{scope}
+
+%
+% balance of forces
+%
+
+\def\pointcolor{black}
+\tikzstyle{point} = [ line width=1pt, color=\pointcolor, fill=\pointcolor ]
+\def\endpointcolor{black}
+\tikzstyle{end point} = [ line width=1pt, color=\endpointcolor, fill=\endpointcolor ]
+\def\pointsize{2}
+\def\endpointsize{\pointsize}
+
+\def\partofbeamypos{\beamcopypos - \beamlengthb - 4}
+
+\pgfmathsetmacro\internalforcetextscale{.84*\textscale}
+
+\def\internalforcelengthx{1}
+\def\internalforcelengthy{\reactionlength + .2}
+
+\def\internalforcecolor{black!10!green}
+\def\initialinternalforcecolor{green!40!blue}
+
+\newcommand\internalforcextext{0}
+\newcommand\internalforceytext{%
+	q \beamcoordinate \hspace{-0.1ex}
+	\mathcolor{\initialinternalforcecolor}{- \verticalreactionequalsto}
+}
+
+\newcommand\drawequilibriumofapoint{%
+	\def\coordinateofapoint{109}
+
+	\pgfmathsetmacro\xbalanceforpoint{-.6*\beamlengtha}
+	\pgfmathsetmacro\ybalanceforpoint{\partofbeamypos - 3.3}
+
+	\coordinate (point) at ($ ( {\beamfx{\coordinateofapoint}}, {\beamfy{\coordinateofapoint}} ) + ( \xbalanceforpoint, \ybalanceforpoint ) $) ;
+
+	%%\pgfmathsetmacro\dottedbeamfirst{\coordinateofapoint - 9}
+	%%\pgfmathsetmacro\dottedbeamlast{\coordinateofapoint + 10}
+	%%\draw [ dotted beam line, opacity=.8 ]
+		%%plot [ variable=\s, domain=\dottedbeamfirst:\dottedbeamlast, samples=100 ]
+		%%( {\beamfx{\s} + \xbalanceforpoint}, {\beamfy{\s} + \ybalanceforpoint} ) ;
+
+	\draw [ concentrated load vector, color=\internalforcecolor ]
+		(point) -- ++( \internalforcelengthx, \internalforcelengthy  )
+		node [ pos=.5, right, inner sep=0pt, outer sep=9pt ]
+		{\scalebox{\internalforcetextscale}{$ \mathboldQ(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) $}} ;
+
+	\draw [ concentrated load vector, color=\internalforcecolor ]
+		(point) -- ++( -\internalforcelengthx, -\internalforcelengthy  )
+		node [ pos=.6, right, inner sep=0pt, outer sep=7pt ]
+		{\scalebox{\internalforcetextscale}{$ - \hspace{.1ex} \mathboldQ(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) $}} ;
+
+	\draw [ point ] (point) circle ( \pointsize\pgflinewidth )
+		node [ above left, inner sep=0pt, outer sep=4pt ]
+		{\scalebox{\internalforcetextscale}{$ s $}} ;
+}
+
+\newcommand\drawhowtogetinternalforce{%
+	\pgfmathsetmacro\qlast{128}
+
+	\draw [ beam line ]
+		plot [ variable=\s, domain=0:\qlast, samples=200 ]
+		( {\beamfx{\s}}, {\beamfy{\s} + \partofbeamypos} ) ;
+
+	\def\extforceyshift{\partofbeamypos}
+	\pgfmathsetmacro\qfrom{0}
+	\pgfmathsetmacro\qnext{\qfrom + \qstep}
+	\foreach \q in {\qfrom, \qnext, ..., \qlast}
+	\draw [ continuous load vector ]
+		( \extforcebeginsatx{\q}, \extforcebeginsaty{\q} ) --
+		++( {\continuousloadscale * ( \extforcefx{\q} )}, {\continuousloadscale * ( \extforcefy{\q} )} ) ;
+
+	\renewcommand\extloadtext{\bm{q}(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})}
+	\draw [ continuous load level ]
+		plot [ variable=\s, domain=0:\qlast, samples=100 ]
+		( \extforcebeginsatx{\s}, \extforcebeginsaty{\s} ) ;
+	\node [ above right, color=\extloadcolor, inner sep=0pt, outer sep=3pt ]
+		at ( \extforcebeginsatx{33}, \extforcebeginsaty{33} )
+		{\scalebox{\textscale}{$ \extloadtext $}} ;
+
+	\draw [ concentrated load vector, color=blue ]
+		( \beamlengtha, \partofbeamypos - \reactionlength ) -- ++( 0, \reactionlength )
+		node [ pos=0.3, left, inner sep=0pt, outer sep=7pt ]
+		{\scalebox{\textscale}{$ \verticalreactionequalsto $}} ;
+
+	\draw [ concentrated load vector, color=\internalforcecolor ]
+		( {\beamfx{\qlast}}, {\beamfy{\qlast} + \partofbeamypos} ) -- ++( 0, \internalforcelengthy  )
+		node [ pos=.88, left, inner sep=0pt, outer sep=6pt ]
+		{\scalebox{\textscale}{$ Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \zeta$}} $}} ;
+
+	\draw [ concentrated load vector, color=\internalforcecolor ]
+		( {\beamfx{\qlast}}, {\beamfy{\qlast} + \partofbeamypos} ) -- ++( \internalforcelengthx, 0  )
+		node [ pos=.6, below, inner sep=0pt, outer sep=9pt ]
+		{\scalebox{\textscale}{$ Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \eta$}} $}} ;
+
+	\draw [ end point ]
+		( {\beamfx{0}}, {\beamfy{0} + \partofbeamypos} )
+		circle ( \endpointsize\pgflinewidth ) ;
+	\draw [ end point ]
+		( {\beamfx{\qlast}}, {\beamfy{\qlast} + \partofbeamypos} )
+		circle ( \endpointsize\pgflinewidth ) ;
+
+	% the sum of forces
+	\node [ color=\internalforcecolor, inner sep=0pt, outer sep=0pt ]
+		at ( .12*\beamlengtha, \partofbeamypos + .4 )
+	{\scalebox{\internalforcetextscale}{$ \begin{array}{l}
+\mathcolor{black}{\scalebox{.7}{$ \displaystyle\integral_{\scalebox{.77}{$\hspace{.2em}0$}}^{\scalebox{.96}{$\hspace{.2em} \beamcoordinate$}} $}}
+\hspace{-0.2ex} \mathcolor{\extloadcolor}{\bm{q}} \hspace{.15ex} \mathcolor{black}{d\beamcoordinate}
+%
+\mathcolor{black}{+} \mathcolor{\internalforcecolor}{\mathboldQ(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})} \hspace{-0.2ex}
+\mathcolor{black}{-}
+\mathcolor{\initialinternalforcecolor}{\mathboldQ(\hspace{-0.1ex}0\hspace{-0.1ex})} \hspace{-0.2ex}
+\mathcolor{black}{=}
+\mathcolor{black}{\bm{0}}
+\\[-0.1em]
+%
+Q_{\hspace{-0.15ex}\raisebox{-0.1em}{$\scriptstyle i$}}(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})
+\hspace{-0.2ex} \mathcolor{black}{=} \hspace{-0.1ex}
+\mathcolor{black}{\scalebox{.7}{$ \hspace{-0.25ex} \displaystyle\integral_{\scalebox{.77}{$\hspace{.2em}0$}}^{\scalebox{.96}{$\hspace{.2em} \beamcoordinate$}} $}}
+\hspace{-0.66ex} \mathcolor{black}{-} \hspace{-0.4ex} \mathcolor{\extloadcolor}{q_{\raisebox{-0.1em}{$\scriptstyle i$}}} \hspace{.1ex} \mathcolor{black}{d\beamcoordinate}
+\mathcolor{black}{+}
+\mathcolor{\initialinternalforcecolor}{Q_{\hspace{-0.15ex}\raisebox{-0.1em}{$\scriptstyle i$}}(\hspace{-0.1ex}0\hspace{-0.1ex})}
+	\end{array} $}} ;
+
+% equilibrium of end point
+
+\coordinate (endpointequilibrium) at ( -.55*\beamlengtha, \partofbeamypos - 3 ) ;
+
+\draw [ concentrated load vector, color=blue ]
+	($ (endpointequilibrium) - ( 0, \reactionlength ) $) -- ++( 0, \reactionlength )
+	node [ pos=.3, left, inner sep=0pt, outer sep=6pt ]
+	{\scalebox{\internalforcetextscale}{$ \verticalreactionequalsto $}} ;
+
+\draw [ concentrated load vector, color=\initialinternalforcecolor ]
+	(endpointequilibrium) -- ++( 0, \reactionlength )
+	node [ pos=.75, left, inner sep=0pt, outer sep=7pt ]
+	{\scalebox{\internalforcetextscale}{$ Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \zeta$}}\hspace{-0.1ex}(\hspace{-0.1ex} 0 \hspace{-0.1ex}) $}} ;
+
+\draw [ concentrated load vector, color=\initialinternalforcecolor ]
+	(endpointequilibrium) -- ++( .63*\internalforcelengthx, 0 )
+	node [ pos=1, yshift=-0.2em, right, inner sep=0pt, outer sep=4pt ]
+	{\scalebox{\internalforcetextscale}{$ Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \eta$}}\hspace{-0.1ex}(\hspace{-0.1ex} 0 \hspace{-0.1ex}) $}} ;
+
+\draw [ end point ] (endpointequilibrium) circle ( \endpointsize\pgflinewidth )
+	node [ left, yshift=.2ex, inner sep=0pt, outer sep=8pt ]
+	{\scalebox{\internalforcetextscale}{$ s \hspace{.3ex}{=}\hspace{.3ex} 0 $}} ;
+
+\node [ right, color=\internalforcecolor, inner sep=0pt, outer sep=0pt ]
+		at ($ (endpointequilibrium) + ( .54*\beamlengtha, -0.3 ) $)
+	{\scalebox{\internalforcetextscale}{$ \begin{aligned}
+\mathcolor{\initialinternalforcecolor}{Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \eta$}}\hspace{-0.1ex}(\hspace{-0.1ex}0\hspace{-0.1ex})}
+\hspace{-0.2ex} &\mathcolor{black}{= 0}
+\\
+\mathcolor{\initialinternalforcecolor}{Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \zeta$}}\hspace{-0.1ex}(\hspace{-0.1ex}0\hspace{-0.1ex})}
+\hspace{-0.2ex} \mathcolor{black}{+}
+\mathcolor{blue}{\verticalreactionequalsto}
+&\mathcolor{black}{= 0}
+	\end{aligned} $}} ;
+}
+
+\drawequilibriumofapoint
+\drawhowtogetinternalforce
+
+\begin{scope}[xshift = \secondbeamxshift]
+\def\extforcefx{\altextforcex}
+\def\extforcefy{\altextforcey}
+
+\drawequilibriumofapoint
+
+\renewcommand\verticalreactionequalsto{q}
+\drawhowtogetinternalforce
+\end{scope}
+
+%
+% field of internal force
+%
+
+\tikzstyle{internal force level} =
+	[ line width=1.5pt, \internalforcecolor, opacity=.8, line cap=round ] %% dash pattern=on 0pt off 1.6\pgflinewidth
+
+\def\internalforcefieldypos{\partofbeamypos - \beamlengthb - 6.7}
+
+\newcommand\internalforcefx[1]{0}
+\newcommand\internalforcefy[1]{( #1 - 90 ) * \justq}
+
+\pgfmathsetmacro\internalforcescale{0.5}
+
+\def\howmanyinternalforcelines{24}
+
+\def\intforcexshift{0}
+\def\intforceyshift{\internalforcefieldypos}
+
+\newcommand\intforcebeginsatx[1]{{ \beamfx{#1} + \intforcexshift }}
+\newcommand\intforcebeginsaty[1]{{ \beamfy{#1} + \intforceyshift }}
+
+\newcommand\intforceendsatx[1]{{ \beamfx{#1} + \intforcexshift + \internalforcescale * ( \internalforcefx{#1} ) }}
+\newcommand\intforceendsaty[1]{{ \beamfy{#1} + \intforceyshift + \internalforcescale * ( \internalforcefy{#1} ) }}
+
+\newcommand\intQloadtext{\mathboldQ(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})}
+
+\newcommand\drawinternalforcefield{%
+\draw [ beam line ]
+	plot [ variable=\s, domain=0:180, samples=200 ]
+	( {\beamfx{\s} + \intforcexshift}, {\beamfy{\s} + \intforceyshift} ) ;
+
+\pgfmathsetmacro\Qstep{180 / ( \howmanyinternalforcelines - 1 )}
+\pgfmathsetmacro\Qfrom{0}
+\pgfmathsetmacro\Qnext{\Qfrom + \Qstep}
+\pgfmathsetmacro\Qlast{180}
+
+\foreach \sQ in {\Qfrom, \Qnext, ..., \Qlast}
+	\draw [ continuous load vector, color=\internalforcecolor ]
+		( \intforcebeginsatx{\sQ}, \intforcebeginsaty{\sQ} ) --
+		( \intforceendsatx{\sQ}, \intforceendsaty{\sQ} ) ;
+
+\def\textcoordinate{123}
+
+\draw [ internal force level ]
+	plot [ variable=\sQ, domain=0:180, samples=100 ] ( \intforceendsatx{\sQ}, \intforceendsaty{\sQ} ) ;
+\node [ above right, color=\internalforcecolor, inner sep=0pt, outer sep=9pt ]
+	at ( \intforceendsatx{\textcoordinate}, \intforceendsaty{\textcoordinate} )
+	{\scalebox{\textscale}{$ \intQloadtext $}} ;
+
+% components of Q
+\node [ right, color=\internalforcecolor, inner sep=0pt, outer sep=0pt ]
+	at ( \intforceendsatx{\textcoordinate}, \internalforcefieldypos + .66 )
+	{\scalebox{\internalforcetextscale}{$ \begin{array}{l}
+\begin{aligned}
+Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \eta$}}\hspace{-0.1ex}(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})
+\hspace{-0.25ex} &= \hspace{-0.1ex}
+\internalforcextext
+\end{aligned}
+\\[.4em]
+\begin{aligned}
+Q_{\hspace{-0.2ex}\raisebox{-0.1em}{$\scriptstyle \zeta$}}\hspace{-0.1ex}(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})
+\hspace{-0.25ex} &= \hspace{-0.1ex}
+\internalforceytext
+\end{aligned}
+	\end{array} $}} ;
+}
+
+\drawinternalforcefield
+
+\begin{scope}[xshift = \secondbeamxshift]
+
+\renewcommand\verticalreactionequalsto{q}
+
+\renewcommand\internalforcefx[1]{(\beamlengthb / \beamlengtha) * deg(1) * \justq * sin(#1)}
+\renewcommand\internalforcefy[1]{- deg(1) * \justq * cos(#1)}
+
+\renewcommand\internalforcextext{\hspace{-0.15ex} \raisebox{-0.1em}{\scalebox{1.4}{$ \textstyle\frac{\scalebox{.7}{$b$}}{\scalebox{.7}{\raisebox{.15em}{$a$}}} $}} \hspace{.1ex} q \sin \beamcoordinate}
+
+\renewcommand\internalforceytext{q \hspace{.1ex} (- \hspace{-0.2ex} \cos \beamcoordinate \hspace{-0.15ex} + \hspace{-0.15ex} 1) \hspace{-0.15ex} \mathcolor{\initialinternalforcecolor}{- \verticalreactionequalsto}\\[-0.3em]
+&= \hspace{-0.1ex} - \hspace{.2ex} q \cos \beamcoordinate}
+
+\drawinternalforcefield
+
+\end{scope}
+
+%
+% tangent vectors
+%
+
+\def\tangentvectorsypos{\internalforcefieldypos - 9}
+
+\pgfmathsetmacro\tangentvectortextscale{.84*\textscale}
+
+\def\tangentvectorcolor{black!66}
+
+\newcommand\tangentfx[1]{- \beamlengtha * sin(#1)}
+\newcommand\tangentfy[1]{\beamlengthb * cos(#1)}
+
+\newcommand\squaredlengthoftangent[1]{( (\tangentfx{#1})^2 + (\tangentfy{#1})^2 )}
+
+\def\howmanytangentvectors{21}
+
+\pgfmathsetmacro\tangentvectorscale{1}
+
+\pgfmathsetmacro\tangentvectorsxshift{0}
+\pgfmathsetmacro\tangentvectorsyshift{\tangentvectorsypos}
+
+\newcommand\tangentvectorbeginsatx[1]{{ \beamfx{#1} + \tangentvectorsxshift }}
+\newcommand\tangentvectorbeginsaty[1]{{ \beamfy{#1} + \tangentvectorsyshift }}
+
+\newcommand\tangentvectorendsatx[1]{{ \tangentvectorbeginsatx{#1} + \tangentvectorscale * ( \tangentfx{#1} ) }}
+\newcommand\tangentvectorendsaty[1]{{ \tangentvectorbeginsaty{#1} + \tangentvectorscale * ( \tangentfy{#1} ) }}
+
+\newcommand\unittangentvectorendsatx[1]{{ \tangentvectorbeginsatx{#1} + \tangentvectorscale * ( \tangentfx{#1} ) / sqrt(\squaredlengthoftangent{#1}) }}
+\newcommand\unittangentvectorendsaty[1]{{ \tangentvectorbeginsaty{#1} + \tangentvectorscale * ( \tangentfy{#1} ) / sqrt(\squaredlengthoftangent{#1}) }}
+
+\newcommand\drawtangentvectorfield{%
+\draw [ beam line ]
+	plot [ variable=\s, domain=0:180, samples=200 ]
+	( {\beamfx{\s} + \tangentvectorsxshift}, {\beamfy{\s} + \tangentvectorsyshift} ) ;
+
+\pgfmathsetmacro\tanstep{180 / ( \howmanytangentvectors - 1 )}
+\pgfmathsetmacro\tanfrom{0}
+\pgfmathsetmacro\tannext{\tanfrom + \tanstep}
+\pgfmathsetmacro\tanlast{180}
+
+\foreach \stan in {\tanfrom, \tannext, ..., \tanlast} {
+	\draw [ location vector ]
+		( \tangentvectorsxshift, \tangentvectorsyshift ) --
+			++( {\beamfx{\stan}}, {\beamfy{\stan}} ) ;
+
+	\draw [ location vector, color=\tangentvectorcolor ]
+		( \tangentvectorbeginsatx{\stan}, \tangentvectorbeginsaty{\stan} ) --
+			( \tangentvectorendsatx{\stan}, \tangentvectorendsaty{\stan} ) ;
+
+	%%\draw [ location vector, color=\tangentvectorcolor ]
+		%%( \tangentvectorbeginsatx{\stan}, \tangentvectorbeginsaty{\stan} ) --
+		%%( \unittangentvectorendsatx{\stan}, \unittangentvectorendsaty{\stan} ) ;
+
+	\draw [ point ] ( {\beamfx{\stan} + \tangentvectorsxshift}, {\beamfy{\stan} + \tangentvectorsyshift} ) circle ( \pointsize\pgflinewidth ) ;
+}
+
+\draw [ aux line, fill=white ] ( \tangentvectorsxshift, \tangentvectorsyshift ) circle ( \initialpositioncircleradius ) ;
+
+% components of tangent vector
+\node [ below, color=\tangentvectorcolor, inner sep=0pt, outer sep=0pt ]
+	at ( \tangentvectorsxshift + .5, \tangentvectorsyshift - .8 )
+	{\scalebox{\tangentvectortextscale}{$ \begin{aligned}
+\bm{t} \hspace{-0.1ex}
+&\mathcolor{black}{=}
+\hspace{-0.1ex} \mathcolor{black}{\scalebox{.82}{$\displaystyle\frac{\raisebox{-0.22em}{$ \partial \hspace{.1ex} \bm{r} $}}{\partial \hspace{-0.1ex} \beamcoordinate}$}}
+\\
+t_{\raisebox{-0.1em}{$\scriptstyle \eta$}} \hspace{-0.3ex}
+&=
+\hspace{-0.1ex} \scalebox{.7}{$\displaystyle\frac{\raisebox{-0.22em}{$ \partial $}}{\partial \hspace{-0.1ex} \beamcoordinate}$} \hspace{.1ex}
+r_{\hspace{-0.33ex}\raisebox{-0.1em}{$\scriptstyle \eta$}} \hspace{-0.3ex}
+=
+- \hspace{.1ex} a \sin \beamcoordinate
+\\[-0.1em]
+t_{\hspace{-0.1ex} \raisebox{-0.1em}{$\scriptstyle \zeta$}} \hspace{-0.3ex}
+&=
+\hspace{-0.1ex} \scalebox{.7}{$\displaystyle\frac{\raisebox{-0.22em}{$ \partial $}}{\partial \hspace{-0.1ex} \beamcoordinate}$} \hspace{.1ex}
+r_{\hspace{-0.33ex}\raisebox{-0.1em}{$\scriptstyle \zeta$}} \hspace{-0.3ex}
+=
+b \cos \beamcoordinate
+	\end{aligned} $}} ;
+}
+
+\begin{scope}[ xshift = .5*\secondbeamxshift ]
+\drawtangentvectorfield
+\end{scope}
+
+%
+% epure of projection of the Q on tangent
+%
+
+\def\Qtangentepureypos{\tangentvectorsypos - 8.8}
+
+\newcommand\Qdottangent[1]{( ((\internalforcefx{#1}) * (\tangentfx{#1})) + ((\internalforcefy{#1}) * (\tangentfy{#1})) )}
+
+\newcommand\Qtangentfx[1]{(\tangentfx{#1}) * \Qdottangent{#1} / \squaredlengthoftangent{#1}}
+\newcommand\Qtangentfy[1]{(\tangentfy{#1}) * \Qdottangent{#1} / \squaredlengthoftangent{#1}}
+
+\newcommand\drawQtangentepure{%
+\draw [ beam line ]
+	plot [ variable=\s, domain=0:180, samples=200 ]
+	( {\beamfx{\s}}, {\beamfy{\s} + \Qtangentepureypos} ) ;
+
+% relation how to get the projection of Q on tangent
+\node [ color=\internalforcecolor, inner sep=0pt, outer sep=0pt ]
+	at ( 0, \Qtangentepureypos )
+	{\scalebox{\textscale}{$
+%%(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})
+\mathboldQ_{\scalebox{.8}{$t$}} \hspace{-0.3ex}
+\mathcolor{black}{=}
+\hspace{-0.1ex} \mathboldQ \mathcolor{black}{\dotp} \hspace{-0.2ex} \mathcolor{black}{\scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \mathcolor{\tangentvectorcolor}{\bm{t}} $}}{\| \mathcolor{\tangentvectorcolor}{\bm{t}} \|} $}}
+\mathcolor{black}{\scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \mathcolor{\tangentvectorcolor}{\bm{t}} $}}{\| \mathcolor{\tangentvectorcolor}{\bm{t}} \|} $}} \hspace{-0.2ex}
+\mathcolor{black}{=}
+\hspace{-0.2ex} \mathcolor{black}{\scalebox{.93}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \mathcolor{\internalforcecolor}{\mathboldQ} \dotp \mathcolor{\tangentvectorcolor}{\bm{t} \hspace{.1ex} \bm{t}} $}}{\mathcolor{\tangentvectorcolor}{\bm{t}} \dotp \mathcolor{\tangentvectorcolor}{\bm{t}}} $}}
+	$}} ;
+
+\pgfmathsetmacro\Qtangentstep{180 / ( \howmanyinternalforcelines - 1 )}
+\pgfmathsetmacro\Qtangentfrom{0}
+\pgfmathsetmacro\Qtangentnext{\Qtangentfrom + \Qtangentstep}
+\pgfmathsetmacro\Qtangentlast{180}
+
+\foreach \sQ in {\Qtangentfrom, \Qtangentnext, ..., \Qtangentlast}
+	\draw [ continuous load vector, color=\internalforcecolor ]
+		( {\beamfx{\sQ}}, {\beamfy{\sQ} + \Qtangentepureypos} ) --
+			++( {\internalforcescale * \Qtangentfx{\sQ}}, {\internalforcescale * \Qtangentfy{\sQ}} ) ;
+
+\draw [ internal force level ]
+	plot [ variable=\sQ, domain=0:180, samples=100 ]
+	( {\beamfx{\sQ} + (\internalforcescale * \Qtangentfx{\sQ})},
+		{\beamfy{\sQ} + (\internalforcescale * \Qtangentfy{\sQ}) + \Qtangentepureypos} ) ;
+}
+
+\renewcommand\internalforcefx[1]{0}
+\renewcommand\internalforcefy[1]{( #1 - 90 ) * \justq}
+
+\drawQtangentepure
+
+\begin{scope}[xshift = \secondbeamxshift]
+\renewcommand\internalforcefx[1]{(\beamlengthb / \beamlengtha) * deg(1) * \justq * sin(#1)}
+\renewcommand\internalforcefy[1]{- deg(1) * \justq * cos(#1)}
+
+\drawQtangentepure
+\end{scope}
+
+%
+% balance of moments
+%
+
+\def\balanceofmomentsypos{\Qtangentepureypos - 6}
+
+\pgfmathsetmacro\internalmomenttextscale{.84*\textscale}
+
+\def\internalmomentcolor{magenta}
+\def\initialinternalmomentcolor{magenta!40!blue}
+
+\newcommand\drawbalanceofmomentsequation{%
+\node [ color=\internalmomentcolor, inner sep=0pt, outer sep=0pt ]
+	at ( 0,  \balanceofmomentsypos )
+	{\scalebox{\internalmomenttextscale}{$
+\mathcolor{black}{\scalebox{.7}{$ \displaystyle\integral_{\scalebox{.77}{$\hspace{.2em}0$}}^{\scalebox{.96}{$\hspace{.2em} \beamcoordinate$}} $}}
+\hspace{-0.3ex} \mathcolor{black}{\big(} \mathcolor{black}{\bm{r}} \hspace{-0.25ex} \mathcolor{black}{\times} \hspace{-0.25ex} \mathcolor{\extloadcolor}{\bm{q}} \hspace{.05ex} \mathcolor{black}{\big)} \hspace{-0.1ex} \mathcolor{black}{d\beamcoordinate}
+%
+\mathcolor{black}{+} \hspace{.1ex}
+\mathcolor{black}{\bm{r}\hspace{-0.1ex}(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})} \hspace{-0.4ex} \mathcolor{black}{\times} \hspace{-0.3ex} \mathcolor{\internalforcecolor}{\mathboldQ(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})} \hspace{-0.15ex}
+\mathcolor{black}{-} \hspace{.1ex}
+\mathcolor{black}{\bm{r}\hspace{-0.1ex}(\hspace{-0.1ex}0\hspace{-0.1ex})} \hspace{-0.4ex} \mathcolor{black}{\times} \hspace{-0.3ex} \mathcolor{\initialinternalforcecolor}{\mathboldQ(\hspace{-0.1ex}0\hspace{-0.1ex})} \hspace{-0.15ex}
+%
+\mathcolor{black}{+}
+\hspace{-0.1ex}\mathboldM(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex}) \hspace{-0.15ex}
+\mathcolor{black}{-}
+\textcolor{\initialinternalmomentcolor}{\hspace{-0.1ex}\mathboldM(\hspace{-0.1ex}0\hspace{-0.1ex})} \hspace{-0.15ex}
+\mathcolor{black}{=}
+\mathcolor{black}{\bm{0}}
+$}} ;
+}
+
+\begin{scope}[ xshift = .5*\secondbeamxshift ]
+\drawbalanceofmomentsequation
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}

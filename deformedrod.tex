@@ -1,15 +1,15 @@
 %%\begin{center}
 
-\begin{wrapfigure}{o}{0.4\textwidth}
-\makebox[0.45\textwidth][c]{\begin{minipage}[t]{0.5\textwidth}
+\begin{wrapfigure}{o}{.4\textwidth}
+\makebox[.45\textwidth][c]{\begin{minipage}[t]{.5\textwidth}
 \vspace{-1em}
-\scalebox{0.95}{
+\scalebox{0.88}{
 
 \def\cameraangle{166}
 \tdplotsetmaincoords{44}{\cameraangle} % orientation of camera
 
 \def\rodheight{10}
-\def\rodradius{0.2}
+\def\rodradius{.2}
 
 \pgfmathsetmacro{\beginangle}{\cameraangle}
 \pgfmathsetmacro{\endangle}{\cameraangle - 180}
@@ -61,7 +61,7 @@
 
 	\draw [line width=1.5pt, red, line cap=round, -{Triangle[round, length=3.6mm, width=2.4mm]}]
 		( 0, 0, \rodheight + \forcelength ) -- ( 0, 0, \rodheight )
-		node [pos=0, below left, inner sep=0, outer sep=3.2pt]
+		node [ pos=0.4, left, inner sep=0, outer sep=4.4pt ]
 			{\scalebox{1.2}[1.2]{${\bm{F}}$}} ;
 
 }}}

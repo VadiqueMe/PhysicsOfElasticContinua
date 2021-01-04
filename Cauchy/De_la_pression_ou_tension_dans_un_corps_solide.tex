@@ -1,0 +1,325 @@
+\documentclass[11pt, twoside, leqno]{article}
+
+\usepackage{geometry}
+\geometry{papersize={205mm, 273mm}} %% {212mm, 1000mm}
+\geometry{tmargin=3cm, bmargin=3cm, outer=3cm, inner=3cm}
+
+\usepackage{amsmath}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[french]{babel}
+
+\usepackage{microtype}
+
+\usepackage{gfsartemisia} % math font
+\usepackage{imfellEnglish}
+
+\usepackage{graphicx}
+
+\setlength{\parskip}{9pt minus1pt}
+
+\usepackage{setspace}
+\setstretch{1.2}
+
+\setlength{\parindent}{5mm} % line offset of first line
+
+%%\usepackage[defaultlines=2,all]{nowidow}
+
+\renewcommand\thepage{\oldstylenums{\arabic{page}}}
+
+\renewcommand{\theequation}{\oldstylenums{\arabic{equation}}}
+\renewcommand{\eqref}[1]{(\ref{#1})}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[CE,CO]{(\;\thepage\;)}
+\geometry{headsep=9pt}
+
+\usepackage[unicode=true, pdfusetitle,%
+	bookmarks=true, bookmarksnumbered=false, bookmarksopen=true,%
+	breaklinks=false, pdfborder={0 0 0}, backref=false,%
+	colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue!50!black]%
+{hyperref}
+
+\hypersetup{pdftitle={Augustin-Louis Cauchy. De la pression ou tension dans un corps solide}}
+
+\newcommand\equals{\scalebox{1.5}[1]{$=$}}
+
+\newcommand\cosine{\operatorname{cos} \hspace{-0.1ex}}
+\newcommand\sine{\operatorname{sin} \hspace{-0.1ex}}
+
+\begin{document}
+
+\leavevmode\thispagestyle{empty}\newpage
+
+\setcounter{page}{42}
+
+\thispagestyle{empty}
+\begin{center}
+\vspace*{1.8em}
+{\LARGE DE LA PRESSION OU TENSION}
+
+{\Large DANS UN CORPS SOLIDE}
+\vspace*{4.4em}
+\end{center}
+
+Les géomètres qui ont recherché les équations d'équilibre ou de mouvement des lames ou des surfaces élastiques ou non élastiques, ont distingué deux espèces de~forces produites les unes par la dilatation ou la contraction, les autres par la flexion de ces mêmes surfaces. De~plus, ils ont généralement supposé, dans leurs calculs, que les forces de la première espèce, nommées tensions, restent perpendiculaires aux lignes contre lesquelles elles s'exercent. Il m'a semblé que ces deux espèces de forces pouvaient être réduites à une seule, qui doit constamment s'appeler \emph{tension} ou \emph{pression}, qui agit sur chaque élément d'une section faite à volonté, non-seulement dans une surface flexible, mais encore dans un solide élastique ou non élastique, et qui est de la même nature que la pression hydrostatique exercée par un fluide en repos contre la surface extérieure d'un corps. Seulement la nouvelle pression ne demeure pas toujours perpendiculaire aux faces qui lui sont soumises, ni la même dans tous les sens en un point donné. En développant cette idée, je suis parvenu à reconnaitre que la pression ou tension exercée contre un plan quelconque en un point donné d'un corps solide se déduit très-aisément, tant en grandeur qu'en direction, des pressions ou tensions exercées contre trois plans rectangulaires menés par le même point. Cette proposition, que j'ai déjà indiquée dans le Bulletin de la Société philomatique de janvier~\oldstylenums{1823}, peut être établie à l'aide des considérations suivantes.
+
+Si, dans un corps solide élastique ou non élastique, on vient à rendre rigide et invariable un petit élément de volume terminé par des faces quelconques, ce petit élément éprouvera sur ses différentes faces, et en chaque point de chacune d'elles une pression ou tension déterminée. Cette pression ou tension sera semblable à la pression qu'un fluide exerce contre un élément de l'enveloppe d'un corps solide, avec cette seule différence que la pression exercée par un fluide en repos contre la surface d'un corps solide, est dirigée perpendiculairement à cette surface de dehors en dedans, et indépendante en chaque point de l'inclinaison de la surface par rapport aux plans coordonnés, tandis que la pression ou tension exercée en un point donné d'un corps solide contre un très-petit élément de surface passant par ce point, peut être dirigée perpendiculairement ou obliquement à cette surface, tantôt de dehors en dedans, s'il y~a condensation, tantôt de dedans en dehors, s'il y~a dilatation, et peut dépendre de l'inclinaison de la surface par rapport aux plans dont il s'agit. Cela posé, soit
+\;$v$\; le~volume d'une portion du corps devenue rigide,
+\hbox{\;$s$,\:$s'$,\:$s'\kern-0.2ex'$,\:.\hspace{.1ex}.\hspace{.1ex}.\hspace{.1ex}.\;} les aires des surfaces planes ou courbes qui recouvrent le~volume~\;$v$\,;\hspace{.4ex}
+\;$x$,\:$y$,\:$z$\; les coordonnées rectangulaires d'un point pris au hasard dans la~surface~\;$s$\,;\hspace{.4ex}
+\;$p$\; la pression ou tension exercée en ce point contre la surface;\hspace{.2ex}
+\hbox{\;$\alpha$,\:$\beta$,\:$\gamma$\;} les angles que la perpendiculaire à la surface forme avec les demi-axes des coordonnées positives;
+enfin \hbox{\;$\lambda$,\:$\mu$,\:$\nu$\;} les angles formes avec les mêmes demi-axes par la direction de la force \;$p$\,.\hspace{.5ex}
+Si~l'on projette sur les axes des~\hbox{\;$x$,\:$y$\, et \,$z$\;} les pressions ou tensions diverses auxquelles la surface sera soumise, les sommes de leurs projections algébriques sur ces trois axes seront représentées par les intégrales
+\begin{equation}\label{integrales.1}
+\displaystyle\iint \! p \cosine \lambda \cosine \gamma \, dy \, dx \hspace{.2ex} \text{,} \hspace{.5em}
+\displaystyle\iint \! p \cosine \mu \cosine \gamma \, dy \, dx \hspace{.2ex} \text{,} \hspace{.5em}
+\displaystyle\iint \! p \cosine \nu \cosine \gamma \, dy \, dx \hspace{.2ex} \text{,}
+\end{equation}
+tandis que les sommes des projections algébriques de leurs moments linéaires seront respectivement, si l'on prend pour centre des moments l'origine des coordonnées,
+\begin{flalign}\label{integrales.2}
+\hspace{-1em}
+\scalebox{0.96}[1]{$\displaystyle\iint \hspace{-0.8ex} p \hspace{.15ex} \bigl( y \hspace{-0.15ex} \cosine \hspace{-0.1ex}\nu \!-\! z \hspace{-0.15ex} \cosine \hspace{-0.1ex}\mu \bigr) \hspace{-0.15ex} \cosine\hspace{-0.1ex} \gamma \hspace{.1ex} dy \hspace{.1ex} dx$}
+\text{,}\hspace{-0.2ex}
+\scalebox{0.96}[1]{$\displaystyle\iint \hspace{-0.8ex} p \hspace{.15ex} \bigl( z \hspace{-0.15ex} \cosine \hspace{-0.1ex}\lambda \!-\! x \hspace{-0.15ex} \cosine \hspace{-0.1ex}\nu \bigr) \hspace{-0.15ex} \cosine\hspace{-0.1ex} \gamma \hspace{.1ex} dy \hspace{.1ex} dx$}
+\text{,}\hspace{-0.2ex}
+\scalebox{0.96}[1]{$\displaystyle\iint \hspace{-0.8ex} p \hspace{.15ex} \bigl( x \hspace{-0.15ex} \cosine \hspace{-0.1ex}\mu \!-\! y \hspace{-0.15ex} \cosine \hspace{-0.1ex}\lambda \bigr) \hspace{-0.15ex} \cosine\hspace{-0.1ex} \gamma \hspace{.1ex} dy \hspace{.1ex} dx$} \text{;}
+\hspace{-1.6em}
+\end{flalign}
+ou, si l'on transporte le centre des moments au point qui a pour coordonnées \hbox{\;$x_o$,\:$y_{\hspace{-0.14ex}o}$,\:$z_o$\,},
+\begin{equation}\label{integrales.3}
+\left\{\;\begin{array}{l}
+\displaystyle\iint \! p \, \bigl[\hspace{.1ex} (y - y_{\hspace{-0.14ex}o}) \cosine \nu - (z - z_o) \cosine \mu \hspace{.2ex}\bigr] \cosine \gamma \, dy \, dx \hspace{.4ex} \text{,}
+\\[1em]
+\displaystyle\iint \! p \, \bigl[\hspace{.1ex} (z - z_o) \cosine \lambda - (x - x_o) \cosine \nu \hspace{.2ex}\bigr] \cosine \gamma \, dy \, dx \hspace{.4ex} \text{,}
+\\[1em]
+\displaystyle\iint \! p \, \bigl[\hspace{.1ex} (x - x_o) \cosine \mu - (y - y_{\hspace{-0.14ex}o}) \cosine \lambda \hspace{.2ex}\bigr] \cosine \gamma \, dy \, dx \hspace{.4ex} \text{.}
+\end{array}\right.
+\end{equation}
+Dans ces diverses intégrales, les limites des intégrations relatives aux variables \hbox{\;$x$,\:$y$\;} devront être déterminées d'après la forme du contour de la surface~\;$s$\,,\hspace{.5ex} de manière qu'on ait entre ces limites
+\begin{equation}
+\displaystyle\iint \! \cosine \gamma \, dy \, dx \hspace{.6ex} \equals \hspace{.5ex} s
+\hspace{.3ex} \text{.}
+\end{equation}
+
+Si la surface \;$s$\; devient plane, et le volume \;$v$\; très-petit, en sorte que chacune de ses dimensions soit considérée comme une quantité infiniment petite du premier ordre, alors les variations, que les trois produits
+\begin{equation}
+p \cosine \lambda \hspace{.4ex} \text{,} \hspace{1.2em}
+p \cosine \mu \hspace{.4ex} \text{,} \hspace{1.2em}
+p \cosine \nu \hspace{.4ex} \text{,}
+\end{equation}
+éprouveront, dans le passage d'un point à un autre de la surface \;$s$\,,\hspace{.5ex} seront encore infiniment petites du premier ordre; et, en négligeant les infiniment petits du troisième ordre dans les valeurs des intégrales~\eqref{integrales.1}, on réduira ces intégrales aux quantités
+\begin{equation}\label{expression.6}
+p \hspace{.1ex} s \cosine \lambda \hspace{.4ex} \text{,} \hspace{1.1em}
+p \hspace{.1ex} s \cosine \mu \hspace{.4ex} \text{,} \hspace{1.1em}
+p \hspace{.1ex} s \cosine \nu \hspace{.4ex} \text{.}
+\end{equation}
+Si d'ailleurs on sait coïncider le centre des moments avec un point du volume~\;$v$\,,\hspace{.5ex} les intégrales~\eqref{integrales.3} seront des quantités infiniment petites du troisième ordre, et il suffira de négliger, dans ces intégrales, les infiniment petits du quatrième ordre, pour qu'elles se réduisent aux produits
+\begin{flalign}\label{expression.7}
+\hspace{-1em}
+\scalebox{0.93}[0.97]{$p \hspace{.5pt} s \hspace{2pt} \bigl[ (\eta \!-\! y_{\hspace{-0.14ex}o}) \hspace{-0.1ex} \cosine \nu \hspace{-0.2ex} - \hspace{-0.2ex} (\zeta \!-\! z_o) \hspace{-0.1ex} \cosine \mu \hspace{.1ex}\bigr]$} \hspace{.1ex} \text{,} \hspace{.3em}
+\scalebox{0.93}[0.97]{$p \hspace{.5pt} s \hspace{2pt} \bigl[ (\zeta \!-\! z_o) \hspace{-0.1ex} \cosine \lambda \hspace{-0.2ex} - \hspace{-0.2ex} (\xi \!-\! x_o) \hspace{-0.1ex} \cosine \nu \hspace{.1ex}\bigr]$} \hspace{.1ex} \text{,} \hspace{.3em}
+\scalebox{0.93}[0.97]{$p \hspace{.5pt} s \hspace{2pt} \bigl[ (\xi \!-\! x_o) \hspace{-0.1ex} \cosine \mu \hspace{-0.2ex} - \hspace{-0.2ex} (\eta \!-\! y_{\hspace{-0.14ex}o}) \hspace{-0.1ex} \cosine \lambda \hspace{.1ex}\bigr]$} \hspace{.1ex} \text{,}
+\hspace{-2.8em}
+\end{flalign}
+\hbox{$\xi$,\;$\eta$,\;$\zeta$\;} désignant les rapports
+\begin{equation}
+\frac{\displaystyle\iint \! x \cosine \gamma \, dy \, dx}{s} \hspace{.3ex} \text{,} \hspace{1.1em}
+\frac{\displaystyle\iint \! y \cosine \gamma \, dy \, dx}{s} \hspace{.3ex} \text{,} \hspace{1.1em}
+\frac{\displaystyle\iint \! z \cosine \gamma \, dy \, dx}{s} \hspace{.3ex} \text{,}
+\end{equation}
+c'est-à-dire les coordonnées du centre de gravité de la surface~\;$s$\,.
+
+Soit maintenant la masse \;$m$\; infiniment petite comprise sous le volume~\;$v$\,.\hspace{.5ex} Concevons en outre que la lettre \;$\varphi$\; représente la force accélératrice appliquée à cette masse, si le corps solide est en équilibre, et dans le cas contraire, l'excès de la force accélératrice appliquée sur celle qui serait capable de produire le mouvement observé de la masse~\;$m$\,.\hspace{.5ex} Enfin nommons \hbox{\;$X$,\;$Y$,\;$Z$\;} les projections algébriques de la force~\;$\varphi$\,,\hspace{.6ex} et \hbox{\;$\xi_o$,\;$\eta_o$,\;$\zeta_o$\;} les coordonnées du centre de gravité de la masse~\;$m$\,.\hspace{.5ex} Si~l'on suppose que la force accélératrice \;$\varphi$\; reste la même en grandeur et en direction dans tous les points de la masse~\;$m$\,,\hspace{.6ex} il devra y avoir équilibre entre la force motrice~\;$m_{\varphi}$\; appliquée au point \hbox{\;$\bigl(\, \xi_o\text{,}\;\eta_o\text{,}\;\zeta_o \,\bigr)$\,},\hspace{.5ex} et les forces auxquelles se réduisent les pressions ou tensions exercées sur les surfaces \hbox{\;$s$,\:$s'$,\:.\hspace{.2ex}.\hspace{.2ex}.\hspace{.2ex}.\hspace{.2ex}.\;} Donc les sommes des projections algébriques de toutes ces forces et de leurs moments linéaires sur les axes des \;$x$,\:$y$,\:$z$\; devront se réduire à zéro. Donc, si l'on se contente de placer un ou plusieurs accents à la suite des lettres \hbox{\;$p$\,,\:\:$\lambda$\,,\:\,$\mu$\,,\:\,$\nu$\,,\:\;$\xi$\,,\:\,$\eta$\,,\:\,$\zeta$\,},\hspace{.5ex} comprises dans les expressions \eqref{expression.6} et~\eqref{expression.7}, pour indiquer les nouvelles valeurs que prennent ces expressions, quand on passe de la surface~\:$s$\hspace{.7ex} à la surface~\:$s'$,\hspace{.5ex} ou \,$s'\kern-0.2ex'$,\hspace{.5ex} ou \,$s'\kern-0.2ex'\kern-0.2ex'$,\hspace{.5ex} etc. .\hspace{.1ex}.\hspace{.1ex}.\,, on trouvera, en négligeant, dans les sommes des forces projetées, les infiniment petits du troisième ordre, et dans les sommes des moments linéaires projetés, les infiniment petits du quatrième ordre,
+\begin{equation}\label{formules.9}
+\left\{\;\begin{array}{l}
+p \hspace{.1ex} s \cosine \lambda + p' \hspace{-0.2ex} s' \hspace{-0.2ex} \cosine \lambda\hspace{.1ex}' \hspace{-0.2ex} + \hspace{.1ex}.\kern.1ex.\kern.1ex.\kern.1ex.\kern.1ex.\hspace{.1ex} + m \hspace{.2ex} X
+\hspace{.4ex} \equals \hspace{.5ex} \text{o} \hspace{.3ex} \text{,}
+\\[.5em]
+p \hspace{.1ex} s \cosine \mu + p' \hspace{-0.2ex} s' \hspace{-0.2ex} \cosine \mu\hspace{.1ex}' \hspace{-0.2ex} + \hspace{.1ex}.\kern.1ex.\kern.1ex.\kern.1ex.\kern.1ex.\hspace{.1ex} + m \hspace{.2ex} Y
+\hspace{.4ex} \equals \hspace{.5ex} \text{o} \hspace{.3ex} \text{,}
+\\[.5em]
+p \hspace{.1ex} s \cosine \nu + p' \hspace{-0.2ex} s' \hspace{-0.2ex} \cosine \nu\hspace{.2ex}' \hspace{-0.2ex} + \hspace{.1ex}.\kern.1ex.\kern.1ex.\kern.1ex.\kern.1ex.\hspace{.1ex} + m \hspace{.2ex} Z
+\hspace{.4ex} \equals \hspace{.5ex} \text{o} \hspace{.3ex} \text{;}
+\end{array}\right.
+\end{equation}
+\begin{flalign}\label{formules.10}
+\hspace{-1em}
+\left\{\hspace{-0.25em}\begin{array}{l}
+\scalebox{0.88}[0.95]{$
+p \hspace{.5pt} s \hspace{1.5pt} \bigl[ (\eta \hspace{-0.25ex}-\hspace{-0.5ex} y_{\hspace{-0.14ex}o} \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \nu \hspace{-0.2ex} - \hspace{-0.2ex} (\zeta \hspace{-0.6ex}-\hspace{-0.4ex} z_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \mu \hspace{.1ex}\bigr] \hspace{-0.4ex}
++\hspace{-0.4ex} p' \hspace{-0.3ex} s' \hspace{1pt} \bigl[ (\eta\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.4ex} y_{\hspace{-0.14ex}o} \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \nu\hspace{.2ex}' \hspace{-0.6ex} - \hspace{-0.2ex} (\zeta\hspace{.1ex}' \hspace{-0.7ex}-\hspace{-0.4ex} z_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \mu' \hspace{.1ex}\bigr] \hspace{-0.1ex}
+\!+\! .\kern.1ex.
+\!+\! m \hspace{1.5pt} \bigl[ (\eta_o \hspace{-0.5ex}-\hspace{-0.4ex} y_{\hspace{-0.14ex}o} \hspace{-0.1ex}) \hspace{.1ex} Z \hspace{-0.3ex} - \hspace{-0.2ex} (\zeta_o \hspace{-0.5ex}-\hspace{-0.4ex} z_o \hspace{-0.1ex}) \hspace{.1ex} Y \hspace{.1ex}\bigr] \hspace{-0.1ex}
+\hspace{.1ex} \equals \hspace{.15ex} \text{o}
+$} \hspace{.1ex} \text{,}
+\\[.5em]
+\scalebox{0.88}[0.95]{$
+p \hspace{.5pt} s \hspace{1.5pt} \bigl[ (\zeta \hspace{-0.6ex}-\hspace{-0.4ex} z_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \lambda \hspace{-0.2ex} - \hspace{-0.2ex} (\xi \hspace{-0.4ex}-\hspace{-0.6ex} x_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \nu \hspace{.1ex}\bigr] \hspace{-0.4ex}
++\hspace{-0.4ex} p' \hspace{-0.3ex} s' \hspace{1pt} \bigl[ (\zeta\hspace{.1ex}' \hspace{-0.7ex}-\hspace{-0.4ex} z_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \lambda' \hspace{-0.5ex} - \hspace{-0.2ex} (\xi\hspace{.1ex}' \hspace{-0.7ex}-\hspace{-0.5ex} x_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \nu\hspace{.2ex}' \hspace{.1ex}\bigr] \hspace{-0.1ex}
+\!+\! .\kern.1ex.
+\!+\! m \hspace{1.5pt} \bigl[ (\zeta_o \hspace{-0.5ex}-\hspace{-0.4ex} z_o \hspace{-0.1ex}) \hspace{.1ex} X \hspace{-0.3ex} - \hspace{-0.2ex} (\xi_o \hspace{-0.5ex}-\hspace{-0.5ex} x_o \hspace{-0.1ex}) \hspace{.1ex} Z \hspace{.1ex}\bigr]
+\hspace{.1ex} \equals \hspace{.15ex} \text{o}
+$} \hspace{.1ex} \text{,}
+\\[.5em]
+\scalebox{0.88}[0.95]{$
+p \hspace{.5pt} s \hspace{1.5pt} \bigl[ (\xi \hspace{-0.4ex}-\hspace{-0.6ex} x_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \mu \hspace{-0.2ex} - \hspace{-0.2ex} (\eta \hspace{-0.25ex}-\hspace{-0.5ex} y_{\hspace{-0.14ex}o} \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \lambda \hspace{.1ex}\bigr] \hspace{-0.4ex}
++\hspace{-0.4ex} p' \hspace{-0.3ex} s' \hspace{1pt} \bigl[ (\xi\hspace{.1ex}' \hspace{-0.7ex}-\hspace{-0.5ex} x_o \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \mu' \hspace{-0.6ex} - \hspace{-0.2ex} (\eta\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.4ex} y_{\hspace{-0.14ex}o} \hspace{-0.1ex}) \hspace{-0.1ex} \cosine \lambda' \hspace{.1ex}\bigr] \hspace{-0.1ex}
+\!+\! .\kern.1ex.
+\!+\! m \hspace{1.5pt} \bigl[ (\xi_o \hspace{-0.5ex}-\hspace{-0.5ex} x_o \hspace{-0.1ex}) \hspace{.1ex} Y \hspace{-0.3ex} - \hspace{-0.2ex} (\eta_o \hspace{-0.5ex}-\hspace{-0.4ex} y_{\hspace{-0.14ex}o} \hspace{-0.1ex}) \hspace{.1ex} X \hspace{.1ex}\bigr]
+\hspace{.1ex} \equals \hspace{.15ex} \text{o}
+$} \hspace{.1ex} \text{.}
+\end{array}\right.
+\hspace{-2.3em}
+\end{flalign}
+Or, la masse~\;$m$\, étant elle-même infiniment petite du troisième ordre, les termes qui la renferment seront du troisième ordre dans les formules~\eqref{formules.9}, du quatrième ordre dans les formules~\eqref{formules.10}. On pourra donc négliger ces termes, et remplacer les formules dont il s'agit par les suivantes
+\begin{flalign}\label{formules.11}
+\hspace{-1em}
+\left\{\hspace{.4ex}\begin{array}{l}
+\scalebox{0.88}[0.95]{$p \hspace{.1ex} s \cosine \lambda
++ p' \hspace{-0.2ex} s' \hspace{-0.2ex} \cosine \lambda\hspace{.1ex}' \hspace{-0.2ex}
++ p'\kern-0.2ex' \hspace{-0.2ex} s'\kern-0.2ex' \hspace{-0.2ex} \cosine \lambda\hspace{.1ex}'\kern-0.2ex' \hspace{-0.2ex}
++ p'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex} s'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex} \cosine \lambda\hspace{.1ex}'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex}
++ \hspace{.1ex}.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.
+\hspace{.4ex} \equals \hspace{.2ex} \text{o}
+$} \hspace{.3ex} \text{,}
+\\[.5em]
+\scalebox{0.88}[0.95]{$p \hspace{.1ex} s \cosine \mu
++ p' \hspace{-0.2ex} s' \hspace{-0.2ex} \cosine \mu\hspace{.1ex}' \hspace{-0.2ex}
++ p'\kern-0.2ex' \hspace{-0.2ex} s'\kern-0.2ex' \hspace{-0.2ex} \cosine \mu\hspace{.1ex}'\kern-0.2ex' \hspace{-0.2ex}
++ p'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex} s'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex} \cosine \mu\hspace{.1ex}'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex}
++ \hspace{.1ex}.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.
+\hspace{.4ex} \equals \hspace{.2ex} \text{o}
+$} \hspace{.3ex} \text{,}
+\\[.5em]
+\scalebox{0.88}[0.95]{$p \hspace{.1ex} s \cosine \nu
++ p' \hspace{-0.2ex} s' \hspace{-0.2ex} \cosine \nu\hspace{.2ex}' \hspace{-0.2ex}
++ p'\kern-0.2ex' \hspace{-0.2ex} s'\kern-0.2ex' \hspace{-0.2ex} \cosine \nu\hspace{.2ex}'\kern-0.2ex' \hspace{-0.2ex}
++ p'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex} s'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex} \cosine \nu\hspace{.2ex}'\kern-0.2ex'\kern-0.2ex' \hspace{-0.2ex}
++ \hspace{.1ex}.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.
+\hspace{.4ex} \equals \hspace{.2ex} \text{o}
+$}\hspace{.3ex} \text{;}
+\end{array}\right.
+\hspace{-3.7em}
+\end{flalign}
+\vspace{-1.3em}
+\begin{flalign}\label{formules.12}
+\hspace{-1em}
+\left\{\hspace{.4ex}\begin{array}{l}
+\scalebox{0.88}[0.95]{$
+p \hspace{.1ex} s \hspace{2pt} \bigl[ (\hspace{.1ex} \eta \hspace{-0.2ex}-\hspace{-0.3ex} y_{\hspace{-0.14ex}o} ) \cosine \nu \hspace{-0.2ex} - \hspace{-0.2ex} (\hspace{.1ex} \zeta \hspace{-0.4ex}-\hspace{-0.2ex} z_o ) \cosine \mu \hspace{.2ex}\bigr] \hspace{-0.2ex}
++\hspace{-0.2ex} p' \hspace{-0.3ex} s' \hspace{1pt} \bigl[ (\hspace{.1ex} \eta\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.3ex} y_{\hspace{-0.14ex}o} ) \cosine \nu\hspace{.2ex}' \hspace{-0.6ex} - \hspace{-0.2ex} (\hspace{.1ex} \zeta\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.3ex} z_o ) \cosine \mu' \hspace{.2ex}\bigr] \hspace{-0.2ex}
++ \hspace{.1ex}.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.
+\hspace{.4ex} \equals \hspace{.2ex} \text{o}
+$} \hspace{.3ex} \text{,}
+\\[.5em]
+\scalebox{0.88}[0.95]{$
+p \hspace{.1ex} s \hspace{2pt} \bigl[ (\hspace{.1ex} \zeta \hspace{-0.4ex}-\hspace{-0.2ex} z_o ) \cosine \lambda \hspace{-0.2ex} - \hspace{-0.2ex} (\hspace{.1ex} \xi \hspace{-0.2ex}-\hspace{-0.4ex} x_o ) \cosine \nu \hspace{.2ex}\bigr] \hspace{-0.2ex}
++\hspace{-0.2ex} p' \hspace{-0.3ex} s' \hspace{1pt} \bigl[ (\hspace{.1ex} \zeta\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.3ex} z_o ) \cosine \lambda' \hspace{-0.5ex} - \hspace{-0.2ex} (\hspace{.1ex} \xi\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.3ex} x_o ) \cosine \nu\hspace{.2ex}' \hspace{.2ex}\bigr] \hspace{-0.2ex}
++ \hspace{.1ex}.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.
+\hspace{.4ex} \equals \hspace{.2ex} \text{o}
+$} \hspace{.3ex} \text{,}
+\\[.5em]
+\scalebox{0.88}[0.95]{$
+p \hspace{.1ex} s \hspace{2pt} \bigl[ (\hspace{.1ex} \xi \hspace{-0.2ex}-\hspace{-0.4ex} x_o ) \cosine \mu \hspace{-0.2ex} - \hspace{-0.2ex} (\hspace{.1ex} \eta \hspace{-0.2ex}-\hspace{-0.3ex} y_{\hspace{-0.14ex}o} ) \cosine \lambda \hspace{.2ex}\bigr] \hspace{-0.2ex}
++\hspace{-0.2ex} p' \hspace{-0.3ex} s' \hspace{1pt} \bigl[ (\hspace{.1ex} \xi\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.3ex} x_o ) \cosine \mu' \hspace{-0.6ex} - \hspace{-0.2ex} (\hspace{.1ex} \eta\hspace{.1ex}' \hspace{-0.6ex}-\hspace{-0.3ex} y_{\hspace{-0.14ex}o} ) \cosine \lambda' \hspace{.2ex}\bigr] \hspace{-0.2ex}
++ \hspace{.1ex}.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.\kern.3ex.
+\hspace{.4ex} \equals \hspace{.2ex} \text{o}
+$} \hspace{.3ex} \text{.}
+\end{array}\right.
+\hspace{-3.7em}
+\end{flalign}
+
+Si l'on voulait tenir compte des variations que peuvent éprouver la force accélératrice~\;$\varphi$\; et ses projections algébriques \hbox{\;$X$,\;$Y$,\;$Z$\,},\hspace{.5ex} quand on passe d'un point à un autre de la masse~\;$m$\,,\hspace{.5ex} il faudrait remplacer, dans les équations~\eqref{formules.9} et~\eqref{formules.10}, les six quantités
+\begin{equation*}
+\begin{array}{c}
+m \hspace{.2ex} X \hspace{.4ex} \text{,} \hspace{1.6em}
+m \hspace{.2ex} Y \hspace{.4ex} \text{,} \hspace{1.6em}
+m \hspace{.2ex} Z \hspace{.4ex} \text{;}
+\\[.6em]
+m \hspace{1.5pt} \bigl[ (\hspace{.1ex} \eta_o \hspace{-0.3ex}-\hspace{-0.3ex} y_{\hspace{-0.14ex}o} ) \hspace{.15ex} Z \hspace{-0.2ex} - \hspace{-0.1ex} (\hspace{.1ex} \zeta_o \hspace{-0.4ex}-\hspace{-0.3ex} z_o ) \hspace{.15ex} Y \hspace{.15ex}\bigr]
+\hspace{.5ex} \text{,} \hspace{.8em}
+m \hspace{1.5pt} \bigl[ (\hspace{.1ex} \zeta_o \hspace{-0.4ex}-\hspace{-0.3ex} z_o ) \hspace{.15ex} X \hspace{-0.2ex} - \hspace{-0.1ex} (\hspace{.1ex} \xi_o \hspace{-0.3ex}-\hspace{-0.4ex} x_o ) \hspace{.15ex} Z \hspace{.15ex}\bigr]
+\hspace{.5ex} \text{,} \hspace{.8em}
+m \hspace{1.5pt} \bigl[ (\hspace{.1ex} \xi_o \hspace{-0.3ex}-\hspace{-0.4ex} x_o ) \hspace{.15ex} Y \hspace{-0.2ex} - \hspace{-0.1ex} (\hspace{.1ex} \eta_o \hspace{-0.3ex}-\hspace{-0.3ex} y_{\hspace{-0.14ex}o} ) \hspace{.15ex} X \hspace{.15ex}\bigr]
+\end{array}
+\end{equation*}
+par six intégrales de la forme
+\begin{equation*}
+\displaystyle\iiint \hspace{-0.4ex} \rho \hspace{.2ex} X \hspace{.2ex} dz \, dy \, dx \hspace{.3ex} \text{,} \hspace{1.1em}
+\displaystyle\iiint \hspace{-0.4ex} \rho \hspace{.15ex} Y \hspace{.1ex} dz \, dy \, dx \hspace{.3ex} \text{,} \hspace{1.1em}
+\displaystyle\iiint \hspace{-0.4ex} \rho \hspace{.3ex} Z \hspace{.3ex} dz \, dy \, dx \hspace{.3ex} \text{;}
+\end{equation*}
+\begin{equation*}
+\left\{\hspace{.4ex}\begin{array}{c}
+\displaystyle\iiint \hspace{-0.4ex}
+\rho \hspace{1.5pt} \bigl[ (\hspace{.1ex} y \hspace{-0.2ex}-\hspace{-0.2ex} y_{\hspace{-0.14ex}o} ) \hspace{.15ex} Z \hspace{-0.15ex} - \hspace{-0.1ex} (\hspace{.1ex} z \hspace{-0.2ex}-\hspace{-0.2ex} z_o ) \hspace{.1ex} Y \hspace{.15ex}\bigr]
+\hspace{.3ex} dz \, dy \, dx
+\hspace{.3ex} \text{,}
+\hspace{.6em}
+\displaystyle\iiint \hspace{-0.4ex}
+\rho \hspace{1.5pt} \bigl[ (\hspace{.1ex} z \hspace{-0.2ex}-\hspace{-0.2ex} z_{\hspace{-0.14ex}o} ) \hspace{.15ex} X \hspace{-0.2ex} - \hspace{-0.1ex} (\hspace{.1ex} x \hspace{-0.2ex}-\hspace{-0.2ex} x_o ) \hspace{.15ex} Z \hspace{.2ex}\bigr]
+\hspace{.3ex} dz \, dy \, dx
+\hspace{.3ex} \text{,}
+\\[1em]
+\displaystyle\iiint \hspace{-0.4ex}
+\rho \hspace{1.5pt} \bigl[ (\hspace{.1ex} x \hspace{-0.2ex}-\hspace{-0.2ex} x_{\hspace{-0.14ex}o} ) \hspace{.1ex} Y \hspace{-0.2ex} - \hspace{-0.1ex} (\hspace{.1ex} y \hspace{-0.2ex}-\hspace{-0.2ex} y_o ) \hspace{.15ex} X \hspace{.15ex}\bigr]
+\hspace{.3ex} dz \, dy \, dx
+\hspace{.3ex} \text{;}
+\end{array}\right.
+\vspace{.4em}\end{equation*}
+$\rho$\; désignant la densité du corps solide au point \hbox{\;$\bigl( x\text{,}\;y\text{,}\;z \hspace{.2ex}\bigr)$\,},\hspace{.5ex} et les limites des intégrations étant relatives aux limites du volume~\;$v$\,.\hspace{.6ex} Mais, comme les trois premières intégrales seraient des infiniment petits du troisième ordre, et les trois dernières des infiniment petits du quatrième ordre, on se trouverait encore ramené aux formules~\eqref{formules.11} et~\eqref{formules.12}. Il reste à faire voir comment, à~l'aide de ces formules, on peut découvrir les relations qui existent entre les pressions ou~tensions exercées en un point donné d'un corps solide contre divers plans menés successivement par le même point.
+
+Concevons d'abord que le volume~\;$v$\; prenne la forme d'un prisme droit, dont les deux bases soient représentées par \;$s$\; et par \;$s'$.\hspace{.5ex} On aura \;${s' \equals \hspace{.2ex} s}$\hspace{.3ex};\hspace{.7ex} et, si, les dimensions de chaque base étant considérées comme infiniment petites du premier ordre, la hauteur du prisme devient une quantité infiniment petite d'un ordre supérieur au premier, alors, en négligeant, dans les formules~\eqref{formules.11}, les infiniment petits d'un ordre supérieur au second, l'on trouvera
+\begin{equation*}
+(\hspace{.1ex} p \hspace{.1ex} \cosine \lambda + \hspace{-0.15ex} p' \hspace{-0.2ex} \cosine \lambda\hspace{.1ex}' ) \hspace{1.2pt} s \hspace{.4ex} \equals \hspace{.3ex} \text{o}
+\hspace{.4ex} \text{,}
+\hspace{1.3em}
+(\hspace{.1ex} p \hspace{.1ex} \cosine \mu + \hspace{-0.15ex} p' \hspace{-0.2ex} \cosine \mu\hspace{.1ex}' ) \hspace{1.2pt} s \hspace{.4ex} \equals \hspace{.3ex} \text{o}
+\hspace{.4ex} \text{,}
+\hspace{1.3em}
+(\hspace{.1ex} p \hspace{.1ex} \cosine \nu + \hspace{-0.15ex} p' \hspace{-0.2ex} \cosine \nu\hspace{.1ex}' ) \hspace{1.2pt} s \hspace{.4ex} \equals \hspace{.3ex} \text{o}
+\hspace{.3ex} \text{;}
+\end{equation*}
+ou, ce qui revient au même,
+\begin{equation*}
+p' \hspace{-0.2ex} \cosine \lambda\hspace{.1ex}' \equals \hspace{.3ex} \scalebox{1.5}[1]{$-$} \hspace{.1ex} p \hspace{.1ex} \cosine \lambda
+\hspace{.4ex} \text{,}
+\hspace{3em}
+p' \hspace{-0.2ex} \cosine \mu\hspace{.1ex}' \equals \hspace{.3ex} \scalebox{1.5}[1]{$-$} \hspace{.1ex} p \hspace{.1ex} \cosine \mu
+\hspace{.4ex} \text{,}
+\hspace{3em}
+p' \hspace{-0.2ex} \cosine \nu\hspace{.1ex}' \equals \hspace{.3ex} \scalebox{1.5}[1]{$-$} \hspace{.1ex} p \hspace{.1ex} \cosine \nu
+\hspace{.3ex} \text{;}
+\end{equation*}
+et l'on en conclura\vspace{-0.5em}
+\begin{equation*}\begin{gathered}
+p' \equals \hspace{.2ex} p
+\\[.4em]
+%
+\cosine \lambda\hspace{.1ex}' \equals \hspace{.3ex} \scalebox{1.5}[1]{$-$} \hspace{-0.1ex} \cosine \lambda
+\hspace{.4ex} \text{,}
+\hspace{4.4em}
+\cosine \mu\hspace{.1ex}' \equals \hspace{.3ex} \scalebox{1.5}[1]{$-$} \hspace{-0.1ex} \cosine \mu
+\hspace{.4ex} \text{,}
+\hspace{4.4em}
+\cosine \nu\hspace{.1ex}' \equals \hspace{.3ex} \scalebox{1.5}[1]{$-$} \hspace{-0.1ex} \cosine \nu
+\hspace{.2ex} \text{.}
+\end{gathered}\end{equation*}
+Ces dernières équations ont rigoureusement lieu dans le cas où la hauteur du prisme s'évanouit, et comprennent un théorême dont voici l'énoncé.
+
+1.${^{\text{er}}}$ \textsc{Théorême}. \emph{Les pressions ou tensions exercées, en un point donné d'un corps solide contre les deux faces d'un plan quelconque mené par ce point, sont des forces égales et directement opposées}\hspace{.2ex}; ce qu'il était facile de prévoir.
+
+Soient maintenant
+
+
+
+
+\end{document}

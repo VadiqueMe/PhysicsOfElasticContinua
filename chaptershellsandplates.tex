@@ -2,6 +2,38 @@
 
 \ru{\chapter{Оболочки и пластины}}
 
+\makeatletter
+
+\newcommand{\soneinbracketsabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}(\hspace{-0.2ex}1\hspace{-0.2ex})$}}
+\DeclareRobustCommand{\mathoneinbracketsabove}{\accentset{\soneinbracketsabove}}
+
+\newcommand{\stwoinbracketsabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}(\hspace{-0.2ex}2\hspace{-0.2ex})$}}
+\DeclareRobustCommand{\mathtwoinbracketsabove}{\accentset{\stwoinbracketsabove}}
+
+\newcommand{\sthreeinbracketsabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}(\hspace{-0.2ex}3\hspace{-0.2ex})$}}
+\DeclareRobustCommand{\maththreeinbracketsabove}{\accentset{\sthreeinbracketsabove}}
+
+\makeatother
+
+\newcommand\oneparametervector[1]{\smash{\mathoneinbracketsabove{#1}}}
+\newcommand\twoparametervector[1]{\smash{\mathtwoinbracketsabove{#1}}}
+\newcommand\threeparametervector[1]{\smash{\maththreeinbracketsabove{#1}}}
+
+\newcommand\twoparameterbivalent[1]{\smash{{^2}\mathtwoinbracketsabove{#1}}}
+
+\newcommand\twoparameterunitdyad{\bm{I}\hspace{-0.1ex}}
+
+\newcommand{\boldnablaflat}{\mathtwoinbracketsabove{\bm{\nabla}}\hspace{-0.2ex}}
+
+\newcommand\threedimensionlocationvector{\smash{\maththreeinbracketsabove{\mathboldrcursive}}}
+\newcommand\threedimensionallocation{{\hspace{.15ex}\threedimensionlocationvector\hspace{.22ex}}}
+
+\newcommand\threedimensionlocationvectorandupperindex[1]{\maththreeinbracketsabove{\mathboldrcursive}^{#1}}
+\newcommand\threedimensionallocationwithupperindex[1]{{\hspace{.15ex}\threedimensionlocationvectorandupperindex{#1}\hspace{.22ex}}}
+
 \thispagestyle{empty}
 
 \label{chapter:shellsandplates}
@@ -10,103 +42,272 @@
 
 \ru{\section{Геометрия поверхности}}
 
-\begin{otherlanguage}{russian}
+\dropcap{\en{S}\ru{П}}{\en{urface}\ru{оверхность}} \en{is described}\ru{описывается} \en{by function}\ru{функцией}~(\en{morphism}\ru{морфизмом})
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{П}{оверхность} в~трёхмерном пространстве определяется функцией вектора\hbox{-}радиуса точек поверхности от~двух координат ${\bm{r} \!=\! \bm{r}(q^{\hspace{.1ex}\alpha})}$, ${\alpha = 1, 2}$. Непрерывное изменение одной из координат~${q^1\hspace{-0.25ex}}$ при постоянной другой~${q^2\hspace{-0.25ex}}$ даёт координатную линию~${q^1\hspace{-0.25ex}}$. Пере\-сече\-ние двух координатных линий однозначно определяет точку поверхности. Векторы
+\nopagebreak\vspace{-0.25em}\begin{equation}
+\locationvector \hspace{-0.4ex} = \hspace{-0.3ex} \locationvector(q^{\hspace{.1ex}\alpha})
+\hspace{.1ex} , \hspace{.4em}
+\alpha \hspace{-0.1ex} = \hspace{-0.12ex} 1, 2
+\end{equation}
 
-\nopagebreak\vspace{-0.5em}\begin{equation*}
-\bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.16ex} \equiv \partial_{\hspace{-0.1ex}\alpha} \bm{r}
-, \;\;
-\partial_{\hspace{-0.1ex}\alpha} \hspace{-0.16ex} \equiv \textstyle\frac{\partial \bm{r}}{\partial q^\alpha}
-\end{equation*}
+\nopagebreak\vspace{-0.25em}\noindent
+\en{of~two}\ru{двух} \en{mutually independent}\ru{взаимно независимых} \en{variable}\ru{переменных} \en{parameters}\ru{параметров} (\en{coordinates}\ru{координат})~${q^{\hspace{.1ex}\alpha}\hspace{-0.33ex}}$,
+\en{then}\ru{тогда} $\locationvector$\en{ is}\ru{\:---} \en{location vector}\ru{вектор положения}~(\en{radius vector}\ru{вектор-радиус}) \en{of surface’s points}\ru{точек поверхности}.
 
-\vspace{-0.2em} \noindent лежат на~касательных к~координатным линиям. Они являются базисом для представления любого вектора~$\mathtwoabove{\bm{v}}$ в~касательной плоскости как линейной комбинации
+\begin{tcolorbox}
+\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+\emph{\en{Examples}\ru{Примеры}}
+
+\begin{itemize}
+
+\vspace{.2em}\item
+\en{a~linear mapping}\ru{линейное отображение} \ru{есть}\en{is} \en{a~}\href{https://en.wikipedia.org/wiki/Plane_(geometry)}{\en{plane}\ru{плоскость}}
+${\locationvector(a,\hspace{-0.15ex} b) \hspace{-0.25ex} = a \hspace{.1ex} \bm{e}_1 \hspace{-0.2ex} + b \hspace{.1ex} \bigl( \hspace{-0.1ex} \bm{e}_2 \hspace{-0.2ex} + \hspace{-0.1ex} \bm{e}_3 \bigr)}$
+
+\vspace{.2em}\item
+\en{a~}\href{https://en.wikipedia.org/wiki/Helicoid}{\en{helicoid}\ru{геликоид}}
+${\locationvector(u,\hspace{-0.2ex} v) \hspace{-0.25ex} = u \operatorname{sin} v \hspace{.33ex} \bm{e}_1 \hspace{-0.15ex} + u \operatorname{cos} v \hspace{.33ex} \bm{e}_2 \hspace{-0.15ex} + v \hspace{.1ex} \bm{e}_3}$
+
+\vspace{.2em}\item
+\en{a~}\en{cone}\ru{конус}
+${\locationvector(u,\hspace{-0.2ex} v) \hspace{-0.25ex} = u \operatorname{sin} v \hspace{.33ex} \bm{e}_1 \hspace{-0.15ex} + u \operatorname{cos} v \hspace{.33ex} \bm{e}_2 \hspace{-0.15ex} + u \hspace{.1ex} \bm{e}_3}$
+
+\vspace{.2em}\item
+\en{a~}\en{cylinder}\ru{цилиндр} \en{of~radius}\ru{радиуса}~${r \narroweq \constant}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\mathtwoabove{\bm{v}} = v^\alpha \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.16ex} = v_\alpha \bm{r}^\alpha
-\hspace{-0.4ex} , \;\;
-v^\alpha \hspace{-0.25ex} = \mathtwoabove{\bm{v}} \dotp \bm{r}^\alpha
-\hspace{-0.4ex} , \:\;
-v_\alpha \hspace{-0.2ex} = \mathtwoabove{\bm{v}} \dotp \bm{r}_{\hspace{-0.2ex}\alpha}
+\locationvector(u,\hspace{-0.2ex} v) \hspace{-0.25ex} = r \hspace{.1ex} \bigl( \operatorname{cos} u \hspace{.33ex} \bm{e}_1 \hspace{-0.2ex} + \operatorname{sin} u \hspace{.33ex} \bm{e}_2 \bigr) \hspace{-0.3ex} + v \hspace{.1ex} \bm{e}_3
 \end{equation*}
 
-\vspace{-0.25em} \noindent (введён взаимный базис в~касательной плоскости: ${\bm{r}^\alpha \hspace{-0.25ex} \dotp \bm{r}_{\hspace{-0.2ex}\beta} \hspace{-0.2ex} = \delta^\alpha_{\hspace{-0.2ex}\beta}}$).
+\item
+\en{a~}\href{https://en.wikipedia.org/wiki/Torus}{\en{torus of~revolution}\ru{тор вращения}} \en{with radii}\ru{с~радиусами} $r$ \en{and}\ru{и}~$R$
 
-Добавление в~каждой точке поверхности единичного вектора нормали~${\bm{n}(q^{\hspace{.1ex}\alpha})}$
-% field of unit normal vectors
+\nopagebreak\vspace{-0.12em}\begin{equation*}
+\hspace{10000pt minus 1fil}
+\locationvector(\hspace{.1ex}p,\hspace{-0.1ex} q) \hspace{-0.25ex}
+= \bm{e}_1 \bigl( r \operatorname{cos} p + \hspace{-0.15ex} R \hspace{.1ex} \bigr) \hspace{-0.2ex} \operatorname{cos} q
++ \bm{e}_2 \bigl( r \operatorname{cos} p + \hspace{-0.15ex} R \hspace{.1ex} \bigr) \hspace{-0.2ex} \operatorname{sin} q
++ \bm{e}_3 \hspace{.2ex} r \operatorname{sin} p
+\hfilneg
+\end{equation*}
 
-\nopagebreak\vspace{-1em}\begin{equation*}
-\bm{n} = \scalebox{.92}{$
-\displaystyle \frac{\bm{r}_1 \hspace{-0.15ex} \times \bm{r}_2}%
-{\hspace{.4ex} | \hspace{.2ex} \bm{r}_1 \hspace{-0.15ex} \times \bm{r}_2 \hspace{.2ex} | \hspace{.4ex}}
+\item
+\en{a~}\href{https://en.wikipedia.org/wiki/N-sphere}{2\hbox{-}\en{sphere}\ru{сфера}}\:--- \en{a~torus}\ru{тор} \en{with}\ru{с}~${\hspace{-0.1ex} R = 0}$
+
+\nopagebreak\vspace{-0.12em}\begin{equation*}
+\hspace{10000pt minus 1fil}
+\locationvector(\hspace{.1ex}p,\hspace{-0.1ex} q) \hspace{-0.25ex}
+= r \hspace{.1ex} \bigl( \operatorname{cos} p \hspace{.1ex} \operatorname{cos} q \hspace{.33ex} \bm{e}_1 \hspace{-0.15ex}
++ \operatorname{cos} p \hspace{.1ex} \operatorname{sin} q \hspace{.33ex} \bm{e}_2 \hspace{-0.15ex}
++ \operatorname{sin} p \hspace{.33ex} \bm{e}_3 \bigr)
+\hfilneg
+\end{equation*}
+
+\vspace{-0.1em}\item
+\en{a~}\href{https://en.wikipedia.org/wiki/Paraboloid}{\en{paraboloid}\ru{параболоид}}
+${
+\locationvector(u,\hspace{-0.2ex} v) \hspace{-0.25ex} = u \hspace{.1ex} \bm{e}_1 \hspace{-0.2ex} + v \hspace{.1ex} \bm{e}_2 \hspace{-0.2ex} + \hspace{-0.2ex} \bigl( u^2 \hspace{-0.3ex} + \hspace{-0.1ex} v^2 \hspace{.1ex} \bigr) \bm{e}_3
+}$
+\en{or}\ru{или} \en{cylindrical parameterization}\ru{цилиндрическая параметризация}
+${
+\locationvector(\hspace{.1ex}\rho,\hspace{-0.15ex} \vartheta) \hspace{-0.25ex} = \hspace{-0.1ex} \rho \operatorname{cos} \vartheta \hspace{.33ex} \bm{e}_1 \hspace{-0.2ex} + \hspace{-0.1ex} \rho \operatorname{sin} \vartheta \hspace{.33ex} \bm{e}_2 \hspace{-0.2ex} + \hspace{-0.1ex} \rho^2 \bm{e}_3
+}$
+\en{for paraboloid of~revolution}\ru{для параболоида вращения}.
+
+\end{itemize}
+\par\end{tcolorbox}
+\vspace{-0.2em}
+
+\en{Continuous change}\ru{Непрерывное изменение} \en{of~one coordinate}\ru{одной координаты}~${q^{1}\hspace{-0.3ex}}$, \en{while}\ru{пока} \en{second coordinate}\ru{вторая координата}~${q^{2} \hspace{-0.1ex} \narroweq \hspace{.1ex} u^{\hspace{-0.1ex}*} \hspace{-0.1ex} \narroweq \hspace{.15ex} \constant}$ \en{is }\inquotesx{\en{frozen}\ru{заморожена}}[,] \en{gives}\ru{даёт} \en{coordinate line}\ru{координатную линию}~${\oneparametervector{\locationvector}(q^1) \hspace{-0.3ex} = \hspace{-0.12ex} \locationvector(q^1 \hspace{-0.4ex} , u^{\hspace{-0.1ex}*} \hspace{-0.1ex})}$.
+\en{A~crossing}\ru{Пересечение} \en{of two coordinate lines}\ru{двух координатных линий} ${q^1 \hspace{-0.1ex} \narroweq \hspace{.1ex} v^{*}\hspace{-0.3ex}}$ \en{and}\ru{и}~${q^2 \hspace{-0.1ex} \narroweq \hspace{.1ex} w^{*}\hspace{-0.3ex}}$ \en{uniquely identifies}\ru{однозначно определяет} \en{a~point}\ru{точку} ${\locationvector(v^{*} \hspace{-0.4ex}, w^{*}\hspace{-0.1ex})}$ \en{of~the~surface}\ru{поверхности}.
+
+\en{Vectors}\ru{Векторы}
+
+\nopagebreak\vspace{-1em}\begin{equation}
+\locationvector_\differentialindex{\alpha} \hspace{-0.15ex} \equiv \partial_{\hspace{-0.1ex}\alpha} \locationvector
+, \hspace{.5em}
+\partial_{\hspace{-0.1ex}\alpha} \hspace{-0.15ex} \equiv \scalebox{0.8}{$\displaystyle\frac{\raisemath{-0.2em}{\partial}}{\partial q^{\hspace{.1ex}\alpha}}$}
+\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{are tangent}\ru{касательны} \en{to coordinate lines}\ru{к~координатным линиям}.
+\en{If}\ru{Если} \en{they}\ru{они} \en{are linearly independent}\ru{линейно независимы} (\en{that is}\ru{то есть} ${\locationvector_\differentialindex{1} \hspace{-0.3ex} \times \hspace{-0.1ex} \locationvector_\differentialindex{2} \hspace{-0.1ex} \neq \bm{0}}$)\footnote{\en{Sometimes somewhere}\ru{Иногда где\hbox{-}нибудь}\:--- \en{at so\hbox{-}called singular points}\ru{в~так называемых сингулярных точках}\:--- \en{it is not so}\ru{это не так}.
+\en{As example}\ru{Как пример},
+\en{for}\ru{для} \en{a~}2\hbox{-}\en{sphere}\ru{сферы} \en{of~unit radius}\ru{единичного радиуса}
+
+\nopagebreak\vspace{.44em}\scalebox{0.92}{\begin{minipage}{\linewidth}
+\begin{align*}
+\locationvector(\hspace{.1ex}p, q) \hspace{-0.15ex} &= \hspace{.1ex} \operatorname{cos} p \hspace{.1ex} \operatorname{cos} q \hspace{.33ex} \bm{e}_1 \hspace{-0.15ex} + \operatorname{cos} p \hspace{.1ex} \operatorname{sin} q \hspace{.33ex} \bm{e}_2 \hspace{-0.15ex} + \operatorname{sin} p \hspace{.33ex} \bm{e}_3
+\hspace{.1ex} ,
+\\
+%
+\locationvector_\differentialindex{p} \hspace{-0.2ex} = \partial_{p} \locationvector \hspace{-0.1ex} &= - \hspace{.1ex} \operatorname{sin} p \hspace{.1ex} \operatorname{cos} q \hspace{.33ex} \bm{e}_1 \hspace{-0.2ex} - \operatorname{sin} p \hspace{.1ex} \operatorname{sin} q \hspace{.33ex} \bm{e}_2 \hspace{-0.15ex} + \operatorname{cos} p \hspace{.33ex} \bm{e}_3
+\hspace{.1ex} ,
+\\[-0.1em]
+%
+\locationvector_\differentialindex{q} \hspace{-0.2ex} = \partial_{\hspace{-0.06ex}q} \locationvector \hspace{-0.1ex} &= - \hspace{.1ex} \operatorname{cos} p \hspace{.1ex} \operatorname{sin} q \hspace{.33ex} \bm{e}_1 \hspace{-0.15ex} + \operatorname{cos} p \hspace{.1ex} \operatorname{cos} q \hspace{.33ex} \bm{e}_2 \hspace{-0.15ex} + 0 \hspace{.2ex} \bm{e}_3
+\hspace{.1ex} ,
+\end{align*}\end{minipage}}
+
+\nopagebreak\vspace{.2em}\noindent
+\en{a~pole}\ru{полюс} ${p \hspace{-0.2ex} = \hspace{-0.2ex} \pm \frac{\pi}{2}}$\ru{\:---}\en{ is} \en{a~singular point}\ru{сингулярная точка}:
+${\locationvector_\differentialindex{q} \bigr|_{\raisemath{.1em}{p \hspace{.2ex} = \hspace{.2ex} \raisemath{.2em}{\pm \hspace{.1ex} \pi} \hspace{-0.4ex} / \hspace{-0.2ex} \raisemath{-0.15em}{\scalebox{0.66}{$2$}}}} \hspace{-0.44ex}
+= \bm{0}}$\hspace{.1ex}.
+}\hspace{-0.3ex}, \en{they compose}\ru{они составляют} \en{a~local basis}\ru{локальный базис} \en{for representing}\ru{для представления} \en{any vector}\ru{любого вектора}~$\twoparametervector{\bm{v}}$ \en{in the~tangent plane}\ru{в~касательной плоскости} \en{as linear combination}\ru{как линейной комбинации}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\begin{array}{c}
+\twoparametervector{\bm{v}} = v^\alpha \locationvector_\differentialindex{\alpha} \hspace{-0.22ex} = v_\alpha \locationvector^\alpha
+\hspace{-0.4ex} ,
+\\[.1em]
+%
+v^\alpha \hspace{-0.33ex} = \twoparametervector{\bm{v}} \dotp \locationvector^\alpha
+\hspace{-0.4ex} , \hspace{.5em}
+v_\alpha \hspace{-0.33ex} = \twoparametervector{\bm{v}} \dotp \locationvector_\differentialindex{\alpha}
+\hspace{.1ex} , \hspace{.5em}
+\locationvector^\alpha \hspace{-0.25ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}\beta} \hspace{-0.25ex} = \hspace{-0.1ex} \delta^\alpha_{\hspace{-0.2ex}\beta}
+\hspace{.1ex} .
+\end{array}
+\end{equation}
+
+\vspace{-0.25em}\noindent
+\en{Here}\ru{Здесь} ${\locationvector^{\alpha}\hspace{-0.15ex}}$\en{ is}\ru{\:---} \en{local reciprocal basis}\ru{локальный взаимный базис} \en{in the~(co)tangent plane}\ru{в~(ко)касательной плоскости}.
+
+\en{Field}\ru{Поле} \en{of~unit normal vectors}\ru{единичных нормальных векторов}~${\unitnormalvector(q^{\hspace{.1ex}\alpha})}$ \en{adds}\ru{добавляет} \en{at~every point}\ru{в~каждой точке} \en{of~the~surface}\ru{поверхности} (${\hspace{.2ex} \forall \locationvector(q^{\hspace{.1ex}\alpha}) \hspace{.12ex}\Leftrightarrow\hspace{.2ex} \forall q^{\hspace{.1ex}\alpha}}$) \en{a~unit}\ru{единичную}\footnote{${\| \bm{a} \| \hspace{-0.1ex} \equiv \hspace{-0.1ex} \smash{\sqrt{\vphantom{j} \bm{a} \hspace{-0.12ex} \dotp \hspace{-0.1ex} \bm{a}}}\hspace{.1ex}}$\en{ is}\ru{\:---} \en{the~length}\ru{длина} \en{of~vector}\ru{вектора}~$\bm{a}$\hspace{.1ex}.}\hspace{-0.3ex} \en{normal}\ru{нормаль}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\unitnormalvector = \scalebox{.92}{$
+\displaystyle \frac{\raisemath{-0.1em}{\locationvector_\differentialindex{1} \hspace{-0.2ex} \times \locationvector_\differentialindex{2}}}%
+{\hspace{.4ex} \| \hspace{.16ex} \locationvector_\differentialindex{1} \hspace{-0.2ex} \times \locationvector_\differentialindex{2} \hspace{.2ex} \| \hspace{.4ex}}
 $}
-%%\hspace{.25ex} ,
+\hspace{.2ex} .
+\end{equation}
+
+\vspace{-0.1em}\noindent
+\en{At non-singular points}\ru{В~несингулярных точках}, \en{three vectors}\ru{три вектора} ${\locationvector_\differentialindex{1}}$, ${\locationvector_\differentialindex{2}}$ \en{and}\ru{и}~${\unitnormalvector}$ \en{can be taken as a~basis}\ru{могут быть взяты как базис} \en{for the~entire three-dimensional space}\ru{для всего трёхмерного пространства}, \en{giving}\ru{давая} \en{a~decomposition}\ru{разложение} \en{of~any vector}\ru{любого вектора} (\en{and}\ru{и}~\en{any tensor}\ru{любого тензора} \en{too}\ru{тоже}), \en{for example}\ru{например} ${\threeparametervector{\bm{u}} = u^\alpha \locationvector_\differentialindex{\alpha} \hspace{-0.2ex} + u^{\hspace{-0.1ex}n} \unitnormalvector}$.
+
+${u^{\hspace{-0.1ex}n} \hspace{-0.25ex} = u_n}$
+
+\begin{tcolorbox}
+\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+\en{for}\ru{для} \en{a~}2\hbox{-}\en{sphere}\ru{сферы} \en{of~unit radius}\ru{единичного радиуса}
+
+\begin{equation*}
+\locationvector_\differentialindex{p} \hspace{-0.25ex} \times \locationvector_\differentialindex{q} \hspace{-0.2ex}
+= - \operatorname{det}\hspace{-0.2ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.44em}}c}
+- \hspace{.1ex} \operatorname{sin} p \hspace{.1ex} \operatorname{cos} q & \bm{e}_1 & - \hspace{.1ex} \operatorname{cos} p \hspace{.1ex} \operatorname{sin} q \\
+- \hspace{.1ex} \operatorname{sin} p \hspace{.1ex} \operatorname{sin} q & \bm{e}_2 & \operatorname{cos} p \hspace{.1ex} \operatorname{cos} q \\
+\operatorname{cos} p & \bm{e}_3 & 0
+\end{array}\hspace{-0.1ex}\right]$} \hspace{-0.5ex} = ...
 \end{equation*}
 
-\vspace{-0.1em} \noindent даёт разложение для любого вектора (и~вообще любого тензора) в~пространстве, например~${\bm{u} = u^\alpha \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} + u_n \bm{n}}$.
+\par\end{tcolorbox}
+\vspace{-0.2em}
 
-Единичные (\inquotes{метрические}) тензоры~$\bm{E}$ в~пространстве и~$\mathtwoabove{\bm{e}}$ в~касательной плоскости
+\begin{otherlanguage}{russian}
+
+Единичные (\inquotes{метрические}) бивалентные тензоры~$\UnitDyad$ в~пространстве \en{and}\ru{и}~$\twoparameterunitdyad$ в~касательной плоскости
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
-\bm{E} = \mathtwoabove{\bm{e}} + \bm{n} \bm{n}
+\UnitDyad = \twoparameterunitdyad + \unitnormalvector \unitnormalvector
 \hspace{.1ex} , \:\:
-\mathtwoabove{\bm{e}} \hspace{.1ex} \equiv \bm{E} - \bm{n} \bm{n} = \bm{r}_{\hspace{-0.2ex}\alpha} \bm{r}^\alpha \hspace{-0.25ex} = \bm{r}^\alpha \bm{r}_{\hspace{-0.2ex}\alpha}
+\twoparameterunitdyad \hspace{.1ex} \equiv \UnitDyad - \unitnormalvector \unitnormalvector
+= \locationvector_\differentialindex{\alpha} \locationvector^\alpha \hspace{-0.25ex}
+= \locationvector^\alpha \locationvector_\differentialindex{\alpha}
 \hspace{.1ex} .
 \vspace{-0.2em}
 \end{equation*}
 
-Представление вектора\hbox{-}радиуса точки пространства на~рас\-стоя\-нии~$h$~(${\frac{\partial h}{\partial q^{\alpha}} \hspace{-0.2ex} = 0}$) от~поверхности
+Представление вектора положения~$\threedimensionallocation$ любой точки пространства на~рас\-стоя\-нии~$h$ от~поверхности
+(${\partial_{\hspace{-0.1ex}\alpha} h = 0}$)
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{locationvector.fromsurfacetospace}
+\threedimensionallocation(q^{\hspace{.1ex}\alpha} \hspace{-0.4ex}, h)
+= \hspace{.1ex} \locationvector(q^{\hspace{.1ex}\alpha}) + \hspace{.1ex} h \hspace{.1ex} \unitnormalvector(q^{\hspace{.1ex}\alpha})
+\end{equation}
+
+\nopagebreak\vspace{-0.25em}\noindent
+даёт локальный касательный базис
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\bm{R}(q^{\hspace{.1ex}\alpha} \hspace{-0.4ex}, h) = \hspace{.1ex} \bm{r}(q^{\hspace{.1ex}\alpha}) + \hspace{.1ex} h \hspace{.1ex} \bm{n}(q^{\hspace{.1ex}\alpha})
-\end{equation*}
-
-\vspace{-0.5em} \noindent определяет базис
-
-\nopagebreak\vspace{-0.8em}\begin{equation*}
 \begin{array}{c}
-\bm{R}_n \hspace{-0.2ex} = \bm{n} = \bm{R}^n \hspace{-0.25ex} ,
-\\[.1em]
-\bm{R}_\alpha \hspace{-0.2ex} \equiv \partial_{\hspace{-0.1ex}\alpha} \bm{R}
-= \partial_{\hspace{-0.1ex}\alpha} \bm{r} + h \hspace{.2ex} \partial_{\hspace{-0.1ex}\alpha} \bm{n}
-= \bm{r}_{\hspace{-0.2ex}\alpha} + \hspace{.1ex} h \hspace{.2ex} \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.2ex} \dotp \bm{r}^\beta \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\beta} \bm{n}
+\threedimensionallocation_\differentialindex{n} \hspace{-0.25ex} = \unitnormalvector = \threedimensionallocationwithupperindex{n} \hspace{-0.33ex} ,
+\\
+%
+\threedimensionallocation_\differentialindex{\alpha} \hspace{-0.2ex} \equiv \partial_{\hspace{-0.1ex}\alpha} \threedimensionallocation \hspace{-0.15ex}
+= \partial_{\hspace{-0.1ex}\alpha} \locationvector + h \hspace{.2ex} \partial_{\hspace{-0.1ex}\alpha} \unitnormalvector
+= \locationvector_\differentialindex{\alpha} + \hspace{.1ex} h \hspace{.2ex} \locationvector_\differentialindex{\alpha} \hspace{-0.2ex} \dotp \locationvector^\beta \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\beta} \unitnormalvector
 \hspace{.1ex} .
 \end{array}
 \end{equation*}
 
 ...
 
-\[
-\bm{R}_\alpha \hspace{-0.2ex}
-= \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} \dotp \hspace{-0.1ex}
-\left(
-\bm{r}^\beta \bm{r}_{\hspace{-0.2ex}\beta}
-+ h \hspace{.2ex} \bm{r}^\beta \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\beta} \bm{n}
-\right) \hspace{-0.25ex}
-= \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} \dotp \hspace{-0.1ex}
-\left(
-\mathtwoabove{\bm{e}} + h \hspace{.1ex} \boldnablaflat \bm{n}
-\right) \hspace{-0.25ex}
-= \bm{r}_{\hspace{-0.2ex}\alpha} \hspace{-0.15ex} \dotp \hspace{-0.1ex}
-\left(
-\mathtwoabove{\bm{e}} - h \hspace{.1ex} \mathtwoabove{\bm{c}}
-\hspace{.2ex} \right)
-\]
+\noindent
+дифференциальный оператор \inquotes{набла}
 
-${\mathtwoabove{\bm{c}} \equiv - \boldnablaflat \bm{n}}$
+в~пространстве ${\boldnabla \equiv \threedimensionallocationwithupperindex{i} \hspace{-0.1ex} \partial_i}$
+
+в~касательной плоскости ${\boldnablaflat \equiv \hspace{.1ex} \locationvector^\alpha \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\alpha}}$
 
 ...
 
-\noindent кобазис и~дифференциальный оператор \inquotes{набла}
+\begin{equation*}
+\threedimensionallocation_\differentialindex{\alpha} \hspace{-0.2ex}
+= \locationvector_\differentialindex{\alpha} \hspace{-0.15ex} \dotp \hspace{-0.16ex}
+\Bigl(
+\locationvector^\beta \locationvector_\differentialindex{\beta}
++ h \hspace{.2ex} \locationvector^\beta \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\beta} \unitnormalvector
+\Bigr) \hspace{-0.3ex}
+= \locationvector_\differentialindex{\alpha} \hspace{-0.15ex} \dotp \hspace{-0.16ex}
+\Bigl(
+\twoparameterunitdyad \hspace{.1ex}
++ h \hspace{.1ex} \boldnablaflat \unitnormalvector
+\Bigr) \hspace{-0.3ex}
+= \locationvector_\differentialindex{\alpha} \hspace{-0.15ex} \dotp \hspace{-0.12ex}
+\Bigl(
+\twoparameterunitdyad \hspace{.1ex}
+- \hspace{-0.15ex} \twoparameterbivalent{\bm{c}} \hspace{.2ex} h
+\Bigr)
+\end{equation*}
 
-${\boldnabla \equiv \bm{R}^{\hspace{.1ex}i} \hspace{-0.1ex} \partial_i}$
+\en{Two\hbox{-}coordinate}\ru{Двухкоординатный} \en{bivalent}\ru{бивалентный} \en{tensor}\ru{тензор}
 
-${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\alpha}}$
+\nopagebreak\vspace{-0.12em}\ru{\vspace{-0.1em}}\begin{equation}
+\twoparameterbivalent{\bm{c}} \hspace{.1ex} \equiv - \boldnablaflat \unitnormalvector = - \hspace{.2ex} \locationvector^\alpha \hspace{-0.1ex} \partial_{\hspace{-0.1ex}\alpha} \unitnormalvector
+\end{equation}
+
+\nopagebreak\vspace{-0.25em}\noindent
+\en{characterizes}\ru{характеризует} \en{the~surface’s curvature}\ru{кривизну поверхности}.
 
 ...
 
+кобазис
+${\threedimensionallocationwithupperindex{\alpha} \hspace{-0.4ex} \dotp \hspace{-0.1ex} \threedimensionallocation_\differentialindex{\beta} \hspace{-0.2ex} = \delta^\alpha_{\hspace{-0.2ex}\beta}}$,
+${\threedimensionallocationwithupperindex{i} \hspace{-0.4ex} \dotp \hspace{-0.1ex} \threedimensionallocation_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex} = \delta^{i}_{\hspace{-0.25ex}j}}$
 
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\threedimensionallocationwithupperindex{\alpha} \hspace{-0.5ex} = \hspace{-0.2ex} \Bigl( \hspace{-0.1ex}
+\twoparameterunitdyad \hspace{.1ex}
++ h \hspace{.1ex} \boldnablaflat \unitnormalvector
+\Bigr)^{\hspace{-0.6ex}\expminusone} \hspace{-0.9ex} \dotp \hspace{.1ex} \locationvector^\alpha
+\hspace{-0.25ex} , \hspace{.5em}
+\threedimensionallocationwithupperindex{n} \hspace{-0.33ex} = \hspace{.1ex} \unitnormalvector
+\end{equation*}
 
+связь между ${\hspace{-0.2ex}\boldnabla}$ и~${\hspace{-0.2ex}\boldnablaflat}$
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\boldnabla = \hspace{-0.16ex} \Bigl( \hspace{-0.1ex}
+\twoparameterunitdyad \hspace{.1ex}
++ h \hspace{.1ex} \boldnablaflat \unitnormalvector
+\Bigr)^{\hspace{-0.6ex}\expminusone} \hspace{-0.9ex} \dotp \hspace{-0.2ex} \boldnablaflat \hspace{.2ex} + \hspace{.1ex} \unitnormalvector \hspace{.12ex} \partial_n
+\end{equation*}
+
+...
 
 \end{otherlanguage}
 
@@ -116,7 +317,13 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-Располагая моделями трёхмерного моментного контину\kern-0.11exума, \textcolor{magenta}{стержней и~пластин}, не~так~уж тяжело разобраться в~механике оболочек. Как~геометрический объект, оболочка определяется ...
+{\small\emph{Располагая моделями трёхмерного моментного контину\kern-0.11exума, \textcolor{magenta}{стержней и~пластин}, не~так~уж тяжело разобраться в~механике оболочек.}\par}
+
+Как~геометрический объект, оболочка определяется срединной поверхностью и~толщиной~${\hcursive\hspace{-0.22ex}}$,
+так что в~представлении~\eqref{locationvector.fromsurfacetospace}
+${\raisemath{.25em}{- \hspace{.1ex} h} \hspace{-0.25ex} / \hspace{-0.3ex} \scalebox{0.91}{$\raisemath{-0.3em}{2}$}
+\leq \hcursive \hspace{-0.3ex} \leq
+\raisemath{.25em}{h} \hspace{-0.25ex} / \hspace{-0.3ex} \scalebox{0.91}{$\raisemath{-0.3em}{2}$}\hspace{.23ex}}$.
 
 ...
 
@@ -162,7 +369,9 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-Вышеизложенная теория (напоминающая балку Тимошенко и~контину\kern-0.11exумы Коссера) рассматривает~$\fieldofrotations$ независимо от~$\fieldofdisplacements$. Но обыденный опыт подсказывает: материальный элемент, нормальный к~срединной поверхности до~деформации, остаётся таковым и~после (кинематическая гипотеза Кирхгофа). В~классической теории Кирхгофа, Арона и~Лява $\fieldofrotations$ выражается через~$\fieldofdisplacements$, что в~конце концов позволяет всё свести к~одному векторному уравнению для~$\fieldofdisplacements$.
+Вышеизложенная теория (напоминающая балку Тимошенко и~контину\kern-0.11exумы Cosserat) рассматривает \en{rotations}\ru{повороты}~$\fieldofrotations$ независимо от \en{displacements}\ru{перемещений}~$\fieldofdisplacements$.
+Но обыденный опыт подсказывает: материальный элемент, нормальный к~срединной поверхности до~деформации, остаётся таковым и~после (кинематическая гипотеза Kirchhoff’а).
+В~классической теории Kirchhoff’а, Арона и~Лява поле~$\fieldofrotations$ выражается через~$\fieldofdisplacements$, что в~конце концов даёт свести всё к~одному векторному уравнению для~$\fieldofdisplacements$.
 
 Предположим, что в~основе классической теории лежит внутренняя связь
 
@@ -178,7 +387,8 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-Это простейший случай оболочки. Орт ${\bm{n} = \bm{k}}$ направлен по декартовой оси~$z$, в~качестве координат ...
+\en{Plate}\ru{Пластина} \en{is}\ru{есть} \en{the~simplest kind}\ru{простейший вид} \en{of~shell}\ru{оболочки}.
+Единичный перпендикуляр ${\unitnormalvector = \bm{k}}$ направлен по декартовой оси~$z$, в~качестве координат ...
 
 ...
 
@@ -206,9 +416,11 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-Существуют разные уравнения цилиндрической оболочки. Приводятся громоздкие выкладки с~отбрасыванием некоторых малых членов, и~не~всегда ясно, какие именно члены действительно можно отбросить.
+Существуют разные уравнения цилиндрической оболочки.
+Приводятся громоздкие выкладки с~отбрасыванием некоторых малых членов, и~не~всегда ясно, какие именно члены действительно можно отбросить.
 
-Предлагаемая читателю теория оболочек иного свойства: лишних членов нет, все уравнения записаны в~компактной тензорной форме\:--- остаётся лишь грамотно действовать с~компонентами тензоров. В~качестве иллюстрации рассмотрим цилиндрическую оболочку.
+Предлагаемая читателю теория оболочек иного свойства: лишних членов нет, все уравнения записаны в~компактной тензорной форме\:--- остаётся лишь \textcolor{magenta}{грамотно} действовать с~компонентами тензоров.
+В~качестве иллюстрации рассмотрим цилиндрическую оболочку.
 
 В~декартовой системе
 
@@ -238,7 +450,8 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-В~рамках рассматриваемого прямого подхода к~оболочкам как материальным поверхностям наиболее надёжным способом вывода граничных условий представляется вариационный. Исходим из вариационного уравнения:
+В~рамках рассматриваемого прямого подхода к~оболочкам как материальным поверхностям наиболее надёжным способом вывода граничных условий представляется вариационный.
+Исходим из вариационного уравнения:
 
 ...
 
@@ -250,11 +463,13 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \ru{\section{Оболочки вращения}}
 
-\noindent \emph{Surface of~revolution (reference surface of shell of revolution) is created by rotating a~plane curve (the~meridian, the~generatrix) about a~straight line in the~plane of curve (an~axis of~rotation).}
+\noindent
+\emph{Surface of~revolution (reference surface of shell of revolution) is created by rotating a~plane curve (the~meridian, the~generatrix) about a~straight line in the~plane of curve (an~axis of~rotation).}
 
 \begin{otherlanguage}{russian}
 
-Разберёмся в~геометрии поверхности вращения~( рис. ?? 29 ?? ). Меридиан можно задать зависимостью декартовых координат
+Разберёмся в~геометрии поверхности вращения~(~\textcolor{blue}{рисунок}~).
+Меридиан можно задать зависимостью декартовых координат
 
 ...
 
@@ -268,7 +483,8 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-В~отличие от~пластины, оболочка способна выдерживать нормальную распределённую нагрузку без появления внутренних моментов. В~безмоментном состоянии напряжения равномерно распределены по~толщине оболочки, безмоментные оболочечные конструкции можно считать оптимально спроектированными.
+В~отличие от~пластины, оболочка способна выдерживать нормальную распределённую нагрузку без появления внутренних моментов.
+В~безмоментном состоянии напряжения равномерно распределены по~толщине оболочки, безмоментные оболочечные конструкции можно считать оптимально спроектированными.
 
 Уравнения безмоментной теории
 
@@ -284,7 +500,8 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-Вышеизложенную безмоментную теорию оболочек возможно просто и~корректно обобщить на нелинейную постановку. Материальная поверхность состоит из~частиц
+Вышеизложенную безмоментную теорию оболочек возможно просто и~корректно обобщить на нелинейную постановку.
+Материальная поверхность состоит из~частиц
 
 ...
 
@@ -316,11 +533,15 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{П}{ластиной} называется тонкое трёхмерное тело, ограниченное двумя параллельными плоскостями и~боковой цилиндрической поверхностью (рисунок ?? 26 ???). В~декартовых координатах ${x_1, x_2, z}$ поперечная координата ...
+\dropcap{П}{ластиной} называется тонкое трёхмерное тело, ограниченное двумя параллельными плоскостями и~боковой цилиндрической поверхностью (?? \textcolor{blue}{рисунок} ??).
+В~декартовых координатах ${x_1, x_2, z}$ поперечная координата ...
 
 ...
 
-В~теории пластин рассматриваются двумерные задачи. Переход от трёхмерной задачи наиболее достоверен на~пути асимптотики. Но логическая стройность и~эффективность присуща и~вариационному подходу, основанному на аппроксимации по~толщине решения трёхмерной вариационной задачи. Самое~же простое корректное изложение теории пластин характерно для прямого подхода к~ним как материальным плоскостям.
+В~теории пластин рассматриваются двумерные задачи.
+Переход от трёхмерной задачи наиболее достоверен на~пути асимптотики.
+Но логическая стройность и~эффективность присуща и~вариационному подходу, основанному на аппроксимации по~толщине решения трёхмерной вариационной задачи.
+Самое~же простое корректное изложение теории пластин характерно для прямого подхода к~ним как материальным плоскостям.
 
 ...
 
@@ -344,7 +565,7 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \en{\section{Kirchhoff’s classical theory of plates}}
 
-\ru{\section{Классическая теория пластин Кирхгофа}}
+\ru{\section{Классическая теория пластин Kirchhoff’а}}
 
 \begin{otherlanguage}{russian}
 
@@ -362,7 +583,9 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-При малой толщине из теории типа Тимошенко вытекает классическая. Толщина~$h$ определяется отношением жёсткостей. Перепишем
+При малой толщине из теории типа Тимошенко вытекает классическая.
+Толщина~${\hcursive\hspace{-0.22ex}}$ определяется отношением жёсткостей.
+Перепишем
 
 ...
 
@@ -376,7 +599,8 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-Используя вариационные принципы Лагранжа или Рейсснера--Хеллингера с~аппроксимацией решения по~толщине, можно получить двумерные вариационные постановки. Из~них вытекают и~соотношения внутри области, и~естественные краевые условия.
+Используя вариационные принципы Lagrange’а или Рейсснера--Хеллингера с~аппроксимацией решения по~толщине, можно получить двумерные вариационные постановки.
+Из~них вытекают и~соотношения внутри области, и~естественные краевые условия.
 
 Для примера построим модель типа Тимошенко с~аппроксимацией перемещений
 
@@ -385,17 +609,20 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 ...
 
-Рассмотренные вариационные переходы легко обобщаются на~случаи неоднородности и~анизотропии материала, температурных деформаций, динамики. Достоинство принципа Рейсснера--Хеллингера\:--- в~явном представлении напряжений. \hbox{Зато} принцип Лагранжа примен\'{и}м к~нелинейным задачам (\customref[глава~]{chapter:nonlinearcontinuum} содержит трёхмерную постановку).
+Рассмотренные вариационные переходы легко обобщаются на~случаи неоднородности и~анизотропии материала, температурных деформаций, динамики.
+Достоинство принципа Рейсснера--Хеллингера\:--- в~явном представлении напряжений.
+\hbox{Зато} принцип Лагранжа примен\'{и}м к~нелинейным задачам (\customref[глава~]{chapter:nonlinearcontinuum} содержит трёхмерную постановку).
 
 \end{otherlanguage}
 
 \en{\section{Plates: Splitting of three-dimensional bending problem}} % Asymptotic splitting
 
-\ru{\section{Пластины: Ращепление трёхмерной задачи изгиба}} % Асимптотическое ращепление
+\ru{\section{Пластины: Расщепление трёхмерной задачи изгиба}} % Асимптотическое расщепление
 
 \begin{otherlanguage}{russian}
 
-Двумерная классическая теория изгиба пластин легко выводится из трёхмерной постановки с~малым параметром. Представив радиус\hbox{-}вектор в~объёме
+Двумерная классическая теория изгиба пластин легко выводится из трёхмерной постановки с~малым параметром.
+Представив радиус\hbox{-}вектор в~объёме
 
 ...
 
@@ -409,7 +636,7 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-В~качестве иллюстрации рассмотрим широко представленный в~литературе вопрос об~уравнениях теории Кирхгофа в~полярных координатах. Имеем
+В~качестве иллюстрации рассмотрим широко представленный в~литературе вопрос об~уравнениях теории Kirchhoff’а в~полярных координатах.
 
 ...
 
@@ -423,7 +650,8 @@ ${\boldnablaflat \equiv \hspace{.1ex} \bm{r}^\alpha \hspace{-0.1ex} \partial_{\h
 
 \begin{otherlanguage}{russian}
 
-Это вторая из~двух задач, о~которых говорилось в~\pararef{para:overviewofplates}. Силы
+Это вторая из~двух задач, о~которых говорилось в~\pararef{para:overviewofplates}.
+Силы
 
 ...
 

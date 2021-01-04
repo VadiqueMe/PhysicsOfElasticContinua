@@ -1,0 +1,133 @@
+\documentclass[11pt, twoside]{book}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{papersize={200mm, 145mm}} % 60x84/16 is 145 mm x 200 mm
+\geometry{tmargin=1.5cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
+
+\usepackage{bm} % bold math symbols
+
+\newcommand\UnitDyad{\bm{E}}
+
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.55}}
+\newcommand*\bigdot{\mathpalette\dotp@{.64}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.20em}}
+
+\newcommand\T{{\mathpalette\raiseT\intercal}} % symbol for transpose
+\newcommand\raiseT[2]{\hspace{-0.02em}\raisebox{.4ex}{$#1#2$}}
+
+\newcommand\cosinematrix[1]{o_{#1}}
+
+\usepackage{xcolor}
+
+\makeatletter
+\def\@mathcolor#1#2#3{%
+	\protect\leavevmode
+	\begingroup\color#1{#2}#3\endgroup
+}
+\def\mathcolor#1#{\@mathcolor{#1}}
+\makeatother
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{align*}
+\cosinematrix{i'k} \hspace{-0.2ex}
+&= \hspace{-0.3ex} \scalebox{0.88}{$\left[\hspace{-0.2ex}
+\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\cosinematrix{\mathcolor{red}{1'}\mathcolor{blue}{1}} &
+\cosinematrix{\mathcolor{red}{1'}\mathcolor{blue}{2}} &
+\cosinematrix{\mathcolor{red}{1'}\mathcolor{blue}{3}} \\
+\cosinematrix{\mathcolor{red}{2'}\mathcolor{blue}{1}} &
+\cosinematrix{\mathcolor{red}{2'}\mathcolor{blue}{2}} &
+\cosinematrix{\mathcolor{red}{2'}\mathcolor{blue}{3}} \\
+\cosinematrix{\mathcolor{red}{3'}\mathcolor{blue}{1}} &
+\cosinematrix{\mathcolor{red}{3'}\mathcolor{blue}{2}} &
+\cosinematrix{\mathcolor{red}{3'}\mathcolor{blue}{3}}
+\end{array}
+\hspace{-0.2ex}\right]$}\hspace{-0.4ex}
+= \hspace{-0.3ex}
+\scalebox{0.88}{$\left[\hspace{-0.2ex}
+\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\mathcolor{red}{\bm{e}'_1} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_1} &
+\mathcolor{red}{\bm{e}'_1} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_2} &
+\mathcolor{red}{\bm{e}'_1} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_3} \\
+\mathcolor{red}{\bm{e}'_2} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_1} &
+\mathcolor{red}{\bm{e}'_2} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_2} &
+\mathcolor{red}{\bm{e}'_2} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_3} \\
+\mathcolor{red}{\bm{e}'_3} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_1} &
+\mathcolor{red}{\bm{e}'_3} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_2} &
+\mathcolor{red}{\bm{e}'_3} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_3}
+\end{array}
+\hspace{-0.3ex}\right]$}\hspace{-0.4ex}
+= \hspace{-0.3ex}
+\scalebox{0.86}[0.88]{$\left[\hspace{-0.1ex}
+\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_1} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_1}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_1} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_2}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_1} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_3}\mathcolor{gray}{)} \\
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_2} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_1}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_2} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_2}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_2} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_3}\mathcolor{gray}{)} \\
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_3} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_1}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_3} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_2}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_3} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_3}\mathcolor{gray}{)}
+\end{array}
+\hspace{-0.1ex}\right]$}
+\\[.5em]
+%
+\left(\cosinematrix{i'k}\right)^{\hspace{-0.1ex}\T} \hspace{-0.33ex}
+&= \hspace{-0.3ex} \scalebox{0.88}{$\left[\hspace{-0.2ex}
+\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\cosinematrix{\mathcolor{red}{1'}\mathcolor{blue}{1}} &
+\cosinematrix{\mathcolor{red}{2'}\mathcolor{blue}{1}} &
+\cosinematrix{\mathcolor{red}{3'}\mathcolor{blue}{1}} \\
+\cosinematrix{\mathcolor{red}{1'}\mathcolor{blue}{2}} &
+\cosinematrix{\mathcolor{red}{2'}\mathcolor{blue}{2}} &
+\cosinematrix{\mathcolor{red}{3'}\mathcolor{blue}{2}} \\
+\cosinematrix{\mathcolor{red}{1'}\mathcolor{blue}{3}} &
+\cosinematrix{\mathcolor{red}{2'}\mathcolor{blue}{3}} &
+\cosinematrix{\mathcolor{red}{3'}\mathcolor{blue}{3}}
+\end{array}
+\hspace{-0.2ex}\right]$}\hspace{-0.4ex}
+= \hspace{-0.3ex}
+\scalebox{0.88}{$\left[\hspace{-0.2ex}
+\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\mathcolor{red}{\bm{e}'_1} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_1} &
+\mathcolor{red}{\bm{e}'_2} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_1} &
+\mathcolor{red}{\bm{e}'_3} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_1} \\
+\mathcolor{red}{\bm{e}'_1} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_2} &
+\mathcolor{red}{\bm{e}'_2} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_2} &
+\mathcolor{red}{\bm{e}'_3} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_2} \\
+\mathcolor{red}{\bm{e}'_1} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_3} &
+\mathcolor{red}{\bm{e}'_2} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_3} &
+\mathcolor{red}{\bm{e}'_3} \hspace{-0.25ex} \dotp \mathcolor{blue}{\bm{e}_3}
+\end{array}
+\hspace{-0.3ex}\right]$}\hspace{-0.4ex}
+= \hspace{-0.3ex}
+\scalebox{0.86}[0.88]{$\left[\hspace{-0.1ex}
+\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_1} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_1}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_2} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_1}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_3} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_1}\mathcolor{gray}{)} \\
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_1} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_2}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_2} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_2}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_3} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_2}\mathcolor{gray}{)} \\
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_1} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_3}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_2} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_3}\mathcolor{gray}{)} &
+\operatorname{cos} \mathcolor{gray}{\scalebox{0.8}{$\measuredangle$} (}\mathcolor{red}{\bm{e}'_3} \mathcolor{gray}{,} \hspace{-0.2ex} \mathcolor{blue}{\bm{e}_3}\mathcolor{gray}{)}
+\end{array}
+\hspace{-0.1ex}\right]$}
+\end{align*}
+
+\end{document}
