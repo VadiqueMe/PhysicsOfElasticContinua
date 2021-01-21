@@ -4,8 +4,8 @@
 \contentsline {chapter}{\numberline {1}Elements of tensor calculus}{1}{chapter.1}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Vector}{1}{section.1.1}%
-\contentsline {section}{\numberline {2}Tensor and its components}{3}{section.1.2}%
-\contentsline {section}{\numberline {3}Operations with tensors}{5}{section.1.3}%
+\contentsline {section}{\numberline {2}Tensor and its components}{4}{section.1.2}%
+\contentsline {section}{\numberline {3}Operations with tensors}{6}{section.1.3}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {4}Polyadic representation (decomposition)}{8}{section.1.4}%
@@ -32,10 +32,10 @@
 \babel@toc {english}{}
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {10}Variations}{27}{section.1.10}%
+\contentsline {section}{\numberline {10}Variations}{28}{section.1.10}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {11}Polar decomposition}{28}{section.1.11}%
+\contentsline {section}{\numberline {11}Polar decomposition}{29}{section.1.11}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {12}Tensors in oblique basis}{30}{section.1.12}%
@@ -136,7 +136,7 @@
 \contentsline {section}{\numberline {2}Uniqueness of the solution in dynamics}{95}{section.4.2}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {3}Hooke’s ceiiinosssttuv law}{97}{section.4.3}%
+\contentsline {section}{\numberline {3}Hooke’s law}{97}{section.4.3}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {4}Theorems of statics}{100}{section.4.4}%

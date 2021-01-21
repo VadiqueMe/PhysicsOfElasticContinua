@@ -1390,20 +1390,21 @@ J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffs
 
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
-\variation{\potential} = \hspace{.1ex} \firstpiolakirchhoffstress \hspace{-0.12ex} \dotdotp \hspace{.1ex} \variation{\hspace{.1ex} \boldnablacircled \currentlocationvector^{\T}}
+\variation{\potential} = \hspace{.1ex} \firstpiolakirchhoffstress \hspace{-0.12ex} \dotdotp \hspace{.1ex} \variation{\hspace{.1ex} \boldnablacircled \currentlocationvector^{\hspace{.1ex}\T}}
 \hspace{.1ex} \Rightarrow \hspace{.32ex}
 \potential \hspace{-0.32ex}=\hspace{-0.25ex} \potential(\boldnablacircled \currentlocationvector\hspace{.1ex})
 \end{equation}
 
-\vspace{-0.2em} \noindent --- этот немного неожиданный результат получился благодаря коммутативности $\variation$ и~$\smash{\hspace{-0.1ex}\boldnablacircled\hspace{.1ex}}$: ${\boldnablacircled \hspace{.1ex} \variation{\currentlocationvector}^{\hspace{.2ex}\T} \hspace{-0.4ex} = \variation{\hspace{.1ex} \boldnablacircled \currentlocationvector^{\T}}\hspace{-0.25ex}}$ ($\boldnabla$ \en{and}\ru{и}~$\variation$ \en{don’t commute}\ru{не~коммутируют}).
+\vspace{-0.2em} \noindent
+--- этот немного неожиданный результат получился благодаря коммутативности $\variation$ и~$\smash{\hspace{-0.1ex}\boldnablacircled\hspace{.1ex}}$: ${\boldnablacircled \hspace{.1ex} \variation{\currentlocationvector}^{\hspace{.1ex}\T} \hspace{-0.4ex} = \variation{\hspace{.1ex} \boldnablacircled \currentlocationvector^{\hspace{.1ex}\T}}\hspace{-0.25ex}}$ ($\boldnabla$ \en{and}\ru{и}~$\variation$ \en{don’t commute}\ru{не~коммутируют}).
 
 % энергетически сопряжённый с ... = energy conjugate to ...
 
-Тензор~$\firstpiolakirchhoffstress$ оказался энергетически сопряжённым с~${\bm{F} \equiv \hspace{-0.1ex} \smash{\boldnablacircled} \hspace{-0.16ex} \currentlocationvector^{\T}}$
+Тензор~$\firstpiolakirchhoffstress$ оказался энергетически сопряжённым с~${\bm{F} \equiv \hspace{-0.1ex} \smash{\boldnablacircled} \currentlocationvector^{\hspace{.1ex}\T}}$
 
 \nopagebreak\vspace{-0.12em}\begin{equation}
 \firstpiolakirchhoffstress \hspace{-0.1ex}
-= \scalebox{0.92}{$ \displaystyle \frac{\partial \hspace{.1ex} \potential}{\raisemath{-0.4em}{\partial \hspace{.1ex} \smash{\boldnablacircled} \hspace{-0.16ex} \currentlocationvector^{\T}}} $}
+= \scalebox{0.92}{$ \displaystyle \frac{\partial \hspace{.1ex} \potential}{\raisemath{-0.4em}{\partial \hspace{.1ex} \smash{\boldnablacircled} \currentlocationvector^{\hspace{.1ex}\T}}} $}
 = \scalebox{0.92}{$ \displaystyle \frac{\hspace{.2ex} \partial \hspace{.1ex} \potential \hspace{.2ex}}{\raisemath{-0.25em}{\partial \bm{F}}} $} \hspace{.25ex}.
 \vspace{.1em}\end{equation}
 
@@ -1527,7 +1528,7 @@ The quantity ${\bm{\kappa} = J \cauchystress}$ is called the \emph{Kirchhoff str
 \\[.25em]
 %
 \variation{\potential}
-= \hspace{-0.16ex} \left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \bm{f} + \hspace{-0.25ex} \boldnablacircled \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} \dotp \variation{\currentlocationvector}
+= \hspace{-0.16ex} \left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \bm{f} + \hspace{-0.25ex} \boldnablacircled \hspace{-0.1ex} \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} \dotp \variation{\currentlocationvector}
 \hspace{.1ex}
 + \firstpiolakirchhoffstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \boldnablacircled \hspace{.1ex} \variation{\currentlocationvector}^{\hspace{0.12ex}\T}
 \end{array}
@@ -1630,7 +1631,7 @@ ${\boldnabla \hspace{-0.08ex}
 = \hspace{-0.2ex} \boldnabla \initiallocationvector \dotp \hspace{-0.16ex} \boldnablacircled \hspace{-0.1ex}
 = \hspace{-0.1ex} \bm{F}^{\hspace{.1ex}\expminusT} \hspace{-0.3ex} \dotp \hspace{-0.12ex} \boldnablacircled}$ \\
 %
-${\boldnablacircled \hspace{-0.08ex}
+${\boldnablacircled \hspace{-0.1ex}
 = \hspace{-0.2ex} \boldnablacircled \dotp \hspace{-0.2ex} \boldnabla \currentlocationvector
 = \initiallocationvector^i \partial_i \hspace{-0.16ex} \dotp \hspace{-0.12ex} \currentlocationvector^{j} \hspace{-0.1ex} \partial_{\hspace{-0.08ex}j} \hspace{-0.1ex} \currentlocationvector
 \stackrel{?}{=} \initiallocationvector^i \partial_i \currentlocationvector \dotp \hspace{-0.24ex} \currentlocationvector^{j} \hspace{-0.1ex} \partial_{\hspace{-0.08ex}j} \hspace{-0.32ex}
@@ -1640,7 +1641,7 @@ ${\boldnablacircled \hspace{-0.08ex}
 \nopagebreak\vspace{-0.05em}\begin{equation}\label{variationsforcurrentconfiguration}
 \begin{array}{c}
 \mathcircabove{\rho} \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
-+ \hspace{-0.1ex} \boldnablacircled \hspace{-0.12ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
++ \hspace{-0.1ex} \boldnablacircled \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
 = \bm{0}
 \hspace{.1ex} , \:\,
 %
