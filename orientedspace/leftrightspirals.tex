@@ -29,14 +29,14 @@
 
 \tdplotsetmaincoords{46}{140} % orientation of camera
 
-\begin{tikzpicture}[scale=2.5, tdplot_main_coords] % use 3dplot
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords]
 
 \pgfmathsetmacro{\spiralradius}{0.69}
 \pgfmathsetmacro{\verticaladvance}{0.5}
 
 \pgfmathsetmacro{\unitvectorlength}{1.2}
 
-\begin{scope}[xshift=-3em]
+\begin{scope}[xshift=-2.8em]
 
 \coordinate (O) at (0, 0, 0);
 
@@ -51,18 +51,20 @@
 	(O) -- (0, 0, \unitvectorlength)
 	node[pos=0.9, left, yshift=0.5em] {${\bm{e}}_3$};
 
-\pgfmathsetmacro{\verticalshift}{-0.1}
-\pgfmathsetmacro{\initialangle}{-35}
-\pgfmathsetmacro{\lengthincircles}{2.15 * 360 + \initialangle}
+\pgfmathsetmacro\verticalshift{-0.1}
+\pgfmathsetmacro\initialangle{-35}
+\def\lengthincircles{2.15}
+\pgfmathsetmacro\endangle{\lengthincircles * 360 + \initialangle}
+\def\howmanysamples{120}
 
-\draw[domain=\initialangle:\lengthincircles, variable=\t, line width=0.8pt]
-	plot [samples=120]
+\draw[ line width=.8pt ]
+	plot [ domain=\initialangle:\endangle, variable=\t, samples=\howmanysamples ]
 	( {\spiralradius*sin(\t)}, {\spiralradius*cos(\t)}, {\verticaladvance*\t/360 + \verticalshift} )
 	[ arrow inside = {}{0.1, 1} ] ;
 
 \end{scope}
 
-\begin{scope}[xshift=3em]
+\begin{scope}[xshift=2.8em]
 
 \coordinate (O) at (0, 0, 0);
 
@@ -77,12 +79,14 @@
 	(O) -- (0, 0, \unitvectorlength)
 	node[pos=0.9, left, yshift=0.5em] {${\bm{e}}_3$};
 
-\pgfmathsetmacro{\verticalshift}{0.02}
-\pgfmathsetmacro{\initialangle}{-125}
-\pgfmathsetmacro{\lengthincircles}{2.15 * 360 + \initialangle}
+\pgfmathsetmacro\verticalshift{0.02}
+\pgfmathsetmacro\initialangle{-125}
+\def\lengthincircles{2.15}
+\pgfmathsetmacro\endangle{\lengthincircles * 360 + \initialangle}
+\def\howmanysamples{120}
 
-\draw[domain=\initialangle:\lengthincircles, variable=\t, line width=0.8pt]
-	plot [samples=120]
+\draw[ line width=.8pt ]
+	plot [ domain=\initialangle:\endangle, variable=\t, samples=\howmanysamples ]
 	( {-\spiralradius*sin(\t)}, {\spiralradius*cos(\t)}, {\verticaladvance*\t/360 + \verticalshift} )
 	[ arrow inside = {}{0.1, 1} ] ;
 

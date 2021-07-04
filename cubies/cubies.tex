@@ -13,18 +13,20 @@
 \usepackage{amsmath}
 
 \usepackage{tikz}
-\usepackage{tikz-3dplot} % it needs tikz-3dplot.sty in same folder
+\usepackage{tikz-3dplot}
 \usetikzlibrary{calc}
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{arrows, arrows.meta}
 
 \usepackage{xintexpr}
 
+\newcommand\UnitDyad{\bm{E}}
+
 \makeatletter
 \newcommand*\dotp{\mathpalette\dotp@{.5}}
 \newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
-\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.20em}}
 
 \makeatletter
 \newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
@@ -50,7 +52,7 @@ aboveskip=4mm,belowskip=2.5mm}
 
 \newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
 
-\newcommand\levicivita{\raisemath{0.2ex}{\mathrm{\in}}}
+\newcommand\levicivita{\raisemath{.2ex}{\mathrm{\in}}}
 
 \newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
 \newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
@@ -66,7 +68,7 @@ aboveskip=4mm,belowskip=2.5mm}
 
 \begin{document}
 
-\def\locationvector{\bm{r}\hspace{-0.05ex}} % \bm{\xi}
+\def\locationvector{\bm{r}} % \bm{\xi}
 
 \begin{center}
 \tdplotsetmaincoords{58}{117} % orientation of camera
@@ -442,7 +444,7 @@ d a^{i} \hspace{.1ex} d\mathcal{O}_i
 \locationvector \hspace{-0.25ex}=\hspace{-0.25ex} \locationvector ( \hspace{.1ex} \xi^i \hspace{.1ex} )
 {\hspace{.4ex} \not\equiv \textsf{linear} \hspace{.5ex} \xi_i \hspace{.2ex} \bm{n}_i}
 \hspace{.1ex}, \:
-\bm{n}_i \hspace{-0.16ex} = \displaystyle \frac{\raisemath{-0.25em}{\partial \bm{r}}}{\partial \xi^i} = \partial_i \bm{r} , \:
+\bm{n}_i \hspace{-0.16ex} = \displaystyle \frac{\raisemath{-0.25em}{\partial \locationvector}}{\partial \xi^i} = \partial_i \locationvector , \:
 d\locationvector = d \xi^i \hspace{.1ex} \bm{n}_i \hspace{.1ex}, \:
 \boldnabla = \bm{n}^{\hspace{-0.16ex}i} \partial_i \\
 %
@@ -461,12 +463,12 @@ d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \hspace{-0.16ex}
 = d a^i \\
 %
 %%d\bm{a} =
-%%d\bm{a} \dotp \hspace{-0.1ex} \bm{E}
+%%d\bm{a} \dotp \hspace{-0.1ex} \UnitDyad
 %%= d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}_i \hspace{.2ex} \levicivita_{i\hspace{-0.1ex}jk} \hspace{.2ex} \bm{n}_j \hspace{-0.25ex} \times \hspace{-0.16ex} \bm{n}_k \hspace{-0.2ex}
 %%= d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}_i \hspace{.2ex} \levicivita_{i\hspace{-0.1ex}jk} \levicivita_{jkh} \hspace{.2ex} \bm{n}_h \hspace{-0.2ex}
 %%= d\bm{a} \dotp \bm{n}_i \bm{n}_i \\
 %
-d\bm{a} \dotp \hspace{-0.1ex} \bm{E}
+d\bm{a} \dotp \hspace{-0.1ex} \UnitDyad
 = d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \levicivita_{i\hspace{-0.1ex}jk} \hspace{.2ex} \bm{n}^j \hspace{-0.32ex} \times \hspace{-0.16ex} \bm{n}^k \hspace{-0.2ex}
 = d\bm{a} \dotp \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \levicivita_{i\hspace{-0.1ex}jk} \levicivita^{jkh} \hspace{.1ex} \bm{n}_h \hspace{-0.2ex}
 = d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i

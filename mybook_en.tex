@@ -4,7 +4,7 @@
 
 \input{bookpreamble.tex}
 
-\hypersetup{pdftitle={Physics of elastic continua (Физика упругих сред)}}
+\hypersetup{pdftitle={Physics of elastic continua}}
 \hypersetup{pdfauthor={Vadique}}
 
 \usepackage{verbatim} % for \begin(comment) ... \end{comment}
@@ -13,23 +13,31 @@
 
 \begin{document}
 
+\frontmatter
+
 \input{mycoverpage.tex}
 
-\input{secondinfopage.tex}
+\input{colorspage.tex}
 
 \en{\selectlanguage{english}}
 \ru{\selectlanguage{russian}}
 
+\input{resumepage.tex}
+
+\mbox{}
+\newpage
+
 \pdfbookmark[chapter]{\contentsname}{toc}
 \tableofcontents
+
 \thispagestyle{plain}
-\newpage
 
 % space above and below equations
 \setlength{\abovedisplayskip}{2pt}
 \setlength{\belowdisplayskip}{2pt}
 
-\vspace*{20mm}
+\mainmatter
+
 \input{chaptertensors.tex}
 
 \newpage
@@ -78,7 +86,7 @@
 \input{chaptercomposites.tex}
 
 \newpage
-\input{chapterseventeenth.tex}
+\input{chapterperiodiccomposites.tex}
 
 \newpage
 \input{listofbooks.tex}

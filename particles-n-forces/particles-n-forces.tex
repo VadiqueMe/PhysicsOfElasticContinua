@@ -26,6 +26,8 @@
 \newcommand\smthexternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}}
 \newcommand\smthinternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}}
 
+\newcommand\locationvector{\bm{r}}
+
 \makeatletter
 \def\mathcolor#1#{\@mathcolor{#1}}
 \def\@mathcolor#1#2#3{%
@@ -121,19 +123,19 @@ radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{St
 % draw position vectors
 
 \draw [radiiline, line width=1.2pt, black!55] (O) -- (m1circle)
-	node [red, pos=0.56, below right, inner sep=3pt, outer sep=0] {$\bm{r}_1$} ;
+	node [red, pos=0.56, below right, inner sep=3pt, outer sep=0] {$\locationvector_1$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (O) -- (m2circle)
-	node [magenta, pos=0.54, above, inner sep=4.7pt, outer sep=0] {$\bm{r}_2$} ;
+	node [magenta, pos=0.54, above, inner sep=4.7pt, outer sep=0] {$\locationvector_2$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (m2circle) -- (m1circle)
-	node [black, pos=0.55, above right, inner sep=3.3pt, outer sep=0] {$\mathcolor{red}{\bm{r}_1} \hspace{-0.25ex} - \mathcolor{magenta}{\bm{r}_2}$} ;
+	node [black, pos=0.55, above right, inner sep=3.3pt, outer sep=0] {$\mathcolor{red}{\locationvector_1} \hspace{-0.25ex} - \mathcolor{magenta}{\locationvector_2}$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (m3circle) -- (m2circle)
-	node [black, pos=0.47, above left, inner sep=2.6pt, outer sep=0] {$\mathcolor{magenta}{\bm{r}_2} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\bm{r}_3}$} ;
+	node [black, pos=0.47, above left, inner sep=2.6pt, outer sep=0] {$\mathcolor{magenta}{\locationvector_2} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\locationvector_3}$} ;
 
 \draw [radiiline, line width=1.2pt, black!55] (m3circle) -- (m1circle)
-	node [black, pos=0.49, below left, inner sep=2.1pt, outer sep=0] {$\mathcolor{red}{\bm{r}_1} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\bm{r}_3}$} ;
+	node [black, pos=0.49, below left, inner sep=2.1pt, outer sep=0] {$\mathcolor{red}{\locationvector_1} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\locationvector_3}$} ;
 
 % draw force vectors
 

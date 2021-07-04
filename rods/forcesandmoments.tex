@@ -1,0 +1,177 @@
+\documentclass[tikz, border=2mm]{standalone}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+
+\usepackage{bm}
+\newcommand\mathboldM{\scalebox{0.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
+\newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
+
+\usepackage{verbatim}
+
+\begin{document}
+
+\def\beamlinewidth{2pt}
+\tikzstyle{beam line} = [ line width=\beamlinewidth, line cap=round, color=black ]
+
+\tikzstyle{aux line thin} = [ line width=.4pt, color=black, line cap=round ]
+\tikzstyle{aux thin dashed} = [ aux line thin, dash pattern=on 0pt off 1.6\pgflinewidth ]
+\tikzstyle{aux line thick} = [ line width=.7pt, color=black, line cap=round ]
+\tikzstyle{aux thick dashed} = [ aux line thick, dash pattern=on 0pt off 1.6\pgflinewidth ]
+
+\tikzstyle{external force} =
+	[ line width=.7pt, orange, line cap=round, -{Triangle[round, length=5pt, width=3pt]} ]
+\tikzstyle{external moment} =
+	[ line width=.7pt, cyan, line cap=round, -{Triangle[round, length=4.5pt, width=2.8pt]} ]
+
+\tikzstyle{internal force} =
+	[ line width=.7pt, magenta, line cap=round, -{Triangle[round, length=5.5pt, width=3.3pt]} ]
+
+\tikzstyle{end point} =
+	[ line width=.5pt, color=blue, fill=blue ]
+
+\def\textscale{.66}
+
+% coordinates of beam ends
+\def\first{-1}
+\def\last{1}
+
+\newcommand\beamfx[1]{1.5*cos(deg(.6*#1)) - .5}
+\newcommand\beamfy[1]{1 + .9*sin(deg(.8*#1))}
+\newcommand\beamfz[1]{.7*(1 - \first + #1)}
+
+\newcommand\extforcex[1]{{.3*#1*#1 - .3}}
+\newcommand\extforcey[1]{{.5*cos(deg(1.1*#1)) - .3 - .2*#1^3}}
+\newcommand\extforcez[1]{{-0.3*#1}}
+
+\newcommand\extmomentx[1]{{1/3}}
+\newcommand\extmomenty[1]{{.5*#1}}
+\newcommand\extmomentz[1]{{-0.1}}
+
+\newcommand\drawbeam{%
+	\draw [ aux thick dashed, color=blue, tdplot_main_coords ] ( 0, 0, 0 ) -- ++( 1, 0, 0 ) ;
+	\draw [ aux thick dashed, color=red, tdplot_main_coords ] ( 0, 0, 0 ) -- ++( 0, 1, 0 ) ;
+	\draw [ aux thick dashed, color=green, tdplot_main_coords ] ( 0, 0, 0 ) -- ++( 0, 0, 1 ) ;
+
+	% beam
+
+	\draw [ beam line, tdplot_main_coords ]
+		plot [ variable=\s, domain=\first:\last, samples=100 ]
+			( {\beamfx{\s}}, {\beamfy{\s}}, {\beamfz{\s}} ) ;
+
+	% beam coordinate
+
+	\def\showcoordinatexshift{1/3}
+	\def\showcoordinateyshift{-1/3}
+	\def\showcoordinatezshift{1/9}
+	\draw [ aux thin dashed, tdplot_main_coords ]
+		( {\beamfx{\first}}, {\beamfy{\first}}, {\beamfz{\first}} ) -- ++( \showcoordinatexshift, \showcoordinateyshift, \showcoordinatezshift ) ;
+	\pgfmathsetmacro\maxbeamforcoordinate{\first + .4}
+	\draw [ aux line thin, -{To[round, length=3pt, width=4pt]}, tdplot_main_coords ]
+		plot [ variable=\s, domain=\first:\maxbeamforcoordinate, samples=100 ]
+			( {\beamfx{\s} + \showcoordinatexshift}, {\beamfy{\s} + \showcoordinateyshift}, {\beamfz{\s} + \showcoordinatezshift} ) ;
+	\draw [ aux line thin, fill=white, tdplot_main_coords ] ( {\beamfx{\first} + \showcoordinatexshift}, {\beamfy{\first} + \showcoordinateyshift}, {\beamfz{\first} + \showcoordinatezshift} ) circle ( .9pt ) ;
+	\node [ inner sep=0pt, outer sep=0pt, color=black, tdplot_main_coords ]
+		at ( {\beamfx{(\maxbeamforcoordinate + .1)} + \showcoordinatexshift}, {\beamfy{(\maxbeamforcoordinate + .1)} + \showcoordinateyshift}, {\beamfz{(\maxbeamforcoordinate + .1)} + \showcoordinatezshift} )
+		{\scalebox{\textscale}{$ s $}} ;
+
+	% external moment
+
+	\def\howmanysteps{10}
+	\pgfmathsetmacro\step{(\last - \first) / (\howmanysteps - 1)}
+	\pgfmathsetmacro\second{\first + \step}
+	\foreach \m in {\first, \second, ..., \last}
+	{
+		\draw [ external moment, shorten >= 2.7pt, tdplot_main_coords ]
+			($ ( {\beamfx{\m}}, {\beamfy{\m}}, {\beamfz{\m}} ) - ( \extmomentx{\m}, \extmomenty{\m}, \extmomentz{\m} ) $) -- ++( \extmomentx{\m}, \extmomenty{\m}, \extmomentz{\m} ) ;
+		\draw [ external moment, tdplot_main_coords ]
+			($ ( {\beamfx{\m}}, {\beamfy{\m}}, {\beamfz{\m}} ) - ( \extmomentx{\m}, \extmomenty{\m}, \extmomentz{\m} ) $) -- ++( \extmomentx{\m}, \extmomenty{\m}, \extmomentz{\m} ) ;
+	}
+
+	\node [ inner sep=0pt, outer sep=0pt, shape=circle, color=cyan, , tdplot_main_coords ]
+		at ($ ( {\beamfx{1/3}}, {\beamfy{1/3}}, {\beamfz{1/3}} ) - 2*( \extmomentx{1/3}, \extmomenty{1/3}, \extmomentz{1/3} ) $)
+		{\scalebox{\textscale}{$ \bm{m}(\hspace{-0.1ex} s \hspace{-0.1ex}) $}} ;
+
+	% external force
+
+	\def\howmanysteps{12}
+	\pgfmathsetmacro\step{(\last - \first) / (\howmanysteps - 1)}
+	\pgfmathsetmacro\second{\first + \step}
+	\foreach \q in {\first, \second, ..., \last}
+		\draw [ external force, tdplot_main_coords ]
+			($ ( {\beamfx{\q}}, {\beamfy{\q}}, {\beamfz{\q}} ) - ( \extforcex{\q}, \extforcey{\q}, \extforcez{\q} ) $) -- ++( \extforcex{\q}, \extforcey{\q}, \extforcez{\q} ) ;
+
+	\node [ inner sep=0pt, outer sep=0pt, shape=circle, color=orange, tdplot_main_coords ]
+		at ($ ( {\beamfx{0}}, {\beamfy{0}}, {\beamfz{0}} ) - 1.7*( \extforcex{0}, \extforcey{0}, \extforcez{0} ) $)
+		{\scalebox{\textscale}{$ \bm{q}(\hspace{-0.1ex} s \hspace{-0.1ex}) $}} ;
+
+	%%\draw [ end point, tdplot_main_coords ] ( {\beamfx{\first}}, {\beamfy{\first}}, {\beamfz{\first}} ) circle (.8pt) ;
+	%%\draw [ end point, tdplot_main_coords ] ( {\beamfx{\last}}, {\beamfy{\last}}, {\beamfz{\last}} ) circle (.8pt) ;
+
+	% internal forces
+	%%\draw [ internal force, tdplot_main_coords ]
+	%%	( {\beamfx{\last}}, {\beamfy{\last}}, {\beamfz{\last}} ) -- ++( -1, -1, 1 ) ;
+}
+
+\def\cameraanglefirst{50}
+\def\cameraanglesecond{-30}
+
+\tdplotsetmaincoords{\cameraanglefirst}{\cameraanglesecond}
+
+\begin{tikzpicture}[ scale=1.25 ]
+
+\drawbeam
+
+\end{tikzpicture}
+
+% projections
+
+\def\gap{6pt}
+
+\begin{tikzpicture}[ scale=1.25 ]
+
+% yz
+\tdplotsetmaincoords{90}{-90}
+\drawbeam
+
+% xz
+\begin{scope}[xshift=\gap, yshift=0pt]
+\tdplotsetmaincoords{90}{0}
+\drawbeam
+\end{scope}
+
+% xy
+\begin{scope}[xshift=0pt, yshift=-\gap]
+\tdplotsetmaincoords{180}{-90}
+\drawbeam
+\end{scope}
+
+\end{tikzpicture}
+
+% many pictures for animation
+\begin{comment}
+\foreach \anglesecond  in { -30, -28, ..., 330 } {
+\begin{tikzpicture}[ scale=1.25 ]
+\def\margin{.5pt}
+\def\scope{4*\margin}
+\tikzstyle{empty node} = [ shape=circle, outer sep=10pt ]
+\node [ empty node ] at ( -\margin, 0, 0 ) {} ;
+\node [ empty node ] at ( 0, -\margin, 0 ) {} ;
+\node [ empty node ] at ( 0, 0, -\margin ) {} ;
+\node [ empty node ] at ( \scope, 0, 0 ) {} ;
+\node [ empty node ] at ( 0, \scope, 0 ) {} ;
+\node [ empty node ] at ( 0, 0, \scope ) {} ;
+
+\tdplotsetmaincoords{50}{\anglesecond}
+
+\node [ empty node, tdplot_main_coords ]
+	at ( {\beamfx{2.2}}, {\beamfy{2.2}}, {\beamfz{2.2}} ) {} ;
+
+\drawbeam
+\end{tikzpicture}
+}
+\end{comment}
+
+\end{document}

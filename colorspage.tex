@@ -1,0 +1,49 @@
+\begin{minipage}[b][\textheight]{.93\linewidth}%
+{
+
+\begin{tikzpicture}[overlay, remember picture]
+
+	\def\widthofsample{2.5mm}
+	\def\heightofsample{2.5mm}
+
+	\fill [remember picture, overlay, fill=black]
+		($ (current page.south east) + (-\widthofsample,0) $)
+		rectangle ++(\widthofsample, \heightofsample);
+
+	\fill [remember picture, overlay, fill=cyan]
+		($ (current page.south east) + (-\widthofsample,\heightofsample) $)
+		rectangle ++(\widthofsample, \heightofsample);
+	\fill [remember picture, overlay, fill=magenta]
+		($ (current page.south east) + (-\widthofsample,2*\heightofsample) $)
+		rectangle ++(\widthofsample, \heightofsample);
+	\fill [remember picture, overlay, fill=yellow]
+		($ (current page.south east) + (-\widthofsample,3*\heightofsample) $)
+		rectangle ++(\widthofsample, \heightofsample);
+
+	\fill [remember picture, overlay, fill=red]
+		($ (current page.south east) + (-\widthofsample,5*\heightofsample) $)
+		rectangle ++(\widthofsample, \heightofsample);
+	\fill [remember picture, overlay, fill=green]
+		($ (current page.south east) + (-\widthofsample,6*\heightofsample) $)
+		rectangle ++(\widthofsample, \heightofsample);
+	\fill [remember picture, overlay, fill=blue]
+		($ (current page.south east) + (-\widthofsample,7*\heightofsample) $)
+		rectangle ++(\widthofsample, \heightofsample);
+
+	\foreach \graysample in {1, 2, ..., 10}
+	{
+		\pgfmathsetmacro{\currentgray}{100 - (10 * (\graysample - 1))}
+		\fill [remember picture, overlay, fill=black!\currentgray]
+			($ (current page.north east) + (-\widthofsample,-\graysample*\heightofsample) $)
+			rectangle ++(\widthofsample, \heightofsample);
+	}
+
+\end{tikzpicture}
+
+}
+\end{minipage}
+
+\thispagestyle{empty}
+
+\newpage
+

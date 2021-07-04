@@ -1,0 +1,435 @@
+\documentclass[tikz, border=10mm]{standalone}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\usepackage{bm}
+
+\renewcommand\thepage{\oldstylenums{\arabic{page}}}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+
+\usepackage[T2A, T1]{fontenc}
+\usepackage[english, russian]{babel}
+
+\def\horizontalindent{4ex}
+\setlength{\parindent}{\horizontalindent} % offset of the first line
+\usepackage{indentfirst}
+
+\usepackage{setspace}
+\setstretch{1.3} % spacing between lines
+
+\usepackage{upgreek}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{wasysym}
+
+\usepackage{xargs}
+\usepackage{xifthen}
+
+\usepackage{verbatim}
+
+\makeatletter
+\newcommand*\dotp{\mathpalette\dotp@{.55}}
+\newcommand*\bigdot{\mathpalette\dotp@{.64}}
+\newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.20em}}
+
+\makeatletter
+\def\@mathcolor#1#2#3{%
+	\protect\leavevmode
+	\begingroup\color#1{#2}#3\endgroup
+}
+\def\mathcolor#1#{\@mathcolor{#1}}
+\makeatother
+
+\newcommand\cosinematrix[1]{o_{#1}}
+
+\definecolor{darkgray}{rgb}{0.33, 0.33, 0.33}
+
+\begin{document}
+
+\def\materiallinewidth{2.8pt}
+\def\materiallinecolor{black}
+\tikzstyle{material line} = [ line width=\materiallinewidth, line cap=round, color=\materiallinecolor ]
+
+\def\auxlinewidth{.6pt}
+\tikzstyle{aux line thin} = [ line width=\auxlinewidth, color=black, line cap=round ]
+\tikzstyle{aux thin dashed} = [ aux line thin, dash pattern=on 0pt off 1.6\pgflinewidth ]
+\tikzstyle{aux line thick} = [ line width=2.5*\auxlinewidth, color=black, line cap=round ]
+\tikzstyle{aux thick dashed} = [ aux line thick, dash pattern=on 0pt off 1.6\pgflinewidth ]
+
+\tikzstyle{axis with arrow} = [ aux line thin, -{To[round, length=8pt, width=10pt]} ]
+
+\def\vectorcolor{blue}
+\tikzstyle{vector} =
+	[ line width=(1/3)*\materiallinewidth, color=\vectorcolor, line cap=round, -{Triangle[round, length=8pt, width=5pt]} ]
+
+\def\dl{3}
+\pgfmathsetmacro\initialdx{(4/3)*\dl}
+\pgfmathsetmacro\initialdy{\dl}
+
+\def\ux{2.6}
+\def\uy{.7}
+
+\pgfmathsetmacro\dux{-.2*\initialdx}
+\pgfmathsetmacro\duy{.3*\initialdy}
+
+\pgfmathsetmacro\currentdx{\initialdx + \dux}
+\pgfmathsetmacro\currentdy{\initialdy + \duy}
+
+\def\rotationangle{40}
+\def\deformationangle{-15}
+
+% #1 and #2 origin
+% #3 draw parameters
+% #4 and #5 text for dx and dy
+\newcommand\drawinitiallines[5]{
+\draw [ #3, shift={(#1,#2)} ] ( 0, 0 ) -- ++( \initialdx, 0 )
+	node [ pos=.5, below, inner sep=0pt, outer sep=4pt ] {$#4$} ;
+
+\draw [ #3, shift={(#1,#2)} ] ( 0, 0 ) -- ++( 0, \initialdy )
+	node [ pos=.5, left, inner sep=0pt, outer sep=3pt ] {$#5$} ;
+}
+
+\newcommand\drawrotatedlines[3]{
+\draw [ #3, rotate around={\rotationangle:(#1,#2)} ] ( #1, #2 ) -- ++( \initialdx, 0 ) ;
+\draw [ #3, rotate around={\rotationangle:(#1,#2)} ] ( #1, #2 ) -- ++( 0, \initialdy ) ;
+}
+
+\newcommand\drawlineardeformedlines[3]{
+\draw [#3, rotate around={\rotationangle:(#1,#2)}] ( #1, #2 ) -- ++( {\initialdx + \dux}, 0 ) ;
+\draw [#3, rotate around={\rotationangle:(#1,#2)}] ( #1, #2 ) -- ++( 0, {\initialdy + \duy} ) ;
+}
+
+% #4 and #5: options for dx and dy nodes
+\newcommand\drawcurrentlines[5]{
+\draw [#3, rotate around={\rotationangle:(#1,#2)}] ( #1, #2 ) -- ++( {\initialdx + \dux}, 0 )
+	node [ #4 ] {$dx$} ;
+\draw [#3, rotate around={{\rotationangle + \deformationangle}:(#1,#2)}] ( #1, #2 ) -- ++( 0, {\initialdy + \duy} )
+	node [ #5 ] {$dy$} ;
+}
+
+\newcommand\drawtranslationvectors{
+\draw [ vector ] ( 0, \initialdy ) -- ++( \ux, \uy ) ;
+\draw [ vector ] ( \initialdx, 0 ) -- ++( \ux, \uy ) ;
+\draw [ vector ] ( 0, 0 ) -- ++( \ux, \uy )
+	node [ pos=.5, above, inner sep=0pt, outer sep=4pt ] {$\bm{u}$} ;
+}
+
+%#1 and #2: x and y of translation
+\newcommand\drawrotationarcsandvectors[2]{
+\draw [ aux line thin, color=\materiallinecolor, opacity=.8, shift={(#1,#2)} ]
+	plot [ domain=0:\rotationangle, variable=\t, samples=60 ] ( {\initialdx*cos(\t)}, {\initialdx*sin(\t)} ) ;
+
+\draw [ vector, color=\materiallinecolor, shift={(#1,#2)} ]
+	( \initialdx, 0 ) -- ( {\initialdx*cos(\rotationangle)}, {\initialdx*sin(\rotationangle)} ) ;
+
+\draw [ aux line thin, color=\materiallinecolor, opacity=.8, shift={(#1,#2)} ]
+	plot [ domain=90:{90+\rotationangle}, variable=\t, samples=60 ] ( {\initialdy*cos(\t)}, {\initialdy*sin(\t)} ) ;
+
+\draw [ vector, color=\materiallinecolor, shift={(#1,#2)} ]
+	( 0, \initialdy ) -- ( {\initialdy*cos(90 + \rotationangle)}, {\initialdy*sin(90 + \rotationangle)} ) ;
+}
+
+% #1 and #2 text and node options for dux
+% #3 and #4 text and node options for duy
+\newcommand\drawdeformationaldisplacement[4]{
+\pgfmathsetmacro\rigidrotationdxx{\initialdx*cos(\rotationangle)}
+\pgfmathsetmacro\rigidrotationdxy{\initialdx*sin(\rotationangle)}
+\pgfmathsetmacro\deformeddxx{\currentdx*cos(\rotationangle)}
+\pgfmathsetmacro\deformeddxy{\currentdx*sin(\rotationangle)}
+\pgfmathsetmacro\rigidrotationdyx{\initialdy*cos(90 + \rotationangle)}
+\pgfmathsetmacro\rigidrotationdyy{\initialdy*sin(90 + \rotationangle)}
+\pgfmathsetmacro\deformeddyx{\currentdy*cos(90 + \rotationangle + \deformationangle)}
+\pgfmathsetmacro\deformeddyy{\currentdy*sin(90 + \rotationangle + \deformationangle)}
+
+\pgfmathsetmacro\currentxofdx{\ux + \deformeddxx}
+\pgfmathsetmacro\currentyofdx{\uy + \deformeddxy}
+\pgfmathsetmacro\currentxofdy{\ux + \deformeddyx}
+\pgfmathsetmacro\currentyofdy{\uy + \deformeddyy}
+
+\draw [ vector ] ( {\ux + \rigidrotationdyx}, {\uy + \rigidrotationdyy} ) -- ( \currentxofdy, \currentyofdy )
+	node [ #4 ] {$#3$} ;
+\draw [ vector ] ( {\ux + \rigidrotationdxx}, {\uy + \rigidrotationdxy} ) -- ( \currentxofdx, \currentyofdx )
+	node [ #2 ] {$#1$} ;
+}
+
+% #1 and #2 text and node options for u + dux
+% #3 and #4 text and node options for u + duy
+\newcommand\drawfulldisplacement[4]{
+\pgfmathsetmacro\rotationdxx{\currentdx*cos(\rotationangle)}
+\pgfmathsetmacro\rotationdxy{\currentdx*sin(\rotationangle)}
+\pgfmathsetmacro\fullrotationdyx{\currentdy*cos(90 + \rotationangle + \deformationangle)}
+\pgfmathsetmacro\fullrotationdyy{\currentdy*sin(90 + \rotationangle + \deformationangle)}
+
+\pgfmathsetmacro\currentxofdx{\ux + \rotationdxx}
+\pgfmathsetmacro\currentyofdx{\uy + \rotationdxy}
+\pgfmathsetmacro\currentxofdy{\ux + \fullrotationdyx}
+\pgfmathsetmacro\currentyofdy{\uy + \fullrotationdyy}
+
+\draw [ vector ] ( 0, \initialdy ) -- ( \currentxofdy, \currentyofdy )
+	node [ #4 ] {$#3$} ;
+\draw [ vector ] ( \initialdx, 0 ) -- ( \currentxofdx, \currentyofdx )
+	node [ #2 ] {$#1$} ;
+
+\pgfmathparse{(\ux != 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+	\pgfmathparse{(\uy != 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\draw [ vector ] ( 0, 0 ) -- ++( \ux, \uy ) ;
+	\fi
+\fi
+}
+
+\newcommand\drawduydecomposition[4]{
+\pgfmathsetmacro\rotationdyxrigid{\currentdy*cos(90 + \rotationangle)}
+\pgfmathsetmacro\rotationdyyrigid{\currentdy*sin(90 + \rotationangle)}
+\pgfmathsetmacro\rotationdyxfull{\currentdy*cos(90 + \rotationangle + \deformationangle)}
+\pgfmathsetmacro\rotationdyyfull{\currentdy*sin(90 + \rotationangle + \deformationangle)}
+
+\draw [ vector, color=cyan!66!blue ] ( 0, \initialdy ) -- ( {\ux + \rotationdyxrigid}, {\uy + \rotationdyyrigid} )
+	node [ #4 ] {$#3$} ;
+
+\draw [ vector, color=green!50!black ] ( {\ux + \rotationdyxrigid}, {\uy + \rotationdyyrigid} ) -- ( {\ux + \rotationdyxfull}, {\uy + \rotationdyyfull} )
+	node [ #2 ] {$#1$} ;
+}
+
+\newcommand\drawduxdecomposition[4]{
+\pgfmathsetmacro\rotationdxxrigid{\currentdx*cos(\rotationangle)}
+\pgfmathsetmacro\rotationdxyrigid{\currentdx*sin(\rotationangle)}
+\pgfmathsetmacro\rotationdxxfull{\currentdx*cos(\rotationangle + \deformationangle)}
+\pgfmathsetmacro\rotationdxyfull{\currentdx*sin(\rotationangle + \deformationangle)}
+
+\draw [ vector, color=green!50!black ] ( \currentdx, 0 ) -- ( {\ux + \rotationdxxrigid}, {\uy + \rotationdxyrigid} )
+	node [ #4 ] {$#3$} ;
+
+\draw [ vector, color=cyan!66!blue ] ( \initialdx, 0 ) -- ( \currentdx, 0 )
+	node [ #2 ] {$#1$} ;
+}
+
+\begin{tikzpicture}[ scale = 1 ]
+
+\def\materiallinecolor{black!66}
+\drawinitiallines{0}{0}{material line}{dx_{\hspace{-.2ex}o}}{dy_{\hspace{-.15ex}o}}
+
+\def\vectorcolor{blue}
+\drawtranslationvectors
+
+\drawinitiallines{\ux}{\uy}{material line, color=\vectorcolor}{}{}
+
+\def\materiallinecolor{green}
+\drawlineardeformedlines{\ux}{\uy}{material line}
+
+\def\materiallinecolor{magenta}
+\drawrotatedlines{\ux}{\uy}{material line}
+
+\drawrotationarcsandvectors{\ux}{\uy}
+
+\def\materiallinecolor{black}
+\drawcurrentlines{\ux}{\uy}{material line}{pos=.55, above left, inner sep=0pt, outer sep=2pt}{pos=.53, right, inner sep=0pt, outer sep=4pt}
+
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\rotationangle ]
+	plot [ domain=90:{90+\deformationangle}, variable=\t, samples=60 ] ( {\currentdy*cos(\t)}, {\currentdy*sin(\t)} ) ;
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\rotationangle ]
+	plot [ domain=90:{90+\deformationangle}, variable=\t, samples=60 ] ( {(\currentdy - .1)*cos(\t)}, {(\currentdy - .1)*sin(\t)} ) ;
+
+\def\vectorcolor{black}
+\drawfulldisplacement%
+	{\bm{u}'}{pos=.5, left, inner sep=0pt, outer sep=1.5pt}%
+	{\bm{u}'\hspace{-.22ex}'}{pos=.88, above, inner sep=0pt, outer sep=6pt}
+
+\def\vectorcolor{orange!50!red}
+\drawdeformationaldisplacement{}{}{}{}
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[ scale = 1 ]
+
+\pgfmathsetmacro\textx{0}
+\pgfmathsetmacro\texty{0} %% -(2/5)*\initialdy}
+\pgfmathsetmacro\interligne{-(1/7)*\initialdy}
+
+\def\textscale{.84}
+
+\node [ inner sep=0pt, outer sep=0pt ] at ( \textx, \texty ) {\scalebox{\textscale}{$
+\bm{u} \hspace{-.1ex} = \bm{r} - \bm{r}_{\hspace{-.25ex}o}
+$}} ;
+
+\node [ inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + \interligne} ) {\scalebox{\textscale}{$
+\bm{r} \hspace{-.1ex} = x \bm{e}_{x} \hspace{-.25ex} + \hspace{-.1ex} y \bm{e}_{y}
+$}} ;
+
+\node [ inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 2*\interligne} ) {\scalebox{\textscale}{$
+\bm{r}_{\hspace{-.25ex}o} \hspace{-.25ex} = x_{\hspace{-.2ex}o} \bm{e}_{x\hspace{-.1ex}o} \hspace{-.25ex} + \hspace{-.1ex} y_{\hspace{-.15ex}o} \bm{e}_{y\hspace{-.1ex}o}
+$}} ;
+
+\pgfmathsetmacro\textx{1.2*\initialdx}
+
+\node [ inner sep=0pt, outer sep=0pt ] at ( \textx, \texty ) {\scalebox{\textscale}{$
+\bm{u}' \hspace{-.33ex} = \hspace{-.1ex} (\bm{r} \hspace{-.1ex} + \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.15ex}x}) \hspace{-.15ex} - \hspace{-.15ex} (\bm{r}_{\hspace{-.25ex}o} \hspace{-.3ex} + \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.2ex}x\hspace{-.1ex}o}) \hspace{-.2ex}
+= \bm{u} \hspace{-.1ex} + \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.15ex}x} \hspace{-.25ex} - \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.2ex}x\hspace{-.1ex}o}
+$}} ;
+
+\node [ inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + \interligne} ) {\scalebox{\textscale}{$
+\bm{u}'\hspace{-.22ex}' \hspace{-.33ex} = \hspace{-.1ex} (\bm{r} \hspace{-.1ex} + \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.15ex}y}) \hspace{-.15ex} - \hspace{-.15ex} (\bm{r}_{\hspace{-.25ex}o} \hspace{-.3ex} + \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.2ex}y\hspace{-.1ex}o}) \hspace{-.2ex}
+= \bm{u} \hspace{-.1ex} + \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.15ex}y} \hspace{-.25ex} - \hspace{-.1ex} \bm{d}\bm{r}_{\hspace{-.2ex}y\hspace{-.1ex}o}
+$}} ;
+
+\node [ inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 2.2*\interligne} ) {\scalebox{\textscale}{$
+\bm{d}\bm{r}_{\hspace{-.2ex}xo} \hspace{-.25ex} = \hspace{-.1ex} dx_{\hspace{-.2ex}o} \bm{e}_{x\hspace{-.1ex}o} \hspace{-.25ex} + \hspace{-.1ex} 0 \hspace{.1ex} \bm{e}_{y\hspace{-.1ex}o}
+\hspace{.2ex} , \hspace{.4em}
+\bm{d}\bm{r}_{\hspace{-.15ex}x} \hspace{-.25ex} = \hspace{-.1ex} dx \bm{e}_{x}
+$}} ;
+
+\node [ inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 3.2*\interligne} ) {\scalebox{\textscale}{$
+\bm{d}\bm{r}_{\hspace{-.2ex}yo} \hspace{-.25ex} = \hspace{-.1ex} 0 \hspace{.1ex} \bm{e}_{x\hspace{-.1ex}o} \hspace{-.25ex} + \hspace{-.1ex} dy_{\hspace{-.15ex}o} \bm{e}_{y\hspace{-.1ex}o}
+\hspace{.2ex} , \hspace{.4em}
+\bm{d}\bm{r}_{\hspace{-.15ex}y} \hspace{-.25ex} = \hspace{-.1ex} dy \bm{e}_{y}
+$}} ;
+
+\pgfmathsetmacro\textx{0}
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 4.4*\interligne} ) {\scalebox{\textscale}{$
+\bm{u}' \hspace{-.33ex}
+= \bm{u} \hspace{-.1ex} + \hspace{-.1ex} dx \bm{e}_{x} \hspace{-.3ex} - \hspace{-.1ex} dx_{\hspace{-.2ex}o} \bm{e}_{x\hspace{-.1ex}o} \hspace{-.25ex}
+= \bm{u} \hspace{-.1ex} + \hspace{-.1ex} \bm{du}_{x}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 5.4*\interligne} ) {\scalebox{\textscale}{$
+\bm{u}'\hspace{-.22ex}' \hspace{-.33ex}
+= \bm{u} \hspace{-.1ex} + \hspace{-.1ex} dy \bm{e}_{y} \hspace{-.3ex} - \hspace{-.1ex} dy_{\hspace{-.2ex}o} \bm{e}_{y\hspace{-.1ex}o} \hspace{-.25ex}
+= \bm{u} \hspace{-.1ex} + \hspace{-.1ex} \bm{du}_{y}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 6.6*\interligne} ) {\scalebox{\textscale}{$
+\bm{e}_{\hspace{-.1ex}\alpha} \hspace{-.2ex} \dotp \bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o} \hspace{-.25ex}
+= \cosinematrix{\alpha \beta \hspace{-.1ex} o} \hspace{-.25ex}
+= \operatorname{cos} \hspace{-.2ex} \mathcolor{darkgray}{\scalebox{.88}{$\measuredangle$} (}\bm{e}_{\hspace{-.1ex}\alpha} \mathcolor{darkgray}{,} \hspace{-.15ex} \bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o} \mathcolor{darkgray}{)}
+\hspace{.2em} \Leftrightarrow \hspace{.2em}
+\bm{e}_{\hspace{-.1ex}\alpha} \hspace{-.25ex}
+= \cosinematrix{\alpha \beta \hspace{-.1ex} o} \hspace{.1ex} \bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o}
+\hspace{.2ex} , \hspace{.2em}
+\bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o} \hspace{-.25ex}
+= \bm{e}_{\hspace{-.1ex}\alpha} \hspace{.1ex} \cosinematrix{\alpha \beta \hspace{-.1ex} o}
+$}} ;
+
+\pgfmathsetmacro\textx{.33*\initialdx}
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 7.6*\interligne} ) {\scalebox{\textscale}{$
+\cosinematrix{\hspace{-.1ex}x x\hspace{-.1ex}o} \hspace{-.25ex}
+= \operatorname{cos} \mathcolor{magenta}{\omega}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 8.5*\interligne} ) {\scalebox{\textscale}{$
+\cosinematrix{\hspace{-.1ex}x y\hspace{-.1ex}o} \hspace{-.25ex}
+= \operatorname{cos} \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} - \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
+= \operatorname{sin} \mathcolor{magenta}{\omega}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 9.4*\interligne} ) {\scalebox{\textscale}{$
+\cosinematrix{\hspace{-.1ex}y x\hspace{-.1ex}o} \hspace{-.25ex}
+= \operatorname{cos} \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} + \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
+= - \operatorname{sin} \mathcolor{magenta}{\omega}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 10.3*\interligne} ) {\scalebox{\textscale}{$
+\cosinematrix{\hspace{-.1ex}y y\hspace{-.1ex}o} \hspace{-.25ex}
+= \operatorname{sin} \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} + \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
+= \operatorname{cos} \mathcolor{magenta}{\omega}
+$}} ;
+
+\pgfmathsetmacro\textx{0}
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 11.4*\interligne} ) {\scalebox{\textscale}{$
+\bm{e}_{x} \hspace{-.25ex}
+= \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
++ \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y \hspace{-.1ex} o}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 12.3*\interligne} ) {\scalebox{\textscale}{$
+\bm{e}_{y} \hspace{-.25ex}
+= - \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
++ \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y \hspace{-.1ex} o}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( {\initialdx + \textx}, {\texty + 11.4*\interligne} ) {\scalebox{\textscale}{$
+\bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
+= \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x} \hspace{-.25ex}
+- \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y}
+$}} ;
+
+\node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( {\initialdx + \textx}, {\texty + 12.3*\interligne} ) {\scalebox{\textscale}{$
+\bm{e}_{y \hspace{-.1ex} o} \hspace{-.25ex}
+= \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x} \hspace{-.25ex}
++ \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y}
+$}} ;
+
+\end{tikzpicture}
+
+%%
+
+\def\ux{0}
+\def\uy{0}
+\def\rotationangle{0}
+
+\begin{tikzpicture}[ scale = 1 ]
+
+\def\materiallinecolor{green}
+\drawlineardeformedlines{\ux}{\uy}{material line}
+
+\def\materiallinecolor{black!66}
+\drawinitiallines{0}{0}{material line}{dx_{\hspace{-.2ex}o}}{dy_{\hspace{-.15ex}o}}
+
+\def\materiallinecolor{black}
+\drawcurrentlines{\ux}{\uy}{material line}{pos=.53, above, inner sep=0pt, outer sep=4.5pt}{pos=.52, right, inner sep=0pt, outer sep=4pt}
+
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\rotationangle ]
+	plot [ domain=90:{90+\deformationangle}, variable=\t, samples=60 ] ( {\currentdy*cos(\t)}, {\currentdy*sin(\t)} ) ;
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\rotationangle ]
+	plot [ domain=90:{90+\deformationangle}, variable=\t, samples=60 ] ( {(\currentdy - .1)*cos(\t)}, {(\currentdy - .1)*sin(\t)} ) ;
+
+\pgfmathsetmacro\halfsectorangle{\rotationangle + .5*\deformationangle}
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\halfsectorangle ]
+	( 0, 0 ) -- ( 0, \currentdy ) ;
+
+\drawduydecomposition{du_{2x}}{pos=.45, above, inner sep=0pt, outer sep=3.3pt}{du_{2y}}{pos=.54, left, inner sep=0pt, outer sep=3pt}
+
+\def\vectorcolor{orange!50!red}
+\drawfulldisplacement{\bm{du}_1}{pos=.4, above, inner sep=0pt, outer sep=3.5pt}{\bm{du}_2}{pos=1.03, below right, inner sep=0pt, outer sep=1pt}
+
+\begin{scope}[ xshift = 5.5cm ]
+
+\def\rotationangle{-\deformationangle}
+
+\def\materiallinecolor{black}
+\drawcurrentlines{\ux}{\uy}{material line}{pos=.53, above, inner sep=0pt, outer sep=5pt}{pos=.52, right, inner sep=0pt, outer sep=3.5pt}
+
+\def\materiallinecolor{black!66}
+\drawinitiallines{0}{0}{material line}{dx_{\hspace{-.2ex}o}}{dy_{\hspace{-.15ex}o}}
+
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\rotationangle ]
+	plot [ domain=0:{\deformationangle}, variable=\t, samples=60 ] ( {\currentdx*cos(\t)}, {\currentdx*sin(\t)} ) ;
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\rotationangle ]
+	plot [ domain=0:{\deformationangle}, variable=\t, samples=60 ] ( {(\currentdx - .1)*cos(\t)}, {(\currentdx - .1)*sin(\t)} ) ;
+
+\pgfmathsetmacro\halfsectorangle{-.5*\deformationangle}
+\draw [ aux line thin, color=green, opacity=.8, shift={(\ux, \uy)}, rotate=\halfsectorangle ]
+	( 0, 0 ) -- ( \currentdx, 0 ) ;
+
+\drawduxdecomposition{du_{1x}}{pos=.4, below, inner sep=0pt, outer sep=4pt}{du_{1y}}{pos=1.3, inner sep=0pt, outer sep=0pt}
+
+\def\vectorcolor{orange!50!red}
+\drawfulldisplacement{\bm{du}_1}{pos=.5, above right, inner sep=0pt, outer sep=0.5pt}{\bm{du}_2}{pos=.5, right, inner sep=0pt, outer sep=3pt}
+
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}

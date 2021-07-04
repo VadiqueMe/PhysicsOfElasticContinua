@@ -11,7 +11,7 @@
 
 \begin{changemargin}{\parindent}{\parindent}
 \vspace{-2em}
-{\noindent \small
+{\noindent\small
 
 \en{Problems}\ru{Проблемы}, \en{solved using models of elastic continua}\ru{решаемые с~использованием моделей упругих сред}, \en{usually}\ru{обыкновенно} \en{include}\ru{сод\'{е}ржат} \en{already known}\ru{уж\'{е} известные} \en{external loads}\ru{внешние нагрузки} (\en{how to~find them}\ru{как найти их}\ru{\:---}\en{ is} \en{a~distinct problem}\ru{отдельная проблема}).
 \en{When}\ru{Когда} \en{electric currents}\ru{электрические токи} \en{flow}\ru{протекают} \en{in an~elastic body}\ru{в~упругом теле}, \en{the~magnetic field}\ru{магнитное поле} \en{produces}\ru{создаёт} \en{a~load}\ru{нагрузку}.
@@ -36,11 +36,12 @@
 
 \label{para:electromagneticfieldandwaves}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{\en{H}\ru{В}}{\en{ere}\ru{от}}\en{ is} \en{the~summary}\ru{краткое изложение} \en{of the~theory of electromagnetism}\ru{теории электромагнетизма}.
+\dropcap{\en{H}\ru{В}}{\en{ere}\ru{от}}\en{ is} \en{the~summary}\ru{краткое изложение} \en{of the~theory of electromagnetism}\ru{теории электромагнетизма}.
 
-\noindent \hspace{\parindent} \en{This theory}\ru{Эта теория} \en{describes}\ru{описывает} \en{two vector fields}\ru{два векторных поля}:
-\en{electric}\ru{электрическое}~${\hspace{.1ex}\boldmathbb{E}(\bm{r}, t)}$ \en{and}\ru{и}~\en{magnetic}\ru{магнитное}~${\hspace{.1ex}\boldmathbb{B}(\bm{r}, t)}$.
-\en{What are}\ru{Что такое} \en{vector}\ru{вектор}~${\hspace{.1ex}\boldmathbb{E}}$ \en{and}\ru{и}~\en{pseudo\-vector}\ru{псевдо\-вектор}~${\hspace{.1ex}\boldmathbb{B}}$ \en{is seen}\ru{в\'{и}дно} \en{from}\ru{из} \en{the~expression}\ru{выражения} \en{of electromagnetic force}\ru{электромагнитной силы} (\href{https://en.wikipedia.org/wiki/Lorentz_force}{\en{Lorentz force}\ru{силы Lorentz’а}}) ${\hspace{-0.1ex}\bm{F}(\bm{r}, \mathdotabove{\bm{r}}, t, q)}$, \en{acting on}\ru{действующей на}~\en{a~point charge}\ru{точечный заряд}\:--- \en{a~particle}\ru{частицу} \en{of infinitesimal size}\ru{бесконечно-малого размера}\ru{,} \en{that contains}\ru{содержащую} \en{electric charge}\ru{электрический заряд}~$q$ \en{and}\ru{и}~\en{moves}\ru{движущуюся} \en{with velocity}\ru{со~скоростью}~${\bm{v} \equiv \mathdotabove{\bm{r}}}$
+\noindent\hspace{\parindent}
+\en{This theory}\ru{Эта теория} \en{describes}\ru{описывает} \en{two vector fields}\ru{два векторных поля}:
+\en{electric}\ru{электрическое}~${\hspace{.1ex}\boldmathbb{E}(\locationvector, t)}$ \en{and}\ru{и}~\en{magnetic}\ru{магнитное}~${\hspace{.1ex}\boldmathbb{B}(\locationvector, t)}$.
+\en{What are}\ru{Что такое} \en{vector}\ru{вектор}~${\hspace{.1ex}\boldmathbb{E}}$ \en{and}\ru{и}~\en{pseudo\-vector}\ru{псевдо\-вектор}~${\hspace{.1ex}\boldmathbb{B}}$ \en{is seen}\ru{в\'{и}дно} \en{from}\ru{из} \en{the~expression}\ru{выражения} \en{of electromagnetic force}\ru{электромагнитной силы} (\href{https://en.wikipedia.org/wiki/Lorentz_force}{\en{Lorentz force}\ru{силы Lorentz’а}}) ${\hspace{-0.1ex}\bm{F}(\locationvector, \mathdotabove{\locationvector}, t, q)}$, \en{acting on}\ru{действующей на}~\en{a~point charge}\ru{точечный заряд}\:--- \en{a~particle}\ru{частицу} \en{of infinitesimal size}\ru{бесконечно-малого размера}\ru{,} \en{that contains}\ru{содержащую} \en{electric charge}\ru{электрический заряд}~$q$ \en{and}\ru{и}~\en{moves}\ru{движущуюся} \en{with velocity}\ru{со~скоростью}~${\bm{v} \equiv \mathdotabove{\locationvector}}$
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{electromagneticforce}
 \bm{F} = \hspace{.12ex} q \hspace{.2ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{.2ex} + \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \bigr)
@@ -49,7 +50,7 @@
 
 \vspace{-0.2em} \noindent \en{In~essence}\ru{По~сути}, \en{the~part}\ru{часть} \en{of the~electromagnetic force}\ru{электромагнитной силы}\ru{,} \en{arising from interaction}\ru{возникающая от взаимо\-действия} \en{with a~moving charge}\ru{с~движущимся зарядом}\:--- \en{magnetic force}\ru{магнитная сила}~${q \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}}$\:--- \en{reveals}\ru{являет} \en{magnetic field}\ru{магнитное поле}~${\hspace{.1ex}\boldmathbb{B}}$, \en{while}\ru{в~то время как} \en{the~other part}\ru{другая часть}\:--- \en{electric force}\ru{электрическая сила}~${q \hspace{.1ex} \boldmathbb{E}}$\:--- \en{reveals}\ru{являет} \en{electric field}\ru{электрическое поле}~${\hspace{.1ex}\boldmathbb{E}}$.
 
-\vspace{-0.1em} \en{Acute question}\ru{Острый вопрос}: \en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\bm{v} \equiv \mathdotabove{\bm{r}}\hspace{.1ex}}$ \en{of a~charged particle}\ru{заряжённой частицы}\en{ measured}, \en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of~relativity}\ru{специальной теории относительности}}%
+\vspace{-0.1em} \en{Acute question}\ru{Острый вопрос}: \en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\bm{v} \equiv \mathdotabove{\locationvector}\hspace{.1ex}}$ \en{of a~charged particle}\ru{заряжённой частицы}\en{ measured}, \en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of~relativity}\ru{специальной теории относительности}}%
 \footnote{%
 \bibauthor{Albert Einstein}.
 \href{http://users.physik.fu-berlin.de/~kleinert/files/1905_17_891-921.pdf}{Zur Elektrodynamik bewegter Körper.~//
@@ -64,7 +65,7 @@ a~vacuum is a~space without matter, \inquotes{free space}
 
 \en{continuous charge distribution}\ru{непрерывное распределение заряда}
 
-\en{charge density}\ru{плотность заряда} (\en{electric charge}\ru{электрический заряд} \en{per volume unit}\ru{на единицу объёма}) ${\chargedensity\hspace{.1ex}(\bm{r}, t)}$
+\en{charge density}\ru{плотность заряда} (\en{electric charge}\ru{электрический заряд} \en{per volume unit}\ru{на единицу объёма}) ${\chargedensity\hspace{.1ex}(\locationvector, t)}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 dq = \chargedensity \hspace{.15ex} d \mathcal{V}
@@ -73,7 +74,7 @@ q = \hspace{-0.5ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathc
 \end{equation*}
 
 \en{the~density of~electric current}\ru{плотность электрического тока} \en{is}\ru{есть} \en{the~flux of~electric charge}\ru{поток электрического заряда}
-${\currentdensity(\bm{r}, t) \hspace{-0.1ex} \equiv \chargedensity \hspace{.1ex} \mathdotabove{\bm{r}} \equiv \chargedensity \hspace{.1ex} \bm{v}}$
+${\currentdensity(\locationvector, t) \hspace{-0.1ex} \equiv \chargedensity \hspace{.1ex} \mathdotabove{\locationvector} \equiv \chargedensity \hspace{.1ex} \bm{v}}$
 
 \foreignlanguage{russian}{в ваку\kern-0.11exуме нет $\chargedensity$ и~$\currentdensity$}
 
@@ -182,13 +183,13 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \dotp \hspace{-0.1ex} \bigl( \bold
 & &
 \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \bm{a} \bigr) \hspace{-0.3ex} = 0 \:\:\forall \bm{a}
 \hspace{.1ex} , \hspace{.55em}
-\currentdensity \equiv \chargedensity \hspace{.1ex} \mathdotabove{\bm{r}}
+\currentdensity \equiv \chargedensity \hspace{.1ex} \mathdotabove{\locationvector}
 \end{array}\hspace{.1ex}\right\rbrace
 \hspace{.5ex}\Rightarrow\hspace*{4em}
 \end{equation*}
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{continuity.balanceofelectriccharge}
 \hspace*{1em}\Rightarrow\hspace{.7ex}
-\boldnabla \hspace{-0.15ex} \dotp \hspace{-0.15ex} \bigl( \chargedensity \hspace{.1ex} \mathdotabove{\bm{r}} \hspace{.1ex} \bigr) \hspace{-0.3ex} + \mathdotabove{\chargedensity} \hspace{.1ex} = 0
+\boldnabla \hspace{-0.15ex} \dotp \hspace{-0.15ex} \bigl( \chargedensity \hspace{.1ex} \mathdotabove{\locationvector} \hspace{.1ex} \bigr) \hspace{-0.3ex} + \mathdotabove{\chargedensity} \hspace{.1ex} = 0
 \hspace{.1ex} .
 \vspace{-0.5em}\end{equation}
 
@@ -200,7 +201,7 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \dotp \hspace{-0.1ex} \bigl( \bold
 \maxwellstress \equiv \hspace{.12ex}
 \vacuumpermittivity \hspace{-0.33ex} \left(
 \boldmathbb{E} \hspace{.1ex} \boldmathbb{E} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \boldmathbb{B}
-- \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \bigr) \hspace{-0.06ex} \bm{E} \hspace{.05ex}
+- \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \bigr) \hspace{-0.06ex} \UnitDyad \hspace{.05ex}
 \right) \hspace{-0.22em} .
 \end{equation}
 
@@ -276,21 +277,21 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{
 ...
 
 \begin{align*}
-\eqrefwithchapdotpara{divergenceofdyadicproducoftwovectors}{chapter:elementsoftensorcalculus}{para:differentiationoftensorfields}
+\eqrefwithchapdotpara{divergenceofdyadicproducoftwovectors}{chapter:elementsoftensorcalculus}{para:spatialdifferentiationoftensorfields}
 & \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{-0.16ex} \dotp \hspace{-0.2ex} \bigl( \hspace{-0.05ex} \bm{a} \bm{a} \bigr) \hspace{-0.33ex}
 = \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.18ex} \dotp \hspace{-0.1ex} \bm{a} \bigr) \hspace{-0.1ex} \bm{a} \hspace{.1ex} + \bm{a} \hspace{-0.07ex} \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.1ex} \bm{a}
 \\[-0.1em]
 %
-\eqrefwithchapdotpara{gradientofdotproductoftwovectors}{chapter:elementsoftensorcalculus}{para:differentiationoftensorfields}
+\eqrefwithchapdotpara{gradientofdotproductoftwovectors}{chapter:elementsoftensorcalculus}{para:spatialdifferentiationoftensorfields}
 & \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{.1ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = 2 \hspace{.16ex} \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bm{a}
 \end{align*}
 
 \begin{equation*}
-\boldnabla \hspace{-0.16ex} \dotp \hspace{-0.12ex} \bigl( \hspace{-0.05ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \hspace{.1ex} \bm{E} \hspace{.12ex} \bigr) \hspace{-0.33ex}
-= \hspace{-0.15ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.22ex}  \bm{E} \hspace{.13ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
+\boldnabla \hspace{-0.16ex} \dotp \hspace{-0.12ex} \bigl( \hspace{-0.05ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \hspace{.1ex} \UnitDyad \hspace{.12ex} \bigr) \hspace{-0.33ex}
+= \hspace{-0.15ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.22ex}  \UnitDyad \hspace{.13ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = \hspace{-0.15ex} \boldnabla \hspace{.1ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = 2 \hspace{.16ex} \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bm{a}
 \end{equation*}
@@ -300,8 +301,8 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{
 \hspace{.1ex} \vacuumpermittivity \Bigl( \hspace{-0.2ex}
 \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldmathbb{E} \hspace{.1ex} \boldmathbb{E} \hspace{.1ex} \bigr) \hspace{-0.22ex}
 + \hspace{.1ex} c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldmathbb{B} \boldmathbb{B} \bigr) \hspace{-0.22ex}
-- \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.1ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} \hspace{.1ex} \bm{E} \hspace{.1ex}
-+ c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \bm{E} \hspace{.15ex} \bigr) \hspace{-0.2ex}
+- \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.1ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \boldmathbb{E} \hspace{.1ex} \UnitDyad \hspace{.1ex}
++ c^{\hspace{.16ex}2} \hspace{.22ex} \boldmathbb{B} \hspace{-0.2ex} \dotp \hspace{-0.16ex} \boldmathbb{B} \UnitDyad \hspace{.15ex} \bigr) \hspace{-0.2ex}
 \Bigr) \hspace{-0.33ex} =
 \\[-0.25em]
 %
@@ -552,10 +553,11 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 \begin{otherlanguage}{russian}
 
-Рассмотрение этого вопроса полезно и для последующего опис\'{а}ния магнетизма. В~статике
+Рассмотрение этого вопроса полезно и для последующего опис\'{а}ния магнетизма.
+В~статике
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\bm{v} \equiv \mathdotabove{\bm{r}} = \bm{0}
+\bm{v} \equiv \mathdotabove{\locationvector} = \bm{0}
 \hspace{.44em} \Rightarrow \hspace{.33em}
 \boldmathbb{B} = \bm{0}
 \end{equation*}
@@ -569,7 +571,7 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \ru{Тензор напряжения }Maxwell\ru{’а}\en{ stress tensor}~\eqref{maxwellstresstensor:definition} \en{in~electrostatics}\ru{в~электростатике}\en{ is}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\maxwellstress = \vacuumpermittivity \hspace{-0.2ex} \left( \boldmathbb{E} \boldmathbb{E} - \smalldisplaystyleonehalf \hspace{.2ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \boldmathbb{E} \hspace{.1ex} \bm{E} \hspace{.1ex} \right)
+\maxwellstress = \vacuumpermittivity \hspace{-0.2ex} \left( \boldmathbb{E} \boldmathbb{E} - \smalldisplaystyleonehalf \hspace{.2ex} \boldmathbb{E} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \boldmathbb{E} \hspace{.1ex} \UnitDyad \hspace{.1ex} \right)
 \end{equation*}
 
 ...
@@ -587,7 +589,8 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 ...
 
-В~диэлектриках нет свободных зарядов: \en{charge density}\ru{плотность заряда}~${\chargedensity = 0}$. Здесь вводится плотность дипольного момента
+В~диэлектриках нет свободных зарядов: \en{charge density}\ru{плотность заряда}~${\chargedensity = 0}$.
+Здесь вводится плотность дипольного момента
 
 ...
 
@@ -644,7 +647,8 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \begin{equation}
 \left( C + C_m \right) \hspace{-0.16ex} u = \mathcircabove{F} .
 \end{equation}
-\noindent К~обычному оператору линейной упругости~$C$ добавилась магнитная жёсткость~$C_m$; $\mathcircabove{F}$\:--- силы в~недоформированном состоянии.
+\noindent
+К~\inquotes{обычному} оператору линейной упругости~$C$ добавилась магнитная жёсткость~$C_m$; $\mathcircabove{F}$\:--- силы в~недоформированном состоянии.
 
 Добавка~$C_m$ пропорциональна квадрату тока и~может стать весьма существенной в~магнитных системах с~сильным полем. Учёт её необходим и~при~недостаточной величине~$C$; в~номинальном режиме конструкция может держать нагрузку, но дополнительная нагрузка неблагоприятного направления может оказаться \inquotesx{невыносимой}[.]
 

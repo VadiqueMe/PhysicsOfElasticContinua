@@ -1,0 +1,1 @@
+convert -delay 10 -density 288x288 -dispose previous forcesandmoments.pdf[3-183] -coalesce -layers optimize -loop 0 forcesandmoments.gif

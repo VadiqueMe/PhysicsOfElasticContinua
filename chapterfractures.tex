@@ -15,7 +15,13 @@
 
 \begin{otherlanguage}{russian}
 
-\lettrine[lines=2, findent=2pt, nindent=0pt]{К}{ак} судить о~прочности тела после определения напряжения в~нём? При одноосном растяжении напряжением~$\mathsigma$ есть, очевидно, некий \inquotes{предел прочности}~${\tensilestrength}$, выше которого материал разрушается. Прочность считают достаточной при~${\mathsigma \hspace{.1ex} \leq \tensilestrength / \hspace{.1ex} k}$, где $k$ есть так называемый коэффициент запаса. Но такой подход не~вполне удовлетворяет, поскольку получаемые из~опытов значения~${\tensilestrength}$ \en{have a~big scatter}\ru{имеют большой разброс}, а~выбор коэффициента запаса \en{sometimes becomes a~bureaucratic act}\ru{временами становится бюрократическим актом}. Тем не~менее подобные взгляды на~анализ прочности широк\'{о} распространены. Воздерживаясь от критики, ст\'{о}ит упомянуть самые популярные из~них.
+\dropcap{К}{ак} судить о~прочности тела после определения напряжения в~нём?
+При одноосном растяжении напряжением~$\mathsigma$ есть, очевидно, некий \inquotes{предел прочности}~${\tensilestrength}$, выше которого материал разрушается.
+Прочность считают достаточной при~${\mathsigma \hspace{.1ex} \leq \tensilestrength / \hspace{.1ex} k}$, где $k$ есть так называемый коэффициент запаса.
+Но такой подход не~вполне удовлетворяет, поскольку получаемые из~опытов значения~${\tensilestrength}$ \en{have a~big scatter}\ru{имеют большой разброс}, а~выбор коэффициента запаса \en{sometimes becomes a~bureaucratic act}\ru{временами становится бюрократическим актом}.
+
+Тем не~менее, подобные взгляды на~анализ прочности широк\'{о} распространены.
+Воздерживаясь от критики, ст\'{о}ит упомянуть самые популярные из~них.
 
 \textbold{Критерий максимального нормального напряжения}:
 разрушение происходит при~${\mathsigma_1 \hspace{-0.15ex} = \tensilestrength}$ (наибольшее из главных напряжений достигает предельного значения).
@@ -25,18 +31,19 @@
 разрушение наступает при ${\mathsigma_1 \hspace{-0.15ex} - \mathsigma_3 \hspace{-0.1ex} = \tensilestrength}$ ($\mathsigma_3$\:--- наименьшее из главных напряжений).
 Это более соответствует началу пластического течения.
 
-\textbold{Критерий максимального удлинения}: наибольшее из собственных значений тензора деформации ${\mathepsilon_1 \hspace{-0.2ex} = \mathepsilon_*}$. Это приемлемо и~при~сжатии с~${\mathepsilon_1 \hspace{-0.12ex} > 0}$.
+\textbold{Критерий максимального удлинения}: наибольшее из собственных значений тензора деформации ${\infinitesimaldeformationeigenvalue{1} \hspace{-0.2ex} = \infinitesimaldeformationeigenvalue{*}}$.
+Это приемлемо и~при~сжатии с~${\infinitesimaldeformationeigenvalue{1} \hspace{-0.12ex} > 0}$.
 
 \textbold{Критерий энергии деформации}:
-${\Pi = \Pi_*}$.
+${\potential = \potential_*}$.
 Здесь учитывается, что разрушение требует энергии, а источником её может~быть лишь сам\'{о} деформированное тело.
 Однако достаточный запас энергии\:--- необходимое, но не~единственное условие разрушения; должен включиться некий механизм преобразования упругой энергии в~работу разрушения.
 
 %% maximum distortion energy criterion
 \textbold{Критерий энергии формоизменения (von~Mises yield criterion)}:
-${\stressdeviator \dotdotp \stressdeviator = 2 \mathtau_{*}^{\hspace{.25ex}2}}$, ${\, \stressdeviator \equiv \cauchystress - \frac{1}{3} \hspace{.25ex} \bm{E} \operatorname{tr} \cauchystress}$ (\inquotes{девиатор напряжений}).
+${\stressdeviator \dotdotp \stressdeviator = 2 \mathtau_{*}^{\hspace{.25ex}2}}$, ${\, \stressdeviator \equiv \cauchystress - \frac{1}{3} \hspace{.25ex} \UnitDyad \trace{\hspace{-0.1ex}\cauchystress}}$ (\inquotes{девиатор напряжений}).
 Здесь не~играет роли энергия объёмной деформации.
-\href{https://en.wikipedia.org/wiki/Richard_von_Mises}{Richard von~Mises} предложил\footnote{\bibauthor{R.}[von~Mises]. \href{https://gdz.sub.uni-goettingen.de/id/PPN252457811_1913?tify=\%7B"pages":\%5B602\%5D,"view":"info"\%7D}{Mechanik der festen K\"{o}rper im plastisch-deformablen Zustand~// Nachrichten von der K\"{o}niglichen Gesellschaft der Wissenschaften zu~Göttingen, Mathematisch-physikalische Klasse, 1913. Seiten 582\hbox{--}592.}}\hspace{-0.25ex}
+\href{https://en.wikipedia.org/wiki/Richard_von_Mises}{Richard von~Mises} предложил\footnote{\bibauthor{R.}[von~Mises]. \href{https://gdz.sub.uni-goettingen.de/id/PPN252457811_1913?tify=\%7B"pages":\%5B602\%5D,"view":"info"\%7D}{Mechanik der festen K\"{o}rper im plastisch-deformablen Zustand. \emph{Nachrichten von der K\"{o}niglichen Gesellschaft der~Wis\-sen\-schaf\-ten zu~Göttingen, Mathematisch-physikalische Klasse.} 1913, Seiten 582\hbox{--}592.}}\hspace{-0.25ex}
 этот критерий как гладкую аппроксимацию условия \href{https://en.wikipedia.org/wiki/Henri_Tresca}{Henri Tresca}.
 
 \textbold{Критерий Mohr’а}.
@@ -68,7 +75,8 @@ ${\stressdeviator \dotdotp \stressdeviator = 2 \mathtau_{*}^{\hspace{.25ex}2}}$,
 
 \begin{otherlanguage}{russian}
 
-Рассмотрим плоскую область произвольного очертания с трещиной внутри; нагрузка приложена и~\inquotesx{в~объёме}[,] и на~внешней границе. Как и~при антиплоской деформации, решение строится в~два этапа
+Рассмотрим плоскую область произвольного очертания с трещиной внутри; нагрузка приложена и~\inquotesx{в~объёме}[,] и на~внешнем крае.
+Как и~при антиплоской деформации, решение строится в~два этапа
 
 ...
 
@@ -96,7 +104,8 @@ ${\stressdeviator \dotdotp \stressdeviator = 2 \mathtau_{*}^{\hspace{.25ex}2}}$,
 
 \begin{otherlanguage}{russian}
 
-Связанная с~энергией~$\textit{Э}$ трещинодвижущая сила~$F$\:--- не~единственное воздействие на~фронт трещины. Должна быть ещё некая сила сопротивления~$F_{*}$; рост трещины начинается при~условии
+Связанная с~энергией~$\potentialenergyfunctional$ трещинодвижущая сила~$F$\:--- не~единственное воздействие на~передний край трещины.
+Должна быть ещё некая сила сопротивления~$F_{*}$; рост трещины начинается при~условии
 
 ...
 
@@ -138,7 +147,8 @@ J = \ldots
 
 \begin{otherlanguage}{russian}
 
-Расчёт прочности тела с~трещиной сводится к~определению коэффициентов интенсивности напряжений. Методы расчёта таких коэффициентов\:--- как~аналитические, так~и~численные\:--- хорошо освещены в~литературе.
+Расчёт прочности тела с~трещиной сводится к~определению коэффициентов интенсивности напряжений.
+Методы расчёта таких коэффициентов\:--- как~аналитические, так~и~численные\:--- хорошо освещены в~литературе.
 
 Рассмотрим ещё один подход к~задачам механики трещин, разработанный
 
@@ -154,15 +164,13 @@ J = \ldots
 
 % https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B5%D0%BD%D0%B1%D0%BB%D0%B0%D1%82%D1%82,_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9_%D0%98%D1%81%D0%B0%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%87
 
-\begin{otherlanguage}{russian}
+\en{An~unlimited increase of~stress}\ru{Неограниченный рост напряжения} \en{at the~edge of a~crack}\ru{на~кра\'{ю} трещины} \en{seems}\ru{кажется} \en{indeed dubious}\ru{конечно~же сомнительным}.
+\en{Singular solutions}\ru{Сингулярные решения} \en{desire}\ru{желают} \en{support}\ru{поддержки} \en{by some}\ru{какими\hbox{-}либо} \en{additional}\ru{дополнительными} \en{reasonings}\ru{рассуждениями} \en{or}\ru{или} \en{by~}\en{using of~another model}\ru{использованием иной модели}.
+\en{And}\ru{И}~\en{such a~support}\ru{такую поддержку} \foreignlanguage{russian}{дал\'{а} работа}
 
-Неограниченный рост напряжений на фронте трещины вызывает некоторые сомнения. Желательно \inquotes{дать поддержку} сингулярным решениям какими\hbox{-}либо дополнительными построениями или использованием иной модели. И~эту поддержку дала работа
 
 ...
 
-
-
-\end{otherlanguage}
 
 \en{\section{Deformational criterion}}
 
@@ -170,8 +178,10 @@ J = \ldots
 
 \begin{otherlanguage}{russian}
 
-D.\,S.\;Dugdale\footnote{\bibauthor{Dugdale,}[D.][S.] Yielding of~steel sheets containing slits~//~Journal of the Mechanics and Physics of~Solids. 1960, Volume~8, Issue~2, pages 100\hbox{--}104.
-}\hspace{-0.4ex}, а~также М.\,Я.\;Леонов и В.\,В.\;Панасюк\footnote{\bibauthor{Леонов}[М.][Я.], \bibauthor{Панасюк}[В.][В.] Развитие мельчайших трещин в~твёрдом теле~//~Прикладная механика. 1959, Т.\:5, №\,4, с.\:391\hbox{--}401.} предложили модель, напоминающую построения Баренблатта. Также есть силы сцепления~$q$ и равен нулю итоговый коэффициент интенсивности напряжений. Но, во\hbox{-}первых, $q$ имеет иной вид:
+D.\,S.\;Dugdale\footnote{\bibauthor{Dugdale,}[D.][S.] Yielding of~steel sheets containing slits. \emph{Journal of the Mechanics and Physics of~Solids.} 1960, Volume~8, Issue~2, pages 100\hbox{--}104.
+}\hspace{-0.4ex}, а~также М.\,Я.\;Леонов и В.\,В.\;Панасюк\footnote{\bibauthor{Леонов}[М.][Я.], \bibauthor{Панасюк}[В.][В.] Развитие мельчайших трещин в~твёрдом теле. \emph{Прикладная механика.} 1959, Т.\:5, №\,4, с.\:391\hbox{--}401.} предложили модель, напоминающую построения Баренблатта.
+Также есть силы сцепления~$q$ и равен нулю итоговый коэффициент интенсивности напряжений.
+Но, во\hbox{-}первых, $q$ имеет иной вид:
 
 ...
 
@@ -218,10 +228,10 @@ D.\,S.\;Dugdale\footnote{\bibauthor{Dugdale,}[D.][S.] Yielding of~steel sheets c
 
 \begin{otherlanguage}{russian}
 
-Уравнение баланса энергии в~линейной теории (${\Pi = \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \mathboldepsilon \hspace{-0.1ex} \dotdotp \stiffnesstensor \dotdotp \mathboldepsilon}$, ${\mathrm{T} = \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$):
+Уравнение баланса энергии в~линейной теории (${\potential = \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \stiffnesstensor \dotdotp \infinitesimaldeformation}$, ${\kinetic = \smash{\smalldisplaystyleonehalf} \hspace{.25ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$):
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.42ex} \left(^{\mathstrut} \hspace{-0.2ex} \mathrm{T} + \Pi \right)^{\hspace{-0.12em}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex} d\mathcal{V} \hspace{.2ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.42ex} \left(^{\mathstrut} \hspace{-0.2ex} \kinetic + \potential \right)^{\hspace{-0.12em}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.25ex} d\mathcal{V} \hspace{.2ex}
 = \hspace{-0.1ex}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.25ex} d\mathcal{V} \hspace{.16ex}
 + \hspace{-0.1ex}

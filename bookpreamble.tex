@@ -1,9 +1,9 @@
 \usepackage[utf8]{inputenc}
 
-\usepackage[T2A,OT1,T1]{fontenc}
+\usepackage[T2A,LGR,OT1,T1]{fontenc}
 \usepackage{ucs}
 
-\usepackage[english, ukrainian, russian]{babel}
+\usepackage[english, greek, ukrainian, russian]{babel}
 
 \RequirePackage{ifthen}
 \newif\ifen
@@ -51,10 +51,10 @@
 \newcommand{\pushleft}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\hfill\fi\ignorespaces}
 \makeatother
 
-\usepackage[unicode=true,pdfusetitle,%
-	bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,linktocpage=true,%
-	breaklinks=false,pdfborder={0 0 0},backref=false,%
-	colorlinks=true,linkcolor=darkcerulean,citecolor=darkmagenta,urlcolor=darksienna]%
+\usepackage[unicode=true, pdfusetitle,%
+	bookmarks=true, bookmarksnumbered=false, bookmarksopen=true, linktocpage=true,%
+	breaklinks=false, pdfborder={0 0 0}, backref=false,%
+	colorlinks=true, linkcolor=darkcerulean, citecolor=darkmagenta, urlcolor=darksienna]%
 {hyperref}
 
 \usepackage{bookmark}
@@ -64,6 +64,8 @@
 \usepackage{lettrine}
 \renewcommand{\LettrineFontHook}{\fontseries{b}}
 \renewcommand{\LettrineTextFont}{\normalfont}
+
+\newcommand\dropcap[2]{\lettrine[lines=2, findent=2pt, nindent=0pt]{#1}{#2}}
 
 \usepackage{calc}
 \usepackage{ulem}
@@ -143,15 +145,15 @@
 
 \newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
 \newcommand{\boldnablacircled}{\mathcircabove{\bm{\nabla}}\hspace{-0.2ex}}
-\newcommand{\boldnablaflat}{\mathtwoabove{\bm{\nabla}}\hspace{-0.2ex}}
 
 \newcommand*\Laplacian{\mathop{}\!\mathbin\bigtriangleup\hspace{.04ex}}
 
 \newcommand\narroweq{\hspace{.25ex}\scalebox{0.8}[1]{$=$}\hspace{.25ex}}
 
 \newcommand\constant{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{constant}}}}
-
 \newcommand\boldconstant{\mathcolor{green!50!black}{\boldmath \constant}}
+
+\newcommand\constantbivalent{\raisemath{-0.1em}{\mathcolor{green!50!black}{^2}}\boldconstant}
 
 \newcommand\eigenvalue{\eta\hspace{.1ex}}
 
@@ -164,6 +166,7 @@
 \usepackage{upgreek}
 
 \newcommand\variation[1]{\ensuremath\updelta\hspace{-0.1ex}#1}
+\newcommand\secondvariation[1]{\ensuremath\updelta^{\hspace{-0.1ex}2}#1}
 
 \makeatletter
 \newcommand\boldvari@tion[2]{\ensuremath\mathcolor{#2}{\bm{\updelta}\hspace{-0.125ex}\bm{\mathrm{#1}}}}
@@ -177,14 +180,14 @@
 \newcommand*\bigdot{\mathpalette\dotp@{.64}}
 \newcommand*\dotp@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
-\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{0.20em}}
+\newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.20em}}
 \newcommand\narrowdotp{\hspace{-0.12em}\dotp\hspace{-0.12em}}
 \newcommand\narrowdotdotp{\hspace{-0.12em}\dotdotp\hspace{-0.12em}}
 
-\newcommand\dotdotdotp{\dotp\hspace{-0.16em}\dotp\hspace{-0.16em}\dotp\hspace{0.08em}}
+\newcommand\dotdotdotp{\dotp\hspace{-0.16em}\dotp\hspace{-0.16em}\dotp\hspace{.08em}}
 
 \newcommand\T{{\mathpalette\raiseT\intercal}} % symbol for transpose
-\newcommand\raiseT[2]{\hspace{-0.02em}\raisebox{0.4ex}{$#1#2$}}
+\newcommand\raiseT[2]{\hspace{-0.02em}\raisebox{.4ex}{$#1#2$}}
 
 % symbol for X-companion
 \newcommand\Xcompanion{{\mathpalette\lowerXcompanion\times}}
@@ -201,7 +204,7 @@
 % symbol for trace dot
 \newcommand\tracedot{\hspace{-0.1ex}\raisemath{-0.4ex}{\scalebox{.64}{$\bullet$}}\hspace{-0.1ex}}
 
-\newcommand\levicivita{\raisemath{0.2ex}{\mathrm{\in}}}
+\newcommand\levicivita{\raisemath{.2ex}{\mathrm{\in}}}
 %%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\bm{\levicivita}}}}
 %%\newcommand\levicivitatensor{{^3\hspace{-0.05ex}\pmb{\scalebox{1.25}[1]{$\textsf{Є}$}}}\hspace{.05ex}}
 \newcommand\levicivitatensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
@@ -212,6 +215,7 @@
 \newcommand\inertiascalar{\mathfrak{I}}
 \newcommand{\inertiatensorcomponents}[1]{\mathfrak{I}_{\hspace{-0.1ex}#1}\hspace{.1ex}}
 \newcommand\inertiatensordotabove{{\hspace{-0.1ex}^2}\mathdotabove{\bm{\mathfrak{I}}}}
+\newcommand\inertiatensorcircabove{{\hspace{-0.1ex}^2}\mathcircabove{\bm{\mathfrak{I}}}}
 
 \newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
 \newcommand\stiffnesstensorB{{^4\hspace{-0.2ex}\bm{\mathcal{B}}}}
@@ -220,10 +224,13 @@
 \newcommand\stiffnesstensor{\stiffnesstensorA}
 \newcommand\pliabilitytensor{\stiffnesstensorB}
 
-\newcommand{\strainratetensor}{\bm{\mathcal{S}}}
-\newcommand{\strainratetensorcomponents}[1]{\mathcal{S}_{#1}}
+\newcommand{\rateofdeformationtensor}{\bm{\mathcal{D}}}
+\newcommand{\rateofdeformationcomponents}[1]{\mathcal{D}_{#1}}
 \newcommand{\vorticitytensor}{\scalebox{0.88}[1.0]{$\bm{\mathcal{W}}$}}
 \newcommand{\vorticityvector}{\bm{w}}
+
+\newcommand\potentialenergyfunctional{{\mathscr{E}\hspace{-0.2ex}}}
+\newcommand\complementaryenergyfunctional{{\mathscr{D}}}
 
 \usepackage{accents}
 
@@ -240,10 +247,6 @@
 	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\,\bullet\hspace{-0.25ex}\bullet$}}
 \DeclareRobustCommand{\mathdotdotabove}{\accentset{\sdotdotabove}}
 
-\newcommand{\stwoabove}{%
-	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}2$}}
-\DeclareRobustCommand{\mathtwoabove}{\accentset{\stwoabove}}
-
 \makeatother
 
 \newcommand\mathdotbelow[1]{\underaccent{\scalebox{.5}{$\bullet$}}{#1}}
@@ -253,8 +256,8 @@
 
 \newcommand\mathboldN{\scalebox{0.9}[1]{\ensuremath{\bm{N}\hspace{-0.1em}}}}
 \newcommand\mathboldM{\scalebox{0.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
-\newcommand\mathboldU{\scalebox{0.9}[1]{\ensuremath{\bm{U}\hspace{-0.1ex}}}}
 \newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
+\newcommand\mathboldU{\scalebox{0.9}[1]{\ensuremath{\bm{U}\hspace{-0.1ex}}}}
 
 \newcommand\mathboldae{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{æ}$}}}}
 \newcommand\mathboldoe{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{œ}$}}\hspace{.1ex}}}
@@ -263,10 +266,12 @@
 
 \newcommand\mathboldrcursive{\ensuremath{\pmb{\text{\textcursive{\slshape r}}}}}
 
-\newcommand\hcursive{\smash{\scalebox{0.9}[0.9]{$\text{\textcursive{\slshape h}}$}\hspace{.5ex}}}
+\newcommand\hcursive{\smash{\scalebox{0.9}{$\text{\textcursive{\slshape h}}$}\hspace{.5ex}}}
 
-\newcommand\elcursive{\smash{\scalebox{0.9}[0.9]{$\text{\textcursive{\slshape l}}$}\hspace{.5ex}}}
-\newcommand\elcursivesub[1]{\smash{\scalebox{0.9}[0.9]{$\text{\textcursive{\slshape l}}$}_{\raisemath{-0.22ex}{\hspace{.1ex}#1}}}}
+\newcommand\elcursive{\smash{\scalebox{0.9}{$\text{\textcursive{\slshape l}}$}\hspace{.5ex}}}
+\newcommand\elcursivesub[1]{\smash{\scalebox{0.9}{$\text{\textcursive{\slshape l}}$}_{\raisemath{-0.22ex}{\hspace{.1ex}#1}}}}
+
+\newcommand\trace[1]{\operatorname{trace}\hspace{.16ex}{#1}}
 
 \newcommand\realpart[1]{\operatorname{{\Re}e}\hspace{.16ex}{#1}}
 \newcommand\imaginarypart[1]{\operatorname{{\Im}m}\hspace{.16ex}{#1}}
@@ -275,14 +280,33 @@
 \newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
 \newcommand\expminustwo{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\hspace{.1ex}\raisemath{.1ex}{2}}
 
+\newcommand\smthactive{{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}a\hspace{-0.1ex})}\hspace{-0.16ex}}}}
+
 \newcommand\smthexternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}}
 \newcommand\smthinternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}}
 
 \newcommand\internalwork{W^{\hspace{-0.12ex}\smthinternal}}
 \newcommand\externalwork{W^{\hspace{-0.12ex}\smthexternal}}
 
+\newcommand\potential{\Pi}
+\newcommand\kinetic{\mathrm{K}\hspace{-0.12ex}}
+
+\newcommand\differentialindex[1]{{\hspace{-0.1ex}\scalebox{0.63}{$\mathcolor{black!70}{\partial}$} #1}}
+
+\newcommand\locationvector{\bm{r}}
+%%\newcommand\advancedlocationvector{\bm{R}}
+\newcommand\currentlocationvector{\locationvector}
+\newcommand\initiallocationvector{\mathcircabove{\locationvector}}
+
+\newcommand\UnitDyad{\bm{E}}
+
+\newcommand\unitnormalvector{\bm{n}}
+\newcommand\currentunitnormal{\unitnormalvector} % \mathboldN
+\newcommand\initialunitnormal{\mathcircabove{\unitnormalvector}}
+
 \newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
 \newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
+\newcommand\smallerdisplaystyleonehalf{\scalebox{0.7}{$\raisemath{.1em}{\displaystyle \onehalf}$}\hspace{.1ex}}
 
 \newcommand\onefourth{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{4}}}
 \newcommand\smalldisplaystyleonefourth{\scalebox{0.8}{$\displaystyle \onefourth$}\hspace{.1ex}}
@@ -298,9 +322,10 @@
 %%\onehalfspacing
 \setstretch{1}
 
-\setlength{\parskip}{0.8mm minus0.2mm} % space between paragraphs
+\def\spacebetweenparagraphs{.8mm minus0.2mm}
+\setlength{\parskip}{\spacebetweenparagraphs}
 
-\def\horizontalindent{4ex}
+\def\horizontalindent{3.3ex}
 \setlength{\parindent}{\horizontalindent} % offset of the first line
 \newlength\negparindent
 \setlength{\negparindent}{-\parindent}
@@ -348,6 +373,8 @@
 
 \newcommand{\tikzsl}[1]{\tikz[baseline=(sl.base)] \node [xslant=0.21, inner sep=0pt, outer sep=0pt] (sl) {#1};}
 
+\newcommand\mathboldPhi{\scalebox{.98}[1]{\tikzsl{\ensuremath{\hspace{-0.16ex}\bm{\Phi}\hspace{-0.2ex}}}}}
+
 \newcommand\mathsigma{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\hspace{-0.15ex}\upsigma\hspace{-0.1ex}}}}}
 \newcommand\mathboldsigma{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\hspace{-0.1ex}\bm{\upsigma}\hspace{-0.1ex}}}}}
 
@@ -357,7 +384,8 @@
 \newcommand\cauchystress{\mathboldtau}
 \newcommand\cauchystresscomponents{\mathtau}
 
-\newcommand\tractionvector[1]{\mathboldtau_{\hspace{-0.2ex}\raisemath{-0.1em}{#1}\hspace{-0.1ex}}}
+\newcommand\tractionvector[1]{{\bm{t}{\raisebox{-0.1em}{$\scriptstyle (#1)$}}\hspace{-0.1ex}}}
+\newcommand\tractionvectoritself{\bm{t}}
 
 \newcommand\linearstress{\mathboldsigma}
 
@@ -367,7 +395,9 @@
 \newcommand\mathepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\upvarepsilon\hspace{-0.1ex}}}}}}
 \newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
 
-\newcommand\mathboldPhi{\scalebox{1.06}[1]{\tikzsl{\ensuremath{\hspace{-0.16ex}\bm{\Upphi}\hspace{-0.32ex}}}}}
+\newcommand\infinitesimaldeformation{\mathboldepsilon}
+\newcommand\infinimentpetitdeformationdevariation{\varbivalent{\infinitesimaldeformation}}
+\newcommand\infinitesimaldeformationeigenvalue[1]{\mathepsilon_{#1}}
 
 \newcommand{\fieldofdisplacements}{\bm{u}}
 \newcommand{\fieldofrotations}{\bm{\varphi}} %% {\bm{\theta}}
@@ -397,8 +427,26 @@
 \newcommand\widearc[1]{%
 	\tikz[baseline=(wideArcAnchor.base)]{%
 		\node [inner sep=0] (wideArcAnchor) {$#1$};
-		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.32ex) $);
-		\coordinate (wideArcAnchorB) at ($ (wideArcAnchor.north east) + (-0.2ex, 0.32ex) $);
+		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.33ex) $);
+		\coordinate (wideArcAnchorB) at ($ (wideArcAnchor.north east) + (-0.2ex, 0.33ex) $);
+		\draw [line width=.5pt, line cap=round, out=60, in=120]
+			(wideArcAnchorA) to (wideArcAnchorB) ;
+}}
+
+\newcommand\widearctoo[1]{%
+	\tikz[baseline=(wideArcAnchor.base)]{%
+		\node [inner sep=0] (wideArcAnchor) {$#1$};
+		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.66ex) $);
+		\coordinate (wideArcAnchorB) at ($ (wideArcAnchor.north east) + (-0.2ex, 0.66ex) $);
+		\draw [line width=.5pt, line cap=round, out=-60, in=-120]
+			(wideArcAnchorA) to (wideArcAnchorB) ;
+}}
+
+\newcommand\widearclowered[1]{%
+	\tikz[baseline=(wideArcAnchor.base)]{%
+		\node [inner sep=0] (wideArcAnchor) {$#1$};
+		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.2ex) $);
+		\coordinate (wideArcAnchorB) at ($ (wideArcAnchor.north east) + (-0.2ex, 0.2ex) $);
 		\draw [line width=.5pt, line cap=round, out=45, in=135]
 			(wideArcAnchorA) to (wideArcAnchorB) ;
 }}
@@ -558,6 +606,8 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \ifthenelse{\equal{#3}{}}{}{\:\mbox{\textbold{#3}}}%
 }
 
+\newcommand\howmanypages[1]{\textcolor{gray}{#1}}
+
 \sloppy
 
 %\usepackage{showframe} % uncomment to show frames
@@ -610,9 +660,13 @@ labelsep=period,justification=centering,singlelinecheck=off}
 
 % tune footnotes
 
+%%\usepackage{footnotebackref}
+
 \renewcommand*\footnoterule{} % no line before footnotes
 
 %%\renewcommand{\thefootnote}{\arabic{footnote})}
+
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
 
 \usepackage[symbol, bottom]{footmisc} % use symbols instead of numbers and place footnotes at the very bottom of page
 \setlength{\skip\footins}{1em plus1em} % \footins is the space between the text body and the footnotes
@@ -622,21 +676,30 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \makeatletter
 \def\@fnsymbol#1{\ensuremath{\ifcase #1 %
 	\or {*} %
-	\or {*}{*} %
-	\or {*}{*}{*} %
-	\or {*}{*}{*}{*} %
+	\or {*}\hspace{-0.2ex}{*} %
+	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
+	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
 	\else {\infty} %% \else \@ctrerr
 \fi}}
 \def\@makefnmark{\raisebox{.8ex}{\hbox{\normalfont\@thefnmark}}}
 \makeatother
 
 \usepackage{perpage}
-\MakePerPage{footnote} % restart \footnote numbering on every page
+\MakePerPage{footnote} % reset footnote numbering on every page
+
+% pair of counters for something like
+% \stepcounter{footnote}\setcounter{auxfootnotecounter}{\value{footnote}}\footnotemark[\value{auxfootnotecounter}]
+\newcounter{auxfootnotecounter}
+\newcounter{auxfootnotecountertoo}
 
 \let\originalfootnote\footnote
 \renewcommand{\footnote}[1]{%
 	\renewcommand\footnotesize\small%
-	\originalfootnote{\hspace{.25em}\parbox[t]{0.88\textwidth}{#1}}}
+	\originalfootnote{\hspace{.25em}\parbox[t]{.88\textwidth}{#1}}}
+
+\newcommand{\nicefootnotetext}[2]{%
+	\renewcommand\footnotesize\small%
+	\footnotetext[\value{#1}]{\hspace{.25em}\parbox[t]{.88\textwidth}{#2}}}
 
 % --------------------------------------------------
 
@@ -647,14 +710,14 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \g@addto@macro\@openbib@code{\setlength{\itemsep}{.2em}}
 \makeatother
 
-\addto\captionsenglish{\def\bibliographyname{List of publications}}
-\addto\captionsenglish{\renewcommand{\bibname}{List of publications}}
+\addto\captionsenglish{\def\bibliographyname{List of referenced publications}}
+\addto\captionsenglish{\renewcommand{\bibname}{\bibliographyname}}
 
-\addto\captionsrussian{\def\bibliographyname{Список публикаций}}
-\addto\captionsrussian{\renewcommand{\bibname}{Список публикаций}}
+\addto\captionsrussian{\def\bibliographyname{Список упомянутых публикаций}}
+\addto\captionsrussian{\renewcommand{\bibname}{\bibliographyname}}
 
-\addto\captionsukrainian{\def\bibliographyname{Список публікацій}}
-\addto\captionsukrainian{\renewcommand{\bibname}{Список публікацій}}
+\addto\captionsukrainian{\def\bibliographyname{Список згаданих публікацій}}
+\addto\captionsukrainian{\renewcommand{\bibname}{\bibliographyname}}
 
 % --------------------------------------------------
 
@@ -783,6 +846,12 @@ labelsep=period,justification=centering,singlelinecheck=off}
 	enlarge left by = 0mm,
 	boxsep = 5pt,
 	arc = 0pt, outer arc = 0pt}
+
+\newtcolorbox{leftverticalbar}[1][]{%
+	blanker, %%breakable,
+	left=10pt, right=0pt, top=1pt, bottom=1pt,
+	borderline west={5pt}{0pt}{cyan!50},
+	before upper=\indent, parbox=false, #1}
 
 \setcounter{totalnumber}{100} % increase number of floats on one page
 

@@ -4,36 +4,34 @@
 
 \input{bookpreamble.tex}
 
-\hypersetup{pdftitle={Physics of elastic continua (Физика упругих сред)}}
+\entrue
+%%\rutrue
+
+\hypersetup{pdftitle={\en{Chapter from Physics of elastic continua}\ru{Глава из Физики упругих континуумов}}}
 \hypersetup{pdfauthor={Vadique}}
 
 \usepackage{verbatim} % for \begin(comment) ... \end{comment}
 
-\entrue
-%%\rutrue
-
 \begin{document}
+
+\frontmatter
 
 \input{mycoverpage.tex}
 
-%%\input{secondinfopage.tex}
-
-\pagestyle{empty}
-
-\cleardoublepage
+\input{colorspage.tex}
 
 \en{\selectlanguage{english}}
 \ru{\selectlanguage{russian}}
 
 \tableofcontents
-\thispagestyle{plain}
-\newpage
 
-\pagestyle{plain}
+\thispagestyle{plain}
 
 % space above and below equations
 \setlength{\abovedisplayskip}{2pt}
 \setlength{\belowdisplayskip}{2pt}
+
+\mainmatter
 
 \setcounter{chapter}{21}
 
