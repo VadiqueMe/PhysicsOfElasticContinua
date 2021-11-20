@@ -1,0 +1,50 @@
+\documentclass[tikz,border=3.14pt]{standalone}
+
+\usepackage{tikz-3dplot}
+
+\begin{document}
+
+\tdplotsetmaincoords{70}{110}
+\begin{tikzpicture}[tdplot_main_coords,font=\sffamily]
+
+	\draw[-latex] (0,0,0) -- (4,0,0) node[left] {$x$};
+	\draw[-latex] (0,0,0) -- (0,4,0) node[below] {$y$};
+	\draw[-latex] (0,0,0) -- (0,0,4) node[left] {$z$};
+
+	\draw[fill=red,opacity=0.2] (-3,0,-3) -- (-3,0,3) -- (3,0,3) -- (3,0,-3) -- cycle;
+	\draw[fill=red,opacity=0.1] (-3,-3,0) -- (-3,3,0) -- (3,3,0) -- (3,-3,0) -- cycle;
+	\draw[thick](-3,0,0)--(3,0,0);
+	\node[anchor=south west,align=center] (line) at (3,3,3)
+		{line of\\ intersection};
+	\draw[-latex] (line) to[out=180,in=75] (-2,0,0.05);
+\end{tikzpicture}
+
+\begin{tikzpicture}[tdplot_main_coords,font=\sffamily]
+
+	\draw[-latex] (0,0,0) -- (4,0,0) node[left] {$x$};
+	\draw[-latex] (0,0,0) -- (0,4,0) node[below] {$y$};
+	\draw[-latex] (0,0,0) -- (0,0,4) node[left] {$z$};
+
+\tdplotsetrotatedcoords{45}{0}{0}
+\begin{scope}[tdplot_rotated_coords]
+	\draw[fill=red,opacity=0.2]
+		(-3,0,-3) -- (-3,0,3) -- (3,0,3) -- (3,0,-3)
+		-- cycle;
+\end{scope}
+
+\tdplotsetrotatedcoords{90}{45}{0}
+\begin{scope}[tdplot_rotated_coords]
+	\draw[fill=red,opacity=0.1]
+		(-3,-3,0) -- (-3,3,0) -- (3,3,0) -- (3,-3,0)
+		-- cycle;
+	\draw[thick]
+		(-3,{3/sqrt(2)},0) coordinate(x) -- (3,{-3/sqrt(2)},0);
+\end{scope}
+
+	\node[anchor=south east,align=center]
+		(line) at (3,-1.5,3.5) {line of\\ intersection};
+	\draw[-latex] (line) to[out=0,in=135] (x);
+
+\end{tikzpicture}
+
+\end{document}

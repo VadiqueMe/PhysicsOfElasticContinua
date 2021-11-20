@@ -7,6 +7,8 @@
 \newcommand{\chargedensity}{\varrho} %% {\uprho}
 \newcommand{\currentdensity}{\bm{j}} %% {\bm{\jmath}}
 
+%% magneto-electro-elastic materials
+
 \label{chapter:magnetoelasticity}
 
 \begin{changemargin}{\parindent}{\parindent}
@@ -39,7 +41,7 @@
 \dropcap{\en{H}\ru{В}}{\en{ere}\ru{от}}\en{ is} \en{the~summary}\ru{краткое изложение} \en{of the~theory of electromagnetism}\ru{теории электромагнетизма}.
 
 \noindent\hspace{\parindent}
-\en{This theory}\ru{Эта теория} \en{describes}\ru{описывает} \en{two vector fields}\ru{два векторных поля}:
+\en{This theory}\ru{Эта теория} \en{describes}\ru{описывает} \en{the two vector fields}\ru{два векторных поля}:
 \en{electric}\ru{электрическое}~${\hspace{.1ex}\boldmathbb{E}(\locationvector, t)}$ \en{and}\ru{и}~\en{magnetic}\ru{магнитное}~${\hspace{.1ex}\boldmathbb{B}(\locationvector, t)}$.
 \en{What are}\ru{Что такое} \en{vector}\ru{вектор}~${\hspace{.1ex}\boldmathbb{E}}$ \en{and}\ru{и}~\en{pseudo\-vector}\ru{псевдо\-вектор}~${\hspace{.1ex}\boldmathbb{B}}$ \en{is seen}\ru{в\'{и}дно} \en{from}\ru{из} \en{the~expression}\ru{выражения} \en{of electromagnetic force}\ru{электромагнитной силы} (\href{https://en.wikipedia.org/wiki/Lorentz_force}{\en{Lorentz force}\ru{силы Lorentz’а}}) ${\hspace{-0.1ex}\bm{F}(\locationvector, \mathdotabove{\locationvector}, t, q)}$, \en{acting on}\ru{действующей на}~\en{a~point charge}\ru{точечный заряд}\:--- \en{a~particle}\ru{частицу} \en{of infinitesimal size}\ru{бесконечно-малого размера}\ru{,} \en{that contains}\ru{содержащую} \en{electric charge}\ru{электрический заряд}~$q$ \en{and}\ru{и}~\en{moves}\ru{движущуюся} \en{with velocity}\ru{со~скоростью}~${\bm{v} \equiv \mathdotabove{\locationvector}}$
 
@@ -48,9 +50,11 @@
 \hspace{-0.1ex} .
 \end{equation}
 
-\vspace{-0.2em} \noindent \en{In~essence}\ru{По~сути}, \en{the~part}\ru{часть} \en{of the~electromagnetic force}\ru{электромагнитной силы}\ru{,} \en{arising from interaction}\ru{возникающая от взаимо\-действия} \en{with a~moving charge}\ru{с~движущимся зарядом}\:--- \en{magnetic force}\ru{магнитная сила}~${q \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}}$\:--- \en{reveals}\ru{являет} \en{magnetic field}\ru{магнитное поле}~${\hspace{.1ex}\boldmathbb{B}}$, \en{while}\ru{в~то время как} \en{the~other part}\ru{другая часть}\:--- \en{electric force}\ru{электрическая сила}~${q \hspace{.1ex} \boldmathbb{E}}$\:--- \en{reveals}\ru{являет} \en{electric field}\ru{электрическое поле}~${\hspace{.1ex}\boldmathbb{E}}$.
+\vspace{-0.2em}\noindent
+\en{In~essence}\ru{По~сути}, \en{the~part}\ru{часть} \en{of the~electromagnetic force}\ru{электромагнитной силы}\ru{,} \en{arising from interaction}\ru{возникающая от взаимо\-действия} \en{with a~moving charge}\ru{с~движущимся зарядом}\:--- \en{magnetic force}\ru{магнитная сила}~${q \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}}$\:--- \en{reveals}\ru{являет} \en{magnetic field}\ru{магнитное поле}~${\hspace{.1ex}\boldmathbb{B}}$, \en{while}\ru{в~то время как} \en{the~other part}\ru{другая часть}\:--- \en{electric force}\ru{электрическая сила}~${q \hspace{.1ex} \boldmathbb{E}}$\:--- \en{reveals}\ru{являет} \en{electric field}\ru{электрическое поле}~${\hspace{.1ex}\boldmathbb{E}}$.
 
-\vspace{-0.1em} \en{Acute question}\ru{Острый вопрос}: \en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\bm{v} \equiv \mathdotabove{\locationvector}\hspace{.1ex}}$ \en{of a~charged particle}\ru{заряжённой частицы}\en{ measured}, \en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of~relativity}\ru{специальной теории относительности}}%
+\vspace{-0.1em}
+\en{Acute question}\ru{Острый вопрос}: \en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\bm{v} \equiv \mathdotabove{\locationvector}\hspace{.1ex}}$ \en{of a~charged particle}\ru{заряжённой частицы}\en{ measured}, \en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of~relativity}\ru{специальной теории относительности}}%
 \footnote{%
 \bibauthor{Albert Einstein}.
 \href{http://users.physik.fu-berlin.de/~kleinert/files/1905_17_891-921.pdf}{Zur Elektrodynamik bewegter Körper.~//
@@ -76,7 +80,7 @@ q = \hspace{-0.5ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathc
 \en{the~density of~electric current}\ru{плотность электрического тока} \en{is}\ru{есть} \en{the~flux of~electric charge}\ru{поток электрического заряда}
 ${\currentdensity(\locationvector, t) \hspace{-0.1ex} \equiv \chargedensity \hspace{.1ex} \mathdotabove{\locationvector} \equiv \chargedensity \hspace{.1ex} \bm{v}}$
 
-\foreignlanguage{russian}{в ваку\kern-0.11exуме нет $\chargedensity$ и~$\currentdensity$}
+\foreignlanguage{russian}{в ваку\kern-0.11exуме нет $\chargedensity$ \en{and}\ru{и}~$\currentdensity$}
 
 in a~region with no charges (${\chargedensity = 0}$) and no currents (${\currentdensity = \bm{0}}$), such as in a~vacuum, ...
 
@@ -277,13 +281,13 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{
 ...
 
 \begin{align*}
-\eqrefwithchapdotpara{divergenceofdyadicproducoftwovectors}{chapter:elementsoftensorcalculus}{para:spatialdifferentiationoftensorfields}
+\eqrefwithchapdotpara{divergenceofdyadicproducoftwovectors}{chapter:mathapparatus}{para:spatialdifferentiationoftensorfields}
 & \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{-0.16ex} \dotp \hspace{-0.2ex} \bigl( \hspace{-0.05ex} \bm{a} \bm{a} \bigr) \hspace{-0.33ex}
 = \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.18ex} \dotp \hspace{-0.1ex} \bm{a} \bigr) \hspace{-0.1ex} \bm{a} \hspace{.1ex} + \bm{a} \hspace{-0.07ex} \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.1ex} \bm{a}
 \\[-0.1em]
 %
-\eqrefwithchapdotpara{gradientofdotproductoftwovectors}{chapter:elementsoftensorcalculus}{para:spatialdifferentiationoftensorfields}
+\eqrefwithchapdotpara{gradientofdotproductoftwovectors}{chapter:mathapparatus}{para:spatialdifferentiationoftensorfields}
 & \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{.1ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = 2 \hspace{.16ex} \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bm{a}
@@ -519,9 +523,10 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \hspace{.16ex} .
 \end{equation}
 
-\vspace{-0.15em} \noindent \en{A~more popular}\ru{Более популярный} \en{option}\ru{вариант}\ru{\:---}\en{ is} \en{even more tight}\ru{ещё более жёсткое} \en{condition}\ru{условие}
+\vspace{-0.15em}\noindent
+\en{A~more popular}\ru{Более популярный} \en{option}\ru{вариант}\ru{\:---}\en{ is} \en{even more tight}\ru{ещё более жёсткое} \en{condition}\ru{условие}
 
-\nopagebreak\vspace{-0.12em}\begin{equation*}
+\nopagebreak\vspace{-0.1em}\begin{equation*}
 \Laplacian \hspace{.07ex} a = 0
 \hspace{.3em} \Rightarrow \hspace{.3em}
 \mathdotdotabove{a} = 0
@@ -529,7 +534,8 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \mathdotabove{\upphi} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} = 0
 \end{equation*}
 
-\vspace{-0.2em} \noindent --- \href{https://en.wikipedia.org/wiki/Lorenz_gauge_condition}{\ru{условие калибровки }Lorenz\ru{’а}\en{ gauge condition}}, \en{which}\ru{которое} \en{gives}\ru{даёт} \en{the~same}\ru{такой~же} \en{effect}\ru{эффект}, \en{being just a~particular}\ru{будучи лишь частным}\:--- \href{https://en.wikipedia.org/wiki/Harmonic_function}{\en{harmonic}\ru{гармоническим}}\:--- \en{case}\ru{случаем}~\en{of~}\eqref{gaugeadditioniswave}.
+\vspace{-0.2em}\noindent
+--- \href{https://en.wikipedia.org/wiki/Lorenz_gauge_condition}{\ru{условие калибровки }Lorenz\ru{’а}\en{ gauge condition}}, \en{which}\ru{которое} \en{gives}\ru{даёт} \en{the~same}\ru{такой~же} \en{effect}\ru{эффект}, \en{being just a~particular}\ru{будучи лишь частным}\:--- \href{https://en.wikipedia.org/wiki/Harmonic_function}{\en{harmonic}\ru{гармоническим}}\:--- \en{case}\ru{случаем}~\en{of~}\eqref{gaugeadditioniswave}.
 
 \en{Following from}\ru{Следующие из}~\eqref{electromagnetic.firstequationofwave} \en{and}\ru{и}~\eqref{electromagnetic.secondequationofwave} \en{with condition}\ru{с~условием}~\eqref{gaugeadditioniswave}, \en{equations}\ru{уравнения} \en{of electromagnetic waves}\ru{электромагнитных волн} \en{in the~potential formulation}\ru{в~потенциальной формулировке}\en{ are}
 
@@ -544,8 +550,6 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \end{equation}
 
 ...
-
-
 
 \en{\section{Electrostatics}}
 
@@ -575,7 +579,6 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \end{equation*}
 
 ...
-
 
 \end{otherlanguage}
 
@@ -607,8 +610,6 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 ...
 
-
-
 \end{otherlanguage}
 
 \en{\section{Magnetics}}
@@ -622,7 +623,6 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 Начнём с~рассмотрения
 
 ...
-
 
 
 ...
@@ -672,13 +672,13 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 
 ...
 
-
 \noindent Наименьший положительный корень~${x = 3.666}$, так~что критическая комбинация параметров такова:
 \[
 \left( I \hspace{-0.25ex} B \hspace{.1ex} {l^3} \hspace{-0.2ex} / a \hspace{.1ex} \right)_{\hspace{-0.32ex}*} \hspace{-0.32ex} = \hspace{.1ex} 394.2 \hspace{.12ex}.
 \]
 
-В~этом решении поле~$\boldmathbb{B}$ считалось внешним и~не~варьировалось. Но если собственное поле тока в~стержне сравнимо с~$\boldmathbb{B}$, решение изм\'{е}нится и~усложн\'{и}тся.
+В~этом решении поле~$\boldmathbb{B}$ считалось внешним и~не~варьировалось.
+Но если собственное поле тока в~стержне сравнимо с~$\boldmathbb{B}$, решение изм\'{е}нится и~усложн\'{и}тся.
 
 \end{otherlanguage}
 

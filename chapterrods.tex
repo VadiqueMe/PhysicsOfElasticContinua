@@ -5,13 +5,37 @@
 \thispagestyle{empty}
 
 \newcommand\internalforce{\mathboldQ} %% \bm{Q}
+\newcommand\internaldistributedforce{\bm{q}}
 \newcommand\internalmoment{\mathboldM}
+\newcommand\internaldistributedmoment{\bm{m}}
 
 \newcommand\tangenttoaxis{\bm{k}}
-\newcommand\tangenttoaxistoo{\bm{e}_3}
+\newcommand\thirdbasisvector{\bm{e}_3}
 
 \newcommand\rodsection{\Upomega} %% {F}
 \newcommand\rodsectionexpminusone{\rodsection^{\hspace{-0.2ex}\expminusone}}
+
+\newcommand\rodfeaturesvector{\bm{\psi}}
+\newcommand\rodfeaturesvectorcomponents[1]{\psi_{#1}}
+\newcommand\initialrodfeaturesvector{{\mathcircabove{\bm{\psi}}}}
+\newcommand\perpendicularrodfeatures{{\bm{\psi}_{\hspace{-0.2ex}\perp}}}
+
+\newcommand\tangentvector{{\bm{T}}}
+\newcommand\normalvector{{\mathboldN}}
+\newcommand\binormalvector{{\bm{B}}}
+
+\newcommand\firstdeformationvectorcosseratline{{\bm{\Gamma}}}
+\newcommand\firstdeformationvectorcosseratlinecomponents[1]{{\Gamma_{\hspace{-0.2ex}#1}}}
+\newcommand\seconddeformationvectorcosseratline{{\bm{\kappa}}}
+
+\newcommand\perpendicularboldnabla{{\boldnabla_{\hspace{-0.4ex}\perp}}}
+
+\newcommand\perpendicularstress{{\mathboldtau_{\hspace{-0.3ex}\perp}}}
+\newcommand\parallelstressvector{{\bm{\tau}_{\hspace{.1ex}\parallel}}} %{^1\hspace{-0.25ex}}\mathboldtau_{\parallel}
+
+\newcommand\RepresentedLocationVector{{\bm{R}\hspace{.1ex}}}
+
+\newcommand\RepresentedVolume{{\mathrm{v}}}
 
 \label{chapter:rods}
 
@@ -25,119 +49,336 @@
 \en{It is thought of}\ru{Он мыслится} (\en{and modeled}\ru{и~моделируется}) \en{as}\ru{как} \en{a~spatial curve}\ru{пространственная кривая}\:--- \en{the~axis of~rod}\ru{ось стержня}, \en{coated with a~material}\ru{покрытая материалом}
 ( \textcolor{blue}{\en{a figure}\ru{рисунок}} ).
 
-\en{The~axis of rod}\ru{Ось стержня} \en{is described}\ru{описывается} \en{by parameterizing}\ru{параметризацией} \en{the~location vector of curve’s points}\ru{вектора положения точек кривой} \en{as a~morphism}\ru{как морфизма}~(\en{function}\ru{функции}) \en{of one}\ru{одной} \en{variable}\ru{переменной} \en{coordinate}\ru{координаты}~$s$,
+\en{The~axis of rod}\ru{Ось стержня} \en{is described}\ru{описывается} \en{as a~curve}\ru{как кривая} \en{by parameterizing}\ru{параметризацией} \en{the~location vector}\ru{вектора положения} \en{of~points of~a~curve}\ru{точек кривой}.
+\en{This is a~morphism}\ru{Это морфизм}~(\en{a~function}\ru{функция}) \en{of~one}\ru{одной} \en{variable}\ru{переменной} \en{coordinate}\ru{координаты}~$s$,
 
-\nopagebreak\en{\vspace{-0.2em}}\ru{\vspace{-1.1em}}\begin{equation}
+\nopagebreak\vspace{-0.2em}\begin{equation}
 \locationvector \hspace{-0.4ex} = \hspace{-0.3ex} \locationvector(s)
 \hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.2em}\noindent
 \en{Material coating}\ru{Покрытие материалом} \en{gives}\ru{даёт} \en{at each rod’s point}\ru{в~каждой точке стержня} \en{a~plane figure}\ru{плоскую фигуру}, \en{perpendicular to the~axis}\ru{перпендикулярную оси}\:--- \en{normal section}\ru{нормальное сечение}~${\rodsection(s)}$.
 
 ...
 
-\begin{otherlanguage}{russian}
+${\bm{c} \narroweq \bm{c}(t)}$\en{ is}\ru{\:---} \en{a~parametric curve parameterized by parameter}\ru{параметрическая кривая, параметризованная параметром}~$t$.
+\en{If}\ru{Если} ${dt \neq d\ell}$, \en{then}\ru{то} \en{a~parameterization}\ru{параметризация} \en{is not natural}\ru{не натуральная}.
+\en{For the natural parameterization}\ru{Для натуральной параметризации} ${dt \hspace{-0.1ex} = d\ell}$, \en{where}\ru{где}
 
-Добавив \textcolor{magenta}{единичный??} вектор касательной к~оси
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\label{lengthofdifferentialpieceofcurve}
+d\ell \hspace{-0.1ex} = \hspace{-0.2ex} \scalebox{.88}{$ \displaystyle \sqrt{ \hspace{-0.2ex} \bigl( dq^1 \bigr)^{\hspace{-0.3ex}2} \hspace{-0.25ex} + \bigl( dq^2 \bigr)^{\hspace{-0.3ex}2} \hspace{-0.25ex} + \bigl( dq^3 \bigr)^{\hspace{-0.3ex}2} \hspace{.2ex} } $}
+\hspace{-0.2ex} .
+\end{equation*}
+
+\en{Many different functions}\ru{Многие разные функции} \en{draw}\ru{рисуют} \en{the same curve}\ru{одну и~ту~же кривую}.
+\en{But}\ru{Но} \en{among various parametrizations}\ru{среди различных параметризаций} \en{of a~curve}\ru{кривой}, \en{the parametrization by the arc length}\ru{параметризация длиной дуги} \en{is special}\ru{особенная}, \en{it is also called}\ru{её также называют} \en{the }\emph{\en{natural}\ru{естественной} \en{parametrization}\ru{параметризацией}}.
+
+\en{The length}\ru{Длина} \en{of }\en{an~infinitesimal}\ru{бесконечно-малого} \en{piece}\ru{кусочка} \en{of~a~curve}\ru{кривой} \en{is described}\ru{описывается} \en{by the }\textgreek{Πυθαγόρας}\hbox{-}\en{formula}\ru{формулой}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+d\ell \hspace{-0.2ex} = \hspace{-0.2ex} \scalebox{.93}{$ \displaystyle\sqrt{ \hspace{-0.2ex} dx^{2} \hspace{-0.2ex} + dy^{2} \hspace{-0.2ex} + dz^{2} \hspace{.3ex} \hspace{.1ex} } $}
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{where}\ru{где} ${dx \equiv dq^1\hspace{-0.4ex}}$, ${dy \equiv dq^2\hspace{-0.4ex}}$, ${dz \equiv dq^3\hspace{-0.2ex}}$\en{ are}\ru{\:---} \en{infinitesimal changes of~coordinates}\ru{бесконечно-малые изменения координат}.
+$d\ell$ \en{is called}\ru{называется} \en{the differential length}\ru{дифференциальной длиной}, \en{that is}\ru{то есть} \en{the length}\ru{длиной} \en{of an~almost straight}\ru{почти прямого} \en{very small piece of a~curve}\ru{очень м\'{а}лого куска кривой}.
+
+%%%%
+\begin{comment}
+
+\noindent
+\en{Rewriting it}\ru{Переписав её}, \en{for example}\ru{например}, \en{thru}\ru{через}~${dy}$ \en{and derivatives}\ru{и~производные}
+
+\nopagebreak\vspace{-0.4em}\begin{multline*}
+d\ell \hspace{-0.1ex}
+= \hspace{-0.2ex}
+\scalebox{.8}{$
+\displaystyle\sqrt{ \hspace{-0.2ex}
+\Bigl( \displaystyle\frac{\raisemath{-0.2em}{dx}}{dy} \hspace{.2ex} dy \Bigr)^{\hspace{-0.5ex}2} \hspace{-0.6ex}
++ dy^{2} \hspace{-0.1ex}
++ \hspace{-0.2ex} \Bigl( \displaystyle\frac{\raisemath{-0.2em}{dz}}{dy} \hspace{.2ex} dy \Bigr)^{\hspace{-0.5ex}2}
+\hspace{.3ex} }
+$} \hspace{-0.5ex} =
+%
+\scalebox{.8}{$
+\displaystyle\sqrt{ \hspace{-0.2ex}
+\Bigl( \displaystyle\frac{\raisemath{-0.2em}{dx}}{dy} \Bigr)^{\hspace{-0.5ex}2} \hspace{-0.2ex} dy^{2}
++ dy^{2} \hspace{-0.1ex}
++ \hspace{-0.2ex} \Bigl( \displaystyle\frac{\raisemath{-0.2em}{dz}}{dy} \Bigr)^{\hspace{-0.5ex}2} \hspace{-0.2ex} dy^{2}
+\hspace{.3ex} }
+$} \hspace{-0.4ex} =
+\\
+%
+= dy \hspace{.2ex}
+\scalebox{.8}{$
+\displaystyle\sqrt{ \hspace{-0.2ex}
+\Bigl( \displaystyle\frac{\raisemath{-0.2em}{dx}}{dy} \Bigr)^{\hspace{-0.5ex}2} \hspace{-0.6ex}
++ 1
++ \hspace{-0.2ex} \Bigl( \displaystyle\frac{\raisemath{-0.2em}{dz}}{dy} \Bigr)^{\hspace{-0.5ex}2}
+\hspace{.3ex} }
+$} \hspace{-0.3ex} .
+\end{multline*}
+
+\end{comment}
+%%%%
+
+${\bm{c}(s)}$ is a~parametric curve parameterized by the arc length (the natural parametrization), its derivative by the arc length parameter is denoted as~${ \bm{c}\hspace{.2ex}' \hspace{-0.2ex} \equiv \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \bm{c}}}{d s} $} }$.
+
+\en{If}\ru{Если} \ru{используется }\en{the arc length (natural) parametrization}\ru{параметризация длиной дуги (естественная)}~${\locationvector \narroweq \locationvector(s)}$\en{ is used}, \en{then}\ru{то} \en{the length}\ru{длина} \en{of derivative}\ru{производной} ${ \locationvector'(s) \hspace{-0.2ex} \equiv \scalebox{.8}{$ \displaystyle\frac{\raisemath{-0.2em}{d \hspace{.1ex} \locationvector(s)}}{\raisemath{.05em}{ds}} $} }$ (\en{of the tangent vector}\ru{касательного вектора}) \en{is always equal to}\ru{всегда равна} \en{the one unit of length}\ru{одной единице длины}:
+
+\nopagebreak\vspace{-0.2em}\begin{gather*}
+%%\tikz[baseline=-1ex] \draw[line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
+%%\hspace{2.25ex}
+%%\\
+%
+\locationvector(s) \hspace{-0.2ex} = q_{i}(s) \hspace{.2ex} \bm{e}_{i}(s) \hspace{-0.2ex} = q_1 \bm{e}_1 \hspace{-0.2ex} + q_2 \bm{e}_2 \hspace{-0.2ex} + q_3 \bm{e}_3
+\hspace{.1ex} ,
+\\[.1em]
+%
+\locationvector'(s) \hspace{-0.2ex}
+= \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{d \hspace{.1ex} \locationvector(s)}}{ds} $}
+= \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{d \hspace{.1ex} q_{i}(s)}}{ds} $} \hspace{.2ex} \bm{e}_{i}(s) \hspace{-0.2ex}
+= q_{i}'(s) \hspace{.2ex} \bm{e}_{i}(s)
+\hspace{.1ex} ,
+\\[-0.5em]
+%
+\| \locationvector'(s) \|^{2} \hspace{-0.2ex} \equiv \locationvector'(s) \hspace{-0.1ex} \dotp \hspace{.2ex} \locationvector'(s) \hspace{-0.2ex}
+= q_{i}'(s) \hspace{.2ex} \bm{e}_{i} \hspace{-0.1ex} \dotp \hspace{.1ex} q_{\hspace{-0.1ex}j}'(s) \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= q_{i}'(s) \hspace{.2ex} q_{\hspace{-0.1ex}j}'(s) \hspace{.2ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \hspace{-0.2ex} \scalebox{.88}{$ \displaystyle\sum_{i=1}^{3} $} \hspace{-0.1ex} \bigl( \hspace{.1ex} q_{i}'(s) \hspace{.1ex} \bigr)^{\hspace{-0.2ex}2}
+\hspace{-0.4ex} ,
+\\[-0.3em]
+%
+ds \hspace{-0.2ex} = \hspace{-0.2ex} \scalebox{.88}{$ \displaystyle \sqrt{ \hspace{-0.2ex} \bigl( dq_1 \bigr)^{\hspace{-0.2ex}2} \hspace{-0.3ex} + \bigl( dq_2 \bigr)^{\hspace{-0.2ex}2} \hspace{-0.3ex} + \bigl( dq_3 \bigr)^{\hspace{-0.2ex}2} } $}
+\hspace{.4em} \Rightarrow \hspace{.5em}
+ds^2 \hspace{-0.2ex} = \hspace{-0.2ex} \scalebox{.88}{$ \displaystyle\sum_{i=1}^{3} $} \hspace{-0.1ex} \bigl( \hspace{.1ex} d \hspace{.1ex} q_{i}(s) \hspace{.1ex} \bigr)^{\hspace{-0.2ex}2}
+\hspace{-0.4ex} ,
+\\[-0.8em]
+%
+\| \locationvector'(s) \|^{2} \hspace{-0.1ex}
+= \hspace{.2ex} \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.2em}{\scalebox{.88}{$ \displaystyle\sum_{i=1}^{3} $} \bigl( d \hspace{.1ex} q_{i}(s) \bigr)^{\hspace{-0.2ex}2}} }{\raisemath{-0.3em}{\bigl( ds \bigr)^{\hspace{-0.3ex}2}}} $}
+= 1
+\hspace{.6em} \Rightarrow \hspace{.5em}
+\| \locationvector'(s) \| \hspace{-0.2ex} = 1
+\hspace{.1ex} .
+%%\\
+%
+%%\hspace{2.25ex}
+%%\tikz[baseline=-0.6ex] \draw[color=black, fill=black] (0, 0) circle (.8ex);
+\end{gather*}
+
+...
+
+\en{In each section}\ru{В~каждом сечении} \en{we select}\ru{мы выбираем} \en{two}\ru{две} \en{perpendicular}\ru{перпендикулярные} \en{axes}\ru{оси} $x_{\alpha}$ \en{with co-directed}\ru{с~сонаправленными} \en{unit vectors}\ru{единичными векторами}~${\bm{e}_{\alpha}}$ (${\alpha \narroweq 1, 2}$).
+\en{The reason of selection}\ru{Причина выбора} \en{for all rod sections}\ru{для всех сечений стержня} \en{is the same}\ru{одна и~та~же}, \en{for example}\ru{для примера}, \en{the main axes of inertia of the section}\ru{главные оси инерции сечения} \en{are chosen}\ru{выбираются} \en{everywhere}\ru{везде}.
+
+%%
+\begin{tcolorbox}[enhanced, colback = orange!40, before upper={\parindent2ex}, parbox = false]
+\small%
+\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}%
+
+\begin{center}
+\emph{\en{The actual axis}\ru{Актуальная ось} \en{and}\ru{и} \en{the initial axis}\ru{начальная ось} \en{are different}\ru{отличаются}}
+\vspace{-1em}
+\end{center}
+
+\en{When vector}\ru{Когда вектор}~${\mathcircabove{\bm{e}}_3}$ \en{is directed}\ru{направлен} \en{along the tangent}\ru{по касательной} \en{to the initial axis}\ru{к~начальной оси} \en{with location}\ru{с~положением}~$\initiallocationvector$, \en{it is written as}\ru{это пишется как}
+${%
+\initiallocationvector{\hspace{.1ex}'} \hspace{-0.3ex}
+\equiv \scalebox{.8}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.15ex} \initiallocationvector}}{\partial s} $}
+\equiv \initiallocationvector_\differentialindex{s} \hspace{-0.2ex}
+\equiv \mathcircabove{\bm{e}}_3
+}$.
+
+\en{Vector}\ru{Вектор}~${\bm{e}_{3} \hspace{-0.2ex} \equiv \bm{k}}$ \en{is directed}\ru{направлен} \en{along the tangent}\ru{вдоль касательной} (\en{tangentially}\ru{тангенциально}) \en{to the actual axis}\ru{к~актуальной оси}.
+\end{tcolorbox}
+%%
+
+\en{Together}\ru{Вместе} \en{with }\ru{с~}\en{the unit vector}\ru{единичным вектором}, \en{tangent}\ru{касательным} \en{to the actual axis}\ru{к~актуальной оси}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \locationvector{\hspace{.1ex}'} \hspace{-0.3ex}
-\equiv \scalebox{.8}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.15ex} \locationvector}}{\partial s} $}
+\equiv \scalebox{.8}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \locationvector}}{d s} $}
+%%\equiv \scalebox{.8}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.15ex} \locationvector}}{\partial s} $}
 \equiv \locationvector_\differentialindex{s} \hspace{-0.2ex}
 \equiv \bm{e}_3 \hspace{-0.2ex}
 \equiv \bm{k}
 \hspace{.15ex} ,
 \end{equation*}
 
-\vspace{-0.1em}\noindent
-получим (для каждого~$s$) тройку взаимно перпендикулярных единичных векторов, характеризующих угловую ориентацию.
+\noindent
+\en{we’ll get}\ru{мы получим} \en{for each}\ru{для каждого}~$s$ \en{a~triple}\ru{тройку} \en{of mutually perpendicular}\ru{взаимно перпендикулярных} \en{unit vectors}\ru{единичных векторов}.
 
-\en{Curvature}\ru{Кривизна} \en{and}\ru{и}~\en{torsion}\ru{кручение} \en{of~the~rod’s axis}\ru{оси стержня} определяются вектором~$\bm{\psi}$
+\en{The curvature}\ru{Кривизна} \en{and}\ru{и}~\en{the torsion}\ru{кручение} \en{of~the~rod’s axis}\ru{оси стержня} \textcolor{blue}{\en{can be described}\ru{могут быть описаны}} \en{by vector}\ru{вектором}~${\rodfeaturesvector \hspace{-0.3ex} = \hspace{-0.3ex} \rodfeaturesvectorcomponents{\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_{\hspace{-0.1ex}j}}$:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
+\label{rods.thepsivector}
 \bm{e}{\hspace{.1ex}'}_{\hspace{-0.7ex}j} \hspace{-0.2ex}
-= \bm{\psi} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{e}_{j}
+= \rodfeaturesvector \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{e}_{j}
 \hspace{.1ex} , \hspace{.5em}
-\bm{\psi} \hspace{-0.1ex} = \smalldisplaystyleonehalf \hspace{.25ex} \bm{e}_{j} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{e}{\hspace{.1ex}'}_{\hspace{-0.7ex}j}
+\rodfeaturesvector \hspace{-0.1ex} = \smalldisplaystyleonehalf \hspace{.25ex} \bm{e}_{j} \hspace{-0.2ex} \times \hspace{-0.1ex} \bm{e}{\hspace{.1ex}'}_{\hspace{-0.7ex}j}
 \hspace{.1ex} .
 \end{equation}
 
-...
+\en{For}\ru{Для} \en{a~}\en{cylindrical}\ru{цилиндрического} (\en{prismatic}\ru{призматического}) \en{rod}\ru{стержня} ${\rodfeaturesvector = \bm{0}}$.
 
-\newpage
+\en{However}\ru{Однако}, \eqref{rods.thepsivector} \en{is}\ru{есть} \en{only}\ru{лишь} \en{an~initial concept}\ru{первоначальное понятие} \en{of~vector}\ru{о~векторе}~${\rodfeaturesvector}$ \en{as}\ru{как} \en{of geometric features}\ru{о~геометрических характеристиках}.
+\en{Further}\ru{Далее} \en{in}\ru{в}~\pararef{para:rods.cosseratlines}, \en{after}\ru{после} \en{adopting}\ru{принятия} \en{the material structure}\ru{материальной структуры} \en{of a~rod}\ru{стержня}, \en{a~concept}\ru{понятие} \en{of}\ru{о}~${\rodfeaturesvector}$ \en{will change}\ru{изменится}.
 
-\en{Moreover}\ru{Кроме этого}, \en{at each point}\ru{в~каждой точке} \en{of the rod’s axis}\ru{оси стержня} \en{as a~curve line}\ru{как кривой линии} \en{there’s}\ru{есть и} \en{another}\ru{другая} \en{triple of mutually perpendicular unit vectors}\ru{тройка взаимно перпендикулярных единичных векторов}\:--- \en{with normal}\ru{с~нормалью} \en{and~binormal}\ru{и~бинормалью}.
+\en{Moreover}\ru{Кроме этого}, \en{at each point}\ru{в~каждой точке} \en{of the rod’s axis}\ru{оси стержня}, \en{thought of as a~curve}\ru{мыслимой как кривая}, \en{there’s}\ru{есть} \en{also another}\ru{также другая} \en{triple of mutually perpendicular unit vectors}\ru{тройка взаимно перпендикулярных единичных векторов}, \en{the one}\ru{та что} \en{with the normal}\ru{с~нормальным} \en{and the binormal}\ru{и~бинормальным} \en{vectors}\ru{векторами}.
 
-\en{Tangent}\ru{Касательная}~$\bm{T}$, \en{normal}\ru{нормаль}~$\bm{N}$ \en{and}\ru{и} \en{binormal}\ru{бинормаль}~$\bm{B}$, \en{together called}\ru{вместе называемые} \en{the }\emph{\ru{системой }Frenet--Serret\en{ frame}}, are defined as follows:
+\en{Tangent}\ru{Касательный}~$\tangentvector$, \en{normal}\ru{нормальный}~$\normalvector$ \en{and}\ru{и} \en{binormal}\ru{бинормальный}~$\binormalvector$ \en{vectors}\ru{векторы}, \en{together called}\ru{вместе называемые} \en{the }\emph{\ru{системой }Frenet\hbox{--}Serret\en{ frame}}, \en{are defined as}\ru{определяются как}:
+%
 \begin{itemize}
-\item $\bm{T}$ is the unit vector tangent to the curve, pointing where the~curve continues further.
-\item $\bm{N}$ is the normal unit vector, the derivative of~$\bm{T}$ by the curve’s arc length parameter, divided by its length ${ \kappa \hspace{-0.1ex} = \hspace{-0.25ex} \| \bm{N} \| }$.
-\item $\bm{B}$ is the binormal unit vector, the cross product of~$\bm{T}$ and~$\bm{N}$, ${\bm{B} \hspace{-0.1ex} \equiv \bm{T} \hspace{-0.15ex} \times \hspace{-0.3ex} \bm{N}}$.
+\item $\tangentvector$\en{ is}\ru{\:---} \en{the unit vector tangent to a~curve}\ru{единичный вектор, касательный к~кривой}. \en{The length}\ru{Длина} \en{of the tangent vector}\ru{касательного вектора} \en{is always one unit}\ru{всегда одна единица}, \en{if}\ru{если} \en{the natural (arc length) parametrization of~a~curve is used}\ru{используется естественная параметризация кривой (длиной дуги)}. \en{The tangent vector}\ru{Касательный вектор} \en{points to where}\ru{указывает туда, где} \en{a~curve}\ru{кривая} \en{continues further}\ru{продолжается дальше}.
+%
+\item $\normalvector$\en{ is}\ru{\:---} \en{the normal unit vector}\ru{нормальный единичный вектор}, \en{the derivative}\ru{производная}\en{of}~$\tangentvector$ \en{by the curve’s parameter}\ru{по параметру кривой} (\en{for instance}\ru{например}, the arc length of a~curve). \en{The normal vector}\ru{Нормальный вектор} \en{is always}\ru{всегда} \en{perpendicular}\ru{перпендикулярен} \en{to the tangent vector}\ru{касательному вектору} \en{and }\ru{и~}\en{points towards the center of curvature}\ru{направлен к~центру кривизны}. \en{It is divided by its length}\ru{Он поделён на свою длину}~${\| \normalvector \|}$\ru{,} \en{to be the one unit long}\ru{чтобы быть длиной в~одну единицу}.
+%
+\item $\binormalvector$\en{ is}\ru{\:---} \en{the binormal unit vector}\ru{бинормальный единичный вектор}, 
+\en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\hspace{-0.25ex}\times\hspace{-0.1ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведение}} (\inquotes{cross product}) \en{of~}$\tangentvector$ \en{and}\ru{и}~$\normalvector$, ${\binormalvector \hspace{-0.1ex} \equiv \tangentvector \hspace{-0.15ex} \times \hspace{-0.3ex} \normalvector}$.
 \end{itemize}
 
-The Frenet--Serret formulas, describing derivatives of tangent, normal and binormal unit vectors in terms of each other, are
+\ru{Формулы }\en{The }Frenet\hbox{--}Serret\en{ formulas} \en{describe}\ru{описывают} \en{the derivatives}\ru{производные} \en{of }\en{tangent}\ru{касательного}, \en{normal}\ru{нормального} \en{and }\ru{и~}\en{binormal}\ru{бинормального} \en{unit vectors}\ru{единичных векторов}  \en{through relations with each other}\ru{через отношения друг с~другом}.
 
 \begin{align*}
-\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{ d\hspace{.1ex}\bm{T} }}{ds} $} &= \kappa \hspace{.1ex} \bm{N} ,
+\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{ d \hspace{.1ex} \tangentvector }}{ds} $} &= \kappa \hspace{.1ex} \normalvector ,
 \\
-\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{ d\bm{N} }}{ds} $} &= {}- \hspace{-0.3ex} \kappa \hspace{.25ex} \bm{T} + \tau \hspace{-0.1ex} \bm{B} ,
+\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{ d \hspace{.2ex} \normalvector }}{ds} $} &= \hspace{-0.4ex} {}- \hspace{-0.3ex} \kappa \hspace{.25ex} \tangentvector + \tau \hspace{-0.1ex} \binormalvector ,
 \\
-\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{ d\bm{B} }}{ds} $} &= {}- \hspace{-0.3ex} \tau \hspace{-0.1ex} \bm{N} ,
+\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.2em}{ d \hspace{.1ex} \binormalvector }}{ds} $} &= \hspace{-0.4ex} {}- \hspace{.1ex} \hspace{-0.3ex} \tau \hspace{-0.1ex} \normalvector ,
 \end{align*}
 
 \vspace{-0.2em}\noindent
-where ${\scalebox{.93}{$ \raisemath{.3em}{d} \hspace{-0.25ex} / \hspace{-0.33ex} \raisemath{-0.25em}{ds} $}}$ denotes the~derivative by arc length, $\kappa$ is the curvature and~$\tau$ is the curve’s torsion.
-The associated collection\:--- ${\bm{T}\hspace{-0.2ex}}$, ${\bm{N}\hspace{-0.2ex}}$, ${\bm{B}\hspace{-0.1ex}}$, $\kappa$, $\tau$\:--- is called the \emph{Frenet--Serret apparatus}.
+\en{where}\ru{где} ${\scalebox{.93}{$ \raisemath{.3em}{d} \hspace{-0.25ex} / \hspace{-0.33ex} \raisemath{-0.25em}{ds} $}}$ \en{denotes}\ru{обозначает} \en{the~derivative by the arc length}\ru{производную по длине дуги}, $\kappa$ \en{is}\ru{есть} \en{the curvature}\ru{кривизна} \en{and}\ru{и}~$\tau$ \en{is}\ru{есть} \en{the curve’s torsion}\ru{кручение кривой}.
+\en{The associated collection}\ru{Соединённая коллекция}\:--- ${\tangentvector\hspace{-0.2ex}}$, ${\normalvector\hspace{-0.2ex}}$, ${\binormalvector\hspace{-0.1ex}}$, $\kappa$, $\tau$\:--- \en{is called}\ru{называется} \en{the }\ru{аппаратом }Frenet--Serret\en{ apparatus}.
 
-Two scalars $\kappa$ and~$\tau$ effectively define the~curvature and torsion of a~space curve.
-Intuitively, curvature measures the deviation of a~curve from a straight line, while torsion measures the deviation of a~curve from being planar.
+\en{Two scalars}\ru{Два скаляра} $\kappa$ \en{and}\ru{и}~$\tau$ \en{effectively define}\ru{эффективно определяют} \en{the~curvature}\ru{кривизну} \en{and }\ru{и~}\en{the~torsion}\ru{кручение} \en{of a~space curve}\ru{пространственной кривой}.
+\en{Intuitively}\ru{Интуитивно}, \en{the curvature}\ru{кривизна} \en{measures}\ru{измеряет} \en{the deviation}\ru{отклонение} \en{of a~curve}\ru{кривой} \en{from a~straight line}\ru{от прямой линии}, \en{while}\ru{тогда как} \en{the torsion}\ru{кручение} \en{measures}\ru{измеряет} \en{the deviation}\ru{отклонение} \en{of a~curve}\ru{кривой} \en{from being planar}\ru{от плоской}.
 
-\[
-\displaystyle \kappa = \left\| \scalebox{.88}{$ \displaystyle\frac{ d\hspace{.1ex}\bm{T} }{ds} $} \right\|
-\]
-
-\[
-\kappa \ge 0
-\]
-
-\textcolor{magenta}{(nonzero curvature ${\kappa \hspace{-0.2ex} \neq \hspace{-0.1ex} 0}$ that is ${\kappa > 0}$)}
-
-the Frenet--Serret frame is not defined if ${\kappa \hspace{-0.2ex} = \hspace{-0.1ex} 0}$
-
-zero curvature implies the curve is a straight line, which lies in a~plane, making the torsion zero too
-
-If the curvature is not zero, it is considered as a curve line.
+\en{Two functions}\ru{Две функции} $\kappa(s)$ \en{and}\ru{и}~$\tau(s)$ \en{completely define the geometry of a~curve}\ru{полностью определяют геометрию кривой}, \en{because}\ru{поскольку} \en{they are}\ru{это} \en{coefficients}\ru{коэффициенты} \en{of a~system}\ru{системы} \en{of ordinary differential equations}\ru{обыкновенных дифференциальных уравнений} \en{for}\ru{для}~$\tangentvector$, $\normalvector$ \en{and}\ru{и}~$\binormalvector$.
+\en{Knowing}\ru{Зная}~${\tangentvector(s)}$, \en{by integration}\ru{интегрированием} \en{we’ll obtain}\ru{мы получим}~${\locationvector(s)}$ \en{with accuracy}\ru{с~точностью} \en{up to}\ru{до} \en{a~constant}\ru{постоянного} \en{rigid displacement}\ru{жёсткого перемещения} \en{without deformations}\ru{без деформаций}.
 
 ...
 
-$\bm{T}$ always has unit magnitude, and since there’s no change in length of~$\bm{T}$, then $\bm{N}$\:--- the derivative of~$\bm{T}$\:--- is always perpendicular to $\bm{T}$
-(${\bm{T} \hspace{-0.15ex} \dotp \hspace{.1ex} \bm{T} = 1
-\hspace{.22em} \Rightarrow \hspace{.22em}
-\bm{T}{\hspace{.25ex}'} \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{T} = 0
-\hspace{.22em} \Rightarrow \hspace{.16em}
-\bm{N} \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{T} = 0}$).
+\begin{align*}
+\tangentvector = \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \locationvector}}{d s} $}
+\hspace{1em} & \text{\en{or}\ru{или}} \hspace{1em}
+\tangentvector = \locationvector{\hspace{.1ex}'}
+\end{align*}
 
-Vectors of the Frenet--Serret frame make an~orthonormal basis ${\bm{f}_{\hspace{-0.1ex}i}\hspace{.2ex}}$:
-${\bm{f}_{\hspace{-0.1ex}1} \hspace{-.2ex} = \bm{T}\hspace{-0.2ex}}$,
-${\bm{f}_{2} \hspace{-.2ex} = \hspace{-.2ex} \bm{N}\hspace{-0.2ex}}$,
-${\bm{f}_{3} \hspace{-.2ex} = \hspace{-.2ex} \bm{B}\hspace{-0.1ex}}$.
+\en{The derivative}\ru{Производная} \en{of~}${\tangentvector}$ \en{consists of two multipliers}\ru{состоит из двух множителей}\:--- \en{the curvature}\ru{кривизны}~${\kappa}$ \en{and}\ru{и} \en{the unit normal vector}\ru{единичного нормального вектора}~${\normalvector}$
 
-\en{The tensor version}\ru{Тензорная версия} \en{of~}\ru{формул }Frenet--Serret\en{ formulas}
+\begin{align*}
+\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \tangentvector}}{d s} $} = \kappa \hspace{.1ex} \normalvector
+\hspace{1em} & \text{\en{or}\ru{или}} \hspace{1em}
+\tangentvector{\hspace{.25ex}'} \hspace{-0.4ex} = \kappa \hspace{.1ex} \normalvector
+\end{align*}
+
+\en{Curvature}\ru{Кривизна}~$\kappa$ \en{is equal to}\ru{равна} \en{the magnitude}\ru{магнитуде}~(\en{length}\ru{длине}) \en{of~vector}\ru{вектора}~$\normalvector$ (\en{the~derivative}\ru{производной} \en{of~vector}\ru{вектора}~$\tangentvector$, \en{the~second derivative}\ru{второй производной} \en{of location vector}\ru{вектора положения}~$\locationvector$)
+
+\begin{align*}
+\kappa
+= \| \normalvector \|
+= \| \tangentvector{\hspace{.25ex}'} \|
+= \left\Vert \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \tangentvector}}{d s} $} \right\Vert
+= \| \locationvector'' \|
+= \left\Vert \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{d^2 \hspace{.15ex} \locationvector}}{d s^2} $} \right\Vert
+\end{align*}
+
+\en{Vector}\ru{Сам вектор}~$\normalvector$\en{ itself} \en{is divided by its length}\ru{поделён на свою длину}\ru{,} \en{thus}\ru{поэтому} \en{its length}\ru{его длина} \en{is equal to}\ru{равна} \en{the one unit}\ru{одной единице}.
+
+\begin{align*}
+\normalvector
+= \scalebox{.88}{$ \displaystyle\frac{ \raisemath{.5em}{ \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \tangentvector}}{d s} $} }}%
+{\raisemath{-0.5em}{\left\Vert \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \tangentvector}}{d s} $} \right\Vert} } $}
+\hspace{1em} & \text{\en{or}\ru{или}} \hspace{1em}
+\normalvector
+= \scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{\tangentvector{\hspace{.25ex}'}}}{\| \tangentvector{\hspace{.25ex}'} \|} $}
+\end{align*}
+
+\en{The~radius of~curvature}\ru{Радиус кривизны}\en{ is}\ru{\:---} \en{the~reciprocal of~curvature}\ru{число, обратное кривизне}.
+
+\begin{align*}
+\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{1}}{\kappa} \hspace{.2ex} \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.15ex} \tangentvector}}{d s} $} = \normalvector
+\hspace{1em} & \text{\en{or}\ru{или}} \hspace{1em}
+\scalebox{.88}{$ \displaystyle\frac{\raisemath{-0.15em}{1}}{\kappa} $} \hspace{.3ex} \tangentvector{\hspace{.25ex}'} \hspace{-0.4ex} = \normalvector
+\end{align*}
+
+...
+
+\begin{equation*}
+\kappa \ge 0
+\end{equation*}
+
+\ru{Система }\en{The }Frenet\hbox{--}Serret\en{ frame} \en{is defined}\ru{определена} \en{only if}\ru{лишь если} \en{the curvature}\ru{кривизна} \en{is nonzero}\ru{отлична от нуля}~(${\kappa > 0}$), \en{it is not defined if}\ru{она не определена, если} ${\kappa \hspace{-0.2ex} = \hspace{-0.1ex} 0}$.
+
+\en{A~line}\ru{Линия} \en{with the nonzero curvature}\ru{с~ненулевой кривизной}~${\kappa \hspace{-0.2ex} \neq \hspace{-0.1ex} 0}$ \en{is considered a~curve}\ru{считается кривой}.
+
+\en{The zero curvature}\ru{Нулевая кривизна} \en{implies that}\ru{предполагает, что} \en{a~line is straight}\ru{линия прямая}, \en{and it lies in a~plane}\ru{и она лежит в~плоскости}, \en{making}\ru{делая} \en{the torsion}\ru{кручение} \en{equal to zero too}\ru{тоже равным нулю}
+(${\tau \hspace{-0.3ex} = \hspace{-0.2ex} 0}$).
+
+...
+
+$\tangentvector$ \en{always}\ru{всегда} \en{has}\ru{имеет} \en{the unit magnitude}\ru{единичную магнитуду}~(\en{length}\ru{длину}).
+\en{Since}\ru{Поскольку} \en{the length}\ru{длина} \en{of~}$\tangentvector$ \en{is constant}\ru{постоянна}, \en{then}\ru{то}~$\normalvector$\:--- \en{the derivative}\ru{производная} \en{of~}$\tangentvector$ \en{and}\ru{и} \en{the~second derivative}\ru{вторая производная} \en{of location vector}\ru{вектора положения}~${\locationvector}$\:--- \en{is always}\ru{всегда} \en{perpendicular}\ru{перпендикулярна} \en{to~}$\tangentvector$
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\tangentvector \dotp \hspace{.2ex} \tangentvector = 1
+\hspace{.4em} \Rightarrow \hspace{.4em}
+\tangentvector{\hspace{.25ex}'} \hspace{-0.4ex} \dotp \hspace{.2ex} \tangentvector = 0
+\hspace{.4em} \Rightarrow \hspace{.4em}
+\normalvector \hspace{.1ex} \dotp \hspace{.2ex} \tangentvector = 0
+\hspace{.1ex} .
+\end{equation*}
+
+\en{Vectors}\ru{Векторы} \en{of the }\ru{системы }Frenet\hbox{--}Serret\en{ frame} \en{make}\ru{составляют} \en{an~orthonormal basis}\ru{ортонормальный базис} ${\bm{f}_{\hspace{-0.1ex}i}\hspace{.2ex}}$:
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{f}_{\hspace{-0.1ex}1} \hspace{-.3ex} = \tangentvector\hspace{-0.2ex} ,
+\hspace{.4em}
+%%\\
+\bm{f}_{2} \hspace{-.2ex} = \hspace{-.2ex} \normalvector
+\hspace{-0.2ex} ,
+\hspace{.4em}
+%%\\
+\bm{f}_{3} \hspace{-.2ex} = \hspace{-.2ex} \binormalvector\hspace{-0.1ex} .
+\end{equation*}
+
+\en{The location vector}\ru{Вектор положения} \en{in the }\ru{в~базисе }Frenet\hbox{--}Serret\en{ basis}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\locationvector(s) \hspace{-0.2ex}
+= q_{j}(s) \hspace{.1ex} \bm{f}_{\hspace{-0.2ex}j}(s) \hspace{-0.2ex}
+= q_{1}(s) \tikzmark{beginTangentUnitVector} \hspace{.1ex} \bm{f}_{\hspace{-0.1ex}1}(s) \tikzmark{endTangentUnitVector} \hspace{-0.1ex} + q_{2}(s) \tikzmark{beginNormalUnitVector} \hspace{.1ex} \bm{f}_{2}(s) \tikzmark{endNormalUnitVector} \hspace{-0.1ex} + q_{3}(s) \tikzmark{beginBinormalUnitVector} \hspace{.1ex} \bm{f}_{3}(s) \tikzmark{endBinormalUnitVector}
+\hspace{.1ex} .
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0, -0.1ex][yshift = -0.1ex]%
+{beginTangentUnitVector}{endTangentUnitVector}%
+{${\scalebox{.8}{$ \tangentvector $}}$}%
+\AddUnderBrace[line width=.75pt][0, -0.1ex][yshift = -0.1ex]%
+{beginNormalUnitVector}{endNormalUnitVector}%
+{${\scalebox{.8}{$ \normalvector $}}$}%
+\AddUnderBrace[line width=.75pt][0, -0.1ex][yshift = -0.1ex]%
+{beginBinormalUnitVector}{endBinormalUnitVector}%
+{${\scalebox{.8}{$ \binormalvector $}}$}%
+\vspace{-0.5em}
+
+\en{The tensor version}\ru{Тензорная версия} \en{of the }\ru{формул }Frenet\hbox{--}Serret\en{ formulas}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{frenetserretformulas.tensorversion}
 \bm{f}_{\hspace{-0.1ex}i}{'} \hspace{-0.25ex} = \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{d}} \hspace{.1ex} \dotp \hspace{-0.15ex} \bm{f}_{\hspace{-0.1ex}i}
 \hspace{.2ex} .
 \end{equation}
 
-Frenet--Serret formulas using matrix notation
+\ru{Формулы }\en{The }Frenet\hbox{--}Serret\en{ formulas}\ru{,} \en{written}\ru{написанные} \en{using}\ru{с~использованием} \en{the matrix notation}\ru{матричных обозначений}
 
 \nopagebreak\begin{equation*}
 \scalebox{.88}{$ \left[ \hspace{.1ex}
 \begin{array}{c}
-\bm{T}{\hspace{.25ex}'}\\
-\bm{N}{\hspace{.1ex}'}\\
-\bm{B}{\hspace{.15ex}'}
+\tangentvector{\hspace{.25ex}'}\\
+\normalvector{\hspace{.25ex}'}\\
+\binormalvector{\hspace{.15ex}'}
 \end{array} \hspace{.1ex} \right] $}
 \hspace{-0.4ex} = \hspace{-0.4ex}
 \scalebox{.88}{$ \left[ \begin{array}{ccc}
@@ -148,30 +389,30 @@ Frenet--Serret formulas using matrix notation
 \hspace{-0.4ex}
 \scalebox{.88}{$ \left[ \hspace{.1ex}
 \begin{array}{c}
-\bm{T} \\
-\bm{N} \\
-\bm{B}
+\tangentvector \\
+\normalvector \\
+\binormalvector
 \end{array} \hspace{.1ex} \right] $}
 \hspace{-0.1ex} .
-\end{equation*}
+\end{equation*} 
 
-Tensor~${^2\hspace{-0.2ex}\bm{d}}$ is skew-symmetric, therefore it can be represented by the~companion (pseudo)vector (\chapdotpararef{chapter:elementsoftensorcalculus}{para:tensors.symmetric+skewsymmetric}).
-This pseudovector is known as the Darboux vector.
+\en{Tensor}\ru{Тензор}~${^2\hspace{-0.2ex}\bm{d}}$\en{ is}\ru{\:---} \en{skew-symmetric}\ru{кососимметричный}, \en{therefore}\ru{поэтому} \en{it can be represented}\ru{он может быть представлен} \en{via}\ru{через} \en{the~companion}\ru{сопутствующий} \en{(pseudo)vector}\ru{(псевдо)вектор} (\chapdotpararef{chapter:mathapparatus}{para:tensors.symmetric+skewsymmetric}).
+\en{This pseudovector}\ru{Этот псевдовектор} \en{is known as}\ru{известен как} \en{the }\ru{вектор }Darboux\en{ vector}.
 
-\begin{align*}
-\bm{D} &= \tau \hspace{.2ex} \bm{T} + \kappa \hspace{.1ex} \bm{B}
+\vspace{-0.2em}\begin{align*}
+\bm{D} &= \tau \hspace{.2ex} \tangentvector + \kappa \hspace{.1ex} \binormalvector
 \\
-\bm{D} &= \tau \hspace{.2ex} \bm{T} + 0 \hspace{.1ex} \bm{N} + \kappa \hspace{.1ex} \bm{B}
+\bm{D} &= \tau \hspace{.2ex} \tangentvector + 0 \hspace{.1ex} \normalvector + \kappa \hspace{.1ex} \binormalvector
 \end{align*}
 
-With the Darboux vector, Frenet--Serret formulas turn into
+\en{With}\ru{С~вектором} \en{the }Darboux\en{ vector}, \ru{формулы }\en{the }Frenet\hbox{--}Serret\en{ formulas} \en{turn into the following}\ru{превращаются в~следующее}:
 
 \begin{align*}
-\bm{T}{\hspace{.25ex}'} \hspace{-0.2ex} &= \hspace{-0.15ex} \bm{D} \hspace{-0.2ex} \times \bm{T} ,
+\tangentvector{\hspace{.25ex}'} \hspace{-0.2ex} &= \hspace{-0.15ex} \bm{D} \hspace{-0.2ex} \times \tangentvector ,
 \\[-0.2em]
-\bm{N}{\hspace{.1ex}'} \hspace{-0.2ex} &= \hspace{-0.15ex} \bm{D} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{N} ,
+\normalvector{\hspace{.25ex}'} \hspace{-0.2ex} &= \hspace{-0.15ex} \bm{D} \hspace{-0.2ex} \times \hspace{-0.2ex} \normalvector ,
 \\[-0.2em]
-\bm{B}{\hspace{.15ex}'} \hspace{-0.2ex} &= \hspace{-0.15ex} \bm{D} \hspace{-0.2ex} \times \hspace{-0.15ex} \bm{B}
+\binormalvector{\hspace{.15ex}'} \hspace{-0.2ex} &= \hspace{-0.15ex} \bm{D} \hspace{-0.2ex} \times \hspace{-0.15ex} \binormalvector
 %\hspace{.1ex} .
 \end{align*}
 
@@ -183,76 +424,100 @@ With the Darboux vector, Frenet--Serret formulas turn into
 \hspace{.2ex} .
 \end{equation}
 
-The Darboux vector is the angular velocity vector of the Frenet--Serret frame of a~curve.
-It is also called as angular momentum vector, because it is directly proportional to angular momentum \textcolor{magenta}{(really??)}.
+\ru{Вектор }\en{The }Darboux\en{ vector} \en{is}\ru{есть} \en{the angular velocity vector}\ru{вектор угловой скорости} \ru{системы }\en{of the }Frenet--Serret\en{ frame}.
 
 ...
 
-\newpage
-
-\en{In approximate}\ru{В~приближённых} (\inquotes{\en{applied}\ru{прикладн\'{ы}х}}) \en{theories of~rods}\ru{теориях стержней} \en{like}\ru{вроде} \inquotes{\en{strength of~materials}\ru{сопротивления материалов}} \en{figure}\ru{фигурируют} \en{internal}\ru{внутренние} \en{force}\ru{сила}~${\hspace{-0.1ex}\internalforce\hspace{.1ex}}$ \en{and}\ru{и}~\en{moment}\ru{момент}~${\hspace{-0.1ex}\internalmoment}$.
-\en{They are connected}\ru{Они связаны} \en{with the stress tensor}\ru{с~тензором напряжения} \en{via relations}\ru{соотношениями}
+\en{Approximate}\ru{Приближённые} \en{applied}\ru{прикладн\'{ы}е} \en{theories of~rods}\ru{теории стержней} \en{like}\ru{вроде} \en{the }\inquotes{\en{strength of~materials}\ru{сопротивления материалов}} \en{use such concepts as}\ru{используют такие понятия как} \en{internal force}\ru{внутренняя сила}~${\hspace{-0.1ex}\internalforce\hspace{.1ex}}$ \en{and}\ru{и}~\en{internal moment}\ru{внутренний момент}~${\hspace{-0.1ex}\internalmoment}$.
+\en{The following}\ru{Следующие} \en{relations}\ru{соотношения} \en{connect them}\ru{связывают их} \en{with the stress tensor}\ru{с~тензором напряжения}
 
 \nopagebreak\vspace{.1em}\begin{align}
-\internalforce(s) \hspace{-0.2ex}
-&= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.25ex} \tractionvector{\tangenttoaxis} \hspace{.3ex} d\rodsection \hspace{-0.1ex}
-= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.25ex} \tangenttoaxis \dotp \hspace{-0.1ex} \cauchystress \hspace{.3ex} d\rodsection\hspace{.2ex} ,
+\internalforce \hspace{.1ex} (s) \hspace{-0.2ex}
+&= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.1ex} \tractionvector{\tangenttoaxis} \hspace{.3ex} d\rodsection
+= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.1ex} \tangenttoaxis \dotp \hspace{-0.1ex} \cauchystress \hspace{.3ex} d\rodsection
+\hspace{.2ex} ,
+\label{stresstensortointernalforce}
 \\
-\internalmoment(s) \hspace{-0.2ex}
-&= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.25ex} \bm{x} \hspace{-0.2ex} \times \hspace{-0.1ex} \tractionvector{\tangenttoaxis} \hspace{.3ex} d\rodsection \hspace{-0.1ex}
-= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.25ex} \bm{x} \hspace{-0.2ex} \times \hspace{-0.1ex} \tangenttoaxis \dotp \hspace{-0.1ex} \cauchystress \hspace{.3ex} d\rodsection
+%
+\internalmoment \hspace{.1ex} (s) \hspace{-0.2ex}
+&= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.1ex} \bm{x} \hspace{-0.1ex} \times \tractionvector{\tangenttoaxis} \hspace{.3ex} d\rodsection
+= \hspace{-0.3ex} \scalebox{.88}{$ \displaystyle\integral_{\rodsection} $} \hspace{-0.1ex} \bm{x} \hspace{-0.1ex} \times \tangenttoaxis \hspace{.1ex} \dotp \hspace{-0.1ex} \cauchystress \hspace{.3ex} d\rodsection
 \hspace{.2ex} .
+\label{stresstensortointernalmoment}
 \end{align}
 
-\[
-\tangenttoaxis \equiv \tangenttoaxistoo
-\hspace{.1ex} , \hspace{.7em}
+\begin{equation*}
+\tangenttoaxis \equiv \thirdbasisvector
+\hspace{.1ex} , \hspace{.6em}
 \bm{x} = x_{\alpha} \bm{e}_\alpha
-\hspace{.1ex} , \hspace{.4em}
-\alpha \hspace{-0.1ex} = \hspace{-0.12ex} 1, 2
-\]
+\hspace{.1ex} , \hspace{.6em}
+\alpha \hspace{-0.1ex} = \hspace{-0.1ex} 1, 2
+\end{equation*}
 
 ...
 
-Такие рассуждения о~геометрии и~о~механике (внутренних силе и~моменте) относятся только лишь к~какой-то одной конфигурации стержня.
-Продолжать эти соображения \en{is meaningless}\ru{бессмысленно} потому, что плоские нормальные сечения после деформирования не~остаются плоскими и~нормальными.
-Добавление~же в~модель \en{an assumption-hypothesis}\ru{предположения-гипотезы} о~том, что депланации нет \en{and}\ru{и}~\inquotes{\en{plane sections remain plane}\ru{плоские сечения остаются плоскими}}\footnote{%
-\en{Two very popular beam models exist}\ru{Существуют две очень популярные модели балки} \en{with }\ru{с~}\ru{гипотезой}\en{the hypothesis}\ru{,} \en{postulating the~absence of~deplanations}\ru{постулирующей отсутствие депланаций}.
-In the Euler\hbox{--}Bernoulli beam theory, shear deformations are neglected, and plane sections remain plane and normal to the~axis.
-In the Timoshenko beam theory, there’s a~constant \en{transverse shear}\ru{поперечный сдвиг} \en{along the section}\ru{вдоль сечения}, and plane sections still remain plane but are no longer normal to the~axis.}\hspace{-0.3ex}
-вносит существенные противоречия с~реальностью.
-\en{Enough to recall}\ru{Достаточно вспомнить} \en{just one fact that}\ru{лишь один факт, что} \en{without}\ru{без} \en{deplanation}\ru{депланации} \en{it’s impossible}\ru{невозможно} \en{to acceptably describe}\ru{приемлемо описать} \en{the torsion of a~rod}\ru{кручение стержня} (\en{and not only torsion}\ru{и~не~только кручение}).
+\en{These thoughts}\ru{Эти мысли} \en{about geometry}\ru{о~геометрии} \en{and }\ru{и~}\en{about mechanics}\ru{о~механике}\:--- \en{in particular}\ru{в~частности}, \en{about internal force}\ru{о~внутренней силе}~\eqref{stresstensortointernalforce} \en{and}\ru{и}~\en{internal moment}\ru{внутреннем моменте}~\eqref{stresstensortointernalmoment}\:--- \en{concern only}\ru{касаются только} \en{some unique single configuration}\ru{какой-то уникальной единственной конфигурации} \en{of a~rod}\ru{стержня}.
+\en{It’s meaningless to continue these thoughts}\ru{Продолжать эти мысли бессмысленно}, \en{because}\ru{потому что} \en{in reality}\ru{в~реальности} \en{plane and normal sections}\ru{плоские и~нормальные сечения} \en{do~not remain}\ru{не~остаются} \en{plane and normal}\ru{плоскими и~нормальными} \en{after deforming}\ru{после деформирования}.
 
-\en{Very reasonable}\ru{Очень резонный} \en{approach}\ru{подход} \en{to}\ru{к}~\en{modeling}\ru{моделированию} \en{deformations}\ru{деформаций} \en{of an~elastic rod}\ru{упругого стержня} \en{consists in}\ru{состоит в} \en{the asymptotic splitting}\ru{асимптотическом расщеплении} \en{of the three-dimensional problem}\ru{трёхмерной проблемы} \en{with }\ru{с~}\en{a~small thickness}\ru{м\'{а}лой толщиной}.
+%%
+\begin{tcolorbox}[enhanced, colback = cyan!50, before upper={\parindent2ex}, parbox = false]
+\small%
+\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}%
+
+\begin{center}
+\emph{synonyms for \inquotes{deplanations}}
+\vspace{-1em}
+\end{center}
+
+\begin{otherlanguage}{russian}
+
+warp, warping = деформация (deform, deformation, strain), искривление, искажение (distort, distortion), перекос (skew), перекосить, перекашиваться, коробиться, покоробить, коробление, out of shape, become twisted or bent
+
+\end{otherlanguage}
+
+\end{tcolorbox}
+
+\ru{А}\en{And}~\en{the~addition}\ru{добавление} \en{of some assumptions-hypotheses}\ru{некоторых предположений-гипотез} \en{to the model}\ru{в~модель}, \en{like}\ru{подобных} \inquotes{\en{there are no warping (deplanations)}\ru{искривления (депланаций) нет}} \en{and}\ru{и}~\en{initially plane sections remain plane}\ru{первоначально плоские сечения остаются плоскими}\footnote{%
+\en{The two very popular beam models exist}\ru{Существуют две очень популярные модели балки}\ru{,} \en{which}\ru{которые} \en{postulate}\ru{постулируют} \en{the hypothesis}\ru{гипотезу} \en{about the~absence of~deplanations}\ru{об отсутствии депланаций}.
+\en{In the }\ru{В~теории балок }Euler\ru{’а}\hbox{--}Bernoulli\en{ beam theory}, \en{shear deformations are neglected}\ru{сдвиговыми деформациями пренебрегают}, \en{plane sections remain plane}\ru{плоские сечения остаются плоскими} \en{and}\ru{и}~\en{perpendicular to the~axis}\ru{перпендикулярными оси}.
+\en{In the }\ru{В~теории балок }Timoshenko\en{ beam theory} \en{there’s}\ru{имеется} \en{a~constant}\ru{постоянный} \en{transverse shear}\ru{поперечный сдвиг} \en{along the section}\ru{вдоль сечения}, \en{so}\ru{так что} \en{plane sections still remain plane}\ru{плоские сечения всё ещё остаются плоскими}, \en{but they}\ru{но они} \en{are no longer perpendicular to the~axis}\ru{больше не перпендикулярны оси}.}\hspace{-0.3ex}
+%
+\en{introduces}\ru{вносит} \en{essential}\ru{существенные} \en{contradictions}\ru{противоречия} \en{with reality}\ru{с~реальностью}.
+\en{Enough to recall}\ru{Достаточно вспомнить} \en{just one fact that}\ru{лишь один факт, что} \en{without}\ru{без} \en{deplanations}\ru{депланаций} \en{it’s impossible}\ru{невозможно} \en{to acceptably describe}\ru{приемлемо описать} \en{the torsion of a~rod}\ru{кручение стержня} (\en{and not only torsion}\ru{и~не~только кручение}).
+
+%%warping
+%%Warping due to shear noticeably complicates the behaviour of a~rod.
+
+\en{The very reasonable}\ru{Очень резонный} \en{approach}\ru{подход} \en{to}\ru{к}~\en{modeling}\ru{моделированию} \en{deformations}\ru{деформаций} \en{of an~elastic rod}\ru{упругого стержня} \en{consists in}\ru{состоит в} \en{asymptotic splitting}\ru{асимптотическом расщеплении} \en{of the three-dimensional problem}\ru{трёхмерной проблемы} \en{with }\ru{с~}\en{a~small thickness}\ru{м\'{а}лой толщиной}.
 \en{But}\ru{Но} \en{for}\ru{для} \en{a~complex asymptotic procedure}\ru{сложной асимптотической процедуры} \en{it would be much simpler}\ru{было бы намного проще} \en{to have}\ru{иметь} \en{whatever}\ru{какую-нибудь} \en{solution version}\ru{версию решения} \en{aforehand}\ru{заранее}.
 \en{And}\ru{И} \en{the direct approach}\ru{прямой подход}, \en{when}\ru{когда} \en{the one\hbox{-}dimensional model}\ru{одномерная модель} \en{of a~rod}\ru{стержня}\en{ is}\ru{\:---} \en{a~material line}\ru{материальная линия}, \en{gives}\ru{даёт} \en{such a~version}\ru{такую версию}.
 
 \en{The primary question}\ru{Первичный вопрос} \en{for building}\ru{для построения} \en{the one\hbox{-}dimensional model}\ru{одномерной модели}:
-\en{what}\ru{какими} \en{degrees of~freedom}\ru{степенями свободы}\:--- \en{besides translation}\ru{помимо трансляции}\:--- \en{do}\ru{обладают} \en{particles}\ru{частицы} \en{of a~material line}\ru{материальной линии}\en{ possess}?
+\en{what}\ru{какими} \en{degrees of~freedom}\ru{степенями свободы}\:--- \en{besides translation}\ru{помимо трансляции}\:--- \en{do}\ru{обладают} \en{the particles}\ru{частицы} \en{of a~material line}\ru{материальной линии}\en{ possess}?
 
-Известно, что стержни чувствительны к~моментным нагрузкам.
-А~присутствие моментов среди обобщённых сил говорит о~наличии вращательных степеней свободы.
-Следовательно, одномерной моделью стержня должна быть линия Коссера\:--- она состоит из бесконечномалых \textcolor{magenta}{твёрдых тел}.
-Впрочем, могут проявиться и~дополнительные степени свободы\:--- как в~тонкостенных стержнях, которым посвящена отдельная глава.
+\en{It is known that}\ru{Известно, что} \en{rods}\ru{стержни} \en{are sensitive}\ru{чувствительны} \en{to the moment loads}\ru{к~моментным нагрузкам}.
+\en{And }\ru{А~}\en{the presence of moments}\ru{присутствие моментов} \en{among}\ru{среди} \en{generalized forces}\ru{обобщённых сил} \en{indicates}\ru{показывает} \en{the presence}\ru{наличие} \en{of rotational degrees of freedom}\ru{вращательных степеней свободы}.
+\en{Therefore}\ru{Поэтому} \en{as}\ru{как} \en{the one-dimensional model}\ru{одномерную модель} \en{of~a~rod}\ru{стержня} \en{it is reasonable to take}\ru{разумно взять} \en{the }\ru{линию }Cosserat\en{ line}\:--- \en{it}\ru{она} \en{consists of}\ru{состоит из} \en{infinitesimal}\ru{бесконечно-малых} \en{absolutely rigid bodies}\ru{абсолютно жёстких тел}.
+\en{However}\ru{Впрочем}, \en{another new}\ru{другие новые} \en{degrees of~freedom}\ru{степени свободы} \en{may also appear}\ru{могут тоже появиться}\:--- \en{as for thin-walled rods}\ru{как для тонкостенных стержней}, \en{described}\ru{описанных} \en{in the dedicated chapter}\ru{в~отдельной главе}~(\chapref{chapter:thinwalledrods}).
 
-В~механике упругих тел стержни занимают особенное место.
-Во\hbox{-}первых, это моментные модели, и~моменты здесь играют главную роль~(не~роль малых добавок, как в~трёхмерном контину\kern-0.11exуме Cosserat).
-Во\hbox{-}вторых, стержни являются как~бы \inquotes{тестовой площ\'{а}дкой} для~моделей с~дополнительными степенями свободы, поскольку наличие этих степеней можно исследовать на~трёх\-мерной модели.
+\en{In the mechanics}\ru{В~механике} \en{of continuous elastic media}\ru{сплошных упругих сред}\en{,} \en{the place of~rods}\ru{место стержней} \en{is specific}\ru{специфическое}.
+\en{First}\ru{Во\hbox{-}первых}, \en{moments}\ru{моменты} \en{play}\ru{играют} \ru{здесь }\en{the main role}\ru{главную роль}\en{ here}, \en{and not the role}\ru{а~не~роль} \en{of small additions}\ru{малых добавок} \en{as in a~three-dimensional}\ru{как в~трёхмерном контину\kern-0.11exуме} Cosserat\en{ continuum}.
+\en{Second}\ru{Во\hbox{-}вторых}, \en{rods}\ru{стержни} \en{can be used to test}\ru{могут быть использованы для тестирования} \en{models}\ru{моделей} \en{with additional degrees of freedom}\ru{с~дополнительными степенями свободы}\:--- \en{and}\ru{и}~\en{before}\ru{прежде, чем} \en{the presence}\ru{наличие} \en{of these degrees}\ru{этих степеней} \en{will be researched}\ru{будет исследовано} \en{on a~three-dimensional model}\ru{на трёхмерной модели}.
 
-Ну~а~пока сосредоточимся на~простой одномерной моментной модели типа Cosserat.
-
-\end{otherlanguage}
+\en{The following section}\ru{Следующий раздел} \en{presents and describes}\ru{представляет и~описывает} \en{the~simple}\ru{простую} \en{one-dimensional}\ru{одномерную} \en{Cosserat-like moment model}\ru{моментную модель типа Cosserat}.
 
 \en{\section{Kinematics of Cosserat lines}} % Cosserat curves
 
 \ru{\section{Кинематика линий Коссера}} % кривых Коссера
 
-\begin{otherlanguage}{russian}
+\label{para:rods.cosseratlines}
 
-Рассматриваемое далее является упрощённым вариантом~\chapref{chapter:cosseratcontinuum}.
-Вместо тройки материальных координат ${q^{\hspace{.1ex}i}}$ имеем одну\:--- $s$, \en{it may be}\ru{это может быть} \en{the arc length parameter}\ru{параметр длины дуги} \en{in the initial configuration}\ru{в~начальной конфигурации}.
-\en{The motion}\ru{Движение} \en{of a~particle}\ru{частицы} \en{over time}\ru{со~временем} \en{is described by}\ru{описывается} \en{the location vector}\ru{вектором положения}~${\locationvector(s,t)}$ \en{and}\ru{и} \en{the rotation tensor}\ru{тензором поворота}~${\rotationtensor(s,t)}$.
-\en{Linear}\ru{Линейная} \en{and}\ru{и}~\en{angular}\ru{угловая} \eqrefwithchapdotpara{angularvelocityvector}{chapter:elementsoftensorcalculus}{para:rotationtensor} \en{velocities}\ru{скорости} \en{of a~rod’s particle}\ru{частицы стержня} \en{are}\ru{суть}
+\en{Model described further}\ru{Модель, описанная далее}\en{ is}\ru{\:---} \en{a~simplified version of}\ru{упрощённая версия}~\chapref{chapter:cosseratcontinuum}.
+
+\en{There’s no more a~triple}\ru{Больше нет тройки} \en{of material coordinates}\ru{материальных координат}~${q_{\hspace{.1ex}i}}$, \en{but}\ru{но} \en{the only one}\ru{лишь одна}\:--- $s$.
+\en{It may be}\ru{Это может быть} \en{the arc length parameter}\ru{параметр длины дуги} \en{in the initial configuration}\ru{в~начальной конфигурации}.
+\en{The motion}\ru{Движение} \en{of a~particle}\ru{частицы} \en{over time}\ru{со~временем} \en{is described}\ru{описывается} \en{by the location vector}\ru{вектором положения}~${\locationvector(s,t)}$ \en{and}\ru{и} \en{the rotation tensor}\ru{тензором поворота}~${\rotationtensor(s,t)}$.
+\en{Linear}\ru{Линейная} \en{and}\ru{и}~\en{angular}\ru{угловая}~\eqrefwithchapdotpara{angularvelocityvector}{chapter:mathapparatus}{para:rotationtensor} \en{velocities}\ru{скорости} \en{of a~rod’s particle}\ru{частицы стержня} \en{are}\ru{суть}
 
 \nopagebreak\vspace{-0.2em}\begin{gather}
 \mathdotabove{\locationvector} = \bm{v}
@@ -267,17 +532,17 @@ In the Timoshenko beam theory, there’s a~constant \en{transverse shear}\ru{п�
 \label{cosseratrod.angularvelocity}
 \end{gather}
 
-Деформация стержня как линии Cosserat определяется двумя векторами
+\en{Deformation of a~rod}\ru{Деформация стержня} \en{as}\ru{как} \en{a~Cosserat line}\ru{линии Cosserat} \en{is defined}\ru{определяется} \en{by two vectors}\ru{двумя векторами}
 
 \nopagebreak\vspace{-0.2em}\begin{gather}
-\bm{\Gamma} \hspace{-0.1ex} = \currentlocationvector{\hspace{.1ex}'} \hspace{-0.3ex} - \rotationtensor \hspace{-0.1ex} \dotp \hspace{.15ex} \initiallocationvector{\hspace{.1ex}'}
+\firstdeformationvectorcosseratline \hspace{-0.1ex} \equiv \currentlocationvector{\hspace{.1ex}'} \hspace{-0.3ex} - \rotationtensor \hspace{-0.1ex} \dotp \hspace{.15ex} \initiallocationvector{\hspace{.1ex}'}
 \hspace{-0.25ex} ,
 \label{cosseratrod.firstdeformationvector}
 \\[.1em]
 %
-\bm{\kappa} \hspace{-0.1ex} = \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \scalebox{.96}{$ \bigl( \rotationtensor{\hspace{.15ex}'} \hspace{-0.3ex} \dotp \rotationtensor^{\T} \hspace{.1ex} \bigr)_{\hspace{-0.3ex}\Xcompanion} $}
+\seconddeformationvectorcosseratline \hspace{-0.1ex} \equiv \hspace{-0.1ex} - \hspace{.25ex} \smalldisplaystyleonehalf \scalebox{.96}{$ \bigl( \rotationtensor{\hspace{.15ex}'} \hspace{-0.3ex} \dotp \rotationtensor^{\T} \hspace{.1ex} \bigr)_{\hspace{-0.3ex}\Xcompanion} $}
 \hspace{.25em} \Leftrightarrow \hspace{.3em}
-\rotationtensor{\hspace{.15ex}'} \hspace{-0.33ex} = \bm{\kappa} \times \hspace{-0.1ex} \rotationtensor
+\rotationtensor{\hspace{.15ex}'} \hspace{-0.33ex} = \seconddeformationvectorcosseratline \times \hspace{-0.1ex} \rotationtensor
 \hspace{.1ex} .
 \label{cosseratrod.seconddeformationvector}
 \end{gather}
@@ -291,82 +556,132 @@ In the Timoshenko beam theory, there’s a~constant \en{transverse shear}\ru{п�
 \vspace{-0.2em}
 \end{equation*}
 
-(*) Если ${\mathcircabove{\bm{e}}_3}$ направить по касательной ${\mathcircabove{\bm{e}}_3 \hspace{-0.2ex} \equiv \initiallocationvector{\hspace{.1ex}'}}$
-
-\nopagebreak\begin{equation*}
-\initiallocationvector{\hspace{.1ex}'} \hspace{-0.3ex}
-\equiv \scalebox{.8}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \hspace{.15ex} \initiallocationvector}}{\partial s} $}
-\equiv \initiallocationvector_\differentialindex{s} \hspace{-0.2ex}
-\equiv \mathcircabove{\bm{e}}_3
+\begin{equation*}
+\| \bm{e}_{3} \| = \| \mathcircabove{\bm{e}}_{3} \| = 1 = \constant
 \end{equation*}
 
-...
+\noindent
+\eqref{cosseratrod.firstdeformationvector} \en{and}\ru{и}~\eqref{cosseratrod.seconddeformationvector} \en{are really}\ru{реально} \en{the deformation vectors}\ru{векторы деформации}, \en{it follows}\ru{это следует} \en{from their equality}\ru{из равенства их} \en{to zero}\ru{нулю} \en{on displacements}\ru{на перемещениях} \en{of~a~body}\ru{тела} \en{as a~rigid whole}\ru{как жёсткого целого} \textcolor{magenta}{(.... add some equation(s) here describing displacements as a rigid whole .....)}.
 
-То, что \eqref{cosseratrod.firstdeformationvector} \en{and}\ru{и}~\eqref{cosseratrod.seconddeformationvector} действительно векторы деформации, следует из равенства их нулю на перемещениях тела как жёсткого целого.
+\en{Next}\ru{Дальше} \en{we will clarify}\ru{мы проясним} \en{the idea}\ru{идею} \en{of the first deformation vector}\ru{первого вектора деформации}~$\firstdeformationvectorcosseratline$.
+\en{Without loss of universality}\ru{Без потери универсальности}, \en{the parameter}\ru{параметр}~$s$ \en{is}\ru{есть} \en{the initial arc length}\ru{начальная длина дуги} \en{and}\ru{и} \en{the initial basis vector}\ru{начальный базисный вектор}~${\mathcircabove{\bm{e}}_{3}}$ \en{is directed}\ru{направлен} \en{along the tangent}\ru{вдоль касательной} \en{in the initial configuration}\ru{в~начальной конфигурации}: ${ \mathcircabove{\bm{e}}_{3} = \initiallocationvector{\hspace{.1ex}'} }$.
+\en{Then}\ru{Тогда}
 
-...
+\nopagebreak\vspace{-0.3em}\begin{multline}
+\label{cosseratrod.firstdeformationvectorexplained}
+%
+\firstdeformationvectorcosseratline \hspace{-0.1ex} \equiv \currentlocationvector{\hspace{.1ex}'} \hspace{-0.3ex} - \rotationtensor \hspace{-0.1ex} \dotp \hspace{.15ex} \initiallocationvector{\hspace{.1ex}'} \hspace{-0.4ex}
+,
+\hspace{.5em}
+\initiallocationvector{\hspace{.1ex}'} \hspace{-0.2ex} = \mathcircabove{\bm{e}}_{3}
+\hspace{.2ex} ,
+\hspace{.5em}
+\rotationtensor \hspace{-0.1ex} \dotp \hspace{.15ex} \initiallocationvector{\hspace{.1ex}'} \hspace{-0.2ex}
+= \rotationtensor \hspace{-0.1ex} \dotp \hspace{.15ex} \mathcircabove{\bm{e}}_{3} \hspace{-0.2ex}
+= \bm{e}_{3}
+%
+%%\hspace{.4em} \Rightarrow
+\\[-0.25em]
+\Rightarrow \hspace{.4em}
+%
+\firstdeformationvectorcosseratline \hspace{-0.1ex} = \currentlocationvector{\hspace{.1ex}'} \hspace{-0.3ex} - \bm{e}_{3}
+\hspace{.2ex} ,
+\end{multline}
 
-\en{The~Cosserat model doesn’t have a~section as a~plane figure.}\ru{В~модели Cosserat нет сечения как плоской фигуры.}
+\nopagebreak\vspace{-0.5em}\begin{multline*}
+\currentlocationvector{\hspace{.1ex}'} \hspace{-0.3ex} = \firstdeformationvectorcosseratline \hspace{-0.1ex} + \bm{e}_{3}
+\hspace{.2ex} ,
+\hspace{.5em}
+\| \currentlocationvector{\hspace{.1ex}'} \|^{2} \hspace{-0.3ex}
+= \currentlocationvector{\hspace{.1ex}'} \hspace{-0.4ex} \dotp \hspace{.1ex} \currentlocationvector{\hspace{.1ex}'} \hspace{-0.4ex}
+= \bigl( \firstdeformationvectorcosseratline \hspace{-0.1ex} + \bm{e}_{3} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.2ex} \bigl( \firstdeformationvectorcosseratline \hspace{-0.1ex} + \bm{e}_{3} \bigr)
+\\
+%
+= \firstdeformationvectorcosseratline \hspace{-0.2ex} \dotp \firstdeformationvectorcosseratline + 2 \hspace{.2ex} \firstdeformationvectorcosseratline \dotp \bm{e}_{3} \hspace{-0.2ex} + \bm{e}_{3} \hspace{-0.2ex} \dotp \bm{e}_{3}
+\hspace{.2ex} ,
+\end{multline*}
 
-...
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\| \currentlocationvector{\hspace{.1ex}'} \|
+= \displaystyle\sqrt{ \| \firstdeformationvectorcosseratline \|^{2} \hspace{-0.2ex} + 2 \hspace{.2ex} \firstdeformationvectorcosseratlinecomponents{3} \hspace{-0.2ex} + 1 \hspace{.2ex} }
+\hspace{.1ex} ,
+\end{equation*}
 
+\nopagebreak\begin{equation}
+\label{cosseratrod.firstdeformationvectordescribesextension}
+%
+\| \currentlocationvector{\hspace{.1ex}'} \| - 1
+= \displaystyle\sqrt{ \| \firstdeformationvectorcosseratline \|^{2} \hspace{-0.2ex} + 2 \hspace{.2ex} \firstdeformationvectorcosseratlinecomponents{3} \hspace{-0.1ex} + 1 \hspace{.2ex} } - 1
+= \hspace{.1ex} \firstdeformationvectorcosseratlinecomponents{3} \hspace{-0.1ex} + \infty^{\hspace{-0.3ex}\expminusone} \hspace{-0.2ex} \bigl( \| \firstdeformationvectorcosseratline \|^{2} \bigr)
+\hspace{.2ex} .
+\end{equation}
 
-\end{otherlanguage}
+\noindent
+\en{Equality}\ru{Равенство}~\eqref{cosseratrod.firstdeformationvectordescribesextension} \en{describes}\ru{описывает} \en{a~relative elongation}\ru{относительное удлинение}.
+\en{Roughly speaking}\ru{Грубо говоря}, \en{component}\ru{компоненту}~${\firstdeformationvectorcosseratlinecomponents{3} \hspace{-0.2ex} \equiv \firstdeformationvectorcosseratline \dotp \bm{e}_{3} \hspace{-0.2ex}}$ \en{can be considered an~elongation}\ru{можно считать удлинением}, \en{and}\ru{а}~\en{components}\ru{компоненты}~${\firstdeformationvectorcosseratlinecomponents{1} \hspace{-0.2ex} \equiv \firstdeformationvectorcosseratline \dotp \bm{e}_{1}}$, ${\firstdeformationvectorcosseratlinecomponents{2} \hspace{-0.2ex} \equiv \firstdeformationvectorcosseratline \dotp \bm{e}_{2} \hspace{-0.2ex}}$ \en{present}\ru{представляют} \en{a~transverse shear}\ru{поперечный сдвиг}.
+\en{It’s more accurate}\ru{Более точно} \en{to rely}\ru{полагаться} \en{on formulas}\ru{на формулы}~\eqref{cosseratrod.firstdeformationvectorexplained} \en{and}\ru{и}~\eqref{cosseratrod.firstdeformationvectordescribesextension}.
+
+......
+
+\en{The~Cosserat-like model of~a~rod}\ru{В~модели стержня типа Cosserat} \en{doesn’t have a~section as a~plane figure}\ru{нет сечения как плоской фигуры}.
+
+....
+
+%%\begin{otherlanguage}{russian}
+%%\end{otherlanguage}
 
 \en{\section{Balance of forces and moments}}
 
 \ru{\section{Баланс сил и моментов}}
 
-\begin{otherlanguage}{russian}
+\label{para:rods.forcesandmomentsbalance}
 
-Возможные нагрузки для стержня как линии Cosserat\:--- \hbox{силы} и~моменты: на~бесконечно-малый элемент~$ds$ действуют \en{external force}\ru{внешняя сила}~${\bm{q}ds}$ \en{and}\ru{и}~\en{external moment}\ru{внешний момент}~${\bm{m}ds}$.
-Внутренними взаимо\-действиями будут сила~${\internalforce(s)}$ и~момент~${\internalmoment(s)}$\:--- это воздействие от~частицы с~координатой~${s\!+\!0}$ к~частице с~${s\!-\!0}$.
-\en{The~action--re\-action principle}\ru{Принцип действия--про\-ти\-во\-действия} даёт, что перемена направления~$s$ меняет знаки ${\internalforce}$ \en{and}\ru{и}~${\internalmoment}$.
+\en{Possible loads}\ru{Возможные нагрузки}\ru{,} \en{acting}\ru{действующие} \en{on a~rod}\ru{на стержень} \en{as}\ru{как} \en{the~}\ru{линию }Cosserat\en{ line}\en{ are}\ru{\:---} \en{forces}\ru{\hbox{силы}} \en{and}\ru{и}~\en{moments}\ru{моменты}: \en{on~infinitesimal element}\ru{на~бесконечно-малый элемент}~$ds$ \en{of a~rod}\ru{стержня} \en{act}\ru{действуют} \en{external force}\ru{внешняя сила}~${\bm{q}ds}$ \en{and}\ru{и}~\en{external moment}\ru{внешний момент}~${\bm{m}ds}$.
+\en{The internal interactions}\ru{Внутренними взаимо\-действиями} \en{will be}\ru{будут} \en{force}\ru{сила}~${\internalforce(s)}$ \en{and }\ru{и~}\en{moment}\ru{момент}~${\internalmoment(s)}$\:--- \en{this is the action}\ru{это действие} \en{of the particle}\ru{частицы} \en{with coordinate}\ru{с~координатой}~${s\!+\!0}$ \en{on the particle}\ru{на частицу} \en{with}\ru{с}~${s\!-\!0}$.
+\en{The~action--re\-action principle}\ru{Принцип действия--про\-ти\-во\-действия} \en{gives that}\ru{даёт, что} 
+\en{a~reverse}\ru{реверс} (\en{a~change of direction}\ru{перемена направления}) \en{of~}\en{coordinate}\ru{координаты}~$s$ \en{changes signs}\ru{меняет знаки} \en{of~}${\internalforce}$ \en{and}\ru{и}~${\internalmoment}$.
 
 ...
 
-
-
-\end{otherlanguage}
+%%\begin{otherlanguage}{russian}
+%%\end{otherlanguage}
 
 \en{\section{Principle of virtual work and consequences}}
 
 \ru{\section{Принцип виртуальной работы и следствия}}
 
+\label{para:rods.principleofvirtualwork}
+
 \noindent
-\en{For a~piece of~rod}\ru{Для куск\'{а} стержня} ${s_0 \hspace{.2em} \scalebox{0.9}{$\leq$} \hspace{.18em} s \hspace{.22em} \scalebox{0.9}{$\leq$} \hspace{.2em} s_1}$ \en{formulation of the~principle is as~follows}\ru{формулировка принципа таков\'{а}}
+\en{For a~piece of~rod}\ru{Для куск\'{а} стержня} ${s_0 \hspace{.2em} \scalebox{.9}{$\leq$} \hspace{.18em} s \hspace{.22em} \scalebox{.9}{$\leq$} \hspace{.2em} s_1}$ \en{formulation of the~principle is as~follows}\ru{формулировка принципа таков\'{а}}
 
-\begin{otherlanguage}{russian}
-
-...
-
+......
 
 \en{Conventionally}\ru{Условно}
 $\bm{a}$ \en{is}\ru{есть} \en{the~tensor of~stiffness for bending and~twisting}\ru{тензор жёсткости на~изгиб и~кручение},
 $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear}\ru{тензор жёсткости на~растяжение и~сдвиг},
 \en{and}\ru{а}~$\bm{c}$\en{ is}\ru{\:---} \en{the~tensor of~crosslinks}\ru{тензор перекрёстных связей}.
 
-\en{Stiffness tensors}\ru{Тензоры жёсткости} \en{rotate together with particle}\ru{поворачиваются вместе с~частицей}:
+\en{Stiffness tensors}\ru{Тензоры жёсткости} \en{rotate}\ru{поворачиваются} \en{along}\ru{вместе} \en{with a~particle}\ru{с~частицей}:
 
 ...
 
-
-
-\end{otherlanguage}
+%%\begin{otherlanguage}{russian}
+%%\end{otherlanguage}
 
 \en{\section{Classical Kirchhoff’s model}}
 
 \ru{\section{Классическая модель Kirchhoff’а}}
 
-% Kirchhoff’s rod theory
+\label{para:rods.modelofkirchhoff}
 
-\begin{otherlanguage}{russian}
+\en{It is also called}\ru{Её ещё называют} \en{the }\emph{\en{Kirchhoff’s rod theory}\ru{теорией стержней Kirchhoff’а}}.
 
-До~сих~пор функции ${\locationvector(s,t)}$ и~${\rotationtensor(s,t)}$ были независимы.
-В~классической теории Kirchhoff’а существует внутренняя связь
+\en{Until now}\ru{До~сих~пор} \en{functions}\ru{функции} ${\locationvector(s,t)}$ \en{and}\ru{и}~${\rotationtensor(s,t)}$ \en{were independent}\ru{были независимы}.
+\en{The }\ru{Классическая теория }Kirchhoff\en{’s}\ru{’а}\en{ classical theory} \en{postulates}\ru{постулирует} \en{the internal constraint}\ru{внутреннюю связь}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{kirchhoffmodelinternalconstraint}
-\bm{\Gamma} \hspace{-0.1ex} = \bm{0}
+\firstdeformationvectorcosseratline \hspace{-0.1ex} = \bm{0}
 \hspace{.4em} \Leftrightarrow \hspace{.4em}
 \currentlocationvector_\differentialindex{s} \hspace{-0.2ex} = \rotationtensor \hspace{-0.1ex} \dotp \hspace{.1ex} \initiallocationvector_\differentialindex{s} \hspace{-0.2ex}
 \hspace{.5em} \text{\en{or}\ru{или}} \hspace{.5em}
@@ -375,10 +690,13 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 \end{equation}
 
 \vspace{-0.2em}\noindent
-Вспоминая смысл вектора~$\bm{\Gamma}$ \textcolor{magenta}{(какой? где??)}, делаем выводы:
-(1)~стержень нерастяжим, (2)~поперечных сдвигов нет.
-Если в~начальном состоянии единичный вектор~${\mathcircabove{\bm{e}}_3}$ был направлен по~касательной к~оси, то он останется на~ней и~после деформирования.
-Частицы стержня поворачиваются лишь вместе с~касательной и~вокруг неё.
+\en{Having}\ru{Имея} \en{the idea of vector}\ru{идею вектора}~$\firstdeformationvectorcosseratline$ \eqref{cosseratrod.firstdeformationvectorexplained}, \en{here we can tell that}\ru{здесь мы можем сказать, что}:
+(1)~\en{a~rod is non-extensible}\ru{стержень нерастяжим}, (2)~\en{there are no transverse shears}\ru{поперечных сдвигов нет}.
+
+\en{If}\ru{Если} \en{basis vector}\ru{базисный вектор}~${\mathcircabove{\bm{e}}_3}$ \en{was directed}\ru{был направлен} \en{along}\ru{вдоль} \en{the tangent to the axis}\ru{касательной к~оси} \en{in the initial configuration}\ru{в~начальной конфигурации}, \en{then}\ru{то} \en{it}\ru{он} \en{will remain}\ru{будет оставаться} \en{on the tangent}\ru{на~касательной} \en{also}\ru{также} \en{after deforming}\ru{после деформирования}.
+\en{The rod particles}\ru{Частицы стержня} \en{rotate}\ru{вращаются} \en{only together}\ru{лишь вместе} \en{with }\ru{с~} \en{the tangent to the axis}\ru{касательной к~оси} \en{and around it}\ru{и~вокруг неё}.
+
+\begin{otherlanguage}{russian}
 
 Уравнения баланса сил и~моментов (импульса и~момента импульса) не~меняются от введения связи~\eqref{kirchhoffmodelinternalconstraint}.
 Но локальное вариационное соотношение (...) становится короче:
@@ -387,9 +705,11 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \end{otherlanguage}
 
-\en{\section{Euler’s problem}}
+\en{\section{Euler’s problem about stability of rods}}
 
-\ru{\section{Проблема Эйлера}}
+\ru{\section{Проблема Euler’а об устойчивости стержней}}
+
+\label{para:rods.eulerstabilityproblem}
 
 \begin{otherlanguage}{russian}
 
@@ -398,63 +718,72 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 ...
 
-
-
 \end{otherlanguage}
 
 \en{\section{Variational equations}} % Equations in variations
 
 \ru{\section{Вариационные уравнения}} % Уравнения в вариациях
 
-\begin{otherlanguage}{russian}
+\label{para:rods.equationsinvariations}
 
-В~нелинейной механике упругих тел полезны уравнения в~вариациях, описывающие малое изменение актуальной конфигурации.
-Как и в~\chapdotpararef{chapter:nonlinearcontinuum}{para:variationofconfiguration}, вариации величин
+\en{In the nonlinear mechanics of elastic media}\ru{В~нелинейной механике упругих сред} \ru{полезны }\en{variational equations}\ru{вариационные уравнения}\en{ are useful}, \en{which describe}\ru{которые описывают} \en{a~small change}\ru{малое изменение} \en{in the current configuration}\ru{текущей конфигурации}~(\chapdotpararef{chapter:nonlinearcontinuum}{para:variationofconfiguration}).
+
+\en{Variating}\ru{Варьируя} \en{equations}\ru{уравнения} \en{of the complete system}\ru{полной системы} \en{of the }\ru{модели }Cosserat\en{ model}, \en{we get}\ru{мы получаем}
+
+\nopagebreak\vspace{-0.2em}\begin{gather*}
+\variation{\hspace{.1ex}\internalforce}{\hspace{.25ex}'} \hspace{-0.3ex} + \variation{\bm{q}}
+= \hspace{-0.1ex} \rho \hspace{.15ex} \bigl( \fieldofdisplacements + \varbivalent{\hspace{-0.2ex}\cauchystress} \hspace{-0.2ex} \times \hspace{-0.3ex} \infinitesimaldeformation \bigr)^{ \hspace{-0.1ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); \hspace{.25ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); }
+\hspace{-0.2ex} ,
+\\
+%
+\variation{\hspace{.1ex}\internalmoment}{\hspace{.25ex}'} \hspace{-0.3ex} + \fieldofdisplacements{'} \hspace{-0.3ex} \times \hspace{-0.2ex} \internalforce + \locationvector{\hspace{.1ex}'} \hspace{-0.3ex} \times \hspace{-0.2ex} \variation{\hspace{.1ex}\internalforce} + \variation{\internaldistributedmoment}
+= \ldots
+\end{gather*}
 
 ...
 
-
-
-\end{otherlanguage}
+%%\begin{otherlanguage}{russian}
+%%\end{otherlanguage}
 
 \en{\section{Non-shear model with (ex)tension}}
 
 \ru{\section{Модель без сдвига с растяжением}}
 
-\en{Kirchhoff’s model}\ru{Модель Kirchhoff’а} \en{with internal constraint}\ru{с~внутренней связью}~${\bm{\Gamma} \hspace{-0.25ex}=\hspace{-0.2ex} \bm{0}}$~\eqref{kirchhoffmodelinternalconstraint} \en{doesn’t describe the~simplest case of extension/compression}\ru{не~описывает простейшего случая растяжения/сжатия} \en{for a~straight rod}\ru{для прямого стержня}.
-\en{This nuisance disappears with \inquotes{softening} of the~constraint}\ru{Эта неприятность исчезает со~\inquotes{смягчением} связи}:
-\en{adding the~possibility of (ex)tension}\ru{добавлением возможности растяжения} \en{and}\ru{и} \en{inhibiting only transverse shear}\ru{подавлением лишь поперечного сдвига}, \en{that~is}\ru{то~есть}
+\label{para:rods.nonshearmodelwithextension}
+
+\en{Kirchhoff’s model}\ru{Модель Kirchhoff’а} \en{with internal constraint}\ru{с~внутренней связью}~${\firstdeformationvectorcosseratline \hspace{-0.25ex} = \hspace{-0.2ex} \bm{0}}$~\eqref{kirchhoffmodelinternalconstraint} \en{doesn’t describe}\ru{не~описывает} \en{the~simplest case}\ru{простейший случай} \en{of extension/compression}\ru{растяжения/сжатия} \en{of a~straight rod}\ru{прямого стержня}.
+\en{This nuisance}\ru{Эта неприятность} \en{disappears}\ru{исчезает} \en{with}\ru{со}~\inquotes{\en{softening}\ru{смягчением}} \en{of the~constraint}\ru{связи}, \en{for example}\ru{например} \en{adding}\ru{добавляя} \en{the~possibility of (ex)tension}\ru{возможность растяжения} \en{and}\ru{и} \en{inhibiting only the transverse shear}\ru{подавляя лишь поперечный сдвиг}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{kirchhoffinternalconstraintwithextension}
-\bm{\Gamma} \hspace{-0.1ex} = \Gamma \bm{e}_3 \hspace{-0.2ex}
+\firstdeformationvectorcosseratline \hspace{-0.1ex} = \Gamma \bm{e}_3 \hspace{-0.2ex}
 \hspace{.4em} \Leftrightarrow \hspace{.4em}
 \Gamma_{\hspace{-0.2ex}\alpha} \hspace{-0.2ex} = 0
 \end{equation}
 
-\begin{otherlanguage}{russian}
-
 ...
 
-
-
-\end{otherlanguage}
+%%\begin{otherlanguage}{russian}
+%%\end{otherlanguage}
 
 \en{\section{Mechanics of flexible thread}}
 
 \ru{\section{Механика гибкой нити}}
 
+\label{para:rods.flexiblethreadmechanics}
+
+\en{A~thread}\ru{Нить}\en{ is}\ru{\:---} \ru{это} \en{a~momentless rod}\ru{безмоментный стержень}.
+
 \begin{otherlanguage}{russian}
 
-\en{A~flexible thread~(chain)}\ru{Гибкая нить~(цепь)} \en{is simpler than a~rod}\ru{проще стержня}:
-\en{its particles}\ru{её частицы} \en{are}\ru{суть} \inquotes{\ru{простые}\en{simple}} \en{material points}\ru{материальные точки} \en{with only translational degrees of~freedom}\ru{с~лишь трансляционными степенями свободы}.
-Поэтому среди нагрузок нет моментов, только \inquotes{линейные} силы\:--- внешние распределённые~$\bm{q}$ и~внутренние сосредоточенные~$\bm{Q}$.
-Движение нити полностью определяется одним вектором-радиусом~${\locationvector(s,t)}$, а~инерционные свойства\:--- линейной плотностью~${\rho\hspace{.12ex}(s)}$.
+\en{A~flexible thread~(chain)}\ru{Гибкая нить~(цепь)} \en{is simpler than a~rod}\ru{проще стержня}, \en{because}\ru{потому что} \en{its particles}\ru{её частицы} \en{are}\ru{суть} \inquotes{\ru{простые}\en{simple}} \en{material points}\ru{материальные точки} \en{with only translational degrees of~freedom}\ru{с~лишь трансляционными степенями свободы}.
+\en{Therefore}\ru{Поэтому} среди нагрузок нет моментов, только \inquotes{линейные} силы\:--- внешние распределённые~$\bm{q}$ и~внутренние сосредоточенные~$\bm{Q}$.
+Движение нити полностью определяется одним вектором-радиусом~${\locationvector(s,t)}$, а~инерционные свойства\:--- линейной плотностью~${\rho\hspace{.1ex}(s)}$.
 % linear density
 
 Вот принцип виртуальной работы для куск\'{а} нити ${s_0 \leq s \leq s_1}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
-\scalebox{0.95}{$
+\scalebox{.95}{$
 \displaystyle \integral\displaylimits_{\raisemath{.05em}{\mathclap{s_0}}}^{\raisemath{.15em}{\mathclap{s_1}}}
 $}
 \hspace{-0.25ex} \Bigl( \hspace{-0.1ex}
@@ -471,7 +800,6 @@ $}
 
 ...
 
-
 Механика нити детально описана в~книге~\cite{merkin-threadmechanics}.
 
 \end{otherlanguage}
@@ -479,6 +807,8 @@ $}
 \en{\section{Linear theory}}
 
 \ru{\section{Линейная теория}}
+
+\label{para:rods-lineartheory}
 
 \begin{otherlanguage}{russian}
 
@@ -494,6 +824,8 @@ $}
 \en{\section{Case of small thickness}}
 
 \ru{\section{Случай малой толщины}}
+
+\label{para:rods.smallthickness}
 
 \begin{otherlanguage}{russian}
 
@@ -518,6 +850,8 @@ $}
 
 \ru{\section{Задача Сэйнт\hbox{-}Венана}}
 
+\label{para:rods.problemofsaint-venant}
+
 \begin{otherlanguage}{russian}
 
 Трудно переоценить ту роль, которую играет в~механике стержней классическое решение Saint\hbox{-\hspace{-0.2ex}}Venant\ru{’а}.
@@ -534,6 +868,8 @@ $}
 \en{\section{Finding stiffness by energy}}
 
 \ru{\section{Нахождение жёсткости по энергии}}
+
+\label{para:rods.stiffnessbyenergy}
 
 \begin{otherlanguage}{russian}
 
@@ -569,8 +905,6 @@ $}
 \end{equation*}
 
 ...
-
-
 
 \end{otherlanguage}
 
@@ -622,42 +956,122 @@ $}
 
 ...
 
+\end{otherlanguage}
+
 ...
 
+\en{For variational construction}\ru{Для вариационного построения} \en{of one-dimensional models}\ru{одномерных моделей} \en{it’s convenient to use}\ru{удобно использовать} \ru{принцип }\en{the }Reissner\ru{’а}\hbox{--}Hellinger\ru{’а}\en{ principle}~(\chapdotpararef{chapter:linearclassicalelasticity}{para:mixedvariationalprinciples}) \en{with independent approximation of stresses}\ru{с~независимой аппроксимацией напряжений}~\cite{eliseev-models}.
+\en{In this case}\ru{В этом случае}\en{,} \ru{нужна }\en{some consistency between}\ru{некоторая согласованность между}~$\bm{u}$ \en{and}\ru{и}~$\cauchystress$\en{ is needed}.
 
-
-Для вариационного построения одномерных моделей удобен принцип Рейсснера\hbox{--}Хеллингера~(\chapdotpararef{chapter:linearclassicalelasticity}{para:mixedvariationalprinciples}) с~независимой аппроксимацией напряжений~\cite{eliseev-models}.
-Но тогда необходима некая согласованность между $\bm{u}$ и~$\cauchystress$.
-
-Множеству достоинств вариационного метода противостоит один, но очень большой недостаток.
-Вводя аппроксимации по~сечению, мы навязываем реальности свои упрощённые представления.
-Вариационный метод более подходит для прикладных расчётов.
-
-\end{otherlanguage}
+\en{Many advantages}\ru{Множеству достоинств} \en{of the variational method}\ru{вариационного метода} \en{are opposed}\ru{противостоит} \en{by the one}\ru{один}, \en{but}\ru{но} \en{significant}\ru{значительный} \en{disadvantage}\ru{недостаток}.
+\en{Introducing}\ru{Вводя} \en{approximations within cross-sections}\ru{приближения в~сечениях}, \en{we impose}\ru{мы навязываем} \en{our}\ru{наши} \en{unreal}\ru{нереальные} \en{simplifications}\ru{упрощения} \en{on reality}\ru{реальности}.
+\en{The variational method}\ru{Вариационный метод} \en{is more suitable}\ru{более подходит} \en{for applied calculations}\ru{для прикладных расчётов}.
 
 \en{\section{Asymptotic splitting of three-dimensional problem}}
 
 \ru{\section{Асимптотическое расщепление трёхмерной проблемы}}
 
-\begin{otherlanguage}{russian}
+\label{para:rods.asymptoticsplittingofthreedimensional}
 
-В~изложении механики стержней асимптотическое расщепление можно считать фундаментальным.
-Одномерные модели составляют лишь часть картины; другая часть\:--- это двумерные задачи в~сечении, а~вместе они являются тем решением трёхмерной задачи, которое получается для м\'{а}лой толщины.
+\en{Asymptotic splitting}\ru{Асимптотическое расщепление} \en{can be considered}\ru{можно считать} \en{fundamental}\ru{фундаментальным} \en{for describing}\ru{для описания} \en{the mechanics of rods}\ru{механики стержней}.
+\en{One-dimensional models}\ru{Одномерные модели} \en{paint only the part of a~picture}\ru{рисуют лишь часть картины}, \en{two-dimensional problems}\ru{двумерные проблемы} \en{in cross-sections}\ru{в~поперечных сечениях} \en{paint the other part}\ru{рисуют другую часть}, \en{and together}\ru{а~вместе} \en{they present}\ru{они представляют} \en{the solution}\ru{решение} \en{of a~three-dimensional problem}\ru{трёхмерной проблемы} \en{for}\ru{для} \en{a~small thickness}\ru{м\'{а}лой толщины}.
 
-Малый параметр~$\smallparameter$ в~трёхмерную задачу проще всего ввести через представление вектора\hbox{-}радиуса~(рисунок ?? 22 ??, \pararef{para:overviewofrods}):
+\en{How to introduce a~small parameter}\ru{Как ввести малый параметр}~${\hspace{-0.2ex}\smallparameter}$ \en{into a~three-dimensional problem}\ru{в~трёхмерную проблему}?
+\en{The easiest way to do it}\ru{Проще всего сделать это} \en{is through}\ru{через} \en{representation}\ru{представление} \en{of the location vector}\ru{вектора положения}~(\pararef{para:overviewofrods}):
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\RepresentedLocationVector \hspace{.1ex} (x_{\alpha}, s) \hspace{-0.2ex} = \smallparameter^{-1} \hspace{.2ex} \locationvector(s) \hspace{-0.1ex} + \hspace{.1ex} \bm{x}
+\hspace{.1ex} ,
+\hspace{.5em}
+\bm{x} \equiv x_{\alpha} \bm{e}_{\alpha}(s)
+\hspace{.1ex} ,
+\hspace{.5em}
+\alpha \hspace{-0.1ex} = \hspace{-0.1ex} 1, 2
+\hspace{.1ex} .
+\end{equation*}
+
+\en{For an~orthonormal basis}\ru{Для ортонормального базиса}, \en{upper and lower indices}\ru{верхние и~нижние индексы} \en{do not differ}\ru{не~различаются}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+q_{i} \hspace{-0.2ex} = q^{i} \hspace{-0.1ex}
+, \hspace{.5ex}
+\RepresentedLocationVector^{\hspace{.1ex}i} \hspace{-0.2ex} = \hspace{-0.2ex} \RepresentedLocationVector_{\hspace{.1ex}i} \hspace{-0.2ex} = \hspace{-0.2ex} \RepresentedLocationVector_{\hspace{.1ex}\differentialindex{i}} \hspace{-0.2ex}
+= \scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \partial \RepresentedLocationVector $}}{\partial q^{\hspace{.1ex}i}} $}
+\hspace{.2ex} .
+\end{equation*}
+
+\vspace{-0.2em}
+\en{Three coordinates}\ru{Три координаты}\en{ are}\ru{\:---}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+q^{1} \hspace{-0.3ex} = x_{1}
+\hspace{.1ex} , \hspace{.5em}
+q^{2} \hspace{-0.3ex} = x_{2}
+\hspace{.1ex} , \hspace{.5em}
+q^{3} \hspace{-0.3ex} = s
+\hspace{.1ex} .
+\end{equation*}
+
+\vspace{-0.2em}
+\en{The basis vectors}\ru{Векторы базиса} \en{are}\ru{суть}
+
+\nopagebreak\vspace{-0.4em}\begin{equation*}
+\bm{e}_{1}
+\hspace{.1ex} , \hspace{.4em}
+\bm{e}_{2}
+\hspace{.1ex} , \hspace{.4em}
+\bm{t} \equiv \bm{e}_{3}
+\hspace{.1ex} .
+\end{equation*}
+
+\en{Representation}\ru{Представление} \ru{оператора }\en{of the }Hamilton\ru{’а}\en{ operator}~${\hspace{-0.3ex}\boldnabla}$
+
+\nopagebreak\begin{gather*}
+\boldnabla \hspace{-0.1ex}
+= \hspace{-0.1ex} \RepresentedLocationVector^{i} \scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \partial $}}{\partial q^{\hspace{.1ex}i}} $}
+= \hspace{-0.2ex} \perpendicularboldnabla \hspace{-0.2ex} + \hspace{.1ex} \RepresentedVolume^{-1} \hspace{.2ex} \bm{t} \hspace{.2ex} \bigl( \partial_s \hspace{-0.2ex} - \psi_{t} \hspace{.1ex} \mathrm{D} \bigr) \hspace{-0.1ex}
+, \hspace{.5em}
+\perpendicularboldnabla \hspace{-0.3ex} \equiv \bm{e}_{\alpha} \hspace{.2ex} \scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \partial $}}{\partial x_{\alpha}} $}
+\hspace{.1ex} ,
+\\
+%
+\RepresentedVolume \equiv \RepresentedLocationVector_{\hspace{.15ex}\differentialindex{1}} \hspace{-0.4ex} \times \hspace{-0.2ex} \RepresentedLocationVector_{\hspace{.15ex}\differentialindex{2}} \dotp \RepresentedLocationVector_{\hspace{.15ex}\differentialindex{3}} \hspace{-0.2ex}
+= \smallparameter^{-1} \hspace{-0.1ex} + \hspace{.2ex} \bm{t} \hspace{.2ex} \dotp \hspace{.2ex} \perpendicularrodfeatures \hspace{-0.3ex} \times \bm{x}
+\hspace{.1ex} ,
+\hspace{.5em}
+\mathrm{D} \hspace{-0.1ex} \equiv \bm{t} \hspace{.2ex} \dotp \hspace{.2ex} \bm{x} \times \hspace{-0.3ex} \perpendicularboldnabla
+\hspace{.1ex} ,
+\\[.2em]
+%
+\perpendicularrodfeatures \hspace{-0.3ex} + \psi_{t} \hspace{.2ex} \bm{t} = \rodfeaturesvector
+%%\hspace{.1ex} .
+\end{gather*}
+
+\vspace{-0.2em}\noindent
+(\en{the meaning}\ru{смысл} \en{of~vector}\ru{вектора}~${\rodfeaturesvector}$ \en{is the same as}\ru{тот~же как} \en{in}\ru{и~в}~\pararef{para:overviewofrods}).
+
+\en{The }\ru{Тензор напряжения }Cauchy\en{ stress tensor}
+
+\nopagebreak\vspace{-0.4em}\begin{equation*}
+\cauchystress = \perpendicularstress \hspace{-0.2ex} + \mathsigma_{t} \hspace{.2ex} \bm{t} \bm{t} + 2 \hspace{.2ex} \bm{t} \hspace{.2ex} {\parallelstressvector}^{\hspace{-0.2ex}\mathsf{S}}
+\hspace{-0.1ex} , \hspace{.5em}
+\perpendicularstress \hspace{-0.2ex} \equiv \mathtau_{\alpha \beta} \hspace{.2ex} \bm{e}_{\alpha} \bm{e}_{\beta}
+\hspace{.1ex} , \hspace{.5em}
+\parallelstressvector \hspace{-0.1ex} \equiv \cauchystresscomponents_{3\alpha} \hspace{.2ex} \bm{e}_{\alpha}
+\hspace{.1ex} .
+\end{equation*}
 
 ...
 
-
-
-\end{otherlanguage}
+%%\begin{otherlanguage}{russian}
+%%\end{otherlanguage}
 
 \en{\section{Thermal deformation and stress}}
 
 \ru{\section{Температурные деформация и напряжение}}
 
 \en{The~direct approach}\ru{Прямой подход}, \en{so efficient}\ru{столь эффективный} \en{for making}\ru{для создания} \en{one-dimensional}\ru{одномерных моделей} Cosserat \en{and}\ru{и}~Kirchhoff\ru{’а}\en{ models}, \en{isn’t applicable }\en{for problems}\ru{для~проблем} \en{of~thermoelasticity}\ru{термоупругости}\ru{ непримен\'{и}м}.
-\en{Then}\ru{Тогда} \en{the~transition}\ru{переход} \en{from the three-dimensional model to the one-dimensional}\ru{от трёхмерной модели к~одномерной} \en{can be realized}\ru{может быть реализован} \en{either by variational or asymptotic way}\ru{или~вариационным путём, или~асимптотическим}.
+\en{The~transition}\ru{Переход} \en{from the three-dimensional model to the one-dimensional}\ru{от трёхмерной модели к~одномерной} \en{can be realized}\ru{может быть реализован} \en{either by variational or asymptotic way}\ru{или~вариационным путём, или~асимптотическим}.
 
 \begin{otherlanguage}{russian}
 
@@ -670,8 +1084,6 @@ $}
 ...
 
 
-
-
 \end{otherlanguage}
 
 \section*{\small \wordforbibliography}
@@ -682,10 +1094,6 @@ $}
 \en{Unlike other topics}\ru{В~отличие от других тем} \en{of the~theory of~elasticity}\ru{теории упругости}, \en{rods}\ru{стержни} \en{are presented}\ru{представлены} \en{in books}\ru{в~книгах} \en{very modestly}\ru{очень скромно}.
 \ru{Стиль изложения}\en{Narration style of} \inquotes{\en{strength of~materials}\ru{сопротивления материалов}} \en{prevails}\ru{преобладает}, \en{more exact and perfect approaches}\ru{более точные и~совершенные подходы} \en{seem}\ru{кажутся} \en{impossible}\ru{невозможными} \en{or}\ru{или}~\en{unnecessary}\ru{ненужными} \en{to many authors}\ru{многим авторам}.
 
-\begin{otherlanguage}{russian}
-
-Но опубликовано много интересных статей, обзоры которых можно найти у~S.\:Antman’а~\cite{stuartantman-theoryofrods}, В.\,В.\;Елисеева~\cite{eliseev-models} и~А.\,А.\;Илюхина~\cite{ilyuhin-elasticrods}.
-
-\end{otherlanguage}
+\en{But}\ru{Но} \en{many interesting articles have been published}\ru{было опубликовано много интересных статей}, \en{their reviews}\ru{их обзоры} \en{are presented}\ru{представлены}, \en{for example}\ru{например}, \en{by}\ru{у}~S.\:Antman\ru{’а}~\cite{stuartantman-theoryofrods}, \foreignlanguage{russian}{В.\,В.\;Елисеев}\ru{а}~\cite{eliseev-models} \en{and}\ru{и}~\foreignlanguage{russian}{А.\,А.\;Илюхин}\ru{а}~\cite{ilyuhin-elasticrods}.
 
 \end{changemargin}

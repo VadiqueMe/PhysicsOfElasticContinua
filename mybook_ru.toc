@@ -1,578 +1,524 @@
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {1}Элементы тензорного исчисления}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Математический аппарат}{1}{chapter.1}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Вектор}{1}{section.1.1}%
-\contentsline {section}{\numberline {2}Тензор и его компоненты}{4}{section.1.2}%
-\contentsline {section}{\numberline {3}Действия с тензорами}{6}{section.1.3}%
+\contentsline {section}{\numberline {2}Тензор и его компоненты}{5}{section.1.2}%
+\contentsline {section}{\numberline {3}Действия с тензорами}{7}{section.1.3}%
+\contentsline {section}{\numberline {4}Полиадное представление (разложение)}{10}{section.1.4}%
+\contentsline {section}{\numberline {5}Матрицы, перестановки и определители}{11}{section.1.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Полиадное представление (разложение)}{9}{section.1.4}%
-\contentsline {section}{\numberline {5}Матрицы, перестановки и определители}{10}{section.1.5}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Векторное произведение и тензор Л\'{е}ви\hbox {-\hspace {-0.2ex}}Чив\'{и}ты}{13}{section.1.6}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Симметричные и антисимметричные тензоры}{18}{section.1.7}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Собственные векторы и собственные числа тензора}{21}{section.1.8}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {9}Тензор поворота}{23}{section.1.9}%
+\contentsline {section}{\numberline {6}Векторное произведение и тензор Л\'{е}ви\hbox {-\hspace {-0.2ex}}Чив\'{и}ты}{15}{section.1.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {10}Варьирование}{29}{section.1.10}%
+\contentsline {section}{\numberline {7}Симметричные и антисимметричные тензоры}{21}{section.1.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {11}Полярное разложение}{29}{section.1.11}%
-\contentsline {section}{\numberline {12}Тензоры в косоугольном базисе}{31}{section.1.12}%
+\contentsline {section}{\numberline {8}Собственные векторы и собственные числа тензора}{24}{section.1.8}%
+\contentsline {section}{\numberline {9}Тензор поворота}{26}{section.1.9}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {13}Тензорные функции}{37}{section.1.13}%
+\contentsline {section}{\numberline {10}Варьирование}{32}{section.1.10}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {14}Тензорные поля. Пространственное дифференцирование}{38}{section.1.14}%
+\contentsline {section}{\numberline {11}Полярное разложение}{33}{section.1.11}%
+\contentsline {section}{\numberline {12}Тензоры в косоугольном базисе}{34}{section.1.12}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {13}Тензорные функции}{40}{section.1.13}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {14}Тензорные поля. Пространственное дифференцирование}{41}{section.1.14}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {15}Интегральные теоремы}{43}{section.1.15}%
+\contentsline {section}{\numberline {15}Интегральные теоремы}{46}{section.1.15}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {16}Тензоры кривизны}{46}{section.1.16}%
+\contentsline {section}{\numberline {16}Тензоры кривизны}{49}{section.1.16}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {2}Основы классической общей механики}{50}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Основы классической общей механики}{53}{chapter.2}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Дискретная совокупность частиц}{50}{section.2.1}%
-\contentsline {section}{\numberline {2}Совершенно жёсткое недеформируемое твёрдое тело}{54}{section.2.2}%
-\contentsline {section}{\numberline {3}Принцип виртуальной работы}{59}{section.2.3}%
+\contentsline {section}{\numberline {1}Дискретная совокупность частиц}{53}{section.2.1}%
+\contentsline {section}{\numberline {2}Совершенно жёсткое недеформируемое твёрдое тело}{57}{section.2.2}%
+\contentsline {section}{\numberline {3}Принцип виртуальной работы}{62}{section.2.3}%
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Баланс импульса, момента импульса и~энергии}{62}{section.2.4}%
+\contentsline {section}{\numberline {4}Баланс импульса, момента импульса и~энергии}{65}{section.2.4}%
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Принцип Гамильтона и уравнения Лагранжа}{63}{section.2.5}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Статика}{65}{section.2.6}%
+\contentsline {section}{\numberline {5}Принцип Гамильтона и уравнения Лагранжа}{66}{section.2.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Механика относительного движения}{68}{section.2.7}%
+\contentsline {section}{\numberline {6}Статика}{68}{section.2.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Малые колебания (вибрации)}{69}{section.2.8}%
+\contentsline {section}{\numberline {7}Механика относительного движения}{71}{section.2.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {chapter}{\numberline {3}Нелинейно\hbox {-\hspace {-0.2ex}}упругая безмоментная среда}{71}{chapter.3}%
+\contentsline {section}{\numberline {8}Малые колебания (вибрации)}{72}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Нелинейно\hbox {-\hspace {-0.2ex}}упругая безмоментная среда}{75}{chapter.3}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Контину\kern -0.11exум. Два описания процессов}{71}{section.3.1}%
+\contentsline {section}{\numberline {1}Контину\kern -0.11exум. Два описания процессов}{75}{section.3.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Градиент движения}{75}{section.3.2}%
+\contentsline {section}{\numberline {2}Градиент движения}{79}{section.3.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Меры (тензоры) деформации}{76}{section.3.3}%
-\contentsline {section}{\numberline {4}Поле скоростей}{81}{section.3.4}%
+\contentsline {section}{\numberline {3}Меры (тензоры) деформации}{80}{section.3.3}%
+\contentsline {section}{\numberline {4}Поле скоростей}{85}{section.3.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Вектор пл\'{о}щади. Изменение площ\'{а}дки}{83}{section.3.5}%
-\contentsline {section}{\numberline {6}Силы в контину\kern -0.11exуме. Тензор напряжения Cauchy}{83}{section.3.6}%
+\contentsline {section}{\numberline {5}Вектор пл\'{о}щади. Изменение площ\'{а}дки}{86}{section.3.5}%
+\contentsline {section}{\numberline {6}Силы в контину\kern -0.11exум{}е. Существование тензора напряжения Cauchy}{87}{section.3.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Баланс импульса и момента импульса}{85}{section.3.7}%
+\contentsline {section}{\numberline {7}Баланс импульса и момента импульса}{89}{section.3.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Собственные числа тензора напряжения Коши}{87}{section.3.8}%
+\contentsline {section}{\numberline {8}Собственные числа тензора напряжения Cauchy. Круги Mohr’а}{91}{section.3.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {9}Принцип виртуальной работы (без множителей Лагранжа)}{87}{section.3.9}%
+\contentsline {section}{\numberline {9}Принцип виртуальной работы (без множителей Лагранжа)}{91}{section.3.9}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {10}Определяющие отношения упругости}{89}{section.3.10}%
+\contentsline {section}{\numberline {10}Определяющие отношения упругости}{93}{section.3.10}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {11}Тензоры напряжения Piola\hbox {--}Kirchhoff’а и~другие меры напряжения}{91}{section.3.11}%
+\contentsline {section}{\numberline {11}Тензоры напряжения Piola\hbox {--}Kirchhoff’а и~другие меры напряжения}{95}{section.3.11}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {12}Варьирование текущей конфигурации}{96}{section.3.12}%
+\contentsline {section}{\numberline {12}Варьирование текущей конфигурации}{100}{section.3.12}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {13}Внутренние связи}{96}{section.3.13}%
+\contentsline {section}{\numberline {13}Внутренние связи}{100}{section.3.13}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {14}Полая сфера под действием давления}{97}{section.3.14}%
+\contentsline {section}{\numberline {14}Полая сфера под давлением}{101}{section.3.14}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {15}Напряжения как множители Лагранжа}{98}{section.3.15}%
+\contentsline {section}{\numberline {15}Напряжения как множители Лагранжа}{102}{section.3.15}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {4}Классическая линейная упругость}{100}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Классическая линейная упругость}{104}{chapter.4}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Полный набор уравнений}{100}{section.4.1}%
+\contentsline {section}{\numberline {1}Полный набор уравнений}{104}{section.4.1}%
+\contentsline {section}{\numberline {2}Уникальность решения в~динамике}{107}{section.4.2}%
+\contentsline {section}{\numberline {3}Закон Гука}{109}{section.4.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Уникальность решения в~динамике}{102}{section.4.2}%
+\contentsline {section}{\numberline {4}Теоремы статики}{112}{section.4.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Закон Гука}{104}{section.4.3}%
+\contentsline {section}{\numberline {5}Уравнения в перемещениях}{116}{section.4.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Теоремы статики}{107}{section.4.4}%
+\contentsline {section}{\numberline {6}Сосредоточенная сила в бесконечной среде}{116}{section.4.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
+\contentsline {section}{\numberline {7}Нахождение перемещений по деформациям}{117}{section.4.7}%
+\contentsline {section}{\numberline {8}Уравнения в напряжениях}{118}{section.4.8}%
+\contentsline {section}{\numberline {9}Принцип минимума потенциальной энергии}{118}{section.4.9}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Уравнения в перемещениях}{111}{section.4.5}%
+\contentsline {section}{\numberline {10}Принцип минимума дополнительной энергии}{121}{section.4.10}%
+\contentsline {section}{\numberline {11}Смешанные принципы стационарности}{122}{section.4.11}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Сосредоточенная сила в бесконечной среде}{111}{section.4.6}%
+\contentsline {section}{\numberline {12}Антиплоский сдвиг}{123}{section.4.12}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Нахождение перемещений по деформациям}{112}{section.4.7}%
+\contentsline {section}{\numberline {13}Кручение стержней}{123}{section.4.13}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Уравнения в напряжениях}{113}{section.4.8}%
-\contentsline {section}{\numberline {9}Принцип минимума потенциальной энергии}{113}{section.4.9}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {10}Принцип минимума дополнительной энергии}{116}{section.4.10}%
-\contentsline {section}{\numberline {11}Смешанные принципы стационарности}{116}{section.4.11}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {12}Антиплоский сдвиг}{118}{section.4.12}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {13}Кручение стержней}{118}{section.4.13}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {14}Плоская деформация}{119}{section.4.14}%
+\contentsline {section}{\numberline {14}Плоская деформация}{125}{section.4.14}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {5}Микрополярная трёхмерная среда}{120}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Микрополярная трёхмерная среда}{126}{chapter.5}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Введение в линейную микрополярную теорию}{120}{section.5.1}%
+\contentsline {section}{\numberline {1}Введение в линейную микрополярную теорию}{126}{section.5.1}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {2}Отношения упругости}{130}{section.5.2}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {3}Уравнения совместности}{132}{section.5.3}%
+\contentsline {section}{\numberline {4}Теоремы статики}{132}{section.5.4}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {5}Псевдоконтину\kern -0.11exум Коссера}{132}{section.5.5}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {6}Плоская деформация}{133}{section.5.6}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {7}Нелинейная теория}{133}{section.5.7}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {8}Нелинейная модель со стеснённым вращением}{136}{section.5.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Отношения упругости}{124}{section.5.2}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Уравнения совместности}{126}{section.5.3}%
-\contentsline {section}{\numberline {4}Теоремы статики}{126}{section.5.4}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Псевдоконтину\kern -0.11exум Коссера}{126}{section.5.5}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Плоская деформация}{127}{section.5.6}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Нелинейная теория}{127}{section.5.7}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Нелинейная модель со стеснённым вращением}{130}{section.5.8}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {chapter}{\numberline {6}Термоупругость}{131}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Термоупругость}{137}{chapter.6}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Первый закон термодинамики}{131}{section.6.1}%
-\contentsline {section}{\numberline {2}Второй закон}{133}{section.6.2}%
-\contentsline {section}{\numberline {3}Определяющие уравнения}{135}{section.6.3}%
+\contentsline {section}{\numberline {1}Первый закон термодинамики}{137}{section.6.1}%
+\contentsline {section}{\numberline {2}Второй закон}{139}{section.6.2}%
+\contentsline {section}{\numberline {3}Определяющие уравнения}{141}{section.6.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Уравнение теплопроводности}{135}{section.6.4}%
-\contentsline {section}{\numberline {5}Линейная термоупругость}{136}{section.6.5}%
+\contentsline {section}{\numberline {4}Уравнение теплопроводности}{141}{section.6.4}%
+\contentsline {section}{\numberline {5}Линейная термоупругость}{142}{section.6.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Уравнения в перемещениях}{136}{section.6.6}%
+\contentsline {section}{\numberline {6}Уравнения в перемещениях}{142}{section.6.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Температурное напряжение}{136}{section.6.7}%
+\contentsline {section}{\numberline {7}Температурное напряжение}{142}{section.6.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Вариационные формулировки}{137}{section.6.8}%
+\contentsline {section}{\numberline {8}Вариационные формулировки}{143}{section.6.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {7}Магнитоупругость}{138}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Магнитоупругость}{144}{chapter.7}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Электромагнитное поле}{138}{section.7.1}%
-\contentsline {section}{\numberline {2}Электромагнитные волны}{141}{section.7.2}%
-\contentsline {section}{\numberline {3}Электростатика}{143}{section.7.3}%
+\contentsline {section}{\numberline {1}Электромагнитное поле}{144}{section.7.1}%
+\contentsline {section}{\numberline {2}Электромагнитные волны}{147}{section.7.2}%
+\contentsline {section}{\numberline {3}Электростатика}{149}{section.7.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Диэлектрики}{143}{section.7.4}%
+\contentsline {section}{\numberline {4}Диэлектрики}{149}{section.7.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Магнитостатика}{143}{section.7.5}%
+\contentsline {section}{\numberline {5}Магнитостатика}{149}{section.7.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Магнетики}{144}{section.7.6}%
+\contentsline {section}{\numberline {6}Магнетики}{150}{section.7.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Магнитная жёсткость}{144}{section.7.7}%
+\contentsline {section}{\numberline {7}Магнитная жёсткость}{150}{section.7.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {8}Методы возмущений (асимптотические методы)}{147}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Методы возмущений (асимптотические методы)}{153}{chapter.8}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Асимптотические разложения}{147}{section.8.1}%
+\contentsline {section}{\numberline {1}Асимптотические разложения}{153}{section.8.1}%
+\contentsline {section}{\numberline {2}Расщепление в линейной алгебраической системе}{156}{section.8.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Расщепление в линейной алгебраической системе}{147}{section.8.2}%
+\contentsline {section}{\numberline {3}Метод Poincar\'{e}}{156}{section.8.3}%
+\contentsline {section}{\numberline {4}Метод осреднения Ван дер Поля}{157}{section.8.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Метод Пуанкаре}{148}{section.8.3}%
+\contentsline {section}{\numberline {5}Сращивание асимптотических разложений}{157}{section.8.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Метод осреднения Ван дер Поля}{148}{section.8.4}%
+\contentsline {section}{\numberline {6}Многоуровневый анализ (метод многих масштабов)}{158}{section.8.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Сращивание асимптотических разложений}{149}{section.8.5}%
+\contentsline {section}{\numberline {7}Уравнения с медленно меняющимися параметрами}{158}{section.8.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Многоуровневый анализ (метод многих масштабов)}{149}{section.8.6}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Уравнения с медленно меняющимися параметрами}{149}{section.8.7}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Тонкие тела}{149}{section.8.8}%
+\contentsline {section}{\numberline {8}Тонкие тела}{158}{section.8.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {9}Стержни}{151}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Стержни}{160}{chapter.9}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Исходные представления}{151}{section.9.1}%
+\contentsline {section}{\numberline {1}Исходные представления}{160}{section.9.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Кинематика линий Коссера}{155}{section.9.2}%
+\contentsline {section}{\numberline {2}Кинематика линий Коссера}{166}{section.9.2}%
+\contentsline {section}{\numberline {3}Баланс сил и моментов}{168}{section.9.3}%
+\contentsline {section}{\numberline {4}Принцип виртуальной работы и следствия}{168}{section.9.4}%
+\contentsline {section}{\numberline {5}Классическая модель Kirchhoff’а}{168}{section.9.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Баланс сил и моментов}{156}{section.9.3}%
+\contentsline {section}{\numberline {6}Проблема Euler’а об устойчивости стержней}{169}{section.9.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Принцип виртуальной работы и следствия}{156}{section.9.4}%
+\contentsline {section}{\numberline {7}Вариационные уравнения}{169}{section.9.7}%
+\contentsline {section}{\numberline {8}Модель без сдвига с растяжением}{169}{section.9.8}%
+\contentsline {section}{\numberline {9}Механика гибкой нити}{170}{section.9.9}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Классическая модель Kirchhoff’а}{157}{section.9.5}%
+\contentsline {section}{\numberline {10}Линейная теория}{170}{section.9.10}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Проблема Эйлера}{157}{section.9.6}%
+\contentsline {section}{\numberline {11}Случай малой толщины}{170}{section.9.11}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Вариационные уравнения}{157}{section.9.7}%
+\contentsline {section}{\numberline {12}Задача Сэйнт\hbox {-}Венана}{171}{section.9.12}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Модель без сдвига с растяжением}{157}{section.9.8}%
+\contentsline {section}{\numberline {13}Нахождение жёсткости по энергии}{171}{section.9.13}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {9}Механика гибкой нити}{158}{section.9.9}%
+\contentsline {section}{\numberline {14}Вариационный метод построения одномерной модели}{172}{section.9.14}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {10}Линейная теория}{158}{section.9.10}%
+\contentsline {section}{\numberline {15}Асимптотическое расщепление трёхмерной проблемы}{173}{section.9.15}%
+\contentsline {section}{\numberline {16}Температурные деформация и напряжение}{174}{section.9.16}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {11}Случай малой толщины}{158}{section.9.11}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {12}Задача Сэйнт\hbox {-}Венана}{159}{section.9.12}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {13}Нахождение жёсткости по энергии}{159}{section.9.13}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {14}Вариационный метод построения одномерной модели}{160}{section.9.14}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {15}Асимптотическое расщепление трёхмерной проблемы}{161}{section.9.15}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {16}Температурные деформация и напряжение}{162}{section.9.16}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {chapter}{\numberline {10}Тонкостенные стержни}{163}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Тонкостенные стержни}{175}{chapter.10}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Вариационный подход}{163}{section.10.1}%
+\contentsline {section}{\numberline {1}Вариационный подход}{175}{section.10.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Уравнения с малым параметром}{163}{section.10.2}%
+\contentsline {section}{\numberline {2}Уравнения с малым параметром}{176}{section.10.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Первый шаг асимптотической процедуры}{163}{section.10.3}%
+\contentsline {section}{\numberline {3}Первый шаг асимптотической процедуры}{176}{section.10.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Второй шаг}{164}{section.10.4}%
+\contentsline {section}{\numberline {4}Второй шаг}{176}{section.10.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Третий шаг}{164}{section.10.5}%
+\contentsline {section}{\numberline {5}Третий шаг}{177}{section.10.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Четвёртый шаг}{165}{section.10.6}%
+\contentsline {section}{\numberline {6}Четвёртый шаг}{177}{section.10.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Перемещения}{165}{section.10.7}%
+\contentsline {section}{\numberline {7}Перемещения}{178}{section.10.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Итоги асимптотического анализа}{165}{section.10.8}%
+\contentsline {section}{\numberline {8}Итоги асимптотического анализа}{178}{section.10.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {11}Оболочки и пластины}{167}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Оболочки и пластины}{179}{chapter.11}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Геометрия поверхности}{167}{section.11.1}%
+\contentsline {section}{\numberline {1}Геометрия поверхности}{179}{section.11.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Модель оболочки}{169}{section.11.2}%
+\contentsline {section}{\numberline {2}Модель оболочки}{181}{section.11.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Баланс сил и моментов для оболочки}{170}{section.11.3}%
+\contentsline {section}{\numberline {3}Баланс сил и моментов для оболочки}{182}{section.11.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Оболочки: Отношения упругости}{170}{section.11.4}%
+\contentsline {section}{\numberline {4}Оболочки: Отношения упругости}{182}{section.11.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Классическая теория оболочек}{170}{section.11.5}%
+\contentsline {section}{\numberline {5}Классическая теория оболочек}{182}{section.11.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Оболочки: Пластина}{170}{section.11.6}%
+\contentsline {section}{\numberline {6}Оболочки: Пластина}{182}{section.11.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Оболочки: Подход с множителями Лагранжа}{171}{section.11.7}%
+\contentsline {section}{\numberline {7}Оболочки: Подход с множителями Лагранжа}{183}{section.11.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Цилиндрическая оболочка}{171}{section.11.8}%
+\contentsline {section}{\numberline {8}Цилиндрическая оболочка}{183}{section.11.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {9}Оболочки: Общие теоремы}{171}{section.11.9}%
+\contentsline {section}{\numberline {9}Оболочки: Общие теоремы}{183}{section.11.9}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {10}Оболочки: Краевые условия}{171}{section.11.10}%
+\contentsline {section}{\numberline {10}Оболочки: Краевые условия}{183}{section.11.10}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {11}Оболочки вращения}{172}{section.11.11}%
+\contentsline {section}{\numberline {11}Оболочки вращения}{184}{section.11.11}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {12}Безмоментная теория оболочек}{172}{section.11.12}%
+\contentsline {section}{\numberline {12}Безмоментная теория оболочек}{184}{section.11.12}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {13}Оболочки: Нелинейная безмоментная теория}{172}{section.11.13}%
+\contentsline {section}{\numberline {13}Оболочки: Нелинейная безмоментная теория}{184}{section.11.13}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {14}Оболочки: Иной вариант классической теории}{172}{section.11.14}%
+\contentsline {section}{\numberline {14}Оболочки: Иной вариант классической теории}{184}{section.11.14}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {15}Пластины: Общие представления}{173}{section.11.15}%
+\contentsline {section}{\numberline {15}Пластины: Общие представления}{185}{section.11.15}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {16}Модель пластины типа Тимошенко (прямой подход)}{173}{section.11.16}%
+\contentsline {section}{\numberline {16}Модель пластины типа Тимошенко (прямой подход)}{185}{section.11.16}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {17}Классическая теория пластин Kirchhoff’а}{173}{section.11.17}%
+\contentsline {section}{\numberline {17}Классическая теория пластин Kirchhoff’а}{185}{section.11.17}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {18}Пластины: Асимптотическое сопоставление двумерных моделей}{173}{section.11.18}%
+\contentsline {section}{\numberline {18}Пластины: Асимптотическое сопоставление двумерных моделей}{185}{section.11.18}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {19}Пластины: Вариационный переход от трёхмерной модели}{174}{section.11.19}%
+\contentsline {section}{\numberline {19}Пластины: Вариационный переход от трёхмерной модели}{186}{section.11.19}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {20}Пластины: Расщепление трёхмерной задачи изгиба}{174}{section.11.20}%
+\contentsline {section}{\numberline {20}Пластины: Расщепление трёхмерной задачи изгиба}{186}{section.11.20}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {21}Круглые пластины}{174}{section.11.21}%
+\contentsline {section}{\numberline {21}Круглые пластины}{186}{section.11.21}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {22}Пластины: Плоское напряжение}{175}{section.11.22}%
+\contentsline {section}{\numberline {22}Пластины: Плоское напряжение}{187}{section.11.22}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {12}Колебания и волны}{176}{chapter.12}%
+\contentsline {chapter}{\numberline {12}Колебания и волны}{188}{chapter.12}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Вибрации трёхмерного тела}{176}{section.12.1}%
+\contentsline {section}{\numberline {1}Вибрации трёхмерных тел}{188}{section.12.1}%
+\contentsline {section}{\numberline {2}Вибрации стержней}{190}{section.12.2}%
+\contentsline {section}{\numberline {3}Малые возмущения параметров}{190}{section.12.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Вибрации стержня}{177}{section.12.2}%
+\contentsline {section}{\numberline {4}Вибрации оболочек}{190}{section.12.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Малые возмущения параметров}{177}{section.12.3}%
+\contentsline {section}{\numberline {5}Волны в упругом континууме}{191}{section.12.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Вибрации оболочки}{177}{section.12.4}%
+\contentsline {section}{\numberline {6}Волны в стержне}{191}{section.12.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Волны в упругой среде}{177}{section.12.5}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Волны в стержне}{178}{section.12.6}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Нелинейные колебания}{178}{section.12.7}%
+\contentsline {section}{\numberline {7}Нелинейные колебания}{191}{section.12.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {13}Устойчивость}{179}{chapter.13}%
+\contentsline {chapter}{\numberline {13}Устойчивость}{192}{chapter.13}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Разные подходы к проблеме устойчивости}{179}{section.13.1}%
+\contentsline {section}{\numberline {1}Разные подходы к проблеме устойчивости}{192}{section.13.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Классические проблемы со стержнями}{180}{section.13.2}%
+\contentsline {section}{\numberline {2}Классические проблемы со стержнями}{193}{section.13.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}“{Следящие}” нагрузки}{180}{section.13.3}%
+\contentsline {section}{\numberline {3}“{Следящие}” нагрузки}{193}{section.13.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Роль добавочных податливостей}{180}{section.13.4}%
+\contentsline {section}{\numberline {4}Роль добавочных податливостей}{193}{section.13.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Вариационные формулировки}{180}{section.13.5}%
+\contentsline {section}{\numberline {5}Вариационные формулировки}{193}{section.13.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Неконсервативные задачи}{181}{section.13.6}%
+\contentsline {section}{\numberline {6}Неконсервативные задачи}{194}{section.13.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Случай кратных корней}{181}{section.13.7}%
+\contentsline {section}{\numberline {7}Случай кратных корней}{194}{section.13.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {14}Дефекты}{182}{chapter.14}%
+\contentsline {chapter}{\numberline {14}Дефекты}{195}{chapter.14}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Дислокации Вольтерры}{182}{section.14.1}%
+\contentsline {section}{\numberline {1}Дислокации Вольтерры}{195}{section.14.1}%
+\contentsline {section}{\numberline {2}Прямолинейные дислокации}{195}{section.14.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Прямолинейные дислокации}{182}{section.14.2}%
+\contentsline {section}{\numberline {3}Действие поля напряжений на дислокацию}{195}{section.14.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Действие поля напряжений на дислокацию}{182}{section.14.3}%
+\contentsline {section}{\numberline {4}О движении дислокаций}{196}{section.14.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}О движении дислокаций}{183}{section.14.4}%
+\contentsline {section}{\numberline {5}Точечные дефекты}{196}{section.14.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Точечные дефекты}{183}{section.14.5}%
+\contentsline {section}{\numberline {6}Сила, действующая на точечный дефект}{196}{section.14.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Действующая на точечный дефект сила}{183}{section.14.6}%
+\contentsline {section}{\numberline {7}Непрерывно распределённые дислокации}{196}{section.14.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Непрерывно распределённые дислокации}{183}{section.14.7}%
+\contentsline {section}{\numberline {8}Напряжение при намотке катушки}{196}{section.14.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Напряжение при намотке катушки}{183}{section.14.8}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {chapter}{\numberline {15}Трещины}{185}{chapter.15}%
+\contentsline {chapter}{\numberline {15}Трещины}{198}{chapter.15}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Традиционные критерии прочности}{185}{section.15.1}%
+\contentsline {section}{\numberline {1}Традиционные критерии прочности}{198}{section.15.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Антиплоская деформация среды с~трещиной}{186}{section.15.2}%
+\contentsline {section}{\numberline {2}Антиплоская деформация среды с~трещиной}{199}{section.15.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Трещина при плоской деформации}{186}{section.15.3}%
+\contentsline {section}{\numberline {3}Трещина при плоской деформации}{199}{section.15.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Трещинодвижущая сила}{186}{section.15.4}%
+\contentsline {section}{\numberline {4}Трещинодвижущая сила}{199}{section.15.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Критерий роста трещины}{187}{section.15.5}%
+\contentsline {section}{\numberline {5}Критерий роста трещины}{200}{section.15.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {6}J-интеграл}{187}{section.15.6}%
+\contentsline {section}{\numberline {6}J-интеграл}{200}{section.15.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Коэффициенты интенсивности напряжений}{187}{section.15.7}%
+\contentsline {section}{\numberline {7}Коэффициенты интенсивности напряжений}{200}{section.15.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Модель Barenblatt’а}{187}{section.15.8}%
-\contentsline {section}{\numberline {9}Деформационный критерий}{188}{section.15.9}%
+\contentsline {section}{\numberline {8}Модель Barenblatt’а}{200}{section.15.8}%
+\contentsline {section}{\numberline {9}Деформационный критерий}{201}{section.15.9}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {10}Рост трещин}{188}{section.15.10}%
+\contentsline {section}{\numberline {10}Рост трещин}{201}{section.15.10}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {11}Упругое поле п\'{е}ред движущейся трещиной}{188}{section.15.11}%
+\contentsline {section}{\numberline {11}Упругое поле п\'{е}ред движущейся трещиной}{201}{section.15.11}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {12}Баланс энергии для движущейся трещины}{189}{section.15.12}%
+\contentsline {section}{\numberline {12}Баланс энергии для движущейся трещины}{202}{section.15.12}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {16}Композиты}{190}{chapter.16}%
+\contentsline {chapter}{\numberline {16}Композиты}{203}{chapter.16}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Вводные размышления}{190}{section.16.1}%
+\contentsline {section}{\numberline {1}Вводные размышления}{203}{section.16.1}%
+\contentsline {section}{\numberline {2}Эффективные поля}{204}{section.16.2}%
+\contentsline {section}{\numberline {3}Краевые задачи для представительного объёма}{205}{section.16.3}%
+\contentsline {section}{\numberline {4}Вилка Hill’а}{205}{section.16.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Эффективные поля}{191}{section.16.2}%
+\contentsline {section}{\numberline {5}Формулы Eshelby}{205}{section.16.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Краевые задачи для представительного объёма}{191}{section.16.3}%
+\contentsline {section}{\numberline {6}Эффективные модули для материала со сферическими включениями}{206}{section.16.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Вилка Hill’а}{191}{section.16.4}%
+\contentsline {section}{\numberline {7}Метод самосогласования}{206}{section.16.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Формулы Eshelby}{192}{section.16.5}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Эффективные модули для материала со сферическими включениями}{192}{section.16.6}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Метод самосогласования}{192}{section.16.7}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {8}Принцип Хашина\hbox {--}Штрикмана}{193}{section.16.8}%
+\contentsline {section}{\numberline {8}Принцип Хашина\hbox {--}Штрикмана}{206}{section.16.8}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {17}Периодические композиты}{194}{chapter.17}%
+\contentsline {chapter}{\numberline {17}Периодические композиты}{208}{chapter.17}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Одномерная задача}{194}{section.17.1}%
+\contentsline {section}{\numberline {1}Одномерная задача}{208}{section.17.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Трёхмерный контину\kern -0.11exум}{194}{section.17.2}%
+\contentsline {section}{\numberline {2}Трёхмерный контину\kern -0.11exум}{208}{section.17.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {3}Волокнистая структура}{194}{section.17.3}%
+\contentsline {section}{\numberline {3}Волокнистая структура}{208}{section.17.3}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {4}Статика периодического стержня}{194}{section.17.4}%
+\contentsline {section}{\numberline {4}Статика периодического стержня}{208}{section.17.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {chapter}{Список упомянутых публикаций}{195}{section.17.4}%
+\contentsline {chapter}{Список упомянутых публикаций}{209}{section.17.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}

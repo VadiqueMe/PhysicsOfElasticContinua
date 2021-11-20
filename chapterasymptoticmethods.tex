@@ -6,52 +6,157 @@
 
 \label{chapter:asymptoticperturbationmethods}
 
-{\small
-Of approximate approaches for analysis of~nonlinear systems, perturbation methods are the~most often applied.
+\begin{changemargin}{\parindent}{\parindent}
+\vspace{-2.5em}
+{\noindent\small
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\en{Of approximate approaches}\ru{Из приближённых подходов} \en{to the analysis}\ru{к~анализу} \en{of~nonlinear systems}\ru{нелинейных систем}, \en{perturbation methods}\ru{методы возмущений} \en{are applied the~most often}\ru{применяются чаще всего}.
+
 \par}
+\vspace{-1.4em}
+\end{changemargin}
 
 \en{\section{Asymptotic decompositions}}
 
 \ru{\section{Асимптотические разложения}}
 
-\begin{otherlanguage}{russian}
+\en{\dropcap{U}{ntil} now,}\ru{\dropcap{Д}{о}~сих пор} \en{function arguments}\ru{аргументами функций} \en{were only coordinates and time}\ru{были только координаты и~время}.
+\en{Dimensions of a~body}\ru{Размеры тела}, \en{elastic moduli}\ru{упругие модули}, \en{ranges of action changes}\ru{диапазоны изменений воздействия} \en{in space and time}\ru{в~пространстве и~времени}\:--- \en{all these parameters}\ru{все эти параметры} \en{were considered known}\ru{считались известными}.
+\en{All asymptotic methods}\ru{Все асимптотические методы} \en{are based}\ru{основаны} \en{on studying}\ru{на изучении} \en{how the solution depends on parameters}\ru{как решение зависит от параметров}.
 
-\dropcap{Д}{о}~сих~пор аргументами рассматриваемых функций были только координаты и~время.
-Размеры тела, упругие модули, характерные масштабы изменения ...
+\en{A~perturbation decomposition}\ru{Разложение возмущения} \en{usually consists}\ru{обычно состоит} \en{of the first two terms}\ru{из первых двух слагаемых}.
+\en{If}\ru{Если} \en{a~problem}\ru{задача} \en{with unknown}\ru{с~неизвестной}~$u$ \en{contains parameter}\ru{содержит параметр}~$a$, \en{then}\ru{то}, \en{assuming}\ru{полагая}
 
-...
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+a = a_{0} \hspace{-0.1ex} + \smallparameter a_{1}
+\hspace{.1ex} ,
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{a~solution}\ru{решение} \en{is sought}\ru{ищется} \en{as series}\ru{в~виде ряда}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{asymptoticsolution}
+u = u_0 \hspace{-0.1ex} + \smallparameter u_1 \hspace{-0.1ex} + \smallparameter^2 u_2 \hspace{-0.1ex}
++ \ldots
+\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{Additional argument}\ru{Дополнительный аргумент}~$\smallparameter$ \en{is called a~formal small parameter}\ru{называется формальным малым параметром}.
+
+\en{A~perturbation decomposition}\ru{Разложение возмущения} \en{may be divergent}\ru{может расходиться}, \en{but}\ru{но} \en{at the same time}\ru{в~то~же время} \en{it}\ru{оно} \en{can be}\ru{может быть} \en{more useful}\ru{более полезным} \en{description}\ru{описанием} \en{of the solution}\ru{решения}\ru{,} \en{than}\ru{чем} \en{a~representation}\ru{представление}\ru{,} \en{that is}\ru{которое} \en{uniformly and absolutely}\ru{равномерно и~абсолютно} \en{convergent}\ru{сходится}.
+
+\en{Decomposition}\ru{Разложение}~\eqref{asymptoticsolution} \en{looks like}\ru{выглядит как} \en{a~common power series}\ru{обычный степенной ряд}.
+\en{However}\ru{Однако}, \en{perturbation methods}\ru{методы возмущений} \en{use}\ru{используют} \en{a~different approach}\ru{отличный подход}: \en{series are considered as asymptotic}\ru{ряды рассматриваются как асимптотические} \en{with convergence}\ru{со сходимостью} \en{not}\ru{не}~${n \to \infty}$ (n\:--- \en{number of withheld terms}\ru{число удержанных членов}), \en{but}\ru{но}~${\smallparameter \to 0}$
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{powerseries-asymptotic}
+\phi = \displaystyle\sum_{k=0}^{\infty} \phi_{k}(\smallparameter)
+\hspace{.1ex} ,
+\hspace{.5em}
+\underset{\scriptstyle \smallparameter \to 0}{\operatorname{lim}} \displaystyle\frac{\phi - \scalebox{.88}{$ \displaystyle\sum_{k=0}^{n} $} \hspace{.1ex} \phi_{k}}{\phi_{n}} = 0
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{In other words}\ru{Иначе говоря},
+\en{the remainder of series}\ru{остаток ряда} \en{is}\ru{есть} \en{a~higher order infinitesimal}\ru{бесконечно-малая высшего порядка} \en{in comparison with the last withheld term}\ru{по~сравнению с~последним удержанным членом}.
+\en{Obviously}\ru{Очевидно}, \en{a~power series}\ru{степенной ряд}~\eqref{asymptoticsolution} \en{also converges as an asymptotic series}\ru{сходится и~как асимптотический ряд}.
+
+\en{But}\ru{Но} \en{the decomposable unknowns}\ru{разлагаемые неизвестные} \en{usually also depend on}\ru{обычно также зависят от} \en{the }\inquotes{\en{main}\ru{главных}} \en{arguments}\ru{аргументов}\:--- \en{on coordinates and time}\ru{от~координат и~времени}.
+\en{The convergence}\ru{Сходимость} \en{for}\ru{для}~${\smallparameter \to 0}$ \en{must be uniform}\ru{должна быть равномерной} \en{across these}\ru{по этим} \inquotes{\en{main}\ru{главным}} \en{arguments}\ru{аргументам}\:--- \en{this is a~requirement}\ru{это требование} \en{for effective use}\ru{к~эффективному использованию} \en{of asymptotic decompositions}\ru{асимптотических разложений}.
+\en{For example}\ru{Например}
+
+\nopagebreak\vspace{-0.3em}\begin{equation*}
+\operatorname{sin} (1 + \smallparameter) t
+= \operatorname{sin} t + \smallparameter t \operatorname{cos} \smallparameter t
+- \smallerdisplaystyleonehalf \smallparameter^2 t^2 \operatorname{sin} \smallparameter t
++ \ldots
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{doesn’t satisfy the requirement of uniformity}\ru{не удовлетворяет требованию равномерности}, \en{because}\ru{поскольку} \en{with }\ru{с~}${t \to \infty}$ \en{subsequent terms prevail over previous ones}\ru{последующие члены преобладают над предыдущими}.
+
+\en{Why}\ru{Чем~же} \en{asymptotic methods}\ru{асимптотические методы} \en{are so attractive}\ru{так привлекательны}?
+\en{As example}\ru{Как пример} \en{take a~solution of the equation}\ru{возьмём решение уравнения}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+f(u, \smallparameter) \hspace{-0.1ex} = 0
+\hspace{.1ex} .
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{Substituting decomposition}\ru{Подставив разложение}~\eqref{asymptoticsolution} \en{into}\ru{в}~\eqref{powerseries-asymptotic} \en{and }\ru{и~}\en{equating coefficients}\ru{приравняв коэффициенты} \en{at the same degrees of}\ru{при одинаковых степенях}~$\smallparameter$, \en{we get}\ru{получим}
+
+\nopagebreak\vspace{-0.2em}\begin{gather*}
+f(u_{0}, 0) = 0
+\hspace{.1ex} ,
+\\
+\bigl( \partial_{u} f \bigr)_{0} \hspace{-0.2ex}
++ u_{1} \bigl( \partial_{\smallparameter} f \bigr)_{0} \hspace{-0.2ex}
+= 0
+\hspace{.1ex} ,
+\\[.2em]
+\bigl( \partial_{u} f \bigr)_{0} \hspace{-0.1ex} u_{2} \hspace{-0.1ex}
++ \smallerdisplaystyleonehalf \bigl( \partial_{u}^2 f \bigr)_{0} \hspace{-0.1ex} u_{1}^2 \hspace{-0.2ex}
++ \smallerdisplaystyleonehalf \bigl( \partial_{\smallparameter}^2 f \bigr)_{0}
++ \bigl( \partial_{u} \partial_{\smallparameter} f \bigr)_{0} \hspace{-0.1ex} u_{1} \hspace{-0.1ex}
+= 0
+\hspace{.1ex} ,
+\\
+\ldots
+\end{gather*}
+
+\en{If the problem}\ru{Если проблема} \en{for}\ru{для}~${u_{0}}$ \en{is uniquely solvable}\ru{однозначно разрешима} \en{at the first step}\ru{на первом шаге}, \en{then}\ru{то} \en{subsequent steps}\ru{последующие шаги} \en{will give corrections}\ru{дадут поправки} ${u_{1}, u_{2}, \ldots}$
+\en{Small corrections}\ru{Малые поправки} \en{are barely important}\ru{едва~ли важны} \en{and }\ru{и~}${u_{0}}$ \en{is enough}\ru{достаточно}, \en{but then}\ru{но тогда} \ru{исчезает }\en{the asymptotic analysis}\ru{асимптотический анализ}\en{ disappears}, \en{since}\ru{ведь} \en{formally}\ru{формально} \en{small terms}\ru{малые члены} \en{in}\ru{в}~\eqref{powerseries-asymptotic} \en{are just discarded}\ru{просто отбрасываются}.
+\en{However}\ru{Впрочем}, \en{it happens that}\ru{бывает так, что} \en{these corrections}\ru{эти поправки} \en{contain in self}\ru{содержат в~себе} \en{some important information}\ru{некую важную информацию}, \en{absent}\ru{отсутствующую} \en{in}\ru{в}~${u_{0}}$\:--- \en{then they}\ru{тогда они} \en{play}\ru{играют} \en{the main role}\ru{главную роль}.
+\en{It’s worth mentioning that}\ru{Ст\'{о}ит упомянуть, что} \en{all corrections}\ru{все поправки} \en{follow}\ru{следуют} \en{from the linear problem}\ru{из линейной проблемы} \en{with the same operator}\ru{с~одним и тем~же оператором}
+${\bigl( \partial_{u} f \bigr)_{0}}$.
+
+\en{But}\ru{Но} \en{all non-trivial and effective solutions}\ru{все нетривиальные и~эффективные решения} \en{are obtained}\ru{получаются} \en{in other ways}\ru{иными способами}, \en{non-uniqueness of the solution}\ru{неединственность решения} \en{at the first step}\ru{на первом шаге} \en{characterizes them}\ru{характеризует их}.
+\en{About this}\ru{Об этом}\:--- \en{in the next paragraphs}\ru{в~следующих параграфах}.
+
+\en{And yes}\ru{И~да}, \en{asymptotic methods}\ru{асимптотические методы} \en{change}\ru{меняют} \en{the initially complex formulation of the problem}\ru{первоначальную сложную постановку задачи}~\eqref{powerseries-asymptotic} \en{to a~simpler one}\ru{на более простую}.
+\en{Essential is that}\ru{Существенно то, что} \en{this does not happen}\ru{это не происходит} \en{by }\inquotes{\en{simple}\ru{простым}} \en{discarding of terms}\ru{отбрасыванием членов}, \en{but quite correctly}\ru{но вполне корректно}\:--- \en{equalities remain equalities}\ru{равенства остаются равенствами}.
+\en{However}\ru{Однако}, \en{the convergence is not proven}\ru{сходимость не доказывается}, \en{so}\ru{так что} \en{there is no }\en{complete mathematical accuracy}\ru{полной математической точности}\ru{ нет}.
 
 \en{In previous chapters,}\ru{В~предыдущих главах} \en{asymptotic problems}\ru{асимптотические проблемы} \en{have already arisen}\ru{уж\'{е} возникали}.
-Линейная теория получается из~нелинейной с~помощью разложений по~масштабу нагрузки~(\chapdotpararef{chapter:linearclassicalelasticity}{para:wholesetofequations.lineartheory}).
-Безмоментная теория вытекает (с~точностью до~краевых эффектов) из~моментной~(\chapref{chapter:cosseratcontinuum}) при~устремлении \inquotes{моментных} жёсткостей к~бесконечности.
-В~термо\-упругости~(\chapref{chapter:thermoelasticity}) использование уравнения теплопроводности~\eqrefwithchapdotpara{heatequation:mathematicalphysics}{chapter:thermoelasticity}{para:heatequation} вместо полного баланса энергии должно быть обосновано асимпто\-ти\-чес\-кими методами.
+\en{The linear theory}\ru{Линейная теория} \en{follows from the nonlinear theory}\ru{следует из~нелинейной теории} \en{via asymptotic decomposition}\ru{через асимптотическое разложение} \en{by the~value of~load}\ru{по величине нагрузки}~(\chapdotpararef{chapter:linearclassicalelasticity}{para:wholesetofequations.lineartheory}).
+\en{The momentless theory}\ru{Безмоментная теория} \en{derives}\ru{происходит} (\en{accurate to edge effects}\ru{с~точностью до~краевых эффектов}) \en{from the moment (micropolar) theory}\ru{из моментной (микрополярной) теории}~(\chapref{chapter:cosseratcontinuum})\ru{,} \en{when}\ru{когда} \en{the }\inquotes{\en{moment}\ru{моментные}} \en{rigidities}\ru{жёсткости} \en{are approaching infinity}\ru{приближаются к~бесконечности}.
+\en{In thermo\-elasticity}\ru{В~термо\-упругости}~(\chapref{chapter:thermoelasticity})\en{,} \en{use of the heat equation}\ru{использование уравнения теплопроводности}~\eqrefwithchapdotpara{heatequation:mathematicalphysics}{chapter:thermoelasticity}{para:heatequation} \en{instead of the full balance of~energy}\ru{вместо полного баланса энергии} \en{must be supported}\ru{должно быть поддержано} \en{by asymptotic methods}\ru{асимптотическими методами}.
 
-Уязвимым в~какой\hbox{-}то степени местом
+\en{To a~certain degree}\ru{В~какой\hbox{-}то степени} \en{the introduction of a~small parameter}\ru{введение малого параметра}~${\smallparameter \to 0}$ \en{is the weakness}\ru{является слабостью} \en{of all asymptotic approaches}\ru{всех асимптотических подходов}.
+\en{A~protestation like}\ru{Возражение типа} \inquotes{\en{infinitesimal parameters do not exist}\ru{бесконечно-малых параметров не~бывает}, \en{all quantities are finite}\ru{все величины конечны}} \en{is barely constructive here}\ru{едва~ли конструктивно здесь}.
+\en{The more relevant question is}\ru{Более актуален вопрос}: \en{what is a~small parameter}\ru{что такое малый параметр}?
+\en{Usually}\ru{Обычно} \en{a~problem}\ru{проблема} \en{is reformulated}\ru{переформулируется} \en{in }\ru{в~}\inquotes{\en{dimensionless}\ru{безразмерных}} \en{quantities}\ru{величинах}, \en{then}\ru{тогда} \en{that}\ru{тот} \inquotes{\en{dimensionless}\ru{безразмерный}} \en{parameter}\ru{параметер} \en{is taken}\ru{берётся} \en{as}\ru{за} \en{a~small parameter}\ru{малый параметр}~${\smallparameter}$, \en{which turns out to be small}\ru{который оказывается малым}.
+\en{But another way is possible too}\ru{Но возможен и~другой путь}: \en{if it’s known}\ru{если известно}\ru{,} \en{that some parameter}\ru{что некий параметр}~${\omega}$ \en{influences the~solution only a~little}\ru{лишь немного влияет на решение}, \en{then}\ru{то}, \en{redesignating it}\ru{переобозначив его} \en{as}\ru{как}~${\smallparameter \omega}$, \en{do asymptotic analysis}\ru{сделать асимптотический анализ} \en{for}\ru{для}~${\smallparameter \to 0}$.
 
+\en{Surely}\ru{Разумеется}, \en{these are not \inquotes{laws} of~asymptotics}\ru{это не \inquotes{законы} асимптотики}, \en{not recommendations}\ru{не рекомендации}, \en{but only considerations}\ru{а~лишь соображения}.
+\en{There’s no common theory of asymptotic methods}\ru{Нет общей теории асимптотических методов}, \en{their application}\ru{их применение} \en{is to some extent}\ru{есть в~какой-то степени} \en{an art}\ru{искусство}.
 
-...
-
-
-
-\end{otherlanguage}
+\en{A~deeper description}\ru{Более глубокое описание} \en{of asymptotic methods}\ru{асимптотических методов} \en{is written}\ru{написано} \en{in the books}\ru{в~книгах} \en{by }Ali Hasan\ru{’а} Nayfeh \cite{nayfeh-introtoperturbation, nayfeh-perturbation}.
 
 \en{\section{Splitting in a linear algebraic system}}
 
 \ru{\section{Расщепление в линейной алгебраической системе}}
 
+\en{This simple case}\ru{Этот простой случай} \ru{хорошо }\en{illustrates}\ru{иллюстрирует} \en{asymptotic methods}\ru{асимптотические методы}\en{ well}.
+
 \begin{otherlanguage}{russian}
 
-Этот простой случай очень познавателен, он хорошо проясняет/иллюстрирует асимптотические явления.
-Рассматривается линейная система
-\begin{equation}
+\en{A~linear system is considered}\ru{Рассматривается линейная система}
+
+\nopagebreak\begin{equation}
 C_{i\hspace{-0.1ex}j} \hspace{.2ex} u_{j} \hspace{-0.16ex} = f_{i} \hspace{.1ex} , \:\:
 C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = C_{i\hspace{-0.1ex}j}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \hspace{.2ex} C_{i\hspace{-0.1ex}j}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(1)}}
 \end{equation}
-\noindent с~матрицей~$C_{i\hspace{-0.1ex}j}$ и~столбцами неизвестных~$u_j$ и~нагрузок~$f_i$.
-Процесс построения асимптотического решения определяется тем, вырождена матрица~${C_{i\hspace{-0.1ex}j}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}}}$ или~нет.
-Возможны три случая.
 
-\indent \textboldextended{1$^{\hspace{-0.1ex}\circ}$\hspace{-1ex}.}\, ${\operatorname{det} \hspace{.16ex} C_{i\hspace{-0.1ex}j}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.25ex} \neq 0}$.
+\noindent
+с~матрицей~$C_{i\hspace{-0.1ex}j}$ и~столбцами неизвестных~$u_j$ и~нагрузок~$f_i$.
+Процесс построения асимптотического решения определяется тем, вырождена матрица~${C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{0.66}{(0)}}}$ или~нет.
+\en{Three cases are possible}\ru{Возможны три случая}.
+
+\indent
+\textboldextended{1$^{\hspace{-0.1ex}\circ}$\hspace{-1ex}.}\, ${\operatorname{det} \hspace{.16ex} C_{i\hspace{-0.1ex}j}^{\hspace{0.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.25ex} \neq 0}$.
 Однородная задача
 \vspace{-0.2em}\begin{equation}
 C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{.1ex} u_{j} \hspace{-0.16ex} = 0
@@ -82,23 +187,17 @@ u_{j} = \ldots
 
 \en{\section{Poincar\'{e} method}} % Jules Henri Poincaré
 
-\ru{\section{Метод Пуанкаре}}
+\ru{\section{Метод Poincar\'{e}}}
 
-% https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9
+\en{This method}\ru{Этот метод}\ru{,} \en{associated}\ru{ассоциируемый} \en{with the name}\ru{с~именем} \href{https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9}{Jules Henri Poincar\'{e}}\ru{,}
+\en{is widely known}\ru{широко известен} \en{in the theory of nonlinear oscillations}\ru{в~теории нелинейных колебаний}.
+\en{It is intended}\ru{Он предназначен}, \en{in particular}\ru{в~частности}, \en{to determine}\ru{для~определения} \en{periodic solutions}\ru{периодических решений} \en{of equation}\ru{уравнения}
 
-\begin{otherlanguage}{russian}
-
-Этот метод широко известен в~теории нелинейных колебаний.
-Он предназначен, в~частности, для~определения периодических решений уравнения
-\begin{equation}\label{nonlinearvibrations:famousequation}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{nonlinearvibrations:famousequation}
 \mathdotdotabove{u} + u = \smallparameter \hspace{.1ex} f(u, \mathdotabove{u})
 \end{equation}
 
-...
-
-
-
-\end{otherlanguage}
+....
 
 \en{\section{Van der Pol averaging method}} % Balthasar van der Pol
 
@@ -126,13 +225,19 @@ u_{j} = \ldots
 \begin{otherlanguage}{russian}
 
 Основоположник метода сращивания внешних и~внутренних асимптотических разложений\:--- Ludwig Prandtl.
-Рассматривая течение вязкой жидкости, он заметил, что влияние малой вязкости локализовано у~границы\:--- в~тонком приграничном слое.
-Вдал\'{и} от~границы жидкость ведёт себя как идеальная.
-Одни и~те~же уравнения
+Рассматривая течение вязкой жидкости, он заметил, что влияние малой вязкости локализовано у~края\:--- в~тонком слое на краю.
+Вдал\'{и} от~края жидкость ведёт себя как идеальная.
+Одни и~те~же уравнения Navier--Stokes\ru{’а} по-разному упрощаются вдали от края и~около него [...]
+
+Метод сращивания состоит из трёх процедур: построения внешнего разложения, построения внутренних разложений и сращивания внешнего разложения с~внутренними.
+Метод предназначен для дифференциальных уравнений с~малым параметром при старших производных.
+Вдали от края решение меняется плавно, формально малые члены можно отбросить, уравнение имеет пониженный порядок\:--- всё это характерно для внешнего разложения.
+У~края наоборот: решение меняется быстро,   первостепенную роль играют старшие производные, хотя имеют малые коэффициенты.
+Но внешнее и~внутреннее разложения\:--- это разные формы одного решения, они должны быть состыкованы процедурой сращивания. Рассмотрим пример.
+
+Задача о~прогибе $u(x)$ натянутой струны с~закреплёнными концами под действием равномерно распределённой нагрузки может быть поставлена так:
 
 ...
-
-
 
 \end{otherlanguage}
 

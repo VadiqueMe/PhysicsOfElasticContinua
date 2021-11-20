@@ -173,10 +173,8 @@ m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_k \hspace{-0.1ex}
 }
 
 % arguments: name of point, name of force, vector length, vector angle in degrees, color
-\newcommand{\forceatpoint}[5]{%
-
-\tikzstyle{force line} =
-	[line width=1.25pt, line cap=round, -{Triangle[round, length=4.2mm, width=2.7mm]}]
+\newcommand{\forceatpoint}[5]{
+\tikzstyle{force line} = [line width=1.25pt, line cap=round, -{Triangle[round, length=4.2mm, width=2.7mm]}]
 
 % (from)!length!angle:(to)
 \path ($ (#1)!#3!#4:($ (#1) + (0, #3) $) $) node [shape=coordinate] (#1#2force) {} ;
@@ -185,10 +183,8 @@ m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_k \hspace{-0.1ex}
 }
 
 % arguments: name of point, name of other point, name of force, force vector length, color
-\newcommand{\forcebetweenpoints}[5]{%
-
-\tikzstyle{force line} =
-	[line width=1.25pt, line cap=round, -{Triangle[round, length=4.2mm, width=2.7mm]}]
+\newcommand{\forcebetweenpoints}[5]{
+\tikzstyle{force line} = [line width=1.25pt, line cap=round, -{Triangle[round, length=4.2mm, width=2.7mm]}]
 
 \path ($ (#1)!#4!0:(#2) $) node [shape=coordinate] (#1#3force) {} ;
 
@@ -707,7 +703,7 @@ ${\mathcircabove{\bm{e}}_i}$\:--- \en{triplet of orthonormal basis vectors}\ru{�
 ${\widetilde{\bm{x}} = x_i \hspace{.1ex} \widetilde{\bm{e}}_i}$,
 ${\bm{x} = x_i \hspace{.1ex} \bm{e}_i}$
 
-\eqref{rodriguesrotationformula}, \chapdotpararef{chapter:elementsoftensorcalculus}{para:rotationtensor}
+\eqref{rodriguesrotationformula}, \chapdotpararef{chapter:mathapparatus}{para:rotationtensor}
 
 ${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \widetilde{\bm{x}}}$
 
@@ -1032,7 +1028,7 @@ c\hspace{.2ex}(\locationvector, t) = 0
 .... \eqref{completelyrigidbody.locationvectorofanypointdecomposed} ${\Rightarrow}$
 ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{x}}}$
 
-(begin copied from \chapdotpararef{chapter:elementsoftensorcalculus}{para:calculusofvariations})
+(begin copied from \chapdotpararef{chapter:mathapparatus}{para:calculusofvariations})
 
 Варьируя тождество~\eqref{orthogonalityofrotationtensor}, получим ${\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!}$.
 Этот тензор антисимметричен, и~потому выражается через свой сопутствующий вектор~${\varvector{o}}$ как~${\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad}$.
@@ -1044,7 +1040,7 @@ ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{
 \hspace{-0.1ex} ,
 \end{equation}
 
-(end of copied from \chapdotpararef{chapter:elementsoftensorcalculus}{para:calculusofvariations})
+(end of copied from \chapdotpararef{chapter:mathapparatus}{para:calculusofvariations})
 
 ...
 
@@ -1059,13 +1055,15 @@ ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{
 
 \ru{\section{Баланс импульса, момента импульса и~энергии}}
 
-Эти уравнения баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\footnote{Изолированная (замкнутая) система\:--- это система частиц, взаимодействующих друг с~другом, но ни с~какими другими телами.}\hspace{-0.25ex} системе выводится из~однородности пространства \emph{(при любом параллельном переносе\:--- трансляции\:--- замкнутой системы как целого свойства этой системы не~меняются)}. Сохранение момента импульса\:--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}. Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \kinetic \hspace{.1ex} (q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \hspace{-0.1ex} \potential(q)}$ такой системы не~зависит явно от~времени).
+Эти уравнения баланса можно связать со~свойствами пространства и~времени~\cite{landau.lifshitz-shortcourse}. Сохранение импульса (количества движения) в~изолированной\footnote{Изолированная (замкнутая) система\:--- это система частиц, взаимодействующих друг с~другом, но ни с~какими другими телами.}\hspace{-0.25ex} системе выводится из~однородности пространства \emph{(при любом параллельном переносе\:--- трансляции\:--- замкнутой системы как целого свойства этой системы не~меняются)}.
+Сохранение момента импульса\:--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}.
+Энергия~же изолированной системы сохраняется, так~как время однородно (энергия ${\mathrm{E} \hspace{.1ex} \equiv \kinetic \hspace{.1ex} (q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \hspace{-0.1ex} \potential(q)}$ такой системы не~зависит явно от~времени).
 
 Уравнения баланса могут быть выведены из принципа виртуальной работы~\eqref{discrete:principleofvirtualwork}.
 Перепишем его в~виде
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{discrete:principleofvirtualwork.externalinternal}
-\displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.25ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\locationvector}_k \right) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex}
+\displaystyle \sum_{\smash{k}} \hspace{-0.2ex} \Bigl( \hspace{-0.25ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\locationvector}_k \Bigr) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex}
 + \variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex},
 \vspace{-0.25em}\end{equation}
 
@@ -1416,7 +1414,7 @@ q^i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 ${x_i \hspace{-0.1ex} \neq \constant}$ $\Rightarrow$ ${\mathdotabove{x}_i \hspace{-0.1ex} \neq 0}$
 
-\en{By}\ru{По}~\eqrefwithchapdotpara{angularvelocityandbasisvectors}{chapter:elementsoftensorcalculus}{para:rotationtensor}
+\en{By}\ru{По}~\eqrefwithchapdotpara{angularvelocityandbasisvectors}{chapter:mathapparatus}{para:rotationtensor}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{e}_i
@@ -1538,7 +1536,6 @@ ${
 
 ...
 
-
 \end{otherlanguage}
 
 \en{\section{Small oscillations (vibrations)}}
@@ -1547,42 +1544,45 @@ ${
 
 \label{para:smalloscillations}
 
-\begin{otherlanguage}{russian}
+% periodic motion
 
-Если статика линейной системы описывается уравнением~\eqref{staticsoflineardiscretesystem}, то в~динамике имеем
+\en{If}\ru{Если} \en{the statics}\ru{статика} \en{of a~linear system}\ru{линейной системы} \en{is described}\ru{описывается} \en{by equation}\ru{уравнением}~\eqref{staticsoflineardiscretesystem}, \en{then}\ru{то} \en{in the dynamics}\ru{в~динамике} \en{we have}\ru{мы имеем}
 
 \nopagebreak\vspace{-0.4em}\begin{equation}\label{dynamicsoflineardiscretesystem}
 \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{-0.2ex} \left(^{\mathstrut} \hspace{-0.2ex} A_{ik} \hspace{.12ex} \mathdotdotabove{q}_k + C_{ik} \hspace{.12ex} q^k \right) \hspace{-0.4ex}
 = \hspace{.1ex} \mathcircabove{Q}_{\hspace{-0.1ex}i}(t) \hspace{.1ex} ,
 \vspace{-0.1em}\end{equation}
 
-\vspace{-0.25em} \noindent где ${A_{ik}}$\:--- симметричная и~положительная \inquotesx{матрица кинетической энергии}[.]
+\vspace{-0.25em}\noindent
+\en{where}\ru{где} ${A_{ik}}$\en{ is}\ru{\:---} \en{the }\en{symmetric and positive}\ru{симметричная и~положительная} \inquotesx{\en{matrix}\ru{матрица} \en{of kinetic energy}\ru{кинетической энергии}}[.]
 
-{\small%
-A normal mode of~an~oscillating system is a pattern of motion in which all parts of the system move sinusoidally with the same frequency and with a fixed phase relation. The free motion described by the normal modes takes place at fixed frequencies. These fixed frequencies of the normal modes of a system are known as its natural resonant frequencies.
+\en{Any description}\ru{Любое описание} \en{of oscillations}\ru{колебаний} \en{almost always}\ru{почти всегда} \en{includes}\ru{включает} \en{the term}\ru{термин} \inquotesx{\en{mode}\ru{мода}}[.]
+\en{A~mode of vibration}\ru{Мода вибрации} \en{can be defined}\ru{может быть определена} \en{as}\ru{как} \en{a~way of vibrating}\ru{способ вибрирования} \en{or}\ru{или} \en{a~pattern}\ru{паттерн} \en{of vibration}\ru{вибрации}.
+\en{A~normal mode}\ru{Нормальная мода} \en{is}\ru{есть} \en{a~pattern}\ru{паттерн} \en{of periodic motion}\ru{периодического движения}, \en{when}\ru{когда} \en{all parts}\ru{все части} \en{of an~oscillating system}\ru{колеблющейся системы} \en{move sinusoidally}\ru{движутся синусоидально} \en{with the same frequency}\ru{одинаковой частотой} \en{and}\ru{и} \en{with a~fixed phase relation}\ru{с~фиксированным соотношением фаз}.
+\en{The free motion}\ru{Свободное движение}\ru{,} \en{described by the normal modes}\ru{описываемое нормальными модами}\ru{,} \en{takes place}\ru{происходит} \en{at fixed frequencies}\ru{на фиксированных частотах}\:--- \en{the natural resonant frequencies}\ru{натуральных резонансных частотах} \en{of an~oscillating system}\ru{колеблющейся системы}.
 
-In music, normal modes of vibrating instruments (strings, air pipes, drums, etc.) are called \inquotes{harmonics} or \inquotesx{overtones}[.]
+\en{The most generic motion}\ru{Самое общее движение} \en{of an~oscillating system}\ru{колеблющейся системы} \en{is}\ru{есть} \ru{некоторая суперпозиция}\en{some superposition} \en{of normal modes}\ru{нормальных мод} \en{of this system}\ru{этой системы}.%
+\footnote{\en{The modes}\ru{Моды} \en{are }\inquotes{\en{normal}\ru{нормальны}} \en{in the sense that}\ru{в~смысле, что} \en{they move independently}\ru{они движутся независимо}, \en{and}\ru{и} \en{an~excitation of one mode}\ru{возбуждение одной моды} \en{will never cause}\ru{никогда не вызовет} \en{a~motion of another mode}\ru{движение другой моды}.
+\en{In mathematical terms}\ru{В~математических терминах}\en{,} \en{normal modes}\ru{нормальные моды} \en{are orthogonal to each other}\ru{ортогональны друг другу}.
+\en{In music}\ru{В~музыке}\en{,} \en{normal modes}\ru{нормальные моды} \en{of vibrating instruments}\ru{вибрирующих инструментов}~(\en{strings}\ru{струн}, \en{air pipes}\ru{воздушных трубок}, \en{percussion}\ru{перкуссии} \en{and others}\ru{и~других}) \en{are called}\ru{называются} \inquotes{harmonics} \en{or}\ru{или} \inquotesx{overtones}[.]}
 
-The most general motion of a system is a superposition of its normal modes. The modes are normal in the sense that they can move independently, that is to say that an excitation of one mode will never cause motion of a different mode. In mathematical terms, normal modes are orthogonal to each other.
-\par}
-
-\en{A~research}\ru{Изучение} \en{of~an~oscillating system}\ru{колеблющейся системы} \en{most often begins with }\ru{чаще всего начинается с~}\en{ortho\-gonal}\ru{орто\-гональ\-ных}~(\en{normal}\ru{нормальных}) \inquotesx{\en{modes}\ru{мод}}[---] \en{harmonics}\ru{гармоник}, собственных~(свободных, без воздействий извне) \en{sinusoidal oscillations}\ru{синусоидальных колебаний} \en{like}\ru{вида}
+\en{A~research}\ru{Изучение} \en{of~an~oscillating system}\ru{колеблющейся системы} \en{most often begins}\ru{чаще всего начинается} \en{with }\ru{с~}\en{ortho\-gonal}\ru{орто\-гональ\-ных}~(\en{normal}\ru{нормальных}) \inquotesx{\en{modes}\ru{мод}}[---] \en{harmonics}\ru{гармоник}, \en{free}\ru{свободных} (\en{without any driving or damping force}\ru{без какой-либо движущей или демпфирующей силы}) \en{sinusoidal oscillations}\ru{синусоидальных колебаний}
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
-q^k \hspace{-0.1ex} (t) \hspace{-0.2ex} = \widearc{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t
+q^k \hspace{-0.1ex} (t) \hspace{-0.2ex} = \mathasteriskabove{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t
 \hspace{.1ex} .
 \end{equation*}
 
 \vspace{-0.2em} \noindent
-\en{Multipliers}\ru{Множители}~${\widearc{q}_{\hspace{-0.1ex}k} \hspace{-0.15ex} = \constant}$\en{ are}\ru{\:---} \en{ortho\-gonal}\ru{орто\-гональ\-ные}~(\en{normal}\ru{нормальные}) \inquotes{\en{modes}\ru{моды}} \en{of~oscillation}\ru{колебания}, ${\omega_k\hspace{-0.1ex}}$\en{ are}\ru{\:---} \en{natural}\ru{натуральные}~(\en{resonant}\ru{резонансные}, \en{eigen-}\ru{собственные}) \en{frequencies}\ru{частоты}.
-\en{This set}\ru{Этот набор}, \en{dependent on}\ru{зависящий от} \en{the~structure}\ru{структуры} \en{of~an~oscillating object}\ru{колеблющегося объекта}, \en{materials}\ru{материалов} \en{and}\ru{и}~\en{boundary conditions}\ru{краевых условий}, находится из задачи на~собственные значения
+\en{Multipliers}\ru{Множители}~${\mathasteriskabove{q}_{\hspace{-0.1ex}k} \hspace{-0.15ex} = \constant}$\en{ are}\ru{\:---} \en{ortho\-gonal}\ru{орто\-гональ\-ные}~(\en{normal}\ru{нормальные}) \inquotes{\en{modes}\ru{моды}} \en{of~oscillation}\ru{колебания}, ${\omega_k\hspace{-0.1ex}}$\en{ are}\ru{\:---} \en{natural}\ru{натуральные}~(\en{resonant}\ru{резонансные}, \en{eigen-}\ru{собственные}) \en{frequencies}\ru{частоты}.
+\en{This set}\ru{Этот набор}, \en{dependent on}\ru{зависящий от} \en{the structure}\ru{структуры} \en{of~an~oscillating object}\ru{колеблющегося объекта}, \en{the materials}\ru{материалов} \en{and}\ru{и}~\en{the boundary conditions}\ru{краевых условий}, \en{is found}\ru{находится} \en{from}\ru{из} \en{the eigenvalue problem}\ru{задачи на~собственные значения}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
 \begin{array}{c}
 \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{-0.15ex} = 0
 \hspace{.1ex} ,
 \:\;
-\mathdotdotabove{q}_k \hspace{-0.12ex} = - \hspace{.2ex} \omega_k^2 \hspace{.25ex} \widearc{q}_{\hspace{-0.1ex}k} \hspace{-0.1ex} \operatorname{sin} \omega_k \hspace{.1ex} t
+\mathdotdotabove{q}_k \hspace{-0.12ex} = - \hspace{.2ex} \omega_k^2 \hspace{.25ex} \mathasteriskabove{q}_{\hspace{-0.1ex}k} \hspace{-0.1ex} \operatorname{sin} \omega_k \hspace{.1ex} t
 \hspace{.1ex} ,
 \:\;
 \eqref{dynamicsoflineardiscretesystem}
@@ -1591,26 +1591,26 @@ q^k \hspace{-0.1ex} (t) \hspace{-0.2ex} = \widearc{q}_{\hspace{-0.1ex}k} \operat
 %
 \Rightarrow \:\,
 \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \Bigl( \hspace{-0.2ex} C_{ik} \hspace{-0.1ex} - \hspace{-0.2ex} A_{ik} \hspace{.25ex} \omega_k^2 \hspace{.1ex} \Bigr) \hspace{.12ex}
-\widearc{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t
+\mathasteriskabove{q}_{\hspace{-0.1ex}k} \operatorname{sin} \omega_k \hspace{.1ex} t
 = 0
 \end{array}
 \end{equation}
 
 ...
 
+%%\begin{otherlanguage}{russian}
+%%\end{otherlanguage}
 
-\end{otherlanguage}
+\ru{Интеграл }Duhamel\en{’s}\ru{’я}\en{ integral} is a~way of calculating the response \en{of linear systems}\ru{линейных систем} to arbitrary time-varying external perturbation.
+
+...
 
 \section*{\small \wordforbibliography}
 
 \begin{changemargin}{\parindent}{0pt}
 \fontsize{10}{12}\selectfont
 
-\begin{otherlanguage}{russian}
-
-В~длинном списке книг по~общей механике можно найти труды не~только механиков\hbox{-}профессионалов~\cite{goldstein-classicalmechanics, treatiseonanalyticaldynamics-by-l.a.pars, loitsjanskiy.lurie, lurie-analyticalmechanics, olkhovskiy-theoreticalmechanicsforphysicists}, но~и физиков\hbox{-}теоретиков широкой ориентации~\cite{landau.lifshitz-shortcourse, terhaar-hamiltonianmechanics}.
-Интересен курс Ф.\,Р.\;Гантмахера~\cite{gantmacher} с~компактным, но~полным изложением осн\'{о}в.
-
-\end{otherlanguage}
+\en{In a~long list}\ru{В~длинном списке} \en{of books}\ru{книг} \en{on generic mechanics}\ru{по~общей механике} \en{one can find}\ru{можно найти} \en{works}\ru{работы} \en{of both}\ru{и} \en{specialists in mechanics}\ru{специалистов по механике}~\cite{goldstein-classicalmechanics, treatiseonanalyticaldynamics-by-l.a.pars, loitsjanskiy.lurie, lurie-analyticalmechanics, olkhovskiy-theoreticalmechanicsforphysicists}\ru{,} \en{and}\ru{и} \en{broadly oriented}\ru{широко ориентированных} \en{theoretical physicists}\ru{физиков\hbox{-}теоретиков}~\cite{landau.lifshitz-shortcourse, terhaar-hamiltonianmechanics}.
+\en{The book by F.\,R.\;Gantmacher (\foreignlanguage{russian}{Ф.\,Р.\;Гантмахер})}\ru{Книга Ф.\,Р.\;Гантмахер’а}~\cite{gantmacher} \en{with compact but complete}\ru{с~компактным, но~полным} \en{narration}\ru{изложением} \en{of fundamentals of the theory}\ru{осн\'{о}в теории} \en{is pretty interesting}.
 
 \end{changemargin}

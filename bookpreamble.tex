@@ -210,6 +210,7 @@
 \newcommand\levicivitatensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
 \newcommand\rotationtensor{\bm{O}}
+\newcommand\orthogonaltensor{\bm{Q}}
 
 \newcommand\inertiatensor{{\hspace{-0.1ex}^2}\bm{\mathfrak{I}}}
 \newcommand\inertiascalar{\mathfrak{I}}
@@ -235,6 +236,14 @@
 \usepackage{accents}
 
 \makeatletter
+
+\newcommand{\sapproxabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.64\dimexpr(\f@size pt)}{0}\selectfont$\,approx$}}
+\DeclareRobustCommand{\mathapproxabove}{\accentset{\sapproxabove}}
+
+\newcommand{\sasteriskabove}{%
+	\hbox{\fontfamily{lmr}\fontsize{.64\dimexpr(\f@size pt)}{0}\selectfont$\,*$}}
+\DeclareRobustCommand{\mathasteriskabove}{\accentset{\sasteriskabove}}
 
 \newcommand{\scircabove}{%
 	\hbox{\fontfamily{lmr}\fontsize{.64\dimexpr(\f@size pt)}{0}\selectfont$\,\circ$}}
@@ -346,6 +355,8 @@
 %%\usetikzlibrary{topaths}
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.misc}
 \usetikzlibrary{decorations.markings, decorations.pathmorphing, decorations.pathreplacing}
 
 \tikzset {
@@ -396,6 +407,7 @@
 \newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
 
 \newcommand\infinitesimaldeformation{\mathboldepsilon}
+\newcommand\infinitesimaldeformationcomponents[1]{\mathepsilon_{#1}}
 \newcommand\infinimentpetitdeformationdevariation{\varbivalent{\infinitesimaldeformation}}
 \newcommand\infinitesimaldeformationeigenvalue[1]{\mathepsilon_{#1}}
 
@@ -586,6 +598,9 @@ aboveskip=4mm,belowskip=2.5mm}
 
 \addto\captionsenglish{\def\wordforbibliography{Bibliography}}
 \addto\captionsrussian{\def\wordforbibliography{Библиография}}
+
+\newcommand\rucontinuum{контину\kern-0.11exум}
+\newcommand\ruContinuum{Контину\kern-0.11exум}
 
 \newcommand\pararef[1]{\hyperref[#1]{\S\,\ref*{#1}}}
 \newcommand\chapdotpararef[2]{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}
