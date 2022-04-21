@@ -483,7 +483,7 @@ ${\stiffnesstensor_{\hspace{.12ex} 12 \scalebox{0.6}[0.8]{$\rightleftarrows$} 34
 ${A^{i\hspace{-0.1ex}j\hspace{-0.06ex}k\hspace{.06ex}l} \hspace{-0.16ex} = A^{j\hspace{-0.06ex}ik\hspace{.06ex}l} \hspace{-0.16ex} = A^{i\hspace{-0.1ex}jlk}}$~(${= A^{j\hspace{-0.06ex}i\hspace{.06ex}l\hspace{-0.06ex}k}}$).
 \en{This}\ru{Это} \en{reduces}\ru{снижает} \en{the~number}\ru{число} \en{of~independent components}\ru{независимых компонент} \en{to}\ru{до}~21:
 
-\nopagebreak\vspace{-0.25em}\begin{equation*}\scalebox{0.8}{$\begin{array}{l}
+\nopagebreak\vspace{-0.25em}\begin{equation*}\scalebox{.8}{$\begin{array}{l}
 \scalebox{1.16}{$A^{abcd^{\mathstrut}} = A^{cdab} = A^{bacd} = A^{abdc}$}
 \\[.2em]
 %
@@ -588,7 +588,7 @@ a_{15} \hspace{-0.2ex} = a_{16} \hspace{-0.2ex} = a_{25} \hspace{-0.2ex} = a_{26
 Пусть далее плоскостей симметрии две: ${z = \constant}$ и ${y = \constant}$.
 Поскольку~$\potential$ в~таком случае не~чувствительна к~знакам~$\varepsilon_{yx}$ и~$\varepsilon_{yz}$, вдобавок к~\eqref{zeroconstants:oneplaneofsymmetry} имеем
 
-\nopagebreak\vspace{-0.22em}\begin{equation}\label{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}
+\nopagebreak\vspace{-0.22em}\begin{equation}\label{zeroconstants:2orthotropic}
 a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56} \hspace{-0.2ex} = 0
 \end{equation}
 
@@ -596,7 +596,7 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 --- осталось 9~констант.
 
 Ортотропным~(ортогонально анизотропным) называется материал с~тремя ортогональными плоскостями симметрии\:--- пусть это координатные плоскости~$x$, $y$, $z$.
-Легко увидеть, что \eqref{zeroconstants:oneplaneofsymmetry} и~\eqref{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}\:--- это весь набор нулевых констант и~в~этом случае.
+Легко увидеть, что \eqref{zeroconstants:oneplaneofsymmetry} и~\eqref{zeroconstants:2orthotropic}\:--- это весь набор нулевых констант и~в~этом случае.
 Итак, ортотропный материал характеризуется девятью константами, и~\inquotes{для ортотропности} достаточно двух перпендикулярных плоскостей симметрии.
 Вид упругой энергии упрощается до
 
@@ -608,11 +608,22 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 \hspace{.1ex} .
 \end{multline*}
 
-В~ортотропном материале сдвиговые~(угловые) деформации $\varepsilon_{xy}$, $\varepsilon_{xz}$, $\varepsilon_{yz}$ никак не~влияют на нормальные напряжения ${\sigma_x \hspace{-0.25ex} = \raisemath{.16em}{\scalebox{0.88}{$\partial \hspace{.1ex} \potential$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial \varepsilon_x$}}}$, ${\sigma_y \hspace{-0.25ex} = \raisemath{.16em}{\scalebox{0.88}{$\partial \hspace{.1ex} \potential$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial \varepsilon_y$}}}$, ${\sigma_z \hspace{-0.25ex} = \raisemath{.16em}{\scalebox{0.88}{$\partial \hspace{.1ex} \potential$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.88}{$\partial \varepsilon_z$}}}$ (и~наоборот).
+В~ортотропном материале сдвиговые~(угловые) деформации ${\varepsilon_{xy}}$, ${\varepsilon_{xz}}$, ${\varepsilon_{yz}}$ никак не~влияют на нормальные напряжения ${\sigma_{\hspace{-.1ex}x}}$\hspace{-.1ex}, ${\sigma_y}$\hspace{-.1ex}, ${\sigma_z}$ (и~наоборот).
 Популярный ортотропный материал\:--- древесина; её упругие свойства различны по~трём взаимно перпендикулярным направлениям: по~радиусу, вдоль~окружности и~по~высоте ствола.
 
 Ещё~один случай анизотропии\:--- трансверсально изотропный (transversely isotropic) материал.
-Он характеризуется
+Он характеризуется осью анизотропии\:--- пусть это $z$, тогда любая плоскость, параллельная $z$, должна быть плоскостью материальной симметрии.
+Ясно, что этот материал ортотропен.
+Но есть большее: $\potential$ не меняется при любом повороте $\infinitesimaldeformation$ вокруг оси $z$.
+Поэтому
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\scalebox{.9}{$ \displaystyle\frac{\partial\hspace{.2ex}\potential}{\partial\infinitesimaldeformation} $} \hspace{-.2ex} \dotdotp \hspace{-.2ex}
+\bigl(\hspace{.3ex}
+\bm{k} \hspace{-.5ex} \times \hspace{-.5ex} \infinitesimaldeformation \hspace{-.2ex} - \hspace{-.2ex} \infinitesimaldeformation \hspace{-.5ex} \times \hspace{-.5ex} \bm{k}
+\hspace{.3ex}\bigr) \hspace{-.3ex} = 0
+\hspace{.2ex} .
+\end{equation}
 
 ...
 
@@ -626,7 +637,7 @@ a_{14} \hspace{-0.2ex} = a_{24} \hspace{-0.2ex} = a_{34} \hspace{-0.2ex} = a_{56
 = \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation
 \hspace{.1ex} ,
 \hspace{.4em}
-\linearstress \hspace{.1ex} = \scalebox{0.9}{$\displaystyle\frac{\raisemath{-0.2em}{\partial\hspace{.1ex} \potential}}{\raisemath{.04em}{\partial \infinitesimaldeformation}}$} = \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation = \infinitesimaldeformation \dotdotp \stiffnesstensor
+\linearstress \hspace{.1ex} = \scalebox{.9}{$\displaystyle\frac{\raisemath{-0.2em}{\partial\hspace{.1ex} \potential}}{\raisemath{.04em}{\partial \infinitesimaldeformation}}$} = \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation = \infinitesimaldeformation \dotdotp \stiffnesstensor
 \hspace{.4em}\Rightarrow
 \\[-0.1em]
 %
@@ -777,7 +788,7 @@ ${- \hspace{.1ex} \variation{\internalwork} \hspace{-0.2ex} = \variation{\potent
 Потому в~принципе виртуальной работы и~варьируются лишь перемещения, чтобы виртуальная работа внешних неварьируемых реальных сил на~вариациях перемещений была равна минус вариации внутренней энергии (в~случае упругой среды\:--- вариации упругого потенциала).
 \par}
 
-\subsection*{\en{Uniqueness of solution theorem}\ru{Теорема единственности решения}}
+\subsection*{\en{The uniqueness of the solution theorem}\ru{Теорема единственности решения}}
 
 Как~и в~динамике~(\pararef{para:uniquenessfordynamicproblem}), допускаем существование двух решений и~ищем их~разность
 
@@ -1086,7 +1097,7 @@ Concentrated force is useful mathematical idealization, but cannot be found in t
 
 \ru{\section{Уравнения в напряжениях}}
 
-\en{Balance of~forces~(of~momentum)}\ru{Баланс сил~(импульса)}
+\en{The balance of~forces~(of~momentum)}\ru{Баланс сил~(импульса)}
 
 \nopagebreak\en{\vspace{-0.125em}}\ru{\vspace{-0.6em}}
 \begin{equation}\label{stresseseq:balanceofforces}
