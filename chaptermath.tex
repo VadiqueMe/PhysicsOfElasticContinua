@@ -6,12 +6,39 @@
 
 \label{chapter:mathapparatus}
 
+\subsection{Lines, curved and straight (linear)}
+
+\en{The hypothesis}\ru{Гипотеза} \en{of the existence}\ru{существования} \en{of straight lines}\ru{прямых линий}.
+
+\subsection{Straight line and vector}
+
+\en{A~(geometric) vector}\ru{Вектор~(геометрический)} \en{may be}\ru{может быть} \en{like}\ru{как} \en{a~straight line}\ru{прямая линия} \en{with an~arrow}\ru{со стрелкой} \en{at one of its ends}\ru{на одном из её концов}.
+\textcolor{red}{Then} it is fully described (characterized) by the~magnitude and the~direction.
+
+\textcolor{magenta}{Why are vectors always straight (linear)?}
+
+\textcolor{magenta}{Vectors are linear (straight), they cannot be curved.}
+
+\textcolor{magenta}{Vectors are neither straight nor curved.}
+A~vector has the~magnitude and the~direction.
+A~vector is not a~line or a~curve, albeit it can be represented by a~straight line.
+
+A~vector has the~magnitude and the~direction. It can’t be thought of as a~line.
+
+\subsection{\en{Number line}\ru{Числовая прямая}}
+
+\subsection{\en{Plane and space}\ru{Плоскость и пространство}}
+
+\subsection{\en{Differentiation into small differential chunks}\ru{Дифференциация на м\'{а}лые дифференциальные кусочки}}
+
+\en{Small differential chunks}\ru{М\'{а}лые дифференциальные кусочки}
+
 \begin{changemargin}{\parindent}{\parindent}
-\vspace{-2.5em}
+%%\vspace{-2.5em}
 {\noindent\small
 \setlength{\parskip}{\spacebetweenparagraphs}
 
-\en{Mention}\ru{Упоминание} \en{of~tensors}\ru{тензоров} \en{may scare away the~reader}\ru{может отпугнуть читателя}, \en{commonly avoiding needless complications}\ru{обычно избегающего ненужных сложностей}.
+\en{A~mention}\ru{Упоминание} \en{of~tensors}\ru{тензоров} \en{may scare away the~reader}\ru{может отпугнуть читателя}, \en{commonly avoiding needless complications}\ru{обычно избегающего ненужных сложностей}.
 \en{Don’t be afraid}\ru{Не бойся}: \en{tensors}\ru{тензоры} \en{are used}\ru{используются} \en{just}\ru{просто} \en{due to their wonderful property}\ru{из\hbox{-}за своего чудесного свойства} \en{of invariance}\ru{инвариантности}\:--- \en{independence from coordinate systems}\ru{независимости от систем координат}.
 
 \par}
@@ -25,11 +52,98 @@
 \label{para:vector}
 
 \en{\dropcap{I}{}}\ru{\dropcap{Я}{}}
-\hspace{-0.1ex}\en{propose}\ru{предлагаю} \en{to~begin familiarizing with tensors}\ru{начать знакомство с~тензорами} \en{via memoirs}\ru{через мемуары} \en{about such a~phenomenon as a~vector}\ru{о~таком феномене как вектор}.
+\hspace{-0.1ex}\en{propose}\ru{предлагаю} \en{to~begin familiarizing with tensors}\ru{начать знакомство с~тензорами} \en{via memoirs}\ru{через мемуары} \en{about such a~phenomenon as a~vector}\ru{о~таком феномене как вектор}%
+\footnote{%
+\en{Within}\ru{в}~\href{https://en.wikipedia.org/wiki/Abstract_algebra}{\en{the abstract algebra}\ru{абстрактной алгебре}}\en{,} \en{the word}\ru{слово} \emph{\en{vector}\ru{вектор}}\en{ is}\ru{\:---} \en{about any object}\ru{про любой объект}\ru{,} \en{which}\ru{который} \en{can be}\ru{может быть} \en{summed}\ru{суммирован} \en{with similar objects}\ru{с~подобными объектами} \en{and}\ru{и}~\en{scaled~(multiplied)}\ru{умножен~(scaled)} \en{by scalars}\ru{на скаляры}, \en{and }\ru{а~}\en{vector space}\ru{векторное пространство}\en{ is}\ru{\:---} \en{a~synonym}\ru{синоним} \en{of~}\en{linear space}\ru{линейного пространства}.
+\en{Therefore}\ru{Поэтому} \en{I clarify that}\ru{я поясняю, что} \en{in this book}\ru{в~этой книге} \emph{\en{vector}\ru{вектор}} \en{is}\ru{есть} \en{nothing else than}\ru{не что иное, как} \en{three-dimensional}\ru{трёхмерный} \en{geometric}\ru{геометрический} (\textgreek{Ευκλείδειος}, \ru{Евклидов, }Euclidean) \en{vector}\ru{вектор}.%
+}\hbox{\hspace{-0.5ex}.}
 
-\en{Here it is}\ru{Вот он}\:--- \en{vector}\ru{вектор}~$\bm{v}$.
-\en{It is pretty well characterized}\ru{Он вполне характеризуется} \en{by }\en{its length}\ru{своей длиной}~(\en{magnitude}\ru{магнитудой}, \en{modulus}\ru{модулем}) \en{and }\ru{и~}\en{its direction}\ru{своим направлением} \en{in space}\ru{в~пространстве}.
-\en{It objectively exists by itself}\ru{Он объективно существует сам по себе}, \en{independent}\ru{независимо} \en{of}\ru{от} \en{methods}\ru{методов} \en{and}\ru{и}~\en{units}\ru{единиц} \en{of~measurements}\ru{измерений} \en{of~both lengths and directions}\ru{и~длин, и~направлений}.
+\begin{itemize}
+\item A \emph{point} has position in space. The only characteristic that distinguishes one point from another is its position.
+\item A \emph{vector} has both magnitude and direction, but no specific position in space.
+\end{itemize}
+
+\subsection{\en{What is a~vector?}\ru{Что такое вектор?}}
+
+What is \inquotes{linear}?
+\\
+(1) straight
+\\
+(2) relating to, resembling, or having \textcolor{teal}{a~graph} that is a~straight line
+
+All vectors are linear objects.
+
+Examples of vectors:
+
+\begin{itemize}
+\item \en{A~force acts on an~object}\ru{Сила действует на объект}.
+%
+\item \en{The~velocity of an~object}\ru{Скорость объекта} \en{describes}\ru{описывает} \en{what’s happening}\ru{происходящее} \en{with this object}\ru{с~этим объектом} \en{at an~instant}\ru{за мгновение}.
+\end{itemize}
+
+The sum (combination) of two or more vectors is the new (\inquotes{resultant}) vector.
+There are two similar methods to calculate the resultant vector geometrically.
+
+The \emph{\inquotes{head to tail} method} involves lining up the head of the one vector with the tail of the other.
+Here the resultant goes from the initial point (\inquotes{tail}) of the first addend to the end point (\inquotes{head}) of the second addend when the tail (initial point) of the second one coincides with the head (end point) of the first one.
+
+[ .... figure here .... ]
+
+The \emph{\inquotes{parallelogram} method}.
+
+Vector addition is commutative
+\begin{equation*}
+\bm{v} + \bm{w} = \bm{w} + \bm{v}
+\hspace{.1ex} .
+\end{equation*}
+
+\en{Multiplication of a~vector by a~scalar.}\ru{Умножение вектора на скаляр.}
+
+\en{Multiplication by minus one.}\ru{Умножение на минус единицу.}
+
+\ru{Принцип }\en{The }Newton’\en{s}\ru{а} \en{action}\ru{действия}--\en{reaction}\ru{противодействия}\en{ principle} \inquotes{\foreignlanguage{russian}{действие равно противодействию по магнитуде и обратно ему по направлению}}.
+
+In every mechanical interaction, there’s a~pair of forces acting on the two objects that interact. These forces can be represented as vectors, they are equal in magnitude and reverse in direction.
+
+Multiplying a~vector by negative one reverses the direction but doesn’t change the magnitude.
+
+For every action, there’s an equal (in magnitude) and opposite (in direction) reaction force.
+
+A~vector may be also represented as the sum (combination) of some trio (called \inquotes{basis}) of~other vectors scaled by numbers (coefficients).
+Such a~representation is called a~\inquotes{linear combination} of basis vectors.
+A~list (array, tuple) of coefficients alone, without basis vectors, is not enough and can’t represent a~vector.
+
+{\small
+\foreignlanguage{russian}{У элементов векторного пространства\:--- векторов\:--- компонент нет.
+Компоненты появляются тогда, когда выбран базис.
+И~в~разных базисах компоненты одного и~того~же вектора будут разные.}
+\par}
+
+\en{Here it is}\ru{Вот он}\:--- \en{the }\en{vector}\ru{вектор}, $\bm{v}$ \en{seems}\ru{кажется} \en{like a~suitable name}\ru{подходящим именем} \en{for it}\ru{для него}.
+
+\en{Like all geometric vectors}\ru{Как и~все геометрические векторы}, $\bm{v}$ \en{is pretty well characterized}\ru{вполне характеризуется} \en{by the }\en{two mutually independent properties}\ru{двумя взаимно независимыми свойствами}: \en{its length}\ru{своей длиной}~(\en{magnitude}\ru{магнитудой}, \en{norm}\ru{нормой}, \en{modulus}\ru{модулем}) \en{and }\ru{и~}\en{its direction}\ru{своим направлением} \en{in space}\ru{в~пространстве}.
+\en{This characterization is complete}\ru{Эта характеристика полная}, \en{so}\ru{так что} \en{two vectors}\ru{два вектора} \en{with the same magnitude and the same direction}\ru{с~одинаковой магнитудой и~одинаковым направлением} \en{are considered equal}\ru{считаются равными}.
+
+\en{Every vector}\ru{Каждый вектор} \en{exists}\ru{существует} \en{objectively by itself}\ru{объективно сам по~себе}, \en{independently}\ru{независимо} \en{of}\ru{от}~\en{methods}\ru{методов} \en{and}\ru{и}~\en{units}\ru{единиц} \en{of~measurement}\ru{измерения} \en{of~both lengths and directions}\ru{и~длин, и~направлений} (\en{including}\ru{включая} \en{any abstractions}\ru{любые абстракции} \en{of such units and methods}\ru{таких единиц и~методов}).
+
+{\small
+plane geometry is two-dimensional Euclidean geometry
+
+\emph{The modern version of the Euclidean geometry is the theory of multidimensional Euclidean (coordinate) spaces, where distance is measured by the Pythagorean theorem.}
+
+Euclidean geometry $\longleftrightarrow$ \inquotes{flat} space
+
+Euclidean geometry, sometimes called parabolic geometry, follows a~set of propositions that are based on \href{https://en.wikibooks.org/wiki/Geometry/Five_Postulates_of_Euclidean_Geometry}{Euclid’s five postulates}.
+
+The fundamental concepts of Euclidean geometry are a~point, a~line, and a~plane.
+A~point has no dimensions (length or width), it only has a~location.
+A~line is straight and extends infinitely \textcolor{magenta}{in the opposite directions}.
+A~plane is a~flat surface that extends infinitely.
+\par}
+
+\subsection{\en{The method of coordinates}\ru{Метод координат}}
+
+....
 
 \vspace{.2em}
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
@@ -47,51 +161,51 @@
 \pgfmathsetmacro{\anglefromz}{44}
 \pgfmathsetmacro{\anglefromx}{70}
 
-\begin{tikzpicture}[scale=2.5, tdplot_main_coords] % use 3dplot
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords]
 
-	\coordinate (O) at (0,0,0);
+	\coordinate (O) at (0, 0, 0);
 
 	% draw axes
-	\draw [line width=0.4pt, blue] (O) -- (1.22,0,0);
+	\draw [line width=.4pt, blue] (O) -- (1.22, 0, 0);
 	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
-		(O) -- (1,0,0)
-		node[pos=0.9, above, xshift=-0.6em, yshift=0.1em] {${\bm{e}}_1$};
+		(O) -- (1, 0, 0)
+		node[pos=.9, above, xshift=-0.6em, yshift=.1em] {${\bm{e}}_1$};
 
-	\draw [line width=0.4pt, blue] (O) -- (0,1.88,0);
+	\draw [line width=.4pt, blue] (O) -- (0, 1.88, 0);
 	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
-		(O) -- (0,1,0)
-		node[pos=0.9, above, xshift=0.2em, yshift=0.1em] {${\bm{e}}_2$};
+		(O) -- (0, 1, 0)
+		node[pos=.9, above, xshift=.2em, yshift=.1em] {${\bm{e}}_2$};
 
-	\draw [line width=0.4pt, blue] (O) -- (0,0,1.22);
+	\draw [line width=.4pt, blue] (O) -- (0, 0, 1.22);
 	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
-		(O) -- (0,0,1)
-		node[pos=0.9, below left, xshift=-0.1em, yshift=0.5em] {${\bm{e}}_3$};
+		(O) -- (0, 0, 1)
+		node[pos=.9, below left, xshift=-0.1em, yshift=.5em] {${\bm{e}}_3$};
 
 	% draw vector
 	\tdplotsetcoord{V}{\lengthofvector}{\anglefromz}{\anglefromx} % {length}{angle from z}{angle from x}
 		% it also defines projections of point
 	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
 		(O) -- (V)
-		node[pos=0.8, above, yshift=0.2em] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+		node[pos=.8, above, yshift=.2em] {\scalebox{1.2}{${\bm{v}}$}};
 
 	% draw components of vector
-	%%\draw [line width=0.4pt, dotted, color=black] (O) -- (Vxy);
-	\draw [line width=0.4pt, dotted, color=black] (Vxy) -- (Vy);
+	%%\draw [line width=.4pt, dotted, color=black] (O) -- (Vxy);
+	\draw [line width=.4pt, dotted, color=black] (Vxy) -- (Vy);
 
 	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
 		-{Stealth[round, length=4mm, width=2.4mm]}]
 		(O) -- (Vx)
-		node[pos=0.5, above, xshift=-0.9em] {${v_1 \hspace{-0.1ex} \bm{e}_1}$};
+		node[pos=.5, above, xshift=-0.9em] {${v_1 \hspace{-0.1ex} \bm{e}_1}$};
 
 	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
 		-{Stealth[round, length=4mm, width=2.4mm]}]
 		(Vx) -- (Vxy)
-		node[pos=0.53, below left, xshift=0.3em] {${v_2 \bm{e}_2}$};
+		node[pos=.53, below left, xshift=.3em] {${v_2 \bm{e}_2}$};
 
 	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
 		-{Stealth[round, length=4mm, width=2.4mm]}]
 		(Vxy) -- (V)
-		node[pos=0.5, above right, yshift=-0.2em] {${v_3 \bm{e}_3}$};
+		node[pos=.5, above right, yshift=-0.2em] {${v_3 \bm{e}_3}$};
 
 \end{tikzpicture}}
 \vspace{-2em}\caption{}\label{fig:componentsofvector}
@@ -114,7 +228,7 @@ $}
 \end{equation*}
 
 \nopagebreak\vspace{-0.2em}\noindent
-\hfill\hbox{\en{for any}\ru{для любого} \inquotes{\en{orthonormal}\ru{ортонормального}} \en{basis}\ru{базиса}}.
+\hfill\hbox{\en{for any}\ru{для любого} \en{orthonormal}\ru{ортонормального} \en{basis}\ru{базиса}}.
 
 \en{Decomposing vector}\ru{Разлагая вектор}~$\bm{v}$ \en{in some ortho\-normal basis}\ru{в~некотором орто\-нормаль\-ном базисе}~${\bm{e}_i}$ (${i = 1, 2, 3}$), \en{we get}\ru{получаем} \en{coefficients}\ru{коэффициенты}~$v_i$\:--- \en{components}\ru{компоненты} \en{of~vector}\ru{вектора}~$\bm{v}$ \en{in that basis}\ru{в~том базисе}~(\figref{fig:componentsofvector})
 
@@ -123,7 +237,7 @@ $}
 \nopagebreak\vspace{-0.33em}\begin{equation}\label{vectorcomponents}
 \bm{v}
 = v_1 \bm{e}_1 \hspace{-0.2ex} + v_2 \bm{e}_2 \hspace{-0.2ex} + v_3 \bm{e}_3 \hspace{-0.1ex}
-\equiv \hspace{-0.1ex} \scalebox{0.84}{$\displaystyle\sum_{i=1}^3$} \hspace{.2ex} {v_i \bm{e}_i} \hspace{-0.1ex}
+\equiv \hspace{-0.1ex} \scalebox{.84}{$\displaystyle\sum_{i=1}^3$} \hspace{.2ex} {v_i \bm{e}_i} \hspace{-0.1ex}
 \equiv \hspace{.1ex} v_i \bm{e}_i
 \hspace{.1ex} ,
 \hspace{.4em}
@@ -177,8 +291,9 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \vspace{-0.1em}\noindent
 \en{The~direction of~a~vector in space}\ru{Направление вектора в~пространстве} \en{is measured}\ru{измеряется} \en{by the three angles~(co\-sines of~angles)}\ru{тремя углами~(ко\-синусами углов)} \en{between}\ru{между} \en{this~vector}\ru{этим вектором} \en{and}\ru{и}~\en{each of the basis ones}\ru{каждым из базисных}:
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{vectorangles}
-\operatorname{cos} \measuredangle ({\bm{v}, \bm{e}_i}) \hspace{-0.1ex}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{anglesbetweenvectorandbasisvectors}
+\operatorname{cos} \measuredangle \bigl( \bm{v} \widehat{\phantom{w}} \bm{e}_i \bigr) %%( \bm{v}, \bm{e}_i )
+\hspace{-0.1ex}
 = \scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.16em}{\bm{v}}}{\raisemath{-0.05em}{\|\bm{v}\|}} $} \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{e}_i \hspace{-0.1ex}
 = \hspace{-0.1ex}\scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.12em}{v_i}}{\raisemath{-0.1em}{\sqrt{\vphantom{i} v_{\hspace{-0.1ex}j} v_{\hspace{-0.1ex}j}}}} $}
 \hspace{.4em}\Leftrightarrow\hspace{.4em}
@@ -191,7 +306,7 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \vspace{-0.6em}
 
 \emph{\en{Measurement of angles}\ru{Измерение углов}.}
-\en{The cosine of the angle}\ru{Косинус угла} \en{between two vectors}\ru{между двумя векторами} is the same as the inner~(dot) product of these vectors when they are normalized to both have the magnitude equal to the one unit of length
+\en{The cosine of the angle}\ru{Косинус угла} \en{between two vectors}\ru{между двумя векторами} is the same as the dot product of these vectors when they are normalized to both have the magnitude equal to the one unit of length
 
 \nopagebreak\vspace{-0.2em}\begin{gather*}
 \operatorname{cos} \measuredangle ({\bm{v}, \bm{w}}) \hspace{-0.1ex}
@@ -199,12 +314,17 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \hspace{.2ex} .
 \end{gather*}
 
-\noindent
-To accompany the magnitude, which represents the length independent of direction, there’s a~way to represent the direction of a vector independent of its length.
-For this purpose, use unit vectors, which are vectors with a~magnitude of 1.
+{\small
+To accompany the magnitude, which represents the length independent of direction, there’s a~way to represent the direction of a~vector independent of its length.
+For this purpose, we use unit vectors, which are vectors with a~magnitude of 1.
+
+A rotation matrix is just a transform that expresses the basis vectors of the input space in a different orientation. The length of the basis vectors will be the same, and the origin will not change. Also, the angle between the basis vectors will not change. All that changes is the relative direction of all of the basis vectors.
+
+Therefore, a rotation matrix is not really a “rotation” matrix; it is an orientation matrix. 
+\par}
 
 \emph{\en{The angle}\ru{Угол} \en{between two random vectors}\ru{между двумя случайными векторами}.}
-\en{According to}\ru{Согласно}~\eqref{vectorangles}
+\en{According to}\ru{Согласно}~\eqref{anglesbetweenvectorandbasisvectors}
 
 \nopagebreak\vspace{-0.2em}\begin{gather*}
 \operatorname{cos} \measuredangle ({\bm{v}, \bm{e}_m}) \hspace{-0.1ex}
@@ -219,7 +339,10 @@ For this purpose, use unit vectors, which are vectors with a~magnitude of 1.
 \hspace{.1ex} .
 \end{gather*}
 
-\en{The~length}\ru{Длина}~\eqref{vectorlength} \en{and}\ru{и}~\en{the~direction in~space}\ru{направление в~пространстве}~\eqref{vectorangles}\:--- \en{measurable}\ru{измер\'{и}мые} \en{by means of}\ru{посредством} \en{the~trio}\ru{трио} \en{of~basic vectors}\ru{базисных векторов}\:--- \en{describe}\ru{описывают} \en{a~vector}\ru{вектор}, \en{and}\ru{и} \en{every vector}\ru{каждый вектор} \en{possesses these properties}\ru{обладает этими свойствами}\footnote{\en{And what is direction}\ru{И~как\'{о}е~же направление} \en{of the~null vector}\ru{у~нуль\hbox{-}вектора}~$\bm{0}$ \en{with length}\ru{с~длиной} ${\| \bm{0} \| \hspace{-0.25ex} = \hspace{-0.1ex} 0}$?}\hbox{\hspace{-0.5ex}.}
+\en{The~length}\ru{Длина}~\eqref{vectorlength} \en{and}\ru{и}~\en{the~direction in~space}\ru{направление в~пространстве}~\eqref{anglesbetweenvectorandbasisvectors}\:--- \en{measurable}\ru{измер\'{и}мые} \en{by means of}\ru{посредством} \en{the~trio}\ru{трио} \en{of~basic vectors}\ru{базисных векторов}\:--- \en{describe}\ru{описывают} \en{a~vector}\ru{вектор}, \en{and}\ru{и} \en{every vector}\ru{каждый вектор} \en{possesses these properties}\ru{обладает этими свойствами}%
+\footnote{\en{And what is the direction}\ru{И~как\'{о}е~же направление} \en{of the~null vector}\ru{у~нуль\hbox{-}вектора}~$\bm{0}$ \en{with zero length}\ru{с~нулевой длиной} ${\| \bm{0} \| \hspace{-0.25ex} = \hspace{-0.1ex} 0}$?
+(\en{The zero vector}\ru{Нулевой вектор} \en{with no magnitude}\ru{без магнитуды} \en{ends exactly where it begins}\ru{кончается точно там~же, где он начинается} \en{and}\ru{и} \en{is not directed anywhere}\ru{никуда не направлен}, \en{thus}\ru{поэтому} \en{its direction}\ru{его направление} \en{is }\emph{\en{undefined}\ru{не определено}}.)}%
+\hbox{\hspace{-0.5ex}.}
 \en{However}\ru{Однако}, \en{this is not~enough}\ru{этого м\'{а}ло} (\inquotes{\href{https://en.wikipedia.org/wiki/Necessity_and_sufficiency}{\en{not}\ru{не}~\en{sufficient}\ru{достаточно}}} \en{in jargon}\ru{на жаргоне} \en{of math books}\ru{книг по~математике}) \en{for vector}\ru{для вектора}.
 
 %%\footnote{\en{There are also pseudovectors}\ru{Бывают ещё и~псевдовекторы}, \en{waiting for the~reader}\ru{ждущие читателя} \en{below}\ru{ниже} \en{in}\ru{в}~\pararef{para:crossproduct+levicivita}.}\hbox{\hspace{-0.5ex}.}
@@ -355,7 +478,7 @@ For this purpose, use unit vectors, which are vectors with a~magnitude of 1.
 \en{Vector}\ru{Вектор} \en{is }\emph{\en{invariant}\ru{инвариантен}}, \en{it doesn’t depend}\ru{он не~зависит} \en{on any basis}\ru{ни~от~как\'{о}го базиса} \en{of any coordinate \hbox{system}}\ru{никак\'{о}й \hbox{системы} координат}.
 
 \vspace{-0.1em}
-\en{A~triple}\ru{Тройка} \en{of mutually perpendicular}\ru{взаимно перпендикулярных} \en{unit vectors}\ru{единичных векторов} \en{can only rotate}\ru{может только поворачиваться} \en{and thereby}\ru{и~тем самым} \en{characterize}\ru{характеризовать} \en{the angular orientation}\ru{угловую ориентацию}.
+\en{A~triple}\ru{Тройка} \en{of pairwise perpendicular}\ru{попарно перпендикулярных} \en{unit vectors}\ru{единичных векторов} \en{can only rotate}\ru{может только поворачиваться} \en{and thereby}\ru{и~тем самым} \en{characterize}\ru{характеризовать} \en{the angular orientation}\ru{угловую ориентацию}.
 
 \en{Decomposition}\ru{Разложение} \en{of the~same vector}\ru{одного и~того~же вектора}~${\bm{v}}$ \en{in two cartesian systems}\ru{в~двух декартовых системах} \en{with basis unit vectors}\ru{с~базисными ортами} ${\bm{e}_{i}}$ \en{and}\ru{и}~${\bm{e}'_{i}}$~(\figref{fig:vectorintwoorthonormalbases}) \en{gives}\ru{даёт}
 
@@ -381,13 +504,13 @@ v'_{\hspace{-0.1ex}i} \hspace{-0.2ex} = \bm{v} \dotp \bm{e}'_{i} \hspace{-0.2ex}
 \end{minipage}
 
 \vspace{.1em}\noindent
-\en{Appeared here}\ru{Возникшие тут} \en{two\hbox{-}index objects}\ru{двухиндексные объекты}
+\en{Appeared here}\ru{Возникшие тут} \en{two\hbox{-}index}\ru{двухиндексные} \en{objects}\ru{объекты} (\en{two\hbox{-}dimensional arrays}\ru{двумерные массивы})
 ${\cosinematrix{k'\hspace{-0.1ex}i} \hspace{-0.2ex} \equiv \bm{e}'_{k} \hspace{-0.2ex} \dotp \bm{e}_i}$ \en{and}\ru{и}~${\cosinematrix{ki'} \hspace{-0.25ex} \equiv \bm{e}_k \hspace{-0.15ex} \dotp \bm{e}'_{i}}$
-\en{are used to shorten formulas}\ru{используются для укорочения формул}.
+\en{are used}\ru{используются} \en{to shorten formulas}\ru{для укорочения формул}.
 
-%%\en{are called}\ru{называются} \inquotes{\en{matrices of~cosines}\ru{матрицы косинусов}} \en{or}\ru{или} \inquotesx{\en{rotation matrices}\ru{матрицы поворота}}[.]
+%%\en{are called}\ru{называются} \inquotes{\en{matrices of~cosines}\ru{матрицы косинусов}} \en{or}\ru{или} \inquotes{\en{rotation/orientation matrices}\ru{матрицы поворота/ориентации}}
 
-\en{The~}\inquotes{${\dotp\hspace{.25ex}}$}\hbox{\hspace{-0.2ex}-}\en{product}\ru{произведение} (dot product, \en{inner product}\ru{внутреннее произведение}) \en{of two vectors}\ru{двух векторов} \en{is commutative}\ru{коммутативно}\:--- \en{that is}\ru{то есть}, \en{swapping}\ru{обмен местами} \en{multipliers}\ru{множителей} \en{doesn’t change}\ru{не~меняет} \en{the~result}\ru{результат}.
+\en{The~}\inquotes{${\dotp\hspace{.25ex}}$}\hbox{\hspace{-0.2ex}-}\en{product}\ru{произведение} (dot product) \en{of two vectors}\ru{двух векторов} \en{is commutative}\ru{коммутативно}\:--- \en{that is}\ru{то есть}, \en{swapping}\ru{обмен местами} \en{multipliers}\ru{множителей} \en{doesn’t change}\ru{не~меняет} \en{the~result}\ru{результат}.
 \en{Thus}\ru{Так что}
 
 \nopagebreak\vspace{-0.2em}\en{\vspace{-0.3em}}\begin{gather*}
@@ -632,7 +755,7 @@ f\hspace{.1ex}'_{\hspace{-0.55ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} = \cosinemat
 {beginComponentOfSecondVector}{endComponentOfSecondVector}{${\scriptstyle \cosinematrix{\hspace{-0.2ex}j'\hspace{-0.2ex}n} b\hspace{.1ex}'_{\hspace{-0.2ex}j}}$}
 
 \vspace{-0.1em}
-\en{If}\ru{Если} ${f_{\hspace{-0.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j}}$, \en{then}\ru{то} ${\digamma \hspace{-0.4ex} = \delta_{i\hspace{-0.1ex}j} \hspace{.1ex} a_i b_{\hspace{-0.1ex}j} \hspace{-0.2ex} = a_i b_i}$\:--- \en{the~}\inquotes{${\dotp\hspace{.25ex}}$}\hbox{\hspace{-0.2ex}-}\en{product}\ru{произведение} (dot product, \en{inner product}\ru{внутреннее произведение}, \en{scalar product}\ru{скалярное произведение}) \en{of~two vectors}\ru{двух векторов}.
+\en{If}\ru{Если} ${f_{\hspace{-0.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j}}$, \en{then}\ru{то} ${\digamma \hspace{-0.4ex} = \delta_{i\hspace{-0.1ex}j} \hspace{.1ex} a_i b_{\hspace{-0.1ex}j} \hspace{-0.2ex} = a_i b_i}$\:--- \en{the~}\inquotes{${\dotp\hspace{.25ex}}$}\hbox{\hspace{-0.2ex}-}\en{product}\ru{произведение} (dot product, \en{scalar product}\ru{скалярное произведение}) \en{of~two vectors}\ru{двух векторов}.
 \en{When}\ru{Когда} \en{both arguments}\ru{оба агрумента} \en{are the~same}\ru{одинаковые}, \en{such}\ru{такой} \en{a~homogeneous polynomial}\ru{однородный многочлен~(полином)} \en{of~second degree}\ru{второй степени} (\en{quadratic}\ru{квадратный}) \en{of~one vector’s components}\ru{от~компонент одного вектора} ${\digamma\hspace{-0.1ex}(\bm{a},\hspace{-0.2ex}\bm{a}) \hspace{-0.1ex} = \hspace{-0.1ex} f_{\hspace{-0.1ex}i\hspace{-0.1ex}j} \hspace{.2ex} a_i a_{\hspace{-0.15ex}j}}$ \en{is called}\ru{называется} \en{a~quadratic form}\ru{квадратичной формой}.
 
 % more complex tensors
@@ -674,13 +797,13 @@ t_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex} \equiv a_i b_{\hspace{-0.1
 \en{Here could be no simple answer}\ru{Здесь не~может быть простого ответа}.
 \en{In~each particular basis}\ru{В~каждом отдельном базисе}, ${\bm{e}_i}$\ru{\:---}\en{ are} \en{vectors}\ru{векторы} \en{and}\ru{и}~${v_i}$\ru{\:---}\en{ are} \en{scalars}\ru{скаляры}.
 
-\en{\section{Operations with tensors}}
+\en{\section{Tensor algebra, or operations with tensors}}
 
-\ru{\section{Действия с тензорами}}
+\ru{\section{Тензорная алгебра, или действия с~тензорами}}
 
 \label{para:operationswithtensors}
 
-\en{There’re four of them}\ru{Этих действий четыре}.
+\en{These are four operations}\ru{Этих действий четыре}.
 
 % linear combination
 
@@ -817,7 +940,7 @@ ${\bigl( \hspace{-0.1ex} \bm{A}^{\hspace{-0.05em}\T} \hspace{.15ex} \bigr)^{\hsp
 \en{The~four presented operations}\ru{Четыре представленных действия} \en{are combined}\ru{комбинируются} \en{in various sequences}\ru{в~разных последовательностях}.
 
 \en{The~combination}\ru{Комбинация} \en{of~}\en{multiplication}\ru{умножения}~\eqref{tensoraction:multiplication} \en{and}\ru{и}~\en{contraction}\ru{свёртки}~\eqref{tensoraction:contraction}\:--- \en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведение} (dot product)\:--- \en{is the~most frequently used}\ru{самая часто используемая}.
-\en{In the direct indexless notation}\ru{В~прямой безиндексной записи} \en{this is denoted by a~large dot}\ru{это обозначается крупной точкой}, \en{which}\ru{которая} \en{shows}\ru{показывает} \en{a~contraction}\ru{свёртку} \en{by adjacent indices}\ru{по~соседним индексам}:
+\en{In the direct indexless notation}\ru{В~прямой безиндексной записи} \en{this is denoted}\ru{это обозначается} \en{by large dot}\ru{крупной точкой}~\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}, \en{which}\ru{которая} \en{shows}\ru{показывает} \en{the~contraction}\ru{свёртку} \en{by adjacent indices}\ru{по~соседним индексам}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \label{tensoraction:dotproductexamples}
@@ -846,6 +969,7 @@ element}\ru{это нейтральный элемент} \en{for}\ru{для} \e
 \en{In the commutative}\ru{В~коммутативном} \en{scalar product}\ru{скалярном произведении} \en{of two vectors}\ru{двух векторов}\en{,} \en{the dot}\ru{точка} \en{represents}\ru{представляет} \en{the same}\ru{то же самое}: \en{the~dyadic product}\ru{диадное произведение} \en{and}\ru{и} \en{the subsequent contraction}\ru{последующая свёртка}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
+\label{transposeofdotproductforvectors}
 \bm{a} \dotp \bm{b}
 = ( \bm{a} \bm{b} )\hspace{.1ex}\tracedot \hspace{-0.1ex}
 = a_i b_i \hspace{-0.2ex}
@@ -855,13 +979,13 @@ element}\ru{это нейтральный элемент} \en{for}\ru{для} \e
 \hspace{.1ex} .
 \end{equation}
 
-\en{The following}\ru{Следующее} \en{identity}\ru{тождество} \en{shows}\ru{показывает}\ru{,} \en{how to swap multipliers}\ru{как обменять местами множители} \en{for}\ru{для} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}} (dot product\ru{’а}) \en{of the two second complexity tensors}\ru{двух тензоров второй сложности}
+\en{The following}\ru{Следующее} \en{identity}\ru{тождество} \en{describes}\ru{описывает} \en{how to swap multipliers}\ru{как обменять местами множители} \en{for}\ru{для} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}} (dot product\ru{’а}) \en{of two second complexity tensors}\ru{двух тензоров второй сложности}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{transposeofdotproduct}
+\nopagebreak\vspace{-0.2em}\begin{equation}%%\label{transposeofdotproductforbivalenttensors}
 \begin{array}{c}
-\bm{B} \dotp \bm{Q} \hspace{.1ex} = \left({ \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} }\right)^{\hspace{-0.25ex}\T}
+\bm{B} \hspace{-0.1ex} \dotp \bm{Q} \hspace{.1ex} = \bigl( \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} \bigr)^{\hspace{-0.25ex}\T}
 \\[.1em]
-\left({ \bm{B} \dotp \bm{Q}}\right)^{\hspace{-0.1ex}\T} \hspace{-0.3ex} = \hspace{.2ex} \bm{Q}^{\hspace{-0.1ex}\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
+\bigl( \bm{B} \hspace{-0.1ex} \dotp \bm{Q} \bigr)^{\hspace{-0.1ex}\T} \hspace{-0.3ex} = \hspace{.1ex} \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
 \hspace{-0.2ex} .
 \end{array}
 \end{equation}
@@ -883,9 +1007,13 @@ d_i p_i \hspace{.25ex} \bm{q}\bm{b} & = & p_i d_i \hspace{.25ex} \bm{q}\bm{b}
 %%\noindent
 \en{For a~vector and a~bivalent tensor}\ru{Для вектора и~бивалентного тензора}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{vectortensordotproduct}
-\bm{c} \hspace{.1ex} \dotp \bm{B} = \bm{B}^{\T} \hspace{-0.4ex} \dotp \bm{c} , \;\;
-\bm{B} \dotp \bm{c} = \bm{c} \hspace{.2ex} \dotp \bm{B}^{\T}
+\nopagebreak\vspace{-0.2em}\begin{equation}%%\label{vectorandbivalenttensordotproduct}
+\bm{c} \hspace{.2ex} \dotp \bm{B}
+= \bm{B}^{\T} \hspace{-0.4ex} \dotp \bm{c}
+\hspace{-0.1ex} ,
+\;\;
+\bm{B} \dotp \bm{c}
+= \bm{c} \hspace{.2ex} \dotp \bm{B}^{\T}
 \hspace{-0.3ex} .
 \end{equation}
 
@@ -1068,10 +1196,54 @@ C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex} = {^3\!\,\bm{C}} \dotdotdo
 \en{They are sometimes called}\ru{Их иногда называют} \en{arrays}\ru{массивами}.
 \en{A~matrix is}\ru{Матрица\:--- это} \en{a~two-dimensional or one-dimensional array of elements}\ru{двумерный или одномерный массив элементов}.
 \en{A~matrix}\ru{Матрица} \en{is}\ru{есть} \en{a~rectangular array}\ru{прямоугольный массив} (\en{a~table}\ru{таблица})\:--- \en{it}\ru{она} \en{is made up}\ru{составлена} \en{of rows and columns}\ru{из строк и~столбцов}.
-\en{A~matrix has}\ru{У~матрицы} \en{the same number of elements in each row}\ru{одно и то~же число элементов в~каждой строке} \en{and}\ru{и} \en{the same number of elements in each column}\ru{одно и то~же число элементов в~каждом столбце}.
+\en{A~matrix has}\ru{У~матрицы} \en{the same number of elements}\ru{одно и то~же число элементов} \en{in each row}\ru{в~каждой строке} \en{and}\ru{и} \en{the same number of elements}\ru{одно и то~же число элементов} \en{in each column}\ru{в~каждом столбце}.
 
-\en{The matrix algebra}\ru{Матричная алгебра} \en{includes}\ru{включает}  \en{linear operations}\ru{линейные операции}\:--- \en{addition of matrices}\ru{сложение матриц} \en{and}\ru{и} \en{scalar multiplication}\ru{скалярное умножение} (\en{multiplication of a~matrix by a~scalar}\ru{умножение матрицы на скаляр}).
-\en{Addition of matrices}\ru{Сложение матриц} \en{is possible}\ru{возможно} \en{only when}\ru{только когда} \en{both addends}\ru{оба слагаемых} \en{have the same dimensions}\ru{имеют одинаковые размеры}.
+\subsection*{\en{Matrix dimension}\ru{Размерность матрицы}}
+
+\en{Matrices}\ru{Матрицы} \en{come in all sizes or dimensions}\ru{бывают всех размеров или размерностей}.
+
+\en{The dimension of a~matrix}\ru{Размерность матрицы} \en{consists of}\ru{состоит из} \en{the number of rows}\ru{числ\'{а} строк}, \en{then}\ru{затем} \en{a~multiplication sign}\ru{знака умножения} (\inquotes{×} \en{is used}\ru{используется} \en{the most often}\ru{чаще всего})\en{,} \en{and then}\ru{и~затем} \en{the number of columns}\ru{числ\'{а} столбцов}.
+
+{\small
+\noindent
+\textcolor{magenta}{Examples.}
+
+\nopagebreak\vspace{.1em}\begin{gather*}
+\displaystyle\underset{\raisemath{.1em}{\scriptscriptstyle 3×3}}{[ \hspace{.2ex}\mathcal{A}\hspace{.2ex} ]} \hspace{.1ex}
+= \hspace{-0.2ex} \ldots
+\end{gather*}
+
+Matrix ${[ \hspace{.2ex}\mathrm{A}\hspace{.2ex} ]}$ is a~${3{×}3}$ matrix, because it has 3~rows and 3~columns.
+Matrix ${[ \hspace{.2ex}\mathrm{B}\hspace{.2ex} ]}$ has 2~rows and 4~columns, so its dimension is~${2{×}4}$.
+Matrix ${[ \hspace{.2ex}\mathrm{C}\hspace{.2ex} ]}$ is a~column matrix (that is a~matrix with just one column), and its dimension is~${3{×}1}$.
+And ${[ \hspace{.2ex}\mathrm{D}\hspace{.2ex} ]}$ is a~row matrix with dimension~${1{×}6}$.
+\par}
+
+\en{The matrix algebra}\ru{Матричная алгебра} \en{includes}\ru{включает}  \en{linear operations}\ru{линейные операции}\:--- \en{the addition of matrices}\ru{сложение матриц} \en{and}\ru{и} \en{the scalar multiplication}\ru{скалярное умножение} (\en{multiplication of a~matrix by a~scalar}\ru{умножение матрицы на скаляр}).
+
+\en{The dimension of a~matrix}\ru{Размерность матрицы} (\en{described earlier}\ru{описанная ранее}) \en{is essential}\ru{существенна} \en{for binary operations}\ru{для бинарных операций}, \en{that is}\ru{то есть} \en{operations}\ru{операций} \en{involving}\ru{с~участием} \en{the two matrices}\ru{двух матриц}.
+\begin{itemize}
+\item
+Adding or subtracting the two matrices \en{is possible}\ru{возможно} \en{only when}\ru{только когда} ...... the same dimension.
+\textcolor{cyan}{\en{Addition of matrices}\ru{Сложение матриц} \en{is possible}\ru{возможно} \en{only when}\ru{только когда}} \en{both addends}\ru{оба слагаемых} \en{have the same size}\ru{имеют одинаковый размер}.
+%
+\item 
+For multiplying the two matrices, the number of columns in the first matrix has to match the number of rows in the second matrix.
+\end{itemize}
+
+\nopagebreak\vspace{.1em}\begin{gather*}
+\displaystyle\underset{\raisemath{.1em}{\scriptscriptstyle m×n}}{[ \hspace{.2ex}\mathcal{A}\hspace{.2ex} ]} \hspace{.1ex}
+= \hspace{-0.2ex} \ldots
+\end{gather*}
+
+The resulting matrix, known as the matrix product, has the number of rows of the first matrix and the number of columns of the second matrix.
+The product of matrices ...A... and ...B... is denoted as ...AB....
+
+%%(the matrix product is the product of multiplication of two matrices)
+
+\subsection*{\en{Square matrices}\ru{Квадратные матрицы}}
+
+....
 
 \subsection*{\en{Matrices and one-dimensional arrays}\ru{Матрицы и одномерные массивы}}
 
@@ -1207,7 +1379,7 @@ e_{213} \hspace{-0.2ex} = e_{321} \hspace{-0.2ex} = e_{132} \hspace{-0.2ex} &= -
 
 \en{The~number of~indices}\ru{Число индексов} \en{in}\ru{в}~$e$\hbox{\hspace{.15ex}-\hspace{.15ex}}\en{symbols}\ru{символах} \en{is equal to}\ru{равно} \en{the~dimension of~space}\ru{размерности пространства}.
 
-\en{Symbol}\ru{Символ}~${e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}}$~(${\pm 1}$ \en{or}\ru{или}~$0$) \en{changes its sign}\ru{меняет свой знак} \en{with permutation}\ru{с~перестановкой} \en{of any two indices}\ru{любых двух индексов}, \en{it does not change}\ru{он не~меняется} \en{with double}\ru{с~двойной}~(\inquotes{\en{circular}\ru{круговой}}) \en{permutation}\ru{перестановкой}\en{,} \en{and}\ru{и}~\en{it nullifies}\ru{он обнуляется}\ru{,} \en{if}\ru{если} \en{any index is repeated}\ru{какой-либо индекс повторяется}.
+\en{Symbol}\ru{Символ}~${e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}}$~(${\pm 1}$ \en{or}\ru{или}~$0$) \en{changes its sign}\ru{меняет свой знак} \en{with a~permutation}\ru{с~перестановкой} \en{of any two indices}\ru{любых двух индексов}, \en{it does not change}\ru{он не~меняется} \en{with a~double}\ru{с~двойной}~(\inquotes{\en{circular}\ru{круговой}}) \en{permutation}\ru{перестановкой}\en{,} \en{and}\ru{и}~\en{it nullifies}\ru{он обнуляется}\ru{,} \en{if}\ru{если} \en{any index is repeated}\ru{какой-либо индекс повторяется}.
 
 %% \begin{comment} %%
 \vspace{1mm}
@@ -1216,14 +1388,20 @@ e_{213} \hspace{-0.2ex} = e_{321} \hspace{-0.2ex} = e_{132} \hspace{-0.2ex} &= -
 \small%
 \setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}%
 
-\[
+\begin{equation*}
 e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}
 = \hspace{.2ex} \left\{ \hspace{-0.2em} \begin{array}{r@{\hspace{.6em}}l}
-0 & \text{when there is a~repeated index in}~i\hspace{-0.1ex}j\hspace{-0.1ex}k \hspace{.1ex} , \\
-+1 & \text{when an~even number of~permutations of}~i\hspace{-0.1ex}j\hspace{-0.1ex}k \text{ is present} \hspace{.1ex} , \\
--1 & \text{when an~odd number of~permutations of}~i\hspace{-0.1ex}j\hspace{-0.1ex}k \text{ is present} \hspace{.1ex} .
-\end{array} \right.
-\]
+0 & \text{when there is a~repeated index in}~i\hspace{-0.1ex}j\hspace{-0.1ex}k
+\hspace{.1ex} ,
+\\
++1 & \text{when an~even number of~permutations of}~i\hspace{-0.1ex}j\hspace{-0.1ex}k \text{ is present}
+\hspace{.1ex} ,
+\\
+-1 & \text{when an~odd number of~permutations of}~i\hspace{-0.1ex}j\hspace{-0.1ex}k \text{ is present}
+\hspace{.1ex} .
+\end{array}
+\right.
+\end{equation*}
 \end{tcolorbox}
 
 \vspace{1mm}
@@ -1233,23 +1411,28 @@ e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}
 
 \en{Using}\ru{Используя} $e$\hbox{\hspace{.15ex}-\hspace{.15ex}}\en{symbols}\ru{символы}, \en{the~determinant}\ru{определитель~(детерминант)} \en{of~a~matrix}\ru{матрицы} \en{is expressed as}\ru{выражается как}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}
-e_{pqr} \hspace{.4ex} \underset{\raisebox{.12em}{\scalebox{0.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.2ex}
-= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} A_{pi} A_{qj} A_{rk} \hspace{-0.2ex}
+\nopagebreak\vspace{-0.2em}\begin{gather}
+e_{pqr} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.2ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} A_{pi} A_{qj} A_{rk}
+\\
+\textrm{\en{or}\ru{или}}
+\\
+e_{pqr} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.2ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} A_{ip} A_{j\hspace{-0.1ex}q} A_{kr}
 \hspace{.1ex} .
-\end{equation}
+\end{gather}
 
-... for $123$
+\noindent
+\en{For}\ru{Для} ${p{=}1, q{=}2, r{=}3}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\underset{\raisebox{.12em}{\scalebox{0.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.2ex}
+\underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.2ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} A_{1i} A_{2j} A_{3k} \hspace{-0.2ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} A_{i1} A_{j2} A_{k3}
 \end{equation*}
 
 \vspace{-0.2em}\begin{multline*}
-\underset{\raisebox{.12em}{\scalebox{0.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.15ex}
+\underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.15ex}
 = \hspace{.1ex} A_{1\hspace{-0.1ex}1} A_{22} A_{33} - A_{1\hspace{-0.1ex}1} A_{23} A_{32}
 - A_{12} A_{21} A_{33} \: + \\[-0.6em]
 + A_{12} A_{23} A_{31}
@@ -1259,15 +1442,15 @@ e_{pqr} \hspace{.4ex} \underset{\raisebox{.12em}{\scalebox{0.7}{$m$,$n$}}}{\oper
 ...
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-e_{pqr} \hspace{.4ex} \underset{\raisebox{.12em}{\scalebox{0.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.2ex}
+e_{pqr} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, A_{mn} \hspace{-0.2ex}
 = \hspace{.1ex}
-\operatorname{det}\hspace{-0.25ex} \scalebox{0.92}{$\left[ \hspace{-0.15ex} \begin{array}{ccc}
+\operatorname{det}\hspace{-0.25ex} \scalebox{.92}{$\left[ \hspace{-0.15ex} \begin{array}{ccc}
 A_{1p} & A_{1q} & A_{1r} \\
 A_{2p} & A_{2q} & A_{2r} \\
 A_{3p} & A_{3q} & A_{3r}
 \end{array} \hspace{-0.1ex} \right]$} \hspace{-0.2ex}
 = \hspace{.1ex}
-\operatorname{det}\hspace{-0.25ex} \scalebox{0.92}{$\left[ \hspace{-0.15ex} \begin{array}{ccc}
+\operatorname{det}\hspace{-0.25ex} \scalebox{.92}{$\left[ \hspace{-0.15ex} \begin{array}{ccc}
 A_{p1} & A_{p2} & A_{p3} \\
 A_{q1} & A_{q2} & A_{q3} \\
 A_{r1} & A_{r2} & A_{r3}
@@ -1277,7 +1460,7 @@ A_{r1} & A_{r2} & A_{r3}
 ...
 
 ${
-\underset{\raisebox{.12em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \hspace{.4ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex} = 1
+\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \hspace{.4ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex} = 1
 }$
 
 ...
@@ -1316,41 +1499,41 @@ e_{pqr} \hspace{-0.1ex}
 \en{A~determinant}\ru{Определитель} \en{is not sensitive}\ru{не~чувствителен} \en{to transposing}\ru{к~транспонированию}:
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
-\underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j} \hspace{-0.16ex}
-= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{j\hspace{-0.06ex}i} \hspace{-0.16ex}
-= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$j\hspace{-0.2ex}$,$\hspace{.1ex}i$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j}
+\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j} \hspace{-0.16ex}
+= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{j\hspace{-0.06ex}i} \hspace{-0.16ex}
+= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$j\hspace{-0.2ex}$,$\hspace{.1ex}i$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j}
 \hspace{.1ex} .
 \end{equation*}
 
 ...
 
-\inquotes{\en{Determinant of the product is equal to the product of determinants}\ru{Определитель произведения равен произведению определителей}}
+\inquotes{\en{The determinant}\ru{Определитель} \en{of the matrix product}\ru{матричного произведения} \en{of the two matrices}\ru{двух матриц} \en{is equal}\ru{равен} \en{to the product of determinants}\ru{произведению определителей} \en{of these matrices}\ru{этих матриц}}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{determinantofmatrixproduct}
-\underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$k$}}}{\operatorname{det}} \, B_{ik} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$k$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, C_{kj} \hspace{-0.15ex}
-= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, B_{ik} \hspace{.1ex} C_{kj}
+\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$k$}}}{\operatorname{det}} \, B_{ik} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$k$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, C_{kj} \hspace{-0.15ex}
+= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, B_{ik} \hspace{.1ex} C_{kj}
 \end{equation}
 
 \[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$m$,$n$}}}{\operatorname{det}} \, B_{m\mathcolor{blue}{s}} \hspace{.1ex} C_{\mathcolor{blue}{s}n} \hspace{-0.2ex}
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, B_{m\mathcolor{blue}{s}} \hspace{.1ex} C_{\mathcolor{blue}{s}n} \hspace{-0.2ex}
 = e_{pqr} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}\mathcolor{blue}{i}} C_{\mathcolor{blue}{i}p} \hspace{.1ex} B_{\hspace{-0.1ex}g\mathcolor{blue}{j}} C_{\hspace{-0.1ex}\mathcolor{blue}{j}\hspace{-0.1ex}q} \hspace{.1ex} B_{h\mathcolor{blue}{k}} C_{\mathcolor{blue}{k}r}
 \hspace{-0.2ex}
 \]
 
 \[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{-0.2ex}
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{-0.2ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}i} B_{\hspace{-0.1ex}gj} B_{hk}
 \hspace{-0.2ex}
 \]
 
 \[
-e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
+e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
 = e_{pqr} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
 \hspace{-0.2ex}
 \]
 
 \[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
 = \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.2ex} e_{pqr} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}i} B_{\hspace{-0.1ex}gj} B_{hk} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
 \hspace{-0.2ex}
 \]
@@ -1367,7 +1550,7 @@ A'_{i\hspace{-0.1ex}j} \hspace{-0.16ex} = \cosinematrix{i'\hspace{-0.1ex}m} \hsp
 
 \end{otherlanguage}
 
-\en{\section{Cross product and Levi\hbox{-}Civita tensor}}
+\en{\section{Cross product and the Levi\hbox{-}Civita tensor}}
 
 \ru{\section{Векторное произведение и тензор Л\'{е}ви\hbox{-\hspace{-0.2ex}}Чив\'{и}ты}}
 
@@ -1574,7 +1757,7 @@ $\bm{\omega}$ \en{is pseudovector there}\ru{там\:--- псевдовектор
 
 \en{The~absolute value}\ru{Абсолютная величина}~(\en{modulus}\ru{модуль}) \en{of~each nonzero component}\ru{всякой ненулевой компоненты} \en{of~tensor}\ru{тензора}~$\levicivitatensor$
 \en{is equal to}\ru{\hbox{равна}} \en{the~volume}\ru{объёму}~${\hspace{-0.25ex}\sqrt{\hspace{-0.33ex}\mathstrut{\textsl{g}}}}$ \en{of~a~parallelopiped}\ru{параллелепипеда}, \en{drew upon a~basis}\ru{натянутого на \hbox{базис}}.
-\en{For basis}\ru{Для базиса}~${\bm{e}_i}$ \en{of mutually perpendicular one\hbox{-}unit long vectors}\ru{из взаимно перпендикулярных векторов единичной длины}
+\en{For basis}\ru{Для базиса}~${\bm{e}_i}$ \en{of pairwise perpendicular one\hbox{-}unit long vectors}\ru{из попарно перпендикулярных векторов единичной длины}
 ${\hspace{-0.25ex}\sqrt{\hspace{-0.33ex}\mathstrut{\textsl{g}\hspace{.12ex}}} = \hspace{-0.1ex} 1}$.
 
 \begin{otherlanguage}{russian}
@@ -2154,6 +2337,8 @@ ${\bm{B}_{\Xcompanion} \hspace{-0.25ex} = \bm{0} \hspace{.25ex} \Leftrightarrow 
 \hspace{.1ex} .
 \end{equation}
 
+\end{otherlanguage}
+
 \vspace{-0.8em}\noindent
 \en{For}\ru{Для} \en{a~dyad}\ru{диады~же}
 
@@ -2169,41 +2354,45 @@ ${\left( \bm{c} \bm{d} \hspace{.2ex} \right)_{\hspace{-0.15ex}\Xcompanion} \hspa
 \hspace*{1em} \bm{c}\bm{d} \hspace{.1ex} = \hspace{.1ex}
 %%\smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c}\bm{d} + \hspace{-0.1ex} \bm{d}\bm{c} \hspace{.1ex} \right) - \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{d} \bm{c} - \hspace{-0.1ex} \bm{c} \bm{d} \hspace{.2ex} \right) = \hspace{.1ex}
 \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c}\bm{d} + \hspace{-0.1ex} \bm{d}\bm{c} \hspace{.1ex} \right)
-- \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c} \hspace{-0.1ex} \times \hspace{-0.2ex} \bm{d} \hspace{.2ex} \right) \hspace{-0.12ex} \times \hspace{-0.25ex} \UnitDyad
+- \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c} \hspace{-0.1ex} \times \hspace{-0.2ex} \bm{d} \hspace{.2ex} \right) \hspace{-0.1ex} \times \hspace{-0.25ex} \UnitDyad
 \hspace{.1ex} .
 \end{equation}
 
-\end{otherlanguage}
+\en{\section{Diagonalization of tensor. Eigenvectors and eigenvalues. Invariants}}
 
-\en{\section{Eigenvectors and eigenvalues of a~tensor}}
-
-\ru{\section{Собственные векторы и собственные числа тензора}}
+\ru{\section{Диагонализация тензора. Собственные векторы и собственные числа. Инварианты}}
 
 \label{para:eigenvectorseigenvalues}
 
 \en{If}\ru{Если} \en{for}\ru{для} \en{some tensor}\ru{какого-нибудь тензора}~${^2\!\bm{B}}$ \en{and}\ru{и}~\en{nonzero vector}\ru{ненулевого вектора}~${\bm{a}}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{eigenvalues:eq}
-^2\!\bm{B} \dotp \bm{a} = \eigenvalue \bm{a} \hspace{.1ex} ,
+^2\!\bm{B} \dotp \bm{a} = \eigenvalue \bm{a}
+\hspace{.1ex} ,
 \:\:
 \bm{a} \neq \bm{0}
 \end{equation}
-\vspace{-1.33em}\[
-\scalebox{0.92}{${^2\!\bm{B}} \dotp \bm{a} = \eigenvalue \UnitDyad \dotp \bm{a}
-\hspace{.1ex},\;\;
+\vspace{-1.33em}\begin{equation*}
+\scalebox{.92}{$
+{^2\!\bm{B}} \dotp \bm{a} = \eigenvalue \UnitDyad \dotp \bm{a}
+\hspace{.1ex} ,
+\;\;
 %%B_{i\hspace{-0.1ex}j} a_j = \eigenvalue \delta_{i\hspace{-0.1ex}j} a_j
-\hspace{.1ex},\;\;
+%%\hspace{.1ex} ,
+%%\;\;
 \left( \hspace{.1ex}
 {^2\!\bm{B} - \eigenvalue \UnitDyad}
-\hspace{.2ex} \right) \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a} = \bm{0}$} \hspace{.1ex},
-\]
+\hspace{.2ex} \right) \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a} = \bm{0}
+$}
+\hspace{.1ex} ,
+\end{equation*}
 
 \vspace{-0.6em}\noindent
-\en{then}\ru{то} $\eigenvalue$ \en{is called}\ru{называется} \en{the eigenvalue}\ru{собственным числом} (\en{or}\ru{или} \en{characteristic value}\ru{собственным значением, eigenvalue}) \en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$, \en{and}\ru{а}~\en{the axis~(direction)}\ru{ось~(направление)} \en{of~eigenvector}\ru{собственного вектора}~$\bm{a}$ \en{is called}\ru{называется} \en{its}\ru{его} \ru{главной}\en{characteristic} \en{axis~(direction)}\ru{осью~(направлением)}.
+\en{then}\ru{то} $\eigenvalue$ \en{is called}\ru{называется} \en{the eigenvalue}\ru{собственным числом} (\en{or}\ru{или} \en{characteristic value}\ru{характеристическим значением, eigenvalue}) \en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$, \en{and}\ru{а}~\en{the axis~(direction)}\ru{ось~(направление)} \en{of~eigenvector}\ru{собственного вектора}~$\bm{a}$ \en{is called}\ru{называется} \en{its}\ru{его} \ru{характеристической}\en{characteristic} \en{axis~(direction)}\ru{осью~(направлением)}.
 
 \en{In components}\ru{В~компонентах}\en{,} \en{this is}\ru{это} \en{the eigenvalue problem}\ru{задача на~собственные значения} \en{for a~matrix}\ru{для матрицы}.
 \en{A~homogeneous}\ru{Однородная} \en{system}\ru{система} \en{of linear equations}\ru{линейных уравнений}
-${( B_{i\hspace{-0.1ex}j} \hspace{-0.12ex} - \eigenvalue \delta_{i\hspace{-0.1ex}j} ) \hspace{.25ex} a_j \hspace{-0.1ex} = 0}$ \en{has}\ru{имеет} \en{a~non-zero solution}\ru{ненулевое решение}\ru{,} \en{if}\ru{если} \en{the determinant}\ru{определитель} \en{of a~matrix of~components}\ru{матрицы компонент} ${\smash{\underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}}} \hspace{.32ex} ( B_{i\hspace{-0.1ex}j} \hspace{-0.12ex} - \eigenvalue \delta_{i\hspace{-0.1ex}j} )}$ \en{is equal to zero}\ru{равен нулю}:
+${( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \eigenvalue \delta_{i\hspace{-0.1ex}j} ) \hspace{.25ex} a_j \hspace{-0.1ex} = 0}$ \en{has}\ru{имеет} \en{a~non-zero solution}\ru{ненулевое решение}\ru{,} \en{if}\ru{если} \en{the determinant}\ru{определитель} \en{of a~matrix of~components}\ru{матрицы компонент} ${\smash{\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}}} \hspace{.3ex} ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \eigenvalue \delta_{i\hspace{-0.1ex}j} )}$ \en{is equal to zero}\ru{равен нулю}:
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{chardetequation}
 \operatorname{det} \hspace{-0.4ex} \scalebox{0.9}[0.92]{$\left[
@@ -2222,12 +2411,12 @@ B_{31} & B_{32} & B_{33} \hspace{-0.16ex} - \eigenvalue
 \hspace{.1ex} ,
 \\[.1em]
 %
-\mathrm{II} & = & \scalebox{0.92}[0.96]{$B_{1\hspace{-0.1ex}1}B_{22} \hspace{-0.2ex} - \hspace{-0.1ex} B_{12}B_{21} \hspace{-0.2ex} + \hspace{-0.1ex} B_{1\hspace{-0.1ex}1}B_{33} \hspace{-0.2ex} - \hspace{-0.1ex} B_{13}B_{31} \hspace{-0.2ex} + \hspace{-0.1ex} B_{22}B_{33} \hspace{-0.2ex} - \hspace{-0.1ex} B_{23}B_{32}$}
+\mathrm{II} & = & \scalebox{.92}[.96]{$B_{1\hspace{-0.1ex}1}B_{22} \hspace{-0.2ex} - \hspace{-0.1ex} B_{12}B_{21} \hspace{-0.2ex} + \hspace{-0.1ex} B_{1\hspace{-0.1ex}1}B_{33} \hspace{-0.2ex} - \hspace{-0.1ex} B_{13}B_{31} \hspace{-0.2ex} + \hspace{-0.1ex} B_{22}B_{33} \hspace{-0.2ex} - \hspace{-0.1ex} B_{23}B_{32}$}
 \hspace{.1ex} ,
 \\[.1em]
 %
 \mathrm{III} & = & \operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
-= \hspace{.15ex} \underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+= \hspace{.15ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{1i} B_{2j} B_{3k} \hspace{-0.1ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{i1} B_{\hspace{-0.1ex}j2} B_{k3}
 \hspace{.1ex} .
@@ -2249,7 +2438,7 @@ ${\mathrm{II}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \hspace{-0.12ex}
 \left( {^2\!\bm{B}}\tracedot\hspace{.1ex} \right)^{\!2} \hspace{-0.5ex}
 - {^2\!\bm{B}} \hspace{-0.2ex} \dotdotp \hspace{-0.25ex} {^2\!\bm{B}} \hspace{.16ex}
 \right]$} \hspace{-0.5ex}
-= \smalldisplaystyleonehalf \scalebox{0.84}{$\left[
+= \smalldisplaystyleonehalf \scalebox{.84}{$\left[
 \left( B_{kk} \right)^{\hspace{-0.1ex}2} \hspace{-0.4ex}
 - \hspace{-0.2ex} B_{i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.06ex}i} \hspace{.1ex}
 \right]$}
@@ -2263,8 +2452,8 @@ ${\mathrm{III}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \hspace{-0.1ex}
 
 \en{This}\ru{Это} \en{applies to all}\ru{относится ко~всем} \en{second complexity tensors}\ru{тензорам второй сложности}.
 \en{Besides that}\ru{Кроме того}, \en{in case}\ru{в~случае} \en{of a~symmetric tensor}\ru{симметричного тензора}\en{,} \en{the following is true}\ru{истинно следующее}:\\
-\indent 1$^{\circ}$\hspace{-1ex}.\, \en{The eigenvalues}\ru{Собственные значения} \en{of a~symmetric tensor}\ru{симметричного тензора}\ru{\:---}\en{ are} \en{real numbers}\ru{действительные числа}.\\
-\indent 2$^{\circ}$\hspace{-1ex}.\, \en{The characteristic axes~(directions)}\ru{Собственные оси~(направления)} \en{for different eigenvalues}\ru{для различных собственных значений} \en{are orthogonal}\ru{ортогональны} \en{to each other}\ru{друг другу}.
+\indent 1$^{\circ}$\hspace{-1ex}.\, \en{The eigenvalues}\ru{Собственные значения} \en{of a~symmetric bivalent tensor}\ru{симметричного бивалентного тензора}\ru{\:---}\en{ are} \en{real numbers}\ru{действительные числа}.\\
+\indent 2$^{\circ}$\hspace{-1ex}.\, \en{The characteristic axes~(directions)}\ru{Характеристические оси~(направления)} \en{for different eigenvalues}\ru{для различных собственных значений} \en{are orthogonal}\ru{ортогональны} \en{to each other}\ru{друг другу}.
 
 \noindent
 ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
@@ -2279,7 +2468,8 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \:\,\Rightarrow\:\,
 \left(\hspace{.25ex} {\lineover{\bm{a}} \, \dotp} \hspace{.25ex}\right)
 \hspace{.5ex}
-{^2\!\bm{B}} \dotp \bm{a} \hspace{.2ex} = \eigenvalue \bm{a}, \;\;
+{^2\!\bm{B}} \dotp \bm{a} \hspace{.2ex} = \eigenvalue \bm{a},
+\;\;
 \left(\hspace{.2ex}{\bm{a} \, \dotp}\hspace{.2ex}\right)
 \hspace{.5ex}
 {^2\!\bm{B}} \dotp \lineover{\bm{a}} \hspace{.2ex} = \hspace{.1ex} \lineover{\eigenvalue} \, \lineover{\bm{a}}
@@ -2356,7 +2546,7 @@ B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1
 
 \label{para:rotationtensor}
 
-\en{The relation}\ru{Соотношение} \en{between}\ru{между} \en{two}\ru{двумя} \inquotes{\en{right}\ru{правыми}} (\en{or}\ru{или} \en{two}\ru{двумя} \inquotes{\en{left}\ru{левыми}}) \en{orthonormal}\ru{ортонормальными} \en{bases}\ru{базисами} ${\bm{e}_i}$ \en{and}\ru{и}~${\mathcircabove{\bm{e}}_i}$ \en{can be determined}\ru{может быть определено} \en{by a~matrix of~cosines}\ru{матрицей косинусов}~(\pararef{para:vector})
+\en{The relation}\ru{Соотношение} \en{between}\ru{между} \en{two}\ru{двумя} \inquotes{\en{right}\ru{правыми}} (\en{or}\ru{или} \en{two}\ru{двумя} \inquotes{\en{left}\ru{левыми}}) \en{orthonormal}\ru{ортонормальными} \en{bases}\ru{базисами} ${\bm{e}_i}$ \en{and}\ru{и}~${\mathcircabove{\bm{e}}_i}$ \en{can be described}\ru{может быть описано} \en{by }\en{a~two\hbox{-}index array}\ru{двухиндексным массивом}\ru{,} \en{represented as a~matrix}\ru{представленным в~виде матрицы}~(\pararef{para:vector}, \pararef{para:matrices+permutations+determinants})
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \bm{e}_i \hspace{-0.2ex} = \bm{e}_i \dotp \hspace{.1ex} \tikzmark{beginEqualsE} \mathcircabove{\bm{e}}_j \mathcircabove{\bm{e}}_j \tikzmark{endEqualsE} \hspace{-0.1ex} = \hspace{.1ex} \cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \, \mathcircabove{\bm{e}}_j
@@ -2364,26 +2554,25 @@ B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1
 \hspace{.4em}
 %
 \cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \hspace{.1ex} \equiv \hspace{.1ex} \bm{e}_i \dotp \mathcircabove{\bm{e}}_j
-\hspace{.1ex} .
+%%\hspace{.1ex} .
 \end{equation*}
 \AddUnderBrace[line width=.75pt][0,-0.2ex]%
 {beginEqualsE}{endEqualsE}{${\scriptstyle \UnitDyad}$}
 
 \vspace{-0.3em}\noindent
-\en{Also}\ru{Также}, \en{a~rotation}\ru{поворот} \en{of a~tensor}\ru{тензора} \en{can be described}\ru{может быть описан} \en{via}\ru{через} \en{another tensor}\ru{другой тензор}:
+(\inquotes{\en{a~matrix of~cosines}\ru{матрицы косинусов}}).
+
+\en{Also}\ru{Также}, \en{a~rotation}\ru{поворот} \en{of a~tensor}\ru{тензора} \en{can be described}\ru{может быть описан} \en{by another tensor}\ru{другим тензором}, \en{called}\ru{называемым} \en{rotation tensor}\ru{тензором поворота}~$\rotationtensor$
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{introductionofrotationtensor}
 \bm{e}_i = \bm{e}_j \hspace{.2ex} \tikzmark{beginEqualsKroneckerDelta} \mathcircabove{\bm{e}}_j \hspace{-0.2ex} \dotp \mathcircabove{\bm{e}}_i \tikzmark{endEqualsKroneckerDelta} = \rotationtensor \hspace{-0.2ex} \dotp \mathcircabove{\bm{e}}_i \hspace{.1ex}, \:\,
 \rotationtensor \equiv \bm{e}_j \mathcircabove{\bm{e}}_j = \scalebox{.96}[1]{$ \bm{e}_1 \hspace{-0.1ex} \mathcircabove{\bm{e}}_1 + \bm{e}_2 \mathcircabove{\bm{e}}_2 + \bm{e}_3 \mathcircabove{\bm{e}}_3 $}
-\hspace{.1ex} ,
+\hspace{.1ex} .
 \end{equation}
-\AddUnderBrace[line width=.75pt][0.1ex,-0.2ex]%
+\AddUnderBrace[line width=.75pt][.1ex,-0.2ex]%
 {beginEqualsKroneckerDelta}{endEqualsKroneckerDelta}{${\scriptstyle \delta_{j\hspace{-0.06ex}i}}$}
 
-\vspace{-0.3em}\noindent
-\en{called}\ru{называемый} \en{the rotation tensor}\ru{тензором поворота}.
-
-\en{Components of}\ru{Компоненты}~$\rotationtensor$ \en{both }\ru{и~в~начальном}\en{in initial}~${\mathcircabove{\bm{e}}_i}$\ru{,} \en{and}\ru{и}~\en{in rotated}\ru{в~повёрнутом}~${\bm{e}_i}$ \en{bases}\ru{базисах} \en{are the same}\ru{одни и~те~же}
+\en{Components of}\ru{Компоненты}~$\rotationtensor$ \en{both }\ru{и~в~начальном}\en{in an~initial}~${\mathcircabove{\bm{e}}_i}$\ru{,} \en{and}\ru{и}~\en{in a~rotated}\ru{в~повёрнутом}~${\bm{e}_i}$ \en{bases}\ru{базисах} \en{are the same}\ru{одни и~те~же}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{componentsofrotationtensor}
 \begin{array}{c}
@@ -2404,16 +2593,21 @@ B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1
 \AddUnderBrace[line width=.75pt][0, -0.2ex]%
 {beginEqualsKroneckerDeltaPast}{endEqualsKroneckerDeltaPast}{${\scriptstyle \delta_{kj}}$}
 
-\vspace{-0.4em}\noindent
+\vspace{-0.1em}\noindent
 \en{In matrix notation}\ru{В матричной записи}\en{,}
-\en{these components}\ru{эти компоненты} \en{present}\ru{представляют} \en{the }\textcolor{red}{????\en{transposed}\ru{транспонированную}?????} \en{matrix of~cosines}\ru{матрицу косинусов}~${\cosinematrix{\!j\mathcircabove{i}} = \hspace{.1ex} \mathcircabove{\bm{e}}_i \dotp \bm{e}_j}$\hspace{.1ex}:
+\en{these components}\ru{эти компоненты} \en{present}\ru{представляют} \en{the }\textcolor{red}{???\en{transposed}\ru{транспонированную}????} \en{matrix of~cosines}\ru{матрицу косинусов}~${\cosinematrix{\!j\mathcircabove{i}} = \hspace{.1ex} \mathcircabove{\bm{e}}_i \dotp \bm{e}_j}$\hspace{.1ex}:
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}
+\nopagebreak\vspace{-0.3em}\begin{equation*}
 \rotationtensor = \cosinematrix{\!j\mathcircabove{i}} \hspace{.5ex} {\bm{e}}_{i} {\bm{e}}_{j} = \cosinematrix{\!j\mathcircabove{i}} \hspace{.5ex} \mathcircabove{\bm{e}}_{i} \mathcircabove{\bm{e}}_{j}
 \hspace{.1ex} .
 \end{equation*}
 
-\en{Tensor}\ru{Тензор}~$\rotationtensor$ \en{relates}\ru{соотносит} \en{two vectors}\ru{два вектора}\:--- \inquotes{\en{before rotation}\ru{до~поворота}}~${\initiallocationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i}$ \en{and}\ru{и}~\inquotes{\en{after rotation}\ru{после поворота}}~${\locationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \bm{e}_i}$.
+{\small
+Spatial transformations in the 3-dimensional Euclidean space ${\mathbb{R}^{3}}$ are distinguished into active or alibi transformations, and passive or alias transformations.
+An active transformation is a transformation which actually changes the physical position (alibi, elsewhere) of objects, which can be defined in the absence of a coordinate system; whereas a passive transformation is merely a change in the coordinate system in which the object is described (alias, other name) (change of coordinates, or change of basis). By transformation, math texts usually refer to active transformations.
+\par}
+
+\en{Tensor}\ru{Тензор}~$\rotationtensor$ \en{relates}\ru{соотносит} \en{the two vectors}\ru{два вектора}\:--- \inquotes{\en{before rotation}\ru{до~поворота}}~${\initiallocationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i}$ \en{and}\ru{и}~\inquotes{\en{after rotation}\ru{после поворота}}~${\locationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \bm{e}_i}$.
 \en{Components}\ru{Компоненты}~${\rho_i \hspace{-0.2ex} = \hspace{-0.1ex} \constant}$ \en{of}\ru{у}~$\locationvector$ \en{in rotated basis}\ru{в~повёрнутом базисе}~${\bm{e}_i}$\en{ are}\ru{\:---} \en{the same}\ru{такие~же} \en{as}\ru{как} \en{of}\ru{у}~${\initiallocationvector}$ \en{in immobile basis}\ru{в~неподвижном базисе}~${\mathcircabove{\bm{e}}_i}$.
 \en{So that}\ru{Так что} \en{the rotation tensor}\ru{тензор поворота} \en{describes}\ru{описывает} \en{the rotation of the vector together with the basis}\ru{вращение вектора вместе с~базисом}.
 \en{And since}\ru{И~поскольку} ${\bm{e}_i = \bm{e}_j \mathcircabove{\bm{e}}_j \hspace{-0.15ex} \dotp \mathcircabove{\bm{e}}_i
@@ -2427,8 +2621,11 @@ B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1
 \vspace{-0.4em}\noindent
 (\en{this is}\ru{это} \en{the }\href{https://fr.wikipedia.org/wiki/Rotation_vectorielle#Cas_g%C3%A9n%C3%A9ral}{\ru{формула поворота }Rodrigues\ru{’а}\en{ rotation formula}}).
 
+\bibauthor{Olinde Rodrigues}.
+\href{http://sites.mathdoc.fr/JMPA/PDF/JMPA_1840_1_5_A39_0.pdf}{Des lois géométriques qui régissent les déplacements d’un système solide dans l’espace, et de la variation des coordonnées provenant de ces déplacements considérés indépendants des causes qui peuvent les produire. \emph{Journal de mathématiques pures et appliquées}, tome~5~(1840), pages~380\hbox{--}440.}
+
 \vspace{-0.1em}
-\en{And}\ru{А}~\en{rotation}\ru{поворот} \en{of a~second complexity tensor}\ru{тензора второй сложности} ${\mathcircabove{\bm{C}} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$ \en{into the current position}\ru{в~текущую позицию} ${\bm{C} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_j}$ \en{happens like}\ru{случается так}
+\en{For}\ru{Для} \en{a~second complexity tensor}\ru{тензора второй сложности} ${\mathcircabove{\bm{C}} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$\en{,} \en{a~rotation}\ru{поворот} \en{into the current position}\ru{в~текущую позицию} ${\bm{C} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_j}$ \en{looks like}\ru{выглядит как}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}
 \bm{e}_i C_{i\hspace{-0.1ex}j} \bm{e}_j \hspace{-0.2ex}
@@ -2450,8 +2647,9 @@ B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1
 \hspace{.2em} ,
 \end{equation}
 
-\vspace{-0.1em} \noindent
-\en{that~is}\ru{то~есть} \en{the~transposed tensor}\ru{транспонированный тензор} \en{coincides}\ru{совпадает} \en{with}\ru{с}~\en{the~reciprocal tensor}\ru{обратным тензором}: ${\rotationtensor^{\T} \hspace{-0.32ex} = \rotationtensor^{\expminusone} \Leftrightarrow \rotationtensor = \rotationtensor^{\expminusT}\hspace{-0.25ex}}$.
+\vspace{-0.1em}\noindent
+\en{that~is}\ru{то~есть} \en{the~transposed tensor}\ru{транспонированный тензор} \en{coincides}\ru{совпадает} \en{with}\ru{с}~\en{the~reciprocal tensor}\ru{обратным тензором}:
+${\rotationtensor^{\T} \hspace{-0.32ex} = \rotationtensor^{\expminusone} \Leftrightarrow \rotationtensor = \rotationtensor^{\expminusT}\hspace{-0.25ex}}$.
 
 \en{An~orthogonal tensor}\ru{Ортогональный тензор} \en{retains}\ru{сохраняет} \en{lengths and~angles}\ru{дл\'{и}ны и~углы} (\en{the metric}\ru{метрику})\ru{,}
 \en{because}\ru{потому что} \en{it}\ru{он} \en{does not change}\ru{не~меняет} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведение} \en{of vectors}\ru{векторов}
@@ -2470,24 +2668,28 @@ B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 1 = \operatorname{det} \UnitDyad = \operatorname{det} \left({\hspace{-0.1ex} \orthogonaltensor \dotp \orthogonaltensor^{\T} \hspace{.2ex}}\right) \hspace{-0.3ex}
 = \left({\operatorname{det} \orthogonaltensor \hspace{.1ex}}\right) \left({\operatorname{det} \orthogonaltensor^{\T} \hspace{.2ex}}\right) \hspace{-0.3ex}
-= \left(\operatorname{det} \orthogonaltensor \hspace{.1ex} \right)^2
+= \left(\operatorname{det} \orthogonaltensor \hspace{.1ex} \right)^{2}
 \hspace{.1ex} .
 \end{equation*}
 
+\en{A~rotation tensor is an~orthogonal tensor}\ru{Тензор поворота это ортогональный тензор} \en{with}\ru{с}~${\operatorname{det} \rotationtensor \hspace{-0.1ex} = 1}$.
+
+\en{But}\ru{Но} \en{not only}\ru{не~только лишь} \en{rotation tensors}\ru{тензоры поворота} \en{possess}\ru{обладают} \en{the property of~orthogonality}\ru{свойством ортогональности}.
+\en{When}\ru{Когда} \en{in}\ru{в}~\eqref{introductionofrotationtensor} \en{the first basis}\ru{первый базис} \en{is }\inquotesx{\en{left}\ru{левый}}[,] \en{and}\ru{а}~\en{the second one}\ru{второй} \en{is }\inquotesx{\en{right}\ru{правый}}[,] \en{then}\ru{тогда} \en{there’s}\ru{это} \en{a~combination of a~rotation and a~reflection}\ru{комбинация поворота и~отражения} (\inquotes{rotoreflection}) ${\rotationtensor = -\UnitDyad \dotp \rotationtensor}$ \en{with}\ru{с}~${\operatorname{det} \left( -\UnitDyad \dotp \rotationtensor \hspace{.15ex} \right) \hspace{-0.1ex} = -1}$.
+
 \begin{otherlanguage}{russian}
 
-Тензор поворота это ортогональный тензор \en{with}\ru{с}~${\operatorname{det} \rotationtensor \hspace{-0.1ex} = 1}$.
-Но не~только лишь тензоры поворота обладают свойством ортогональности.
-\en{When}\ru{Когда} \en{in}\ru{в}~\eqref{introductionofrotationtensor} один из базисов \inquotesx{правый}[,] а~другой \inquotesx{левый}[,] \en{then it’s}\ru{тогда это} \en{combination of a~rotation and a~reflection}\ru{комбинация поворота и~отражения} (\inquotes{rotoreflection}) ${\rotationtensor = -\UnitDyad \dotp \rotationtensor}$ \en{with}\ru{с}~${\operatorname{det} \left( -\UnitDyad \dotp \rotationtensor \hspace{.16ex} \right) \hspace{-0.1ex} = -1}$.
+У~любого бивалентного тензора в~трёхмерном пространстве как минимум одно собственное число\:--- \en{the root of}\ru{корень}~\eqref{chardetequation}\en{ is}\ru{\:---} \en{non-complex}\ru{некомпл\'{е}ксное}~(\ru{действительное, }real).
+\en{For a~rotation tensor}\ru{Для тензора поворота}\en{,} \en{it is equal to one}\ru{оно равно единице}
 
-У~любого бивалентного тензора в~трёхмерном пространстве как минимум одно собственное число\:--- корень~\eqref{chardetequation}\:--- действительное~(некомпл\'{е}ксное).
-Для тензора поворота оно равно единице
-
-\nopagebreak\vspace{1em}\begin{equation*}\begin{array}{c}
-\rotationtensor \dotp \bm{a} = \eigenvalue \bm{a} \:\Rightarrow\:
+\nopagebreak\vspace{1em}\begin{equation*}
+\begin{array}{c}
+\rotationtensor \dotp \bm{a} = \eigenvalue \bm{a}
+\:\Rightarrow\:
 \tikzmark{BeginPaBrace} \bm{a} \hspace{.16ex} \dotp \tikzmark{BeginEBrace} \rotationtensor^{\T} \tikzmark{EndPaBrace} \hspace{-0.4ex} \dotp \rotationtensor \hspace{-0.32ex}\tikzmark{EndEBrace}\hspace{.32ex} \dotp \hspace{.16ex} \bm{a} = \eigenvalue \bm{a} \dotp \eigenvalue \bm{a}
 \:\Rightarrow\: \eigenvalue^{2} \hspace{-0.2ex} = 1 \hspace{.1ex} .
-\end{array}\end{equation*}
+\end{array}
+\end{equation*}
 \AddOverBrace[line width=.75pt][0.1ex,0.4ex]{BeginPaBrace}{EndPaBrace}{${\scriptstyle \rotationtensor \:\dotp\; \bm{a}}$}
 \AddUnderBrace[line width=.75pt][-0.1ex,0.1ex]{BeginEBrace}{EndEBrace}{${\scriptstyle \UnitDyad}$}
 
@@ -3172,11 +3374,11 @@ ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{a}_p \hspace{-0.2ex} \dotp \bm{e}_
 \end{equation*}
 
 \vspace{-0.1em} \noindent
-${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\levicivita_{123} \hspace{.2ex} \levicivita_{123} \hspace{-0.12ex} = \underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex} = \underset{\raisebox{.15em}{\scalebox{0.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, \textsl{g}_{i\hspace{-0.1ex}j}}$.
+${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\levicivita_{123} \hspace{.2ex} \levicivita_{123} \hspace{-0.15ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, \textsl{g}_{i\hspace{-0.1ex}j}}$.
 ${ \hspace{.6em}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex); }$
 
-Представляя~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$ и~остальные векторы кобазиза суммой
+\en{Representing}\ru{Представляя}~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$ \en{and other}\ru{и~другие} \en{cobasis vectors}\ru{векторы кобазиса} \en{as the sum}\ru{как сумму}
 
 \nopagebreak\vspace{.8em}\begin{equation*}
 \begin{array}{l@{\hspace{.3em}}c@{\hspace{.36em}}r}
@@ -3593,26 +3795,33 @@ ${\hspace{-0.1ex} -\bm{B}^{2} \hspace{-0.2ex} + \mathrm{I}\hspace{.16ex} \bm{B} 
 
 \end{otherlanguage}
 
-\en{\section{Tensor fields. Spatial differentiation}}
+\en{\section{Spatial differentiation}}
 
-\ru{\section{Тензорные поля. Пространственное дифференцирование}}
+\ru{\section{Пространственное дифференцирование}}
 
-\label{para:spatialdifferentiationoftensorfields}
+\label{para:spatialdifferentiationoftensorfields} <<<<<< rename: remove fields
 
 \begin{changemargin}{\parindent}{\parindent}
 \vspace{-0.1em}
-\small \flushright
-\textit{\en{Tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is} \en{a~tensor}\ru{это тензор}\ru{,} \en{varying from~point to~point}\ru{меняющийся от~точки к~точке} (\en{variable in~space}\ru{переменный в~пространстве}, \en{coordinate dependent}\ru{зависящий от~координат})
+\small
+\flushright
+\textit{\en{Tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is} \en{a~tensor}\ru{это тензор}\ru{,} \en{varying from~point to~point}\ru{меняющийся от~точки к~точке} (\en{variable in~space}\ru{переменный в~пространстве}, \en{coordinate dependent}\ru{зависящий от~координат}).
+
 \par\vspace{.3em}
 \end{changemargin}
 
 \begin{otherlanguage}{russian}
 
+<<<<<<<
+
 \noindent
-Пусть в~каждой точке некоторой области трёхмерного пространства определена величина~$\varsigma$.
-Тогда имеем поле~${\varsigma \!=\! \varsigma(\locationvector)}$, \en{where}\ru{где}~$\locationvector$\en{ is}\ru{\:---} \en{location vector}\ru{вектор положения}~(\en{radius vector}\ru{вектор\hbox{-}радиус}) \en{of~a~point}\ru{точки} \en{in~space}\ru{пространства}.
+Пусть \en{at each point}\ru{в~каждой точке} \en{of some region}\ru{некоторой области} \en{of a~three-dimensional space}\ru{трёхмерного пространства} определена величина~$\varsigma$.
+Тогда говорят, что есть тензорное поле~${\varsigma \!=\! \varsigma(\locationvector)}$, \en{where}\ru{где}~$\locationvector$\en{ is}\ru{\:---} \en{location vector}\ru{вектор положения}~(\en{radius vector}\ru{вектор\hbox{-}радиус}) \en{of~a~point}\ru{точки} \en{in~space}\ru{пространства}.
+
 Величина~$\varsigma$ может~быть тензором любой сложности.
 Пример скалярного поля\:--- поле температуры в~среде, векторного поля\:--- скорости частиц жидкости.
+
+Концепт тензорного поля никак не~связан с~концептом поля с~операциями $+$ и~$*$ с~11~свойствами этих операций.
 
 \end{otherlanguage}
 
@@ -3629,12 +3838,11 @@ ${\hspace{-0.1ex} -\bm{B}^{2} \hspace{-0.2ex} + \mathrm{I}\hspace{.16ex} \bm{B} 
 
 \end{otherlanguage}
 
+Commonly used \en{sets of~coordinates}\ru{наборы координат}<<<<<<
+\en{Rectangular}\ru{Прямоугольные} (\inquotes{\en{cartesian}\ru{декартовы}}), \en{spherical}\ru{сферические} \en{and }\ru{и~}\en{cylindrical}\ru{цилиндрические} \en{coordinates}\ru{координаты}\en{ are}\ru{\:---}
+
 Curvilinear coordinates may be derived from a~set of~rectangular~(\inquotes{cartesian}) coordinates by using a~transformation that is locally invertible (a~one-to-one map) at~each point.
-Therefore, rectangular coordinates \en{of~any point}\ru{любой точки} \en{can be converted}\ru{могут быть преобразованы} to its curvilinear coordinates \en{and}\ru{и}~\en{vice versa}\ru{обратно}.
-
-Commonly used sets of~coordinates are rectangular (\inquotes{cartesian}), spherical and cylindrical.
-
-...
+\en{Therefore}\ru{Поэтому} \en{rectangular coordinates}\ru{прямоугольные координаты} \en{of~any point}\ru{любой точки} \en{of~space}\ru{пространства} \en{can be converted}\ru{могут быть преобразованы} \en{to }\ru{в~}\en{some}\ru{какие-либо} \en{curvilinear coordinates}\ru{криволинейные координаты} \en{and}\ru{и}~\en{vice versa}\ru{обратно}.
 
 ...
 
@@ -3884,8 +4092,8 @@ small cube, little cube
 
 \leavevmode{\indent}The~\href{https://en.wikipedia.org/wiki/Riemann_curvature_tensor}{\emph{Riemann curvature tensor} or \emph{Riemann\hbox{--}Christoffel tensor}} (after \href{https://en.wikipedia.org/wiki/Bernhard_Riemann}{\textbold{Bernhard Riemann}} and \href{https://en.wikipedia.org/wiki/Elwin_Bruno_Christoffel}{\textbold{Elwin Bruno Christoffel}}) is the most common method used to express the curvature of Riemannian manifolds. It’s a~tensor field, it assigns a~tensor to each point of a~Riemannian manifold, that measures the extent to which the~metric tensor is not locally isometric to that of \inquotes{flat} space. The curvature tensor measures noncommutativity of the covariant derivative, and as such is the~integrability obstruction for the~existence of an~isometry with \inquotes{flat} space.
 
-\vspace{.2em}
-\hfill $\sim$\:\emph{from Wikipedia, the free encyclopedia}
+%%%\vspace{.2em}
+%%%\hfill $\sim$\:\emph{from Wikipedia, the free encyclopedia}
 \par
 \egroup
 \nopagebreak\vspace{.12em}

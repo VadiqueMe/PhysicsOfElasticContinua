@@ -3,7 +3,8 @@
 \usepackage[T2A,LGR,OT1,T1]{fontenc}
 \usepackage{ucs}
 
-\usepackage[english, greek, ukrainian, russian]{babel}
+\usepackage[english, greek, russian]{babel}
+%%ukrainian
 
 \RequirePackage{ifthen}
 \newif\ifen
@@ -576,25 +577,24 @@ aboveskip=4mm,belowskip=2.5mm}
 
 \addto\captionsenglish{\renewcommand{\chaptertitlename}{Chapter}}
 \addto\captionsrussian{\renewcommand{\chaptertitlename}{Глава}}
-\addto\captionsukrainian{\renewcommand{\chaptertitlename}{Розділ}}
+%%\addto\captionsukrainian{\renewcommand{\chaptertitlename}{Розділ}}
 
 \addto\captionsenglish{\def\chaptershortname{chapter\hspace{.28ex}}}
 \addto\captionsrussian{\def\chaptershortname{гл.}}
-\addto\captionsukrainian{\def\chaptershortname{розд.}}
+%%\addto\captionsukrainian{\def\chaptershortname{розд.}}
 
 \addto\captionsenglish{\renewcommand{\contentsname}{Contents}}
 \addto\captionsrussian{\renewcommand{\contentsname}{Содержание}}
-\addto\captionsukrainian{\renewcommand{\contentsname}{Змiст}}
+%%\addto\captionsukrainian{\renewcommand{\contentsname}{Змiст}}
 
 \addto\captionsenglish{\renewcommand{\figurename}{figure}}
 %%\addto\captionsrussian{\renewcommand{\figurename}{фигура}}
 \addto\captionsrussian{\renewcommand{\figurename}{рисунок}}
-\addto\captionsukrainian{\renewcommand{\figurename}{малюнок}}
+%%\addto\captionsukrainian{\renewcommand{\figurename}{малюнок}}
 
 \addto\captionsenglish{\def\figureshortname{fig.}}
-%%\addto\captionsrussian{\def\figureshortname{фиг.}}
-\addto\captionsrussian{\def\figureshortname{рис.}}
-\addto\captionsukrainian{\def\figureshortname{мал.}}
+\addto\captionsrussian{\def\figureshortname{рис.}} %%\def\figureshortname{фиг.}
+%%\addto\captionsukrainian{\def\figureshortname{мал.}}
 
 \addto\captionsenglish{\def\wordforbibliography{Bibliography}}
 \addto\captionsrussian{\def\wordforbibliography{Библиография}}
@@ -731,8 +731,8 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \addto\captionsrussian{\def\bibliographyname{Список упомянутых публикаций}}
 \addto\captionsrussian{\renewcommand{\bibname}{\bibliographyname}}
 
-\addto\captionsukrainian{\def\bibliographyname{Список згаданих публікацій}}
-\addto\captionsukrainian{\renewcommand{\bibname}{\bibliographyname}}
+%%\addto\captionsukrainian{\def\bibliographyname{Список згаданих публікацій}}
+%%\addto\captionsukrainian{\renewcommand{\bibname}{\bibliographyname}}
 
 % --------------------------------------------------
 
