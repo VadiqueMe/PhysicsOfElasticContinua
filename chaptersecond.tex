@@ -22,13 +22,13 @@
 \en{Function}\ru{Функция}~${\locationvector_{k}(t)}$ \en{is measured}\ru{измеряется} \en{relative to the chosen reference system}\ru{относительно выбранной системы отсчёта}.
 
 \vspace{.2em}
-\hspace*{-\parindent}\begin{minipage}{\linewidth}
+%\hspace*{-\parindent}\begin{minipage}{\linewidth}
 \setlength{\parindent}{\horizontalindent}
 \setlength{\parskip}{\spacebetweenparagraphs}
 
-\begin{wrapfigure}{r}{.4\textwidth} %\begin{wrapfigure}[8]{r}{.4\textwidth}
-\makebox[.42\textwidth][c]{\begin{minipage}[t]{.43\textwidth}
-\vspace{-.5em}
+\begin{wrapfigure}[10]{r}{.4\textwidth}
+\makebox[.42\textwidth][c]{%%%\begin{minipage}[t]{.43\textwidth}
+\vspace{.5em}
 \scalebox{1.1}{
 \begin{tikzpicture}[scale=0.86]
 
@@ -55,9 +55,12 @@
 	\draw [line width=1.2pt, blue, rotate around={148:(clock)}] (clock) -- ++(\clockradius - 0.15, 0);
 
 	\path (0, 0.33) node [shape=coordinate] (O) {};
+	\path (O) node [inner sep=0mm, outer sep=1mm] ($mcirc$) {};
 	\path (O) -- ++(2.3, 0) node [shape=coordinate] (first) {};
 	\path (O) -- ++(-1, -1) node [shape=coordinate] (second) {};
 	\path (O) -- ++(0, 1.83) node [shape=coordinate] (third) {};
+
+	\path (O) node [left, inner sep=0mm, outer sep=2mm, yshift=0.5mm] { $o$ } ;
 
 	\tikzstyle{basis vector} =
 		[line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}]
@@ -81,26 +84,27 @@
 
 	\draw [line width=1pt, blue, fill=white] (O) circle (1.2mm) ;
 
-\end{tikzpicture}}
-\vspace{-0.3em}\caption{}\label{fig:referencesystem}
-\end{minipage}}
-\end{wrapfigure}
+\end{tikzpicture}
+}
+\vspace{.5em}\caption{}\label{fig:referencesystem}
+%%%}
+\end{wrapfigure} %%%\end{minipage}
 
 \en{A~reference system~(also \inquotes{reference frame})}\ru{Система отсчёта} \en{consists of}\ru{состоит из}~(\figref{fig:referencesystem})
 
 \begin{itemize}
-\item \en{some}\ru{н\'{е}которой} \inquotes{\en{null}\ru{нулевой}} \en{reference point}\ru{точки отсчёта},
+\item \en{some}\ru{н\'{е}которой} \inquotes{\en{null}\ru{нулевой}} \en{reference point}\ru{точки отсчёта} ${o}$,
 \item \en{a~set of coordinates}\ru{набора координат}, %%(\en{the coordinates}\ru{координаты} \en{define the units of measurements}\ru{определяют единицы измерения}
-\item \en{any clock}\ru{любых часов}.
+\item \en{a~clock}\ru{часы}.
 \end{itemize}
 
-\vspace{-0.1em}\noindent
-\inquotes{\emph{\en{Any}\ru{Любых}}} \en{clock}\ru{часов}\:--- \en{because}\ru{потому что}
-(\en{in}\ru{в}~\en{classical}\ru{классической} \en{generic}\ru{общей} \en{mechanics}\ru{механике})
-\en{time}\ru{время} \en{tick-tocks}\ru{тик-такает}, \en{flows}\ru{течёт} \en{and }\ru{и~}\en{passes}\ru{проходит} \en{identically}\ru{одинаково} \en{in~any clock}\ru{в~любых часах} \en{in~any place}\ru{в~любом месте}, \en{and}\ru{и} \en{all clocks are perfectly synchronized}\ru{все часы идеально синхронизированы}.
+%\vspace{-0.1em}\noindent
+%\inquotes{\emph{\en{Any}\ru{Любых}}} \en{clock}\ru{часов}\:--- \en{because}\ru{потому что}
+%(\en{in}\ru{в}~\en{classical}\ru{классической} \en{generic}\ru{общей} \en{mechanics}\ru{механике})
+%\en{time}\ru{время} \en{tick-tocks}\ru{тик-такает}, \en{flows}\ru{течёт} \en{and }\ru{и~}\en{passes}\ru{проходит} \en{identically}\ru{одинаково} \en{in~any clock}\ru{в~любых часах} \en{in~any place}\ru{в~любом месте}, \en{and}\ru{и} \en{all clocks are perfectly synchronized}\ru{все часы идеально синхронизированы}.
 
 \vspace{.33em}
-\end{minipage}
+%%%\end{minipage}
 
 \en{Long time ago}\ru{Когда\hbox{-}то давно}, \en{the~reference system}\ru{системой отсчёта} \en{was}\ru{было} \en{some absolute space}\ru{некое абсолютное пространство}: \en{empty at~first}\ru{сначала пустое}, \en{and then}\ru{а~затем} \en{filled with the~continuous elastic medium}\ru{заполненное сплошной упругой \hbox{средой}}\:--- \en{the~æther}\ru{эфиром~(æther)}.
 \en{Later it became clear}\ru{Позже стало ясно,} \en{that}\ru{что} \en{for classical mechanics}\ru{для классической механики} \ru{могут быть использованы }\en{any reference systems}\ru{любые системы отсчёта}\en{ can be used}, \en{but}\ru{но} \en{the~preference is given to}\ru{предпочтение отдаётся} \en{the so~called}\ru{так называемым} \inquotes{\en{inertial}\ru{инерциальным}} \en{systems}\ru{системам}, \en{where}\ru{где} \en{a~point}\ru{\hbox{точка}} \en{moves}\ru{движется} \en{with a~constant velocity}\ru{с~постоянной скоростью} \en{without acceleration}\ru{без~ускорения}~(${\mathdotdotabove{\locationvector} = \hspace{-0.1ex} \bm{0}}$, ${\mathdotabove{\locationvector} = \hspace{-0.1ex} \boldconstant}$) \en{in the~absence of external interactions}\ru{в~отсутствии внешних взаимодействий}.
@@ -441,7 +445,7 @@ dm \equiv \rho \hspace{.2ex} d\mathcal{V}
 \en{a~rotation around the~chosen pole}\ru{поворот вокруг выбранного полюса},
 \en{or}\ru{либо}
 \en{an~equal displacement of the~pole and all body’s points}\ru{равное перемещение полюса и~всех точек тела}\:--- \en{translation~(linear motion)}\ru{трансляция~(линейное движение)}\footnote{%
-\en{A~translation}\ru{Трансляция} \en{can also be thought of as}\ru{может также быть мыслима как} \en{a~rotation}\ru{вращение} \en{with the~revolution center}\ru{с~центром переворота} \en{at~infinity}\ru{на~бесконечности}.}\hbox{\hspace{-0.3ex},}
+\en{A~translation}\ru{Трансляция} \en{can also be thought of as}\ru{может также быть мыслима как} \en{a~rotation}\ru{вращение} \en{with the~revolution center}\ru{с~центром переворота} \en{at the~infinity}\ru{на~бесконечности}}\hbox{\hspace{-0.3ex},}
 \en{or}\ru{либо}
 \en{a~combination of~them both}\ru{комбинация их обоих}.
 
@@ -734,8 +738,9 @@ ${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} 
 
 ...
 
-\[
-\hspace{-0.4ex} \displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} \positionofthepole \hspace{.2ex} dm
+\hspace{-0.4ex}\begin{equation*}
+
+\displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} \positionofthepole \hspace{.2ex} dm
 = \hspace{.1ex} \positionofthepole \hspace{-0.5ex} \displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} dm
 = \hspace{.1ex} \positionofthepole \hspace{.2ex} m
 \]
@@ -1024,7 +1029,8 @@ c\hspace{.2ex}(\locationvector, t) = 0
 \noindent
 где~${\bm{F}_{k}^{\smthactive}}$\:--- лишь активные силы, без реакций связей.
 
-Дифференциальное вариационное уравнение~\eqref{discrete:principleofvirtualwork} может показаться тривиальным следствием закона Ньютона~\eqref{law:ofnewton} и~условия идеальности связей~\eqref{idealconstraints}. Однако содержание~\eqref{discrete:principleofvirtualwork} несравненно обширнее.
+Дифференциальное вариационное уравнение~\eqref{discrete:principleofvirtualwork} может показаться тривиальным следствием закона Ньютона~\eqref{law:ofnewton} и~условия идеальности связей~\eqref{idealconstraints}.
+Однако содержание~\eqref{discrete:principleofvirtualwork} несравненно обширнее.
 Читатель вскоре увидит, что принцип~\eqref{discrete:principleofvirtualwork} может быть положен в~основу механики~\cite{gantmacher}.
 Разные модели упругих тел, описываемые в~этой книге, построены с~опорой на~этот принцип.
 

@@ -237,11 +237,11 @@ The addition and subtraction
 \hspace{.1ex} .
 \end{gather*}
 
-For every action, there’s an equal (in magnitude) and opposite (in direction) reaction force.
+/en{For every action}\ru{Для каждого действия}, \en{exists}\ru{существует} \en{an equal (in magnitude)}\ru{равная (по магнитуде)} \en{and}\ru{и} \en{opposite (in direction)}\ru{обратная (по направлению)} \en{reaction force}\ru{сила реакции}.
 
-A~vector may be also represented as the sum (combination) of some trio of~other vectors, called \inquotes{basis}, when the each of the three is scaled by a~number (coefficient).
-Such a~representation is called a~\inquotes{linear combination} of basis vectors.
-A~list (array, tuple) of coefficients alone, without basis vectors, is not enough and can’t represent a~vector.
+\en{A~vector}\ru{Вектор} \en{may be}\ru{может быть} \en{also}\ru{также} \en{represented}\ru{представлен} \en{as the sum (combination)}\ru{как сумма (комбинация)} \en{of some trio of~other vectors}\ru{какого-нибудь трио других векторов}, \en{called}\ru{называемых} \en{a~basis}\ru{базисом}, \en{when}\ru{когда} \en{the each of the three}\ru{каждый из трёх} \en{is scaled}\ru{умножается} \en{by a~number (coefficient)}\ru{на число (коэффициент)} \en{and summed with others}\ru{и суммируется с~другими}.
+\en{Such a~representation}\ru{Такое представление} \en{is called}\ru{называется} \en{a~\inquotes{linear combination}}\ru{линейной комбинацией} \en{of basis vectors}\ru{базисных векторов}.
+\en{A~list (array, tuple)}\ru{Набор (массив, список)} \en{of coefficients alone}\ru{одних только коэффициентов}\en{,} \en{without basis vectors}\ru{без базисных векторов}\en{,} \en{is not enough}\ru{недостаточен} \en{and}\ru{и} \en{can’t represent a~vector}\ru{не может представлять вектор}.
 
 {\small
 \foreignlanguage{russian}{У элементов векторного пространства\:--- векторов\:--- компонент нет.
@@ -950,22 +950,22 @@ t_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex} \equiv a_i b_{\hspace{-0.1
 
 % linear combination
 
-\nopagebreak\en{The~first}\ru{Первое}\:--- \textbold{\en{linear combination}\ru{линейная комбинация}}\:--- \en{aggregates}\ru{объединяет} \en{addition}\ru{сложение} \en{and}\ru{и}~\en{multiplication by~number}\ru{умножение на~число}.
-\en{Arguments of this operation and the~result}\ru{Аргументы этого действия и~результат}\en{ are}\ru{\:---} \en{of the~same complexity}\ru{одинаковой сложности}.
-\en{For two tensors it looks like this}\ru{Для двух тензоров оно выглядит так}:
+\nopagebreak\en{The~first}\ru{Первое}\:--- \textbold{\en{linear combination}\ru{линейная комбинация}}\:--- \en{aggregates}\ru{объединяет} \en{addition}\ru{сложение} \en{and}\ru{и}~\en{multiplication by a~number}\ru{умножение на~число}.
+\en{Arguments}\ru{Аргументы} \en{of this operation}\ru{этой операции} \en{and the~result}\ru{и~результат} \en{have the same complexity}\ru{имеют одинаковую сложность}.
+\en{For the two tensors}\ru{Для двух тензоров} \en{it looks like this}\ru{оно выглядит так}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{tensoraction:linearcombination}
-\lambda a_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex} + \hspace{.2ex} \mu b_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex} = \hspace{.2ex} c_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex}
+\lambda \hspace{.3ex} a_{i\hspace{-0.1ex}j\ldots} + \hspace{.2ex} \mu \hspace{.2ex} b_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex} = \hspace{.2ex} c_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex}
 \;\Leftrightarrow\;
-\lambda \bm{a} + \mu \bm{b} = \bm{c}
+\lambda \hspace{.1ex} \bm{a} + \mu \bm{b} = \bm{c}
 \hspace{.2ex} .
 \end{equation}
 
 \vspace{-0.1em}\noindent
 \en{Here}\ru{Здесь}
-$\lambda$ \en{and}\ru{и}~$\mu$~\en{are}\ru{---} \en{scalar coefficients}\ru{коэффициенты\hbox{-}скаляры};
+$\lambda$ \en{and}\ru{и}~$\mu$~\en{are}\ru{---} \en{scalar coefficients}\ru{скалярные коэффициенты}.
 $\bm{a}$, $\bm{b}$ \en{and}\ru{и}~$\bm{c}$~\en{are}\ru{---} \en{tensors}\ru{тензоры} \en{of the~same complexity}\ru{одной и~той~же сложности}.
-\en{It’s easy to show}\ru{Легко показать,} \en{that}\ru{что} \en{components}\ru{компоненты} \en{of~result}\ru{результата}~$\bm{c}$ \en{satisfy}\ru{удовлетворяют} \en{the~orthogonal transformation}\ru{ортогональному преобразованию} \en{like}\ru{вида}~\eqref{orthotransform:2}.
+\en{It’s easy to show}\ru{Легко показать,} \en{that}\ru{что} \en{components}\ru{компоненты} \en{of the result}\ru{результата}~$\bm{c}$ \en{satisfy}\ru{удовлетворяют} \en{the~orthogonal transformation}\ru{ортогональному преобразованию} \en{like}\ru{вида}~\eqref{orthotransform:2}.
 
 \inquotesx{\en{Decomposition of~a~vector in a~basis}\ru{Разложение вектора в~базисе}}[---] \en{representation}\ru{представление} \en{of~a~vector}\ru{вектора} \en{as the~sum}\ru{суммой}~${\bm{v} = v_i \bm{e}_i}$\:--- \en{is nothing else but}\ru{это не~что~иное как} \en{the~linear combination}\ru{линейная комбинация} \en{of~basis vectors}\ru{векторов базиса}~${\bm{e}_i}$ \en{with coefficients}\ru{с~коэффициентами}~${v_i}$.
 
@@ -984,7 +984,7 @@ a_{i\hspace{-0.1ex}j} B_{abc} \hspace{-0.16ex} = D_{i\hspace{-0.1ex}jabc} & \Lef
 \end{equation}
 
 \vspace{-0.1em}
-\en{Transformation of a~collection of result’s components}\ru{Преобразование совокупности компонент результата}, \en{such as}\ru{такой как} ${C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex} = v_i a_{j\hspace{-0.1ex}k}}$, \en{during a~rotation of~basis}\ru{при повороте базиса}\en{ is}\ru{\:---} \en{orthogonal}\ru{ортогональное}, \en{similar to}\ru{подобное}~\eqref{orthotransform:3}, \en{thus}\ru{посему} \en{here’s no~doubt that}\ru{тут нет сомнений, что} \en{this collection is a~set of tensor components}\ru{эта совокупность есть набор компонент тензора}.
+\en{Transformation of a~collection of the result’s components}\ru{Преобразование совокупности компонент результата}, \en{such as}\ru{такой как} ${C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex} = v_i a_{j\hspace{-0.1ex}k}}$, \en{during a~rotation of the~basis}\ru{при повороте базиса}\en{ is}\ru{\:---} \en{orthogonal}\ru{ортогональное}, \en{similar to}\ru{подобное}~\eqref{orthotransform:3}, \en{thus}\ru{посему} \en{here’s no~doubt that}\ru{тут нет сомнений, что} \en{this collection is a~set of tensor components}\ru{эта совокупность есть набор компонент тензора}.
 
 \en{Primary}\ru{Первичный} \en{and}\ru{и} \en{already known}\ru{уж\'{е} знакомый} (\en{from}\ru{по}~\pararef{para:tensoranditscomponents}) \en{subtype of~multiplication}\ru{подвид умножения}\en{ is}\ru{\:---} \en{the~dyadic product of two vectors}\ru{диадное произведение двух векторов}
 ${^2\hspace{-0.25em}\bm{A} \hspace{-0.15ex} = \bm{b}\bm{c}}$.
@@ -1122,7 +1122,7 @@ element}\ru{это нейтральный элемент} \en{for}\ru{для} \e
 \hspace{.1ex} .
 \end{equation}
 
-\en{The following}\ru{Следующее} \en{identity}\ru{тождество} \en{describes}\ru{описывает} \en{how to swap multipliers}\ru{как обменять местами множители} \en{for}\ru{для} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}} (dot product\ru{’а}) \en{of two second complexity tensors}\ru{двух тензоров второй сложности}
+\en{The following}\ru{Следующее} \en{identity}\ru{тождество} \en{describes}\ru{описывает} \en{how to swap multipliers}\ru{как обменять местами множители} \en{for}\ru{для} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}} (dot product\ru{’а}) \en{of the two second complexity tensors}\ru{двух тензоров второй сложности}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}%%\label{transposeofdotproductforbivalenttensors}
 \begin{array}{c}
