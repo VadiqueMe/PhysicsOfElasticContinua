@@ -1,0 +1,78 @@
+\en{\section{Finding displacements by deformations}}
+
+\ru{\section{Нахождение перемещений по деформациям}}
+
+\label{para:displacementsfromdeformations}
+
+\en{Like any}\ru{Как и~всякий} \en{bivalent tensor}\ru{бивалентный тензор}, \en{displacement gradient}\ru{градиент перемещения}~${\boldnabla \bm{u}}$ \en{can be decomposed}\ru{может быть разложен} \en{into the sum}\ru{на сумму} \en{of the symmetric and antisymmetric parts}\ru{симметричной и~антисимметричной частей}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\label{lineartheory:displacementgradientdecomposed}
+\boldnabla \bm{u} \hspace{.2ex} = \tikzmark{beginSymmNablaU} \hspace{.3ex} \infinitesimaldeformation \hspace{.4ex} \tikzmark{endSymmNablaU} \hspace{-0.16ex} - \hspace{.25ex} \tikzmark{beginAsymmNablaU} \bm{\omega} \times \hspace{-0.1ex} \UnitDyad \tikzmark{endAsymmNablaU} \hspace{.1ex} , \:\;
+\bm{\omega} \equiv \displaystyle \onehalf \hspace{.3ex} \boldnabla \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{u} \hspace{.2ex},
+\end{equation}%
+\AddOverBrace[line width=.75pt][.1ex,0.1ex]%
+{beginSymmNablaU}{endSymmNablaU}{${\scriptstyle \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$}%
+\AddOverBrace[line width=.75pt][.2ex,0.1ex]%
+{beginAsymmNablaU}{endAsymmNablaU}{${\scriptstyle - \hspace{.1ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{A}}}$}
+
+\en{The symmetric part}\ru{Симметричная часть} ${\boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$ \en{is}\ru{есть} \en{the linear deformation tensor}\ru{тензор линейной деформации} $\infinitesimaldeformation$.
+\en{The antisymmetric part}\ru{Антисимметричную часть} ${\boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{A}}}$ \en{we will denote as}\ru{обозначим как}~$\bm{\Omega}$ \en{and }\ru{и~}\en{will call it}\ru{назовём} \en{the tensor of small rotations}\ru{тензором малых поворотов}.
+\en{Any antisymmetric bivalent tensor}\ru{Любой антисимметричный бивалентный тензор} \en{can be represented by a~vector}\ru{может быть представлен вектором} (\chapdotpararef{chapter:mathapparatus}{para:tensors.symmetric+skewsymmetric}).
+\en{So}\ru{Итак}, \en{to find displacements}\ru{чтобы найти перемещения}~$\bm{u}$ \en{by deformations}\ru{по~деформациям}~${\infinitesimaldeformation}$, \ru{нужно }\en{one more field}\ru{ещё одно поле}\en{ is needed}\:--- \en{the field of rotations}\ru{поле поворотов}~$\bm{\omega}(\bm{r})$.
+
+....
+
+\emph{\en{The compatibility conditions}\ru{Условия совместности}
+\en{in the linear elasticity}\ru{в~линейной упругости}}
+
+\en{The }\ru{Условия совместности }Saint\hbox{-\hspace{-0.2ex}}Venant’\en{s}\ru{а}\en{ compatibility conditions} \en{represent}\ru{представляют} \en{the integrability conditions}\ru{условия интегрируемости} \en{for}\ru{для} \en{a~symmetric}\ru{симметричного} \en{bivalent tensor field}\ru{бивалентного тензорного поля}.
+\en{When such a~tensor field is compatible}\ru{Когда такое тензорное поле совместно}, \en{then it describes some deformation (strain)}\ru{тогда оно описывает какую-то деформацию}.
+
+\en{In }\ru{В~отношении }\en{the }\en{displacement}\ru{перемещение}\hbox{$\hspace{.3ex}\mapsto\hspace{.3ex}$}\en{deformation}\ru{деформация}\en{ relation}~${\infinitesimaldeformation = \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$\en{,}
+\en{the six}\ru{шесть} \en{components}\ru{компонент}~${\infinitesimaldeformationcomponents{i\hspace{-0.1ex}j}}$ \en{of deformation}\ru{деформации}~${\infinitesimaldeformation}$ \en{originate from}\ru{происходят из} \en{only three components}\ru{лишь трёх компонент}~${u_{k}}$ \en{of the displacement vector}\ru{вектора перемещений}~${\bm{u}}$.
+
+\en{The compatibility conditions}\ru{Условия совместности} \en{determine}\ru{определяют}\ru{,} \en{whether this deformation does not cause}\ru{не является ли эта деформация причиной} \en{any gaps and/or overlaps}\ru{каких-либо промежутков и/или перекрываний}
+\textcolor{blue}{(.... and add picture here .....)}.
+
+%% continuum
+%% контину\kern-0.11exум
+
+...
+
+\begin{equation*}
+\operatorname{inc} \infinitesimaldeformation \hspace{-0.1ex}
+\equiv
+\hspace{-0.1ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \hspace{.1ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.15ex} \infinitesimaldeformation \hspace{.1ex} \bigr)^{\hspace{-0.2ex}\T}
+\end{equation*}
+
+\en{A~contour is arbitrary here}\ru{Контур здесь произволен}, \en{so we have the relation}\ru{так что имеем отношение}
+
+\nopagebreak\vspace{-0.25em}\begin{equation}\label{incompatibilityequalszero}
+\operatorname{inc} \infinitesimaldeformation = \hspace{-0.07ex} {^2\bm{0}}
+\hspace{.1ex} ,
+\end{equation}
+
+\vspace{-0.33em}\noindent
+\en{called}\ru{называемому}
+\en{the equation of compatibility of deformations}\ru{уравнением совместности деформаций}.
+
+...
+
+\en{Expression}\ru{Выражение}~\eqref{incompatibilityequalszero} \en{provides}\ru{предоставляет} \en{constraints}\ru{ограничения} \en{on possible variants}\ru{на возможные варианты} \en{of a~deformation (strain) field}\ru{поля деформации}.
+( \textcolor{blue}{... the figure with cut squares ...} )
+
+...
+
+\en{Tensor}\ru{Тензор}~${\operatorname{inc} \infinitesimaldeformation}$ \en{is symmetric}\ru{симметричен} \en{together with the }\ru{вместе с~}${\infinitesimaldeformation}$
+
+...
+
+\en{All equations}\ru{Все уравнения} \en{of the linear theory}\ru{линейной теории} \en{have an~analogue (primary source)}\ru{имеют аналог (первоисточник)} \en{in the nonlinear theory}\ru{в~нелинейной теории}.
+\en{To find it for}\ru{Чтобы найти его для}~\eqref{incompatibilityequalszero}, \en{remember}\ru{вспомним} \en{the}\ru{тензор деформации} Cauchy\hbox{--}Green\ru{’а}\en{deformation tensor}~(\chapdotpararef{chapter:nonlinearcontinuum}{para:deformationtensors}) \en{and}\ru{и}~\en{curvature tensors}\ru{тензоры кривизны}~(\chapdotpararef{chapter:mathapparatus}{para:curvaturetensors})
+
+...................
+
+...................
+
+

@@ -1,0 +1,738 @@
+\en{\section{Hooke’s law}}
+
+\ru{\section{Закон Гука}}
+
+\label{para:hookelaw}
+
+\nopagebreak\vspace{-2.4em}
+${
+\small \linearstress
+\hspace{.1ex} =
+\displaystyle\frac{
+   \raisemath{-0.2em}{\partial \hspace{.1ex} \potential}
+}{\partial \infinitesimaldeformation}
+= \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation
+= \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \stiffnesstensor
+}$
+\vspace{.5em}
+
+\nopagebreak
+\en{That}\ru{То}
+\en{relation}\ru{соотношение}
+\en{between}\ru{между}
+\en{the stress}\ru{напряжением}
+\en{and}\ru{и}
+\en{the deformation~(strain)}\ru{деформацией}, \en{which}\ru{которое} \en{in}\ru{в}
+\en{the~}\hbox{XVII$^{\hspace{.15ex}\textrm{\en{th}\ru{ом}}}$\hspace{-0.12em}}~\en{century}\ru{веке}
+Robert Hooke\ru{ Роберт Гук}
+\en{could only phrase}\ru{мог высказать лишь}
+\en{pretty vaguely}\ru{весьма расплывчато}\footnote{\hspace*{.2em}\inquotesx{\textit{ceiiinosssttuu, id est, Ut tensio sic vis}}[---]
+\bibauthor{Robert Hooke}.
+\href{https://play.google.com/books/reader?id=LAtPAAAAcAAJ&pg=GBS.PA1}{Lectures de Potentia Restitutiva, Or of Spring Explaining the Power of Springing Bodies. London, 1678. \howmanypages{56~pages.}}}\hbox{\hspace{-0.32em},}\hspace{.2em}
+\en{is written}\ru{записано}
+\en{in the~direct invariant notation}\ru{в~прямой инвариантной нотации}
+\en{in}\ru{в}~\eqref{lineartheory:wholesetofequations}
+\en{and is carried out}\ru{и~осуществляется}
+\en{by the~stiffness tensor}\ru{тензором жёсткости}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}
+   \stiffnesstensor
+   \hspace{.1ex} =
+   \displaystyle\frac{
+      \raisemath{-0.1em}{ \partial^2 \hspace{.1ex} \potential }
+   }{
+      \raisemath{-0.1em}{
+         \partial \infinitesimaldeformation \hspace{.1ex}
+         \partial \infinitesimaldeformation}
+   }
+   = \hspace{-0.1ex}
+   A^{i\hspace{-0.1ex}jk\hspace{.06ex}l} \hspace{.16ex}
+   \locationvector_\differentialindex{i}
+   \locationvector_\differentialindex{\hspace{-0.1ex}j}
+   \locationvector_\differentialindex{k}
+   \locationvector_\differentialindex{l}
+   \hspace{.1ex} ,
+   \hspace{1em}
+   %
+   A^{i\hspace{-0.1ex}jk\hspace{.06ex}l} \hspace{-0.16ex}
+   =
+   \displaystyle\frac{
+      \raisemath{-0.1em}{ \partial^2 \hspace{.1ex} \potential }
+   }
+   {
+      \raisemath{-0.1em}{\partial \varepsilon_{ i\hspace{-0.1ex}j } \hspace{.1ex}
+      \partial \varepsilon_{ \hspace{-0.1ex}k\hspace{.06ex}l }
+}}
+\hspace{.16ex}
+.
+\end{equation}
+
+\vspace{-0.1em}
+\en{The~stiffness tensor}\ru{Тензор жёсткости}
+\en{is}\ru{есть}
+\en{the~partial derivative}\ru{частная производная}
+\en{of~the~scalar}\ru{скалярной}
+\en{elastic potential energy density}\ru{плотности упругой потенциальной энергии}~$\potential$
+\en{twice}\ru{дважды}
+\en{by}\ru{по}
+\en{the same}\ru{тому~же}
+\en{bivalent tensor}\ru{бивалентному тензору}
+\en{of the infinitesimal deformation}\ru{бесконечно малой деформации}
+$\infinitesimaldeformation$.
+\en{It is symmetric}\ru{Он симметричен}
+\en{in the pairs of~indices}\ru{по~парам индексов}:
+${\stiffnesstensor_{\hspace{.12ex}
+   12 \scalebox{.6}[.8]{$ \rightleftarrows $} 34} \hspace{-0.25ex}
+   = \hspace{-0.1ex}
+   \stiffnesstensor
+   \hspace{.5ex} \Leftrightarrow \hspace{.2ex}
+   A^{i\hspace{-0.1ex}jk\hspace{.06ex}l} \hspace{-0.2ex}
+   =
+   A^{ k\hspace{.06ex}l\hspace{.06ex}i\hspace{-0.1ex}j }\hspace{-0.25ex}
+}$.
+\en{Therefrom}\ru{Оттог\'{о}} 
+\en{we have}\ru{мы имеем}
+36~\en{components}\ru{компонент}
+\en{out of}\ru{из}
+${ 3^4 \hspace{-0.25ex} = \hspace{-0.12ex} 81 }$
+\inquotes{\en{have a~twin}\ru{имеют двойник\'{а}}}
+\en{and}\ru{и}
+\en{only}\ru{только}
+45
+\en{are independent}\ru{независимы}.
+%
+\en{Furthermore}\ru{К~тому~же},
+\en{due}\ru{из\hbox{-}за}
+\en{to the~symmetry}\ru{симметрии}
+\en{of the infinitesimal deformation tensor}\ru{тензора бесконечномалой деформации}~$\infinitesimaldeformation$,
+\en{the tensor}\ru{тензор}~$\stiffnesstensor$
+\en{is symmetric}\ru{симметричен}
+\ru{ещё~и~}\en{also inside}\ru{внутри}
+\en{each pair of~indices}\ru{каждой пары индексов}:
+${
+   A^{i\hspace{-0.1ex}j\hspace{-0.06ex}k\hspace{.06ex}l} \hspace{-0.16ex}
+   = A^{j\hspace{-0.06ex}ik\hspace{.06ex}l} \hspace{-0.16ex}
+   = A^{i\hspace{-0.1ex}jlk}
+}$~(${
+   = A^{j\hspace{-0.06ex}i\hspace{.06ex}l\hspace{-0.06ex}k}}
+$).
+\en{This}\ru{Это}
+\en{reduces}\ru{снижает}
+\en{the number}\ru{число}
+\en{of the independent components}\ru{независимых компонент}
+\en{to}\ru{до}~21:
+
+\nopagebreak\vspace{-0.25em}
+\begin{equation*}\scalebox{.8}{$
+   \begin{array}{l}
+   \scalebox{1.16}{$
+      A^{abcd^{\mathstrut}} = A^{cdab} = A^{bacd} = A^{abdc}
+   $}
+\\[.2em]
+%
+A^{1\hspace{-0.1ex}1\hspace{-0.1ex}1\hspace{-0.1ex}1}
+\\
+A^{1\hspace{-0.1ex}1\hspace{-0.1ex}12}
+= A^{1\hspace{-0.1ex}121}
+= A^{121\hspace{-0.1ex}1}
+= A^{21\hspace{-0.1ex}1\hspace{-0.1ex}1}
+\\
+A^{1\hspace{-0.1ex}1\hspace{-0.1ex}13}
+= A^{1\hspace{-0.1ex}131}
+= A^{131\hspace{-0.1ex}1}
+= A^{31\hspace{-0.1ex}1\hspace{-0.1ex}1}
+\\
+A^{1\hspace{-0.1ex}122}
+= A^{221\hspace{-0.1ex}1}
+\\
+A^{1\hspace{-0.1ex}123}
+= A^{1\hspace{-0.1ex}132}
+= A^{231\hspace{-0.1ex}1}
+= A^{321\hspace{-0.1ex}1}
+\\
+A^{1\hspace{-0.1ex}133}
+= A^{331\hspace{-0.1ex}1}
+\\
+A^{1212} = A^{1221} = A^{21\hspace{-0.1ex}12} = A^{2121}
+\\
+A^{1213} = A^{1231} = A^{1312} = A^{1321} = A^{21\hspace{-0.1ex}13} = A^{2131} = A^{31\hspace{-0.1ex}12} = A^{3121}
+\\
+A^{1222} = A^{2122} = A^{2212} = A^{2221}
+\\
+A^{1223} = A^{1232} = A^{2123} = A^{2132} = A^{2312} = A^{2321} = A^{3212} = A^{3221}
+\\
+A^{1233} = A^{2133} = A^{3312} = A^{3321}
+\\
+A^{1313} = A^{1331} = A^{31\hspace{-0.1ex}13} = A^{3131}
+\\
+A^{1322} = A^{2213} = A^{2231} = A^{3122}
+\\
+A^{1323} = A^{1332} = A^{2313} = A^{2331} = A^{3123} = A^{3132} = A^{3213} = A^{3231}
+\\
+A^{1333} = A^{3133} = A^{3313} = A^{3331}
+\\
+A^{2222}
+\\
+A^{2223} = A^{2232} = A^{2322} = A^{3222}
+\\
+A^{2233} = A^{3322}
+\\
+A^{2323} = A^{2332} = A^{3223} = A^{3232}
+\\
+A^{2333} = A^{3233} = A^{3323} = A^{3332}
+\\
+A^{3333}
+\\
+\end{array}
+$}
+\end{equation*}
+
+\vspace{-0.2em}
+\en{The components}\ru{Компоненты}
+\en{of the stiffness tensor}\ru{тензора жёсткости}
+\en{are often written}\ru{часто записывают}
+\en{as}\ru{как}
+\en{the~symmetric}\ru{симметричной}
+\en{6×6 matrix}\ru{матрицей 6×6}
+
+\nopagebreak\vspace{-.3ex}
+\begin{gather}
+\displaystyle\underset{\raisemath{.1em}{\scriptscriptstyle 6×6}}{
+[ \hspace{.2ex} \mathcal{A} \hspace{.2ex} ]
+} \hspace{.12ex} = \hspace{-0.2ex}
+%
+\scalebox{.82}{$
+   \left[ \hspace{.4em} {
+   \begin{matrix}
+      a_{1} & a_{12} & a_{13} & a_{14} & a_{15} & a_{16} \\
+      \color{gray}{a_{12}} & a_{2} & a_{23} & a_{24} & a_{25} & a_{26} \\
+      \color{gray}{a_{13}} & \color{gray}{a_{23}} & a_{3} & a_{34} & a_{35} & a_{36} \\
+      \color{gray}{a_{14}} & \color{gray}{a_{24}} & \color{gray}{a_{34}} & a_{4} & a_{45} & a_{46} \\
+      \color{gray}{a_{15}} & \color{gray}{a_{25}} & \color{gray}{a_{35}} & \color{gray}{a_{45}} & a_{5} & a_{56} \\
+      \color{gray}{a_{16}} & \color{gray}{a_{26}} & \color{gray}{a_{36}} & \color{gray}{a_{46}} & \color{gray}a_{56}} & a_{6}
+   \end{matrix}
+   } \hspace{.32em} \right]
+$}
+%
+\hspace{-0.2ex} \equiv \hspace{-0.2ex}
+%
+\scalebox{.82}{$
+   \left[ \hspace{.4em} {
+   \begin{matrix}
+   A^{1\hspace{-0.1ex}1\hspace{-0.1ex}1\hspace{-0.1ex}1} &
+   A^{1\hspace{-0.1ex}122} &
+   A^{1\hspace{-0.1ex}133} &
+   A^{1\hspace{-0.1ex}1\hspace{-0.1ex}12} &
+   A^{1\hspace{-0.1ex}1\hspace{-0.1ex}13} &
+   A^{1\hspace{-0.1ex}123}
+   \\
+   {\color{gray}{ A^{221\hspace{-0.1ex}1} } &
+   A^{2222} &
+   A^{2233} &
+   A^{1222} &
+   A^{1322} &
+   A^{2223}
+   \\
+   {\color{gray}{ A^{331\hspace{-0.1ex}1} } &
+   {\color{gray}{ A^{3322} } &
+   A^{3333} &
+   A^{1233} &
+   A^{1333} &
+   A^{2333}
+   \\
+   {\color{gray}{ A^{121\hspace{-0.1ex}1} } &
+   {\color{gray}{ A^{2212} } &
+   {\color{gray}{ A^{3312} } &
+   A^{1212} &
+   A^{1213} &
+   A^{1223}
+   \\
+   {\color{gray}{ A^{131\hspace{-0.1ex}1} } &
+   {\color{gray}{ A^{2213} } &
+   {\color{gray}{ A^{3313} } &
+   {\color{gray}{ A^{1312} } &
+   A^{1313} &
+   A^{1323}
+   \\
+   {\color{gray}{ A^{231\hspace{-0.1ex}1} } &
+   {\color{gray}{ A^{2322} }} &
+   {\color{gray}{ A^{3323} }} &
+   {\color{gray}{ A^{2312} }} &
+   {\color{gray}{ A^{2313) }} &
+   A^{2323}
+\end{matrix}
+}
+\hspace{.4em} \right]
+$}
+\end{gather}
+
+\vspace{.1em}
+\en{Even}\ru{Даже}
+\en{in the Cartesian coordinates}\ru{в~декартовых координатах}
+$x$,\:$y$,\:$z$
+\en{the quadratic form}\ru{квадратичная форма}
+\en{of the elastic energy}\ru{упругой энергии}
+${\potential( \hspace{-0.1ex}
+   \infinitesimaldeformation
+   \hspace{-0.1ex} ) \hspace{-0.2ex}
+   = \hspace{.1ex}
+   \smallerdisplaystyleonehalf \hspace{.25ex}
+   \infinitesimaldeformation
+   \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
+   \stiffnesstensor
+   \dotdotp \hspace{-0.1ex}
+   \infinitesimaldeformation
+}$
+\en{is pretty}\ru{довольно\hbox{-}таки}
+\en{cumbersome}\ru{громоздкая}:
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{elasticenergylooongcartesian}
+\begin{gathered}
+\hspace{-5em}
+2 \hspace{.1ex} \potential
+= a_1 \varepsilon^2_{x} \hspace{-0.1ex}
++ a_2 \varepsilon^2_{y} \hspace{-0.1ex}
++ a_3 \varepsilon^2_{z} \hspace{-0.1ex}
++ a_4 \varepsilon^2_{xy} \hspace{-0.2ex}
++ a_5 \varepsilon^2_{xz} \hspace{-0.2ex}
++ a_6 \varepsilon^2_{yz}
+\\[-0.1em]
+%
+\hspace{.2em}
++ 2 \hspace{.2ex} \bigl[ \hspace{.1ex}
+\varepsilon_{x} \hspace{.1ex}
+( a_{12} \varepsilon_{y} \hspace{-0.2ex}
++ a_{13} \varepsilon_{z} \hspace{-0.2ex}
++ a_{14} \varepsilon_{xy} \hspace{-0.2ex}
++ a_{15} \varepsilon_{xz} \hspace{-0.2ex}
++ a_{16} \varepsilon_{yz} ) \hspace{-0.11ex}
+\\[-0.1em]
+%
+\hspace{3em}
++ \varepsilon_{y} \hspace{.1ex} (
+a_{23} \varepsilon_{z} \hspace{-0.2ex}
++ a_{24} \varepsilon_{xy} \hspace{-0.2ex}
++ a_{25} \varepsilon_{xz} \hspace{-0.2ex}
++ a_{26} \varepsilon_{yz}
+)
+\\[-0.1em]
+%
+\hspace{5em}
++ \varepsilon_{z} ( a_{34} \varepsilon_{xy} \hspace{-0.2ex}
++ a_{35} \varepsilon_{xz} \hspace{-0.2ex}
++ a_{36} \varepsilon_{yz} )
+\\[-0.1em]
+%
+\hspace{11em}
++ \varepsilon_{xy} \hspace{.1ex} \bigl(
+a_{45} \varepsilon_{xz} \hspace{-0.2ex}
++ a_{46} \varepsilon_{yz} ) \hspace{-0.11ex}
++ a_{56} \varepsilon_{xz} \varepsilon_{yz} \hspace{.1ex}
+\bigr)
+\hspace{.1ex}
+.
+\end{gathered}
+\end{equation}
+
+\en{When}\ru{Когда}
+\ru{добавляется }\en{a~material symmetry}\ru{материальная симметрия}\en{ is added},
+\en{the number}\ru{число}
+\en{of the independent components}\ru{независимых компонент}
+\en{of the tensor}\ru{тензора}~${\stiffnesstensor}$
+\en{decreases}\ru{уменьшается}.
+
+\en{For}\ru{Для}
+\en{a~material}\ru{материала}
+\en{with}\ru{с}
+\en{a~symmetry plane}\ru{плоскостью симметрии}
+\en{of the elastic properties}\ru{упругих свойств},
+\en{for example}\ru{например}
+${z = \constant}$.
+
+\en{The change}\ru{Изменение}
+\en{of signs}\ru{знаков}
+\en{of}\ru{у}~\en{the coordinates}\ru{координат}
+$x$
+\en{and}\ru{и}~$y$
+\en{does not change}\ru{не меняет}
+\en{the potential energy density}\ru{плотность потенциальной энергии}~${\potential}
+(\en{per volume unit}\ru{на единицу объёма}).
+%
+\en{And}\ru{А}
+\en{it’s possible}\ru{это возможно}
+\en{only}
+\en{when}\ru{когда}
+\begin{equation}\label{zeroconstants:oneplaneofsymmetry}
+\potential \hspace{.1ex}
+\raisemath{-0.2em} {
+    \Bigr\vert
+}_{\substack{
+    \varepsilon_{xz} \hspace{.2ex}=\hspace{.2ex} -\varepsilon_{xz} \\
+    \varepsilon_{yz} \hspace{.2ex}=\hspace{.2ex} -\varepsilon_{yz}
+}
+} \hspace{-0.2ex}
+=
+\potential
+\hspace{2em} \Leftrightarrow \hspace{-3em}
+\begin{array}{c}
+   0 =
+   a_{15} \hspace{-0.2ex}
+   = a_{16} \hspace{-0.2ex}
+   = a_{25} \hspace{-0.2ex}
+   = a_{26}
+\\ [-0.1em]
+\hspace{8em}
+   = a_{35} \hspace{-0.2ex}
+   = a_{36} \hspace{-0.2ex}
+   = a_{45} \hspace{-0.2ex}
+   = a_{46}
+\end{array}
+\vspace{.1em}\end{equation}
+
+\noindent
+---
+\en{the number}\ru{число}
+\en{of the independent coefficients}\ru{независимых коэффициентов}
+\en{lowers}\ru{падает}
+\en{to}\ru{до}~13.
+
+\en{Let there be then}\ru{Пусть далее будут тогда}
+\en{the two}\ru{две}
+\en{planes}\ru{плоскости}
+\en{of symmetry}\ru{симметрии}:
+${z = \constant}$
+\en{and}\ru{и}
+${y = \constant}$.
+\en{Because}\ru{Поскольку}~$\potential$
+\en{in such a~case}\ru{в~таком случае}
+\en{is not sensitive}\ru{не~чувствительна} %энергия, женского роду
+{\en{to the signs}\ru{к~знакам}\en{of}~$\varepsilon_{yx}$ \en{and}\ru{и}~$\varepsilon_{yz}$,
+\en{in addition}\ru{вдобавок}
+\en{to}\ru{к}~\eqref{zeroconstants:oneplaneofsymmetry}
+\en{we have}\ru{мы имеем}
+
+\nopagebreak\vspace{-0.22em}
+\begin{equation}\label{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}
+a_{14} \hspace{-0.2ex}
+= a_{24} \hspace{-0.2ex}
+= a_{34} \hspace{-0.2ex}
+= a_{56} \hspace{-0.2ex}
+= 0
+\end{equation}
+
+\vspace{-0.25em}\noindent
+--- \en{9~constants are left}\ru{осталось 9~констант}.
+
+\en{A~material}\ru{Материал}
+\en{with}\ru{с}~\en{the three}\ru{тремя}
+\en{mutually orthogonal}\ru{взаимно ортогональными}
+\en{planes}\ru{плоскостями}
+\en{of~symmetry}\ru{симметрии}\:---
+\en{let these be}\ru{пусть это будут}
+\ru{плоскости }\en{the }$x$
+\en{and}\ru{и}
+$y$, $z$\en{ planes}\:---
+\en{is called}\ru{называется}
+\en{the orthotropic}\ru{ортотропным}
+(\en{orthogonally anisotropic}\ru{ортогонально анизотропным})
+.
+%
+\en{It's easy to see}\ru{Легко увидеть}\ru{,}
+\en{that}\ru{что}~\eqref{zeroconstants:oneplaneofsymmetry}
+\en{and}\ru{и}~\eqref{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}\:---
+\en{this is the whole set}\ru{это весь набор}
+\en{of null constants}\ru{нулевых констант}\en{,}
+\en{in this case too}\ru{и~в~этом случае}.
+\en{So}\ru{Итак},
+\en{an orthotropic material}\ru{ортотропный материал}
+\en{is characterized}\ru{характеризуется}
+\en{by the nine}\ru{девятью}
+\en{constants}\ru{константами},
+\en{and}\ru{и}
+\en{for}\ru{для}
+\en{the orthotropy}\ru{ортотропности}
+\ru{достаточны }\en{the two}\ru{две}
+\en{mutually perpendicular}\ru{взаимно перпендикулярные}
+\en{planes}\ru{плоскости}
+\en{of symmetry}\ru{симметрии}
+\en{ are enough} .
+\en{The kind}\ru{Вид}
+\en{of the elastic energy}\ru{упругой энергии}
+\en{is simplified to}\ru{упрощается до}
+
+\nopagebreak\vspace{-0.25em}\begin{multline*}
+\potential =^{\mathstrut^{\mathstrut}} \smalldisplaystyleonehalf a_1 \varepsilon^2_{x} \hspace{-0.1ex} + \smalldisplaystyleonehalf a_2 \varepsilon^2_{y} \hspace{-0.1ex} + \smalldisplaystyleonehalf a_3 \varepsilon^2_{z} \hspace{-0.1ex} + \smalldisplaystyleonehalf a_4 \varepsilon^2_{xy} \hspace{-0.2ex} + \smalldisplaystyleonehalf a_5 \varepsilon^2_{xz} \hspace{-0.2ex} + \smalldisplaystyleonehalf a_6 \varepsilon^2_{yz}
+\\[-0.1em]
+%
++ a_{12} \varepsilon_{x} \varepsilon_{y} \hspace{-0.2ex} + a_{13} \varepsilon_{x} \varepsilon_{z} \hspace{-0.2ex} + a_{23} \varepsilon_{y} \varepsilon_{z}
+\hspace{.1ex}
+.
+\end{multline*}
+
+В~ортотропном материале
+сдвиговые~(угловые) деформации
+$\varepsilon_{xy}$, $\varepsilon_{xz}$, $\varepsilon_{yz}$
+никак не~влияют
+на нормальные напряжения
+${
+   \sigma_x \hspace{-0.25ex}
+   = \raisemath{.16em} {
+      \scalebox{.88}{$ \partial \hspace{.1ex} \potential $}
+   }
+   \hspace{-0.1ex} / \hspace{-0.2ex}
+   \raisemath{-0.32em} {
+      \scalebox{.88}{$ \partial \varepsilon_x $}
+   }
+}$,
+${
+   \sigma_y \hspace{-0.25ex}
+   = \raisemath{.16em} {
+      \scalebox{.88}{$ \partial \hspace{.1ex} \potential $}
+}
+\hspace{-0.1ex} / \hspace{-0.2ex}
+\raisemath{-0.32em} {
+   \scalebox{.88}{$ \partial \varepsilon_y $}
+}
+}$,
+${\sigma_z \hspace{-0.25ex}
+   =
+   \raisemath{.16em} {
+      \scalebox{.88}{$ \partial \hspace{.1ex} \potential $}
+   }
+   \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em} {
+      \scalebox{.88}{$ \partial \varepsilon_z $}
+  }
+}$ (\en{and vice versa}\ru{и~наоборот}).and vice versa
+Популярный
+ортотропный материал\:---
+древесина.
+Её упругие свойства
+различны
+по~трём
+взаимно перпендикулярным
+направлениям:
+по~радиусу,
+вдоль~окружности
+и~по~высоте ствола.
+
+Ещё~один случай анизотропии\:--- трансверсально изотропный (transversely isotropic) материал.
+Он характеризуется осью анизотропии\:--- пусть это $z$.
+Любая плоскость, параллельная $z$, должна быть плоскостью материальной симметрии.
+Ясно, что этот материал ортотропен.
+Но есть большее: любой поворот тензора напряжений $\infinitesimaldeformation$ вокруг оси $z$
+не меняет $\potential$.
+Поэтому
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}
+\label{transversely-isotropic-material:hooke's law}
+\scalebox{.9}{$
+   \displaystyle\frac{
+      \raisemath{-0.2em}{ \partial \hspace{.2ex} \potential }
+      { \partial \infinitesimaldeformation }
+   } %end of frac
+} %end of scalebox
+\hspace{-.2ex} \dotdotp \hspace{-.2ex} %two dots (double dot)
+\bigl( \hspace{.2ex}
+   \bm{k}
+   \hspace{-.2ex} \times \hspace{-.2ex}
+   \infinitesimaldeformation
+   \hspace{-.1ex} - \hspace{-.1ex}
+   \infinitesimaldeformation
+   \hspace{-.2ex} \times \hspace{-.2ex}
+   \bm{k}
+\hspace{.2ex} \bigr) \hspace{-.2ex}
+= 0
+\hspace{.1ex}
+,
+\end{equation}
+
+\en{because}\ru{поскольку}
+\en{for any}\ru{для любого}
+\en{small rotation}\ru{малого поворота}
+\en{with vector}\ru{с~вектором}~${ \varvector{\bm{o}} }$
+\en{the variation}\ru{вариация}
+%%\en{of the infinitesimal}\ru{бесконечно малой}
+%%\en{linear}\ru{линейной}
+%%\en{deformation}\ru{деформации}
+\en{of the deformation tensor}\ru{тензора деформации}
+\infinitesimaldeformation
+\en{is}\ru{есть}
+${
+   \varvector{\bm{o)} \times \infinitesimaldeformation
+   - \infinitesimaldeformation \times \varvector{\bm{o}}
+$}\ru{,}
+\en{and}\ru{а}
+$\varvector{\bm{o}}$
+\en{is directed}\ru{направлен}
+\en{along}\ru{вдоль}~$z$.
+\en{Let’s write}\ru{Распишем}
+\en{this equation}\ru{это равенство}
+\en{in components}\ru{в~компонентах}
+(\en{it must be true}\ru{оно должно быть истиной}
+\en{for}\ru{для}
+\en{any}\ru{любых}
+\en{deformations}\ru{деформаций})
+
+.......................
+.......................
+.......................
+.......................
+
+\vspace{-0.25em}\noindent
+\en{because}\ru{так как}
+\en{for}\ru{для}
+\en{any}\ru{любого}
+\en{small rotation}\ru{малого поворота}
+\en{with}\ru{с}~\en{the vector}\ru{вектором}~${ \varvector{\bm{o}} }$
+\en{the variation}\ru{вариация}
+\en{of the deformation tensor}\ru{тензора деформаций}
+\en{is equal to}\ru{равна}
+${
+   \varvector{\bm{o}}
+   \hspace{-.2ex} \times \hspace{-.2ex}
+   \infinitesimaldeformation
+}$
+\hspace{-.1ex} - \hspace{-.1ex}
+${
+   \infinitesimaldeformation
+   \hspace{-.2ex} \times \hspace{-.2ex}
+   \varvector{\bm{o}}
+}$,
+\en{and}\ru{а}~{\varvector{\bm{o}}}
+\en{directed}\ru{направлен}
+\en{along }\ru{вдоль}
+\en{the $z$ axis}\ru{оси $z$}.
+\en{The equation}\ru{Равенство}~\eqref{transversely-isotropic-material:hooke's law}
+\en{is true}\ru{истинно}
+\en{for}\ru{для}
+\en{any}\ru{любых}
+\en{infinitesimaldeformation}\ru{бесконечно малых}
+\en{deformations}\ru{деформаций}~$\infinitesimaldeformation$.
+\en{In~components}\ru{В~компонентах}~\eqref{transversely-isotropic-material:hooke's law}
+\en{will be}\ru{будет}
+\en{like this}\ru{таким}:
+
+\vspace{-0.25em}\noindent
+\begin{gather*}
+\bigl( \hspace{.2ex}
+a_1 \epsilon_{x} \hspace{-.2ex}
++ a_12 \epsilon_{y} \hspace{-.2ex}
++ a_13 \epsilon_{z} \hspace{.2ex} \bigr) \hspace{.2ex}
+\bigl( \hspace{.2ex}
+- 2 \epsilon_{xy}
+\hspace{.2ex} \bigr)
++ \bigl( \hspace{.2ex}
+a_2 \epsilon_{y} \hspace{-.2ex}
++ a_12 \epsilon_{x} \hspace{-.2ex}
++ a_23 \epsilon_{z}
+\hspace{.2ex} \bigr)
+2 \epsilon_{xy} \hspace{-.2ex}
+\\
++ 2 a_4 \epsilon_{xy} \hspace{-.2ex}
+\bigl( \hspace{.2ex} - \epsilon_y + \epsilon_x \hspace{.2ex} \bigr)
++ 2 a_5 \epsilon_{xz}
+\bigl( \hspace{.2ex} - \epsilon_{yz} \hspace{.2ex} \bigr)
++ 2 a_6 \epsilon_{yz} \epsilon_{xz} \hspace{-.2ex}
+= 0
+\end{gather*}
+
+\en{As~a~result}\ru{В~результате}
+
+\vspace{-0.25em}\noindent
+\begin{equation*}
+a_1 \hspace{-.2ex} = a_12 + a_4 \hspace{-.2ex} = a_2
+\hspace{.1ex} ,
+\hspace{.5em}
+a_{13} = a_{23}
+\hspace{.1ex} ,
+\hspace{.5em}
+a_5 \hspace{-.2ex} = a_6
+\hspace{.1ex} .
+\end{equation*}
+
+\en{Presenting}\ru{Представив}
+\en{the stress tensor}\ru{тензор напряжений}
+\en{as}\ru{как}
+
+\begin{equation*}\label{Hooke's law for transversely isotropic material}
+\linearstress
+= \withtheindexofperpendicularity{\linearstress}
++ \bm{t} \bm{k}
++ \bm{k} \bm{t}
++ \cauchystresscomponents_{zz} \bm{k} \bm{k}
+\hspace{.1ex} ,
+\hspace{1em}
+\withtheindexofperpendicularity{\linearstress}
+\def
+\cauchystresscomponents_{\alpha \beta}
+\bm{e}_{\alpha} \bm{e}_{\beta}
+\hspace{.1ex} ,
+\hspace{1em}
+\linearstress \def \cauchystresscomponents_{\alpha z} \bm{e}_{\alpha}
+\end{equation*}
+($
+   \bm{e}_{1} = \bm{i}
+   \hspace{.1ex} ,
+   \bm{e}_{2} = \bm{j}
+$),
+\en{we can}\ru{можем}
+\en{write down}\ru{записать}
+\ru{закон }\en{the }Hooke’\en{s}\ru{а}\en{ law}
+\en{for}\ru{для}
+\en{a~transversally isotropic}\ru{трансверсально изотропного}
+\en{material}\ru{материала} 
+
+\begin{equation*}
+\withtheindexofperpendicularity{\linearstress}
+a_4 \withtheindexofperpendicularity{\infinitesimaldeformation}
++
+\Bigl(
+   a_{12}
+   \withtheindexofperpendicularity{\infinitesimaldeformation}
+   +
+   a_{13}
+\end{equation*}
+
+.....
+
+\en{There are}\ru{Есть}
+\en{many different types}\ru{различные типы}
+\en{of a~crystal symmetry}\ru{симметрии кристаллов}
+(триклинная сингония,
+моноклинная сингония,
+ромбическая сингония,
+тетрагональная сингония,
+ромбоэдрическая сингония,
+гексагональная сингония,
+кубическая сингония,
+трансверсальная изотропия,
+изотропия)
+\cite{chernyh-anisotropicelasticity}
+\en{Each case of symmetry}\ru{Каждый случай симметрии}
+характеризует
+набор ортогональных тензоров \bm{Q}.
+Набор должен решать уравнение
+${ \bm{Q} \dotp \bm{Q}^\T }$
+(повороты и~отражения)
+и удовлетворять
+равенство
+\begin{equation*}
+   \stiffnesstensor \dotdotp
+   \Bigl( \bm{Q} \dotp \lineardeformation \dotp \bm{Q}^\T \Bigr)
+   = \bm{Q} \dotp
+   \Bigl( \stiffnesstensor \dotdotp \lineardeformation \Bigr)
+   \dotp
+   \bm{Q}^\T
+\end{equation}
+\en{The each}\ru{Каждый}
+\en{case of the symmetry}\ru{случай симметрии}
+\en{is characterized}\ru{характеризуется}
+\en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}.
+
+\begin{equation}
+\end{equation}
+
+

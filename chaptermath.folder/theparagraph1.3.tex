@@ -1,0 +1,288 @@
+\en{\section{Tensor algebra, or operations with tensors}}
+
+\ru{\section{Тензорная алгебра, или действия с~тензорами}}
+
+\label{para:operationswithtensors}
+
+\en{The whole tensor algebra}\ru{Целая тензорная алгебра}
+\en{can be built}\ru{может быть построена}
+\en{on the basis}\ru{на основе}
+\en{of the only}\ru{лишь}
+\en{four operations}\ru{четырёх операций}.
+\en{This paragraph is about them}\ru{Этот параграф\:--- про них}.
+
+\en{So}\ru{Итак},
+\en{the tensor algebra}\ru{тензорная алгебра}
+\en{consists of the four operations}\ru{состоит из четырёх операций}.
+
+% linear combination
+
+\nopagebreak\en{The~first}\ru{Первое}\:--- \textbold{\en{linear combination}\ru{линейная комбинация}}\:--- \en{aggregates}\ru{объединяет}
+\en{the addition}\ru{сложение}
+\en{and}\ru{и}
+\en{the multiplication by~number}\ru{умножение на~число}.
+\en{Arguments of this operation and the~result}\ru{Аргументы этого действия и~результат}\en{ are}\ru{\:---}
+\en{of the~same complexity}\ru{одинаковой сложности}.
+\en{For the two tensors it looks like this}\ru{Для двух тензоров это выглядит так}:
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{tensoraction:linearcombination}
+\lambda a_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex} + \hspace{.2ex} \mu b_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex} = \hspace{.2ex} c_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex}
+\;\Leftrightarrow\;
+\lambda \bm{a} + \mu \bm{b} = \bm{c}
+\hspace{.2ex} .
+\end{equation}
+
+\vspace{-0.1em}\noindent
+\en{Here}\ru{Здесь}
+$\lambda$ \en{and}\ru{и}~$\mu$~\en{are}\ru{---} \en{scalar coefficients}\ru{коэффициенты\hbox{-}скаляры};
+$\bm{a}$, $\bm{b}$ \en{and}\ru{и}~$\bm{c}$~\en{are}\ru{---} \en{tensors}\ru{тензоры} \en{of the~same complexity}\ru{одной и~той~же сложности}.
+\en{It’s easy to show}\ru{Легко показать,} \en{that}\ru{что} \en{components}\ru{компоненты} \en{of~result}\ru{результата}~$\bm{c}$ \en{satisfy}\ru{удовлетворяют} \en{the~orthogonal transformation}\ru{ортогональному преобразованию} \en{like}\ru{вида}~\eqref{orthotransform:2}.
+
+\inquotesx{\en{Decomposition of~a~vector in a~basis}\ru{Разложение вектора в~базисе}}[---] \en{representation}\ru{представление} \en{of~a~vector}\ru{вектора} \en{as the~sum}\ru{суммой}~${\bm{v} = v_i \bm{e}_i}$\:--- \en{is nothing else but}\ru{это не~что~иное как} \en{the~linear combination}\ru{линейная комбинация} \en{of~basis vectors}\ru{векторов базиса}~${\bm{e}_i}$ \en{with coefficients}\ru{с~коэффициентами}~${v_i}$.
+
+% multiplication
+
+\en{The~second operation}\ru{Второе действие} \en{is}\ru{это} \textbold{\en{multiplication~(tensor product, direct product)}\ru{умножение~(тензорное произведение, прямое произведение)}}.
+\en{It~takes arguments of~any complexities}\ru{Оно принимает аргументы любых сложностей}, \en{returning the~result of~cumulative complexity}\ru{возвращая результат суммарной сложности}.
+\en{Examples}\ru{Примеры}:
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{tensoraction:multiplication}
+\begin{array}{rcl}
+v_i a_{j\hspace{-0.1ex}k} \hspace{-0.16ex} = C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} & \Leftrightarrow & \bm{v} \, {^2\hspace{-0.2ex}\bm{a}} = {^3\hspace{-0.15ex}\bm{C}},
+\\[.1em]
+a_{i\hspace{-0.1ex}j} B_{abc} \hspace{-0.16ex} = D_{i\hspace{-0.1ex}jabc} & \Leftrightarrow & {^2\hspace{-0.2ex}\bm{a}} \hspace{.25ex} {^3\hspace{-0.33ex}\bm{B}} = {^5\hspace{-0.33ex}\bm{D}}.
+\end{array}\hspace{1.5em}
+\end{equation}
+
+\vspace{-0.1em}
+\en{Transformation of a~collection of result’s components}\ru{Преобразование совокупности компонент результата}, \en{such as}\ru{такой как} ${C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex} = v_i a_{j\hspace{-0.1ex}k}}$, \en{during a~rotation of~basis}\ru{при повороте базиса}\en{ is}\ru{\:---} \en{orthogonal}\ru{ортогональное}, \en{similar to}\ru{подобное}~\eqref{orthotransform:3}, \en{thus}\ru{посему} \en{here’s no~doubt that}\ru{тут нет сомнений, что} \en{this collection is a~set of tensor components}\ru{эта совокупность есть набор компонент тензора}.
+
+\en{Primary}\ru{Первичный} \en{and}\ru{и} \en{already known}\ru{уж\'{е} знакомый} (\en{from}\ru{по}~\pararef{para:tensoranditscomponents}) \en{subtype of~multiplication}\ru{подвид умножения}\en{ is}\ru{\:---} \en{the~dyadic product of two vectors}\ru{диадное произведение двух векторов}
+${^2\hspace{-0.25em}\bm{A} \hspace{-0.15ex} = \bm{b}\bm{c}}$.
+
+% contraction
+
+\en{The~third operation}\ru{Третье действие} \en{is called}\ru{называется} \textbold{\ru{свёрткой~(}contraction\ru{)}}.
+\en{It applies}\ru{Оно применяется} \en{to bivalent and more complex tensors}\ru{к~бивалентным и более сложным тензорам}.
+\en{This operation acts upon a~single tensor}\ru{Это действие над одним тензором}, \en{without}\ru{без} \en{other}\ru{других} \inquotesx{\en{participants}\ru{участников}}[.]
+\en{Roughly speaking}\ru{Грубо говоря}, \en{contracting a~tensor}\ru{свёртывание тензора} \en{is}\ru{есть} \en{summing of its components}\ru{суммирование его компонент} \en{over}\ru{по} \en{some}\ru{какой\hbox{-}либо} \en{pair of~indices}\ru{паре индексов}.
+\en{As a~result,}\ru{В~результате} \en{tensor’s complexity}\ru{сложность тензора} \en{decreases by two}\ru{уменьшается на~два}.
+
+\en{For the trivalent tensor}\ru{Для трёхвалентного тензора}~${\hspace{-0.1ex} ^3\hspace{-0.33ex}\bm{D}}$\en{,} 
+ru{возможны }\en{the three variants}\ru{три варианта} \en{of~contraction}\ru{свёртки}\en{ are possible},
+\en{giving vectors}\ru{дающие векторы}
+${\bm{a}}$, ${\bm{b}}$ \en{and}\ru{и}~${\bm{c}}$
+\en{with the components}\ru{с~компонентами}
+
+\nopagebreak\vspace{-0.33em}\begin{equation}\label{tensoraction:contraction}
+a_{i} = D_{kki} \hspace{.1ex} ,
+\;\;
+b_{i} = D_{kik} \hspace{.1ex} ,
+\;\;
+c_{i} = D_{ikk} \hspace{.16ex} .
+\end{equation}
+
+\vspace{-0.33em}\noindent
+\en{A~rotation of~basis}\ru{Поворот базиса}
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+a'_{i} = D\hspace{.16ex}'_{\hspace{-0.32ex}kki} \hspace{-0.16ex}
+= \tikzmark{BeginDeltaPQBrace} {\cosinematrix{k'\hspace{-0.1ex}p} \hspace{.1ex} \cosinematrix{k'\hspace{-0.1ex}q}} \tikzmark{EndDeltaPQBrace} \hspace{.1ex} \cosinematrix{i'\hspace{-0.1ex}r} \hspace{.16ex} D_{pqr} \hspace{-0.16ex}
+= \cosinematrix{i'\hspace{-0.1ex}r} \hspace{.16ex} D_{ppr} \hspace{-0.16ex}
+= \cosinematrix{i'\hspace{-0.1ex}r} \hspace{.16ex} a_{r}
+\end{equation*}
+\AddUnderBrace[line width = .75pt][0, -0.22ex]{BeginDeltaPQBrace}{EndDeltaPQBrace}%
+{${\scriptstyle \delta_{pq}}$}
+
+\nopagebreak\vspace{-0.33em}\noindent
+\en{shows}\ru{показывает}
+\inquotes{\en{the~tensorial nature}\ru{тензорную природу}}
+\en{as the~result of~contraction}\ru{как результат свёртки}.
+
+\en{For a~tensor}\ru{Для~тензора}
+\en{of~second complexity}\ru{второй сложности}\en{,} \ru{возможен }\en{the~only one}\ru{лишь один} \en{variant}\ru{вариант} \en{of~contraction}\ru{свёртки}\en{ is possible}.
+\en{It gives a~scalar}\ru{дающий скаляр},
+\en{known}\ru{известный}
+\en{as}\ru{как}
+\en{the~trace}\ru{след~(trace)}
+
+\nopagebreak\en{\vspace{-0.2em}}\ru{\vspace{-0.8em}}\begin{equation*}
+\bm{B}\tracedot \hspace{.25ex} \equiv \hspace{.3ex}
+\trace{\bm{B}} \hspace{.15ex} \equiv \hspace{.4ex}
+\mathrm{I}\hspace{.16ex}(\bm{B}) \hspace{-0.15ex}
+= B_{kk}
+\hspace{.1ex} .
+\end{equation*}
+
+\vspace{-0.16em}
+\en{The~trace}\ru{След} \en{of~the~unit tensor}\ru{единичного тензора} (\inquotes{\en{contraction of~the~Kronecker delta}\ru{свёртка дельты Kronecker’а}}) \en{is equal to}\ru{равен} \en{the~dimension of~space}\ru{размерности пространства}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\trace{\UnitDyad} = \hspace{-0.1ex} \UnitDyad\tracedot = \delta_{kk} \hspace{-0.2ex} = \hspace{.1ex} \delta_{1\hspace{-0.1ex}1} \hspace{-0.2ex} + \delta_{22} \hspace{-0.2ex} + \delta_{33} \hspace{-0.1ex} = \hspace{.1ex} 3
+\hspace{.1ex} .
+\end{equation*}
+
+% index juggling
+
+\en{The~fourth operation}\ru{Четвёртое действие} \en{is also applicable}\ru{также примен\'{и}мо} \en{to a~single tensor}\ru{к~одному тензору} \en{of~second and bigger complexities}\ru{второй и~б\'{о}льших сложностей}.
+\en{It}\ru{Оно} \en{is named}\ru{именуется} \en{as}\ru{как} \textbold{\ru{перестановка индексов~(}index swap\ru{)}, \ru{жонглирование индексами~(}index juggling\ru{)}, \ru{транспонирование~(}transposing\ru{)}}.
+\en{From}\ru{Из} \en{components}\ru{компонент} \en{of~a~tensor}\ru{тензора}\en{,} \ru{возникает }\en{the~new collection}\ru{новая совокупность}\en{ is emerged} \en{with another}\ru{с~другой} \en{sequence of~indices}\ru{последовательностью индексов}, \en{the result’s complexity stays the~same}\ru{сложность результата остаётся той~же}.
+\en{For example}\ru{Для примера}, \en{trivalent tensor}\ru{трёхвалентный тензор}~${^3\hspace{-0.16em}\bm{D}}$ \en{can give}\ru{может дать} \en{tensors}\ru{тензоры} ${^3\hspace{-0.28em}\bm{A}}$, ${^3\hspace{-0.15em}\bm{B}}$, ${^3\hspace{-0.05em}\bm{C}}$ \en{with components}\ru{с~компонентами}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{tensoraction:transposing}
+\begin{array}{rcl}
+{^3\hspace{-0.3em}\bm{A}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2}
+& \!\Leftrightarrow\!\! &
+A_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{j\hspace{-0.06ex}ik}
+\hspace{.1ex} ,
+\\
+{^3\hspace{-0.15em}\bm{B}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3}
+& \!\Leftrightarrow\!\! &
+B_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{kj\hspace{-0.06ex}i}
+\hspace{.1ex} ,
+\\
+{^3\hspace{-0.05em}\bm{C}} = {^3\hspace{-0.16em}\bm{D}}_{2 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3}
+& \!\Leftrightarrow\!\! &
+C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{ikj}
+\hspace{.1ex} .
+\end{array}
+\end{equation}
+
+\en{For a~bivalent tensor}\ru{Для бивалентного тензора}\en{,}
+\ru{возможно }\en{the~only one transposition}\ru{лишь одно транспонирование}\en{ is possible}:
+${\bm{A}^{\hspace{-0.05em}\T} \hspace{-0.15ex} \equiv \bm{A}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2} = \hspace{-0.1ex} \bm{B}
+\hspace{.4ex}\Leftrightarrow\hspace{.25ex}
+B_{i\hspace{-0.1ex}j} \hspace{-0.1ex} = A_{j\hspace{-0.06ex}i}}$.
+\en{Obviously}\ru{Очевидно},
+${\bigl( \hspace{-0.1ex} \bm{A}^{\hspace{-0.05em}\T} \hspace{.15ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.2ex} = \bm{A}}$.
+
+\en{For}\ru{Для} \en{the~dyadic multiplication}\ru{диадного умножения} \en{of~two vectors}\ru{двух векторов}, ${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\hspace{-0.4ex}}$.
+
+% combining operations
+
+\subsection*{\en{Combining operations}\ru{Комбинирование действий}}
+
+\en{The~four presented operations}\ru{Четыре представленных действия} \en{are combined}\ru{комбинируются} \en{in various sequences}\ru{в~разных последовательностях}.
+
+\en{The~combination}\ru{Комбинация} \en{of~}\en{multiplication}\ru{умножения}~\eqref{tensoraction:multiplication} \en{and}\ru{и}~\en{contraction}\ru{свёртки}~\eqref{tensoraction:contraction}\:--- \en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведение} (dot product)\:--- \en{is the~most frequently used}\ru{самая часто используемая}.
+\en{In the direct indexless notation}\ru{В~прямой безиндексной записи} \en{this is denoted}\ru{это обозначается} \en{by large dot}\ru{крупной точкой}~\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}, \en{which}\ru{которая} \en{shows}\ru{показывает} \en{the~contraction}\ru{свёртку} \en{by adjacent indices}\ru{по~соседним индексам}:
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\label{tensoraction:dotproductexamples}
+\bm{a} = \bm{B} \dotp \bm{c}
+\,\Leftrightarrow\,
+a_i \hspace{-0.15ex} = B_{i\hspace{-0.1ex}j} c_j
+\hspace{.1ex} , \;\:
+\bm{A} = \bm{B} \dotp \bm{C}
+\,\Leftrightarrow\,
+A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = B_{ik} C_{kj}
+\hspace{.1ex} .
+\end{equation}
+
+\en{The defining property}\ru{Определяющее свойство} \en{of the unit tensor}\ru{единичного тензора}\:--- \en{it is the neutral 
+element}\ru{это нейтральный элемент} \en{for}\ru{для} \en{the~dyadic product}\ru{диадного произведения} \en{with the subsequent contraction}\ru{с~последующей свёрткой} \en{by adjacent indices}\ru{по~соседним индексам} (\inquotes{${\dotp\hspace{.25ex}}$}\hbox{\hspace{-0.2ex}-}\en{product}\ru{произведения})
+
+\nopagebreak\vspace{-0.15em}\begin{equation}
+\label{definingpropertyofidentitytensor}
+{^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \UnitDyad
+= \UnitDyad \dotp \hspace{-0.15ex} {^\mathrm{n}\hspace{-0.2ex}\bm{a}}
+= {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\:\:
+\forall \, {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\; \forall \hspace{.1ex} \mathrm{n \!>\! 0}
+\hspace{.1ex} .
+\end{equation}
+
+\en{In the commutative}\ru{В~коммутативном} \en{scalar product}\ru{скалярном произведении} \en{of two vectors}\ru{двух векторов}\en{,} \en{the dot}\ru{точка} \en{represents}\ru{представляет} \en{the same}\ru{то же самое}: \en{the~dyadic product}\ru{диадное произведение} \en{and}\ru{и} \en{the subsequent contraction}\ru{последующая свёртка}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\label{transposeofdotproductforvectors}
+\bm{a} \dotp \bm{b}
+= ( \bm{a} \bm{b} )\hspace{.1ex}\tracedot \hspace{-0.1ex}
+= a_i b_i \hspace{-0.2ex}
+= b_i a_i \hspace{-0.2ex}
+= ( \bm{b} \bm{a} )\hspace{.1ex}\tracedot \hspace{-0.1ex}
+= \bm{b} \dotp \bm{a}
+\hspace{.1ex} .
+\end{equation}
+
+\en{The following}\ru{Следующее} \en{identity}\ru{тождество} \en{describes}\ru{описывает} \en{how to swap multipliers}\ru{как обменять местами множители} \en{for}\ru{для} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}} (dot product\ru{’а}) \en{of two second complexity tensors}\ru{двух тензоров второй сложности}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}%%\label{transposeofdotproductforbivalenttensors}
+\begin{array}{c}
+\bm{B} \hspace{-0.1ex} \dotp \bm{Q} \hspace{.1ex} = \bigl( \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} \bigr)^{\hspace{-0.25ex}\T}
+\\[.1em]
+\bigl( \bm{B} \hspace{-0.1ex} \dotp \bm{Q} \bigr)^{\hspace{-0.1ex}\T} \hspace{-0.3ex} = \hspace{.1ex} \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
+\hspace{-0.2ex} .
+\end{array}
+\end{equation}
+
+%%\noindent
+\en{For two dyads}\ru{Для двух диад} ${\bm{B} \hspace{-0.1ex} = \bm{b}\bm{d}}$ \en{and}\ru{и}~${\bm{Q} \hspace{-0.1ex} = \bm{p}\bm{q}}$
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
+\left(\hspace{.1ex} \bm{b}\bm{d} \dotp \bm{p}\bm{q} \hspace{.1ex}\right)^{\hspace{-0.1ex}\T} & \hspace{-0.5ex} = & \hspace{-0.1ex} \bm{p}\bm{q}^{\T} \hspace{-0.25ex} \dotp \bm{b}\bm{d}^{\hspace{.1ex}\T}
+\\[.2em]
+d_i p_i \hspace{.25ex} \bm{b}\bm{q}^{\T} & \hspace{-0.5ex} = & \hspace{-0.1ex} \bm{q}\bm{p} \dotp \bm{d} \bm{b}
+\\[.1em]
+d_i p_i \hspace{.25ex} \bm{q}\bm{b} & = & p_i d_i \hspace{.25ex} \bm{q}\bm{b}
+\hspace{.1ex} .
+\end{array}
+\end{equation*}
+
+%%\noindent
+\en{For a~vector and a~bivalent tensor}\ru{Для вектора и~бивалентного тензора}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}%%\label{vectorandbivalenttensordotproduct}
+\bm{c} \hspace{.2ex} \dotp \bm{B}
+= \bm{B}^{\T} \hspace{-0.4ex} \dotp \bm{c}
+\hspace{-0.1ex} ,
+\;\;
+\bm{B} \dotp \bm{c}
+= \bm{c} \hspace{.2ex} \dotp \bm{B}^{\T}
+\hspace{-0.3ex} .
+\end{equation}
+
+%%\en{Tensor of~second valence \inquotes{squared} is}\ru{Тензор второй валентности \inquotes{в~квадрате} это}
+
+%%\nopagebreak\vspace{-0.2em}\begin{equation}\label{exponentiation:two}
+%%\bm{B}^2 \equiv\hspace{.2ex} \bm{B} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{B} .
+%%\end{equation}
+
+\en{Contraction can be repeated}\ru{Свёртка может повторяться} \en{two times or more}\ru{два раза или больше}:
+${\bigl( \hspace{-0.1ex} \bm{A} \dotp \hspace{-0.1ex} \bm{B} \hspace{.1ex} \bigr)\tracedot
+= \hspace{-0.1ex} \bm{A} \dotdotp \hspace{-0.1ex} \bm{B}
+= \hspace{-0.1ex} A_{\hspace{.1ex}i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.06ex}i}}$,
+\en{and here are useful equations}\ru{и~вот полезные равенства} \en{for second complexity tensors}\ru{для тензоров второй сложности}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\begin{array}{c}
+\bm{A} \dotdotp \hspace{-0.1ex} \bm{B} = \bm{B} \dotdotp \hspace{-0.1ex} \bm{A}
+\hspace{.12ex} ,
+\;\;
+\bm{d} \hspace{.1ex} \dotp \hspace{-0.15ex} \bm{A} \dotp \bm{b} = \hspace{-0.1ex} \bm{A} \dotdotp \hspace{.1ex} \bm{b}\bm{d} = \bm{b}\bm{d} \hspace{.1ex} \dotdotp \hspace{-0.1ex} \bm{A} = b_{\hspace{-0.1ex}j} d_{\hspace{.1ex}i} A_{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{.12ex} ,
+\\[.2em]
+%
+\bm{A} \dotdotp \bm{B} = \bm{A}^{\hspace{-0.16ex}\T} \hspace{-0.2ex} \dotdotp \bm{B}^{\T} \hspace{-0.2ex} = A_{\hspace{.1ex}i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.06ex}i}
+\hspace{.12ex} ,
+\;\;
+\bm{A} \dotdotp \bm{B}^{\T} \hspace{-0.2ex} = \bm{A}^{\hspace{-0.16ex}\T} \hspace{-0.2ex} \dotdotp \bm{B} = A_{\hspace{.1ex}i\hspace{-0.1ex}j} B_{i\hspace{-0.1ex}j}
+\hspace{.12ex} ,
+\\[.2em]
+%
+\bm{A} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \UnitDyad = \UnitDyad \dotdotp \hspace{-0.1ex} \bm{A} = \bm{A}\hspace{.15ex}\tracedot = A_{j\hspace{-0.15ex}j} \hspace{.12ex} ,
+\\[.2em]
+%
+\bm{A} \narrowdotp \bm{B} \narrowdotdotp \UnitDyad = \hspace{-0.16ex} A_{\hspace{.1ex}i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.2ex} \delta_{ki} \hspace{-0.1ex} = \bm{A} \narrowdotdotp \bm{B} ,
+\:\:
+\bm{A} \narrowdotp \bm{A} \narrowdotdotp \UnitDyad = \bm{A} \narrowdotdotp \bm{A}
+\hspace{.12ex} ,
+\\[.2em]
+%
+\bm{A} \narrowdotdotp \bm{B} \narrowdotp \bm{C} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \hspace{.1ex} \bm{C} = \hspace{.1ex} \bm{C} \narrowdotdotp \hspace{-0.1ex} \bm{A} \narrowdotp \bm{B} = A_{\hspace{.1ex}i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.1ex}k} C_{ki} \hspace{.1ex} ,
+\\[.15em]
+%
+\bm{A} \hspace{-0.1ex}\narrowdotdotp \bm{B} \narrowdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotdotp \bm{C} \narrowdotp \bm{D} = \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} \narrowdotdotp \bm{D} = \hspace*{3em} \\
+\hspace{11em} = \bm{D} \narrowdotdotp \bm{A} \narrowdotp \bm{B} \narrowdotp \bm{C} = A_{\hspace{.1ex}i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.1ex}k} C_{kh} D_{hi} \hspace{.1ex}.
+\end{array}
+\end{equation}
+

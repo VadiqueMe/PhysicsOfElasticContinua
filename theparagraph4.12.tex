@@ -1,0 +1,99 @@
+\en{\section{Mixed principles of stationarity}}
+
+\ru{\section{Смешанные принципы стационарности}}
+
+\label{para:mixedvariationalprinciples}
+
+\vspace{.2em}\begin{changemargin}{2\parindent}{\parindent}
+\bgroup % to change \parindent locally
+\setlength{\parindent}{\negparindent}
+\small
+
+\hspace{\parindent}\href{https://en.wikiversity.org/wiki/Introduction_to_Elasticity/Hellinger-Reissner_principle}{\textbold{Prange\hbox{--}Hellinger\hbox{--}Reissner Variational Principle}},\\
+named after \emph{Ernst Hellinger}, \emph{Georg Prange} and \emph{Eric Reissner}.
+\par
+
+\nopagebreak\vspace{.16em}
+{\noindent
+\scriptsize
+Working independently of Hellinger and Prange, Eric Reissner published his famous six\hbox{-}page paper \inquotes{On a~variational theorem in~elasticity} in~1950. In this paper he develops\:--- without, however, considering Hamilton\hbox{--}Jacobi theory\:--- a~variational principle same to that of~Prange and~Hellinger.
+\par}
+
+\nopagebreak\vspace{.32em}
+\href{https://en.wikiversity.org/wiki/Introduction_to_Elasticity/Hu-Washizu_principle}{\textbold{Hu\hbox{--}Washizu Variational Principle}},\\
+\en{named as}\ru{именуемых}
+\emph{Hu Haichang}
+\en{and}\ru{и}
+\emph{Kyuichiro\;Washizu}.
+\par
+\egroup
+\nopagebreak\vspace{.1em}
+\end{changemargin}
+
+\noindent
+\en{The~following}\ru{Следующий} \en{functional}\ru{функционал}
+\en{over}\ru{над}
+\en{displacements}\ru{перемещениями} \en{and}\ru{и}~\en{stresses}\ru{напряжениями}
+
+\nopagebreak\vspace{-0.3em}
+\begin{multline}\label{reissnerhellingervariationalprinciple}
+\shoveleft{\mathcal{R}( \bm{u}, \hspace{-0.32ex} \linearstress ) \hspace{.2ex} =
+\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex}
+\Bigl[
+\linearstress \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \hspace{.1ex} \widehat{\potential}(\hspace{-0.1ex}\linearstress\hspace{.1ex})\hspace{-0.1ex} -
+\bm{f} \hspace{-0.1ex} \dotp \bm{u}
+\hspace{.2ex} \Bigr] \hspace{-0.1ex} d\mathcal{V} \hspace{.5ex}
+- \hfill}
+\\[-1.2em]
+%
+\hspace{8em}
+- \hspace{-0.2ex} \displaystyle\integral\displaylimits_{o_1} \hspace{-0.4ex} \unitnormalvector \dotp \hspace{-0.1ex} \linearstress \dotp \hspace{-0.1ex} \bigl( \bm{u} - \bm{u}_{\raisemath{-0.1em}{0}} \bigr) do \hspace{.2ex}
+- \hspace{-0.2ex} \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \bm{u} \hspace{.25ex} do
+\end{multline}
+
+\nopagebreak\vspace{-0.2em}\noindent
+\en{carries}\ru{н\'{о}сит} \en{names}\ru{имена} \en{of~}Reissner\ru{’а}, Prange\ru{’а} \en{and}\ru{и}~Hellinger\ru{’а}.
+
+...
+
+\en{The advantage}\ru{Преимущество} \ru{принципа }\en{of the }Reissner\ru{’а}\hbox{--}Hellinger\ru{’а}\en{ principle}\:--- \en{freedom of variation}\ru{свобода варьирования}.
+\en{But it also has a~drawback}\ru{Но у него есть и~недостаток}: \en{on the true solution}\ru{на~истинном решении} \en{the functional has no extremum}\ru{у~функционала нет экстремума}, \en{but only stationarity}\ru{а~лишь стационарность}.
+
+
+\begin{otherlanguage}{russian}
+
+Принцип можно использовать для~построения приближённых решений методом Ritz\ru{’а}~(Ritz method).
+Задавая аппроксимации
+
+...
+
+Принцип Hu\hbox{--}Washizu\ru{~(Ху\hbox{--}Васидзу)}~\cite{washizubook} формулируется так:
+
+\nopagebreak\vspace{-0.2em}\begin{multline}\label{huwashizuvariationalprinciple}
+\hfil \variation{\mathcal{W}} \hspace{.1ex} (\bm{u}, \hspace{-0.32ex}\infinitesimaldeformation, \hspace{-0.32ex}\linearstress) = 0
+\hspace{.1ex} ,
+\\[-0.1em]
+%
+\shoveleft{\displaystyle \mathcal{W} \hspace{.2ex} \equiv
+\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex}
+\Bigl[
+\linearstress \dotdotp \hspace{-0.2ex} \Bigl( \hspace{-0.2ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \infinitesimaldeformation \hspace{-0.1ex} \Bigr) \hspace{-0.2ex} + \hspace{.1ex} \potential(\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex})\hspace{-0.1ex} -
+\bm{f} \hspace{-0.1ex} \dotp \bm{u}
+\hspace{.2ex} \Bigr] \hspace{-0.1ex} d\mathcal{V} \hspace{.5ex}
+- \hfill}
+\\[-1.2em]
+%
+\hspace{8em}
+- \hspace{-0.2ex} \displaystyle\integral\displaylimits_{o_1} \hspace{-0.4ex} \unitnormalvector \dotp \hspace{-0.1ex} \linearstress \dotp \hspace{-0.1ex} \bigl( \bm{u} - \bm{u}_{\raisemath{-0.1em}{0}} \bigr) do \hspace{.2ex}
+- \hspace{-0.2ex} \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \bm{u} \hspace{.25ex} do
+\hspace{.2ex} .
+\end{multline}
+
+Как и~в~принципе Рейсснера\hbox{--}Хеллингера, здесь нет ограничений ни~в~объёме, ни~на~поверхности, но добавляется третий независимый аргумент~$\infinitesimaldeformation$.
+Поскольку ${\widehat{\potential} = \linearstress \dotdotp \infinitesimaldeformation - \potential}$, то~\eqref{reissnerhellingervariationalprinciple} \en{and}\ru{и}~\eqref{huwashizuvariationalprinciple} кажутся почти одним и~тем~же.
+
+\en{From}\ru{Из} \ru{принципа }\en{the }Hu\hbox{--}Washizu\ru{~(Ху\hbox{--}Васидзу)}\en{ principle} \en{ensues}\ru{вытекает} \en{the complete system of equations}\ru{вся полная система уравнений} \en{with boundary conditions}\ru{с~краевыми условиями}, так~как
+
+.....
+
+\end{otherlanguage}

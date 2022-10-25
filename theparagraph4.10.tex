@@ -1,0 +1,520 @@
+\en{\section{The principle of the minimum potential energy}}
+
+\ru{\section{Принцип минимума потенциальной энергии}}
+
+\label{para:principleofminimumpotentialenergy}
+
+\vspace{.2em}
+\begin{changemargin}{\parindent}{\parindent}
+\small
+\en{When}\ru{Когда}
+\en{the~existence}\ru{существование}
+\en{of the deformation energy function}\ru{функции энергии деформации}
+\en{is assured}\ru{несомненно},
+\en{and}\ru{и}
+\en{the external forces}\ru{внешние силы}
+\en{are assumed}\ru{считаются}
+\en{to be constant}\ru{постоянными} 
+\en{during}\ru{во~вр\'{е}мя}
+\en{the variation}\ru{варьирования}
+\en{of the displacements}\ru{перемещений},
+\en{the~principle of virtual work}\ru{принцип виртуальной работы}
+\en{leads}\ru{приводит}
+\en{to}\ru{к}~\en{the~principle}\ru{принципу}
+\en{of the minimum}\ru{минимума}
+\en{potential energy}\ru{потенциальной энергии}.
+\par
+\nopagebreak\vspace{.2em}
+\end{changemargin}
+
+\noindent
+\en{The formulation}\ru{Формулировка} \en{of~the~principle}\ru{принципа}:
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{principleofminimumpotentialenergy.formulation}
+\potentialenergyfunctional \hspace{.2ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \equiv \hspace{-0.2ex}
+\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
+\Bigl(
+\potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.1ex} - \bm{f} \hspace{-0.1ex} \dotp \bm{u}
+\Bigr) \hspace{-0.1ex} d\mathcal{V} \hspace{.1ex}
+- \hspace{-0.3ex}
+\displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex}
+\bm{p} \dotp \bm{u} \hspace{.33ex} do \hspace{.2ex}
+\hspace{.1ex}\to\hspace{.25ex} \mathrm{min}
+\hspace{.15ex} , \hspace{.5em}
+\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.8ex} = \hspace{.1ex} \bm{u}_{\raisemath{-0.1em}{0}}
+\hspace{.16ex} .
+\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{The functional}\ru{Функционал}
+${\potentialenergyfunctional \hspace{.2ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})}$,
+\en{called}\ru{называемый}
+\en{the~(full)}\ru{(полной)}
+\en{potential energy}\ru{потенциальной энергией}
+en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
+\en{is minimal}\ru{минимален}
+\en{when}\ru{тогда, когда} \en{the displacements}\ru{перемещения}~$\bm{u}$
+\en{are true}\ru{истинны}\:---
+\en{that is}\ru{то~есть}
+\en{for}\ru{для}
+\en{the~solution}\ru{решения} \en{of a~problem}\ru{задачи}~\eqref{lineartheory:equationsindisplacements}.
+\en{The input functions}\ru{Аргументы\hbox{-}функции}~$\bm{u}$
+\en{must satisfy}\ru{должны удовлетворять}
+\en{the~geometrical condition}\ru{геометрическому условию}
+\en{on}\ru{на}~${o_1\hspace{-0.2ex}}$
+(
+   \en{so}\ru{так}
+   \en{they}\ru{они}
+   \en{don’t break}\ru{не~рвут}
+   \en{the existing constraints}\ru{существующие связи}
+   \en{and}\ru{и}
+   \en{can be}\ru{могут быть}
+   \en{continuous}\ru{непрерывными}
+   \en{or else}\ru{иначе} ${ \smash{ \potential(\hspace{-0.1ex} \bm{u} \hspace{-0.1ex} )}\hspace{-0.1ex} }$
+   \en{will not be}\ru{не~будет}
+   \en{integrable}\ru{интегрируемой}
+) .
+
+\en{For}\ru{Для}
+\en{the~true field}\ru{истинного поля}
+\en{of~displacements}\ru{перемещений}~$\bm{u}$,
+\en{the quadratic function}\ru{квадратичная функция}
+
+\nopagebreak\vspace{-0.15em}
+\begin{equation*}
+\potential( \hspace{-0.1ex} \bm{u} \hspace{-0.1ex} )
+\hspace{-0.2ex} = \hspace{.1ex}
+\smalldisplaystyleonehalf \boldnabla \bm{u}
+\hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
+\stiffnesstensor
+\dotdotp \hspace{-0.25ex}
+\boldnabla \bm{u}
+\end{equation*}
+
+\nopagebreak\vspace{-0.1em}\noindent
+\en{becomes equal to}\ru{становится равной}
+\en{the~true potential energy}\ru{истинной потенциальной энергии}
+\en{of deformation}\ru{деформации}.
+\en{Then}\ru{Тогда}
+\begin{equation*}
+\potentialenergyfunctional
+\hspace{-0.1ex} = \hspace{-0.1ex} \potentialenergyfunctional_{\hspace{-0.1ex}\text{min}}$, \en{which}\ru{которая} \en{according to}\ru{согласно} \en{the }\ru{теореме }Clapeyron’\en{s}\ru{а}\en{ theorem}~\eqref{clapeyron:elasticitytheorem}
+\en{is}\ru{есть}
+
+\nopagebreak\vspace{-0.33em}
+\begin{equation*}
+\potentialenergyfunctional_{\hspace{-0.1ex}\text{min}}
+= \hspace{-0.2ex}
+\scalebox{.9}{$
+   \displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex}
+   \potential( \hspace{-0.1ex}\bm{u}\hspace{-0.1ex} ) \hspace{.2ex} d\mathcal{V} \hspace{.1ex}
+   - \scalebox{.88}[1]{$ \biggl( $} \hspace{.1ex}
+   \scalebox{.9}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+   \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.3ex} d\mathcal{V}
+   + \hspace{-0.3ex}
+   \scalebox{.9}{$ \displaystyle \integral \displaylimits_{o_2} $} \hspace{-0.1ex}
+   \bm{p} \dotp \bm{u} \hspace{.33ex}
+   do
+   \scalebox{.88}[1]{$ \biggr) $} \hspace{-0.3ex}
+   = \hspace{.1ex} - \hspace{.1ex}
+   \scalebox{.9}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+   \potential(\hspace{-0.1ex} \bm{u} \hspace{-0.1ex}) \hspace{.2ex}
+   d\mathcal{V}
+   .
+\vspace{-0.1em}
+\end{equation*}
+
+\en{Taking}\ru{Взяв}
+\en{the some other}\ru{какое\hbox{-}то другое} \en{satisfactory}\ru{приемлемое}
+\en{field of~displacements}\ru{поле перемещений}~${\bm{u}'\hspace{-0.25ex}}$,
+\en{have a~look at}\ru{взгл\'{я}нем на}
+\en{the finite difference}\ru{конечную разность}
+
+\nopagebreak\vspace{-0.25em}
+\begin{equation*}
+\potentialenergyfunctional \hspace{.16ex} (\hspace{-0.1ex} \bm{u}' \hspace{.1ex}) \hspace{-0.2ex}
+- \potentialenergyfunctional \hspace{.16ex}
+(\hspace{-0.1ex} \bm{u} \hspace{-0.1ex}) \hspace{-0.2ex}
+= \hspace{-0.3ex}
+   \scalebox{.9}{$
+      \displaystyle \integral \displaylimits_{\mathcal{V}}
+   $}
+   \hspace{-0.44ex}
+   \Bigl(
+      \potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+      - \potential(\hspace{-0.1ex} \bm{u} \hspace{-0.1ex})
+      \hspace{-0.2ex} - \hspace{-0.2ex}
+      \bm{f} \hspace{-0.17ex} \dotp \hspace{-0.1ex}
+      ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} )
+   \Bigr) \hspace{-0.1ex} d\mathcal{V}
+   - \hspace{-0.3ex}
+   \scalebox{.9}{$ \displaystyle\integral \displaylimits_{o_2} $} \hspace{-0.1ex}
+   \bm{p} \dotp \hspace{-0.1ex}
+   ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} )
+   \hspace{.2ex} do
+   \hspace{.1ex}
+   ,
+\vspace{-0.1em}
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{seeking}\ru{ищ\'{а}}
+${
+   \potentialenergyfunctional \hspace{.16ex}
+   (\hspace{-0.1ex} \bm{u}' \hspace{.1ex}) \hspace{-0.2ex}
+   - \potentialenergyfunctional \hspace{.16ex}
+   (\hspace{-0.1ex} \bm{u} \hspace{-0.1ex}) \hspace{-0.1ex}
+   \geq 0
+}$
+\en{or}\ru{или}
+(\en{ditto}\ru{то~же самое})
+${
+   \potentialenergyfunctional \hspace{.16ex}
+   (\hspace{-0.1ex}\bm{u}'\hspace{.1ex})
+   \hspace{-0.2ex} \geq
+   \potentialenergyfunctional \hspace{.16ex}
+   (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})
+}$.
+
+${ \bm{f} \hspace{-0.2ex} = \hspace{-0.1ex} \boldconstant }$
+\en{and}\ru{и}
+${ \bm{p} \hspace{-0.1ex} = \hspace{-0.1ex} \boldconstant }$
+
+${\potential(\hspace{-0.1ex}\bm{a}\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smallerdisplaystyleonehalf \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$
+(but \emph{not} the linear ${\smallerdisplaystyleonehalf \boldnabla \bm{u} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$\:--- this means ${\potential(\hspace{-0.1ex}\bm{a}\hspace{-0.1ex}) \hspace{-0.2ex} \neq \smallerdisplaystyleonehalf \hspace{.1ex} \linearstress \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$)
+
+\en{Constraints}\ru{Связи}
+\en{don’t change}\ru{не~меняются}:
+${( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \bigr|_{o_1} \hspace{-0.8ex} = \bm{u}_{\raisemath{-0.1em}{0}} \hspace{-0.3ex} - \bm{u}_{\raisemath{-0.1em}{0}} \hspace{-0.22ex} = \bm{0}}$.
+\en{External}\ru{Внешняя} \en{surface force}\ru{поверхностная сила} ${ \hspace{.1ex}\bm{p} \hspace{.15ex} \bigr|_{o_2} \hspace{-0.9ex} = \hspace{-0.1ex} \tractionvector{\currentunitnormal} \hspace{-0.1ex} = \currentunitnormal \dotp \linearstress }$ \en{on}\ru{на}~${o_2}$
+\en{and}\ru{и}~${{=} \hspace{.33ex} \bm{0}}$ \en{elsewhere}\ru{где-либо ещё} \en{on}\ru{на}~${o(\boundary \mathcal{V})}$.
+${\linearstress \hspace{-0.1ex} = \hspace{-0.3ex} \boldnabla \bm{u} \dotdotp \stiffnesstensor \hspace{-0.1ex} = \hspace{-0.1ex} \constantbivalent}$ along with constant~$\bm{p}$ \en{and}\ru{и}~$\bm{f}$\hbox{\hspace{-0.2ex}.}
+\en{There\-fore}\ru{Поэтому}
+
+\nopagebreak\vspace{-0.3em}\begin{multline*}
+\hspace{-1em}\begin{gathered}
+\scalebox{0.9}{$\displaystyle\integral\displaylimits_{o_2}$} \hspace{-0.1ex}
+\bm{p} \dotp \hspace{-0.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{.2ex} do \hspace{.1ex}
+= \hspace{-0.1ex}
+\scalebox{0.9}{$\displaystyle\ointegral\displaylimits_{\mathclap{o\hspace{.1ex}(\boundary \mathcal{V})}}$} \hspace{.1ex}
+\unitnormalvector \dotp \linearstress \dotp \hspace{-0.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{.2ex} do \hspace{.1ex}
+= \hspace{-0.3ex}
+\scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.33ex}
+\boldnabla \dotp \hspace{-0.1ex} \Bigl( \hspace{-0.2ex} \linearstress \dotp \hspace{-0.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \Bigr) \hspace{-0.1ex} d\mathcal{V}
+=
+\end{gathered}
+\\[-0.6em]
+%
+\begin{gathered}
+= \hspace{-0.3ex}
+\scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.33ex}
+( \hspace{.1ex} \boldnabla \dotp \linearstress \hspace{.12ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{.2ex} d\mathcal{V}
++ \hspace{-0.3ex}
+\scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.3ex}
+\linearstress^{\hspace{.12ex}\T} \hspace{-0.4ex} \dotdotp \hspace{-0.1ex} \boldnabla \hspace{.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{.2ex} d\mathcal{V}
+.
+\end{gathered}\hspace{-1em}
+\end{multline*}
+
+\vspace{-0.3em}\noindent
+\en{Due to}\ru{из\hbox{-}за} \en{symmetry}\ru{симметрии} ${\linearstress^{\hspace{.12ex}\T} \hspace{-0.5ex} = \hspace{-0.1ex} \linearstress}$ ${\hspace{.4ex}\Rightarrow\hspace{.2ex}}$ ${\linearstress^{\hspace{.12ex}\T} \hspace{-0.4ex} \dotdotp \hspace{-0.2ex} \boldnabla \bm{a} = \linearstress \dotdotp \hspace{-0.2ex} \boldnabla \bm{a} = \linearstress \dotdotp \hspace{-0.2ex} \boldnabla \bm{a}^{\mathsf{S}} \hspace{.8ex}\forall \bm{a}}$.
+\textcolor{magenta}{\foreignlanguage{russian}{Разность преобразуется до}}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\begin{multlined}[\displaywidth]
+\potentialenergyfunctional \hspace{.16ex} (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex} -
+\potentialenergyfunctional \hspace{.16ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
+=
+\\[-0.1em]
+%
+= \hspace{-0.3ex}
+\scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.44ex}
+\Bigl(
+\potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+- \potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
+- \hspace{-0.2ex} \bigl( \hspace{.1ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \linearstress + \hspace{-0.1ex} \bm{f} \hspace{.1ex} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.2ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.2ex}
+- \linearstress \dotdotp \hspace{-0.1ex} \boldnabla \hspace{.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.1ex}
+\Bigr) d\mathcal{V}
+.
+\end{multlined}
+\end{equation*}
+
+\noindent
+\en{And}\ru{И}
+\en{with the~balance}\ru{с~балансом}
+\en{of~momentum}\ru{импульса}
+${ \hspace{-0.24ex}
+\boldnabla
+\hspace{-0.1ex} \dotp \hspace{-0.1ex}
+\linearstress
++ \hspace{-0.1ex} \bm{f} \hspace{-0.15ex}
+= \bm{0} }$
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\potentialenergyfunctional \hspace{.16ex}
+(\hspace{-0.1ex}
+\bm{u}'
+\hspace{.1ex}) \hspace{-0.2ex}
+- \potentialenergyfunctional \hspace{.16ex}
+(\hspace{-0.1ex}
+\bm{u}
+\hspace{-0.1ex}) \hspace{-0.2ex}
+= \hspace{-0.3ex}
+\scalebox{.9}{$\displaystyle
+\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.44ex}
+\Bigl(
+\potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+- \potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
+- \linearstress
+\dotdotp \hspace{-0.1ex}
+\boldnabla \hspace{.1ex}
+(
+   \bm{u}' \hspace{-0.4ex}
+   - \hspace{-0.1ex}
+   \bm{u}
+) \hspace{-0.1ex}
+\Bigr)
+d\mathcal{V}
+.
+\end{equation*}
+
+\noindent
+\en{Here}\ru{Тут}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+= \smalldisplaystyleonehalf
+\boldnabla \bm{u}'
+\hspace{-0.4ex} \dotdotp \hspace{-0.1ex}
+\stiffnesstensor
+\dotdotp \hspace{-0.25ex}
+\boldnabla \bm{u}'
+\hspace{-0.2ex} ,
+\hspace{.6em}
+\potential(\hspace{-0.1ex}
+\bm{u}
+\hspace{-0.1ex}) \hspace{-0.2ex}
+= \smalldisplaystyleonehalf
+\boldnabla \bm{u}
+\dotdotp
+\stiffnesstensor
+\dotdotp \hspace{-0.25ex}
+\boldnabla \bm{u} \hspace{.1ex}
+,
+\end{equation*}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\potential (
+   \hspace{-0.1ex} \bm{u}' \hspace{.1ex}
+) \hspace{-0.2ex}
+- \potential (
+   \hspace{-0.1ex} \bm{u} \hspace{.1ex}
+) \hspace{-0.2ex}
+= \smalldisplaystyleonehalf \hspace{-0.1ex}
+\scalebox{.95}{$
+  \Bigl( \hspace{.1ex}
+    \boldnabla \bm{u}'
+    \hspace{-0.4ex} \dotdotp \hspace{-0.1ex}
+    \stiffnesstensor
+    \dotdotp \hspace{-0.25ex}
+    \boldnabla \bm{u}' 
+    \hspace{-0.25ex} - \hspace{-0.2ex}
+    \boldnabla \bm{u}
+    \dotdotp
+    \stiffnesstensor
+    \dotdotp \hspace{-0.25ex}
+    \boldnabla \bm{u}
+  \hspace{.1ex} \Bigr)
+$}
+\end{equation*}
+
+\begin{equation*}
+\stiffnesstensor_{\hspace{.12ex}
+12
+,
+\scalebox{.6}[.8]{$\rightleftarrows$}
+34} \hspace{-0.25ex}
+= \stiffnesstensor
+\hspace{.4em}\Rightarrow\hspace{.25em}
+\boldnabla \bm{u}
+\dotdotp \hspace{-0.1ex}
+\stiffnesstensor
+\dotdotp \hspace{-0.25ex}
+\boldnabla \bm{u}' \hspace{-0.25ex}
+= \hspace{-0.2ex}
+\boldnabla \bm{u}'
+\hspace{-0.4ex} \dotdotp \hspace{-0.1ex}
+\stiffnesstensor
+\dotdotp \hspace{-0.25ex}
+\boldnabla \bm{u}
+\end{equation*}
+
+\begin{equation*}
+\smalldisplaystyleonehalf
+\hspace{-0.1ex} \scalebox{.95}{$
+   \Bigl( \hspace{-0.1ex}
+      \boldnabla \bm{u}'
+      \hspace{-0.4ex} \dotdotp \hspace{-0.1ex}
+      \stiffnesstensor
+      \dotdotp \hspace{-0.25ex}
+      \boldnabla \bm{u}' \hspace{-0.25ex}
+      - \hspace{-0.2ex} \boldnabla \bm{u}
+      \dotdotp
+      \stiffnesstensor
+      \dotdotp \hspace{-0.25ex}
+      \boldnabla \bm{u}
+      + \hspace{-0.2ex}
+      \boldnabla \bm{u}
+      \dotdotp \hspace{-0.1ex}
+      \stiffnesstensor
+      \dotdotp \hspace{-0.25ex}
+      \boldnabla \bm{u}' \hspace{-0.25ex}
+      - \hspace{-0.2ex}
+      \boldnabla \bm{u}' \hspace{-0.4ex}
+      \dotdotp \hspace{-0.1ex}
+      \stiffnesstensor
+      \dotdotp \hspace{-0.25ex}
+      \boldnabla \bm{u}
+    \Bigr)
+$}
+\end{equation*}
+
+\begin{equation*}
+\bigl(
+   \boldnabla \bm{u}' 
+   \hspace{-0.3ex} - \hspace{-0.32ex}
+   \boldnabla \bm{u}
+\hspace{.1ex} \bigr) \hspace{-0.2ex}
+= \hspace{-0.1ex}
+\boldnabla \hspace{.1ex} (
+   \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
+)
+\end{equation*}
+
+\noindent
+\en{for}\ru{для}
+\en{a~finite}\ru{конечной}
+\en{difference}\ru{разности}
+\en{of~potentials}\ru{потенциалов}
+
+\begin{education*}
+\smalldisplaystyleonehalf \boldnabla \bigl(
+\bm{u}' \hspace{-0.4ex} + \hspace{-0.1ex} \bm{u}
+\hspace{.1ex} \bigr) \hspace{-0.2ex}
+\dotdotp \stiffnesstensor \hspace{-0.1ex} \dotdotp \hspace{-0.15ex} \boldnabla \bigl(
+\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
+\hspace{.1ex} \bigr) \hspace{-0.25ex}
+= \hspace{.1ex} \potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+- \potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})
+\hspace{.1ex} ,
+\end{education*}
+
+\noindent
+\en{adding}\ru{добавляя}
+\en{to~which}\ru{к~которой}
+
+\begin{education*}
+- \boldnabla \bm{u}
+\dotdotp \stiffnesstensor \dotdotp 
+\hspace{-0.25ex} \boldnabla \hspace{.1ex}
+( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.2ex}
+= - \hspace{.2ex} \linearstress \dotdotp
+\hspace{-0.1ex} \boldnabla
+\hspace{.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} )
+\end{education*}
+
+\noindent
+\en{we get}\ru{мы получаем}
+
+\begin{education*}
+\smalldisplaystyleonehalf
+\boldnabla
+\bigl(
+\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
+\hspace{.1ex} \bigr) \hspace{-0.2ex} \dotdotp \stiffnesstensor \hspace{-0.1ex} \dotdotp \hspace{-0.15ex}
+\boldnabla \bigl(
+\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
+\hspace{.1ex} \bigr) \hspace{-0.25ex}
+= \hspace{.1ex}
+\potential(\hspace{-0.1ex}\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
+\hspace{.1ex} )
+\end{education*}
+
+\noindent
+\en{and}\ru{и}
+\en{finally}\ru{в~конц\'{е}\hbox{-}конц\'{о}в}\footnote{%
+${b^{\hspace{.1ex}2} \hspace{-0.2ex} - a^2 \hspace{-0.2ex} - 2 \hspace{.1ex} a \hspace{.1ex} (b \hspace{-0.1ex} - \hspace{-0.2ex} a) \hspace{-0.1ex}
+=\hspace{-0.1ex}  (b \hspace{-0.1ex} + \hspace{-0.2ex} a) \hspace{.1ex} (b \hspace{-0.1ex} - \hspace{-0.2ex} a) \hspace{-0.15ex} - 2 \hspace{.1ex} a \hspace{.1ex} (b \hspace{-0.1ex} - \hspace{-0.2ex} a) \hspace{-0.1ex}
+= \hspace{-0.1ex} (b \hspace{-0.1ex} - \hspace{-0.2ex} a)^2}$}
+% end footnote
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\potentialenergyfunctional \hspace{.16ex} (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex} -
+\potentialenergyfunctional \hspace{.16ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
+= \hspace{-0.3ex}
+\scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.22ex}
+\potential(\hspace{-0.1ex}\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}\hspace{.1ex})
+\hspace{.1ex} d\mathcal{V}
+.
+\end{equation*}
+
+\en{Since}\ru{Потому как} $\stiffnesstensor$
+\en{is positive definite}\ru{положительно определён} (\pararef{para:uniquenessfordynamicproblem})
+${\potential ( \hspace{.1ex}
+\bm{w} \hspace{.1ex} ) \hspace{-0.2ex}
+= \smallerdisplaystyleonehalf
+\scalebox{.95}{$
+   \boldnabla \bm{w}
+   \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
+   \stiffnesstensor \dotdotp \hspace{-0.25ex}
+   \boldnabla \bm{w}
+$}
+\hspace{-0.1ex} \geq \hspace{-0.1ex} 0
+\hspace{.8ex}
+\forall \bm{w}
+}$
+(\en{and}\ru{и}
+${= \hspace{-0.2ex} 0}$
+\en{only if}\ru{только если}
+${
+   \boldnabla \bm{w}
+   \hspace{-0.2ex} = \hspace{-0.2ex}
+   \bm{0}
+   \hspace{.2ex}\Leftrightarrow\hspace{.2ex}
+   \bm{w}
+   \hspace{-0.2ex} = \hspace{-0.2ex}
+   \boldconstant
+}$:
+\en{for}\ru{для}
+\en{a~case}\ru{случая}
+\en{of~translation}\ru{трансляции}
+\en{as a~whole}\ru{как целого}
+\en{without}\ru{без}
+\en{deformation}\ru{деформации}.
+
+...
+
+${ \variation{\boldnabla \fieldofdisplacements} \hspace{-0.1ex}
+= \hspace{-0.3ex} \boldnabla \variation{\fieldofdisplacements} }$
+
+...
+
+\en{the}\ru{метод} Ritz\ru{’а}\en{ method}
+
+\en{The minimum functional problem}\ru{Задача о~минимуме функционала}
+${\potentialenergyfunctional \hspace{.2ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})}$
+\en{is approximately solved as}\ru{приближённо решается как}
+
+.......................
+
+\ru{метод конечных элементов}
+\ru{(}the finite element method\ru{)}
+
+.......................
+
+

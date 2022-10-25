@@ -1,0 +1,42 @@
+\en{\section{Equations in stresses}}
+
+\ru{\section{Уравнения в напряжениях}}
+
+\en{The balance}\ru{Баланс}
+\en{of~forces}\ru{сил}
+(
+    \en{or}\ru{или}
+    \en{of~momentum}\ru{импульса}
+)
+
+\nopagebreak\en{\vspace{-0.125em}}\ru{\vspace{-0.6em}}
+\begin{equation}\label{stresseseq:balanceofforces}
+\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f}
+= \hspace{.1ex} \bm{0}
+\end{equation}
+
+\nopagebreak\vspace{-0.2em}\noindent
+\en{does not quite yet determine}\ru{ещё не~определяет}
+\en{the stresses}\ru{напряжения}.
+\en{It’s necessary as~well}\ru{Необходимо вдобавок}\ru{,} \en{that deformations (strains)}\ru{чтобы соответствующие напряжениям деформации}~${\infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex})}$\en{ corresponding to stresses}~\eqref{legendretransformforlinearelasticenergy}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{stresseseq:strainfromstress}
+\infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex}) = \displaystyle\frac{\raisemath{-0.2em}{\partial\hspace{.1ex} \widehat{\potential}}}{\raisemath{.04em}{\partial \linearstress}} = \hspace{-0.12ex} \pliabilitytensor \dotdotp \hspace{-0.07ex} \linearstress
+\end{equation}
+
+\nopagebreak\vspace{-0.5em}\noindent
+\en{were compatible}\ru{были совместны}~(\pararef{para:displacementsfromdeformations})
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}\label{stresseseq:compatibility}
+\operatorname{inc} \infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex}) \hspace{-0.06ex}
+\equiv
+\hspace{-0.07ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.44ex} \Bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex}) \Bigr)^{\raisemath{-0.12em}{\hspace{-0.44ex}\T}} \hspace{-0.52ex}
+= {^2\bm{0}}
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.3em}\noindent
+\en{Gathered together}\ru{Взятые вместе}, \eqref{stresseseq:balanceofforces}, \eqref{stresseseq:strainfromstress} and~\eqref{stresseseq:compatibility} \en{present}\ru{представляют} \en{the~complete closed set}\ru{полный замкнутый набор}~(\en{system}\ru{систему}) \en{of~equations}\ru{уравнений} \en{in~stresses}\ru{в~напряжениях}.
+
+...

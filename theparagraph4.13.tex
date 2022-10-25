@@ -1,0 +1,99 @@
+\en{\section{Antiplane shear}} % Antiplane deformation (strain)
+
+\ru{\section{Антиплоский сдвиг}}
+
+\newcommand\antiplanedisplacement{\mathcolor{red}{\upupsilon}}
+
+\en{This is}\ru{Это}
+\en{such a~problem}\ru{такая проблема}
+\en{of the linear theory of~elasticity}\ru{линейной теории упругости},
+\en{where}\ru{где}
+\en{the non-trivial results}\ru{нетривиальные результаты}
+\en{are obtained}\ru{получаются}
+\en{by the simple outputs}\ru{простыми выводами}\footnote{\en{Non-trivial}\ru{Нетривиальное}
+\en{in the theory of elasticity}\ru{в~теории упругости}
+\en{is}\ru{это}, \en{for example}\ru{для примера},
+\en{when}\ru{когда}
+\en{the division of a~force by an~area}\ru{деление силы на~площадь}
+\en{gives}\ru{даёт}
+\en{an~infinitely large error}\ru{бесконечно больш\'{у}ю ошибку}
+\en{in the calculation of the stresses}\ru{в~вычислении напряжений}.}
+\hspace{-.5ex} .
+
+\en{The problem}\ru{Проблема}
+\en{considers}\ru{рассматривает}
+\en{an isotropic elastic}\ru{изотропно упругий}
+\en{continuum}\ru{континуум}
+\en{in the Cartesian coordinates}\ru{в~декартовых координатах}~$x_i$
+($x_1$ \en{and}\ru{и}~$x_2$)
+\en{is in the plane of the section}\ru{в~плоскости сечения},
+$\mathcolor{blue}{x_3}$
+\en{is perpendicular to the section}\ru{перпендикулярна сечению).
+\en{The basis vectors}\ru{Базисные векторы}\en{are}
+
+\begin{equation*}
+\bm{e}_i \hspace{-0.2ex} = \partial_i \hspace{.1ex} \locationvector}$\hbox{\hspace{-0.12ex},}
+${\locationvector = x_i \bm{e}_i}$,
+${\bm{e}_i \bm{e}_i \hspace{-0.2ex} = \hspace{-0.15ex} \UnitDyad \,\Leftrightarrow\hspace{.25ex} \bm{e}_i \hspace{-0.1ex} \dotp \bm{e}_j \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j}
+\end{equation*}
+
+\en{In~case}\ru{В~случае}
+\en{of the an~anti\-plane strain}\ru{анти\-плоской деформации}
+ (\en{the anti\-plane shear}\ru{анти\-плоского сдвига}),
+\en{the field}\ru{поле}
+\en{of the movements}\ru{перемещений}$
+$\bm{u}(\bm{r})$
+\en{parallel}\ru{параллельно}
+\en{to the coordinate}\ru{координате}~$\mathcolor{blue}{x_3}$:
+
+\begin{equation}
+{\bm{u} = \antiplanedisplacement \hspace{.12ex} \mathcolor{blue}{\bm{e}_3}}$, и~$\antiplanedisplacement$ не~зависит от~$\mathcolor{blue}{x_3}$: ${\antiplanedisplacement \narroweq \antiplanedisplacement(x_1, x_2)}$, ${\partial_{\raisemath{-0.15ex}{\mathcolor{blue}{3}}} \antiplanedisplacement \hspace{-0.15ex} = 0 .
+\end{equation}
+
+\en{The deformation}\ru{Деформация}
+
+\nopagebreak\vspace{-0.25em}
+\begin{equation}
+\infinitesimaldeformation
+\equiv \hspace{-0.1ex}
+\boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.2ex}
+= \hspace{-0.2ex}
+\boldnabla \hspace{.1ex} \bigl(
+   \antiplanedisplacement
+   \hspace{.1ex}
+   \mathcolor{blue}{\bm{e}_3}
+\bigr)^{\hspace{-0.2ex} \mathsf{S} } \hspace{-0.25ex}
+   = \mathcolor{blue}{\bm{e}_3}
+   \hspace{-0.15ex} \boldnabla \hspace{.1ex}
+   \antiplanedisplacement^{\hspace{.1ex}\mathsf{S}}
+   \hspace{-0.25ex} +
+   \antiplanedisplacement \hspace{.1ex}
+   \tikzmark{beginZero2}
+   % beginZero2
+      \boldnabla
+      \mathcolor{blue}{\bm{e}_3}
+   \tikzmark{endZero2}^{\mathsf{S}} \hspace{-0.2ex}
+   = \hspace{.1ex}
+   \smalldisplaystyleonehalf \hspace{.1ex}
+   \bigl(
+      \boldnabla \hspace{.1ex} \antiplanedisplacement \hspace{.12ex}
+      \mathcolor{blue}{\bm{e}_3} \hspace{-0.1ex}
+      + \mathcolor{blue}{\bm{e}_3} \hspace{-0.15ex}
+      \boldnabla \hspace{.1ex} \antiplanedisplacement
+   \bigr)
+\end{equation}%
+\AddUnderBrace[line width=.75pt][.2ex, -0.1ex]%
+{beginZero2}{endZero2}{${ \scriptstyle ^2\bm{0} }$}%
+
+\en{Possible inhomogeneity}\ru{Возможна неоднородность}
+\en{of the medium}\ru{среды}
+\en{in the plane}\ru{в~плоскости}
+${x_1, x_2}$
+\en{of the section}\ru{сечения} 
+ 
+\begin{equation}
+\mu \narroweq \mu(x_1, x_2) ,
+\partial_{
+   \raisemath{-0.15ex}{ \mathcolor{blue}{3} }
+} \hspace{.08ex} \mu \hspace{-0.1ex} = 0 .
+\end{equation}

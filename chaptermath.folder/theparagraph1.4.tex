@@ -1,0 +1,146 @@
+\en{\section{Polyadic representation (decomposition)}}
+
+\ru{\section{Полиадное представление (разложение)}}
+
+\label{para:polyadicrepresentation}
+
+\en{Before in}\ru{Ранее в}~\pararef{para:tensoranditscomponents}\en{,} \en{a~tensor was presented as some invariant object}\ru{тензор был представлен как некий инвариантный объект}, \en{showing itself in every basis as a~collection of numbers~(components)}\ru{проявляющий себя в~каждом базисе совокупностью чисел~(компонент)}.
+\hbox{\en{Such}\ru{Такое}} \en{a~presentation}\ru{представление} \en{is typical}\ru{типично} \en{for majority of~books about tensors}\ru{для большинства книг о~тензорах}.
+\en{Index notation}\ru{Индексная запись} \en{can be convenient}\ru{может быть удобна}, \en{especially}\ru{особенно} \en{when only rectangular coordinates are used}\ru{когда используются только прямоугольные координаты}, \en{but}\ru{но} \en{very often it is not}\ru{очень часто это не~так}.
+\en{And}\ru{И} \en{the relevant case is}\ru{подходящий случай\:---} \en{physics of~elastic continua}\ru{физика упругих \rucontinuum{}ов}: \en{it needs more elegant, more powerful and~perfect apparatus of the~direct tensor calculus}\ru{ей нужен более изящн\hbox{ь\kern-0.066emi}й, более мощный и~совершенный аппарат прямого тензорного исчисления}, \en{operating with indexless invariant objects}\ru{оперирующий с~безындексными инвариантными объектами}.
+
+\en{Linear combination}\ru{Линейная комбинация} ${\bm{v} = v_i \bm{e}_i}$ \en{from}\ru{из} \en{decomposition}\ru{разложения}~\eqref{vectorcomponents} \en{connects}\ru{соединяет} \en{vector}\ru{вектор}~${\bm{v}}$ \en{with basis}\ru{с~базисом}~${\bm{e}_i}$ \en{and vector’s components}\ru{и~компонентами}~${v_i}$ \en{in that basis}\ru{вектора в~том базисе}.
+\en{Soon}\ru{Вскоре} \en{we will get a~similar relation for a~tensor of any complexity}\ru{мы получим похожее соотношение для~тензора любой сложности}.
+
+\en{Any bivalent tensor}\ru{Любой бивалентный тензор} ${^2\!\bm{B}}$
+\en{has}\ru{имеет} \en{nine components}\ru{девять компонент}~${B_{i\hspace{-0.1ex}j}}$ \en{in~each basis}\ru{в~каждом базисе}.
+\en{The~number}\ru{Число} \en{of~various dyads}\ru{различных диад}~${\bm{e}_i \bm{e}_{\hspace{-0.15ex}j}}$ \en{for the~same basis}\ru{для одного и~того~же базиса}\ru{\:---}\en{ is} \en{nine}\ru{тоже девять}~($3^2$)\en{ too}.
+\en{Linear combining}\ru{Линейное комбинирование} \en{these dyads}\ru{этих диад} \en{with coefficients}\ru{с~коэффициентами}~${B_{i\hspace{-0.1ex}j}}$
+\en{gives the~sum}\ru{даёт сумму} ${B_{i\hspace{-0.1ex}j} \bm{e}_i \bm{e}_{\hspace{-0.15ex}j}}$.
+\en{This is}\ru{Это}
+\en{tensor}\ru{тензор},
+\en{but}\ru{но}
+\en{what are its components}\ru{каков\'{ы} его компоненты},
+\en{and}\ru{и}
+\en{how}\ru{как}
+\en{this representation}\ru{это представление}
+\en{changes}
+\en{or}\ru{или}
+\en{doesn’t change}\ru{не~меняется}
+\en{with a~rotation of~basis}\ru{с~поворотом базиса}?
+
+\en{Components of the~constructed sum}\ru{Компоненты построенной суммы}
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+\bigl( B_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \bigr)_{\hspace{-0.2ex}p\hspace{.1ex}q} \hspace{-0.3ex}
+= \hspace{-0.1ex} B_{i\hspace{-0.1ex}j} \hspace{.1ex} \delta_{ip} \delta_{\hspace{-0.15ex}j\hspace{-0.1ex}q} \hspace{-0.2ex}
+= \hspace{-0.1ex} B_{pq}
+\end{equation*}
+
+\vspace{-0.25em}\noindent
+\en{are components}\ru{суть компоненты}
+\en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$.
+\en{And}\ru{И}
+\en{with a~rotation}\ru{с~поворотом}
+\en{of~basis}\ru{базиса}
+
+\nopagebreak\vspace{-0.25em}
+\begin{equation*}
+\scalebox{.99}{$
+   B\hspace{.16ex}'_{\hspace{-0.32ex}i\hspace{-0.1ex}j}
+   \bm{e}'_{i}
+   \bm{e}'_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+   = \cosinematrix{i'\hspace{-0.1ex}p}
+   \cosinematrix{j'\hspace{-0.1ex}q}
+   B_{pq}
+   \cosinematrix{i'\hspace{-0.1ex}n}
+   \bm{e}_n
+   \cosinematrix{j'\hspace{-0.1ex}m}
+   \bm{e}_m \hspace{-0.2ex}
+   = \delta_{\hspace{-0.1ex}pn}
+   \delta_{\hspace{-0.1ex}qm}
+   B_{pq} \bm{e}_n \bm{e}_m \hspace{-0.2ex}
+   = B_{pq} \bm{e}_p \bm{e}_q
+$}
+\hspace{.1ex} .
+\end{equation*}
+
+\en{Doubts are dropped}\ru{Сомнения отпали}:
+\en{a~tensor of~second complexity}\ru{тензор второй сложности}
+\en{can be~(re)pre\-sent\-ed}\ru{может быть представлен}
+\en{as}\ru{как}
+\en{the~linear combination}\ru{линейная комбинация}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{polyada:2}
+^2\!\bm{B} = B_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
+\end{equation}
+
+\vspace{-0.25em}\nopagebreak\noindent
+--- \en{the~dyadic decomposition}\ru{диадное разложение} \en{of~}\en{a~bivalent tensor}\ru{бивалентного тензора}.
+
+\vspace{-0.2em} \en{For}\ru{Для} \en{the~unit tensor}\ru{единичного тензора}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\UnitDyad =
+E_{i\hspace{-0.1ex}j} \hspace{.16ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex} =
+\delta_{i\hspace{-0.1ex}j} \hspace{.16ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex} =
+\bm{e}_i \bm{e}_i \hspace{-0.2ex} =
+\bm{e}_1 \bm{e}_1 \hspace{-0.2ex} + \bm{e}_2 \bm{e}_2 \hspace{-0.2ex} + \bm{e}_3 \bm{e}_3
+\hspace{.1ex} ,
+\end{equation*}
+
+\vspace{-0.2em}\nopagebreak\noindent
+\en{that’s why}\ru{вот почему}
+${\hspace{-0.15ex}\UnitDyad}$
+\en{is called}\ru{называется}
+\en{the~unit dyad}\ru{единичной диадой}.
+
+\en{Polyadic representations}\ru{Полиадные представления} \en{like}\ru{типа}~\eqref{polyada:2} \en{help}\ru{помогают} \en{to~operate}\ru{оперировать}
+\en{with}\ru{с}
+\en{the tensors}\ru{тензорами}
+\en{much}\ru{намного}
+\en{easier}\ru{проще}:
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{v} \dotp {^2\!\bm{B}} =
+v_i\bm{e}_i
+\hspace{-0.1ex} \dotp
+\bm{e}_{\hspace{-0.1ex}j}
+B_{\hspace{-0.2ex}j\hspace{-0.1ex}k}
+\bm{e}_k \hspace{-0.2ex}
+= v_i
+\delta_{i\hspace{-0.1ex}j}
+B_{\hspace{-0.2ex}j\hspace{-0.1ex}k} \hspace{.1ex}
+\bm{e}_k \hspace{-0.2ex}
+= v_i
+B_{ik}
+\bm{e}_k
+\hspace{.1ex} ,
+\end{equation*}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{tensorcomponents}
+\bm{e}_i
+\hspace{-0.1ex} \dotp \hspace{-0.1ex}
+{^2\!\bm{B}}
+\dotp
+\bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+=
+\bm{e}_i
+\hspace{-0.1ex} \dotp
+B_{pq}\bm{e}_p\bm{e}_q
+\hspace{-0.1ex} \dotp
+\bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \hspace{-0.1ex}
+B_{pq} \hspace{.1ex}
+\delta_{\hspace{-0.1ex}ip}
+\delta_{\hspace{-0.1ex}qj} \hspace{-0.2ex}
+= \hspace{-0.1ex}
+B_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+=
+{^2\!\bm{B}}
+\hspace{-0.1ex} \dotdotp
+\bm{e}_{\hspace{-0.1ex}j}
+\bm{e}_i
+\hspace{.1ex} .
+\end{equation}

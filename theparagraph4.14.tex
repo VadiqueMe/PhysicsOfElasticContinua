@@ -1,0 +1,156 @@
+\en{\section{The torsion of rods}}
+
+\ru{\section{Кручение стержней}}
+
+\label{para:twistingofrods.saintvenant}
+
+\begin{otherlanguage}{russian}
+
+{\small
+\bibauthor{M.\:de\;Saint\hbox{-\hspace{-0.2ex}}Venant}. \href{https://babel.hathitrust.org/cgi/pt?id=hvd.32044091959866&seq=7}{Memoire sur la torsion des prismes (1853)}
+
+Adhémar-Jean-Claude Barré de Saint\hbox{-\hspace{-0.2ex}}Venant.
+Mémoire sur la torsion des prismes, avec des considérations sur leur flexion ainsi que sur l'équilibre intérieur des solides élastiques en général, et des formules pratiques pour le calcul de leur résistance à divers efforts s’exerçant simultanément.
+1856.
+327~pages.
+
+1. Memoire sur la torsion des prismes, avec des considerations sur leur flexion, etc. Memoires presentes par divers savants a l'Academie des scienees, t. 14, 1856.
+
+2. Memoire sur la flexion des prismes, etc. Journal de mathematiques pures et appliquees, publie par J. Liouville, 2me serie, t. 1, 1856.
+
+Перевод на русский язык:
+\bibauthor{Сен-Венан Б.} Мемуар о~кручении призм. Мемуар об~изгибе призм. М.:\;Физ\-мат\-гиз, 1961.
+\howmanypages{518~страниц.}
+стр. 379--494
+\par}
+
+\end{otherlanguage}
+
+\en{This problem}\ru{Эта задача},
+\en{studied in detail}\ru{подробно изученная}
+\en{by }Saint\hbox{-\hspace{-0.2ex}}Venant\ru{’ом},
+\en{is contained}\ru{содержится}
+\en{in almost every book}\ru{едва~ли~не в~каждой книге}
+\en{about the linear elasticity}\ru{о~линейной упругости}.
+\en{It considers}\ru{В~ней рассматривается} \en{a~cylinder}\ru{цилиндр}
+\en{of some section}\ru{какого\hbox{-}либо сечения},
+\en{loaded}\ru{нагруженный}
+\en{only}\ru{лишь}
+\en{by the surface forces}\ru{поверхностными силами}
+\en{at the ends}\ru{на торцах}
+\textcolor{blue}{(... add a figure ...)}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\begin{array}{r@{\hspace{.4em}}l}
+z=\ell:&
+\bm{k} \dotp \linearstress = \bm{p}(x_{\alpha})
+\hspace{.1ex} ,
+\\
+z=0:&
+- \bm{k} \dotp \linearstress = \bm{p}_{0}(x_{\alpha})
+\hspace{.1ex} ,
+\end{array}
+\end{equation*}
+
+\noindent
+\en{where}\ru{где}
+${\bm{k} \equiv \bm{e}_3}$,
+${\alpha = 1, 2}$,
+${\bm{x} \equiv x_{\alpha} \bm{e}_{\alpha}}$.
+\en{Coordinates}\ru{Координаты}\en{ are}\ru{\:---}
+${x_1}$, ${x_2}$, ${z}$.
+
+\en{The resultant (the sum)}\ru{Результанта (сумма)}
+\en{of the external forces}\ru{внешних сил}
+\en{is equal to}\ru{равна}~$\bm{0}$,
+\en{and}\ru{а}
+\en{the resultant couple}\ru{суммарная пара сил}
+\en{is directed}\ru{направлена}
+\en{along the}\ru{вдоль оси}~$z$\en{ axis}:
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\integral_{o} \bm{p} \hspace{.1ex} do
+= \bm{0}
+\hspace{.1ex} ,
+\hspace{.4em}
+\integral_{o} \bm{x}
+\hspace{-0.2ex} \times \hspace{-0.2ex}
+\bm{p} \hspace{.1ex}
+do
+= M \bm{k}
+\hspace{.1ex} .
+\end{equation*}
+
+\en{It is known that}\ru{Известно, что}
+\en{the torsion}\ru{кручение} \textcolor{magenta}{\en{gives}\ru{даёт}}
+\en{the tangential}\ru{касательные}
+\en{components}\ru{компоненты}
+\en{of stress}\ru{ напряжения}
+${
+   \mathtau_{z1}
+   \equiv \bm{k}
+   \dotp
+   \linearstress
+   \dotp
+   \bm{e}_1
+}$
+\en{and}\ru{и}
+${
+   \mathtau_{z2}
+   \equiv \bm{k}
+   \dotp
+   \linearstress
+   \dotp
+   \bm{e}_2
+}$.
+\en{Assuming that}\ru{Полагая, что}
+\en{only these}\ru{лишь эти}
+\en{components}\ru{компоненты}
+\en{of tensor}\ru{тензора}~$\linearstress$
+\en{are non-zero}\ru{ненулевые}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\linearstress = \bm{s} \bm{k} + \bm{k} \bm{s}
+\hspace{.1ex} ,
+\hspace{.4em}
+\bm{s} \equiv \mathtau_{z \alpha} \bm{e}_{\alpha}
+\hspace{.1ex} .
+\end{equation*}
+
+\en{The solution of this problem}\ru{Решение этой задачи} \en{simplifies}\ru{упрощается}\ru{,} \en{if}\ru{если} \ru{используются }\en{the equations in stresses}\ru{уравнения в~напряжениях}\en{ are used}.
+
+\nopagebreak\vspace{-0.2em}
+\begin{align}
+\boldnabla \dotp \linearstress = \bm{0}
+\hspace{.2em} \Rightarrow \hspace{.2em}
+\boldnabla_{\bot} \dotp \bm{s} = \bm{0}
+(\boldnabla_{\bot} \equiv \bm{e}_{\alpha} \partial_{\alpha})
+\hspace{.1ex} ,
+\partial_{z} \bm{s}
+= \bm{0}
+\hspace{.1ex} ,
+\\
+%
+\boldnabla \dotp \boldnabla \linearstress
++ \displaystyle\frac{1}{1 + \nu} \boldnabla \boldnabla \mathsigma
+= {^2}\bm{0}
+\hspace{.2em} \Rightarrow \hspace{.2em}
+\Laplacian_{\bot} \bm{s}
+= \bm{0}
+(\Laplacian_{\bot} \equiv \partial_{\alpha} \partial_{\alpha})
+\hspace{.1ex} .
+\end{align}
+
+\noindent
+\en{The independence}\ru{Независимость}
+\en{of~}$\bm{s}$
+\en{from}\ru{от}~$z$
+\en{makes it possible}\ru{даёт возможность}
+\en{to replace}\ru{заменить}
+\en{the three-dimensional operators}\ru{трёхмерные операторы}
+\en{with the two-dimensional ones}\ru{двумерными}.
+
+
+...

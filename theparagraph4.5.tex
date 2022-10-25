@@ -1,0 +1,329 @@
+\en{\section{Theorems of statics}}
+
+\ru{\section{Теоремы статики}}
+
+\label{para:theoremsofstatics}
+
+\subsection*{\ru{Теорема }Clapeyron’\ru{а}\en{s theorem}}
+
+% Benoît Paul Émile Clapeyron
+% Mémoire sur le travail des forces élastiques dans un corps solide élastique déformé par l’action de forces extérieures
+% Comptes rendus hebdomadaires des séances de l’Académie des sciences, Tome XLVI, Janvier–Juin 1858
+
+\en{In~equilibrium}\ru{В~равновесии}
+\en{with the external forces}\ru{с~внешними силами},
+\ru{объёмными}\en{the volume ones}~$\bm{f}$
+\ru{и}\en{and}
+\en{the surface ones}\ru{поверхностными}
+\$\bm{p}$,
+\en{the work}\ru{работа}
+\en{of~these forces}\ru{этих сил}~(\inquotesx{\en{statically frozen}\ru{статически замороженных}}[---] \en{constant along time}\ru{постоянных во~времени})
+\en{through actual displacements}\ru{на~актуальных перемещениях}
+\ru{равна}\en{is equal to}
+\en{the doubled}\ru{удвоенной}\footnote{%
+%%\emph{(i)}~\bibauthor{Gabriel Lam\'{e}} et \bibauthor{Benoît Paul \'{E}mile Clapeyron}.
+%%\href{https://gallica.bnf.fr/ark:/12148/bpt6k33093/f475.image}{M\'{e}moire sur l'\'{e}quilibre int\'{e}rieur des~corps solides homog\'{e}nes. \emph{Memoires present\'{e}s par Divers Savants}, IV, 1833. Pagine~465\hbox{--}562.}
+%%\emph{(ii)}~
+
+\inquotesx{Ce produit repr\'{e}sentait d’ailleurs le~double de la~force~vive que le~ressort pouvait absorber par l’effet de sa flexion et qui \'{e}tait la~mesure naturelle de~sa~puissance.}[---]\\
+\bibauthor{Benoît Paul \'{E}mile Clapeyron}.
+\href{https://gallica.bnf.fr/ark:/12148/bpt6k3003h/f208.image}{ M\'{e}moire sur le travail des forces \'{e}lastiques dans un corps solide \'{e}lastique d\'{e}form\'{e} par l’action de~forces ext\'{e}rieures.
+\emph{Comptes rendus},
+Tome\;XLVI, Janvier--Juin 1858.
+Pagine~208\hbox{--}212.}
+}\hspace{-0.4ex}
+\en{energy of~deformation}\ru{энергии деформации}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{clapeyron:elasticitytheorem}
+2 \hspace{-0.2em}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \potential \hspace{.2ex} d\mathcal{V} \hspace{.12ex}
+= \hspace{-0.2ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex} d\mathcal{V}
++ \hspace{-0.3ex}
+\integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \bm{u} \hspace{.25ex} do
+\hspace{.2ex} .
+\end{equation}
+
+\vspace{-0.55em}\begin{multline*}
+\tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
+\hspace{2.25ex}
+2 \hspace{.1ex} \potential \hspace{.1ex} = \linearstress \dotdotp \infinitesimaldeformation =
+\linearstress \hspace{.1ex} \dotdotp \hspace{-0.12ex} \boldnabla \bm{u}^{\mathsf{S}} \hspace{-0.12ex} =
+\boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \bm{u} \hspace{.1ex} \right) -
+\tikzmark{beginMinusLoad} \boldnabla \dotp \linearstress \tikzmark{endMinusLoad} \dotp \bm{u} \;\Rightarrow
+\\[.5em]
+%
+\Rightarrow\;\,
+\displaystyle 2 \hspace{-0.16em}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex}
+  \potential \hspace{.2ex} d\mathcal{V} \hspace{.12ex}
+= \integral\displaylimits_{o_2} \hspace{-0.4ex}
+\tikzmark{beginSurfaceLoad}
+  \unitnormalvector \dotp \linearstress
+\tikzmark{endSurfaceLoad} \hspace{.1ex}
+  \dotp \bm{u} \hspace{.25ex} do \hspace{.4ex}
++ \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
+  \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex}
+  d\mathcal{V} \hspace{2.25ex}
+\tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);
+\end{multline*}%
+\AddUnderBrace[line width=.75pt][.2ex, 0][yshift = .1em]%
+{beginMinusLoad}{endMinusLoad}{$
+    \scalebox{.75}{$ - \bm{f} $}
+$}%
+\AddUnderBrace[line width=.75pt][-0.1ex, 0][yshift = .1em]%
+{beginSurfaceLoad}{endSurfaceLoad}{$
+    \scalebox{.75}{$ \bm{p} $}
+$}
+
+\vspace{-0.2em}
+\en{From}\ru{Из}~\eqref{clapeyron:elasticitytheorem}
+\en{also follows}\ru{следует также},
+\en{that without loading}\ru{что без нагрузки}
+${\hspace{-0.25ex}
+\scalebox{1.4}{$ \integral $}_
+{ \hspace{-0.5ex}
+   \raisemath{.1em}{\mathcal{V}}
+} \hspace{.25ex}
+\potential \hspace{.2ex} d\mathcal{V}
+= 0
+}$.
+\en{Because}\ru{Поскольку} $\potential$
+\en{is positive}\ru{положителен},
+\en{then the stress}\ru{то~и~напряжение}~$\linearstress$,
+\en{and}\ru{и}
+\en{deformation}\ru{деформация}~$\infinitesimaldeformation$
+\en{without a~load}\ru{без нагрузки}
+\en{are equal to zero}\ru{равны нулю}.
+
+\begin{align*}
+2 \hspace{.1ex} \potential \hspace{.1ex} &= \linearstress \dotdotp \infinitesimaldeformation
+\\
+\mathdotabove{\potential} \hspace{.1ex} &= \linearstress \dotdotp \mathdotabove{\infinitesimaldeformation}
+\\
+\variation{\potential} &= \linearstress \dotdotp \variation{\infinitesimaldeformation}
+\end{align*}
+
+$\potential$
+\en{is equal to}\ru{равна}
+\en{only}\ru{лишь}
+\en{the~half}\ru{половине}
+\en{of~the~work}\ru{работы}
+\en{of~the~external forces}\ru{внешних сил}.
+
+\en{The~accumulated}\ru{Накопленная}
+\en{potential energy of~deformation}\ru{потенциальная энергия деформации}~$\potential$
+\en{is equal}\ru{равна}
+\en{to only}\ru{только}
+\en{the half}\ru{половине}
+\en{of the work}\ru{работы}\ru{,}
+\en{done}\ru{совершённой}
+\en{by the external forces}\ru{внешними силами},
+\en{acting}\ru{действующими}
+\en{from}\ru{из}
+\en{the~unstressed}\ru{ненагруженной}
+\en{configuration}\ru{конфигурации}
+\en{to the~equilibrium}\ru{к~равновесию}
+\en{with}\ru{со}
+\en{the external forces}\ru{внешними силами}.
+
+\ru{Теорема }Clapeyron’\en{s}\ru{а}\en{ theorem}
+\en{implies that}\ru{подразумевает, что}
+\en{the~accumulated elastic energy}\ru{накопленная упругая энергия}
+\en{accounts for}\ru{составляет}
+\en{only the~half}\ru{лишь половину}
+\en{of the energy}\ru{энергии}\ru{,}
+\en{spent on the deformation}\ru{потраченной на деформацию}.
+\en{The~remaining}\ru{Оставшаяся}
+\en{half}\ru{половина}
+\en{of the~work}\ru{работы},
+\en{done by the external forces}\ru{совершённой внешними силами},
+\en{is lost somewhere}\ru{теряется где\hbox{-}то}
+\en{before reaching}\ru{до достижения}
+\en{the~equilibrium}\ru{равновесия}.
+
+\bibauthor{Roger Fosdick} and \bibauthor{Lev Truskinovsky}.
+\href{http://www.cityu.edu.hk/ma/ws2007/notes/FTJElast.pdf}{About Clapeyron’s Theorem in Linear Elasticity. \emph{Journal of~Elasticity}, Volume~72, July 2003. Pages 145\hbox{--}172.}
+\par}
+
+\en{In theory}\ru{В~теории}\en{,}
+\ru{распространена }\en{the concept}\ru{концепция}
+\en{of~the~}\inquotesx{\en{static loading}\ru{статического нагружения}}\en{ is common}.
+\en{It‘s}\ru{Это}
+\en{when}\ru{когда}
+\en{the external load}\ru{внешняя нагрузка}
+\en{is applied}\ru{применяется}
+\en{infinitely slow}\ru{бесконечно медленно}
+(\en{sounds like forever}\ru{звучит как вечность},
+\en{yeah}\ru{да}).
+
+\en{The work}\ru{Работа}
+\en{of the external forces}\ru{внешних сил}
+\en{on the actual displacements}\ru{на актуальных перемещениях}
+\ru{равна}\en{is equal to}
+\en{twice}\ru{удвоенному}
+\en{the elastic potential}\ru{упругому потенциалу}
+$2\potential$.
+
+\en{Yes}\ru{Да},
+\en{only the half}\ru{всего половина}
+\en{of the linear elastic energy}\ru{линейно упругой энергии}
+\en{is stored}\ru{запасается}.
+\en{The second half}\ru{Вторая половина}
+\en{is}\ru{это}
+\en{the }\inquotes{
+   \en{additional energy}\ru{дополнительная энергия}
+}.
+\en{It is lost}\ru{Она теряется}
+\en{до}\ru{before}
+\en{reaching}\ru{достижения}
+\en{the equilibrium}\ru{равновесия}
+\en{on}\ru{на}
+\en{the dynamics}\ru{динамику}\:---
+\en{on}\ru{на}
+\en{the internal energy}\ru{внутреннюю энергию}
+\en{of the particles}\ru{частиц}
+( \en{of the dissipation}\ru{диссипацию} ),
+\en{on}\ru{на}
+\en{the vibrations}\ru{колебания}
+\en{and waves}\ru{и~волны}.
+\en{So is in the theory.}\ru{Так в~теории.}
+
+\en{But}\ru{Но}
+\en{any real loading}\ru{любое реальное нагружение}
+\en{would be}\ru{не будет}
+\en{neither sudden loading}\ru{ни внезапным нагружением}\ru{,}
+\en{nor infinitely slow loading}\ru{ни бесконечно медленным}.
+%\ru{ нагружением}.
+\en{These are two extremes}\ru{Это две крайности}.
+\en{The real dynamics}\ru{Реальная динамика}
+\en{of applying the loads}\ru{приложения нагрузок}
+\en{will always be}\ru{всегда будет}
+\en{не похожей на теорию}\ru{different from the theory}.
+
+%(there’s always heating due to the dissipation of the energy)
+
+\ru{В~области~же}\en{In the area}
+\en{of the infinitesimal variations}\ru{бесконечномалых вариаций}
+\en{here}\ru{здесь}
+\en{the real external forces}\ru{реальные внешние силы},
+\en{applied to the medium}\ru{приложенные к~среде},
+\en{work}\ru{работают}
+\en{on virtual displacements}\ru{на виртуальных перемещениях}
+\en{and}\ru{и}
+\en{produce the work}\ru{производят работу},
+\en{which}\ru{которая}
+\en{is exactly equal}\ru{в~точности равна}
+\en{to the variation}\ru{вариации}
+\en{of the elastic potential}\inquotes{упругого потенциала}.
+
+\begin{equation*}
+\linearstress \dotdotp \variation{\infinitesimaldeformation}
+= \variation{\potential}
+\hspace{.1ex}
+.
+\end{equation*}
+
+\en{A~linear}\ru{Линейная}
+\en{elastic medium}\ru{упругая среда}
+\en{is one}\ru{это такая},
+\ru{в~которой}\en{in which}
+\en{a~variation}\ru{вариация}
+\en{of work}\ru{работы}
+\en{of the internal forces}\ru{внутренних сил}
+(\en{or stresses}\ru{или напряжений})
+\en{is}\ru{есть}
+\en{a~variation of the potential}\ru{вариация потенциала}
+\en{with the opposite sign}\ru{с~противоположным зн\'{а}ком}
+
+${
+   - \hspace{.1ex} \variation{\internalwork} \hspace{-0.2ex}
+   = \variation{\potential} = \variation{\externalwork} \hspace{-0.25ex}
+}$,
+\en{when}\ru{когда}
+\ru{варьируются }\en{the only displacements}\ru{только перемещения}\en{ vary}
+(\en{the stress loads}\ru{нагрузки\hbox{-}напряжения}
+\en{do not vary}\ru{не~варьируются}).
+
+\en{It is necessary that}\ru{Нужно, чтобы}
+\en{the virtual work}\ru{виртуальная работа}
+\en{of the real}\ru{реальных}
+\en{external forces}\ru{внешних сил}
+(\en{not varied here}\ru{здесь не варьируемых})
+\en{on variations}\ru{на~вариациях}
+\en{of displacements}\ru{перемещений}
+\en{would be equal to}\ru{была бы равна}
+\en{the variation}\ru{вариации}
+\en{of the internal energy}\ru{внутренней энергии}
+\en{with the opposite sign}\ru{с~обратным знаком}
+( \en{for}\ru{для}
+\en{an elastic media}\ru{упругой среды}\:---
+\en{the variation}\ru{вариации}
+%%\en{of the elastic potential}\ru{упругого потенциала}
+\en{of the internal energy}\ru{внутренней энергии}
+).
+
+\subsection*{\en{The uniqueness of the solution theorem}\ru{Теорема единственности решения}}
+
+\en{As in dynamics}\ru{Как и в~динамике}
+(\pararef{para:uniquenessfordynamicproblem}),
+\en{we}\ru{мы}
+\en{suppose}\ru{допускаем}
+\en{the existence}\ru{существование}
+\en{of the two solutions}\ru{двух решений}
+\end{and}\ru{и}
+\en{looking for}\ru{ищем}
+\en{their difference}\ru{их~разность}
+
+\begin{equation}
+..........
+..........
+\end{equation}
+
+\hspace*{-\parindent}
+\begin{minipage}{\linewidth}
+
+% ~ ~ ~ ~ ~
+\input{deformedrod.tex}
+% ~ ~ ~ ~ ~
+
+\hspace{\horizontalindent}%
+\en{The~uniqueness}\ru{Уникальность}
+\en{of the~solution}\ru{решения},
+\en{dis\-covered}\ru{открытая}
+\en{by~}G.\:Kirchhoff\ru{’ом}
+\en{for bodies}\ru{для тел}
+\en{with }\ru{с~}
+\en{the simply connected}\ru{одно\-св\'{я}зным}
+\en{contour}\ru{контуром}
+\stepcounter{footnote}\setcounter{auxfootnotecounter}{\value{footnote}}\footnotemark[ \value{auxfootnotecounter} ]\hbox{\hspace{-0.4ex},}
+\en{is contrary to}\ru{противоречит},
+\en{as it seems}\ru{\hbox{казалось~бы}},
+\en{the everyday experience}\ru{повседневному опыту}.
+\en{Imagine}\ru{Вообразим}
+\en{a~straight rod}\ru{прямой стержень}\en{,}
+\en{clamped}\ru{зажатый}
+\en{at the one end}\ru{на одном конц\'{е}}
+(the \inquotes{ \en{cantilever}\ru{конс\'{о}льный} })
+\en{and compressed}\ru{и~сжимаемый}
+\en{at the second end}\ru{на~втором конц\'{е}}
+\en{with a~longitudinal force}\ru{продольной силой}~(\figref{fig:deformedrod}).
+\en{When}\ru{Когда}
+\en{the~load}\ru{нагрузка}
+\en{is large enough}\ru{достаточно больш\'{а}я},
+\en{the~problem of statics}\ru{задача статики}
+\en{has}\ru{имеет}
+\en{the two solutions}\ru{два решения},
+\inquotes{\en{straight}\ru{прямое}} \en{and}\ru{и}~\inquotesx{\en{bent}\ru{изогнутое}}.
+\en{Such a~contradiction}\ru{такое противоречие}
+\en{with the~uniqueness theorem}\ru{с~теоремой единственности}
+\en{comes from}\ru{происходит от}
+\en{the nonlinearity of this problem}\ru{нелинейности этой задачи}.
+\en{If a~load is small}\ru{Если нагрузка мал\'{а}}
+( \en{infinitesimal}\ru{бесконечно мал\'{а} ),
+\en{then}\ru{то}
+\en{the~solution}\ru{решение}
+\en{is described}\ru{описывается}
+\en{by the linear equations}\ru{линейными уравнениями}
+\en{and}\ru{и}
+\en{is unique}\ru{единственно}.

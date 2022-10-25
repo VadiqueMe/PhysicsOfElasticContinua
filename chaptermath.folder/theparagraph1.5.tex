@@ -1,0 +1,263 @@
+\en{\section{Matrices, permutations and determinants}}
+
+\ru{\section{Матрицы, перестановки и определители}}
+
+\label{para:matrices+permutations+determinants}
+
+\en{The matrices}\ru{Матрицы}
+\en{are the convenient tool}\en{это удобный инструмент}
+\en{for solving}\ru{для решения}
+\en{the systems of linear equations}\ru{систем линейных уравнений}.
+\en{And for arranging of elements}\ru{И~для упорядочивания элементов}.
+\en{Any matrix has}\ru{У~любой матрицы}
+\en{the same number of elements}\ru{одно и то~же число элементов}
+\en{in each row}\ru{в~каждой строке}
+\en{and}\ru{и}
+\en{the same number of elements}\ru{одно и то~же число элементов}
+\en{in each column}\ru{в~каждом столбце}.
+
+\en{Do you need}\ru{Тебе нужны}
+\en{the two-dimensional arrays}\ru{двумерные массивы}?
+\en{The matrices}\ru{Матрицы}
+\en{can be presented}\ru{могут быть представлены}
+\en{as tables}\ru{как таблицы}\ru{,}
+\en{full of rows and columns}\ru{полные строк и~столбцов}.
+
+\en{Do you want}\ru{Ты хочешь}
+\en{a~rectangular arrangement}\ru{прямоугольное упорядочивание}
+\en{of your elements}\ru{твоих элементов}?
+\en{Matrices}\ru{Матрицы}
+\en{are full}\ru{полн\'{ы}}
+\en{of numbers and expressions}\ru{чисел и~выражений}
+\en{in the rows and columns}\ru{в~строках и~столбцах}.
+
+\ru{Ты знаешь}\en{Do you know}\ru{,}
+\en{that}\ru{что}
+\en{matrices}\ru{матрицы}
+\en{are sometimes called}\ru{иногда называют}
+\en{arrays}\ru{массивами}?
+
+%--------------------
+
+\subsection*{\en{Matrix dimensions}\ru{Размерности матрицы}}
+
+\en{Matrices}\ru{Матрицы}
+\en{come in all sizes}\ru{бывают всех размеров}\ru{,}
+\en{that are dimensions}
+\ru{которые и~есть размерности}.
+
+\en{The dimension of a~matrix}\ru{Размерность матрицы}
+\en{consists of}\ru{состоит из}
+\en{the number of rows}\ru{числ\'{а} строк},
+\en{then}\ru{затем}
+\en{a~multiplication sign}\ru{знака умножения}
+(\inquotes{×} \en{is used}\ru{используется}
+\en{the most often}\ru{чаще всего})\en{,}
+\en{and then}\ru{а~затем}
+\en{the number of columns}\ru{числ\'{а} столбцов}.
+
+{\small
+\noindent
+\en{Examples}\ru{Примеры}.
+
+\nopagebreak\vspace{.1em}
+\begin{gather*}
+\displaystyle
+\underset{ \raisemath{.1em}{ \scriptscriptstyle 3×3 } }{\bigl[ \hspace{.2ex} \mathcal{A} \hspace{.2ex} ]}
+\hspace{.1ex} = \hspace{-0.2ex} ......
+\end{gather*}
+
+Matrix ${[ \hspace{.2ex}\mathrm{A}\hspace{.2ex} ]}$ is a~${3{×}3}$ matrix, because it has 3~rows and 3~columns.
+Matrix ${[ \hspace{.2ex}\mathrm{B}\hspace{.2ex} ]}$ has 2~rows and 4~columns, so its dimension is~${2{×}4}$.
+Matrix ${[ \hspace{.2ex}\mathrm{C}\hspace{.2ex} ]}$ is a~column matrix (that is a~matrix with just one column), and its dimension is~${3{×}1}$.
+And ${[ \hspace{.2ex}\mathrm{D}\hspace{.2ex} ]}$ is a~row matrix with dimension~${1{×}6}$.
+\par}
+
+%--------------------
+
+\subsection*{\en{The matrix algebra}\ru{Матричная алгебра}}
+
+\en{The matrix algebra}\ru{Матричная алгебра}
+\en{includes}\ru{включает}
+\en{the linear operations}\ru{линейные операции}\:---
+\en{the addition of matrices}\ru{сложение матриц}
+\en{and}\ru{и}
+\en{the multiplication by scalar}\ru{умножение на скаляр}.
+
+\en{The dimension of a~matrix}\ru{Размерность матрицы}
+\en{is essential}\ru{существенна}
+\en{for the binary operations}\ru{для бинарных операций},
+\en{that is}\ru{то есть}
+\en{for operations}\ru{для операций}
+\en{involving}\ru{с~участием}
+\en{the two matrices}\ru{двух матриц}.
+
+\en{An~addition}\ru{Сложение}
+\en{or}\ru{или}
+\en{subtraction}\ru{вычитание}
+\en{of the two matrices}\ru{двух матриц}
+\en{is possible}\ru{возможно}
+\en{only}\ru{только}
+\en{if}\ru{если}
+\en{they have}\ru{они имеют}
+\en{the same sizes}\ru{те же размеры}.
+
+%----
+
+\subsection{\en{Matrix multiplication}\ru{Умножение матриц}}
+
+.................
+
+\nopagebreak\vspace{.1em}\begin{gather*}
+\displaystyle\underset{\raisemath{.1em}{\scriptscriptstyle m×n}}{[ \hspace{.2ex}\mathcal{A}\hspace{.2ex} ]} \hspace{.1ex}
+= \hspace{-0.2ex} \ldots
+\end{gather*}
+
+The resulting matrix, known as the matrix product, has the number of rows of the first matrix and the number of columns of the second matrix.
+
+%%(the matrix product is the product of multiplication of two matrices)
+
+
+
+
+
+
+\subsection*{\en{Square matrices}\ru{Квадратные матрицы}}
+
+....
+
+
+\subsection*{\en{Matrices and the one-dimensional arrays}\ru{Матрицы и одномерные массивы}}
+
+\en{The two indices of a~table}\ru{Два индекса таблицы}\en{ is}\ru{\:---} \en{more than}\ru{больше, чем}
+\en{the single index}\ru{единственный индекс}
+\en{of a~one-dimensional array}\ru{одномерного массива}.
+\en{Due to this}\ru{Из-за этого}\en{,}
+\en{an~one-dimensional array}\ru{одномерный массив}
+\en{could be}\ru{может быть}
+\en{presented}\ru{представлен}
+\en{as}\ru{как}
+\en{a~table of rows}\ru{таблица строк}
+\en{or}\ru{или}
+\en{as}\ru{как}
+\en{a~table of columns}\ru{таблица столбцов}.
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\scalebox{.9}{$
+\left[ \hspace{-0.1ex}
+\begin{array}{c@{\hspace{.5em}}c@{\hspace{.5em}}c}
+h_{1\hspace{-0.1ex}1} & h_{12} & h_{13}
+\end{array}
+\hspace{-0.1ex} \right]
+$}
+\hspace{-0.1ex} ,
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{or}\ru{либо}
+\en{the vertical}\ru{вертикальные}
+\en{tables}\ru{таблицы}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\scalebox{.9}{$
+\left[ \hspace{-0.1ex}
+\begin{array}{c}
+v_{1\hspace{-0.1ex}1} \\[-0.1em]
+v_{21} \\[-0.1em]
+v_{31}
+\end{array}
+\hspace{-0.1ex} \right]
+$}
+\hspace{-0.2ex} .
+\end{equation*}
+
+${
+\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \hspace{.4ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex} = 1
+}$
+
+...
+
+\begin{otherlanguage}{russian}
+
+\vspace{-0.2em}
+А~символ чётности перестановки через детерминант\:--- как
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+e_{pqr} \hspace{-0.2ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \delta_{pi} \delta_{\hspace{-0.1ex}qj} \delta_{rk} \hspace{-0.2ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \delta_{ip} \delta_{\hspace{-0.15ex}j\hspace{-0.1ex}q} \delta_{kr}
+\hspace{.1ex} ,
+\end{equation*}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{permutationsymbolasdeterminant}
+e_{pqr} \hspace{-0.1ex}
+= \hspace{.1ex}
+\operatorname{det}\hspace{-0.25ex} \scalebox{.92}{$\left[ \begin{array}{ccc}
+\delta_{1p} & \delta_{1q} & \delta_{1r} \\
+\delta_{2p} & \delta_{2q} & \delta_{2r} \\
+\delta_{3p} & \delta_{3q} & \delta_{3r}
+\end{array} \hspace{-0.1ex} \right]$} \hspace{-0.2ex}
+= \hspace{.1ex}
+\operatorname{det}\hspace{-0.25ex} \scalebox{.92}{$\left[ \begin{array}{ccc}
+\delta_{p1} & \delta_{p2} & \delta_{p3} \\
+\delta_{q1} & \delta_{q2} & \delta_{q3} \\
+\delta_{r1} & \delta_{r2} & \delta_{r3}
+\end{array} \hspace{-0.1ex} \right]$}
+\hspace{-0.2ex} .
+\end{equation}
+
+...
+
+\en{A~determinant}\ru{Определитель}
+\en{is not sensitive}\ru{не~чувствителен} \en{to transposing}\ru{к~транспонированию}:
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j} \hspace{-0.16ex}
+= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{j\hspace{-0.06ex}i} \hspace{-0.16ex}
+= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$j\hspace{-0.2ex}$,$\hspace{.1ex}i$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j}
+\hspace{.1ex} .
+\end{equation*}
+
+...
+
+\inquotes{\en{The determinant}\ru{Определитель} \en{of the matrix product}\ru{матричного произведения} \en{of the two matrices}\ru{двух матриц} \en{is equal}\ru{равен} \en{to the product of determinants}\ru{произведению определителей} \en{of these matrices}\ru{этих матриц}}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{determinantofmatrixproduct}
+\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$k$}}}{\operatorname{det}} \, B_{ik} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$k$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, C_{kj} \hspace{-0.15ex}
+= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, B_{ik} \hspace{.1ex} C_{kj}
+\end{equation}
+
+\[
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, B_{m\mathcolor{blue}{s}} \hspace{.1ex} C_{\mathcolor{blue}{s}n} \hspace{-0.2ex}
+= e_{pqr} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}\mathcolor{blue}{i}} C_{\mathcolor{blue}{i}p} \hspace{.1ex} B_{\hspace{-0.1ex}g\mathcolor{blue}{j}} C_{\hspace{-0.1ex}\mathcolor{blue}{j}\hspace{-0.1ex}q} \hspace{.1ex} B_{h\mathcolor{blue}{k}} C_{\mathcolor{blue}{k}r}
+\hspace{-0.2ex}
+\]
+
+\[
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{-0.2ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}i} B_{\hspace{-0.1ex}gj} B_{hk}
+\hspace{-0.2ex}
+\]
+
+\[
+e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
+= e_{pqr} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
+\hspace{-0.2ex}
+\]
+
+\[
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
+= \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.2ex} e_{pqr} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}i} B_{\hspace{-0.1ex}gj} B_{hk} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
+\hspace{-0.2ex}
+\]
+
+...
+
+Определитель компонент \en{of a~bivalent tensor}\ru{бивалентного тензора} \en{is invariant}\ru{инвариантен}, он не~меняется с~поворотом базиса
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+A'_{i\hspace{-0.1ex}j} \hspace{-0.16ex} = \cosinematrix{i'\hspace{-0.1ex}m} \hspace{.1ex} \cosinematrix{j'\hspace{-0.1ex}n} \hspace{.16ex} A_{mn}
+\end{equation*}
+

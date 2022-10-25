@@ -1,0 +1,41 @@
+\documentclass[tikz]{standalone}
+\begin{document}
+
+\begin{tikzpicture}
+
+   \def\ballradius{.5ex}
+
+   \def\ballxstep{4em}
+   \def\ballystep{4em}
+
+  \coordinate (ball1) at (-\ballxstep,\ballystep);
+  \coordinate (ball2) at (0,\ballystep);
+  \coordinate (ball3) at (\ballxstep,\ballystep);
+  \coordinate (ball4) at (-\ballxstep,0);
+  \coordinate (ball5) at (0,0);
+  \coordinate (ball6) at (\ballxstep,0);
+  \coordinate (ball7) at (-\ballxstep,-\ballystep);
+  \coordinate (ball8) at (0,-\ballystep);
+  \coordinate (ball9) at (\ballxstep,-\ballystep);
+  \coordinate (o) at (0,0);
+
+  \draw (ball1) -- (ball2) -- (ball3) circle (\ballradius} ;
+  \draw (ball4) -- (ball5) -- (ball6) circle (\ballradius} ;
+  \draw (ball7) -- (ball8) -- (ball9) circle (\ballradius} ;
+
+  \fill (ball1) circle (\ballradius} color{white} ;
+  \fill (ball2) circle (\ballradius} color{white} ;
+  \fill (ball3) circle (\ballradius} color{white} ;
+
+  \fill (ball4) circle (\ballradius} color{white} ;
+  \fill (ball5) circle (\ballradius} color{white} ;
+  \fill (ball6) circle (\ballradius} color{white} ;
+
+  \fill (ball7) circle (\ballradius} color{white} ;
+  \fill (ball8) circle (\ballradius} color{white} ;
+  \fill (ball9) circle (\ballradius} color{white} ;
+
+\end{tikzpicture}
+
+\end{document}
+
