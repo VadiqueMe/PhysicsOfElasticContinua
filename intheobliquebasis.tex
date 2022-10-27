@@ -1,0 +1,104 @@
+
+% some vector to draw
+\pgfmathsetmacro{\lengthofvector}{2.66}
+	\pgfmathsetmacro{\vectoranglefromz}{33}
+	\pgfmathsetmacro{\vectoranglefromx}{59}
+
+\tdplotsetmaincoords{33}{109} % orientation of camera
+
+% vectors of basis
+\pgfmathsetmacro{\firstlength}{0.8}
+	\pgfmathsetmacro{\firstanglefromz}{90} % first and second are xy plane
+	\pgfmathsetmacro{\firstanglefromx}{77} % first is not orthogonal to second
+\pgfmathsetmacro{\secondlength}{1.1}
+	\pgfmathsetmacro{\secondanglefromz}{90} % first and second are xy plane
+	\pgfmathsetmacro{\secondanglefromx}{0}
+\pgfmathsetmacro{\thirdlength}{1}
+	\pgfmathsetmacro{\thirdanglefromz}{-15}
+	\pgfmathsetmacro{\thirdanglefromx}{50}
+
+\vspace{-0.9em}
+\hspace{1.1em}\scalebox{.96}[.96]{%
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords]
+
+	\coordinate (O) at (0,0,0);
+
+	% draw axes and vectors of basis
+	\tdplotsetcoord{A1}{\firstlength}{\firstanglefromz}{\firstanglefromx}
+	\tdplotsetcoord{A2}{\secondlength}{\secondanglefromz}{\secondanglefromx}
+	\tdplotsetcoord{A3}{\thirdlength}{\thirdanglefromz}{\thirdanglefromx}
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 2.2*(A1) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A1)
+		node[pos=0.93, above, inner sep=0pt, outer sep=6pt] {${\bm{a}}_1$};
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.08*(A2) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A2)
+		node[pos=0.97, above left, inner sep=0pt, outer sep=3.3pt] {${\bm{a}}_2$};
+
+	\draw [line width=0.4pt, blue] (O) -- ($ 1.12*(A3) $);
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (A3)
+		node[pos=1.02, below right, inner sep=0pt, outer sep=7pt] {${\bm{a}}_3$};
+
+	% define vector by sperical coordinates {length}{angle from z}{angle from x}
+	% (plus it defines its projections)
+	\tdplotsetcoord{V}{\lengthofvector}{\vectoranglefromz}{\vectoranglefromx}
+
+	% get components of vector
+	\coordinate (ParallelToThird) at ($ (V) - (A3) $);
+	\coordinate (VcomponentXY) at (intersection of V--ParallelToThird and O--Vxy);
+
+	\coordinate (ParallelToSecond) at ($ (VcomponentXY) - (A2xy) $);
+	\coordinate (ParallelToFirst) at ($ (VcomponentXY) - (A1xy) $);
+
+	\coordinate (Vcomponent1) at (intersection of VcomponentXY--ParallelToSecond and O--A1);
+	\coordinate (Vcomponent2) at (intersection of VcomponentXY--ParallelToFirst and O--A2);
+
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (VcomponentXY); % projection on first & second vectors’ plane
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (VcomponentXY);
+	\draw [line width=0.4pt, dotted, color=black] (VcomponentXY) -- (Vcomponent1);
+	\draw [line width=0.4pt, dotted, color=black] (VcomponentXY) -- (Vcomponent2);
+
+	% draw parallelopiped
+	\coordinate (onPlane23) at ($ (Vcomponent2) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (Vcomponent2) -- (onPlane23);
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (onPlane23);
+
+	\coordinate (onPlane13) at ($ (Vcomponent1) + (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (Vcomponent1) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=black] (V) -- (onPlane13);
+
+	\coordinate (onAxis3) at ($ (V) - (VcomponentXY) $);
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=black] (onPlane13) -- (onAxis3);
+	\draw [line width=0.4pt, dotted, color=black] (onPlane23) -- (onAxis3);
+
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onPlane13);
+	\draw [line width=0.4pt, dotted, color=black] (O) -- (onPlane23);
+
+	% draw components of vector
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (Vcomponent1)
+		node[pos=0.6, below, shape=circle, fill=white, inner sep=-2pt, outer sep=2pt] {${v^1 \hspace{-0.1ex} \bm{a}_1}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(Vcomponent1) -- (VcomponentXY)
+		node[pos=0.4, below right, fill=white, shape=circle, inner sep=0pt, outer sep=4pt] {${v^2 \hspace{-0.1ex} \bm{a}_2}$};
+
+	\draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(VcomponentXY) -- (V)
+		node[pos=0.55, above right, shape=circle, fill=white, inner sep=0.3pt, outer sep=6.2pt] {${v^3 \hspace{-0.1ex} \bm{a}_3}$};
+
+	% draw vector
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.68, above, fill=white, inner sep=1pt, outer sep=5pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+\end{tikzpicture}}
+
