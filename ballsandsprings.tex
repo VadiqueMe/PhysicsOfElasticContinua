@@ -1,4 +1,7 @@
 \documentclass[tikz]{standalone}
+
+\usepackage{tikz}
+
 \begin{document}
 
 \begin{tikzpicture}
@@ -17,25 +20,51 @@
   \coordinate (ball7) at (-\ballxstep,-\ballystep);
   \coordinate (ball8) at (0,-\ballystep);
   \coordinate (ball9) at (\ballxstep,-\ballystep);
-  \coordinate (o) at (0,0);
 
-  \draw (ball1) -- (ball2) -- (ball3) circle (\ballradius} ;
-  \draw (ball4) -- (ball5) -- (ball6) circle (\ballradius} ;
-  \draw (ball7) -- (ball8) -- (ball9) circle (\ballradius} ;
+  \coordinate (m) at (0,0);
 
-  \fill (ball1) circle (\ballradius} color{white} ;
-  \fill (ball2) circle (\ballradius} color{white} ;
-  \fill (ball3) circle (\ballradius} color{white} ;
+  \draw (ball1) circle(\ballradius) color(black) ;
+  \draw (ball2) circle(\ballradius) color(black) ;
+  \draw (ball3) circle(\ballradius) color(black) ;
+  \draw (ball4) circle(\ballradius) color(black) ;
+  \draw (ball5) circle(\ballradius) color(black) ;
+  \draw (ball6) circle(\ballradius) color(black) ;
+  \draw (ball7) circle(\ballradius) color(black) ;
+  \draw (ball8) circle(\ballradius) color(black) ;
+  \draw (ball9) circle(\ballradius) color(black) ;
 
-  \fill (ball4) circle (\ballradius} color{white} ;
-  \fill (ball5) circle (\ballradius} color{white} ;
-  \fill (ball6) circle (\ballradius} color{white} ;
+  \fill (ball1) circle(\ballradius) color(white) ;
+  \fill (ball2) circle(\ballradius) color(white) ;
+  \fill (ball3) circle(\ballradius) color(white) ;
+  \fill (ball4) circle(\ballradius) color(white) ;
+  \fill (ball5) circle(\ballradius) color(white) ;
+  \fill (ball6) circle(\ballradius) color(white) ;
+  \fill (ball7) circle(\ballradius) color(white) ;
+  \fill (ball8) circle(\ballradius) color(white) ;
+  \fill (ball9) circle(\ballradius) color(white) ;
 
-  \fill (ball7) circle (\ballradius} color{white} ;
-  \fill (ball8) circle (\ballradius} color{white} ;
-  \fill (ball9) circle (\ballradius} color{white} ;
+   %argument is where to draw
+   \def\drawBlick[1] {
+      \draw [ color=black ] (#1)
+      arc [ start angle=-80, end angle=-10, radius=.7*\ballradius ] ;
+  }
+
+  \drawBlick(m)
+  \drawBlick(ball1)
+  \drawBlick(ball2)
+  \drawBlick(ball3)
+  \drawBlick(ball4)
+  \drawBlick(ball5)
+  \drawBlick(ball6)
+  \drawBlick(ball7)
+  \drawBlick(ball8)
+  \drawBlick(ball9)
+
+   %%\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+      %%circle(m) -- (0, 1, 0)
+      %%node [ pos=.9, above, xshift=.2em, yshift=.1em ]
+      %%{$ some text $};
 
 \end{tikzpicture}
 
 \end{document}
-

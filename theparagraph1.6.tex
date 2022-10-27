@@ -42,15 +42,16 @@
 \setlength{\parskip}{\spacebetweenparagraphs}
 
 \begin{wrapfigure}[8]{R}{.32\textwidth}
-\makebox[.36\textwidth][c]{\hspace{.5em}\begin{minipage}[t]{.36\textwidth}
+\makebox[.36\textwidth][c]{\hspace{.5em} \begin{minipage}[t]{.36\textwidth}
 \vspace{-1.5em}
 \hspace{1.25em}\scalebox{.9}{%
-\begin{tikzpicture}[scale=0.8]
 
-\draw [line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]}]
-	(0, 0) -- (2.4, -0.8)
-	node[above=1.7mm, xshift=-1.8mm] {$\bm{a}$};
-\draw [line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]}]
+\begin{tikzpicture}[scale=.8]
+
+   \draw [line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]}]
+      (0, 0) -- (2.4, -0.8)
+      node[ above=1.7mm, xshift=-1.8mm ] {$\bm{a}$} ;
+      \draw [ line width=1.6pt, black, -{Stealth[round, length=4.5mm, width=3mm]} ]
 	(0, 0) -- (1.6, 0.8)
 	node[midway, above=0.8mm] {$\bm{b}$};
 
@@ -75,14 +76,15 @@
 \end{wrapfigure}
 
 \en{The multipliers}\ru{Сомножители}
-\en{of~}\hbox{ \hspace{-0.2ex}\inquotes{$ {
+\en{of the~}\hbox{ \hspace{-0.2ex}\inquotes{$ {
    \hspace{-0.25ex} \times \hspace{-0.1ex}
 } $}\hspace{-0.2ex}-\en{product}\ru{произведения}}
 ${\bm{c} = \bm{a} \times \bm{b}}$
 \en{determine}\ru{определяют}
 \en{the~result’s direction}\ru{направление результата}
 \en{in space}\ru{в~пространстве},
-\en{except the sign}\ru{кроме знака}
+\en{with an~accuracy}\ru{с~точностью}
+\en{up to the sign}\ru{до знака}
 \figref{fig:crossproduct}.
 
 \en{Once you pick}\ru{Как только ты выбираешь}
@@ -294,7 +296,10 @@ ${\bm{v} = \bm{v}_{\raisemath{-0.1em}{0}} + \hspace{.15ex} \bm{\omega} \hspace{-
 $\bm{\omega}$ \en{is pseudovector there}\ru{там\:--- псевдовектор},
 \en{and}\ru{и} \en{with the~cross product}\ru{с~векторным произведением} \en{two}\ru{два} \inquotes{\en{pseudo}\ru{псевдо}} \en{give}\ru{дают} ${(-1)^2 = 1}$ (\inquotes{\en{mutually compensate each other}\ru{взаимно компенсируют друг друга}}).
 
-\en{Here is}\ru{Вот} \en{the}\ru{тензор} Levi\hbox{-}Civita\ru{\hspace{-0.1ex}’ы}\en{ tensor}\:--- \en{the volumetric}\ru{волюметрический} \en{tensor of third complexity}\ru{тензор третьей сложности}
+\en{The tensor}\ru{Тензор}
+\en{of the permutations parity}\ru{чётности перестановок},
+\en{the volumetric}\ru{объёмометрический}
+\en{tensor of third complexity}\ru{тензор третьей сложности}
 
 \nopagebreak\vspace{-0.15em}\begin{equation}\label{levicivitaintro}
 \levicivitatensor = \levicivita_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.2ex} \bm{e}_i \bm{e}_j \bm{e}_k \hspace{.1ex}, \:\:

@@ -19,35 +19,18 @@ $\bm{Q}$.
 от главных инвариантов~\chapdotpararef{chapter:mathapparatus}{para:eigenvectorseigenvalues}:
 
 \begin{equation}
-\potential = A \mathrm{I}_1 ^2 + B \mathrm{II}_2
+2 \potential = A \mathrm{I}_1 ^2 + B \mathrm{II}_2
 .
 \end{equation}
 
 $\potential(\infinitesimaldeformation)$ это квадратичная функция
-(или \inquotes{форма})
+(или \inquotes{квадратичная форма})
 
-...........
-
-\potential = A \mathrm{I}_1 ^2 + B 
-
-
-\begin{equation*}
-................
-\end{equation*}
-
-.............
-.............
-.............
-...............
-...............
-...............
-
-%%\en{the potential energy density}\ru{плотность потенциальной энергии}
-%%\en{from the internal forces}\ru{от внутренних сил}
-%%$\potential$
-
-%\en{the complementary energy}
-%\ru{дополнительная энергия}
+\begin{equation}
+2 \potential( \lineardeformation )
+= A \lineardeformation_\tracedot \lineardeformation_\tracedot
++ 2 B \lineardeformation \dotp \lineardeformation
+\end{equation}
 
 \en{In~the~linear theory}\en{,}\ru{В~линейной теории}
 \en{the~}\inquotes{ \en{complementary energy}\ru{дополнительная энергия} }
@@ -55,15 +38,13 @@ $\potential(\infinitesimaldeformation)$ это квадратичная функ
 \en{the }\en{elastic potential}\ru{упругому потенциалу}}.
 
 \nopagebreak\vspace{-0.1em}
-\begin{equation}\label{the Legendre transform}
-\begin{gathered}
+\begin{gather}\label{the Legendre transform}
 \infinitesimaldeformation
 = \scalebox{.9}{$
    \displaystyle
-   \frac{ \raisemath{-0.2em}{
-      \partial \hspace{.1ex} \widehat{\potential}
-   } }
-   { \raisemath{.04em}{\partial \linearstress} }
+   \frac{
+      { \raisemath{-0.2em}{ \partial \hspace{.1ex} \widehat{\potential} } }{ \raisemath{.04em}{\partial \linearstress} }
+   }
 $}
 = \hspace{-0.12ex} \pliabilitytensor \dotdotp \linearstress
 \hspace{.1ex} =
@@ -71,21 +52,13 @@ $}
 \hspace{.1ex} ,
 \\
 %the complementary energy
-\widehat{\potential}( \hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
+\widehat{\potential}( \hspace{-0.1ex} \linearstress \hspace{.12ex} ) \hspace{-0.1ex}
 = \linearstress \dotdotp \infinitesimaldeformation
 - \hspace{.1ex} \potential(\infinitesimaldeformation)
 \hspace{.1ex} .
-\end{gathered}
-\end{equation}\:---
-\en{the }\ru{преобразование }Legendre\ru{’а}\en{ transform}\ru{ (Лежандра)}.
+\end{gather}
+%\en{the }\ru{преобразование }Legendre\ru{’а}\en{ transform}\ru{ (Лежандра)}.
 
-..............
-............
-
-\begin{equation*}
-.........................
-.,,......................
-\end{equation*}
 
 %\{chapter:mathapparatus}{para:tensors.symmetric+skewsymmetric})
 

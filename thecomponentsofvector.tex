@@ -1,0 +1,58 @@
+
+% the three parameters for the vector
+\pgfmathsetmacro{\lengthofvector}{2.5}
+\pgfmathsetmacro{\anglefromz}{44}
+\pgfmathsetmacro{\anglefromx}{70}
+
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords]
+
+   \coordinate (O) at (0, 0, 0);
+
+   % draw axes
+   \draw [line width=.4pt, blue] (O) -- (1.22, 0, 0);
+   \draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+      (O) -- (1, 0, 0)
+      node[pos=.9, above, xshift=-0.6em, yshift=.1em]
+      {$ \bm{e}_1 $};
+
+      \draw [line width=.4pt, blue] (O) -- (0, 1.88, 0);
+      \draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+         (O) -- (0, 1, 0)
+         node[pos=.9, above, xshift=.2em, yshift=.1em]
+         {$ \bm{e}_2 $};
+
+      \draw [line width=.4pt, blue] (O) -- (0, 0, 1.22);
+      \draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+         (O) -- (0, 0, 1)
+         node[pos=.9, below left, xshift=-0.1em, yshift=.5em]
+         {$ \bm{e}_3 $};
+
+      % draw vector
+      \tdplotsetcoord{V}{\lengthofvector}{\anglefromz}{\anglefromx} % {length}{angle from z}{angle from x}
+      % it also defines projections of point
+      \draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+      (O) -- (V)
+      node[pos=.8, above, yshift=.2em] { \scalebox{1.2}{$\bm{v}$} };
+
+      % draw components of vector
+      %%\draw [line width=.4pt, dotted, color=black] (O) -- (Vxy);
+      \draw [line width=.4pt, dotted, color=black] (Vxy) -- (Vy);
+
+      \draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+         -{Stealth[round, length=4mm, width=2.4mm]}]
+         (O) -- (Vx)
+         node[pos=.5, above, xshift=-0.9em]
+         {${ v_1 \hspace{-0.1ex} \bm{e}_1 }$};
+
+      \draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+         -{Stealth[round, length=4mm, width=2.4mm]}]
+         (Vx) -- (Vxy)
+         node[pos=.53, below left, xshift=.3em] {${ v_2 \bm{e}_2 }$};
+
+
+      \draw [color=black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+            -{Stealth[round, length=4mm, width=2.4mm]}]
+            (Vxy) -- (V)
+            node[pos=.5, above right, yshift=-0.2em] {${ v_3 \bm{e}_3 }$};
+
+\end{tikzpicture}}
