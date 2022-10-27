@@ -1,0 +1,113 @@
+
+\begin{tikzpicture}[scale=3.2, tdplot_main_coords]
+
+	\coordinate (O) at (0, 0, 0) ;
+
+	% three coordinates of vector
+	\pgfmathsetmacro{\Vx}{0.88}
+	\pgfmathsetmacro{\Vy}{1.33}
+	\pgfmathsetmacro{\Vz}{2.2}
+	\coordinate (Vx) at (\Vx, 0, 0) ;
+	\coordinate (Vy) at (0, \Vy, 0) ;
+	\coordinate (Vz) at (0, 0, \Vz) ;
+	\coordinate (V) at ($ (Vx) + (Vy) + (Vz) $) ;
+
+	% draw vector
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=2.8mm]}]
+		(O) -- (V)
+		node[pos=0.93, below right, inner sep=0pt, outer sep=4.4pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	\tdplotsetrotatedcoords{21}{-15}{-43} % 3-2-3 rotation sequence
+	\begin{scope}[tdplot_rotated_coords]
+
+	% draw axes
+
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (1,0,0)
+		node[pos=0.86, above left, inner sep=0pt, outer sep=2.5pt] {${\bm{e}}_1$};
+
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,1,0)
+		node[pos=0.9, above, inner sep=0pt, outer sep=5pt] {${\bm{e}}_3$};
+
+	\draw [line width=1.25pt, blue, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0,0,1)
+		node[pos=0.92, below left, inner sep=0pt, outer sep=3.3pt] {${\bm{e}}_2$};
+
+	%%\draw [line width=.4pt, dotted, color=blue] (1,0,0) -- (0,1,0);
+	%%\draw [line width=.4pt, dotted, color=blue] (0,1,0) -- (0,0,1);
+	%%\draw [line width=.4pt, dotted, color=blue] (0,0,1) -- (1,0,0);
+
+	\end{scope}
+
+	% get projections of vector
+	\tdplottransformmainrot{\Vx}{\Vy}{\Vz}
+	\pgfmathsetmacro{\Vrotx}{\tdplotresx}
+	\pgfmathsetmacro{\Vroty}{\tdplotresy}
+	\pgfmathsetmacro{\Vrotz}{\tdplotresz}
+	%%\draw [tdplot_rotated_coords, line width=1.6pt, blue, -{Stealth[round, length=5mm, width=2.8mm]}]
+		%%(O) -- (\Vrotx, \Vroty, \Vrotz)
+		%%node[pos=0.8, above left, inner sep=0pt, outer sep=2.5pt] {\scalebox{1.2}[1.2]{${\bm{v}}$}};
+
+	% draw components of vector
+
+	\draw [tdplot_rotated_coords, color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (\Vrotx, 0, 0)
+		node[pos=0.48, below right, inner sep=0pt, outer sep=2.5pt] {${v_1 \hspace{-0.1ex} \bm{e}_1}$};
+
+	\draw [tdplot_rotated_coords, color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, 0) -- (\Vrotx, 0, \Vrotz)
+		node[pos=0.47, below left, inner sep=0pt, outer sep=3.3pt] {${v_2 \bm{e}_2}$};
+
+	\draw [tdplot_rotated_coords, color=blue!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, \Vrotz) -- (\Vrotx, \Vroty, \Vrotz)
+		node[pos=0.5, above, inner sep=0pt, outer sep=3.5pt] {${v_3 \bm{e}_3}$};
+
+	\tdplotsetrotatedcoords{2}{-8}{28} % 3-2-3 rotation sequence
+
+	% draw axes
+
+	\draw [tdplot_rotated_coords, line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (1, 0, 0)
+		node[pos=.86, above right, inner sep=0pt, outer sep=1.3pt] {${\bm{e}'\hspace{-0.6ex}}_{\raisemath{-0.15ex}{1}}$};
+
+	\draw [tdplot_rotated_coords, line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0, 1, 0)
+		node[pos=.9, above left, inner sep=0pt, outer sep=2.7pt] {${\bm{e}'\hspace{-0.6ex}}_{\raisemath{-0.15ex}{3}}$};
+
+	\draw [tdplot_rotated_coords, line width=1.25pt, red, -{Latex[round, length=3.6mm, width=2.4mm]}]
+		(O) -- (0, 0, 1)
+		node[pos=.98, below right, inner sep=0pt, outer sep=4.4pt] {${\bm{e}'\hspace{-0.6ex}}_{\raisemath{-0.15ex}{2}}$};
+
+	%%\draw [tdplot_rotated_coords, line width=.4pt, dotted, color=red] (1, 0, 0) -- (0, 1, 0);
+	%%\draw [tdplot_rotated_coords, line width=.4pt, dotted, color=red] (0, 1, 0) -- (0, 0, 1);
+	%%\draw [tdplot_rotated_coords, line width=.4pt, dotted, color=red] (0, 0, 1) -- (1, 0, 0);
+
+	% get projections of vector
+	\tdplottransformmainrot{\Vx}{\Vy}{\Vz}
+	\pgfmathsetmacro{\Vrotx}{\tdplotresx}
+	\pgfmathsetmacro{\Vroty}{\tdplotresy}
+	\pgfmathsetmacro{\Vrotz}{\tdplotresz}
+
+	% draw components of vector
+
+	\draw [tdplot_rotated_coords, color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(O) -- (\Vrotx, 0, 0)
+		node[pos=.81, below left, inner sep=0pt, outer sep=2pt] {${v'_{\raisemath{-0.15ex}{\hspace{-0.1ex}1}} \hspace{-0.1ex} \bm{e}'_{\raisemath{-0.15ex}{1}}}$};
+
+	\draw [tdplot_rotated_coords, color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, 0) -- (\Vrotx, 0, \Vrotz)
+		node[pos=.4, above right, inner sep=0pt, outer sep=3.3pt] {${v'_{\raisemath{-0.15ex}{\hspace{-0.1ex}2}} \bm{e}'_{\raisemath{-0.15ex}{2}}}$};
+
+	\draw [tdplot_rotated_coords, color=red!50!black, line width=1.6pt, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth,
+		-{Stealth[round, length=4mm, width=2.4mm]}]
+		(\Vrotx, 0, \Vrotz) -- (\Vrotx, \Vroty, \Vrotz)
+		node[pos=.26, below right, inner sep=0pt, outer sep=1pt] {${v'_{\raisemath{-0.15ex}{\hspace{-0.1ex}3}} \bm{e}'_{\raisemath{-0.15ex}{3}}}$};
+
+\end{tikzpicture}
+

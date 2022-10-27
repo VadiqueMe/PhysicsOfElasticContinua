@@ -93,7 +93,7 @@ ${\stiffnesstensor_{\hspace{.12ex}
 }$.
 \en{Therefrom}\ru{Оттог\'{о}} 
 \en{we have}\ru{мы имеем}
-36~\en{components}\ru{компонент}
+36~\en{constants}\ru{констант}
 \en{out of}\ru{из}
 ${ 3^4 \hspace{-0.25ex} = \hspace{-0.12ex} 81 }$
 \inquotes{\en{have a~twin}\ru{имеют двойник\'{а}}}
@@ -106,10 +106,10 @@ ${ 3^4 \hspace{-0.25ex} = \hspace{-0.12ex} 81 }$
 \en{due}\ru{из\hbox{-}за}
 \en{to the~symmetry}\ru{симметрии}
 \en{of the infinitesimal deformation tensor}\ru{тензора бесконечномалой деформации}~$\infinitesimaldeformation$,
-\en{the tensor}\ru{тензор}~$\stiffnesstensor$
-\en{is symmetric}\ru{симметричен}
-\ru{ещё~и~}\en{also inside}\ru{внутри}
-\en{each pair of~indices}\ru{каждой пары индексов}:
+\en{the stiffness tensor}\ru{тензор жёсткости}~$\stiffnesstensor$
+\en{is also symmetric}\ru{симметричен также}
+\en{inside}\ru{внутри}
+\en{the each pair of~indices}\ru{каждой пары индексов}:
 ${
    A^{i\hspace{-0.1ex}j\hspace{-0.06ex}k\hspace{.06ex}l} \hspace{-0.16ex}
    = A^{j\hspace{-0.06ex}ik\hspace{.06ex}l} \hspace{-0.16ex}
@@ -120,11 +120,13 @@ $).
 \en{This}\ru{Это}
 \en{reduces}\ru{снижает}
 \en{the number}\ru{число}
-\en{of the independent components}\ru{независимых компонент}
+\en{of the independent constants}\ru{независимых констант}
+( \inquotes{\en{elastic moduli}\ru{упругих модулей}} )
 \en{to}\ru{до}~21:
 
 \nopagebreak\vspace{-0.25em}
-\begin{equation*}\scalebox{.8}{$
+\begin{equation*}
+\scalebox{.8}{$
    \begin{array}{l}
    \scalebox{1.16}{$
       A^{abcd^{\mathstrut}} = A^{cdab} = A^{bacd} = A^{abdc}
@@ -189,7 +191,7 @@ $}
 \end{equation*}
 
 \vspace{-0.2em}
-\en{The components}\ru{Компоненты}
+\en{The moduli}\ru{Модули}
 \en{of the stiffness tensor}\ru{тензора жёсткости}
 \en{of the 4th complexity}\ru{четвёртой сложности}
 \en{are often written}\ru{часто записывают}
@@ -213,7 +215,7 @@ $}
       \color{gray}{$ a_{16} $} & \color{gray}{$ a_{26} $} & \color{gray}{$ a_{36} $} & \color{gray}{$ a_{46} $} & \color{gray}{$ a_{56} $} & a_{6}
    \end{matrix}
    \hspace{.32em} \right]
-$}
+$\end{gather}
 %
 \hspace{-0.2ex} \equiv \hspace{-0.2ex}
 %
@@ -337,7 +339,7 @@ a_{45} \varepsilon_{xz} \hspace{-0.2ex}
 \en{When}\ru{Когда}
 \ru{добавляется }\en{a~material symmetry}\ru{материальная симметрия}\en{ is added},
 \en{the number}\ru{число}
-\en{of the independent components}\ru{независимых компонент}
+\en{of the independent moduli}\ru{независимых модулей}
 \en{of the tensor}\ru{тензора}~${\stiffnesstensor}$
 \en{decreases}\ru{уменьшается}.
 
@@ -568,11 +570,11 @@ $\varvector{\bm{o}}$
 \en{along}\ru{вдоль}~$z$.
 \en{Let’s write}\ru{Распишем}
 \en{this equation}\ru{это равенство}
-\en{in components}\ru{в~компонентах}
-(\en{it must be true}\ru{оно должно быть истиной}
+\en{in components}\ru{в~компонентах}.
+(\en{It must be true}\ru{оно должно быть истиной}
 \en{for}\ru{для}
 \en{any}\ru{любых}
-\en{deformations}\ru{деформаций})
+\en{deformations}\ru{деформаций}~$\infinitesimaldeformation$)
 
 .......................
 .......................
@@ -702,9 +704,9 @@ a_4 \withtheindexofperpendicularity{\infinitesimaldeformation}
 ( \en{triclinic}\ru{триклинная}, \en{monoclinic}\ru{моноклинная}, \en{rhombic}\ru{ромбическая}, \en{tetragonal}\ru{тетрагональная} \en{and others}\ru{и~другие}~\cite{chernyh-anisotropicelasticity} ).
 \en{The each case of symmetry}\ru{Каждый случай симметрии}
 \en{is characterized}\ru{характеризуется}
-\en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~\bm{Q}.
+\en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~\orthogonaltensor.
 \en{The set must solve the equation}\ru{Набор должен решать уравнение}
-${ \bm{Q} \dotp \bm{Q}^\T = \UnitDyad }$
+${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$
 ( \en{rotations}\ru{повороты} \en{and}\ru{и}~\en{reflections}\ru{отражения} )
 \en{and}\ru{и}
 \en{to satisfy}\ru{удовлетворять}
@@ -713,19 +715,19 @@ ${ \bm{Q} \dotp \bm{Q}^\T = \UnitDyad }$
 \noindent
 \begin{equation}\label{Hooke's law for the symmetric crystals}
    \stiffnesstensor \dotdotp
-   \Bigl( \bm{Q} \dotp \lineardeformation \dotp \bm{Q}^\T \Bigr)
-   = \bm{Q} \dotp
+   \Bigl( \orthogonaltensor \dotp \lineardeformation \dotp \orthogonaltensor^\T \Bigr)
+   = \orthogonaltensor \dotp
    \Bigl( \stiffnesstensor \dotdotp \lineardeformation \Bigr)
    \dotp
-   \bm{Q}^\T
+   \orthogonaltensor^\T
 \end{equation}
 
 \en{The each}\ru{Каждый}
 \en{case of symmetry}\ru{случай симметрии}
 \en{is characterized}\ru{характеризуется}
-\en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\bm{Q}$\ru{,}
+\en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\orthogonaltensor$\ru{,}
 \en{that satisfies the equation}\ru{которые удовлетворяют уравнению}
-${ \bm{Q} \dotp \bm{Q}^\T = \UnitDyad }$,
+${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$,
 \en{that is}\ru{то есть}%\en{,}
 \en{rotations}\ru{повороты}
 \en{and }\ru{и~}\en{reflections}\ru{отражения}
@@ -733,24 +735,19 @@ ${ \bm{Q} \dotp \bm{Q}^\T = \UnitDyad }$,
 
 
 
-which depends only on invariants from the solution of the characteristic equation
 
 \en{a~function}\ru{функция}\ru{,}
 \en{its arguments are only invariants}\ru{её аргументы суть только инварианты}
-en{}\ru{из решения характеристического уравнения}~\eqref{......}.
-
-
-
-Проще принять, что
 
 функция с членами второй степени, но не выше
 function with members of the second degree, but not higher
 
 
 \en{For an~isotropic material}\ru{Для изотропного материала}\en{,}
- \eqref{the Hooke's law for the symmetric crystals} \en{is satisfied}\ru{удовлетворяется}
-\en{by any orthogonal tensor}\ru{любым ортогональным тензором}~$\bm{Q}$.
-\en{It’s easier to accept that}\ru{Проще принять, что}~${ \potential(\lineardeformation) }$
+ \eqref{the Hooke's law for symmetric crystals} \en{is satisfied}\ru{удовлетворяется}
+\en{by any orthogonal tensor}\ru{любым ортогональным тензором}~$\orthogonaltensor$.
+\en{It’s easier to accept that}\ru{Проще принять, что}
+\en{the elastic potential}\ru{упругий потенциал}~${ \potential(\lineardeformation) }$
 \en{becomes an isotropic function}\ru{становится изотропной функцией}\ru{,}
 \en{which depends only on invariants}\ru{которая зависит лишь от инвариантов}
 \en{from the solution of the characteristic equation}\ru{из решения характеристического уравнения}~\eqref{}
