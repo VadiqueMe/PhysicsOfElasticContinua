@@ -191,25 +191,26 @@ $}
 \vspace{-0.2em}
 \en{The components}\ru{Компоненты}
 \en{of the stiffness tensor}\ru{тензора жёсткости}
+\en{of the 4th complexity}\ru{четвёртой сложности}
 \en{are often written}\ru{часто записывают}
 \en{as}\ru{как}
 \en{the~symmetric}\ru{симметричной}
-\en{6×6 matrix}\ru{матрицей 6×6}
+\ru{матрицей }${6 \times 6}$\en{ matrix}
 
 \nopagebreak\vspace{-.3ex}
 \begin{gather}
 \displaystyle
-\underset{ \raisemath{.1em}{\scriptscriptstyle 6×6} }{ [ \hspace{.2ex} \mathcal{A} \hspace{.2ex} ] }
+\underset{ \raisemath{.1em}{ \scriptscriptstyle{$ 6 \times 6 $} } }{ \bigl[ \hspace{.2ex} \mathcal{A} \hspace{.2ex} \bigr] }
 \hspace{.12ex} = \hspace{-0.2ex}
 \scalebox{.82}{$
    \left[ \hspace{.4em}
    \begin{matrix}
       a_{1} & a_{12} & a_{13} & a_{14} & a_{15} & a_{16} \\
-      \color{gray}{a_{12}} & a_{2} & a_{23} & a_{24} & a_{25} & a_{26} \\
-      \color{gray}{a_{13}} & \color{gray}{a_{23}} & a_{3} & a_{34} & a_{35} & a_{36} \\
-      \color{gray}{a_{14}} & \color{gray}{a_{24}} & \color{gray}{a_{34}} & a_{4} & a_{45} & a_{46} \\
-      \color{gray}{a_{15}} & \color{gray}{a_{25}} & \color{gray}{a_{35}} & \color{gray}{a_{45}} & a_{5} & a_{56} \\
-      \color{gray}{a_{16}} & \color{gray}{a_{26}} & \color{gray}{a_{36}} & \color{gray}{a_{46}} & \color{gray}{a_{56}} & a_{6}
+      \color{gray}{$ a_{12} $} & a_{2} & a_{23} & a_{24} & a_{25} & a_{26} \\
+      \color{gray}{$ a_{13} $} & \color{gray}{$ a_{23} $} & a_{3} & a_{34} & a_{35} & a_{36} \\
+      \color{gray}{$ a_{14} $} & \color{gray}{$ a_{24} $} & \color{gray}{$ a_{34} $} & a_{4} & a_{45} & a_{46} \\
+      \color{gray}{$ a_{15} $} & \color{gray}{$ a_{25} $} & \color{gray}{$ a_{35} $} & \color{gray}{$ a_{45} $} & a_{5} & a_{56} \\
+      \color{gray}{$ a_{16} $} & \color{gray}{$ a_{26} $} & \color{gray}{$ a_{36} $} & \color{gray}{$ a_{46} $} & \color{gray}{$ a_{56} $} & a_{6}
    \end{matrix}
    \hspace{.32em} \right]
 $}
@@ -261,8 +262,7 @@ $}
      \color{gray}{ A^{2313) } &
      A^{2323}
 \end{matrix}
-\hspace{.4em} \right]
-$}
+\hspace{.4em} \right] $}
 \end{gather}
 
 \vspace{.1em}
@@ -270,11 +270,11 @@ $}
 \en{in the Cartesian coordinates}\ru{в~декартовых координатах}
 $x$,\:$y$,\:$z$
 \en{the quadratic form}\ru{квадратичная форма}
-\en{of the elastic energy}\ru{упругой энергии}
+\en{of the elastic energy density}\ru{плотности упругой энергии}
 ${\potential( \hspace{-0.1ex}
    \infinitesimaldeformation
-   \hspace{-0.1ex} ) \hspace{-0.2ex}
-   = \hspace{.1ex}
+   \hspace{-0.1ex} )
+   \hspace{-0.2ex} = \hspace{.1ex}
    \smallerdisplaystyleonehalf \hspace{.25ex}
    \infinitesimaldeformation
    \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
@@ -282,8 +282,8 @@ ${\potential( \hspace{-0.1ex}
    \dotdotp \hspace{-0.1ex}
    \infinitesimaldeformation
 }$
-\en{is pretty}\ru{довольно\hbox{-}таки}
-\en{cumbersome}\ru{громоздкая}:
+\en{looks pretty}\ru{выглядит весьма}
+\en{huge}\ru{громоздкой}:
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{elasticenergylooongcartesian}
@@ -677,7 +677,7 @@ a_5 \hspace{-.2ex} = a_6
    \bm{e}_{2} = \bm{j}
 $),
 \en{we can}\ru{можем}
-\en{write down}\ru{записать}
+\en{write}\ru{записать}
 \ru{закон }\en{the }Hooke’\en{s}\ru{а}\en{ law}
 \en{for}\ru{для}
 \en{a~transversally isotropic}\ru{трансверсально изотропного}
@@ -721,18 +721,37 @@ ${ \bm{Q} \dotp \bm{Q}^\T = \UnitDyad }$
 \end{equation}
 
 \en{The each}\ru{Каждый}
-\en{case of the symmetry}\ru{случай симметрии}
+\en{case of symmetry}\ru{случай симметрии}
 \en{is characterized}\ru{характеризуется}
 \en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\bm{Q}$\ru{,}
 \en{that satisfies the equation}\ru{которые удовлетворяют уравнению}
-${ \bm{Q} \dotp \bm{Q}^\T = \UnitDyad }$
-( то есть \en{rotations}\ru{повороты} \en{and }\ru{и~}\en{reflections}\ru{отражения} ).
-
-
-Для изотропного материала \eqref{Hooke's law for the symmetric crystals} удовлетворяется любым ортогональным тензором.
-Проще принять, что ${ \potential(\lineardeformation) }$ становится изотропной функцией и~зависит лишь от инвариантов
-из решения характеристического уравнения~\eqref{}
+${ \bm{Q} \dotp \bm{Q}^\T = \UnitDyad }$,
+\en{that is}\ru{то есть}%\en{,}
+\en{rotations}\ru{повороты}
+\en{and }\ru{и~}\en{reflections}\ru{отражения}
 
 
 
+
+which depends only on invariants from the solution of the characteristic equation
+
+\en{a~function}\ru{функция}\ru{,}
+\en{its arguments are only invariants}\ru{её аргументы суть только инварианты}
+en{}\ru{из решения характеристического уравнения}~\eqref{......}.
+
+
+
+Проще принять, что
+
+функция с членами второй степени, но не выше
+function with members of the second degree, but not higher
+
+
+\en{For an~isotropic material}\ru{Для изотропного материала}\en{,}
+ \eqref{the Hooke's law for the symmetric crystals} \en{is satisfied}\ru{удовлетворяется}
+\en{by any orthogonal tensor}\ru{любым ортогональным тензором}~$\bm{Q}$.
+\en{It’s easier to accept that}\ru{Проще принять, что}~${ \potential(\lineardeformation) }$
+\en{becomes an isotropic function}\ru{становится изотропной функцией}\ru{,}
+\en{which depends only on invariants}\ru{которая зависит лишь от инвариантов}
+\en{from the solution of the characteristic equation}\ru{из решения характеристического уравнения}~\eqref{}
 
