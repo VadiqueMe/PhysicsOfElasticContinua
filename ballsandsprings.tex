@@ -46,8 +46,15 @@
    %argument is where to draw
    \def\drawBlick[1] {
       \draw [ color=black ] (#1)
-      arc [ start angle=-80, end angle=-10, radius=.7*\ballradius ] ;
+      arc [ line width=1pt, radius=.7*\ballradius, start angle=-80, end angle=-10 ] ;
   }
+
+   %argument is where to draw
+   \def\drawBall[1] {
+      \draw [ color=black ] (#1)
+      circle [ line width=1pt, radius=\ballradius ] ;
+  }
+
 
   \drawBlick(m)
   \drawBlick(ball1)
