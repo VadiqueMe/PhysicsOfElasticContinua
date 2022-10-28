@@ -698,14 +698,16 @@ a_4 \withtheindexofperpendicularity{\infinitesimaldeformation}
 
 .....
 
+%симметрия кристаллов
+
 \en{There are}\ru{Есть}
 \en{many different types}\ru{различные типы}
 \en{of a~crystal symmetry}\ru{симметрии кристаллов}
 ( \en{triclinic}\ru{триклинная}, \en{monoclinic}\ru{моноклинная}, \en{rhombic}\ru{ромбическая}, \en{tetragonal}\ru{тетрагональная} \en{and others}\ru{и~другие}~\cite{chernyh-anisotropicelasticity} ).
-\en{The each case of symmetry}\ru{Каждый случай симметрии}
+\en{The each case of~symmetry}\ru{Каждый случай симметрии}
 \en{is characterized}\ru{характеризуется}
 \en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~\orthogonaltensor.
-\en{The set must solve the equation}\ru{Набор должен решать уравнение}
+\en{The tensors from the set must solve the equation}\ru{Набор должен решать уравнение}
 ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$
 ( \en{rotations}\ru{повороты} \en{and}\ru{и}~\en{reflections}\ru{отражения} )
 \en{and}\ru{и}
@@ -728,27 +730,57 @@ ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$
 \en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\orthogonaltensor$\ru{,}
 \en{that satisfies the equation}\ru{которые удовлетворяют уравнению}
 ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$,
-\en{that is}\ru{то есть}%\en{,}
-\en{rotations}\ru{повороты}
-\en{and }\ru{и~}\en{reflections}\ru{отражения}
 
 
 
-
-
-\en{a~function}\ru{функция}\ru{,}
+\en{a~function}\ru{функция}
 \en{its arguments are only invariants}\ru{её аргументы суть только инварианты}
 
 функция с членами второй степени, но не выше
-function with members of the second degree, but not higher
+the function with the members of the second degree, but not higher
 
 
 \en{For an~isotropic material}\ru{Для изотропного материала}\en{,}
- \eqref{the Hooke's law for symmetric crystals} \en{is satisfied}\ru{удовлетворяется}
-\en{by any orthogonal tensor}\ru{любым ортогональным тензором}~$\orthogonaltensor$.
+ \eqref{the Hooke's law for symmetric crystals}
+ \en{is satisfied}\ru{удовлетворяется}
+\en{for any orthogonal tensor}\ru{для любого ортогонального тензора}~$\orthogonaltensor$.
 \en{It’s easier to accept that}\ru{Проще принять, что}
 \en{the elastic potential}\ru{упругий потенциал}~${ \potential(\lineardeformation) }$
 \en{becomes an isotropic function}\ru{становится изотропной функцией}\ru{,}
 \en{which depends only on invariants}\ru{которая зависит лишь от инвариантов}
-\en{from the solution of the characteristic equation}\ru{из решения характеристического уравнения}~\eqref{}
+\en{of the solution}\ru{решения}
+\en{of the characteristic equation}\ru{характеристического уравнения}~\eqref{eigenvalues:eq}.
+
+"квадратичная форма" = "однородный многочлен второй степени" = функция с~только квадратичными членами	
+
+........
+
+Здесь представлены версии закона Hooke’а для разных пар упругих констант (модулей):
+$\lambda$ \en{and}\ru{и}~$\mu$\:--- параметры Lame,
+$\mu$\:--- модуль сдвига,
+$\poissonratio$\:--- коэффициент Poisson’а,
+K\:--- объёмнометрический модуль,
+E\:--- модуль Юнга/найти имя на латинице/
+
+\noindent
+\begin{equation}\label{inequalitiesforelasticmoduli}
+E > 0 \hspace{.2ex} , \hspace{1em}
+\mu > 0 \hspace{.2ex} , \hspace{1em}
+K > 0 \hspace{.2ex}
+.
+\end{equation}
+
+\noindent
+Растягиваемый стержень удлиняется;
+сдвиг направлен в~ту~же сторону, что и касательное напряжение;
+объём уменьшается от внешнего давления.
+Неравенств~\eqref{inequalitiesforelasticmoduli}
+достаточно для положительности~$\potential$.
+
+..........
+
+При~${ \poissonratio \mapsto \smalldisplaystyleonehalf }$
+материал становится несжимаемым, ${ K \mapsto \infty }$.
+
+.....
 

@@ -26,14 +26,12 @@
 
 \en{The tensor of the parity of permutations}\ru{Тензор чётности перестановок}~$\permutationsparitytensor$
 \en{is antisymmetric}\ru{антисимметричен}
-\en{by the any pair of indices}\ru{по любой паре индексов},
+\en{by any pair of indices}\ru{по любой паре индексов},
 \en{that is}\ru{то~есть}\en{,}
 \en{it is completely}\ru{он полностью}
 (\en{absolutely}\ru{абсолютно})
 \en{antisymmetric}\ru{антисимметричен}
 (\en{skew-symmetric}\ru{кососимметричен}).
-
-\begin{otherlanguage}{russian}
 
 \en{Tensor of the second complexity}\ru{Тензор второй сложности}~$\bm{B}$
 \en{is symmetric}\ru{симметричен}\ru{,}
@@ -44,8 +42,8 @@ ${\bm{B} = \bm{B}^{\T}}$.
 \en{changes the sign of a~tensor}\ru{меняет знак тензора}
 ${ \bm{A}^{\hspace{-0.1em}\T} = - \bm{A} }$,
 \en{then}\ru{тогда}
-\en{it is antisymmetric}\ru{он антисимметричен
-(кососимметричен).
+\en{it is antisymmetric}\ru{он антисимметричен}
+(\en{skew-symmetric}\ru{кососимметричен}).
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\begin{array}{c}
 \bm{C} = \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}+\hspace{.1ex} \bm{C}^{\mathsf{\hspace{.1ex}A}}\hspace{.1ex} , \;
@@ -62,6 +60,11 @@ ${ \bm{A}^{\hspace{-0.1em}\T} = - \bm{A} }$,
 
 Произведение двух симметричных тензоров~${\bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}}}$ симметрично далеко не~всегда, но~только когда ${\bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp\hspace{.12ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.2ex}=\hspace{.1ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}}\hspace{-0.4ex}}$,
 ведь по~\eqref{transposeofdotproduct} ${\left(\hspace{.08ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{.1ex}\right)^{\hspace{-0.32ex}\T} \hspace{-0.16ex} = \hspace{.1ex} \bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp\hspace{.12ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.4ex}}$.
+
+
+
+
+
 
 В~нечётномерных пространствах любой антисимметричный тензор второй сложности необрат\'{и}м, определитель матрицы компонент для~него\:--- нулевой.
 
@@ -138,7 +141,12 @@ A_{hj} & = & \! - \, a_{i} \levicivita_{ihj}
 \end{array}
 \end{equation}
 
-Компоненты кососимметричного~${\hspace{-0.2ex}\bm{A}}$ через компоненты сопутствующего ему псевдовектора~$\bm{a}$
+\en{The components}\ru{Компоненты}
+\en{of a~skew-symmetric tensor}\ru{кососимметричного тензора~${\hspace{-0.2ex}\bm{A}}$
+\en{via}\ru{через}
+\en{the components}\ru{компоненты}
+\en{of the accompanying}\ru{сопутствующего}
+\en{pseudovector}\ru{псевдовектора}~$\bm{a}$
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{c}
@@ -153,7 +161,9 @@ a_3 & 0 & -a_1 \\
 \end{array}
 \end{equation*}
 
-\vspace{-0.4em} \noindent и~наоборот
+\vspace{-0.4em}
+\noindent
+\en{and vice versa}\ru{и~наоборот}
 
 \nopagebreak\vspace{-0.5em}\begin{equation*}\begin{array}{c}
 \bm{a} = \smalldisplaystyleonehalf \, \bm{A} \dotdotp \levicivitatensor =
@@ -171,9 +181,20 @@ A_{21} - A_{12}
 \end{array} \right]$} .
 \vspace{.1em}\end{array}\end{equation*}
 
-Легко запоминающийся вспомогательный \inquotes{псевдовекторный инвариант}~${\!\bm{A}_{\!\bm{\times}}}$ получается из тензора~${\hspace{-0.2ex}\bm{A}}$ заменой диадного произведения на~векторное
+\en{The easy to remember}\ru{Легко запоминающийся}
+\inquotes{\en{pseudovector invariant}\ru{псевдовекторный инвариант}}
+${\!\bm{A}_{\!\bm{\times}}}$
+\en{comes from the original tensor}\ru{происходит из оригинального тензора}~${\hspace{-0.2ex}\bm{A}}$
+\en{by replacing}\ru{заменой}
+\en{of the dyadic product}\ru{диадного произведения}
 
-\nopagebreak\vspace{-0.15em}\begin{equation}\label{pseudovectorinvariant}
+на векторное произведение
+
+the invariant is obtained from the tensor
+
+
+\nopagebreak\vspace{-0.15em}
+\begin{equation}\label{pseudovectorinvariant}
 \begin{array}{c}
 \bm{A}_{\Xcompanion} \equiv A_{i\hspace{-0.1ex}j} \hspace{.25ex} \bm{e}_i \times \bm{e}_j = - \hspace{.1ex} \bm{A} \hspace{.1ex} \dotdotp \levicivitatensor
 \hspace{.2ex}, \\[.3em]
@@ -184,13 +205,11 @@ A_{21} - A_{12}
 \end{array}
 \end{equation}
 
-\en{Justification}\ru{Обоснование}:
+\en{Explaination}\ru{Объяснение}:
 
-
-
-
-
-\nopagebreak\vspace{-0.1em}\[\begin{array}{c}
+\nopagebreak\vspace{-0.1em}
+\begin{equation*}
+\begin{array}{c}
 \bm{a} \times\hspace{-0.1ex} \UnitDyad = - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex} \bm{A}_{\Xcompanion} \times \UnitDyad = - \hspace{.2ex} \smalldisplaystyleonehalf \, A_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
 \left( \hspace{.08ex} \tikzmark{beginFirstCrossProduct} {\bm{e}_i \times \bm{e}_j} \tikzmark{endFirstCrossProduct} \hspace{.16ex} \right)
 \times \bm{e}_k \bm{e}_k = \\[1.5em]
@@ -200,29 +219,76 @@ A_{21} - A_{12}
 \hspace{.32ex} \bm{e}_p \bm{e}_k = - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.32ex} A_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \left( \bm{e}_j \bm{e}_i - \bm{e}_i \bm{e}_j \right) = \\[.8em]
 %
 \hspace{13.2em}= - \hspace{.2ex} \smalldisplaystyleonehalf \left({ \bm{A}^{\hspace{-0.1em}\T} \hspace{-0.25ex} - \hspace{-0.2ex} \bm{A} \hspace{.2ex}}\right) = \bm{A}^{\mathsf{\hspace{-0.1ex}A}} = \bm{A}.
-\end{array}\]
-\AddUnderBrace[line width=.75pt][0,-0.25ex]{beginFirstCrossProduct}{endFirstCrossProduct}%
-{${\scriptstyle \levicivita_{i\hspace{-0.1ex}jn} \bm{e}_n}$}
-\AddUnderBrace[line width=.75pt][.25ex,-0.25ex]{beginTwoLeviCivitas}{endTwoLeviCivitas}%
-{${\scriptstyle \hspace{3.2em}\delta_{j\hspace{-0.1ex}p} \delta_{ik} \,-\; \delta_{ip} \delta_{j\hspace{-0.1ex}k}}$}
+\end{array}
+\end{equation*}
+%
+\AddUnderBrace[line width=.75pt][0,-0.25ex]{beginTwoPermutationsParity}
+{${ \scriptstyle \levicivita_{i\hspace{-0.1ex}jn} \bm{e}_n $}
+\AddUnderBrace[line width=.75pt][.25ex,-0.25ex]{endTwoPermutationsParity}
+{${ \scriptstyle
+   \hspace{3.2em}
+   \delta_{j\hspace{-0.1ex}p}
+   \delta_{ik}
+   \, - \;
+   \delta_{ip}
+   \delta_{j\hspace{-0.1ex}k}
+}$}}
+
+the accompanying vector
+сопутствующий вектор
 
 \vspace{-0.6em}
-Сопутствующий вектор \textcolor{magenta}{можно ввести} для любого бивалентного тензора, но лишь антисимметричная часть при~этом даёт вклад:
-${\bm{C}^{\hspace{.2ex}\mathsf{A}} \hspace{-0.1ex} = \hspace{-0.1ex} - \hspace{.1ex}\onehalf\hspace{.32ex} \bm{C}_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.16ex} \times \hspace{-0.16ex} \UnitDyad}$.
-Для~симметричного тензора сопутствующий вектор\:--- нулевой:
-${\bm{B}_{\Xcompanion} \hspace{-0.25ex} = \bm{0} \hspace{.25ex} \Leftrightarrow \bm{B} = \bm{B}^{\T} \hspace{-0.32ex} = \bm{B}^{\mathsf{\hspace{.1ex}S}}\hspace{-0.32ex}}$.
+\en{You can introduce}\ru{Ты можешь ввести}
+\en{the accompanying vector}\ru{сопутствующий вектор}
+\en{for any}\ru{для любого}
+\en{bivalent tensor}\ru{бивалентного тензора}.
 
-\en{With}\ru{С}~\eqref{pseudovectorinvariant} разложение какого\hbox{-}либо тензора~$\bm{C}$ на~симметричную и~антисимметричную части выглядит как
+\en{Only}\ru{Только}
+\en{the asymmetric part}\ru{антисимметричная часть}
+\en{contributes}\ru{даёт вклад}:
+${
+   \bm{C}^{\hspace{.2ex}\mathsf{A}}
+   \hspace{-0.1ex} = \hspace{-0.1ex}
+   - \hspace{.1ex}
+   \onehalf \hspace{.32ex} \bm{C}_{\hspace{-0.1ex}\Xcompanion}
+   \hspace{-0.16ex} \times \hspace{-0.16ex}
+   \UnitDyad
+}$.
+
+\en{For}\ru{Для}
+\en{a~symmetric tensor}\ru{симметричного тензора}\en{,}
+\en{the accompanying vector}\ru{сопутствующий вектор}
+\en{is zero}\ru{это нуль}:
+
+\noindent
+\begin{equation*}
+\bm{B}_{\Xcompanion} \hspace{-0.25ex}
+= \bm{0} \hspace{.25ex} \Leftrightarrow
+\bm{B} = \bm{B}^{\T} \hspace{-0.32ex} = \bm{B}^{\mathsf{\hspace{.1ex}}
+\hspace{-0.32ex}
+.
+\end{equation*}
+
+\en{With}\ru{С}~\eqref{pseudovectorinvariant}
+\en{the decomposition of some tensor}\ru{разложение какого\hbox{-}либо тензора}~$\bm{C}$
+\en{on}\ru{на}
+\en{the symmetric}\ru{симметричную}
+\en{and}\ru{и}
+\en{the antisymmetric}\ru{антисимметричную}
+\en{parts}\ru{части}
+\en{looks like}\ru{выглядит как}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{symmetricantisymmetricdecompositionofsometensor}
 \bm{C} = \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.32ex} - \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.32ex} \bm{C}_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.16ex} \times \hspace{-0.16ex} \UnitDyad
 \hspace{.1ex} .
 \end{equation}
 
-\end{otherlanguage}
+
+
 
 \vspace{-0.8em}\noindent
-\en{For}\ru{Для} \en{a~dyad}\ru{диады~же}
+\en{For}\ru{Для}
+\en{a~dyad}\ru{диады}
 
 \nopagebreak
 {\centering \eqref{vectorcrossvectorcrossidentity}~$\Rightarrow$~${\left( \bm{c} \hspace{-0.1ex} \times \hspace{-0.2ex} \bm{d} \hspace{.2ex} \right) \hspace{-0.12ex} \times \hspace{-0.25ex} \UnitDyad = \bm{d} \bm{c} - \hspace{-0.1ex} \bm{c} \bm{d} \hspace{.1ex} = \hspace{-0.1ex} - \hspace{.1ex} 2 \hspace{.15ex} \bm{c}\bm{d}^{\mathsf{\hspace{.3ex}A}}\hspace{-0.2ex}}$,\hspace{.32em}
