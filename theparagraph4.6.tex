@@ -4,11 +4,30 @@
 
 \label{para:equationsindisplacements.linearelasticity}
  
-\en{The~complete set of equations}\ru{Полный набор уравнений}~\eqref{lineartheory:wholesetofequations} \en{contains unknowns}\ru{содержит неизвестные} $\linearstress$, $\infinitesimaldeformation$ \en{and}\ru{и}~$\bm{u}$.
-\en{Excluding}\ru{Исключая} $\linearstress$ \en{and}\ru{и}~$\infinitesimaldeformation$, \en{we come}\ru{приходим} \en{to the formulation in displacements}\ru{к~формулировке в~перемещениях}
-(\en{symmetrization of}\ru{симметризация}~${\hspace{-0.2ex} \boldnabla \bm{u}}$ \en{is redundant here}\ru{тут лишняя}, \en{because}\ru{ведь} ${\stiffnesstensor_{\hspace{.12ex} 3 \scalebox{0.6}[0.8]{$\rightleftarrows$} 4} \hspace{-0.25ex} = \stiffnesstensor}$)
+\en{The~complete set of equations}\ru{Полный набор уравнений}~\eqref{lineartheory:wholesetofequations}
+\en{contains unknowns}\ru{содержит неизвестные}
+$\linearstress$, $\infinitesimaldeformation$ \en{and}\ru{и}~$\bm{u}$.
+\en{Excluding}\ru{Исключая}~$\linearstress$
+\en{and}\ru{и}~$\infinitesimaldeformation$,
+\en{we come}\ru{приходим}
+\en{to the formulation in displacements}\ru{к~формулировке в~перемещениях}
+(\en{the symmetrization of}\ru{симметризация}~${\hspace{-0.2ex} \boldnabla \bm{u}}$
+\en{is redundant}\ru{лишняя}
+\en{due to the following symmetry}\ru{из-за следующей симметрии} 
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{lineartheory:equationsindisplacements}
+\noindent
+\begin{equation}\label{thesymmetryofthestiffnesstensor}
+\stiffnesstensor_{
+   \hspace{.12ex}
+   3 \scalebox{.6}[.8]{$\rightleftarrows$} 4
+}
+\hspace{-0.25ex} =
+\stiffnesstensor
+\end{equation}
+).
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{lineartheory:equationsindisplacements}
 \begin{array}{c}
 \boldnabla \dotp \left( \stiffnesstensor \dotdotp \hspace{-0.12ex} \boldnabla \bm{u} \hspace{.1ex} \right) + \hspace{.1ex} \bm{f} = \hspace{.1ex} \bm{0}
 \hspace{.16ex} , \\[.4em]

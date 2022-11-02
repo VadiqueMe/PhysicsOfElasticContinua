@@ -26,10 +26,19 @@
 \href{https://en.wikipedia.org/wiki/George_Green_(mathematician)}{George Green}\ru{’ом}
 \en{and the other scientists}\ru{и~другими учёными}.
 
-\en{The~complete closed set}\ru{Полный замкнутый набор}~(\en{the system}\ru{система})
-\en{of~equations}\ru{уравнений}
-\en{of~the~classical linear theory}\ru{классической линейной теории}
-\en{in~the~direct invariant tensor notation}\ru{в~прямой инвариантной тензорной з\'{а}писи}
+\en{The~complete closed set}\ru{Полный замкнутый набор}
+\en{of the equations}\ru{уравнений}
+\en{of the classical linear theory}\ru{классической линейной теории}
+\en{in~the~direct invariant tensor notation}\ru{в~прямой инвариантной тензорной з\'{а}писи},
+\en{including}\ru{включая}
+\begin{itemize}
+\item \en{the balance of forces}\ru{баланс сил},
+\item \en{the stress--strain relations}\ru{отношения напряжение--деформация},
+\item ${\bm{u} \mapsto \infinitesimaldeformation}$.
+%\en{the infinitesimal}\ru{бесконечномалые} \en{linear strain}\ru{линейные деформации}
+%\en{from the displacements}\ru{от перемещений}.
+\end{itemize}
+
 \en{is}\ru{есть}
 
 \nopagebreak\vspace{-0.1em}
@@ -63,21 +72,29 @@ $}
 
 \nopagebreak\noindent
 \en{Here}\ru{Здесь}
-$\linearstress$\ru{\:---}\en{ is}
-\en{the linear stress tensor}\ru{линейный тензор напряжения},
-$\bm{f}$~\en{is the vector}\ru{--- вектор}
+$\linearstress$
+\ru{это}\en{is}
+\en{the linear stress tensor}\ru{линейный тензор напряжений},
+$\bm{v}$
+\en{is the vector}\ru{это вектор}
 \en{of the volume loads}\ru{объёмных нагрузок},
-$\infinitesimaldeformation$\ru{\:---}\en{ is}
-\en{the infinitesimal linear deformation tensor}\ru{тензор бесконечномалой линейной деформации},
+$\infinitesimaldeformation$
+\ru{это}\en{is}
+\en{the tensor}\ru{тензор}
+ \en{of the infinitesimal linear deformation}\ru{бесконечномалой линейной деформации},
 ${
    \potential(
       \hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}
    )\hspace{-0.1ex}
-}$\ru{\:---}\en{~is}
-\en{the potential energy of~deformation per volume unit}\ru{потенциальная энергия деформации единицы объёма},
-${\stiffnesstensor}$\ru{\:---}\en{~is}
-\en{the stiffness tensor}\ru{тензор жёсткости}
-(%begin brackets
+}
+$\ru{это}\en{is}
+\en{the elastic potential energy}\ru{упругая потенциальная энергия}
+\en{of~deformation}\ru{деформации}
+\en{per volume unit}\ru{на единицу объёма},
+$\stiffnesstensor$
+\ru{это}\en{is}
+\en{the stiffness tensor}\ru{тензор жёсткости}.
+\en{It is}\ru{Он}
 \en{tetravalent}\ru{четырёхвалентный},
 \en{with the following symmetry}\ru{со~следующей симметрией}
 ${
@@ -93,9 +110,7 @@ ${
    \hspace{-0.33ex} = \hspace{-0.1ex}
    \stiffnesstensor
 }$
-)%end brackets
-\hspace{.2ex} .
-\end{minipage}
+\hspace{.1ex} .
 
 \en{The equations}\ru{Уравнения}~\eqref{lineartheory:wholesetofequations}
 \en{are exact}\ru{точные},
@@ -104,7 +119,8 @@ ${
 \en{of the~nonlinear theory}\ru{уравнений нелинейной теории}.
 \en{The variation from an~arbitrary configuration}\ru{Варьирование от~произвольной конфигурации}
 \en{is~described in}\ru{описано в}~\chapdotpararef{chapter:nonlinearcontinuum}{para:variationofconfiguration}.
-\en{The~linear theory}\ru{Линейная теория}\ru{\:---}\en{ is}
+\en{The~linear theory}\ru{Линейная теория}
+\ru{это}\en{is}
 \en{the~result of varying}\ru{результат варьирования}
 \en{from the~initial unstressed configuration}\ru{от~начальной ненапряжённой конфигурации},
 \en{where}\ru{где}
@@ -143,34 +159,43 @@ ${
 
 \vspace{-0.1em}\noindent
 \en{It remains to~change}\ru{Остаётся поменять}
-    ${\variation{\currentlocationvector}}$
-        \en{to}\ru{на}
-        $\bm{u}$,
-    ${
-        \infinimentpetitdeformationdevariation\hspace{-0.15ex}
-    }$
-\en{to}\ru{на}
-    $\infinitesimaldeformation$,
-    $\varbivalent{\hspace{-0.15ex}\cauchystress}$
-    \en{to}\ru{на}
-    $\linearstress$,
-    ${
-        \scalebox{.95}{$
-            \raisemath{.15em}{ \scalebox{.92}{$ \partial^2 \hspace{.1ex} \potential $} }
-    / %it is division
-   \hspace{-0.1ex}
-    \raisemath{-0.3em}{\scalebox{.92}{$
-        \partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}
-    $}
-    }
-$}}$
-\en{to}\ru{на}~$\stiffnesstensor$,
-\en{and}\ru{а}~${ \hspace{-0.1ex} \rho \hspace{.25ex}
-\variation{\hspace{-0.2ex}\bm{f}} }$
-\en{to}\ru{на}
-${ \hspace{-0.1ex} \bm{f} \hspace{-0.2ex} }$.
+\begin{itemize}
+\item
+   ${\variation{\currentlocationvector}}$
+   \en{to}\ru{на}
+   $\bm{u}$,
+\item
+   ${ \infinimentpetitdeformationdevariation \hspace{-0.15ex} }$
+   \en{to}\ru{на}
+   $\infinitesimaldeformation$,
+\item
+   $\varbivalent{\hspace{-0.15ex}\cauchystress}$
+   \en{to}\ru{на}
+   $\linearstress$,
+\item
+   ${
+      \scalebox{.95}{$ \raisemath{.15em}{
+         \scalebox{.92}{$ \partial^2 \hspace{.1ex} \potential $}
+      }
+      / %it is division
+      \hspace{-0.1ex}
+      \raisemath{-0.3em}{\scalebox{.92}{$
+        \partial \hspace{.1ex} \bm{C}
+         \hspace{.1ex}
+         \partial \hspace{.1ex} \bm{C}
+      $}
+   }$ 
+   \en{to}\ru{на}
+   $\stiffnesstensor$,
+\item
+   ${ \hspace{-0.1ex} \rho \hspace{.25ex}
+   \variation{\hspace{-0.2ex}\bm{f}} }$
+   \en{to}\ru{на}
+   ${ \hspace{-0.1ex} \bm{f} \hspace{-0.2ex} }$.
 
-\en{If}\ru{Если} \en{the derivation}\ru{вывод}~\eqref{variationfrominitialconfiguration}
+\en{If}\ru{Если}
+\en{the derivation}\ru{вывод}
+\eqref{variationfrominitialconfiguration}
 \en{seems abstruse to the~reader}\ru{кажется читателю малопонятным},
 \en{it’s possible}\ru{возможно}
 \en{to proceed}\ru{исходить}

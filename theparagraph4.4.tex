@@ -4,6 +4,72 @@
 
 \label{para:hooke.forisotropic}
 
+
+\en{a~function}\ru{функция}
+\en{with arguments}\ru{с~аргументами}
+\en{which are only invariants}\ru{суть только инварианты}
+
+
+\en{For an~isotropic material}\ru{Для изотропного материала}\en{,}
+ \eqref{the Hooke's law for symmetric crystals}
+ \en{is satisfied}\ru{удовлетворяется}
+\en{for any orthogonal tensor}\ru{для любого ортогонального тензора}~$\orthogonaltensor$.
+\en{It’s easier to accept that}\ru{Проще принять, что}
+\en{the elastic potential}\ru{упругий потенциал}~${ \potential(\lineardeformation) }$
+\en{becomes an isotropic function}\ru{становится изотропной функцией},
+\en{which depends only on invariants}\ru{которая зависит лишь от инвариантов}
+\en{of the solution}\ru{решения}
+\en{of the characteristic equation}\ru{характеристического уравнения}~\eqref{eigenvalues:eq}.
+
+"квадратичная форма" = "однородный многочлен второй степени" = функция с~только квадратичными членами
+
+\en{the function}\ru{функция}
+\en{with the members}\ru{с членами}
+\en{of the second degree}\ru{второй степени}
+
+............
+
+
+for the various pairs of two elastic constants (modules)
+
+\en{Below}\ru{Ниже}
+\en{are presented}\ru{представлены}
+\en{the versions}\ru{версии}
+\en{of the }\ru{закона }Hooke’\ru{а}\en{s}\en{ law}
+\en{for}\ru{для}
+\en{the different pairs}\ru{разных пар}
+\en{of elastic constants}\ru{упругих констант}
+(\en{elastic moduli}\ru{модулей упругости}).
+$\lambda$ \en{and}\ru{и}~$\mu$\:--- параметры Lame,
+$\mu$\:--- \ru{модуль сдвига}\en{the shear modulus},
+$\poissonratio$\:--- \en{the }\ru{коэффициент }Poisson’\ru{а}\en{s}\en{ ratio},
+$K$\:--- \en{the volumetric modulus}\ru{объёмнометрический модуль},
+$E$\:--- \en{the Young's modulus}\ru{модуль Юнга}.
+
+\en{A~priori limits}\ru{Априорные пределы}
+\en{for values}\ru{для значений}
+\en{of the elastic moduli}\ru{модулей упругости}
+
+\noindent
+\begin{equation}\label{inequalitiesforelasticmoduli}
+E > 0 \hspace{.2ex} , \hspace{1em}
+\mu > 0 \hspace{.2ex} , \hspace{1em}
+K > 0 \hspace{.2ex}
+.
+\end{equation}
+
+\noindent
+Растягиваемый стержень удлиняется;
+сдвиг направлен в~ту~же сторону, что и касательное напряжение;
+объём уменьшается от внешнего давления.
+Неравенств~\eqref{inequalitiesforelasticmoduli}
+достаточно для положительности~$\potential$.
+
+..........
+
+При~${ \poissonratio \mapsto \smalldisplaystyleonehalf }$
+материал становится несжимаемым, ${ K \mapsto \infty }$.
+
 \en{For an~isotropic material}\ru{Для изотропного материала}
 ( \eqref{Hooke's law for transversely isotropic material} )
 \en{is satisfied}\ru{удовлетворяется}
@@ -20,13 +86,14 @@ $\bm{Q}$.
 \en{of the characteristic equation}\ru{характеристического уравнения}~\chapdotpararef{chapter:mathapparatus}{para:eigenvectorseigenvalues}
 
 \begin{equation}
-2 \potential = A \mathrm{I}_1 ^2 + B \mathrm{II}_2
-.
+2 \potential = \alpha \mathrm{I}_1 ^2 + \beta \mathrm{II}_2 .
 \end{equation}
 
-$\potential(\infinitesimaldeformation)$ это квадратичная функция,
-функция с членами степени не выше второй,
-(или \inquotes{квадратичная форма})
+$\potential(\infinitesimaldeformation)$
+\en{это квадратичная функция}\ru{is a~quadratic function}
+\en{or}\ru{или} \en{a~}\inquotes{\en{quadratic form}\ru{квадратичная форма})
+\en{with terms}\ru{с~членами}
+\en{of the second degree}\ru{второй степени}.
 
 \begin{equation}
 2 \potential( \lineardeformation )
@@ -35,11 +102,6 @@ $\potential(\infinitesimaldeformation)$ это квадратичная функ
 \end{equation}
 
 .........
-
-\en{In~the~linear theory}\en{,}\ru{В~линейной теории}
-\en{the~}\inquotes{ \en{complementary energy}\ru{дополнительная энергия} }
-\en{is numerically equal to}\ru{численно равна}
-\en{the }\en{elastic potential}\ru{упругому потенциалу}}.
 
 \nopagebreak\vspace{-0.1em}
 \begin{gather}\label{the Legendre transform}
@@ -54,18 +116,170 @@ $}
 \hspace{.1ex} =
 \linearstress \dotdotp \hspace{-0.1ex} \pliabilitytensor
 \hspace{.1ex} ,
-\\
+\end{gather}
+
 %
 % the complementary energy
 %
+\begin{equation}\label{the complementary energy}
 \widehat{\potential}( \hspace{-0.1ex} \linearstress \hspace{.12ex} ) \hspace{-0.1ex}
 = \linearstress \dotdotp \infinitesimaldeformation
 - \hspace{.1ex} \potential(\infinitesimaldeformation)
 \hspace{.1ex} .
 \end{gather}
 
-
-
 \chapdotpararef{chapter:mathapparatus}{para:tensors.symmetric+skewsymmetric}
 
 \eqref{eigenvalues:eq}
+
+\subsection*{The elastic potential for a linear isotropic medium (body)}
+
+The function
+
+\noindent
+\begin{equation*}
+\mathrm{I}_1,
+\mathrm{II}_2
+\mapsto
+\potential
+\end{equation*}
+
+\noindent
+\begin{equation*}
+\potential =
+\potential(\mathrm{I}_1, \mathrm{II}_2)
+\end{equation*}
+
+has the terms of the only 2^{nd} degree, not more.
+Thus the third invariant $\mathrm{III}_3$
+is out of the arguments of $\potential$.
+
+%обратные отношения
+\begin{equation}\label{The backward relations of the Hooke's law for an isotropic media}
+2 \potential = \linearstress \dotdotp \infinitesimaldeformation,
+\hspace{1em}
+\infinitesimaldeformation = \scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \hspace{.1ex} \potential^{\mathstrut}
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \linearstress} }
+$}
+=
+= \pliabilitytensor \dotdotp \linearstress
+\end{equation}
+
+\en{In the linear theory}\ru{В~линейной теории}\en{,}
+\en{the~}\inquotes{ \en{complementary energy}\ru{дополнительная энергия} }
+\en{is numerically equal to}\ru{численно равна}
+\en{the }\en{elastic potential}\ru{упругому потенциалу}}
+
+\begin{equation*}
+\begintikzmark{twoElasticPotentials}
+2 \potential
+\endtikzmark{twoElasticPotentials}
+-
+\begintikzmark{oneElasticPotential}
+\potential(\infinitesimaldeformation)
+\endtikzmark{oneElasticPotential}
+= \widehat{\potential}(\linearstress).
+\end{equation*}
+\AddUnderBrace{oneElasticPotential}{$ \linearstress \dotdotp \infinitesimaldeformation $}
+\AddUnderBrace{twoElasticPotentials}{$ \smalldisplaystyleonehalf \linearstress \dotdotp \infinitesimaldeformation $}
+
+\begin{equation*}
+\widehat{\potential}(\linearstress) = \potential(\infinitesimaldeformation)
+\end{equation*}
+
+\en{An~isotropic medium}\ru{Изотропная среда}
+\en{has}\ru{имеет}
+\en{the two non-zero elastic constants}\ru{две ненулевые упругие константы},
+\en{the }\inquotes{\en{elastic moduli}\ru{модули упругости}}.
+
+\noindent
+\begin{equation}\label{theelasticpotentialforanisotropicmedium}
+\potential(\infinitesimaldeformation) =
+\alpha \mathrm{I}_1^2 (\infinitesimaldeformation)
++ \beta \mathrm{II}_2 (\infinitesimaldeformation)
+\end{equation}
+
+\noindent
+\begin{gather*}
+\scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \linearstress} }
+$}
+\hspace{.1ex} \potential^{\mathstrut}
+\Bigl(
+   \scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \infinitesimaldeformation_\tracedot
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+   \dotdotp
+   \infinitesimaldeformation_\tracedot
+   +
+   \infinitesimaldeformation_\tracedot
+   \dotdotp
+   \scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \infinitesimaldeformation_\tracedot
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+   $}
+\Bigr)
+\\
+%
+=
+2 \infinitesimaldeformation_\tracedot \dotdotp \UnitDyad
+\end{gather*}
+
+\noindent
+\begin{equation}\label{the derivative of trace by the tensor itself}
+\scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \infinitesimaldeformation_\tracedot
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
+=
+\UnitDyad
+\end{equation}
+
+\en{In the components}\ru{В~компонентах}
+\en{for an~isotropic medium}\ru{для изотропной среды}
+\en{we have}\ru{имеем}
+
+\begin{equation}\label{componentsofthestiffnesstensor.foranisotropicbody}
+A_{ijpq} =
+\lambda
+\KroneckerDelta{ij}
+\KroneckerDelta{pq}
++
+\mu
+\bigl(
+\KroneckerDelta{ip}
+\KroneckerDelta{jq}
++
+\KroneckerDelta{iq}
+\KroneckerDelta{jp}
+\bigr)
+\end{equation}\:---
+\en{these are}\ru{это}
+\en{components}\ru{компоненты}
+\en{of an~isotropic tensor}\ru{изотропного тензора}
+\en{of the fourth complexity}\ru{четвёртой сложности}.
+\en{These components don’t change}\ru{Эти компоненты не меняются}
+\en{when}\ru{когда}
+\en{the basis rotates}\ru{базис вращается}.

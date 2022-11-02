@@ -517,13 +517,26 @@ ${\sigma_z \hspace{-0.25ex}
 вдоль~окружности
 и~по~высоте ствола.
 
-Ещё~один случай анизотропии\:--- трансверсально изотропный (transversely isotropic) материал.
-Он характеризуется осью анизотропии\:--- пусть это $z$.
-Любая плоскость, параллельная $z$, должна быть плоскостью материальной симметрии.
-Ясно, что этот материал ортотропен.
-Но есть большее: любой поворот тензора напряжений $\infinitesimaldeformation$ вокруг оси $z$
-не меняет $\potential$.
-Поэтому
+\subsection*{\en{A~transversely isotropic}\ru{Трансверсально изотропный} \en{material}\ru{материал}}
+
+\en{The one more}\ru{Ещё один}
+\en{case of~anisotropy}\ru{случай анизотропии}
+\en{is}\ru{это}
+\en{a~transversely isotropic}\ru{трансверсально изотропный} \en{material}\ru{материал}}.
+\en{It is characterized by an~axis of~anisotropy}\ru{Он характеризуется осью анизотропии}\:--- \en{let it be}\ru{пусть это}~$z$.
+\en{Any plane}\ru{Любая плоскость}\ru{,}
+\en{parallel to}\ru{параллельная}~$z$,
+\en{must be a~plane}\ru{должна быть плоскостью}
+\en{of the~material symmetry}\ru{материальной симметрии}.
+\ru{Ясно}\en{It is clear}\ru{,}
+\en{that this material is orthotropic}\ru{что этот материал ортотропен}.
+\en{But there is more}\ru{Но есть большее}:
+\en{any rotation}\ru{любой поворот}
+\en{of the deformation tensor}\ru{тензора деформаций}~$\infinitesimaldeformation$
+\en{around the axis}\ru{вокруг оси}~$z$
+\ru{не меняет}\en{doesn’t change}
+\en{the elastic potential}\ru{упругий потенциал}~$\potential$.
+\en{Thus}\ru{Поэтому}
 
 \nopagebreak\vspace{-0.1em}
 \begin{equation}
@@ -549,6 +562,7 @@ ${\sigma_z \hspace{-0.25ex}
 ,
 \end{equation}
 
+\noindent
 \en{because}\ru{поскольку}
 \en{for any}\ru{для любого}
 \en{small rotation}\ru{малого поворота}
@@ -557,8 +571,8 @@ ${\sigma_z \hspace{-0.25ex}
 %%\en{of the infinitesimal}\ru{бесконечно малой}
 %%\en{linear}\ru{линейной}
 %%\en{deformation}\ru{деформации}
-\en{of the deformation tensor}\ru{тензора деформации}
-\infinitesimaldeformation
+\en{of the infinitesimal linear deformation tensor}\ru{тензора бесконечномалой линейной деформации}
+$\infinitesimaldeformation$
 \en{is}\ru{есть}
 ${
    \varvector{\bm{o)} \times \infinitesimaldeformation
@@ -568,6 +582,7 @@ $}\ru{,}
 $\varvector{\bm{o}}$
 \en{is directed}\ru{направлен}
 \en{along}\ru{вдоль}~$z$.
+
 \en{Let’s write}\ru{Распишем}
 \en{this equation}\ru{это равенство}
 \en{in components}\ru{в~компонентах}.
@@ -581,13 +596,6 @@ $\varvector{\bm{o}}$
 .......................
 .......................
 
-\vspace{-0.25em}\noindent
-\en{because}\ru{так как}
-\en{for}\ru{для}
-\en{any}\ru{любого}
-\en{small rotation}\ru{малого поворота}
-\en{with}\ru{с}~\en{the vector}\ru{вектором}~${ \varvector{\bm{o}} }$
-\en{the variation}\ru{вариация}
 \en{of the deformation tensor}\ru{тензора деформаций}
 \en{is equal to}\ru{равна}
 ${
@@ -694,9 +702,14 @@ a_4 \withtheindexofperpendicularity{\infinitesimaldeformation}
    \withtheindexofperpendicularity{\infinitesimaldeformation}
    +
    a_{13}
+   ..............
+\Bigr)
 \end{equation*}
 
-.....
+Итак,
+трансверсально изотропный материал
+характеризуется
+шестью ненулевыми упругими константами.
 
 %симметрия кристаллов
 
@@ -730,57 +743,4 @@ ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$
 \en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\orthogonaltensor$\ru{,}
 \en{that satisfies the equation}\ru{которые удовлетворяют уравнению}
 ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$,
-
-
-
-\en{a~function}\ru{функция}
-\en{its arguments are only invariants}\ru{её аргументы суть только инварианты}
-
-функция с членами второй степени, но не выше
-the function with the members of the second degree, but not higher
-
-
-\en{For an~isotropic material}\ru{Для изотропного материала}\en{,}
- \eqref{the Hooke's law for symmetric crystals}
- \en{is satisfied}\ru{удовлетворяется}
-\en{for any orthogonal tensor}\ru{для любого ортогонального тензора}~$\orthogonaltensor$.
-\en{It’s easier to accept that}\ru{Проще принять, что}
-\en{the elastic potential}\ru{упругий потенциал}~${ \potential(\lineardeformation) }$
-\en{becomes an isotropic function}\ru{становится изотропной функцией}\ru{,}
-\en{which depends only on invariants}\ru{которая зависит лишь от инвариантов}
-\en{of the solution}\ru{решения}
-\en{of the characteristic equation}\ru{характеристического уравнения}~\eqref{eigenvalues:eq}.
-
-"квадратичная форма" = "однородный многочлен второй степени" = функция с~только квадратичными членами	
-
-........
-
-Здесь представлены версии закона Hooke’а для разных пар упругих констант (модулей):
-$\lambda$ \en{and}\ru{и}~$\mu$\:--- параметры Lame,
-$\mu$\:--- модуль сдвига,
-$\poissonratio$\:--- коэффициент Poisson’а,
-K\:--- объёмнометрический модуль,
-E\:--- модуль Юнга/найти имя на латинице/
-
-\noindent
-\begin{equation}\label{inequalitiesforelasticmoduli}
-E > 0 \hspace{.2ex} , \hspace{1em}
-\mu > 0 \hspace{.2ex} , \hspace{1em}
-K > 0 \hspace{.2ex}
-.
-\end{equation}
-
-\noindent
-Растягиваемый стержень удлиняется;
-сдвиг направлен в~ту~же сторону, что и касательное напряжение;
-объём уменьшается от внешнего давления.
-Неравенств~\eqref{inequalitiesforelasticmoduli}
-достаточно для положительности~$\potential$.
-
-..........
-
-При~${ \poissonratio \mapsto \smalldisplaystyleonehalf }$
-материал становится несжимаемым, ${ K \mapsto \infty }$.
-
-.....
 
