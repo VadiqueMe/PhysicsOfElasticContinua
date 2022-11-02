@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \en{\section{Vector}}
 
 \ru{\section{Вектор}}
@@ -139,15 +140,15 @@ The Elements (\textgreek{Στοιχεῖα}) (Stoikheîa)
 \end{wrapfigure}
 
 \en{Introduce rectangular}\ru{Введём прямоугольные}~(\inquotes{\en{cartesian}\ru{декартовы}}) \en{coordinates}\ru{координаты} \en{by picking}\ru{выбором} \en{some}\ru{каких-либо} \en{three}\ru{трёх} \en{mutually perpendicular unit vectors}\ru{взаимно перпендикулярных единичных векторов} ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$ \en{as}\ru{как} \en{a~\hbox{basis}}\ru{основы~(\hbox{базиса})} \en{for measurements}\ru{для измерений}.
-\en{Within a~such}\ru{В~так\'{о}й}
-\en{system}\ru{системе}\en{,} \hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{products}\ru{произведения}
-\en{of the basis vectors}\ru{базисных векторов}
+\en{Within such}\ru{В~так\'{о}й}
+\en{a~}\hbox{\en{system}\ru{системе}}\en{,}
+\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{products}\ru{произведения} \en{of the basis vectors}\ru{базисных векторов}
 \en{are equal to}\ru{равны}
-\en{the}\ru{дельте} Kronecker’\en{s}\ru{а}\en{ delta}
+\en{the}\ru{дельте} Kronecker\ru{’а}\en{ delta}
 
 \nopagebreak\vspace{-0.15em}\begin{equation*}
 \bm{e}_i \dotp \hspace{.1ex} \bm{e}_j \hspace{-0.15ex}
-= \hspace{.1ex} \KroneckerDelta{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+= \hspace{.1ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 = \hspace{.1ex} \scalebox{.95}{$
 \left\{\hspace{.3ex}\begin{gathered}
 1, \; i = j
@@ -160,14 +161,8 @@ $}
 \nopagebreak\vspace{-0.2em}\noindent
 \hfill\hbox{\en{for any}\ru{для любого} \en{orthonormal}\ru{ортонормального} \en{basis}\ru{базиса}}.
 
-\en{Decomposing vector}\ru{Разлагая вектор}~$\bm{v}$
-\en{in some ortho\-normal basis}\ru{в~некотором орто\-нормаль\-ном базисе}
-${\bm{e}_i}$ (${i = 1, 2, 3}$),
-\en{we get}\ru{получаем}
-\en{coefficients}\ru{коэффициенты}~$v_i$\:---
-\en{the components}\ru{компоненты} \en{of~vector}\ru{вектора}~$\bm{v}$
-\en{in that basis}\ru{в~том базисе}
-(\figref{fig:componentsofvector}).
+
+\en{Decomposing vector}\ru{Разлагая вектор}~$\bm{v}$ \en{in some ortho\-normal basis}\ru{в~некотором орто\-нормаль\-ном базисе}~${\bm{e}_i}$ (${i = 1, 2, 3}$), \en{we get}\ru{получаем} \en{coefficients}\ru{коэффициенты}~$v_i$\:--- \en{components}\ru{компоненты} \en{of~vector}\ru{вектора}~$\bm{v}$ \en{in that basis}\ru{в~том базисе}~(\figref{fig:componentsofvector})
 
 \end{minipage}
 
@@ -221,7 +216,7 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \nopagebreak\vspace{-0.15em}\begin{equation}\label{vectorlength}
 \bm{v} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{v} \hspace{-0.1ex}
 = v_i \bm{e}_i \hspace{-0.1ex} \dotp v_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.25ex}
-= v_i \hspace{.1ex} \KronekerDelta{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.25ex}
+= v_i \hspace{.1ex} \delta_{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.25ex}
 = v_i v_i
 \hspace{.1ex} , \hspace{.5em}
 \| \bm{v} \| \hspace{-0.1ex}
@@ -268,16 +263,11 @@ All that changes is the relative direction of all of the basis vectors.
 Therefore, a rotation matrix is not really just a~“rotation” matrix;
 it is an orientation matrix.
 
-\en{There are also pseudovectors}\ru{Бывают ещё и~псевдовекторы},
-\en{waiting for the~reader}\ru{ждущие читателя}
-\en{below}\ru{ниже}
-\en{in the}\ru{в}~\pararef{para:crossproduct}.}\hbox{\hspace{-0.5ex}.
+\en{There are also pseudovectors}\ru{Бывают ещё и~псевдовекторы}, \en{waiting for the~reader}\ru{ждущие читателя} \en{below}\ru{ниже} \en{in}\ru{в}~\pararef{para:crossproduct+levicivita}.}\hbox{\hspace{-0.5ex}.
 \par}
 
-\subsection*{ \en{The angle}\ru{Угол}
-\en{between two random vectors}\ru{между двумя случайными векторами} }
-
-\en{According to the}\ru{Согласно}~\eqref{anglesbetweenvectorandbasisvectors}
+\emph{\en{The angle}\ru{Угол} \en{between two random vectors}\ru{между двумя случайными векторами}.}
+\en{According to}\ru{Согласно}~\eqref{anglesbetweenvectorandbasisvectors}
 
 \nopagebreak\vspace{-0.2em}\begin{gather*}
 \operatorname{cos} \measuredangle ({\bm{v}, \bm{e}_m}) \hspace{-0.1ex}
@@ -305,18 +295,23 @@ it is an orientation matrix.
 \en{every vector}\ru{каждый вектор}
 \en{possesses these properties}\ru{обладает этими свойствами}%
 \footnote{ \en{And what is the direction}\ru{И~как\'{о}е~же направление}
-\en{the~null vector has?}\ru{имеет нуль\hbox{-}вектор?}
+\en{of the~null vector}\ru{у~нуль\hbox{-}вектора}
 $\bm{0}$
 \en{with zero length}\ru{с~нулевой длиной}
 ${ \| \bm{0} \| \hspace{-0.25ex} = \hspace{-0.1ex} 0 }$?
 (\en{The zero vector}\ru{Нулевой вектор}
-\en{has the zero magnitude}\ru{имеет нулевую магнитуду}
-\en{and}\ru{и}
+\en{with no magnitude}\ru{без магнитуды}
 \en{ends exactly where it begins}\ru{кончается точно там~же, где он начинается}
 \en{and}\ru{и}
-\en{is not directed somewhere}\ru{не направлен куда-нибудь}.
+\en{is not directed anywhere}\ru{никуда не направлен},
+\en{thus}\ru{поэтому}
+\en{its direction}\ru{его направление}
+\en{is }\emph{\en{undefined}\ru{не определено}}.) }%
+\hbox{\hspace{-0.5ex}.}
 \en{However}\ru{Однако},
-\en{this is not~enough}\ru{этого не достаточно}.
+\en{this is not~enough}\ru{этого м\'{а}ло} (\inquotes{\href{https://en.wikipedia.org/wiki/Necessity_and_sufficiency}{\en{not}\ru{не}~\en{sufficient}\ru{достаточно}}}
+\en{in jargon}\ru{на жаргоне}
+\en{of the math books}\ru{книг по~математике}).
 
 \vspace{.1em}
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
@@ -493,26 +488,71 @@ ${
 \vspace{-0.2em}\noindent
 \en{is sometimes used}\ru{иногда используется}
 \en{for}\ru{для}
-\en{the definition}\ru{определения}
-\en{of a~vector itself}\ru{самог\'{о} вектора}.
+\en{defining}\ru{определения}
+\en{a~vector itself}\ru{самог\'{о} вектора}.
 \en{If}\ru{Если}
 \en{in each}\ru{в~каждом}
 \en{orthonormal}\ru{ортонормальном}
 \en{basis}\ru{базисе}~${\bm{e}_i}$
-\ru{известна }\en{a~triplet of~components}\ru{тройка компонент}~${v_i}$\en{ is known},
+\ru{известна }\en{a~triplet of~numbers}\ru{тройка чисел}~${v_i}$\en{ is known},
 \en{and}\ru{и}
 \en{with}\ru{с}
 \en{a~rotation}\ru{вращением}
-\en{of a~basis}\ru{базиса}
-\en{as a~whole}\ru{как целого},
-\en{the set of vector components is transformed}\ru{набор компонент вектора преобразуется}
+\en{of the basis}\ru{базиса}
+\en{as a~whole}\ru{как целого}
+\en{it is transformed}\ru{он преобразуется}
 \en{according to}\ru{согласно}~\eqref{orthotransform:1}.
 \en{then}\ru{тогда}
 \en{this triplet of~components}\ru{эта тройка компонент}
 \en{represents}\ru{представляет}
 \en{an~invariant object}\ru{инвариантный объект}\:---
-\en{a~vector}\ru{вектор}~${\bm{v}}$.
+\en{vector}\ru{вектор}~${\bm{v}}$.
 
-%that's why
-
-
+=======
+--- theparagraph1.1.tex
++++ theparagraph1.1.tex
+@@ -139,11 +139,15 @@
+ \end{wrapfigure}
+ 
+ \en{Introduce rectangular}\ru{Введём прямоугольные}~(\inquotes{\en{cartesian}\ru{декартовы}}) \en{coordinates}\ru{координаты} \en{by picking}\ru{выбором} \en{some}\ru{каких-либо} \en{three}\ru{трёх} \en{mutually perpendicular unit vectors}\ru{взаимно перпендикулярных единичных векторов} ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$ \en{as}\ru{как} \en{a~\hbox{basis}}\ru{основы~(\hbox{базиса})} \en{for measurements}\ru{для измерений}.
+-\en{Within such}\ru{В~так\'{о}й} \en{a~}\hbox{\en{system}\ru{системе}}\en{,} \hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{products}\ru{произведения} \en{of~\hbox{basis} vectors}\ru{базисных векторов} \en{are equal to}\ru{равны} \en{the~\hbox{Kronecker} delta}\ru{\hbox{дельте} \hbox{Kronecker’а}}:
++\en{Within a~such}\ru{В~так\'{о}й}
++\en{system}\ru{системе}\en{,} \hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{products}\ru{произведения}
++\en{of the basis vectors}\ru{базисных векторов}
++\en{are equal to}\ru{равны}
++\en{the}\ru{дельте} Kronecker’\en{s}\ru{а}\en{ delta}
+ 
+ \nopagebreak\vspace{-0.15em}\begin{equation*}
+ \bm{e}_i \dotp \hspace{.1ex} \bm{e}_j \hspace{-0.15ex}
+-= \hspace{.1ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
++= \hspace{.1ex} \KroneckerDelta{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+ = \hspace{.1ex} \scalebox{.95}{$
+ \left\{\hspace{.3ex}\begin{gathered}
+ 1, \; i = j
+@@ -156,8 +160,14 @@
+ \nopagebreak\vspace{-0.2em}\noindent
+ \hfill\hbox{\en{for any}\ru{для любого} \en{orthonormal}\ru{ортонормального} \en{basis}\ru{базиса}}.
+ 
+-
+-\en{Decomposing vector}\ru{Разлагая вектор}~$\bm{v}$ \en{in some ortho\-normal basis}\ru{в~некотором орто\-нормаль\-ном базисе}~${\bm{e}_i}$ (${i = 1, 2, 3}$), \en{we get}\ru{получаем} \en{coefficients}\ru{коэффициенты}~$v_i$\:--- \en{components}\ru{компоненты} \en{of~vector}\ru{вектора}~$\bm{v}$ \en{in that basis}\ru{в~том базисе}~(\figref{fig:componentsofvector})
++\en{Decomposing vector}\ru{Разлагая вектор}~$\bm{v}$
++\en{in some ortho\-normal basis}\ru{в~некотором орто\-нормаль\-ном базисе}
++${\bm{e}_i}$ (${i = 1, 2, 3}$),
++\en{we get}\ru{получаем}
++\en{coefficients}\ru{коэффициенты}~$v_i$\:---
++\en{the components}\ru{компоненты} \en{of~vector}\ru{вектора}~$\bm{v}$
++\en{in that basis}\ru{в~том базисе}
++(\figref{fig:componentsofvector}).
+ 
+ \end{minipage}
+ 
+@@ -211,7 +221,7 @@
+ \nopagebreak\vspace{-0.15em}\begin{equation}\label{vectorlength}
+ \bm{v} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{v} \hspace{-0.1ex}
+ = v_i \bm{e}_i \hspace{-0.1ex} \dotp v_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.25ex}
+-= v_i \hspace{.1ex} \delta_{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.25ex}
++= v_i \hspace{.1ex} \KronekerDelta{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.25ex}
+ = v_i v_i
+ \hspace{.1ex} , \hspace{.5em}
+ \| \bm{v} \| \hspace{-0.1ex}
+>>>>>>> 63698db (edit 1.1 and 4.4)
