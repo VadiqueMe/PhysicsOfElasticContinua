@@ -1,4 +1,4 @@
-\en{\section{Rotation tensor}}
+\en{\section{The rotation tensor}}
 
 \ru{\section{Тензор поворота}}
 
@@ -414,7 +414,7 @@ $}}
 \hspace{.1ex}, \]
 \nopagebreak\vspace{-0.64em}\begin{equation}
 \bm{\omega} = - \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.4ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{.4ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{.5ex} \mathcircabove{\bm{e}}_i \hspace{-0.3ex}\times\hspace{-0.3ex} \mathcircabove{\bm{e}}_j \hspace{-0.1ex} =
-\smalldisplaystyleonehalf \hspace{.2ex} \levicivita_{j\hspace{-0.06ex}ik} \hspace{.32ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{.4ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{.4ex} \mathcircabove{\bm{e}}_k
+\smalldisplaystyleonehalf \hspace{.2ex} \permutationsparity_{j\hspace{-0.06ex}ik} \hspace{.32ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{.4ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{.4ex} \mathcircabove{\bm{e}}_k
 \hspace{.2ex} .
 \end{equation}
 
@@ -774,7 +774,7 @@ ${a_i \hspace{-0.2ex} = \hspace{.1ex} b_{kk}^{\hspace{.1ex}i}}$\ru{\:---}\en{ is
 
 \vspace{-0.1em}\noindent
 Коэффициент~$\gamma$ получился равным (с~точностью до~знака для \inquotes{левой} тройки ${\bm{a}_i}$) объёму параллелепипеда, построенного на~векторах~$\bm{a}_i$.
-\en{In}\ru{В}~\pararef{para:crossproduct+levicivita} \en{the~same volume}\ru{тот~же объём} \en{was presented as}\ru{был представлен как}~${\hspace{-.22ex}\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{.16ex}}$, \en{and this is}\ru{и~это} \en{not without reason}\ru{не без причины}, \en{because}\ru{ведь} \en{it coincides with the~square root of}\ru{он совпад\'{а}ет с~квадратным корнем из}~\href{https://en.wikipedia.org/wiki/Gramian_matrix}{\en{gramian}\ru{грамиана}}~\hbox{$\textsl{g} \hspace{.1ex} \hspace{.25ex} \equiv \hspace{.2ex} \operatorname{det} \textsl{g}_{i\hspace{-0.1ex}j}$\hspace{-0.12ex}}\:--- \en{determinant of}\ru{определителя} \en{the~symmetric}\ru{симметричной} \ru{матрицы }\hbox{\href{https://en.wikipedia.org/wiki/J\%C3\%B8rgen_Pedersen_Gram}{J.\,P.\:Gram}\ru{’а}}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \equiv \hspace{.2ex} \bm{a}_i \dotp \bm{a}_j}$.
+\en{In}\ru{В}~\pararef{para:crossproduct} \en{the~same volume}\ru{тот~же объём} \en{was presented as}\ru{был представлен как}~${\hspace{-.22ex}\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{.16ex}}$, \en{and this is}\ru{и~это} \en{not without reason}\ru{не без причины}, \en{because}\ru{ведь} \en{it coincides with the~square root of}\ru{он совпад\'{а}ет с~квадратным корнем из}~\href{https://en.wikipedia.org/wiki/Gramian_matrix}{\en{gramian}\ru{грамиана}}~\hbox{$\textsl{g} \hspace{.1ex} \hspace{.25ex} \equiv \hspace{.2ex} \operatorname{det} \textsl{g}_{i\hspace{-0.1ex}j}$\hspace{-0.12ex}}\:--- \en{determinant of}\ru{определителя} \en{the~symmetric}\ru{симметричной} \ru{матрицы }\hbox{\href{https://en.wikipedia.org/wiki/J\%C3\%B8rgen_Pedersen_Gram}{J.\,P.\:Gram}\ru{’а}}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \equiv \hspace{.2ex} \bm{a}_i \dotp \bm{a}_j}$.
 
 \noindent
 ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
@@ -783,7 +783,7 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \en{The }\inquotes{\en{triple product}\ru{Тройное произведение}} ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex} \bm{a}_k}$ \en{in some orthonormal basis}\ru{в~каком\hbox{-}нибудь орто\-нормаль\-ном базисе}~${\bm{e}_i}$ вычисл\'{и}мо как~детерминант (с~\inquotes{$-$} для \inquotes{левой} тройки ${\bm{a}_i}$) по~строкам
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\levicivita_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.1ex}
+\permutationsparity_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.1ex}
 \equiv \hspace{.16ex} \bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex} \bm{a}_k =
 \hspace{.1ex} \pm \hspace{.1ex} \operatorname{det}\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
@@ -797,7 +797,7 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 или по~столбцам
 
 \nopagebreak\vspace{-0.4em}\begin{equation*}
-\levicivita_{pqr} \hspace{-0.15ex}
+\permutationsparity_{pqr} \hspace{-0.15ex}
 \equiv \hspace{.16ex} \bm{a}_p \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_q \dotp \hspace{.1ex} \bm{a}_r =
 \hspace{.1ex} \pm \hspace{.1ex} \operatorname{det}\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
@@ -808,14 +808,18 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \end{equation*}
 
 \vspace{.1em}\noindent
-Произведение определителей~${\levicivita_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \levicivita_{pqr}}$ равно определителю произведения матриц, \en{and}\ru{а}~\en{elements of~the~latter}\ru{элементы последнего}\ru{\:---}\en{ are} \en{sums}\ru{суммы} \en{like}\ru{вида}
+Произведение определителей~${\permutationsparity_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \permutationsparity_{pqr}}$ равно определителю произведения матриц,
+\en{and}\ru{а}~\en{an~elements of~the~latter}\ru{элементы последнего}
+\en{are}\ru{это}
+\en{sums}\ru{суммы}
+\en{like}\ru{вида}
 ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{a}_p \hspace{-0.2ex} \dotp \bm{e}_s \hspace{-0.2ex}
 = \bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{e}_s \hspace{-0.2ex} \dotp \bm{a}_p \hspace{-0.15ex}
 = \bm{a}_i \hspace{-0.1ex} \dotp \hspace{-0.1ex} \UnitDyad \dotp \bm{a}_p \hspace{-0.15ex}
 = \bm{a}_i \hspace{-0.1ex} \dotp \bm{a}_p}$, в~результате
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\levicivita_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \levicivita_{pqr} = \hspace{0.25ex}
+\permutationsparity_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \permutationsparity_{pqr} = \hspace{0.25ex}
 \operatorname{det}\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_p & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_q & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_r \\
@@ -825,7 +829,7 @@ ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{a}_p \hspace{-0.2ex} \dotp \bm{e}_
 \end{equation*}
 
 \vspace{-0.1em} \noindent
-${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\levicivita_{123} \hspace{.2ex} \levicivita_{123} \hspace{-0.15ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, \textsl{g}_{i\hspace{-0.1ex}j}}$.
+${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\permutationsparity_{123} \hspace{.2ex} \permutationsparity_{123} \hspace{-0.15ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, \textsl{g}_{i\hspace{-0.1ex}j}}$.
 ${ \hspace{.6em}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex); }$
 
@@ -856,7 +860,7 @@ ${ \hspace{.6em}
 \vspace{-0.2em}\noindent
 Здесь ${e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k}}$ по\hbox{-}прежнему символ перестановки Veblen’а (${\pm 1}$ или~$0$):
 ${e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.1ex} \equiv e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}}$.
-Произведение~${\bm{a}_j \hspace{-0.1ex} \times \bm{a}_k = \hspace{.1ex} \levicivita_{j\hspace{-0.1ex}kn} \hspace{.2ex} \bm{a}^n\hspace{-0.12ex}}$, компоненты тензора Л\'{е}ви\hbox{-\!}Чив\'{и}ты~${ \levicivita_{j\hspace{-0.1ex}kn} \hspace{-0.2ex} = \pm \hspace{.33ex} e_{j\hspace{-0.1ex}kn} \hspace{-0.1ex} \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} }$,
+Произведение~${\bm{a}_j \hspace{-0.1ex} \times \bm{a}_k = \hspace{.1ex} \permutationsparity_{j\hspace{-0.1ex}kn} \hspace{.2ex} \bm{a}^n\hspace{-0.12ex}}$, компоненты тензора Л\'{е}ви\hbox{-\!}Чив\'{и}ты~${ \permutationsparity_{j\hspace{-0.1ex}kn} \hspace{-0.2ex} = \pm \hspace{.33ex} e_{j\hspace{-0.1ex}kn} \hspace{-0.1ex} \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} }$,
 \en{and}\ru{а}~\en{by}\ru{по}~\eqref{veblencontraction} ${e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k} e_{j\hspace{-0.1ex}kn} \hspace{-0.25ex} = 2 \hspace{.1ex} \delta_n^{\hspace{.1ex}i}}$.
 \en{Thus}\ru{Так что}
 
@@ -1776,7 +1780,7 @@ ${\mathfrak{R}_{\hspace{.1ex}1212}}$, ${\mathfrak{R}_{\hspace{.1ex}1213}}$, ${\m
 \begin{equation*}
 \hspace{.1ex}\pmb{\scalebox{1.2}[1]{$\mathscr{R}$}} \equiv
 \smalldisplaystyleonefourth \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}abi\hspace{-0.1ex}j} \hspace{.2ex} \locationvector^a \hspace{-0.33ex} \times \hspace{-0.1ex} \locationvector^b \locationvector^i \hspace{-0.33ex} \times \hspace{-0.1ex} \locationvector^j \hspace{-0.25ex}
-= \smalldisplaystyleonefourth \hspace{.15ex} \levicivita^{abp} \levicivita^{i\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{.25ex} \mathfrak{R}_{\hspace{.1ex}abi\hspace{-0.1ex}j} \hspace{.2ex} \locationvector_\differentialindex{p} \locationvector_\differentialindex{q} \hspace{-0.2ex}
+= \smalldisplaystyleonefourth \hspace{.15ex} \permutationsparity^{abp} \permutationsparity^{i\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{.25ex} \mathfrak{R}_{\hspace{.1ex}abi\hspace{-0.1ex}j} \hspace{.2ex} \locationvector_\differentialindex{p} \locationvector_\differentialindex{q} \hspace{-0.2ex}
 = \mathscr{R}^{\hspace{.1ex}pq} \hspace{.1ex} \locationvector_\differentialindex{p} \locationvector_\differentialindex{q}
 \end{equation*}
 
