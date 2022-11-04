@@ -207,12 +207,12 @@ $}
 \scalebox{.82}{$
    \left[ \hspace{.4em}
    \begin{matrix}
-      a_{1} & a_{12} & a_{13} & a_{14} & a_{15} & a_{16} \\
-      \color{gray}{$ a_{12} $} & a_{2} & a_{23} & a_{24} & a_{25} & a_{26} \\
-      \color{gray}{$ a_{13} $} & \color{gray}{$ a_{23} $} & a_{3} & a_{34} & a_{35} & a_{36} \\
-      \color{gray}{$ a_{14} $} & \color{gray}{$ a_{24} $} & \color{gray}{$ a_{34} $} & a_{4} & a_{45} & a_{46} \\
-      \color{gray}{$ a_{15} $} & \color{gray}{$ a_{25} $} & \color{gray}{$ a_{35} $} & \color{gray}{$ a_{45} $} & a_{5} & a_{56} \\
-      \color{gray}{$ a_{16} $} & \color{gray}{$ a_{26} $} & \color{gray}{$ a_{36} $} & \color{gray}{$ a_{46} $} & \color{gray}{$ a_{56} $} & a_{6}
+      a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & a_{16} \\
+      \color{gray}{$ a_{12} $} & a_{22} & a_{23} & a_{24} & a_{25} & a_{26} \\
+      \color{gray}{$ a_{13} $} & \color{gray}{$ a_{23} $} & a_{33} & a_{34} & a_{35} & a_{36} \\
+      \color{gray}{$ a_{14} $} & \color{gray}{$ a_{24} $} & \color{gray}{$ a_{34} $} & a_{44} & a_{45} & a_{46} \\
+      \color{gray}{$ a_{15} $} & \color{gray}{$ a_{25} $} & \color{gray}{$ a_{35} $} & \color{gray}{$ a_{45} $} & a_{55} & a_{56} \\
+      \color{gray}{$ a_{16} $} & \color{gray}{$ a_{26} $} & \color{gray}{$ a_{36} $} & \color{gray}{$ a_{46} $} & \color{gray}{$ a_{56} $} & a_{66}
    \end{matrix}
    \hspace{.32em} \right]
 $\end{gather}
@@ -292,12 +292,12 @@ ${\potential( \hspace{-0.1ex}
 \begin{gathered}
 \hspace{-5em}
 2 \hspace{.1ex} \potential
-= a_1 \varepsilon^2_{x} \hspace{-0.1ex}
-+ a_2 \varepsilon^2_{y} \hspace{-0.1ex}
-+ a_3 \varepsilon^2_{z} \hspace{-0.1ex}
-+ a_4 \varepsilon^2_{xy} \hspace{-0.2ex}
-+ a_5 \varepsilon^2_{xz} \hspace{-0.2ex}
-+ a_6 \varepsilon^2_{yz}
+= a_{11} \varepsilon^2_{x} \hspace{-0.1ex}
++ a_{22} \varepsilon^2_{y} \hspace{-0.1ex}
++ a_{33} \varepsilon^2_{z} \hspace{-0.1ex}
++ a_{44} \varepsilon^2_{xy} \hspace{-0.2ex}
++ a_{55} \varepsilon^2_{xz} \hspace{-0.2ex}
++ a_{66} \varepsilon^2_{yz}
 \\[-0.1em]
 %
 \hspace{.2em}
@@ -338,9 +338,9 @@ a_{45} \varepsilon_{xz} \hspace{-0.2ex}
 
 \en{When}\ru{Когда}
 \ru{добавляется }\en{a~material symmetry}\ru{материальная симметрия}\en{ is added},
-\en{the number}\ru{число}
+\en{then the number}\ru{тогда число}
 \en{of the independent moduli}\ru{независимых модулей}
-\en{of the tensor}\ru{тензора}~${\stiffnesstensor}$
+\en{of tensor}\ru{тензора}~${\stiffnesstensor}$
 \en{decreases}\ru{уменьшается}.
 
 \en{For}\ru{Для}
@@ -357,13 +357,14 @@ ${z = \constant}$.
 $x$
 \en{and}\ru{и}~$y$
 \en{does not change}\ru{не меняет}
-\en{the potential energy density}\ru{плотность потенциальной энергии}~${\potential}
-(\en{per volume unit}\ru{на единицу объёма}).
+\en{the potential energy density}\ru{плотность потенциальной энергии}~${\potential}.
 %
 \en{And}\ru{А}
 \en{it’s possible}\ru{это возможно}
 \en{only}
 \en{when}\ru{когда}
+
+\noindent
 \begin{equation}\label{zeroconstants:oneplaneofsymmetry}
 \potential \hspace{.1ex}
 \raisemath{-0.2em} {
@@ -458,15 +459,23 @@ $y$, $z$\en{ planes}\:---
 \en{planes}\ru{плоскости}
 \en{of symmetry}\ru{симметрии}
 \en{ are enough} .
-\en{The kind}\ru{Вид}
-\en{of the elastic energy}\ru{упругой энергии}
-\en{is simplified to}\ru{упрощается до}
+\en{The expression}\ru{Выражение}
+\en{of the elastic energy density}\ru{плотности упругой энергии}
+\en{can be simplified to}\ru{может быть упрощено до}
 
 \nopagebreak\vspace{-0.25em}\begin{multline*}
-\potential =^{\mathstrut^{\mathstrut}} \smalldisplaystyleonehalf a_1 \varepsilon^2_{x} \hspace{-0.1ex} + \smalldisplaystyleonehalf a_2 \varepsilon^2_{y} \hspace{-0.1ex} + \smalldisplaystyleonehalf a_3 \varepsilon^2_{z} \hspace{-0.1ex} + \smalldisplaystyleonehalf a_4 \varepsilon^2_{xy} \hspace{-0.2ex} + \smalldisplaystyleonehalf a_5 \varepsilon^2_{xz} \hspace{-0.2ex} + \smalldisplaystyleonehalf a_6 \varepsilon^2_{yz}
+\potential =^{\mathstrut^{\mathstrut}}
+\smalldisplaystyleonehalf a_{11} \varepsilon^2_{x} \hspace{-0.1ex} +
+\smalldisplaystyleonehalf a_{22} \varepsilon^2_{y} \hspace{-0.1ex} +
+\smalldisplaystyleonehalf a_{33} \varepsilon^2_{z} \hspace{-0.1ex} +
+\smalldisplaystyleonehalf a_{44} \varepsilon^2_{xy} \hspace{-0.2ex} +
+\smalldisplaystyleonehalf a_{55} \varepsilon^2_{xz} \hspace{-0.2ex} +
+\smalldisplaystyleonehalf a_{66} \varepsilon^2_{yz}
 \\[-0.1em]
 %
-+ a_{12} \varepsilon_{x} \varepsilon_{y} \hspace{-0.2ex} + a_{13} \varepsilon_{x} \varepsilon_{z} \hspace{-0.2ex} + a_{23} \varepsilon_{y} \varepsilon_{z}
++ a_{12} \varepsilon_{x} \varepsilon_{y} \hspace{-0.2ex}
++ a_{13} \varepsilon_{x} \varepsilon_{z} \hspace{-0.2ex}
++ a_{23} \varepsilon_{y} \varepsilon_{z}
 \hspace{.1ex}
 .
 \end{multline*}
@@ -582,18 +591,32 @@ $}\ru{,}
 $\varvector{\bm{o}}$
 \en{is directed}\ru{направлен}
 \en{along}\ru{вдоль}~$z$.
-
 \en{Let’s write}\ru{Распишем}
 \en{this equation}\ru{это равенство}
-\en{in components}\ru{в~компонентах}.
-(\en{It must be true}\ru{оно должно быть истиной}
+\en{in components}\ru{в~компонентах}
+(\en{it must be true}\ru{оно должно быть истиной}
 \en{for}\ru{для}
 \en{any}\ru{любых}
-\en{deformations}\ru{деформаций}~$\infinitesimaldeformation$)
+\en{infinitesimal deformations}\ru{бесконечномалых деформаций}~$\infinitesimaldeformation$)
 
-.......................
-.......................
-.......................
+\noindentic
+\begin{gather}\label{equationforelasticmoduliforatransverselyisotropicmaterial}
+\bigl( a_{11} \mathepsilon_{x} + a_{12} \mathepsilon_{y} + a_{13} \mathepsilon_{z} \bigr)\bigl( -2 \mathepsilon_{xy} \bigr)
++
+\bigl( a_{12} \mathepsilon_{x} + a_{22} \mathepsilon_{y} + a_{23} \mathepsilon{z} \bigr) 2 \mathepsilon_{xy}
+\\
+%
++ 2 a_{44} \mathepsilon_{xy} \bigl( -\mathepsilon_{y} + \mathepsilon_{x} \bigr)
++ 2 a_{55} \mathepsilon_{xz} \bigl( -\mathepsilon_{yz} \bigr)
++ 2 a_{66} \mathepsilon_{yz} \mathepsilon_{xz}
+= 0
+\end{gather}
+
+\noindent
+\begin{equation}\label{elasticmoduliforatransverselyisotropicmaterial}
+\Rightarrow\hspace{.5em}
+a_{11}
+\end{equation}
 .......................
 
 \en{of the deformation tensor}\ru{тензора деформаций}
@@ -626,38 +649,41 @@ ${
 \vspace{-0.25em}\noindent
 \begin{gather*}
 \bigl( \hspace{.2ex}
-a_1 \epsilon_{x} \hspace{-.2ex}
-+ a_12 \epsilon_{y} \hspace{-.2ex}
-+ a_13 \epsilon_{z} \hspace{.2ex} \bigr) \hspace{.2ex}
+a_{11} \mathepsilon_{x} \hspace{-.2ex}
++ a_{12} \mathepsilon_{y} \hspace{-.2ex}
++ a_{13} \mathepsilon_{z} \hspace{.2ex} \bigr) \hspace{.2ex}
 \bigl( \hspace{.2ex}
-- 2 \epsilon_{xy}
+- 2 \mathepsilon_{xy}
 \hspace{.2ex} \bigr)
 + \bigl( \hspace{.2ex}
-a_2 \epsilon_{y} \hspace{-.2ex}
-+ a_12 \epsilon_{x} \hspace{-.2ex}
-+ a_23 \epsilon_{z}
+a_{22} \mathepsilon_{y} \hspace{-.2ex}
++ a_{12} \mathepsilon_{x} \hspace{-.2ex}
++ a_{23} \mathepsilon_{z}
 \hspace{.2ex} \bigr)
-2 \epsilon_{xy} \hspace{-.2ex}
+2 \mathepsilon_{xy} \hspace{-.2ex}
 \\
-+ 2 a_4 \epsilon_{xy} \hspace{-.2ex}
-\bigl( \hspace{.2ex} - \epsilon_y + \epsilon_x \hspace{.2ex} \bigr)
-+ 2 a_5 \epsilon_{xz}
-\bigl( \hspace{.2ex} - \epsilon_{yz} \hspace{.2ex} \bigr)
-+ 2 a_6 \epsilon_{yz} \epsilon_{xz} \hspace{-.2ex}
+%
++ 2 a_{44} \mathepsilon_{xy} \hspace{-.2ex}
+\bigl( \hspace{.2ex} - \mathepsilon_y + \mathepsilon_x \hspace{.2ex} \bigr)
++ 2 a_{55} \mathepsilon_{xz}
+\bigl( \hspace{.2ex} - \mathepsilon_{yz} \hspace{.2ex} \bigr)
++ 2 a_{66} \mathepsilon_{yz} \mathepsilon_{xz} \hspace{-.2ex}
 = 0
+.
 \end{gather*}
 
-\en{As~a~result}\ru{В~результате}
+\noindent
+\en{As a~result}\ru{Как результат}
 
 \vspace{-0.25em}\noindent
 \begin{equation*}
-a_1 \hspace{-.2ex} = a_12 + a_4 \hspace{-.2ex} = a_2
+a_{11} \hspace{-.2ex} = a_{12} + a_{44} \hspace{-.2ex} = a_{22}
 \hspace{.1ex} ,
 \hspace{.5em}
 a_{13} = a_{23}
 \hspace{.1ex} ,
 \hspace{.5em}
-a_5 \hspace{-.2ex} = a_6
+a_{55} \hspace{-.2ex} = a_{66}
 \hspace{.1ex} .
 \end{equation*}
 
@@ -695,21 +721,28 @@ $),
 
 \begin{equation*}
 \withtheindexofperpendicularity{\linearstress}
+=
 a_4 \withtheindexofperpendicularity{\infinitesimaldeformation}
 +
 \Bigl(
    a_{12}
    \withtheindexofperpendicularity{\infinitesimaldeformation}
    +
-   a_{13}
-   ..............
+   a_{13} \epsilon_z
 \Bigr)
+\withtheindexofperpendicularity{\UnitDyad}
 \end{equation*}
 
-Итак,
-трансверсально изотропный материал
-характеризуется
-шестью ненулевыми упругими константами.
+\en{So}\ru{Итак},
+\en{a~transversally isotropic material}\ru{трансверсально изотропный материал}
+\en{is characterized}\ru{характеризуется}
+\en{by the five}\ru{пятью}
+\en{non-null}\ru{ненулевыми}
+\en{mutually independent}\ru{взаимно независимыми}
+\en{components}\ru{компонентами},
+\en{the elastic moduli}\ru{упругими модулями}
+${a_33}$, ${a_44}$, ${a_55}$, ${a_12}$, ${a_13}$
+\hspace{.1ex} .
 
 %симметрия кристаллов
 
@@ -741,6 +774,8 @@ ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$
 \en{case of symmetry}\ru{случай симметрии}
 \en{is characterized}\ru{характеризуется}
 \en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\orthogonaltensor$\ru{,}
-\en{that satisfies the equation}\ru{которые удовлетворяют уравнению}
+\en{that satisfy the equation}\ru{которые удовлетворяют уравнению}
 ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$,
+
+
 
