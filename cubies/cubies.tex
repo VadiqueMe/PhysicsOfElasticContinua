@@ -30,10 +30,7 @@
 \makeatother
 \newcommand\dotdotp{\dotp\hspace{-0.16em}\dotp\hspace{.20em}}
 
-\makeatletter
-\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
-\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
-\makeatother
+\usepackage{mathtools}
 
 \usepackage{nicefrac}
 
@@ -45,12 +42,6 @@
 \addto\captionsenglish{\renewcommand{\figurename}{figure}}
 \addto\captionsenglish{\def\figureshortname{fig.}}
 \newcommand\figref[1]{\figureshortname~\ref{#1}}
-
-\usepackage[format=plain]{caption}
-\captionsetup[figure]{%
-font={small,it},labelfont=small,%
-labelsep=newline,justification=centering,singlelinecheck=off,%
-aboveskip=4mm,belowskip=2.5mm}
 
 \newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
 
@@ -65,6 +56,14 @@ aboveskip=4mm,belowskip=2.5mm}
 \newcommand{\lquote}[0]{``}
 \newcommand{\rquote}[0]{''}
 \newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\newcommand\permutationsparitysymbols[1]{\raisemath{.2ex}{\mathrm{\in}_[1]}}
+\newcommand\permutationsparitytensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
 \pagestyle{empty}
 
@@ -345,7 +344,7 @@ aboveskip=4mm,belowskip=2.5mm}
 		($ (a) + (0, \semilengthofside, 0) $) -- ($ (aplusday) + (0, \semilengthofside, 0) $)
 		node [pos=0.5, above right, inner sep=1pt, outer sep=3pt]
 			{$\smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 \hspace{-0.2ex}
-				+ \hspace{-0.16ex} \scalebox{0.9}{$\infty^{\hspace{-0.4ex}\expminusone}$}(d\bm{a})$} ;
+				+ \hspace{-0.16ex} \scalebox{.9}{$\infty^{\hspace{-0.4ex}\expminusone}$}(d\bm{a})$} ;
 
 	\draw [line width=1.6pt, blue, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
 		($ (a) + (0, -\semilengthofside, 0) $) -- ($ (aminusday) + (0, -\semilengthofside, 0) $)
@@ -484,15 +483,15 @@ d\bm{a} \dotp \hspace{-0.1ex} \UnitDyad
 
 \begin{equation*}
 \begin{array}{c}
-%%\bm{n}_i \hspace{.2ex} d\mathcal{O}_i \hspace{-0.12ex} = \bm{n}_i \bm{n}_i \hspace{-0.12ex} \dotp d\xi_j \bm{n}_j \hspace{-0.25ex} \times \hspace{-0.16ex} d \xi_k \bm{n}_k
-%%\hspace{.1ex}, \:
-%%d\mathcal{O}_i \hspace{-0.12ex} = \hspace{-0.16ex} \permutationsparitytensor_{i\hspace{-0.1ex}jk} \hspace{.2ex} d\xi_j \hspace{.12ex} d\xi_k
-%%\\[.25em]
-%
 \bm{n}^{\hspace{-0.16ex}i} d\mathcal{O}_i \hspace{-0.12ex} = \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i \hspace{-0.12ex} \dotp d\xi^j \bm{n}_j \hspace{-0.25ex} \times \hspace{-0.16ex} d \xi^k \bm{n}_k
-\hspace{.1ex}, \:
-d\mathcal{O}_i \hspace{-0.12ex} = \hspace{-0.16ex} \permutationsparitytensor_{i\hspace{-0.1ex}jk} \hspace{.2ex} d\xi^j \hspace{-0.12ex} d\xi^k
-\end{array}\]
+\hspace{.1ex} ,
+\hspace{1em}
+d\mathcal{O}_i
+\hspace{-0.12ex} = \hspace{-0.16ex}
+\permutationsparitysymbols{i\hspace{-0.1ex}jk}
+\hspace{.2ex} d\xi^j \hspace{-0.12ex} d\xi^k
+\end{array}
+\end{equation*}
 
 \[\begin{array}{c}
 d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} d\mathcal{O}_i \hspace{-0.12ex}

@@ -145,9 +145,7 @@
 
 \end{otherlanguage}
 
-\ru{\section{Перемещения}}
-
-\en{\section{Displacements}}
+\section{\en{Displacements}\ru{Смещения}}
 
 \begin{otherlanguage}{russian}
 
@@ -159,19 +157,66 @@
 
 \end{otherlanguage}
 
+
+
 \en{\section{Results of asymptotic analysis}}
 
-\ru{\section{Итоги асимптотического анализа}}
+\ru{\section{Результаты асимптотического анализа}}
+% Итоги асимптотического анализа
 
 \begin{otherlanguage}{russian}
 
-Определение главных членов асимптотики напряжений и~перемещений для~тонкостенных стержней оказалось намного сложнее, чем в~случае массивного сечения. Дадим сводку полученных выше итоговых результатов.
+Нахождение главных членов асимптотики
+\en{of~stresses}\ru{напряжений}
+\en{and}\ru{и}~\en{displacements}\ru{смещений}
+для~тонкостенных стержней
+оказалось
+намного сложнее,
+чем для массивных сечений.
+Дадим сводку полученных выше итоговых результатов.
 
-Перемещение:
+Смещение:
+
+\begin{equation}
+\withtheindexofperpendicularity{\fieldofdisplacements}
+=
+\lambda^{-4}
+\bigl(
+   \withtheindexofperpendicularity{\bm{U}} (z)
+   +
+   \theta (z) \bm{k} \times \bm{r}
+\bigr)
++
+\hspace{-0.1ex} \scalebox{.9}{$
+   \infty^{\hspace{-0.4ex}\expminusone}
+$}(\lambda^{-3})
+\hspace{.1ex} ,
+\end{equation}
+%
+\begin{equation}
+\fieldofdisplacementscomponents{z}
+=
+\lambda^{-3}
+\bigl(
+   {}- \withtheindexofperpendicularity{\mathdotabove{\bm{U}}
+   \dotp
+   \bm{r}
+   +
+   \mathdotabove{\theta}
+   \omega (s)
+   +
+   U_z (z)
+\bigr)
++
+\hspace{-0.1ex} \scalebox{.9}{$
+   \infty^{\hspace{-0.4ex}\expminusone}
+$}(\lambda^{-2})
+\hspace{.1ex} .
+\end{equation}
+
+Напряжения:
 
 ...
-
-
 
 
 \end{otherlanguage}
@@ -184,8 +229,21 @@
 
 \begin{otherlanguage}{russian}
 
-Помимо известных книг ... Материал главы содержится в~\cite{eliseev-models}, где можно найти и~обширный список статей.
+Помимо книг
+В.\,З.\;Власов’а~\cite{vlasov-thinwalledrods},
+Г.\,Ю.\;Джанелидзе и~Я.\,Г.\;Пановко~\cite{janelidzepanovko-thinwalledrods},
+отметим
+статью
+Я.\,Г.\;Пановко и~Е.\,А.\;Бейлина~\cite{panovko.beylin-thinwalledrods}.
+
+Материал этой главы содержится
+в~диссертации
+Владимира~В.\;Елисеева~\cite{eliseev-models},
+там также есть обширный список статей
+на тему
+тонкостенных стержней.
 
 \end{otherlanguage}
 
 \end{minipage}
+

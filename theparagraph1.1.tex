@@ -121,13 +121,14 @@ The Elements (\textgreek{Στοιχεῖα}) (Stoikheîa)
 
 ......
 
-\vspace{.2em}
-\hspace*{-\parindent}\begin{minipage}{\linewidth}
-\setlength{\parindent}{\horizontalindent}
-\setlength{\parskip}{\spacebetweenparagraphs}
+%%\vspace{.2em}
+%%\hspace*{-\parindent}\begin{minipage}{\linewidth}
+%%\setlength{\parindent}{\horizontalindent}
+%%\setlength{\parskip}{\spacebetweenparagraphs}
 
 \begin{wrapfigure}[12]{o}{.4\textwidth}
-\makebox[.32\textwidth][c]{\begin{minipage}[t]{.5\textwidth}
+\makebox[.32\textwidth][c]{%
+\begin{minipage}[t]{.5\textwidth}
 \vspace{-1.3em}
 \scalebox{.93}{
 \tdplotsetmaincoords{45}{125}
@@ -135,7 +136,8 @@ The Elements (\textgreek{Στοιχεῖα}) (Stoikheîa)
 \input{thecomponentsofvector.tex}
 
 \vspace{-2em}\caption{}\label{fig:componentsofvector}
-\end{minipage}}
+}\end{minipage}%
+}
 \end{wrapfigure}
 
 \en{Introduce rectangular}\ru{Введём прямоугольные}~(\inquotes{\en{cartesian}\ru{декартовы}}) \en{coordinates}\ru{координаты} \en{by picking}\ru{выбором} \en{some}\ru{каких-либо} \en{three}\ru{трёх} \en{mutually perpendicular unit vectors}\ru{взаимно перпендикулярных единичных векторов} ${\bm{e}_1}$,\;${\bm{e}_2}$,\;${\bm{e}_3}$ \en{as}\ru{как} \en{a~\hbox{basis}}\ru{основы~(\hbox{базиса})} \en{for measurements}\ru{для измерений}.
@@ -160,10 +162,9 @@ $}
 \nopagebreak\vspace{-0.2em}\noindent
 \hfill\hbox{\en{for any}\ru{для любого} \en{orthonormal}\ru{ортонормального} \en{basis}\ru{базиса}}.
 
-
 \en{Decomposing vector}\ru{Разлагая вектор}~$\bm{v}$ \en{in some ortho\-normal basis}\ru{в~некотором орто\-нормаль\-ном базисе}~${\bm{e}_i}$ (${i = 1, 2, 3}$), \en{we get}\ru{получаем} \en{coefficients}\ru{коэффициенты}~$v_i$\:--- \en{components}\ru{компоненты} \en{of~vector}\ru{вектора}~$\bm{v}$ \en{in that basis}\ru{в~том базисе}~(\figref{fig:componentsofvector})
 
-\end{minipage}
+%%\end{minipage}
 
 \nopagebreak\vspace{-0.33em}\begin{equation}\label{vectorcomponents}
 \bm{v}

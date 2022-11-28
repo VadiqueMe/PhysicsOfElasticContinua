@@ -148,12 +148,10 @@
 
 \newcommand*\Laplacian{\mathop{}\!\mathbin\bigtriangleup\hspace{.04ex}}
 
-\newcommand\narroweq{\hspace{.25ex}\scalebox{0.8}[1]{$=$}\hspace{.25ex}}
+\newcommand\narroweq{\hspace{.25ex}\scalebox{.8}[1]{$=$}\hspace{.25ex}}
 
-\newcommand\constant{\scalebox{0.92}[0.98]{\ensuremath{\mathsf{constant}}}}
+\newcommand\constant{\scalebox{.92}[.98]{\ensuremath{\mathsf{constant}}}}
 \newcommand\boldconstant{\mathcolor{green!50!black}{\boldmath \constant}}
-
-\newcommand\constantbivalent{\raisemath{-0.1em}{\mathcolor{green!50!black}{^2}}\boldconstant}
 
 \newcommand\eigenvalue{\eta\hspace{.1ex}}
 
@@ -198,6 +196,8 @@
 \newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
 \makeatother
 
+\newcommand\constantbivalent{\raisemath{-0.1em}{\mathcolor{green!50!black}{^2}}\boldconstant}
+
 \newcommand*{\lineover}[1]{\overline{\raisebox{0pt}[1.2\height]{\ensuremath{#1}}}}
 \newcommand*{\lineoverlower}[1]{\overline{\raisebox{0pt}[1.1\height]{\ensuremath{#1}}}}
 
@@ -208,7 +208,7 @@
 %named after Leopold Kronecker
 \newcommand\KroneckerDelta[1]{\delta_{#1}}
 
-\newcommand\permutationsparitysymbols{\raisemath{.2ex}{\mathrm{\in}}}
+\newcommand\permutationsparitysymbols[1]{\raisemath{.2ex}{\mathrm{\in}_{[#1]}}}
 \newcommand\permutationsparitytensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
 \newcommand\rotationtensor{\bm{O}}
@@ -220,7 +220,7 @@
 \newcommand\inertiatensordotabove{{\hspace{-0.1ex}^2}\mathdotabove{\bm{\mathfrak{I}}}}
 \newcommand\inertiatensorcircabove{{\hspace{-0.1ex}^2}\mathcircabove{\bm{\mathfrak{I}}}}
 
-\newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.72ex}\bm{\mathcal{A}}}\hspace{.08ex}}
+\newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.7ex}\bm{\mathcal{A}}}\hspace{.08ex}}
 \newcommand\stiffnesstensorB{{^4\hspace{-0.2ex}\bm{\mathcal{B}}}}
 \newcommand\stiffnesstensorC{{^4\bm{\mathcal{C}}}}
 
@@ -229,7 +229,7 @@
 
 \newcommand{\rateofdeformationtensor}{\bm{\mathcal{D}}}
 \newcommand{\rateofdeformationcomponents}[1]{\mathcal{D}_{#1}}
-\newcommand{\vorticitytensor}{\scalebox{0.88}[1.0]{$\bm{\mathcal{W}}$}}
+\newcommand{\vorticitytensor}{\scalebox{.88}[1.0]{$\bm{\mathcal{W}}$}}
 \newcommand{\vorticityvector}{\bm{w}}
 
 \newcommand\potentialenergyfunctional{{\mathscr{E}\hspace{-0.2ex}}}
@@ -265,31 +265,31 @@
 \newcommand\cosinematrix[1]{o_{#1}} % or \alpha
 \newcommand\cosinematrixdotted[1]{\mathdotabove{o}_{#1}}
 
-\newcommand\mathboldN{\scalebox{0.9}[1]{\ensuremath{\bm{N}\hspace{-0.1em}}}}
-\newcommand\mathboldM{\scalebox{0.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
-\newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
-\newcommand\mathboldU{\scalebox{0.9}[1]{\ensuremath{\bm{U}\hspace{-0.1ex}}}}
+\newcommand\mathboldN{\scalebox{.9}[1]{\ensuremath{\bm{N}\hspace{-0.1em}}}}
+\newcommand\mathboldM{\scalebox{.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
+\newcommand\mathboldQ{\scalebox{.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
+\newcommand\mathboldU{\scalebox{.9}[1]{\ensuremath{\bm{U}\hspace{-0.1ex}}}}
 
 \newcommand\mathboldae{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{æ}$}}}}
 \newcommand\mathboldoe{\ensuremath{\pmb{\scalebox{1.2}[1]{$\textit{œ}$}}\hspace{.1ex}}}
 
-\newcommand\mathboldalpha{\scalebox{0.88}[1]{\ensuremath{\bm{\alpha}}}}
+\newcommand\mathboldalpha{\scalebox{.88}[1]{\ensuremath{\bm{\alpha}}}}
 
 \newcommand\mathboldrcursive{\ensuremath{\pmb{\text{\textcursive{\slshape r}}}}}
 
-\newcommand\hcursive{\smash{\scalebox{0.9}{$\text{\textcursive{\slshape h}}$}\hspace{.5ex}}}
+\newcommand\hcursive{\smash{\scalebox{.9}{$\text{\textcursive{\slshape h}}$}\hspace{.5ex}}}
 
-\newcommand\elcursive{\smash{\scalebox{0.9}{$\text{\textcursive{\slshape l}}$}\hspace{.5ex}}}
-\newcommand\elcursivesub[1]{\smash{\scalebox{0.9}{$\text{\textcursive{\slshape l}}$}_{\raisemath{-0.22ex}{\hspace{.1ex}#1}}}}
+\newcommand\elcursive{\smash{\scalebox{.9}{$\text{\textcursive{\slshape l}}$}\hspace{.5ex}}}
+\newcommand\elcursivesub[1]{\smash{\scalebox{.9}{$\text{\textcursive{\slshape l}}$}_{\raisemath{-0.22ex}{\hspace{.1ex}#1}}}}
 
 \newcommand\trace[1]{\operatorname{trace}\hspace{.16ex}{#1}}
 
 \newcommand\realpart[1]{\operatorname{{\Re}e}\hspace{.16ex}{#1}}
 \newcommand\imaginarypart[1]{\operatorname{{\Im}m}\hspace{.16ex}{#1}}
 
-\newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
-\newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
-\newcommand\expminustwo{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\hspace{.1ex}\raisemath{.1ex}{2}}
+\newcommand\expminusone{\hspace{.16ex}\scalebox{.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
+\newcommand\expminusT{\hspace{.16ex}\scalebox{.8}[1]{\hbox{--}}\T}
+\newcommand\expminustwo{\hspace{.16ex}\scalebox{.8}[1]{\hbox{--}}\hspace{.1ex}\raisemath{.1ex}{2}}
 
 \newcommand\smthactive{{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}a\hspace{-0.1ex})}\hspace{-0.16ex}}}}
 
@@ -302,7 +302,7 @@
 \newcommand\potential{\Pi}
 \newcommand\kinetic{\mathrm{K}\hspace{-0.12ex}}
 
-\newcommand\differentialindex[1]{{\hspace{-0.1ex}\scalebox{0.63}{$\mathcolor{black!70}{\partial}$} #1}}
+\newcommand\differentialindex[1]{{\hspace{-0.1ex}\scalebox{.63}{$\mathcolor{black!70}{\partial}$} #1}}
 
 \newcommand\locationvector{\bm{r}}
 %%\newcommand\advancedlocationvector{\bm{R}}
@@ -316,11 +316,11 @@
 \newcommand\initialunitnormal{\mathcircabove{\unitnormalvector}}
 
 \newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
-\newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
-\newcommand\smallerdisplaystyleonehalf{\scalebox{0.7}{$\raisemath{.1em}{\displaystyle \onehalf}$}\hspace{.1ex}}
+\newcommand\smalldisplaystyleonehalf{\scalebox{.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
+\newcommand\smallerdisplaystyleonehalf{\scalebox{.7}{$\raisemath{.1em}{\displaystyle \onehalf}$}\hspace{.1ex}}
 
 \newcommand\onefourth{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{4}}}
-\newcommand\smalldisplaystyleonefourth{\scalebox{0.8}{$\displaystyle \onefourth$}\hspace{.1ex}}
+\newcommand\smalldisplaystyleonefourth{\scalebox{.8}{$\displaystyle \onefourth$}\hspace{.1ex}}
 
 % add the symbol of perpendicularity to the index of a given symbol
 \newcommand\withtheindexofperpendicularity[1]{ #1_{\[UpTee]} }
@@ -392,6 +392,10 @@
 
 \newcommand{\tikzsl}[1]{\tikz[baseline=(sl.base)] \node [xslant=0.21, inner sep=0pt, outer sep=0pt] (sl) {#1};}
 
+\newcommand\zeroofthefirstcomplexity{{\bm{0}}}
+\newcommand\zerovector{\zeroofthefirstcomplexity}
+\newcommand\zeroofthesecondcomplexity{{^2\bm{0}}}
+
 \newcommand\mathboldPhi{\scalebox{.98}[1]{\tikzsl{\ensuremath{\hspace{-0.16ex}\bm{\Phi}\hspace{-0.2ex}}}}}
 
 \newcommand\mathsigma{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\hspace{-0.15ex}\upsigma\hspace{-0.1ex}}}}}
@@ -422,6 +426,8 @@
 \newcommand\infinitesimaldeformationeigenvalue[1]{\mathepsilon_{#1}}
 
 \newcommand{\fieldofdisplacements}{\bm{u}}
+\newcommand{\fieldofdisplacementscomponents}[1]{u_{[#1]}}
+
 \newcommand{\fieldofrotations}{\bm{\varphi}} %% {\bm{\theta}}
 
 \newcommandx*{\tikzcancel}[2][1=black]{%

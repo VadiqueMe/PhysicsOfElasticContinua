@@ -444,7 +444,7 @@ dm \equiv \rho \hspace{.2ex} d\mathcal{V}
 \en{either}\ru{либо}
 \en{a~rotation around the~chosen pole}\ru{поворот вокруг выбранного полюса},
 \en{or}\ru{либо}
-\en{an~equal displacement of the~pole and all body’s points}\ru{равное перемещение полюса и~всех точек тела}\:--- \en{translation~(linear motion)}\ru{трансляция~(линейное движение)}\footnote{%
+\en{an~equal displacement of the~pole and all body’s points}\ru{равное смещение полюса и~всех точек тела}\:--- \en{translation~(linear motion)}\ru{трансляция~(линейное движение)}\footnote{%
 \en{A~translation}\ru{Трансляция} \en{can also be thought of as}\ru{может также быть мыслима как} \en{a~rotation}\ru{вращение} \en{with the~revolution center}\ru{с~центром переворота} \en{at the~infinity}\ru{на~бесконечности}}\hbox{\hspace{-0.3ex},}
 \en{or}\ru{либо}
 \en{a~combination of~them both}\ru{комбинация их обоих}.
@@ -800,28 +800,74 @@ We therefore have as the condition for equilibrium of a system that the virtual 
 
 Note that coefficients ${\bm{F}_{i}^{\smthactive}}$ can no longer be thought equal to zero: in common ${\bm{F}_{i}^{\smthactive} \hspace{-0.3ex} \neq \hspace{-0.1ex} 0}$, since ${\variation{\hspace{.1ex}\locationvector_i}}$ are not independent but are bound by constraints.
 
+\en{A~virtual displacement}\ru{Виртуальным смещением}
+\en{of~a~particle}\ru{частицы}
+\en{with vector radius}\ru{с~вектором\hbox{-}радиусом}~${\locationvector_k}$
+\en{is}\ru{это}
+\en{variation}\ru{вариация}
+${\variation{\hspace{.1ex}\locationvector_k}}$\:---
+\en{any}\ru{любое}
+\en{infinitesimal}\ru{бесконечно малое}
+\en{change}\ru{изменение}
+\en{of~vector}\ru{вектора}~${\locationvector_k}$,
+\en{which is}\ru{которое}
+\en{compatible}\ru{совместимо}
+\en{with the }\ru{со связями (}constraints\ru{)}.
+\en{If}\ru{Если}
+\en{the system is free}\ru{система свободна},
+\en{that is}\ru{то есть}
+\en{there are no constraints}\ru{связей нет},
+\en{then}\ru{тогда}
+\en{virtual displacements}\ru{виртуальные смещения}
+${\variation{\hspace{.1ex}\locationvector_k}}$
+\en{are perfectly random}\ru{совершенно случайны}.
+
 \begin{otherlanguage}{russian}
 
-Виртуальным перемещением частицы с~вектором\hbox{-}радиусом~${\locationvector_k}$ называется вариация~${\variation{\hspace{.1ex}\locationvector_k}}$\:---
-%% н\'{е}которое
-любое бесконечно малое приращение вектора~${\locationvector_k}$, происходящее мгновенно %% вне~времени~(${\variation{t} \hspace{-0.2ex}\equiv\hspace{-0.2ex} 0}$)
-и~совместимое со~связями (constraints).
-Если связей нет, то~есть система свободна, тогда виртуальные перемещения ${\variation{\hspace{.1ex}\locationvector_k}}$ совершенно любые.
+Связи бывают
+голономные
+(holonomic, или геометрические),
+связывающие только положения~(смещения)\:---
+\en{they are functions}\ru{это функции}
+\en{of only}\ru{лишь}
+\en{the coordinates}\ru{координат}
+\en{and}\ru{и}\ru{,}
+\en{probably}\ru{возможно}\ru{,}
+\en{time}\ru{времени}
 
-Связи бывают голономные~(holonomic, или геометрические), связывающие только положения~(перемещения)\:--- это функции лишь координат и, возможно, времени
-
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{holonomicconstraint}
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{holonomicconstraint}
 c\hspace{.2ex}(\locationvector, t) = 0
 \end{equation}
 
 \vspace{-0.1em}\noindent
---- и~неголономные~(или дифференциальные), содержащие производные координат по~времени: ${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$ и~не~интегрируемые до~геометрических связей.
+--- и~неголономные~(или дифференциальные),
+содержащие производные координат по~времени:
+${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$
+\en{and not}\ru{и~не} интегрируемые
+\en{till}\ru{до}
+\en{the geometrical constraints}\ru{геометрических связей}.
 
-Далее рассматриваем системы, все связи в~которых\:--- голономные.
-В~системе с~голономными связями виртуальные перемещения частицы \inquotes{${\hspace{.05ex}k\hspace{.25ex}}$} удовлетворяют уравнению
+\en{When}\ru{Когда}
+\en{all}\ru{все}
+\en{constraints}\ru{связи}
+\en{are holonomic}\ru{голономные},
+\en{then}\ru{тогда}
+\en{the virtual displacements}\ru{виртуальные смещения}
+\en{of~a~particle}\ru{частицы}
+\inquotes{${\hspace{.05ex}k\hspace{.25ex}}$}
+\en{satisfy}\ru{удовлетворяют}
+\en{the equation}\ru{уравнению}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{requirementforvirtualdisplacements}
-\displaystyle \sum_{\smash{j=1}}^{m} \scalebox{.92}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{j}}}{\partial \hspace{.1ex} \locationvector_k}$} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.1ex} = 0 \hspace{.16ex}.
+\displaystyle \sum_{\smash{j=1}}^{m}
+\scalebox{.92}{$ \displaystyle
+   \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{j}}}{\partial \hspace{.1ex} \locationvector_k} $}
+\hspace{-0.1ex} \dotp
+\variation{\hspace{.1ex}\locationvector_k}
+\hspace{-0.1ex} =
+0
+\hspace{.1ex} .
 \vspace{-0.25em}\end{equation}
 
 В~несвободных системах все силы делятся на две группы: активные и~реакции связей.
@@ -833,7 +879,7 @@ c\hspace{.2ex}(\locationvector, t) = 0
 \quad \textrm{---}
 \vspace{-0.25em}\end{equation}
 \noindent
-работа реакций на~любых виртуальных перемещениях равна нулю.
+работа реакций на~любых виртуальных смещениях равна нулю.
 
 Принцип виртуальной работы is
 
@@ -900,7 +946,7 @@ ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{
 ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{k}}}{\sum}$} \scalebox{0.8}[0.84]{$\displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum}$} \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.1ex}}$.
 
 \vspace{-0.1em}
-Предполагается, что внутренние силы не~совершают работы на~виртуальных перемещениях тела как жёсткого целого (${\constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\constvarvector{\bm{o}}}$\:--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
+Предполагается, что внутренние силы не~совершают работы на~виртуальных смещениях тела как жёсткого целого (${\constvarvector{\hspace{-0.1ex}\bm{\rho}}}$ и~${\constvarvector{\bm{o}}}$\:--- произвольные постоянные векторы, определяющие трансляцию и~поворот)
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{assumptionforvirtualwork}
 \begin{array}{l}
@@ -1025,7 +1071,7 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 Известны уравнения Lagrange’а не~только второго, но~и~первого рода.
 Рассмотрим их ради методики вывода, много раз применяемой в~этой книге.
 
-При~наличии связей~\eqref{holonomicconstraint} равенство ${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\locationvector}_k}$ не~следует из~вариационного уравнения~\eqref{discrete:principleofvirtualwork}, ведь тогда виртуальные перемещения~${\variation{\hspace{.1ex}\locationvector_k}}$ не независимы.
+При~наличии связей~\eqref{holonomicconstraint} равенство ${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\locationvector}_k}$ не~следует из~вариационного уравнения~\eqref{discrete:principleofvirtualwork}, ведь тогда виртуальные смещения~${\variation{\hspace{.1ex}\locationvector_k}}$ не независимы.
 Каждое из $m$ ($m$\:--- число связей) условий для~вариаций~\eqref{requirementforvirtualdisplacements} умножим на~некий скаляр~$\lambda_{\alpha}$ (${\alpha = 1, \ldots, m}$) и~добавим к~\eqref{discrete:principleofvirtualwork}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
@@ -1080,7 +1126,7 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 \href{https://gallica.bnf.fr/ark:/12148/bpt6k6213152z.texteImage}{\inquotes{Éléments de~statique}}
 \en{by }\href{https://en.wikipedia.org/wiki/Louis_Poinsot}{Louis\ru{’а} Poinsot}.}\hbox{\hspace{-0.5ex},}
 поскольку у~системы есть степени свободы трансляции и~поворота.
-Огромная популярность сил и~моментов связана не~столько с~известностью статики совершенно недеформируемого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~перемещениях системы как жёсткого целого равна нулю в~любой среде.
+Огромная популярность сил и~моментов связана не~столько с~известностью статики совершенно недеформируемого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~смещениях системы как жёсткого целого равна нулю в~любой среде.
 
 Пусть в~системе действуют два вида сил: потенциальные с~энергией от~обобщённых координат ${\potential(q^i)}$ и~дополнительные внешние~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
 Из~\eqref{statics.discrete:principleofvirtualwork} следуют уравнения равновесия
@@ -1143,7 +1189,7 @@ d\potential = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex
 
 ...
 
-\en{Reciprocal work theorem}\ru{Теорема о~взаимности работ} (\inquotes{работа~${W_{\hspace{-0.1ex}12}}$ сил первого варианта на~перемещениях от сил второго равна работе~${W_{\hspace{-0.15ex}21}}$ сил второго варианта на~перемещениях от сил первого}) мгновенно выводится из~\eqref{staticsoflineardiscretesystem}:
+\en{Reciprocal work theorem}\ru{Теорема о~взаимности работ} (\inquotes{работа~${W_{\hspace{-0.1ex}12}}$ сил первого варианта на~смещениях от сил второго равна работе~${W_{\hspace{-0.15ex}21}}$ сил второго варианта на~смещениях от сил первого}) мгновенно выводится из~\eqref{staticsoflineardiscretesystem}:
 
 (...)
 

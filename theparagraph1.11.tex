@@ -14,7 +14,7 @@
 
 \en{The variations}\ru{Вариации}
 \en{are seen as}\ru{видятся как}
-\en{the infinitesimal displacements}\ru{бесконечно малые перемещения},
+\en{the infinitesimal displacements}\ru{бесконечно малые смещения},
 \en{compatible with the constraints}\ru{совместимые с~ограничениями}\ru{( \inquotes{связями} )}.
 \en{If}\ru{Если}
 \en{there are no restrictions}\ru{ограничений}
@@ -36,54 +36,104 @@ x \!=\! x(y\hspace{-0.1ex})
 \variation{x} = x'\hspace{-0.25ex}(y\hspace{-0.1ex}) \hspace{.1ex} \variation{y} .
 \end{equation*}
 
-\en{The writings of variations}\ru{З\'{а}писи вариаций}
+\en{Variations}\ru{Вариации}
 \en{have}\ru{имеют}
-\en{the~same specifics}\ru{те~же особенности}\ru{,}
-\en{as}\ru{как и}
-\en{the writings}\ru{з\'{а}писи}
-\en{of differentials}\ru{дифференциалов}.
+\en{the specifics }\en{similar}\ru{похожие}
+\en{to differentials}\ru{на~дифференциалы}\ru{ особенности}
+.
 \en{If}\ru{Если},
 \en{as example}\ru{как пример},
-${\variation{x}}$ \en{and}\ru{и}~${\variation{y}}$\en{ are}\ru{\:---}
+${\variation{x}}$ \en{and}\ru{и}~${\variation{y}}$
+\en{are}\ru{это}
 \en{variations of}\ru{вариации}~$x$ \en{and}\ru{и}~$y$,
 $u$ \en{and}\ru{и}~$v$\en{ are}\ru{\:---}
 \en{the finite}\ru{кон\'{е}чные}
 \en{values}\ru{значения},
 \en{then we write}\ru{то мы пишем}
 ${u \variation{x} + v \variation{y} = \variation{w}}$
-\en{even if}\ru{даже если} ${\variation{w}}$
+\en{even if}\ru{даже если}
+${\variation{w}}$
 \en{is not a~variation of}\ru{это не вариация}~$w$.
 
-\en{In this case}\ru{В~этом случае}\en{,}
-${\variation{w}}$ \en{is a~single symbol}\ru{это одиночный символ}.
-\en{Surely}\ru{Разумеется}, \en{if}\ru{если} ${u \narroweq u(x,y)}$, ${v \narroweq v(x,y)}$ \en{and}\ru{и}~${\partial_x v = \partial_y u}$ (${\hspace{.16ex}\frac{\partial}{\partial x} v = \frac{\partial}{\partial y} u\hspace{.16ex}}$), \en{then}\ru{то} \en{the~sum}\ru{сумма}~${\variation{w}}$ \en{will be a~variation}\ru{будет вариацией} \en{of some}\ru{н\'{е}кой}~$w$.
+\en{In this case}\ru{В~этом случае}~${\variation{w}}$
+\en{is a~single symbol}\ru{это одиночный символ}.
+\en{Surely}\ru{Разумеется}\ru{,}
+\en{if}\ru{если}
+${u \narroweq u(x,y)}$,
+${v \narroweq v(x,y)}$
+\en{and}\ru{и}~${\partial_x v = \partial_y u}$
+(${ \hspace{.16ex}
+   \frac{\partial}{\partial x} v = \frac{\partial}{\partial y} u
+\hspace{.16ex} }$),
+\en{then}\ru{то}
+\en{the~sum}\ru{сумма}~${\variation{w} = u \variation{x} + v \variation{y}}$
+\en{will be a~variation}\ru{будет вариацией}
+\en{of some}\ru{н\'{е}кой}~$w$.
 
-Варьируя тождество~\eqref{orthogonalityofrotationtensor}, получим ${\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!}$.
-Этот тензор антисимметричен, и~потому выражается через свой сопутствующий вектор~${\varvector{o}}$ как~${\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad}$.
+\en{Varying}\ru{Варьируя}
+\en{the identity}\ru{тождество}~\eqref{orthogonalityofrotationtensor},
+\en{we get}\ru{мы получаем}
 
-Приходим к~соотношениям
+\begin{equation*}
+\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!
+.
+\end{equation*}
 
-\nopagebreak\vspace{-0.5em}\begin{equation}
-\variation{\rotationtensor} \hspace{-0.1ex} = \varvector{o} \hspace{-0.1ex} \times \hspace{-0.1ex} \rotationtensor , \:\:
-\varvector{o} = - \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $} \hspace{-0.1ex} \Bigl( \hspace{-0.1ex} \variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \Bigr)_{\hspace{-0.25em}\Xcompanion}
+\en{This tensor}\ru{Этот тензор}
+\en{is antisymmetric}\ru{антисимметричен},
+\en{and thus}\ru{и~потому}
+\en{is representable}\ru{представляется}
+\en{via}\ru{через}
+\en{its}\ru{свой}
+\en{companion}\ru{сопутствующий}
+\en{pseudovector}\ru{псевдовектор}~${\varvector{o}}$
+\en{as}\ru{как}
+
+\begin{equation*}
+\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
+.
+\end{equation*}
+
+\en{We have}\ru{Мы имеем}
+\en{relations}\ru{отношения}
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}
+\variation{\rotationtensor}
+\hspace{-0.1ex} =
+\varvector{o}
+\hspace{-0.1ex} \times \hspace{-0.1ex}
+\rotationtensor
+,
+\:\:
+\varvector{o}
+=
+- \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $}
+\hspace{-0.1ex} \Bigl( \hspace{-0.1ex}
+\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T}
+\Bigr)_{\hspace{-0.25em}\Xcompanion}
 \hspace{-0.1ex} ,
 \end{equation}
 
 \vspace{-0.5em}\noindent
-аналогичным~\eqref{angularvelocityvector}.
-\en{The vector}\ru{Вектор}
-\en{of the infinitesimal rotation}\ru{бесконечно малого поворота}
-${\varvector{o}}$
-это не~\inquotesx{вариация $\bm{\mathrm{o}}$},
-но единый символ
-(в~отличие от~${\variation{\rotationtensor}}$).
+\en{similar}\ru{похожие}
+\en{to}\ru{на}~\eqref{angularvelocityvector}.
+\en{Vector}\ru{Вектор}~${\varvector{o}}$
+\en{of an~infinitesimal rotation}\ru{бесконечно малого поворота}
+\en{is not}\ru{это не}
+\inquotesx{\en{a~variation of}\ru{вариация}~$\bm{\mathrm{o}}$},
+\en{but}\ru{но}
+\en{a~single}\ru{один}
+\en{symbol}\ru{символ}.
 
-\en{The infinitesimal rotation}\ru{Бесконечно малый поворот}
-определяется вектором~${\varvector{o}}$,
-но конечный поворот
-тоже возможно представить
+\en{An~infinitesimal rotation}\ru{Бесконечно малый поворот}
+\en{is defined}\ru{определяется}
+\en{by vector}\ru{вектором}~${\varvector{o}}$,
+\en{but}\ru{но}
+\en{a~finite rotation}\ru{конечный поворот}
+\en{is also}\ru{тоже}
+\en{possible to represent}\ru{возможно представить}
 \en{as a~vector}\ru{как вектор}
 
 ...
 
-\end{otherlanguage}
