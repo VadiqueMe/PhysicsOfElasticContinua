@@ -4,11 +4,13 @@ https://github.com/VadiqueMe/PhysicsOfElasticContinua/raw/master/mybook_en.pdf
 
 ## What is this book about?
 
-In this book, all models of an elastic continuum are presented: nonlinear and linear, micropolar and classical momentless; three-dimensional, two-dimensional (shells and plates), one-dimensional (rods, including thin-walled ones). Fundamentals of dynamics — oscillations, waves and stability — are explained. For thermoelasticity and magnetoelasticity, the summary of theories of thermodynamics and electrodynamics is given. Theories of defects and fractures are described. Approaches to modeling inhomogeneous materials — composites — are shown.
+I presented all the models of an elastic continuum in this book: nonlinear and linear, micropolar and classical momentless; three-dimensional, two-dimensional (shells and plates), one-dimensional (rods, including thin-walled ones). I also explained the fundamentals of dynamics — oscillations, waves and a stability. For the thermoelasticity and the magnetoelasticity, I gave the summary of the classical theories of the thermodynamics and the electrodynamics. The dynamics of destruction is described via the theories of defects and fractures. The approaches to modeling of the human-made inhomogeneous materials (the ‟composites”) are also shown.
+
+The word ‟continua” in the title of the book says that a body (a medium) is modeled here not as a discrete collection of particles, but as a continuous field of location vectors, a continuous matter. It gives a large convenience, because the apparatus of calculus of infinitesimals can be used for such a model.
 
 The book is written using the compact and elegant direct indexless tensor notation. The mathematical apparatus for interpreting the direct tensor relations is contained in the first chapter.
 
-I am writing this book simultaneously in the two languages, English and Russian. The reader is free to choose for yourself any option of the two or to read both.
+I am writing this book simultaneously in the two languages, English and Russian. The reader is free to pick any language of the two.
 
 # Физика упругих континуумов
 
@@ -16,9 +18,11 @@ https://github.com/VadiqueMe/PhysicsOfElasticContinua/raw/master/mybook_ru.pdf
 
 ## О чём эта книга?
 
-В этой книге представлены все модели упругого континуума: нелинейные и линейные, микрополярные и классические безмоментные; трёхмерные, двумерные (оболочки и пластины), одномерные (стержни, в том числе тонкостенные). Изложены основы динамики — колебания, волны и устойчивость. Для термоупругости и магнитоупругости даётся сводка теорий термодинамики и электродинамики. Описаны теории дефектов и трещин. Показаны подходы к моделированию неоднородных материалов — композитов.
+Я представил все модели упругого континуума в этой книге: нелинейные и линейные, микрополярные и классические безмоментные; трёхмерные, двумерные (оболочки и пластины), одномерные (стержни, в том числе тонкостенные). Также я объяснил основы динамики — колебания, волны и устойчивость. Для термоупругости и магнитоупругости я дал сводку классических теорий термодинамики и электродинамики. Динамика разрушения описана через теории дефектов и трещин. Также показаны подходы к моделированию сделанных человеком неоднородных материалов («композитов»).
+
+Слово «континуумов» в названии книги говорит, что тело (среда) моделируется здесь не как дискретная коллекция частиц, но как непрерывное поле векторов положения, непрерывная материя. Это даёт большое удобство, потому что аппарат calculus’а (исчисления) бесконечно м\'{а}лых может быть использован для такой модели.
 
 Книга написана с использованием компактной и элегантной прямой безиндексной тензорной записи. Математический аппарат для интерпретации прямых тензорных соотношений содержится в первой главе.
 
-Я пишу эту книгу одновременно на двух языках, английском и~русском. Читатель свободен выбрать для себя любой вариант из двух или читать оба.
+Я пишу эту книгу одновременно на двух языках, английском и русском. Читатель свободен выбрать любой язык из двух.
 
