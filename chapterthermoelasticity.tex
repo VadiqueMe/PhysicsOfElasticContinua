@@ -6,11 +6,28 @@
 
 \label{chapter:thermoelasticity}
 
+%~%~%~% intro to the chapter "thermoelasticity"
+
 \newcommand{\temperaturefield}{\scalebox{0.9}[1]{$\varTheta$}} % {\hspace{.2ex} T}
 \newcommand{\temperaturegradient}{\boldnabla \temperaturefield}
 \newcommand{\heatfluxvector}{\bm{q}}
 
-\en{\section{First law of thermodynamics}}
+\begin{changemargin}{\parindent}{\parindent}
+\vspace{-2.5em}
+{\noindent\small
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\hspace*{\fill}
+\en{In this chapter}\ru{В~этой главе}
+\ru{рассматривается }\en{only the~momentless model}\ru{лишь безмоментная модель}\en{ is considered}.
+
+\par}
+\vspace{-1.2em}
+\end{changemargin}
+
+%~%~%~%
+
+\en{\section{The first law of thermodynamics}}
 
 \ru{\section{Первый закон термодинамики}}
 
@@ -37,14 +54,32 @@
 \end{equation}
 
 \vspace{-0.1em}
-\en{Internal energy}\ru{Внутренняя энергия}~$E$ \en{is}\ru{есть} \en{the~sum}\ru{сумма} \en{of the~}\en{kinetic}\ru{кинетической} \en{and}\ru{и}~\en{potential}\ru{потенциальной} \en{energies}\ru{энергий} \en{of~particles}\ru{частиц}.
-\en{For}\ru{Для} \en{any}\ru{любого} \en{finite}\ru{кон\'{е}чного} \en{volume}\ru{объёма} \en{of a~material continuum}\ru{материального контину\kern-0.11exума}
+\en{Internal energy}\ru{Внутренняя энергия}~$E$
+\en{is}\ru{это}
+\en{the~sum}\ru{сумма}
+\en{of the~}\en{kinetic}\ru{кинетической}
+\en{and}\ru{и}~\en{the~potential}\ru{потенциальной}
+\en{energies}\ru{энергий}
+\en{of the~particles}\ru{частиц}.
+\en{For}\ru{Для}
+\en{any}\ru{любого}
+\en{finite}\ru{кон\'{е}чного}
+\en{volume}\ru{объёма}
+\en{of a~material}\ru{материального}
+\en{continuum}\ru{\rucontinuum{}а}
 
-\nopagebreak\en{\vspace{-0.1em}}\ru{\vspace{-0.8em}}\begin{equation}\label{internalenergy:continuumthermodynamics}
+\nopagebreak\en{\vspace{-0.1em}}\ru{\vspace{-0.8em}}%
+\begin{equation}\label{internalenergy:continuumthermodynamics}
 E = \hspace{-0.44ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \hspace{.2ex} \Bigl( \hspace{.1ex}
-\smalldisplaystyleonehalf \hspace{.2ex} \mathdotabove{\currentlocationvector} \dotp \mathdotabove{\currentlocationvector} \hspace{.1ex}
-+ e
-\Bigr) d\mathcal{V} .
+   \smalldisplaystyleonehalf \hspace{.2ex}
+   \mathdotabove{\currentlocationvector}
+   \dotp
+   \mathdotabove{\currentlocationvector}
+   \hspace{.1ex} +
+   e
+\Bigr)
+d\mathcal{V}
+.
 \end{equation}
 
 \vspace{-0.5em}\noindent
@@ -73,8 +108,14 @@ ${m \hspace{-0.1ex} = \hspace{-0.2ex} \scalebox{1.4}{$\integral$}_{\hspace{-0.5e
 \Bigr) d\mathcal{V} .
 \end{equation}
 
-\en{The~power of~external forces}\ru{Мощность внешних сил} \en{for}\ru{для} \en{some}\ru{некоторого} \en{finite}\ru{кон\'{е}чного} \en{volume}\ru{объёма} \en{of~continuum}\ru{контину\kern-0.11exума}
-(\en{momentless}\ru{безмоментного}\:--- \en{in this chapter}\ru{в~этой главе} \en{only the~momentless model is considered}\ru{рассматривается лишь безмоментная модель})
+\en{The~power}\ru{Мощность}
+\en{of the~external forces}\ru{внешних сил}
+\en{for}\ru{для}
+\en{some}\ru{некоторого}
+\en{finite}\ru{кон\'{е}чного}
+\en{volume}\ru{объёма}
+\en{of a~momentless}\ru{безмоментного}
+\en{continuum}\ru{\rucontinuum{}а}
 
 \nopagebreak\vspace{-0.4em}\begin{multline}\label{powerofexternalforces}
 P^{\smthexternal} \hspace{-0.1ex}
@@ -228,7 +269,7 @@ $}
 ...
 
 
-\en{\section{Second law}}
+\en{\section{The second law}}
 
 \ru{\section{Второй закон}}
 
@@ -250,7 +291,13 @@ dE \hspace{-0.1ex} = \partial\hspace{.1ex}\externalwork\hspace{-0.2ex} + \partia
 
 \en{Further,}\ru{Далее} \en{processes}\ru{процессы} \en{are divided into}\ru{делятся на} \en{reversible ones}\ru{обратимые}, \en{for which}\ru{для которых} ${dS \hspace{-0.2ex} = \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$, \en{and}\ru{и}~\en{irreversible ones}\ru{необратимые} \en{with characteristic}\ru{с~характерным} \ru{неравенством }Clausius\ru{’а}\en{ inequality} ${dS \hspace{-0.2ex} \geq \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$.
 
-\en{But how}\ru{Но как} \en{to~adapt}\ru{адаптировать} \en{this}\ru{это} \en{for}\ru{для} \en{a~continuum}\ru{контину\kern-0.11exума} \en{with an~inhomogeneous}\ru{с~неоднородным} \en{temperature field}\ru{полем температуры}?
+\en{But how}\ru{Но как}
+\en{to~adapt}\ru{адаптировать}
+\en{this}\ru{это}
+\en{for}\ru{для}
+\en{a~continuum}\ru{\rucontinuum{}а}
+\en{with an~inhomogeneous}\ru{с~неоднородным}
+\en{temperature field}\ru{полем температуры}?
 
 \en{Sometimes}\ru{Иногда} \en{a~process}\ru{процесс} \en{in an~infinitesimal volume}\ru{в~бесконечномалом объёме} \en{is thought of as}\ru{мыслится} \en{reversible}\ru{обратимым}, \en{then}\ru{тогда} \ru{предлагается }\en{the~equality}\ru{равенство} \en{like}\ru{типа}
 
@@ -265,7 +312,13 @@ dE \hspace{-0.1ex} = \partial\hspace{.1ex}\externalwork\hspace{-0.2ex} + \partia
 
 \en{However}\ru{Однако}, \en{there’s always}\ru{всегда есть} \en{heat dissipation}\ru{тепловое рассеивание~(диссипация)}\:--- \en{an~irreversible}\ru{необратимый} \en{process}\ru{процесс}, \en{and}\ru{и}~\en{therefore}\ru{поэтому}~\eqref{reversibleprocessequality.differential} \en{looks disputable}\ru{выглядит спорно}.
 
-\en{The~most appropriate}\ru{Наиболее подходящим} \en{expression}\ru{выражением} \en{of the~second law of~thermodynamics}\ru{второго закона термодинамики} \en{for material continuum}\ru{для материального контину\kern-0.11exума} \en{seems to be}\ru{видится} \ru{неравенство }\en{the~}Clausius\ru{’а}\hbox{--}Duhem\ru{’а}\en{ inequality}
+\en{The~most appropriate}\ru{Наиболее подходящим}
+\en{expression}\ru{выражением}
+\en{of the~second law of~thermodynamics}\ru{второго закона термодинамики}
+\en{for}\ru{для}
+\en{a~material continuum}\ru{материального \rucontinuum{}а}
+\en{seems to be}\ru{видится}
+\ru{неравенство }\en{the~}Clausius\ru{’а}\hbox{--}Duhem\ru{’а}\en{ inequality}
 
 \nopagebreak\vspace{-0.1em}\en{\vspace{-0.9em}}\begin{equation}\label{clausiusduheminequality.integral}
 \displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \hspace{.15ex} s \hspace{.25ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.32em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
@@ -498,15 +551,45 @@ $}%
 
 \begin{otherlanguage}{russian}
 
-Когда температура постоянна, уравнения термоупругости выглядят как в~механике.
+Когда
+температура
+постоянна,
+уравнения термоупругости
+выглядят
+так~же, как
+в~механике.
 
 ...
 
 Для переноса вариационного метода на термоупругость достаточно заменить \en{in the}\ru{в~принципе}~(Lagrange\ru{’а})\en{ principle} \en{of~minimum potential energy}\ru{минимума потенциальной энергии} ${\potential(\bm{C})}$ на \ru{свободную энергию }Helmholtz\ru{’а}\en{ free energy} ${A(\bm{C}\hspace{-0.12ex}, \temperaturefield)}$, а в~принципе Reissner’а--Hellinger’а заменить ${\widehat{\potential}(\hspace{-0.1ex}\cauchystress\hspace{.12ex})}$ на \ru{свободную энтальпию }Gibbs\ru{’а}\en{ free enthalpy} (\en{Gibbs function}\ru{функцию Gibbs’а}) ${G(\hspace{-0.1ex}\cauchystress\hspace{.12ex}, \temperaturefield)}$.
 
-{\small
-The~\emph{Gibbs free energy} (\emph{Gibbs energy} or \emph{Gibbs function} or \emph{free enthalpy} to distinguish it from Helmholtz free energy) is a~thermodynamic potential that measures the~maximum of reversible work by a~thermodynamic system at a~constant temperature and pressure.
-\par}
+%~%~%{\small
+\en{The}\ru{Свободная энергия} \emph{Gibbs\ru{’а}\en{ free energy}}
+(%
+  \en{the~}\emph{\ru{энергия }Gibbs\ru{’а}\en{ energy}}
+  \en{or}\ru{или}
+  \en{the~}\emph{\ru{функция }Gibbs\ru{’а}\en{ function}}
+  \en{or}\ru{или}
+  \en{the~}\emph{\en{free enthalpy}\ru{свободная энтальпия}}%
+  \footnote{%
+    To distinguish
+    \en{it}\ru{её}
+    \en{from}\ru{от}
+    \en{the~}\href{https://en.wikipedia.org/wiki/Helmholtz_free_energy}{\ru{свободной энергии }Helmholtz\ru{’а}\en{ free energy}}.%
+  }%
+)
+\en{is}\ru{это}
+\en{a~thermodynamic potential}\ru{термодинамический потенциал}\ru{,}
+\en{which}\ru{который}
+\en{measures}\ru{измеряет}
+\en{the~maximum}\ru{максимум}
+\en{of the~}\href{https://en.wikipedia.org/wiki/Reversible_process_(thermodynamics)}{\en{reversible work}\ru{обратимой работы}}\ru{,}
+\en{produced}\ru{произведённой}
+%%by a~thermodynamic system
+\en{with a~constant}\ru{с~постоянными}
+\en{temperature}\ru{температурой}
+\en{and pressure}\ru{и~давлением}.
+%~%~%\par}
 
 ...
 

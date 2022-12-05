@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pdflatex mybook.math.tex
+pdflatex mybook.chapter1.math.tex

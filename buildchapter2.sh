@@ -1,3 +1,4 @@
 #!/bin/sh
 
-pdflatex mybook.chapter2.tex
+pdflatex mybook.chapter2.classicalmechanics.tex
+
