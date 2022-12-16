@@ -1,43 +1,228 @@
+\en{\section{Spatial differentiation}}
 
-\en{\section{Integral theorems}}
+\ru{\section{Пространственное дифференцирование}}
 
-\ru{\section{Интегральные теоремы}}
+\label{para:spatialdifferentiationoftensorfields} <<<<<< rename: remove fields
+
+\begin{changemargin}{\parindent}{\parindent}
+\vspace{-0.1em}
+\small
+\flushright
+\textit{\en{Tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is} \en{a~tensor}\ru{это тензор}\ru{,} \en{varying from~point to~point}\ru{меняющийся от~точки к~точке} (\en{variable in~space}\ru{переменный в~пространстве}, \en{coordinate dependent}\ru{зависящий от~координат}).
+
+\par\vspace{.3em}
+\end{changemargin}
 
 \begin{otherlanguage}{russian}
 
-Для векторных полей известны интегральные теоремы Gauss’а и~Stokes’а.
+\noindent
+Пусть \en{at each point}\ru{в~каждой точке} \en{of some region}\ru{некоторой области} \en{of a~three-dimensional space}\ru{трёхмерного пространства} определена величина~$\varsigma$.
+Тогда говорят, что есть тензорное поле~${\varsigma \!=\! \varsigma(\locationvector)}$, \en{where}\ru{где}~$\locationvector$\en{ is}\ru{\:---} \en{location vector}\ru{вектор положения}~(\en{radius vector}\ru{вектор\hbox{-}радиус}) \en{of~a~point}\ru{точки} \en{in~space}\ru{пространства}.
 
-\noindent\leavevmode{\indent}{\small Gauss’ theorem (divergence theorem) enables an~integral taken over a~volume to be replaced by one taken over the closed surface bounding that volume, and vice versa.\par}
+Величина~$\varsigma$ может~быть тензором любой сложности.
+Пример скалярного поля\:--- поле температуры в~среде, векторного поля\:--- скорости частиц жидкости.
 
-\noindent\leavevmode{\indent}{\small Stokes’ theorem enables an~integral taken around a closed curve to be replaced by one taken over \emph{any} surface bounded by that curve. Stokes’ theorem relates a~line integral around a closed path to a surface integral over what is called a~\emph{capping surface} of the path.\par}
+Концепт тензорного поля никак не~связан с~концептом поля с~операциями $+$ и~$*$ с~11~свойствами этих операций.
 
-Теорема Гаусса о~дивергенции\:--- про~то, как заменить объёмный интеграл поверхностным~(\en{and vice versa}\ru{и~наоборот}). В~этой теореме рассматривается поток (ef)flux вектора через ограничивающую объём~$V$ з\'{а}мкнутую поверхность ${\mathcal{O}(\boundary V)}$ с~единичным вектором внешней нормали~$\bm{n}$
+\end{otherlanguage}
 
-\nopagebreak\vspace{-0.1em}\begin{equation}
-\ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary V)}} \hspace{-0.1ex} \bm{n} \dotp \bm{a} \hspace{.4ex} d\mathcal{O} \hspace{.12ex} = \integral\displaylimits_{V} \hspace{-0.3ex} \boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.4ex} dV \hspace{-0.25ex}.
-\end{equation}
+% ~ ~ ~ ~ ~
+\input{curvilinear-coordinates.tex}
+% ~ ~ ~ ~ ~
 
-Объём~$V$ нарезается тремя семействами координатных поверхностей на~множество бесконечно малых элементов. Поток через поверхность ${\mathcal{O}(\boundary V)}$ равен сумме потоков через края получившихся элементов. В~бесконечной малости каждый такой элемент\:--- маленький локальный дифференциальный кубик~(параллелепипед). ... Поток вектора~$\bm{a}$ через грани малого кубика объёма~$dV$ есть ${\sum_{i = 1}^{6} \bm{n}_i \dotp \bm{a} \hspace{.2ex} \mathcal{O}_i}$, а~через сам этот объём поток равен ${\boldnabla \dotp \bm{a} \hspace{.32ex} dV}$.
+\begin{otherlanguage}{russian}
 
-Похожая трактовка этой теоремы есть, к примеру, в~курсе Richard’а Feynman’а~\cite{feynman-lecturesonphysics}.
+Не~только для~решения прикладных задач, но нередко и в~\inquotes{чистой тео\-рии} вместо аргумента~$\locationvector$ ис\-поль\-зу\-ет\-ся набор (какая-либо трой\-ка) криво\-линей\-ных координат~${q^{\hspace{.1ex}i}\hspace{-0.2ex}}$.
+Если непрерывно менять лишь одну координату из~трёх, получается координатная линия.
+Каждая точка трёхмерного пространства лежит на~пересечении трёх координатных линий (\figref{fig:curvilinearcoordinates}).
+Вектор положения точки выражается через набор координат \en{as}\ru{как} \en{relation}\ru{отношение} ${\locationvector \hspace{-0.4ex} = \hspace{-0.4ex} \locationvector(q^{\hspace{.1ex}i}\hspace{.1ex})}$.
 
-\emph{( рисунок с кубиками )}
+\end{otherlanguage}
 
-to dice\:--- нарез\'{а}ть кубиками
+Commonly used \en{sets of~coordinates}\ru{наборы координат}<<<<<<
+\en{Rectangular}\ru{Прямоугольные} (\inquotes{\en{cartesian}\ru{декартовы}}), \en{spherical}\ru{сферические} \en{and }\ru{и~}\en{cylindrical}\ru{цилиндрические} \en{coordinates}\ru{координаты}\en{ are}\ru{\:---}
 
-small cube, little cube
-
-локально ортонормальные координаты ${\bm{\xi} = \xi_i \hspace{.2ex} \bm{n}_i \hspace{.1ex}}$, ${d\bm{\xi} = d \xi_i \hspace{.2ex} \bm{n}_i}$, ${\boldnabla = \bm{n}_i \partial_i}$
-
-разложение вектора ${\bm{a} = a_i \bm{n}_i \hspace{.1ex}}$
-
-Теорема Стокса о~циркуляции выражается равенством
+Curvilinear coordinates may be derived from a~set of~rectangular~(\inquotes{cartesian}) coordinates by using a~transformation that is locally invertible (a~one-to-one map) at~each point.
+\en{Therefore}\ru{Поэтому} \en{rectangular coordinates}\ru{прямоугольные координаты} \en{of~any point}\ru{любой точки} \en{of~space}\ru{пространства} \en{can be converted}\ru{могут быть преобразованы} \en{to }\ru{в~}\en{some}\ru{какие-либо} \en{curvilinear coordinates}\ru{криволинейные координаты} \en{and}\ru{и}~\en{vice versa}\ru{обратно}.
 
 ...
 
-\newpage ...
+The~differential of a~function presents a~change in the~linearization of this function.
 
+...
 
+\en{partial derivative}\ru{частная производная}
 
-\end{otherlanguage}
+\nopagebreak\vspace{-0.4em}\begin{equation*}
+\partial_i \equiv \scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial$}}{\raisebox{-0.1em}{$\partial q^i$}} $}
+\end{equation*}
+
+...
+
+\en{differential}\ru{дифференциал} \en{of~}${\varsigma(q^i)}$
+
+\nopagebreak\vspace{-0.4em}\begin{equation}
+d\varsigma \hspace{-0.1ex}
+= \scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\raisebox{-0.1em}{$\partial q^i$}} $} \hspace{.2ex} dq^i \hspace{-0.2ex}
+= \partial_i \varsigma \hspace{.15ex} dq^i
+\end{equation}
+
+...
+
+\en{Linearity}\ru{Линейность}
+
+\nopagebreak\vspace{-0.4em}\begin{equation}\label{linearityordifferentiation}
+\partial_i \bigl( \lambda \hspace{.1ex} p + \hspace{-0.2ex} \mu \hspace{.1ex} q \hspace{.1ex} \bigr) \hspace{-0.2ex}
+= \lambda \bigl( \partial_i \hspace{.1ex} p \hspace{.1ex} \bigr) \hspace{-0.2ex} + \hspace{.1ex}
+\mu \bigl( \partial_i \hspace{.1ex} q \hspace{.1ex} \bigr)
+\end{equation}
+
+\inquotes{Product rule}
+
+\nopagebreak\vspace{-0.4em}\begin{equation}\label{productrulefordifferentiation}
+\partial_i \bigl( \hspace{.15ex} p \circ q \hspace{.1ex} \bigr) \hspace{-0.2ex}
+= \hspace{-0.2ex} \bigl( \partial_i \hspace{.1ex} p \hspace{.1ex} \bigr) \hspace{-0.25ex} \circ q \hspace{.12ex} +
+\hspace{.1ex} p \circ \hspace{-0.25ex} \bigl( \partial_i \hspace{.1ex} q \hspace{.1ex} \bigr)
+\end{equation}
+
+...
+
+Local basis ${\locationvector_\differentialindex{i}}$
+
+\en{The~differential}\ru{Дифференциал} \en{of~location vector}\ru{вектора положения}~${\locationvector(q^{\hspace{.1ex}i}\hspace{.1ex})}$ \en{is}\ru{есть}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{differentialoflocationvector}
+d\locationvector
+=
+\scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \partial \hspace{.15ex} \locationvector $}}{\partial q^{\hspace{.1ex}i}} $} \hspace{.2ex} dq^i \hspace{-0.1ex}
+=
+dq^i \locationvector_\differentialindex{i}
+\hspace{.1ex} , \hspace{.5em}
+\locationvector_\differentialindex{i} \hspace{-0.1ex} \equiv \scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \partial \hspace{.15ex} \locationvector $}}{\partial q^{\hspace{.1ex}i}} $} \hspace{-0.1ex}
+\equiv \partial_i \hspace{.1ex} \locationvector
+\end{equation}
+
+...
+
+Local cobasis ${\locationvector^i}$, ${\locationvector^i \hspace{-0.32ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.22ex} = \delta_{\hspace{-0.15ex}j}^{\hspace{.2ex}i}}$
+
+...
+
+\begin{equation*}
+\displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\partial \locationvector}
+=
+\displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\raisebox{-0.1em}{$\partial q^i$}} \hspace{.1ex} \locationvector^i \hspace{-0.25ex}
+=
+\partial_i \varsigma \hspace{.2ex} \locationvector^i
+\end{equation*}
+
+\begin{equation}
+d \varsigma \hspace{-0.1ex}
+=
+\scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\partial \locationvector} $} \dotp d\locationvector \hspace{-0.1ex}
+=
+\partial_i \varsigma \hspace{.2ex} \locationvector^i \hspace{-0.15ex} \dotp dq^{\hspace{.12ex}j} \hspace{-0.1ex} \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
+=
+\partial_i \varsigma \hspace{.15ex} dq^i
+\end{equation}
+
+...
+
+\en{The bivalent unit tensor}\ru{Бивалентный единичный тензор}~(\en{metric tensor}\ru{метрический тензор})~${\hspace{-0.1ex}\UnitDyad}$,
+\en{which}\ru{который} \en{is neutral}\ru{нейтрален}~\eqref{definingpropertyofidentitytensor} \en{to the } \hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведению} (dot product\ru{’у}),
+\en{can be represented as}\ru{может быть представлен как}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\UnitDyad
+= \locationvector^i \locationvector_\differentialindex{i} \hspace{-0.15ex}
+= \tikzmark{beginOriginOfNabla} \locationvector^i \partial_i \tikzmark{endOriginOfNabla} \hspace{.1ex} \locationvector = \hspace{-0.16ex} \boldnabla \locationvector ,
+\end{equation}
+\AddUnderBrace[line width=.75pt][0,-0.1ex]%
+{beginOriginOfNabla}{endOriginOfNabla}%
+{${\scriptstyle \boldnabla}$}
+
+\vspace{-0.4em}\noindent
+\en{where appears}\ru{где появляется} \en{the~}\en{differential}\ru{дифференциальный} \ru{оператор }\inquotes{\en{nabla}\ru{набла}}\en{ operator}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\boldnabla \equiv \locationvector^i \partial_i \hspace{.1ex} .
+\end{equation}
+
+...
+
+\begin{equation}
+d \varsigma \hspace{-0.1ex}
+=
+\scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\raisebox{-0.05em}{$\partial \locationvector$}} $} \dotp d\locationvector \hspace{-0.1ex}
+=
+d\locationvector \dotp \hspace{-0.11ex} \boldnabla \varsigma \hspace{-0.1ex}
+=
+\partial_i \varsigma \hspace{.15ex} dq^i
+\end{equation}
+
+\vspace{1.1em}${
+d\locationvector = d\locationvector \dotp \hspace{-0.2ex} \tikzmark{beginItsUnitTensorE} \boldnabla \locationvector \tikzmark{endItsUnitTensorE}
+}$%
+\AddOverBrace[line width=.75pt][0,0.1ex]{beginItsUnitTensorE}{endItsUnitTensorE}{${\scriptstyle \UnitDyad}$}
+
+...
+
+\en{Divergence}\ru{Дивергенция} \en{of~the~dyadic product}\ru{диадного произведения} \en{of~two vectors}\ru{двух векторов}
+
+\nopagebreak\vspace{-0.3em}\begin{multline}\label{divergenceofdyadicproducoftwovectors}
+\boldnabla \hspace{-0.16ex} \dotp \hspace{-0.2ex} \bigl( \hspace{-0.1ex} \bm{a} \bm{b} \hspace{.05ex} \bigr) \hspace{-0.33ex}
+= \locationvector^i \partial_i \hspace{-0.1ex} \dotp \hspace{-0.24ex} \bigl( \hspace{-0.1ex} \bm{a} \bm{b} \bigr) \hspace{-0.33ex}
+= \locationvector^i \hspace{-0.3ex} \dotp \partial_i \bigl( \hspace{-0.1ex} \bm{a} \bm{b} \bigr) \hspace{-0.3ex}
+= \locationvector^i \hspace{-0.3ex} \dotp \hspace{-0.15ex} \bigl( \partial_i \bm{a} \bigr) \bm{b} \hspace{.1ex} + \locationvector^i \hspace{-0.3ex} \dotp \bm{a} \hspace{.1ex} \bigl( \partial_i \bm{b} \bigr) \hspace{-0.33ex} =
+\\[-0.1em]
+%
+= \hspace{-0.15ex} \bigl( \locationvector^i \hspace{-0.3ex} \dotp \partial_i \bm{a} \bigr) \bm{b} \hspace{.1ex} + \bm{a} \dotp \locationvector^i \hspace{-0.15ex} \bigl( \partial_i \bm{b} \bigr) \hspace{-0.33ex}
+= \hspace{-0.15ex} \bigl( \locationvector^i \partial_i \hspace{-0.1ex} \dotp \bm{a} \bigr) \bm{b} \hspace{.1ex} + \bm{a} \dotp \hspace{-0.1ex} \bigl( \locationvector^i \partial_i \bm{b} \bigr) \hspace{-0.33ex} =
+\\
+%
+= \hspace{-0.15ex} \bigl( \boldnabla \hspace{-0.15ex} \dotp \hspace{-0.1ex} \bm{a} \bigr) \bm{b} \hspace{.1ex} + \bm{a} \dotp \hspace{-0.12ex} \bigl( \boldnabla \hspace{.1ex} \bm{b} \bigr)
+\end{multline}
+
+\vspace{-0.2em}\noindent
+--- \en{here’s no~need}\ru{тут нет нужды} \en{to~expand}\ru{разворачивать} \en{vectors}\ru{векторы}~$\bm{a}$ \en{and}\ru{и}~$\bm{b}$, \en{expanding just}\ru{развернув лишь} \en{differential operator}\ru{дифференциальный оператор}~${\hspace{-0.13ex}\boldnabla}$.
+
+...
+
+\en{Gradient of cross product of two vectors}\ru{Градиент векторного произведения двух векторов},
+\en{applying}\ru{применяя} \inquotes{product rule}~\eqref{productrulefordifferentiation}
+\en{and}\ru{и}~\en{relation}\ru{соотношение}~\eqref{crossproductoftwovectors} \en{for any two vectors}\ru{для любых двух векторов}
+(\en{partial derivative}\ru{частная производная}~$\partial_i$ \en{of~some~vector by scalar coordinate}\ru{некоторого вектора по скалярной координате}~$q^i\hspace{-0.1ex}$ \en{is a~vector too}\ru{это тоже вектор})
+
+\nopagebreak\vspace{-0.4em}\begin{multline}\label{gradientofcrossproductoftwovectors}
+\boldnabla \hspace{-0.2ex} \left( \bm{a} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{b} \right) \hspace{-0.2ex}
+= \hspace{.1ex} \locationvector^i \partial_i \hspace{-0.3ex} \left( \bm{a} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{b} \right) \hspace{-0.2ex}
+= \locationvector^i \hspace{-0.4ex} \left( \partial_i \bm{a} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{b} \hspace{.1ex} +
+\bm{a} \hspace{-0.2ex} \times \hspace{-0.2ex} \partial_i \bm{b} \right) \hspace{-0.2ex} =
+\\[-0.1em]
+%
+= \locationvector^i \hspace{-0.4ex} \left( \partial_i \bm{a} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{b} \hspace{.1ex} -
+\partial_i \bm{b} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} \right) \hspace{-0.2ex}
+= \hspace{.1ex} \locationvector^i \partial_i \hspace{.1ex} \bm{a} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{b} \hspace{.1ex} - \hspace{.1ex}
+\locationvector^i \partial_i \hspace{.1ex} \bm{b} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} =
+\\[-0.1em]
+%
+= \hspace{-0.12ex} \boldnabla \bm{a} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{b} \hspace{.12ex} - \hspace{-0.12ex}
+\boldnabla \hspace{.1ex} \bm{b} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{a}
+\hspace{.2ex} .
+\end{multline}
+
+...
+
+\en{Gradient}\ru{Градиент} \en{of }dot product\ru{’а} \en{of two vectors}\ru{двух векторов}
+
+\nopagebreak\vspace{-0.4em}\begin{multline}\label{gradientofdotproductoftwovectors}
+\boldnabla \hspace{.1ex} \bigl( \hspace{-0.05ex} \bm{a} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{b} \hspace{.05ex} \bigr) \hspace{-0.3ex}
+= \hspace{.1ex} \locationvector^i \partial_i \bigl( \hspace{-0.05ex} \bm{a} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{b} \hspace{.05ex} \bigr) \hspace{-0.33ex}
+= \hspace{.1ex} \locationvector^i \bigl( \partial_i \bm{a} \bigr) \hspace{-0.32ex} \dotp \bm{b} + \hspace{.1ex} \locationvector^i \bm{a} \hspace{-0.05ex} \dotp \hspace{-0.15ex} \bigl( \partial_i \bm{b} \bigr) \hspace{-0.33ex} =
+\\[-0.1em]
+%
+= \hspace{-0.2ex} \bigl( \locationvector^i \partial_i \bm{a} \bigr) \hspace{-0.32ex} \dotp \bm{b} \hspace{.1ex} + \hspace{.1ex} \locationvector^i \bigl( \partial_i \bm{b} \bigr) \hspace{-0.33ex} \dotp \bm{a}
+= \hspace{-0.16ex} \bigl( \boldnabla \hspace{-0.1ex} \bm{a} \bigr) \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{b} \hspace{.1ex} + \hspace{-0.1ex} \bigl( \boldnabla \hspace{.1ex} \bm{b} \bigr) \hspace{-0.27ex} \dotp \hspace{.1ex} \bm{a}
+\hspace{.2ex} .
+\end{multline}
 

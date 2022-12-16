@@ -15,10 +15,11 @@
 
 \en{So}\ru{Итак},
 \en{the tensor algebra}\ru{тензорная алгебра}
-\en{consists of the five operations}\ru{состоит из пяти операций}.
+\en{consists of the five operations}\ru{состоит из пяти операций}
+(\en{actions}\ru{действий}).
 
 % equality
-\subsection*{\en{The equality}\ru{Равенство}}
+\subsection*{\en{Equality}\ru{Равенство}}
 
 \en{This operation}\ru{Эта операция}
 \en{shows}\ru{показывает}\ru{,}
@@ -30,11 +31,19 @@
 \en{Tensors}\ru{Тензоры}
 \en{can be equal}\ru{могут быть равны}
 \en{only when}\ru{лишь тогда, когда}
-\en{their complexities (valencies)}\ru{их сложности (валентности)}
+\en{their}\ru{их}
+\en{complexities}\ru{сложности}
+(\en{valencies}\ru{валентности})
 \en{are the~same}\ru{одинаковы}.
-\en{Tensors of the different valencies}\ru{Тензоры разных валентностей}
+\en{Tensors of different valencies}\ru{Тензоры разных валентностей}
 \en{cannot be}\ru{не~могут быть}
-\en{equal or not}\ru{равн\'{ы} или не~равн\'{ы}}.
+\en{equal}\ru{равн\'{ы}}
+\en{or}\ru{или}
+\en{not equal}\ru{не~равн\'{ы}}.
+
+\begin{equation}\label{tensoralgebra:equality}
+.....
+\end{equation}
 
 
 ....
@@ -42,7 +51,7 @@
 
 
 % linear combination
-\subsection*{\en{The linear combination}\ru{Линейная комбинация}}
+\subsection*{\en{Linear combination}\ru{Линейная комбинация}}
 
 \en{The~first}\ru{Первое}
 \en{is the }\textbold{\en{linear combination}\ru{линейная комбинация}},
@@ -55,7 +64,7 @@
 \en{For a~two tensors}\ru{Для двух тензоров}:
 
 \nopagebreak\vspace{-0.2em}
-\begin{equation}\label{tensoraction:linearcombination}
+\begin{equation}\label{tensoralgebra:linearcombination}
 \lambda a_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex} + \hspace{.2ex} \mu b_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex} = \hspace{.2ex} c_{i\hspace{-0.1ex}j\ldots} \hspace{-0.2ex}
 \;\Leftrightarrow\;
 \lambda \bm{a} + \mu \bm{b} = \bm{c}
@@ -74,18 +83,26 @@ $\bm{a}$, $\bm{b}$ \en{and}\ru{и}~$\bm{c}$~\en{are}\ru{---} \en{tensors}\ru{т�
 \en{an~orthogonal transformation}\ru{ортогональному преобразованию}
 \en{like}\ru{типа}~\eqref{orthotransform:2}.
 
-
-
-\inquotesx{\en{Decomposition of~a~vector in a~basis}\ru{Разложение вектора в~базисе}}[---]
-\en{representation}\ru{представление} \en{of~a~vector}\ru{вектора} \en{as the~sum}\ru{суммой}~${\bm{v} = v_i \bm{e}_i}$\:--- \en{is nothing else but}\ru{это не~что~иное как} \en{the~linear combination}\ru{линейная комбинация} \en{of~basis vectors}\ru{векторов базиса}~${\bm{e}_i}$ \en{with coefficients}\ru{с~коэффициентами}~${v_i}$.
+\inquotesx{\en{Decomposition of~vector by basis}\ru{Разложение вектора по базису}}[---]
+\en{a~representation}\ru{представление}
+\en{of~a~vector}\ru{вектора} \en{as the~sum}\ru{суммой}~${\bm{v} = v_i \bm{e}_i}$\:--- \en{is nothing else but}\ru{это не~что~иное как} \en{the~linear combination}\ru{линейная комбинация} \en{of~basis vectors}\ru{векторов базиса}~${\bm{e}_i}$ \en{with coefficients}\ru{с~коэффициентами}~${v_i}$.
 
 % multiplication
+\subsection*{\en{Multiplication of tensors}\ru{Умножение тензоров}}
 
-\en{The~second operation}\ru{Второе действие} \en{is}\ru{это} \textbold{\en{multiplication~(tensor product, direct product)}\ru{умножение~(тензорное произведение, прямое произведение)}}.
-\en{It~takes arguments of~any complexities}\ru{Оно принимает аргументы любых сложностей}, \en{returning the~result of~cumulative complexity}\ru{возвращая результат суммарной сложности}.
+\en{The~second operation}\ru{Второе действие}
+\en{is}\ru{это}
+\textbold{ \en{the~multiplication}\ru{умножение}
+(\en{tensor product}\ru{тензорное произведение},
+\en{direct product}\ru{прямое произведение}) }.
+\en{It~takes arguments}\ru{Оно принимает аргументы}
+\en{of~any complexities}\ru{любых сложностей},
+\en{returning}\ru{возвращая}
+\en{the~result}\ru{результат}
+\en{of a~cumulative complexity}\ru{суммарной сложности}.
 \en{Examples}\ru{Примеры}:
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{tensoraction:multiplication}
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{tensoralgebra:multiplication}
 \begin{array}{rcl}
 v_i a_{j\hspace{-0.1ex}k} \hspace{-0.16ex} = C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} & \Leftrightarrow & \bm{v} \, {^2\hspace{-0.2ex}\bm{a}} = {^3\hspace{-0.15ex}\bm{C}},
 \\[.1em]
@@ -100,6 +117,7 @@ a_{i\hspace{-0.1ex}j} B_{abc} \hspace{-0.16ex} = D_{i\hspace{-0.1ex}jabc} & \Lef
 ${^2\hspace{-0.25em}\bm{A} \hspace{-0.15ex} = \bm{b}\bm{c}}$.
 
 % contraction
+\subsection*{\en{Contraction}\ru{Свёртка}}
 
 \en{The~third operation}\ru{Третье действие} \en{is called}\ru{называется} \textbold{\ru{свёрткой~(}contraction\ru{)}}.
 \en{It applies}\ru{Оно применяется} \en{to bivalent and more complex tensors}\ru{к~бивалентным и более сложным тензорам}.
@@ -113,7 +131,7 @@ ru{возможны }\en{the three variants}\ru{три варианта} \en{of~
 ${\bm{a}}$, ${\bm{b}}$ \en{and}\ru{и}~${\bm{c}}$
 \en{with the components}\ru{с~компонентами}
 
-\nopagebreak\vspace{-0.33em}\begin{equation}\label{tensoraction:contraction}
+\nopagebreak\vspace{-0.33em}\begin{equation}\label{tensoralgebra:contraction}
 a_{i} = D_{kki} \hspace{.1ex} ,
 \;\;
 b_{i} = D_{kik} \hspace{.1ex} ,
@@ -162,13 +180,14 @@ a'_{i} = D\hspace{.16ex}'_{\hspace{-0.32ex}kki} \hspace{-0.16ex}
 \end{equation*}
 
 % index juggling
+\subsection*{\en{Index juggling, transposing}\ru{Жонглирование индексами, транспонирование}}
 
 \en{The~fourth operation}\ru{Четвёртое действие} \en{is also applicable}\ru{также примен\'{и}мо} \en{to a~single tensor}\ru{к~одному тензору} \en{of~second and bigger complexities}\ru{второй и~б\'{о}льших сложностей}.
 \en{It}\ru{Оно} \en{is named}\ru{именуется} \en{as}\ru{как} \textbold{\ru{перестановка индексов~(}index swap\ru{)}, \ru{жонглирование индексами~(}index juggling\ru{)}, \ru{транспонирование~(}transposing\ru{)}}.
 \en{From}\ru{Из} \en{components}\ru{компонент} \en{of~a~tensor}\ru{тензора}\en{,} \ru{возникает }\en{the~new collection}\ru{новая совокупность}\en{ is emerged} \en{with another}\ru{с~другой} \en{sequence of~indices}\ru{последовательностью индексов}, \en{the result’s complexity stays the~same}\ru{сложность результата остаётся той~же}.
 \en{For example}\ru{Для примера}, \en{trivalent tensor}\ru{трёхвалентный тензор}~${^3\hspace{-0.16em}\bm{D}}$ \en{can give}\ru{может дать} \en{tensors}\ru{тензоры} ${^3\hspace{-0.28em}\bm{A}}$, ${^3\hspace{-0.15em}\bm{B}}$, ${^3\hspace{-0.05em}\bm{C}}$ \en{with components}\ru{с~компонентами}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{tensoraction:transposing}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{tensoralgebra:transposing}
 \begin{array}{rcl}
 {^3\hspace{-0.3em}\bm{A}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2}
 & \!\Leftrightarrow\!\! &
@@ -198,16 +217,20 @@ ${\bigl( \hspace{-0.1ex} \bm{A}^{\hspace{-0.05em}\T} \hspace{.15ex} \bigr)^{\hsp
 \en{For}\ru{Для} \en{the~dyadic multiplication}\ru{диадного умножения} \en{of~two vectors}\ru{двух векторов}, ${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\hspace{-0.4ex}}$.
 
 % combining operations
+\subsection*{\en{Combining operations}\ru{Комбинирование операций}}
 
-\subsection*{\en{Combining operations}\ru{Комбинирование действий}}
+\en{The~four presented operations (actions)}\ru{Четыре представленных операции (действия)}
+\en{can be combined}\ru{могут быть скомбинированы}
+\en{in various sequences}\ru{в~разных последовательностях}.
 
-\en{The~four presented operations}\ru{Четыре представленных действия} \en{are combined}\ru{комбинируются} \en{in various sequences}\ru{в~разных последовательностях}.
-
-\en{The~combination}\ru{Комбинация} \en{of~}\en{multiplication}\ru{умножения}~\eqref{tensoraction:multiplication} \en{and}\ru{и}~\en{contraction}\ru{свёртки}~\eqref{tensoraction:contraction}\:--- \en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведение} (dot product)\:--- \en{is the~most frequently used}\ru{самая часто используемая}.
+\en{The~combination}\ru{Комбинация}
+\en{of~}\en{multiplication}\ru{умножения}~\eqref{tensoralgebra:multiplication}
+\en{and}\ru{и}~\en{contraction}\ru{свёртки}~\eqref{tensoralgebra:contraction}\:---
+\en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведение} (dot product)\:--- \en{is the~most frequently used}\ru{самая часто используемая}.
 \en{In the direct indexless notation}\ru{В~прямой безиндексной записи} \en{this is denoted}\ru{это обозначается} \en{by large dot}\ru{крупной точкой}~\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}, \en{which}\ru{которая} \en{shows}\ru{показывает} \en{the~contraction}\ru{свёртку} \en{by adjacent indices}\ru{по~соседним индексам}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
-\label{tensoraction:dotproductexamples}
+\label{tensoralgebra:dotproductexamples}
 \bm{a} = \bm{B} \dotp \bm{c}
 \,\Leftrightarrow\,
 a_i \hspace{-0.15ex} = B_{i\hspace{-0.1ex}j} c_j

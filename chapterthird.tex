@@ -388,10 +388,25 @@ d\initiallocationvector = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em
 \en{And this}\ru{А это}\en{ is}\ru{\:---} \en{where}\ru{где} \ru{возникает }\en{the extra complexity}\ru{сверх сложность}\en{ arose}.
 Although, the multivariance is often seen as a big gift.
 
-\en{Motion gradient}\ru{Градиент движения}~$\bm{F}$ \en{characterizes}\ru{характеризует} \en{both the~deformation of a~body and the~rotation of a~body as a~whole}\ru{и~деформацию тела, и~поворот тела как~целого}.
-\inquotes{\en{The pure}\ru{Чистыми}} \en{deformation tensors}\ru{тензорами деформации} \en{are}\ru{являются} \en{the stretch tensors}\ru{тензоры искажений}~${\bm{U}\hspace{-0.25ex}}$ \en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$ \en{from polar decomposition}\ru{из полярного разложения} ${\bm{F} \hspace{-0.1ex} = \rotationtensor \dotp \hspace{.25ex} \bm{U} \hspace{-0.2ex} = \bm{V} \hspace{-0.3ex} \dotp \hspace{.15ex} \rotationtensor}$, \en{as well as}\ru{так~же как и}~\en{other tensors}\ru{другие тензоры}, \en{originating}\ru{происходящие} \en{from}\ru{от} ${\bm{U}\hspace{-0.25ex}}$ \ru{или\,(и)}\en{or\,(and)}~${\bm{V}\hspace{-0.3ex}}$.
+\en{Motion gradient}\ru{Градиент движения}~$\bm{F}$ \en{characterizes}\ru{характеризует}
+\en{both the~deformation of a~body}\ru{и~деформацию тела,}
+\en{and the~rotation of a~body as a~whole}\ru{и~поворот тела как~целого}.
+%
+\en{The deformation-only tensors}\ru{Тензорами лишь-деформации}
+\en{are}\ru{являются}
+\en{the stretch tensors}\ru{тензоры искажений}~${\bm{U}\hspace{-0.25ex}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$
+\en{from the polar decomposition}\ru{из полярного разложения}
+${\bm{F} \hspace{-0.1ex} = \rotationtensor \dotp \hspace{.25ex} \bm{U} \hspace{-0.2ex} = \bm{V} \hspace{-0.3ex} \dotp \hspace{.15ex} \rotationtensor}$,
+\en{as well as}\ru{так~же как и}~\en{another tensors}\ru{другие тензоры},
+\en{originating}\ru{происходящие}
+\en{from}\ru{от}~${\bm{U}\hspace{-0.25ex}}$
+\ru{или\,(и)}\en{or\,(and)}~${\bm{V}\hspace{-0.3ex}}$.
 
-\en{Widely used ones are}\ru{Широко используются} \inquotes{\en{squares}\ru{квадраты}} \en{of~}${\bm{U}\hspace{-0.25ex}}$ \en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$
+\en{The widely used ones are}\ru{Широко используются}
+\en{the~}\inquotes{\en{squares}\ru{квадраты}}
+\en{of~}${\bm{U}\hspace{-0.25ex}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{deformationtensors.nonlinear}
 \begin{array}{c}
@@ -411,14 +426,47 @@ Although, the multivariance is often seen as a big gift.
 \end{equation}
 
 \vspace{-0.25em}\noindent
-\en{These are}\ru{Это} \en{the }\ru{тензор деформации }Green’\en{s}\ru{а}\en{ deformation tensor}~(\en{or}\ru{или} \en{the right}\ru{правый} \ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\bm{G}$ \en{and}\ru{и} \en{the }\ru{тензор деформации }Finger’\en{s}\ru{а}\en{ deformation tensor}~(\en{or}\ru{или} \en{the left}\ru{левый} \ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\mathboldPhi$.
-\en{The~convenient relation}\ru{Удобная связь} \en{to}\ru{с}~$\bm{F}$\:---  \en{without}\ru{без} \en{extracting roots}\ru{извлечения корней} \ru{как у}\en{as with}~${\bm{U}\hspace{-0.25ex}}$ \en{and}\ru{и}~${\bm{V}\hspace{-0.25ex}}$\:--- \en{explains}\ru{объясняет} \en{the~big popularity}\ru{больш\'{у}ю популярность} \en{of~tensors}\ru{тензоров}~$\bm{G}$ \en{and}\ru{и}~$\mathboldPhi$.
-\en{Tensor}\ru{Тензор}~$\bm{G}$ \en{was first used}\ru{впервые использовал} \en{by }George Green\hspace{-0.1ex}%
+\en{These are}\ru{Это}
+\en{the }\ru{тензор деформации }Green’\en{s}\ru{а}\en{ deformation tensor}
+(\en{or}\ru{или}
+\en{the right}\ru{правый}
+\ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\bm{G}$
+\en{and}\ru{и}
+\en{the }\ru{тензор деформации }Finger’\en{s}\ru{а}\en{ deformation tensor}
+(\en{or}\ru{или}
+\en{the left}\ru{левый}
+\ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\mathboldPhi$.
+%
+\en{They have}\ru{У~них есть}
+\en{the~convenient link}\ru{удобная связь}
+\en{with}\ru{с}~\en{the motion gradient}\ru{градиентом движения}~$\bm{F}$,
+\en{without}\ru{без}
+\en{calculating square roots}\ru{вычисления квадратных корней}
+(\en{as}\ru{как}
+\en{it’s needed}\ru{это нужно}
+\en{for}\ru{для}~${\bm{U}\hspace{-0.25ex}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.25ex}}$%
+).
+%
+\en{That’s}\ru{Таков\'{а}}
+\en{the big reason}\ru{больш\'{а}я причина}\ru{,}
+\en{why}\ru{почему}
+\en{tensors}\ru{тензоры}~$\bm{G}$
+\en{and}\ru{и}~$\mathboldPhi$
+\en{are so widely used}\ru{так широк\'{о} используются}.
+
+\en{Tensor}\ru{Тензор}~$\bm{G}$
+\en{was first used}\ru{впервые использовал}
+\en{by }George Green\hspace{-0.1ex}%
 \footnote{%
-\href{https://en.wikipedia.org/wiki/George_Green_(mathematician)}{\bibauthor{Green, George}}. \href{https://hdl.handle.net/2027/mdp.39015027059651?urlappend=\%3Bseq=133}{(1839) On the~propagation of~light in crystallized media. \emph{Transactions of the~Cambridge Philosophical Society.} 1842, vol.\:7, part~II, pages 121\hbox{--}140.}
+\href{https://en.wikipedia.org/wiki/George_Green_(mathematician)}{\bibauthor{Green, George}}.
+\href{https://hdl.handle.net/2027/mdp.39015027059651?urlappend=\%3Bseq=133}{(1839) On the~propagation of~light in crystallized media. \emph{Transactions of the~Cambridge Philosophical Society.} 1842, vol.\:7, part~II, pages 121\hbox{--}140.}
 }\hspace{-0.5ex}.
 
-\en{The inversion}\ru{Обращение} \en{of~}$\mathboldPhi$ \en{and}\ru{и}~$\bm{G}$ \en{gives}\ru{даёт} \en{the two more}\ru{ещё два} \en{deformation tensors}\ru{тензора деформации}
+\en{An~inversion}\ru{Обращение}
+\en{of~}$\mathboldPhi$
+\en{and}\ru{и}~$\bm{G}$
+\en{gives}\ru{даёт} \en{the two more}\ru{ещё два} \en{deformation tensors}\ru{тензора деформации}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{moredeformationtensors.nonlinear}
 \begin{array}{c}
@@ -443,9 +491,11 @@ Although, the multivariance is often seen as a big gift.
 \en{each of~which}\ru{каждый из~которых} \en{is sometimes called}\ru{иногда называется} \ru{тензором }\en{the~}\href{https://en.wikipedia.org/wiki/Gabrio_Piola}{Piola}\en{ tensor} \en{or}\ru{или} \ru{тензором }\en{the~}\href{https://en.wikipedia.org/wiki/Josef_Finger}{Finger}\ru{’а}\en{ tensor}.
 \en{The~inverse}\ru{Обратный} \en{of the left}\ru{к~левому} \ru{тензору }Cauchy--Green\ru{’а}\en{ tensor}~${\hspace{-0.1ex}\mathboldPhi\hspace{.1ex}}$\en{ is}\ru{\:---} \ru{тензор деформации }\en{the }Cauchy\en{ deformation tensor}~${\hspace{-0.2ex}{^2}\hspace{-0.2ex}\bm{c}}$.
 
-\en{The components}\ru{Компоненты} \en{of these tensors}\ru{этих тензоров}\en{ are}
+\en{The components}\ru{Компоненты}
+\en{of these tensors}\ru{этих тензоров}\en{ are}
 
-\nopagebreak\vspace{-0.1em}\begin{equation*}%%\label{componentsofdeformationtensors}
+\nopagebreak\vspace{-0.1em}
+\begin{equation*}\label{componentsofdeformationtensors}
 \begin{array}{r@{\hspace{.5em}}l}
 \bm{G} = \initiallocationvector^i \hspace{-0.25ex} \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \initiallocationvector^j \hspace{-0.25ex}
 = G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{.1ex} \initiallocationvector^i \initiallocationvector^j
@@ -482,8 +532,7 @@ G^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
 \vspace{-0.2em}\noindent
 \en{coincide}\ru{совпадают}
 \en{with the components}\ru{с~компонентами}
-\en{of the unit}\ru{единичного}
-(\en{metric}\ru{метрического})
+\en{of the unit}\ru{единичного}~(\en{metric}\ru{метрического})
 \en{tensor}\ru{тензора}
 
 \nopagebreak\vspace{-0.4em}\begin{multline*}
@@ -502,48 +551,75 @@ G^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
 
 \vspace{-0.2em}\noindent
 \en{but}\ru{но}
-\en{these components are}\ru{эти компоненты}
-\en{in the different bases}\ru{в~разных базисах}.
+\en{the components’ bases}\ru{базисы компонент}
+\en{are different}\ru{разные}.
+%
 \en{Using the index notation}\ru{Пользуясь индексной записью},
 \en{it’s easy to get confused}\ru{легко запутаться}
 \en{in the differences}\ru{в~различиях}
 \en{between}\ru{между}
 \en{the~unit}\ru{единичным} \en{tensor}\ru{тензором}~$\UnitDyad$
 \en{and the~strain tensors}\ru{и~тензорами деформации}
-$\bm{G}$, $\mathboldPhi$, ${{^2}\hspace{-0.4ex}\bm{f}\hspace{-0.1ex}}$, ${{^2}\hspace{-0.2ex}\bm{c}}$.
-
+$\bm{G}$,
+$\mathboldPhi$,
+${{^2}\hspace{-0.4ex}\bm{f}\hspace{-0.1ex}}$,
+${{^2}\hspace{-0.2ex}\bm{c}}$.
+%
 \en{The direct indexless notation}\ru{Прямая безиндексная запись}
 \en{has}\ru{имеет}
-en{here}\ru{здесь}
-\en{the obvious}\ru{явное}
-\en{advantage}\ru{преимущество}.
+\ru{тут }\en{the obvious}\ru{явное}
+\en{advantage}\ru{преимущество}\en{ here}.
 
 \en{As was mentioned}\ru{Как упоминалось}
 \en{in}\ru{в}~\chapdotpararef{chapter:mathapparatus}{para:polardecomposition},
-\en{the stretch tensors}\ru{тензоры искажений} $\bm{U}\hspace{-0.1em}$ \en{and}\ru{и}~$\bm{V}\hspace{-0.1em}$
+\en{the stretch tensors}\ru{тензоры искажений}
+$\bm{U}\hspace{-0.1em}$
+\en{and}\ru{и}~$\bm{V}\hspace{-0.1em}$
 \en{have}\ru{имеют}
 \en{the same invariants}\ru{одинаковые инварианты}.
+
 \en{If}\ru{Если}
-$U_{\hspace{-0.2ex}k}$ (${k \hspace{-.2ex} = \hspace{-.2ex} 1, 2, 3})$
+${j_{\hspace{-0.2ex}k}}$
+(${k \hspace{-.2ex} = \hspace{-.2ex} 1, 2, 3})$
 \en{are}\ru{это}
 \en{the eigenvalues}\ru{собственные значения}
 \en{of~}\en{the stretch tensors}\ru{тензоров искажений}
-${\bm{U}\hspace{-0.1em}}$ \en{and}\ru{и}~${\bm{V}\hspace{-0.2em}}$,
+${\bm{U}\hspace{-0.1em}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.2em}}$,
+\en{that is}\ru{то есть}
+\en{the roots}\ru{корни}
+\en{of the characteristic equation}\ru{характеристического уравнения}
+\en{for}\ru{для}
+${\bm{U}\hspace{-0.1em}}$
+\en{and}\ru{и}~\en{for}\ru{для}
+${\bm{V}\hspace{-0.2em}}$,
 \en{then}\ru{то}
-\en{the invariants will be}\ru{инвариантами будут}
+\en{here are}\ru{вот}
+\en{their}\ru{их}
+\en{the invariants}\ru{инварианты}:
 
 \nopagebreak\vspace{-0.3em}
 \begin{gather*}
-\mathrm{I}\hspace{.16ex}(\bm{U}) = \mathrm{I}\hspace{.16ex}(\bm{V}) = \textstyle\sum \hspace{-0.2ex} U_{\hspace{-0.2ex}k}
+\firstcharacteristicinvariantof{\bm{U}}
+= \firstcharacteristicinvariantof{\bm{V}}
+= \trace{\bm{U}}
+= \trace{\bm{V}}
+= \textstyle\sum \hspace{-0.2ex} U_{\hspace{-0.2ex}aa}
+= \textstyle\sum \hspace{-0.2ex} V_{\hspace{-0.4ex}aa}
+= \textstyle\sum \hspace{-0.2ex} j_{\hspace{-0.1ex}k}
 \hspace{.1ex} ,
 \\
-\mathrm{II}\hspace{.16ex}(\bm{U}) \hspace{-0.2ex}
-= \mathrm{II}\hspace{.16ex}(\bm{V}) \hspace{-0.2ex}
-= U_1 U_2 \hspace{-0.2ex} + U_1 U_3 \hspace{-0.2ex} + U_2 \hspace{.2ex} U_3
+%
+\secondcharacteristicinvariantof{\bm{U}} \hspace{-0.2ex}
+= \secondcharacteristicinvariantof{\bm{V}} \hspace{-0.2ex}
+= j_1 j_2 \hspace{-0.2ex}
++ j_1 j_3 \hspace{-0.2ex}
++ j_2 \hspace{.2ex} j_3
 \hspace{.1ex} ,
 \\
-\mathrm{III}\hspace{.16ex}(\bm{U}) \hspace{-0.2ex}
-= \mathrm{III}\hspace{.16ex}(\bm{V}) \hspace{-0.2ex}
+%
+\thirdcharacteristicinvariantof{\bm{U}} \hspace{-0.2ex}
+= \thirdcharacteristicinvariantof{\bm{V} \hspace{-0.2ex}
 = U_1 U_2 \hspace{.2ex} U_3
 \hspace{.1ex} .
 \end{gather*}
@@ -555,10 +631,13 @@ ${\bm{U}\hspace{-0.1em}}$ \en{and}\ru{и}~${\bm{V}\hspace{-0.2em}}$,
 
 \noindent
 \begin{equation*}
-\mathrm{I}\hspace{.16ex}(\bm{G}) \hspace{-0.2ex} = \mathrm{I}\hspace{.16ex}(\mathboldPhi) \hspace{-0.2ex} = \textstyle\sum \hspace{-0.2ex} U_{\hspace{-0.25ex}k}^2, \dots
+\anyfirstinvariantof{\bm{G}}
+\hspace{-0.2ex}
+= \anyfirstinvariantof{\mathboldPhi}
+\hspace{.1ex} , \dots
 \end{equation*}
 
-\en{Without deformation}\ru{Без деформации}
+\en{Without a~deformation}\ru{Без деформации}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \bm{F} = \bm{U} \hspace{-0.3ex} = \bm{V} \hspace{-0.3ex} = \bm{G} = \mathboldPhi = {^2}\hspace{-0.4ex}\bm{f} = {^2}\hspace{-0.2ex}\bm{c} = \UnitDyad
@@ -595,21 +674,21 @@ G_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
 This tensor \textcolor{magenta}{gives the~\inquotes{square} of local change in distances} due to deformation:
 ${\displaystyle d\currentlocationvector \dotp d\currentlocationvector = d\initiallocationvector \dotp \bm{G} \dotp d\initiallocationvector}$
 
-Invariants of~${\bm{G}}$ are used in expressions for (density of) isotropic body’s potential energy of deformation.
-The most popular invariants are
+The most popular invariants of~${\bm{G}}$ are
+%%used in expressions for the potential energy of elastic deformations of an~isotropic body.
 \[
 \begin{array}{r@{\hspace{.25em}}c@{\hspace{.33em}}l}
-\mathrm{I}\hspace{.16ex}(\bm{G}) & \equiv &
+\anyfirstinvariantof{\bm{G}} & \equiv &
 \trace{\bm{G}}
 = G_{ii} \hspace{-0.2ex} = \gamma_{1}^{2} + \gamma_{2}^{2} + \gamma_{3}^{2}
 \\[.25em]
 %
-\mathrm{II}\hspace{.16ex}(\bm{G}) & \equiv &
+\anysecondinvariantof{\bm{G}} & \equiv &
 \smalldisplaystyleonehalf \bigl( G_{\hspace{-0.2ex}j\hspace{-0.1ex}j}^{\hspace{.25ex}2} \hspace{-0.1ex} - G_{ik} G_{ki} \hspace{.1ex} \bigr) \hspace{-0.25ex}
 = \gamma_{1}^{2}\gamma_{2}^{2} + \gamma_{2}^{2}\gamma_{3}^{2} + \gamma_{3}^{2}\gamma_{1}^{2}
 \\[.4em]
 %
-\mathrm{III}\hspace{.16ex}(\bm{G}) & \equiv &
+\anythirdinvariantof{\bm{G}} & \equiv &
 \operatorname{det} \hspace{.1ex} \bm{G}
 = \gamma_{1}^{2}\gamma_{2}^{2}\gamma_{3}^{2}
 \end{array}
@@ -790,6 +869,20 @@ aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2
 \vspace{.4em} \noindent \hfill \textboldoblique{Wikipedia, the free encyclopedia}\:--- \href{https://en.wikipedia.org/wiki/Finite_strain_theory}{Finite strain theory}
 
 ...
+
+
+\subsection*{\en{Logarithmic strain, Hencky’s strain}\ru{Логарифмическая деформация, деформация Hencky}}
+
+\href{https://en.wikipedia.org/wiki/Heinrich_Hencky}{%
+\bibauthor{Heinrich Hencky}%
+}.
+Über die Form des Elastizitätsgesetzes bei ideal elastischen Stoffen.
+Zeitschrift für technische Physik, Vol.\:9~(1928),
+Seiten~215\hbox{--}220.
+
+
+....
+
 
 
 \en{\section{Velocity field}}
@@ -1502,14 +1595,53 @@ With
 
 ...
 
-\en{In an~elastic continuum,}\ru{В~упругой среде} \en{internal forces are potential}\ru{внутренние силы потенциальны}
+\en{In an~elastic continuum}\ru{В~упругой среде}\en{,} \en{the~internal forces}\ru{внутренние силы}
+\en{are potential}\ru{потенциальны}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \variation{\internalwork} = - \rho \hspace{.2ex} \variation{\widetilde{\potential}}
 %%\hspace{.1ex} .
 \end{equation*}
 
+
 ...
+
+
+
+
+%----------
+{\small
+\setlength{\parindent}{0pt}
+
+\begin{leftverticalbar}%%[oversize]
+
+\inquotes{The elastic potential energy density per volume unit},
+becomes when shorting
+\inquotes{The elastic potential ....}
+
+\begin{otherlanguage}{russian}
+Плотность
+упругой потенциальной энергии,
+запасённой|накопленной
+в~единице объёма тела (сред\'{ы}).
+\end{otherlanguage}
+
+\begin{otherlanguage}{russian}
+Дословный перевод
+c~english на~русский
+фразы
+\inquotesx{the elastic potential}
+даёт
+\inquotesx{упругий потенциал}[.]
+\end{otherlanguage}
+
+\end{leftverticalbar}
+\par}
+%----------
+
+
+....
+
 
 \begin{equation}
 \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\mathsf{S}} \hspace{-0.25ex}
@@ -1564,9 +1696,9 @@ With
 If the strain energy density is path independent, then it acts as a~potential for stress, that is
 \[ \displaystyle \cauchystress = {\frac{\partial \potential(\bm{C})}{\partial \bm{C}}} \]
 
-For adiabatic processes, ${\potential}$ is equal to the change in internal energy per unit volume.
+For adiabatic processes, ${\potential}$ is equal to the change in internal energy per unit of volume.
 
-For isothermal processes, ${\potential}$ is equal to the Helmholtz free energy per unit volume.
+For isothermal processes, ${\potential}$ is equal to the Helmholtz free energy per unit of volume.
 
 The natural configuration of a~body is defined as the configuration in which the body is in stable thermal equilibrium with no external loads and zero stress and strain.
 
@@ -1586,12 +1718,21 @@ When we apply energy methods in elasticity, we implicitly assume that a~body ret
 
 ...
 
-Rubber\hbox{-}like material (elastomer)
+A~rubber\hbox{-}like material (an elastomer)
 
-Материалу типа резины~(эластомеру) характерны больш\'{и}е деформации, и~функция~${\potential\hspace{.12ex}(\mathrm{I}, \mathrm{II}, \mathrm{III})}$ для~него бывает весьма сложной\footnote{\bibauthor{Harold Alexander}. \href{https://kundoc.com/pdf-a-constitutive-relation-for-rubber-like-materials-.html}{A~constitutive relation for rubber-like ma\-te\-ri\-als~// International Journal of~Engineering Science, volume~6 (September 1968), pages 549\hbox{--}563.}}\hbox{\hspace{-0.5ex}.}
+Для материала типа резины~(эластомера)
+характерны больш\'{и}е деформации.
+Функция~${\potential\hspace{.12ex}(\anyfirstinvariant, \anysecondinvariant, \anythirdinvariant)}$
+для такого материала
+бывает весьма сложной%
+\footnote{\bibauthor{Harold Alexander}. \href{https://kundoc.com/pdf-a-constitutive-relation-for-rubber-like-materials-.html}{A~constitutive relation for rubber-like ma\-te\-ri\-als~// International Journal of~Engineering Science, volume~6 (September 1968), pages 549\hbox{--}563.}}\hbox{\hspace{-0.5ex}.}
 % https://www.researchgate.net/publication/232329906_A_constitutive_relation_for_rubber-like_materials
 
-При~больш\'{и}х деформациях исчезают преимущества использования~$\bm{u}$ и~$\bm{C}$\:--- проще остаться с~вектором\hbox{-}радиусом~$\currentlocationvector$ ...
+Преимущества использования~$\bm{u}$ и~$\bm{C}$
+исчезают,
+если деформации
+больш\'{и}е (кон\'{е}чные)\:---
+проще остаться с~вектором\hbox{-}радиусом~$\currentlocationvector$ ...
 
 ...
 
@@ -1968,25 +2109,32 @@ ${\boldnablacircled \hspace{-0.1ex}
 
 Понятие геометрической связи, развитое в~общей механике ...
 
+\end{otherlanguage}
+
+
 ...
 
-for incompressible materials ${\potential \hspace{-0.4ex} = \hspace{-0.33ex} \potential(\mathrm{I}, \mathrm{II})}$
+
+
+for incompressible materials
+${\potential \hspace{-0.4ex} = \hspace{-0.33ex} \potential(\anyfirstinvariant, \anysecondinvariant)}$
 
 Mooney\hbox{--}Rivlin model of incompressible material
 \[
-\potential = c_1 \bigl( \mathrm{I} - 3\bigr) + c_2 \bigl( \mathrm{II} - 3\bigr)
+\potential = c_1 \bigl( \anyfirstinvariant - 3 \bigr) + c_2 \bigl( \anysecondinvariant - 3 \bigr)
 \]
 
 incompressible Treloar (neo-Hookean) material
 \[
 c_2 \hspace{-0.16ex} = 0
 \;\;\Rightarrow\;\;
-\potential = c_1 \bigl( \mathrm{I} - 3\bigr)
+\potential = c_1 \bigl( \anyfirstinvariant - 3 \bigr)
 \]
+
 
 ...
 
-\end{otherlanguage}
+
 
 \en{\section{Hollow sphere under pressure}}
 

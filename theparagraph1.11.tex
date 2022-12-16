@@ -1,139 +1,483 @@
-\en{\section{Variations}}
+\en{\section{The rotation tensor}}
 
-\ru{\section{Вариации}}
+\ru{\section{Тензор поворота}}
 
-\label{para:calculusofvariations}
+\label{para:rotationtensor}
 
-\en{Further}\ru{Дальше}\ru{,}
-\en{we will}\ru{мы будем}
-\en{pretty often}\ru{довольно часто}
-\en{use}\ru{использовать}
-\en{the operation of varying}\ru{операцию варьирования}.
-\en{It is similar}\ru{Она похожа}
-\en{to the differentiation}\ru{на дифференцирование}.
+\en{The relation}\ru{Соотношение} \en{between}\ru{между} \en{two}\ru{двумя} \inquotes{\en{right}\ru{правыми}} (\en{or}\ru{или} \en{two}\ru{двумя} \inquotes{\en{left}\ru{левыми}}) \en{orthonormal}\ru{ортонормальными} \en{bases}\ru{базисами} ${\bm{e}_i}$ \en{and}\ru{и}~${\mathcircabove{\bm{e}}_i}$ \en{can be described}\ru{может быть описано} \en{by }\en{a~two\hbox{-}index array}\ru{двухиндексным массивом}\ru{,} \en{represented as a~matrix}\ru{представленным в~виде матрицы}~(\pararef{para:vector}, \pararef{para:matrices+permutations+determinants})
 
-\en{The variations}\ru{Вариации}
-\en{are seen as}\ru{видятся как}
-\en{the infinitesimal displacements}\ru{бесконечно малые смещения},
-\en{compatible with the constraints}\ru{совместимые с~ограничениями}\ru{( \inquotes{связями} )}.
-\en{If}\ru{Если}
-\en{there are no restrictions}\ru{ограничений}
-\en{for}\ru{для}
-\en{the variable}\ru{переменной} $x$\ru{ нет},
-\en{then}\ru{то}
-\en{the variations}\ru{вариации}
-${\variation{x}}$
-\en{are completely random}\ru{совершенно случайны}.
-\en{But when}\ru{Но когда}
-\begin{equation*}
-x \!=\! x(y\hspace{-0.1ex})
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{e}_i \hspace{-0.2ex} = \bm{e}_i \dotp \hspace{.1ex} \tikzmark{beginEqualsE} \mathcircabove{\bm{e}}_j \mathcircabove{\bm{e}}_j \tikzmark{endEqualsE} \hspace{-0.1ex} = \hspace{.1ex} \cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \, \mathcircabove{\bm{e}}_j
+\hspace{.1ex} ,
+\hspace{.4em}
+%
+\cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \hspace{.1ex} \equiv \hspace{.1ex} \bm{e}_i \dotp \mathcircabove{\bm{e}}_j
+%%\hspace{.1ex} .
 \end{equation*}
-\en{is}\ru{это}
-\en{the function}\ru{функция}
-\en{of the independent argument}\ru{независимого аргумента}~$y$,
-\en{then}\ru{тогда}
-\begin{equation*}
-\variation{x} = x'\hspace{-0.25ex}(y\hspace{-0.1ex}) \hspace{.1ex} \variation{y} .
-\end{equation*}
+\AddUnderBrace[line width=.75pt][0,-0.2ex]%
+{beginEqualsE}{endEqualsE}{${\scriptstyle \UnitDyad}$}
 
-\en{Variations}\ru{Вариации}
-\en{have}\ru{имеют}
-\en{the specifics }\en{similar}\ru{похожие}
-\en{to differentials}\ru{на~дифференциалы}\ru{ особенности}
-.
-\en{If}\ru{Если},
-\en{as example}\ru{как пример},
-${\variation{x}}$ \en{and}\ru{и}~${\variation{y}}$
-\en{are}\ru{это}
-\en{variations of}\ru{вариации}~$x$ \en{and}\ru{и}~$y$,
-$u$ \en{and}\ru{и}~$v$\en{ are}\ru{\:---}
-\en{the finite}\ru{кон\'{е}чные}
-\en{values}\ru{значения},
-\en{then we write}\ru{то мы пишем}
-${u \variation{x} + v \variation{y} = \variation{w}}$
-\en{even if}\ru{даже если}
-${\variation{w}}$
-\en{is not a~variation of}\ru{это не вариация}~$w$.
+\vspace{-0.3em}\noindent
+(\inquotes{\en{a~matrix of~cosines}\ru{матрицы косинусов}}).
 
-\en{In this case}\ru{В~этом случае}~${\variation{w}}$
-\en{is a~single symbol}\ru{это одиночный символ}.
-\en{Surely}\ru{Разумеется}\ru{,}
-\en{if}\ru{если}
-${u \narroweq u(x,y)}$,
-${v \narroweq v(x,y)}$
-\en{and}\ru{и}~${\partial_x v = \partial_y u}$
-(${ \hspace{.16ex}
-   \frac{\partial}{\partial x} v = \frac{\partial}{\partial y} u
-\hspace{.16ex} }$),
-\en{then}\ru{то}
-\en{the~sum}\ru{сумма}~${\variation{w} = u \variation{x} + v \variation{y}}$
-\en{will be a~variation}\ru{будет вариацией}
-\en{of some}\ru{н\'{е}кой}~$w$.
+\en{Also}\ru{Также}, \en{a~rotation}\ru{поворот} \en{of a~tensor}\ru{тензора} \en{can be described}\ru{может быть описан} \en{by another tensor}\ru{другим тензором}, \en{called}\ru{называемым} \en{rotation tensor}\ru{тензором поворота}~$\rotationtensor$
 
-\en{Varying}\ru{Варьируя}
-\en{the identity}\ru{тождество}~\eqref{orthogonalityofrotationtensor},
-\en{we get}\ru{мы получаем}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{introductionofrotationtensor}
+\bm{e}_i = \bm{e}_j \hspace{.2ex} \tikzmark{beginEqualsKroneckerDelta} \mathcircabove{\bm{e}}_j \hspace{-0.2ex} \dotp \mathcircabove{\bm{e}}_i \tikzmark{endEqualsKroneckerDelta} = \rotationtensor \hspace{-0.2ex} \dotp \mathcircabove{\bm{e}}_i \hspace{.1ex}, \:\,
+\rotationtensor \equiv \bm{e}_j \mathcircabove{\bm{e}}_j = \scalebox{.96}[1]{$ \bm{e}_1 \hspace{-0.1ex} \mathcircabove{\bm{e}}_1 + \bm{e}_2 \mathcircabove{\bm{e}}_2 + \bm{e}_3 \mathcircabove{\bm{e}}_3 $}
+\hspace{.1ex} .
+\end{equation}
+\AddUnderBrace[line width=.75pt][.1ex,-0.2ex]%
+{beginEqualsKroneckerDelta}{endEqualsKroneckerDelta}{${\scriptstyle \delta_{j\hspace{-0.06ex}i}}$}
 
-\begin{equation*}
-\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!
-.
+\en{Components of}\ru{Компоненты}~$\rotationtensor$ \en{both }\ru{и~в~начальном}\en{in an~initial}~${\mathcircabove{\bm{e}}_i}$\ru{,} \en{and}\ru{и}~\en{in a~rotated}\ru{в~повёрнутом}~${\bm{e}_i}$ \en{bases}\ru{базисах} \en{are the same}\ru{одни и~те~же}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{componentsofrotationtensor}
+\begin{array}{c}
+\bm{e}_{i} \dotp \rotationtensor \hspace{-0.1ex} \dotp \bm{e}_{j} =
+\hspace{.2ex} \tikzmark{beginEqualsKroneckerDeltaPresent} \bm{e}_{i} \hspace{-0.1ex} \dotp \bm{e}_{k} \tikzmark{endEqualsKroneckerDeltaPresent} \hspace{.2ex} \mathcircabove{\bm{e}}_{k} \hspace{-0.1ex} \dotp \bm{e}_{j} =
+\hspace{.2ex} \mathcircabove{\bm{e}}_{i} \hspace{-0.1ex} \dotp \bm{e}_{j}
+\hspace{.1ex} ,
+\\[1.4em]
+%
+\mathcircabove{\bm{e}}_{i} \dotp \rotationtensor \hspace{-0.1ex} \dotp \mathcircabove{\bm{e}}_{j} =
+\hspace{.2ex} \mathcircabove{\bm{e}}_{i} \hspace{-0.1ex} \dotp \bm{e}_{k} \hspace{.2ex} \tikzmark{beginEqualsKroneckerDeltaPast} \mathcircabove{\bm{e}}_{k} \hspace{-0.1ex} \dotp \mathcircabove{\bm{e}}_{j} \tikzmark{endEqualsKroneckerDeltaPast} =
+\hspace{.2ex} \mathcircabove{\bm{e}}_{i} \hspace{-0.1ex} \dotp \bm{e}_{j}
+\hspace{.1ex} .
+\end{array}
+\end{equation}
+\AddUnderBrace[line width=.75pt][.1ex, -0.2ex]%
+{beginEqualsKroneckerDeltaPresent}{endEqualsKroneckerDeltaPresent}{${\scriptstyle \delta_{ik}}$}
+\AddUnderBrace[line width=.75pt][0, -0.2ex]%
+{beginEqualsKroneckerDeltaPast}{endEqualsKroneckerDeltaPast}{${\scriptstyle \delta_{kj}}$}
+
+\vspace{-0.1em}\noindent
+\en{In matrix notation}\ru{В матричной записи}\en{,}
+\en{these components}\ru{эти компоненты} \en{present}\ru{представляют} \en{the }\textcolor{red}{???\en{transposed}\ru{транспонированную}????} \en{matrix of~cosines}\ru{матрицу косинусов}~${\cosinematrix{\!j\mathcircabove{i}} = \hspace{.1ex} \mathcircabove{\bm{e}}_i \dotp \bm{e}_j}$\hspace{.1ex}:
+
+\nopagebreak\vspace{-0.3em}\begin{equation*}
+\rotationtensor = \cosinematrix{\!j\mathcircabove{i}} \hspace{.5ex} {\bm{e}}_{i} {\bm{e}}_{j} = \cosinematrix{\!j\mathcircabove{i}} \hspace{.5ex} \mathcircabove{\bm{e}}_{i} \mathcircabove{\bm{e}}_{j}
+\hspace{.1ex} .
 \end{equation*}
 
-\en{This tensor}\ru{Этот тензор}
-\en{is antisymmetric}\ru{антисимметричен},
-\en{and thus}\ru{и~потому}
-\en{is representable}\ru{представляется}
-\en{via}\ru{через}
-\en{its}\ru{свой}
-\en{companion}\ru{сопутствующий}
-\en{pseudovector}\ru{псевдовектор}~${\varvector{o}}$
-\en{as}\ru{как}
+{\small
+Spatial transformations in the 3-dimensional Euclidean space ${\mathbb{R}^{3}}$ are distinguished into active or alibi transformations, and passive or alias transformations.
+An active transformation is a transformation which actually changes the physical position (alibi, elsewhere) of objects, which can be defined in the absence of a coordinate system; whereas a passive transformation is merely a change in the coordinate system in which the object is described (alias, other name) (change of coordinates, or change of basis). By transformation, math texts usually refer to active transformations.
+\par}
 
-\begin{equation*}
-\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
-.
+\en{Tensor}\ru{Тензор}~$\rotationtensor$ \en{relates}\ru{соотносит} \en{the two vectors}\ru{два вектора}\:--- \inquotes{\en{before rotation}\ru{до~поворота}}~${\initiallocationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i}$ \en{and}\ru{и}~\inquotes{\en{after rotation}\ru{после поворота}}~${\locationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \bm{e}_i}$.
+\en{Components}\ru{Компоненты}~${\rho_i \hspace{-0.2ex} = \hspace{-0.1ex} \constant}$ \en{of}\ru{у}~$\locationvector$ \en{in rotated basis}\ru{в~повёрнутом базисе}~${\bm{e}_i}$\en{ are}\ru{\:---} \en{the same}\ru{такие~же} \en{as}\ru{как} \en{of}\ru{у}~${\initiallocationvector}$ \en{in immobile basis}\ru{в~неподвижном базисе}~${\mathcircabove{\bm{e}}_i}$.
+\en{So that}\ru{Так что} \en{the rotation tensor}\ru{тензор поворота} \en{describes}\ru{описывает} \en{the rotation of the vector together with the basis}\ru{вращение вектора вместе с~базисом}.
+\en{And since}\ru{И~поскольку} ${\bm{e}_i = \bm{e}_j \mathcircabove{\bm{e}}_j \hspace{-0.15ex} \dotp \mathcircabove{\bm{e}}_i
+\:\Leftrightarrow\,
+\rho_i \hspace{.1ex} \bm{e}_i \hspace{-0.2ex} = \bm{e}_j \mathcircabove{\bm{e}}_j \hspace{-0.15ex} \dotp \rho_i \hspace{.1ex} \mathcircabove{\bm{e}_i}}$, \en{then}\ru{то}
+
+\nopagebreak\vspace{-0.25em}\begin{equation}\label{rodriguesrotationformula}
+\locationvector = \rotationtensor \dotp\hspace{.2ex} \initiallocationvector
+\end{equation}
+
+\vspace{-0.4em}\noindent
+(\en{this is}\ru{это} \en{the }\href{https://fr.wikipedia.org/wiki/Rotation_vectorielle#Cas_g%C3%A9n%C3%A9ral}{\ru{формула поворота }Rodrigues\ru{’а}\en{ rotation formula}}).
+
+\bibauthor{Olinde Rodrigues}.
+\href{http://sites.mathdoc.fr/JMPA/PDF/JMPA_1840_1_5_A39_0.pdf}{Des lois géométriques qui régissent les déplacements d’un système solide dans l’espace, et de la variation des coordonnées provenant de ces déplacements considérés indépendants des causes qui peuvent les produire. \emph{Journal de mathématiques pures et appliquées}, tome~5~(1840), pages~380\hbox{--}440.}
+
+\vspace{-0.1em}
+\en{For}\ru{Для} \en{a~second complexity tensor}\ru{тензора второй сложности} ${\mathcircabove{\bm{C}} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$\en{,} \en{a~rotation}\ru{поворот} \en{into the current position}\ru{в~текущую позицию} ${\bm{C} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_j}$ \en{looks like}\ru{выглядит как}
+
+\nopagebreak\vspace{-0.25em}\begin{equation}
+\bm{e}_i C_{i\hspace{-0.1ex}j} \bm{e}_j \hspace{-0.2ex}
+= \bm{e}_i \mathcircabove{\bm{e}}_i \hspace{-0.1ex} \dotp \mathcircabove{\bm{e}}_p C_{pq} \mathcircabove{\bm{e}}_q \hspace{-0.1ex} \dotp \mathcircabove{\bm{e}}_j \bm{e}_j
+\,\;\Leftrightarrow\;\:
+\bm{C} = \rotationtensor \dotp\hspace{.1ex} \mathcircabove{\bm{C}} \dotp \rotationtensor^{\T}
+\hspace{-0.3ex} .
+\end{equation}
+
+\en{Essential property}\ru{Существенное свойство} \en{of a~rotation tensor}\ru{тензора поворота}\:--- \en{orthogonality}\ru{ортогональность}\:--- \en{is expressed as}\ru{выражается как}
+
+\nopagebreak\en{\vspace{-0.8em}}\ru{\vspace{-0.25em}}
+\begin{equation}\label{orthogonalityofrotationtensor}
+\aunderbrace[l1r]{\rotationtensor}_{\bm{e}_i \mathcircabove{\bm{e}}_i} \hspace{.1em} \dotp \hspace{.1em} \aunderbrace[l1r]{\rotationtensor^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_j \bm{e}_j}
+\hspace{.2ex} = \hspace{.2ex}
+\aunderbrace[l1r]{\rotationtensor^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_i \bm{e}_i} \hspace{.2em} \dotp \aunderbrace[l1r]{\rotationtensor}_{\bm{e}_j \mathcircabove{\bm{e}}_j}
+\hspace{-0.2ex} = \hspace{.3ex}
+\aunderbrace[l1r]{\hspace{.2ex}\UnitDyad\hspace{.2ex}}_{\mathclap{\begin{subarray}{l} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \\ \bm{e}_i \bm{e}_i \end{subarray}}}
+\hspace{.2em} ,
+\end{equation}
+
+\vspace{-0.1em}\noindent
+\en{that~is}\ru{то~есть} \en{the~transposed tensor}\ru{транспонированный тензор} \en{coincides}\ru{совпадает} \en{with}\ru{с}~\en{the~reciprocal tensor}\ru{обратным тензором}:
+${\rotationtensor^{\T} \hspace{-0.32ex} = \rotationtensor^{\expminusone} \Leftrightarrow \rotationtensor = \rotationtensor^{\expminusT}\hspace{-0.25ex}}$.
+
+\en{An~orthogonal tensor}\ru{Ортогональный тензор} \en{retains}\ru{сохраняет} \en{lengths and~angles}\ru{дл\'{и}ны и~углы} (\en{the metric}\ru{метрику})\ru{,}
+\en{because}\ru{потому что} \en{it}\ru{он} \en{does not change}\ru{не~меняет} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведение} \en{of vectors}\ru{векторов}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}
+\label{orthogonaltensorkeepsmetrics}
+\left( \rotationtensor \hspace{-0.2ex} \dotp \bm{a}\hspace{.2ex} \right) \dotp \left( \rotationtensor \hspace{-0.2ex} \dotp \bm{b}\hspace{.2ex} \right)
+= \bm{a} \dotp \rotationtensor^{\T} \hspace{-0.4ex} \dotp \rotationtensor \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{b}
+= \bm{a} \dotp \UnitDyad \dotp \bm{b}
+= \bm{a} \dotp \bm{b}
+\hspace{.1ex} .
+\end{equation}
+
+\en{For all}\ru{Для всех} \en{orthogonal tensors}\ru{ортогональных тензоров} ${\left(\operatorname{det} \orthogonaltensor\hspace{.1ex}\right)^2 \hspace{-0.1ex} = 1}$:
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+1 = \operatorname{det} \UnitDyad = \operatorname{det} \left({\hspace{-0.1ex} \orthogonaltensor \dotp \orthogonaltensor^{\T} \hspace{.2ex}}\right) \hspace{-0.3ex}
+= \left({\operatorname{det} \orthogonaltensor \hspace{.1ex}}\right) \left({\operatorname{det} \orthogonaltensor^{\T} \hspace{.2ex}}\right) \hspace{-0.3ex}
+= \left(\operatorname{det} \orthogonaltensor \hspace{.1ex} \right)^{2}
+\hspace{.1ex} .
 \end{equation*}
 
-\en{We have}\ru{Мы имеем}
-\en{relations}\ru{отношения}
+\en{A~rotation tensor is an~orthogonal tensor}\ru{Тензор поворота это ортогональный тензор} \en{with}\ru{с}~${\operatorname{det} \rotationtensor \hspace{-0.1ex} = 1}$.
 
-\nopagebreak\vspace{-0.5em}
-\begin{equation}
-\variation{\rotationtensor}
-\hspace{-0.1ex} =
-\varvector{o}
-\hspace{-0.1ex} \times \hspace{-0.1ex}
-\rotationtensor
-,
-\:\:
-\varvector{o}
-=
-- \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $}
-\hspace{-0.1ex} \Bigl( \hspace{-0.1ex}
-\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T}
-\Bigr)_{\hspace{-0.25em}\Xcompanion}
+\en{But}\ru{Но} \en{not only}\ru{не~только лишь} \en{rotation tensors}\ru{тензоры поворота} \en{possess}\ru{обладают} \en{the property of~orthogonality}\ru{свойством ортогональности}.
+\en{When}\ru{Когда} \en{in}\ru{в}~\eqref{introductionofrotationtensor} \en{the first basis}\ru{первый базис} \en{is }\inquotesx{\en{left}\ru{левый}}[,] \en{and}\ru{а}~\en{the second one}\ru{второй} \en{is }\inquotesx{\en{right}\ru{правый}}[,] \en{then}\ru{тогда} \en{there’s}\ru{это} \en{a~combination of a~rotation and a~reflection}\ru{комбинация поворота и~отражения} (\inquotes{rotoreflection}) ${\rotationtensor = -\UnitDyad \dotp \rotationtensor}$ \en{with}\ru{с}~${\operatorname{det} \left( -\UnitDyad \dotp \rotationtensor \hspace{.15ex} \right) \hspace{-0.1ex} = -1}$.
+
+\begin{otherlanguage}{russian}
+
+У~любого бивалентного тензора в~трёхмерном пространстве как минимум одно собственное число\:--- \en{the root of}\ru{корень}~\eqref{chardetequation}\en{ is}\ru{\:---} \en{non-complex}\ru{некомпл\'{е}ксное}~(\ru{действительное, }real).
+\en{For a~rotation tensor}\ru{Для тензора поворота}\en{,} \en{it is equal to one}\ru{оно равно единице}
+
+\nopagebreak\vspace{1em}\begin{equation*}
+\begin{array}{c}
+\rotationtensor \dotp \bm{a} = \eigenvalue \bm{a}
+\:\Rightarrow\:
+\tikzmark{BeginPaBrace} \bm{a} \hspace{.16ex} \dotp \tikzmark{BeginEBrace} \rotationtensor^{\T} \tikzmark{EndPaBrace} \hspace{-0.4ex} \dotp \rotationtensor \hspace{-0.32ex}\tikzmark{EndEBrace}\hspace{.32ex} \dotp \hspace{.16ex} \bm{a} = \eigenvalue \bm{a} \dotp \eigenvalue \bm{a}
+\:\Rightarrow\: \eigenvalue^{2} \hspace{-0.2ex} = 1 \hspace{.1ex} .
+\end{array}
+\end{equation*}
+\AddOverBrace[line width=.75pt][0.1ex,0.4ex]{BeginPaBrace}{EndPaBrace}{${\scriptstyle \rotationtensor \:\dotp\; \bm{a}}$}
+\AddUnderBrace[line width=.75pt][-0.1ex,0.1ex]{BeginEBrace}{EndEBrace}{${\scriptstyle \UnitDyad}$}
+
+\vspace{-0.5em}\noindent
+Соответствующая собственная ось называется осью поворота.
+Теорема Euler’а о~конечном повороте в~том и~состоит, что такая ось существует.
+Если ${\bm{k}}$\:--- орт этой оси, а~${\vartheta}$\:--- конечная величина угла поворота, то тензор поворота представ\'{и}м как
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{eulerfiniterotation}
+\rotationtensor\hspace{.1ex}(\bm{k}, \vartheta) = \UnitDyad \operatorname{cos} \vartheta + \bm{k} \times\hspace{-0.2ex} \UnitDyad \operatorname{sin} \vartheta + \bm{k} \bm{k} \left( {1 - \operatorname{cos} \vartheta} \right)
+\hspace{-0.2ex} .
+\end{equation}
+
+\vspace{-0.1em}
+Доказывается эта формула так.
+Направление~${\bm{k}}$ при~повороте не~меняется~(${\rotationtensor \hspace{-0.2ex}\dotp \bm{k} = \bm{k}\hspace{.12ex}}$), поэтому на~оси поворота ${\mathcircabove{\bm{e}}_3 \hspace{-0.2ex} = \bm{e}_3 \hspace{-0.2ex} = \bm{k}}$.
+В~перпендикулярной плоскости~(\figref{fig:eulerfiniterotation}) ${\mathcircabove{\bm{e}}_1 \hspace{-0.2ex} = \bm{e}_1 \operatorname{cos} \vartheta - \bm{e}_2 \operatorname{sin} \vartheta}$, ${\mathcircabove{\bm{e}}_2 \hspace{-0.2ex} = \bm{e}_1 \operatorname{sin} \vartheta + \bm{e}_2 \operatorname{cos} \vartheta}$, ${\rotationtensor = \bm{e}_i \mathcircabove{\bm{e}}_i \,\Rightarrow\hspace{.2ex}}$~\eqref{eulerfiniterotation}.
+
+% ~ ~ ~ ~ ~
+\input{finiterotation.tex}
+% ~ ~ ~ ~ ~
+
+Из~\eqref{eulerfiniterotation} и~\eqref{rodriguesrotationformula} получаем формулу поворота Родрига в~параметрах~$\bm{k}$ и~$\vartheta$:
+
+\nopagebreak\vspace{-0.3em}\begin{equation*}
+\locationvector \hspace{.3ex}
+= \hspace{.4ex} \initiallocationvector \operatorname{cos} \vartheta \hspace{.3ex} + \hspace{.3ex} \bm{k} \times \initiallocationvector \hspace{.2ex} \operatorname{sin} \vartheta \hspace{.3ex} + \hspace{.4ex} \bm{k} \bm{k} \dotp \hspace{.1ex} \initiallocationvector \left({1 - \operatorname{cos} \vartheta}\right)
+\hspace{-0.25ex} .
+\end{equation*}
+
+\vspace{-0.2em}
+В~параметрах конечного поворота транспонирование, оно~же обращение, тензора~$\rotationtensor$ эквивалентно перемене направления поворота\:--- знака угла~$\vartheta$
+\[
+\rotationtensor^{\T} \hspace{-0.1ex}=\hspace{.1ex} \rotationtensor \hspace{.1ex} \bigr|_{\vartheta \,=\hspace{.1ex} -\vartheta} \hspace{-0.1ex} = \UnitDyad \operatorname{cos} \vartheta - \bm{k} \times\hspace{-0.2ex} \UnitDyad \operatorname{sin} \vartheta + \bm{k} \bm{k} \left({1 - \operatorname{cos} \vartheta}\right)
+\hspace{-0.3ex} .
+\]
+
+Пусть теперь тензор поворота меняется со~временем:
+${\rotationtensor \narroweq \rotationtensor(t)}$.
+Псевдовектор угловой скорости~${\bm{\omega}}$ вводится через тензор поворота~$\rotationtensor$ таким путём.
+Дифференцируем тождество ортогональности~\eqref{orthogonalityofrotationtensor} по~времени%
+\footnote{\en{Various notations are used}\ru{Используются различные записи} \en{to designate the~time derivative}\ru{для обозначения производной по времени}.
+\en{In~addition}\ru{Вдобавок} \en{to}\ru{к~записи} \en{the }Leibniz’\en{s}\ru{а}\en{ notation} ${\scalebox{.9}{$ \raisemath{.3em}{dx} $} \hspace{-0.3ex} / \hspace{-0.4ex} \scalebox{.9}{$ \raisemath{-.3em}{dt} $}\hspace{.1ex}}$, \en{the~very popular one is}\ru{очень популярна запись} \en{the~}\inquotes{\en{dot-above}\ru{точка-сверху}} Newton’\en{s}\ru{а}\en{ notation}~${\mathdotabove{x}}$.}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} \hspace{-0.1ex} + \hspace{.25ex} \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T} \hspace{-0.1ex} = \hspace{.1ex} {^2\bm{0}}
+\hspace{.1ex} .
+\end{equation*}
+
+Тензор ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!}}$ (по~\eqref{transposeofdotproduct} ${\left({ \mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} }\right)^{\raisemath{-0.25em}{\!\T}} \hspace{-0.4ex} = \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T}}$) оказался анти\-сим\-метрич\-ным.
+Поэтому согласно~\eqref{companionvector} он представ\'{и}м сопутствующим вектором как ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \times \UnitDyad = \bm{\omega} \times \rotationtensor \dotp \rotationtensor^{\T}}$\!.
+То~есть
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{angularvelocityvector}
+\mathdotabove{\rotationtensor} = \bm{\omega} \times \rotationtensor, \;\:\:
+\bm{\omega} \equiv -\, \displaystyle \onehalf \left( \mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} \right)_{\hspace{-0.2em}\Xcompanion}
+\vspace{-0.25em}\end{equation}
+
+Помимо этого общего представления~вектора~${\bm{\omega}}$, для~него есть и~другие. Например, через параметры конечного поворота.
+
+Производная~${\mathdotabove{\rotationtensor}}$ в~параметрах конечного поворота в~общем случае (оба параметра\:--- и~единичный вектор~$\bm{k}$, и~угол~$\vartheta$\:--- переменны во~времени):
+\vspace{.3em}%
+\[
+\begin{array}{r@{\hspace{.33em}}c@{\hspace{.25em}}l}
+\mathdotabove{\rotationtensor} \hspace{.2em} & = & \hspace{.1em} \left(\rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex} +^{\mathstrut} \rotationtensor^{\mathsf{\hspace{.12ex}A}}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} =
+\hspace{.1em} \left(\hspace{.2ex} \tikzmark{StartBracePs} {\UnitDyad \operatorname{cos} \vartheta + \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{.32ex} +^{\mathstrut} \hspace{.2ex}
+\tikzmark{StartBracePa} {\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \operatorname{sin} \vartheta \hspace{.2ex}} \tikzmark{EndBracePa} {} \hspace{.16ex}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} \hspace{-0.05em} =
+\\[0.4em]
+%
+& = & \hspace{.2em} \tikzmark{StartBraceDotPs} {\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta + \hspace{-0.2ex} ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \tikzmark{EndBraceDotPs} \hspace{.64ex} + \\[0.64em]
+& & \hspace{13.2em} + \hspace{.72ex} \tikzmark{StartBraceDotPa} {\hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \operatorname{sin} \vartheta} \tikzmark{EndBraceDotPa}
+\hspace{.1em} .
+\end{array}\]%
+\vspace{-1.2em}
+
+\AddOverBrace[line width=0.75pt][0.12ex,0]{StartBracePs}{EndBracePs}{${\scriptstyle \rotationtensor^{\mathsf{\hspace{.12ex}S}}}$}
+\AddOverBrace[line width=0.75pt][-0.12ex,0]{StartBracePa}{EndBracePa}{${\scriptstyle \rotationtensor^{\mathsf{\hspace{.12ex}A}}}$}
+\AddUnderBrace[line width=0.75pt]{StartBraceDotPs}{EndBraceDotPs}{${\scriptstyle \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}}}$}
+\AddUnderBrace[line width=0.75pt][-0.1ex,0.1ex]{StartBraceDotPa}{EndBraceDotPa}{${\scriptstyle \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}}}$}
+
+\vspace{-1.32em} \noindent Находим
+\vspace{.2em}\[\begin{array}{r@{\hspace{.25em}}c@{\hspace{.4em}}l}
+\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} & = & (\hspace{.1em} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} + \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{.05em}) \hspace{-0.1ex} \dotp \hspace{-0.1ex} (\hspace{.1em} \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} - \rotationtensor^{\mathsf{\hspace{.12ex}A}} \hspace{.1ex} \hspace{.05em}) =
+\\[0.25em]
+& = & \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}S}}
++ \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}S}}
+- \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}}
+- \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}} ,
+\end{array}\]
+
+\vspace{-0.5em}\noindent
+\en{using}\ru{используя}
+\[\scalebox{0.95}[0.96]{$\begin{array}{c}
+\bm{k} \dotp \bm{k} = 1 = \constant \,\Rightarrow\:
+\bm{k} \dotp \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \dotp \bm{k} = 0 \;\Leftrightarrow\; \mathdotabove{\bm{k}} \dotp \bm{k} = \bm{k} \dotp \mathdotabove{\bm{k}} = 0 \hspace{.1ex} ,
+\\[.08em]
+%
+\bm{k} \bm{k} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = \bm{k} \bm{k}, \:\:
+\mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = \mathdotabove{\bm{k}} \bm{k} , \:\:
+\bm{k} \mathdotabove{\bm{k}} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = {\hspace{-0.2ex}^2\bm{0}} \hspace{.1ex},
+\\[.16em]
+%
+\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} = \bm{k} - \bm{k} = {\bm{0}} \hspace{.1ex}, \,\,
+\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} = \bm{k} \bm{k} - \bm{k} \bm{k} = {\hspace{-0.2ex}^2\bm{0}} \hspace{.1ex} ,
+\\[.08em]
+%
+\bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.1ex}
+= \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \bm{k}
+= \bm{k} \hspace{-0.24ex}\times\hspace{-0.2ex} \bm{k} = \bm{0} \hspace{.1ex} , \,\,
+\bm{k} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.1ex}
+= \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \bm{k} \bm{k}
+= {\hspace{-0.2ex}^2\bm{0}} \hspace{0.1ex},
+\\[.08em]
+%
+\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{0.1ex} \right) \hspace{-0.2ex} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.1ex} = \hspace{-0.1ex}
+- \hspace{0.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{0.1ex},
+\\
+%
+( \bm{a} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \bm{b} =
+\bm{a} \hspace{-0.2ex}\times\hspace{-0.36ex} ( \UnitDyad \hspace{-0.1ex} \dotp \bm{b} ) \hspace{-0.16ex} =
+\bm{a} \hspace{-0.16ex}\times\hspace{-0.12ex} \bm{b} \:\,\Rightarrow\,
+( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \bm{k} \bm{k} =
+\mathdotabove{\bm{k}} \hspace{-0.16ex}\times\hspace{-0.2ex} \bm{k} \bm{k} \hspace{0.1ex},
+\end{array}$}\]
+
+\vspace{-0.4em} \noindent \eqref{vectorcrossidentitydotvectorcrossidentity} $\,\Rightarrow\,$
+\scalebox{0.95}[0.96]{${( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} = \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad}$},\hspace{0.4ex}
+%
+\scalebox{0.95}[0.96]{${\displaystyle ( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} = \bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex} - \tikzbackcancel[black!25]{$\mathdotabove{\bm{k}} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \hspace{.16ex} \UnitDyad$}}$\hspace{.16ex}},
+
+\noindent \eqref{vectorcrossvectorcrossidentity} $\,\Rightarrow\,$
+\scalebox{0.95}[0.96]{$\mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex} - \hspace{-0.1ex} \bm{k} \mathdotabove{\bm{k}} = \hspace{-0.16ex} ( \bm{k} \hspace{-0.2ex} \times \hspace{-0.24ex} \mathdotabove{\bm{k}} ) \hspace{-0.32ex} \times \hspace{-0.32ex} \UnitDyad$},\hspace{.4ex}
+%
+\scalebox{0.95}[0.96]{${\displaystyle ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.24ex} \bm{k} ) \hspace{.2ex} \bm{k} \hspace{-0.1ex} - \hspace{-0.1ex} \bm{k} \hspace{.16ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.24ex} \bm{k} ) \hspace{-0.16ex} = \bm{k} \hspace{-0.2ex} \times \hspace{-0.32ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.24ex} \bm{k} ) \hspace{-0.32ex} \times \hspace{-0.32ex} \UnitDyad}$\hspace{.16ex}}
+
+\begin{fleqn}[0pt]
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{0.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.25ex} = $} \hspace{2em} \hfill}
+\\[-0.25em]
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= \hspace{.2ex} \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \UnitDyad \operatorname{cos} \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \dotp \UnitDyad \operatorname{cos} \vartheta \hspace{.32em} +$} \hfill}
+\\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)$} \hspace{.2ex} +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}}
+\\
+%
+\scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.1ex} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) + ( \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k}$} + \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k} ) \left({1 \!-\! \operatorname{cos} \vartheta}\right)^{\hspace{-0.12ex}2} \hspace{-0.25ex} =$}
+\\
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta + \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \hfill}
+\\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+ \hspace{.24em} \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta + \mathdotabove{\bm{k}} \bm{k} - 2 \, \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta =$}}\\
+%
+%% \shoveright{\hfill \scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{.1ex}
+%% + \hspace{.1ex} \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)
+%% + \mathdotabove{\bm{k}} \bm{k}
+%% - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta =$}}\\
+%
+\shoveright{\hfill \hspace{4.8em} \scalebox{0.94}[0.96]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{.1ex}
+%% + \hspace{-0.1ex} ( \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
+- \bm{k} \mathdotabove{\bm{k}} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
+%
+\shoveleft{\scalebox{0.8}[0.82]{$= ( \hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
+( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \:+$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$ ( \hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.5ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) $} \hspace{.2ex} +
+( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}} \\
+%
+\hspace{3.85em} \scalebox{0.94}[0.96]{$= \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
+\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta +
+%%\hspace{-0.12ex} ( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.2ex}
+\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{.2ex}
+\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$= ( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} ) \hspace{.25ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \operatorname{sin} \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex} \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \operatorname{sin} \vartheta =$} \\
+%
+\scalebox{0.78}[0.82]{$= \hspace{.2ex} \tikzbackcancel[black!25]{$\bm{k} \bm{k} \hspace{-0.12ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta$} \hspace{.12ex}
+- \hspace{-0.1ex} \UnitDyad \hspace{-0.16ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{.25ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \hspace{-0.2ex} \left( \hspace{-0.1ex} \bm{k} \mathdotabove{\bm{k}} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} + \hspace{.1ex} \tikzbackcancel[black!25]{$\mathdotabove{\bm{k}} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \UnitDyad$} ) \hspace{-0.12ex} \right) \hspace{-0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta} \right) =$} \\[-0.25em]
+%
+\hspace{13em} \scalebox{0.94}[0.96]{$= \hspace{-0.16ex} - \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \hspace{.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\end{multline*}
+\begin{multline*}
+\shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex} =
+%
+( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \operatorname{sin} \vartheta + \hspace{-0.1ex}
+( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} \dotp \hspace{-0.16ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{.1ex} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta = $} \hfill} \\
+%
+\shoveright{\hfill \hspace{16em} \scalebox{0.94}[0.96]{$= ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta \hspace{.2ex};$}}
+\end{multline*}
+\end{fleqn}
+
+\begin{multline*}
+\scalebox{0.94}[0.96]{$\mathdotabove{\bm{P}} \dotp \bm{P}^{\T}$} \hspace{.25ex}
+\scalebox{0.92}[0.96]{$= \hspace{.1ex}
+\mathdotabove{\bm{P}}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}S}}
++ \hspace{.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}S}}
+- \hspace{.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}A}}
+- \hspace{.2ex} \mathdotabove{\bm{P}}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex}\dotp \bm{P}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex} =$} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$= {\color{black!50}{\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
++ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \\[-0.2em]
+%
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{.2ex} {\color{green!50!black}{\hspace{.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{.4ex}}} +$} \\[-0.25em]
+%
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}}
+- \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} {\color{green!50!black}{\hspace{.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{.4ex}}}
+{\color{black!50}{-\hspace{.5ex} ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}} =$} \\[-0.08em]
+%
+\scalebox{0.79}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \hspace{-0.1ex} \hspace{-0.16ex} ( \hspace{.2ex} \mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex} - \hspace{-0.2ex} \bm{k} \mathdotabove{\bm{k}} \hspace{.2ex} ) \hspace{.1ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \hspace{-0.1ex} ( \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{-0.12ex} - \hspace{-0.12ex} \bm{k} \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} ) \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
+%
+\scalebox{0.8}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.25ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \bm{k} \hspace{-0.25ex} \times \hspace{-0.32ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.2ex} \bm{k} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
+%
+\scalebox{0.78}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
++ \hspace{-0.16ex} ( \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \bm{k} \hspace{-0.1ex} - \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.16ex} \dotp \hspace{-0.1ex} \bm{k} \hspace{.1ex}$} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex}
++ \hspace{-0.1ex} \bm{k} \hspace{-0.32ex}\times\hspace{-0.25ex}  \mathdotabove{\bm{k}} \hspace{-0.25ex}\times\hspace{-0.42ex} \UnitDyad \hspace{.32ex} ({1 \!-\! \operatorname{cos} \vartheta}) = $} \\
+%
+\shoveright{\hfill \hspace{11.2em}\scalebox{.96}[.96]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.32ex} ({1 \hspace{-0.2ex} - \hspace{-0.2ex} \operatorname{cos} \vartheta})
+\hspace{.1ex} .
+$}}
+\end{multline*}
+
+Этот результат, подставленный в~определение~\eqref{angularvelocityvector} псевдо\-вектора~$\bm{\omega}$, даёт
+
+\nopagebreak\vspace{-0.5em}\begin{equation}
+\bm{\omega} = \bm{k} \hspace{.2ex} \mathdotabove{\vartheta}
++ \mathdotabove{\bm{k}} \operatorname{sin} \vartheta
++ \bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}} \left( 1 - \operatorname{cos} \vartheta \right) \hspace{-0.4ex}.
+\end{equation}
+
+\vspace{-0.3em}\noindent
+Вектор~$\bm{\omega}$ получился разложенным по~трём взаимно ортогональным направлениям\:--- $\bm{k}$, $\mathdotabove{\bm{k}}$ и~${\bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}}}$. При~неподвижной оси поворота ${\mathdotabove{\bm{k}} = \bm{0} \,\Rightarrow\, \bm{\omega} = \bm{k} \hspace{.1ex} \mathdotabove{\vartheta}}$.
+
+Ещё одно представление~$\bm{\omega}$ связано с~компонентами тензора поворота~\eqref{componentsofrotationtensor}. Поскольку ${\bm{P} = \cosinematrix{\!j\mathcircabove{i}} \hspace{.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$, ${\bm{P}^{\T} \hspace{-0.32ex} = \cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \hspace{.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$, а~векторы начального базиса~${\mathcircabove{\bm{e}}_i}$ неподвижны (со~временем не~меняются), то
+\nopagebreak\vspace{.25em}\[ \mathdotabove{\bm{P}} = \cosinematrixdotted{\!j\mathcircabove{i}} \hspace{.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j
+\hspace{.1ex} , \:\,
+\mathdotabove{\bm{P}} \dotp \bm{P}^{\T} \hspace{-0.32ex} = \hspace{.1ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{.4ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j
+\hspace{.1ex}, \]
+\nopagebreak\vspace{-0.64em}\begin{equation}
+\bm{\omega} = - \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.4ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{.4ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{.5ex} \mathcircabove{\bm{e}}_i \hspace{-0.3ex}\times\hspace{-0.3ex} \mathcircabove{\bm{e}}_j \hspace{-0.1ex} =
+\smalldisplaystyleonehalf \hspace{.2ex} \permutationsparity_{j\hspace{-0.06ex}ik} \hspace{.32ex} \cosinematrix{\hspace{-0.4ex}n\mathcircabove{j}} \hspace{.4ex} \cosinematrixdotted{\hspace{-0.4ex}n\mathcircabove{i}} \hspace{.4ex} \mathcircabove{\bm{e}}_k
+\hspace{.2ex} .
+\end{equation}
+
+\vspace{-0.25em}
+Отметим и~формулы
+\nopagebreak\vspace{.16em}\begin{equation}\label{angularvelocityandbasisvectors}
+\begin{array}{c}
+\eqref{angularvelocityvector} \hspace{.32ex} \Rightarrow\:
+\mathdotabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \times \hspace{-0.1ex} \bm{e}_i \mathcircabove{\bm{e}}_i \:\Rightarrow\:
+\mathdotabove{\bm{e}}_i = \bm{\omega} \times \bm{e}_i \hspace{.12ex},
+\\[.32em]
+%
+\eqref{angularvelocityvector} \hspace{.32ex} \Rightarrow\:
+\bm{\omega} = \hspace{-0.1ex} - \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-.2ex} \left( \mathdotabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \hspace{-0.1ex} \dotp \mathcircabove{\bm{e}}_j \bm{e}_j \right)_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex}
+= \hspace{-0.1ex} - \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-.2ex} \left( \mathdotabove{\bm{e}}_i \bm{e}_i \hspace{.1ex} \right)_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.25ex}
+= \smalldisplaystyleonehalf \hspace{.4ex} \bm{e}_i \hspace{-0.16ex} \times \hspace{-0.1ex} \mathdotabove{\bm{e}}_i
+\hspace{.12ex} .
+\end{array}
+\end{equation}
+
+
+\textcolor{magenta}{Не всё то вектор, что имеет величину и направление.
+Поворот тела вокруг оси представляет, казалось~бы, вектор:
+его численное значение равно углу поворота, а~направление совпадает с~направлением оси вращения.}
+Однако, повороты не~складываются как векторы%
+\footnote{Когда углы поворота не~бесконечно-м\'{а}лые.}%
+\hbox{\hspace{-0.5ex}.}
+
+На~с\'{а}мом~же деле последовательные повороты не~складываются, а~умножаются.
+
+Можно~ли складывать угловые скорости?\:--- Да, ведь угол поворота в~$\mathdotabove{\vartheta}$ бесконечномалый.\:--- Но только при вращении вокруг неподвижной оси?
+
+
+...
+
+
+
+Варьируя тождество~\eqref{orthogonalityofrotationtensor},
+получим ${\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!}$.
+Этот тензор антисимметричен, и~потому выражается через свой сопутствующий вектор~${\varvector{o}}$ как~${\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad}$.
+Приходим к~соотношениям
+
+\nopagebreak\vspace{-0.5em}\begin{equation}
+\variation{\rotationtensor} \hspace{-0.1ex} = \varvector{o} \hspace{-0.1ex} \times \hspace{-0.1ex} \rotationtensor , \:\:
+\varvector{o} = - \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $} \hspace{-0.1ex} \Bigl( \hspace{-0.1ex} \variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \Bigr)_{\hspace{-0.25em}\Xcompanion}
 \hspace{-0.1ex} ,
 \end{equation}
 
 \vspace{-0.5em}\noindent
-\en{similar}\ru{похожие}
-\en{to}\ru{на}~\eqref{angularvelocityvector}.
-\en{Vector}\ru{Вектор}~${\varvector{o}}$
-\en{of an~infinitesimal rotation}\ru{бесконечно малого поворота}
-\en{is not}\ru{это не}
-\inquotesx{\en{a~variation of}\ru{вариация}~$\bm{\mathrm{o}}$},
-\en{but}\ru{но}
-\en{a~single}\ru{один}
-\en{symbol}\ru{символ}.
 
-\en{An~infinitesimal rotation}\ru{Бесконечно малый поворот}
-\en{is defined}\ru{определяется}
-\en{by vector}\ru{вектором}~${\varvector{o}}$,
-\en{but}\ru{но}
-\en{a~finite rotation}\ru{конечный поворот}
-\en{is also}\ru{тоже}
-\en{possible to represent}\ru{возможно представить}
-\en{as a~vector}\ru{как вектор}
+аналогичным~\eqref{angularvelocityvector}.
+Вектор бесконечно малого поворота~${\varvector{o}}$
+это не~\inquotesx{вариация $\bm{\mathrm{o}}$}[,]
+но единый символ
+(в~отличие от~${\variation{\rotationtensor}}$).
+
+
+Малый поворот определяется вектором~${\varvector{o}}$,
+но конечный поворот тоже возможно представить как вектор.
+
 
 ...
+
+
+\end{otherlanguage}
 

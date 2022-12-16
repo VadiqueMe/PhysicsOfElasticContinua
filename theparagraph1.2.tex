@@ -54,7 +54,10 @@ $} .
 \en{Resulting}\ru{Получающийся} \en{tensor}\ru{тензор}~${^2\hspace{-0.25ex}\bm{d}}$
 \en{is called}\ru{называется} \ru{диадным произведением~(}\en{a~}dyadic product\ru{)} \en{or}\ru{или} \en{just}\ru{просто} \ru{диадой~(}dyad\ru{)}
 \en{and}\ru{и} \en{is written as}\ru{пишется как}~${\bm{a} \hspace{-0.15ex} \otimes \hspace{-0.15ex} \bm{b}}$ \en{or}\ru{или}~${\bm{a} \bm{b}}$.
-\en{I choose notation}\ru{Я выбираю запись} ${^2\hspace{-0.25ex}\bm{d} = \hspace{-0.1ex} \bm{a} \bm{b}}$ \en{without}\ru{без} \en{symbol}\ru{символа}~${\otimes}$.
+\en{I choose the~notation}\ru{Я выбираю запись}
+\inquotes{${^2\hspace{-0.25ex}\bm{d} = \hspace{-0.1ex} \bm{a} \bm{b}}$},
+\en{without}\ru{без}
+\en{the}\ru{символа}~${\otimes}$\en{ symbol}.
 
 % unit dyad
 
@@ -67,11 +70,33 @@ ${E\kern+0.1ex'_{\hspace{-0.12ex}mn} \hspace{-0.25ex} = \cosinematrix{m'\hspace{
 \en{as}\ru{как}~$\UnitDyad$
 (\en{other popular choices}\ru{другие популярные варианты}\ru{\:---}\en{ are} $\bm{I}$ \en{and}\ru{и}~${\hspace{-0.1ex} ^2\hspace{-0.1ex}\bm{1}}$).
 
-\en{Immutability of~components upon any rotation}\ru{Неизменяемость компонент при~любом повороте} \en{makes tensor}\ru{делает тензор}~${\UnitDyad}$ \en{isotropic}\ru{изотропным}. \en{There are no non\hbox{-}null vectors with such property}\ru{Ненулевых векторов с~таким свойством нет} (\en{all components}\ru{все компоненты} \en{of the~null vector}\ru{нуль\hbox{-}вектора}~$\bm{0}$ \en{are zero}\ru{равны нулю} \en{in any basis}\ru{в~любом базисе}).
+\en{Invariableness}\ru{Неизменяемость} %%% invariability = invariableness
+\en{of~components}\ru{компонент}
+\en{upon any rotation}\ru{при~любом повороте}
+\en{makes}\ru{делает}
+\en{the~tensor}\ru{тензор}~${\UnitDyad}$
+\en{isotropic}\ru{изотропным}.
+%
+%%% nonvanishing = неравный нулю, отличный от нуля
+\en{There are no }\en{non\hbox{-}null}\ru{Ненулевых}
+(\en{nonvanishing}\ru{неисчезающих})
+\en{isotropic vectors}\ru{изотропных векторов}\ru{ не бывает}
+(\en{all components}\ru{все компоненты}
+\en{of the~null vector}\ru{нуль\hbox{-}вектора}
+(\inquotes{\en(vanishing)\ru{исчезающего}
+\en{vector}\ru{вектора}})
+$\bm{0}$
+\en{are equal to zero}\ru{равны нулю}
+\en{in any basis}\ru{в~любом базисе}).
 
 % linear mapping (linear transformation)
 
-\en{The next example is related to a~linear transformation (linear mapping) of vectors}\ru{Следующий пример связан с~линей\-ным преобразованием (линей\-ным отображением) векторов}.
+\en{The next example}\ru{Следующий пример}
+\en{is related}\ru{относится}
+\en{to a~linear transformation}\ru{к~линейному преобразованию}
+(\en{a~linear mapping}\ru{линейному отображению})
+\en{of vectors}\ru{векторов}.
+
 \en{If}\ru{Если} ${\bm{b} \hspace{-0.2ex} = \hspace{-0.2ex} b_i \bm{e}_i}$ \en{is}\ru{есть} \en{linear}\ru{линей\-ная} (\en{preserving}\ru{сохраняющая} \en{addition}\ru{сложение} \en{and}\ru{и} \en{multiplication by number}\ru{умножение на~число}) \en{function}\ru{функция} \en{of}\ru{от}~${\bm{a} \hspace{-0.2ex} = \hspace{-0.2ex} a_{\hspace{-0.15ex}j} \bm{e}_{\hspace{-0.2ex}j}}$, \en{then}\ru{то} ${b_i \hspace{-0.2ex} = c_{i\hspace{-0.15ex}j} a_{\hspace{-0.15ex}j}}$ \en{in every basis}\ru{в~каждом базисе}. \en{Transformation coefficients}\ru{Коэффициенты преобразования}~${c_{i\hspace{-0.1ex}j}}$ \en{alter when a~basis rotates}\ru{меняются, когда базис вращается}:
 
 \nopagebreak\vspace{-0.3em}\begin{equation*}
@@ -150,17 +175,34 @@ t_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex} \equiv a_i b_{\hspace{-0.1
 
 % vectors
 
-\en{Vectors}\ru{Векторы} \en{with transformation}\ru{с~пребразованием}~\eqref{orthotransform:1} \en{are}\ru{суть} \en{tensors}\ru{тензоры} \en{of first complexity}\ru{первой сложности}.
+\en{Vectors}\ru{Векторы}
+\en{with transformation}\ru{с~пребразованием}~\eqref{orthotransform:1}
+\en{are}\ru{это}
+\en{tensors}\ru{тензоры}
+\en{of the first complexity}\ru{первой сложности}
+(\ru{моновалентные тензоры}\en{monovalent tensors}).
 
 % scalars
 
-\en{In~the~end}\ru{Напоследок} \en{consider}\ru{рассмотрим} \en{the~least complex objects}\ru{наименее сложные объекты}\:--- \en{scalars}\ru{скаляры}, \en{they are}\ru{они~же} \en{tensors}\ru{тензоры} \en{of~zeroth complexity}\ru{нулевой сложности}.
-\en{A~scalar}\ru{Скаляр} \en{is}\ru{это} \en{a~single}\ru{одно} ${(3^0 \hspace{-0.24ex}=\hspace{-0.12ex} 1)}$ \en{number}\ru{число}, \en{which doesn’t depend on a~basis}\ru{которое не~зависит от~базиса}: \en{energy}\ru{энергия}, \en{mass}\ru{масса}, \en{temperature}\ru{температура} \en{et~al.}\ru{и~др.}
+\en{The~least complex objects}\ru{Наименее сложные объекты}\en{ are}\ru{\:---}
+\en{scalars}\ru{скаляры}
+\en{or}\ru{или}
+\en{tensors}\ru{тензоры}
+\en{of the~zeroth complexity}\ru{нулевой сложности}.
+%
+\en{A~scalar}\ru{Скаляр}
+\en{is}\ru{это}
+\en{a~single}\ru{одно}
+${(3^0 \hspace{-0.24ex}=\hspace{-0.12ex} 1)}$
+\en{number}\ru{число},
+\en{which doesn’t depend on a~basis}\ru{которое не~зависит от~базиса}:
+\en{the~energy}\ru{энергия},
+\en{the~mass}\ru{масса},
+\en{the~temperature}\ru{температура}
+\en{et~al.}\ru{и~др.}
+%
 \en{But what are}\ru{Но что такое} \en{components}\ru{компоненты}, \en{for example}\ru{к~примеру}, \en{of~vector}\ru{вектора} ${\bm{v} = v_i \bm{e}_i}$, ${v_i = \bm{v} \dotp \bm{e}_i}$?
 \en{If}\ru{Если} \en{not scalars}\ru{не~скаляры}, \en{then}\ru{то} \en{what}\ru{что}?
 \en{Here could be no simple answer}\ru{Здесь не~может быть простого ответа}.
 \en{In~each particular basis}\ru{В~каждом отдельном базисе}, ${\bm{e}_i}$\ru{\:---}\en{ are} \en{vectors}\ru{векторы} \en{and}\ru{и}~${v_i}$\ru{\:---}\en{ are} \en{scalars}\ru{скаляры}.
-
-
-
 

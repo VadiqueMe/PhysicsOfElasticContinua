@@ -1,12 +1,15 @@
-\en{\section{Eigenvectors and eigenvalues. Invariants}}
+\en{\section{Eigenvectors and eigenvalues}}
 
-\ru{\section{Собственные векторы и собственные числа. Инварианты}}
+\ru{\section{Собственные векторы и собственные числа}}
 
 \label{para:eigenvectorseigenvalues}
 
-\en{If}\ru{Если} \en{for}\ru{для} \en{some tensor}\ru{какого-нибудь тензора}~${^2\!\bm{B}}$ \en{and}\ru{и}~\en{nonzero vector}\ru{ненулевого вектора}~${\bm{a}}$
+\en{If}\ru{Если}
+\en{for}\ru{для}
+\en{some tensor}\ru{какого-нибудь тензора}~${^2\!\bm{B}}$
+\en{and}\ru{и}~\en{the~nonzero vector}\ru{ненулевого вектора}~${\bm{a}}$
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{eigenvalues:eq}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{eigenvalues equation}
 ^2\!\bm{B} \dotp \bm{a} = \eigenvalue \bm{a}
 \hspace{.1ex} ,
 \:\:
@@ -31,11 +34,24 @@ $}
 \end{equation*}
 
 \vspace{-0.6em}\noindent
-\en{then}\ru{то} $\eigenvalue$ \en{is called}\ru{называется} \en{the eigenvalue}\ru{собственным числом} (\en{or}\ru{или} \en{characteristic value}\ru{характеристическим значением, eigenvalue}) \en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$, \en{and}\ru{а}~\en{the axis~(direction)}\ru{ось~(направление)} \en{of~eigenvector}\ru{собственного вектора}~$\bm{a}$ \en{is called}\ru{называется} \en{its}\ru{его} \ru{характеристической}\en{characteristic} \en{axis~(direction)}\ru{осью~(направлением)}.
+\en{then}\ru{то}
+$\eigenvalue$
+\en{is called}\ru{называется}
+\en{the eigenvalue}\ru{собственным числом}
+(\en{or}\ru{или}
+\en{the characteristic value}\ru{характеристическим значением, eigenvalue})
+\en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$,
+\en{and}\ru{а}~\en{the axis~(direction)}\ru{ось~(направление)}
+\en{of~eigenvector}\ru{собственного вектора}~$\bm{a}$
+\en{is called}\ru{называется}
+\en{its}\ru{его}
+\ru{характеристической}\en{characteristic}
+\en{axis}\ru{осью}
+(\en{direction}\ru{направлением}).
 
 \en{In components}\ru{В~компонентах}\en{,}
 \en{this is}\ru{это}
-\en{the eigenvalue problem}\ru{задача на~собственные значения}
+\en{an~eigenvalue problem}\ru{задача на~собственные значения}
 \en{for a~matrix}\ru{для матрицы}.
 \en{A~homogeneous}\ru{Однородная} \en{system}\ru{система}
 \en{of linear equations}\ru{линейных уравнений}
@@ -76,9 +92,12 @@ ${ ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
    \right]
 $} %end of scalebox
 \hspace{-0.4ex} = - \hspace{.2ex}
-\eigenvalue^3 \hspace{-0.25ex} + \mathrm{I} \hspace{.25ex}
-\eigenvalue^2 \hspace{-0.25ex} - \mathrm{II} \hspace{.25ex}
-\eigenvalue + \mathrm{III}
+\eigenvalue^3 \hspace{-0.25ex}
++ \firstcharacteristicinvariant \hspace{.25ex}
+\eigenvalue^2 \hspace{-0.25ex}
+- \secondcharacteristicinvariant \hspace{.25ex}
+\eigenvalue
++ \thirdcharacteristicinvariant
 = 0
 \hspace{.2ex} ;
 \end{equation}
@@ -86,28 +105,53 @@ $} %end of scalebox
 \vspace{-0.25em}
 \begin{equation}\label{invariants:2}
 \begin{array}{r@{\hspace{.4em}}c@{\hspace{.4em}}l}
-\mathrm{I} & = & \trace{^2\!\bm{B}} = B_{kk}
-= \scalebox{0.92}[0.96]{$B_{1\hspace{-0.1ex}1} \hspace{-0.2ex} + \hspace{-0.1ex} B_{22} \hspace{-0.2ex} + \hspace{-0.1ex} B_{33}$}
+\firstcharacteristicinvariant
+& = &
+\trace{^2\!\bm{B}} = B_{kk}
+= \scalebox{.92}[.96]{$ B_{1\hspace{-0.1ex}1}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{22}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{33} $}
 \hspace{.1ex} ,
 \\[.1em]
 %
-\mathrm{II} & = & \scalebox{.92}[.96]{$B_{1\hspace{-0.1ex}1}B_{22} \hspace{-0.2ex} - \hspace{-0.1ex} B_{12}B_{21} \hspace{-0.2ex} + \hspace{-0.1ex} B_{1\hspace{-0.1ex}1}B_{33} \hspace{-0.2ex} - \hspace{-0.1ex} B_{13}B_{31} \hspace{-0.2ex} + \hspace{-0.1ex} B_{22}B_{33} \hspace{-0.2ex} - \hspace{-0.1ex} B_{23}B_{32}$}
+\secondcharacteristicinvariant
+& = &
+\scalebox{.92}[.96]{$ B_{1\hspace{-0.1ex}1}B_{22}
+\hspace{-0.2ex} - \hspace{-0.1ex}
+B_{12}B_{21}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{1\hspace{-0.1ex}1}B_{33}
+\hspace{-0.2ex} - \hspace{-0.1ex}
+B_{13}B_{31}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{22}B_{33}
+\hspace{-0.2ex} - \hspace{-0.1ex}
+B_{23}B_{32} $}
 \hspace{.1ex} ,
 \\[.1em]
 %
-\mathrm{III} & = & \operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
-= \hspace{.15ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+\thirdcharacteristicinvariant
+& = &
+\operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
+= \hspace{.15ex}
+\underset{\raisebox{.15em}{%
+   \scalebox{.7}{ $i$,$\hspace{.15ex}j$ }%
+}}%
+{\operatorname{det}} \, B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{1i} B_{2j} B_{3k} \hspace{-0.1ex}
 = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{i1} B_{\hspace{-0.1ex}j2} B_{k3}
 \hspace{.1ex} .
 \end{array}\end{equation}
 
 \vspace{-0.4em}
-\en{The roots}\ru{Корни} \en{of characteristic equation}\ru{характеристического уравнения}~\eqref{chardetequation}\:--- \en{eigenvalues}\ru{собственные числа}\:---
+\en{The roots}\ru{Корни}
+\en{of the characteristic equation}\ru{характеристического уравнения}~\eqref{chardetequation}\:--- \en{the eigenvalues}\ru{собственные числа}\:---
 \en{don’t depend}\ru{не~зависят}
 \en{on the basis}\ru{от~базиса}
 \en{and therefore}\ru{и~потому}
-\en{are invariants}\ru{суть инварианты}.
+\en{are invariants}\ru{инварианты}.
 
 \en{The coefficients}\ru{Коэффициенты}~\en{of~}\eqref{invariants:2}
 \en{also}\ru{тоже}
@@ -119,14 +163,15 @@ $} %end of scalebox
 \en{the second}\ru{вторым}
 \en{and}\ru{и}
 \en{the third}\ru{третьим}
+\en{characteristic}\ru{характеристическими}
 \en{invariants}\ru{инвариантами}
 \en{of a~tensor}\ru{тензора}.
-\en{The first invariant}\ru{Первый инвариант}~${\mathrm{I}}$
+\en{The first invariant}\ru{Первый инвариант}~$\firstcharacteristicinvariant$
 \en{is the trace}\ru{это след}.
 \en{It was described}\ru{Он был описан}
 \en{earlier}\ru{ранее}
 \en{in}\ru{в}~\pararef{para:operationswithtensors}.
-\en{The second invariant}\ru{Второй инвариант}~${\mathrm{II}}$
+\en{The second invariant}\ru{Второй инвариант}~$\secondcharacteristicinvariant$
 \en{is}\ru{это}
 \en{the trace}\ru{след}
 \en{of~the~adjugate}\ru{присоединённой~(взаимной, adjugate)}
@@ -135,7 +180,7 @@ $} %end of scalebox
 \en{of the cofactor matrix}
 \en(of the matrix of algebraic complements)}\ru{матрицы алгебраических дополнений}
 \begin{equation*}
-\mathrm{II}\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} )
+\secondcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} )
 \hspace{-0.12ex} \equiv \hspace{.1ex}
 \trace{\hspace{-0.33ex} \left(
    \operatorname{adj}{ B_{i\hspace{-0.1ex}j} }
@@ -146,7 +191,7 @@ $} %end of scalebox
 \en{Or}\ru{Или}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\mathrm{II}\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \hspace{-0.2ex}
+\secondcharacteristicinvariant\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \hspace{-0.2ex}
 \equiv \hspace{.12ex} \smalldisplaystyleonehalf \scalebox{.84}{$\left[
 \left( {^2\!\bm{B}} \tracedot\hspace{.1ex} \right)^{\!2} \hspace{-0.5ex}
 - {^2\!\bm{B}} \hspace{-0.2ex} \dotdotp \hspace{-0.25ex} {^2\!\bm{B}} \hspace{.16ex}
@@ -159,11 +204,11 @@ $} %end of scalebox
 \end{equation*}
 
 \vspace{-0.2em}\noindent
-\en{And}\ru{И}~\en{the third invariant}\ru{третий инвариант}~${\mathrm{III}}$
+\en{And}\ru{И}~\en{the third invariant}\ru{третий инвариант}~$\thirdcharacteristicinvariant$
 \en{is}\ru{это}
 \en{the determinant}\ru{определитель~(детерминант)}
 \en{of a~matrix of tensor components}\ru{матрицы компонент тензора}:
-${ \mathrm{III}\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} ) \hspace{-0.1ex}
+${ \thirdcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} ) \hspace{-0.1ex}
 \equiv \operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
 }$.
 
@@ -181,7 +226,7 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \en{And then}\ru{И~тогда}
 
 \nopagebreak\vspace{-0.5em}\begin{multline*}
-\eqref{eigenvalues:eq}
+\eqref{eigenvalues equation}
 \:\,\Rightarrow\:\,
 \left(\hspace{.25ex} {\lineover{\bm{a}} \, \dotp} \hspace{.25ex}\right)
 \hspace{.5ex}
@@ -273,7 +318,7 @@ ${\eigenvalue_2 \hspace{-0.16ex} \to \eigenvalue_1}$,
 ${\bm{a}_1}$ \en{and}\ru{и} ${\bm{a}_2}$
 \en{in the limit}\ru{в~пределе}
 \en{satisfies the equation}\ru{удовлетворяет уравнению}
-\eqref{eigenvalues:eq}.
+\eqref{eigenvalues equation}.
 
 \en{Then}\ru{Тогда}
 \en{any}\ru{любая}
