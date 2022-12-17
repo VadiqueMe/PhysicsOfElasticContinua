@@ -358,10 +358,10 @@
 \newcommand\onefourth{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{4}}}
 \newcommand\smalldisplaystyleonefourth{\scalebox{.8}{$\displaystyle \onefourth$}\hspace{.1ex}}
 
-% add the symbol of perpendicularity to the index of a given symbol
+% put the symbol of perpendicularity into the index of a symbol
 \newcommand\withtheindexofperpendicularity[1]{ #1_{\[UpTee]} }
 
-% add the symbol of parallelism to the index of a given symbol
+% put the symbol of parallelism into the index of a symbol
 \newcommand\withtheindexofparallelism[1]{ #1_{\[DoubleVerticalBar]} }
 
 \usepackage{scalerel}
@@ -653,15 +653,15 @@ aboveskip=4mm,belowskip=2.5mm}
 \newcommand\rucontinuum{контину\kern-0.11exум}
 \newcommand\ruContinuum{Контину\kern-0.11exум}
 
-\newcommand\pararef[1]{\hyperref[#1]{\S\,\ref*{#1}}}
-\newcommand\chapdotpararef[2]{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}
-\newcommand\chapref[1]{\hyperref[#1]{\chaptershortname\:\ref*{#1}}}
+\newcommand\sectionref[1]{\hyperref[#1]{\S\,\ref*{#1}}}
+\newcommand\chapterdotsectionref[2]{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}
+\newcommand\chapterref[1]{\hyperref[#1]{\chaptershortname\:\ref*{#1}}}
 
-\newcommand\figref[1]{\figureshortname\:\ref{#1}}
+\newcommand\figureref[1]{\figureshortname\:\ref{#1}}
 
 \newcommandx*\customref[2][1=]{\hyperref[#2]{#1\ref*{#2}}}
 
-\newcommand\eqrefwithchapdotpara[3]{\text{(\hyperref[#1]{\ref*{#1}},\:\chapdotpararef{#2}{#3})}}
+\newcommand\eqrefwithchapdotsection[3]{\text{(\hyperref[#1]{\ref*{#1}},\:\chapterdotsectionref{#2}{#3})}}
 
 \captionsetup[table]{%
 %labelsep=newline,
