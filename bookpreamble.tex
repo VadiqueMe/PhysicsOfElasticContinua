@@ -661,13 +661,13 @@ aboveskip=4mm,belowskip=2.5mm}
 
 \newcommandx*\customref[2][1=]{\hyperref[#2]{#1\ref*{#2}}}
 
-\newcommand\eqrefwithchapdotsection[3]{\text{(\hyperref[#1]{\ref*{#1}},\:\chapterdotsectionref{#2}{#3})}}
+\newcommand\eqrefwithchapterdotsection[3]{\text{(\hyperref[#1]{\ref*{#1}},\:\chapterdotsectionref{#2}{#3})}}
 
 \captionsetup[table]{%
 %labelsep=newline,
 labelsep=period,justification=centering,singlelinecheck=off}
 
-\newcommandx*{\bibauthor}[3][2=,3=]{\mbox{\textbold{#1}}%
+\newcommandx*{\bookauthor}[3][2=,3=]{\mbox{\textbold{#1}}%
 \ifthenelse{\equal{#2}{}}{}{~\mbox{\textbold{#2}}}%
 \ifthenelse{\equal{#3}{}}{}{\:\mbox{\textbold{#3}}}%
 }
