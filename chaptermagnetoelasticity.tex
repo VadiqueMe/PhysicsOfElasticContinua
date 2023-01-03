@@ -4,8 +4,18 @@
 
 \thispagestyle{empty}
 
-\newcommand{\chargedensity}{\varrho} %% {\uprho}
-\newcommand{\currentdensity}{\bm{j}} %% {\bm{\jmath}}
+\newcommand\chargedensity{\varrho} % {\uprho}
+\newcommand\currentdensity{\bm{j}} % {\bm{\jmath}}
+
+\newcommand\velocityofpoint{\mathdotabove{\locationvector}} % {\bm{v}}
+%\bm{v} \equiv \mathdotabove{\locationvector}
+
+\newcommand\vacuumpermittivity{\varepsilon_{\hspace{-0.1ex}\scalebox{.6}[.5]{$\raisemath{.1ex}{0}$}}}
+\newcommand\vacuumpermeability{\mu_{\hspace{.05ex}\scalebox{.6}[.5]{$\raisemath{.1ex}{0}$}}}
+
+\newcommand\maxwellstress{{^2\hspace{-0.25ex}\mathboldM}}
+
+\newcommand\expminustwelve{\hspace{.16ex}\scalebox{.8}[1]{\hbox{--}}\raisemath{.1ex}{1\kern-0.07ex2}}
 
 %% magneto-electro-elastic materials
 
@@ -15,53 +25,44 @@
 \vspace{-2em}
 {\noindent\small
 
-\en{Problems}{Проблемы},
+\en{Problems}\ru{Проблемы},
 \en{which}\ru{которые}
 \en{are solved}\ru{решаются}
-\en{using the models}\ru{используя модели}
-\en{of an~elastic continua}\ru{упругих \rucontinuum{}ов}, \en{usually}\ru{обыкновенно}
+\en{using models}\ru{используя модели}
+\en{of an~elastic continua}\ru{упругих \rucontinuum{}ов},
+\en{usually}\ru{обыкновенно}
 \en{include}\ru{включают}
-\en{the already known}\ru{уж\'{е} известные}
-\en{external loads}\ru{внешние нагрузки}
-(\en{how to~find them}\ru{как найти их}
+\en{already known}\ru{уж\'{е} известные}
+\en{external loads}\ru{внешние нагрузки}.
+\en{How to~find}\ru{Как найти}
+\en{these external loads}\ru{эти внешние нагрузки}
 \en{is}\ru{это}
-\en{a~distinct problem}\ru{отдельная проблема}).
+\en{another problem}\ru{другая проблема}.
 %
 \en{When}\ru{Когда}
 \en{electric currents}\ru{электрические токи}
 \en{flow}\ru{текут}
 \en{in a~body}\ru{в~теле},
-\en{the~magnetic field}\ru{магнитное поле}
+\en{the magnetic field}\ru{магнитное поле}
 \en{creates}\ru{создаёт}
 \en{a~load}\ru{нагрузку}.
 %
-\en{When}\ru{Когда}
-\en{a~body}\ru{тело}
-\en{is deformed}\ru{деформируется},
-\en{the~magnetic field changes too}\ru{меняется и~магнитное поле}.
+\en{The magnetic field}\ru{Магнитное поле}
+\en{is changing}\ru{изменяется}
+\en{because of body’s deformation}\ru{из\hbox{-}за деформации т\'{е}ла}.
+%
 \en{If}\ru{Если}
 \en{the~field’s sensitivity}\ru{чувствительность п\'{о}ля}
-\en{to a~deformation}\ru{к~деформации}
+\en{to deformations}\ru{к~деформациям}
 \en{is high}\ru{высок\'{а}},
 \en{then}\ru{тогда}
-\en{we need}\ru{нам нужно}
-\en{to solve}\ru{решить}
-\en{a~problem}\ru{проблему}
-\en{of an~elasticity}\ru{упругости}
-\en{along}\ru{вместе}
-\en{with a~magnetism}\ru{с~магнетизмом}.
+\ru{возникает }\en{a~problem}\ru{проблема}
+\en{of elasticity}\ru{упругости}
+\en{along with magnetism}\ru{вместе с~магнетизмом}\en{ emerges}.
 
 \par}
 \vspace{-1em}
 \end{changemargin}
-
-\newcommand\vacuumpermittivity{\varepsilon_{\hspace{-0.1ex}\scalebox{0.6}[0.5]{$\raisemath{.1ex}{0}$}}}
-
-\newcommand\vacuumpermeability{\mu_{\hspace{.05ex}\scalebox{0.6}[0.5]{$\raisemath{.1ex}{0}$}}}
-
-\newcommand\maxwellstress{{^2\hspace{-0.25ex}\mathboldM}}
-
-\newcommand\expminustwelve{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1\kern-0.07ex2}}
 
 \en{\section{Electromagnetic field}}
 
@@ -69,38 +70,77 @@
 
 \label{para:electromagneticfieldandwaves}
 
-\dropcap{\en{H}\ru{В}}{\en{ere}\ru{от}}\en{ is} \en{the~summary}\ru{краткое изложение} \en{of the~theory of electromagnetism}\ru{теории электромагнетизма}.
+\dropcap{\en{H}\ru{В}}{\en{ere}\ru{от}}\en{ is}
+\en{the~summary}\ru{краткое изложение}
+\en{of the~theory of~electromagnetism}\ru{теории электромагнетизма}.
 
-\noindent\hspace{\parindent}
-\en{This theory}\ru{Эта теория} \en{describes}\ru{описывает} \en{the two vector fields}\ru{два векторных поля}:
-\en{electric}\ru{электрическое}~${\hspace{.1ex}\boldmathbb{E}(\locationvector, t)}$ \en{and}\ru{и}~\en{magnetic}\ru{магнитное}~${\hspace{.1ex}\boldmathbb{B}(\locationvector, t)}$.
-\en{What are}\ru{Что такое} \en{vector}\ru{вектор}~${\hspace{.1ex}\boldmathbb{E}}$ \en{and}\ru{и}~\en{pseudo\-vector}\ru{псевдо\-вектор}~${\hspace{.1ex}\boldmathbb{B}}$ \en{is seen}\ru{в\'{и}дно} \en{from}\ru{из} \en{the~expression}\ru{выражения} \en{of electromagnetic force}\ru{электромагнитной силы} (\href{https://en.wikipedia.org/wiki/Lorentz_force}{\en{Lorentz force}\ru{силы Lorentz’а}}) ${\hspace{-0.1ex}\bm{F}(\locationvector, \mathdotabove{\locationvector}, t, q)}$, \en{acting on}\ru{действующей на}~\en{a~point charge}\ru{точечный заряд}\:--- \en{a~particle}\ru{частицу} \en{of infinitesimal size}\ru{бесконечно-малого размера}\ru{,} \en{that contains}\ru{содержащую} \en{electric charge}\ru{электрический заряд}~$q$ \en{and}\ru{и}~\en{moves}\ru{движущуюся} \en{with velocity}\ru{со~скоростью}~${\bm{v} \equiv \mathdotabove{\locationvector}}$
+\noindent\hspace{\parindent}\hspace{1ex}
+\en{This theory}\ru{Эта теория}
+\en{describes}\ru{описывает}
+\en{the two vector fields}\ru{два векторных поля},
+\en{the electric one}\ru{электрическое}~${\hspace{.1ex}\boldmathbb{E}(\locationvector, t)}$
+\en{and}\ru{и}~\en{the magnetic one}\ru{магнитное}~${\hspace{.1ex}\boldmathbb{B}(\locationvector, t)}$.
+\en{What are}\ru{Что такое}
+\en{vector}\ru{вектор}~${\hspace{.1ex}\boldmathbb{E}}$
+\en{and}\ru{и}~\en{pseudo\-vector}\ru{псевдо\-вектор}~${\hspace{.1ex}\boldmathbb{B}}$
+\en{can be}\ru{можно}
+\en{figured out}\ru{понять}
+\en{from}\ru{из}
+\en{the~expression}\ru{выражения}
+\en{of the~electromagnetic force}\ru{электромагнитной силы}
+(\href{https://en.wikipedia.org/wiki/Lorentz_force}{\en{the Lorentz force}\ru{силы Lorentz’а}})
+${\hspace{-0.1ex}\bm{F}(\locationvector, \mathdotabove{\locationvector}, t, q)}$\ru{,}
+\en{acting on}\ru{действующей на}~\en{a~point-like charge}\ru{точечный заряд}\:---
+\en{an~infinitesimal in size particle}\ru{частицу бесконечно-м\'{а}леньких размеров}\ru{,}
+\en{that contains}\ru{содержащую}
+\en{an~electric charge}\ru{электрический заряд}~$q$
+\en{and}\ru{и}~\en{moves}\ru{движущуюся}
+\en{with velocity}\ru{со~скоростью}~${\velocityofpoint}$
 
-\nopagebreak\vspace{-0.25em}\begin{equation}\label{electromagneticforce}
-\bm{F} = \hspace{.12ex} q \hspace{.2ex} \bigl( \hspace{.1ex} \boldmathbb{E} \hspace{.2ex} + \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B} \bigr)
+\nopagebreak\vspace{-0.15em}\begin{equation}\label{electromagneticforce}
+\bm{F} = \hspace{.12ex} q \hspace{.2ex} \bigl(
+\hspace{.1ex} \boldmathbb{E} \hspace{.2ex} + \hspace{.2ex} \velocityofpoint \hspace{-0.1ex} \times \hspace{-0.15ex} \boldmathbb{B}
+\bigr)
 \hspace{-0.1ex} .
 \end{equation}
 
-\vspace{-0.2em}\noindent
-\en{In~essence}\ru{По~сути}, \en{the~part}\ru{часть} \en{of the~electromagnetic force}\ru{электромагнитной силы}\ru{,} \en{arising from interaction}\ru{возникающая от взаимо\-действия} \en{with a~moving charge}\ru{с~движущимся зарядом}\:--- \en{magnetic force}\ru{магнитная сила}~${q \hspace{.1ex} \bm{v} \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}}$\:--- \en{reveals}\ru{являет} \en{magnetic field}\ru{магнитное поле}~${\hspace{.1ex}\boldmathbb{B}}$, \en{while}\ru{в~то время как} \en{the~other part}\ru{другая часть}\:--- \en{electric force}\ru{электрическая сила}~${q \hspace{.1ex} \boldmathbb{E}}$\:--- \en{reveals}\ru{являет} \en{electric field}\ru{электрическое поле}~${\hspace{.1ex}\boldmathbb{E}}$.
+\vspace{-0.1em}\noindent
+\en{In~essence}\ru{По~сути},
+\en{the~part}\ru{часть}
+\en{of the~electromagnetic force}\ru{электромагнитной силы}\ru{,}
+\en{arising from an~interaction}\ru{возникающая от взаимо\-действия}
+\en{with a~moving charge}\ru{с~движущимся зарядом}\:---
+\en{the magnetic force}\ru{магнитная сила}~${q \hspace{.2ex} \velocityofpoint \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}}$\:--- \en{reveals}\ru{являет}
+\en{the magnetic field}\ru{магнитное поле}~${\hspace{.1ex}\boldmathbb{B}}$,
+\en{while}\ru{в~то время как}
+\en{the~other part}\ru{другая часть}\:---
+\en{the electric force}\ru{электрическая сила}~${q \hspace{.2ex} \boldmathbb{E}}$\:---
+\en{reveals}\ru{являет}
+\en{the electric field}\ru{электрическое поле}~${\hspace{.1ex}\boldmathbb{E}}$.
 
 \vspace{-0.1em}
-\en{Acute question}\ru{Острый вопрос}: \en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\bm{v} \equiv \mathdotabove{\locationvector}\hspace{.1ex}}$ \en{of a~charged particle}\ru{заряжённой частицы}\en{ measured}, \en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of~relativity}\ru{специальной теории относительности}}%
+\en{The acute question}\ru{Острый вопрос} \emph{\inquotes{%
+\en{in~which exactly}\ru{в~какой~же именно} \en{frame of~reference}\ru{системе отсчёта} \en{is}\ru{измеряется} \en{velocity}\ru{скорость}~${\velocityofpoint}$ \en{of a~charged particle}\ru{заряжённой частицы}\en{ measured}?%
+}}
+\en{leads to}\ru{ведёт к}~\href{https://en.wikipedia.org/wiki/Special_relativity}{\en{the~special theory of relativity}\ru{специальной теории относительности}}%
 \footnote{%
 \bookauthor{Albert Einstein}.
 \href{http://users.physik.fu-berlin.de/~kleinert/files/1905_17_891-921.pdf}{Zur Elektrodynamik bewegter Körper.~//
 Annalen der~Physik, IV\kern-0.33ex.\:Folge, Band~17, 1905. Seiten 891\hbox{--}921.}
-}\hspace{-0.55ex}.
+}\hbox{\hspace{-0.55ex}.}
 
 the~classical concept about the~existence of~absolute space and~time as the~preferred frame of~reference
 
-a~vacuum is a~space without matter, \inquotes{free space}
+a~vacuum is space without matter, \inquotes{free space}
 
 ...
 
 \en{continuous charge distribution}\ru{непрерывное распределение заряда}
 
-\en{charge density}\ru{плотность заряда} (\en{electric charge}\ru{электрический заряд} \en{per volume unit}\ru{на единицу объёма}) ${\chargedensity\hspace{.1ex}(\locationvector, t)}$
+\en{a~charge density}\ru{плотность заряда}~${\chargedensity\hspace{.1ex}(\locationvector, t)}$
+\en{is}\ru{это}
+\en{an~electric charge}\ru{электрический заряд}
+\en{per volume unit}\ru{на единицу объёма}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 dq = \chargedensity \hspace{.15ex} d \mathcal{V}
@@ -108,12 +148,19 @@ dq = \chargedensity \hspace{.15ex} d \mathcal{V}
 q = \hspace{-0.5ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.3ex} \chargedensity \hspace{.15ex} d\mathcal{V}
 \end{equation*}
 
-\en{the~density of~electric current}\ru{плотность электрического тока} \en{is}\ru{есть} \en{the~flux of~electric charge}\ru{поток электрического заряда}
-${\currentdensity(\locationvector, t) \hspace{-0.1ex} \equiv \chargedensity \hspace{.1ex} \mathdotabove{\locationvector} \equiv \chargedensity \hspace{.1ex} \bm{v}}$
+\en{the~density of~electric current}\ru{плотность электрического тока}
+\en{is}\ru{есть}
+\en{the~flux of~electric charge}\ru{поток электрического заряда}
+${%
+   \currentdensity(\locationvector, t) \hspace{-0.1ex}
+   \equiv
+   \chargedensity \hspace{.15ex} \mathdotabove{\locationvector} %%\equiv \chargedensity \hspace{.15ex} \bm{v}
+}$
 
-\foreignlanguage{russian}{в ваку\kern-0.11exуме нет $\chargedensity$ \en{and}\ru{и}~$\currentdensity$}
+\foreignlanguage{russian}{в ваку\kern-0.11exуме нет}
+$\chargedensity$ \en{and}\ru{и}~$\currentdensity$
 
-in a~region with no charges (${\chargedensity = 0}$) and no currents (${\currentdensity = \bm{0}}$), such as in a~vacuum, ...
+in a~region with no charges (${\chargedensity = 0}$) and no currents (${\currentdensity = \bm{0}}$), such as a~vacuum, ...
 
 ...
 
@@ -144,10 +191,15 @@ in a~region with no charges (${\chargedensity = 0}$) and no currents (${\current
 
 % Maxwell’s equations
 
-\en{Electromagnetic phenomena}\ru{Электромагнитные явления} \en{are usually described}\ru{обыкновенно описываются} \ru{уравнениями }\en{by }Maxwell’\en{s}\ru{а}\en{ equations}.
-\en{Differential}\ru{Дифференциальные} \en{versions of~}\ru{версии }\ru{уравнений }\href{https://en.wikipedia.org/wiki/James_Clerk_Maxwell}{Maxwell}’\en{s}\ru{а}\en{ equations} \en{are}\ru{суть}
+\en{Electromagnetic phenomena}\ru{Электромагнитные явления}
+\en{are usually described}\ru{обыкновенно описываются}
+\ru{уравнениями }\en{by }\en{the }\href{https://en.wikipedia.org/wiki/James_Clerk_Maxwell}{Maxwell}’\en{s}\ru{а}\en{ equations}.
+\en{Differential}\ru{Дифференциальные}
+\en{versions}\ru{версии}
+\en{of~}\en{these equations}\ru{этих уравнений}
+\en{are}\ru{суть}
 
-\nopagebreak\en{\vspace{.15em}}\ru{\vspace{-0.8em}}
+\nopagebreak\vspace{.2em}
 \refstepcounter{equation}
 \begin{align*}
 \hspace*{5em} \boldnabla \dotp \hspace{.12ex} \boldmathbb{E} &= \smash{\displaystyle \frac{\chargedensity}{\raisemath{.16em}{\vacuumpermittivity}}}
@@ -185,7 +237,9 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0
 \tag{$\theequation^{\raisemath{.15em}{\delta}}$}\label{maxwell.equations:ampere.circuital.with.addition}
 \end{align*}
 
-...
+
+....
+
 
 \en{speed of~light in vacuum}\ru{скорость света в~ваку\kern-0.11exуме}
 ${c = 299\:792\:458}$~\raisebox{.3em}{\en{m}\ru{м}}\hspace{-0.2ex}/\hspace{-0.25ex}\raisebox{-0.2em}{\en{s}\ru{с}}
@@ -338,13 +392,13 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{
 ...
 
 \begin{align*}
-\eqrefwithchapterdotpara{divergenceofdyadicproducoftwovectors}{chapter:mathapparatus}{para:spatialdifferentiationoftensorfields}
+\eqrefwithchapterdotsection{divergenceofdyadicproducoftwovectors}{chapter:mathapparatus}{para:spatialdifferentiationoftensorfields}
 & \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{-0.16ex} \dotp \hspace{-0.2ex} \bigl( \hspace{-0.05ex} \bm{a} \bm{a} \bigr) \hspace{-0.33ex}
 = \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.18ex} \dotp \hspace{-0.1ex} \bm{a} \bigr) \hspace{-0.1ex} \bm{a} \hspace{.1ex} + \bm{a} \hspace{-0.07ex} \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.1ex} \bm{a}
 \\[-0.1em]
 %
-\eqrefwithchapterdotpara{gradientofdotproductoftwovectors}{chapter:mathapparatus}{para:spatialdifferentiationoftensorfields}
+\eqrefwithchapterdotsection{gradientofdotproductoftwovectors}{chapter:mathapparatus}{para:spatialdifferentiationoftensorfields}
 & \hspace{.27em}\Rightarrow\hspace{.32em}
 \boldnabla \hspace{.1ex} \bigl( \hspace{-0.1ex} \bm{a} \hspace{-0.17ex} \dotp \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.33ex}
 = 2 \hspace{.16ex} \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.12ex} \dotp \hspace{-0.15ex} \bm{a}
@@ -545,7 +599,12 @@ c^{\hspace{.16ex}2} \bigl( \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmath
 \hspace{.2ex} .
 \end{multline}
 
-\en{With a~gauge freedom}\ru{Со~свободой калибровки} \en{it’s possible}\ru{возможно} \en{to~simplify}\ru{упростить} \en{wave equations}\ru{волновые уравнения}~\eqref{electromagnetic.secondequationofwave} \en{and}\ru{и}~\eqref{electromagnetic.firstequationofwave}, \en{assuming that}\ru{полож\'{и}в}
+\en{With a~gauge freedom}\ru{Со~свободой калибровки}
+\en{it’s possible}\ru{возможно}
+\en{to~simplify}\ru{упростить}
+\en{the wave equations}\ru{волновые уравнения}~\eqref{electromagnetic.secondequationofwave}
+\en{and}\ru{и}~\eqref{electromagnetic.firstequationofwave},
+\en{assuming that}\ru{полож\'{и}в}
 
 \nopagebreak\vspace{-0.25em}\begin{gather*}
 \left.
@@ -573,7 +632,12 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \hspace{.16ex} ,
 \end{gather*}
 
-\vspace{-0.16em} \noindent \en{finally presenting as}\ru{наконец становясь} \en{homogeneous}\ru{однородным} \href{https://en.wikipedia.org/wiki/Wave_equation}{\en{wave equation}\ru{волновым уравнением}} \en{for}\ru{для}~$a$
+\vspace{-0.16em}\noindent
+\en{finally}\ru{наконец}
+\en{presenting as}\ru{становясь}
+\en{the }\en{homogeneous}\ru{однородным}
+\href{https://en.wikipedia.org/wiki/Wave_equation}{\en{wave equation}\ru{волновым уравнением}}
+\en{for}\ru{для}~$a$
 
 \nopagebreak\vspace{-0.12em}\begin{equation}\label{gaugeadditioniswave}
 \mathdotdotabove{a} \hspace{.1ex} = c^{\hspace{.16ex}2} \hspace{-0.4ex} \Laplacian \hspace{.07ex} a
@@ -581,7 +645,8 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \end{equation}
 
 \vspace{-0.15em}\noindent
-\en{A~more popular}\ru{Более популярный} \en{option}\ru{вариант}\ru{\:---}\en{ is} \en{even more tight}\ru{ещё более жёсткое} \en{condition}\ru{условие}
+\en{The more popular condition}\ru{Более популярное условие}\en{ is}\ru{\:---}
+\en{even more stiff}\ru{ещё более жёсткое}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \Laplacian \hspace{.07ex} a = 0
@@ -589,10 +654,17 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 \mathdotdotabove{a} = 0
 \hspace{.1ex} , \:\:
 \mathdotabove{\upphi} + c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} = 0
+\hspace{.1ex} .
 \end{equation*}
 
 \vspace{-0.2em}\noindent
---- \href{https://en.wikipedia.org/wiki/Lorenz_gauge_condition}{\ru{условие калибровки }Lorenz\ru{’а}\en{ gauge condition}}, \en{which}\ru{которое} \en{gives}\ru{даёт} \en{the~same}\ru{такой~же} \en{effect}\ru{эффект}, \en{being just a~particular}\ru{будучи лишь частным}\:--- \href{https://en.wikipedia.org/wiki/Harmonic_function}{\en{harmonic}\ru{гармоническим}}\:--- \en{case}\ru{случаем}~\en{of~}\eqref{gaugeadditioniswave}.
+\en{This}\ru{Это}
+\href{https://en.wikipedia.org/wiki/Lorenz_gauge_condition}{\ru{условие калибровки }Lorenz\ru{’а}\en{ gauge condition}}
+\en{gives}\ru{даёт}
+\en{the~same}\ru{такой~же}
+\en{effect}\ru{эффект},
+\en{being just the~particular}\ru{будучи лишь частным}\:---
+\en{the }\href{https://en.wikipedia.org/wiki/Harmonic_function}{\en{harmonic}\ru{гармоническим}}\:--- \en{case}\ru{случаем}~\en{of~}\eqref{gaugeadditioniswave}.
 
 \en{Following from}\ru{Следующие из}~\eqref{electromagnetic.firstequationofwave} \en{and}\ru{и}~\eqref{electromagnetic.secondequationofwave} \en{with condition}\ru{с~условием}~\eqref{gaugeadditioniswave}, \en{equations}\ru{уравнения} \en{of electromagnetic waves}\ru{электромагнитных волн} \en{in the~potential formulation}\ru{в~потенциальной формулировке}\en{ are}
 
@@ -618,7 +690,7 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 В~статике
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\bm{v} \equiv \mathdotabove{\locationvector} = \bm{0}
+\velocityofpoint = \bm{0}
 \hspace{.44em} \Rightarrow \hspace{.33em}
 \boldmathbb{B} = \bm{0}
 \end{equation*}

@@ -4,7 +4,6 @@
 \usepackage{ucs}
 
 \usepackage[english, greek, russian]{babel}
-%%ukrainian
 
 \RequirePackage{ifthen}
 \newif\ifen
@@ -187,6 +186,8 @@
 \newcommand\T{{\mathpalette\raiseT\intercal}} % symbol for transpose
 \newcommand\raiseT[2]{\hspace{-0.02em}\raisebox{.4ex}{$#1#2$}}
 
+\newcommand\indexjuggling[2]{#1\hspace{.1ex}\scalebox{.6}[.8]{$\rightleftarrows$}\hspace{.1ex}#2}
+
 % symbol for X-companion
 \newcommand\Xcompanion{{\mathpalette\lowerXcompanion\times}}
 \newcommand\lowerXcompanion[2]{\hspace{-0.16ex}\raisebox{-0.2ex}{$#1\bm{#2}$}\hspace{-0.24ex}}
@@ -208,7 +209,9 @@
 %named after Leopold Kronecker
 \newcommand\KroneckerDelta[1]{\delta_{#1}}
 
-\newcommand\permutationsparitysymbols[1]{\raisemath{.2ex}{\mathrm{\in}_{[#1]}}}
+\newcommand\permutationsparitysymbolslower[1]{\raisemath{.2ex}{\mathrm{\in}_{[#1]}}}
+\newcommand\permutationsparitysymbols[1]{\permutationsparitysymbolslower{#1}}
+\newcommand\permutationsparitysymbolsupper[1]{\raisemath{.2ex}{\mathrm{\in}^{[#1]}}}
 \newcommand\permutationsparitytensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
 \newcommand\rotationtensor{\bm{O}}
@@ -358,11 +361,13 @@
 \newcommand\onefourth{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{4}}}
 \newcommand\smalldisplaystyleonefourth{\scalebox{.8}{$\displaystyle \onefourth$}\hspace{.1ex}}
 
-% put the symbol of perpendicularity into the index of a symbol
-\newcommand\withtheindexofperpendicularity[1]{ #1_{\[UpTee]} }
+\def\upTeeSymbol{}
 
-% put the symbol of parallelism into the index of a symbol
-\newcommand\withtheindexofparallelism[1]{ #1_{\[DoubleVerticalBar]} }
+% put the symbol of perpendicularity into the index of an argument
+\newcommand\withtheindexofperpendicularity[1]{{#1}_{\bot}}
+
+% put the symbol of parallelism into the index of an argument
+\newcommand\withtheindexofparallelism[1]{{#1}_{\parallel}}
 
 \usepackage{scalerel}
 
@@ -649,6 +654,8 @@ aboveskip=4mm,belowskip=2.5mm}
 
 \addto\captionsenglish{\def\wordforbibliography{Bibliography}}
 \addto\captionsrussian{\def\wordforbibliography{Библиография}}
+
+\newcommand\publication[1]{\bibitem{#1}}
 
 \newcommand\rucontinuum{контину\kern-0.11exум}
 \newcommand\ruContinuum{Контину\kern-0.11exум}

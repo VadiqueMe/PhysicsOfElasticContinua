@@ -4,10 +4,24 @@
 
 \label{para:uniquenessfordynamicproblem}
 
-\en{As is typical}\ru{Как это типично} \en{for}\ru{для} \en{linear mathematical physics}\ru{линейной математической физики},
-\en{the~uniqueness theorem}\ru{теорема единственности} \en{is proven}\ru{доказывается} \inquotesx{\en{by~contradiction}\ru{от~противного}}[.]
-\en{Assume}\ru{Предположим, что} \en{there are}\ru{существуют} \en{some}\ru{какие-либо} \en{two solutions}\ru{два решения}: ${\bm{u}_1 (\locationvector, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\locationvector, t)}$.
-\en{If}\ru{Если} \en{difference}\ru{разность}~${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}_1 \hspace{-0.4ex} - \bm{u}_2}$ \en{will be equal to}\ru{окажется равной}~$\bm{0}$, \en{then}\ru{тогда} \en{these solutions}\ru{эти решения} \en{coincide}\ru{совпадают}, \en{that is}\ru{то есть} \en{the~solution is unique}\ru{решение единственно}.
+\en{As is typical}\ru{Как это типично}
+\en{for}\ru{для}
+\en{linear mathematical physics}\ru{линейной математической физики},
+\en{the~uniqueness theorem}\ru{теорема единственности}
+\en{is proven}\ru{доказывается}
+\inquotesx{\en{by~contradiction}\ru{от~противного}}[.]
+\en{Assume that}\ru{Предположим, что}
+\en{there are}\ru{существуют}
+\en{two solutions}\ru{два решения}:
+${\bm{u}_1 (\locationvector, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\locationvector, t)}$.
+\en{If}\ru{Если}
+\en{the difference}\ru{разность}~${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}_1 \hspace{-0.4ex} - \bm{u}_2}$
+\en{will be equal to}\ru{будет равной}~$\bm{0}$,
+\en{then}\ru{тогда}
+\en{these solutions}\ru{эти решения}
+\en{coincide}\ru{совпадают},
+\en{that is}\ru{то есть}
+\en{the~solution is unique}\ru{решение единственно}.
 
 \en{But}\ru{Но}
 \en{at first}\ru{сперв\'{а}}
@@ -17,12 +31,13 @@
 \en{by deriving}\ru{путём вывода}
 \en{the balance of~mechanical energy equation}\ru{уравнения баланса механической энергии}
 \en{for the linear model}\ru{для линейной модели}
-\en{of the small displacement theory}\ru{теории малых смещений}
+\en{of the small displacements theory}\ru{теории м\'{а}лых смещений}
 
 \nopagebreak
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}\label{dynamicsoflineartheory:integralofenergy}
-\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \kinetic + \potential \Bigr)^{\hspace{-0.33ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} d\mathcal{V}
+\displaystyle\integral\displaylimits_{\mathcal{V}}
+\hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \kinetic + \potential \Bigr)^{\hspace{-0.33ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} d\mathcal{V}
 = \hspace{-0.2ex}
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.3ex} d\mathcal{V}
 + \hspace{-0.2ex}
@@ -30,14 +45,14 @@
 \hspace{.15ex} ,
 \end{equation}
 %
-\nopagebreak\vspace{-0.25em}\begin{equation*}
-\begin{array}{c}
+\nopagebreak\vspace{-0.25em}\begin{gather*}
 \bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \bm{0}
-\hspace{.11ex} ,
-\hspace*{.6em}
+\hspace{.1ex} ,
+\hspace{.6em}
 %
 \unitnormalvector \dotp \linearstress \hspace{.2ex} \bigr|_{o_2} \hspace{-0.64ex} = \hspace{.2ex} \bm{p}
 \hspace{.15ex} ,
+%
 \\[.5em]
 %
 \bm{u} \hspace{.1ex} \bigr|_{t=0} \hspace{-0.2ex} = \bm{u}^{\hspace{-0.1ex}\circ}
@@ -46,13 +61,12 @@
 %
 \mathdotabove{\bm{u}} \hspace{.1ex} \bigr|_{t=0} \hspace{-0.2ex} = \mathdotabove{\bm{u}}^{\circ}
 \hspace{-0.4ex} .
-\end{array}
-\end{equation*}
+\end{gather*}
 \end{minipage}
 
 \vspace{.3em}
 \en{For}\ru{Для}
-\en{the~left\hbox{-}hand side}\ru{левой части}
+\en{the \hbox{left\textcolor{gray}{-hand}} side}\ru{левой части}
 \en{we have}\ru{мы имеем}
 
 \nopagebreak\begin{equation*}
@@ -64,7 +78,7 @@
 \hspace{.2ex} ,
 \\[.5em]
 %
-\mathdotabove{\potential} \hspace{.1ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{-0.25ex} \tikzmark{beginDerivativeOfElasticPotential} \left( \hspace{.1ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation \hspace{.1ex} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-1.2ex} \tikzmark{endDerivativeOfElasticPotential} \hspace{.7ex}
+\mathdotabove{\potential} \hspace{.1ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{-0.25ex} \tikzmark{beginDerivativeOfPotentialEnergyDensity} \left( \hspace{.1ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation \hspace{.1ex} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-1.2ex} \tikzmark{endDerivativeOfPotentialEnergyDensity} \hspace{.7ex}
 = \linearstress \dotdotp \mathdotabove{\infinitesimaldeformation}
 = \linearstress \hspace{.1ex} \dotdotp \hspace{-0.12ex} \boldnabla \mathdotabove{\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.12ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.15ex} \right) -
@@ -76,13 +90,13 @@
 + ( \hspace{.12ex} \bm{f} \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}}
 %%\hspace{.2ex} .
 \end{array}
-\end{equation*}%
+\end{equation*}
 \AddUnderBrace[line width=.75pt][.5ex, -0.4ex][yshift = .2ex]%
-{beginDerivativeOfElasticPotential}{endDerivativeOfElasticPotential}%
+{beginDerivativeOfPotentialEnergyDensity}{endDerivativeOfPotentialEnergyDensity}%
 {${\scalebox{0.75}{$ 2 \hspace{.2ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \mathdotabove{\infinitesimaldeformation} $}}$}
 \AddUnderBrace[line width=.75pt][.16ex, .1ex][yshift = .2ex]%
 {NablaDotTauDynamicsBegin}{NablaDotTauDynamicsEnd}%
-{${\scalebox{0.75}{$ - \hspace{.2ex} ( \hspace{.12ex} \bm{f} \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) $}}$}
+{ \scalebox{.75}{$ - \hspace{.2ex} ( \hspace{.12ex} \bm{f} \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) $} }
 
 \nopagebreak\vspace{-0.6em}\noindent
 (\ru{использован }\en{the balance of~momentum}\ru{баланс импульса}
@@ -106,7 +120,10 @@ ${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} - \rho 
 \end{equation*}
 
 \vspace{-0.33em}\noindent
-\en{and}\ru{и}~\en{boundary condition}\ru{краевое условие} ${\unitnormalvector \dotp \linearstress = \bm{p}}$ \en{on}\ru{на}~$o_2$, \en{we get}\ru{получаем}~\eqref{dynamicsoflineartheory:integralofenergy}.
+\en{and}\ru{и}~\en{the boundary condition}\ru{краевое условие}
+${\unitnormalvector \dotp \linearstress = \bm{p}}$
+\en{on}\ru{на}~$o_2$,
+\en{we get}\ru{получаем}~\eqref{dynamicsoflineartheory:integralofenergy}.
 
 \en{From}\ru{Из}~\eqref{dynamicsoflineartheory:integralofenergy} \en{it follows that}\ru{следует, что} \en{without loads}\ru{без нагрузок} (\en{when}\ru{когда} \en{there’re no external forces}\ru{нет внешних сил}, \en{neither volume nor surface}\ru{ни объёмных, ни поверхностных}), \en{and}\ru{и} \en{the~full mechanical energy}\ru{полная механическая энергия} \en{doesn’t change}\ru{не изменяется}:
 
@@ -148,7 +165,11 @@ ${\potential \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\infi
 \en{Such is}\ru{Таков\'{о}} \en{a~priori requirement}\ru{априорное требование} \en{of~the~positive definiteness}\ru{положительной определённости} \en{for}\ru{для}~\en{stiffness tensor}\ru{тензора жёсткости}~$\stiffnesstensor$.
 \en{This is one of}\ru{Это одно из}~\inquotes{\en{additional inequalities in the~theory of~elasticity}\ru{дополнительных неравенств в~теории упругости}}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
 
-\en{Since}\ru{Так как}~$\kinetic$ \en{and}\ru{и}~$\potential$ \en{are positive-definite}\ru{положительно определены}, \eqref{dynamicsoflineartheory:fullenergyiszero} \en{gives}\ru{даёт}
+\en{Since}\ru{Так как}
+$\kinetic$ \en{and}\ru{и}~$\potential$
+\en{are positive definite}\ru{положительно определены},
+\eqref{dynamicsoflineartheory:fullenergyiszero}
+\en{gives}\ru{даёт}
 
 \nopagebreak\vspace{-0.1em}
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
@@ -208,9 +229,9 @@ ${\bm{f} \hspace{-0.1ex} = \bm{0}}$,
 \en{and }\ru{и~}\en{in initial}\ru{в~начальных} \en{conditions}\ru{условиях}\:---
 \en{zeroes}\ru{нули}.
 \en{Therefore}\ru{Поэтому}
-${\smash{\bm{u}^{\hspace{-0.1ex}*}}
+${ \smash{\bm{u}^{\hspace{-0.1ex}*}}
 \hspace{-0.32ex} =
-\bm{0}}$,
+\bm{0} }$,
 \en{and}\ru{и}
 \en{the uniqueness is proven}\ru{единственность доказана}.
 
@@ -218,10 +239,10 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}}
 \en{the existence}\ru{существования}
 \en{of a~solution}\ru{решения}\:---
 \en{it cannot be proven}\ru{его не~обосновать}
-\en{in the generic case}\ru{в~общем случае}
+\en{for the generic case}\ru{для общего случая}
 \en{by simple}\ru{простыми}
 \en{conclusions}\ru{выводами}.
-\en{I could only tell}\ru{Я могу лишь сказать}\ru{,} \en{that}\ru{что}
+\en{I could only tell that}\ru{Я могу лишь сказать, что}
 \en{a~dynamic problem}\ru{динамическая проблема}
 \en{is}\ru{является}
 \en{evolutional}\ru{эволюционной},
@@ -234,41 +255,45 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}}
 (\en{the conservation}\ru{сохранение})
 \en{of~momentum}\ru{импульса}
 \en{gives}\ru{даёт}
-\en{the acceleration}\ru{ускорение} $\mathdotdotabove{\bm{u}}$.
+\en{the acceleration}\ru{ускорение}~$\mathdotdotabove{\bm{u}}$.
 \en{Then}\ru{Далее},
 \en{moving}\ru{переходя}
-\ru{на}\en{to the} \inquotes{ \en{next time layer}\ru{следующий временн\'{о}й слой} }
+\ru{на}\en{to the} \inquotes{\en{next time layer}\ru{следующий временн\'{о}й слой}}
 ${ t \hspace{-0.1ex} + \hspace{-0.15ex} dt }$:
 
-\nopagebreak\vspace{-0.2em}
+\nopagebreak
 \begin{gather*}
-\mathdotabove{\bm{u}} (\bm{r}, t \hspace{-0.3ex} + \hspace{-0.3ex} dt)
+\mathdotabove{\bm{u}} ({\bm{r}, \hspace{.1ex} t \hspace{-0.3ex} + \hspace{-0.3ex} dt})
 \hspace{-0.2ex} =
 \mathdotabove{\bm{u}}(\bm{r}, t) + \mathdotdotabove{\bm{u}} dt \hspace{.1ex} , \\
-\bm{u}( \bm{r}, t \hspace{-0.3ex} + \hspace{-0.3ex} dt )
+\bm{u}({ \bm{r}, \hspace{.1ex} t \hspace{-0.3ex} + \hspace{-0.3ex} dt })
 \hspace{-0.2ex} =
 \bm{u}(\bm{r}, t)
 + \mathdotabove{\bm{u}} dt
 \hspace{.1ex} ,
 \\[-0.1em]
 %
-\infinitesimaldeformation(\bm{r}, t \hspace{-0.3ex} + \hspace{-0.3ex} dt)
+\infinitesimaldeformation({\bm{r}, \hspace{.1ex} t \hspace{-0.3ex} + \hspace{-0.3ex} dt})
 \hspace{-0.2ex} = \hspace{-0.2ex}
-\bigl( \boldnabla \bm{u}(\bm{r}, t \hspace{-0.3ex} + \hspace{-0.3ex} dt) \bigr)^{\hspace{-0.25ex}\mathsf{S}}
+\bigl( \boldnabla \bm{u}{( \bm{r}, \hspace{.1ex} t \hspace{-0.3ex} + \hspace{-0.3ex} dt )} \bigr)^{\hspace{-0.25ex}\mathsf{S}}
 \hspace{.2em} \Rightarrow \hspace{.25em}
 \linearstress
 \hspace{.1ex} ,
 \\[-0.1em]
 %
 \boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f}
-= \rho \hspace{.2ex} \mathdotdotabove{\bm{u}}( \bm{r}, t \hspace{-0.3ex} + \hspace{-0.3ex} dt )
+= \rho \hspace{.2ex} \mathdotdotabove{\bm{u}}( \bm{r}, \hspace{.1ex} t \hspace{-0.3ex} + \hspace{-0.3ex} dt )
 \end{gather*}
 
 \vspace{-0.1em}\noindent
 \en{and so forth}\ru{и так далее}.
 \en{Surely}\ru{Разумеется},
 \en{these considerations}\ru{эти соображения}
-\en{lack}\ru{лишены} \en{the mathematical scrupulosity}\ru{математической щепетильности},
-\en{inherent}\ru{присущей},
-\en{for example}\ru{например},
-\en{to}\ru{для} \en{the}\ru{монографии} Philippe\ru{’а} Ciarlet’\en{s}\ru{а}\en{ monograph}~\cite{ciarlet-mathematicalelasticity}.
+\en{lack}\ru{лишены}
+\en{the mathematical scrupulosity}\ru{математической щепетильности}.
+\en{The latter}\ru{Последнее}
+\en{can be}\ru{может быть}
+\en{found}\ru{найдено},
+\en{for example}\ru{для примера},
+\en{in}\ru{в}~\en{the}\ru{монографии} Philippe\ru{’а} Ciarlet\en{’s}\en{ monograph}~\cite{ciarlet-mathematicalelasticity}.
+

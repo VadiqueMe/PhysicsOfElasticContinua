@@ -125,11 +125,13 @@ ${^2\hspace{-0.25em}\bm{A} \hspace{-0.15ex} = \bm{b}\bm{c}}$.
 \en{Roughly speaking}\ru{Грубо говоря}, \en{contracting a~tensor}\ru{свёртывание тензора} \en{is}\ru{есть} \en{summing of its components}\ru{суммирование его компонент} \en{over}\ru{по} \en{some}\ru{какой\hbox{-}либо} \en{pair of~indices}\ru{паре индексов}.
 \en{As a~result,}\ru{В~результате} \en{tensor’s complexity}\ru{сложность тензора} \en{decreases by two}\ru{уменьшается на~два}.
 
-\en{For the trivalent tensor}\ru{Для трёхвалентного тензора}~${\hspace{-0.1ex} ^3\hspace{-0.33ex}\bm{D}}$\en{,} 
-ru{возможны }\en{the three variants}\ru{три варианта} \en{of~contraction}\ru{свёртки}\en{ are possible},
-\en{giving vectors}\ru{дающие векторы}
+\en{For}\ru{Для}
+\en{a~trivalent tensor}\ru{трёхвалентного тензора}~${\hspace{-0.1ex} ^3\hspace{-0.33ex}\bm{D}}$
+\en{there are the three possible contractions}\ru{возможны три свёртки}.
+\en{They}\ru{Они}
+\en{give vectors}\ru{дают векторы}
 ${\bm{a}}$, ${\bm{b}}$ \en{and}\ru{и}~${\bm{c}}$
-\en{with the components}\ru{с~компонентами}
+\en{with components}\ru{с~компонентами}
 
 \nopagebreak\vspace{-0.33em}\begin{equation}\label{tensoralgebra:contraction}
 a_{i} = D_{kki} \hspace{.1ex} ,
@@ -189,17 +191,17 @@ a'_{i} = D\hspace{.16ex}'_{\hspace{-0.32ex}kki} \hspace{-0.16ex}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{tensoralgebra:transposing}
 \begin{array}{rcl}
-{^3\hspace{-0.3em}\bm{A}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2}
+{^3\hspace{-0.3em}\bm{A}} = {^3\hspace{-0.16em}\bm{D}}_{\indexjuggling{1}{2}}
 & \!\Leftrightarrow\!\! &
 A_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{j\hspace{-0.06ex}ik}
 \hspace{.1ex} ,
 \\
-{^3\hspace{-0.15em}\bm{B}} = {^3\hspace{-0.16em}\bm{D}}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3}
+{^3\hspace{-0.15em}\bm{B}} = {^3\hspace{-0.16em}\bm{D}}_{\indexjuggling{1}{3}}
 & \!\Leftrightarrow\!\! &
 B_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{kj\hspace{-0.06ex}i}
 \hspace{.1ex} ,
 \\
-{^3\hspace{-0.05em}\bm{C}} = {^3\hspace{-0.16em}\bm{D}}_{2 \scalebox{0.6}[0.8]{$\rightleftarrows$} 3}
+{^3\hspace{-0.05em}\bm{C}} = {^3\hspace{-0.16em}\bm{D}}_{\indexjuggling{2}{3}}
 & \!\Leftrightarrow\!\! &
 C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{ikj}
 \hspace{.1ex} .
@@ -208,7 +210,7 @@ C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{ikj}
 
 \en{For a~bivalent tensor}\ru{Для бивалентного тензора}\en{,}
 \ru{возможно }\en{the~only one transposition}\ru{лишь одно транспонирование}\en{ is possible}:
-${\bm{A}^{\hspace{-0.05em}\T} \hspace{-0.15ex} \equiv \bm{A}_{1 \scalebox{0.6}[0.8]{$\rightleftarrows$} 2} = \hspace{-0.1ex} \bm{B}
+${\bm{A}^{\hspace{-0.05em}\T} \hspace{-0.15ex} \equiv \bm{A}_{\indexjuggling{1}{2}} = \hspace{-0.1ex} \bm{B}
 \hspace{.4ex}\Leftrightarrow\hspace{.25ex}
 B_{i\hspace{-0.1ex}j} \hspace{-0.1ex} = A_{j\hspace{-0.06ex}i}}$.
 \en{Obviously}\ru{Очевидно},

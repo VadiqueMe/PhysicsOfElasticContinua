@@ -1,6 +1,4 @@
-\en{\section{Vector}}
-
-\ru{\section{Вектор}}
+\en{\section{\en{Vector}\ru{Вектор}}}
 
 \label{para:vector}
 
@@ -33,51 +31,69 @@ Examples of vectors:
 \item \en{The~velocity of an~object}\ru{Скорость объекта} \en{describes}\ru{описывает} \en{what’s happening}\ru{происходящее} \en{with this object}\ru{с~этим объектом} \en{at an~instant}\ru{за мгновение}.
 \end{itemize}
 
-\subsection{\en{What is a~vector?}\ru{Что такое вектор?}}
+\noindent
+\emph{\en{Multiplication of a~vector by a~scalar}\ru{Умножение вектора на~скаляр}}
 
-What is \inquotes{linear}?
-\\
-(1) straight
-\\
-(2) relating to, resembling, or having \textcolor{teal}{a~graph} that is a~straight line
+\noindent
+\emph{\en{Multiplication by the minus one}\ru{Умножение на~минус единицу}}
 
-All vectors are linear objects.
+\ru{Принцип }\en{The }Newton’\en{s}\ru{а} \en{action}\ru{действия}--\en{reaction}\ru{противодействия}\en{ principle}
+\inquotesx{\foreignlanguage{russian}{действие равно противодействию по магнитуде и обратно ему по направлению}}[.]
 
-Examples of vectors:
+\en{Each}\ru{Каждое}
+\en{mechanical interaction}\ru{механическое взаимодействие}
+\en{of two objects}\ru{двух объектов}
+\en{is characterized}\ru{характеризуется}
+\en{by two forces}\ru{двумя силами}\ru{,}
+\en{that act}\ru{которые действуют}
+\en{on both interacting objects}\ru{на оба взаимодействующих объекта}.
+\en{These forces}\ru{Эти силы}
+\en{can be represented}\ru{могут быть представлены}
+\en{as two vectors}\ru{двумя векторами}\ru{,}
+\en{that}\ru{которые}
+\en{are equal in magnitude}\ru{равны по магнитуде}
+\en{and}\ru{и}~\en{reverse in direction}\ru{обратны по направлению}.
 
-\begin{itemize}
-\item \en{A~force acts on an~object}\ru{Сила действует на объект}.
-%
-\item \en{The~velocity of an~object}\ru{Скорость объекта} \en{describes}\ru{описывает} \en{what’s happening}\ru{происходящее} \en{with this object}\ru{с~этим объектом} \en{at an~instant}\ru{за мгновение}.
-\end{itemize}
+\en{Multiplying a~vector}\ru{Умножение вектора}
+\en{by the negative one}\ru{на отрицательную единицу}~${ -1}$
+\en{reverses the vector’s direction}\ru{обращает направление вектора}\ru{,}
+\en{but}\ru{но}
+\en{doesn’t change its magnitude}\ru{но не~меняет его магнитуду}.
 
-The sum (combination) of two or more vectors is the new (\inquotes{resultant}) vector.
+\subsection{The addition and subtraction}
+
+The sum (combination) of two or more vectors is the new \inquotes{resultant} vector.
 There are two similar methods to calculate the resultant vector geometrically.
 
-The \emph{\inquotes{head to tail} method} involves lining up the head of the one vector with the tail of the other.
-Here the resultant goes from the initial point (\inquotes{tail}) of the first addend to the end point (\inquotes{head}) of the second addend when the tail (initial point) of the second one coincides with the head (end point) of the first one.
+\emph{\en{The }\inquotes{\ru{Метод }head to tail\en{ method}}}
+involves lining up the head of one vector with the tail of another.
+Here the resultant goes
+from the initial point (the~\inquotes{tail})
+of the first addend
+to the end point (the~\inquotes{head})
+of the second addend
+when
+the tail (the initial point)
+of the second one
+coincides with
+the head (the end point)
+of the first one.
 
 [ .... figure here .... ]
 
-The \emph{\inquotes{parallelogram} method}.
+\emph{\en{The }\inquotes{\ru{Метод }\en{parallelogram}\ru{параллелограмма}\en{ method}}} ...
 
-Vector addition is commutative
+[ .... figure here .... ]
+
+The vector addition is commutative
 \begin{equation*}
 \bm{v} + \bm{w} = \bm{w} + \bm{v}
 \hspace{.1ex} .
 \end{equation*}
 
-\en{Multiplication of a~vector by a~scalar.}\ru{Умножение вектора на скаляр.}
 
-\en{Multiplication by minus one.}\ru{Умножение на минус единицу.}
+....
 
-\ru{Принцип }\en{The }Newton’\en{s}\ru{а} \en{action}\ru{действия}--\en{reaction}\ru{противодействия}\en{ principle} \inquotes{\foreignlanguage{russian}{действие равно противодействию по магнитуде и обратно ему по направлению}}.
-
-In every mechanical interaction, there’s a~pair of forces acting on the two objects that interact. These forces can be represented as vectors, they are equal in magnitude and reverse in direction.
-
-Multiplying a~vector by the negative one~${ -1}$ reverses the direction but doesn’t change the magnitude.
-
-\subsection{The addition and subtraction}
 
 \nopagebreak\vspace{-0.1em}\begin{gather*}
 \bm{p} + \bm{q}
@@ -108,10 +124,19 @@ A~list (array, tuple) of coefficients alone, without basis vectors, is not enoug
 
 
 {\small
-\foreignlanguage{russian}{У~сам\'{и}х по~себе векторов
+\foreignlanguage{russian}{У~сам\'{и}х по~себе
+векторов
 как элементов векторного пространства
 компонент нет.
-Компоненты у~вектора появляются лишь тогда, когда мы выбрали базис.
+%
+\en{Vector components appear}\ru{У~вектора появляются компоненты}
+\en{only when}\ru{лишь когда}
+\en{a~certain basis is chosen}\ru{выбран определённый базис},
+\en{then}\ru{тогда}
+\en{any vector}\ru{любой вектор}
+\en{can be decomposed}\ru{может быть разложен}
+\en{into components}\ru{на компоненты}.
+%
 В~разных базисах компоненты одного и~того~же вектора отличаются друг от друга.}
 \par}
 
@@ -160,14 +185,16 @@ The Elements (\textgreek{Στοιχεῖα}) (Stoikheîa)
 \makebox[.32\textwidth][c]{%
 \begin{minipage}[t]{.5\textwidth}
 \vspace{-1.3em}
-\scalebox{.93}{
-\tdplotsetmaincoords{45}{125}
+\scalebox{.93}%
+{
+    \tdplotsetmaincoords{45}{125}
 
-\input{thecomponentsofvector.tex}
+    \input{thecomponentsofvector.tex}
+}
 
 \vspace{-2em}\caption{}\label{fig:componentsofvector}
-}\end{minipage}%
-}
+\end{minipage}%
+} %close makebox
 \end{wrapfigure}
 
 \en{By choosing}\ru{Выбрав}
@@ -275,13 +302,16 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 %----------
 
 \en{Having components}\ru{Имея компоненты} \en{of a~vector}\ru{вектора} \en{in an~orthonormal basis}\ru{в~ортонормальном базисе},
-\en{the~length}\ru{длина} \en{of this vector}\ru{этого вектора} \en{is retrieved}\ru{возвращается} \en{by }\en{\hbox{the~\hspace{-0.1ex}}}\inquotesx{\ru{равенством }\href{https://el.wikipedia.org/wiki/\%CE\%A0\%CF\%85\%CE\%B8\%CE\%B1\%CE\%B3\%CF\%8C\%CF\%81\%CE\%B1\%CF\%82}{\en{\textgreek{Πυθαγόρας}’\hspace{-0.2ex}}\ru{Пифагора~(\textgreek{Πυθαγόρας})}}\en{ equation}}
+\en{the~length}\ru{длина}
+\en{of this vector}\ru{этого вектора}
+\en{is retrieved}\ru{возвращается}
+\en{by }\en{\hbox{the~\hspace{-0.1ex}}}\inquotesx{\ru{равенством }\href{https://el.wikipedia.org/wiki/\%CE\%A0\%CF\%85\%CE\%B8\%CE\%B1\%CE\%B3\%CF\%8C\%CF\%81\%CE\%B1\%CF\%82}{\en{\textgreek{Πυθαγόρας}’\hspace{-0.2ex}}\ru{Пифагора~(\textgreek{Πυθαγόρας})}}\en{ equation}}
 
 \nopagebreak\vspace{-0.15em}
 \begin{equation}\label{vectorlength}
 \bm{v} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{v} \hspace{-0.1ex}
 = v_i \bm{e}_i \hspace{-0.1ex} \dotp v_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.25ex}
-= v_i \hspace{.1ex} \KronekerDelta{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.25ex}
+= v_i \hspace{.1ex} \KroneckerDelta{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.25ex}
 = v_i v_i
 \hspace{.1ex} , \hspace{.5em}
 \| \bm{v} \| \hspace{-0.1ex}
@@ -290,8 +320,15 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \hspace{.2ex} .
 \end{equation}
 
+\emph{The magnitude represents the length independent of direction.}
+
 \vspace{-0.1em}\noindent
-\en{The~direction of~a~vector in space}\ru{Направление вектора в~пространстве} \en{is measured}\ru{измеряется} \en{by the three angles~(co\-sines of~angles)}\ru{тремя углами~(ко\-синусами углов)} \en{between}\ru{между} \en{this~vector}\ru{этим вектором} \en{and}\ru{и}~\en{each of the basis ones}\ru{каждым из базисных}:
+\en{The~direction of~a~vector in space}\ru{Направление вектора в~пространстве}
+\en{is measured}\ru{измеряется}
+\en{by the three angles~(co\-sines of~angles)}\ru{тремя углами~(ко\-синусами углов)}
+\en{between}\ru{между}
+\en{this~vector}\ru{этим вектором}
+\en{and}\ru{и}~\en{each of the basis ones}\ru{каждым из базисных}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{anglesbetweenvectorandbasisvectors}
 \operatorname{cos} \measuredangle \bigl( \bm{v} \widehat{\phantom{w}} \bm{e}_i \bigr) %%( \bm{v}, \bm{e}_i )
@@ -308,7 +345,21 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \vspace{-0.6em}
 
 \emph{\en{Measurement of angles}\ru{Измерение углов}.}
-\en{The cosine of the angle}\ru{Косинус угла} \en{between two vectors}\ru{между двумя векторами} is the same as the dot product of these vectors when they are normalized to both have the magnitude equal to the one unit of length
+\en{The cosine of an~angle}\ru{Косинус угла}
+\en{between two vectors}\ru{между двумя векторами}
+is the same as the dot product of these vectors
+if their magnitudes are equal to the one unit of length
+
+When the magnitudes of two vectors
+are equal to the one unit of length,
+then the cosine of the least angle between them
+is the same as the dot product of these vectors.
+\en{Any vector}\ru{Любой вектор}
+\en{with the non-unit magnitude}\ru{с~не-единичной магнитудой}
+(\en{but the~null vector}\ru{кроме нулевого вектора})
+\en{can be}\ru{может быть}
+\inquotes{\en{normalized}\ru{нормализован}}
+\en{via dividing a~vector by its magnitude}\ru{делением вектора на его магнитуду}.
 
 \nopagebreak\vspace{-0.2em}\begin{gather*}
 \operatorname{cos} \measuredangle ({\bm{v}, \bm{w}}) \hspace{-0.1ex}
@@ -322,11 +373,12 @@ which represents the length
 independent of direction,
 there’s a~way to represent the direction of a~vector
 independent of its length.
-For this purpose, the unit vectors
+For this purpose,
+the unit vectors
 (the vectors with the~magnitude of~1)
 are used.
 
-A rotation matrix is just a transform that expresses the basis vectors of the input space in a different orientation.
+A rotation matrix is just a~transform that expresses the basis vectors of the input space in a different orientation.
 The length of the basis vectors will be the same, and the origin will not change.
 Also, the angle between the basis vectors will not change.
 All that changes is the relative direction of all of the basis vectors.
@@ -411,7 +463,7 @@ ${ \| \bm{0} \| \hspace{-0.25ex} = \hspace{-0.1ex} 0 }$?
 
 \vspace{-0.1em}
 \en{A~triple}\ru{Тройка}
-\en{of a~pairwise perpendicular}\ru{попарно перпендикулярных}
+\en{of pairwise perpendicular}\ru{попарно перпендикулярных}
 \en{unit vectors}\ru{единичных векторов}
 \en{can only rotate}\ru{может только поворачиваться}
 \en{and thereby}\ru{и~тем самым}

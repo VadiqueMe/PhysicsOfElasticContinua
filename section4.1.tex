@@ -33,15 +33,16 @@
 \en{including}\ru{включая}
 \begin{itemize}
 \item \en{the balance of forces}\ru{баланс сил},
-\item \en{the stress--strain relations}\ru{отношения напряжение--деформация}
-\en{for the material}\ru{для материала},
-\item ${\bm{u} \mapsto \infinitesimaldeformation}$.
+\item \ru{соотношения}\en{the} \en{stress}\ru{напряжение}--\en{strain}\ru{деформация}\en{ relations}
+\en{for a~material}\ru{для материала},
+\item ${\bm{u} \mapsto \infinitesimaldeformation}$
 \end{itemize}
 
-\en{are}
+\noindent
+\en{is}\ru{есть}
 
 \nopagebreak\vspace{-0.1em}
-\hspace*{-\parindent}\begin{minipage}{\linewidth}
+%%%\hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}
 \label{lineartheory:wholesetofequations}
 \boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} = \hspace{.1ex} \bm{0}
@@ -53,7 +54,7 @@
    \frac{ \raisemath{-0.133em}{
       \partial \hspace{.1ex} \potential^{\mathstrut}
    }%close \raisemath
-   }%close \frac
+   }%close 1st argument of \frac
    { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
 $}
 =
@@ -81,12 +82,11 @@ $\infinitesimaldeformation$
 \ru{это}\en{is}
 \en{the tensor}\ru{тензор}
  \en{of the infinitesimal linear deformation}\ru{бесконечномалой линейной деформации},
-${
+${%
    \potential(
       \hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}
    )\hspace{-0.1ex}
-}
-$\ru{это}\en{is}
+}$ \ru{это}\en{is}
 \en{the elastic potential energy}\ru{упругая потенциальная энергия}
 \en{of~deformation}\ru{деформации}
 \en{per volume unit}\ru{на единицу объёма},
@@ -94,22 +94,21 @@ $\stiffnesstensor$
 \ru{это}\en{is}
 \en{the stiffness tensor}\ru{тензор жёсткости}.
 \en{It is}\ru{Он}
-\en{tetravalent}\ru{четырёхвалентный},
+\en{tetravalent}\ru{четырёхвалентный}
 \en{with the following symmetry}\ru{со~следующей симметрией}
 ${
-   \stiffnesstensor_{\hspace{.12ex} 12 \scalebox{.6}[.8]{$ \rightleftarrows $} 34}
+   \stiffnesstensor_{\hspace{.12ex} \indexjuggling{12}{34}}
    \hspace{-0.4ex} = \hspace{-0.1ex}
    \stiffnesstensor
 }$, ${
-   \stiffnesstensor_{\hspace{.12ex} 1 \scalebox{.6}[.8]{$ \rightleftarrows $} 2}
+   \stiffnesstensor_{\hspace{.12ex} \indexjuggling{1}{2}}
    \hspace{-0.33ex} = \hspace{-0.1ex}
    \stiffnesstensor
 }$, ${
-   \stiffnesstensor_{\hspace{.12ex} 3 \scalebox{.6}[.8]{$ \rightleftarrows $} 4}
+   \stiffnesstensor_{\hspace{.12ex} \indexjuggling{3}{4}}
    \hspace{-0.33ex} = \hspace{-0.1ex}
    \stiffnesstensor
-}$
-\hspace{.1ex} .
+}$\hbox{\hspace{.1ex}.}
 
 \en{But}\ru{Но}
 \en{where does}\ru{откуда}
@@ -148,17 +147,18 @@ ${
 \:\;
 \varbivalent{\hspace{-0.2ex}\cauchystress}
 = \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
-= \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.125em}{\partial^2 \hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}}} $}
+= \scalebox{.9}{$
+\displaystyle \frac{\raisemath{-0.125em}{ \partial^2 \hspace{.1ex} \potential }}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}}} $}
 \hspace{-0.1ex} \dotdotp
-\variation{\hspace{.12ex}\bm{C}} ,
+\variation{\hspace{.12ex}\bm{C}}
+\hspace{.1ex} ,
 \:\:
 \boldnabla \dotp \varbivalent{\hspace{-0.2ex}\cauchystress}
 \hspace{.1ex} + \hspace{.1ex}
 \rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
 = \hspace{.1ex}
 \bm{0}
-\hspace{.11ex}
-.
+\hspace{.11ex} .
 \end{array}
 \end{equation}
 
@@ -177,19 +177,16 @@ ${
    $\varbivalent{\hspace{-0.15ex}\cauchystress}$
    \en{to}\ru{на}
    $\linearstress$,
-\item
-   ${
-      \scalebox{.95}{$ \raisemath{.15em}{
-         \scalebox{.92}{$ \partial^2 \hspace{.1ex} \potential $}
-      }
-      / %it is division
-      \hspace{-0.1ex}
-      \raisemath{-0.3em}{\scalebox{.92}{$
-        \partial \hspace{.1ex} \bm{C}
-         \hspace{.1ex}
-         \partial \hspace{.1ex} \bm{C}
-      $}
-   }$ 
+\item ${%
+   \scalebox{.95}{$%
+      \raisemath{.15em}{ \scalebox{.92}{$ \partial^2 \hspace{.1ex} \potential $} } $}
+   / %it is division
+   \hspace{-0.1ex}
+   \raisemath{-0.3em}{\scalebox{.92}{$
+      \partial \hspace{.1ex} \bm{C}
+      \hspace{.1ex}
+      \partial \hspace{.1ex} \bm{C}
+   $}} }$
    \en{to}\ru{на}
    $\stiffnesstensor$,
 \item
@@ -197,10 +194,10 @@ ${
    \variation{\hspace{-0.2ex}\bm{f}} }$
    \en{to}\ru{на}
    ${ \hspace{-0.1ex} \bm{f} \hspace{-0.2ex} }$.
+\end{itemize}
 
 \en{If}\ru{Если}
-\en{the derivation}\ru{вывод}
-\eqref{variationfrominitialconfiguration}
+\en{the derivation of}\ru{вывод}~\eqref{variationfrominitialconfiguration}
 \en{seems abstruse to the~reader}\ru{кажется читателю малопонятным},
 \en{it’s possible}\ru{возможно}
 \en{to proceed}\ru{исходить}
@@ -227,7 +224,7 @@ ${
 \en{Assuming}\ru{Полагая}
 \en{the displacement}\ru{смещение}~$\bm{u}$
 \en{is small}\ru{м\'{а}лым}
-( \en{infinitesimal}\ru{бесконечно м\'{а}лым} ),
+(\en{infinitesimal}\ru{бесконечно м\'{а}лым}),
 \en{we’ll move}\ru{мы перейдём}
 \en{from}\ru{от}~\eqref{nonlinear:setofequations}
 \en{to}\ru{к}~\eqref{lineartheory:wholesetofequations}.
@@ -243,7 +240,7 @@ ${\smallparameter \hspace{-0.1ex}\to 0}$.
 \en{the unknowns}\ru{неизвестные}
 \en{by the series}\ru{рядами}
 \en{in the integer exponents}\ru{в~целых показателях}
-\en{of the parameter}\ru{параметра}~$\smallparameter$
+\en{of parameter}\ru{параметра}~$\smallparameter$
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{c}
@@ -265,9 +262,9 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}{(1)}} \h
 \en{from the first}\ru{из первых}~(\en{zeroth}\ru{нулевых})
 \en{terms}\ru{членов}
 \en{of these series}\ru{этих рядов}.
-\en{In}\ru{В}~\hbox{\en{his book}\ru{его книге}~\cite{truesdell-firstcourse}}
+\en{In}\ru{В}~\en{the~book}\ru{книге}~\cite{truesdell-firstcourse}
 \en{this is called}\ru{это названо}
-\en{the }\inquotesx{\en{formal approximation}\ru{формальным приближением}}.
+\inquotesx{\en{formal approximation}\ru{формальным приближением}}[.]
 
 \en{It is impossible}\ru{Невозможно}
 \en{to tell}\ru{сказать}
@@ -301,8 +298,8 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}{(1)}} \h
 {$ \mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}} $}\hspace{-0.12em},
 \en{bounded by the surface}\ru{ограниченном поверхностью}~$o$
 \en{with the area vector}\ru{с~вектором пл\'{о}щади}~${\unitnormalvector do}$
-(\inquotes{ \en{the~principle}\ru{принцип}
-\en{of the~initial dimensions}\ru{начальных размеров} }).
+(\inquotes{\en{the~principle}\ru{принцип}
+\en{of the~initial dimensions}\ru{начальных размеров}}).
 
 \en{The boundary}\ru{Краевые~(граничные)} \en{conditions}\ru{условия}
 \en{most often}\ru{чаще всего}
@@ -425,7 +422,7 @@ $\infinitesimaldeformation$
 \nopagebreak\vspace{-0.1em}
 \begin{equation*}
 \potential ( \hspace{-0.1ex}
-   \infinitesimaldeformation
+\infinitesimaldeformation
 \hspace{-0.1ex} ) \hspace{-0.2ex}
 = \hspace{.1ex}
 \smash{\smalldisplaystyleonehalf} \hspace{.2ex}
@@ -534,17 +531,16 @@ $}
 \en{of mechanics}\ru{механики}.
 \en{This principle}\ru{Этот принцип}
 \en{is true}\ru{справедлив}
-\en{also for}\ru{и~для}
-\en{the linear theory}\ru{линейной теории}
+\en{for the linear theory too}\ru{и~для линейной теории}
 (\en{the internal forces}\ru{внутренние силы}
 \en{in an~elastic medium}\ru{в~упругой среде}
 \en{are potential}\ru{потенциальны}
-( ${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potential} }$ )
+${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potential} }$)
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{lineartheory:principleofvirtualwork}
 \displaystyle\integral\displaylimits_{\mathcal{V}}
-\hspace{-0.2ex} \Bigl[
+\hspace{-0.2ex} \Bigl(
     \left(
         \bm{f}
         \hspace{-0.1ex} - \hspace{-0.1ex}
@@ -555,8 +551,7 @@ $}
     \hspace{-0.1ex}
     \dotp
     \variation{\bm{u}} - \variation{\potential}
-\hspace{.25ex} \Bigr]
-\hspace{-0.2ex} d\mathcal{V}
+\hspace{.1ex} \Bigr) d\mathcal{V}
 + \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \variation{\bm{u}} \hspace{.25ex} do \hspace{.1ex}
 = \hspace{.1ex} 0
@@ -600,8 +595,7 @@ $}
 \end{equation*}
 
 \vspace{-0.4em}\noindent
-\en{which}\ru{что},
-\en{of course}\ru{конечно~же},
+\en{that}\ru{что}
 \en{is equal to zero}\ru{равно нулю}.
 \en{Notice}\ru{Отметим}
 \en{the boundary condition}\ru{краевое условие}

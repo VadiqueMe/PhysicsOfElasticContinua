@@ -65,13 +65,13 @@ ${ ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 \en{the determinant}\ru{определитель}
 \en{of a~matrix of~components}\ru{матрицы компонент}
 \begin{equation*}
-\smash{
-   \underset{
-      \raisebox{.15em}{
-         \scalebox{.7}{ i, \hspace{.15ex}j }
+\smash{%
+   \underset{%
+      \raisebox{.15em}{%
+         \scalebox{.7}{ i, \hspace{.15ex}j }%
       } %end of raisebox
-   } %end of undeset
-\operatorname{det}
+   } %end of underset's first parameter
+   { \operatorname{det} }%
 } %end of smash
 \hspace{.3ex}
 ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \eigenvalue \delta_{ i \hspace{-0.1ex} j } )
@@ -171,21 +171,23 @@ B_{23}B_{32} $}
 \en{It was described}\ru{Он был описан}
 \en{earlier}\ru{ранее}
 \en{in}\ru{в}~\sectionref{para:operationswithtensors}.
+\textcolor{magenta}{%
 \en{The second invariant}\ru{Второй инвариант}~$\secondcharacteristicinvariant$
 \en{is}\ru{это}
 \en{the trace}\ru{след}
 \en{of~the~adjugate}\ru{присоединённой~(взаимной, adjugate)}
 \en{matrix}\ru{матрицы}\:---
 \en{the transpose}\ru{транспонированной}
-\en{of the cofactor matrix}
-\en(of the matrix of algebraic complements)}\ru{матрицы алгебраических дополнений}
+\en{of the cofactor matrix}\ru{????}
+\en{(of the matrix of algebraic complements)}\ru{(матрицы алгебраических дополнений)}
+} %end of textcolor
+
 \begin{equation*}
 \secondcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} )
 \hspace{-0.12ex} \equiv \hspace{.1ex}
-\trace{\hspace{-0.33ex} \left(
-   \operatorname{adj}{ B_{i\hspace{-0.1ex}j} }
-}
-\right) }} %end of trace
+\trace{\hspace{-0.33ex}%
+   \left( \operatorname{adj} B_{i\hspace{-0.1ex}j} \right)%
+} %end of trace
 \end{equation*}
 (\en{it’s hard, yeah}\ru{тяжеловато, да}).
 \en{Or}\ru{Или}
