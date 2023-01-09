@@ -6,14 +6,13 @@
 
 \en{\dropcap{E}{quations}}\ru{\dropcap{У}{равнения}}
 \en{of the nonlinear elasticity}\ru{нелинейной упругости},
-\en{even in the simplest cases}\ru{даже в~самых простых случаях},
+\en{even in their simplest cases}\ru{даже в~самых простых случаях},
 \en{lead to the mathematically complex problems}\ru{приводят к~математически сложным задачам}.
 \en{Therefore}\ru{Поэтому}
 \en{the~linear theory}\ru{линейная теория}
-\en{of the infinitesimal displacements}\ru{бесконечно м\'{а}лых смещений}
+\en{of~infinitesimal displacements}\ru{бесконечно м\'{а}лых смещений}
 \en{is applied everywhere}\ru{повсеместно применяется}.
-\en{The equations}\ru{Уравнения}
-\en{of this theory}\ru{этой теории}
+\en{This theory’s equations}\ru{Уравнения этой теории}
 \en{were derived}\ru{были выведены}
 \en{in the~first half}\ru{в~первой половине}
 \en{of~the~}\hbox{XIX$^{\textrm{\en{th}\ru{го}}}$\hspace{-0.2ex}}~\en{century}\ru{века}\en{ by}
@@ -30,24 +29,27 @@
 \en{of~equations}\ru{уравнений}
 \en{of the classical linear theory}\ru{классической линейной теории}
 \en{in~the~direct invariant tensor notation}\ru{в~прямой инвариантной тензорной з\'{а}писи},
-\en{including}\ru{включая}
+\en{including}\ru{включающий}
 \begin{itemize}
-\item \en{the balance of forces}\ru{баланс сил},
+\item \en{the~balance of~forces}\ru{баланс сил}~(\en{of~momentum}\ru{импульса},
+\en{of~}\ru{количества движения, }\emph{vis~viva}),
 \item \ru{соотношения}\en{the} \en{stress}\ru{напряжение}--\en{strain}\ru{деформация}\en{ relations}
 \en{for a~material}\ru{для материала},
-\item ${\bm{u} \mapsto \infinitesimaldeformation}$
+\item ${\bm{u} \mapsto \infinitesimaldeformation}$,
 \end{itemize}
 
 \noindent
 \en{is}\ru{есть}
 
-\nopagebreak\vspace{-0.1em}
+\nopagebreak\vspace{-0.8em}
 %%%\hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}
 \label{lineartheory:wholesetofequations}
-\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} = \hspace{.1ex} \bm{0}
+\boldnabla \dotp \linearstress \hspace{.15ex} + \hspace{.15ex} \bm{v}
+\hspace{.1ex} = \hspace{.1ex}
+\bm{0}
 \hspace{.1ex} ,
-\hspace{.7em}
+\hspace{1em}
 %
 \linearstress = \scalebox{.92}{$
    \displaystyle
@@ -59,57 +61,56 @@
 $}
 =
 \stiffnesstensor
-\dotdotp \hspace{-0.1ex}
-\infinitesimaldeformation ,
-\hspace{.7em}
+\hspace{-0.1ex} \dotdotp
+\infinitesimaldeformation
+\hspace{.1ex} ,
+\hspace{1em}
 %
 \infinitesimaldeformation
 = \hspace{-0.2ex}
 \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}
 \hspace{-0.2ex} .
-\vspace{.2em}
 \end{equation}
 
 \nopagebreak\noindent
 \en{Here}\ru{Здесь}
-$\linearstress$
-\ru{это}\en{is}
+$\linearstress$~\ru{это}\en{is}
 \en{the linear stress tensor}\ru{линейный тензор напряжений},
-$\bm{v}$
-\en{is the vector}\ru{это вектор}
-\en{of the volume loads}\ru{объёмных нагрузок},
-$\infinitesimaldeformation$
-\ru{это}\en{is}
+$\bm{v}$~\en{is}\ru{это}
+\en{the vector}\ru{вектор}
+\en{of volume loads}\ru{объёмных нагрузок},
+$\infinitesimaldeformation$~\ru{это}\en{is}
 \en{the tensor}\ru{тензор}
- \en{of the infinitesimal linear deformation}\ru{бесконечномалой линейной деформации},
+ \en{of infinitesimal linear deformation}\ru{бесконечномалой линейной деформации},
 ${%
    \potential(
       \hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}
    )\hspace{-0.1ex}
-}$ \ru{это}\en{is}
-\en{the elastic potential energy}\ru{упругая потенциальная энергия}
-\en{of~deformation}\ru{деформации}
-\en{per volume unit}\ru{на единицу объёма},
-$\stiffnesstensor$
-\ru{это}\en{is}
+}$~\ru{это}\en{is}
+\en{the potential energy}\ru{потенциальная энергия}
+\en{of deformation}\ru{деформации}
+\en{per volume unit}\ru{на единицу объёма}
+\en{and}\ru{и}~$\stiffnesstensor$~\ru{это}\en{is}
 \en{the stiffness tensor}\ru{тензор жёсткости}.
 \en{It is}\ru{Он}
 \en{tetravalent}\ru{четырёхвалентный}
 \en{with the following symmetry}\ru{со~следующей симметрией}
-${
+\begin{equation*}
    \stiffnesstensor_{\hspace{.12ex} \indexjuggling{12}{34}}
    \hspace{-0.4ex} = \hspace{-0.1ex}
    \stiffnesstensor
-}$, ${
+\hspace{.2ex} , \hspace{.8em}
    \stiffnesstensor_{\hspace{.12ex} \indexjuggling{1}{2}}
    \hspace{-0.33ex} = \hspace{-0.1ex}
    \stiffnesstensor
-}$, ${
+\hspace{.2ex} , \hspace{.8em}
    \stiffnesstensor_{\hspace{.12ex} \indexjuggling{3}{4}}
    \hspace{-0.33ex} = \hspace{-0.1ex}
    \stiffnesstensor
-}$\hbox{\hspace{.1ex}.}
+\hspace{.2ex} .
+\end{equation*}
 
+\noindent
 \en{But}\ru{Но}
 \en{where does}\ru{откуда}
 \en{this set}\ru{этот набор}~(\en{system}\ru{система})
@@ -118,16 +119,19 @@ ${
 
 \en{The equations}\ru{Уравнения}~\eqref{lineartheory:wholesetofequations}
 \en{are exact}\ru{точные},
-\en{they can be derived via varying}\ru{они могут быть получены варьированием}
-\en{of equations}
-\en{of the~nonlinear theory}\ru{уравнений нелинейной теории}.
-\en{The variation from an~arbitrary configuration}\ru{Варьирование от~произвольной конфигурации}
+\en{they}\ru{они}
+\en{can be derived}\ru{могут быть получены}
+\en{by varying}\ru{варьированием}
+\en{the~equations}\ru{уравнений}
+\en{of the~nonlinear theory}\ru{нелинейной теории}.
+\en{Varying}\ru{Варьирование}
+\en{from an~arbitrary configuration}\ru{от~произвольной конфигурации}
 \en{is~described in}\ru{описано в}~\chapterdotsectionref{chapter:nonlinearcontinuum}{para:variationofconfiguration}.
 \en{The~linear theory}\ru{Линейная теория}
 \ru{это}\en{is}
 \en{the~result of varying}\ru{результат варьирования}
 \en{from the~initial unstressed configuration}\ru{от~начальной ненапряжённой конфигурации},
-\en{where}\ru{где}
+\en{when}\ru{когда}
 
 \nopagebreak
 \begin{equation}\label{variationfrominitialconfiguration}
@@ -137,9 +141,9 @@ ${
 \bm{C} \hspace{-0.1ex} = {\hspace{-0.2ex}^2\bm{0}}
 \hspace{.1ex} ,
 \:\;
-\variation{\hspace{.12ex}\bm{C}} \hspace{-0.1ex} = \hspace{-0.2ex} \boldnabla \hspace{.12ex} \variation{\currentlocationvector}^{\hspace{.2ex}\mathsf{S}} \hspace{-0.15ex}
-\equiv
-\infinimentpetitdeformationdevariation ,
+\variation{\hspace{.12ex}\bm{C}} \hspace{-0.1ex} = \hspace{-0.2ex} \boldnabla \hspace{.12ex} \variation{\currentlocationvector}^{\hspace{.2ex}\mathsf{S}}
+%%\hspace{-0.15ex} \equiv \infinimentpetitdeformationdevariation
+\hspace{-0.1ex} ,
 \\[.2em]
 %
 \cauchystress = {\hspace{-0.2ex}^2\bm{0}}
@@ -170,7 +174,7 @@ ${
    \en{to}\ru{на}
    $\bm{u}$,
 \item
-   ${ \infinimentpetitdeformationdevariation \hspace{-0.15ex} }$
+   ${\variation{\hspace{.12ex}\bm{C}}}$
    \en{to}\ru{на}
    $\infinitesimaldeformation$,
 \item
@@ -180,7 +184,7 @@ ${
 \item ${%
    \scalebox{.95}{$%
       \raisemath{.15em}{ \scalebox{.92}{$ \partial^2 \hspace{.1ex} \potential $} } $}
-   / %it is division
+   /
    \hspace{-0.1ex}
    \raisemath{-0.3em}{\scalebox{.92}{$
       \partial \hspace{.1ex} \bm{C}
@@ -193,7 +197,7 @@ ${
    ${ \hspace{-0.1ex} \rho \hspace{.25ex}
    \variation{\hspace{-0.2ex}\bm{f}} }$
    \en{to}\ru{на}
-   ${ \hspace{-0.1ex} \bm{f} \hspace{-0.2ex} }$.
+   ${ \hspace{-0.1ex} \bm{v} \hspace{-0.2ex} }$.
 \end{itemize}
 
 \en{If}\ru{Если}
@@ -202,7 +206,7 @@ ${
 \en{it’s possible}\ru{возможно}
 \en{to proceed}\ru{исходить}
 \en{from}\ru{из}
-\en{the next equations}\ru{следующих уравнений}
+\en{the~following equations}\ru{следующих уравнений}
 
 \nopagebreak\vspace{-0.25em}
 \begin{equation}\label{nonlinear:setofequations}
@@ -288,8 +292,7 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}{(1)}} \h
 \en{of a~freely vibrating}\ru{свободно вибрирующего}
 \en{motion}\ru{движения}
 \en{after}\ru{после}
-\en{the initial offset}\ru{начального смещения}
-\en{of the amplitude of~vibrations}\ru{амплитуды вибраций},
+\en{the initial displacement}\ru{начального смещения},
 \en{then}\ru{то}
 \en{a~nonlinear model is needed}\ru{нужна нелинейная модель}.
 
@@ -299,7 +302,7 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}{(1)}} \h
 \en{bounded by the surface}\ru{ограниченном поверхностью}~$o$
 \en{with the area vector}\ru{с~вектором пл\'{о}щади}~${\unitnormalvector do}$
 (\inquotes{\en{the~principle}\ru{принцип}
-\en{of the~initial dimensions}\ru{начальных размеров}}).
+\en{of initial dimensions}\ru{начальных размеров}}).
 
 \en{The boundary}\ru{Краевые~(граничные)} \en{conditions}\ru{условия}
 \en{most often}\ru{чаще всего}

@@ -19,48 +19,49 @@
 \contentsline {subsection}{\numberline {0.14.}Расстояние на плоскости или в более-мерном пространстве}{3}{subsection.1.0.14}%
 \contentsline {subsection}{\numberline {0.15.}What is an angle?}{3}{subsection.1.0.15}%
 \contentsline {subsection}{\numberline {0.16.}Дифференциация непрерывного на м\'{а}лые дифференциальные кусочки}{3}{subsection.1.0.16}%
-\contentsline {subsection}{\numberline {0.17.}Что такое вектор?}{4}{subsection.1.0.17}%
-\contentsline {subsection}{\numberline {0.18.}The addition and subtraction}{4}{subsection.1.0.18}%
-\contentsline {subsection}{\numberline {0.19.}Метод координат}{6}{subsection.1.0.19}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Тензор и его компоненты}{9}{section.1.1}%
-\contentsline {section}{\numberline {2}Тензорная алгебра, или операции с~тензорами}{11}{section.1.2}%
-\contentsline {section}{\numberline {3}Полиадное представление (разложение)}{15}{section.1.3}%
-\contentsline {section}{\numberline {4}Матрицы, перестановки и определители}{16}{section.1.4}%
-\contentsline {subsection}{\numberline {4.1.}Умножение матриц}{17}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1}Вектор}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.}Что такое вектор?}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.2.}The addition and subtraction}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.3.}Метод координат}{6}{subsection.1.1.3}%
+\contentsline {section}{\numberline {2}Тензор и его компоненты}{9}{section.1.2}%
+\contentsline {section}{\numberline {3}Тензорная алгебра, или операции с~тензорами}{11}{section.1.3}%
+\contentsline {section}{\numberline {4}Полиадное представление (разложение)}{15}{section.1.4}%
+\contentsline {section}{\numberline {5}Матрицы, перестановки и определители}{16}{section.1.5}%
+\contentsline {subsection}{\numberline {5.1.}Умножение матриц}{17}{subsection.1.5.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Векторное произведение}{18}{section.1.5}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {6}Симметричные и антисимметричные тензоры}{24}{section.1.6}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Полярное разложение}{27}{section.1.7}%
-\contentsline {section}{\numberline {8}Собственные векторы и собственные числа}{28}{section.1.8}%
-\contentsline {section}{\numberline {9}Коллекции инвариантов симметричного бивалентного тензора}{30}{section.1.9}%
-\contentsline {section}{\numberline {10}Тензор поворота}{31}{section.1.10}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {11}Вариации}{37}{section.1.11}%
-\contentsline {section}{\numberline {12}Полярное разложение}{38}{section.1.12}%
-\contentsline {section}{\numberline {13}В~косоугольном базисе}{40}{section.1.13}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {14}Тензорные функции}{46}{section.1.14}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {15}Пространственное дифференцирование}{47}{section.1.15}%
+\contentsline {section}{\numberline {6}Векторное произведение}{18}{section.1.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {16}Интегральные теоремы}{50}{section.1.16}%
+\contentsline {section}{\numberline {7}Симметричные и антисимметричные тензоры}{24}{section.1.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {17}Тензоры кривизны}{51}{section.1.17}%
+\contentsline {section}{\numberline {8}Полярное разложение}{27}{section.1.8}%
+\contentsline {section}{\numberline {9}Собственные векторы и собственные числа}{28}{section.1.9}%
+\contentsline {section}{\numberline {10}Коллекции инвариантов симметричного бивалентного тензора}{30}{section.1.10}%
+\contentsline {section}{\numberline {11}Тензор поворота}{31}{section.1.11}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {12}Вариации}{37}{section.1.12}%
+\contentsline {section}{\numberline {13}Полярное разложение}{38}{section.1.13}%
+\contentsline {section}{\numberline {14}В~косоугольном базисе}{40}{section.1.14}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {15}Тензорные функции}{46}{section.1.15}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {16}Пространственное дифференцирование}{47}{section.1.16}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {17}Интегральные теоремы}{50}{section.1.17}%
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {18}Тензоры кривизны}{51}{section.1.18}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {chapter}{\numberline {2}Классическая общая механика}{56}{chapter.2}%

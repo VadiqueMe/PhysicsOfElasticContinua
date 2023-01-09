@@ -450,7 +450,7 @@
 \contentsline {section}{\numberline {6}Force acting on a~point defect}{218}{section.14.6}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {7}Continuously distributed dislocations}{218}{section.14.7}%
+\contentsline {section}{\numberline {7}Continuously distributed dislocations}{219}{section.14.7}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {8}Stress during winding of coil}{219}{section.14.8}%
