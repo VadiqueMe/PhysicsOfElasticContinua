@@ -16,6 +16,8 @@
 \usepackage{newunicodechar}
 \newunicodechar{×}{\ensuremath{\times}}
 
+\usepackage{multicol}
+
 % no more "Too many math alphabets used in version normal"
 %%\newcommand\hmmax{0}
 %%\newcommand\bmmax{0}
@@ -808,7 +810,7 @@ labelsep=period,justification=centering,singlelinecheck=off}
 
 \renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 
 \newcommand{\mychapterfont}{\normalfont\fontsize{12}{13}}
 \newcommand{\mysectionfont}{\normalfont\normalsize\bfseries}
@@ -836,11 +838,11 @@ labelsep=period,justification=centering,singlelinecheck=off}
 	[\parindent]%right
 
 \titleformat{\subsection}
-	{\mysubsectionfont\filleft}{\mdseries\comfortaa\thesubsection}{.8ex}{}
+	{\mysubsectionfont\filleft}{\mdseries\itshape(\thesubsection)}{.8ex}{}
 
 \titlespacing*{\subsection}
 	{\parindent}% left
-	{4mm}% before
+	{8mm}% before
 	{1mm}% after
 	[\parindent]%right
 
