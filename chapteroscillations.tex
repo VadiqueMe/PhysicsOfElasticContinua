@@ -10,7 +10,7 @@
 
 \ru{\section{Вибрации трёхмерных тел}}
 
-\label{para:vibrations.3dbodies}
+\label{section:vibrations.3dbodies}
 
 \en{\dropcap{D}{ynamic}}\ru{\dropcap{Д}{инамическая}} \en{problem}\ru{задача} \en{of the classical linear elasticity}\ru{классической линейной упругости} \en{is}\ru{есть}
 
@@ -33,7 +33,7 @@
 \end{equation}
 
 \vspace{.2em}
-\en{According to the common theory}\ru{Согласно общей теории}~(\chapterdotsectionref{chapter:genericmechanics}{para:smalloscillations}), \en{we begin}\ru{мы начинаем} \en{with the analysis}\ru{с~анализа} \en{of~harmonics}\ru{гармоник}~(\en{ortho\-gonal oscillations}\ru{орто\-гональ\-ных колебаний}):
+\en{According to the common theory}\ru{Согласно общей теории}~(\chapterdotsectionref{chapter:genericmechanics}{section:smalloscillations}), \en{we begin}\ru{мы начинаем} \en{with the analysis}\ru{с~анализа} \en{of~harmonics}\ru{гармоник}~(\en{ortho\-gonal oscillations}\ru{орто\-гональ\-ных колебаний}):
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
 \bm{f} = \bm{0} \hspace{.1ex} ,
@@ -54,9 +54,9 @@
 \vspace{-0.2em}\noindent
 \en{If}\ru{Если} \en{a~homogeneous problem}\ru{однородная задача} \en{has}\ru{имеет} \en{a~nontrivial solution}\ru{нетривиальное решение}, \en{then}\ru{то} \en{values of}\ru{значения}~$\omega$ \en{are}\ru{это} \en{natural}\ru{натуральные} \en{resonant}\ru{резонансные} \en{frequencies}\ru{частоты}, \en{and}\ru{а}~${\mathboldU(\locationvector)}$\ru{\:---}\en{ are} \en{ortho\-gonal}\ru{орто\-гональ\-ные}~(\en{normal}\ru{нормальные}) \inquotesx{\en{modes}\ru{моды}}[.]
 
-\en{Time independent}\ru{Независимое от~времени} \en{equation}\ru{уравнение}~\eqref{oscillations:equationsforharmonics} \en{looks like}\ru{выглядит как} \en{equation}\ru{уравнение} \en{of~linear elasto\-statics}\ru{линейной эласто\-статики} \eqrefwithchapterdotsection{lineartheory:equationsfordisplacements}{chapter:linearclassicalelasticity}{para:equationsfordisplacements.linearelasticity}\ru{,} \en{when}\ru{когда} \en{the~volume load}\ru{объемная нагрузка} \en{is equal to}\ru{равна}~${\omega^2 \hspace{-0.2ex} \rho \hspace{.25ex} \mathboldU \hspace{-0.1ex}}$.
+\en{Time independent}\ru{Независимое от~времени} \en{equation}\ru{уравнение}~\eqref{oscillations:equationsforharmonics} \en{looks like}\ru{выглядит как} \en{equation}\ru{уравнение} \en{of~linear elasto\-statics}\ru{линейной эласто\-статики} \eqrefwithchapterdotsection{lineartheory:equationsfordisplacements}{chapter:linearclassicalelasticity}{section:equationsfordisplacements.linearelasticity}\ru{,} \en{when}\ru{когда} \en{the~volume load}\ru{объемная нагрузка} \en{is equal to}\ru{равна}~${\omega^2 \hspace{-0.2ex} \rho \hspace{.25ex} \mathboldU \hspace{-0.1ex}}$.
 \en{The surface load}\ru{Поверхностная нагрузка} \en{on}\ru{на}~${o_2}$ \en{is equal to zero}\ru{равна нулю}.
-\ru{Тождество }Clapeyron’\en{s}\ru{а}\en{ identity}~\eqrefwithchapterdotsection{clapeyron:elasticitytheorem}{chapter:linearclassicalelasticity}{para:theoremsofstatics} \en{gives}\ru{даёт}
+\ru{Тождество }Clapeyron’\en{s}\ru{а}\en{ identity}~\eqrefwithchapterdotsection{clapeyron:elasticitytheorem}{chapter:linearclassicalelasticity}{section:theoremsofstatics} \en{gives}\ru{даёт}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \omega^2 \hspace{-0.2em}
@@ -66,7 +66,7 @@
 = \hspace{.1ex}
 2 \hspace{-0.2em}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex}
-\potential \bigl( \scalebox{0.9}{$\boldnabla \hspace{.1ex} \mathboldU \hspace{.2ex}^{\mathsf{S}}$} \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} .
+\potentialenergydensity \bigl( \scalebox{0.9}{$\boldnabla \hspace{.1ex} \mathboldU \hspace{.2ex}^{\mathsf{S}}$} \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} .
 \end{equation}
 
 \vspace{-0.2em}\noindent
@@ -93,7 +93,7 @@ ${\omega^2\hspace{-0.1ex}}$
 \en{This can be proven}\ru{Это может быть доказано} \inquotesx{\en{by~contradiction}\ru{от~противного}}[.]
 \en{If}\ru{Если}~${\imaginarypart{\omega^2} \hspace{-0.2ex} \neq 0}$, \en{then}\ru{то} \en{conjugate}\ru{сопряжённая} \en{frequency}\ru{часто\-та}~${\lineover{\omega}^{\hspace{.2ex}2}\hspace{-0.2ex}}$\ru{\:---}\en{ is} \ru{тоже }\en{part}\ru{часть} \en{of the~oscillation spectrum}\ru{спектра колебания}\en{ too}, \en{and}\ru{и} \inquotes{\en{mode}\ru{мода}}~${\lineoverlower{\mathboldU}\hspace{-0.1ex}}$ \en{for this frequency}\ru{для этой часто\-ты} \en{has}\ru{имеет} \en{conjugate components}\ru{сопряжённые компоненты}.
 \en{Using then}\ru{Используя далее}
-\en{the~reciprocal work theorem}\ru{теорему о~взаимности работ}~\eqrefwithchapterdotsection{betti:reciprocalworktheorem}{chapter:linearclassicalelasticity}{para:theoremsofstatics}
+\en{the~reciprocal work theorem}\ru{теорему о~взаимности работ}~\eqrefwithchapterdotsection{betti:reciprocalworktheorem}{chapter:linearclassicalelasticity}{section:theoremsofstatics}
 \en{for}\ru{для}
 $\mathboldU$
 \en{and}\ru{и}~$\lineoverlower{\mathboldU}$,
@@ -192,9 +192,9 @@ d\mathcal{V}
 
 \ru{\section{Вибрации стержней}}
 
-\label{para:vibrations.rods}
+\label{section:vibrations.rods}
 
-\en{In the linear dynamics}\ru{В~линейной динамике} \en{of~rods}\ru{стержней} \en{we have}\ru{мы имеем} \en{the following system}\ru{следующую систему} \en{for}\ru{для} \en{forces}\ru{сил}~$\mathboldQ$, \en{force couples}\ru{пар сил}~(\en{moments}\ru{моментов})~$\mathboldM$, \en{displacements}\ru{смещений}~$\bm{u}$ \en{and}\ru{и}~\en{rotations}\ru{поворотов}~$\bm{\theta}~(\chapterdotsectionref{chapter:rods}{para:rods-lineartheory})$:
+\en{In the linear dynamics}\ru{В~линейной динамике} \en{of~rods}\ru{стержней} \en{we have}\ru{мы имеем} \en{the following system}\ru{следующую систему} \en{for}\ru{для} \en{forces}\ru{сил}~$\mathboldQ$, \en{force couples}\ru{пар сил}~(\en{moments}\ru{моментов})~$\mathboldM$, \en{displacements}\ru{смещений}~$\bm{u}$ \en{and}\ru{и}~\en{rotations}\ru{поворотов}~$\bm{\theta}~(\chapterdotsectionref{chapter:rods}{section:rods-lineartheory})$:
 
 \nopagebreak\vspace{-0.2em}\begin{gather}
 \bm{Q}' + \bm{q}
@@ -218,7 +218,7 @@ d\mathcal{V}
 
 \ru{\section{Малые возмущения параметров}}
 
-\label{para:vibrations.smallperturbations}
+\label{section:vibrations.smallperturbations}
 
 \begin{otherlanguage}{russian}
 
@@ -258,7 +258,7 @@ U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scal
 
 \ru{\section{Вибрации оболочек}}
 
-\label{para:vibrations.shells}
+\label{section:vibrations.shells}
 
 \begin{otherlanguage}{russian}
 
@@ -275,7 +275,7 @@ U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scal
 
 \ru{\section{Волны в упругом \rucontinuum{}е}}
 
-\label{para:wavesinelastic}
+\label{section:wavesinelastic}
 
 \begin{otherlanguage}{russian}
 
@@ -292,7 +292,7 @@ U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scal
 
 \ru{\section{Волны в стержне}}
 
-\label{para:wavesinrod}
+\label{section:wavesinrod}
 
 \begin{otherlanguage}{russian}
 
@@ -310,7 +310,7 @@ U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scal
 
 \ru{\section{Нелинейные колебания}}
 
-\label{para:oscillations.nonlinear}
+\label{section:oscillations.nonlinear}
 
 \begin{otherlanguage}{russian}
 

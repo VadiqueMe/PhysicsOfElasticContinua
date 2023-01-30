@@ -4,17 +4,17 @@
 
 \makeatletter
 
-\newcommand{\soneinbracketsabove}{%
+\newcommand{\accentoneinbracketsabove}{%
 	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}(\hspace{-0.2ex}1\hspace{-0.2ex})$}}
-\DeclareRobustCommand{\mathoneinbracketsabove}{\accentset{\soneinbracketsabove}}
+\DeclareRobustCommand{\mathoneinbracketsabove}{\accentset{\accentoneinbracketsabove}}
 
-\newcommand{\stwoinbracketsabove}{%
+\newcommand{\accenttwoinbracketsabove}{%
 	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}(\hspace{-0.2ex}2\hspace{-0.2ex})$}}
-\DeclareRobustCommand{\mathtwoinbracketsabove}{\accentset{\stwoinbracketsabove}}
+\DeclareRobustCommand{\mathtwoinbracketsabove}{\accentset{\accenttwoinbracketsabove}}
 
-\newcommand{\sthreeinbracketsabove}{%
+\newcommand{\accentthreeinbracketsabove}{%
 	\hbox{\fontfamily{lmr}\fontsize{.5\dimexpr(\f@size pt)}{0}\selectfont$\hspace{.25ex}(\hspace{-0.2ex}3\hspace{-0.2ex})$}}
-\DeclareRobustCommand{\maththreeinbracketsabove}{\accentset{\sthreeinbracketsabove}}
+\DeclareRobustCommand{\maththreeinbracketsabove}{\accentset{\accentthreeinbracketsabove}}
 
 \makeatother
 
@@ -42,7 +42,7 @@
 
 \ru{\section{Геометрия поверхности}}
 
-\dropcap{\en{A}\ru{П}}{\en{~surface}\ru{оверхность}}
+\dropcap{\en{A\hspace*{-0.1ex}}\ru{П}}{\en{surface}\ru{оверхность}}
 \en{is described}\ru{описывается}
 \en{by a~function}\ru{функцией}~(\en{a~morphism}\ru{морфизмом})
 
@@ -55,7 +55,10 @@
 
 \nopagebreak\vspace{-0.25em}\noindent
 \en{of~two}\ru{двух} \en{mutually independent}\ru{взаимно независимых} \en{variable}\ru{переменных} \en{parameters}\ru{параметров} (\en{coordinates}\ru{координат})~${q^{\hspace{.1ex}\alpha}\hspace{-0.33ex}}$,
-\en{then}\ru{тогда} $\locationvector$\en{ is}\ru{\:---} \en{location vector}\ru{вектор положения}~(\en{radius vector}\ru{вектор-радиус}) \en{of surface’s points}\ru{точек поверхности}.
+\en{then}\ru{тогда}
+$\locationvector$\en{~is}\ru{\:---}
+\en{the~location vector}\ru{вектор положения}~(\en{the~radius vector}\ru{вектор-радиус})
+\en{of~the~surface’s points}\ru{точек поверхности}.
 
 \begin{tcolorbox}
 \small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
@@ -112,18 +115,33 @@ ${\locationvector(u,\hspace{-0.2ex} v) \hspace{-0.25ex} = u \operatorname{sin} v
 ${
 \locationvector(u,\hspace{-0.2ex} v) \hspace{-0.25ex} = u \hspace{.1ex} \bm{e}_1 \hspace{-0.2ex} + v \hspace{.1ex} \bm{e}_2 \hspace{-0.2ex} + \hspace{-0.2ex} \bigl( u^2 \hspace{-0.3ex} + \hspace{-0.1ex} v^2 \hspace{.1ex} \bigr) \bm{e}_3
 }$
-\en{or}\ru{или} \en{cylindrical parameterization}\ru{цилиндрическая параметризация}
+\en{or}\ru{или}
+\en{via a~cylindrical parameterization}\ru{цилиндрической параметризацией}
 ${
 \locationvector(\hspace{.1ex}\rho,\hspace{-0.15ex} \vartheta) \hspace{-0.25ex} = \hspace{-0.1ex} \rho \operatorname{cos} \vartheta \hspace{.33ex} \bm{e}_1 \hspace{-0.2ex} + \hspace{-0.1ex} \rho \operatorname{sin} \vartheta \hspace{.33ex} \bm{e}_2 \hspace{-0.2ex} + \hspace{-0.1ex} \rho^2 \bm{e}_3
 }$
-\en{for paraboloid of~revolution}\ru{для параболоида вращения}.
+\en{for}\ru{для}
+\en{a~paraboloid}\ru{параболоида}
+\en{of~revolution}\ru{вращения}.
 
 \end{itemize}
 \par\end{tcolorbox}
 \vspace{-0.2em}
 
-\en{Continuous change}\ru{Непрерывное изменение} \en{of~one coordinate}\ru{одной координаты}~${q^{1}\hspace{-0.3ex}}$, \en{while}\ru{пока} \en{second coordinate}\ru{вторая координата}~${q^{2} \hspace{-0.1ex} \narroweq \hspace{.1ex} u^{\hspace{-0.1ex}*} \hspace{-0.1ex} \narroweq \hspace{.15ex} \constant}$ \en{is }\inquotesx{\en{frozen}\ru{заморожена}}[,] \en{gives}\ru{даёт} \en{coordinate line}\ru{координатную линию}~${\oneparametervector{\locationvector}(q^1) \hspace{-0.3ex} = \hspace{-0.12ex} \locationvector(q^1 \hspace{-0.4ex} , u^{\hspace{-0.1ex}*} \hspace{-0.1ex})}$.
-\en{A~crossing}\ru{Пересечение} \en{of two coordinate lines}\ru{двух координатных линий} ${q^1 \hspace{-0.1ex} \narroweq \hspace{.1ex} v^{*}\hspace{-0.3ex}}$ \en{and}\ru{и}~${q^2 \hspace{-0.1ex} \narroweq \hspace{.1ex} w^{*}\hspace{-0.3ex}}$ \en{uniquely identifies}\ru{однозначно определяет} \en{a~point}\ru{точку} ${\locationvector(v^{*} \hspace{-0.4ex}, w^{*}\hspace{-0.1ex})}$ \en{of~the~surface}\ru{поверхности}.
+\en{The~continuous change}\ru{Непрерывное изменение}
+\en{of~the~first coordinate}\ru{первой координаты}~${q^{1}\hspace{-0.3ex}}$,
+\en{while}\ru{пока}
+\en{the~second one}\ru{вторая}~${q^{2} \hspace{-0.1ex} \narroweq \hspace{.1ex} u^{\hspace{-0.1ex}*} \hspace{-0.1ex} \narroweq \hspace{.15ex} \constant}$
+\en{is }\inquotesx{\en{frozen}\ru{заморожена}}[,]
+\en{gives}\ru{даёт}
+\en{the~coordinate line}\ru{координатную линию}~${\oneparametervector{\locationvector}(q^1) \hspace{-0.3ex} = \hspace{-0.12ex} \locationvector(q^1 \hspace{-0.4ex} , u^{\hspace{-0.1ex}*} \hspace{-0.1ex})}$.
+\en{The~crossing}\ru{Пересечение}
+\en{of~the~two coordinate lines}\ru{двух координатных линий}
+${q^1 \hspace{-0.1ex} \narroweq \hspace{.1ex} v^{*}\hspace{-0.3ex}}$
+\en{and}\ru{и}~${q^2 \hspace{-0.1ex} \narroweq \hspace{.1ex} w^{*}\hspace{-0.3ex}}$
+\en{uniquely identifies}\ru{однозначно определяет}
+\en{the~point}\ru{точку}~${\locationvector(v^{*} \hspace{-0.4ex}, w^{*}\hspace{-0.1ex})}$
+\en{of~the~surface}\ru{поверхности}.
 
 \en{Vectors}\ru{Векторы}
 
@@ -571,7 +589,7 @@ to figure out
 
 \ru{\section{Пластины: Общие представления}}
 
-\label{para:overviewofplates}
+\label{section:overviewofplates}
 
 \begin{otherlanguage}{russian}
 
@@ -734,7 +752,7 @@ Reissner\ru{’а}
 
 \begin{otherlanguage}{russian}
 
-Это вторая из~двух задач, о~которых говорилось в~\sectionref{para:overviewofplates}.
+Это вторая из~двух задач, о~которых говорилось в~\sectionref{section:overviewofplates}.
 Силы
 
 ...

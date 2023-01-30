@@ -141,6 +141,18 @@
 \newcommand\boundary{\hspace{.1ex}\varpartial}
 %%\newcommand\boundary{\reflectbox{\textsf{6}}}
 
+\newcommand\oneone{1\hspace{-0.1ex}1}
+
+\newcommand\mathgray[1]{\mathcolor{gray}{#1}}
+
+\newcommand\matrixasletter[3]{%
+\underset%
+{\raisemath{.1em}{\scriptscriptstyle{\ensuremath{#2 \times #3}}}}%
+{\bigl[ \hspace{.2ex} #1 \hspace{.2ex} \bigr]}%
+}
+
+\newcommand\matrixasletterwithoutdimensions[1]{\bigl[ \hspace{.2ex} #1 \hspace{.2ex} \bigr]}
+
 \DeclareMathOperator*{\integral}{\scalerel*{\rotatebox{12}{$\!\textstyle\int\!$}}{\int}} % \rotatebox{8} for vertical line
 \DeclareMathOperator*{\ointegral}{\scalerel*{\rotatebox{12}{$\!\textstyle\oint\!$}}{\oint}} % \rotatebox{8} for vertical line
 
@@ -340,8 +352,8 @@
 \newcommand\internalwork{W^{\hspace{-0.12ex}\smthinternal}}
 \newcommand\externalwork{W^{\hspace{-0.12ex}\smthexternal}}
 
-\newcommand\potential{\Pi}
-\newcommand\kinetic{\mathrm{K}\hspace{-0.12ex}}
+\newcommand\potentialenergydensity{\Pi}
+\newcommand\kineticenergydensity{\mathrm{K}\hspace{-0.12ex}}
 
 \newcommand\differentialindex[1]{{\hspace{-0.1ex}\scalebox{.63}{$\mathcolor{black!70}{\partial}$} #1}}
 
@@ -785,13 +797,13 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \g@addto@macro\@openbib@code{\setlength{\itemsep}{.2em}}
 \makeatother
 
-\addto\captionsenglish{\def\bibliographyname{List of referenced publications}}
+\addto\captionsenglish{\def\bibliographyname{List of publications}}
 \addto\captionsenglish{\renewcommand{\bibname}{\bibliographyname}}
 
-\addto\captionsrussian{\def\bibliographyname{Список упомянутых публикаций}}
+\addto\captionsrussian{\def\bibliographyname{Список публикаций}}
 \addto\captionsrussian{\renewcommand{\bibname}{\bibliographyname}}
 
-%%\addto\captionsukrainian{\def\bibliographyname{Список згаданих публікацій}}
+%%\addto\captionsukrainian{\def\bibliographyname{Список публікацій}}
 %%\addto\captionsukrainian{\renewcommand{\bibname}{\bibliographyname}}
 
 % --------------------------------------------------

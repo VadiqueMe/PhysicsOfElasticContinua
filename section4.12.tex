@@ -2,7 +2,7 @@
 
 \ru{\section{Смешанные принципы стационарности}}
 
-\label{para:mixedvariationalprinciples}
+\label{section:mixedvariationalprinciples}
 
 \vspace{.2em}\begin{changemargin}{2\parindent}{\parindent}
 \bgroup % to change \parindent locally
@@ -42,7 +42,7 @@ Working independently of Hellinger and Prange, Eric Reissner published his famou
 \shoveleft{\mathcal{R}( \bm{u}, \hspace{-0.32ex} \linearstress ) \hspace{.2ex} =
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex}
 \Bigl[
-\linearstress \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \hspace{.1ex} \widehat{\potential}(\hspace{-0.1ex}\linearstress\hspace{.1ex})\hspace{-0.1ex} -
+\linearstress \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \hspace{.1ex} \widehat{\potentialenergydensity}(\hspace{-0.1ex}\linearstress\hspace{.1ex})\hspace{-0.1ex} -
 \bm{f} \hspace{-0.1ex} \dotp \bm{u}
 \hspace{.2ex} \Bigr] \hspace{-0.1ex} d\mathcal{V} \hspace{.5ex}
 - \hfill}
@@ -79,7 +79,7 @@ Working independently of Hellinger and Prange, Eric Reissner published his famou
 \shoveleft{\displaystyle \mathcal{W} \hspace{.2ex} \equiv
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex}
 \Bigl[
-\linearstress \dotdotp \hspace{-0.2ex} \Bigl( \hspace{-0.2ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \infinitesimaldeformation \hspace{-0.1ex} \Bigr) \hspace{-0.2ex} + \hspace{.1ex} \potential(\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex})\hspace{-0.1ex} -
+\linearstress \dotdotp \hspace{-0.2ex} \Bigl( \hspace{-0.2ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \infinitesimaldeformation \hspace{-0.1ex} \Bigr) \hspace{-0.2ex} + \hspace{.1ex} \potentialenergydensity (\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex})\hspace{-0.1ex} -
 \bm{f} \hspace{-0.1ex} \dotp \bm{u}
 \hspace{.2ex} \Bigr] \hspace{-0.1ex} d\mathcal{V} \hspace{.5ex}
 - \hfill}
@@ -92,7 +92,7 @@ Working independently of Hellinger and Prange, Eric Reissner published his famou
 \end{multline}
 
 Как и~в~принципе Рейсснера\hbox{--}Хеллингера, здесь нет ограничений ни~в~объёме, ни~на~поверхности, но добавляется третий независимый аргумент~$\infinitesimaldeformation$.
-Поскольку ${\widehat{\potential} = \linearstress \dotdotp \infinitesimaldeformation - \potential}$, то~\eqref{reissnerhellingervariationalprinciple} \en{and}\ru{и}~\eqref{huwashizuvariationalprinciple} кажутся почти одним и~тем~же.
+Поскольку ${\widehat{\potentialenergydensity} = \linearstress \dotdotp \infinitesimaldeformation - \potentialenergydensity}$, то~\eqref{reissnerhellingervariationalprinciple} \en{and}\ru{и}~\eqref{huwashizuvariationalprinciple} кажутся почти одним и~тем~же.
 
 \en{From}\ru{Из} \ru{принципа }\en{the }Hu\hbox{--}Washizu\ru{~(Ху\hbox{--}Васидзу)}\en{ principle} \en{ensues}\ru{вытекает} \en{the complete system of equations}\ru{вся полная система уравнений} \en{with boundary conditions}\ru{с~краевыми условиями}, так~как
 

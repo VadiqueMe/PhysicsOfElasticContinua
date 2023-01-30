@@ -1,27 +1,347 @@
-\en{\section{Collections of invariants of a~symmetric bivalent tensor}}
+\en{\section{Eigenvectors and eigenvalues}}
 
-\ru{\section{Коллекции инвариантов симметричного бивалентного тензора}}
+\ru{\section{Собственные векторы и собственные числа}}
 
-\label{para:variousinvariants}
+\label{section:eigenvectorseigenvalues}
 
-....
+\en{If}\ru{Если}
+\en{for}\ru{для}
+\en{some tensor}\ru{какого-нибудь тензора}~${^2\!\bm{B}}$
+\en{and}\ru{и}~\en{the~nonzero vector}\ru{ненулевого вектора}~${\bm{a}}$
 
-\subsection*{\inquotes{\en{The algebraic}\ru{Алгебраические}} \en{invariants}\ru{инварианты}}
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{eigenvalues equation}
+^2\!\bm{B} \dotp \bm{a} = \eigenvalue \bm{a}
+\hspace{.1ex} ,
+\:\:
+\bm{a} \neq \bm{0}
+\end{equation}
+\vspace{-1.33em}\begin{equation*}
+\scalebox{.92}{$
+{^2\!\bm{B}} \dotp \bm{a} = \eigenvalue \UnitDyad \dotp \bm{a}
+\hspace{.1ex} ,
+\;\;
+%%B_{i\hspace{-0.1ex}j} a_j = \eigenvalue \delta_{i\hspace{-0.1ex}j} a_j
+%%\hspace{.1ex} ,
+%%\;\;
+\left( \hspace{.1ex}
+{^2\!\bm{B} - \eigenvalue \UnitDyad}
+\hspace{.2ex} \right)
+\hspace{-0.1ex} \dotp \hspace{.1ex}
+\bm{a}
+= \bm{0}
+$}
+\hspace{.1ex} ,
+\end{equation*}
 
-...
+\vspace{-0.6em}\noindent
+\en{then}\ru{то}
+$\eigenvalue$
+\en{is called}\ru{называется}
+\en{the eigenvalue}\ru{собственным числом}
+(\en{or}\ru{или}
+\en{the characteristic value}\ru{характеристическим значением, eigenvalue})
+\en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$,
+\en{and}\ru{а}~\en{the axis~(direction)}\ru{ось~(направление)}
+\en{of~eigenvector}\ru{собственного вектора}~$\bm{a}$
+\en{is called}\ru{называется}
+\en{its}\ru{его}
+\ru{характеристической}\en{characteristic}
+\en{axis}\ru{осью}
+(\en{direction}\ru{направлением}).
 
-\subsection*{\inquotes{\en{The characteristic}\ru{Характеристические}} \en{invariants}\ru{инварианты}}
+\en{In components}\ru{В~компонентах}\en{,}
+\en{this is}\ru{это}
+\en{an~eigenvalue problem}\ru{задача на~собственные значения}
+\en{for a~matrix}\ru{для матрицы}.
+\en{A~homogeneous}\ru{Однородная} \en{system}\ru{система}
+\en{of linear equations}\ru{линейных уравнений}
+${ ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+- \eigenvalue \delta_{i\hspace{-0.1ex}j} )
+\hspace{.25ex} a_j \hspace{-0.1ex}
+= 0 }$
+\en{has}\ru{имеет}
+\en{a~non-zero solution}\ru{ненулевое решение}\ru{,}
+\en{if}\ru{если}
+\en{the determinant}\ru{определитель}
+\en{of a~matrix of~components}\ru{матрицы компонент}
+\begin{equation*}
+\smash{%
+   \underset{%
+      \raisebox{.15em}{%
+         \scalebox{.7}{ i, \hspace{.15ex}j }%
+      } %end of raisebox
+   } %end of underset's first parameter
+   { \operatorname{det} }%
+} %end of smash
+\hspace{.3ex}
+( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \eigenvalue \delta_{ i \hspace{-0.1ex} j } )
+\end{equation*}
+\en{is equal to zero}\ru{равен нулю}:
 
-\en{These are coefficients}\ru{Это коэффициенты}
-\en{of a~characteristic equation}\ru{характеристического уравнения}~\eqref{eigenvalues equation}.
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{chardetequation}
+\operatorname{det} \hspace{-0.4ex}
+\scalebox{.9}[.92]{$
+   \left[
+      \begin{array}{ccc}
+         B_{1\hspace{-0.1ex}1} \hspace{-0.16ex} - \eigenvalue & B_{12} & B_{13} \\
+         B_{21} & B_{22} \hspace{-0.16ex} - \eigenvalue & B_{23} \\
+         B_{31} & B_{32} & B_{33} \hspace{-0.16ex} - \eigenvalue
+      \end{array}
+   \hspace{.1ex}
+   \right]
+$} %end of scalebox
+\hspace{-0.4ex} = - \hspace{.2ex}
+\eigenvalue^3 \hspace{-0.25ex}
++ \firstcharacteristicinvariant \hspace{.25ex}
+\eigenvalue^2 \hspace{-0.25ex}
+- \secondcharacteristicinvariant \hspace{.25ex}
+\eigenvalue
++ \thirdcharacteristicinvariant
+= 0
+\hspace{.2ex} ;
+\end{equation}
 
-...
+\vspace{-0.25em}
+\begin{equation}\label{invariants:2}
+\begin{array}{r@{\hspace{.4em}}c@{\hspace{.4em}}l}
+\firstcharacteristicinvariant
+& = &
+\trace{^2\!\bm{B}} = B_{kk}
+= \scalebox{.92}[.96]{$ B_{1\hspace{-0.1ex}1}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{22}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{33} $}
+\hspace{.1ex} ,
+\\[.1em]
+%
+\secondcharacteristicinvariant
+& = &
+\scalebox{.92}[.96]{$ B_{1\hspace{-0.1ex}1}B_{22}
+\hspace{-0.2ex} - \hspace{-0.1ex}
+B_{12}B_{21}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{1\hspace{-0.1ex}1}B_{33}
+\hspace{-0.2ex} - \hspace{-0.1ex}
+B_{13}B_{31}
+\hspace{-0.2ex} + \hspace{-0.1ex}
+B_{22}B_{33}
+\hspace{-0.2ex} - \hspace{-0.1ex}
+B_{23}B_{32} $}
+\hspace{.1ex} ,
+\\[.1em]
+%
+\thirdcharacteristicinvariant
+& = &
+\operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
+= \hspace{.15ex}
+\underset{\raisebox{.15em}{%
+   \scalebox{.7}{ $i$,$\hspace{.15ex}j$ }%
+}}%
+{\operatorname{det}} \, B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{1i} B_{2j} B_{3k} \hspace{-0.1ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{i1} B_{\hspace{-0.1ex}j2} B_{k3}
+\hspace{.1ex} .
+\end{array}\end{equation}
 
-\subsection*{\inquotes{\en{The research}\ru{Исследовательские}} \en{invariants}\ru{инварианты}}
+\vspace{-0.4em}
+\en{The roots}\ru{Корни}
+\en{of the characteristic equation}\ru{характеристического уравнения}~\eqref{chardetequation}\:--- \en{the eigenvalues}\ru{собственные числа}\:---
+\en{don’t depend}\ru{не~зависят}
+\en{on the basis}\ru{от~базиса}
+\en{and therefore}\ru{и~потому}
+\en{are invariants}\ru{инварианты}.
 
-...
+\en{The coefficients}\ru{Коэффициенты}~\en{of~}\eqref{invariants:2}
+\en{also}\ru{тоже}
+\en{don’t depend}\ru{не~зависят}
+\en{on the basis}\ru{от~базиса};
+\en{they}\ru{они}
+\en{are called}\ru{называются}
+\en{the first}\ru{первым},
+\en{the second}\ru{вторым}
+\en{and}\ru{и}
+\en{the third}\ru{третьим}
+\en{characteristic}\ru{характеристическими}
+\en{invariants}\ru{инвариантами}
+\en{of a~tensor}\ru{тензора}.
+\en{The first invariant}\ru{Первый инвариант}~$\firstcharacteristicinvariant$
+\en{is the trace}\ru{это след}.
+\en{It was described}\ru{Он был описан}
+\en{earlier}\ru{ранее}
+\en{in}\ru{в}~\sectionref{section:operationswithtensors}.
+\textcolor{magenta}{%
+\en{The second invariant}\ru{Второй инвариант}~$\secondcharacteristicinvariant$
+\en{is}\ru{это}
+\en{the trace}\ru{след}
+\en{of~the~adjugate}\ru{присоединённой~(взаимной, adjugate)}
+\en{matrix}\ru{матрицы}\:---
+\en{the transpose}\ru{транспонированной}
+\en{of the cofactor matrix}\ru{????}
+\en{(of the matrix of algebraic complements)}\ru{(матрицы алгебраических дополнений)}
+} %end of textcolor
 
-\subsection*{\inquotes{\en{The harmonic}\ru{Гармонические}} \en{invariants}\ru{инварианты}}
+\begin{equation*}
+\secondcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} )
+\hspace{-0.12ex} \equiv \hspace{.1ex}
+\trace{\hspace{-0.33ex}%
+   \left( \operatorname{adj} B_{i\hspace{-0.1ex}j} \right)%
+} %end of trace
+\end{equation*}
+(\en{it’s hard, yeah}\ru{тяжеловато, да}).
+\en{Or}\ru{Или}
 
-...
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\secondcharacteristicinvariant\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \hspace{-0.2ex}
+\equiv \hspace{.12ex} \smalldisplaystyleonehalf \scalebox{.84}{$\left[
+\left( {^2\!\bm{B}} \tracedot\hspace{.1ex} \right)^{\!2} \hspace{-0.5ex}
+- {^2\!\bm{B}} \hspace{-0.2ex} \dotdotp \hspace{-0.25ex} {^2\!\bm{B}} \hspace{.16ex}
+\right]$} \hspace{-0.5ex}
+= \smalldisplaystyleonehalf \scalebox{.84}{$\left[
+\left( B_{kk} \right)^{\hspace{-0.1ex}2} \hspace{-0.4ex}
+- \hspace{-0.2ex} B_{i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.06ex}i} \hspace{.1ex}
+\right]$}
+\hspace{-0.25ex} .
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{And}\ru{И}~\en{the third invariant}\ru{третий инвариант}~$\thirdcharacteristicinvariant$
+\en{is}\ru{это}
+\en{the determinant}\ru{определитель~(детерминант)}
+\en{of a~matrix of tensor components}\ru{матрицы компонент тензора}:
+${ \thirdcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} ) \hspace{-0.1ex}
+\equiv \operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
+}$.
+
+\en{This}\ru{Это} \en{applies to all}\ru{относится ко~всем} \en{second complexity tensors}\ru{тензорам второй сложности}.
+\en{Besides that}\ru{Кроме того}, \en{in case}\ru{в~случае} \en{of a~symmetric tensor}\ru{симметричного тензора}\en{,} \en{the following is true}\ru{истинно следующее}:\\
+\indent 1$^{\circ}$\hspace{-1ex}.\, \en{The eigenvalues}\ru{Собственные значения} \en{of a~symmetric bivalent tensor}\ru{симметричного бивалентного тензора}\ru{\:---}\en{ are} \en{real numbers}\ru{действительные числа}.\\
+\indent 2$^{\circ}$\hspace{-1ex}.\, \en{The characteristic axes~(directions)}\ru{Характеристические оси~(направления)} \en{for different eigenvalues}\ru{для различных собственных значений} \en{are orthogonal}\ru{ортогональны} \en{to each other}\ru{друг другу}.
+
+\noindent
+${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
+\hspace{.6em} }$
+\en{The first statement}\ru{Первое утверждение} \en{is proved}\ru{доказывается} \en{by contradiction}\ru{от~противного}.
+\en{If}\ru{Если}~$\eigenvalue$\ru{\:---}\en{ is} \en{a~complex root}\ru{компл\'{е}ксный корень}\en{ of}~\eqref{chardetequation}\ru{,} \en{corresponding to eigenvector}\ru{соответствующий собственному вектору}~$\bm{a}$, \en{then}\ru{то} \en{conjugate number}\ru{сопряжённое число}~$\lineover{\eigenvalue}$ \en{will also be}\ru{тоже будет} \en{the root}\ru{корнем}\en{ of}~\eqref{chardetequation}.
+\ru{Соответствует ему }\en{Eigenvector}\ru{собственный вектор}~$\lineover{\bm{a}}$ \en{with }\ru{с~}\en{the conjugate}\ru{сопряжёнными} \en{components}\ru{компонентами}\en{ corresponds to it}.
+\en{And then}\ru{И~тогда}
+
+\nopagebreak\vspace{-0.5em}\begin{multline*}
+\eqref{eigenvalues equation}
+\:\,\Rightarrow\:\,
+\left(\hspace{.25ex} {\lineover{\bm{a}} \, \dotp} \hspace{.25ex}\right)
+\hspace{.5ex}
+{^2\!\bm{B}} \dotp \bm{a} \hspace{.2ex} = \eigenvalue \bm{a},
+\;\;
+\left(\hspace{.2ex}{\bm{a} \, \dotp}\hspace{.2ex}\right)
+\hspace{.5ex}
+{^2\!\bm{B}} \dotp \lineover{\bm{a}} \hspace{.2ex} = \hspace{.1ex} \lineover{\eigenvalue} \, \lineover{\bm{a}}
+\:\;\Rightarrow
+\\[-0.1em]
+%
+\Rightarrow\;\:
+\lineover{\bm{a}} \dotp {^2\!\bm{B}} \dotp \bm{a} - \bm{a} \dotp {^2\!\bm{B}} \dotp \lineover{\bm{a}} \hspace{.2ex} = \left(\hspace{.1ex}{\eigenvalue - \lineover{\eigenvalue}}\hspace{.2em}\right)\hspace{-0.1em} \bm{a} \dotp \lineover{\bm{a}}
+\hspace{.2ex} .
+\end{multline*}
+
+\vspace{-0.2em}\noindent
+\en{Here}\ru{Здесь} \en{on the left}\ru{слева}\en{ is}\ru{\:---} \en{zero}\ru{нуль}, \en{because}\ru{поскольку} ${\bm{a} \dotp {^2\!\bm{B}} \dotp \bm{c} = \bm{c} \dotp {^2\!\bm{B}^{\T}\!} \dotp \bm{a}}$ \en{and}\ru{и}~${{^2\!\bm{B}} = {^2\!\bm{B}^{\T}\!}}$.
+\en{Thence}\ru{Поэтому} ${\eigenvalue = \lineover{\eigenvalue}}$, \en{that is}\ru{то~есть} \en{a~real number}\ru{действительное число}.
+
+\en{Just as simple}\ru{Так~же просто} \en{looks}\ru{выглядит} \en{the proof}\ru{доказательство} \en{of~}2$^{\circ}$:
+
+\nopagebreak\vspace{-0.5em}\begin{multline*}
+\tikzmark{BeginEqualsZeroBrace} {\bm{a}_2 \dotp {^2\!\bm{B}} \dotp \bm{a}_1 - \bm{a}_1 \dotp {^2\!\bm{B}} \dotp \bm{a}_2} \hspace{.1ex} \tikzmark{EndEqualsZeroBrace}
+= \hspace{.12ex} \left(\hspace{.1ex}{\eigenvalue_1 \hspace{-0.25ex} - \eigenvalue_2}\right) \bm{a}_1 \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a}_2 \hspace{.1ex} , \;
+\eigenvalue_1 \hspace{-0.1ex} \neq \hspace{.1ex} \eigenvalue_2
+\;\Rightarrow
+\\
+%
+\Rightarrow\;
+\bm{a}_1 \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a}_2 = 0
+\hspace{.1ex} .
+\hspace{4em} \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);
+\end{multline*}
+\AddUnderBrace[line width=.75pt][0.1ex,-0.1ex]%
+{BeginEqualsZeroBrace}{EndEqualsZeroBrace}{${\scriptstyle =\;0}$}
+
+\vspace{-1.4em}
+\en{If}\ru{Если} \en{the roots}\ru{корни} \en{of the characteristic equation}\ru{характеристического уравнения} (\en{the eigenvalues}\ru{собственные числа}) \en{are different}\ru{различны}, \en{then}\ru{то} \en{one unit long eigenvectors}\ru{собственные векторы единичной длины}~${\mathboldae_i}$ \en{compose}\ru{составляют} \en{an~orthonormal basis}\ru{ортонормальный базис}.
+\en{What are}\ru{Каков\'{ы}~же} \en{tensor components}\ru{компоненты тензора} \en{in such a~basis}\ru{в~таком базисе}?
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}\begin{array}{c}
+{^2\!\bm{B}} \dotp \mathboldae_k = \hspace{.2ex} \scalebox{0.82}{$\tikzcancel[blue]{$\displaystyle\sum_k^{~}$}$}\: \eigenvalue_{\hspace{-0.15ex}k} \hspace{.1ex} \mathboldae_k \hspace{.1ex}, \:\: k =\hspace{-0.1ex} 1, 2, 3
+\\[.9em]
+%
+{^2\!\bm{B}} \dotp \tikzmark{BeginEqualsEBrace} {\mathboldae_k \mathboldae_k} \tikzmark{EndEqualsEBrace} = \hspace{-0.1ex} \scalebox{0.9}{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} \eigenvalue_{\hspace{-0.15ex}k} \hspace{.1ex} \mathboldae_k \mathboldae_k
+%%{^2\!\bm{B}} = \displaystyle \sum_{\smash{k}} \eigenvalue_k \mathboldae_k \mathboldae_k
+\end{array}\end{equation*}
+\AddUnderBrace[line width=.75pt]%
+{BeginEqualsEBrace}{EndEqualsEBrace}{${\scriptstyle \UnitDyad}$}
+
+\vspace{-0.25em}
+\en{In a~common case}\ru{В~общем случае} ${B_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_{\hspace{-0.1ex}j}}$.
+\en{In the basis}\ru{В~базисе} ${\mathboldae_1}$, ${\mathboldae_2}$, ${\mathboldae_3}$ \en{of mutually perpendicular}\ru{взаимно перпендикулярных} \en{one unit long}\ru{единичной длины} ${\mathboldae_i \dotp \mathboldae_{\hspace{-0.1ex}j} \hspace{-0.15ex} = \delta_{i\hspace{-0.1ex}j}}$ \en{eigenvectors}\ru{собственных векторов} \en{of a~symmetric tensor}\ru{симметричного тензора}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}\begin{array}{c}
+B_{1\hspace{-0.1ex}1} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_1 = \eigenvalue_1
+\hspace{.1ex} ,
+\\[.1em]
+B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_2 = 0
+\hspace{.1ex} ,
+\\[-0.2em]
+\ldots
+\end{array}\end{equation*}
+
+\vspace{-0.3em}\noindent
+\en{The~matrix of components}\ru{Матрица компонент}
+\en{is diagonal}\ru{диагональна}
+\en{and}\ru{и}~${ {^2\!\bm{B}} = \sum \hspace{-0.2ex}
+\eigenvalue_{\hspace{-0.15ex}i} \hspace{.1ex} \mathboldae_i \mathboldae_i }$.
+
+\en{Here}\ru{Здесь}
+\en{goes}\ru{идёт}
+\en{a~summation}\ru{суммирование}
+\en{over the three repeating indices}\ru{по~трём повторяющимся индексам},
+\en{because}\ru{ведь}
+\ru{используется }\en{the special basis}\ru{особенный базис}\en{ is used}.
+
+\en{The case of multiplicity}\ru{Случай кратности}
+\en{of the eigenvalues}\ru{собственных значений}
+\en{is considered}\ru{рассматривается}
+\en{in the limit}\ru{в~пределе}.
+
+\en{If simpler}\ru{Если попроще}
+${\eigenvalue_2 \hspace{-0.16ex} \to \eigenvalue_1}$,
+\en{then}\ru{то}
+\en{any linear combination}\ru{любая линейная комбинация}
+\en{of vectors}\ru{векторов}
+${\bm{a}_1}$ \en{and}\ru{и} ${\bm{a}_2}$
+\en{in the limit}\ru{в~пределе}
+\en{satisfies the equation}\ru{удовлетворяет уравнению}
+\eqref{eigenvalues equation}.
+
+\en{Then}\ru{Тогда}
+\en{any}\ru{любая}
+\en{axis}\ru{ось}
+\en{in the plane}\ru{в~плоскости}
+(${\bm{a}_1, \bm{a}_2}$)
+\en{becomes characteristic}\ru{становится собственной}.
+
+\en{When}\ru{Когда~же}
+\en{the three eigenvalues}\ru{все три собственных числ\'{а}}
+\en{coincide}\ru{совпадают},
+\en{then}\ru{то}
+\en{any axis}\ru{любая ось}
+\en{in the space}\ru{в~пространстве}
+\en{is characteristic}\ru{собственная}.
+
+\en{Then}\ru{Тогда}
+${{^2\!\bm{B}} = \eigenvalue \UnitDyad}$,
+\en{such tensors}\ru{такие тензоры}
+\en{are called}\ru{называются}
+\en{isotropic}\ru{изотропными}
+\en{or}\ru{или}
+\inquotesx{\en{spherical}\ru{шаровыми}}.
 

@@ -31,14 +31,14 @@
 
 \ru{\section{Первый закон термодинамики}}
 
-\label{para:firstlaw.thermoelasticity}
+\label{section:firstlaw.thermoelasticity}
 
 \en{\dropcap{H}{itherto}}\ru{\dropcap{Д}{о}~сих~пор} \en{modeling}\ru{моделирование} \en{was limited to mechanics only}\ru{было ограничено только механикой}.
 \en{It is widely known}\ru{Широк\'{о} известно}, \en{however}\ru{однако}, \en{that}\ru{что} \en{a~change in~temperature}\ru{изменение температуры} \en{causes a~deformation}\ru{вызывает деформацию}.
 \en{Temperature}\ru{Температурная} \en{deformation}\ru{деформация} \en{and}\ru{и}~\en{stress}\ru{напряжение} \en{often}\ru{часто} \en{play}\ru{играют} \en{the~primary role}\ru{первичную роль} \en{and}\ru{и}~\en{can lead}\ru{могут приводить} \en{to~a~breakage}\ru{к~поломке}.
 
 \en{So effective in~mechanics}\ru{Столь эффективный в~механике}, \en{the principle of~virtual work}\ru{принцип виртуальной работы} \en{is not~applicable}\ru{не~примен\'{и}м} \en{to~thermomechanics}\ru{к~термо\-механике}%
-\footnote{\en{Analogue}\ru{Аналог} \en{of the~principle of virtual work}\ru{принципа виртуальной работы} \en{will be presented}\ru{будет представлен} \en{below}\ru{ниже} \en{in}\ru{в}~\sectionref{para:variationalformulations.thermoelasticity}.}\hbox{\hspace{-0.5ex}.}
+\footnote{\en{Analogue}\ru{Аналог} \en{of the~principle of virtual work}\ru{принципа виртуальной работы} \en{will be presented}\ru{будет представлен} \en{below}\ru{ниже} \en{in}\ru{в}~\sectionref{section:variationalformulations.thermoelasticity}.}\hbox{\hspace{-0.5ex}.}
 \en{Considering thermal effects}\ru{Рассматривая тепловые эффекты}, \en{it’s possible}\ru{возможно} \en{to~lean on}\ru{опираться на}~\en{the~two laws of~thermodynamics}\ru{два закона термодинамики}.
 
 \en{The~first}\ru{Первый}, \en{discovered by}\ru{открытый}
@@ -250,7 +250,7 @@ $}
 \boldnabla \dotp \cauchystress \hspace{.12ex}
 + \rho \hspace{.15ex} \bigl( \hspace{.1ex} \bm{f} \hspace{-0.15ex} - \mathdotdotabove{\currentlocationvector} \hspace{.3ex} \bigr) \hspace{-0.2ex}
 = \hspace{.1ex} \bm{0}
-\hspace{.5em}\eqrefwithchapterdotsection{balanceoftranslationalmomentum.local}{chapter:nonlinearcontinuum}{para:balance.elasticcontinuum}
+\hspace{.5em}\eqrefwithchapterdotsection{balanceoftranslationalmomentum.local}{chapter:nonlinearcontinuum}{section:balance.elasticcontinuum}
 \end{equation*}
 
 \nopagebreak\vspace{-0.4em}\noindent
@@ -273,7 +273,7 @@ $}
 
 \ru{\section{Второй закон}}
 
-\label{para:secondlaw.thermoelasticity}
+\label{section:secondlaw.thermoelasticity}
 
 \ru{Распространено }\en{The~following concept}\ru{следующее представление} \en{of~laws of~thermodynamics}\ru{о~законах термодинамики}\en{ is widespread}:
 \en{change in internal energy}\ru{изменение внутренней энергии}~${dE}$ \en{is equal to}\ru{равно} \en{the~sum of}\ru{сумме} \en{work of~external forces}\ru{работы внешних сил}~${\partial\hspace{.1ex}\externalwork\hspace{-0.1ex}}$ \en{and}\ru{и}~\en{supplied heat}\ru{подведённого тепла}~${\partial\hspace{.1ex}Q}$
@@ -380,7 +380,7 @@ a \equiv e - \temperaturefield s
 
 \ru{\section{Определяющие уравнения}}
 
-\label{para:constitutiveequations.thermoelasticity}
+\label{section:constitutiveequations.thermoelasticity}
 
 \begin{otherlanguage}{russian}
 
@@ -409,7 +409,7 @@ a \narroweq a(\bm{C} \hspace{-0.1ex} , \temperaturefield)
 
 \ru{\section{Уравнение теплопроводности}}
 
-\label{para:heatequation}
+\label{section:heatequation}
 
 \en{In}\ru{В}~\en{mathematical physics,}\ru{математической физике}
 \en{a~parabolic differential equation}\ru{параболическое дифференциальное уравнение},
@@ -496,7 +496,7 @@ $}%
 
 \ru{\section{Линейная термоупругость}}
 
-\label{para:linearthermoelasticity}
+\label{section:linearthermoelasticity}
 
 \begin{otherlanguage}{russian}
 
@@ -512,7 +512,7 @@ $}%
 
 \ru{\section{Уравнения в смещениях}}
 
-\label{para:equationsfordisplacements.thermoelasticity}
+\label{section:equationsfordisplacements.thermoelasticity}
 
 \begin{otherlanguage}{russian}
 
@@ -528,7 +528,7 @@ $}%
 
 \ru{\section{Температурное напряжение}}
 
-\label{para:thermalstress}
+\label{section:thermalstress}
 
 \begin{otherlanguage}{russian}
 
@@ -547,7 +547,7 @@ $}%
 
 \ru{\section{Вариационные формулировки}}
 
-\label{para:variationalformulations.thermoelasticity}
+\label{section:variationalformulations.thermoelasticity}
 
 \begin{otherlanguage}{russian}
 
@@ -561,7 +561,7 @@ $}%
 
 ...
 
-Для переноса вариационного метода на термоупругость достаточно заменить \en{in the}\ru{в~принципе}~(Lagrange\ru{’а})\en{ principle} \en{of~minimum potential energy}\ru{минимума потенциальной энергии} ${\potential(\bm{C})}$ на \ru{свободную энергию }Helmholtz\ru{’а}\en{ free energy} ${A(\bm{C}\hspace{-0.12ex}, \temperaturefield)}$, а в~принципе Reissner’а--Hellinger’а заменить ${\widehat{\potential}(\hspace{-0.1ex}\cauchystress\hspace{.12ex})}$ на \ru{свободную энтальпию }Gibbs\ru{’а}\en{ free enthalpy} (\en{Gibbs function}\ru{функцию Gibbs’а}) ${G(\hspace{-0.1ex}\cauchystress\hspace{.12ex}, \temperaturefield)}$.
+Для переноса вариационного метода на термоупругость достаточно заменить \en{in the}\ru{в~принципе}~(Lagrange\ru{’а})\en{ principle} \en{of~minimum potential energy}\ru{минимума потенциальной энергии} ${\potentialenergydensity (\bm{C})}$ на \ru{свободную энергию }Helmholtz\ru{’а}\en{ free energy} ${A(\bm{C}\hspace{-0.12ex}, \temperaturefield)}$, а в~принципе Reissner’а--Hellinger’а заменить ${\widehat{\potentialenergydensity}(\hspace{-0.1ex}\cauchystress\hspace{.12ex})}$ на \ru{свободную энтальпию }Gibbs\ru{’а}\en{ free enthalpy} (\en{Gibbs function}\ru{функцию Gibbs’а}) ${G(\hspace{-0.1ex}\cauchystress\hspace{.12ex}, \temperaturefield)}$.
 
 %~%~%{\small
 \en{The}\ru{Свободная энергия} \emph{Gibbs\ru{’а}\en{ free energy}}

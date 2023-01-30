@@ -20,7 +20,7 @@
 
 \ru{\section{Введение в линейную микрополярную теорию}}
 
-\label{para:introtolinearmicropolar}
+\label{section:introtolinearmicropolar}
 
 %% micropolar elasticity, couple\hbox{-}stress elasticity, asymmetric (non\hbox{-}symmetric) elasticity, Cosserat elasticity
 
@@ -411,7 +411,7 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$
 \en{of any virtual deformations}\ru{любых виртуальных деформаций}
 ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}${\variation{\wrynesstensor} = \hspace{-0.1ex} {^2\bm{0}}}$.
 
-\en{In}\ru{В}~\chapterdotsectionref{chapter:nonlinearcontinuum}{para:stressesAsLagrangeMultipliers} \en{for the~momentless continuum}\ru{для безмоментной среды}, \en{stresses appear as Lagrange multipliers}\ru{напряжения появляются как множители Lagrange’а} \en{in the~principle of~virtual work}\ru{в~принципе виртуальной работы}, \textcolor{magenta}{\en{when}\ru{когда}}~${\mathcolor{magenta}{\variation{\internalwork} \hspace{-0.2ex} = 0}}$.
+\en{In}\ru{В}~\chapterdotsectionref{chapter:nonlinearcontinuum}{section:stressesAsLagrangeMultipliers} \en{for the~momentless continuum}\ru{для безмоментной среды}, \en{stresses appear as Lagrange multipliers}\ru{напряжения появляются как множители Lagrange’а} \en{in the~principle of~virtual work}\ru{в~принципе виртуальной работы}, \textcolor{magenta}{\en{when}\ru{когда}}~${\mathcolor{magenta}{\variation{\internalwork} \hspace{-0.2ex} = 0}}$.
 \en{The~same here}\ru{Так~же и~тут}:
 
 \nopagebreak\vspace{-0.3em}
@@ -454,7 +454,7 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 \en{Using}\ru{Используя}
 
 \nopagebreak\vspace{-1em}\begin{equation*}
-\eqrefwithchapterdotsection{pseudovectorinvariant}{chapter:mathapparatus}{para:tensors.symmetric+skewsymmetric}
+\eqrefwithchapterdotsection{pseudovectorinvariant}{chapter:mathapparatus}{section:tensors.symmetric+skewsymmetric}
 \:\Rightarrow\,
 \bm{A}_{\Xcompanion} \hspace{-0.1ex} = - \hspace{.1ex} \bm{A} \dotdotp \permutationsparitytensor
 \hspace{.1ex} ,
@@ -585,8 +585,8 @@ ${\variation{\distortiontensor} = \hspace{-0.1ex} {^2\bm{0}}}$ \en{and }\ru{и~}
 \begin{otherlanguage}{russian}
 
 В~этой книге упругой называется среда с~потенциальными внутренними силами:
-${\variation{\internalwork} = - \hspace{.16ex} \variation{\potential}}$,
-где~$\potential$\:--- энергия деформации на~единицу объёма
+${\variation{\internalwork} = - \hspace{.16ex} \variation{\potentialenergydensity}}$,
+где~$\potentialenergydensity$\:--- энергия деформации на~единицу объёма
 (\en{continuing to~model}\ru{продолжая моделировать} \en{the~geometrically linear material}\ru{геометрически линейный материал}, ${\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}\hspace{.12ex}}$).
 
 Имея соотношения (...)
@@ -595,17 +595,17 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potential}}$,
 
 \begin{multline}\label{micropolar.constitutiveequations}
 \hspace*{4em}
-\variation{\potential} = - \hspace{.25ex} \variation{\internalwork} \hspace{-0.15ex}
+\variation{\potentialenergydensity} = - \hspace{.25ex} \variation{\internalwork} \hspace{-0.15ex}
 = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.25ex}
 + \hspace{.1ex} \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T}
 \hspace{.6ex} \Rightarrow
 \\[-0.1em]
 %
 \Rightarrow \hspace{.88ex}
-\forcestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potential^{\mathstrut}}}{\partial \distortiontensor}$}
+\forcestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potentialenergydensity^{\mathstrut}}}{\partial \distortiontensor}$}
 \hspace{.15ex} ,
 \hspace{.8ex}
-\couplestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potential^{\mathstrut}}}{\partial \wrynesstensor}$}
+\couplestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potentialenergydensity^{\mathstrut}}}{\partial \wrynesstensor}$}
 \hspace{.2ex} .
 \hspace*{3.33em}
 \end{multline}
@@ -643,12 +643,12 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potential}}$,
 
 \noindent
 преобразуем выражение
-${\variation{\potential} = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.3ex}
+${\variation{\potentialenergydensity} = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.3ex}
 + \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.25ex}}$
 как
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
-\variation{\potential} = \ldots
+\variation{\potentialenergydensity} = \ldots
 \end{equation}
 
 ...
@@ -683,17 +683,17 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \begin{array}{c}
-\distortiontensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potential}^{\mathstrut}}}{\partial \forcestresstensor}$}
+\distortiontensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potentialenergydensity}^{\mathstrut}}}{\partial \forcestresstensor}$}
 \hspace{.15ex} ,
 \hspace{.8ex}
-\wrynesstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potential}^{\mathstrut}}}{\partial \couplestresstensor}$}
+\wrynesstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potentialenergydensity}^{\mathstrut}}}{\partial \couplestresstensor}$}
 \hspace{.2ex} ,
 \\[.8em]
 %
-\widehat{\potential}(\hspace{-0.1ex} \forcestresstensor, \couplestresstensor \hspace{.12ex}) \hspace{-0.12ex}
+\widehat{\potentialenergydensity}(\hspace{-0.1ex} \forcestresstensor, \couplestresstensor \hspace{.12ex}) \hspace{-0.12ex}
 = \forcestresstensor \dotdotp \distortiontensor^{\T} \hspace{-0.25ex}
 + \hspace{.1ex} \couplestresstensor \dotdotp \wrynesstensor^{\T} \hspace{-0.2ex}
-- \hspace{.1ex} \potential(\distortiontensor , \wrynesstensor \hspace{.12ex})
+- \hspace{.1ex} \potentialenergydensity (\distortiontensor , \wrynesstensor \hspace{.12ex})
 \hspace{.1ex} .
 \end{array}
 \end{equation}
@@ -702,7 +702,7 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 
 material’s intrinsic (internal) length scale $\elcursive$
 
-Если устремить $\elcursive$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\potential$, а~с~ним и моментные напряжения~$\couplestresstensor$.
+Если устремить $\elcursive$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\potentialenergydensity$, а~с~ним и моментные напряжения~$\couplestresstensor$.
 Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$, тогда тензор~${\hspace{-0.1ex}\forcestresstensor}$ становится симметричным:
 ${\boldnabla \dotp {\color{black!66}{\couplestresstensor}} \hspace{.1ex}
 + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex}
@@ -726,7 +726,7 @@ ${{\color{black!66}{\bm{m}}} = \bm{0} \,\Rightarrow \hspace{.1ex} \forcestresste
 
 \ru{\section{Уравнения совместности}}
 
-\label{para:compatibilityequations.cosseratcontinuum}
+\label{section:compatibilityequations.cosseratcontinuum}
 
 \en{Having}\ru{Имея} \en{identity}\ru{тождество}
 ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm{0}}$~${\forall \bm{a}}$
@@ -771,7 +771,7 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 (минимальность энергии,
 \en{the}\ru{теорема} Clapeyron’\en{s}\ru{а}\en{ theorem},
 \en{the reciprocal work theorem}\ru{теорема о~взаимности работ}
-\en{et~al.}\ru{и~др.}\:--- \chapterdotsectionref{chapter:genericmechanics}{para:statics}),
+\en{et~al.}\ru{и~др.}\:--- \chapterdotsectionref{chapter:genericmechanics}{section:statics}),
 справедливые
 \en{for}\ru{для}
 \en{the continual}\ru{континуальных}
@@ -793,7 +793,7 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 
 \ru{\section{Псевдо\rucontinuum Cosserat}}
 
-\label{para:caseoflatenttrihedron.smalldisplacementsandrotations}Paul van Dyk - We Are Alive
+\label{section:caseoflatenttrihedron.smalldisplacementsandrotations}Paul van Dyk - We Are Alive
 
 \en{Besides}\ru{Помимо}
 \en{the~model with free rotation}\ru{модели со~свободным вращением}
@@ -822,11 +822,11 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 
 \begin{otherlanguage}{russian}
 
-Равенство~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию~$\distortiontensor$) возможно понимать как внутреннюю связь~(\chapterdotsectionref{chapter:nonlinearcontinuum}{para:internalconstraints}).
-Аргумент~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$ исчезает из~энергии~$\potential$, соотношение упругости для~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано.
+Равенство~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$~(симметрию~$\distortiontensor$) возможно понимать как внутреннюю связь~(\chapterdotsectionref{chapter:nonlinearcontinuum}{section:internalconstraints}).
+Аргумент~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$ исчезает из~энергии~$\potentialenergydensity$, соотношение упругости для~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано.
 Его место в~полной системе занимает уравнение связи.
 
-В~классической (линейной безмоментной) теории упругости полная система сводится к~одному уравнению для~вектора~$\fieldofdisplacements$~(\chapterdotsectionref{chapter:linearclassicalelasticity}{para:equationsfordisplacements.linearelasticity}).
+В~классической (линейной безмоментной) теории упругости полная система сводится к~одному уравнению для~вектора~$\fieldofdisplacements$~(\chapterdotsectionref{chapter:linearclassicalelasticity}{section:equationsfordisplacements.linearelasticity}).
 В~моментной теории
 
 ...
@@ -839,7 +839,7 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 
 \ru{\section{Плоская деформация}}
 
-\label{para:planedeformation.cosseratcontinuum}
+\label{section:planedeformation.cosseratcontinuum}
 
 \begin{otherlanguage}{russian}
 
@@ -860,7 +860,7 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = {^2}\bm
 
 \ru{\section{Нелинейная теория}}
 
-\label{para:nonlinear.micropolar}
+\label{section:nonlinear.micropolar}
 
 \begin{otherlanguage}{russian}
 
@@ -1031,7 +1031,7 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 = \hspace{.1ex} 0 \hspace{.1ex} .
 \end{multline}
 
-\textcolor{magenta}{После тех~же преобразований, что и~в~\sectionref{para:introtolinearmicropolar}, получаем}
+\textcolor{magenta}{После тех~же преобразований, что и~в~\sectionref{section:introtolinearmicropolar}, получаем}
 
 ...
 
@@ -1053,11 +1053,11 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$\:--- работа внутренн�
 
 \ru{\section{Нелинейная модель со стеснённым вращением}}
 
-\label{para:caseoflatenttrihedron.largedisplacementsandrotations}
+\label{section:caseoflatenttrihedron.largedisplacementsandrotations}
 
 \begin{otherlanguage}{russian}
 
-Вспомним переход к~модели со~стеснённым вращением в~линейной теории~(\sectionref{para:caseoflatenttrihedron.smalldisplacementsandrotations}).
+Вспомним переход к~модели со~стеснённым вращением в~линейной теории~(\sectionref{section:caseoflatenttrihedron.smalldisplacementsandrotations}).
 Разделились соотношения упругости для~симметричной части тензора силового напряжения ${\forcestresstensor^{\hspace{.32ex}\mathsf{S}}}\hspace{-0.2ex}$ и~кососимметричной его части~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$.
 Возникла внутренняя связь~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \bm{0}}$
 

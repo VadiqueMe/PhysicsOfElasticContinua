@@ -4,17 +4,17 @@
 
 \nopagebreak\vspace{-2.4em}
 \noindent
-${
-\small \linearstress
+\small ${%
+\linearstress
 \hspace{.1ex} =
-\displaystyle\frac{ \raisemath{-0.2em}{\partial \hspace{.1ex} \potential} }%
+\displaystyle\frac{ \raisemath{-0.2em}{\partial \hspace{.1ex} \potentialenergydensity} }%
 { \partial \infinitesimaldeformation }
 = \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation
 = \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \stiffnesstensor
 }$
 \vspace{.5em}
 
-\label{para:hookelaw}
+\label{section:hookelaw}
 
 \nopagebreak
 \en{That}\ru{То}
@@ -22,13 +22,17 @@ ${
 \en{between}\ru{между}
 \en{the stress}\ru{напряжением}
 \en{and}\ru{и}
-\en{the deformation~(strain)}\ru{деформацией}, \en{which}\ru{которое} \en{in}\ru{в}
-\en{the~}\hbox{XVII$^{\hspace{.15ex}\textrm{\en{th}\ru{ом}}}$\hspace{-0.12em}}~\en{century}\ru{веке}
-Robert Hooke\ru{ Роберт Гук}
+\en{the deformation~(strain)}\ru{деформацией},
+\en{which}\ru{которое}
+\en{in}\ru{в}~\en{the~}\hbox{XVII$^{\hspace{.15ex}\textrm{\en{th}\ru{ом}}}$\hspace{-0.12em}}~\en{century}\ru{веке}
+Robert Hooke\ru{~(Роберт Гук)}
 \en{could only phrase}\ru{мог высказать лишь}
-\en{pretty vaguely}\ru{весьма расплывчато}\footnote{\hspace*{.2em}\inquotesx{\textit{ceiiinosssttuu, id est, Ut tensio sic vis}}[---]
+\en{pretty vaguely}\ru{весьма расплывчато}\footnote{%
+\hspace*{.2em}\inquotesx{\textit{ceiiinosssttuu, id est, Ut tensio sic vis}}[---]
 \bookauthor{Robert Hooke}.
-\href{https://play.google.com/books/reader?id=LAtPAAAAcAAJ&pg=GBS.PA1}{Lectures de Potentia Restitutiva, Or of Spring Explaining the Power of Springing Bodies. London, 1678. \howmanypages{56~pages.}}%
+%%%https://play.google.com/books/reader?id=LAtPAAAAcAAJ&pg=GBS.PA1
+\href{https://www.google.com/books/edition/Lectures_de_Potentia_Restitutiva_Or_of_S/LAtPAAAAcAAJ}%
+{Lectures de Potentia Restitutiva, Or of Spring Explaining the Power of Springing Bodies. London, 1678. \howmanypages{56~pages.}}%
 }\hbox{\hspace{-0.32em},}\hspace{.2em}
 \en{is written}\ru{записано}
 \en{as part}\ru{как часть}
@@ -38,44 +42,14 @@ Robert Hooke\ru{ Роберт Гук}
 \en{via the~stiffness tensor}\ru{тензором жёсткости}
 
 \nopagebreak\vspace{-0.1em}
-\begin{equation}
-   \stiffnesstensor
-   \hspace{.1ex} =
-   \displaystyle\frac{
-      \raisemath{-0.1em}{ \partial^2 \hspace{.1ex} \potential }
-   }{
-      \raisemath{-0.1em}{
-         \partial \infinitesimaldeformation \hspace{.1ex}
-         \partial \infinitesimaldeformation
-      }
-   }
-   = \hspace{-0.1ex}
-   A^{i\hspace{-0.1ex}jk\hspace{.06ex}l} \hspace{.16ex}
-   \locationvector_\differentialindex{i}
-   \locationvector_\differentialindex{\hspace{-0.1ex}j}
-   \locationvector_\differentialindex{k}
-   \locationvector_\differentialindex{l}
-   \hspace{.1ex} ,
-   \hspace{1em}
-   %
-   A^{i\hspace{-0.1ex}jk\hspace{.06ex}l} \hspace{-0.16ex}
-   =
-   \displaystyle\frac{
-      \raisemath{-0.1em}{ \partial^2 \hspace{.1ex} \potential }
-   }%
-   {
-      \raisemath{-0.1em}{\partial \varepsilon_{ i\hspace{-0.1ex}j } \hspace{.1ex}
-      \partial \varepsilon_{ \hspace{-0.1ex}k\hspace{.06ex}l }}
-   }
-   \hspace{.16ex} .
-\end{equation}
+\input{stiffnesstensor.tex}
 
 \vspace{-0.1em}
 \en{The~stiffness tensor}\ru{Тензор жёсткости}
 \en{is}\ru{есть}
 \en{the~partial derivative}\ru{частная производная}
 \en{of~the~scalar}\ru{скалярной}
-\en{elastic potential energy density}\ru{плотности упругой потенциальной энергии}~$\potential$
+\en{elastic potential energy density}\ru{плотности упругой потенциальной энергии}~$\potentialenergydensity$
 \en{twice}\ru{дважды}
 \en{by}\ru{по}
 \en{the same}\ru{тому~же}
@@ -117,8 +91,8 @@ ${
    = A^{j\hspace{-0.06ex}ik\hspace{.06ex}l} \hspace{-0.2ex}
    = A^{i\hspace{-0.1ex}jl\hspace{-0.06ex}k}
 }$~(${
-   = A^{j\hspace{-0.06ex}i\hspace{.06ex}l\hspace{-0.06ex}k}}$%
-).
+   {} = A^{j\hspace{-0.06ex}i\hspace{.06ex}l\hspace{-0.06ex}k}
+}$).
 \en{This}\ru{Это}
 \en{reduces}\ru{снижает}
 \en{the number}\ru{число}
@@ -145,7 +119,7 @@ ${
 $x$,\:$y$,\:$z$
 \en{the quadratic form}\ru{квадратичная форма}
 \en{of elastic energy density}\ru{плотности упругой энергии}
-${\potential( \hspace{-0.1ex}
+${\potentialenergydensity ( \hspace{-0.1ex}
    \infinitesimaldeformation
    \hspace{-0.1ex} )
    \hspace{-0.2ex} = \hspace{.1ex}
@@ -175,6 +149,7 @@ ${\potential( \hspace{-0.1ex}
 %
 \hspace{.2em}
 + 2 \hspace{.2ex} \bigl[ \hspace{.1ex}
+%
 \varepsilon_{x} \hspace{.1ex}
 \bigl( a_{12} \varepsilon_{y} \hspace{-0.2ex}
 + a_{13} \varepsilon_{z} \hspace{-0.2ex}
@@ -203,6 +178,7 @@ a_{34} \varepsilon_{xy} \hspace{-0.2ex}
 a_{45} \varepsilon_{xz} \hspace{-0.2ex}
 + a_{46} \varepsilon_{yz} \bigr) \hspace{-0.11ex}
 + a_{56} \varepsilon_{xz} \varepsilon_{yz}
+%
 \hspace{.1ex} \bigr]
 \hspace{.1ex}
 .
@@ -230,7 +206,7 @@ ${z = \constant}$.
 $x$
 \en{and}\ru{и}~$y$
 \en{does not change}\ru{не меняет}
-\en{the potential energy density}\ru{плотность потенциальной энергии}~${\potential}.
+\en{the potential energy density}\ru{плотность потенциальной энергии}~${\potentialenergydensity}.
 %
 \en{And}\ru{А}
 \en{it’s possible}\ru{это возможно}
@@ -239,7 +215,7 @@ $x$
 
 \noindent
 \begin{equation}\label{zeroconstants:oneplaneofsymmetry}
-\potential \hspace{.1ex}
+\potentialenergydensity \hspace{.1ex}
 \raisemath{-0.2em} {
     \Bigr\vert
 }_{\substack{
@@ -279,7 +255,7 @@ $x$
 ${z = \constant}$
 \en{and}\ru{и}
 ${y = \constant}$.
-\en{Because}\ru{Поскольку}~$\potential$
+\en{Because}\ru{Поскольку}~$\potentialenergydensity$
 \en{in such a~case}\ru{в~таком случае}
 \en{is not sensitive}\ru{не~чувствительна} %энергия, женского роду
 {\en{to the signs}\ru{к~знакам}\en{of}~$\varepsilon_{yx}$ \en{and}\ru{и}~$\varepsilon_{yz}$,
@@ -337,7 +313,7 @@ $y$, $z$\en{ planes}\:---
 \en{can be simplified to}\ru{может быть упрощено до}
 
 \nopagebreak\vspace{-0.25em}\begin{multline*}
-\potential =^{\mathstrut^{\mathstrut}}
+\potentialenergydensity =^{\mathstrut^{\mathstrut}}
 \smalldisplaystyleonehalf a_{11} \varepsilon^2_{x} \hspace{-0.1ex} +
 \smalldisplaystyleonehalf a_{22} \varepsilon^2_{y} \hspace{-0.1ex} +
 \smalldisplaystyleonehalf a_{33} \varepsilon^2_{z} \hspace{-0.1ex} +
@@ -361,7 +337,7 @@ $\varepsilon_{xy}$, $\varepsilon_{xz}$, $\varepsilon_{yz}$
 ${
    \sigma_x \hspace{-0.25ex}
    = \raisemath{.16em} {
-      \scalebox{.88}{$ \partial \hspace{.1ex} \potential $}
+      \scalebox{.88}{$ \partial \hspace{.1ex} \potentialenergydensity $}
    }
    \hspace{-0.1ex} / \hspace{-0.2ex}
    \raisemath{-0.32em} {
@@ -371,7 +347,7 @@ ${
 ${
    \sigma_y \hspace{-0.25ex}
    = \raisemath{.16em} {
-      \scalebox{.88}{$ \partial \hspace{.1ex} \potential $}
+      \scalebox{.88}{$ \partial \hspace{.1ex} \potentialenergydensity $}
 }
 \hspace{-0.1ex} / \hspace{-0.2ex}
 \raisemath{-0.32em} {
@@ -381,7 +357,7 @@ ${
 ${\sigma_z \hspace{-0.25ex}
    =
    \raisemath{.16em} {
-      \scalebox{.88}{$ \partial \hspace{.1ex} \potential $}
+      \scalebox{.88}{$ \partial \hspace{.1ex} \potentialenergydensity $}
    }
    \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em} {
       \scalebox{.88}{$ \partial \varepsilon_z $}
@@ -417,7 +393,7 @@ ${\sigma_z \hspace{-0.25ex}
 \en{of the deformation tensor}\ru{тензора деформаций}~$\infinitesimaldeformation$
 \en{around the axis}\ru{вокруг оси}~$z$
 \ru{не меняет}\en{doesn’t change}
-\en{the elastic potential}\ru{упругий потенциал}~$\potential$.
+\en{the elastic potential}\ru{упругий потенциал}~$\potentialenergydensity$.
 \en{Thus}\ru{Поэтому}
 
 \nopagebreak\vspace{-0.1em}
@@ -425,7 +401,7 @@ ${\sigma_z \hspace{-0.25ex}
 \label{transversely-isotropic-material:hooke's law}
 \scalebox{.9}{$
    \displaystyle\frac{
-      \raisemath{-0.2em}{ \partial \hspace{.2ex} \potential }
+      \raisemath{-0.2em}{ \partial \hspace{.2ex} \potentialenergydensity }
       { \partial \infinitesimaldeformation }
    } %end of frac
 } %end of scalebox
@@ -621,20 +597,33 @@ $a_{33}$, $a_{44}$, $a_{55}$, $a_{12}$, $a_{13}$
 
 \en{There are}\ru{Есть}
 \en{many different types}\ru{различные типы}
-\en{of a~crystal symmetry}\ru{симметрии кристаллов}
-( \en{triclinic}\ru{триклинная}, \en{monoclinic}\ru{моноклинная}, \en{rhombic}\ru{ромбическая}, \en{tetragonal}\ru{тетрагональная} \en{and others}\ru{и~другие}~\cite{chernyh-anisotropicelasticity} ).
-\en{The each case of~symmetry}\ru{Каждый случай симметрии}
+\en{of crystal symmetry}\ru{симметрии кристаллов}
+( \en{triclinic}\ru{триклинная},
+\en{monoclinic}\ru{моноклинная},
+\en{rhombic}\ru{ромбическая},
+\en{tetragonal}\ru{тетрагональная}
+\textcolor{magenta}{\en{and others}\ru{и~другие}~\cite{chernyh-anisotropicelasticity}} ).
+\en{The~each}\ru{Каждый}
+\en{case of~symmetry}\ru{случай симметрии}
 \en{is characterized}\ru{характеризуется}
-\en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~\orthogonaltensor.
-\en{The tensors from the set must solve the equation}\ru{Набор должен решать уравнение}
-${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$
-( \en{rotations}\ru{повороты} \en{and}\ru{и}~\en{reflections}\ru{отражения} )
+\en{by the~set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\orthogonaltensor$%
+\footnote{%
+\en{Orthogonal tensors}\ru{Ортогональные тензоры}
+\en{are those that}\ru{это такие, которые}
+\en{satisfy}\ru{удовлетворяют}
+\en{the equality}\ru{равенству}~\eqrefwithchapterdotsection{orthogonalityofrotationtensor}{chapter:mathapparatus}{section:rotationtensor}
+${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$,
+\en{describing}\ru{описывая}
+\en{rotations}\ru{повороты}
+\en{and}\ru{и}~\en{reflections}\ru{отражения}.
+}\hbox{\hspace{-0.5em}.}
+...................
 \en{and}\ru{и}
-\en{to satisfy}\ru{удовлетворять}
-\en{the following equation}\ru{следующее равенство}
+\en{satisfy}\ru{удовлетворяют}
+\en{the following}\ru{следующему}
 
 \noindent
-\begin{equation}\label{the-Hooke.for-the-symmetric-crystals}
+\begin{equation}\label{Hooke.for-symmetric-crystals}
    \stiffnesstensor \dotdotp
    \Bigl( \orthogonaltensor \dotp \lineardeformation \dotp \orthogonaltensor^\T \Bigr)
    = \orthogonaltensor \dotp
@@ -644,21 +633,15 @@ ${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$
    \hspace{1.5em} \forall \hspace{.3ex} \lineardeformation .
 \end{equation}
 
-\en{The each}\ru{Каждый}
-\en{case of symmetry}\ru{случай симметрии}
-\en{is characterized}\ru{характеризуется}
-\en{by the set of orthogonal tensors}\ru{набором ортогональных тензоров}~$\orthogonaltensor$\ru{,}
-\en{that satisfy the equation}\ru{которые удовлетворяют уравнению}
-${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$,
-
-\en{The theory}\ru{Теория}
-\en{of describing}\ru{описания}
-\en{the linear properties}\ru{линейных свойств}
-\en{of the~anisotropic materials}\ru{анизотропных материалов}\:---
+\en{The theory}\ru{Теория},
+\en{describing}\ru{описывающая}
+\en{the linear properties}\ru{линейные свойства}
+\en{of anisotropic materials}\ru{анизотропных материалов}\:---
 \en{the~crystals}\ru{кристаллов},
 \en{the~composites}\ru{композитов},
 \en{the~wood}\ru{древесины}
-\en{and others}\ru{и~других}.
+\en{and others}\ru{и~других},
+................
 
 \en{The }\inquotes{\en{material tensors}\ru{Материальные тензоры}}
 \en{define}\ru{определяют}

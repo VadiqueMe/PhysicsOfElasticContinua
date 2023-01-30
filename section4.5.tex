@@ -2,7 +2,7 @@
 
 \ru{\section{Теоремы статики}}
 
-\label{para:theoremsofstatics}
+\label{section:theoremsofstatics}
 
 \subsection*{\ru{Теорема }Clapeyron’\ru{а}\en{s theorem}}
 
@@ -39,7 +39,7 @@ Pagine~208\hbox{--}212.}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{clapeyron:elasticitytheorem}
 2 \hspace{-0.2em}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \potential \hspace{.2ex} d\mathcal{V} \hspace{.12ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \potentialenergydensity \hspace{.2ex} d\mathcal{V} \hspace{.12ex}
 = \hspace{-0.2ex}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex} d\mathcal{V}
 + \hspace{-0.3ex}
@@ -50,7 +50,7 @@ Pagine~208\hbox{--}212.}
 \vspace{-0.55em}\begin{multline*}
 \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
 \hspace{2.25ex}
-2 \hspace{.1ex} \potential \hspace{.1ex} = \linearstress \dotdotp \infinitesimaldeformation =
+2 \hspace{.1ex} \potentialenergydensity \hspace{.1ex} = \linearstress \dotdotp \infinitesimaldeformation =
 \linearstress \hspace{.1ex} \dotdotp \hspace{-0.12ex} \boldnabla \bm{u}^{\mathsf{S}} \hspace{-0.12ex} =
 \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \bm{u} \hspace{.1ex} \right) -
 \tikzmark{beginMinusLoad} \boldnabla \dotp \linearstress \tikzmark{endMinusLoad} \dotp \bm{u} \;\Rightarrow
@@ -59,7 +59,7 @@ Pagine~208\hbox{--}212.}
 \Rightarrow\;\,
 \displaystyle 2 \hspace{-0.16em}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex}
-  \potential \hspace{.2ex} d\mathcal{V} \hspace{.12ex}
+  \potentialenergydensity \hspace{.2ex} d\mathcal{V} \hspace{.12ex}
 = \integral\displaylimits_{o_2} \hspace{-0.4ex}
 \tikzmark{beginSurfaceLoad}
   \unitnormalvector \dotp \linearstress
@@ -88,10 +88,10 @@ ${\hspace{-0.25ex}
 { \hspace{-0.5ex}
    \raisemath{.1em}{\mathcal{V}}
 } \hspace{.25ex}
-\potential \hspace{.2ex} d\mathcal{V}
+\potentialenergydensity \hspace{.2ex} d\mathcal{V}
 = 0
 }$.
-\en{Because}\ru{Поскольку} $\potential$
+\en{Because}\ru{Поскольку} $\potentialenergydensity$
 \en{is positive}\ru{положителен},
 \en{then the stress}\ru{то~и~напряжение}~$\linearstress$,
 \en{and}\ru{и}
@@ -100,14 +100,14 @@ ${\hspace{-0.25ex}
 \en{are equal to zero}\ru{равны нулю}.
 
 \begin{align*}
-2 \hspace{.1ex} \potential \hspace{.1ex} &= \linearstress \dotdotp \infinitesimaldeformation
+2 \hspace{.1ex} \potentialenergydensity \hspace{.1ex} &= \linearstress \dotdotp \infinitesimaldeformation
 \\
-\mathdotabove{\potential} \hspace{.1ex} &= \linearstress \dotdotp \mathdotabove{\infinitesimaldeformation}
+\mathdotabove{\potentialenergydensity} \hspace{.1ex} &= \linearstress \dotdotp \mathdotabove{\infinitesimaldeformation}
 \\
-\variation{\potential} &= \linearstress \dotdotp \variation{\infinitesimaldeformation}
+\variation{\potentialenergydensity} &= \linearstress \dotdotp \variation{\infinitesimaldeformation}
 \end{align*}
 
-$\potential$
+$\potentialenergydensity$
 \en{is equal to}\ru{равна}
 \en{only}\ru{лишь}
 \en{the~half}\ru{половине}
@@ -115,7 +115,7 @@ $\potential$
 \en{of~the~external forces}\ru{внешних сил}.
 
 \en{The~accumulated}\ru{Накопленная}
-\en{potential energy of~deformation}\ru{потенциальная энергия деформации}~$\potential$
+\en{potential energy of~deformation}\ru{потенциальная энергия деформации}~$\potentialenergydensity$
 \en{is equal}\ru{равна}
 \en{to only}\ru{только}
 \en{the half}\ru{половине}
@@ -165,7 +165,7 @@ $\potential$
 \ru{равна}\en{is equal to}
 \en{the double}\ru{удвоенной}
 \en{of the potential energy density}\ru{плотности потенциальной энергии}
-$2\potential$.
+$2\potentialenergydensity$.
 
 \begin{otherlanguage}{russian}
 Если снять внешние воздействия
@@ -227,7 +227,7 @@ $2\potential$.
 
 \begin{equation*}
 \linearstress \dotdotp \variation{\infinitesimaldeformation}
-= \variation{\potential}
+= \variation{\potentialenergydensity}
 \hspace{.1ex}
 .
 \end{equation*}
@@ -245,7 +245,7 @@ $2\potential$.
 \en{with the opposite sign}\ru{с~противоположным зн\'{а}ком}
 ${
    - \hspace{.1ex} \variation{\internalwork} \hspace{-0.2ex}
-   = \variation{\potential} = \variation{\externalwork} \hspace{-0.25ex}
+   = \variation{\potentialenergydensity} = \variation{\externalwork} \hspace{-0.25ex}
 }$,
 \en{when}\ru{когда}
 \ru{варьируются }\en{the only displacements}\ru{только смещения}\en{ vary}
@@ -271,7 +271,7 @@ ${
 \subsection*{\en{The uniqueness of the solution theorem}\ru{Теорема единственности решения}}
 
 \en{As in dynamics}\ru{Как и в~динамике}
-(\sectionref{para:uniquenessfordynamicproblem}),
+(\sectionref{section:uniquenessfordynamicproblem}),
 \en{we}\ru{мы}
 \en{suppose}\ru{допускаем}
 \en{the existence}\ru{существование}
@@ -284,12 +284,30 @@ ${
 ..........
 \end{equation*}
 
+%%%%%%%%%%
+\newpage
+%%%%%%%%%%
+
 %%%\hspace*{-\parindent}
 %%%\begin{minipage}{\linewidth}
 
 % ~ ~ ~ ~ ~
-\input{deformedrod.tex}
+\begin{wrapfigure}[0]{o}{.4\textwidth}
+%%\makebox[.45\textwidth][c]{%
+\begin{minipage}[t]{.5\textwidth}
+%%\vspace{-1em}
+\scalebox{.88}{
+    \input{deformedrod.tex}
+}
+\vspace{-0.2em}\caption{}\label{fig:deformedrod}
+\end{minipage}%
+%%}
+\end{wrapfigure}
 % ~ ~ ~ ~ ~
+
+%%%%%%%%%%
+\newpage
+%%%%%%%%%%
 
 \hspace{\horizontalindent}%
 \en{The~uniqueness}\ru{Уникальность}
@@ -297,10 +315,9 @@ ${
 \en{dis\-covered}\ru{открытая}
 \en{by~}Gustav\ru{’ом} Kirchhoff\ru{’ом}
 \en{for bodies}\ru{для тел}
-\en{with }\ru{с~}
-\en{the simply connected}\ru{одно\-св\'{я}зным}
-\en{contour}\ru{контуром}
-\stepcounter{footnote}\setcounter{auxfootnotecounter}{\value{footnote}}\footnotemark[ \value{auxfootnotecounter} ]\hbox{\hspace{-0.4ex},}
+\en{with }\ru{с~}\en{the simply connected}\ru{одно\-св\'{я}зным}
+\en{contour}\ru{контуром}%
+\stepcounter{footnote}\setcounter{auxfootnotecounter}{\value{footnote}}\footnotemark[\value{auxfootnotecounter}]\hbox{\hspace{-0.4ex},}
 \en{is contrary to}\ru{противоречит},
 \en{as it seems}\ru{\hbox{казалось~бы}},
 \en{the everyday experience}\ru{повседневному опыту}.

@@ -12,7 +12,7 @@
 
 \ru{\section{Дискретная совокупность частиц}} %% Исходные представления. Дискретный подход
 
-\label{para:initialconcepts.discreteapproach}
+\label{section:initialconcepts.discreteapproach}
 
 \en{\dropcap{C}{lassical}}\ru{\dropcap{К}{лассическая}} \en{generic}\ru{общая} \en{mechanics}\ru{механика} \en{models}\ru{моделирует} \en{physical objects}\ru{физические объекты}\en{ by}\ru{,} \en{discretizing them}\ru{дискретизируя их} \en{into }\ru{в~}\en{a~collection of~particles}\ru{совокупность частиц} (\inquotesx{\en{pointlike masses}\ru{точеч\-ных масс}}[,] \inquotes{\en{material points}\ru{материальных точек}}%
 \footnote{\en{Point mass}\ru{Точечная масса} (\en{pointlike mass, }\en{material point}\ru{материальная точка})\en{ is}\ru{\:--- это} \en{the~concept}\ru{концепт} \en{of an~object}\ru{объекта}, \en{typically}\ru{типично} \en{matter}\ru{материи}, \en{that}\ru{который} \en{has}\ru{имеет} \en{nonzero mass}\ru{ненулевую массу} \en{and}\ru{и}~\en{is}\ru{является}~(\en{or}\ru{или} \en{is being thought of as}\ru{мыслится}) \en{infinitesimal}\ru{бесконечно-малым} \en{in~its}\ru{по~своем\'{у}} \en{volume}\ru{объёму}~(\en{dimensions}\ru{размерам}).%
@@ -394,7 +394,7 @@ ${\Rightarrow \hspace{.4em}
 
 \ru{\section{Совершенно жёсткое недеформируемое твёрдое тело}}
 
-\label{para:absolutelyrigidundeformablesolidbody}
+\label{section:absolutelyrigidundeformablesolidbody}
 
 %% \inquotesx{Абсолютно твёрдое}[,] оно~же \inquotes{абсолютно жёсткое} и~\inquotesx{абсолютно прочное}[---] несбыточная мечта каждого инженера.
 
@@ -562,7 +562,7 @@ ${\mathcircabove{\bm{e}}_i}$\:--- \en{triplet of orthonormal basis vectors}\ru{�
 ${\widetilde{\bm{x}} = x_i \hspace{.1ex} \widetilde{\bm{e}}_i}$,
 ${\bm{x} = x_i \hspace{.1ex} \bm{e}_i}$
 
-\eqref{rodriguesrotationformula}, \chapterdotsectionref{chapter:mathapparatus}{para:rotationtensor}
+\eqref{rodriguesrotationformula}, \chapterdotsectionref{chapter:mathapparatus}{section:rotationtensor}
 
 ${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \widetilde{\bm{x}}}$
 
@@ -772,7 +772,7 @@ Three examples of nonholonomic constraints are: when the constraint equations ar
 
 \ru{\section{Принцип виртуальной работы}}
 
-\label{para:virtualworkprinciple.genericmechanics}
+\label{section:virtualworkprinciple.genericmechanics}
 
 \emph{Mécanique analytique} (1788--89) is a two volume French treatise on analytical mechanics, written by Joseph Louis Lagrange, and published 101 years following Isaac Newton’s \emph{Philosophiæ Naturalis Principia Mathematica}.
 
@@ -942,7 +942,7 @@ ${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$
 .... \eqref{completelyrigidbody.locationvectorofanypointdecomposed} ${\Rightarrow}$
 ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{x}}}$
 
-(begin copied from \chapterdotsectionref{chapter:mathapparatus}{para:calculusofvariations})
+(begin copied from \chapterdotsectionref{chapter:mathapparatus}{section:calculusofvariations})
 
 Варьируя тождество~\eqref{orthogonalityofrotationtensor}, получим ${\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!}$.
 Этот тензор антисимметричен, и~потому выражается через свой сопутствующий вектор~${\varvector{o}}$ как~${\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad}$.
@@ -954,7 +954,7 @@ ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{
 \hspace{-0.1ex} ,
 \end{equation}
 
-(end of copied from \chapterdotsectionref{chapter:mathapparatus}{para:calculusofvariations})
+(end of copied from \chapterdotsectionref{chapter:mathapparatus}{section:calculusofvariations})
 
 ...
 
@@ -1004,7 +1004,7 @@ ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{
 классической механики.
 }\hspace{-0.25ex} % end of footnote
 (энергия
-${\mathrm{E} \hspace{.1ex} \equiv \kinetic \hspace{.1ex} (q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \hspace{-0.1ex} \potential(q)}$
+${\mathrm{E} \hspace{.1ex} \equiv \kineticenergydensity \hspace{.1ex} (q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \hspace{-0.1ex} \potentialenergydensity (q)}$
 такой системы
 не~зависит явно от~времени).
 
@@ -1040,8 +1040,8 @@ ${\variation{\internalwork} \hspace{-0.12ex} = \scalebox{0.8}[0.84]{$\displaysty
 Предпосылки-соображения для~этого предположения таковы.
 
 Первое\:--- для случая упругих (потенциальных) внутренних сил.
-Тогда ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potential}}$\:--- вариация потенциала с~противоположным знаком.
-Достаточно очевидно, что только лишь деформирование меняет~$\potential$.
+Тогда ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potentialenergydensity}}$\:--- вариация потенциала с~противоположным знаком.
+Достаточно очевидно, что только лишь деформирование меняет~$\potentialenergydensity$.
 
 Второе соображение\:--- в~том, что суммарный вектор и~суммарный момент внутренних сил равен нулю
 
@@ -1073,7 +1073,7 @@ Two branches of analytical mechanics are Lagrangian mechanics (using generalized
 
 Вариационное уравнение~\eqref{discrete:principleofvirtualwork} удовлетворяется в~любой момент времени.
 Проинтегрируем его\footnote{%
-${ \mathcolor{magenta}{\variation{\kinetic} = \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\locationvector}_k}} \hspace{-0.5ex} }$ , \hspace{-0.1ex}
+${ \mathcolor{magenta}{\variation{\kineticenergydensity} = \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\locationvector}_k}} \hspace{-0.5ex} }$ , \hspace{-0.1ex}
 ${%
 \left(
 \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.4ex}
@@ -1085,19 +1085,19 @@ ${%
 \\[.5em]
 ${%
 - \hspace{.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.25ex} dt \hspace{.4ex}
-= \hspace{-0.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \hspace{-0.1ex} \variation{\kinetic} \hspace{.1ex} dt \hspace{.16ex}
+= \hspace{-0.1ex} \scalebox{0.95}[0.96]{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \hspace{-0.1ex} \variation{\kineticenergydensity} \hspace{.1ex} dt \hspace{.16ex}
 - \hspace{-0.1ex} \left[ \hspace{.2ex}
 \scalebox{0.92}[0.95]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.16ex}
 \right]_{\hspace{-0.25ex}t_1}^{\hspace{-0.25ex}t_2}
 }$}%
-\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKinetic}{endVariationOfKinetic}{${\scriptstyle \variation{\kinetic}}$}
+\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKinetic}{endVariationOfKinetic}{${\scriptstyle \variation{\kineticenergydensity}}$}
 %
 по~какому\hbox{-}либо промежутку ${\left[\hspace{.15ex} t_1, t_2 \hspace{.15ex}\right]}$
 
 \nopagebreak\vspace{-0.25em}\begin{equation}
 \displaystyle \integral\displaylimits_{t_1}^{\raisemath{.12em}{t_2}}
 \hspace{-0.8ex}
-\left( \hspace{-0.25ex} \variation{\kinetic}
+\left( \hspace{-0.25ex} \variation{\kineticenergydensity}
 + \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{-0.33ex} \right) \hspace{-0.5ex} dt \hspace{.1ex}
 - \hspace{-0.2ex} \left[ \hspace{.2ex} \scalebox{0.95}[0.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_k} \hspace{.16ex} \right]_{\hspace{-0.32ex}t_1}^{\hspace{-0.32ex}t_2}
 \hspace{-0.8ex} = 0
@@ -1110,7 +1110,7 @@ ${%
 Вводятся обобщённые координаты~$q^i$~(${i = 1, \ldots, n}$\:--- число степеней свободы).
 Векторы-радиусы становятся функциями \hbox{вида} ${\locationvector_{k}(q^i, t)}$, тождественно удовлетворяющими уравнениям связей~\eqref{holonomicconstraint}.
 Если связи стационарны, то~есть~\eqref{holonomicconstraint} не~содержат $t$, то остаётся~${\locationvector_{k}(q^i)}$.
-Кинетическая энергия превращается в~функцию ${\kinetic \hspace{.1ex} (q^i, \mathdotabove{q}^{\hspace{.2ex}i}, t)}$, где явно входящее~$t$ характерно лишь для нестационарных связей.
+Кинетическая энергия превращается в~функцию ${\kineticenergydensity \hspace{.1ex} (q^i, \mathdotabove{q}^{\hspace{.2ex}i}, t)}$, где явно входящее~$t$ характерно лишь для нестационарных связей.
 
 Весьма существенно понятие обобщённых сил~${Q_{\hspace{-0.1ex}i}}$.
 Они вводятся через выражение виртуальной работы
@@ -1129,13 +1129,13 @@ Q_{\hspace{-0.1ex}i} \equiv
 Ст\'{о}ит акцентировать происхождение обобщённых сил через работу.
 Установив набор обобщённых координат системы, следует сгруппировать приложенные силы~${\bm{F}_k}$ в~комплексы~${Q_{\hspace{-0.1ex}i}}$.
 
-Если силы потенциальны с~энергией~${\potential \narroweq \potential(q^i \hspace{-0.2ex} , t)}$, то
+Если силы потенциальны с~энергией~${\potentialenergydensity \narroweq \potentialenergydensity (q^i \hspace{-0.2ex} , t)}$, то
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \scalebox{0.92}[0.96]{$\displaystyle \sum_{i}$} \hspace{.16ex} Q_{\hspace{-0.1ex}i} \hspace{.12ex} \variation{q^i} \hspace{-0.1ex}
-= - \hspace{.16ex} \variation{\potential} \hspace{.1ex} ,
+= - \hspace{.16ex} \variation{\potentialenergydensity} \hspace{.1ex} ,
 \:\:
-Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial q^i}} $} \hspace{.16ex} .
+Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \potentialenergydensity}}{\raisemath{-0.1em}{\partial q^i}} $} \hspace{.16ex} .
 \vspace{-0.1em}\end{equation}
 
 \vspace{-0.15em}\noindent
@@ -1173,7 +1173,7 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 
 \ru{\section{Статика}}
 
-\label{para:statics}
+\label{section:statics}
 
 \begin{otherlanguage}{russian}
 
@@ -1203,16 +1203,16 @@ Q_{\hspace{-0.1ex}i} = - \hspace{.16ex} \scalebox{0.96}{$ \displaystyle \frac{\r
 поскольку у~системы есть степени свободы трансляции и~поворота.
 Огромная популярность сил и~моментов связана не~столько с~известностью статики совершенно недеформируемого твёрдого тела, но с~тем, что виртуальная работа внутренних сил на~смещениях системы как жёсткого целого равна нулю в~любой среде.
 
-Пусть в~системе действуют два вида сил: потенциальные с~энергией от~обобщённых координат ${\potential(q^i)}$ и~дополнительные внешние~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
+Пусть в~системе действуют два вида сил: потенциальные с~энергией от~обобщённых координат ${\potentialenergydensity (q^i)}$ и~дополнительные внешние~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
 Из~\eqref{statics.discrete:principleofvirtualwork} следуют уравнения равновесия
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{staticequilibriumwithpotentialenergy}
-\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial q^i}} $} = \mathcircabove{Q}_{\hspace{-0.1ex}i}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potentialenergydensity}}{\raisemath{-0.1em}{\partial q^i}} $} = \mathcircabove{Q}_{\hspace{-0.1ex}i}
 \hspace{.1ex},
 \end{equation}
 \nopagebreak\vspace{.1em}\begin{equation*}
-d\potential = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
-\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial q^i}} $} \hspace{.2ex} dq^i
+d\potentialenergydensity = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potentialenergydensity}}{\raisemath{-0.1em}{\partial q^i}} $} \hspace{.2ex} dq^i
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} dq^i
 \hspace{.1ex} .
 \end{equation*}
@@ -1220,7 +1220,7 @@ d\potential = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex
 \vspace{-0.5em}\noindent
 Здесь содержится нелинейная в~общем случае задача статики о~связи положения равновесия~$q^i$ с~нагрузками~${\mathcircabove{Q}_{\hspace{-0.1ex}i}}$.
 
-В~линейной системе с~квадратичным потенциалом вида ${\potential = \smalldisplaystyleonehalf \hspace{.2ex} C_{ik} \hspace{.15ex} q^{k} \hspace{.1ex} q^{i}}$
+В~линейной системе с~квадратичным потенциалом вида ${\potentialenergydensity = \smalldisplaystyleonehalf \hspace{.2ex} C_{ik} \hspace{.15ex} q^{k} \hspace{.1ex} q^{i}}$
 
 \nopagebreak\vspace{-1.25em}\begin{equation}\label{staticsoflineardiscretesystem}
 \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} C_{ik} \hspace{.12ex} q^k \hspace{-0.1ex}
@@ -1242,7 +1242,7 @@ d\potential = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{discrete:potentialenergyofsystem}
 \potentialenergyfunctional \hspace{.2ex} (q^{j}) \hspace{.1ex}
 \equiv \hspace{.1ex}
-\potential - \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex}
+\potentialenergydensity - \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex}
 \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q^{i}
 %
 = \hspace{.1ex}
@@ -1291,34 +1291,34 @@ q^i \hspace{.2ex} d \mathcircabove{Q}_{\hspace{-0.1ex}i}
 %
 \small
 d \hspace{-0.1ex} \left( \hspace{-0.1ex} \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q^i \hspace{-0.12ex} \right) \hspace{-0.4ex}
-- \hspace{.1ex} \tikzmark{beginLegendreOfPotential} \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} dq^i \tikzmark{endLegendreOfPotential}
+- \hspace{.1ex} \tikzmark{beginLegendreOfPotentialEnergy} \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} dq^i \tikzmark{endLegendreOfPotentialEnergy}
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex} q^i \hspace{.2ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
 \hspace{.2ex} ,
 \\[1em]
 %
 \small
-d \hspace{-0.1ex} \left( \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q^i - \potential \hspace{-0.1ex} \right) \hspace{-0.5ex}
+d \hspace{-0.1ex} \left( \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.2ex} q^i - \potentialenergydensity \hspace{-0.1ex} \right) \hspace{-0.5ex}
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex} q^i \hspace{.2ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
 = \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.4ex}
-\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\potential}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $}
+\scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\potentialenergydensity}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $}
 \hspace{.25ex} d\mathcircabove{Q}_{\hspace{-0.1ex}i}
 %
 \hspace{.33ex} ;
 \end{array}\end{equation*}%
-\AddOverBrace[line width=.75pt][-0.3ex,0.3em]{beginLegendreOfPotential}{endLegendreOfPotential}{${\scriptstyle d\potential}$}
+\AddOverBrace[line width=.75pt][-0.3ex,0.3em]{beginLegendreOfPotentialEnergy}{endLegendreOfPotentialEnergy}{${\scriptstyle d\potentialenergydensity}$}
 
 \nopagebreak\vspace{-0.33em}\begin{equation}\label{Castigliano:theorem}
-q^i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\potential}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $} \hspace{.2ex} ,
+q^i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \widehat{\potentialenergydensity}}}{\raisemath{-0.4em}{\partial \mathcircabove{Q}_{\hspace{-0.1ex}i}}} $} \hspace{.2ex} ,
 \:\;
-\widehat{\potential}(\mathcircabove{Q}_{\hspace{-0.1ex}i})
-= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q^i - \potential
+\widehat{\potentialenergydensity}(\mathcircabove{Q}_{\hspace{-0.1ex}i})
+= \scalebox{0.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} \mathcircabove{Q}_{\hspace{-0.1ex}i} \hspace{.12ex} q^i - \potentialenergydensity
 \hspace{.1ex} .
 \end{equation}
 
 \vspace{-0.1em}\noindent
-Это теорема \href{https://en.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Castigliano}, $\widehat{\potential}$ называется дополнительной энергией.
-В~линейной системе \eqref{staticsoflineardiscretesystem} ${\Rightarrow}$ ${\widehat{\potential} = \potential}$.
-Теорема~\eqref{Castigliano:theorem} бывает очень полезна\:--- когда легко находится~${\widehat{\potential}(\mathcircabove{Q}_{\hspace{-0.1ex}i})}$.
+Это теорема \href{https://en.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Castigliano}, $\widehat{\potentialenergydensity}$ называется дополнительной энергией.
+В~линейной системе \eqref{staticsoflineardiscretesystem} ${\Rightarrow}$ ${\widehat{\potentialenergydensity} = \potentialenergydensity}$.
+Теорема~\eqref{Castigliano:theorem} бывает очень полезна\:--- когда легко находится~${\widehat{\potentialenergydensity}(\mathcircabove{Q}_{\hspace{-0.1ex}i})}$.
 Встречаются так называемые статически определимые системы, в~которых все внутренние силы удаётся найти лишь из баланса сил и~моментов.
 Для них \eqref{Castigliano:theorem} эффективна.
 
@@ -1338,11 +1338,11 @@ q^i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 \ru{\section{Механика относительного движения}}
 
-\label{para:mechanicsofrelativemotion}
+\label{section:mechanicsofrelativemotion}
 
 \begin{otherlanguage}{russian}
 
-До~этого не~ставился вопрос о~системе отсчёта, всё рассматривалось в~некой \inquotes{абсолютной} системе или одной из инерциальных систем~(\sectionref{para:initialconcepts.discreteapproach}).
+До~этого не~ставился вопрос о~системе отсчёта, всё рассматривалось в~некой \inquotes{абсолютной} системе или одной из инерциальных систем~(\sectionref{section:initialconcepts.discreteapproach}).
 Теперь представим себе две системы: \inquotes{абсолютную} и~\inquotes{подвижную}
 
 ...
@@ -1367,7 +1367,7 @@ q^i = \scalebox{0.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace
 
 ${x_i \hspace{-0.1ex} \neq \constant}$ $\Rightarrow$ ${\mathdotabove{x}_i \hspace{-0.1ex} \neq 0}$
 
-\en{By}\ru{По}~\eqrefwithchapterdotsection{angularvelocityandbasisvectors}{chapter:mathapparatus}{para:rotationtensor}
+\en{By}\ru{По}~\eqrefwithchapterdotsection{angularvelocityandbasisvectors}{chapter:mathapparatus}{section:rotationtensor}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{e}_i
@@ -1495,7 +1495,7 @@ ${
 
 \ru{\section{Малые колебания (вибрации)}}
 
-\label{para:smalloscillations}
+\label{section:smalloscillations}
 
 % periodic motion
 

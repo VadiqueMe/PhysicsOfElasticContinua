@@ -2,7 +2,7 @@
 
 \ru{\section{Уникальность решения в~динамике}}
 
-\label{para:uniquenessfordynamicproblem}
+\label{section:uniquenessfordynamicproblem}
 
 \en{As is typical}\ru{Как это типично}
 \en{for}\ru{для}
@@ -37,7 +37,7 @@ ${\bm{u}_1 (\locationvector, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\locationvector, t
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}\label{dynamicsoflineartheory:integralofenergy}
 \displaystyle\integral\displaylimits_{\mathcal{V}}
-\hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \kinetic + \potential \Bigr)^{\hspace{-0.33ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} d\mathcal{V}
+\hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \kineticenergydensity + \potentialenergydensity \Bigr)^{\hspace{-0.33ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} d\mathcal{V}
 = \hspace{-0.2ex}
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.3ex} d\mathcal{V}
 + \hspace{-0.2ex}
@@ -71,14 +71,14 @@ ${\bm{u}_1 (\locationvector, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\locationvector, t
 
 \nopagebreak\begin{equation*}
 \begin{array}{c}
-\mathdotabove{\kinetic} = \smalldisplaystyleonehalf \bigl( \hspace{.1ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}} \hspace{.1ex} \bigr)^{\hspace{-0.2ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.2ex}
+\mathdotabove{\kineticenergydensity} = \smalldisplaystyleonehalf \bigl( \hspace{.1ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}} \hspace{.1ex} \bigr)^{\hspace{-0.2ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.2ex}
 = \smalldisplaystyleonehalf \hspace{.2ex} \rho \hspace{.2ex} \bigl( \mathdotabove{\bm{u}} \dotp \mathdotdotabove{\bm{u}} + \mathdotdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}} \hspace{.1ex} \bigr)
 \hspace{-0.22ex} =
 \rho \hspace{.2ex} \mathdotdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}
 \hspace{.2ex} ,
 \\[.5em]
 %
-\mathdotabove{\potential} \hspace{.1ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{-0.25ex} \tikzmark{beginDerivativeOfPotentialEnergyDensity} \left( \hspace{.1ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation \hspace{.1ex} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-1.2ex} \tikzmark{endDerivativeOfPotentialEnergyDensity} \hspace{.7ex}
+\mathdotabove{\potentialenergydensity} \hspace{.1ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{-0.25ex} \tikzmark{beginDerivativeOfPotentialEnergyDensity} \left( \hspace{.1ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation \hspace{.1ex} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-1.2ex} \tikzmark{endDerivativeOfPotentialEnergyDensity} \hspace{.7ex}
 = \linearstress \dotdotp \mathdotabove{\infinitesimaldeformation}
 = \linearstress \hspace{.1ex} \dotdotp \hspace{-0.12ex} \boldnabla \mathdotabove{\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.12ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.15ex} \right) -
@@ -104,7 +104,7 @@ ${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} - \rho 
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
-\mathdotabove{\kinetic} + \mathdotabove{\potential} \hspace{.1ex}
+\mathdotabove{\kineticenergydensity} + \mathdotabove{\potentialenergydensity} \hspace{.1ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.15ex} \right)
 + \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}}
 \hspace{.2ex} .
@@ -134,39 +134,39 @@ ${\unitnormalvector \dotp \linearstress = \bm{p}}$
 %
 \hspace{.8ex} \Rightarrow \hspace{.55ex}
 %
-\scalebox{.8}{$\displaystyle \integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \bigl( \hspace{.1ex} \kinetic + \potential \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} = \hspace{.1ex} \constant(t)
+\scalebox{.8}{$\displaystyle \integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \bigl( \hspace{.1ex} \kineticenergydensity + \potentialenergydensity \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} = \hspace{.1ex} \constant(t)
 \hspace{.2ex} .
 \vspace{-0.25em}
 \end{equation}
 
 \vspace{-0.1em}\noindent
-\en{If}\ru{Если} \en{at the~moment}\ru{в~момент}~${t \narroweq 0}$ \en{there was}\ru{был} \en{unstressed}\ru{ненапряжённый}\:(${\potential \narroweq \hspace{.1ex} 0}$) \en{rest}\ru{покой}\:(${\kinetic \narroweq \hspace{.1ex} 0}$), \en{then}\ru{то}
+\en{If}\ru{Если} \en{at the~moment}\ru{в~момент}~${t \narroweq 0}$ \en{there was}\ru{был} \en{unstressed}\ru{ненапряжённый}\:(${\potentialenergydensity \narroweq \hspace{.1ex} 0}$) \en{rest}\ru{покой}\:(${\kineticenergydensity \narroweq \hspace{.1ex} 0}$), \en{then}\ru{то}
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
-\scalebox{.8}{$\displaystyle \integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \bigl( \hspace{.1ex} \kinetic + \potential \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} = \hspace{.1ex} 0
+\scalebox{.8}{$\displaystyle \integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \bigl( \hspace{.1ex} \kineticenergydensity + \potentialenergydensity \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} = \hspace{.1ex} 0
 \hspace{.1ex} .
 \tag{\theequation \raisebox{.1em}{\textquotesingle}}\label{dynamicsoflineartheory:fullenergyiszero}
 \vspace{-0.25em}
 \end{equation*}
 
 \en{The kinetic energy}\ru{Кинетическая энергия} \en{is positive}\ru{положительна}:
-${\kinetic \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} \bm{0}}$
+${\kineticenergydensity \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} \bm{0}}$
 \en{and}\ru{и}~\en{vanishes}\ru{исчезает}
 (\en{nullifies}\ru{обнуляется})
 \en{only when}\ru{лишь когда}~${\mathdotabove{\bm{u}} = \hspace{-0.1ex} \bm{0}}$\:---
 \en{this ensues}\ru{это вытекает} \en{from its definition}\ru{из её определения}
-${\kinetic \hspace{-0.1ex} \equiv \smallerdisplaystyleonehalf \hspace{.2ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$.
+${\kineticenergydensity \hspace{-0.1ex} \equiv \smallerdisplaystyleonehalf \hspace{.2ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$.
 \en{The potential energy}\ru{Потенциальная энергия},
 \en{being}\ru{будучи} \en{a~quadratic form}\ru{квадратичной формой} %%\en{of~}\en{an~infinitesimal linear deformation}\ru{бесконечномалой линейной деформации}
-${\potential(\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smash{\smallerdisplaystyleonehalf} \hspace{.2ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation}$,
+${\potentialenergydensity (\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smash{\smallerdisplaystyleonehalf} \hspace{.2ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation}$,
 \en{is positive too}\ru{тоже положительна}:
-${\potential \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\infinitesimaldeformation \hspace{-0.1ex} \neq \hspace{-0.1ex} {^2\bm{0}}}$.
+${\potentialenergydensity \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\infinitesimaldeformation \hspace{-0.1ex} \neq \hspace{-0.1ex} {^2\bm{0}}}$.
 %
 \en{Such is}\ru{Таков\'{о}} \en{a~priori requirement}\ru{априорное требование} \en{of~the~positive definiteness}\ru{положительной определённости} \en{for}\ru{для}~\en{stiffness tensor}\ru{тензора жёсткости}~$\stiffnesstensor$.
 \en{This is one of}\ru{Это одно из}~\inquotes{\en{additional inequalities in the~theory of~elasticity}\ru{дополнительных неравенств в~теории упругости}}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
 
 \en{Since}\ru{Так как}
-$\kinetic$ \en{and}\ru{и}~$\potential$
+$\kineticenergydensity$ \en{and}\ru{и}~$\potentialenergydensity$
 \en{are positive definite}\ru{положительно определены},
 \eqref{dynamicsoflineartheory:fullenergyiszero}
 \en{gives}\ru{даёт}
@@ -174,7 +174,7 @@ $\kinetic$ \en{and}\ru{и}~$\potential$
 \nopagebreak\vspace{-0.1em}
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation*}
-\kinetic = 0 \hspace{.1ex}, \; \potential = 0
+\kineticenergydensity = 0 \hspace{.1ex}, \; \potentialenergydensity = 0
 \hspace{.7ex} \Rightarrow \hspace{.7ex}
 %
 \mathdotabove{\bm{u}} = \bm{0}

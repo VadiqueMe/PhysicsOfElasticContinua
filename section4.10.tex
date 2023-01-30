@@ -2,7 +2,7 @@
 
 \ru{\section{Принцип минимума потенциальной энергии}}
 
-\label{para:principleofminimumpotentialenergy}
+\label{section:principleofminimumpotentialenergy}
 
 \vspace{.2em}
 \begin{changemargin}{\parindent}{\parindent}
@@ -37,7 +37,7 @@
 \potentialenergyfunctional \hspace{.2ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \equiv \hspace{-0.2ex}
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
 \Bigl(
-\potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.1ex} - \bm{f} \hspace{-0.1ex} \dotp \bm{u}
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.1ex} - \bm{f} \hspace{-0.1ex} \dotp \bm{u}
 \Bigr) \hspace{-0.1ex} d\mathcal{V} \hspace{.1ex}
 - \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex}
@@ -74,7 +74,7 @@ en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
    \en{and}\ru{и}
    \en{can be}\ru{могут быть}
    \en{continuous}\ru{непрерывными}
-   \en{or else}\ru{иначе} ${ \smash{ \potential(\hspace{-0.1ex} \bm{u} \hspace{-0.1ex} )}\hspace{-0.1ex} }$
+   \en{or else}\ru{иначе} ${ \smash{ \potentialenergydensity (\hspace{-0.1ex} \bm{u} \hspace{-0.1ex} )}\hspace{-0.1ex} }$
    \en{will not be}\ru{не~будет}
    \en{integrable}\ru{интегрируемой}
 ) .
@@ -86,7 +86,7 @@ en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
 
 \nopagebreak\vspace{-0.15em}
 \begin{equation*}
-\potential( \hspace{-0.1ex} \bm{u} \hspace{-0.1ex} )
+\potentialenergydensity ( \hspace{-0.1ex} \bm{u} \hspace{-0.1ex} )
 \hspace{-0.2ex} = \hspace{.1ex}
 \smalldisplaystyleonehalf \boldnabla \bm{u}
 \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
@@ -116,7 +116,7 @@ en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
 = \hspace{-0.2ex}
 \scalebox{.9}{$
    \displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex}
-   \potential( \hspace{-0.1ex}\bm{u}\hspace{-0.1ex} ) \hspace{.2ex} d\mathcal{V} \hspace{.1ex}
+   \potentialenergydensity ( \hspace{-0.1ex}\bm{u}\hspace{-0.1ex} ) \hspace{.2ex} d\mathcal{V} \hspace{.1ex}
    - \scalebox{.88}[1]{$ \biggl( $} \hspace{.1ex}
    \scalebox{.9}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
    \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.3ex} d\mathcal{V}
@@ -127,7 +127,7 @@ en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
    \scalebox{.88}[1]{$ \biggr) $} \hspace{-0.3ex}
    = \hspace{.1ex} - \hspace{.1ex}
    \scalebox{.9}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
-   \potential(\hspace{-0.1ex} \bm{u} \hspace{-0.1ex}) \hspace{.2ex}
+   \potentialenergydensity (\hspace{-0.1ex} \bm{u} \hspace{-0.1ex}) \hspace{.2ex}
    d\mathcal{V}
    .
 \vspace{-0.1em}
@@ -151,8 +151,8 @@ en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
    $}
    \hspace{-0.44ex}
    \Bigl(
-      \potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
-      - \potential(\hspace{-0.1ex} \bm{u} \hspace{-0.1ex})
+      \potentialenergydensity (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+      - \potentialenergydensity (\hspace{-0.1ex} \bm{u} \hspace{-0.1ex})
       \hspace{-0.2ex} - \hspace{-0.2ex}
       \bm{f} \hspace{-0.17ex} \dotp \hspace{-0.1ex}
       ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} )
@@ -190,8 +190,8 @@ ${ \bm{f} \hspace{-0.2ex} = \hspace{-0.1ex} \boldconstant }$
 \en{and}\ru{и}
 ${ \bm{p} \hspace{-0.1ex} = \hspace{-0.1ex} \boldconstant }$
 
-${\potential(\hspace{-0.1ex}\bm{a}\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smallerdisplaystyleonehalf \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$
-(but \emph{not} the linear ${\smallerdisplaystyleonehalf \boldnabla \bm{u} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$\:--- this means ${\potential(\hspace{-0.1ex}\bm{a}\hspace{-0.1ex}) \hspace{-0.2ex} \neq \smallerdisplaystyleonehalf \hspace{.1ex} \linearstress \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$)
+${\potentialenergydensity (\hspace{-0.1ex}\bm{a}\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smallerdisplaystyleonehalf \boldnabla \hspace{-0.1ex} \bm{a} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$
+(but \emph{not} the linear ${\smallerdisplaystyleonehalf \boldnabla \bm{u} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$\:--- this means ${\potentialenergydensity (\hspace{-0.1ex}\bm{a}\hspace{-0.1ex}) \hspace{-0.2ex} \neq \smallerdisplaystyleonehalf \hspace{.1ex} \linearstress \dotdotp \hspace{-0.25ex} \boldnabla \hspace{-0.1ex} \bm{a}}$)
 
 \en{Constraints}\ru{Связи}
 \en{don’t change}\ru{не~меняются}:
@@ -240,8 +240,8 @@ ${\linearstress \hspace{-0.1ex} = \hspace{-0.3ex} \boldnabla \bm{u} \dotdotp \st
 = \hspace{-0.3ex}
 \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.44ex}
 \Bigl(
-\potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
-- \potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+- \potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
 - \hspace{-0.2ex} \bigl( \hspace{.1ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \linearstress + \hspace{-0.1ex} \bm{f} \hspace{.1ex} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.2ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.2ex}
 - \linearstress \dotdotp \hspace{-0.1ex} \boldnabla \hspace{.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.1ex}
 \Bigr) d\mathcal{V}
@@ -274,8 +274,8 @@ ${ \hspace{-0.24ex}
 \scalebox{.9}{$\displaystyle
 \integral\displaylimits_{\mathcal{V}}$} \hspace{-0.44ex}
 \Bigl(
-\potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
-- \potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+- \potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
 - \linearstress
 \dotdotp \hspace{-0.1ex}
 \boldnabla \hspace{.1ex}
@@ -294,7 +294,7 @@ d\mathcal{V}
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
-\potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
 = \smalldisplaystyleonehalf
 \boldnabla \bm{u}'
 \hspace{-0.4ex} \dotdotp \hspace{-0.1ex}
@@ -303,7 +303,7 @@ d\mathcal{V}
 \boldnabla \bm{u}'
 \hspace{-0.2ex} ,
 \hspace{.6em}
-\potential(\hspace{-0.1ex}
+\potentialenergydensity (\hspace{-0.1ex}
 \bm{u}
 \hspace{-0.1ex}) \hspace{-0.2ex}
 = \smalldisplaystyleonehalf
@@ -317,10 +317,10 @@ d\mathcal{V}
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
-\potential (
+\potentialenergydensity (
    \hspace{-0.1ex} \bm{u}' \hspace{.1ex}
 ) \hspace{-0.2ex}
-- \potential (
+- \potentialenergydensity (
    \hspace{-0.1ex} \bm{u} \hspace{.1ex}
 ) \hspace{-0.2ex}
 = \smalldisplaystyleonehalf \hspace{-0.1ex}
@@ -413,8 +413,8 @@ $}
 \dotdotp \stiffnesstensor \hspace{-0.1ex} \dotdotp \hspace{-0.15ex} \boldnabla \bigl(
 \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
 \hspace{.1ex} \bigr) \hspace{-0.25ex}
-= \hspace{.1ex} \potential(\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
-- \potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})
+= \hspace{.1ex} \potentialenergydensity (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
+- \potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})
 \hspace{.1ex} ,
 \end{equation*}
 
@@ -445,7 +445,7 @@ $}
 \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
 \hspace{.1ex} \bigr) \hspace{-0.25ex}
 = \hspace{.1ex}
-\potential(\hspace{-0.1ex}\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}
 \hspace{.1ex} )
 \end{equation*}
 
@@ -463,14 +463,14 @@ ${b^{\hspace{.1ex}2} \hspace{-0.2ex} - a^2 \hspace{-0.2ex} - 2 \hspace{.1ex} a \
 \potentialenergyfunctional \hspace{.16ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
 = \hspace{-0.3ex}
 \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.22ex}
-\potential(\hspace{-0.1ex}\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}\hspace{.1ex})
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u}\hspace{.1ex})
 \hspace{.1ex} d\mathcal{V}
 .
 \end{equation*}
 
 \en{Since}\ru{Потому как} $\stiffnesstensor$
-\en{is positive definite}\ru{положительно определён} (\sectionref{para:uniquenessfordynamicproblem})
-${\potential ( \hspace{.1ex}
+\en{is positive definite}\ru{положительно определён} (\sectionref{section:uniquenessfordynamicproblem})
+${\potentialenergydensity ( \hspace{.1ex}
 \bm{w} \hspace{.1ex} ) \hspace{-0.2ex}
 = \smallerdisplaystyleonehalf
 \scalebox{.95}{$

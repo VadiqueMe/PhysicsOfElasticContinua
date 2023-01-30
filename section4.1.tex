@@ -2,7 +2,7 @@
 
 \ru{\section{Полный набор уравнений}}
 
-\label{para:wholesetofequations.lineartheory}
+\label{section:wholesetofequations.lineartheory}
 
 \en{\dropcap{E}{quations}}\ru{\dropcap{У}{равнения}}
 \en{of the nonlinear elasticity}\ru{нелинейной упругости},
@@ -54,7 +54,7 @@
 \linearstress = \scalebox{.92}{$
    \displaystyle
    \frac{ \raisemath{-0.133em}{
-      \partial \hspace{.1ex} \potential^{\mathstrut}
+      \partial \hspace{.1ex} \potentialenergydensity^{\mathstrut}
    }%close \raisemath
    }%close 1st argument of \frac
    { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
@@ -83,7 +83,7 @@ $\infinitesimaldeformation$~\ru{это}\en{is}
 \en{the~tensor}\ru{тензор}
  \en{of infinitesimal relative deformation~(strain)}\ru{бесконечномалой относительной деформации},
 ${%
-   \potential(
+   \potentialenergydensity (
       \hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}
    )\hspace{-0.1ex}
 }$~\ru{это}\en{is}
@@ -126,7 +126,7 @@ ${%
 \en{of the~nonlinear theory}\ru{нелинейной теории}.
 \en{Varying}\ru{Варьирование}
 \en{from an~arbitrary configuration}\ru{от~произвольной конфигурации}
-\en{is~described in}\ru{описано в}~\chapterdotsectionref{chapter:nonlinearcontinuum}{para:variationofconfiguration}.
+\en{is~described in}\ru{описано в}~\chapterdotsectionref{chapter:nonlinearcontinuum}{section:variationofconfiguration}.
 \en{The~linear theory}\ru{Линейная теория}
 \ru{это}\en{is}
 \en{the~result of varying}\ru{результат варьирования}
@@ -152,7 +152,7 @@ ${%
 \varbivalent{\hspace{-0.2ex}\cauchystress}
 = \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
 = \scalebox{.9}{$
-\displaystyle \frac{\raisemath{-0.125em}{ \partial^2 \hspace{.1ex} \potential }}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}}} $}
+\displaystyle \frac{\raisemath{-0.125em}{ \partial^2 \hspace{.1ex} \potentialenergydensity }}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}}} $}
 \hspace{-0.1ex} \dotdotp
 \variation{\hspace{.12ex}\bm{C}}
 \hspace{.1ex} ,
@@ -183,7 +183,7 @@ ${%
    $\linearstress$,
 \item ${%
    \scalebox{.95}{$%
-      \raisemath{.15em}{ \scalebox{.92}{$ \partial^2 \hspace{.1ex} \potential $} } $}
+      \raisemath{.15em}{ \scalebox{.92}{$ \partial^2 \hspace{.1ex} \potentialenergydensity $} } $}
    /
    \hspace{-0.1ex}
    \raisemath{-0.3em}{\scalebox{.92}{$
@@ -218,7 +218,7 @@ ${%
 \bm{F} = \UnitDyad \hspace{.1ex} + \hspace{-0.2ex} \boldnablacircled {\bm{u}}^{\T} \hspace{-0.3ex},
 \\[.2em]
 %
-\cauchystress \hspace{.1ex} = J^{-1} \hspace{.2ex} \bm{F} \dotp \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potential}}{\raisemath{-0.1em}{\partial\hspace{.1ex} \bm{C}}} $} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex},
+\cauchystress \hspace{.1ex} = J^{-1} \hspace{.2ex} \bm{F} \dotp \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potentialenergydensity}}{\raisemath{-0.1em}{\partial\hspace{.1ex} \bm{C}}} $} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex},
 \:\:
 \bm{C} = \boldnablacircled {\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.3ex} + \smalldisplaystyleonehalf \boldnablacircled \bm{u} \dotp \hspace{-0.25ex} \boldnablacircled \bm{u}^{\T} \hspace{-0.25ex}.
 \end{array}
@@ -408,7 +408,7 @@ $\infinitesimaldeformation$
 \en{and}\ru{и}~$\linearstress$
 \en{will increase}\ru{вырастут}
 \ru{тоже }\en{by}\ru{в}~$m$ \en{times}\ru{раз}\en{ too}.
-\en{Potential energy density}\ru{Плотность потенциальной энергии}~$\potential$
+\en{Potential energy density}\ru{Плотность потенциальной энергии}~$\potentialenergydensity$
 \en{will increase by}\ru{вырастет в}~$m^2$ \en{times}\ru{раз}.
 \en{In~reality}\ru{В~реальности}
 \en{such}\ru{такое}
@@ -420,11 +420,11 @@ $\infinitesimaldeformation$
 
 \en{The density}\ru{Плотность}
 \en{of the potential energy}\ru{потенциальной энергии}
-\en{of the elastic deformation}\ru{упругой деформации}~$\potential$
+\en{of the elastic deformation}\ru{упругой деформации}~$\potentialenergydensity$
 
 \nopagebreak\vspace{-0.1em}
 \begin{equation*}
-\potential ( \hspace{-0.1ex}
+\potentialenergydensity ( \hspace{-0.1ex}
 \infinitesimaldeformation
 \hspace{-0.1ex} ) \hspace{-0.2ex}
 = \hspace{.1ex}
@@ -440,9 +440,9 @@ $\infinitesimaldeformation$
 \en{and}\ru{и}
 \en{its variation}\ru{её вариация}
 
-\nopagebreak\vspace{.1em}\begin{equation*}
+\nopagebreak\vspace{.3em}\begin{equation*}
 \begin{gathered}
-\variation{\potential}
+\variation{\potentialenergydensity}
 = \hspace{.1ex}
 \smash{\smalldisplaystyleonehalf} \hspace{.25ex}
 \variation{ \bigl(
@@ -480,14 +480,14 @@ $}
 \variation{\infinitesimaldeformation}
 \\[.3em]
 %
-\variation{\hspace{.1ex}\potential}
+\variation{\hspace{.1ex}\potentialenergydensity}
 ( \hspace{-0.1ex}
     \infinitesimaldeformation
 \hspace{-0.1ex} ) \hspace{-0.2ex}
 = \scalebox{.9}{$
     \displaystyle\frac{
         \raisemath{-0.16em}
-        {\partial \hspace{.1ex} \potential}}
+        {\partial \hspace{.1ex} \potentialenergydensity}}
         {\partial \infinitesimaldeformation}
     $} \hspace{-0.1ex}
 \dotdotp
@@ -502,12 +502,12 @@ $}
 \variation{\infinitesimaldeformation}
 \\
 %
-\secondvariation{\hspace{.1ex}\potential}(\hspace{-0.1ex}
+\secondvariation{\hspace{.1ex}\potentialenergydensity}(\hspace{-0.1ex}
 \infinitesimaldeformation
 \hspace{-0.1ex}) \hspace{-0.2ex}
 = \variation{\infinitesimaldeformation}
 \hspace{-0.1ex} \dotdotp
-\scalebox{.9}{$ \displaystyle\frac{\raisemath{-0.16em}{\partial^2 \hspace{.1ex} \potential}}{ \partial \infinitesimaldeformation \hspace{.1ex} \partial \infinitesimaldeformation } $}
+\scalebox{.9}{$ \displaystyle\frac{\raisemath{-0.16em}{\partial^2 \hspace{.1ex} \potentialenergydensity}}{ \partial \infinitesimaldeformation \hspace{.1ex} \partial \infinitesimaldeformation } $}
 \hspace{-0.1ex} \dotdotp
 \variation{\infinitesimaldeformation}
 = \variation{\infinitesimaldeformation}
@@ -515,7 +515,7 @@ $}
 \stiffnesstensor
 \dotdotp
 \variation{\infinitesimaldeformation}
-= 2 \potential(\variation{\infinitesimaldeformation})
+= 2 \potentialenergydensity (\variation{\infinitesimaldeformation})
 \end{gathered}
 \end{equation*}%
 \AddUnderBrace[line width=.75pt][0, .1ex][yshift = .2ex]%
@@ -525,7 +525,8 @@ $}
 }$}
 \vspace{-0.5em}
 
-\en{As was noted}\ru{Как отмечалось} \en{in}\ru{в}~\chapterref{chapter:genericmechanics},
+\en{As was noted}\ru{Как отмечалось}
+\en{in}\ru{в}~\chapterref{chapter:genericmechanics},
 \en{the principle}\ru{принцип}
 \en{of the virtual work}\ru{виртуальной работы}
 (\ru{принцип }\en{the~}\hbox{d’\hspace{-0.2ex}Alembert\ru{’а}--Lagrange\ru{’а}}\en{ principle})
@@ -538,7 +539,7 @@ $}
 (\en{the internal forces}\ru{внутренние силы}
 \en{in an~elastic medium}\ru{в~упругой среде}
 \en{are potential}\ru{потенциальны}
-${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potential} }$)
+${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensity} }$)
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{lineartheory:principleofvirtualwork}
@@ -553,7 +554,7 @@ ${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potential} }$)
     \right)
     \hspace{-0.1ex}
     \dotp
-    \variation{\bm{u}} - \variation{\potential}
+    \variation{\bm{u}} - \variation{\potentialenergydensity}
 \hspace{.1ex} \Bigr) d\mathcal{V}
 + \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \variation{\bm{u}} \hspace{.25ex} do \hspace{.1ex}
@@ -574,14 +575,14 @@ ${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potential} }$)
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \begin{gathered}
-\variation{\potential}
+\variation{\potentialenergydensity}
 = \linearstress \dotdotp \variation{\infinitesimaldeformation}
 = \linearstress \dotdotp \hspace{-0.12ex} \boldnabla \variation{\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.16ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \hspace{-0.1ex} \dotp \variation{\bm{u}} \hspace{.1ex} \right) - \boldnabla \dotp \linearstress \dotp \variation{\bm{u}}
 \hspace{.1ex} ,
 \\[.1em]
 %
-\displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \variation{\potential} \hspace{.2ex} d\mathcal{V} =
+\displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \variation{\potentialenergydensity} \hspace{.2ex} d\mathcal{V} =
 \ointegral\displaylimits_{\mathclap{o\hspace{.1ex}(\boundary \mathcal{V})}} \hspace{-0.2ex} \unitnormalvector \hspace{.1ex} \dotp \linearstress \dotp \variation{\bm{u}} \hspace{.32ex} do \hspace{.2ex} - \hspace{-0.1ex}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \linearstress \dotp \variation{\bm{u}} \hspace{.32ex} d\mathcal{V}
 \end{gathered}

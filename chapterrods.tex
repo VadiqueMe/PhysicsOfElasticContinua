@@ -43,7 +43,7 @@
 
 \ru{\section{Исходные представления}}
 
-\label{para:overviewofrods}
+\label{section:overviewofrods}
 
 \en{\dropcap{R}{od}}\ru{\dropcap{С}{тержень}}\ru{\:--- это}\en{ is} \en{a~thin long body}\ru{тонкое длинное тело}.
 \en{It is thought of}\ru{Он мыслится} (\en{and modeled}\ru{и~моделируется}) \en{as}\ru{как} \en{a~spatial curve}\ru{пространственная кривая}\:--- \en{the~axis of~rod}\ru{ось стержня}, \en{coated with a~material}\ru{покрытая материалом}
@@ -224,7 +224,7 @@ ${%
 \en{For}\ru{Для} \en{a~}\en{cylindrical}\ru{цилиндрического} (\en{prismatic}\ru{призматического}) \en{rod}\ru{стержня} ${\rodfeaturesvector = \bm{0}}$.
 
 \en{However}\ru{Однако}, \eqref{rods.thepsivector} \en{is}\ru{есть} \en{only}\ru{лишь} \en{an~initial concept}\ru{первоначальное понятие} \en{of~vector}\ru{о~векторе}~${\rodfeaturesvector}$ \en{as}\ru{как} \en{of geometric features}\ru{о~геометрических характеристиках}.
-\en{Further}\ru{Далее} \en{in}\ru{в}~\sectionref{para:rods.cosseratlines}, \en{after}\ru{после} \en{adopting}\ru{принятия} \en{the material structure}\ru{материальной структуры} \en{of a~rod}\ru{стержня}, \en{a~concept}\ru{понятие} \en{of}\ru{о}~${\rodfeaturesvector}$ \en{will change}\ru{изменится}.
+\en{Further}\ru{Далее} \en{in}\ru{в}~\sectionref{section:rods.cosseratlines}, \en{after}\ru{после} \en{adopting}\ru{принятия} \en{the material structure}\ru{материальной структуры} \en{of a~rod}\ru{стержня}, \en{a~concept}\ru{понятие} \en{of}\ru{о}~${\rodfeaturesvector}$ \en{will change}\ru{изменится}.
 
 \en{Moreover}\ru{Кроме этого}, \en{at each point}\ru{в~каждой точке} \en{of the rod’s axis}\ru{оси стержня}, \en{thought of as a~curve}\ru{мыслимой как кривая}, \en{there’s}\ru{есть} \en{also another}\ru{также другая} \en{triple of mutually perpendicular unit vectors}\ru{тройка взаимно перпендикулярных единичных векторов}, \en{the one}\ru{та что} \en{with the normal}\ru{с~нормальным} \en{and the binormal}\ru{и~бинормальным} \en{vectors}\ru{векторами}.
 
@@ -421,7 +421,7 @@ $\tangentvector$ \en{always}\ru{всегда} \en{has}\ru{имеет} \en{the un
 \en{it can be represented}\ru{он может быть представлен}
 \en{via}\ru{через}
 \en{the~companion}\ru{сопутствующий}
-\en{pseudovector}\ru{псевдовектор}~(\chapterdotsectionref{chapter:mathapparatus}{para:tensors.symmetric+skewsymmetric}).
+\en{pseudovector}\ru{псевдовектор}~(\chapterdotsectionref{chapter:mathapparatus}{section:tensors.symmetric+skewsymmetric}).
 \en{This pseudovector}\ru{Этот псевдовектор}
 \en{is known as}\ru{известен как}
 \en{the}\ru{вектор} Darboux\en{ vector}.
@@ -563,14 +563,14 @@ Cosserat\en{ continuum}.
 
 \ru{\section{Кинематика линий Коссера}} % кривых Коссера
 
-\label{para:rods.cosseratlines}
+\label{section:rods.cosseratlines}
 
 \en{Model described further}\ru{Модель, описанная далее}\en{ is}\ru{\:---} \en{a~simplified version of}\ru{упрощённая версия}~\chapterref{chapter:cosseratcontinuum}.
 
 \en{There’s no more a~triple}\ru{Больше нет тройки} \en{of material coordinates}\ru{материальных координат}~${q_{\hspace{.1ex}i}}$, \en{but}\ru{но} \en{the only one}\ru{лишь одна}\:--- $s$.
 \en{It may be}\ru{Это может быть} \en{the arc length parameter}\ru{параметр длины дуги} \en{in the initial configuration}\ru{в~начальной конфигурации}.
 \en{The motion}\ru{Движение} \en{of a~particle}\ru{частицы} \en{over time}\ru{со~временем} \en{is described}\ru{описывается} \en{by the location vector}\ru{вектором положения}~${\locationvector(s,t)}$ \en{and}\ru{и} \en{the rotation tensor}\ru{тензором поворота}~${\rotationtensor(s,t)}$.
-\en{Linear}\ru{Линейная} \en{and}\ru{и}~\en{angular}\ru{угловая}~\eqrefwithchapterdotsection{angularvelocityvector}{chapter:mathapparatus}{para:rotationtensor} \en{velocities}\ru{скорости} \en{of a~rod’s particle}\ru{частицы стержня} \en{are}\ru{суть}
+\en{Linear}\ru{Линейная} \en{and}\ru{и}~\en{angular}\ru{угловая}~\eqrefwithchapterdotsection{angularvelocityvector}{chapter:mathapparatus}{section:rotationtensor} \en{velocities}\ru{скорости} \en{of a~rod’s particle}\ru{частицы стержня} \en{are}\ru{суть}
 
 \nopagebreak\vspace{-0.2em}\begin{gather}
 \mathdotabove{\locationvector} = \bm{v}
@@ -710,7 +710,7 @@ ${ \mathcircabove{\bm{e}}_{3} = \initiallocationvector{\hspace{.1ex}'} }$.
 
 \ru{\section{Баланс сил и моментов}}
 
-\label{para:rods.forcesandmomentsbalance}
+\label{section:rods.forcesandmomentsbalance}
 
 \en{Possible loads}\ru{Возможные нагрузки}\ru{,} \en{acting}\ru{действующие} \en{on a~rod}\ru{на стержень} \en{as}\ru{как} \en{the~}\ru{линию }Cosserat\en{ line}\en{ are}\ru{\:---} \en{forces}\ru{\hbox{силы}} \en{and}\ru{и}~\en{moments}\ru{моменты}: \en{on~infinitesimal element}\ru{на~бесконечно-малый элемент}~$ds$ \en{of a~rod}\ru{стержня} \en{act}\ru{действуют} \en{external force}\ru{внешняя сила}~${\bm{q}ds}$ \en{and}\ru{и}~\en{external moment}\ru{внешний момент}~${\bm{m}ds}$.
 \en{The internal interactions}\ru{Внутренними взаимо\-действиями} \en{will be}\ru{будут} \en{force}\ru{сила}~${\internalforce(s)}$ \en{and }\ru{и~}\en{moment}\ru{момент}~${\internalmoment(s)}$\:--- \en{this is the action}\ru{это действие} \en{of the particle}\ru{частицы} \en{with coordinate}\ru{с~координатой}~${s\!+\!0}$ \en{on the particle}\ru{на частицу} \en{with}\ru{с}~${s\!-\!0}$.
@@ -726,7 +726,7 @@ ${ \mathcircabove{\bm{e}}_{3} = \initiallocationvector{\hspace{.1ex}'} }$.
 
 \ru{\section{Принцип виртуальной работы и следствия}}
 
-\label{para:rods.principleofvirtualwork}
+\label{section:rods.principleofvirtualwork}
 
 \noindent
 \en{For a~piece of~rod}\ru{Для куск\'{а} стержня} ${s_0 \hspace{.2em} \scalebox{.9}{$\leq$} \hspace{.18em} s \hspace{.22em} \scalebox{.9}{$\leq$} \hspace{.2em} s_1}$ \en{formulation of the~principle is as~follows}\ru{формулировка принципа таков\'{а}}
@@ -749,7 +749,7 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \ru{\section{Классическая модель Kirchhoff’а}}
 
-\label{para:rods.modelofkirchhoff}
+\label{section:rods.modelofkirchhoff}
 
 \en{It is also called}\ru{Её ещё называют} \en{the }\emph{\en{Kirchhoff’s rod theory}\ru{теорией стержней Kirchhoff’а}}.
 
@@ -785,7 +785,7 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \ru{\section{Проблема Euler’а об устойчивости стержней}}
 
-\label{para:rods.eulerstabilityproblem}
+\label{section:rods.eulerstabilityproblem}
 
 \begin{otherlanguage}{russian}
 
@@ -800,9 +800,9 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \ru{\section{Вариационные уравнения}} % Уравнения в вариациях
 
-\label{para:rods.equationsinvariations}
+\label{section:rods.equationsinvariations}
 
-\en{In the nonlinear mechanics of elastic media}\ru{В~нелинейной механике упругих сред} \ru{полезны }\en{variational equations}\ru{вариационные уравнения}\en{ are useful}, \en{which describe}\ru{которые описывают} \en{a~small change}\ru{малое изменение} \en{in the current configuration}\ru{текущей конфигурации}~(\chapterdotsectionref{chapter:nonlinearcontinuum}{para:variationofconfiguration}).
+\en{In the nonlinear mechanics of elastic media}\ru{В~нелинейной механике упругих сред} \ru{полезны }\en{variational equations}\ru{вариационные уравнения}\en{ are useful}, \en{which describe}\ru{которые описывают} \en{a~small change}\ru{малое изменение} \en{in the current configuration}\ru{текущей конфигурации}~(\chapterdotsectionref{chapter:nonlinearcontinuum}{section:variationofconfiguration}).
 
 \en{Variating}\ru{Варьируя} \en{equations}\ru{уравнения} \en{of the complete system}\ru{полной системы} \en{of the }\ru{модели }Cosserat\en{ model}, \en{we get}\ru{мы получаем}
 
@@ -825,7 +825,7 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \ru{\section{Модель без сдвига с растяжением}}
 
-\label{para:rods.nonshearmodelwithextension}
+\label{section:rods.nonshearmodelwithextension}
 
 \en{Kirchhoff’s model}\ru{Модель Kirchhoff’а} \en{with internal constraint}\ru{с~внутренней связью}~${\firstdeformationvectorcosseratline \hspace{-0.25ex} = \hspace{-0.2ex} \bm{0}}$~\eqref{kirchhoffmodelinternalconstraint} \en{doesn’t describe}\ru{не~описывает} \en{the~simplest case}\ru{простейший случай} \en{of extension/compression}\ru{растяжения/сжатия} \en{of a~straight rod}\ru{прямого стержня}.
 \en{This nuisance}\ru{Эта неприятность} \en{disappears}\ru{исчезает} \en{with}\ru{со}~\inquotes{\en{softening}\ru{смягчением}} \en{of the~constraint}\ru{связи}, \en{for example}\ru{например} \en{adding}\ru{добавляя} \en{the~possibility of (ex)tension}\ru{возможность растяжения} \en{and}\ru{и} \en{inhibiting only the transverse shear}\ru{подавляя лишь поперечный сдвиг}
@@ -845,7 +845,7 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \ru{\section{Механика гибкой нити}}
 
-\label{para:rods.flexiblethreadmechanics}
+\label{section:rods.flexiblethreadmechanics}
 
 \en{A~thread}\ru{Нить}\en{ is}\ru{\:---} \ru{это} \en{a~momentless rod}\ru{безмоментный стержень}.
 
@@ -865,7 +865,7 @@ $}
 \hspace{-0.25ex} \Bigl( \hspace{-0.1ex}
 \bigl( \bm{q} - \hspace{-0.12ex} \rho \hspace{.2ex} \mathdotdotabove{\locationvector} \hspace{.36ex} \bigr)
 \hspace{-0.25ex} \dotp \variation{\locationvector}
-- \variation{\potential}
+- \variation{\potentialenergydensity}
 \Bigr) ds
 \hspace{.1ex} + \hspace{-0.1ex} \Bigl[ \hspace{.1ex}
 \bm{Q} \hspace{-0.1ex} \dotp \variation{\locationvector}
@@ -884,7 +884,7 @@ $}
 
 \ru{\section{Линейная теория}}
 
-\label{para:rods-lineartheory}
+\label{section:rods-lineartheory}
 
 \begin{otherlanguage}{russian}
 
@@ -901,7 +901,7 @@ $}
 
 \ru{\section{Случай малой толщины}}
 
-\label{para:rods.smallthickness}
+\label{section:rods.smallthickness}
 
 \begin{otherlanguage}{russian}
 
@@ -926,12 +926,12 @@ $}
 
 \ru{\section{Задача Сэйнт\hbox{-}Венана}}
 
-\label{para:rods.problemofsaint-venant}
+\label{section:rods.problemofsaint-venant}
 
 \begin{otherlanguage}{russian}
 
 Трудно переоценить ту роль, которую играет в~механике стержней классическое решение Saint\hbox{-\hspace{-0.2ex}}Venant\ru{’а}.
-О~нём уж\'{е} шла речь в~\chapterdotsectionref{chapter:linearclassicalelasticity}{para:twistingofrods.saintvenant}.
+О~нём уж\'{е} шла речь в~\chapterdotsectionref{chapter:linearclassicalelasticity}{section:twistingofrods.saintvenant}.
 
 Вместо условий ...
 
@@ -945,7 +945,7 @@ $}
 
 \ru{\section{Нахождение жёсткости по энергии}}
 
-\label{para:rods.stiffnessbyenergy}
+\label{section:rods.stiffnessbyenergy}
 
 \begin{otherlanguage}{russian}
 
@@ -999,10 +999,10 @@ d\rodsection
 
 Помимо $\internalforce$ \en{and}\ru{и}~$\internalmoment$, есть ещё величина, не вызывающая сомнений\:--- упругая энергия.
 Естественно потребовать, чтобы в~одно\-мерной и в~трёх\-мерной моделях энергии на~единицу длины совпали.
-При этом, чтобы уйти от~различий в~трактовках ${\bm{u}_{\raisemath{-0.2ex}{1}}}$ и~$\bm{\theta}$, будем исходить из \en{complementary energy}\ru{дополнительной энергии}~${\widehat{\potential}(\internalmoment, \internalforce)}$:
+При этом, чтобы уйти от~различий в~трактовках ${\bm{u}_{\raisemath{-0.2ex}{1}}}$ и~$\bm{\theta}$, будем исходить из \en{complementary energy}\ru{дополнительной энергии}~${\widehat{\potentialenergydensity}(\internalmoment, \internalforce)}$:
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-\widehat{\potential}(\internalmoment, \internalforce) = \hspace{-0.2ex} \integral\displaylimits_{\rodsection} \hspace{-0.4ex} \potential_{\raisemath{-0.2ex}{3}} \hspace{.2ex} d\rodsection
+\widehat{\potentialenergydensity}(\internalmoment, \internalforce) = \hspace{-0.2ex} \integral\displaylimits_{\rodsection} \hspace{-0.4ex} \\potentialenergydensity_{\raisemath{-0.2ex}{3}} \hspace{.2ex} d\rodsection
 \end{equation*}
 
 ...
@@ -1013,7 +1013,7 @@ d\rodsection
 
 \ru{\section{Вариационный метод построения одномерной модели}}
 
-\label{para:variationalmethodforonedimension}
+\label{section:variationalmethodforonedimension}
 
 \begin{otherlanguage}{russian}
 
@@ -1030,13 +1030,13 @@ d\rodsection
 Невозможно пренебречь возникающими невязками в~дифференциальных уравнениях и краевых условиях.
 
 Формально \inquotes{чистым} является вариационный метод сведения трёхмерной проблемы к~одномерной, называемый иногда методом внутренних связей.
-Аппроксимация~\eqref{rods.fieldofdisplacements} подставляется в~трёхмерную формулировку вариационного принципа минимума потенциальной энергии~\eqrefwithchapterdotsection{principleofminimumpotentialenergy.formulation}{chapter:linearclassicalelasticity}{para:principleofminimumpotentialenergy}
+Аппроксимация~\eqref{rods.fieldofdisplacements} подставляется в~трёхмерную формулировку вариационного принципа минимума потенциальной энергии~\eqrefwithchapterdotsection{principleofminimumpotentialenergy.formulation}{chapter:linearclassicalelasticity}{section:principleofminimumpotentialenergy}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \potentialenergyfunctional \hspace{.2ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) = \hspace{-0.2ex}
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex}
 \Bigl(
-\potential(\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.1ex} - \bm{f} \hspace{-0.1ex} \dotp \bm{u} \Bigr) \hspace{-0.1ex} d\mathcal{V}
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.1ex} - \bm{f} \hspace{-0.1ex} \dotp \bm{u} \Bigr) \hspace{-0.1ex} d\mathcal{V}
 - \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.32ex} \bm{p} \dotp \bm{u} \hspace{.33ex} do \hspace{.2ex}
 \hspace{.1ex}\to\hspace{.25ex} \mathrm{min}
@@ -1061,7 +1061,7 @@ d\rodsection
 
 ...
 
-\en{For variational construction}\ru{Для вариационного построения} \en{of one-dimensional models}\ru{одномерных моделей} \en{it’s convenient to use}\ru{удобно использовать} \ru{принцип }\en{the }Reissner\ru{’а}\hbox{--}Hellinger\ru{’а}\en{ principle}~(\chapterdotsectionref{chapter:linearclassicalelasticity}{para:mixedvariationalprinciples}) \en{with independent approximation of stresses}\ru{с~независимой аппроксимацией напряжений}~\cite{eliseev-models}.
+\en{For variational construction}\ru{Для вариационного построения} \en{of one-dimensional models}\ru{одномерных моделей} \en{it’s convenient to use}\ru{удобно использовать} \ru{принцип }\en{the }Reissner\ru{’а}\hbox{--}Hellinger\ru{’а}\en{ principle}~(\chapterdotsectionref{chapter:linearclassicalelasticity}{section:mixedvariationalprinciples}) \en{with independent approximation of stresses}\ru{с~независимой аппроксимацией напряжений}~\cite{eliseev-models}.
 \en{In this case}\ru{В этом случае}\en{,} \ru{нужна }\en{some consistency between}\ru{некоторая согласованность между}~$\bm{u}$ \en{and}\ru{и}~$\cauchystress$\en{ is needed}.
 
 \en{Many advantages}\ru{Множеству достоинств} \en{of the variational method}\ru{вариационного метода} \en{are opposed}\ru{противостоит} \en{by the one}\ru{один}, \en{but}\ru{но} \en{significant}\ru{значительный} \en{disadvantage}\ru{недостаток}.
@@ -1072,13 +1072,13 @@ d\rodsection
 
 \ru{\section{Асимптотическое расщепление трёхмерной проблемы}}
 
-\label{para:rods.asymptoticsplittingofthreedimensional}
+\label{section:rods.asymptoticsplittingofthreedimensional}
 
 \en{Asymptotic splitting}\ru{Асимптотическое расщепление} \en{can be considered}\ru{можно считать} \en{fundamental}\ru{фундаментальным} \en{for describing}\ru{для описания} \en{the mechanics of rods}\ru{механики стержней}.
 \en{One-dimensional models}\ru{Одномерные модели} \en{paint only the part of a~picture}\ru{рисуют лишь часть картины}, \en{two-dimensional problems}\ru{двумерные проблемы} \en{in cross-sections}\ru{в~поперечных сечениях} \en{paint the other part}\ru{рисуют другую часть}, \en{and together}\ru{а~вместе} \en{they present}\ru{они представляют} \en{the solution}\ru{решение} \en{of a~three-dimensional problem}\ru{трёхмерной проблемы} \en{for}\ru{для} \en{a~small thickness}\ru{м\'{а}лой толщины}.
 
 \en{How to introduce a~small parameter}\ru{Как ввести малый параметр}~${\hspace{-0.2ex}\smallparameter}$ \en{into a~three-dimensional problem}\ru{в~трёхмерную проблему}?
-\en{The easiest way to do it}\ru{Проще всего сделать это} \en{is through}\ru{через} \en{representation}\ru{представление} \en{of the location vector}\ru{вектора положения}~(\sectionref{para:overviewofrods}):
+\en{The easiest way to do it}\ru{Проще всего сделать это} \en{is through}\ru{через} \en{representation}\ru{представление} \en{of the location vector}\ru{вектора положения}~(\sectionref{section:overviewofrods}):
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \RepresentedLocationVector \hspace{.1ex} (x_{\alpha}, s) \hspace{-0.2ex} = \smallparameter^{-1} \hspace{.2ex} \locationvector(s) \hspace{-0.1ex} + \hspace{.1ex} \bm{x}
@@ -1149,7 +1149,7 @@ q^{3} \hspace{-0.3ex} = s
 \end{gather*}
 
 \vspace{-0.2em}\noindent
-(\en{the meaning}\ru{смысл} \en{of~vector}\ru{вектора}~${\rodfeaturesvector}$ \en{is the same as}\ru{тот~же как} \en{in}\ru{и~в}~\sectionref{para:overviewofrods}).
+(\en{the meaning}\ru{смысл} \en{of~vector}\ru{вектора}~${\rodfeaturesvector}$ \en{is the same as}\ru{тот~же как} \en{in}\ru{и~в}~\sectionref{section:overviewofrods}).
 
 \en{The }\ru{Тензор напряжения }Cauchy\en{ stress tensor}
 
@@ -1176,10 +1176,10 @@ q^{3} \hspace{-0.3ex} = s
 
 \begin{otherlanguage}{russian}
 
-Описанный в~\sectionref{para:variationalmethodforonedimension} вариационный метод целиком переносится на~термоупругость\:--- включая задачи с~неоднородностью и~анизотропией, переменным сечением, динамические и~даже нелинейные.
-Для этого нужно~(\chapterdotsectionref{chapter:thermoelasticity}{para:variationalformulations.thermoelasticity})
+Описанный в~\sectionref{section:variationalmethodforonedimension} вариационный метод целиком переносится на~термоупругость\:--- включая задачи с~неоднородностью и~анизотропией, переменным сечением, динамические и~даже нелинейные.
+Для этого нужно~(\chapterdotsectionref{chapter:thermoelasticity}{section:variationalformulations.thermoelasticity})
 \en{in}\ru{в} \en{the~}\ru{принципе }Lagrange\ru{’а}\en{ principle} \en{of~minimum potential energy}\ru{минимума потенциальной энергии}
-заменить потенциал~${\potential(\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex})\hspace{-0.1ex}}$
+заменить потенциал~${\potentialenergydensity (\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex})\hspace{-0.1ex}}$
 свободной энергией
 
 ...

@@ -1,91 +1,15 @@
-\en{\section{Polar decomposition}}
+\en{\section{Rotations in 3-dimensional space: quaternions}}
 
-\ru{\section{Полярное разложение}}
+\ru{\section{Повороты в~трёхмерном пространстве: кватернионы}}
 
-\label{para:polardecomposition}
+\label{section:quaternions}
 
-\en{Any tensor}\ru{Любой тензор}
-\en{of the~second complexity}\ru{второй сложности}~${\bm{F}}$
-\en{with}\ru{с}~${\operatorname{det} F_{i\hspace{-0.1ex}j} \hspace{-0.2ex} \neq 0}$,
-\en{that is}\ru{то есть}
-\en{a~not singular}\ru{не сингулярный}
-\en{tensor}\ru{тензор},
-\en{can be}\ru{может быть}
-\en{decomposed}\ru{разложен}
-\en{as}\ru{как}
+The other way to describe a~rotation (or orientation) in space is via quaternions.
+It is very popular for computer graphics.
+
+Lorem ipsum ....
+
 
 ...
 
-\begin{tcolorbox}
-\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
-
-\emph{Example.} Polar decompose tensor~${\bm{C} = C_{i\hspace{-0.1ex}j} \bm{e}_i \bm{e}_j}$, where $\bm{e}_k$ are mutually perpendicular unit vectors of basis, and $C_{i\hspace{-0.1ex}j}$ are tensor’s components
-
-\begin{equation*}
-C_{i\hspace{-0.1ex}j} =
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
--5 & 20 & 11 \\
-10 & -15 & 23 \\
--3 & -5 & 10
-\end{array}\hspace{-0.2ex}\right]$}
-\end{equation*}
-
-\begin{equation*}
-\rotationtensor = O_{i\hspace{-0.1ex}j} \bm{e}_i \bm{e}_j \hspace{-0.2ex}
-= \bm{O}_1 \hspace{-0.2ex} \dotp \bm{O}_2
-\end{equation*}
-
-\begin{equation*}
-O_{i\hspace{-0.1ex}j} =
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
-0 & \nicefrac{3}{5} & \nicefrac{4}{5} \\
-0 & \nicefrac{4}{5} & - \hspace{.2ex} \nicefrac{3}{5} \\
--1 & 0 & 0
-\end{array}\hspace{-0.4ex}\right]$}
-\hspace{-0.25ex} = \hspace{-0.25ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
-0 & \mathcolor{red!33!white}{0} & 1 \\
-\mathcolor{red!33!white}{0} & \mathcolor{red!77!black}{1} & \mathcolor{red!33!white}{0} \\
--1 & \mathcolor{red!33!white}{0} & 0
-\end{array}\hspace{-0.2ex}\right]$}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
-\mathcolor{red!77!black}{1} & \mathcolor{red!33!white}{0} & \mathcolor{red!33!white}{0} \\
-\mathcolor{red!33!white}{0} & \nicefrac{4}{5} & - \hspace{.2ex} \nicefrac{3}{5} \\
-\mathcolor{red!33!white}{0} & \nicefrac{3}{5} & \nicefrac{4}{5}
-\end{array}\hspace{-0.4ex}\right]$}
-\end{equation*}
-
-\begin{equation*}\begin{array}{c}
-\bm{C} = \rotationtensor \hspace{-0.1ex} \dotp \bm{S_{\smash{\mathsf{R}}}}
-\hspace{.1ex} , \:\:
-\rotationtensor^{\T}\hspace{-0.5ex} \dotp \bm{C} = \bm{S_{\smash{\mathsf{R}}}}
-\end{array}\end{equation*}
-
-\begin{equation*}\begin{array}{c}
-\bm{C} = \bm{S_{\smash{\mathsf{L}}}} \hspace{-0.25ex} \dotp \rotationtensor
-\hspace{.1ex} , \:\:
-\bm{C} \dotp \rotationtensor^{\T}\hspace{-0.5ex} = \bm{S_{\smash{\mathsf{L}}}}
-\end{array}\end{equation*}
-
-\begin{equation*}
-S_{\smash{\mathsf{R}}\hspace{.15ex}i\hspace{-0.1ex}j} \hspace{-0.1ex} =
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
-3 & 5 & -10 \\
-5 & 0 & 25 \\
--10 & 25 & -5
-\end{array}\hspace{-0.2ex}\right]$}
-\end{equation*}
-
-\begin{equation*}
-S_{\smash{\mathsf{L}}\hspace{.15ex}i\hspace{-0.1ex}j} \hspace{-0.1ex} =
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
-\nicefrac{104}{5} & \nicefrac{47}{5} & 5 \\
-\nicefrac{47}{5} & - \hspace{.2ex} \nicefrac{129}{5} & -10 \\
-5 & -10 & 3
-\end{array}\hspace{-0.2ex}\right]$}
-\end{equation*}
-
-\par\end{tcolorbox}
-
-...
 
