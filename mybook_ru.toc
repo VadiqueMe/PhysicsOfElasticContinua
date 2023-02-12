@@ -3,24 +3,24 @@
 \babel@toc {russian}{}
 \contentsline {chapter}{Введение}{{\fontencoding {T2A}\selectfont iii}}{chapter*.1}%
 \contentsline {chapter}{\numberline {1}Математический аппарат}{1}{chapter.1}%
-\contentsline {subsection}{\numberline {0.1}What is abstract? What does math do?}{1}{subsection.1.0.1}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Древняя, но интуитивно понятная геометрия}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1}Points}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.2}Linear lines, curved and straight}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Lines, curved and straight}{2}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.3}A~relation between lines and points}{2}{subsection.1.1.3}%
 \contentsline {subsection}{\numberline {1.4}Do straight lines exists?}{2}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.5}The existence of vectors. Do vectors exist?}{3}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.6}Continuity of line}{3}{subsection.1.1.6}%
-\contentsline {subsection}{\numberline {1.7}A~point of reference}{3}{subsection.1.1.7}%
-\contentsline {subsection}{\numberline {1.8}Translation as the easiest kind of motion. Translations and vectors}{3}{subsection.1.1.8}%
-\contentsline {subsection}{\numberline {1.9}Straight line and vector}{3}{subsection.1.1.9}%
-\contentsline {subsection}{\numberline {1.10}Изображающая реальные числа линия}{3}{subsection.1.1.10}%
-\contentsline {subsection}{\numberline {1.11}What is a distance?}{4}{subsection.1.1.11}%
-\contentsline {subsection}{\numberline {1.12}Плоскость и более многомерное пространство}{4}{subsection.1.1.12}%
-\contentsline {subsection}{\numberline {1.13}Расстояние на плоскости или в более-мерном пространстве}{4}{subsection.1.1.13}%
-\contentsline {subsection}{\numberline {1.14}What is an angle?}{4}{subsection.1.1.14}%
-\contentsline {subsection}{\numberline {1.15}Дифференциация непрерывного на м\'{а}лые дифференциальные кусочки}{4}{subsection.1.1.15}%
+\contentsline {subsection}{\numberline {1.5}Vectors. Lines and vectors}{3}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.6}The existence of vectors. Do vectors exist?}{3}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.7}Continuity of line}{3}{subsection.1.1.7}%
+\contentsline {subsection}{\numberline {1.8}A~point of reference}{3}{subsection.1.1.8}%
+\contentsline {subsection}{\numberline {1.9}Translation as the easiest kind of motion. Translations and vectors}{3}{subsection.1.1.9}%
+\contentsline {subsection}{\numberline {1.10}Straight line and vector}{3}{subsection.1.1.10}%
+\contentsline {subsection}{\numberline {1.11}Линия, изображающая реальные числа}{3}{subsection.1.1.11}%
+\contentsline {subsection}{\numberline {1.12}What is a distance?}{4}{subsection.1.1.12}%
+\contentsline {subsection}{\numberline {1.13}Плоскость и более многомерное пространство}{4}{subsection.1.1.13}%
+\contentsline {subsection}{\numberline {1.14}Расстояние на плоскости или в более-мерном пространстве}{4}{subsection.1.1.14}%
+\contentsline {subsection}{\numberline {1.15}What is an angle?}{4}{subsection.1.1.15}%
+\contentsline {subsection}{\numberline {1.16}Дифференциация непрерывного на м\'{а}лые дифференциальные кусочки}{4}{subsection.1.1.16}%
 \contentsline {section}{\numberline {2}Вектор}{4}{section.1.2}%
 \contentsline {subsection}{\numberline {2.1}Что такое вектор?}{5}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {2.2}The addition and subtraction}{5}{subsection.1.2.2}%
@@ -32,9 +32,7 @@
 \contentsline {subsection}{\numberline {6.1}Умножение матриц}{18}{subsection.1.6.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {7}Векторное произведение}{20}{section.1.7}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
+\contentsline {section}{\numberline {7}Векторное произведение}{19}{section.1.7}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {8}Симметричные и антисимметричные тензоры}{25}{section.1.8}%
