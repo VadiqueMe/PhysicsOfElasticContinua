@@ -208,17 +208,17 @@
 \contentsline {chapter}{\numberline {7}Magnetoelasticity}{154}{chapter.7}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Electromagnetic field}{154}{section.7.1}%
-\contentsline {section}{\numberline {2}Electromagnetic waves}{157}{section.7.2}%
+\contentsline {section}{\numberline {2}Electromagnetic waves}{158}{section.7.2}%
 \contentsline {section}{\numberline {3}Electrostatics}{160}{section.7.3}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {4}Dielectrics}{160}{section.7.4}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {5}Magnetostatics}{160}{section.7.5}%
+\contentsline {section}{\numberline {5}Magnetostatics}{161}{section.7.5}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {6}Magnetics}{160}{section.7.6}%
+\contentsline {section}{\numberline {6}Magnetics}{161}{section.7.6}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {7}Magnetic rigidity}{161}{section.7.7}%
@@ -228,12 +228,12 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {8}Perturbation methods (asymptotic methods)}{164}{chapter.8}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Asymptotic decompositions}{164}{section.8.1}%
-\contentsline {section}{\numberline {2}Splitting in a linear algebraic system}{167}{section.8.2}%
+\contentsline {section}{\numberline {1}Asymptotic decomposition}{164}{section.8.1}%
+\contentsline {section}{\numberline {2}Splitting in a linear algebraic system}{166}{section.8.2}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {3}Poincar\'{e} method}{167}{section.8.3}%
-\contentsline {section}{\numberline {4}Van der Pol averaging method}{168}{section.8.4}%
+\contentsline {section}{\numberline {4}Van der~Pol averaging method}{167}{section.8.4}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {5}Coalescence of asymptotic decompositions}{168}{section.8.5}%

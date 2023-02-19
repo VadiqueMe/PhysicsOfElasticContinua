@@ -228,12 +228,12 @@
 \babel@toc {russian}{}
 \contentsline {chapter}{\numberline {8}Методы возмущений (асимптотические методы)}{166}{chapter.8}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Асимптотические разложения}{166}{section.8.1}%
+\contentsline {section}{\numberline {1}Асимптотическое разложение}{166}{section.8.1}%
 \contentsline {section}{\numberline {2}Расщепление в линейной алгебраической системе}{169}{section.8.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {3}Метод Poincar\'{e}}{170}{section.8.3}%
-\contentsline {section}{\numberline {4}Метод осреднения Ван дер Поля}{170}{section.8.4}%
+\contentsline {section}{\numberline {4}Метод осреднения Van der~Pol’я}{170}{section.8.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {5}Сращивание асимптотических разложений}{170}{section.8.5}%

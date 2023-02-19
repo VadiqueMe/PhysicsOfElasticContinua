@@ -22,17 +22,18 @@
 \vspace{-1.4em}
 \end{changemargin}
 
-\en{\section{Asymptotic decompositions}}
+\en{\section{Asymptotic decomposition}}
 
-\ru{\section{Асимптотические разложения}}
+\ru{\section{Асимптотическое разложение}}
+
+%%\en{in space and time}\ru{в~пространстве и~времени}
 
 \en{\dropcap{U}{ntil} now}\ru{\dropcap{Д}{о}~сих пор}\en{,}
 \en{the~arguments of a~function}\ru{аргументами функций}
-\en{were only coordinates and time}\ru{были только координаты и~время}.
+\en{were only the~coordinates and time}\ru{были только координаты и~время}.
 \en{Dimensions of a~body}\ru{Размеры тела},
 \en{elastic moduli}\ru{упругие модули},
-\en{ranges of action changes}\ru{диапазоны изменений воздействия}
-\en{in space and time}\ru{в~пространстве и~времени}\:---
+\en{ranges of actions}\ru{диапазоны воздействий}\:---
 \en{all these parameters}\ru{все эти параметры}
 \en{were considered known}\ru{считались известными}.
 \en{All asymptotic methods}\ru{Все асимптотические методы}
@@ -78,17 +79,19 @@ u = u_0 \hspace{-0.1ex} + \smallparameter u_1 \hspace{-0.1ex} + \smallparameter^
 \en{looks like}\ru{выглядит как}
 \en{a~common power series}\ru{обычный степенной ряд}.
 \en{However}\ru{Однако},
-\en{perturbation methods}\ru{методы возмущений}
-\en{use}\ru{используют}
-\en{another approach}\ru{иной подход}:
-\en{series}\ru{ряды}
-\en{are considered}\ru{рассматриваются}
+\en{the~approach}\ru{подход}
+\en{within the~perturbation methods}\ru{в~методах возмущений}
+\en{is different}\ru{отличается}:
+\en{the~series}\ru{ряды}
+\en{are considered there}\ru{рассматриваются там}
 \en{as asymptotic}\ru{как асимптотические}
-\en{with the~convergence}\ru{со сходимостью}
+\en{with convergence}\ru{со сходимостью}
 ${\smallparameter \to 0}$,
-\en{not}\ru{не}~${n \to \infty}$
-(n~\textcolor{magenta}{\en{shows}\ru{показывает}}
-\en{how many terms to hold}\ru{как много членов удерживать}).
+\en{and not}\ru{а~не}~${n \to \infty}$,
+\en{where}\ru{где}~n
+\en{defines}\ru{определяет}\ru{,}
+\en{how many terms}\ru{как много членов}
+\en{to hold}\ru{удерживать}.
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{powerseries-asymptotic}
@@ -250,9 +253,18 @@ u_{j} = \ldots
 
 \ru{\section{Метод Poincar\'{e}}}
 
-\en{This method}\ru{Этот метод}\ru{,} \en{associated}\ru{ассоциируемый} \en{with the name}\ru{с~именем} \href{https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9}{Jules Henri Poincar\'{e}}\ru{,}
-\en{is widely known}\ru{широко известен} \en{in the theory of nonlinear oscillations}\ru{в~теории нелинейных колебаний}.
-\en{It is intended}\ru{Он предназначен}, \en{in particular}\ru{в~частности}, \en{to determine}\ru{для~определения} \en{periodic solutions}\ru{периодических решений} \en{of equation}\ru{уравнения}
+\en{This method}\ru{Этот метод},
+\en{associated}\ru{ассоциируемый}
+\en{with the~name}\ru{с~именем}
+\href{https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9}{Jules Henri Poincar\'{e}},
+\en{is widely known}\ru{широк\'{о} известен}
+\en{in the~theory of nonlinear oscillations}\ru{в~теории нелинейных колебаний}.
+%
+\en{It is intended}\ru{Он предназначен},
+\en{in particular}\ru{в~частности},
+\en{to determine}\ru{для~определения}
+\en{the~periodic solutions}\ru{периодических решений}
+\en{of equation}\ru{уравнения}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{nonlinearvibrations:famousequation}
 \mathdotdotabove{u} + u = \smallparameter \hspace{.1ex} f(u, \mathdotabove{u})
@@ -260,22 +272,36 @@ u_{j} = \ldots
 
 ....
 
-\en{\section{Van der Pol averaging method}} % Balthasar van der Pol
+\en{\section{Van der~Pol averaging method}} % Balthasar van der Pol
 
-\ru{\section{Метод осреднения Ван дер Поля}}
+\ru{\section{Метод осреднения Van der~Pol’я}}
 
 % https://en.wikipedia.org/wiki/Balthasar_van_der_Pol
 
-\begin{otherlanguage}{russian}
-
-Опять рассматривается уравнение~\eqref{nonlinearvibrations:famousequation}, но~теперь ищутся не~только периодические решения.
-Вводится фазовая плоскость
+\en{Here}\ru{Здесь}
+\en{again}\ru{опять}
+\en{figures}\ru{фигурирует}
+\en{equation}\ru{уравнение}~\eqref{nonlinearvibrations:famousequation},
+\en{but}\ru{но}
+\en{the~solutions being found}\ru{находимые решения}\en{ are}\ru{\:---}
+\ru{уж\'{е} }\en{not only periodic}\ru{не~только периодические}\en{ anymore}.
+%
+\en{Introducing the~phase plane}\ru{Ввод\'{я} фазовую плоскость}
 
 ...
 
-Процедура осреднения применяется в разных разделах теории упругости (тонкие тела, композиты и~др.).
-Осреднение вне асимптотических методов приводит обычно к незамкнутым системам уравнений; для замыкания приходится принимать некие гипотезы, что умаляет убедительность теории.
-Иная ситуация в~асимптотике: условия разрешимости для поправочных членов с~необходимостью приводят к соответствующим интегральным соотношениям.
+\begin{otherlanguage}{russian}
+
+Процедура осреднения применяется во многих темах,
+таких как тонкие тела и~композиты.
+Осреднение вне асимптотических методов
+ведёт обычно к не~з\'{а}мкнутому набору уравнений.
+Для замыкания системы приходится добавлять некие гипотезы,
+убавляющие убедительность теории.
+Иная ситуация в~асимптотике:
+условия разрешимости для поправочных членов
+с~необходимостью
+приводят к соответствующим интегральным соотношениям.
 
 \end{otherlanguage}
 
