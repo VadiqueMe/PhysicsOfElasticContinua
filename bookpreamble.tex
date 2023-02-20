@@ -138,6 +138,9 @@
 \makeatother
 \newcommand{\varpartial}{\Pimathsymbol[\mathord]{mymathpazo}{182}}
 
+\newcommand\englishlanguage[1]{\foreignlanguage{english}{#1}}
+\newcommand\russianlanguage[1]{\foreignlanguage{russian}{#1}}
+
 \newcommand\boundary{\hspace{.1ex}\varpartial}
 %%\newcommand\boundary{\reflectbox{\textsf{6}}}
 
@@ -632,7 +635,8 @@
 \usepackage{array}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}<{}} % equal-width centered column
 
-% setup captions for figures and tables
+% tune captions for figures and tables
+
 \usepackage[format=plain]{caption}
 
 \captionsetup[figure]{%
@@ -671,8 +675,12 @@ aboveskip=4mm,belowskip=2.5mm}
 
 \newcommand\publication[1]{\bibitem{#1}}
 
-\newcommand\rucontinuum{контину\kern-0.11exум}
-\newcommand\ruContinuum{Контину\kern-0.11exум}
+\newcommand\ruyy{у\kern-0.11exу}
+
+\newcommand\rucontinuum{контин\ruyy{}м}
+\newcommand\ruContinuum{Контин\ruyy{}м}
+
+\newcommand\ruvacuum{вак\ruyy{}м}
 
 \newcommand\sectionref[1]{\hyperref[#1]{\S\,\ref*{#1}}}
 \newcommand\chapterdotsectionref[2]{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}
@@ -790,7 +798,7 @@ labelsep=period,justification=centering,singlelinecheck=off}
 
 % --------------------------------------------------
 
-% tune bibliography
+% tune the list of publications, mistakenly referred to as "the bibliography"
 
 \makeatletter
 \renewcommand*{\@biblabel}[1]{#1.}

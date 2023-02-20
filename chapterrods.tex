@@ -391,7 +391,10 @@ $\tangentvector$ \en{always}\ru{всегда} \en{has}\ru{имеет} \en{the un
 \hspace{.2ex} .
 \end{equation}
 
-\ru{Формулы }\en{The }Frenet\hbox{--}Serret\en{ formulas}\ru{,} \en{written}\ru{написанные} \en{using}\ru{с~использованием} \en{the matrix notation}\ru{матричных обозначений}
+\ru{Формулы }\en{The }Frenet\hbox{--}Serret\en{ formulas}\ru{,}
+\en{written}\ru{написанные}
+\en{using}\ru{с~использованием}
+\en{the~matrix notation}\ru{матричных обозначений}
 
 \nopagebreak\begin{equation*}
 \scalebox{.88}{$ \left[ \hspace{.1ex}
@@ -416,7 +419,8 @@ $\tangentvector$ \en{always}\ru{всегда} \en{has}\ru{имеет} \en{the un
 \hspace{-0.1ex} .
 \end{equation*} 
 
-\en{Tensor}\ru{Тензор}~${^2\hspace{-0.2ex}\bm{d}}$\en{ is}\ru{\:---} \en{skew-symmetric}\ru{кососимметричный},
+\en{Tensor}\ru{Тензор}~${^2\hspace{-0.2ex}\bm{d}}$\en{ is}\ru{\:---}
+\en{skew-symmetric}\ru{кососимметричный},
 \en{so}\ru{так что}
 \en{it can be represented}\ru{он может быть представлен}
 \en{via}\ru{через}
@@ -496,11 +500,7 @@ $\tangentvector$ \en{always}\ru{всегда} \en{has}\ru{имеет} \en{the un
 \vspace{-1em}
 \end{center}
 
-\begin{otherlanguage}{russian}
-
-warp, warping = деформация (deform, deformation, strain), искривление, искажение (distort, distortion), перекос (skew), перекосить, перекашиваться, коробиться, покоробить, коробление, out of shape, become twisted or bent
-
-\end{otherlanguage}
+warp, warping = \russianlanguage{деформация} (deformation, strain), \russianlanguage{искривление}, \russianlanguage{искажение} (distort, distortion), \russianlanguage{перек\'{о}с} (skew), \russianlanguage{перекос\'{и}ть}, \russianlanguage{перек\'{а}шиваться}, \russianlanguage{кор\'{о}биться}, \russianlanguage{покор\'{о}бить}, \russianlanguage{коробл\'{е}ние}, becoming twisted or bent
 
 \end{tcolorbox}
 
@@ -754,7 +754,9 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 \en{It is also called}\ru{Её ещё называют} \en{the }\emph{\en{Kirchhoff’s rod theory}\ru{теорией стержней Kirchhoff’а}}.
 
 \en{Until now}\ru{До~сих~пор} \en{functions}\ru{функции} ${\locationvector(s,t)}$ \en{and}\ru{и}~${\rotationtensor(s,t)}$ \en{were independent}\ru{были независимы}.
-\en{The }\ru{Классическая теория }Kirchhoff\en{’s}\ru{’а}\en{ classical theory} \en{postulates}\ru{постулирует} \en{the internal constraint}\ru{внутреннюю связь}
+\en{The }\ru{Классическая теория }Kirchhoff\en{’s}\ru{’а}\en{ classical theory}
+\en{postulates}\ru{постулирует}
+\en{the internal con\emph{strain}t}\ru{внутреннюю связь}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{kirchhoffmodelinternalconstraint}
 \firstdeformationvectorcosseratline \hspace{-0.1ex} = \bm{0}
@@ -828,7 +830,7 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 \label{section:rods.nonshearmodelwithextension}
 
 \en{Kirchhoff’s model}\ru{Модель Kirchhoff’а} \en{with internal constraint}\ru{с~внутренней связью}~${\firstdeformationvectorcosseratline \hspace{-0.25ex} = \hspace{-0.2ex} \bm{0}}$~\eqref{kirchhoffmodelinternalconstraint} \en{doesn’t describe}\ru{не~описывает} \en{the~simplest case}\ru{простейший случай} \en{of extension/compression}\ru{растяжения/сжатия} \en{of a~straight rod}\ru{прямого стержня}.
-\en{This nuisance}\ru{Эта неприятность} \en{disappears}\ru{исчезает} \en{with}\ru{со}~\inquotes{\en{softening}\ru{смягчением}} \en{of the~constraint}\ru{связи}, \en{for example}\ru{например} \en{adding}\ru{добавляя} \en{the~possibility of (ex)tension}\ru{возможность растяжения} \en{and}\ru{и} \en{inhibiting only the transverse shear}\ru{подавляя лишь поперечный сдвиг}
+\en{This nuisance}\ru{Эта неприятность} \en{disappears}\ru{исчезает} \en{with}\ru{со}~\inquotes{\en{softening}\ru{смягчением}} \en{of the~con\emph{strain}t}\ru{связи}, \en{for example}\ru{например} \en{adding}\ru{добавляя} \en{the~possibility of (ex)tension}\ru{возможность растяжения} \en{and}\ru{и} \en{inhibiting only the transverse shear}\ru{подавляя лишь поперечный сдвиг}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{kirchhoffinternalconstraintwithextension}
 \firstdeformationvectorcosseratline \hspace{-0.1ex} = \Gamma \bm{e}_3 \hspace{-0.2ex}
@@ -1192,9 +1194,22 @@ q^{3} \hspace{-0.3ex} = s
 \begin{changemargin}{\parindent}{0pt}
 \fontsize{10}{12}\selectfont
 
-\en{Unlike other topics}\ru{В~отличие от других тем} \en{of the~theory of~elasticity}\ru{теории упругости}, \en{rods}\ru{стержни} \en{are presented}\ru{представлены} \en{in books}\ru{в~книгах} \en{very modestly}\ru{очень скромно}.
-\ru{Стиль изложения}\en{Narration style of} \inquotes{\en{strength of~materials}\ru{сопротивления материалов}} \en{prevails}\ru{преобладает}, \en{more exact and perfect approaches}\ru{более точные и~совершенные подходы} \en{seem}\ru{кажутся} \en{impossible}\ru{невозможными} \en{or}\ru{или}~\en{unnecessary}\ru{ненужными} \en{to many authors}\ru{многим авторам}.
+\en{Unlike other topics}\ru{В~отличие от других тем},
+\en{rods}\ru{стержни}
+\en{are presented}\ru{представлены}
+\ru{в~книгах }\en{very modestly}\ru{очень скромно}\en{ in books}.
+\ru{Стиль изложения}\en{The narration style of}
+\inquotes{\en{the~strength of~materials}\ru{сопротивления материалов}}
+\en{prevails}\ru{преобладает}
+\en{there}\ru{там},
+\en{and}\ru{а}
+\en{more exact and perfect approaches}\ru{более точные и~совершенные подходы}
+\en{seem}\ru{кажутся}
+\en{impossible}\ru{невозможными}
+\en{or}\ru{или}~\en{unnecessary}\ru{ненужными}
+\en{to the~majority of~authors}\ru{большинству авторов}.
 
-\en{But}\ru{Но} \en{many interesting articles have been published}\ru{было опубликовано много интересных статей}, \en{their reviews}\ru{их обзоры} \en{are presented}\ru{представлены}, \en{for example}\ru{например}, \en{by}\ru{у}~S.\:Antman\ru{’а}~\cite{stuartantman-theoryofrods}, \foreignlanguage{russian}{В.\,В.\;Елисеев}\ru{а}~\cite{eliseev-models} \en{and}\ru{и}~\foreignlanguage{russian}{А.\,А.\;Илюхин}\ru{а}~\cite{ilyuhin-elasticrods}.
+\en{But}\ru{Но}
+\en{many interesting articles have been published}\ru{было опубликовано много интересных статей}, \en{their reviews}\ru{их обзоры} \en{are presented}\ru{представлены}, \en{for example}\ru{например}, \en{by}\ru{у}~S.\:Antman\ru{’а}~\cite{stuartantman-theoryofrods}, \russianlanguage{В.\,В.\;Елисеев}\ru{а}~\cite{eliseev-models} \en{and}\ru{и}~\russianlanguage{А.\,А.\;Илюхин}\ru{а}~\cite{ilyuhin-elasticrods}.
 
 \end{changemargin}

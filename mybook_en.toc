@@ -253,8 +253,6 @@
 \contentsline {chapter}{\numberline {9}Rods}{171}{chapter.9}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Initial concepts}{171}{section.9.1}%
-\babel@toc {russian}{}
-\babel@toc {english}{}
 \contentsline {section}{\numberline {2}Kinematics of Cosserat lines}{178}{section.9.2}%
 \contentsline {section}{\numberline {3}Balance of forces and moments}{179}{section.9.3}%
 \contentsline {section}{\numberline {4}Principle of virtual work and consequences}{180}{section.9.4}%
@@ -486,12 +484,8 @@
 \contentsline {section}{\numberline {10}Growth of cracks}{214}{section.15.10}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {section}{\numberline {11}Elastic field ahead of a moving crack}{214}{section.15.11}%
-\babel@toc {russian}{}
-\babel@toc {english}{}
+\contentsline {section}{\numberline {11}Elastic field ahead of a~moving crack}{214}{section.15.11}%
 \contentsline {section}{\numberline {12}Balance of energy for a moving crack}{215}{section.15.12}%
-\babel@toc {russian}{}
-\babel@toc {english}{}
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {16}Composites}{216}{chapter.16}%

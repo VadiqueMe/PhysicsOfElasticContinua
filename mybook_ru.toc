@@ -84,7 +84,7 @@
 \contentsline {section}{\numberline {8}Малые колебания (вибрации)}{83}{section.2.8}%
 \contentsline {chapter}{\numberline {3}Нелинейно\hbox {-\hspace {-0.2ex}}упругая безмоментная среда}{85}{chapter.3}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Контину\kern -0.11exум{}. Два описания процессов}{85}{section.3.1}%
+\contentsline {section}{\numberline {1}Контину\kern -0.11exу{}м{}. Два описания процессов}{85}{section.3.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
@@ -95,7 +95,7 @@
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {5}Вектор пл\'{о}щади. Изменение площ\'{а}дки}{97}{section.3.5}%
-\contentsline {section}{\numberline {6}Силы в контину\kern -0.11exум{}е. Существование тензора напряжения Cauchy}{98}{section.3.6}%
+\contentsline {section}{\numberline {6}Силы в контину\kern -0.11exу{}м{}е. Существование тензора напряжения Cauchy}{98}{section.3.6}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {7}Баланс импульса и момента импульса}{100}{section.3.7}%
@@ -169,7 +169,7 @@
 \contentsline {section}{\numberline {4}Теоремы статики}{143}{section.5.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Псевдоконтину\kern -0.11exумCosserat}{143}{section.5.5}%
+\contentsline {section}{\numberline {5}Псевдоконтину\kern -0.11exу{}мCosserat}{143}{section.5.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {6}Плоская деформация}{144}{section.5.6}%
@@ -253,8 +253,6 @@
 \contentsline {chapter}{\numberline {9}Стержни}{173}{chapter.9}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Исходные представления}{173}{section.9.1}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
 \contentsline {section}{\numberline {2}Кинематика линий Коссера}{180}{section.9.2}%
 \contentsline {section}{\numberline {3}Баланс сил и моментов}{182}{section.9.3}%
 \contentsline {section}{\numberline {4}Принцип виртуальной работы и следствия}{182}{section.9.4}%
@@ -396,7 +394,7 @@
 \contentsline {section}{\numberline {4}Вибрации оболочек}{206}{section.12.4}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {5}Волны в упругом контину\kern -0.11exум{}е}{206}{section.12.5}%
+\contentsline {section}{\numberline {5}Волны в упругом контину\kern -0.11exу{}м{}е}{206}{section.12.5}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {6}Волны в стержне}{206}{section.12.6}%
@@ -487,11 +485,7 @@
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {11}Упругое поле п\'{е}ред движущейся трещиной}{216}{section.15.11}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
 \contentsline {section}{\numberline {12}Баланс энергии для движущейся трещины}{217}{section.15.12}%
-\babel@toc {russian}{}
-\babel@toc {russian}{}
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {chapter}{\numberline {16}Композиты}{218}{chapter.16}%
@@ -521,7 +515,7 @@
 \contentsline {section}{\numberline {1}Одномерная задача}{223}{section.17.1}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {2}Трёхмерный контину\kern -0.11exум}{223}{section.17.2}%
+\contentsline {section}{\numberline {2}Трёхмерный контину\kern -0.11exу{}м}{223}{section.17.2}%
 \babel@toc {russian}{}
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {3}Волокнистая структура}{223}{section.17.3}%
