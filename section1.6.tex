@@ -237,19 +237,19 @@ e_{pqr} \hspace{-0.1ex}
 \en{of these matrices}\ru{этих матриц}}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{determinantofmatrixproduct}
-\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$k$}}}{\operatorname{det}} \, B_{ik} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$k$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, C_{kj} \hspace{-0.15ex}
-= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, B_{ik} \hspace{.1ex} C_{kj}
+\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$k$}}}{\operatorname{det}} \, \somematrixelements{ik} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$k$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, C_{kj} \hspace{-0.15ex}
+= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, \somematrixelements{ik} \hspace{.1ex} C_{kj}
 \end{equation}
 
 \[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, B_{m\mathcolor{blue}{s}} \hspace{.1ex} C_{\mathcolor{blue}{s}n} \hspace{-0.2ex}
-= e_{pqr} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}\mathcolor{blue}{i}} C_{\mathcolor{blue}{i}p} \hspace{.1ex} B_{\hspace{-0.1ex}g\mathcolor{blue}{j}} C_{\hspace{-0.1ex}\mathcolor{blue}{j}\hspace{-0.1ex}q} \hspace{.1ex} B_{h\mathcolor{blue}{k}} C_{\mathcolor{blue}{k}r}
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, \somematrixelements{m\mathcolor{blue}{s}} \hspace{.1ex} C_{\mathcolor{blue}{s}n} \hspace{-0.2ex}
+= e_{pqr} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}\mathcolor{blue}{i}} C_{\mathcolor{blue}{i}p} \hspace{.1ex} \somematrixelements{\hspace{-0.1ex}g\mathcolor{blue}{j}} C_{\hspace{-0.1ex}\mathcolor{blue}{j}\hspace{-0.1ex}q} \hspace{.1ex} \somematrixelements{h\mathcolor{blue}{k}} C_{\mathcolor{blue}{k}r}
 \hspace{-0.2ex}
 \]
 
 \[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{-0.2ex}
-= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}i} B_{\hspace{-0.1ex}gj} B_{hk}
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, \somematrixelements{ms} \hspace{-0.2ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}i} \somematrixelements{\hspace{-0.1ex}gj} \somematrixelements{hk}
 \hspace{-0.2ex}
 \]
 
@@ -260,8 +260,8 @@ e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.33ex} \underset{\raisebox{.15em}{
 \]
 
 \[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, B_{ms} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
-= \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.2ex} e_{pqr} \hspace{.1ex} B_{\hspace{-0.25ex}f\hspace{-0.1ex}i} B_{\hspace{-0.1ex}gj} B_{hk} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, \somematrixelements{ms} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
+= \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.2ex} e_{pqr} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}i} \somematrixelements{\hspace{-0.1ex}gj} \somematrixelements{hk} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
 \hspace{-0.2ex}
 \]
 
@@ -282,4 +282,3 @@ e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!66}{e_{i\h
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 A'_{i\hspace{-0.1ex}j} \hspace{-0.16ex} = \cosinematrix{i'\hspace{-0.1ex}m} \hspace{.1ex} \cosinematrix{j'\hspace{-0.1ex}n} \hspace{.16ex} A_{mn}
 \end{equation*}
-

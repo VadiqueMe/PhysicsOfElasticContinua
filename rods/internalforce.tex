@@ -39,7 +39,7 @@
 \newlength{\savedparindent}
 \setlength{\savedparindent}{\parindent}
 
-\def\reflength{5} % reference length
+\def\referenceLength{5}
 
 \def\beamcolor{black}
 \def\epurecolor{blue}
@@ -58,16 +58,16 @@
 \begin{tikzpicture}[ scale = 1 ]
 
 \draw [ beam line ]
-	( 0, 0 ) -- ++( \reflength, 0 ) ;
+	( 0, 0 ) -- ++( \referenceLength, 0 ) ;
 \draw [ beam line, fill=\beamcolor ] ( 0, 0 ) circle ( 1.2pt ) ;
-\draw [ beam line, fill=\beamcolor ] ( \reflength, 0 ) circle ( 1.2pt ) ;
+\draw [ beam line, fill=\beamcolor ] ( \referenceLength, 0 ) circle ( 1.2pt ) ;
 
 \def\externalforcelength{1}
 
 \draw [ external force ]
 	($ ( 0, 0 ) - ( \externalforcelength, 0 ) $) -- ++( \externalforcelength, 0 )  ;
 \draw [ external force ]
-	($ ( \reflength, 0 ) + ( \externalforcelength, 0 ) $) -- ++( -\externalforcelength, 0 )  ;
+	($ ( \referenceLength, 0 ) + ( \externalforcelength, 0 ) $) -- ++( -\externalforcelength, 0 )  ;
 
 \def\numsteps{9}
 
@@ -76,7 +76,7 @@
 \def\epureoffsetthird{-5.75}
 \def\epureoffsetfourth{-8.25}
 
-\pgfmathsetmacro\zfrom{\reflength}
+\pgfmathsetmacro\zfrom{\referenceLength}
 \pgfmathsetmacro\zto{0}
 \pgfmathsetmacro\zstep{(\zto - \zfrom) / (\numsteps - 1)}
 \pgfmathsetmacro\znext{\zfrom + \zstep}
@@ -97,7 +97,7 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \def\epureoffset{\epureoffsetnext}
 
@@ -115,7 +115,7 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \def\epureoffset{\epureoffsetthird}
 
@@ -133,7 +133,7 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \def\epureoffset{\epureoffsetfourth}
 
@@ -151,23 +151,23 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \end{tikzpicture}
 
 \begin{tikzpicture}[ scale = 1 ]
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, 0 ) -- ++( \reflength, 0 ) ;
+	( 0, 0 ) -- ++( \referenceLength, 0 ) ;
 \draw [ beam line, color=\beamcolor, fill=\beamcolor ] ( 0, 0 ) circle ( 1.2pt ) ;
-\draw [ beam line, color=\beamcolor, fill=\beamcolor ] ( \reflength, 0 ) circle ( 1.2pt ) ;
+\draw [ beam line, color=\beamcolor, fill=\beamcolor ] ( \referenceLength, 0 ) circle ( 1.2pt ) ;
 
 \def\externalforcelength{1}
 
 \draw [ external force ]
 	( 0, 0 ) -- ++( -\externalforcelength, 0 )  ;
 \draw [ external force ]
-	( \reflength, 0 ) -- ++( \externalforcelength, 0 )  ;
+	( \referenceLength, 0 ) -- ++( \externalforcelength, 0 )  ;
 
 \def\numsteps{9}
 
@@ -176,7 +176,7 @@
 \def\epureoffsetthird{-5.75}
 \def\epureoffsetfourth{-8.25}
 
-\pgfmathsetmacro\zfrom{\reflength}
+\pgfmathsetmacro\zfrom{\referenceLength}
 \pgfmathsetmacro\zto{0}
 \pgfmathsetmacro\zstep{(\zto - \zfrom) / (\numsteps - 1)}
 \pgfmathsetmacro\znext{\zfrom + \zstep}
@@ -197,7 +197,7 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \def\epureoffset{\epureoffsetnext}
 
@@ -215,7 +215,7 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \def\epureoffset{\epureoffsetthird}
 
@@ -233,7 +233,7 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \def\epureoffset{\epureoffsetfourth}
 
@@ -251,7 +251,7 @@
 }
 
 \draw [ beam line, color=\beamcolor ]
-	( 0, \epureoffset ) -- ++( \reflength, 0 ) ;
+	( 0, \epureoffset ) -- ++( \referenceLength, 0 ) ;
 
 \end{tikzpicture}
 

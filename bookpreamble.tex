@@ -27,6 +27,8 @@
 \usepackage{xargs}
 \usepackage{xparse}
 
+\usepackage{soul} % for \st that's strikethrough
+
 \usepackage{comfortaa}
 %%\usepackage{calligra}
 \usepackage{frcursive}
@@ -233,6 +235,12 @@
 
 \newcommand\rotationtensor{\bm{O}}
 \newcommand\orthogonaltensor{\bm{Q}}
+
+\newcommand\somebivalenttensor{{^2\!\bm{B}}}
+\newcommand\somebivalenttensorcomponents[1]{B_{#1}}
+\newcommand\somebivalenttensorcomponentsupper[1]{B^{\hspace{.1ex}{#1}}}
+
+\newcommand\somematrixelements[1]{B_{#1}}
 
 %~%~%
 
@@ -676,11 +684,12 @@ aboveskip=4mm,belowskip=2.5mm}
 \newcommand\publication[1]{\bibitem{#1}}
 
 \newcommand\ruyy{у\kern-0.11exу}
-
+%
 \newcommand\rucontinuum{контин\ruyy{}м}
 \newcommand\ruContinuum{Контин\ruyy{}м}
-
+%
 \newcommand\ruvacuum{вак\ruyy{}м}
+\newcommand\ruVacuum{Вак\ruyy{}м}
 
 \newcommand\sectionref[1]{\hyperref[#1]{\S\,\ref*{#1}}}
 \newcommand\chapterdotsectionref[2]{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}

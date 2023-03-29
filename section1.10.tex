@@ -6,25 +6,25 @@
 
 \en{If}\ru{Если}
 \en{for}\ru{для}
-\en{some tensor}\ru{какого-нибудь тензора}~${^2\!\bm{B}}$
+\en{some tensor}\ru{какого-нибудь тензора}~$\somebivalenttensor$
 \en{and}\ru{и}~\en{the~nonzero vector}\ru{ненулевого вектора}~${\bm{a}}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{eigenvalues equation}
-^2\!\bm{B} \dotp \bm{a} = \eigenvalue \bm{a}
+\somebivalenttensor \dotp \bm{a} = \eigenvalue \bm{a}
 \hspace{.1ex} ,
 \:\:
 \bm{a} \neq \bm{0}
 \end{equation}
 \vspace{-1.33em}\begin{equation*}
-\scalebox{.92}{$
-{^2\!\bm{B}} \dotp \bm{a} = \eigenvalue \UnitDyad \dotp \bm{a}
+\scalebox{.92}{$%
+\somebivalenttensor \dotp \bm{a} = \eigenvalue \UnitDyad \dotp \bm{a}
 \hspace{.1ex} ,
 \;\;
-%%B_{i\hspace{-0.1ex}j} a_j = \eigenvalue \delta_{i\hspace{-0.1ex}j} a_j
+%%\somebivalenttensorcomponents{i\hspace{-0.1ex}j} a_j = \eigenvalue \delta_{i\hspace{-0.1ex}j} a_j
 %%\hspace{.1ex} ,
 %%\;\;
 \left( \hspace{.1ex}
-{^2\!\bm{B} - \eigenvalue \UnitDyad}
+{ \somebivalenttensor - \eigenvalue \UnitDyad }
 \hspace{.2ex} \right)
 \hspace{-0.1ex} \dotp \hspace{.1ex}
 \bm{a}
@@ -35,27 +35,27 @@ $}
 
 \vspace{-0.6em}\noindent
 \en{then}\ru{то}
-$\eigenvalue$
-\en{is called}\ru{называется}
-\en{the eigenvalue}\ru{собственным числом}
+$\eigenvalue$~\en{is called}\ru{называется}
+\en{the~eigenvalue}\ru{собственным числом}
 (\en{or}\ru{или}
-\en{the characteristic value}\ru{характеристическим значением, eigenvalue})
-\en{of~tensor}\ru{тензора}~${^2\!\bm{B}}$,
+\en{the~characteristic value}\ru{характеристическим значением, eigenvalue})
+\en{of~tensor}\ru{тензора}~$\somebivalenttensor$,
 \en{and}\ru{а}~\en{the axis~(direction)}\ru{ось~(направление)}
 \en{of~eigenvector}\ru{собственного вектора}~$\bm{a}$
 \en{is called}\ru{называется}
 \en{its}\ru{его}
 \ru{характеристической}\en{characteristic}
 \en{axis}\ru{осью}
-(\en{direction}\ru{направлением}).
+(\en{or}\ru{или} \en{direction}\ru{направлением}).
 
 \en{In components}\ru{В~компонентах}\en{,}
 \en{this is}\ru{это}
-\en{an~eigenvalue problem}\ru{задача на~собственные значения}
+\en{the~eigenvalue problem}\ru{задача на~собственные значения}
 \en{for a~matrix}\ru{для матрицы}.
-\en{A~homogeneous}\ru{Однородная} \en{system}\ru{система}
+\en{A~homogeneous}\ru{Однородная}
+\en{system}\ru{система}
 \en{of linear equations}\ru{линейных уравнений}
-${ ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+${ ( \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 - \eigenvalue \delta_{i\hspace{-0.1ex}j} )
 \hspace{.25ex} a_j \hspace{-0.1ex}
 = 0 }$
@@ -74,7 +74,7 @@ ${ ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
    { \operatorname{det} }%
 } %end of smash
 \hspace{.3ex}
-( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \eigenvalue \delta_{ i \hspace{-0.1ex} j } )
+( \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \eigenvalue \delta_{ i \hspace{-0.1ex} j } )
 \end{equation*}
 \en{is equal to zero}\ru{равен нулю}:
 
@@ -84,9 +84,9 @@ ${ ( B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 \scalebox{.9}[.92]{$
    \left[
       \begin{array}{ccc}
-         B_{1\hspace{-0.1ex}1} \hspace{-0.16ex} - \eigenvalue & B_{12} & B_{13} \\
-         B_{21} & B_{22} \hspace{-0.16ex} - \eigenvalue & B_{23} \\
-         B_{31} & B_{32} & B_{33} \hspace{-0.16ex} - \eigenvalue
+         \somebivalenttensorcomponents{1\hspace{-0.1ex}1} \hspace{-0.16ex} - \eigenvalue & \somebivalenttensorcomponents{12} & \somebivalenttensorcomponents{13} \\
+         \somebivalenttensorcomponents{21} & \somebivalenttensorcomponents{22} \hspace{-0.16ex} - \eigenvalue & \somebivalenttensorcomponents{23} \\
+         \somebivalenttensorcomponents{31} & \somebivalenttensorcomponents{32} & \somebivalenttensorcomponents{33} \hspace{-0.16ex} - \eigenvalue
       \end{array}
    \hspace{.1ex}
    \right]
@@ -107,41 +107,42 @@ $} %end of scalebox
 \begin{array}{r@{\hspace{.4em}}c@{\hspace{.4em}}l}
 \firstcharacteristicinvariant
 & = &
-\trace{^2\!\bm{B}} = B_{kk}
-= \scalebox{.92}[.96]{$ B_{1\hspace{-0.1ex}1}
+\trace{\somebivalenttensor} = \somebivalenttensorcomponents{kk}
+= \scalebox{.92}[.96]{$%
+\somebivalenttensorcomponents{1\hspace{-0.1ex}1}
 \hspace{-0.2ex} + \hspace{-0.1ex}
-B_{22}
+\somebivalenttensorcomponents{22}
 \hspace{-0.2ex} + \hspace{-0.1ex}
-B_{33} $}
+\somebivalenttensorcomponents{33} $}
 \hspace{.1ex} ,
 \\[.1em]
 %
 \secondcharacteristicinvariant
 & = &
-\scalebox{.92}[.96]{$ B_{1\hspace{-0.1ex}1}B_{22}
+\scalebox{.92}[.96]{$ \somebivalenttensorcomponents{1\hspace{-0.1ex}1} \somebivalenttensorcomponents{22}
 \hspace{-0.2ex} - \hspace{-0.1ex}
-B_{12}B_{21}
+\somebivalenttensorcomponents{12} \somebivalenttensorcomponents{21}
 \hspace{-0.2ex} + \hspace{-0.1ex}
-B_{1\hspace{-0.1ex}1}B_{33}
+\somebivalenttensorcomponents{1\hspace{-0.1ex}1} \somebivalenttensorcomponents{33}
 \hspace{-0.2ex} - \hspace{-0.1ex}
-B_{13}B_{31}
+\somebivalenttensorcomponents{13} \somebivalenttensorcomponents{31}
 \hspace{-0.2ex} + \hspace{-0.1ex}
-B_{22}B_{33}
+\somebivalenttensorcomponents{22} \somebivalenttensorcomponents{33}
 \hspace{-0.2ex} - \hspace{-0.1ex}
-B_{23}B_{32} $}
+\somebivalenttensorcomponents{23} \somebivalenttensorcomponents{32} $}
 \hspace{.1ex} ,
 \\[.1em]
 %
 \thirdcharacteristicinvariant
 & = &
-\operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
+\operatorname{det} \hspace{.1ex} \somebivalenttensor
 = \hspace{.15ex}
 \underset{\raisebox{.15em}{%
    \scalebox{.7}{ $i$,$\hspace{.15ex}j$ }%
 }}%
-{\operatorname{det}} \, B_{i\hspace{-0.1ex}j} \hspace{-0.15ex}
-= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{1i} B_{2j} B_{3k} \hspace{-0.1ex}
-= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} B_{i1} B_{\hspace{-0.1ex}j2} B_{k3}
+{\operatorname{det}} \, \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.15ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \somebivalenttensorcomponents{1i} \somebivalenttensorcomponents{2j} \somebivalenttensorcomponents{3k} \hspace{-0.1ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \somebivalenttensorcomponents{i1} \somebivalenttensorcomponents{\hspace{-0.1ex}j2} \somebivalenttensorcomponents{k3}
 \hspace{.1ex} .
 \end{array}\end{equation}
 
@@ -183,24 +184,24 @@ B_{23}B_{32} $}
 } %end of textcolor
 
 \begin{equation*}
-\secondcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} )
+\secondcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex} \somebivalenttensor )
 \hspace{-0.12ex} \equiv \hspace{.1ex}
 \trace{\hspace{-0.33ex}%
-   \left( \operatorname{adj} B_{i\hspace{-0.1ex}j} \right)%
+   \left( \operatorname{adj} \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \right)%
 } %end of trace
 \end{equation*}
 (\en{it’s hard, yeah}\ru{тяжеловато, да}).
 \en{Or}\ru{Или}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\secondcharacteristicinvariant\hspace{.16ex}(\hspace{.1ex}{^2\!\bm{B}}) \hspace{-0.2ex}
+\secondcharacteristicinvariant\hspace{.16ex}(\hspace{.1ex}\somebivalenttensor) \hspace{-0.2ex}
 \equiv \hspace{.12ex} \smalldisplaystyleonehalf \scalebox{.84}{$\left[
-\left( {^2\!\bm{B}} \tracedot\hspace{.1ex} \right)^{\!2} \hspace{-0.5ex}
-- {^2\!\bm{B}} \hspace{-0.2ex} \dotdotp \hspace{-0.25ex} {^2\!\bm{B}} \hspace{.16ex}
+\left( \somebivalenttensor \tracedot\hspace{.1ex} \right)^{\!2} \hspace{-0.5ex}
+- \somebivalenttensor \hspace{-0.2ex} \dotdotp \hspace{-0.25ex} \somebivalenttensor \hspace{.16ex}
 \right]$} \hspace{-0.5ex}
 = \smalldisplaystyleonehalf \scalebox{.84}{$\left[
-\left( B_{kk} \right)^{\hspace{-0.1ex}2} \hspace{-0.4ex}
-- \hspace{-0.2ex} B_{i\hspace{-0.1ex}j} B_{\hspace{-0.1ex}j\hspace{-0.06ex}i} \hspace{.1ex}
+\left( \somebivalenttensorcomponents{kk} \right)^{\hspace{-0.1ex}2} \hspace{-0.4ex}
+- \hspace{-0.2ex} \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \somebivalenttensorcomponents{\hspace{-0.1ex}j\hspace{-0.06ex}i} \hspace{.1ex}
 \right]$}
 \hspace{-0.25ex} .
 \end{equation*}
@@ -210,8 +211,8 @@ B_{23}B_{32} $}
 \en{is}\ru{это}
 \en{the determinant}\ru{определитель~(детерминант)}
 \en{of a~matrix of tensor components}\ru{матрицы компонент тензора}:
-${ \thirdcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex}{^2\!\bm{B}} ) \hspace{-0.1ex}
-\equiv \operatorname{det} \hspace{.1ex} {^2\!\bm{B}}
+${ \thirdcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex} \somebivalenttensor ) \hspace{-0.1ex}
+\equiv \operatorname{det} \hspace{.1ex} \somebivalenttensor
 }$.
 
 \en{This}\ru{Это} \en{applies to all}\ru{относится ко~всем} \en{second complexity tensors}\ru{тензорам второй сложности}.
@@ -232,27 +233,40 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \:\,\Rightarrow\:\,
 \left(\hspace{.25ex} {\lineover{\bm{a}} \, \dotp} \hspace{.25ex}\right)
 \hspace{.5ex}
-{^2\!\bm{B}} \dotp \bm{a} \hspace{.2ex} = \eigenvalue \bm{a},
+\somebivalenttensor \dotp \bm{a} \hspace{.2ex} = \eigenvalue \bm{a},
 \;\;
 \left(\hspace{.2ex}{\bm{a} \, \dotp}\hspace{.2ex}\right)
 \hspace{.5ex}
-{^2\!\bm{B}} \dotp \lineover{\bm{a}} \hspace{.2ex} = \hspace{.1ex} \lineover{\eigenvalue} \, \lineover{\bm{a}}
+\somebivalenttensor \dotp \lineover{\bm{a}} \hspace{.2ex} = \hspace{.1ex} \lineover{\eigenvalue} \, \lineover{\bm{a}}
 \:\;\Rightarrow
 \\[-0.1em]
 %
 \Rightarrow\;\:
-\lineover{\bm{a}} \dotp {^2\!\bm{B}} \dotp \bm{a} - \bm{a} \dotp {^2\!\bm{B}} \dotp \lineover{\bm{a}} \hspace{.2ex} = \left(\hspace{.1ex}{\eigenvalue - \lineover{\eigenvalue}}\hspace{.2em}\right)\hspace{-0.1em} \bm{a} \dotp \lineover{\bm{a}}
+\lineover{\bm{a}} \dotp \somebivalenttensor \dotp \bm{a} - \bm{a} \dotp \somebivalenttensor \dotp \lineover{\bm{a}} \hspace{.2ex} = \left(\hspace{.1ex}{\eigenvalue - \lineover{\eigenvalue}}\hspace{.2em}\right)\hspace{-0.1em} \bm{a} \dotp \lineover{\bm{a}}
 \hspace{.2ex} .
 \end{multline*}
 
 \vspace{-0.2em}\noindent
-\en{Here}\ru{Здесь} \en{on the left}\ru{слева}\en{ is}\ru{\:---} \en{zero}\ru{нуль}, \en{because}\ru{поскольку} ${\bm{a} \dotp {^2\!\bm{B}} \dotp \bm{c} = \bm{c} \dotp {^2\!\bm{B}^{\T}\!} \dotp \bm{a}}$ \en{and}\ru{и}~${{^2\!\bm{B}} = {^2\!\bm{B}^{\T}\!}}$.
-\en{Thence}\ru{Поэтому} ${\eigenvalue = \lineover{\eigenvalue}}$, \en{that is}\ru{то~есть} \en{a~real number}\ru{действительное число}.
+\en{Here}\ru{Здесь}
+\en{on the~left}\ru{слева}\en{ is}\ru{\:---}
+\en{zero}\ru{нуль},
+\en{because}\ru{поскольку}
+${%
+\bm{a} \dotp \somebivalenttensor \dotp \bm{c}
+= \bm{c} \dotp \somebivalenttensor^{\T}\! \dotp \bm{a} }$
+\en{and}\ru{и}~${ \somebivalenttensor = \somebivalenttensor^{\T}\! }$.
+\en{Thence}\ru{Поэтому}
+${\eigenvalue = \lineover{\eigenvalue}}$,
+\en{that is}\ru{то~есть}
+\en{a~real number}\ru{действительное число}.
 
-\en{Just as simple}\ru{Так~же просто} \en{looks}\ru{выглядит} \en{the proof}\ru{доказательство} \en{of~}2$^{\circ}$:
+\en{Just as simple}\ru{Так~же просто}
+\en{looks}\ru{выглядит}
+\en{the proof}\ru{доказательство}
+\en{of~}2$^{\circ}$:
 
 \nopagebreak\vspace{-0.5em}\begin{multline*}
-\tikzmark{BeginEqualsZeroBrace} {\bm{a}_2 \dotp {^2\!\bm{B}} \dotp \bm{a}_1 - \bm{a}_1 \dotp {^2\!\bm{B}} \dotp \bm{a}_2} \hspace{.1ex} \tikzmark{EndEqualsZeroBrace}
+\tikzmark{BeginEqualsZeroBrace} {\bm{a}_2 \dotp \somebivalenttensor \dotp \bm{a}_1 - \bm{a}_1 \dotp \somebivalenttensor \dotp \bm{a}_2} \hspace{.1ex} \tikzmark{EndEqualsZeroBrace}
 = \hspace{.12ex} \left(\hspace{.1ex}{\eigenvalue_1 \hspace{-0.25ex} - \eigenvalue_2}\right) \bm{a}_1 \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a}_2 \hspace{.1ex} , \;
 \eigenvalue_1 \hspace{-0.1ex} \neq \hspace{.1ex} \eigenvalue_2
 \;\Rightarrow
@@ -271,49 +285,61 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \en{What are}\ru{Каков\'{ы}~же} \en{tensor components}\ru{компоненты тензора} \en{in such a~basis}\ru{в~таком базисе}?
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}\begin{array}{c}
-{^2\!\bm{B}} \dotp \mathboldae_k = \hspace{.2ex} \scalebox{0.82}{$\tikzcancel[blue]{$\displaystyle\sum_k^{~}$}$}\: \eigenvalue_{\hspace{-0.15ex}k} \hspace{.1ex} \mathboldae_k \hspace{.1ex}, \:\: k =\hspace{-0.1ex} 1, 2, 3
+\somebivalenttensor \dotp \mathboldae_k = \hspace{.2ex} \scalebox{0.82}{$\tikzcancel[blue]{$\displaystyle\sum_k^{~}$}$}\: \eigenvalue_{\hspace{-0.15ex}k} \hspace{.1ex} \mathboldae_k \hspace{.1ex}, \:\: k =\hspace{-0.1ex} 1, 2, 3
 \\[.9em]
 %
-{^2\!\bm{B}} \dotp \tikzmark{BeginEqualsEBrace} {\mathboldae_k \mathboldae_k} \tikzmark{EndEqualsEBrace} = \hspace{-0.1ex} \scalebox{0.9}{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} \eigenvalue_{\hspace{-0.15ex}k} \hspace{.1ex} \mathboldae_k \mathboldae_k
-%%{^2\!\bm{B}} = \displaystyle \sum_{\smash{k}} \eigenvalue_k \mathboldae_k \mathboldae_k
+\somebivalenttensor \dotp \tikzmark{BeginEqualsEBrace} {\mathboldae_k \mathboldae_k} \tikzmark{EndEqualsEBrace} = \hspace{-0.1ex} \scalebox{.9}{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} \eigenvalue_{\hspace{-0.15ex}k} \hspace{.1ex} \mathboldae_k \mathboldae_k
+%%\somebivalenttensor = \displaystyle \sum_{\smash{k}} \eigenvalue_k \mathboldae_k \mathboldae_k
 \end{array}\end{equation*}
 \AddUnderBrace[line width=.75pt]%
 {BeginEqualsEBrace}{EndEqualsEBrace}{${\scriptstyle \UnitDyad}$}
 
 \vspace{-0.25em}
-\en{In a~common case}\ru{В~общем случае} ${B_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \bm{e}_i \dotp {^2\!\bm{B}} \dotp \bm{e}_{\hspace{-0.1ex}j}}$.
-\en{In the basis}\ru{В~базисе} ${\mathboldae_1}$, ${\mathboldae_2}$, ${\mathboldae_3}$ \en{of mutually perpendicular}\ru{взаимно перпендикулярных} \en{one unit long}\ru{единичной длины} ${\mathboldae_i \dotp \mathboldae_{\hspace{-0.1ex}j} \hspace{-0.15ex} = \delta_{i\hspace{-0.1ex}j}}$ \en{eigenvectors}\ru{собственных векторов} \en{of a~symmetric tensor}\ru{симметричного тензора}
+\en{For a~common case}\ru{Для общего случая}
+${%
+\somebivalenttensorcomponents{i\hspace{-0.1ex}j}
+\hspace{-0.2ex} =
+\bm{e}_i \dotp \somebivalenttensor \dotp \bm{e}_{\hspace{-0.1ex}j} }$.
+\en{In the~basis}\ru{В~базисе}
+${\mathboldae_1}$, ${\mathboldae_2}$, ${\mathboldae_3}$
+\en{of mutually perpendicular}\ru{взаимно перпендикулярных}
+\en{one unit long}\ru{единичной длины}
+${\mathboldae_i \dotp \mathboldae_{\hspace{-0.1ex}j} \hspace{-0.15ex} = \delta_{i\hspace{-0.1ex}j}}$
+\en{eigenvectors}\ru{собственных векторов}
+\en{of a~symmetric tensor}\ru{симметричного тензора}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}\begin{array}{c}
-B_{1\hspace{-0.1ex}1} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_1 = \eigenvalue_1
+\somebivalenttensorcomponents{1\hspace{-0.1ex}1} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_1 = \eigenvalue_1
 \hspace{.1ex} ,
 \\[.1em]
-B_{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_2 = 0
+\somebivalenttensorcomponents{12} \hspace{-0.12ex} = \mathboldae_1 \dotp \left({\eigenvalue_1 \mathboldae_1 \mathboldae_1 + \eigenvalue_2 \mathboldae_2 \mathboldae_2 + \eigenvalue_3 \mathboldae_3 \mathboldae_3}\right) \dotp \mathboldae_2 = 0
 \hspace{.1ex} ,
 \\[-0.2em]
 \ldots
 \end{array}\end{equation*}
 
 \vspace{-0.3em}\noindent
-\en{The~matrix of components}\ru{Матрица компонент}
+\en{The~matrix}\ru{Матрица}
+\en{of~components}\ru{компонент}
 \en{is diagonal}\ru{диагональна}
-\en{and}\ru{и}~${ {^2\!\bm{B}} = \sum \hspace{-0.2ex}
+\en{and}\ru{и}~${ \somebivalenttensor = \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.33ex}
 \eigenvalue_{\hspace{-0.15ex}i} \hspace{.1ex} \mathboldae_i \mathboldae_i }$.
-
-\en{Here}\ru{Здесь}
-\en{goes}\ru{идёт}
-\en{a~summation}\ru{суммирование}
-\en{over the three repeating indices}\ru{по~трём повторяющимся индексам},
+%
+\en{Yes}\ru{Да},
+\en{here is}\ru{здесь\:---}
+\en{the~summation}\ru{суммирование}
+\en{over the~three}\ru{по~трём}
+\en{repeating indices}\ru{повторяющимся индексам},
 \en{because}\ru{ведь}
-\ru{используется }\en{the special basis}\ru{особенный базис}\en{ is used}.
+\ru{используется }\en{the~special basis}\ru{особенный базис}\en{ is used}.
 
-\en{The case of multiplicity}\ru{Случай кратности}
-\en{of the eigenvalues}\ru{собственных значений}
-\en{is considered}\ru{рассматривается}
-\en{in the limit}\ru{в~пределе}.
-
-\en{If simpler}\ru{Если попроще}
-${\eigenvalue_2 \hspace{-0.16ex} \to \eigenvalue_1}$,
+\en{The~transition}\ru{Переход}
+\en{to a~coincidence case}\ru{к~случаю совпадения}
+\en{of eigenvalues}\ru{собственных значений}
+\en{can be acquired}\ru{может быть получен}
+\en{via limit calculation}\ru{подсчётом предела}.
+%
+\en{If}\ru{Если}~${\eigenvalue_2 \hspace{-0.16ex} \to \eigenvalue_1}$,
 \en{then}\ru{то}
 \en{any linear combination}\ru{любая линейная комбинация}
 \en{of vectors}\ru{векторов}
@@ -321,8 +347,8 @@ ${\bm{a}_1}$ \en{and}\ru{и} ${\bm{a}_2}$
 \en{in the limit}\ru{в~пределе}
 \en{satisfies the equation}\ru{удовлетворяет уравнению}
 \eqref{eigenvalues equation}.
-
-\en{Then}\ru{Тогда}
+%
+\en{And then}\ru{И~тогда}
 \en{any}\ru{любая}
 \en{axis}\ru{ось}
 \en{in the plane}\ru{в~плоскости}
@@ -330,18 +356,17 @@ ${\bm{a}_1}$ \en{and}\ru{и} ${\bm{a}_2}$
 \en{becomes characteristic}\ru{становится собственной}.
 
 \en{When}\ru{Когда~же}
-\en{the three eigenvalues}\ru{все три собственных числ\'{а}}
+\en{all the~three eigenvalues}\ru{все три собственных числ\'{а}}
 \en{coincide}\ru{совпадают},
 \en{then}\ru{то}
 \en{any axis}\ru{любая ось}
-\en{in the space}\ru{в~пространстве}
+\en{in space}\ru{в~пространстве}
 \en{is characteristic}\ru{собственная}.
 
 \en{Then}\ru{Тогда}
-${{^2\!\bm{B}} = \eigenvalue \UnitDyad}$,
+${ \somebivalenttensor = \eigenvalue \UnitDyad }$,
 \en{such tensors}\ru{такие тензоры}
 \en{are called}\ru{называются}
 \en{isotropic}\ru{изотропными}
 \en{or}\ru{или}
-\inquotesx{\en{spherical}\ru{шаровыми}}.
-
+\inquotesx{\en{spherical}\ru{шаровыми}}[.]

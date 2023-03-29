@@ -83,7 +83,7 @@ ${a_i \hspace{-0.2ex} = \hspace{.1ex} b_{kk}^{\hspace{.1ex}i}}$\ru{\:---}\en{ is
 %%\begin{itemize}
 %%\item компоненты единичного~(\inquotes{метрического}) тензора\:--- символы Кронекера (дельта Кронекера),
 %%\item компоненты (псевдо)тензора чётности перестановок (Л\'{е}ви\hbox{-\!}Чив\'{и}ты)\:--- символы Веблена
-%%      c~\inquotes{+} для чётного и с~\inquotes{-} для нечётного числ\'{а} перестановок 
+%%      c~\inquotes{+} для чётного и с~\inquotes{-} для нечётного числ\'{а} перестановок
 %%     (c~\inquotes{+} для \inquotes{правой} и с~\inquotes{-} для \inquotes{левой} тройки базисных векторов)
 %%\end{itemize}
 
@@ -298,8 +298,13 @@ v_{i} \hspace{-0.1ex} = \bm{v} \dotp \bm{a}_i \hspace{.1ex} .
 \footnote{Потому что они меняются обратно~(contra) изменению длин базисных векторов~${\bm{a}_i}$.}\hspace{-0.2ex}
 компонентами.
 
-Есть литература о~тензорах, где introducing existence and различают ко\-вариант\-ные и~контра\-вариант\-ные... векторы~(\en{and}\ru{и}~\inquotes{\en{covectors}\ru{ковекторы}}, \inquotes{dual vectors}).
-Не~ст\'{о}ит вводить читателя в~заблуждение: \href{https://www.physicsforums.com/threads/is-a-vector-itself-contra-covariant-or-just-its-components.994318/}{вектор\hbox{-}то один и~тот~же}, просто разложение по~двум разным базисам даёт два набора компонент.
+Есть литература о~тензорах,
+где introducing existænce
+and различают ко\-вариант\-ные
+и~контра\-вариант\-ные...
+векторы~(\en{and}\ru{и}~\inquotes{\en{covectors}\ru{ковекторы}}, \inquotes{dual vectors}).
+Не~ст\'{о}ит вводить читателя в~заблуждение:
+\href{https://www.physicsforums.com/threads/is-a-vector-itself-contra-covariant-or-just-its-components.994318/}{вектор\hbox{-}то один и~тот~же}, просто разложение по~двум разным базисам даёт два набора компонент.
 
 % ~ ~ ~ ~ ~
 \input{decompositionviaobliquebasis.tex}
@@ -313,22 +318,30 @@ ${\bm{a}_i \hspace{.1ex} \bm{a}_j}$,
 ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 Согласующиеся коэффициенты в~декомпозиции тензора называются его контра\-вариант\-ными, ко\-вариант\-ными и~смешан\-ными компонентами:
 \vspace{.1em}\begin{equation}\begin{array}{c}
-{^2\!\bm{B}} \hspace{.1ex} =
-B^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.1ex} \bm{a}_i \hspace{.1ex} \bm{a}_j \hspace{-0.05ex} =
-B_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.15ex} =
-B_{\hspace{-0.2ex} \cdot j}^{\hspace{.1ex}i} \hspace{.1ex} \bm{a}_i \hspace{.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.15ex} =
-B_{\hspace{-0.1ex}i}^{\hspace{-0.05ex} \cdot j} \hspace{-0.2ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j \hspace{.1ex}, \\[0.4em]
+\somebivalenttensor \hspace{.1ex} =
+\somebivalenttensorcomponentsupper{i\hspace{-0.1ex}j} \hspace{-0.1ex} \bm{a}_i \hspace{.1ex} \bm{a}_j \hspace{-0.05ex} =
+\somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.15ex} =
+\somebivalenttensorcomponents{\hspace{-0.2ex} \cdot j}^{\hspace{.1ex}i} \hspace{.1ex} \bm{a}_i \hspace{.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.15ex} =
+\somebivalenttensorcomponents{\hspace{-0.1ex}i}^{\hspace{-0.05ex} \cdot j} \hspace{-0.2ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j \hspace{.1ex}, \\[0.4em]
 %
-B^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.25ex} = \bm{a}^{\hspace{-0.05ex}i} \dotp {^2\!\bm{B}} \dotp \hspace{.1ex} \bm{a}^{\hspace{.05ex}j} \hspace{-0.2ex}, \:\,
-B_{i\hspace{-0.1ex}j} = \bm{a}_i \dotp {^2\!\bm{B}} \dotp \hspace{.1ex} \bm{a}_j \hspace{.1ex}, \\[0.25em]
+\somebivalenttensorcomponentsupper{i\hspace{-0.1ex}j} \hspace{-0.25ex} = \bm{a}^{\hspace{-0.05ex}i} \dotp \somebivalenttensor \dotp \hspace{.1ex} \bm{a}^{\hspace{.05ex}j} \hspace{-0.2ex}, \:\,
+\somebivalenttensorcomponents{i\hspace{-0.1ex}j} = \bm{a}_i \dotp \somebivalenttensor \dotp \hspace{.1ex} \bm{a}_j \hspace{.1ex}, \\[0.25em]
 %
-B_{\hspace{-0.2ex} \cdot j}^{\hspace{.1ex}i} = \bm{a}^{\hspace{-0.05ex}i} \dotp {^2\!\bm{B}} \dotp \hspace{.1ex} \bm{a}_j \hspace{.1ex}, \:\,
-B_{\hspace{-0.1ex}i}^{\hspace{-0.05ex} \cdot j} \hspace{-0.2ex} = \bm{a}_i \dotp {^2\!\bm{B}} \dotp \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.1ex}.
+\somebivalenttensorcomponents{\hspace{-0.2ex} \cdot j}^{\hspace{.1ex}i} = \bm{a}^{\hspace{-0.05ex}i} \dotp \somebivalenttensor \dotp \hspace{.1ex} \bm{a}_j \hspace{.1ex}, \:\,
+\somebivalenttensorcomponents{\hspace{-0.1ex}i}^{\hspace{-0.05ex} \cdot j} \hspace{-0.2ex} = \bm{a}_i \dotp \somebivalenttensor \dotp \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.1ex}.
 \end{array}\end{equation}
 
-\vspace{-0.1em}\noindent Для~двух видов смешанных компонент точка в~индексе это просто свободное место: у~${B_{\hspace{-0.2ex} \cdot j}^{\hspace{.1ex}i}}$ верхний индекс~\inquotesx{$i\hspace{.25ex}$}[---] первый, а~ниж\-ний~\inquotesx{$\hspace{-0.1ex}j\hspace{.25ex}$}[---] второй.
+\vspace{-0.1em}\noindent
+Для~двух видов смешанных компонент точка в~индексе это просто свободное место:
+у~${ \somebivalenttensorcomponents{\hspace{-0.2ex} \cdot j}^{\hspace{.1ex}i} }$
+верхний индекс~\inquotesx{$i\hspace{.25ex}$}[---]
+первый,
+а~ниж\-ний~\inquotesx{$\hspace{-0.1ex}j\hspace{.25ex}$}[---]
+второй.
 
-Компоненты единичного~(\inquotes{метрического}) тензора~$\UnitDyad$
+Компоненты
+единичного~(\inquotes{метрического})
+тензора~$\UnitDyad$
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\begin{array}{c}
 \UnitDyad = \bm{a}^{k} \hspace{-0.1ex} \bm{a}_{k} \hspace{-0.1ex} = \bm{a}_{k} \hspace{.1ex} \bm{a}^{k} \hspace{-0.2ex} = \textsl{g}_{j\hspace{-0.1ex}k} \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.1ex} \bm{a}^{k} \hspace{-0.2ex} = \textsl{g}^{\hspace{0.25ex}j\hspace{-0.1ex}k} \hspace{-0.1ex} \bm{a}_j \bm{a}_k \hspace{-0.32ex}: \\[0.2em]
@@ -476,5 +489,3 @@ $\bm{P}^{\T} \hspace{-0.4ex} = \hspace{-0.1ex} \mathcircabove{\bm{a}}^i \bm{a}_i
 \end{equation}
 
 \end{otherlanguage}
-
-

@@ -11,27 +11,29 @@
 
 \en{Consider}\ru{Рассмотрим} \en{at~least}\ru{хотя~бы} \en{a~scalar function}\ru{скалярную функцию} \en{of~a~bivalent tensor}\ru{двухвалентного тензора}~${\varphi \narroweq \varphi(\bm{B}\hspace{.1ex})}$.
 \en{Examples}\ru{Примеры}\ru{\:---}\en{ are} ${\bm{B} \hspace{-0.2ex} \dotdotp \hspace{-0.25ex} \scalebox{1.1}[1]{$\bm{\mathit{\Phi}}$}}$ (\en{or}\ru{или}~${\bm{p} \dotp \hspace{-0.2ex} \bm{B} \hspace{-0.16ex} \dotp \hspace{-0.1ex} \bm{q}}$) \en{and}\ru{и}~${\bm{B} \hspace{-0.2ex} \dotdotp \hspace{-0.2ex} \bm{B}}$.
-\en{Then}\ru{Тогда} \en{in~each basis}\ru{в~каждом базисе}~${\bm{a}_i}$ \en{paired with}\ru{в~паре с}~\en{cobasis}\ru{кобазисом}~${\bm{a}^{\hspace{-0.1ex}i}}$ \en{we have}\ru{имеем} \en{function}\ru{функцию}~${\varphi(B_{i\hspace{-0.1ex}j})}$ \en{of~nine numeric arguments}\ru{девяти числовых аргументов}\:--- \en{components}\ru{компонент}~$B_{i\hspace{-0.1ex}j}$ \en{of~tensor}\ru{тензора}~$\bm{B}$.
+\en{Then}\ru{Тогда} \en{in~each basis}\ru{в~каждом базисе}~${\bm{a}_i}$ \en{paired with}\ru{в~паре с}~\en{cobasis}\ru{кобазисом}~${\bm{a}^{\hspace{-0.1ex}i}}$ \en{we have}\ru{имеем}
+\en{function}\ru{функцию}~${\varphi(\somebivalenttensorcomponents{i\hspace{-0.1ex}j})}$ \en{of~nine numeric arguments}\ru{девяти числовых аргументов}\:---
+\en{components}\ru{компонент}~$\somebivalenttensorcomponents{i\hspace{-0.1ex}j}$ \en{of~tensor}\ru{тензора}~$\bm{B}$.
 \en{For example}\ru{Для примера}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \varphi(\bm{B}\hspace{.1ex}) \hspace{-0.2ex}
 = \bm{B} \hspace{-0.2ex} \dotdotp \hspace{-0.28ex} \scalebox{1.1}[1]{$\bm{\mathit{\Phi}}$} \hspace{-0.1ex}
-= \hspace{-0.1ex} B_{i\hspace{-0.1ex}j} \hspace{.16ex} \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.16ex} \bm{a}^j \hspace{-0.3ex} \dotdotp \bm{a}_m \bm{a}_n \hspace{-0.2ex} \scalebox{1.2}[1]{$\mathit{\Phi}$}^{mn} \hspace{-0.25ex}
-= \hspace{-0.1ex} B_{i\hspace{-0.1ex}j} \hspace{-0.15ex} \scalebox{1.2}[1]{$\mathit{\Phi}$}^{\hspace{.1ex}j\hspace{-0.06ex}i} \hspace{-0.25ex}
-= \varphi(B_{i\hspace{-0.1ex}j})
+= \hspace{-0.1ex} \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{.16ex} \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.16ex} \bm{a}^j \hspace{-0.3ex} \dotdotp \bm{a}_m \bm{a}_n \hspace{-0.2ex} \scalebox{1.2}[1]{$\mathit{\Phi}$}^{mn} \hspace{-0.25ex}
+= \hspace{-0.1ex} \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.15ex} \scalebox{1.2}[1]{$\mathit{\Phi}$}^{\hspace{.1ex}j\hspace{-0.06ex}i} \hspace{-0.25ex}
+= \varphi(\somebivalenttensorcomponents{i\hspace{-0.1ex}j})
 \hspace{.1ex} .
 \end{equation*}
 
 \vspace{-0.25em} \noindent
 \en{With any transition}\ru{С~любым переходом} \en{to~a~new basis,}\ru{к~новому базису} \en{the~result}\ru{результат} \en{doesn’t change}\ru{не~меняется}:
-${\varphi(B_{i\hspace{-0.1ex}j}) \hspace{-0.2ex} = \varphi(B\hspace{.16ex}'_{\hspace{-0.32ex}i\hspace{-0.1ex}j}) \hspace{-0.2ex} = \varphi(\bm{B}\hspace{.1ex})}$.
+${\varphi(\somebivalenttensorcomponents{i\hspace{-0.1ex}j}) \hspace{-0.2ex} = \varphi(B\hspace{.16ex}'_{\hspace{-0.32ex}i\hspace{-0.1ex}j}) \hspace{-0.2ex} = \varphi(\bm{B}\hspace{.1ex})}$.
 
 \en{Differentiation of}\ru{Дифференцирование}~${\varphi(\bm{B}\hspace{.1ex})}$ \en{looks like}\ru{выглядит как}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 d \hspace{.1ex} \varphi
-= \displaystyle \frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.2ex} B_{i\hspace{-0.1ex}j}} \hspace{.2ex} d B_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \displaystyle \frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.2ex} \somebivalenttensorcomponents{i\hspace{-0.1ex}j}} \hspace{.2ex} d \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.2ex}
 = \displaystyle \frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.1ex} \bm{B}} \dotdotp d \bm{B}^{\T}
 \hspace{-0.25ex} .
 \end{equation}
@@ -40,19 +42,19 @@ d \hspace{.1ex} \varphi
 \en{Tensor}\ru{Тензор}~${\scalebox{0.98}[1]{$\raisemath{.16em}{\scalebox{0.92}[0.92]{$\partial \hspace{.15ex} \varphi$}} \hspace{-0.1ex} / \hspace{-0.1ex} \raisemath{-0.32em}{\scalebox{0.92}[0.92]{$\partial \hspace{-0.1ex} \bm{B}$}}\hspace{.1ex}$}}$
 \en{is called}\ru{называется} \en{the~derivative}\ru{производной} \en{of~function}\ru{функции}~$\varphi$ \en{by~argument}\ru{по~аргументу}~${\hspace{-0.15ex}\bm{B}\hspace{.1ex}}$;
 ${d \bm{B}}$\en{~is}\ru{\:---} \en{the~differential}\ru{дифференциал} \en{of~tensor}\ru{тензора}~$\bm{B}$,
-${d \bm{B} \hspace{-0.1ex} = d B_{i\hspace{-0.1ex}j} \hspace{.16ex} \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.16ex} \bm{a}^j}$;
-${\smash{\scalebox{0.98}[1]{$\raisemath{.16em}{\scalebox{0.9}{$\partial \hspace{.15ex} \varphi$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.9}{$\partial \hspace{-0.1ex} B_{i\hspace{-0.1ex}j}$}}$}}}$\ru{\:---}\en{~are} \en{components}\ru{компоненты}~(\en{contra\-variant ones}\ru{контра\-вариант\-ные}) \en{of~\,}${\smash{\scalebox{0.98}[1]{$\raisemath{.16em}{\scalebox{0.92}[0.92]{$\partial \hspace{.15ex} \varphi$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.92}{$\partial \hspace{-0.1ex} \bm{B}$}}\hspace{.2ex}$}}}$
+${d \bm{B} \hspace{-0.1ex} = d \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{.16ex} \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.16ex} \bm{a}^j}$;
+${\smash{\scalebox{0.98}[1]{$\raisemath{.16em}{\scalebox{0.9}{$\partial \hspace{.15ex} \varphi$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.9}{$\partial \hspace{-0.1ex} \somebivalenttensorcomponents{i\hspace{-0.1ex}j}$}}$}}}$\ru{\:---}\en{~are} \en{components}\ru{компоненты}~(\en{contra\-variant ones}\ru{контра\-вариант\-ные}) \en{of~\,}${\smash{\scalebox{0.98}[1]{$\raisemath{.16em}{\scalebox{0.92}[0.92]{$\partial \hspace{.15ex} \varphi$}} \hspace{-0.1ex} / \hspace{-0.2ex} \raisemath{-0.32em}{\scalebox{0.92}{$\partial \hspace{-0.1ex} \bm{B}$}}\hspace{.2ex}$}}}$
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.15ex} \dotp \scalebox{0.92}{$\displaystyle\frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.1ex} \bm{B}}$} \dotp \bm{a}^j \hspace{-0.2ex}
 =
 \scalebox{0.92}{$\displaystyle\frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.1ex} \bm{B}}$} \dotdotp \bm{a}^j \hspace{-0.2ex} \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.2ex}
 =
-\scalebox{0.92}{$\displaystyle\frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.15ex} B_{i\hspace{-0.1ex}j}}$}
+\scalebox{0.92}{$\displaystyle\frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.15ex} \somebivalenttensorcomponents{i\hspace{-0.1ex}j}}$}
 \;\Leftrightarrow\;
 \scalebox{0.92}{$\displaystyle\frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.1ex} \bm{B}}$}
 =
-\scalebox{0.92}{$\displaystyle\frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.15ex} B_{i\hspace{-0.1ex}j}}$} \hspace{.25ex} \bm{a}_i \bm{a}_{\hspace{-0.1ex}j}
+\scalebox{0.92}{$\displaystyle\frac{\partial \hspace{.1ex} \varphi}{\partial \hspace{-0.15ex} \somebivalenttensorcomponents{i\hspace{-0.1ex}j}}$} \hspace{.25ex} \bm{a}_i \bm{a}_{\hspace{-0.1ex}j}
 \hspace{.1ex} .
 \end{equation*}
 
@@ -129,4 +131,3 @@ ${ \anythirdinvariantof{\bm{B}^{\mathsf{\hspace{.1ex}S}}} }$.
 где транспонирование излишне.
 
 \end{otherlanguage}
-

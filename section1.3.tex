@@ -7,14 +7,21 @@
 %% Conversion of tensor’s components from one orthonormal basis to another is done through an orthogonal transformation.
 
 \en{\dropcap{W}{hen}}\ru{\dropcap{К}{огда}}
-\en{in each orthonormal basis}\ru{в~каждом ортонормальном базисе}~${\bm{e}_i}$ \en{we have a~set}\ru{имеем набор} \en{of~nine}\ru{девяти} (${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$) \en{numbers}\ru{чисел} ${B_{i\hspace{-0.1ex}j}}$~(${i, j = 1, 2, 3}$),
-\en{and this set is transformed}\ru{и этот набор преобразуется} \en{during a~transition}\ru{во~время перехода} \en{to~a~new~(rotated) orthonormal basis}\ru{к~новому~(повёрнутому) ортонормальному базису}~${\bm{e}'_i}$ \en{as}\ru{как}
+\en{in each orthonormal basis}\ru{в~каждом ортонормальном базисе}~${\bm{e}_i}$
+\en{we have a~set}\ru{имеем набор}
+\en{of~nine}\ru{девяти}~(${3^2 \hspace{-0.24ex}=\hspace{-0.12ex} 9}$)
+\en{numbers}\ru{чисел}
+$\somebivalenttensorcomponents{i\hspace{-0.1ex}j}$~(${i, j = 1, 2, 3}$),
+\en{and this set is transformed}\ru{и этот набор преобразуется}
+\en{during a~transition}\ru{во~время перехода}
+\en{to~a~new~(rotated) orthonormal basis}\ru{к~новому~(повёрнутому) ортонормальному базису}~${\bm{e}'_i}$
+\en{as}\ru{как}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{orthotransform:2}
 B\hspace{.16ex}'_{\hspace{-0.33ex}i\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \bm{e}'_i \hspace{-0.15ex} \dotp \bm{e}_m \hspace{.1ex} B_{mn} \hspace{.1ex} \bm{e}_n \hspace{-0.3ex} \dotp \bm{e}'_{\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \bm{e}'_i \hspace{-0.15ex} \dotp \bm{e}_m \hspace{.1ex} \bm{e}'_{\hspace{-0.1ex}j} \hspace{-0.15ex} \dotp \bm{e}_n \hspace{.1ex} B_{mn} \hspace{-0.2ex}
-= \cosinematrix{i'\hspace{-0.1ex}m} \hspace{.1ex} \cosinematrix{j'\hspace{-0.1ex}n} \hspace{.1ex} B_{mn}
+= \bm{e}'_i \hspace{-0.15ex} \dotp \bm{e}_m \hspace{.1ex} \somebivalenttensorcomponents{mn} \hspace{.1ex} \bm{e}_n \hspace{-0.3ex} \dotp \bm{e}'_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \bm{e}'_i \hspace{-0.15ex} \dotp \bm{e}_m \hspace{.1ex} \bm{e}'_{\hspace{-0.1ex}j} \hspace{-0.15ex} \dotp \bm{e}_n \hspace{.1ex} \somebivalenttensorcomponents{mn} \hspace{-0.2ex}
+= \cosinematrix{i'\hspace{-0.1ex}m} \hspace{.1ex} \cosinematrix{j'\hspace{-0.1ex}n} \hspace{.1ex} \somebivalenttensorcomponents{mn}
 \hspace{.1ex} ,
 \end{equation}
 
@@ -23,20 +30,30 @@ B\hspace{.16ex}'_{\hspace{-0.33ex}i\hspace{-0.1ex}j} \hspace{-0.2ex}
 \en{this set of~components}\ru{этот набор компонент}
 \en{presents}\ru{представляет}
 \en{an~invariant object}\ru{инвариантный объект}\:---
-\en{a~tensor}\ru{тензор}
-\en{of a~second complexity}\ru{второй сложности}
-( \en{of a~second valence}\ru{второй валентности},
-\en{bivalent}\ru{ бивалентный} )
-${\hspace{-0.1ex}^2\!\bm{B}}$.
+\en{a~tensor}\ru{тензор}~$\somebivalenttensor$
+\en{of second complexity}\ru{второй сложности}
+( \en{of second valence}\ru{второй валентности},
+\en{bivalent}\ru{ бивалентный} ).
 
-\en{In other words}\ru{Иными словами}, \en{tensor}\ru{тензор}~${^2\!\bm{B}}$ \en{reveals in every basis as a~collection of its components}\ru{проявляется в~каждом базисе совокупностью своих компонент}~${B_{i\hspace{-0.1ex}j}}$, \en{changing along with a~basis according to}\ru{меняющейся вместе с~базисом согласно}~\eqref{orthotransform:2}.
+\en{In other words}\ru{Иными словами},
+\en{tensor}\ru{тензор}~$\somebivalenttensor$
+\en{reveals in every basis as a~collection of its components}\ru{проявляется в~каждом базисе совокупностью своих компонент}~$\somebivalenttensorcomponents{i\hspace{-0.1ex}j}$, \en{changing along with a~basis according to}\ru{меняющейся вместе с~базисом согласно}~\eqref{orthotransform:2}.
 
 % dyad
 
-\en{The key example}\ru{Ключевой пример} \en{of a~second complexity tensor}\ru{тензора второй сложности}\en{ is}\ru{\:---} \en{a~dyad}\ru{диада}.
-\en{Having two vectors}\ru{Имея два вектора} ${\bm{a} \hspace{-0.2ex} = \hspace{-0.2ex} a_i \bm{e}_i}$ \en{and}\ru{и}~${\bm{b} \hspace{-0.2ex} = \hspace{-0.2ex} b_i \bm{e}_i}$,
-\en{in each basis}\ru{в~каждом базисе}~${\bm{e}_i}$ \en{assume}\ru{пол\'{о}жим} ${d_{i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv a_i b_j}$.
-\en{It’s easy to~see}\ru{Легко увидеть} \en{how components}\ru{как компоненты}~${d_{i\hspace{-0.1ex}j}}$ \en{transform}\ru{преобразуются} \en{according to}\ru{согласно}~\eqref{orthotransform:2}:
+\en{The~key example}\ru{Ключевой пример}
+\en{of a~second complexity tensor}\ru{тензора второй сложности}\en{ is}\ru{\:---}
+\en{a~dyad}\ru{диада}.
+\en{Having two vectors}\ru{Имея два вектора}
+${\bm{a} \hspace{-0.2ex} = \hspace{-0.2ex} a_i \bm{e}_i}$
+\en{and}\ru{и}~${\bm{b} \hspace{-0.2ex} = \hspace{-0.2ex} b_i \bm{e}_i}$,
+\en{in each basis}\ru{в~каждом базисе}~${\bm{e}_i}$
+\en{assume}\ru{пол\'{о}жим}
+${d_{i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv a_i b_j}$.
+\en{It’s easy to~see}\ru{Легко увидеть}
+\en{how components}\ru{как компоненты}~${d_{i\hspace{-0.1ex}j}}$
+\en{transform}\ru{преобразуются}
+\en{according to}\ru{согласно}~\eqref{orthotransform:2}:
 
 \nopagebreak\vspace{-0.3em}\begin{equation*}
 \scalebox{0.96}[1]{$
@@ -51,24 +68,64 @@ $} .
 \end{equation*}
 
 \vspace{-0.25em}\noindent
-\en{Resulting}\ru{Получающийся} \en{tensor}\ru{тензор}~${^2\hspace{-0.25ex}\bm{d}}$
-\en{is called}\ru{называется} \ru{диадным произведением~(}\en{a~}dyadic product\ru{)} \en{or}\ru{или} \en{just}\ru{просто} \ru{диадой~(}dyad\ru{)}
-\en{and}\ru{и} \en{is written as}\ru{пишется как}~${\bm{a} \hspace{-0.15ex} \otimes \hspace{-0.15ex} \bm{b}}$ \en{or}\ru{или}~${\bm{a} \bm{b}}$.
+\en{A~resulting}\ru{Получающийся}
+\en{tensor}\ru{тензор}~${^2\hspace{-0.25ex}\bm{d}}$
+\en{is called}\ru{называется}
+\ru{диадным произведением~(}\en{a~}dyadic product\ru{)}
+\en{or}\ru{или}
+\en{just}\ru{просто}
+\ru{диадой~(}dyad\ru{)}
+\en{and }\ru{и~}\en{is written as}\ru{пишется как}~${\bm{a} \hspace{-0.15ex} \otimes \hspace{-0.15ex} \bm{b}}$
+\en{or}\ru{или}~${\bm{a} \bm{b}}$.
 \en{I choose the~notation}\ru{Я выбираю запись}
 \inquotes{${^2\hspace{-0.25ex}\bm{d} = \hspace{-0.1ex} \bm{a} \bm{b}}$},
 \en{without}\ru{без}
 \en{the}\ru{символа}~${\otimes}$\en{ symbol}.
 
+\en{When}\ru{Когда}
+\en{some bivalent tensor}\ru{какой\hbox{-}то бивалентный тензор}~$\somebivalenttensor$\en{ is}\ru{\:---}
+\en{a~dyad}\ru{диада}~${\bm{\beta}\bm{b}}$,
+\en{its components}\ru{его компоненты}
+${ \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.3ex} = \hspace{-0.2ex} \beta_{i} b_{\hspace{-0.1ex}j} }$
+\en{satisfy}\ru{удовлетворяют}
+\en{the~equality}\ru{равенству}
+${ \somebivalenttensorcomponents{pq} \somebivalenttensorcomponents{mn} \hspace{-0.2ex} = \somebivalenttensorcomponents{mq} \somebivalenttensorcomponents{pn} }$\ru{,}
+\en{to get}\ru{чтобы получить}
+\en{commutativity}\ru{коммутативность}
+\en{of~multiplication}\ru{умножения}
+${ \beta_{p} b_{q} \hspace{.2ex} \beta_{m} b_{n} \hspace{-0.2ex} = \beta_{m} b_{q} \hspace{.2ex} \beta_{p} b_{n} }$.
+\en{Here}\ru{Здесь}~${p \hspace{-0.2ex} \neq \hspace{-0.2ex} m}$,
+\en{or else}\ru{а~ин\'{а}че}
+\en{the~equality}\ru{равенство}
+\en{becomes}\ru{стан\'{о}вится}
+\en{the~identity}\ru{т\'{о}ждеством}.
+
 % unit dyad
 
-\en{Essential exemplar}\ru{Существенным экземпляром} \en{of a~bivalent tensor}\ru{двухвалентного тензора} \ru{является}\en{is} \en{the~unit tensor}\ru{единичный тензор}~(\en{other names}\ru{другие именования}\ru{\:---}\en{ are} \en{unit dyad}\ru{единичная диада}, \en{identity tensor}\ru{тождественный тензор} \en{and}\ru{и} \en{metric tensor}\ru{метрический тензор}).
-\en{Let}\ru{Пусть} \en{for any}\ru{для~любого} \en{orthonormal}\ru{отронормального}~(\ru{декартова, }cartesian) \en{basis}\ru{базиса}
+\en{The~essential exemplar}\ru{Существенным экземпляром}
+\en{of a~bivalent tensor}\ru{двухвалентного тензора}
+\ru{является}\en{is}
+\en{the~unit tensor}\ru{единичный тензор}~(\en{other names}\ru{другие именования}\ru{\:---}\en{ are}
+\en{unit dyad}\ru{единичная диада},
+\en{identity tensor}\ru{тождественный тензор}
+\en{and }\ru{и~}\en{metric tensor}\ru{метрический тензор}).
+\en{Let}\ru{Пусть}
+\en{for any}\ru{для~любого}
+\en{orthonormal}\ru{отронормального}~(\ru{декартова, }cartesian)
+\en{basis}\ru{базиса}
 ${E_{i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{e}_i \dotp \bm{e}_{\hspace{-0.15ex}j} \hspace{-0.2ex} = \delta_{i\hspace{-0.1ex}j}}$.
-\en{These are really components of~tensor}\ru{Это действительно компоненты тензора}, \eqref{orthotransform:2} \en{is actual}\ru{актуально}:
+\en{These are really components of~tensor}\ru{Это действительно компоненты тензора},
+\eqref{orthotransform:2}
+\en{is actual}\ru{актуально}:
 ${E\kern+0.1ex'_{\hspace{-0.12ex}mn} \hspace{-0.25ex} = \cosinematrix{m'\hspace{-0.1ex}i} \cosinematrix{n'\hspace{-0.2ex}j} E_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \cosinematrix{m'\hspace{-0.1ex}i} \cosinematrix{n'\hspace{-0.1ex}i} \hspace{-0.2ex} = \delta_{mn}}$.
-\en{I~write}\ru{Я~пишу} \en{this tensor}\ru{этот тензор}
+\en{I~write}\ru{Я~пишу}
+\en{this tensor}\ru{этот тензор}
 \en{as}\ru{как}~$\UnitDyad$
-(\en{other popular choices}\ru{другие популярные варианты}\ru{\:---}\en{ are} $\bm{I}$ \en{and}\ru{и}~${\hspace{-0.1ex} ^2\hspace{-0.1ex}\bm{1}}$).
+(\en{other}\ru{другие}
+\en{popular}\ru{популярные}
+\en{choices}\ru{альтернативы}\ru{\:---}\en{ are}
+$\bm{I}$
+\en{and}\ru{и}~${\hspace{-0.1ex} ^2\hspace{-0.1ex}\bm{1}}$).
 
 \en{Invariableness}\ru{Неизменяемость} %%% invariability = invariableness
 \en{of~components}\ru{компонент}
@@ -82,12 +139,12 @@ ${E\kern+0.1ex'_{\hspace{-0.12ex}mn} \hspace{-0.25ex} = \cosinematrix{m'\hspace{
 (\en{nonvanishing}\ru{неисчезающих})
 \en{isotropic vectors}\ru{изотропных векторов}\ru{ не бывает}
 (\en{all components}\ru{все компоненты}
-\en{of the~null vector}\ru{нуль\hbox{-}вектора}
-(\inquotes{\en(vanishing)\ru{исчезающего}
-\en{vector}\ru{вектора}})
-$\bm{0}$
+\en{of the~null}\ru{нулевого},
+\en{or}\ru{или}
+\inquotesx{\en{vanishing}\ru{исчезающего}}[,]
+\en{vector}\ru{вектора}~$\bm{0}$
 \en{are equal to zero}\ru{равны нулю}
-\en{in any basis}\ru{в~любом базисе}).
+\en{within any basis}\ru{в~любом базисе}).
 
 % linear mapping (linear transformation)
 
@@ -205,4 +262,3 @@ ${(3^0 \hspace{-0.24ex}=\hspace{-0.12ex} 1)}$
 \en{If}\ru{Если} \en{not scalars}\ru{не~скаляры}, \en{then}\ru{то} \en{what}\ru{что}?
 \en{Here could be no simple answer}\ru{Здесь не~может быть простого ответа}.
 \en{In~each particular basis}\ru{В~каждом отдельном базисе}, ${\bm{e}_i}$\ru{\:---}\en{ are} \en{vectors}\ru{векторы} \en{and}\ru{и}~${v_i}$\ru{\:---}\en{ are} \en{scalars}\ru{скаляры}.
-

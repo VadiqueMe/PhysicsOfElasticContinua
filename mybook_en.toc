@@ -5,31 +5,31 @@
 \contentsline {chapter}{\numberline {1}Mathematical apparatus}{1}{chapter.1}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}The ancient but intuitive geometry}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1}Points}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1}Points}{2}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.2}Lines, curved and straight}{2}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.3}A~relation between lines and points}{2}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.4}Do straight lines exists?}{2}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.4}Do straight lines exists?}{3}{subsection.1.1.4}%
 \contentsline {subsection}{\numberline {1.5}Vectors. Lines and vectors}{3}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.6}The existence of vectors. Do vectors exist?}{3}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.6}The existænce of vectors. Do vectors exist?}{3}{subsection.1.1.6}%
 \contentsline {subsection}{\numberline {1.7}Continuity of line}{3}{subsection.1.1.7}%
 \contentsline {subsection}{\numberline {1.8}A~point of reference}{3}{subsection.1.1.8}%
 \contentsline {subsection}{\numberline {1.9}Translation as the easiest kind of motion. Translations and vectors}{3}{subsection.1.1.9}%
 \contentsline {subsection}{\numberline {1.10}Straight line and vector}{3}{subsection.1.1.10}%
-\contentsline {subsection}{\numberline {1.11}The line which figures real numbers}{3}{subsection.1.1.11}%
+\contentsline {subsection}{\numberline {1.11}The line which figures real numbers}{4}{subsection.1.1.11}%
 \contentsline {subsection}{\numberline {1.12}What is a distance?}{4}{subsection.1.1.12}%
 \contentsline {subsection}{\numberline {1.13}Plane and more dimensional space}{4}{subsection.1.1.13}%
 \contentsline {subsection}{\numberline {1.14}Distance on plane or more dimensional space}{4}{subsection.1.1.14}%
 \contentsline {subsection}{\numberline {1.15}What is an angle?}{4}{subsection.1.1.15}%
 \contentsline {subsection}{\numberline {1.16}Differentiation of continuous into small differential chunks}{4}{subsection.1.1.16}%
-\contentsline {section}{\numberline {2}Vector}{4}{section.1.2}%
-\contentsline {subsection}{\numberline {2.1}What is a~vector?}{4}{subsection.1.2.1}%
+\contentsline {section}{\numberline {2}Vector}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {2.1}What is a~vector?}{5}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {2.2}The addition and subtraction}{5}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {2.3}The method of coordinates}{6}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {2.3}The method of coordinates}{7}{subsection.1.2.3}%
 \contentsline {section}{\numberline {3}Tensor and its components}{10}{section.1.3}%
-\contentsline {section}{\numberline {4}Tensor algebra, or operations with tensors}{12}{section.1.4}%
+\contentsline {section}{\numberline {4}Tensor algebra, or operations with tensors}{13}{section.1.4}%
 \contentsline {section}{\numberline {5}Polyadic representation (decomposition)}{16}{section.1.5}%
-\contentsline {section}{\numberline {6}Matrices, permutations and determinants}{17}{section.1.6}%
-\contentsline {subsection}{\numberline {6.1}The multiplication of matrices}{18}{subsection.1.6.1}%
+\contentsline {section}{\numberline {6}Matrices, permutations and determinants}{18}{section.1.6}%
+\contentsline {subsection}{\numberline {6.1}The multiplication of matrices}{19}{subsection.1.6.1}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \contentsline {section}{\numberline {7}The cross product}{20}{section.1.7}%
@@ -84,7 +84,7 @@
 \contentsline {section}{\numberline {8}Small oscillations (vibrations)}{82}{section.2.8}%
 \contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{84}{chapter.3}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Continuum. The two descriptions of processes}{84}{section.3.1}%
+\contentsline {section}{\numberline {1}Continuum and the two approaches to describe it}{84}{section.3.1}%
 \babel@toc {russian}{}
 \babel@toc {english}{}
 \babel@toc {russian}{}
@@ -96,8 +96,6 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {5}Area vector. Surface change}{96}{section.3.5}%
 \contentsline {section}{\numberline {6}Forces in continuum. Existence of the~Cauchy stress tensor}{97}{section.3.6}%
-\babel@toc {russian}{}
-\babel@toc {english}{}
 \contentsline {section}{\numberline {7}Balance of momentum and angular momentum}{99}{section.3.7}%
 \babel@toc {russian}{}
 \babel@toc {english}{}

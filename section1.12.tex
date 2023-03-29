@@ -164,13 +164,39 @@ ${\left(\operatorname{det} \orthogonaltensor\hspace{.1ex}\right)^2 \hspace{-0.1e
 \en{is an~orthogonal tensor}\ru{это ортогональный тензор}
 \en{with}\ru{с}~${\operatorname{det} \rotationtensor \hspace{-0.1ex} = 1}$.
 
-\en{But}\ru{Но} \en{not only}\ru{не~только лишь} \en{rotation tensors}\ru{тензоры поворота} \en{possess}\ru{обладают} \en{the property of~orthogonality}\ru{свойством ортогональности}.
-\en{When}\ru{Когда} \en{in}\ru{в}~\eqref{introductionofrotationtensor} \en{the first basis}\ru{первый базис} \en{is }\inquotesx{\en{left}\ru{левый}}[,] \en{and}\ru{а}~\en{the second one}\ru{второй} \en{is }\inquotesx{\en{right}\ru{правый}}[,] \en{then}\ru{тогда} \en{there’s}\ru{это} \en{a~combination of a~rotation and a~reflection}\ru{комбинация поворота и~отражения} (\inquotes{rotoreflection}) ${\rotationtensor = -\UnitDyad \dotp \rotationtensor}$ \en{with}\ru{с}~${\operatorname{det} \left( -\UnitDyad \dotp \rotationtensor \hspace{.15ex} \right) \hspace{-0.1ex} = -1}$.
+\en{But}\ru{Но}
+\en{not only}\ru{не~только лишь}
+\en{rotation tensors}\ru{тензоры поворота}
+\en{possess}\ru{обладают}
+\en{the~property of~orthogonality}\ru{свойством ортогональности}.
+\en{When}\ru{Когда}
+\en{in}\ru{в}~\eqref{introductionofrotationtensor}
+\en{the~first basis}\ru{первый базис}
+\en{is }\inquotesx{\en{left}\ru{левый}}[,]
+\en{and }\ru{а~}\en{the~second one}\ru{второй}
+\en{is }\inquotesx{\en{right}\ru{правый}}[,]
+\en{then}\ru{тогда}
+\en{there’s}\ru{это}
+\en{a~combination}\ru{комбинация}
+\en{of rotating}\ru{вращения}
+\en{and }\ru{и~}\en{mirroring}\ru{зеркалирования}
+(\en{a~}\inquotes{roto\-reflexion})
+${\rotationtensor = -\UnitDyad \dotp \rotationtensor}$
+\en{with}\ru{с}~${\operatorname{det} \left( -\UnitDyad \dotp \rotationtensor \hspace{.15ex} \right) \hspace{-0.1ex} = -1}$.
 
-\begin{otherlanguage}{russian}
-
-У~любого бивалентного тензора в~трёхмерном пространстве как минимум одно собственное число\:--- \en{the root of}\ru{корень}~\eqref{chardetequation}\en{ is}\ru{\:---} \en{non-complex}\ru{некомпл\'{е}ксное}~(\ru{действительное, }real).
-\en{For a~rotation tensor}\ru{Для тензора поворота}\en{,} \en{it is equal to one}\ru{оно равно единице}
+\en{Any}\ru{У~любого}
+\en{bivalent tensor}\ru{бивалентного тензора}
+\en{in the three-dimensional}\ru{в~трёхмерном}~(3D)
+\en{space}\ru{пространстве}\en{ has}
+\en{at least}\ru{как минимум}
+\en{one eigenvalue}\ru{одно собственное число}\:---
+\en{the~root of}\ru{корень}~\eqref{chardetequation}\:---
+\en{is }\en{non-complex}\ru{некомпл\'{е}ксное},
+\en{or}\ru{или}
+\ru{действительное}\ru{~(}real\ru{)}.
+\en{For}\ru{Для}
+\en{a~rotation tensor}\ru{тензора поворота}\en{,}
+\en{it is equal to one}\ru{оно равно единице}
 
 \nopagebreak\vspace{1em}\begin{equation*}
 \begin{array}{c}
@@ -184,19 +210,37 @@ ${\left(\operatorname{det} \orthogonaltensor\hspace{.1ex}\right)^2 \hspace{-0.1e
 \AddUnderBrace[line width=.75pt][-0.1ex,0.1ex]{BeginEBrace}{EndEBrace}{${\scriptstyle \UnitDyad}$}
 
 \vspace{-0.5em}\noindent
-Соответствующая собственная ось называется осью поворота.
-Теорема Euler’а о~конечном повороте в~том и~состоит, что такая ось существует
-[\textcolor{blue}{ПУБИКАЦИЯ ЭЙЛЕРА ПРО ЭТО}].
-Если ${\bm{k}}$\:--- орт этой оси, а~${\vartheta}$\:--- конечная величина угла поворота, то тензор поворота представ\'{и}м как
+\en{The~corresponding}\ru{Соответствующий}
+\en{eigenvector}\ru{собственный вектор}
+\en{is called}\ru{называется}
+\en{the~axis of~rotation}\ru{осью поворота}.
+\href{https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem}{%
+\en{The~}\ru{Теорема }Euler’\en{s}\ru{а}\en{ theorem}
+\en{on finite rotation}\ru{о~конечном повороте}}
+\en{is just about that}\ru{и~есть про~то, что}
+\en{such an~axis exists}\ru{такая ось существует}
+[http://eulerarchive.maa.org//docs/originals/E478.pdf].
+\en{If}\ru{Если}
+${\bm{k}}$\en{ is}\ru{\:---}
+\en{the~unit vector of that axis}\ru{единичный вектор той оси},
+\en{and}\ru{а}~${\vartheta}$\en{ is}\ru{\:---}
+\en{the~finite angle of~rotation}\ru{кон\'{е}чный угол поворота},
+\en{then}\ru{то}
+\en{the~rotation tensor}\ru{тензор поворота}
+\en{is representable as}\ru{представ\'{и}м как}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{eulerfiniterotation}
 \rotationtensor\hspace{.1ex}(\bm{k}, \vartheta) = \UnitDyad \operatorname{cos} \vartheta + \bm{k} \times\hspace{-0.2ex} \UnitDyad \operatorname{sin} \vartheta + \bm{k} \bm{k} \left( {1 - \operatorname{cos} \vartheta} \right)
 \hspace{-0.2ex} .
 \end{equation}
 
+\begin{otherlanguage}{russian}
+
 \vspace{-0.1em}
 Доказывается эта формула так.
-Направление~${\bm{k}}$ при~повороте не~меняется~(${\rotationtensor \hspace{-0.2ex}\dotp \bm{k} = \bm{k}\hspace{.12ex}}$), поэтому на~оси поворота ${\mathcircabove{\bm{e}}_3 \hspace{-0.2ex} = \bm{e}_3 \hspace{-0.2ex} = \bm{k}}$.
+Направление~${\bm{k}}$
+во~вр\'{е}мя поворота
+не~меняется~(${\rotationtensor \hspace{-0.2ex}\dotp \bm{k} = \bm{k}\hspace{.12ex}}$), поэтому на~оси поворота ${\mathcircabove{\bm{e}}_3 \hspace{-0.2ex} = \bm{e}_3 \hspace{-0.2ex} = \bm{k}}$.
 В~перпендикулярной плоскости~(\figureref{fig:eulerfiniterotation}) ${\mathcircabove{\bm{e}}_1 \hspace{-0.2ex} = \bm{e}_1 \operatorname{cos} \vartheta - \bm{e}_2 \operatorname{sin} \vartheta}$, ${\mathcircabove{\bm{e}}_2 \hspace{-0.2ex} = \bm{e}_1 \operatorname{sin} \vartheta + \bm{e}_2 \operatorname{cos} \vartheta}$, ${\rotationtensor = \bm{e}_i \mathcircabove{\bm{e}}_i \,\Rightarrow\hspace{.2ex}}$~\eqref{eulerfiniterotation}.
 
 % ~ ~ ~ ~ ~
@@ -230,8 +274,17 @@ ${\rotationtensor \narroweq \rotationtensor(t)}$.
 \hspace{.1ex} .
 \end{equation*}
 
-Тензор ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!}}$ (по~\eqref{transposeofdotproduct} ${\left({ \mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} }\right)^{\raisemath{-0.25em}{\!\T}} \hspace{-0.4ex} = \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T}}$) оказался анти\-сим\-метрич\-ным.
-Поэтому согласно~\eqref{companionvector} он представ\'{и}м сопутствующим вектором как ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \times \UnitDyad = \bm{\omega} \times \rotationtensor \dotp \rotationtensor^{\T}}$\!.
+По~\eqref{transposeofdotproductforbivalenttensors}
+${\left({ \mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} }\right)^{\raisemath{-0.25em}{\!\T}} \hspace{-0.4ex} = \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T}}$,
+поэтому
+тензор~${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!}}$
+оказывается анти\-сим\-метрич\-ным.
+Тогда
+согласно~\eqref{companionvector}
+он представ\'{и}м
+через сопутствующий вектор
+как
+${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \times \UnitDyad = \bm{\omega} \times \rotationtensor \dotp \rotationtensor^{\T}}$\!.
 То~есть
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{angularvelocityvector}
@@ -513,4 +566,3 @@ $}}
 
 
 \end{otherlanguage}
-
