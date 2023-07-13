@@ -524,6 +524,10 @@
 \babel@toc {english}{}
 \babel@toc {russian}{}
 \babel@toc {english}{}
-\contentsline {chapter}{List of publications}{222}{section.17.4}%
+\contentsline {chapter}{\numberline {18}Out of elasticity, or plasticity}{222}{chapter.18}%
+\vspace {.2em}
+\contentsline {section}{\numberline {1}When elasticity is over}{222}{section.18.1}%
+\contentsline {section}{\numberline {2}Where goes the energy}{222}{section.18.2}%
+\contentsline {chapter}{List of publications}{223}{section.18.2}%
 \babel@toc {russian}{}
 \babel@toc {english}{}

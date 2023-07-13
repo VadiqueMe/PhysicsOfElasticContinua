@@ -12,3 +12,8 @@
 ./makechapter10.sh
 ./makechapter11.sh
 ./makechapter12.sh
+./makechapter13.sh
+./makechapter14.sh
+./makechapter15.sh
+./makechapters16and17.sh # the 17th chapter is built together with the 16th
+./makechapter18.sh

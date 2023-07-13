@@ -1,0 +1,41 @@
+\documentclass[11pt, twoside]{book}
+
+\input{bookgeometry.tex}
+
+\input{bookpreamble.tex}
+
+\entrue
+%%\rutrue
+
+\hypersetup{ pdftitle=\en{Chapter \inquotes{PLASTICITY} from the book \inquotes{Physics of elastic continua}}\ru{Глава \inquotes{ПЛАСТИЧНОСТЬ} из книги \inquotes{Физика упругих континуумов}} }
+\hypersetup{pdfauthor={Vadique}}
+
+\usepackage{verbatim} % for \begin(comment) ... \end{comment}
+
+\begin{document}
+
+\frontmatter
+
+\input{mycoverpage.tex}
+
+\input{colorspage.tex}
+
+\en{\selectlanguage{english}}
+\ru{\selectlanguage{russian}}
+
+\tableofcontents
+
+\thispagestyle{plain}
+
+\mainmatter
+
+\setcounter{chapter}{17} % chapters before this one
+
+\input{chapterplasticity.tex}
+
+%% \begin{comment} %%
+\newpage
+\input{listofbooks.tex}
+%% \end{comment} %%
+
+\end{document}
