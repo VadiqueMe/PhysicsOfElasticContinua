@@ -118,13 +118,32 @@ An active transformation is a transformation which actually changes the physi
 
 \nopagebreak\en{\vspace{-0.8em}}\ru{\vspace{-0.25em}}
 \begin{equation}\label{orthogonalityofrotationtensor}
-\aunderbrace[l1r]{\rotationtensor}_{\bm{e}_i \mathcircabove{\bm{e}}_i} \hspace{.1em} \dotp \hspace{.1em} \aunderbrace[l1r]{\rotationtensor^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_j \bm{e}_j}
+\tikzmark{beginJustARotation} \rotationtensor \tikzmark{endJustARotation}
+\hspace{.2ex} \dotp \hspace{.2ex}
+\tikzmark{beginATransposedRotation} \rotationtensor^{\T} \hspace{-0.5ex} \tikzmark{endATransposedRotation}
 \hspace{.2ex} = \hspace{.2ex}
-\aunderbrace[l1r]{\rotationtensor^{\T}\hspace{-0.2em}}_{\mathcircabove{\bm{e}}_i \bm{e}_i} \hspace{.2em} \dotp \aunderbrace[l1r]{\rotationtensor}_{\bm{e}_j \mathcircabove{\bm{e}}_j}
-\hspace{-0.2ex} = \hspace{.3ex}
-\aunderbrace[l1r]{\hspace{.2ex}\UnitDyad\hspace{.2ex}}_{\mathclap{\begin{subarray}{l} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \\ \bm{e}_i \bm{e}_i \end{subarray}}}
-\hspace{.2em} ,
+\tikzmark{beginAnotherTransposedRotation} \rotationtensor^{\T} \hspace{-0.5ex} \tikzmark{endAnotherTransposedRotation}
+\hspace{.2ex} \dotp \hspace{.2ex}
+\tikzmark{beginJustAnotherRotation} \rotationtensor \tikzmark{endJustAnotherRotation}
+\hspace{.2ex} = \hspace{.2ex}
+\tikzmark{justTheUnitDyadHere} \UnitDyad \tikzmark{justTheUnitDyadThere}
+\hspace{.5ex} ,
 \end{equation}
+\AddUnderBrace[line width=.75pt][-0.1ex, -0.1ex]%
+{beginJustARotation}{endJustARotation}{${\scriptstyle \bm{e}_i \mathcircabove{\bm{e}}_i}$}
+\AddUnderBrace[line width=.75pt][-0.1ex, -0.1ex]%
+{beginATransposedRotation}{endATransposedRotation}{${\scriptstyle \mathcircabove{\bm{e}}_j \bm{e}_j}$}
+\AddUnderBrace[line width=.75pt][-0.1ex, -0.1ex]%
+{beginAnotherTransposedRotation}{endAnotherTransposedRotation}{${\scriptstyle \mathcircabove{\bm{e}}_i \bm{e}_i}$}
+\AddUnderBrace[line width=.75pt][-0.1ex, -0.1ex]%
+{beginJustAnotherRotation}{endJustAnotherRotation}{${\scriptstyle \bm{e}_j \mathcircabove{\bm{e}}_j}$}
+\AddUnderBrace[line width=.75pt][0ex, -0.1ex]%
+{justTheUnitDyadHere}{justTheUnitDyadThere}{${\scriptstyle \mathclap{%
+\begin{subarray}{l}
+   \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \\
+   \bm{e}_i \bm{e}_i
+\end{subarray}%
+}}$}
 
 \vspace{-0.1em}\noindent
 \en{that~is}\ru{то~есть} \en{the~transposed tensor}\ru{транспонированный тензор} \en{coincides}\ru{совпадает} \en{with}\ru{с}~\en{the~reciprocal tensor}\ru{обратным тензором}:
@@ -162,7 +181,7 @@ ${\left(\operatorname{det} \orthogonaltensor\hspace{.1ex}\right)^2 \hspace{-0.1e
 
 \en{A~rotation tensor}\ru{Тензор поворота}
 \en{is an~orthogonal tensor}\ru{это ортогональный тензор}
-\en{with}\ru{с}~${\operatorname{det} \rotationtensor \hspace{-0.1ex} = 1}$.
+\en{with}\ru{с}~${\operatorname{det} \rotationtensor \hspace{-0.1ex} = +1}$.
 
 \en{But}\ru{Но}
 \en{not only}\ru{не~только лишь}

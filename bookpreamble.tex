@@ -113,8 +113,6 @@
 
 \numberwithin{equation}{section}
 
-\usepackage{abraces}
-
 \usepackage{wasysym}
 \usepackage{mathrsfs}
 
@@ -389,7 +387,7 @@
 \def\upTeeSymbol{}
 
 % put the symbol of perpendicularity into the index of an argument
-\newcommand\withtheindexofperpendicularity[1]{{#1}_{\bot}}
+\newcommand\withtheindexofperpendicularity[1]{{#1}_{\hspace{-.25ex}\bot}}
 
 % put the symbol of parallelism into the index of an argument
 \newcommand\withtheindexofparallelism[1]{{#1}_{\parallel}}
@@ -471,7 +469,7 @@
 \newcommand\mathboldtau{\scalebox{1}[1.06]{\tikzsl{\ensuremath{\bm{\uptau}\hspace{-0.1ex}}}}}
 
 \newcommand\cauchystress{\mathboldtau}
-\newcommand\cauchystresscomponents{\mathtau}
+\newcommand\cauchystresscomponents[1]{\mathtau_{#1}}
 
 \newcommand\tractionvector[1]{{\bm{t}{\raisebox{-0.1em}{$\scriptstyle (#1)$}}\hspace{-0.1ex}}}
 \newcommand\tractionvectoritself{\bm{t}}
@@ -485,7 +483,7 @@
 \newcommand\mathboldepsilon{\scalebox{1}[1.06]{\hspace{-0.2ex}\tikzsl{\scalebox{1.2}[1]{\ensuremath{\bm{\upvarepsilon}\hspace{-0.1ex}}}}}}
 
 \newcommand\infinitesimaldeformation{\mathboldepsilon}
-\newcommand\infinitesimaldeformationcomponents[1]{\mathepsilon_{#1}}
+\newcommand\infinitesimaldeformationcomponents[1]{\hspace{.123ex}\varepsilon_{#1}}
 \newcommand\infinitesimalstrain{\infinitesimaldeformation}
 \newcommand\infinitesimalstraincomponents[1]{\infinitesimaldeformationcomponents{#1}}
 \newcommand\infinimentpetitdeformationdevariation{\varbivalent{\infinitesimaldeformation}}
@@ -796,13 +794,25 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \newcounter{auxfootnotecounter}
 \newcounter{auxfootnotecountertoo}
 
+\makeatletter
+\renewcommand\footnotesize{%
+   \@setfontsize\footnotesize\@ixpt{11}%
+   \abovedisplayskip 8\p@ \@plus2\p@ \@minus4\p@
+   \abovedisplayshortskip \z@ \@plus\p@
+   \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+   \def\@listi{\leftmargin\leftmargini
+               \topsep 4\p@ \@plus2\p@ \@minus2\p@
+               \parsep 2\p@ \@plus\p@ \@minus\p@
+               \itemsep \parsep}%
+   \belowdisplayskip \abovedisplayskip
+}
+\makeatother
+
 \let\originalfootnote\footnote
 \renewcommand{\footnote}[1]{%
-	\renewcommand\footnotesize\small%
 	\originalfootnote{\hspace{.25em}\parbox[t]{.88\textwidth}{#1}}}
 
 \newcommand{\nicefootnotetext}[2]{%
-	\renewcommand\footnotesize\small%
 	\footnotetext[\value{#1}]{\hspace{.25em}\parbox[t]{.88\textwidth}{#2}}}
 
 % --------------------------------------------------
