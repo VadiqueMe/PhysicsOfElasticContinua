@@ -142,7 +142,7 @@
 \en{moves}\ru{движется}
 \en{with a~constant velocity}\ru{с~постоянной скоростью}
 \en{without acceleration}\ru{без~ускорения}
-(${\mathdotdotabove{\locationvector} = \hspace{-0.1ex} \bm{0}}$, ${\mathdotabove{\locationvector} = \hspace{-0.1ex} \boldconstant}$)
+(${\mathdotdotabove{\locationvector} = \hspace{-0.1ex} \zerovector}$, ${\mathdotabove{\locationvector} = \hspace{-0.1ex} \boldconstant}$)
 \en{in the~absence}\ru{в~отсутствии}
 \en{of external interactions}\ru{внешних взаимодействий}.
 
@@ -334,7 +334,7 @@ ${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$ \en{is}\ru{есть} \en{the~exte
 \en{The~second addend}\ru{Второе слагаемое}\en{ is}\ru{\:---} \en{the sum of internal forces}\ru{сумма внутренних сил}
 (\en{force}\ru{сила} ${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}}$ \en{is}\ru{есть} \en{the interaction}\ru{взаимодействие}\ru{,} \en{induced}\ru{подаваемое} \en{by the~}$j$\hbox{-}\en{th}\ru{ой} \en{particle}\ru{частицей} \en{on}\ru{на} \en{the~}$k$\hbox{-}\en{th}\ru{ую} \en{particle}\ru{частицу}).
 \en{Internal interactions}\ru{Внутренние взаимодействия} \en{happen}\ru{случаются} \en{only}\ru{только} \en{between}\ru{между} \en{elements}\ru{элементами} \en{of the observed system}\ru{наблюдаемой системы} \en{and}\ru{и} \en{don’t affect}\ru{не~влияют} (\en{mechanically}\ru{механически}) \en{anything other}\ru{ни на что другое}.
-\en{Neither particle interacts with itself}\ru{Ни~одна частица не~взаимодействует сама с~собой}, ${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kk} \hspace{-0.25ex} = \hspace{-0.15ex} \bm{0} \hspace{.3em} \forall k}$.
+\en{Neither particle interacts with itself}\ru{Ни~одна частица не~взаимодействует сама с~собой}, ${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kk} \hspace{-0.25ex} = \hspace{-0.15ex} \zerovector \hspace{.3em} \forall k}$.
 
 % la force Fkj est l’interaction induite par la j-me particule sur la particule k-ème
 % induce (verb) = induire, inciter, amener, produire, provoquer, persuader
@@ -350,7 +350,7 @@ ${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$ \en{is}\ru{есть} \en{the~exte
 \scalebox{0.88}{$ \displaystyle\sum_{\smash{k}} $}
 \scalebox{0.88}{$ \displaystyle\underset{\raisemath{.2ex}{\smash{j}}}{\sum} $} \hspace{.2ex}
 \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.2ex}
-= \hspace{-0.1ex} \bm{0}
+= \hspace{-0.1ex} \zerovector
 \hspace{.1ex} ,
 \end{equation*}
 
@@ -387,7 +387,7 @@ It is relative to the~reference point.
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{.15ex} \parallel \hspace{.1ex} \bigl( \hspace{.1ex} \locationvector_k \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \hspace{.1ex} \bigr)
 \hspace{.33em} \Leftrightarrow \hspace{.33em}
-\bigl( \hspace{.1ex} \locationvector_k \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \hspace{.1ex} \bigr) \hspace{-0.35ex} \times \hspace{-0.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = \bm{0}
+\bigl( \hspace{.1ex} \locationvector_k \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \hspace{.1ex} \bigr) \hspace{-0.35ex} \times \hspace{-0.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = \zerovector
 \hspace{.1ex} ,
 \end{equation*}
 
@@ -407,7 +407,7 @@ ${
 \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = - \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}
 \hspace{.55em} \text{\en{and}\ru{и}} \hspace{.55em}
 \bigl( \hspace{.1ex} \locationvector_k \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \hspace{.1ex} \bigr) \hspace{-0.35ex} \times \hspace{-0.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
-= \bm{0}
+= \zerovector
 \hspace{.4em} \Rightarrow}$
 \\[-1.1em]
 \begin{flushright}
@@ -415,7 +415,7 @@ ${\Rightarrow \hspace{.4em}
 \scalebox{.8}{$ \displaystyle\sum_{\smash{k=1}}^{\smash{N}} $} \hspace{.1ex} \locationvector_k \hspace{-0.25ex} \times \hspace{-0.2ex} \scalebox{0.8}{$ \displaystyle\sum_{\smash{j=1}}^{\smash{N}} $} \hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
 = \scalebox{0.8}{$ \displaystyle\sum_{\smash{k=1}}^{\smash{N}} $} \hspace{.4ex} \scalebox{0.8}{$ \displaystyle\sum_{\smash{j=k+1}}^{\smash{N}} $} \hspace{-.4ex}
 \bigl( \hspace{.1ex} \locationvector_k \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \hspace{.1ex} \bigr) \hspace{-.25ex} \times \hspace{-0.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
-= \bm{0}
+= \zerovector
 }$
 \end{flushright}%
 }
@@ -660,7 +660,7 @@ ${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} 
 \en{The eccentricity vector}\ru{Вектор экцентриситета} \en{is equal to}\ru{равняется} \en{the~null vector}\ru{нуль\hbox{-}вектору} \en{only when}\ru{только когда} \en{the chosen pole}\ru{выбранный полюс} \en{coincides with}\ru{совпадает с} \en{the~}\inquotesx{\en{center of~mass}\ru{центром масс}}[---] \en{the~unique point}\ru{уникальной точкой} \en{within a~body}\ru{внутри тела} \en{with }\ru{с~}\en{location vector}\ru{вектором положения}~${\mathboldrcursive\hspace{.2ex}}$, \en{in short}\ru{короче}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\bm{\Xi} = \bm{0}
+\bm{\Xi} = \zerovector
 \hspace{.6ex} \Leftrightarrow \hspace{.5ex}
 \positionofthepole = \hspace{.1ex} \mathboldrcursive
 \hspace{.3ex} .
@@ -669,12 +669,12 @@ ${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} 
 \begin{gather*}
 \bm{x} = \hspace{-0.1ex} \locationvector - \positionofthepole
 , \hspace{.6em}
-\bm{\Xi} \hspace{.2ex} m = \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \locationvector - \hspace{-0.1ex} \mathboldrcursive \hspace{.2ex} \bigr) dm = \hspace{.1ex} \bm{0}
+\bm{\Xi} \hspace{.2ex} m = \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \locationvector - \hspace{-0.1ex} \mathboldrcursive \hspace{.2ex} \bigr) dm = \hspace{.1ex} \zerovector
 \hspace{.1ex} ,
 \\[-0.4em]
 %
 \integral_{\mathcal{V}} \hspace{-0.7ex} \locationvector \hspace{.25ex} dm \hspace{.1ex}
-- \hspace{.2ex} \mathboldrcursive \hspace{-0.3ex} \integral_{\mathcal{V}} \hspace{-0.7ex} dm = \hspace{.1ex} \bm{0}
+- \hspace{.2ex} \mathboldrcursive \hspace{-0.3ex} \integral_{\mathcal{V}} \hspace{-0.7ex} dm = \hspace{.1ex} \zerovector
 \hspace{.7ex} \Rightarrow \hspace{.7ex}
 \mathboldrcursive = m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.7ex} \locationvector \hspace{.25ex} dm
 \end{gather*}
@@ -849,7 +849,7 @@ Now, imagine an arbitrary path through the configuration space/manifold. This me
 A~virtual infinitesimal displacement of a~system of particles refers to a~change in the configuration of a~system as the result of any arbitrary infinitesimal change of location vectors (or coordinates) ${\variation{\hspace{.1ex}\locationvector_k}}$, consistent with the forces and constraints imposed on the system at the current/given instant~$t$.
 This displacement is called \inquotes{virtual} to distinguish it from an~actual displacement of the system occurring in a~time interval~${dt}$, during which the forces and constraints may be changing.
 
-Assume the system is in equilibrium, that is the full force on each particle vanishes, ${\bm{F}_i \hspace{-0.2ex} = \hspace{-0.1ex} \bm{0} \hspace{.4em} \forall i}$.
+Assume the system is in equilibrium, that is the full force on each particle vanishes, ${\bm{F}_i \hspace{-0.2ex} = \hspace{-0.1ex} \zerovector \hspace{.4em} \forall i}$.
 Then clearly the term ${\bm{F}_i \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_i}}$, which is the virtual work of force ${\bm{F}_i}$ in displacement ${\variation{\hspace{.1ex}\locationvector_i}}$, also vanishes for each particle, ${\bm{F}_i \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_i} \hspace{-0.1ex} = 0 \hspace{.4em} \forall i}$.
 The~sum of these vanishing products over all particles is likewise equal to zero:
 \[
@@ -1162,7 +1162,7 @@ ${%
 \end{equation}
 
 \vspace{-0.16em}\noindent
-Без ущерба для общности можно принять ${\variation{\hspace{.1ex}\locationvector_k}\hspace{.1ex}(t_1) \hspace{-0.1ex} = \variation{\hspace{.1ex}\locationvector_k}\hspace{.1ex}(t_2) \hspace{-0.1ex} = \bm{0}}$, тогда внеинтегральный член исчезает.
+Без ущерба для общности можно принять ${\variation{\hspace{.1ex}\locationvector_k}\hspace{.1ex}(t_1) \hspace{-0.1ex} = \variation{\hspace{.1ex}\locationvector_k}\hspace{.1ex}(t_2) \hspace{-0.1ex} = \zerovector}$, тогда внеинтегральный член исчезает.
 
 Вводятся обобщённые координаты~$q^i$~(${i = 1, \ldots, n}$\:--- число степеней свободы).
 Векторы-радиусы становятся функциями \hbox{вида} ${\locationvector_{k}(q^i, t)}$, тождественно удовлетворяющими уравнениям связей~\eqref{holonomicconstraint}.

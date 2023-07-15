@@ -221,7 +221,7 @@ ${%
 \hspace{.1ex} .
 \end{equation}
 
-\en{For}\ru{Для} \en{a~}\en{cylindrical}\ru{цилиндрического} (\en{prismatic}\ru{призматического}) \en{rod}\ru{стержня} ${\rodfeaturesvector = \bm{0}}$.
+\en{For}\ru{Для} \en{a~}\en{cylindrical}\ru{цилиндрического} (\en{prismatic}\ru{призматического}) \en{rod}\ru{стержня} ${\rodfeaturesvector = \zerovector}$.
 
 \en{However}\ru{Однако}, \eqref{rods.thepsivector} \en{is}\ru{есть} \en{only}\ru{лишь} \en{an~initial concept}\ru{первоначальное понятие} \en{of~vector}\ru{о~векторе}~${\rodfeaturesvector}$ \en{as}\ru{как} \en{of geometric features}\ru{о~геометрических характеристиках}.
 \en{Further}\ru{Далее} \en{in}\ru{в}~\sectionref{section:rods.cosseratlines}, \en{after}\ru{после} \en{adopting}\ru{принятия} \en{the material structure}\ru{материальной структуры} \en{of a~rod}\ru{стержня}, \en{a~concept}\ru{понятие} \en{of}\ru{о}~${\rodfeaturesvector}$ \en{will change}\ru{изменится}.
@@ -759,7 +759,7 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 \en{the internal con\emph{strain}t}\ru{внутреннюю связь}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{kirchhoffmodelinternalconstraint}
-\firstdeformationvectorcosseratline \hspace{-0.1ex} = \bm{0}
+\firstdeformationvectorcosseratline \hspace{-0.1ex} = \zerovector
 \hspace{.4em} \Leftrightarrow \hspace{.4em}
 \currentlocationvector_\differentialindex{s} \hspace{-0.2ex} = \rotationtensor \hspace{-0.1ex} \dotp \hspace{.1ex} \initiallocationvector_\differentialindex{s} \hspace{-0.2ex}
 \hspace{.5em} \text{\en{or}\ru{или}} \hspace{.5em}
@@ -829,8 +829,21 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \label{section:rods.nonshearmodelwithextension}
 
-\en{Kirchhoff’s model}\ru{Модель Kirchhoff’а} \en{with internal constraint}\ru{с~внутренней связью}~${\firstdeformationvectorcosseratline \hspace{-0.25ex} = \hspace{-0.2ex} \bm{0}}$~\eqref{kirchhoffmodelinternalconstraint} \en{doesn’t describe}\ru{не~описывает} \en{the~simplest case}\ru{простейший случай} \en{of extension/compression}\ru{растяжения/сжатия} \en{of a~straight rod}\ru{прямого стержня}.
-\en{This nuisance}\ru{Эта неприятность} \en{disappears}\ru{исчезает} \en{with}\ru{со}~\inquotes{\en{softening}\ru{смягчением}} \en{of the~con\emph{strain}t}\ru{связи}, \en{for example}\ru{например} \en{adding}\ru{добавляя} \en{the~possibility of (ex)tension}\ru{возможность растяжения} \en{and}\ru{и} \en{inhibiting only the transverse shear}\ru{подавляя лишь поперечный сдвиг}
+\en{Kirchhoff’s model}\ru{Модель Kirchhoff’а}
+\en{with an internal constraint}\ru{с~внутренней связью}~${\firstdeformationvectorcosseratline \hspace{-0.25ex} = \hspace{-0.2ex} \zerovector}$~\eqref{kirchhoffmodelinternalconstraint}
+\en{doesn’t describe}\ru{не~описывает}
+\en{the~simplest case}\ru{простейший случай}
+\en{of a~straight rod extension/compression}\ru{растяжения/сжатия прямого стержня}.
+\en{This nuisance}\ru{Эта неприятность}
+\en{disappears}\ru{исчезает}
+\en{with}\ru{со}~\inquotes{\en{softening}\ru{смягчением}}
+\en{of the~con\emph{strain}t}\ru{связи},
+\en{for example}\ru{например}
+\en{by adding}\ru{добавлением}
+\en{the~possibility of (ex)tension}\ru{возможности растяжения}
+\en{and}\ru{и}
+\en{inhibiting}\ru{подавлением}
+\en{only the transverse shear}\ru{лишь поперечного сдвига}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{kirchhoffinternalconstraintwithextension}
 \firstdeformationvectorcosseratline \hspace{-0.1ex} = \Gamma \bm{e}_3 \hspace{-0.2ex}
@@ -1173,8 +1186,18 @@ q^{3} \hspace{-0.3ex} = s
 
 \ru{\section{Температурные деформация и напряжение}}
 
-\en{The~direct approach}\ru{Прямой подход}, \en{so efficient}\ru{столь эффективный} \en{for making}\ru{для создания} \en{one-dimensional}\ru{одномерных моделей} Cosserat \en{and}\ru{и}~Kirchhoff\ru{’а}\en{ models}, \en{isn’t applicable }\en{for problems}\ru{для~проблем} \en{of~thermoelasticity}\ru{термоупругости}\ru{ непримен\'{и}м}.
-\en{The~transition}\ru{Переход} \en{from the three-dimensional model to the one-dimensional}\ru{от трёхмерной модели к~одномерной} \en{can be realized}\ru{может быть реализован} \en{either by variational or asymptotic way}\ru{или~вариационным путём, или~асимптотическим}.
+\en{The~direct approach}\ru{Прямой подход},
+\en{very efficient}\ru{очень эффективный}
+\en{for describing}\ru{для опис\'{а}ния}
+\en{one-dimensional}\ru{одномерных моделей}
+Cosserat
+\en{and}\ru{и}~Kirchhoff\ru{’а}\en{ models},
+\en{isn’t applicable }\en{for problems}\ru{для~проблем}
+\en{of~thermoelasticity}\ru{термоупругости}\ru{ непримен\'{и}м}.
+\en{The~transition}\ru{Переход}
+\en{from the three-dimensional model to the one-dimensional}\ru{от трёхмерной модели к~одномерной}
+\en{can be realized}\ru{может быть реализован}
+\en{either by the variational or the asymptotic way}\ru{или~вариационным путём, или~асимптотическим}.
 
 \begin{otherlanguage}{russian}
 

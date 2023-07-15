@@ -10,7 +10,7 @@
 \nopagebreak\en{\vspace{-0.125em}}\ru{\vspace{-0.6em}}
 \begin{equation}\label{stresseseq:balanceofforces}
 \boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f}
-= \hspace{.1ex} \bm{0}
+= \hspace{.1ex} \zerovector
 \end{equation}
 
 \nopagebreak\vspace{-0.2em}\noindent
@@ -19,7 +19,9 @@
 \en{It’s necessary as~well}\ru{Необходимо вдобавок}\ru{,} \en{that deformations (strains)}\ru{чтобы соответствующие напряжениям деформации}~${\infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex})}$\en{ corresponding to stresses}~\eqref{legendretransformforlinearelasticenergy}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{stresseseq:strainfromstress}
-\infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex}) = \displaystyle\frac{\raisemath{-0.2em}{\partial\hspace{.1ex} \widehat{\potentialenergydensity}}}{\raisemath{.04em}{\partial \linearstress}} = \hspace{-0.12ex} \pliabilitytensor \dotdotp \hspace{-0.07ex} \linearstress
+\infinitesimaldeformation ( \hspace{-0.1ex} \linearstress \hspace{.1ex} ) \hspace{-0.1ex}
+= \displaystyle\frac{\raisemath{-0.2em}{\partial\hspace{.1ex} \widehat{\potentialenergydensity}}}{\raisemath{.04em}{\partial \linearstress}}
+= \hspace{-0.1ex} \pliabilitytensor \dotdotp \hspace{-0.1ex} \linearstress
 \end{equation}
 
 \nopagebreak\vspace{-0.5em}\noindent
@@ -27,10 +29,12 @@
 
 \nopagebreak\vspace{-0.5em}
 \begin{equation}\label{stresseseq:compatibility}
-\operatorname{inc} \infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex}) \hspace{-0.06ex}
+\operatorname{inc} \infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex}) \hspace{-0.1ex}
 \equiv
-\hspace{-0.07ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.44ex} \Bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \infinitesimaldeformation(\hspace{-0.15ex}\linearstress\hspace{.1ex}) \Bigr)^{\raisemath{-0.12em}{\hspace{-0.44ex}\T}} \hspace{-0.52ex}
-= {^2\bm{0}}
+\hspace{-0.1ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.44ex} \Bigl(
+   \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \infinitesimaldeformation ( \hspace{-0.1ex} \linearstress \hspace{.1ex} )
+\Bigr)^{\raisemath{-0.12em}{\hspace{-0.44ex}\T}} \hspace{-0.52ex}
+= \zerobivalent
 \hspace{.1ex} .
 \end{equation}
 

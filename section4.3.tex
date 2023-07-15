@@ -387,7 +387,7 @@ ${\sigma_z \hspace{-0.25ex}
 \en{and}\ru{и}
 \en{along the trunk height}\ru{по высоте ствола}.
 
-\subsection*{\en{A~transversely isotropic}\ru{Трансверсально изотропный} \en{material}\ru{материал}}
+\subsection*{\en{A\:transversely isotropic}\ru{Трансверсально изотропный} \en{material}\ru{материал}}
 
 \en{One more}\ru{Ещё один}
 \en{case of~anisotropy}\ru{случай анизотропии}
@@ -514,14 +514,14 @@ a_{55} \hspace{-.2ex} = a_{66}
 \en{like}\ru{в~виде}
 
 \nopagebreak
-\begin{equation*}
+\begin{equation}\label{stress tensor for a transversely isotropic material}
 \linearstress
 = \withtheindexofperpendicularity{\linearstress}
 + \bm{s} \bm{k}
 + \bm{k} \bm{s}
 + \cauchystresscomponents{zz} \hspace{.1ex} \bm{k} \bm{k}
 \hspace{.1ex} ,
-\end{equation*}
+\end{equation}
 
 \noindent
 \en{where}\ru{где}
@@ -591,19 +591,20 @@ a_{13} \infinitesimaldeformationcomponents{\alpha \alpha}
 \bm{e}_{\alpha} \bm{e}_{\beta}
 \hspace{.1ex} , \hspace{.5em}
 \infinitesimaldeformationcomponents{\alpha \alpha} \hspace{-0.2ex}
-= \trace{\withtheindexofperpendicularity{\infinitesimaldeformation}}
-\hspace{.1ex} , \hspace{.5em}
-\bm{\epsilon} \equiv \infinitesimaldeformationcomponents{\alpha z} \hspace{.2ex} \bm{e}_{\alpha}
+= \trace{\withtheindexofperpendicularity{\infinitesimaldeformation}} \hspace{-0.3ex}
+= \infinitesimaldeformationcomponents{x} + \infinitesimaldeformationcomponents{y}
 \hspace{.1ex} ,
 \\[-0.2em]
 %
+\bm{\epsilon} \equiv \infinitesimaldeformationcomponents{\alpha z} \hspace{.2ex} \bm{e}_{\alpha}
+\hspace{.1ex} , \hspace{.5em}
 \withtheindexofperpendicularity{\hspace{.1ex}\UnitDyad} \hspace{-0.3ex}
 \equiv \bm{e}_{\alpha} \bm{e}_{\alpha} \hspace{-0.3ex}
 = \bm{i} \bm{i} + \bm{j} \bm{i} + \bm{i} \hspace{-0.1ex} \bm{j} + \bm{j} \hspace{-0.2ex} \bm{j}
 \hspace{.5ex} \bigr)
 \end{multline*}
 
-\en{So}\ru{Итак},
+\en{It comes that}\ru{Получается, что}
 \en{a~transversely isotropic material}\ru{трансверсально изотропный материал}
 \en{is characterized}\ru{характеризуется}
 \en{by five}\ru{пятью}
@@ -611,23 +612,23 @@ a_{13} \infinitesimaldeformationcomponents{\alpha \alpha}
 \en{mutually independent}\ru{взаимно независимыми}
 \en{components}\ru{компонентами},
 \en{the elastic moduli}\ru{упругими модулями}
-${a_{33}\hspace{.1ex}}$,
-${a_{44}\hspace{.1ex}}$,
-${a_{55}\hspace{.1ex}}$,
-${a_{12}\hspace{.1ex}}$,
-${a_{13}\hspace{.1ex}}$.
+${a_{12} \hspace{-0.2ex} = A^{\oneone 22} \hspace{.1ex}}$,
+${a_{13} \hspace{-0.2ex} = A^{\oneone 33} \hspace{.1ex}}$,
+${a_{33} \hspace{-0.2ex} = A^{3333} \hspace{.1ex}}$,
+${a_{44} \hspace{-0.2ex} = A^{1212} \hspace{.1ex}}$,
+${a_{55} \hspace{-0.2ex} = A^{1313} \hspace{.1ex}}$.
 
-\subsection*{\en{A~crystal symmetry}\ru{Симметрия кристаллов}}
+\subsection*{\en{A\:crystal symmetry}\ru{Симметрия кристаллов}}
 
 \en{There are}\ru{Есть}
 \en{many different kinds}\ru{различные виды}
-\en{of a~crystal symmetry}\ru{симметрии кристаллов}
-( \en{triclinic}\ru{триклинная},
+\en{of a~crystal symmetry}\ru{симметрии кристаллов}\::
+\en{triclinic}\ru{триклинная},
 \en{monoclinic}\ru{моноклинная},
 \en{rhombic}\ru{ромбическая},
 \en{tetragonal}\ru{тетрагональная}
-\textcolor{magenta}{\en{and others}\ru{и~другие}~\cite{chernyh-anisotropicelasticity}} ).
-\en{The~each}\ru{Каждый}
+\textcolor{magenta}{\en{and others}\ru{и~другие}~\cite{chernyh-anisotropicelasticity}}.
+\en{Each}\ru{Каждый}
 \en{case of~symmetry}\ru{случай симметрии}
 \en{is characterized}\ru{характеризуется}
 \en{by the~set}\ru{набором}
@@ -635,27 +636,58 @@ ${a_{13}\hspace{.1ex}}$.
 \en{Orthogonal tensors}\ru{Ортогональные тензоры}
 \en{are those that}\ru{это такие, которые}
 \en{satisfy}\ru{удовлетворяют}
-\en{the equality}\ru{равенству}~\eqrefwithchapterdotsection{orthogonalityofrotationtensor}{chapter:mathapparatus}{section:rotationtensor}
-${ \orthogonaltensor \dotp \orthogonaltensor^\T = \UnitDyad }$,
+\en{the equality}\ru{равенству}
+${ \orthogonaltensor \dotp \hspace{.1ex} \orthogonaltensor^\T = \UnitDyad }$
+\eqrefwithchapterdotsection{orthogonalityofrotationtensor}{chapter:mathapparatus}{section:rotationtensor},
 \en{describing}\ru{описывая}
 \en{rotations}\ru{повороты}
 \en{and}\ru{и}~\en{mirror flippings}\ru{зеркальные перевороты}.
 }
 \en{tensors}\ru{тензоров}~$\orthogonaltensor$,
-\en{which}\ru{которые}
-\en{satisfy}\ru{удовлетворяют}
-\en{the following}\ru{следующему}
+\en{for which}\ru{для которых}
+\en{the following equation}\ru{следующее уравнение}
 
 \nopagebreak
 \begin{equation}\label{Hooke.for-symmetric-crystals}
    \stiffnesstensor \dotdotp
    \Bigl( \orthogonaltensor \dotp \infinitesimaldeformation \dotp \orthogonaltensor^\T \Bigr)
    = \orthogonaltensor \dotp
-   \Bigl( \stiffnesstensor \dotdotp \infinitesimaldeformation \Bigr)
-   \dotp
+   \Bigl( \stiffnesstensor \dotdotp \infinitesimaldeformation \Bigr) \hspace{-0.2ex}
+   \dotp \hspace{.2ex}
    \orthogonaltensor^\T
-   \hspace{1.5em} \forall \hspace{.3ex} \infinitesimaldeformation .
+   \hspace{1.25em} \forall \hspace{.2ex} \infinitesimaldeformation
 \end{equation}
+
+\noindent
+\en{is true}\ru{--- истина}
+(\en{for}\ru{для}
+\en{any}\ru{любой}
+\en{infinitesimal deformation}\ru{бесконечномалой деформации}~$\infinitesimaldeformation$).
+
+\subsection*{\en{Inverse relations}\ru{Обратные отношения}}
+
+............
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{legendretransformforlinearelasticenergy}
+2 \potentialenergydensity
+= \linearstress \dotdotp \infinitesimaldeformation
+\hspace{.1ex} ,
+\hspace{.8em}
+\infinitesimaldeformation ( \hspace{-0.1ex} \linearstress \hspace{.1ex} ) \hspace{-0.1ex}
+= \displaystyle\frac{\raisemath{-0.2em}{\partial\hspace{.1ex} \widehat{\potentialenergydensity}}}{\raisemath{.04em}{\partial \linearstress}}
+= \hspace{-0.1ex} \pliabilitytensor \dotdotp \hspace{-0.1ex} \linearstress
+\hspace{.1ex} ,
+\hspace{.8em}
+\widehat{\potentialenergydensity}(\hspace{-0.1ex} \linearstress \hspace{.1ex}) \hspace{-0.1ex}
+= \linearstress \dotdotp \infinitesimaldeformation - \potentialenergydensity ( \hspace{-0.1ex} \infinitesimaldeformation \hspace{.1ex} )
+\end{equation}
+
+\en{For}\ru{Для}
+\en{the~linear model}\ru{линейной модели},
+\inquotes{\en{complementary energy}\ru{добавочная энергия}}
+${\widehat{\potentialenergydensity} = \potentialenergydensity = \smalldisplaystyleonehalf \hspace{.2ex} \linearstress \dotdotp \infinitesimaldeformation}$
+
+.....................................
 
 \en{The theory}\ru{Теория},
 \en{describing}\ru{описывающая}

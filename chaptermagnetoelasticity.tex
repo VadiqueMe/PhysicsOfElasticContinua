@@ -302,11 +302,11 @@ ${%
 \en{without charges}\ru{без зарядов},
 ${\chargedensity = 0}$,
 \en{and without currents}\ru{и~без токов},
-${\currentdensity = \bm{0}}$,
+${\currentdensity = \zerovector}$,
 \en{thus}\ru{потому}
 \en{there’s no}\ru{там нет}
 \en{ponderomotive force}\ru{пондеромоторной силы},
-${\ponderomotiveforce = \bm{0}}$.
+${\ponderomotiveforce = \zerovector}$.
 
 ...
 
@@ -528,9 +528,9 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \dotp \hspace{-0.1ex} \bigl( \bold
 \nopagebreak\vspace{-0.1em}\begin{align*}
 \eqref{maxwell.equations:gauss.magnetic}
 & \hspace{.27em}\Rightarrow\hspace{.25em}
-\boldnabla \hspace{-0.1ex} \dotp \boldmathbb{B} \boldmathbb{B} = \hspace{.1ex} \bm{0}
+\boldnabla \hspace{-0.1ex} \dotp \boldmathbb{B} \boldmathbb{B} = \hspace{.1ex} \zerovector
 \hspace{.1ex} , \hspace{.4em}
-c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{B} \boldmathbb{B} = \hspace{.1ex} \bm{0}
+c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{B} \boldmathbb{B} = \hspace{.1ex} \zerovector
 \end{align*}
 
 \nopagebreak\vspace{-0.2em}\noindent
@@ -664,9 +664,9 @@ ${
 ${\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.16ex} \bm{a} \bigr) \hspace{-0.3ex} = 0 \:\:\forall \bm{a}}$
 
 ${
-\boldnabla \hspace{-0.2ex} \times \hspace{-0.28ex} \boldnabla = \hspace{.08ex} \bm{0}
+\boldnabla \hspace{-0.2ex} \times \hspace{-0.28ex} \boldnabla = \hspace{.08ex} \zerovector
 \hspace{.1ex} , \hspace{.33em}
-\boldnabla \hspace{-0.15ex} \times \hspace{-0.25ex} \boldnabla \alpha = \bm{0} \:\:\forall \alpha
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.25ex} \boldnabla \alpha = \zerovector \:\:\forall \alpha
 }$
 
 vector potential $\boldmathbb{A}$
@@ -697,7 +697,7 @@ scalar potential $\upphi$
 \hspace{.4em} \Rightarrow
 \\[-0.1em]
 \Rightarrow \hspace{.3em}
-\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \bigl( \hspace{.1ex} \boldmathbb{E} + \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace{-0.4ex} = \bm{0}
+\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \bigl( \hspace{.1ex} \boldmathbb{E} + \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a} \hspace{.15ex} \bigr) \hspace{-0.4ex} = \zerovector
 \hspace{.4em} \Rightarrow \hspace{.25em}
 - \boldnabla \upphi = \hspace{.1ex} \boldmathbb{E} + \mathdotabove{\boldmathbb{A}} + \hspace{-0.2ex} \boldnabla \mathdotabove{a}
 \hspace{.4em} \Rightarrow
@@ -723,7 +723,7 @@ And
 
 ${\boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \boldmathbb{A} \bigr) \hspace{-0.25ex} = \hspace{-0.1ex} \boldnabla \boldnabla \hspace{-0.1ex} \dotp \boldmathbb{A} - \Laplacian \hspace{.05ex} \boldmathbb{A}}$
 
-${\boldnabla \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla a - \hspace{-0.2ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla \boldnabla a = \bm{0}}$ (partial derivatives of a~smooth function commute)
+${\boldnabla \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla a - \hspace{-0.2ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla \boldnabla a = \zerovector}$ (partial derivatives of a~smooth function commute)
 
 \nopagebreak\vspace{-0.4em}\begin{multline}\label{electromagnetic.secondequationofwave}
 c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.15ex} \times \hspace{-0.1ex} \boldmathbb{B}
@@ -837,9 +837,9 @@ c^{\hspace{.16ex}2} \hspace{.22ex} \boldnabla \hspace{-0.12ex} \dotp \hspace{-0.
 В~статике
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\velocityofpoint = \bm{0}
+\velocityofpoint = \zerovector
 \hspace{.44em} \Rightarrow \hspace{.33em}
-\boldmathbb{B} = \bm{0}
+\boldmathbb{B} = \zerovector
 \end{equation*}
 
 ...

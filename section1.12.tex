@@ -289,7 +289,7 @@ ${\rotationtensor \narroweq \rotationtensor(t)}$.
 \en{In~addition}\ru{Вдобавок} \en{to}\ru{к~записи} \en{the }Leibniz’\en{s}\ru{а}\en{ notation} ${\scalebox{.9}{$ \raisemath{.3em}{dx} $} \hspace{-0.3ex} / \hspace{-0.4ex} \scalebox{.9}{$ \raisemath{-.3em}{dt} $}\hspace{.1ex}}$, \en{the~very popular one is}\ru{очень популярна запись} \en{the~}\inquotes{\en{dot above}\ru{точка сверху}} Newton’\en{s}\ru{а}\en{ notation}~${\mathdotabove{x}}$.}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} \hspace{-0.1ex} + \hspace{.25ex} \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T} \hspace{-0.1ex} = \hspace{.1ex} {^2\bm{0}}
+\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} \hspace{-0.1ex} + \hspace{.25ex} \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T} \hspace{-0.1ex} = \hspace{.1ex} \zerobivalent
 \hspace{.1ex} .
 \end{equation*}
 
@@ -352,23 +352,25 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 %
 \bm{k} \bm{k} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = \bm{k} \bm{k}, \:\:
 \mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = \mathdotabove{\bm{k}} \bm{k} , \:\:
-\bm{k} \mathdotabove{\bm{k}} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = {\hspace{-0.2ex}^2\bm{0}} \hspace{.1ex},
+\bm{k} \mathdotabove{\bm{k}} \hspace{-0.2ex}\dotp\hspace{-0.2ex} \bm{k} \bm{k} = \hspace{-0.2ex} \zerobivalent \hspace{.1ex},
 \\[.16em]
 %
-\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} = \bm{k} - \bm{k} = {\bm{0}} \hspace{.1ex}, \,\,
-\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} = \bm{k} \bm{k} - \bm{k} \bm{k} = {\hspace{-0.2ex}^2\bm{0}} \hspace{.1ex} ,
+\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} = \bm{k} - \bm{k}
+   = \zerovector \hspace{.1ex}, \,\,
+\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} = \bm{k} \bm{k} - \bm{k} \bm{k}
+   = \hspace{-0.2ex} \zerobivalent \hspace{.1ex} ,
 \\[.08em]
 %
 \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.1ex}
 = \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \bm{k}
-= \bm{k} \hspace{-0.24ex}\times\hspace{-0.2ex} \bm{k} = \bm{0} \hspace{.1ex} , \,\,
+= \bm{k} \hspace{-0.24ex}\times\hspace{-0.2ex} \bm{k} = \zerovector \hspace{.1ex} , \,\,
 \bm{k} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.1ex}
 = \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \bm{k} \bm{k}
-= {\hspace{-0.2ex}^2\bm{0}} \hspace{0.1ex},
+= \hspace{-0.2ex} \zerobivalent \hspace{0.1ex},
 \\[.08em]
 %
-\left( \hspace{0.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{0.1ex} \right) \hspace{-0.2ex} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.1ex} = \hspace{-0.1ex}
-- \hspace{0.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{0.1ex},
+\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{0.1ex} \right) \hspace{-0.2ex} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.1ex} = \hspace{-0.1ex}
+- \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{0.1ex},
 \\
 %
 ( \bm{a} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.2ex} \dotp \bm{b} =
@@ -510,7 +512,7 @@ $}}
 \end{equation}
 
 \vspace{-0.3em}\noindent
-Вектор~$\bm{\omega}$ получился разложенным по~трём взаимно ортогональным направлениям\:--- $\bm{k}$, $\mathdotabove{\bm{k}}$ и~${\bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}}}$. При~неподвижной оси поворота ${\mathdotabove{\bm{k}} = \bm{0} \,\Rightarrow\, \bm{\omega} = \bm{k} \hspace{.1ex} \mathdotabove{\vartheta}}$.
+Вектор~$\bm{\omega}$ получился разложенным по~трём взаимно ортогональным направлениям\:--- $\bm{k}$, $\mathdotabove{\bm{k}}$ и~${\bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}}}$. При~неподвижной оси поворота ${\mathdotabove{\bm{k}} = \zerovector \,\Rightarrow\, \bm{\omega} = \bm{k} \hspace{.1ex} \mathdotabove{\vartheta}}$.
 
 Ещё одно представление~$\bm{\omega}$ связано с~компонентами тензора поворота~\eqref{componentsofrotationtensor}. Поскольку ${\bm{P} = \cosinematrix{\!j\mathcircabove{i}} \hspace{.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$, ${\bm{P}^{\T} \hspace{-0.32ex} = \cosinematrix{\hspace{-0.2ex}i\mathcircabove{j}} \hspace{.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$, а~векторы начального базиса~${\mathcircabove{\bm{e}}_i}$ неподвижны (со~временем не~меняются), то
 \nopagebreak\vspace{.25em}\[ \mathdotabove{\bm{P}} = \cosinematrixdotted{\!j\mathcircabove{i}} \hspace{.4ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j

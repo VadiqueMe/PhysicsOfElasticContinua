@@ -47,7 +47,7 @@
 \label{lineartheory:wholesetofequations}
 \boldnabla \dotp \linearstress \hspace{.15ex} + \hspace{.15ex} \bm{v}
 \hspace{.1ex} = \hspace{.1ex}
-\bm{0}
+\zerovector
 \hspace{.1ex} ,
 \hspace{1em}
 %
@@ -138,7 +138,7 @@ ${%
 \begin{array}{c}
 \bm{F} = \UnitDyad \hspace{.1ex} ,
 \:\;
-\bm{C} \hspace{-0.1ex} = {\hspace{-0.2ex}^2\bm{0}}
+\bm{C} \hspace{-0.1ex} = \hspace{-0.2ex} \zerobivalent
 \hspace{.1ex} ,
 \:\;
 \variation{\hspace{.12ex}\bm{C}} \hspace{-0.1ex} = \hspace{-0.2ex} \boldnabla \hspace{.12ex} \variation{\currentlocationvector}^{\hspace{.2ex}\mathsf{S}}
@@ -146,7 +146,7 @@ ${%
 \hspace{-0.1ex} ,
 \\[.2em]
 %
-\cauchystress = {\hspace{-0.2ex}^2\bm{0}}
+\cauchystress = \hspace{-0.2ex} \zerobivalent
 \hspace{.1ex} ,
 \:\;
 \varbivalent{\hspace{-0.2ex}\cauchystress}
@@ -161,7 +161,7 @@ ${%
 \hspace{.1ex} + \hspace{.1ex}
 \rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
 = \hspace{.1ex}
-\bm{0}
+\zerovector
 \hspace{.11ex} .
 \end{array}
 \end{equation}
@@ -211,7 +211,7 @@ ${%
 \nopagebreak\vspace{-0.25em}
 \begin{equation}\label{nonlinear:setofequations}
 \begin{array}{c}
-\boldnabla \dotp \cauchystress \hspace{.15ex} + \rho \bm{f} = \hspace{.1ex} \bm{0} \hspace{.1ex},
+\boldnabla \dotp \cauchystress \hspace{.15ex} + \rho \bm{f} = \hspace{.1ex} \zerovector \hspace{.1ex},
 \:\:
 \boldnabla = \bm{F}^{-\T} \hspace{-0.2ex} \dotp \boldnablacircled ,
 \:\:
@@ -351,7 +351,7 @@ ${
    \bm{f}
    \hspace{-0.1ex} - \hspace{-0.1ex}
    \rho \hspace{.2ex} \mathdotdotabove{\bm{u}}
-}$  
+}$
 \en{instead of just}\ru{вместо просто}~$\bm{f}$.
 \en{And}\ru{А}
 \en{the initial conditions}\ru{начальные условия}
@@ -367,7 +367,7 @@ ${
 \en{of~time}\ru{времени}~${t \narroweq \hspace{.1ex} 0}$
 \ru{известны }$\bm{u}$ \en{and}\ru{и}~$\mathdotabove{\bm{u}}$\en{ are known}.
 %
-\en{The linearity of the problems}\ru{Линейность задач} 
+\en{The linearity of the problems}\ru{Линейность задач}
 
 \en{The linearity}\ru{Линейность}
 \en{gives}\ru{даёт}
@@ -565,7 +565,7 @@ ${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensit
 \bm{u} \hspace{.1ex}
 \bigr|_{o_1}
 \hspace{-0.64ex} = \hspace{.1ex}
-\bm{0}
+\zerovector
 \hspace{.1ex} ,
 \vspace{-0.2em}
 \end{equation}
@@ -603,9 +603,8 @@ ${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensit
 \en{is equal to zero}\ru{равно нулю}.
 \en{Notice}\ru{Отметим}
 \en{the boundary condition}\ru{краевое условие}
-${\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \bm{0}}$:
+${\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \zerovector}$:
 \en{the virtual displacements}\ru{виртуальные смещения}
 \en{are compatible}\ru{совместимы}
 \en{with this constraint}\ru{с~этой связью}
-${ \variation{\bm{u}} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \bm{0} }$.
-
+${ \variation{\bm{u}} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \zerovector }$.

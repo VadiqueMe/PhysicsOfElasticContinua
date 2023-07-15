@@ -158,8 +158,6 @@
 \contentsline {chapter}{\numberline {5}Micropolar three\hbox {-}dimensional continuum}{137}{chapter.5}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Introduction to the linear micropolar theory}{137}{section.5.1}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {2}Relations of elasticity}{141}{section.5.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 

@@ -1427,7 +1427,7 @@ ${\currentunitnormal \hspace{.1ex} d\mathcal{O}\hspace{-0.1ex}}$
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \scalebox{.96}{$\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.16ex} \boldnabla \dotp \cauchystress \hspace{.15ex}
 + \rho \hspace{-0.1ex} \left( \bm{f} \hspace{-0.2ex} - \mathdotabove{\bm{v}} \right) \right) \hspace{-0.33ex} d\mathcal{V}$} \hspace{.1ex}
-= \hspace{.1ex} \bm{0}
+= \hspace{.1ex} \zerovector
 \hspace{.1ex} .
 \end{equation*}
 
@@ -1438,7 +1438,7 @@ ${\currentunitnormal \hspace{.1ex} d\mathcal{O}\hspace{-0.1ex}}$
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{balanceoftranslationalmomentum.local}
 \boldnabla \dotp \cauchystress \hspace{.15ex}
 + \rho \hspace{-0.1ex} \left( \bm{f} \hspace{-0.2ex} - \mathdotabove{\bm{v}} \right)
-= \hspace{.1ex} \bm{0}
+= \hspace{.1ex} \zerovector
 \hspace{.1ex} .
 \end{equation}
 
@@ -1465,7 +1465,7 @@ ${\currentunitnormal \hspace{.1ex} d\mathcal{O}\hspace{-0.1ex}}$
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \tikzmark{RdotCrossRdotBegin} \mathdotabove{\currentlocationvector} \times \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.1ex} \tikzmark{RdotCrossRdotEnd} \hspace{.3ex} d\mathcal{V} ,
 \end{equation*}
 \AddUnderBrace[line width=.75pt][0, -0.1ex][yshift=0.11em]%
-{RdotCrossRdotBegin}{RdotCrossRdotEnd}{${\scalebox{0.8}{$\bm{0}$}}$}
+{RdotCrossRdotBegin}{RdotCrossRdotEnd}{${\scalebox{.8}{$ \zerovector $}}$}
 
 \vspace{-0.6em}\noindent
 применяя теорему о~дивергенции к~поверхностному интегралу ....
@@ -1495,7 +1495,7 @@ ${\currentunitnormal \hspace{.1ex} d\mathcal{O}\hspace{-0.1ex}}$
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{.15ex} \bigl( \bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.2ex} \bigr) \hspace{.1ex} d\mathcal{V} \hspace{.12ex}
 - \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \left( \cauchystress \times \hspace{-0.24ex} \currentlocationvector \hspace{.2ex} \right) \hspace{-0.1ex} d\mathcal{V} \hspace{.1ex}
-= \hspace{.15ex} \bm{0}
+= \hspace{.15ex} \zerovector
 \hspace{.1ex} ,
 \end{equation*}
 
@@ -1640,11 +1640,11 @@ ${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystre
 %
 \constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant
 \hspace{.4ex} \Rightarrow \hspace{.2ex}
-\boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}} =  \hspace{-0.12ex} {^2\bm{0}} \hspace{.1ex} ,
+\boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}} =  \hspace{-0.12ex} \zerobivalent \hspace{.1ex} ,
 \;\:
 \constvarvector{o} = \boldconstant
 \hspace{.4ex} \Rightarrow \hspace{.2ex}
-\boldnabla \hspace{.1ex} \constvarvector{o} = \hspace{-0.12ex} {^2\bm{0}} \hspace{.1ex} ,
+\boldnabla \hspace{.1ex} \constvarvector{o} = \hspace{-0.12ex} \zerobivalent \hspace{.1ex} ,
 \\[.2em]
 %
 \boldnabla \hspace{.1ex} \bigl(
@@ -1668,11 +1668,16 @@ ${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystre
 \end{equation*}
 
 \vspace{-0.2em}
-\en{Assuming}\ru{Полагая} ${\constvarvector{o} \hspace{-0.1ex} = \bm{0}}$ (\en{just translation}\ru{лишь трансляция}) ${\Rightarrow}$~${\hspace{-0.1ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector} = \hspace{-0.2ex} \boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}} =  \hspace{-0.12ex} {^2\bm{0}}}$,
+\en{Assuming}\ru{Полагая}
+${\constvarvector{o} \hspace{-0.1ex} = \zerovector}$
+(\en{just a~translation}\ru{лишь трансляция})
+${\Rightarrow}$~${\hspace{-0.1ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}
+= \hspace{-0.2ex} \boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}
+= \hspace{-0.12ex} \zerobivalent}$,
 \en{it turns into the~balance of~forces~(of~momentum)}\ru{оно превращается в~баланс сил~(импульса)}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \rho \bm{f} \hspace{-0.1ex} = \bm{0}
+\boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \rho \bm{f} \hspace{-0.1ex} = \zerovector
 \hspace{.1ex} .
 \end{equation*}
 
@@ -1834,7 +1839,15 @@ When we apply energy methods in elasticity, we implicitly assume that a~body ret
 \begin{otherlanguage}{russian}
 
 \noindent
-Начальная конфигурация считается естественной (natural configuration)\:--- недеформированной ненапряжённой: ${\bm{C} = \hspace{-0.1ex} {^2\bm{0}} \hspace{.4ex} \Leftrightarrow \hspace{.2ex} \cauchystress = \hspace{-0.2ex} {^2\bm{0}}}$, поэтому в~$\potentialenergydensity$ нет линейных членов.
+Начальная конфигурация
+считается
+естественной (natural configuration)\:---
+недеформированной ненапряжённой\::
+${\bm{C} = \hspace{-0.1ex} \zerobivalent \hspace{.4ex} \Leftrightarrow \hspace{.2ex} \cauchystress
+= \hspace{-0.2ex} \zerobivalent}$,
+поэтому
+в~$\potentialenergydensity$
+нет линейных членов.
 
 Тензор жёсткости~$\stiffnesstensor$
 
@@ -2023,14 +2036,14 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 = \hspace{-0.2ex}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.5ex}
 \left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \bm{f} \hspace{-0.12ex} + \hspace{-0.4ex} \boldnablacircled \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} d \mathcircabove{\mathcal{V}} $} \hspace{-0.25ex}
-= \bm{0}
+= \zerovector
 \vspace{-0.25em}\end{equation*}
 
 \noindent
 \en{or}\ru{или} \en{in the~local~(differential) version}\ru{в~локальной~(дифференциальной) версии}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}
-\boldnablacircled \dotp \hspace{.12ex} \firstpiolakirchhoffstress + \hspace{.1ex} \mathcircabove{\rho} \bm{f} = \hspace{.1ex} \bm{0} \hspace{.12ex}.
+\boldnablacircled \dotp \hspace{.12ex} \firstpiolakirchhoffstress + \hspace{.1ex} \mathcircabove{\rho} \bm{f} = \hspace{.1ex} \zerovector \hspace{.12ex}.
 \end{equation}
 
 \en{Advantages of this equation}\ru{Преимущества этого уравнения}
@@ -2174,7 +2187,7 @@ ${\boldnablacircled \hspace{-0.1ex}
 \begin{array}{c}
 \mathcircabove{\rho} \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
 + \hspace{-0.1ex} \boldnablacircled \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
-= \bm{0}
+= \zerovector
 \hspace{.1ex} , \:\,
 %
 \variation{\hspace{.1ex}\firstpiolakirchhoffstress} \hspace{-0.1ex}
@@ -2329,7 +2342,7 @@ c_2 \hspace{-0.16ex} = 0
 \en{as a~whole}\ru{как целое}
 \en{without}\ru{без}
 \en{deformations}\ru{деформаций}
-(${\infinimentpetitdeformationdevariation = \zeroofthesecondcomplexity}$).
+(${\infinimentpetitdeformationdevariation = \zerobivalent}$).
 \en{Then}\ru{Тогда}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{stressesAsLagrangeMultipliers:zerovirtualmovements}
@@ -2337,7 +2350,7 @@ c_2 \hspace{-0.16ex} = 0
 \hspace{-0.1ex} = \hspace{-0.1ex}
 \boldnabla \variation{\currentlocationvector}^{\mathsf{S}}
 \hspace{-0.2ex} = \hspace{-0.1ex}
-{^2\bm{0}}
+\zerobivalent
 \hspace{.5ex} \Rightarrow \hspace{.33ex}
 \variation{\internalwork}
 \hspace{-0.2ex} =
@@ -2404,7 +2417,7 @@ ${%
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \bm{p} \hspace{.1ex} = \currentunitnormal \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \hspace{.2ex},
 \:\:
-\boldnabla \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \hspace{.2ex} + \hspace{.2ex} \rho \bm{f} \hspace{-0.1ex} = \hspace{.1ex} \bm{0}
+\boldnabla \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \hspace{.2ex} + \hspace{.2ex} \rho \bm{f} \hspace{-0.1ex} = \hspace{.1ex} \zerovector
 \end{equation*}
 
 \vspace{-0.25em}\noindent

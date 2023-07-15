@@ -16,7 +16,7 @@
 ${\bm{u}_1 (\locationvector, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\locationvector, t)}$.
 \en{If}\ru{Если}
 \en{the difference}\ru{разность}~${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}_1 \hspace{-0.4ex} - \bm{u}_2}$
-\en{will be equal to}\ru{будет равной}~$\bm{0}$,
+\en{will be equal to}\ru{будет равной}~$\zerovector$,
 \en{then}\ru{тогда}
 \en{these solutions}\ru{эти решения}
 \en{coincide}\ru{совпадают},
@@ -46,7 +46,7 @@ ${\bm{u}_1 (\locationvector, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\locationvector, t
 \end{equation}
 %
 \nopagebreak\vspace{-0.25em}\begin{gather*}
-\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \bm{0}
+\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \zerovector
 \hspace{.1ex} ,
 \hspace{.6em}
 %
@@ -100,7 +100,7 @@ ${\bm{u}_1 (\locationvector, t)}$ \en{and}\ru{и}~${\bm{u}_2 (\locationvector, t
 
 \nopagebreak\vspace{-0.6em}\noindent
 (\ru{использован }\en{the balance of~momentum}\ru{баланс импульса}
-${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} - \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} = \bm{0}}$\en{ is used}),
+${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} - \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} = \zerovector}$\en{ is used}),
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
@@ -128,9 +128,9 @@ ${\unitnormalvector \dotp \linearstress = \bm{p}}$
 \en{From}\ru{Из}~\eqref{dynamicsoflineartheory:integralofenergy} \en{it follows that}\ru{следует, что} \en{without loads}\ru{без нагрузок} (\en{when}\ru{когда} \en{there’re no external forces}\ru{нет внешних сил}, \en{neither volume nor surface}\ru{ни объёмных, ни поверхностных}), \en{and}\ru{и} \en{the~full mechanical energy}\ru{полная механическая энергия} \en{doesn’t change}\ru{не изменяется}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{dynamicsoflineartheory:fullenergyisconstantwithoutloads}
-\bm{f} \hspace{-0.1ex} = \bm{0}
+\bm{f} \hspace{-0.1ex} = \zerovector
 \hspace{1.1ex} \text{\en{and}\ru{и}} \hspace{1.2ex}
-\bm{p} = \bm{0}
+\bm{p} = \zerovector
 %
 \hspace{.8ex} \Rightarrow \hspace{.55ex}
 %
@@ -150,17 +150,17 @@ ${\unitnormalvector \dotp \linearstress = \bm{p}}$
 \end{equation*}
 
 \en{The kinetic energy}\ru{Кинетическая энергия} \en{is positive}\ru{положительна}:
-${\kineticenergydensity \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} \bm{0}}$
+${\kineticenergydensity \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} \zerovector}$
 \en{and}\ru{и}~\en{vanishes}\ru{исчезает}
 (\en{nullifies}\ru{обнуляется})
-\en{only when}\ru{лишь когда}~${\mathdotabove{\bm{u}} = \hspace{-0.1ex} \bm{0}}$\:---
+\en{only when}\ru{лишь когда}~${\mathdotabove{\bm{u}} = \hspace{-0.1ex} \zerovector}$\:---
 \en{this ensues}\ru{это вытекает} \en{from its definition}\ru{из её определения}
 ${\kineticenergydensity \hspace{-0.1ex} \equiv \smallerdisplaystyleonehalf \hspace{.2ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$.
 \en{The potential energy}\ru{Потенциальная энергия},
 \en{being}\ru{будучи} \en{a~quadratic form}\ru{квадратичной формой} %%\en{of~}\en{an~infinitesimal linear deformation}\ru{бесконечномалой линейной деформации}
 ${\potentialenergydensity (\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smash{\smallerdisplaystyleonehalf} \hspace{.2ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation}$,
 \en{is positive too}\ru{тоже положительна}:
-${\potentialenergydensity \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\infinitesimaldeformation \hspace{-0.1ex} \neq \hspace{-0.1ex} {^2\bm{0}}}$.
+${\potentialenergydensity \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\infinitesimaldeformation \hspace{-0.1ex} \neq \hspace{-0.1ex} \zerobivalent}$.
 %
 \en{Such is}\ru{Таков\'{о}} \en{a~priori requirement}\ru{априорное требование} \en{of~the~positive definiteness}\ru{положительной определённости} \en{for}\ru{для}~\en{stiffness tensor}\ru{тензора жёсткости}~$\stiffnesstensor$.
 \en{This is one of}\ru{Это одно из}~\inquotes{\en{additional inequalities in the~theory of~elasticity}\ru{дополнительных неравенств в~теории упругости}}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
@@ -177,9 +177,9 @@ $\kineticenergydensity$ \en{and}\ru{и}~$\potentialenergydensity$
 \kineticenergydensity = 0 \hspace{.1ex}, \; \potentialenergydensity = 0
 \hspace{.7ex} \Rightarrow \hspace{.7ex}
 %
-\mathdotabove{\bm{u}} = \bm{0}
+\mathdotabove{\bm{u}} = \zerovector
 \hspace{.1ex} , \;
-\infinitesimaldeformation = \hspace{-0.25ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.25ex} = \hspace{-0.1ex} {^2\bm{0}}
+\infinitesimaldeformation = \hspace{-0.25ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.25ex} = \hspace{-0.1ex} \zerobivalent
 \hspace{.8ex} \Rightarrow \hspace{.7ex}
 %
 \bm{u} = \bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.3ex} + \hspace{.1ex} \bm{\omega}^{\circ} \hspace{-0.5ex} \times \locationvector
@@ -191,15 +191,15 @@ $\kineticenergydensity$ \en{and}\ru{и}~$\potentialenergydensity$
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
-\bm{u} \hspace{.1ex} \rvert_{\raisemath{-0.1em}{o_1}} \hspace{-0.7ex} = \bm{0}
+\bm{u} \hspace{.1ex} \rvert_{\raisemath{-0.1em}{o_1}} \hspace{-0.7ex} = \zerovector
 \hspace{.8ex} \Rightarrow \hspace{.7ex}
 %
-\smash{\bm{u}^{\hspace{-0.1ex}\circ}} \hspace{-0.4ex} = \bm{0}
+\smash{\bm{u}^{\hspace{-0.1ex}\circ}} \hspace{-0.4ex} = \zerovector
 \hspace{1.1ex} \text{\en{and}\ru{и}} \hspace{1.1ex}
-\smash{\bm{\omega}^{\circ}} \hspace{-0.4ex} = \bm{0}
+\smash{\bm{\omega}^{\circ}} \hspace{-0.4ex} = \zerovector
 \hspace{.8ex} \Rightarrow \hspace{.7ex}
 %
-\bm{u} = \hspace{-0.1ex} \bm{0} \hspace{1ex} \text{\en{everywhere}\ru{всюду}} .
+\bm{u} = \hspace{-0.1ex} \zerovector \hspace{1ex} \text{\en{everywhere}\ru{всюду}} .
 \end{equation*}
 \end{minipage}
 
@@ -224,14 +224,14 @@ ${\smash{
 \en{linear}\ru{линейной}
 \en{problem}\ru{задачи}:
 \en{in a~volume}\ru{в~объёме}
-${\bm{f} \hspace{-0.1ex} = \bm{0}}$,
+${\bm{f} \hspace{-0.1ex} = \zerovector}$,
 \en{in boundary}\ru{в~краевых}
 \en{and }\ru{и~}\en{in initial}\ru{в~начальных} \en{conditions}\ru{условиях}\:---
 \en{zeroes}\ru{нули}.
 \en{Therefore}\ru{Поэтому}
 ${ \smash{\bm{u}^{\hspace{-0.1ex}*}}
-\hspace{-0.32ex} =
-\bm{0} }$,
+\hspace{-0.3ex} =
+\zerovector }$,
 \en{and}\ru{и}
 \en{the~uniqueness}\ru{единственность}
 \en{is proven}\ru{доказана}.

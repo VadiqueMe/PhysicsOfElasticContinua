@@ -26,6 +26,9 @@
 \newcommand\mathboldM{\scalebox{0.9}[1]{\ensuremath{\bm{M}\hspace{-0.1em}}}}
 \newcommand\mathboldQ{\scalebox{0.9}[1]{\ensuremath{\bm{Q}\hspace{-0.1ex}}}}
 
+\newcommand\nullofthefirstcomplexity{{\bm{0}}}
+\newcommand\zerovector{\nullofthefirstcomplexity}
+
 \makeatletter
 \def\mathcolor#1#{\@mathcolor{#1}}
 \def\@mathcolor#1#2#3{%
@@ -459,7 +462,7 @@ q_{\raisebox{-0.1em}{$\scriptstyle \zeta$}} \hspace{-0.1ex} (\hspace{-0.2ex} \be
 \mathcolor{black}{-}
 \mathcolor{\initialinternalforcecolor}{\mathboldQ(\hspace{-0.1ex}0\hspace{-0.1ex})} \hspace{-0.2ex}
 \mathcolor{black}{=}
-\mathcolor{black}{\bm{0}}
+\mathcolor{black}{\zerovector}
 \\[-0.1em]
 %
 Q_{\hspace{-0.15ex}\raisebox{-0.1em}{$\scriptstyle i$}}(\hspace{-0.2ex} \beamcoordinate \hspace{-0.12ex})
@@ -777,7 +780,7 @@ b \cos \beamcoordinate
 \mathcolor{black}{-}
 \textcolor{\initialinternalmomentcolor}{\hspace{-0.1ex}\mathboldM(\hspace{-0.1ex}0\hspace{-0.1ex})} \hspace{-0.15ex}
 \mathcolor{black}{=}
-\mathcolor{black}{\bm{0}}
+\mathcolor{black}{\zerovector}
 $}} ;
 }
 
