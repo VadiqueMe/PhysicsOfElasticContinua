@@ -171,7 +171,7 @@ $2\potentialenergydensity$.
 Если снять внешние воздействия
 мгновенно (бесконечно быстро),
 то тело будет колебаться.
-Но \textcolor{magenta}{из-за сопротивления}
+Но \textcolor{magenta}{из-за сопротивления среды (внутреннего трения)}
 спустя некоторое время
 тело придёт в состояние равновесия.
 \end{otherlanguage}
@@ -280,9 +280,9 @@ ${
 \en{are looking for}\ru{ищем}
 \en{their difference}\ru{их~разность}
 
-\begin{equation*}
+\begin{equation}\label{kirchhoff:uniquenessforstatics}
 ..........
-\end{equation*}
+\end{equation}
 
 %%%%%%%%%%
 \newpage
@@ -348,3 +348,188 @@ ${
 \en{by the linear equations}\ru{линейными уравнениями}
 \en{and}\ru{и}
 \en{is unique}\ru{единственно}.
+
+
+...
+
+...
+
+%%%\end{minipage}
+
+\nicefootnotetext{auxfootnotecounter}{\bookauthor{Gustav Robert Kirchhoff}. \href{https://opacplus.bsb-muenchen.de/Vta2/bsb10525510/bsb:2960444?page=291}{Über das~Gleich\-gewicht und die~Bewe\-gung eines unendlich dünnen elastischen Stabes. \emph{Journal für die reine und angewandte Mathematik (Crelle’s journal)}, 56.\:Band (1859). Seiten 285\hbox{--}313.} (Seite 291)}
+
+\subsection*{\en{Reciprocal work theorem}\ru{Теорема взаимности работ}}
+
+Proposed by Enrico Betti\footnote{\bookauthor{Enrico Betti}.
+\href{https://play.google.com/books/reader?id=RHDzLUBIlUUC&pg=GBS.PA69}{Teoria della elasticit\`{a}.
+\emph{Il Nuovo Cimento}~(1869--1876), VII\:e\:VIII\;(1872). Pagina 69.}}{\hspace{-0.5ex}.}
+
+%%Il Nuovo Cimento (1869--1876)
+%%Betti, E. Teoria della elasticità. Nuovo Cimento 7\hbox{--}8 (1872)
+%%Betti, Nuovo Cimento VII--VIII (1872): 5--21, 69--97, 158--180
+
+\en{For a~body}\ru{Для т\'{е}ла}
+\en{with a~fixed part}\ru{с~фиксированной частью}~${o_1}$
+\en{of the surface}\ru{поверхности}\en{,}
+\en{the two options are considered}\ru{рассматриваются две опции}\::
+\en{the~first one}\ru{первая}
+\en{with loads}\ru{с~нагрузками}
+$\bm{f}_1$, $\bm{p}_1$
+\en{and the~second one}\ru{и~вторая}
+\en{with loads}\ru{с~нагрузками} $\bm{f}_2$, $\bm{p}_2$.
+\en{The~verbal formulation}\ru{Словесная формулировка}
+\en{of the~theorem}\ru{теоремы}
+\en{is the~same as in}\ru{та~же, что и~в}~\chapterdotsectionref{chapter:genericmechanics}{section:statics}.
+\en{The~mathematical notation}\ru{Математическая запись}
+
+\nopagebreak\vspace{1.3em}\begin{equation}\label{betti:reciprocalworktheorem}
+\tikzmark{beginReciprocalFirstVariant}
+\scalebox{.96}{$ \displaystyle %
+   \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f}_1 \hspace{-0.2ex} \dotp \bm{u}_2 \hspace{.25ex} d\mathcal{V} $}
++ \hspace{-0.3ex}
+\scalebox{.96}{$ \displaystyle %
+   \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p}_1 \hspace{-0.2ex} \dotp \bm{u}_2 \hspace{.25ex} do $}
+\tikzmark{endReciprocalFirstVariant}
+%
+\hspace{.2ex} = \hspace{-0.2ex}
+%
+\tikzmark{beginReciprocalSecondVariant}
+\scalebox{.96}{$ \displaystyle %
+   \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f}_2 \hspace{-0.2ex} \dotp \bm{u}_1 \hspace{.25ex} d\mathcal{V} $}
++ \hspace{-0.3ex}
+\scalebox{.96}{$ \displaystyle %
+   \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p}_2 \hspace{-0.2ex} \dotp \bm{u}_1 \hspace{.25ex} do $}
+\tikzmark{endReciprocalSecondVariant}
+\hspace{.1ex} .
+\end{equation}%
+\AddOverBrace[line width=.75pt][.1ex, .66em][yshift=-0.11ex]%
+{beginReciprocalFirstVariant}{endReciprocalFirstVariant}{\scalebox{0.88}{$ W_{\hspace{-0.1ex}12} $}}%
+\AddOverBrace[line width=.75pt][.1ex, .66em][yshift=-0.11ex]%
+{beginReciprocalSecondVariant}{endReciprocalSecondVariant}{\scalebox{0.88}{$ W_{\hspace{-0.15ex}21} $}}
+
+...
+
+{\small
+The reciprocal work theorem, also known as the Betti’s theorem, claims that for a~linear elastic structure subject to two sets of forces $P$ and $Q$, the~work done by set~$P$ through displacements produced by set~$Q$ is equal to the~work done by set~$Q$ through displacements produced by set~$P$.
+This theorem has applications in structural engineering where it is used to define influence lines and derive the boundary element method.
+\par}
+
+...
+
+%%%\hspace*{-\parindent}
+%%%\begin{minipage}{\linewidth}
+
+\begin{wrapfigure}[12]{o}{.42\textwidth}
+\makebox[.42\textwidth][c]{\begin{minipage}[t]{.42\textwidth}
+\vspace{-0.5em}
+
+% parameter #1 is the height of beam
+\newcommand\drawrodbeam[1]%
+{
+       \draw [line width=1.2pt, black] (-0.5, 0) -- (0.5, 0) ;
+       \foreach \xground in {-0.36, -0.16, ..., 0.5}
+               \draw [line width=0.4pt, black!80] (\xground, 0) -- (\xground - 0.2, -0.2) ;
+
+       \draw [line width=2pt, line cap=round, black] (0, 0) -- (0, #1) ;
+}
+
+\tikzstyle{force line} =
+       [line width=1.25pt, red, line cap=round, -{Triangle[round, length=3.2mm, width=2mm]}]
+
+\tikzstyle{unitforce line} =
+       [line width=1.25pt, blue, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{Triangle[round, length=3.2mm, width=2mm]}]
+
+\begin{tikzpicture}[scale=0.8]
+
+       \def\beamheight{5}
+       \def\beamxshift{1.9}
+       \def\firstforcelength{0.9}
+       \def\secondforcelength{1.1}
+       \def\firstunitforcelength{0.69}
+       \pgfmathsetmacro\secondunitforcelength{\firstunitforcelength * 3 / 4}
+
+       \pgfmathsetmacro{\firstforceposition}{\beamheight}
+       \pgfmathsetmacro{\secondforceposition}{0.6 * \beamheight}
+
+       \drawrodbeam{\beamheight}
+
+       \foreach \loadpos in { 0, 0.3, ..., 0.6 }
+               \draw [force line]
+                       ( -\firstforcelength, \firstforceposition - \loadpos ) -- ( 0, \firstforceposition - \loadpos ) ;
+
+       \node at ( -\firstforcelength, \firstforceposition - 0.3 )
+               [left, inner sep=0, outer sep=3.3pt, red]
+                       {${P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}}}$} ;
+
+       \foreach \loadpos in { 0, 0.3, ..., 1 }
+               \draw [force line]
+                       ( -\secondforcelength, \secondforceposition - \loadpos ) -- ( 0, \secondforceposition - \loadpos ) ;
+
+       \node at ( -\secondforcelength, \secondforceposition - 0.5 )
+               [left, inner sep=0, outer sep=3.3pt, red]
+                       {${P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}}$} ;
+
+       \pgfmathsetmacro\secondxshift{\beamxshift}
+
+       \begin{scope}[xshift=\secondxshift cm, yshift=0cm]
+               \drawrodbeam{\beamheight}
+       \end{scope}
+
+       \foreach \loadpos in { 0, 0.3, ..., 0.6 }
+               \draw [unitforce line]
+                       ( \secondxshift - \firstunitforcelength, \firstforceposition - \loadpos )
+                       -- ( \secondxshift, \firstforceposition - \loadpos ) ;
+
+       \node at ( \secondxshift - \firstunitforcelength, \firstforceposition - 0.3 )
+               [left, inner sep=0, outer sep=3.2pt, blue] {$ 1 $} ;
+
+       \pgfmathsetmacro\thirdxshift{\beamxshift + \beamxshift}
+
+       \begin{scope}[xshift=\thirdxshift cm, yshift=0cm]
+               \drawrodbeam{\beamheight}
+       \end{scope}
+
+       \foreach \loadpos in { 0, 0.3, ..., 1 }
+               \draw [unitforce line]
+                       ( \thirdxshift - \secondunitforcelength, \secondforceposition - \loadpos )
+                       -- ( \thirdxshift, \secondforceposition - \loadpos ) ;
+
+       \node at ( \thirdxshift - \secondunitforcelength, \secondforceposition - 0.5 )
+               [left, inner sep=0, outer sep=3.2pt, blue] {$ 1 $} ;
+
+\end{tikzpicture}
+\vspace{-1.5em}\caption{}\label{fig:exampleofapplicationofreciprocalworktheorem}
+\end{minipage}}
+\end{wrapfigure}
+
+\en{The reciprocal work theorem}\ru{Теорема взаимности работ}
+\en{finds}\ru{находит}
+\en{unexpected and effective}\ru{неожиданные и~эффективные}
+\en{applications}\ru{применения}.
+\en{For example}\ru{Для примера}\en{,}
+\en{consider}\ru{рассмотрим}
+\en{a~rod-beam}\ru{стержень-балку}\ru{,}
+\en{clamped}\ru{защёмленную}
+\en{at one end}\ru{на одн\'{о}м конц\'{е}}~(\inquotes{\en{cantilever}\ru{консольную}})
+\en{and}\ru{и}
+\en{bent}\ru{изгибаемую}
+\en{by the two forces}\ru{двумя силами}
+\en{with }\ru{с~}\en{the integral values}\ru{интегральными значениями}~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}}$
+\en{and}\ru{и}~$P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}$~(\figureref{fig:exampleofapplicationofreciprocalworktheorem}).
+\en{While the~linear theory is applied}\ru{Тогда как применяется линейная теория},
+\en{displacements}\ru{перемещения}-\en{deflections}\ru{пр\'{о}гибы}
+\en{can be represented as}\ru{могут быть представлены как}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}\begin{array}{c}
+u_1 \hspace{-0.22ex} =
+    \alpha_{1\hspace{-0.1ex}1} P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}} \hspace{-0.2ex}
+  + \alpha_{12} P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}
+\hspace{.2ex} ,
+\\[.1em]
+u_2 \hspace{-0.22ex} = \alpha_{21} P_{\hspace{-0.25ex}\raisemath{-0.4ex}{1}} \hspace{-0.2ex} + \alpha_{22} P_{\hspace{-0.25ex}\raisemath{-0.4ex}{2}}
+\hspace{.2ex} .
+\end{array}\end{equation*}
+
+...
+
+%%%\end{minipage}

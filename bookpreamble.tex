@@ -698,9 +698,9 @@ aboveskip=4mm,belowskip=2.5mm}
 \newcommand\ruvacuum{вак\ruyy{}м}
 \newcommand\ruVacuum{Вак\ruyy{}м}
 
-\newcommand\sectionref[1]{\hyperref[#1]{\S\,\ref*{#1}}}
-\newcommand\chapterdotsectionref[2]{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}
-\newcommand\chapterref[1]{\hyperref[#1]{\chaptershortname\:\ref*{#1}}}
+\newcommand\sectionref[1]{\hyperref[#1]{\hbox{\S\,\ref*{#1}}}}
+\newcommand\chapterdotsectionref[2]{\hbox{\hyperref[#2]{\S\,\ref*{#1}.\ref*{#2}}}}
+\newcommand\chapterref[1]{\hyperref[#1]{\hbox{\chaptershortname\:\ref*{#1}}}}
 
 \newcommand\figureref[1]{\figureshortname\:\ref{#1}}
 

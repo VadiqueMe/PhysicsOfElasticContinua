@@ -411,13 +411,16 @@ ${\variation{\internalwork}\hspace{-0.2ex}}$
 \en{of any virtual deformations}\ru{любых виртуальных деформаций}
 ${\variation{\distortiontensor} = \hspace{-0.1ex} \zerobivalent}$ \en{and }\ru{и~}${\variation{\wrynesstensor} = \hspace{-0.1ex} \zerobivalent}$.
 
-\en{In}\ru{В}~\chapterdotsectionref{chapter:nonlinearcontinuum}{section:stressesAsLagrangeMultipliers}
+\en{Before}\ru{Прежде}
+\en{in}\ru{в}~\chapterdotsectionref{chapter:nonlinearcontinuum}{section:stressesAsLagrangeMultipliers}\en{,}
 \en{stresses}\ru{напряжения}
-\en{appear}\ru{появляются}
+\en{appeared}\ru{возникли}
 \en{as}\ru{как}
-\ru{множители }Lagrange\ru{’а}\en{ multipliers}
+\ru{множители }Lagrange’\en{s}\ru{а}\en{ multipliers}
 \en{in the~principle of~virtual work}\ru{в~принципе виртуальной работы},
 \textcolor{magenta}{\en{when}\ru{когда}}
+\en{variation}\ru{вариация}
+\en{of the~internal work}\ru{внутренней работы}
 ${\mathcolor{magenta}{\variation{\internalwork} \hspace{-0.2ex} = 0}}$.
 \en{The~same for}\ru{Так~же и~для}
 \en{the~micropolar continuum}\ru{микрополярного \rucontinuum{}а}\::
@@ -647,9 +650,12 @@ ${\hspace{-0.1ex} \boldnabla \dotp \couplestresstensor \hspace{.1ex} + \forcestr
 
 ...
 
-\en{eccentricity vector}\ru{вектор эксцентриситета}~$\mathboldoe$ \en{and}\ru{и} \en{inertia tensor}\ru{тензор инерции}~${\inertiatensor}$
+\en{eccentricity vector}\ru{вектор эксцентриситета}~$\mathboldoe$
+\en{and}\ru{и}
+\en{inertia tensor}\ru{тензор инерции}~${\inertiatensor}$
 
-\en{For an~isotropic medium}\ru{Для изотропной среды} ${\mathboldoe = \zerovector}$, ${\inertiatensor = \inertiascalar \UnitDyad}$.
+\en{For an~isotropic medium}\ru{Для изотропной среды}
+${\mathboldoe = \zerovector}$, ${\inertiatensor = \inertiascalar \UnitDyad}$.
 
 ...
 
@@ -659,14 +665,23 @@ ${\hspace{-0.1ex} \boldnabla \dotp \couplestresstensor \hspace{.1ex} + \forcestr
 
 \ru{\section{Отношения упругости}}
 
-\begin{otherlanguage}{russian}
-
-В~этой книге упругой называется среда с~потенциальными внутренними силами:
+\en{In this book}\ru{В~этой книге}\en{,}
+\en{something}\ru{н\'{е}что}
+\inquotes{\en{elastic}\ru{упругое}}
+\en{implies}\ru{подразумевает}
+\en{the~potentiality}\ru{потенциальность}
+\en{of internal forces}\ru{внутренних сил}\::
 ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potentialenergydensity}}$,
-где~$\potentialenergydensity$\:--- энергия деформации на~единицу объёма
-(\en{continuing to~model}\ru{продолжая моделировать} \en{the~geometrically linear material}\ru{геометрически линейный материал}, ${\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}\hspace{.12ex}}$).
+\en{where}\ru{где}~$\potentialenergydensity$\en{ is}\ru{\:---}
+\en{the~energy}\ru{энергия}
+\en{of~deformation}\ru{деформации}
+\en{per volume unit}\ru{на~единицу объёма}
+(\en{continuing to~model}\ru{продолжая моделировать}
+\en{the~geometrically linear material}\ru{геометрически линейный материал},
+${\mathcal{V} \hspace{-0.2ex} = \hspace{-0.2ex} \mathcircabove{\mathcal{V}}\hspace{.12ex}}$).
 
-Имея соотношения (...)
+\en{Having relations}\ru{Имея (со)отношения}
+(...)
 
 ...
 
@@ -679,17 +694,30 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potentialenergydensit
 \\[-0.1em]
 %
 \Rightarrow \hspace{.88ex}
-\forcestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potentialenergydensity^{\mathstrut}}}{\partial \distortiontensor}$}
-\hspace{.15ex} ,
+\forcestresstensor = \scalebox{.92}{$ \displaystyle
+   \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potentialenergydensity^{\mathstrut}}}{\partial \distortiontensor}
+$} \hspace{.15ex} ,
 \hspace{.8ex}
-\couplestresstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potentialenergydensity^{\mathstrut}}}{\partial \wrynesstensor}$}
-\hspace{.2ex} .
+\couplestresstensor = \scalebox{.92}{$ \displaystyle
+   \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \potentialenergydensity^{\mathstrut}}}{\partial \wrynesstensor}
+$} \hspace{.2ex} .
 \hspace*{3.33em}
 \end{multline}
 
-Последние равенства\:--- соотношения упругости (определяющие уравнения, constitutive equations).
+\en{And yep}\ru{И~да},
+\en{the~last equalities}\ru{последние равенства}
+\en{are}\ru{это}
+\en{the~relations of~elasticity}\ru{отношения упругости}
+(\en{or}\ru{или},
+\en{in other words}\ru{другими словами},---
+\ru{определяющие уравнения, }\en{the~}constitutive equations).
 
-Разлагая тензоры деформации и~напряжения на~симметричные и~антисимметричные части
+\en{Decomposing}\ru{Разлагая}
+\en{the strain~(deformation) and stress tensors}\ru{тензоры деформации и~напряжения}
+\en{into}\ru{на}
+\en{the~symmetric}\ru{симметричные}
+\en{and }\ru{и~}\en{the~antisymmetric}\ru{антисимметричные}
+\en{parts}\ru{части}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{c}
@@ -719,10 +747,10 @@ ${\variation{\internalwork} = - \hspace{.16ex} \variation{\potentialenergydensit
 \end{equation*}
 
 \noindent
-преобразуем выражение
+\en{the expression}\ru{выражение}
 ${\variation{\potentialenergydensity} = \forcestresstensor \dotdotp \variation{\distortiontensor}^{\T} \hspace{-0.3ex}
 + \couplestresstensor \dotdotp \variation{\wrynesstensor}^{\T} \hspace{-0.25ex}}$
-как
+\en{changes into}\ru{изменяется до}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
 \variation{\potentialenergydensity} = \ldots
@@ -756,7 +784,11 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 
 ...
 
-Соотношения~\eqref{micropolar.constitutiveequations} обращаются преобразованием Лежандра
+
+\begin{otherlanguage}{russian}
+
+Соотношения~\eqref{micropolar.constitutiveequations}
+обращаются преобразованием Лежандра
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \begin{array}{c}
@@ -779,8 +811,11 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 
 material’s intrinsic (internal) length scale $\elcursive$
 
-Если устремить $\elcursive$ к~нулю, то исчезает вклад $\wrynesstensor$ в~$\potentialenergydensity$, а~с~ним и моментные напряжения~$\couplestresstensor$.
-Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$, тогда тензор~${\hspace{-0.1ex}\forcestresstensor}$ становится симметричным:
+Если устремить $\elcursive$ к~нулю,
+то исчезает вклад $\wrynesstensor$ в~$\potentialenergydensity$,
+а~с~ним и моментные напряжения~$\couplestresstensor$.
+Когда вдобавок нет объёмной моментной нагрузки~$\bm{m}$,
+тогда тензор~${\hspace{-0.1ex}\forcestresstensor}$ становится симметричным:
 ${\boldnabla \dotp {\color{black!66}{\couplestresstensor}} \hspace{.1ex}
 + \forcestresstensor_{\Xcompanion} \hspace{-0.1ex}
 + {\color{black!66}{\bm{m}}} \hspace{.1ex}
@@ -791,13 +826,26 @@ ${{\color{black!66}{\bm{m}}} = \zerovector \,\Rightarrow \hspace{.1ex} \forcestr
 
 \end{otherlanguage}
 
-\en{Yet using of}\ru{Использование~же} \en{the~micropolar model}\ru{микрополярной модели} \en{is natural}\ru{естественно} \en{in~a~case}\ru{в~случае}\ru{,}
-\en{when}\ru{когда} \en{the~real material}\ru{реальный материал} \en{has a~certain smallest volume}\ru{имеет некий наименьший объём,}
-\inquotesx{\en{which is impossible to~enter into}\ru{в~который невозможно войти}}[.]
-\en{And}\ru{И}~\en{such a~situation}\ru{такая ситуация} \en{occurs}\ru{возникает} \ru{весьма часто}\en{quite often}:
-\en{composites}\ru{композиты} \en{with}\ru{с}~\inquotes{\en{representative}\ru{представительным}} \en{volume}\ru{объёмом},
-\en{polycrystalline materials}\ru{поликристаллические материалы},
-\en{polymers}\ru{полимеры} \en{with}\ru{с}~\en{large molecules}\ru{большими молекулами}~(\en{macro\-molecules}\ru{макро\-молекулами}).
+\en{Yet using of}\ru{Использование~же}
+\en{the~micropolar model}\ru{микрополярной модели}
+\en{is natural}\ru{естественно}
+\en{for a~case}\ru{для случая}\ru{,}
+\en{when}\ru{когда}
+\en{the~real material}\ru{реальный материал}
+\en{has a~certain smallest volume}\ru{имеет некий наименьший объём}\ru{,}
+\inquotesx{\en{which is impossible to penetrate}\ru{в~который невозможно проникнуть}}[.]
+\en{And}\ru{И}~\en{such a~situation}\ru{такая ситуация}
+\en{occurs}\ru{возникает}
+\ru{весьма часто}\en{quite often}\::
+\en{for}\ru{для}
+\en{composites}\ru{композитов}
+\en{with a}\ru{с}~\inquotes{\en{representative}\ru{представительным}}
+\en{volume}\ru{объёмом},
+\en{for}\ru{для}
+\en{polycrystalline materials}\ru{поликристаллических материалов},
+\en{for}\ru{для}
+\en{polymers}\ru{полимеров}
+\en{with}\ru{с}~\en{large molecules}\ru{большими молекулами}~(\en{macro\-molecules}\ru{макро\-молекулами}).
 
 \en{\section{Compatibility equations}}
 
@@ -807,9 +855,10 @@ ${{\color{black!66}{\bm{m}}} = \zerovector \,\Rightarrow \hspace{.1ex} \forcestr
 
 \en{Having}\ru{Имея}
 \en{the~identity}\ru{тождество}
-${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = \zerobivalent}$~${\forall \bm{a}}$
+${\boldnabla \hspace{-0.33ex} \times \hspace{-0.5ex} \boldnabla \bm{a} \hspace{-0.1ex} = \hspace{-0.2ex} \zerobivalent \hspace{.6em} \forall \bm{a}}$
 \en{and }\ru{и~}\en{the~definitions}\ru{определения}
-\en{of the~deformation ten\-sors}\ru{тензоров деформации}~\eqref{deformationtensors:micropolarcontinuum}
+\en{for}\ru{для}
+\en{the~deformation ten\-sors}\ru{тензоров деформации}~\eqref{deformationtensors:micropolarcontinuum}
 
 \nopagebreak\vspace{-0.8em}\begin{equation}
 \begin{array}{r@{\hspace{1ex}}c@{\hspace{1ex}}l}
@@ -829,47 +878,46 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = \zerobi
 \end{array}
 \end{equation}
 
-%%\begin{otherlanguage}{russian}
+....
 
-...
-
-%%\end{otherlanguage}
 
 \en{\section{Theorems of statics}}
 
 \ru{\section{Теоремы статики}}
 
-\begin{otherlanguage}{russian}
-
 \en{Theorems}\ru{Теоремы}
 \en{of~statics}\ru{статики}
-линейных консервативных систем,
-легко выводимые
-для конечного числа
-степеней свободы
-(минимальность энергии,
-\en{the}\ru{теорема} Clapeyron’\en{s}\ru{а}\en{ theorem},
-\en{the reciprocal work theorem}\ru{теорема о~взаимности работ}
-\en{et~al.}\ru{и~др.}\:--- \chapterdotsectionref{chapter:genericmechanics}{section:statics}),
-справедливые
 \en{for}\ru{для}
-\en{any}\ru{любой}
-\en{continual}\ru{континуальной}
-\en{linear}\ru{линейной}
-\en{elastic}\ru{упругой}
-\en{medium}\ru{среды}~(\chapterref{chapter:linearclassicalelasticity}),
+\en{linear conservative systems}\ru{линейных консервативных систем},
+\en{easily derivable}\ru{легко выводимые}
+\en{for}\ru{для}
+\en{a~finite number}\ru{конечного числа}
+\en{of~degrees o’freedom}\ru{степеней свободы}~(\chapterdotsectionref{chapter:genericmechanics}{section:statics}),
+\en{such as}\ru{такие как}
+\en{the~minimality of~energy}\ru{минимальность энергии},
+\en{the~uniqueness of the~solution}\ru{единственность решения},
+\en{the}\ru{теорема} Clapeyron’\en{s}\ru{а}\en{ theorem},
+\en{the reciprocal work theorem}\ru{теорема о~взаимности работ},
+\en{are equitable}\ru{справедливы}
+\eqrefwithchapterdotsection{kirchhoff:uniquenessforstatics}{chapter:linearclassicalelasticity}{section:theoremsofstatics},
+\eqrefwithchapterdotsection{clapeyron:elasticitytheorem}{chapter:linearclassicalelasticity}{section:theoremsofstatics},
+\eqrefwithchapterdotsection{betti:reciprocalworktheorem}{chapter:linearclassicalelasticity}{section:theoremsofstatics}
+\ru{также и~}\en{for}\ru{для}
+\en{infinity}\ru{бесконечности}
+\en{degrees o’freedom}\ru{степеней свободы}\en{ as well},
+\en{that is}\ru{то есть}
+\en{for}\ru{для}
+\en{any}\ru{любого}
+\en{linear}\ru{линейного}
+\en{elastic}\ru{упругого}
+\en{continuum}\ru{\rucontinuum{}а},
 \en{including}\ru{включая}
-\en{the~micropolar model of~continuum}\ru{микрополярную модель \rucontinuum{}а}
-(\en{a~medium with the~force couples}\ru{среду с~парами сил}
+\en{the~micropolar model}\ru{микрополярную модель}
+(\en{a~medium with force couples}\ru{среду с~парами сил}
 \en{or}\ru{или}
-\en{the~moments}\ru{моментами}).
-
+\en{moments}\ru{моментами}).
 
 ...
-
-
-
-\end{otherlanguage}
 
 
 \en{\section{The Cosserat pseudocontinuum}}
@@ -888,11 +936,14 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = \zerobi
 \en{rotations}\ru{повороты}
 \en{are expressed}\ru{выражаются}
 \en{via displacements}\ru{через смещения},
-\en{as}\ru{как}
+\en{like}\ru{как}
 \en{for}\ru{для}
-\en{the~classical momentless continuum}\ru{классического безмоментного \rucontinuum{}а}:
+\en{the~}\en{linear momentless}\ru{линейного безмоментного}
+(\inquotes{\en{classical}\ru{классического}})
+\en{continuum}\ru{\rucontinuum{}а}~\eqrefwithchapterdotsection{lineartheory:displacementgradientdecomposed}{chapter:linearclassicalelasticity}{section:displacementsfromdeformations}
 
 \nopagebreak\vspace{-0.15em}\begin{equation}
+\label{pseudocontinuum.rotationsviadisplacements}
 \fieldofrotations = \smalldisplaystyleonehalf \hspace{.2ex} \boldnabla \hspace{-0.16ex} \times \hspace{-0.1ex} \fieldofdisplacements
 \hspace{.6ex}\Leftrightarrow\hspace{.6ex}
 \distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \zerovector
@@ -902,22 +953,64 @@ ${\boldnabla \hspace{-0.15ex} \times \hspace{-0.3ex} \boldnabla \bm{a} = \zerobi
 \end{equation}
 
 \vspace{-0.2em}\noindent
---- \en{the~model}\ru{модель} \en{with }\ru{со~стеснённым вращением (}constrained rotation\ru{)}\footnote{\ru{Братья }Cosserat\en{ brothers} \en{called it}\ru{называли это} cas de trièdre caché (\ru{случай скрытого трёхгранника, }case of latent trihedron).}\hspace{-0.32em}.
+--- \en{the~model}\ru{модель}
+\en{with }\ru{со~стеснённым вращением (}constrained rotation\ru{)}\footnote{%
+\ru{Братья }Cosserat\en{ brothers}
+\en{named it}\ru{именовали это}
+\emph{cas de trièdre caché}
+(\ru{случай скрытого трёхгранника, }case of latent trihedron).%
+}\hspace{-0.5em}.
 
-\begin{otherlanguage}{russian}
+\en{The~symmetry of}\ru{Симметрия}~$\distortiontensor$
+(${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \zerovector}$)
+\en{can be}\ru{может быть}
+\en{thought of as}\ru{м\'{ы}слима как}
+\en{an~internal constraint}\ru{внутренняя связь}~(\chapterdotsectionref{chapter:nonlinearcontinuum}{section:internalconstraints}).
+\en{Here}\ru{Тут}
+${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$
+\en{disappears}\ru{исчезает}
+\en{from}\ru{из}
+\en{the~energy}\ru{энергии}~$\potentialenergydensity$,
+\en{and }\ru{а~}\en{a~relation of~elasticity}\ru{отношение упругости}
+\en{for}\ru{для}~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$
+\en{cannot be written}\ru{не~может быть написано}.
+\en{That place}\ru{То место}
+\en{in the~complete set of~equations}\ru{в~полном наборе уравнений}
+\en{is taken}\ru{занимает}
+\en{by the~equation of a~constraint}\ru{уравнение связи}.
 
-Равенство~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion} \hspace{-0.32ex} = \zerovector}$~(симметрию~$\distortiontensor$) возможно понимать как внутреннюю связь~(\chapterdotsectionref{chapter:nonlinearcontinuum}{section:internalconstraints}).
-Аргумент~${\distortiontensor_{\hspace{-0.25ex}\Xcompanion}}$ исчезает из~энергии~$\potentialenergydensity$, соотношение упругости для~${\forcestresstensor_{\hspace{-0.1ex}\Xcompanion}}$ не~может быть написано.
-Его место в~полной системе занимает уравнение связи.
+\en{For the~classical}\ru{Для классической}
+(\en{linear momentless}\ru{линейной безмоментной})
+\en{model}\ru{модели},
+\en{the~complete}\ru{полный}
+\en{set}\ru{набор}~(\en{system}\ru{система})
+\en{may be}\ru{может быть}
+\en{presented as}\ru{представлен как}
+\en{the~just one}\ru{всего к~одному}
+\en{equation}\ru{уравнению}
+\en{for}\ru{для}
+\en{the~vector}\ru{вектора}~$\fieldofdisplacements$~\eqrefwithchapterdotsection{lineartheory:equationsindisplacements}{chapter:linearclassicalelasticity}{section:equationsindisplacements.linearelasticity}.
+\en{The~model}\ru{Модель}
+\en{with }\ru{с~}\en{moments}\ru{моментами}
+\en{and}\ru{и}
+\en{free rotation}\ru{свободным вращением}
+\en{may be}\ru{может быть}
+\en{described}\ru{описана}
+\en{by the~two}\ru{двумя}
+\en{vector equations}\ru{векторными уравнениями}
+\en{for}\ru{для}~$\fieldofdisplacements$
+\en{and}\ru{и}~$\fieldofrotations$.
+\en{And for}\ru{А~для}
+\en{the~model}\ru{модели}
+\en{with constrained rotation}\ru{со~стеснённым вращением}
+\en{it’s again}\ru{это опять}
+\en{the~single}\ru{одно}
+\en{equation}\ru{уравнение}
+\en{for}\ru{для}~$\fieldofdisplacements$.
 
-В~классической (линейной безмоментной) теории упругости полная система сводится к~одному уравнению для~вектора~$\fieldofdisplacements$~(\chapterdotsectionref{chapter:linearclassicalelasticity}{section:equationsfordisplacements.linearelasticity}).
-В~моментной теории
-
-...
+.....
 
 
-
-\end{otherlanguage}
 
 \en{\section{Plane deformation}}
 
