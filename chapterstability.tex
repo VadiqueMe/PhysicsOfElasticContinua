@@ -6,34 +6,52 @@
 
 \label{chapter:stability}
 
-\en{\section{The various approaches to the problem of stability}}
+\begin{comment} %%%
+\begin{changemargin}{\parindent}{\parindent}
+\vspace{-2.5em}
+{\noindent\small
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\inquotes{\en{indifferent equilibrium}\ru{безразличное равновесие}}
+\en{or}\ru{или}
+\inquotes{\en{neutral equilibrium}\ru{нейтральное равновесие}}
+(\en{neither stability nor instability}\ru{ни устойчивость, ни неустойчивость},
+a~disturbance introduced into such an~equilibrium will be neither amplified nor damped)
+
+\par}
+\vspace{-1.2em}
+\end{changemargin}
+\end{comment} %%%
+
+\en{\section{Various approaches to the problem of stability}}
 
 \ru{\section{Разные подходы к проблеме устойчивости}}
 
+\label{section:approachestostability}
+
 \en{\dropcap{T}{here’s}}\ru{\dropcap{Е}{сть}}
 \en{the }\en{well developed}\ru{весьма р\'{а}звитая}
-\en{theory of stability}\ru{теория устойчивости}
-\en{by \russianlanguage{Ляпунов}~(Lyapunov)}\ru{по Ляпунову}.
-\en{It says that}\ru{Она говорит, что}
+\href{https://en.wikipedia.org/wiki/Lyapunov_stability}{\en{theory of stability}\ru{теория устойчивости}}
+\en{by}\ru{по}
+\href{https://en.wikipedia.org/wiki/Aleksandr_Lyapunov}{\en{\russianlanguage{А.\,Ляпунов}~(Aleksandr Lyapunov)}\ru{Александру Ляпунову}}.
+\en{It looks at}\ru{Она смотрит на}
+\en{the~dynamics}\ru{динамику}
+\en{of small deviations}\ru{малых отклонений}
+\en{and says that}\ru{и~говорит, что}
 \en{if}\ru{если}
-\en{the initial deviations}\ru{начальные отклонения}%
-\footnote{\en{From the~equilibrium configuration}\ru{От равновесной конфигурации}.}%
-\en{are }\inquotesx{\en{close (small) enough}\ru{достаточно близкие (м\'{а}лые)}}[,]
-\en{and afterwards}\ru{и~впоследствии}
-\en{they}\ru{они}
-\en{don’t increase}\ru{не~растут},
+\en{initial deviations}\ru{начальные отклонения}
+(\en{for example}\ru{для примера},
+\en{from the~equilibrium}\ru{от равновесия})
+\en{were}\ru{были}
+\inquotesx{\en{quite close~(small)}\ru{довольно близкие~(м\'{а}лые)}}[,]
+\en{and }\ru{и~}\en{they}\ru{они}
+\en{don’t rise}\ru{не~растут}
+\en{any further}\ru{как-либо в~дальнейшем},
 \en{remaining}\ru{оставаясь}
-\inquotesx{\en{close enough}\ru{достаточно близкими}}
+\inquotesx{\en{quite close}\ru{довольно близкими}}
 \en{forever}\ru{навсегда},
 \en{then}\ru{то}
-\en{the process is stable}\ru{процесс устойчив}.
-\en{This applies}\ru{Это применимо}
-\en{to the~condition of~equilibrium}\ru{и~к~состоянию равновесия}
-\en{too}.
-%\en{Considering}\ru{Рассматривая}
-%\en{the dynamics}\ru{динамику}
-%\en{of the small deviations}\ru{малых отклонений}
-%....
+\en{the~process is stable}\ru{процесс устойчив}.
 \en{This is}\ru{Так\'{о}в}
 \en{the~}\textbold{\en{dynamic approach}\ru{динамический подход}}
 \en{to the~problem of~stability}\ru{к~проблеме устойчивости},
@@ -43,60 +61,57 @@
 \en{However}\ru{Однако},
 \en{for problems}\ru{для~задач}
 \en{about}\ru{об}
-\en{the~stability of the~equilibrium}\ru{устойчивости равновесия},
+\en{the~stability of the~equilibrium}\ru{устойчивости равновесия}\en{,}
 %\en{of~elastic systems}\ru{упругих систем}\en{,}
-\ru{обрёл популярность }\en{another}\ru{другой} \en{approach}\ru{подход}\en{ has gained popularity}.
+\ru{нашёл больш\'{у}ю популярность }\en{the~other}\ru{другой}
+\en{approach}\ru{подход}\en{ has found much popularity}.
 %
 \en{It is called}\ru{Он называется}
-\en{the }\textbold{\en{static}\ru{статическим}}
-\en{approach}\ru{подходом},
-\en{the}\ru{имя} Leonhard\ru{’а} Euler’\en{s}\ru{а}\en{ name}
-\en{is associated}\ru{ассоциируется}
-\en{with it}\ru{с~ним}.
+\en{the~}\textbold{\en{static}\ru{статическим}
+\en{approach}\ru{подходом}},
+\en{and }\ru{и~}\en{is }\href{https://en.wikipedia.org/wiki/Euler%27s_critical_load}{\en{widely known}\ru{широк\'{о} известен}}
+\en{under}\ru{под}
+\ru{именем }\en{the~}\href{https://en.wikipedia.org/wiki/Leonhard_Euler}{Leonhard}\ru{’а}
+\href{https://en.wikipedia.org/wiki/List_of_things_named_after_Leonhard_Euler}{Euler}’\en{s}\ru{а}\en{ name}.
 %
 \en{When}\ru{Когда}
-\en{the equations of statics}\ru{уравнения статики}
+\en{the~equations of~statics}\ru{уравнения статики}
 \en{give}\ru{дают}
 \en{a~nontrivial solution}\ru{нетривиальное решение}
-\en{for the small}\ru{для м\'{а}лых}
-\en{deviations-displacements}\ru{отклонений-смещений},
+\en{for small}\ru{для м\'{а}лых}
+\en{disturbances-displacements}\ru{возмущений-смещений},
 \en{then}\ru{тогда}
-\en{the values of parameters}\ru{тогда значения параметров}
+\en{the~values of~parameters}\ru{значения параметров}
 \en{are assumed to be}\ru{предполагаются}
 \inquotesx{\en{critical}\ru{критическими}}[.]
 %
-\en{In~other words}\ru{Иными словами},
+\en{In~other words}\ru{Другими словами},
 \en{if}\ru{если}
-\en{the~equilibrium}\ru{равновесие}
-\en{isn’t isolated}\ru{не~изолированное},
+\en{there’s}\ru{есть}
+\en{a~non\hbox{-}isolated equilibrium}\ru{не изолированное равновесие}\footnote{% begins
+\inquotes{\en{Non\hbox{-}isolated}\ru{не изолированное}}
+\en{means that}\ru{значит, что}
+\en{at the~same}\ru{в~одно и~то~же}
+\en{time}\ru{время}
+\en{there appear}\ru{появляется}
+\en{many}\ru{много}
+\en{possible}\ru{возможных}
+\en{adjacent forms}\ru{смежных форм}
+\en{of the~same one}\ru{одного и~того~же}
+\en{equilibrium}\ru{равновесия}.}\hbox{\hspace{-0.5ex},} % \footnote ends
 \en{then}\ru{то}
 \en{it’s considered}\ru{оно считается}
-\en{the }\inquotesx{\en{critical}\ru{критическим}}[.]
+\inquotesx{\en{critical}\ru{критическим}}[.]
 %
-\en{At the~same}\ru{В~то~же}
-\en{time}\ru{время},
-\en{many}\ru{много}
-\en{adjacent forms of the equilibrium}\ru{смежных форм равновесия}
-\en{appear}\ru{появляется}%
-\footnote{%
-   \en{This is known}\ru{Это известно}
-   \en{as}\ru{как}
-   \en{the }\inquotesx{\en{indifferent equilibrium}\ru{безразличное равновесие}}[.]%
-} % end of footnote
-\en{Using this approach}\ru{Используя этот подход},
+\en{With this approach}\ru{С~этим подходом}
 \en{it’s enough}\ru{достаточно}
 \en{to~solve}\ru{решить}
-\en{the~problem}\ru{задачу}
-\en{about the~eigenvalues}\ru{о~собственных числах}.
+\en{the~eigenvalue problem}\ru{проблему собственных чисел}.
 
-%%\en{in its neighborhood}\ru{в~его окрестности}
-
-\en{There are also}\ru{Есть ещё}
-\en{more}\ru{больше}
-\en{approaches}\ru{подходов}.
+\en{More approaches exist as well}\ru{Существуют и~другие подходы}.
 %
-\en{For example}\ru{Для примера},
-\en{the~}\textbold{\en{method of~imperfections}\ru{метод несовершенств}}:
+\en{One of them}\ru{Один из них}\en{ is}\ru{\:---}
+\en{the~}\textbold{\en{method of~imperfections}\ru{метод несовершенств}}\::
 \en{if}\ru{если}
 \en{small random changes}\ru{м\'{а}лые случайные изменения}
 \en{of the initial shape}\ru{начального \'{о}блика},
@@ -111,7 +126,7 @@
 \en{is stable}\ru{устойчиво}.
 %
 \en{Or}\ru{Или}
-\en{the~}\textbold{\en{energy approach}\ru{энергетический подход}}:
+\en{the~}\textbold{\en{energy approach}\ru{энергетический подход}}\::
 \en{when}\ru{когда}
 \en{a~loss of stability}\ru{потеря устойчивости}
 \en{becomes}\ru{становится}
@@ -120,10 +135,10 @@
 \en{when}\ru{когда}
 \en{it leads}\ru{она ведёт}
 \en{to a~decrease}\ru{к~уменьшению}
-\en{of energy}\ru{энергии},
+\en{in energy}\ru{энергии},
 \en{then}\ru{тогда}
-\en{this loss of stability}\ru{эта потеря устойчивости}
-\en{happens}\ru{случается}.
+\en{such a~stability loss}\ru{такая потеря устойчивости}
+\en{really happens}\ru{действительно случается}.
 
 \en{The mentioned approaches}\ru{Упомянутые подходы}
 \en{draw}\ru{рисуют}
@@ -135,19 +150,36 @@
 \en{for}\ru{для}
 \en{a~model}\ru{модели}
 \en{with a~finite number}\ru{с~конечным числом}
-\en{of~degrees of~freedom}\ru{степеней свободы}.
+\en{of~degrees o’freedom}\ru{степеней свободы}.
 
-\begin{otherlanguage}{russian}
+\en{Pretty}\ru{Весьма}
+\en{abstract}\ru{абстрактны}
+\en{and }\ru{и~}\en{universal}\ru{универсальны}\en{,}
+\en{the~}\ru{уравнения }Lagrange’\en{s}\ru{а}\en{ equations}
 
-Больш\'{о}й общностью обладают
+\nopagebreak
+\begin{equation}
+A_{\hspace{-0.1ex}jk} \hspace{.2ex} \mathdotdotabove{q}_k \hspace{-0.1ex} = Q_{\hspace{-0.1ex}j} \bigl( q_k, p \bigr)
+\hspace{.1ex} .
+\end{equation}
+
+\noindent
+\en{Here}\ru{Тут}
+$q_k$\:--- \en{generalized coordinates}\ru{обобщённые координаты},
+$Q_{\hspace{-0.1ex}j}$\:--- \en{generalized forces}\ru{обобщённые силы},
+......
 
 ...
 
-\end{otherlanguage}
+...........
+
+
 
 \en{\section{Classical problems with rods}}
 
 \ru{\section{Классические проблемы со стержнями}}
+
+\label{section:rodsclassicalstability}
 
 \begin{otherlanguage}{russian}
 
@@ -162,6 +194,8 @@
 \en{\section{\inquotes{Tracking} loads}}
 
 \ru{\section{\inquotes{Следящие} нагрузки}}
+
+\label{section:trackingloads}
 
 %% “dead” loads and “tracking” loads
 
@@ -195,6 +229,8 @@
 
 \ru{\section{Роль добавочных податливостей}}
 
+\label{section:additionalpliabilities}
+
 \begin{otherlanguage}{russian}
 
 Для прямого \textcolor{magenta}{консольного} стержня, сжатого постоянной силой~$\bm{F}$ на~свободном конце, критическая нагрузка определяется формулой Euler’а
@@ -208,6 +244,8 @@
 \en{\section{Variational formulations}}
 
 \ru{\section{Вариационные формулировки}}
+
+\label{section:variationalformulationsforstability}
 
 \begin{otherlanguage}{russian}
 
@@ -227,6 +265,8 @@
 
 \ru{\section{Неконсервативные задачи}}
 
+\label{section:nonconservativeproblemsofstability}
+
 \begin{otherlanguage}{russian}
 
 В~уравнении динамики (...) матрица позиционных сил
@@ -240,6 +280,8 @@
 \en{\section{Case of multiple roots}}
 
 \ru{\section{Случай кратных корней}}
+
+\label{section:caseofmultipleroots}
 
 \begin{otherlanguage}{russian}
 
