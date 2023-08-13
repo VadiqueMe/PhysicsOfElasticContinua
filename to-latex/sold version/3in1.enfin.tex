@@ -1,0 +1,2041 @@
+\documentclass[14pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{papersize={21cm, 29.7cm}} % A4
+\geometry{tmargin=2cm, bmargin=2cm, outer=2cm, inner=2cm, head=2cm, foot=2cm}
+
+\usepackage[unicode=true, pdfusetitle,%
+	bookmarks=true, bookmarksnumbered=false, bookmarksopen=true, linktocpage=true,%
+	breaklinks=false, pdfborder={0 0 0}, backref=false,%
+	colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]%
+{hyperref}
+
+\hypersetup{pdftitle={Сложное напряжённое состояние (домашнее задание 3)}}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\renewcommand\thepage{\oldstylenums{\arabic{page}}}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[CE,CO]{${(\:}$\raisebox{.1em}{\thepage}${\:)}$}
+%%\fancyfoot[CE,CO]{$\hspace{-9em}\textcolor{red}{%
+%%\textbf{\textsf{ДОКУМЕНТ НЕ ВЫКУПЛЕН}} \hspace{1em}%
+%%\textbf{\textsf{ДОКУМЕНТ НЕ ВЫКУПЛЕН}} \hspace{1em}%
+%%\textbf{\textsf{ДОКУМЕНТ НЕ ВЫКУПЛЕН}}}$}
+\pagestyle{fancy}
+\geometry{headsep=.5cm}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{patterns}
+
+\usepackage[T2A, T1]{fontenc}
+\usepackage[english, russian]{babel}
+
+\def\horizontalindent{4ex}
+\setlength{\parindent}{\horizontalindent} % offset of the first line
+\usepackage{indentfirst}
+
+\usepackage{setspace}
+\setstretch{1.3} % spacing between lines
+
+\usepackage{microtype}
+
+\usepackage{tempora}
+\usepackage{upgreek}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{wasysym}
+
+\usepackage{xargs}
+\usepackage{xifthen}
+
+\newcommand{\lquote}[0]{«} % {<<}
+\newcommand{\rquote}[0]{»} % {>>}
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
+\usepackage[many]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left = 0pt,
+	right = 0pt,
+	top = 0pt,
+	bottom = 0pt,
+	colback = gray!10,
+	colframe = white,
+	width = \dimexpr\textwidth\relax,
+	enlarge left by = 0mm,
+	boxsep = 5pt,
+	arc = 0pt, outer arc = 0pt}
+
+\usepackage{verbatim}
+
+%%\usepackage{draftwatermark} % [nostamp]
+%%\SetWatermarkText{ВЫКУПАЕТСЯ}
+%%\SetWatermarkScale{.7}
+%%\SetWatermarkAngle{-40}
+%%\SetWatermarkColor{red!50}
+
+\begin{document}
+
+\input{commonforallbeams.tex}
+
+\newlength{\savedparindent}
+\setlength{\savedparindent}{\parindent}
+
+\def\forcearrowscale{4}
+
+\thispagestyle{empty} % no numbering for 1st page
+
+\begin{comment}
+\begin{center}
+\vspace*{\fill}
+
+{\large \textbf{Домашнее задание №\hspace{.33ex}3}}
+
+\vspace{1cm}
+
+{\large \MakeUppercase{Сложное напряжённое состояние}}
+
+\vspace{7cm}
+\vspace*{\fill}
+\end{center}
+\end{comment}
+
+\def\tabletextscale{.88}
+\newcommand\tabletext[1]{\scalebox{\tabletextscale}{#1}}
+
+\begin{tikzpicture}[ remember picture, overlay, shift=(current page.south east), shift={( -.5cm, .5cm )}, rotate=180 ]
+\begin{scope}[ x={(current page.north east)}, y={(current page.south west)} ]
+
+\draw [ aux line thick ] ( 0, 0 ) -- ( 12cm, 0 ) -- ( 12cm, -4.5cm ) -- ( 0, -4.5cm ) -- cycle ;
+
+\draw [ aux line thick, shift={( 12cm, -4.5cm )} ] ( 0, 0 ) rectangle ( -2.5cm, 1cm ) node [ midway ] { \tabletext{СМ} } ;
+\draw [ aux line thick, shift={( 12cm, -4.5cm )}, shift={( -2.5cm, 0 )} ] ( 0, 0 ) rectangle ( -2.5cm, 1cm ) node [ midway ] { \tabletext{СМ7--31Б} } ;
+\draw [ aux line thick, shift={( 12cm, -4.5cm )}, shift={( -2.5cm, 0 )}, shift={( -2.5cm, 0 )} ] ( 0, 0 ) rectangle ( -1.5cm, 1cm ) node [ midway ] { \tabletext{№\hspace{.25ex}3} } ;
+\draw [ aux line thick, shift={( 12cm, -4.5cm )}, shift={( -2.5cm, 0 )}, shift={( -2.5cm, 0 )}, shift={( -1.5cm, 0 )} ] ( 0, 0 ) rectangle ( -1.5cm, 1cm ) node [ midway ] { \tabletext{1} } ;
+
+\draw [ aux line thick, shift={( 0, -4.5cm )} ] ( 0, 0 ) rectangle ( 4cm, 1cm ) node [ midway ] { \tabletext{\href{https://repetitors.info/repetitor/?p=NizametdinovFR}{Низаметдинов Ф.\:Р.}} } ; % Низаметдинов Фярит Ринатович
+
+\draw [ aux line thick, shift={( 12cm, -3.5cm )} ] ( 0, 0 ) rectangle ( -2.5cm, 1cm ) node [ midway ] { \tabletext{МГТУ} } ;
+
+\draw [ aux line thick, shift={( 0, -3.5cm )} ] ( 0, 0 ) rectangle ( 9.5cm, 1cm ) node [ midway ] { \tabletext{\href{http://rk5.bmstu.ru/}{Сопротивление материалов}} } ;
+
+\draw [ aux line thick, shift={( 0, -2.5cm )} ] ( 0, 0 ) rectangle ( 12cm, 1.5cm ) node [ midway ] { \tabletext{\MakeUppercase{Сложное напряжённое состояние}} } ;
+
+\draw [ aux line thick, shift={( 12cm, 0 )} ] ( 0, 0 ) rectangle ( -6cm, -1cm ) node [ midway ] { \tabletext{\href{https://vk.com/maximdenisov.chvrches}{Денисов М.\:А.}} } ;
+
+\draw [ aux line thick ] ( 0, 0 ) rectangle ( 6cm, -1cm ) node [ midway ] { \tabletext{Вариант 8} } ;
+
+\end{scope}
+\end{tikzpicture}
+
+\newpage
+
+\input{beamfirst.tex}
+
+\tikzstyle{dimension arrow} = [ aux line thin, -{Stealth[ round, length=8pt, width=5.5pt ]} ]
+\tikzstyle{dimension two arrows} = [ aux line thin, {Stealth[ round, length=8pt, width=5.5pt ]}-{Stealth[ round, length=8pt, width=5.5pt ]} ]
+
+\tikzstyle{axis with arrow} = [ aux line thin, -{To[round, length=8pt, width=10pt]} ]
+
+% #1, #2, #3 = text for x, y, z axes
+\newcommand\drawaxes[3]{
+\draw [ axis with arrow, tdplot_main_coords ]
+	( 0, 0, 0 ) -- ++( \showcoordinatelength, 0, 0 )
+	node [ pos=1, below, shape=circle, inner sep=0pt, outer sep=5.5pt ]
+		{\scalebox{\textscale}{$ #1 $}} ;
+\draw [ axis with arrow, tdplot_main_coords ]
+	( 0, 0, 0 ) -- ++( 0, \showcoordinatelength, 0 )
+	node [ pos=1, below, shape=circle, inner sep=0pt, outer sep=6.3pt ]
+		{\scalebox{\textscale}{$ #2 $}} ;
+\draw [ axis with arrow, tdplot_main_coords ]
+	( 0, 0, 0 ) -- ++( 0, 0, .9*\showcoordinatelength )
+	node [ pos=1, above, shape=circle, inner sep=0pt, outer sep=3.3pt ]
+		{\scalebox{\textscale}{$ #3 $}} ;
+}
+
+\newcommand\drawcircularsection{
+\draw [ aux line thick, pattern=flexible hatch ]
+	( 0, 0 ) circle ( \radiusofcircle ) ;
+}
+
+\newcommand\drawcircularsectionthreedimzy{
+\draw [ aux line thick, pattern=flexible hatch, tdplot_main_coords ]
+	( 0, 0, 0 ) plot [ domain=0:360, variable=\t, samples=60 ]
+	( 0, {\radiusofcircle*sin(\t)}, {\radiusofcircle*cos(\t)} ) ;
+}
+
+\def\angleofdimension{150}
+\def\deltaradiusofdimension{.7}
+
+\newcommand\drawcircularsectiondimensionscustom[1]{
+\draw [ aux line thin, opacity=.8 ]
+	( {\radiusofcircle * cos(\angleofdimension)}, {\radiusofcircle * sin(\angleofdimension)} )
+	-- ( {\radiusofcircle * cos(\angleofdimension + 180)}, {\radiusofcircle * sin(\angleofdimension + 180)} ) ;
+\draw [ dimension arrow ]
+	( {(\radiusofcircle + \deltaradiusofdimension) * cos(\angleofdimension)}, {(\radiusofcircle + \deltaradiusofdimension) * sin(\angleofdimension)} )
+	-- ( {\radiusofcircle * cos(\angleofdimension)}, {\radiusofcircle * sin(\angleofdimension)} ) ;
+\draw [ dimension arrow ]
+	( {(\radiusofcircle + \deltaradiusofdimension + .22) * cos(\angleofdimension + 180)}, {(\radiusofcircle + \deltaradiusofdimension + .22) * sin(\angleofdimension + 180)} )
+	-- ( {\radiusofcircle * cos(\angleofdimension + 180)}, {\radiusofcircle * sin(\angleofdimension + 180)} ) ;
+\draw [ aux line thin ]
+	( {(\radiusofcircle + \deltaradiusofdimension + .22) * cos(\angleofdimension + 180)}, {(\radiusofcircle + \deltaradiusofdimension + .22) * sin(\angleofdimension + 180)} )
+	-- ++( .74, 0 )
+	node [ pos=.49, above, inner sep=0pt, outer sep=3pt ]
+	{\scalebox{.8}{$ #1 $}} ;
+}
+
+\newcommand\drawcircularsectiondimensions{
+	\drawcircularsectiondimensionscustom{\scalebox{1.2}{\diameter}\hspace{-.3ex}D}
+}
+
+\newcommand\drawrectangularsection{
+\draw [ aux line thick, rounded corners=.5\pgflinewidth, pattern=flexible hatch ]
+	( -.5*\widthofsquare, .5*\heightofsquare )
+	-- ( .5*\widthofsquare, .5*\heightofsquare )
+	-- ( .5*\widthofsquare, -.5*\heightofsquare )
+	-- ( -.5*\widthofsquare, -.5*\heightofsquare )
+	-- cycle ;
+}
+
+\newcommand\drawrectangularsectionthreedimzy{
+\draw [ aux line thick, rounded corners=.5\pgflinewidth, pattern=flexible hatch, tdplot_main_coords ]
+	( 0, -.5*\widthofsquare, .5*\heightofsquare )
+	-- ( 0, .5*\widthofsquare, .5*\heightofsquare )
+	-- ( 0, .5*\widthofsquare, -.5*\heightofsquare )
+	-- ( 0, -.5*\widthofsquare, -.5*\heightofsquare )
+	-- cycle ;
+}
+
+\def\dimensionlinelength{1}
+
+% #1 : text for width
+% #2 : text node options for width
+% #3 : text for height
+% #4 : text node options for height
+% anything in #5 for vertical dimension on left
+\newcommandx*\drawrectangularsectiondimensions[5][5=]{
+\ifthenelse{\isempty{#5}}%
+	{\def\hsign{1}}%
+	{\def\hsign{-1}}
+
+\draw [ aux line thin ]
+	( .5*\hsign*\widthofsquare, .5*\heightofsquare ) -- ++( \hsign*\dimensionlinelength, 0 ) ;
+\draw [ aux line thin ]
+	( .5*\hsign*\widthofsquare, -.5*\heightofsquare ) -- ++( \hsign*\dimensionlinelength, 0 ) ;
+
+\draw [ dimension two arrows ]
+	( {.5*\hsign*\widthofsquare + .8*\hsign*\dimensionlinelength}, .5*\heightofsquare )
+	-- ++( 0, -\heightofsquare )
+	node [ #4 ] {\scalebox{.8}{$ #3 $}} ;
+
+\draw [ aux line thin ]
+	( .5*\widthofsquare, -.5*\heightofsquare ) -- ++( 0, -\dimensionlinelength ) ;
+\draw [ aux line thin ]
+	( -.5*\widthofsquare, -.5*\heightofsquare ) -- ++( 0, -\dimensionlinelength ) ;
+
+\draw [ dimension two arrows ]
+	( -.5*\widthofsquare, {-.5*\heightofsquare - .8*\dimensionlinelength} )
+	-- ++( \widthofsquare, 0 )
+	node [ #2 ] {\scalebox{.8}{$ #1 $}} ;
+}
+
+\newcommand\drawrectangularsectionwithhorizontaldiagonal{
+	\draw [ aux line thick, rounded corners=.5\pgflinewidth, pattern=flexible hatch, rotate around={atan(-2):(0, 0)} ]
+	( -.5*\widthofsquare, .5*\heightofsquare )
+	-- ( .5*\widthofsquare, .5*\heightofsquare )
+	-- ( .5*\widthofsquare, -.5*\heightofsquare )
+	-- ( -.5*\widthofsquare, -.5*\heightofsquare )
+	-- cycle ;
+}
+
+\def\camerafirstangle{57} % 60
+\def\camerasecondangle{142} % 140
+
+\tdplotsetmaincoords{\camerafirstangle}{\camerasecondangle}
+
+\begin{center}
+
+\textbf{Задача 1\raisebox{.7ex}{\small я}}
+\vspace{.4cm}
+
+Определить размер сечения для~бруса кругового профиля с~диаметром~$D$
+и~для~бруса прямоугольного сечения с~размерами ${H \!\times\! B}$\hbox{,\hspace{.2ex}} $B$~--- ширина\hbox{,\hspace{.2ex}} ${H \hspace{-.5ex}=\hspace{-.3ex} 2B}$~--- высота
+\vspace{.6cm}
+
+\scalebox{1.25}{
+\begin{tikzpicture}[ scale=1 ]
+
+\begin{scope}[xshift=-2.3cm]
+\def\radiusofcircle{1}
+\drawcircularsection
+
+\def\dimensionlinelength{1}
+\def\angleofdimension{158}
+\drawcircularsectiondimensions
+\end{scope}
+
+\begin{scope}[xshift=2.3cm]
+\def\widthofsquare{1.3}
+\pgfmathsetmacro\heightofsquare{2*\widthofsquare}
+
+\drawrectangularsection
+\drawrectangularsectiondimensions{B}{pos=.5, above, inner sep=0pt, outer sep=4pt}{H}{pos=.51, left, inner sep=0pt, outer sep=3pt}
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\vspace{.6cm}
+
+${F \hspace{-.5ex}=\hspace{-.4ex} 1\:}$кН\hbox{,\hspace{.5ex}}
+${\ell \!=\! 200\:}$мм\hbox{,\hspace{.5ex}}
+${\sigma_{\mathrm{\scalebox{.6}{T}p}} \hspace{-.5ex}=\hspace{-.3ex} \sigma_{\mathrm{\scalebox{.6}{T}c}} \hspace{-.5ex}=\hspace{-.3ex} 300\:}$МПа\hbox{,\hspace{.5ex}}
+${n_{\mathrm{\scalebox{.6}{T}}} \hspace{-.44ex}=\hspace{-.33ex} 2}$
+
+\vspace{1.2cm}
+
+\emph{Вариант №\hspace{.33ex}8}
+\vspace{.8cm}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1 ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 20}
+
+\drawclampyzat{( 0, 0, 0 )}
+\drawfirstbeam
+\drawfirstbeamtext
+
+\def\externalforcecolor{\colorforforces}
+
+\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.2, below, inner sep=0pt, outer sep=10pt}{\scalebox{\textscale}{$ F $}}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.2, right, inner sep=0pt, outer sep=5pt}{\scalebox{\textscale}{$ F $}}
+\end{tikzpicture}
+}
+
+\end{center}
+
+\newpage
+
+Эпюры внутренних моментов от каждой из внешних сил отдельно:
+\vspace{.5cm}
+
+\begin{center}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1 ]
+
+\begin{scope}[ yshift=6.5cm ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawfirstbeam
+
+\def\externalforcecolor{blue}
+
+\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.2, below, inner sep=0pt, outer sep=10pt}{\scalebox{\textscale}{$ F $}}
+
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{0}
+\def\twistingmomentmultiplierz{-1}
+\def\twistingmomentepureoffset{.4*\reflength}
+
+\def\spiralaxialstep{1.25}
+\def\spiralinitialangle{80}
+\def\wherefirstarrowonspiral{0.07}
+
+\drawepureofinternalmomentfromfirstforce
+
+\end{scope}
+
+\begin{scope}[ yshift=-6.5cm ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawfirstbeam
+
+\def\externalforcecolor{red}
+
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{-1}
+\def\twistingmomentmultiplierz{0}
+\def\twistingmomentepureoffset{\reflength / 3}
+
+\def\spiralaxialstep{1.1}
+\def\spiralinitialangle{-150}
+\def\wherefirstarrowonspiral{0.055}
+
+\drawepureofinternalmomentfromsecondforce
+
+\drawthirdpartofbeam
+\drawfourthpartofbeam
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.2, right, inner sep=0pt, outer sep=5pt}{\scalebox{\textscale}{$ F $}}
+
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\end{center}
+
+\newpage
+
+Эпюра внутренних моментов от всех внешних нагрузок:
+
+\begin{center}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1 ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawfirstbeam
+
+\def\twistingmomentepureoffset{.4*\reflength}
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{0}
+\def\twistingmomentmultiplierz{1}
+
+\drawepureofinternalmomentfrombothforces{blue}{red}{magenta}
+
+\def\externalforcecolor{blue}
+
+\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.2, below, inner sep=0pt, outer sep=10pt}{\scalebox{\textscale}{$ F $}}
+
+\def\externalforcecolor{red}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.2, left, inner sep=0pt, outer sep=6pt}{\scalebox{\textscale}{$ F $}}
+
+\end{tikzpicture}
+}
+\end{center}
+
+\vspace{.5cm}
+
+Наиболее нагруженная точка конструкции~--- у~закрепления (заделки).
+В~ней
+\nopagebreak\vspace{-.8em}\[
+M_{\hspace{-0.1ex}\scalebox{.8}{$z$}} \hspace{-.25ex}
+= \hspace{-.2ex} F \hspace{-0.1ex} \ell
+\hspace{.1ex} , \hspace{.4em}
+M_{\hspace{-0.1ex}\scalebox{.8}{$y$}} \hspace{-.25ex}
+= \hspace{-.2ex} - \hspace{.1ex} 2 \hspace{.1ex} F \hspace{-0.1ex} \ell
+\hspace{.1ex} , \hspace{.4em}
+M_{\hspace{-0.1ex}\scalebox{.8}{$x$}} \hspace{-.25ex}
+= \hspace{-.2ex}
+M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-.25ex}
+= \hspace{-.2ex} F \hspace{-0.1ex} \ell
+\]
+
+\vspace{-.4em}
+\begin{center}
+\scalebox{.8}{
+\begin{tikzpicture}[ scale=1 ]
+
+\tdplotsetmaincoords{72}{58}
+
+\pgfmathsetmacro\cornerlength{\reflength / 20}
+
+\drawclampyzat{( 0, 0, 0 )}[minusy]
+\drawfirstbeam
+
+{
+\def\showcoordinatelength{.5*\reflength}
+\def\textscale{1.5}
+\drawaxes{x}{y}{z}
+}
+
+\draw [ aux line thick, color=red, fill=red ] ( 0, 0, 0 ) circle ( 2\pgflinewidth ) ;
+\end{tikzpicture}
+}
+\end{center}
+
+%%\vspace{.5cm}
+
+\newpage
+
+\def\couplecolor{black}
+\def\momentcircleradius{5.5pt}
+\def\momentarrowlen{.8}
+\tikzstyle{moment arrow} =
+	[ line width=2.5*\auxlinewidth, color=black, line cap=round, -{Triangle[round, length=9pt, width=6pt]} ]
+
+% #1: length of couple
+% #2: angle of couple
+% #3: text
+% #4: node options
+\newcommand\drawmomentaroundx[4]{
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( {#1*cos(#2)}, {#1*sin(#2)} ) ;
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( {-1*#1*cos(#2)}, {-1*#1*sin(#2)} ) ;
+	\draw [ moment arrow, color=\couplecolor ]
+		( {#1*cos(#2)}, {#1*sin(#2)} ) -- ++( {\momentarrowlen*sin(#2)}, {-1*\momentarrowlen*cos(#2)} ) node [ #4 ] { \scalebox{.8}{#3} } ;
+	\draw [ moment arrow, color=\couplecolor ]
+		( {-1*#1*cos(#2)}, {-1*#1*sin(#2)} ) -- ++( {-1*\momentarrowlen*sin(#2)}, {\momentarrowlen*cos(#2)} ) ;
+}
+
+% #1: length of couple
+% #2: angle of couple
+% #3: text
+% #4: node options
+\newcommand\drawmomentaroundxthreedim[4]{
+	\draw [ aux line thick, color=\couplecolor, opacity=.8, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ++( 0, {#1*cos(#2)}, {#1*sin(#2)} ) ;
+	\draw [ aux line thick, color=\couplecolor, opacity=.8, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ++( 0, {-1*#1*cos(#2)}, {-1*#1*sin(#2)} ) ;
+	\draw [ moment arrow, color=\couplecolor, tdplot_main_coords ]
+		( 0, {#1*cos(#2)}, {#1*sin(#2)} ) -- ++( 0, {\momentarrowlen*sin(#2)}, {-1*\momentarrowlen*cos(#2)} ) node [ #4 ] { \scalebox{.8}{#3} } ;
+	\draw [ moment arrow, color=\couplecolor, tdplot_main_coords ]
+		( 0, {-1*#1*cos(#2)}, {-1*#1*sin(#2)} ) -- ++( 0, {-1*\momentarrowlen*sin(#2)}, {\momentarrowlen*cos(#2)} ) ;
+}
+
+% #1: length of couple
+% #2: text
+% #3: node options
+\newcommand\drawmomentaroundy[3]{
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( 0, #1 ) ;
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( 0, -1*#1 ) ;
+	\draw [ aux line thick, color=\couplecolor, fill=white ]
+		( 0, #1 ) circle ( \momentcircleradius ) ;
+	\draw [ aux line thick, color=\couplecolor, fill=\couplecolor ]
+		( 0, #1 ) circle ( .66\pgflinewidth ) node [ #3 ] { \scalebox{.8}{#2} } ;
+	\draw [ aux line thick, color=\couplecolor, fill=white ]
+		( 0, -1*#1 ) circle ( \momentcircleradius ) ;
+	\draw [ aux line thin, color=\couplecolor ]
+		($ ( 0, -1*#1 ) - ( {\momentcircleradius*cos(45)}, {\momentcircleradius*sin(45)} ) $) -- ++( {2*\momentcircleradius*cos(45)}, {2*\momentcircleradius*sin(45)} ) ;
+	\draw [ aux line thin, color=\couplecolor ]
+		($ ( 0, -1*#1 ) + ( {\momentcircleradius*cos(-45)}, {\momentcircleradius*sin(-45)} ) $) -- ++( {-2*\momentcircleradius*cos(-45)}, {-2*\momentcircleradius*sin(-45)} ) ;
+}
+
+% #1: length of couple
+% #2: text
+% #3: node options
+\newcommand\drawmomentaroundythreedim[3]{
+	\draw [ aux line thick, color=\couplecolor, opacity=.8, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ++( 0, 0, #1 ) ;
+	\draw [ aux line thick, color=\couplecolor, opacity=.8, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ++( 0, 0, -1*#1 ) ;
+	\draw [ moment arrow, color=\couplecolor, tdplot_main_coords ]
+		( 0, 0, #1 ) -- ++( 1.5*\momentarrowlen, 0, 0 ) node [ #3 ] { \scalebox{.8}{#2} } ;
+	\draw [ moment arrow, color=\couplecolor, tdplot_main_coords ]
+		( 0, 0, -1*#1 ) -- ++( -1.5*\momentarrowlen, 0, 0 ) ;
+}
+
+% #1: length of couple
+% #2: text
+% #3: node options
+\newcommand\drawmomentaroundz[3]{
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( #1, 0 ) ;
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( -1*#1, 0 ) ;
+	\draw [ aux line thick, color=\couplecolor, fill=white ]
+		( #1, 0 ) circle ( \momentcircleradius ) ;
+	\draw [ aux line thick, color=\couplecolor, fill=\couplecolor ]
+		( #1, 0 ) circle ( .66\pgflinewidth ) node [ #3 ] { \scalebox{.8}{#2} } ;
+	\draw [ aux line thick, color=\couplecolor, fill=white ]
+		( -1*#1, 0 ) circle ( \momentcircleradius ) ;
+	\draw [ aux line thin, color=\couplecolor ]
+		($ ( -1*#1, 0 ) - ( {\momentcircleradius*cos(45)}, {\momentcircleradius*sin(45)} ) $) -- ++( {2*\momentcircleradius*cos(45)}, {2*\momentcircleradius*sin(45)} ) ;
+	\draw [ aux line thin, color=\couplecolor ]
+		($ ( -1*#1, 0 ) + ( {\momentcircleradius*cos(-45)}, {\momentcircleradius*sin(-45)} ) $) -- ++( {-2*\momentcircleradius*cos(-45)}, {-2*\momentcircleradius*sin(-45)} ) ;
+}
+
+% #1: length of couple
+% #2: text
+% #3: node options
+\newcommand\drawmomentaroundzthreedim[3]{
+	\draw [ aux line thick, color=\couplecolor, opacity=.8, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ++( 0, #1, 0 ) ;
+	\draw [ aux line thick, color=\couplecolor, opacity=.8, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ++( 0, -1*#1, 0 ) ;
+	\draw [ moment arrow, color=\couplecolor, tdplot_main_coords ]
+		( 0, #1, 0 ) -- ++( 1.5*\momentarrowlen, 0, 0 ) node [ #3 ] { \scalebox{.8}{#2} } ;
+	\draw [ moment arrow, color=\couplecolor, tdplot_main_coords ]
+		( 0, -1*#1, 0 ) -- ++( -1.5*\momentarrowlen, 0, 0 ) ;
+}
+
+% #1: length of couple around z
+% #2: length of couple around y
+% #3: text
+% #4: node options
+\newcommand\drawsummarybendingmoment[4]{
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( #1, #2 ) ;
+	\draw [ aux line thick, color=\couplecolor, opacity=.8 ] ( 0, 0 ) -- ++( -1*#1, -1*#2 ) ;
+	\draw [ aux line thick, color=\couplecolor, fill=white ]
+		( #1, #2 ) circle ( \momentcircleradius ) ;
+	\draw [ aux line thick, color=\couplecolor, fill=\couplecolor ]
+		( #1, #2 ) circle ( .66\pgflinewidth ) node [ #4 ] { \scalebox{.8}{#3} } ;
+	\draw [ aux line thick, color=\couplecolor, fill=white ]
+		( -1*#1, -1*#2 ) circle ( \momentcircleradius ) ;
+	\draw [ aux line thin, color=\couplecolor ]
+		($ ( -1*#1, -1*#2 ) - ( {\momentcircleradius*cos(45)}, {\momentcircleradius*sin(45)} ) $) -- ++( {2*\momentcircleradius*cos(45)}, {2*\momentcircleradius*sin(45)} ) ;
+	\draw [ aux line thin, color=\couplecolor ]
+		($ ( -1*#1, -1*#2 ) + ( {\momentcircleradius*cos(-45)}, {\momentcircleradius*sin(-45)} ) $) -- ++( {-2*\momentcircleradius*cos(-45)}, {-2*\momentcircleradius*sin(-45)} ) ;
+}
+
+\tikzstyle{cube side} = [ aux line thick, rounded corners=.5\pgflinewidth, fill=white, fill opacity=.66 ]
+
+% parameter is the side of cube
+\newcommand\drawcube[1]{
+	\draw [ cube side, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ( #1, 0, 0 ) -- ( #1, #1, 0 ) -- ( 0, #1, 0 )
+		-- cycle ;
+	\draw [ cube side, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ( 0, #1, 0 ) -- ( 0, #1, #1 ) -- ( 0, 0, #1 )
+		-- cycle ;
+	\draw [ cube side, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ( #1, 0, 0 ) -- ( #1, 0, #1 ) -- ( 0, 0, #1 )
+		-- cycle ;
+	\draw [ cube side, tdplot_main_coords ]
+		( 0, #1, 0 ) -- ( #1, #1, 0 ) -- ( #1, #1, #1 ) -- ( 0, #1, #1 )
+		-- cycle ;
+	\draw [ cube side, tdplot_main_coords ]
+		( 0, 0, #1 ) -- ( #1, 0, #1 ) -- ( #1, #1, #1 ) -- ( 0, #1, #1 )
+		-- cycle ;
+	\draw [ cube side, tdplot_main_coords ]
+		( #1, 0, 0 ) -- ( #1, #1, 0 ) -- ( #1, #1, #1 ) -- ( #1, 0, #1 )
+		-- cycle ;
+}
+
+\hspace*{-\parindent}\begin{minipage}{\linewidth}
+\begin{center}
+
+\emph{Круглое сечение}
+\vspace{1cm}
+
+\scalebox{1.4}{
+\begin{tikzpicture}[ scale=1 ]
+
+\tdplotsetmaincoords{70}{123}
+
+\def\radiusofcircle{.8}
+
+\drawcircularsectionthreedimzy
+
+\pgfmathsetmacro\xaxislinelength{2.2 + \radiusofcircle}
+\pgfmathsetmacro\yaxislinelength{3 + \radiusofcircle}
+\pgfmathsetmacro\zaxislinelength{5 + \radiusofcircle}
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]}, tdplot_main_coords ]
+	( {-\radiusofcircle - .2*\xaxislinelength}, 0, 0 ) -- ++( {\radiusofcircle + 1.1*\xaxislinelength}, 0, 0 )
+	node [ pos=.98, below, shape=circle, inner sep=0pt, outer sep=4pt ]
+		{\scalebox{.8}{$ x $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]}, tdplot_main_coords ]
+	( 0, {-\radiusofcircle - .2*\yaxislinelength}, 0 ) -- ++( 0, {\radiusofcircle + .9*\yaxislinelength}, 0 )
+	node [ pos=.98, below, shape=circle, inner sep=0pt, outer sep=5pt ]
+		{\scalebox{.8}{$ y $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]}, tdplot_main_coords ]
+	( 0, 0, {-\radiusofcircle - .2*\zaxislinelength} ) -- ++( 0, 0, {\radiusofcircle + .9*\zaxislinelength} )
+	node [ pos=.99, right, shape=circle, inner sep=0pt, outer sep=4.5pt ]
+		{\scalebox{.8}{$ z $}} ;
+
+\def\couplecolor{red}
+\drawmomentaroundxthreedim{1.66}{133}{${F \hspace{-0.1ex} \ell}$}{pos=1.1, left, shape=circle, inner sep=0pt, outer sep=11pt}
+
+\def\couplecolor{blue}
+\drawmomentaroundzthreedim{1.66}{${F \hspace{-0.1ex} \ell}$}{pos=1.4, right, shape=circle, inner sep=0pt, outer sep=15pt}
+
+\def\couplecolor{magenta}
+\drawmomentaroundythreedim{3.33}{${2 \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{pos=1.1, above, shape=circle, inner sep=0pt, outer sep=5pt}
+
+\begin{scope}[ xshift=5cm ]
+
+\drawcircularsection
+
+%%\def\angleofdimension{123}
+%%\drawcircularsectiondimensions
+
+\def\saxislengthmultiplier{2.02}
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( {-\radiusofcircle - .2*\yaxislinelength}, 0 ) -- ++( {\radiusofcircle + .9*\yaxislinelength}, 0 )
+	node [ pos=.98, below, shape=circle, inner sep=0pt, outer sep=6pt ]
+		{\scalebox{.8}{$ y $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( 0, {-\radiusofcircle - .2*\zaxislinelength} ) -- ++( 0, {\radiusofcircle + .9*\zaxislinelength} )
+	node [ pos=.98, left, shape=circle, inner sep=0pt, outer sep=5pt ]
+		{\scalebox{.8}{$ z $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( 0, 0 ) -- ++( {\saxislengthmultiplier*1}, {\saxislengthmultiplier*2} )
+	node [ pos=.98, left, shape=circle, inner sep=0pt, outer sep=6pt ]
+		{\scalebox{.8}{$ a $}} ;
+
+\def\valueforFl{1.66}
+
+\def\couplecolor{red}
+\drawmomentaroundx{\valueforFl}{133}{${F \hspace{-0.1ex} \ell}$}{pos=1.1, left, shape=circle, inner sep=0pt, outer sep=11pt}
+
+\def\couplecolor{blue}
+\drawmomentaroundz{\valueforFl}{${F \hspace{-0.1ex} \ell}$}{above, shape=circle, inner sep=0pt, outer sep=6pt}
+
+\def\couplecolor{magenta}
+\drawmomentaroundy{2*\valueforFl}{${2 \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{right, shape=circle, inner sep=0pt, outer sep=8pt}
+
+\def\couplecolor{black}
+\drawsummarybendingmoment{\valueforFl}{2*\valueforFl}{${\sqrt{5} \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{anchor=north west, shape=circle, inner sep=0pt, outer sep=3pt}
+
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\vspace{1.5cm}
+
+\scalebox{1.4}{
+\begin{tikzpicture}[ scale=1 ]
+
+\def\radiusofcircle{.8}
+
+\drawcircularsection
+
+\def\saxislengthmultiplier{6}
+\def\naxislengthmultiplier{4}
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( 0, 0 ) -- ++( \saxislengthmultiplier*\radiusofcircle, 0 )
+	node [ pos=.98, below, shape=circle, inner sep=0pt, outer sep=6pt ]
+		{\scalebox{.8}{$ a $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( 0, -1.5*\radiusofcircle ) -- ++( 0, \naxislengthmultiplier*\radiusofcircle )
+	node [ pos=.97, right, shape=circle, inner sep=0pt, outer sep=4pt ]
+		{\scalebox{.8}{$ b $}} ;
+
+\def\couplecolor{black}
+\def\valueforFl{1.66}
+\pgfmathsetmacro\summarybendingmoment{\valueforFl*sqrt(5)}
+\drawmomentaroundz{\summarybendingmoment}{${\sqrt{5} \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{below, shape=circle, inner sep=0pt, outer sep=1pt}
+
+\def\couplecolor{red}
+\drawmomentaroundx{\valueforFl}{0}{${F \hspace{-0.1ex} \ell}$}{pos=.7, right, shape=circle, inner sep=0pt, outer sep=4pt}
+
+\def\offsetforsigmaepure{-2.2}
+
+\draw [ aux thick dashed ]
+	( -\radiusofcircle, 0 ) -- ++( 0, \offsetforsigmaepure ) ;
+\draw [ aux thick dashed ]
+	( \radiusofcircle, 0 ) -- ++( 0, \offsetforsigmaepure ) ;
+\draw [ aux line thick, opacity=.8 ]
+	( -\radiusofcircle, \offsetforsigmaepure ) -- ++( 2*\radiusofcircle, 0 ) ;
+
+\def\offsetfortauepure{-2.2}
+
+\draw [ aux thick dashed ]
+	( -\radiusofcircle, \offsetforsigmaepure ) -- ++( 0, \offsetfortauepure ) ;
+\draw [ aux thick dashed ]
+	( \radiusofcircle, \offsetforsigmaepure ) -- ++( 0, \offsetfortauepure ) ;
+\draw [ aux line thick, opacity=.8 ]
+	( -\radiusofcircle, {\offsetforsigmaepure + \offsetfortauepure} ) -- ++( 2*\radiusofcircle, 0 ) ;
+
+\draw [ aux line thin ] ( 0, -\radiusofcircle ) -- ( 0, {\offsetforsigmaepure + \offsetfortauepure} ) ;
+
+\def\howmanyepurelines{7}
+\pgfmathsetmacro\epurestep{\radiusofcircle / (\howmanyepurelines - 1)}
+
+\def\maxsigma{1}
+\def\epurecolor{black}
+
+\foreach \x in { 0, \epurestep, ..., \radiusofcircle } {
+	\pgfmathsetmacro\y{\maxsigma * \x / \radiusofcircle}
+	\draw [ aux line thin, color=\epurecolor ] ( \x, \offsetforsigmaepure ) -- ++( 0, \y ) ;
+}
+\foreach \x in { 0, -\epurestep, ..., -\radiusofcircle } {
+	\pgfmathsetmacro\y{\maxsigma * \x / \radiusofcircle}
+	\draw [ aux line thin, color=\epurecolor ] ( \x, \offsetforsigmaepure ) -- ++( 0, \y ) ;
+}
+\draw [ aux line thick, color=\epurecolor ]
+	( \radiusofcircle, \offsetforsigmaepure )
+	-- ++( 0, \maxsigma )
+	node [ pos=.5, right, shape=circle, inner sep=0pt, outer sep=2.5pt ]
+	{\scalebox{.8}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} $}} ;
+\draw [ aux line thick, color=\epurecolor ]
+	( -\radiusofcircle, \offsetforsigmaepure )
+	-- ++( 0, -\maxsigma )
+	node [ pos=.5, left, shape=circle, inner sep=0pt, outer sep=3pt ]
+	{\scalebox{.8}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} $}} ;
+\draw [ aux line thick, color=\epurecolor ]
+	( -\radiusofcircle, {\offsetforsigmaepure - \maxsigma} )
+	-- ( \radiusofcircle, {\offsetforsigmaepure + \maxsigma} ) ;
+
+\def\maxtau{.7}
+\def\epurecolor{red}
+
+\foreach \x in { 0, \epurestep, ..., \radiusofcircle } {
+	\pgfmathsetmacro\y{\maxtau * \x / \radiusofcircle}
+	\draw [ aux line thin, color=\epurecolor ]
+		( \x, {\offsetforsigmaepure + \offsetfortauepure} )
+		-- ++( 0, -\y ) ;
+}
+\foreach \x in { 0, -\epurestep, ..., -\radiusofcircle } {
+	\pgfmathsetmacro\y{\maxtau * \x / \radiusofcircle}
+	\draw [ aux line thin, color=\epurecolor ]
+		( \x, {\offsetforsigmaepure + \offsetfortauepure} )
+		-- ++( 0, -\y ) ;
+}
+\draw [ aux line thick, color=\epurecolor ]
+	( \radiusofcircle, {\offsetforsigmaepure + \offsetfortauepure} )
+	-- ++( 0, -\maxtau )
+	node [ pos=.6, right, shape=circle, inner sep=0pt, outer sep=2.5pt ]
+	{\scalebox{.8}{$ \uptau_{\scalebox{.75}{max}} $}} ;
+\draw [ aux line thick, color=\epurecolor ]
+	( -\radiusofcircle, {\offsetforsigmaepure + \offsetfortauepure} )
+	-- ++( 0, \maxtau )
+	node [ pos=.5, left, shape=circle, inner sep=0pt, outer sep=3pt ]
+	{\scalebox{.8}{$ \uptau_{\scalebox{.75}{max}} $}} ;
+\draw [ aux line thick, color=\epurecolor ]
+	( -\radiusofcircle, {\offsetforsigmaepure + \offsetfortauepure + \maxtau} )
+	-- ( \radiusofcircle, {\offsetforsigmaepure + \offsetfortauepure - \maxtau} ) ;
+
+\draw [ aux line thick, color=black, fill=yellow ]
+	( -\radiusofcircle, 0 ) circle ( 1.6\pgflinewidth )
+	node [ above left, shape=circle, inner sep=0pt, outer sep=3pt ] {\scalebox{.7}{ (1) }} ;
+\draw [ aux line thick, color=black, fill=yellow ]
+	( \radiusofcircle, 0 ) circle ( 1.6\pgflinewidth )
+	node [ above right, shape=circle, inner sep=0pt, outer sep=3pt ] {\scalebox{.7}{ (2) }} ;
+
+\end{tikzpicture}
+}
+
+\end{center}
+\end{minipage}
+\vspace{.6cm}
+
+\newpage
+
+Осевой момент инерции круглого сечения вокруг любой оси, проходящей через центр круга:
+\[
+\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$z$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$y$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$b$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$a$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$\pi \hspace{-0.1ex} D^{\hspace{.1ex}4}$}}{64}
+\]
+
+Нормальные напряжения от изгиба
+\[
+\upsigma_{\hspace{-0.2ex}\scalebox{.8}{$x$}} \hspace{-0.2ex}
+= \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$z$}}} \hspace{.25ex} y
+- \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$y$}}} \hspace{.25ex} z
+= \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$b$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$b$}}} \hspace{.25ex} a
+\hspace{.1ex} ,
+\hspace{.4em}
+M_{\hspace{-0.1ex}\scalebox{.8}{$b$}}
+\hspace{-0.2ex}=\hspace{-0.2ex} \sqrt{\hspace{-0.2ex}M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.2ex}+\hspace{-0.2ex} M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}\hspace{.2ex}}
+\]
+максимальны в~точках контура сечения, где
+%%${y^2 \hspace{-0.25ex}+\hspace{-0.2ex} z^2 \hspace{-.15ex}=\hspace{-.3ex} \left( \scalebox{.82}{$ \displaystyle\frac{\raisebox{-.2em}{$D$}}{2} $} \hspace{.1ex} \right)^{\hspace{-0.4ex}2}\hspace{-0.2ex}}$ и
+${\hspace{.1ex}a \hspace{-.25ex}=\hspace{-.2ex} \pm \hspace{.2ex} \scalebox{.82}{$ \displaystyle\frac{\raisebox{-.2em}{$D$}}{2} $}\hspace{.2ex}}$:
+\[
+\upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} \hspace{-.25ex}
+= \hspace{-.2ex} \pm \hspace{.1ex} M_{\hspace{-0.1ex}\scalebox{.8}{$b$}} \hspace{.2ex}
+\displaystyle\frac{\raisebox{-.2em}{$64$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}4}} \hspace{.25ex} \displaystyle\frac{\raisebox{-.2em}{$D$}}{2}
+\hspace{-.1ex}= \hspace{-.1ex}
+\pm \hspace{.1ex} \displaystyle\frac{\raisebox{-.2em}{$32$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}} \hspace{.1ex}
+\sqrt{\hspace{-0.2ex}M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.2ex}+\hspace{-0.2ex} M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}\hspace{.2ex}}
+\]
+
+Полярный момент инерции круглого сечения:
+\[
+\mathfrak{I}_{\hspace{-0.2ex}\scalebox{.8}{$\rho$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$\pi \hspace{-0.1ex} D^{\hspace{.1ex}4}$}}{32}
+\]
+
+Касательные напряжения от кручения
+\[
+\uptau_{\scalebox{.8}{$x \hspace{-.1ex} \rho$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\displaystyle\frac{M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}}{\mathfrak{I}_{\hspace{-0.2ex}\scalebox{.8}{$\rho$}}} \hspace{.25ex} \rho
+\]
+максимальны тоже на~контуре сечения~--- в~точках с~${\hspace{.1ex}\rho \hspace{-.2ex}=\hspace{-.15ex} \scalebox{.82}{$ \displaystyle\frac{\raisebox{-.2em}{$D$}}{2} $}\hspace{.2ex}}$:
+\[
+\uptau_{\scalebox{.75}{max}} \hspace{-.25ex}
+= \hspace{-.2ex} M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}\hspace{.2ex}
+\displaystyle\frac{\raisebox{-.2em}{$32$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}4}} \hspace{.25ex} \displaystyle\frac{\raisebox{-.2em}{$D$}}{2}
+\hspace{-.1ex}= \hspace{-.1ex}
+\displaystyle\frac{\raisebox{-.2em}{$16$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}} \hspace{.1ex}
+M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}
+\]
+
+\vspace{.2cm}
+В~самых напряжённых точках сечения~--- точках (1) и~(2)~--- имеем
+\vspace{.2cm}
+
+\def\sideofcube{1.5}
+\def\showcoordinatelength{3}
+
+\begin{center}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1.2 ]
+
+\begin{scope}[xshift=-3cm]
+
+\tdplotsetmaincoords{66}{133}
+
+ \node [ outer sep=0pt, inner sep=0pt, tdplot_main_coords ]
+	at ( 0, 0, 3.8 )
+	{ \scalebox{1}{\emph{точка~(1)}} } ;
+
+\drawaxes{x}{a}{b}
+
+\def\stresscolor{black}
+
+\def\stresslength{1.8}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	($ ( 0, {.5*\sideofcube}, {.5*\sideofcube} ) - ( \stresslength, 0, 0 ) $)
+	-- ++( \stresslength, 0, 0 ) ;
+
+\def\stresslength{1.1}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube + .5*\stresslength}, {.5*\sideofcube}, 0 ) -- ++( -\stresslength, 0, 0 ) ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube}, {.5*\sideofcube + .5*\stresslength} ) -- ++( 0, 0, -\stresslength ) ;
+
+\drawcube{\sideofcube}
+
+\def\stresslength{1.8}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	($ ( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube} )+ ( \stresslength, 0, 0 ) $) -- ++( -\stresslength, 0, 0 )
+	node [ pos=-0.1, above, inner sep=0pt, outer sep=12pt ]
+	{ \scalebox{\textscale}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} $} } ;
+
+\def\stresslength{1.1}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube - .5*\stresslength} ) -- ++( 0, 0, \stresslength )
+	node [ pos=-0.2, below, inner sep=0pt, outer sep=6pt ]
+	{ \scalebox{\textscale}{$ \uptau_{\scalebox{.75}{max}} $} } ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube - .5*\stresslength}, {.5*\sideofcube}, {\sideofcube} ) -- ++( \stresslength, 0, 0 ) ;
+
+\end{scope}
+
+\begin{scope}[xshift=3cm]
+
+\tdplotsetmaincoords{66}{133}
+
+ \node [ outer sep=0pt, inner sep=0pt, tdplot_main_coords ]
+	at ( 0, 0, 3.8 )
+	{ \scalebox{1}{\emph{точка~(2)}} } ;
+
+\drawaxes{x}{a}{b}
+
+\def\stresscolor{black}
+
+\def\stresslength{1.8}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( -\stresslength, 0, 0 ) ;
+
+\def\stresslength{1.1}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube - .5*\stresslength}, {.5*\sideofcube}, 0 ) -- ++( \stresslength, 0, 0 ) ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube}, {.5*\sideofcube - .5*\stresslength} ) -- ++( 0, 0, \stresslength ) ;
+
+\drawcube{\sideofcube}
+
+\def\stresslength{1.8}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( \stresslength, 0, 0 )
+	node [ pos=1, above, inner sep=0pt, outer sep=13pt ]
+	{ \scalebox{\textscale}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} $} } ;
+
+\def\stresslength{1.1}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube + .5*\stresslength} ) -- ++( 0, 0, -\stresslength )
+	node [ pos=1.2, below, inner sep=0pt, outer sep=6pt ]
+	{ \scalebox{\textscale}{$ \uptau_{\scalebox{.75}{max}} $} } ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube + .5*\stresslength}, {.5*\sideofcube}, {\sideofcube} ) -- ++( -\stresslength, 0, 0 ) ;
+
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\end{center}
+
+По энергетическому критерию прочности эквивалентное одноосное напряжение есть
+\[
+\upsigma_{\hspace{-.15ex}\scalebox{.75}{max}}^{\hspace{.2ex}\scalebox{.75}{э}}
+\hspace{-0.15ex}=\hspace{-0.1ex} \sqrt{\hspace{-0.1ex}
+\upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-.3ex}+\hspace{-.1ex} 3 \hspace{.1ex} \uptau_{\scalebox{.75}{max}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}
+\hspace{.2ex}}
+\]
+
+Для круглого сечения
+\[
+\upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} \hspace{-.25ex}
+= \hspace{-.1ex}
+\displaystyle\frac{\raisebox{-.2em}{$32$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}} \hspace{.1ex}
+\sqrt{\hspace{-0.2ex}M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.2ex}+\hspace{-0.2ex} M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}\hspace{.2ex}}
+, \hspace{.4em}
+%
+\uptau_{\scalebox{.75}{max}} \hspace{-.25ex}
+= \hspace{-.1ex}
+\displaystyle\frac{\raisebox{-.2em}{$16$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}} \hspace{.1ex}
+M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}
+\]
+и энергетический критерий даёт
+\[
+\upsigma_{\hspace{-.15ex}\scalebox{.75}{max}}^{\hspace{.2ex}\scalebox{.75}{э}} \hspace{-0.2ex}
+=\hspace{-0.2ex}
+\displaystyle\frac{\raisebox{-.2em}{$16$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}} \hspace{.1ex}
+\sqrt{%
+4 \hspace{.1ex} \bigl( \hspace{-0.1ex} M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.3ex}+\hspace{-0.3ex} M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{.2ex} \bigr) \hspace{-.4ex}
++\hspace{-.1ex} 3 M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}
+\hspace{.2ex}}
+\]
+
+Для рассматриваемой задачи в~наиболее нагруженной точке (у~заделки)
+\[
+M_{\hspace{-0.1ex}\scalebox{.8}{$z$}} \hspace{-.25ex}
+= \hspace{-.2ex} F \hspace{-0.1ex} \ell
+\hspace{.1ex} , \hspace{.4em}
+M_{\hspace{-0.1ex}\scalebox{.8}{$y$}} \hspace{-.25ex}
+= \hspace{-.2ex} - \hspace{.1ex} 2 \hspace{.1ex} F \hspace{-0.1ex} \ell
+\hspace{.1ex} , \hspace{.4em}
+M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-.25ex}
+= \hspace{-.2ex} F \hspace{-0.1ex} \ell
+\]
+и эквивалентное (по энергетическому критерию прочности) напряжение в~точках сечения (1) и~(2) равно
+\nopagebreak\vspace{-0.5em}\[\begin{aligned}
+\upsigma_{\hspace{-.15ex}\scalebox{.75}{max}}^{\hspace{.2ex}\scalebox{.75}{э}} \hspace{-0.2ex}
+&=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-.2em}{$16$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}} \hspace{.1ex}
+\sqrt{%
+4 \hspace{.1ex} \bigl( \hspace{-0.2ex} F^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.1ex} \ell^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.5ex}+\hspace{-0.2ex} 4 \hspace{.1ex} F^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.1ex} \ell^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{.2ex} \bigr) \hspace{-.4ex}
++\hspace{-.1ex} 3 \hspace{.1ex} F^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.1ex} \ell^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}
+\hspace{.2ex}}
+\\[.2em]
+%
+&=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-.2em}{$16$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}} \hspace{.1ex}
+\sqrt{%
+20 \hspace{.1ex} F^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.1ex} \ell^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-.44ex}
++\hspace{-.1ex} 3 \hspace{.1ex} F^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.1ex} \ell^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}
+\hspace{.2ex}}
+\\[.4em]
+%
+&=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-.2em}{$16 \sqrt{\hspace{-.1ex}23} \hspace{.2ex} F \hspace{-.1ex} \ell$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}}
+\end{aligned}\]
+
+По условию прочности
+\nopagebreak\vspace{-.1em}\[
+\upsigma_{\hspace{-.15ex}\scalebox{.75}{max}}^{\hspace{.2ex}\scalebox{.75}{э}} \hspace{-0.2ex}
+= \displaystyle\frac{\raisebox{-.05em}{$ \sigma_{\mathrm{\scalebox{.6}{T}}} $}}{\raisebox{.1em}{$ n_{\mathrm{\scalebox{.6}{T}}} $}}
+\vspace{-.4em}\]
+с~данными
+\[
+F \hspace{-.5ex}=\hspace{-.4ex} 1000\:\text{Н}
+, \hspace{.4em}
+\ell \!=\! 200\:\text{мм}
+, \hspace{.4em}
+\sigma_{\mathrm{\scalebox{.6}{T}}} \hspace{-.5ex}=\hspace{-.3ex} 300\:\text{МПа}
+, \hspace{.4em}
+n_{\mathrm{\scalebox{.6}{T}}} \hspace{-.44ex}=\hspace{-.33ex} 2
+\]
+определяем диаметр сечения:
+\[\begin{gathered}
+\displaystyle\frac{\raisebox{-.2em}{$16 \sqrt{\hspace{-.1ex}23} \cdot 1000\:\text{Н}\cdot 200\:\text{мм}$}}{\pi \hspace{-0.1ex} D^{\hspace{.1ex}3}}
+= \displaystyle\frac{\raisebox{-.1em}{$ 300\:\text{МПа} $}}{2}
+\\[.5em]
+%
+\Rightarrow\hspace{.4em}
+D^{\hspace{.1ex}3} \hspace{-.25ex}
+= \displaystyle\frac{\raisebox{-.1em}{$ 64\hspace{.2ex}000 \hspace{.1ex} \sqrt{\hspace{-.1ex}23} $}}{3 \hspace{.1ex} \pi} \hspace{.6ex} \text{мм}^3
+\hspace{.4em}\Rightarrow\hspace{.4em}
+D \hspace{-0.2ex}
+=\hspace{-0.2ex} 40 \sqrt[\scalebox{.7}{$6$}]{\hspace{-.2ex}
+\displaystyle\frac{\raisebox{-.1em}{$ 23 $}}{9 \pi^2}
+\hspace{.1ex}} \hspace{.5ex} \text{мм}
+\approx\hspace{-.1ex}
+31.9343\:\text{мм}
+\hspace{.4em}\Rightarrow\hspace{.4em}
+D \!=\hspace{-0.25ex} 32\:\text{мм}
+\end{gathered}\]
+
+% ~ ~
+\newpage
+% ~ ~
+
+\hspace*{-\parindent}\begin{minipage}{\linewidth}
+\begin{center}
+
+\emph{Прямоугольное сечение}
+\vspace{1cm}
+
+\scalebox{1.4}{
+\begin{tikzpicture}[ scale=1 ]
+
+\tdplotsetmaincoords{70}{123}
+
+\def\widthofsquare{1.4}
+\pgfmathsetmacro\heightofsquare{2*\widthofsquare}
+
+\drawrectangularsectionthreedimzy
+
+\pgfmathsetmacro\xaxislinelength{2}
+\pgfmathsetmacro\yaxislinelength{2.7}
+\pgfmathsetmacro\zaxislinelength{4}
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]}, tdplot_main_coords ]
+	( {-.8*\xaxislinelength}, 0, 0 ) -- ++( {2.2*\xaxislinelength}, 0, 0 )
+	node [ pos=.98, below, shape=circle, inner sep=0pt, outer sep=4pt ]
+		{\scalebox{.8}{$ x $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]}, tdplot_main_coords ]
+	( 0, {-.5*\widthofsquare - .3*\yaxislinelength}, 0 ) -- ++( 0, {\widthofsquare + 1*\yaxislinelength}, 0 )
+	node [ pos=.98, below, shape=circle, inner sep=0pt, outer sep=5pt ]
+		{\scalebox{.8}{$ y $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]}, tdplot_main_coords ]
+	( 0, 0, {-.5*\heightofsquare - .3*\zaxislinelength} ) -- ++( 0, 0, {\heightofsquare + 1*\zaxislinelength} )
+	node [ pos=.98, right, shape=circle, inner sep=0pt, outer sep=4.5pt ]
+		{\scalebox{.8}{$ z $}} ;
+
+\def\couplecolor{red}
+\drawmomentaroundxthreedim{1.66}{133}{${F \hspace{-0.1ex} \ell}$}{pos=1.1, left, shape=circle, inner sep=0pt, outer sep=11pt}
+
+\def\couplecolor{blue}
+\drawmomentaroundzthreedim{1.66}{${F \hspace{-0.1ex} \ell}$}{pos=1.4, right, shape=circle, inner sep=0pt, outer sep=15pt}
+
+\def\couplecolor{magenta}
+\drawmomentaroundythreedim{3.33}{${2 \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{pos=1.1, above, shape=circle, inner sep=0pt, outer sep=5pt}
+
+\begin{scope}[ xshift=5cm ]
+
+\drawrectangularsection
+
+\def\saxislengthmultiplier{2.02}
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( {-.5*\widthofsquare - .3*\yaxislinelength}, 0 ) -- ++( {\widthofsquare + 1*\yaxislinelength}, 0 )
+	node [ pos=1, below, shape=circle, inner sep=0pt, outer sep=5pt ]
+		{\scalebox{.8}{$ y $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( 0, {-.5*\heightofsquare - .3*\zaxislinelength} ) -- ++( 0, {\heightofsquare + 1*\zaxislinelength} )
+	node [ pos=.98, left, shape=circle, inner sep=0pt, outer sep=5pt ]
+		{\scalebox{.8}{$ z $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=7pt]} ]
+	( 0, 0 ) -- ++( {\saxislengthmultiplier*1}, {\saxislengthmultiplier*2} )
+	node [ pos=.98, left, shape=circle, inner sep=0pt, outer sep=6pt ]
+		{\scalebox{.8}{$ a $}} ;
+
+\def\valueforFl{1.66}
+
+\def\couplecolor{red}
+\drawmomentaroundx{\valueforFl}{133}{${F \hspace{-0.1ex} \ell}$}{pos=1.1, left, shape=circle, inner sep=0pt, outer sep=11pt}
+
+\def\couplecolor{blue}
+\drawmomentaroundz{\valueforFl}{${F \hspace{-0.1ex} \ell}$}{above, shape=circle, inner sep=0pt, outer sep=6pt}
+
+\def\couplecolor{magenta}
+\drawmomentaroundy{2*\valueforFl}{${2 \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{right, shape=circle, inner sep=0pt, outer sep=8pt}
+
+\def\couplecolor{black}
+\drawsummarybendingmoment{\valueforFl}{2*\valueforFl}{${\sqrt{5} \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{anchor=north west, shape=circle, inner sep=0pt, outer sep=3pt}
+
+%%\draw [ aux line thick, color=gray ]
+%%	( -.5*\widthofsquare, .5*\heightofsquare ) -- ( 0, 0 ) ;
+%%\draw [ aux line thick, color=gray, rotate around={90:(-.5*\widthofsquare, .5*\heightofsquare)}, shift={({-.5*\widthofsquare}, 0)} ]
+%%	( -.5*\widthofsquare, .5*\heightofsquare ) -- ( 0, 0 ) ;
+
+%%\draw [ aux line thick, color=cyan ]
+%%	( .5*\widthofsquare, .5*\heightofsquare ) -- ++( -\widthofsquare, 0 ) ;
+%%\draw [ aux line thick, color=green, rotate around={atan(1/2):(.5*\widthofsquare, .5*\heightofsquare)} ]
+%%	( .5*\widthofsquare, .5*\heightofsquare ) -- ++( -\widthofsquare, 0 ) ;
+
+%%\draw [ aux line thick, color=orange, rotate around={atan(1/2):(.5*\widthofsquare, .5*\heightofsquare)} ]
+%%	( .5*\widthofsquare, .5*\heightofsquare ) -- ++( {-\widthofsquare*cos(atan(1/2))}, 0 ) ;
+
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\end{center}
+\end{minipage}
+\vspace{.6cm}
+
+\begin{center}
+
+\scalebox{1.4}{
+\begin{tikzpicture}[ scale=1 ]
+
+\def\widthofsquare{1.4}
+\pgfmathsetmacro\heightofsquare{2*\widthofsquare}
+
+\drawrectangularsectionwithhorizontaldiagonal
+
+\def\axislength{1}
+\def\saxislengthmultiplier{5.5}
+\def\naxislengthmultiplier{3.6}
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=6pt]} ]
+	( 0, 0 ) -- ++( \saxislengthmultiplier*\axislength, 0 )
+	node [ pos=.98, below, shape=circle, inner sep=0pt, outer sep=5pt ]
+		{\scalebox{.8}{$ a $}} ;
+
+\draw [ axis with arrow, -{To[round, length=6pt, width=6pt]} ]
+	( 0, -1.5*\axislength ) -- ++( 0, \naxislengthmultiplier*\axislength )
+	node [ pos=.97, right, shape=circle, inner sep=0pt, outer sep=3.3pt ]
+		{\scalebox{.8}{$ b $}} ;
+
+\def\offsetforsigmaepure{.9}
+
+\draw [ aux line thin, rotate around={atan(-2):(0, 0)} ]
+	( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )
+	-- ( -.9*\widthofsquare, .9*\heightofsquare )
+	node [ pos=.92, right, shape=circle, inner sep=0pt, outer sep=5pt ]
+		{\scalebox{.8}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.8}{$x$}} \hspace{-0.25ex}=\hspace{-.1ex} 0 $}} ; % zero stress line
+
+\draw [ aux line thin, rotate around={atan(-2):(0, 0)} ]
+	( 0, -.5*\heightofsquare ) -- ( 0, .5*\heightofsquare ) ;
+\draw [ aux line thin, rotate around={atan(-2):(0, 0)} ]
+	( -.5*\widthofsquare, 0 ) -- ( .5*\widthofsquare, 0 ) ;
+
+\def\couplecolor{black}
+\def\valueforFl{2}
+\pgfmathsetmacro\summarybendingmoment{\valueforFl*sqrt(5)}
+\drawmomentaroundz{\summarybendingmoment}{${\sqrt{5} \hspace{.1ex} F \hspace{-0.1ex} \ell}$}{below, shape=circle, inner sep=0pt, outer sep=.5pt}
+
+\def\couplecolor{red}
+\drawmomentaroundx{\valueforFl}{0}{${F \hspace{-0.1ex} \ell}$}{pos=.7, right, shape=circle, inner sep=0pt, outer sep=4pt}
+
+\pgfmathsetmacro\dmax{\widthofsquare * cos(atan(1/2))}
+
+\draw [ aux line thick, opacity=.8, rotate around={atan(-2):(0, 0)} ]
+	( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare ) -- ++( {(1/sqrt(5))*\heightofsquare*cos(atan(1/2))}, {(1/sqrt(5))*\widthofsquare*cos(atan(1/2))} ) ;
+\draw [ aux line thick, opacity=.8, rotate around={atan(-2):(0, 0)} ]
+	( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare ) -- ++( {-(1/sqrt(5))*\heightofsquare*cos(atan(1/2))}, {-(1/sqrt(5))*\widthofsquare*cos(atan(1/2))} ) ;
+
+\draw [ aux thick dashed, rotate around={atan(-2):(0, 0)} ]
+	( .5*\widthofsquare, .5*\heightofsquare )
+	-- ( {\offsetforsigmaepure*\widthofsquare + (1/sqrt(5))*\heightofsquare*cos(atan(1/2))}, {-\offsetforsigmaepure*\heightofsquare + (1/sqrt(5))*\widthofsquare*cos(atan(1/2))} ) ;
+
+\draw [ aux thick dashed, rotate around={atan(-2):(0, 0)} ]
+	( -.5*\widthofsquare, -.5*\heightofsquare )
+	-- ( {\offsetforsigmaepure*\widthofsquare - (1/sqrt(5))*\heightofsquare*cos(atan(1/2))}, {-\offsetforsigmaepure*\heightofsquare - (1/sqrt(5))*\widthofsquare*cos(atan(1/2))} ) ;
+
+\def\howmanyepurelines{8}
+\pgfmathsetmacro\epurestep{\dmax / (\howmanyepurelines - 1)}
+
+\def\maxsigma{1}
+\def\epurecolor{black}
+
+%%\draw [ aux line thick, color=black, fill=green, rotate around={atan(-2):(0, 0)} ]
+%%	( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare ) circle ( 1.6\pgflinewidth ) ; % center of epure
+
+\foreach \x in { 0, \epurestep, ..., \dmax } {
+	\pgfmathsetmacro\y{\maxsigma * \x / \dmax}
+	\draw [ aux line thin, color=\epurecolor, rotate around={atan(-2):(0, 0)}, shift={( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )}, rotate=atan(1/2) ]
+		( \x, 0 ) -- ++( 0, \y ) ;
+}
+\foreach \x in { 0, -\epurestep, ..., -\dmax } {
+	\pgfmathsetmacro\y{\maxsigma * \x / \dmax}
+	\draw [ aux line thin, color=\epurecolor, rotate around={atan(-2):(0, 0)}, shift={( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )}, rotate=atan(1/2) ]
+		( \x, 0 ) -- ++( 0, \y ) ;
+}
+\draw [ aux line thick, color=\epurecolor, rotate around={atan(-2):(0, 0)}, shift={( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )}, rotate=atan(1/2) ]
+	( \dmax, 0 )
+	-- ++( 0, \maxsigma )
+	node [ pos=.3, right, shape=circle, inner sep=0pt, outer sep=5pt ]
+	{\scalebox{.8}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} $}} ;
+
+\draw [ aux line thick, color=\epurecolor, rotate around={atan(-2):(0, 0)}, shift={( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )}, rotate=atan(1/2) ]
+	( -\dmax, 0 )
+	-- ++( 0, -\maxsigma )
+	node [ pos=.25, left, shape=circle, inner sep=0pt, outer sep=5pt ]
+	{\scalebox{.8}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} $}} ;
+
+\draw [ aux line thick, color=\epurecolor, rotate around={atan(-2):(0, 0)}, shift={( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )}, rotate=atan(1/2) ]
+	( -\dmax, -\maxsigma )
+	-- ( \dmax, \maxsigma ) ;
+
+\draw [ aux line thick, color=\epurecolor, rotate around={atan(-2):(0, 0)}, shift={( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )}, rotate=atan(1/2) ]
+	( .5*\dmax, 0 )
+	-- ++( 0, .5*\maxsigma )
+node [ pos=0, below left, shape=circle, inner sep=0pt, outer sep=-2pt ]
+	{\scalebox{.8}{$
+\upsigma_{\hspace{-0.15ex}\scalebox{.8}{$x$}\hspace{.1ex}\scalebox{.7}{(3)}}
+	$}} ;
+
+\draw [ aux line thick, color=\epurecolor, rotate around={atan(-2):(0, 0)}, shift={( \offsetforsigmaepure*\widthofsquare, -\offsetforsigmaepure*\heightofsquare )}, rotate=atan(1/2) ]
+	( .5*\dmax, 0 )
+	-- ++( 0, .5*\maxsigma )
+node [ pos=-0.6, below left, shape=circle, inner sep=0pt, outer sep=-1pt ]
+	{\scalebox{.8}{$
+\upsigma_{\hspace{-0.15ex}\scalebox{.8}{$x$}\hspace{.1ex}\scalebox{.7}{(2)}}
+	$}} ;
+
+\pgfmathsetmacro\maxlengtha{.5*sqrt(\widthofsquare*\widthofsquare + \heightofsquare*\heightofsquare)}
+
+\draw [ aux line thick, color=black, fill=yellow ]
+	( \maxlengtha, 0 ) circle ( 1.6\pgflinewidth )
+	node [ above right, shape=circle, inner sep=0pt, outer sep=1pt ] {\scalebox{.7}{ (1) }} ;
+
+\draw [ aux thick dashed, rotate around={atan(-2):(0, 0)} ]
+	( 0, .5*\heightofsquare )
+	-- ++( {(\offsetforsigmaepure + .5 - (.5/sqrt(5))*sin(atan(1/2)))*\widthofsquare}, {-(\offsetforsigmaepure + .5 - (.5/sqrt(5))*sin(atan(1/2)))*\heightofsquare} ) ; % mid side points
+
+\draw [ rotate around={atan(-2):(0, 0)}, aux line thick, color=black, fill=yellow ]
+	( .5*\widthofsquare, 0 ) circle ( 1.6\pgflinewidth )
+	node [ below right, yshift=4pt, shape=circle, inner sep=0pt, outer sep=3pt ] {\scalebox{.7}{ (2) }} ;
+
+\draw [ rotate around={atan(-2):(0, 0)}, aux line thick, color=black, fill=yellow ]
+	( 0, .5*\heightofsquare ) circle ( 1.6\pgflinewidth )
+	node [ above right, shape=circle, inner sep=0pt, outer sep=0.5pt ] {\scalebox{.7}{ (3) }} ;
+
+\end{tikzpicture}
+}
+
+\end{center}
+
+\vspace{.4cm}
+
+Осевые моменты инерции прямоугольного сечения:
+\[
+\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$y$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$B \hspace{-0.1ex} H^{\hspace{.1ex}3}$}}{12}
+\hspace{.1ex} , \hspace{.4em}
+ \mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$z$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$H \hspace{-0.15ex} B^{\hspace{.1ex}3}$}}{12}
+\hspace{.1ex} , \hspace{.4em}
+ \mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$b$}} \hspace{-0.25ex}=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$B \hspace{-0.1ex} H$}}{12} \Bigl(
+\hspace{-0.2ex} H^{\hspace{.1ex}2} \hspace{-.2ex} \operatorname{cos}^{2} \hspace{-0.22ex} \operatorname{atan} \scalebox{.88}{$\displaystyle\frac{\raisebox{-0.2em}{$B$}}{H}$}
+\hspace{-0.1ex}+\hspace{-0.25ex}
+B^{\hspace{.1ex}2} \hspace{-.2ex} \operatorname{sin}^{2} \hspace{-0.22ex} \operatorname{atan} \scalebox{.88}{$\displaystyle\frac{\raisebox{-0.2em}{$B$}}{H}$} \hspace{.2ex}
+\Bigr)
+\]
+
+\hspace*{-\parindent}%
+\begin{minipage}{\linewidth}
+
+\hspace{\savedparindent}
+Коэффициент пропорциональности~${\mathfrak{I}_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}}$ (\inquotes{геометрическая жёсткость}, \inquotes{момент инерции для кручения}) между внутренним крутящим моментом~${M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}}$ и~${G \hspace{.1ex} \Theta}$:
+\[
+M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-0.3ex}=\hspace{-0.1ex}
+\mathfrak{I}_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{.1ex} G \hspace{.1ex} \Theta
+\hspace{.1ex} , \hspace{.33em}
+\mathfrak{I}_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-0.3ex}=\hspace{-0.1ex}
+\upbeta \hspace{.1ex} B^{\hspace{.1ex}3} \hspace{-0.2ex} H
+, \hspace{.33em}
+%
+\upbeta \hspace{-0.2ex}=\hspace{-0.1ex}
+\scalebox{.88}{$\displaystyle\frac{\raisebox{-0.18em}{$1$}}{3}$}
+\hspace{-0.1ex}-\hspace{-0.1ex} \displaystyle\frac{\raisebox{-0.18em}{\scalebox{.88}{$64$}}}{\pi^5} \hspace{.2ex} \displaystyle\frac{\raisebox{-0.2em}{$B$}}{H} \displaystyle\sum_{\mathclap{\hspace{.4em}j=1,3,..}}^{\raisebox{-0.1em}{\scalebox{.75}{$\infty$}}} j^{-5} \operatorname{tanh} \hspace{-0.33ex} \left( \displaystyle\frac{\raisebox{-0.18em}{$\pi \hspace{-0.1ex} j$}}{\scalebox{.88}{$2$}} \hspace{.2ex} \displaystyle\frac{\raisebox{-0.2em}{$H$}}{B} \hspace{.1ex} \right)
+\vspace{-.6em}\]
+($B$~--- меньшая сторона)
+
+\end{minipage}
+\vspace{.5em}
+
+Коэффициент пропорциональности~${W_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}}$ между внутренним крутящим моментом~${M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}}$ и~максимальным касательным напряжением в~сечении (в~точке на~контуре посередине б\'{о}льшей стороны прямоугольника):
+\[
+M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-0.3ex}=\hspace{-0.1ex}
+W_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{.1ex} \uptau_{\scalebox{.75}{max}}
+\hspace{.1ex} , \hspace{.33em}
+W_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-0.3ex}=\hspace{-0.1ex}
+\upalpha \hspace{.2ex} B^{\hspace{.1ex}2} \hspace{-0.2ex} H
+, \hspace{.33em}
+%
+\upalpha \hspace{-0.2ex}=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.1em}{$\upbeta \hspace{.1ex} \pi^2$}}{8 \hspace{.4ex}
+\scalebox{1}{$\displaystyle\sum_{\mathclap{\hspace{.4em}\scalebox{1}{$\scriptstyle j=1,3,..$}}}^{\raisebox{-0.1em}{\scalebox{.75}{$\infty$}}}$} \hspace{.3ex} j^{-2} \Biggl( \hspace{-.1ex} 1 - \displaystyle\frac{\raisebox{-0.1em}{\scalebox{.96}{$1$}}}{%
+\scalebox{.93}{$
+\operatorname{cosh} \hspace{-0.33ex} \left( \hspace{-0.1ex} \displaystyle\frac{\raisebox{-0.18em}{$\pi \hspace{-0.1ex} j$}}{\scalebox{.88}{$2$}} \hspace{.2ex} \displaystyle\frac{\raisebox{-0.2em}{$H$}}{B} \hspace{.1ex} \right)
+$}} \Biggr)}
+\]
+
+\vspace{-1em}
+\hspace*{-\parindent}%
+\begin{minipage}{\linewidth}
+\hspace{\savedparindent}
+Для ${\hspace{.2ex}\scalebox{.84}{$\displaystyle\frac{\raisebox{-0.2em}{$H$}}{B}$} \hspace{-0.3ex}=\hspace{-0.2ex} 2}$:
+
+\begin{tcolorbox}[enhanced, colback = yellow!33, arc=20pt, left=6pt, right=6pt, top=6pt, bottom=6pt, boxsep=2pt, parbox = false]
+\[\begin{aligned}
+\upbeta \hspace{-0.2ex}&=\hspace{-0.1ex}
+0.22868167711958
+\hspace{.5em}
+\text{(вычислено с~точностью ${10^{-15}}$ до ${j \hspace{-0.33ex}=\hspace{-0.3ex} 1001}$)}
+\\[-0.2em]
+%
+\upalpha \hspace{-0.2ex}&=\hspace{-0.1ex}
+0.24587834540483
+\hspace{.5em}
+\text{(с~точностью ${10^{-15}}$ до ${j \hspace{-0.33ex}=\hspace{-0.3ex} 31622777}$)}
+\end{aligned}\]
+\end{tcolorbox}
+\end{minipage}
+\vspace{.6cm}
+
+В~рассматриваемом прямоугольном сечении выделяются три точки~--- (1), (2) и~(3)~--- как кандидаты на самую напряжённую точку сечения.
+В~точке~(1)~--- наибольшее нормальное напряжение от изгиба, касательные же напряжения в~угловых точках равны нулю.
+В~точках (2) и~(3)~--- максимальные касательные напряжения от кручения.
+Напряжённое состояние в~угловой точке~(1):
+%%\vspace{.2cm}
+
+\def\sideofcube{1.5}
+\def\showcoordinatelength{3}
+
+\begin{center}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1.2 ]
+
+\tdplotsetmaincoords{66}{133}
+
+\node [ outer sep=0pt, inner sep=0pt, tdplot_main_coords ]
+	at ( 0, 0, 4 )
+	{ \scalebox{1}{\emph{точка~(1)}} } ;
+
+\def\stresscolor{black}
+\def\stresslength{2}
+
+\drawaxes{x}{a}{b}
+
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( -\stresslength, 0, 0 ) ;
+
+\drawcube{\sideofcube}
+
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( \stresslength, 0, 0 )
+	node [ pos=.98, above, inner sep=0pt, outer sep=12pt ]
+	{ \scalebox{\textscale}{$ \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} $} } ;
+
+\end{tikzpicture}
+}
+
+\end{center}
+
+Нормальные напряжения от изгиба
+\[
+\upsigma_{\hspace{-0.2ex}\scalebox{.8}{$x$}} \hspace{-0.2ex}
+= \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$z$}}} \hspace{.25ex} y
+- \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$y$}}} \hspace{.25ex} z
+= \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$b$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$b$}}} \hspace{.25ex} a
+\hspace{.1ex} ,
+\hspace{.4em}
+M_{\hspace{-0.1ex}\scalebox{.8}{$b$}}
+\hspace{-0.2ex}=\hspace{-0.2ex} \sqrt{\hspace{-0.2ex}M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.2ex}+\hspace{-0.2ex} M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}\hspace{.2ex}}
+\]
+равны нулю на \inquotes{нулевой линии} (\inquotes{нейтральной оси}), уравнение которой есть
+\[
+\upsigma_{\hspace{-0.2ex}\scalebox{.8}{$x$}} \hspace{-0.2ex}
+=\hspace{-.1ex} 0
+\hspace{.4em}\Rightarrow\hspace{.4em}
+\displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$z$}}} \hspace{.25ex} y
+- \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$y$}}} \hspace{.25ex} z
+= 0
+\hspace{.4em}\Rightarrow\hspace{.4em}
+z \hspace{-.1ex}=\hspace{-.1ex}
+\displaystyle\frac{\raisebox{-0.12em}{$M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}$}}{M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}} \hspace{.2ex}
+\displaystyle\frac{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$y$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$z$}}}
+\hspace{.3ex} y
+\]
+
+Отношение моментов в~сечении
+\[
+M_{\hspace{-0.1ex}\scalebox{.8}{$z$}} \hspace{-.25ex}
+= \hspace{-.2ex} F \hspace{-0.1ex} \ell
+\hspace{.1ex} , \hspace{.4em}
+M_{\hspace{-0.1ex}\scalebox{.8}{$y$}} \hspace{-.25ex}
+= \hspace{-.2ex} - \hspace{.1ex} 2 \hspace{.1ex} F \hspace{-0.1ex} \ell
+\hspace{.4em} \Rightarrow \hspace{.4em}
+\displaystyle\frac{\raisebox{-0.12em}{$M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}$}}{M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}} \hspace{-.1ex}
+= \hspace{-.1ex} \displaystyle\frac{\raisebox{-0.18em}{$1$}}{-2}
+\hspace{.3ex} ,
+\]
+отношение осевых моментов инерции для этого сечения
+\[
+\displaystyle\frac{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$y$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$z$}}} \hspace{-.1ex}
+= \hspace{-.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$12 \hspace{.1ex} B \hspace{-0.1ex} H^{\hspace{.1ex}3}$}}{12 \hspace{.1ex} H \hspace{-0.15ex} B^{\hspace{.1ex}3}} \hspace{-.1ex}
+= \hspace{-.25ex}
+\left( \displaystyle\frac{\raisebox{-0.18em}{$H$}}{B} \hspace{.1ex} \right)^{\hspace{-.5ex}2} \hspace{-.5ex}
+=\hspace{-.1ex} 4
+\]
+и уравнение нулевой линии
+\[
+z \hspace{-.1ex}=\hspace{-.1ex}
+- \hspace{.1ex} 2 \hspace{.1ex} y
+\]
+
+Максимальное нормальное напряжение
+\[
+\upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} \hspace{-.33ex}
+= \hspace{-.15ex} \displaystyle\frac{M_{\hspace{-0.1ex}\scalebox{.8}{$b$}}}{\mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$b$}}} \hspace{.25ex} d_{\scalebox{.75}{max}}
+\hspace{.2ex} ,
+\]
+где ${d_{\scalebox{.75}{max}}}$~--- расстояние от нулевой линии до наиболее удалённой точки сечения.
+
+\vspace{.4cm}
+Если ${\hspace{.2ex}\scalebox{.84}{$\displaystyle\frac{\raisebox{-0.2em}{$H$}}{B}$} \hspace{-0.3ex}=\hspace{-0.2ex} 2}$, ось~$a$ проходит по~диагонали прямоугольника, а нулевая линия~---по второй диагонали, то
+\nopagebreak\vspace{-0.2em}\[
+d_{\scalebox{.75}{max}} \hspace{-.3ex}
+= \hspace{-.2ex}
+B \operatorname{cos} \hspace{.2ex} \operatorname{atan} \scalebox{.88}{$\displaystyle\frac{\raisebox{-0.2em}{$1$}}{2}$} \hspace{-.1ex}
+= \hspace{-.2ex}
+B \sqrt{0.8} \hspace{-.1ex}
+= \hspace{-.2ex}
+\scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.18em}{$2$}}{\sqrt{5}} $} \hspace{.2ex} B
+\]
+
+\vspace{.2em}
+Момент инерции рассматриваемого сечения вокруг оси~$b$
+\[
+ \mathfrak{I}_{\hspace{-0.1ex}\scalebox{.8}{$b$}} \hspace{-0.25ex}
+=\hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$B^{\hspace{.1ex}4}$}}{6} \Bigl(
+\hspace{-0.1ex} 4 \operatorname{cos}^{2} \hspace{-0.22ex} \operatorname{atan} \scalebox{.88}{$\displaystyle\frac{\raisebox{-0.2em}{$1$}}{2}$}
+\hspace{-0.1ex}+
+\operatorname{sin}^{2} \hspace{-0.22ex} \operatorname{atan} \scalebox{.88}{$\displaystyle\frac{\raisebox{-0.2em}{$1$}}{2}$} \hspace{.2ex}
+\Bigr) \hspace{-.45ex}
+= \hspace{-0.1ex}
+\displaystyle\frac{\raisebox{-0.18em}{$B^{\hspace{.1ex}4}$}}{6} \Bigl(
+\hspace{-0.1ex} 4 \hspace{-.2ex}\cdot\hspace{-.2ex} \scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.18em}{$4$}}{5} $}
+\hspace{-0.1ex}+
+\scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.18em}{$1$}}{5} $}
+\hspace{.2ex} \Bigr) \hspace{-.45ex}
+= \hspace{-0.1ex}
+\scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.18em}{$17$}}{30} $} \hspace{.1ex} B^{\hspace{.1ex}4}
+\]
+
+Суммарный изгибающий момент в~сечении
+\[
+M_{\hspace{-0.1ex}\scalebox{.8}{$b$}} \hspace{-0.2ex}
+=\hspace{-.2ex} \sqrt{\hspace{-0.2ex}M_{\hspace{-0.1ex}\scalebox{.8}{$z$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-0.2ex}+\hspace{-0.2ex} M_{\hspace{-0.1ex}\scalebox{.8}{$y$}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}\hspace{.2ex}} \hspace{-.25ex}
+=\hspace{-.2ex} \sqrt{5} \hspace{.1ex} F \hspace{-0.1ex} \ell
+\]
+
+Максимальное нормальное напряжение в~сечении
+\[
+\upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} \hspace{-.33ex}
+= \hspace{-.15ex} \displaystyle\frac{\raisebox{-0.18em}{$30 \sqrt{5} \hspace{.1ex} F \hspace{-0.1ex} \ell$}}{17 B^{\hspace{.1ex}4}} \hspace{.2ex} B \sqrt{0.8}
+= \hspace{-.1ex} \displaystyle\frac{\raisebox{-0.18em}{$60$}}{17} \hspace{.2ex} \displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{B^{\hspace{.1ex}3}} \hspace{-.1ex}
+= \hspace{-.25ex} \left( 3 \hspace{-.15ex}+\hspace{-.15ex} \scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.18em}{$9$}}{17} $} \hspace{.1ex} \right) \hspace{-.4ex} \displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{B^{\hspace{.1ex}3}}
+\]
+
+\vspace{.2cm}
+
+Напряжённое состояние в~точках с~наибольшими касательными напряжениями от кручения:
+
+\begin{center}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1.2 ]
+
+\begin{scope}[xshift=-3cm]
+
+ \node [ outer sep=0pt, inner sep=0pt, tdplot_main_coords ]
+	at ( 0, 0, 4.2 )
+	{ \scalebox{1}{\emph{точка~(2)}} } ;
+
+\tdplotsetmaincoords{66}{133}
+
+\def\stresscolor{black}
+
+\drawaxes{x}{y}{z}
+
+\def\stresslength{1.5}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( -\stresslength, 0, 0 ) ;
+
+\def\stresslength{1.2}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube}, {.5*\sideofcube - .5*\stresslength} ) -- ++( 0, 0, \stresslength ) ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube - .5*\stresslength}, {.5*\sideofcube}, 0 ) -- ++( \stresslength, 0, 0 ) ;
+
+\drawcube{\sideofcube}
+
+\def\stresslength{1.5}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( \stresslength, 0, 0 )
+	node [ pos=1.1, above, inner sep=0pt, outer sep=12pt ]
+	{ \scalebox{\textscale}{$ \upsigma_{\hspace{-0.15ex}\scalebox{.8}{$x$}\hspace{.1ex}\scalebox{.7}{(2)}} $} } ;
+
+\def\stresslength{1.2}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube + .5*\stresslength} ) -- ++( 0, 0, -\stresslength )
+	node [ pos=1.2, below, inner sep=0pt, outer sep=6pt ]
+	{ \scalebox{\textscale}{$ \uptau_{\scalebox{.75}{max}} $} } ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube + .5*\stresslength}, {.5*\sideofcube}, {\sideofcube} ) -- ++( -\stresslength, 0, 0 ) ;
+
+\end{scope}
+
+\begin{scope}[xshift=3cm]
+
+ \node [ outer sep=0pt, inner sep=0pt, tdplot_main_coords ]
+	at ( 0, 0, 4.2 )
+	{ \scalebox{1}{\emph{точка~(3)}} } ;
+
+\tdplotsetmaincoords{66}{133}
+
+\drawaxes{x}{y}{z}
+
+\def\stresscolor{black}
+
+\def\stresslength{1.5}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( -\stresslength, 0, 0 ) ;
+
+\def\stresslength{1}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( 0, {.5*\sideofcube + .5*\stresslength}, {.5*\sideofcube} ) -- ++( 0, -\stresslength, 0 ) ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube + .5*\stresslength}, 0, {.5*\sideofcube} ) -- ++( -\stresslength, 0, 0 ) ;
+
+\drawcube{\sideofcube}
+
+\def\stresslength{1.5}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube}, {.5*\sideofcube} ) -- ++( \stresslength, 0, 0 )
+	node [ pos=1.1, above, inner sep=0pt, outer sep=11pt ]
+	{ \scalebox{\textscale}{$ \upsigma_{\hspace{-0.15ex}\scalebox{.8}{$x$}\hspace{.1ex}\scalebox{.7}{(3)}} $} } ;
+
+\def\stresslength{1}
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {\sideofcube}, {.5*\sideofcube - .5*\stresslength}, {.5*\sideofcube} ) -- ++( 0, \stresslength, 0 )
+	node [ pos=.84, below, inner sep=0pt, outer sep=5.5pt ]
+	{ \scalebox{\textscale}{$ {\uptau\hspace{.1ex}}' $} } ;
+\draw [ external force, color=\stresscolor, tdplot_main_coords ]
+	( {.5*\sideofcube - .5*\stresslength}, {\sideofcube}, {.5*\sideofcube} ) -- ++( \stresslength, 0, 0 ) ;
+
+\pgfmathsetmacro\smallertextscale{.88*\textscale}
+ \node [ outer sep=0pt, inner sep=0pt ]
+	at ( 0, -1.5 )
+	{\scalebox{\smallertextscale}{$
+%%{\uptau\hspace{.1ex}}' \hspace{-.25ex}\approx\hspace{-.1ex} 0.795 \hspace{.2ex} \uptau_{\scalebox{.75}{max}}
+{\uptau\hspace{.1ex}}' \hspace{-.3ex}<\hspace{-.1ex} \uptau_{\scalebox{.75}{max}}
+	$}} ;
+
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\end{center}
+
+Имеем
+\nopagebreak\vspace{-1em}\[\begin{gathered}
+\upsigma_{\hspace{-0.15ex}\scalebox{.8}{$x$}\hspace{.1ex}\scalebox{.7}{(2)}} \hspace{-.33ex}
+= \hspace{-.2ex}
+\upsigma_{\hspace{-0.15ex}\scalebox{.8}{$x$}\hspace{.1ex}\scalebox{.7}{(3)}} \hspace{-.33ex}
+= \hspace{-.2ex}
+\scalebox{.88}{$ \displaystyle\frac{\raisebox{-0.18em}{$1$}}{2} $} \hspace{.15ex} \upsigma_{\hspace{-0.2ex}\scalebox{.75}{max}} \hspace{-.3ex}
+= \hspace{-.1ex} \displaystyle\frac{\raisebox{-0.18em}{$30$}}{17} \hspace{.2ex} \displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{B^{\hspace{.1ex}3}}
+\hspace{.2ex} ,
+\\[.4em]
+%
+\uptau_{\scalebox{.75}{max}} \hspace{-.3ex}
+= \hspace{-.1ex} \displaystyle\frac{\raisebox{-0.1em}{$M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}$}}{W_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}}}
+\hspace{.2ex} , \hspace{.4em}
+W_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-0.3ex}=\hspace{-0.1ex}
+\upalpha \hspace{.2ex} B^{\hspace{.1ex}2} \hspace{-0.2ex} H \hspace{-0.3ex}=\hspace{-0.1ex} 2 \upalpha \hspace{.1ex} B^{\hspace{.1ex}3} \hspace{-.3ex}
+, \hspace{.4em}
+2 \upalpha \approx 0.4917566908 \hspace{.1ex} ,
+\\[-.3em]
+%
+M_{\hspace{-0.1ex}\mathrm{\scalebox{.6}{K}}} \hspace{-.25ex}
+= \hspace{-.2ex} F \hspace{-0.1ex} \ell
+%%\hspace{.1ex} ,
+\\[-.1em]
+%
+\Rightarrow\hspace{.4em}
+\uptau_{\scalebox{.75}{max}} \hspace{-.3ex}
+= \hspace{-.1ex} \displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{2 \upalpha \hspace{.1ex} B^{\hspace{.1ex}3}}
+\hspace{.2ex} , \hspace{.6em}
+%
+\scalebox{.93}{$ \displaystyle\frac{\raisebox{-0.2em}{$1$}}{2 \upalpha} $}
+\approx 2.0335259666
+\hspace{.1ex} , \hspace{.4em}
+\hspace{-.25ex}
+\left( \hspace{.1ex} \scalebox{.93}{$ \displaystyle\frac{\raisebox{-0.2em}{$1$}}{2 \upalpha} $} \hspace{.15ex} \right)^{\hspace{-.5ex}2} \hspace{-.4ex}
+\approx 4.1352278567
+\end{gathered}\]
+
+По энергетическому критерию прочности эквивалентное одноосное напряжение будет равно
+\nopagebreak\vspace{.1em}\[\begin{aligned}
+\upsigma_{\scalebox{.7}{(2)}}^{\hspace{.2ex}\scalebox{.75}{э}} \hspace{-0.15ex}
+&=\hspace{-0.1ex} \sqrt{\hspace{-0.1ex}
+\upsigma_{\hspace{-0.15ex}\scalebox{.8}{$x$}\hspace{.1ex}\scalebox{.7}{(2)}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}} \hspace{-.3ex}+\hspace{-.1ex} 3 \hspace{.1ex} \uptau_{\scalebox{.75}{max}}^{\hspace{.2ex}\raisebox{.2em}{$\scriptstyle 2$}}
+\hspace{.2ex}}
+\\[.3em]
+&=
+\displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{B^{\hspace{.1ex}3}} \hspace{.1ex}
+\sqrt{\hspace{.1ex}
+\scalebox{.93}{$ \displaystyle\frac{\raisebox{-0.18em}{$30^{2}$}}{17^{2}} $} \hspace{-.15ex}+\hspace{-.2ex} 12.4056835702
+\hspace{.2ex}}
+\\[.1em]
+&\approx
+3.9395266748 \hspace{.2ex}
+\displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{B^{\hspace{.1ex}3}}
+\end{aligned}\]
+
+Самой напряжённой точкой сечения оказалась точка на середине длинной стороны контура прямоугольника~--- точка~(2)~--- с~эквивалентным напряжением
+\[
+\upsigma_{\hspace{-.15ex}\scalebox{.75}{max}}^{\hspace{.2ex}\scalebox{.75}{э}} \hspace{-0.2ex}
+= \upnu \hspace{.2ex}
+\displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{B^{\hspace{.1ex}3}}
+\hspace{.2ex} , \hspace{.5em}
+\upnu \hspace{-.25ex}=\hspace{-.2ex} 3.9395266748
+\]
+
+Размер $B$ (ширину) сечения найдём из условия прочности
+\nopagebreak\vspace{-.1em}\[\begin{gathered}
+\upsigma_{\hspace{-.15ex}\scalebox{.75}{max}}^{\hspace{.2ex}\scalebox{.75}{э}} \hspace{-0.2ex}
+=\hspace{-.1ex} \displaystyle\frac{\raisebox{-.05em}{$ \sigma_{\mathrm{\scalebox{.6}{T}}} $}}{\raisebox{.1em}{$ n_{\mathrm{\scalebox{.6}{T}}} $}}
+\\[.4em]
+%
+\upnu \hspace{.2ex}
+\displaystyle\frac{\raisebox{-0.18em}{$F \hspace{-0.1ex} \ell$}}{B^{\hspace{.1ex}3}} \hspace{-.1ex}
+=\hspace{-.1ex} \displaystyle\frac{\raisebox{-.05em}{$ \sigma_{\mathrm{\scalebox{.6}{T}}} $}}{\raisebox{.1em}{$ n_{\mathrm{\scalebox{.6}{T}}} $}}
+\hspace{.4em}\Rightarrow\hspace{.33em}
+B^{\hspace{.1ex}3} \hspace{-0.33ex}
+=\hspace{-.2ex} \upnu F \hspace{-0.1ex} \ell
+\hspace{.25ex} \displaystyle\frac{\raisebox{-.05em}{$ n_{\mathrm{\scalebox{.6}{T}}} $}}{\raisebox{.1em}{$ \sigma_{\mathrm{\scalebox{.6}{T}}} $}}
+\vspace{-.4em}\end{gathered}\]
+
+Для данных
+\nopagebreak\vspace{-.5em}\[
+F \hspace{-.5ex}=\hspace{-.4ex} 1000\:\text{Н}
+, \hspace{.4em}
+\ell \!=\! 200\:\text{мм}
+, \hspace{.4em}
+\sigma_{\mathrm{\scalebox{.6}{T}}} \hspace{-.5ex}=\hspace{-.3ex} 300\:\text{МПа}
+, \hspace{.4em}
+n_{\mathrm{\scalebox{.6}{T}}} \hspace{-.44ex}=\hspace{-.33ex} 2
+\vspace{-.5em}\]
+окончательно находим
+\[\begin{multlined}
+B \hspace{-0.2ex}
+= \hspace{-0.2ex} \sqrt[\scalebox{.7}{$3$}]{%
+\upnu F \hspace{-0.1ex} \ell
+\hspace{.25ex} \displaystyle\frac{\raisebox{-.05em}{$ n_{\mathrm{\scalebox{.6}{T}}} $}}{\raisebox{.1em}{$ \sigma_{\mathrm{\scalebox{.6}{T}}} $}}
+\hspace{.2ex}}
+= \hspace{-0.2ex} \sqrt[\scalebox{.7}{$3$}]{ \hspace{.2ex}
+\scalebox{.93}{$ \displaystyle\frac{\raisebox{-.15em}{$ 3.9395266748 \cdot 1000\:\text{Н}\cdot 200\:\text{мм} \cdot 2 $}}{300\:\text{МПа}} $}
+\hspace{.2ex}} \hspace{-.1ex}
+\approx\hspace{-.1ex}
+17.3831\:\text{мм}
+\\
+\hspace{.25em}\Rightarrow\hspace{.25em}
+B \!=\hspace{-0.25ex} 17.5\:\text{мм}
+\end{multlined}\]
+
+% final figure
+
+\begin{center}
+\vspace{\fill}
+
+\scalebox{1.33}{
+\begin{tikzpicture}[ scale=1.2 ]
+
+\begin{scope}[xshift=-2.3cm]
+\def\radiusofcircle{1}
+\drawcircularsection
+
+\def\dimensionlinelength{1}
+\def\angleofdimension{123}
+\drawcircularsectiondimensionscustom{\scalebox{1.2}{\diameter}32}
+\end{scope}
+
+\begin{scope}[xshift=2.3cm]
+\def\widthofsquare{1.3}
+\pgfmathsetmacro\heightofsquare{2*\widthofsquare}
+
+\drawrectangularsection
+
+\def\dimensionlinelength{1.1}
+\drawrectangularsectiondimensions{17.5}{pos=.5, above, inner sep=0pt, outer sep=5pt}{35}{pos=.51, above, inner sep=0pt, outer sep=5pt, rotate=90}
+\end{scope}
+
+\end{tikzpicture}
+}
+
+\vspace{\fill}
+\vspace{1cm}
+\end{center}
+
+% ~ ~ ~ ~
+\newpage
+% ~ ~ ~ ~
+
+%% \begin{comment} %%
+
+\input{Fbeam.tex}
+
+\def\camerafirstangle{60} % 60
+\def\camerasecondangle{140} % 140
+
+\tdplotsetmaincoords{\camerafirstangle}{\camerasecondangle}
+
+\begin{center}
+\textbf{Задача 2\raisebox{.7ex}{\small я}}
+\vspace{.4cm}
+
+Построить эпюры изгибающих и крутящих моментов
+\vspace{1cm}
+
+\emph{Вариант №\hspace{.33ex}8}
+\vspace{.8cm}
+
+\scalebox{1.1}{
+\begin{tikzpicture}[ scale=1 ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 20}
+
+\drawclampyzat{( 0, 0, 0 )}
+\drawbeam
+\drawbeamtext
+
+\def\externalforcecolor{\colorforforces}
+
+\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.1, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.6, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\end{tikzpicture}
+}
+\end{center}
+
+\vspace{2cm}
+
+Для линейно-упругих систем примен\'{и}м принцип независимости действия сил, согласно которому
+результат от действия \emph{всех} нагрузок аналогичен сумме действий от \emph{каждой} из нагрузок.
+Поэтому, для решения задачи найдём внутренний момент от каждой внешней силы по отдельности.
+
+\begin{center}
+\vspace*{1cm}
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1.1 ]
+
+\begin{scope}[ yshift=4.4cm ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawbeam
+
+\def\externalforcecolor{red}
+
+\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.1, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{0}
+\def\twistingmomentmultiplierz{1}
+\def\twistingmomentepureoffset{\reflength / 3}
+
+\drawepureofinternalmomentfromfirstforce
+
+\end{scope}
+
+\begin{scope}[ yshift=-4.4cm ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawbeam
+
+\def\externalforcecolor{blue}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.6, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{1}
+\def\twistingmomentmultiplierz{0}
+
+\def\spiralaxialstep{1.1}
+\def\spiralinitialangle{-140}
+
+\drawepureofinternalmomentfromsecondforce
+
+\end{scope}
+
+\end{tikzpicture}
+}
+\end{center}
+
+\newpage
+
+Сложение эпюр от отдельных внешних сил даёт суммарную эпюру от всех сил, действующих на конструкцию.
+Суммарная эпюра:
+
+\begin{center}
+\vspace{1cm}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1.2 ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawbeam
+
+\def\externalforcecolor{red}
+
+\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.1, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\externalforcecolor{blue}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.6, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\twistingmomentepureoffset{.4*\reflength}
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{0}
+\def\twistingmomentmultiplierz{1}
+
+\drawepureofinternalmomentfrombothforces{red}{blue}{magenta}
+
+\end{tikzpicture}
+}
+\end{center}
+
+% ~ ~ ~ ~
+\newpage
+% ~ ~ ~ ~
+
+\def\camerafirstangle{55} % 60, 55
+\def\camerasecondangle{130} % 135, 130
+
+\tdplotsetmaincoords{\camerafirstangle}{\camerasecondangle}
+
+\begin{center}
+\textbf{Задача 3\raisebox{.7ex}{\small я}}
+\vspace{.4cm}
+
+Построить эпюры изгибающих и крутящих моментов
+\vspace{1cm}
+
+\emph{Вариант №\hspace{.33ex}8}
+\vspace{.8cm}
+
+\scalebox{1.1}{
+\begin{tikzpicture}[ scale=1 ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 20}
+
+\drawclampyzat{( 0, 0, 0 )}
+\drawbeamtwo
+\drawbeamtwotext
+
+\def\externalforcecolor{\colorforforces}
+
+%%\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.1, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.6, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\drawload{( {\thirdforcepointx}, {\thirdforcepointy}, {\thirdforcepointz} )}{( {\thirdforcevectorx * \forcearrowscale}, {\thirdforcevectory * \forcearrowscale}, {\thirdforcevectorz * \forcearrowscale} )}{pos=.33, left, inner sep=0pt, outer sep=6pt}{\scalebox{\textscale}{$ P $}}
+
+\end{tikzpicture}
+}
+\end{center}
+
+\vspace{2cm}
+
+Для решения, как и в~предыдущей задаче, используется принцип независимости действия сил.
+
+\begin{center}
+\vspace*{1cm}
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1.1 ]
+
+\begin{scope}[ yshift=4.4cm ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawbeamtwo
+
+\def\externalforcecolor{green}
+
+\drawload{( {\thirdforcepointx}, {\thirdforcepointy}, {\thirdforcepointz} )}{( {\thirdforcevectorx * \forcearrowscale}, {\thirdforcevectory * \forcearrowscale}, {\thirdforcevectorz * \forcearrowscale} )}{pos=.33, left, inner sep=0pt, outer sep=6pt}{\scalebox{\textscale}{$ P $}}
+
+\drawepureofinternalmomentfromthirdforce
+
+\end{scope}
+
+\begin{scope}[ yshift=-4.4cm ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawbeamtwo
+
+\def\externalforcecolor{blue}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.6, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{1}
+\def\twistingmomentmultiplierz{0}
+
+\def\spiralaxialstep{1.1}
+\def\spiralinitialangle{-140}
+
+\drawepureofinternalmomentfromsecondforce
+
+\end{scope}
+
+\end{tikzpicture}
+}
+\end{center}
+
+\newpage
+
+Суммарная эпюра:
+
+\begin{center}
+\vspace{1cm}
+
+\scalebox{1}{
+\begin{tikzpicture}[ scale=1.2 ]
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawbeamtwo
+
+\def\externalforcecolor{green}
+
+\drawload{( {\thirdforcepointx}, {\thirdforcepointy}, {\thirdforcepointz} )}{( {\thirdforcevectorx * \forcearrowscale}, {\thirdforcevectory * \forcearrowscale}, {\thirdforcevectorz * \forcearrowscale} )}{pos=.33, left, inner sep=0pt, outer sep=6pt}{\scalebox{\textscale}{$ P $}}
+
+\def\externalforcecolor{blue}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.6, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\twistingmomentepureoffset{.55*\reflength}
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{-1}
+\def\twistingmomentmultiplierz{0}
+\def\spiralaxialstep{1.1}
+\def\spiralinitialangle{-75}
+
+\drawepureofinternalmomentfromthirdandsecondforces{green}{blue}{cyan}
+
+\end{tikzpicture}
+}
+\end{center}
+
+%% \end{comment} %%
+
+\end{document}

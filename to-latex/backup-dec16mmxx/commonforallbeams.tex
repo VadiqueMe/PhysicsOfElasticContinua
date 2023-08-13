@@ -1,0 +1,536 @@
+\def\beamlinewidth{2.8pt}
+\tikzstyle{beam line} = [ line width=\beamlinewidth, line cap=round, color=black ]
+
+\def\auxlinewidth{.6pt}
+\tikzstyle{aux line thin} = [ line width=\auxlinewidth, color=black, line cap=round ]
+\tikzstyle{aux thin dashed} = [ aux line thin, dash pattern=on 0pt off 1.6\pgflinewidth ]
+\tikzstyle{aux line thick} = [ line width=2.5*\auxlinewidth, color=black, line cap=round ]
+\tikzstyle{aux thick dashed} = [ aux line thick, dash pattern=on 0pt off 1.6\pgflinewidth ]
+
+\def\colorforforces{orange!33!red}
+\def\externalforcecolor{\colorforforces}
+\tikzstyle{external force} =
+	[ line width=(2/3)*\beamlinewidth, color=\externalforcecolor, line cap=round, -{Triangle[round, length=12pt, width=8pt]} ]
+
+\def\textscale{1.2}
+
+\def\reflength{5} % reference length
+
+\pgfmathsetmacro\cornerlength{\reflength / 20}
+
+\pgfmathsetmacro\onePl{\reflength / 3}
+\pgfmathsetmacro\justP{\onePl / \reflength}
+
+\def\epurehatchsteps{12} % steps per reference length
+\pgfmathsetmacro\hatchstep{\reflength / (\epurehatchsteps - 1)}
+
+\tikzset{
+	hatch distance/.store in=\hatchdistance,
+	hatch distance=15pt,
+	hatch thickness/.store in=\hatchthickness,
+	hatch thickness=.6pt %%\auxlinewidth
+}
+
+\makeatletter
+\pgfdeclarepatternformonly[\hatchdistance,\hatchthickness]{flexible hatch}
+	{\pgfqpoint{0pt}{0pt}}
+	{\pgfqpoint{\hatchdistance}{\hatchdistance}}
+	{\pgfpoint{\hatchdistance-1pt}{\hatchdistance-1pt}}%
+	{
+		\pgfsetcolor{\tikz@pattern@color}
+		\pgfsetlinewidth{\hatchthickness}
+		\pgfpathmoveto{\pgfqpoint{0pt}{0pt}}
+		\pgfpathlineto{\pgfqpoint{\hatchdistance}{\hatchdistance}}
+		\pgfusepath{stroke}
+	}
+\makeatother
+
+\def\clampsize{.8}
+\def\clampcolor{gray}
+
+\tikzstyle{clamp line} = [ line width=(2/3)*\beamlinewidth, line cap=round, color=\clampcolor ]
+\tikzstyle{clamp line thin} = [ line width=2*\auxlinewidth, line cap=round, color=\clampcolor ]
+
+\newcommand\drawclampyz[1]{
+	\draw [ clamp line, tdplot_main_coords ] ($ #1 + ( 0, .6*\clampsize, .5*\clampsize ) $) -- ++( - .6*\clampsize, 0, 0 ) ;
+	\draw [ clamp line, tdplot_main_coords ] ($ #1 + ( 0, -.6*\clampsize, .5*\clampsize ) $) -- ++( - .7*\clampsize, 0, 0 ) ;
+	\draw [ clamp line, tdplot_main_coords ] ($ #1 + ( 0, .6*\clampsize, -.5*\clampsize ) $) -- ++( - .7*\clampsize, 0, 0 ) ;
+	\draw [ clamp line, tdplot_main_coords ] ($ #1 + ( 0, -.6*\clampsize, -.5*\clampsize ) $) -- ++( - .7*\clampsize, 0, 0 ) ;
+
+	\draw [ clamp line, rounded corners=.5\pgflinewidth, fill=white, tdplot_main_coords ]
+		($ #1 + ( 0, .6*\clampsize, .5*\clampsize ) $)
+		-- ($ #1 + ( 0, -.6*\clampsize, .5*\clampsize ) $)
+		-- ($ #1 + ( 0, -.6*\clampsize, -.5*\clampsize ) $)
+		-- ($ #1 + ( 0, .6*\clampsize, -.5*\clampsize ) $)
+		-- cycle ;
+
+	\draw [ clamp line thin, color=\clampcolor, tdplot_main_coords ]
+		plot [ smooth, tension=.8 ] coordinates {
+		($ #1 + ( - .6*\clampsize, .6*\clampsize, .5*\clampsize ) $)
+		($ #1 + ( -.5*\clampsize, .3*\clampsize, .5*\clampsize ) $)
+		($ #1 + ( - .75*\clampsize, -.3*\clampsize, .5*\clampsize ) $)
+		($ #1 + ( - .7*\clampsize, -.6*\clampsize, .5*\clampsize ) $)
+	} ;
+	\draw [ clamp line thin, color=\clampcolor, tdplot_main_coords ]
+		plot [ smooth, tension=.5 ] coordinates {
+		($ #1 + ( - .6*\clampsize, .6*\clampsize, .5*\clampsize ) $)
+		($ #1 + ( -.66*\clampsize, .6*\clampsize, .2*\clampsize ) $)
+		($ #1 + ( - .55*\clampsize, .6*\clampsize, -.2*\clampsize ) $)
+		($ #1 + ( - .7*\clampsize, .6*\clampsize, -.5*\clampsize ) $)
+	} ;
+}
+
+% #1: point
+% #2: force vector
+% #3: options for node
+% #4: node text
+\newcommand\drawload[4]{
+	\draw [ external force, tdplot_main_coords ]
+		($ #1 - #2 $) -- ++#2
+		node [ #3 ] { #4 } ;
+}
+
+% takes two points as cartesian {x}{y}{z} and calculates cross product of their location vectors
+% placing the result into last three arguments
+\newcommand\tdcrossproductcartesian[9]{
+\def\crossz{ (#1) * (#5) - (#2) * (#4) }
+\def\crossx{ (#2) * (#6) - (#3) * (#5) }
+\def\crossy{ (#3) * (#4) - (#1) * (#6) }
+\pgfmathsetmacro{#7}{\crossx}
+\pgfmathsetmacro{#8}{\crossy}
+\pgfmathsetmacro{#9}{\crossz}
+}
+
+% {rx}{ry}{rz} of a point in question
+% {rfx}{rfy}{rfz} of force point
+% {fx}{fy}{fz} of force vector
+% places result in \momentx, \momenty, \momentz
+\newcommand\calculateinternalmomentatpointfromforce[9]{
+	% get vector d from current point to the force
+	\pgfmathsetmacro\distancex{(#4) - (#1)}
+	\pgfmathsetmacro\distancey{(#5) - (#2)}
+	\pgfmathsetmacro\distancez{(#6) - (#3)}
+	% balance of moments: M + d ✕ F = 0
+	% internal moment M = - d ✕ F = F ✕ d
+	\tdcrossproductcartesian%
+		{#7}{#8}{#9}%
+		{\distancex}{\distancey}{\distancez}%
+		{\momentx}{\momenty}{\momentz}
+}
+
+\def\twistingmomentepureoffset{\reflength / 3}
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{0}
+\def\twistingmomentmultiplierz{1}
+
+% #1,#2,#3 = x,y,z
+% #4 = color
+\newcommandx*\drawtwistingoffsetlineat[4][4=\epurecolor]{
+	\draw [ aux thick dashed, color=#4, tdplot_main_coords ]
+		( #1, #2, #3 ) -- ++( {\twistingmomentmultiplierx * \twistingmomentepureoffset}, {\twistingmomentmultipliery * \twistingmomentepureoffset}, {\twistingmomentmultiplierz * \twistingmomentepureoffset} ) ;
+}
+
+%%\newcommand\drawtwistingoffsetbasebetween[6]{
+%%	\draw [ aux line thick, color=\epurecolor, tdplot_main_coords ]
+%%		($ ( #1, #2, #3 ) + ( {\twistingmomentmultiplierx * \twistingmomentepureoffset}, {\twistingmomentmultipliery * \twistingmomentepureoffset}, {\twistingmomentmultiplierz * \twistingmomentepureoffset} ) $)
+%%		-- ($ ( #4, #5, #6 ) + ( {\twistingmomentmultiplierx * \twistingmomentepureoffset}, {\twistingmomentmultipliery * \twistingmomentepureoffset}, {\twistingmomentmultiplierz * \twistingmomentepureoffset} ) $) ;
+%%}
+
+\tikzset {
+	set arrow inside/.code={\pgfqkeys{/tikz/arrow inside}{#1}},
+	set arrow inside={end/.initial=>, opt/.initial=},
+	/pgf/decoration/Mark/.style={
+		mark/.expanded=at position #1 with {
+			\noexpand\arrow[\pgfkeysvalueof{/tikz/arrow inside/opt}]{\pgfkeysvalueof{/tikz/arrow inside/end}}
+		}
+	},
+	arrow inside/.style 2 args={
+		set arrow inside={#1},
+		postaction={
+			decorate,decoration={
+				markings,Mark/.list={#2}
+			}
+		}
+	},
+}
+
+\def\samplespercircle{30}
+
+\def\spiralinitialangle{-10}
+\def\spiralaxialstep{1}
+\def\wherefirstarrowonspiral{0.075}
+
+% #1 = begin z, #2 = end z
+% #3, #4 = x, y
+% #5 = color
+% needs pre-calculated \momentz
+\newcommandx*\drawtwistingspiralalongzbetween[5][5=\epurecolor]{
+	\pgfmathparse{(abs(\momentz) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\pgfmathsetmacro\momentzsign{\momentz / abs(\momentz)}
+	\else
+		\pgfmathsetmacro\momentzsign{0}
+	\fi
+
+	\pgfmathsetmacro\momentzmidx{#3 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + .5*abs(\momentz) )}
+	\pgfmathsetmacro\momentzmidy{#4 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + .5*abs(\momentz) )}
+	\pgfmathsetmacro\momentzmidz{#1 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + .5*abs(\momentz) )}
+
+	\pgfmathsetmacro\spiralradius{\momentz / 2}
+	\pgfmathsetmacro\axialadvance{abs(\spiralaxialstep) * (#2 - #1) / abs(#2 - #1)}
+	\pgfmathsetmacro\axialshift{-\spiralinitialangle*\axialadvance/360}
+	\pgfmathsetmacro\lengthincircles{abs(#2 - #1) / abs(\spiralaxialstep)}
+	\pgfmathsetmacro\endangle{\lengthincircles * 360 + \spiralinitialangle}
+	\pgfmathsetmacro\howmanysamples{\lengthincircles * \samplespercircle}
+
+	\draw[ aux line thick, color=#5, tdplot_main_coords ]
+		plot [ domain=\spiralinitialangle:\endangle, variable=\t, samples=\howmanysamples ]
+		( {\momentzmidx + \momentzsign*\spiralradius*sin(\t)},
+		{\momentzmidy + abs(\momentzsign)*\spiralradius*cos(\t)},
+			{\momentzmidz + \axialadvance*\t/360 + \axialshift} )
+		[ arrow inside = {}{\wherefirstarrowonspiral, 1} ] ;
+}
+
+% #1 = begin y, #2 = end y
+% #3, #4 = x, z
+% #5 = color
+% needs pre-calculated \momenty
+\newcommandx*\drawtwistingspiralalongybetween[5][5=\epurecolor]{
+	\pgfmathparse{(abs(\momenty) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\pgfmathsetmacro\momentysign{\momenty / abs(\momenty)}
+	\else
+		\pgfmathsetmacro\momentysign{0}
+	\fi
+
+	\pgfmathsetmacro\momentymidx{#3 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + .5*abs(\momenty) )}
+	\pgfmathsetmacro\momentymidy{#1 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + .5*abs(\momenty) )}
+	\pgfmathsetmacro\momentymidz{#4 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + .5*abs(\momenty) )}
+
+	\pgfmathsetmacro\spiralradius{\momenty / 2}
+	\pgfmathsetmacro\axialadvance{abs(\spiralaxialstep) * (#2 - #1) / abs(#2 - #1)}
+	\pgfmathsetmacro\axialshift{-\spiralinitialangle*\axialadvance/360}
+	\pgfmathsetmacro\lengthincircles{abs(#2 - #1) / abs(\spiralaxialstep)}
+	\pgfmathsetmacro\endangle{\lengthincircles * 360 + \spiralinitialangle}
+	\pgfmathsetmacro\howmanysamples{\lengthincircles * \samplespercircle}
+
+	\draw[ aux line thick, color=#5, tdplot_main_coords ]
+		plot [ domain=\spiralinitialangle:\endangle, variable=\t, samples=\howmanysamples ]
+		( {\momentymidx - \momentysign*\spiralradius*sin(\t)},
+			{\momentymidy + \axialadvance*\t/360 + \axialshift},
+		{\momentymidz + abs(\momentysign)*\spiralradius*cos(\t)} )
+		[ arrow inside = {}{\wherefirstarrowonspiral, 1} ] ;
+}
+
+% #1 = begin x, #2 = end x
+% #3, #4 = y, z
+% #5 = color
+% needs pre-calculated \momentx
+\newcommandx*\drawtwistingspiralalongxbetween[5][5=\epurecolor]{
+	\pgfmathparse{(abs(\momentx) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\pgfmathsetmacro\momentxsign{\momentx / abs(\momentx)}
+	\else
+		\pgfmathsetmacro\momentxsign{0}
+	\fi
+
+	\pgfmathsetmacro\momentxmidx{#1 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + .5*abs(\momentx) )}
+	\pgfmathsetmacro\momentxmidy{#3 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + .5*abs(\momentx) )}
+	\pgfmathsetmacro\momentxmidz{#4 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + .5*abs(\momentx) )}
+
+	\pgfmathsetmacro\spiralradius{\momentx / 2}
+	\pgfmathsetmacro\axialadvance{abs(\spiralaxialstep) * (#2 - #1) / abs(#2 - #1)}
+	\pgfmathsetmacro\axialshift{-\spiralinitialangle*\axialadvance/360}
+	\pgfmathsetmacro\lengthincircles{abs(#2 - #1) / abs(\spiralaxialstep)}
+	\pgfmathsetmacro\endangle{\lengthincircles * 360 + \spiralinitialangle}
+	\pgfmathsetmacro\howmanysamples{\lengthincircles * \samplespercircle}
+
+	\draw[ aux line thick, color=#5, tdplot_main_coords ]
+		plot [ domain=\spiralinitialangle:\endangle, variable=\t, samples=\howmanysamples ]
+		( {\momentxmidx + \axialadvance*\t/360 + \axialshift},
+			{\momentxmidy + \momentxsign*\spiralradius*sin(\t)},
+			{\momentxmidz + abs(\momentxsign)*\spiralradius*cos(\t)} )
+		[ arrow inside = {}{\wherefirstarrowonspiral, 1} ] ;
+}
+
+% #1,#2,#3 are x,y,z of point
+% #4,#5,#6 are colors of lines for moment around x axis, y axis and z axis
+% anything in #7 for thick line
+% needs pre-calculated \momentx, \momenty, \momentz
+\newcommandx*\drawepurelinesatpointalongx[7][7=]{
+	\ifthenelse{\isempty{#7}}%
+		{\def\linestyle{aux line thin}}%
+		{\def\linestyle{aux line thick}}
+
+	\pgfmathsetmacro\momentzendx{#1 + 0}
+	\pgfmathsetmacro\momentzendy{#2 - \momentz}
+	\pgfmathsetmacro\momentzendz{#3 + 0}
+
+	\pgfmathsetmacro\momentyendx{#1 + 0}
+	\pgfmathsetmacro\momentyendy{#2 + 0}
+	\pgfmathsetmacro\momentyendz{#3 + \momenty}
+
+	\pgfmathsetmacro\momentxendx{#1 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + abs(\momentx) )}
+	\pgfmathsetmacro\momentxendy{#2 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + abs(\momentx) )}
+	\pgfmathsetmacro\momentxendz{#3 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + abs(\momentx) )}
+
+	\pgfmathsetmacro\momentxmidx{#1 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + .5*abs(\momentx) )}
+	\pgfmathsetmacro\momentxmidy{#2 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + .5*abs(\momentx) )}
+	\pgfmathsetmacro\momentxmidz{#3 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + .5*abs(\momentx) )}
+
+	% bending
+	\draw [ \linestyle, color=#5, tdplot_main_coords ]
+		( #1, #2, #3 ) -- ( \momentyendx, \momentyendy, \momentyendz ) ;
+	\draw [ \linestyle, color=#6, tdplot_main_coords ]
+		( #1, #2, #3 ) -- ( \momentzendx, \momentzendy, \momentzendz ) ;
+
+	% twisting
+	\pgfmathparse{(abs(\momentx) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\ifthenelse{\isempty{#7}}%
+		{}{%
+		\draw[ aux thick dashed, color=#4, tdplot_main_coords  ]
+			plot [ domain=0:360, variable=\t, samples=60 ]
+			( {\momentxmidx + 0}, {\momentxmidy + .5*\momentx*sin(\t)}, {\momentxmidz + .5*\momentx*cos(\t)} ) ;
+		}
+	\fi
+}
+
+% #1,#2,#3 are x,y,z of point
+% #4,#5,#6 are colors of lines for moment around x axis, y axis and z axis
+% anything in #7 for thick line
+% needs pre-calculated \momentx, \momenty, \momentz
+\newcommandx*\drawepurelinesatpointalongy[7][7=]{
+	\ifthenelse{\isempty{#7}}%
+		{\def\linestyle{aux line thin}}%
+		{\def\linestyle{aux line thick}}
+
+	\pgfmathsetmacro\momentzendx{#1 + \momentz}
+	\pgfmathsetmacro\momentzendy{#2 + 0}
+	\pgfmathsetmacro\momentzendz{#3 + 0}
+
+	\pgfmathsetmacro\momentxendx{#1 + 0}
+	\pgfmathsetmacro\momentxendy{#2 + 0}
+	\pgfmathsetmacro\momentxendz{#3 - \momentx}
+
+	\pgfmathsetmacro\momentyendx{#1 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + abs(\momenty) )}
+	\pgfmathsetmacro\momentyendy{#2 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + abs(\momenty) )}
+	\pgfmathsetmacro\momentyendz{#3 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + abs(\momenty) )}
+
+	\pgfmathsetmacro\momentymidx{#1 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + .5*abs(\momenty) )}
+	\pgfmathsetmacro\momentymidy{#2 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + .5*abs(\momenty) )}
+	\pgfmathsetmacro\momentymidz{#3 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + .5*abs(\momenty) )}
+
+	% bending
+	\draw [ \linestyle, color=#4, tdplot_main_coords ]
+		( #1, #2, #3 ) -- ( \momentxendx, \momentxendy, \momentxendz ) ;
+	\draw [ \linestyle, color=#6, tdplot_main_coords ]
+		( #1, #2, #3 ) -- ( \momentzendx, \momentzendy, \momentzendz ) ;
+
+	% twisting
+	\pgfmathparse{(abs(\momenty) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\ifthenelse{\isempty{#7}}%
+		{}{%
+		\draw[ aux thick dashed, color=#5, tdplot_main_coords  ]
+			plot [ domain=0:360, variable=\t, samples=60 ]
+			( {\momentymidx + .5*\momenty*sin(\t)}, {\momentymidy + 0}, {\momentymidz + .5*\momenty*cos(\t)} ) ;
+		}
+	\fi
+}
+
+% #1,#2,#3 are x,y,z of point
+% #4,#5,#6 are colors of lines for moment around x axis, y axis and z axis
+% anything in #7 for thick line
+% needs pre-calculated \momentx, \momenty, \momentz
+\newcommandx*\drawepurelinesatpointalongz[7][7=]{
+	\ifthenelse{\isempty{#7}}%
+		{\def\linestyle{aux line thin}}%
+		{\def\linestyle{aux line thick}}
+
+	\pgfmathsetmacro\momentxendx{#1 + 0}
+	\pgfmathsetmacro\momentxendy{#2 - \momentx}
+	\pgfmathsetmacro\momentxendz{#3 + 0}
+
+	\pgfmathsetmacro\momentyendx{#1 + \momenty}
+	\pgfmathsetmacro\momentyendy{#2 + 0}
+	\pgfmathsetmacro\momentyendz{#3 + 0}
+
+	\pgfmathsetmacro\momentzendx{#1 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + abs(\momentz) )}
+	\pgfmathsetmacro\momentzendy{#2 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + abs(\momentz) )}
+	\pgfmathsetmacro\momentzendz{#3 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + abs(\momentz) )}
+
+	\pgfmathsetmacro\momentzmidx{#1 + \twistingmomentmultiplierx * ( \twistingmomentepureoffset + .5*abs(\momentz) )}
+	\pgfmathsetmacro\momentzmidy{#2 + \twistingmomentmultipliery * ( \twistingmomentepureoffset + .5*abs(\momentz) )}
+	\pgfmathsetmacro\momentzmidz{#3 + \twistingmomentmultiplierz * ( \twistingmomentepureoffset + .5*abs(\momentz) )}
+
+	% bending
+	\draw [ \linestyle, color=#4, tdplot_main_coords ]
+		( #1, #2, #3 ) -- ( \momentxendx, \momentxendy, \momentxendz ) ;
+	\draw [ \linestyle, color=#5, tdplot_main_coords ]
+		( #1, #2, #3 ) -- ( \momentyendx, \momentyendy, \momentyendz ) ;
+
+	% twisting
+	\pgfmathparse{(abs(\momentz) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\ifthenelse{\isempty{#7}}%
+		{}{%
+		\draw [ aux thick dashed, color=#6, tdplot_main_coords ]
+			plot [ domain=0:360, variable=\t, samples=60 ]
+			( {\momentzmidx + .5*\momentz*cos(\t)}, {\momentzmidy + .5*\momentz*sin(\t)}, {\momentzmidz + 0} ) ;
+		}
+	\fi
+}
+
+% #1,#2,#3 = variables for maximum moments
+\newcommand\resetmaxmoments[3]{
+	\pgfmathsetmacro{#1}{0}
+	\pgfmathsetmacro{#2}{0}
+	\pgfmathsetmacro{#3}{0}
+}
+
+% #1,#2,#3 = variables for maximum moments
+% uses pre-calculated \momentx, \momenty, \momentz
+\newcommand\updatemaxmoments[3]{
+	\pgfmathparse{( abs(\momentx) > abs(#1) ) ? 1 : 0}%
+	\ifdim\pgfmathresult pt>0pt%
+		\pgfmathsetmacro{#1}{\momentx}
+	\fi
+
+	\pgfmathparse{( abs(\momenty) > abs(#2) ) ? 1 : 0}%
+	\ifdim\pgfmathresult pt>0pt%
+		\pgfmathsetmacro{#2}{\momenty}
+	\fi
+
+	\pgfmathparse{( abs(\momentz) > abs(#3) ) ? 1 : 0}%
+	\ifdim\pgfmathresult pt>0pt%
+		\pgfmathsetmacro{#3}{\momentz}
+	\fi
+}
+
+\def\saveepureendpoints{
+	\pgfmathsetmacro\savedmomentxendx{\momentxendx}
+	\pgfmathsetmacro\savedmomentxendy{\momentxendy}
+	\pgfmathsetmacro\savedmomentxendz{\momentxendz}
+
+	\pgfmathsetmacro\savedmomentyendx{\momentyendx}
+	\pgfmathsetmacro\savedmomentyendy{\momentyendy}
+	\pgfmathsetmacro\savedmomentyendz{\momentyendz}
+
+	\pgfmathsetmacro\savedmomentzendx{\momentzendx}
+	\pgfmathsetmacro\savedmomentzendy{\momentzendy}
+	\pgfmathsetmacro\savedmomentzendz{\momentzendz}
+}
+
+\newcommandx*\drawlinebetweensavedandcurrentz[1][1=\epurecolor]{
+	\draw [ aux line thick, color=#1, tdplot_main_coords ]
+		( \savedmomentzendx, \savedmomentzendy, \savedmomentzendz )
+		-- ( \momentzendx, \momentzendy, \momentzendz ) ;
+}
+
+\newcommandx*\drawlinebetweensavedandcurrenty[1][1=\epurecolor]{
+	\draw [ aux line thick, color=#1, tdplot_main_coords ]
+		( \savedmomentyendx, \savedmomentyendy, \savedmomentyendz )
+		-- ( \momentyendx, \momentyendy, \momentyendz ) ;
+}
+
+\newcommandx*\drawlinebetweensavedandcurrentx[1][1=\epurecolor]{
+	\draw [ aux line thick, color=#1, tdplot_main_coords ]
+		( \savedmomentxendx, \savedmomentxendy, \savedmomentxendz )
+		-- ( \momentxendx, \momentxendy, \momentxendz ) ;
+}
+
+% #1 = begin x, #2 = end x
+% #3, #4 = y, z
+% #5 = force vector as {fx}{fy}{fz}
+% #6 = force point as {x}{y}{z}
+% #7, #8, #9 = colorx, colory, colorz
+\newcommand\drawepuresofmomentsalongxbetween[9]{
+	\pgfmathsetmacro\xfrom{#1}
+	\pgfmathsetmacro\xto{#2}
+	\pgfmathsetmacro\xstep{\hatchstep * ( \xto - \xfrom ) / abs( \xto - \xfrom )}
+	\pgfmathsetmacro\xnext{\xfrom + \xstep}
+	\pgfmathsetmacro\xnextnext{\xnext + \xstep}
+}
+
+% #1 = begin y, #2 = end y
+% #3, #4 = x, z
+% #5 = force vector as {fx}{fy}{fz}
+% #6 = force point as {x}{y}{z}
+% #7, #8, #9 = colorx, colory, colorz
+\newcommand\drawepuresofmomentsalongybetween[9]{
+	\pgfmathsetmacro\yfrom{#1}
+	\pgfmathsetmacro\yto{#2}
+	\pgfmathsetmacro\ystep{\hatchstep * ( \yto - \yfrom ) / abs( \yto - \yfrom )}
+	\pgfmathsetmacro\ynext{\yfrom + \ystep}
+	\pgfmathsetmacro\ynextnext{\ynext + \ystep}
+
+	\foreach \yline in { \ynext, \ynextnext, ..., \yto } {
+		\resetmaxmoments{\maxmomentx}{\maxmomenty}{\maxmomentz}
+
+		\pgfmathsetmacro\ybefore{\yline - \ystep}
+		\calculateinternalmomentatpointfromforce{#3}{\ybefore}{#4}#6#5
+		\drawepurelinesatpointalongy{#3}{\ybefore}{#4}{#7}{#8}{#9}
+		\updatemaxmoments{\maxmomentx}{\maxmomenty}{\maxmomentz}
+		\saveepureendpoints
+
+		\calculateinternalmomentatpointfromforce{#3}{\yline}{#4}#6#5
+		\drawepurelinesatpointalongy{#3}{\yline}{#4}{#7}{#8}{#9}
+		\updatemaxmoments{\maxmomentx}{\maxmomenty}{\maxmomentz}
+
+		\pgfmathparse{(abs(\maxmomentx) > 0) ? 1 : 0}%
+		\ifdim\pgfmathresult pt>0pt%
+			\drawlinebetweensavedandcurrentx[#7]
+		\fi
+		\pgfmathparse{(abs(\maxmomentz) > 0) ? 1 : 0}%
+		\ifdim\pgfmathresult pt>0pt%
+			\drawlinebetweensavedandcurrentz[#9]
+		\fi
+	}
+
+	\pgfmathsetmacro\spiralishere{0} % 0: false, 1: true
+
+	\calculateinternalmomentatpointfromforce{#3}{\yfrom}{#4}#6#5
+	\drawepurelinesatpointalongy{#3}{\yfrom}{#4}{#7}{#8}{#9}[thick]
+
+	\pgfmathparse{(abs(\momenty) > 0) ? 1 : 0}%
+	\ifdim\pgfmathresult pt>0pt%		
+		\drawtwistingoffsetlineat{#3}{\yfrom}{#4}[#8]
+		\pgfmathsetmacro\spiralishere{1}
+	\fi
+
+	\calculateinternalmomentatpointfromforce{#3}{\yto}{#4}#6#5
+	\drawepurelinesatpointalongy{#3}{\yto}{#4}{#7}{#8}{#9}[thick]
+
+	\pgfmathparse{(abs(\momenty) > 0) ? 1 : 0}%
+	\ifdim\pgfmathresult pt>0pt%
+		\drawtwistingoffsetlineat{#3}{\yto}{#4}[#8]
+		\pgfmathsetmacro\spiralishere{1}
+	\fi
+
+	\ifdim\spiralishere pt>0pt%
+		\drawtwistingspiralalongybetween{#1}{#2}{#3}{#4}[#8]
+	\fi
+}
+
+% #1 = begin z, #2 = end z
+% #3, #4 = x, y
+% #5 = force vector as {fx}{fy}{fz}
+% #6 = force point as {x}{y}{z}
+% #7, #8, #9 = colorx, colory, colorz
+\newcommand\drawepuresofmomentsalongzbetween[9]{
+	\pgfmathsetmacro\zfrom{#1}
+	\pgfmathsetmacro\zto{#2}
+	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+	\pgfmathsetmacro\znext{\zfrom + \zstep}
+	\pgfmathsetmacro\znextnext{\znext + \zstep}
+}
+
+\newcommand\drawepureofinternalmomentfromfirstforce{
+	% override it
+}
+
+\newcommand\drawepureofinternalmomentfromsecondforce{
+	% override it
+}
+
+% #1: color of first force
+% #2: color of second force
+% #3: color of sum
+\newcommand\drawepureofinternalmomentfrombothforces[3]{
+	% override it
+}

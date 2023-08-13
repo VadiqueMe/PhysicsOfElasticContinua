@@ -1,0 +1,113 @@
+\documentclass[tikz, border=5mm]{standalone}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{decorations.markings}
+
+\usepackage[english]{babel}
+
+\usepackage{xargs}
+\usepackage{xifthen}
+
+\begin{document}
+
+\input{commonforallbeams.tex}
+
+\def\forcearrowscale{4}
+
+\input{Fbeam.tex}
+
+\newcommand\drawframe{
+%
+\tikzstyle{empty node} = [ shape=circle, outer sep=10pt ]
+\node [ empty node ] at ( 16cm, 12cm ) {} ;
+\node [ empty node ] at ( -16cm, -12cm ) {} ;
+
+\def\textscale{2}
+
+\pgfmathsetmacro\cornerlength{\reflength / 32}
+
+\drawbeam
+
+\def\externalforcecolor{green}
+
+\drawepureofinternalmomentfromthirdforce
+
+\def\externalforcecolor{red}
+
+\drawload{( {\firstforcepointx}, {\firstforcepointy}, {\firstforcepointz} )}{( {\firstforcevectorx * \forcearrowscale}, {\firstforcevectory * \forcearrowscale}, {\firstforcevectorz * \forcearrowscale} )}{pos=.1, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\externalforcecolor{blue}
+
+\drawload{( {\secondforcepointx}, {\secondforcepointy}, {\secondforcepointz} )}{( {\secondforcevectorx * \forcearrowscale}, {\secondforcevectory * \forcearrowscale}, {\secondforcevectorz * \forcearrowscale} )}{pos=.6, below, inner sep=0pt, outer sep=11pt}{\scalebox{\textscale}{$ P $}}
+
+\def\twistingmomentepureoffset{.5*\reflength}
+\def\twistingmomentmultiplierx{0}
+\def\twistingmomentmultipliery{0}
+\def\twistingmomentmultiplierz{1}
+
+\drawepureofinternalmomentfrombothforces{red}{blue}{magenta}
+
+\def\externalforcecolor{green}
+
+\drawload{( {\thirdforcepointx}, {\thirdforcepointy}, {\thirdforcepointz} )}{( {\thirdforcevectorx * \forcearrowscale}, {\thirdforcevectory * \forcearrowscale}, {\thirdforcevectorz * \forcearrowscale} )}{pos=.33, left, inner sep=0pt, outer sep=6pt}{\scalebox{\textscale}{$ P $}}
+%
+}
+
+\pgfmathsetmacro\maxzooming{1}
+
+\def\anglestep{2}
+\def\anglesecondbegin{120}
+\pgfmathsetmacro\nextangle{\anglesecondbegin + \anglestep}
+\def\maxincrement{360} % 360
+\pgfmathsetmacro\endangle{\anglesecondbegin + \maxincrement - \anglestep}
+
+\foreach \anglesecond  in { \anglesecondbegin, \nextangle, ..., \endangle } {
+\begin{tikzpicture}[ scale=1 ]
+
+\pgfmathsetmacro\anglefirst{55 + ( (\anglesecond - 120) / 18 )}
+\tdplotsetmaincoords{\anglefirst}{\anglesecond}
+
+\pgfmathsetmacro\zooming{(\anglesecond - 110) / 90}
+\pgfmathparse{(\zooming > \maxzooming) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+\pgfmathsetmacro\zooming{\maxzooming}
+\fi
+
+\scalebox{\zooming}{\drawframe}
+
+\end{tikzpicture}
+}
+
+\pgfmathsetmacro\endangle{\anglesecondbegin + \maxincrement - \anglestep}
+
+\foreach \anglesecond  in { \anglesecondbegin, \nextangle, ..., \endangle } {
+\begin{tikzpicture}[ scale=1 ]
+
+\pgfmathsetmacro\anglefirst{75 - ( (\anglesecond - 120) / 15 )}
+\tdplotsetmaincoords{\anglefirst}{\anglesecond}
+
+\pgfmathsetmacro\zooming{\maxzooming}
+
+\scalebox{\zooming}{\drawframe}
+
+\end{tikzpicture}
+}
+
+\pgfmathsetmacro\endangle{\anglesecondbegin + \maxincrement}
+
+\foreach \anglesecond  in { \anglesecondbegin, \nextangle, ..., \endangle } {
+\begin{tikzpicture}[ scale=1 ]
+
+\pgfmathsetmacro\anglefirst{51 + ( (\anglesecond - 120) / 90 )}
+\tdplotsetmaincoords{\anglefirst}{\anglesecond}
+
+\pgfmathsetmacro\zooming{\maxzooming}
+
+\scalebox{\zooming}{\drawframe}
+
+\end{tikzpicture}
+}
+
+\end{document}

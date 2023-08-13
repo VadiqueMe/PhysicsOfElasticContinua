@@ -1,0 +1,599 @@
+\pgfmathsetmacro\xfirst{\reflength}
+\pgfmathsetmacro\xfirsttosecond{\reflength}
+\pgfmathsetmacro\xsecond{\xfirst + abs(\xfirsttosecond)}
+\pgfmathsetmacro\zfirst{-\reflength}
+\pgfmathsetmacro\zsecond{-\reflength}
+
+\newcommand\drawpartofbeamalongx{
+	\draw [ beam line, tdplot_main_coords ]
+		( 0, 0, 0 ) -- ++( \xsecond, 0, 0 ) ;
+}
+
+\newcommand\drawfirstverticalpartofbeam{
+	\draw [ beam line, tdplot_main_coords ]
+		($ ( 0, 0, 0 ) + ( \xfirst, 0, 0 ) $) -- ++( 0, 0, \zfirst ) ;
+
+	% corners
+
+	\pgfmathsetmacro\cornerzsign{\zfirst / abs(\zfirst)}
+
+	\draw [ beam line, fill=black, tdplot_main_coords ]
+		($ ( 0, 0, 0 ) + ( \xfirst, 0, 0 ) $)
+		-- ++( -\cornerlength, 0, 0 )
+		-- ++( \cornerlength, 0, {\cornerzsign*\cornerlength} )
+		-- cycle ;
+
+	\draw [ beam line, fill=black, tdplot_main_coords ]
+		($ ( 0, 0, 0 ) + ( \xfirst, 0, 0 ) $)
+		-- ++( \cornerlength, 0, 0 )
+		-- ++( -\cornerlength, 0, {\cornerzsign*\cornerlength} )
+		-- cycle ;
+}
+
+\newcommand\drawsecondverticalpartofbeam{
+	\draw [ beam line, tdplot_main_coords ]
+		($ ( 0, 0, 0 ) + ( \xsecond, 0, 0 ) $) -- ++( 0, 0, \zsecond ) ;
+
+	% corners
+
+	\pgfmathsetmacro\cornerzsign{\zsecond / abs(\zsecond)}
+
+	\draw [ beam line, fill=black, tdplot_main_coords ]
+		($ ( 0, 0, 0 ) + ( \xsecond, 0, 0 ) $)
+		-- ++( -\cornerlength, 0, 0 )
+		-- ++( \cornerlength, 0, {\cornerzsign*\cornerlength} )
+		-- cycle ;
+}
+
+\newcommand\drawbeam{
+	\drawpartofbeamalongx
+	\drawfirstverticalpartofbeam
+	\drawsecondverticalpartofbeam
+}
+
+\newcommand\drawbeamtwo{
+	\drawpartofbeamalongx
+	\drawfirstverticalpartofbeam
+}
+
+\newcommand\drawtextforpartofbeamalongx{
+	\pgfmathsetmacro\firstpartlengthmultiplier{\xfirst / \reflength}
+
+	\node [ above, shape=circle, inner sep=0pt, outer sep=8pt, tdplot_main_coords ]
+		at ($ ( 0, 0, 0 ) + ( .53*\xfirst, 0, 0 ) $)
+	{\scalebox{\textscale}{$
+\pgfmathparse{(\firstpartlengthmultiplier == 1) ? 0 : 1}\ifdim\pgfmathresult pt>0pt%
+	\pgfmathprintnumber[ precision=3, fixed, zerofill=false ]\firstpartlengthmultiplier\hspace{.1ex}
+\fi
+\ell
+	$}} ;
+
+	\pgfmathsetmacro\secondpartlengthmultiplier{\xfirsttosecond / \reflength}
+
+	\node [ above, shape=circle, inner sep=0pt, outer sep=8pt, tdplot_main_coords ]
+		at ($ ( \xfirst, 0, 0 ) + ( .51*\xfirsttosecond, 0, 0 ) $)
+	{\scalebox{\textscale}{$
+\pgfmathparse{(\secondpartlengthmultiplier == 1) ? 0 : 1}\ifdim\pgfmathresult pt>0pt%
+	\pgfmathprintnumber[ precision=3, fixed, zerofill=false ]\secondpartlengthmultiplier\hspace{.1ex}
+\fi
+\ell
+	$}} ;
+}
+
+\newcommand\drawtextforfirstverticalpartofbeam{
+	\pgfmathsetmacro\firstverticalpartlengthmultiplier{abs(\zfirst / \reflength)}
+
+	\node [ right, inner sep=0pt, outer sep=7pt, tdplot_main_coords ]
+		at ($ ( 0, 0, 0 ) + ( \xfirst, 0, .5*\zfirst ) $)
+	{\scalebox{\textscale}{$
+\pgfmathparse{(\firstverticalpartlengthmultiplier == 1) ? 0 : 1}\ifdim\pgfmathresult pt>0pt%
+	\pgfmathprintnumber[ precision=3, fixed, zerofill=false ]\firstverticalpartlengthmultiplier\hspace{.1ex}
+\fi
+\ell
+	$}} ;
+}
+
+\newcommand\drawtextforsecondverticalpartofbeam{
+	\pgfmathsetmacro\secondverticalpartlengthmultiplier{abs(\zsecond / \reflength)}
+
+	\node [ right, inner sep=0pt, outer sep=7pt, tdplot_main_coords ]
+		at ($ ( \xfirst, 0, 0 ) + ( \xfirsttosecond, 0, .5*\zsecond ) $)
+	{\scalebox{\textscale}{$
+\pgfmathparse{(\secondverticalpartlengthmultiplier == 1) ? 0 : 1}\ifdim\pgfmathresult pt>0pt%
+	\pgfmathprintnumber[ precision=3, fixed, zerofill=false ]\secondverticalpartlengthmultiplier\hspace{.1ex}
+\fi
+\ell
+	$}} ;
+}
+
+\newcommand\drawbeamtext{
+	\drawtextforpartofbeamalongx
+	\drawtextforfirstverticalpartofbeam
+	\drawtextforsecondverticalpartofbeam
+}
+
+\newcommand\drawbeamtwotext{
+	\drawtextforpartofbeamalongx
+	\drawtextforfirstverticalpartofbeam
+}
+
+\def\firstforcepointx{ \xsecond }
+\def\firstforcepointy{ 0 }
+\def\firstforcepointz{ \zsecond }
+\def\firstforcevectorx{ 0 }
+\def\firstforcevectory{ \justP }
+\def\firstforcevectorz{ 0 }
+
+\def\secondforcepointx{ \xfirst }
+\def\secondforcepointy{ 0 }
+\def\secondforcepointz{ \zfirst }
+\def\secondforcevectorx{ 0 }
+\def\secondforcevectory{ -\justP }
+\def\secondforcevectorz{ 0 }
+
+\def\thirdforcepointx{ \xsecond }
+\def\thirdforcepointy{ 0 }
+\def\thirdforcepointz{ 0 }
+\def\thirdforcevectorx{ 0 }
+\def\thirdforcevectory{ 0 }
+\def\thirdforcevectorz{ -\justP }
+
+\renewcommand\drawepureofinternalmomentfromfirstforce{
+	\def\epurecolor{\externalforcecolor}
+
+	% along x
+
+	\pgfmathsetmacro\xmax{\xsecond}
+	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\drawtwistingoffsetlineat{0}{0}{0}
+	\drawtwistingoffsetlineat{\xfirst}{0}{0}
+	\drawtwistingoffsetlineat{\xsecond}{0}{0}
+
+	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+	\drawepurelinesatpointalongx{0}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentz
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+	\drawepurelinesatpointalongx{\xsecond}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentz
+
+	\def\spiralaxialstep{1.1}
+	\def\spiralinitialangle{-100}
+	\def\wherefirstarrowonspiral{0.05}
+	\drawtwistingspiralalongxbetween{\xsecond}{0}{0}{0}
+
+	% along z
+
+	\pgfmathsetmacro\zfrom{0}
+	\pgfmathsetmacro\zto{\zsecond}
+	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+	\pgfmathsetmacro\znext{\zfrom + \zstep}
+	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+		\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zhatch}%
+			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+		\drawepurelinesatpointalongz{\xsecond}{0}{\zhatch}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+	\drawepurelinesatpointalongz{\xsecond}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zsecond}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+	\drawepurelinesatpointalongz{\xsecond}{0}{\zsecond}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentx
+}
+
+\renewcommand\drawepureofinternalmomentfromsecondforce{
+	\def\epurecolor{\externalforcecolor}
+
+	% along x
+
+	\pgfmathsetmacro\xmax{\xfirst}
+	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\drawtwistingoffsetlineat{0}{0}{0}
+	\drawtwistingoffsetlineat{\xfirst}{0}{0}
+
+	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+	\drawepurelinesatpointalongx{0}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentz
+
+	\drawtwistingspiralalongxbetween{\xfirst}{0}{0}{0}
+
+	% along z
+
+	\pgfmathsetmacro\zfrom{0}
+	\pgfmathsetmacro\zto{\zfirst}
+	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+	\pgfmathsetmacro\znext{\zfrom + \zstep}
+	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+		\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zhatch}%
+			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+		\drawepurelinesatpointalongz{\xfirst}{0}{\zhatch}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+	\drawepurelinesatpointalongz{\xfirst}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zfirst}%
+		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+	\drawepurelinesatpointalongz{\xfirst}{0}{\zfirst}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentx
+}
+
+% #1: color of first force
+% #2: color of second force
+% #3: color of sum
+\renewcommand\drawepureofinternalmomentfrombothforces[3]{
+	% along x
+
+	\def\epurecolor{#3}
+
+	\pgfmathsetmacro\xmin{0}
+	\pgfmathsetmacro\xnext{\xmin + \hatchstep}
+	\pgfmathsetmacro\xmax{\xfirst}
+	\foreach \xhatch in { \xmin, \xnext, ..., \xmax } {
+		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+		\pgfmathsetmacro\firstmomentx{\momentx}
+		\pgfmathsetmacro\firstmomenty{\momenty}
+		\pgfmathsetmacro\firstmomentz{\momentz}
+
+		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+		\pgfmathsetmacro\secondmomentx{\momentx}
+		\pgfmathsetmacro\secondmomenty{\momenty}
+		\pgfmathsetmacro\secondmomentz{\momentz}
+
+		\pgfmathsetmacro\momentx{\firstmomentx + \secondmomentx}
+		\pgfmathsetmacro\momenty{\firstmomenty + \secondmomenty}
+		\pgfmathsetmacro\momentz{\firstmomentz + \secondmomentz}
+
+		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+	\pgfmathsetmacro\firstmomentx{\momentx}
+	\pgfmathsetmacro\firstmomenty{\momenty}
+	\pgfmathsetmacro\firstmomentz{\momentz}
+
+	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+	\pgfmathsetmacro\momentx{\momentx + \firstmomentx}
+	\pgfmathsetmacro\momenty{\momenty + \firstmomenty}
+	\pgfmathsetmacro\momentz{\momentz + \firstmomentz}
+
+	\drawepurelinesatpointalongx{0}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\pgfmathsetmacro\momentxatzero{\momentx}
+	\pgfmathparse{(abs(\momentxatzero) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\drawtwistingoffsetlineat{0}{0}{0}
+	\fi
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+	\pgfmathsetmacro\firstmomentx{\momentx}
+	\pgfmathsetmacro\firstmomenty{\momenty}
+	\pgfmathsetmacro\firstmomentz{\momentz}
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+	\pgfmathsetmacro\momentx{\momentx + \firstmomentx}
+	\pgfmathsetmacro\momenty{\momenty + \firstmomenty}
+	\pgfmathsetmacro\momentz{\momentz + \firstmomentz}
+
+	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentz
+
+	\pgfmathparse{(abs(\momentxatzero) > 0) ? 1 : 0}\ifdim\pgfmathresult pt>0pt%
+		\pgfmathsetmacro\spiralaxialstep{.5}
+		\def\spiralinitialangle{-20}
+		\def\wherefirstarrowonspiral{.11}
+		\drawtwistingspiralalongxbetween{\xfirst}{0}{0}{0}
+	\fi
+
+	\def\epurecolor{#1}
+
+	\pgfmathsetmacro\xmin{\xfirst}
+	\pgfmathsetmacro\xnext{\xmin + \hatchstep}
+	\pgfmathsetmacro\xmax{\xsecond}
+	\foreach \xhatch in { \xmin, \xnext, ..., \xmax } {
+		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+		\pgfmathsetmacro\firstmomentx{\momentx}
+		\pgfmathsetmacro\firstmomenty{\momenty}
+		\pgfmathsetmacro\firstmomentz{\momentz}
+
+		\pgfmathsetmacro\secondmomentx{0}
+		\pgfmathsetmacro\secondmomenty{0}
+		\pgfmathsetmacro\secondmomentz{0}
+
+		\pgfmathsetmacro\momentx{\firstmomentx + \secondmomentx}
+		\pgfmathsetmacro\momenty{\firstmomenty + \secondmomenty}
+		\pgfmathsetmacro\momentz{\firstmomentz + \secondmomentz}
+
+		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\drawtwistingoffsetlineat{\xsecond}{0}{0}
+	\drawtwistingoffsetlineat{\xfirst}{0}{0}
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+	\drawepurelinesatpointalongx{\xsecond}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentz
+
+	\pgfmathsetmacro\spiralaxialstep{\momentx / (\justP * .8 * \reflength)}
+	\def\spiralinitialangle{40}
+	\def\wherefirstarrowonspiral{0.1}
+	\drawtwistingspiralalongxbetween{\xsecond}{\xfirst}{0}{0}
+
+	% along z
+
+	\def\epurecolor{#2}
+
+	\pgfmathsetmacro\zfrom{0}
+	\pgfmathsetmacro\zto{\zfirst}
+	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+	\pgfmathsetmacro\znext{\zfrom + \zstep}
+	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+		\pgfmathsetmacro\firstmomentx{0}
+		\pgfmathsetmacro\firstmomenty{0}
+		\pgfmathsetmacro\firstmomentz{0}
+
+		\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zhatch}%
+			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+		\pgfmathsetmacro\secondmomentx{\momentx}
+		\pgfmathsetmacro\secondmomenty{\momenty}
+		\pgfmathsetmacro\secondmomentz{\momentz}
+
+		\pgfmathsetmacro\momentx{\firstmomentx + \secondmomentx}
+		\pgfmathsetmacro\momenty{\firstmomenty + \secondmomenty}
+		\pgfmathsetmacro\momentz{\firstmomentz + \secondmomentz}
+
+		\drawepurelinesatpointalongz{\xfirst}{0}{\zhatch}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+	\drawepurelinesatpointalongz{\xfirst}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zfirst}%
+		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
+
+	\drawepurelinesatpointalongz{\xfirst}{0}{\zfirst}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentx
+
+	\def\epurecolor{#1}
+
+	\pgfmathsetmacro\zfrom{0}
+	\pgfmathsetmacro\zto{\zsecond}
+	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+	\pgfmathsetmacro\znext{\zfrom + \zstep}
+	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+		\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zhatch}%
+			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+		\pgfmathsetmacro\firstmomentx{\momentx}
+		\pgfmathsetmacro\firstmomenty{\momenty}
+		\pgfmathsetmacro\firstmomentz{\momentz}
+
+		\pgfmathsetmacro\secondmomentx{0}
+		\pgfmathsetmacro\secondmomenty{0}
+		\pgfmathsetmacro\secondmomentz{0}
+
+		\pgfmathsetmacro\momentx{\firstmomentx + \secondmomentx}
+		\pgfmathsetmacro\momenty{\firstmomenty + \secondmomenty}
+		\pgfmathsetmacro\momentz{\firstmomentz + \secondmomentz}
+
+		\drawepurelinesatpointalongz{\xsecond}{0}{\zhatch}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+	\drawepurelinesatpointalongz{\xsecond}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zsecond}%
+		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
+
+	\drawepurelinesatpointalongz{\xsecond}{0}{\zsecond}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrentx
+}
+
+\newcommand\drawepureofinternalmomentfromthirdforce{
+	\def\epurecolor{\externalforcecolor}
+
+	% along x
+
+	\pgfmathsetmacro\xmax{\xsecond}
+	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+			{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+			{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
+
+		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+			{\epurecolor}{\epurecolor}{\epurecolor}
+	}
+
+	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+		{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+		{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
+	\drawepurelinesatpointalongx{0}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+		{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+		{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
+	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrenty
+	%%\drawlinebetweensavedandcurrentz
+
+	\saveepureendpoints
+
+	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+		{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+		{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
+	\drawepurelinesatpointalongx{\xsecond}{0}{0}%
+		{\epurecolor}{\epurecolor}{\epurecolor}%
+		[thick]
+
+	\drawlinebetweensavedandcurrenty
+	%%\drawlinebetweensavedandcurrentz
+}
+
+% #1: color of third force
+% #2: color of second force
+% #3: color of sum
+\newcommand\drawepureofinternalmomentfromthirdandsecondforces[3]{
+	\def\externalforcecolor{#1}
+	\drawepureofinternalmomentfromthirdforce
+
+	\def\externalforcecolor{#2}
+	\drawepureofinternalmomentfromsecondforce
+}
