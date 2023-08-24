@@ -1,6 +1,6 @@
-\en{\section{Symmetric and antisymmetric tensors}}
+\en{\section{Symmetric and skewsymmetric tensors}}
 
-\ru{\section{Симметричные и антисимметричные тензоры}}
+\ru{\section{Симметричные и кососимметричные тензоры}}
 
 \label{section:tensors.symmetric+skewsymmetric}
 
@@ -10,110 +10,251 @@
 \en{of some pair of its indices}\ru{какой\hbox{-}либо пары своих индексов}\ru{,}
 \en{is called}\ru{называется}
 \en{symmetric}\ru{симметричным}
-\en{for that pair of indices}\ru{для той пары индексов}.
-\en{And if}\ru{А~если}
-\en{a~tensor}\ru{тензор}
-\en{alternates the~sign}\ru{меняет знак}~($+$/$-$)%
-\footnote{${{} \cdot (-1)}$}%
-\en{upon a~permutation}\ru{при~перестановке}
-\en{of some pair of indices}\ru{какой\hbox{-}нибудь пары индексов},
-\en{then}\ru{то}
-\en{it is called}\ru{он называется}
-\en{antisymmetric}\ru{антисимметричным}
-\en{or}\ru{или}
-\en{skew-symmetric}\ru{кососимметричным}
-\en{for that pair of indices}\ru{для той пары индексов}.
-
-\en{The tensor of the parity of permutations}\ru{Тензор чётности перестановок}~$\permutationsparitytensor$
-\en{is antisymmetric}\ru{антисимметричен}
-\en{by any pair of indices}\ru{по любой паре индексов},
-\en{it is completely}\ru{он полностью}
-(\en{absolutely}\ru{соверш\'{е}нно, абсолютно})
-\en{antisymmetric}\ru{антисимметричен}
-(\en{skew-symmetric}\ru{кососимметричен}).
-
-\en{Tensor of the second complexity}\ru{Тензор второй сложности}~$\bm{B}$
-\en{is symmetric}\ru{симметричен}\ru{,}
-\en{if}\ru{если}
-${\bm{B} = \bm{B}^{\T}}$.
-\en{When}\ru{Когда}
-\en{the transposing}\ru{транспонирование}
-\en{changes the sign of a~tensor}\ru{меняет знак тензора}
-${ \bm{A}^{\hspace{-0.1em}\T} = - \bm{A} }$,
+\en{for}\ru{для}
+\en{that pair}\ru{той пары}
+\en{of~indices}\ru{индексов}.
+\en{And when}\ru{А~когда}
+\en{a~permutation}\ru{перестановка}
+\en{of some}\ru{какой\hbox{-}нибудь}
+\en{pair}\ru{пары}
+\en{of~indices}\ru{индексов}
+\en{alternates the~sign}\ru{меняет знак}~\inquotes{$+$/$-$}{}
+\en{of a~tensor}\ru{тензора},
 \en{then}\ru{тогда}
-\en{it is antisymmetric}\ru{он антисимметричен}
-(\en{skew-symmetric}\ru{кососимметричен}).
+\en{this tensor}\ru{этот тензор}
+\en{is called}\ru{называется}
+\en{anti-symmetric}\ru{анти-симметричным}
+\en{or}\ru{или}
+\en{skew-symmetric}\ru{косо-симметричным}
+\en{for that pair of indices}\ru{для той пары индексов}.
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\begin{array}{c}
-\bm{C} = \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}+\hspace{.1ex} \bm{C}^{\mathsf{\hspace{.1ex}A}}\hspace{.1ex} , \;
+\en{As example}\ru{Как пример},
+\en{the~tensor of parity of permutations}\ru{тензор чётности перестановок}~$\permutationsparitytensor$~\eqref{permutationsparityintro}
+\en{is antisymmetric}\ru{антисимметричен}
+\en{for}\ru{для}
+\en{any\;\&\;every}\ru{любой и~каждой}
+\en{pair of~indices}\ru{пары индексов},
+\en{it is completely}\ru{он\:--- полностью}
+(\en{absolutely}\ru{соверш\'{е}нно, абсолютно})
+\en{skewsymmetric}\ru{кососимметричен}.
+
+\en{Tensor of the~second complexity}\ru{Тензор второй сложности}~$\bm{B}$
+\en{is symmetric}\ru{симметричен}\ru{,}
+\en{when}\ru{когда}
+${\bm{B} = \bm{B}^{\T}\hspace{-0.3ex}}$.
+\en{If}\ru{Если}~%
+\en{transposing}\ru{транспонирование}
+\en{changes the tensor’s sign}\ru{меняет знак тензора},
+\en{that is}\ru{то есть}
+${ \bm{A}^{\hspace{-0.1em}\T} \hspace{-0.3ex} = - \bm{A} }$,
+\en{then}\ru{то}
+\en{tensor}\ru{тензор}~${\hspace{-0.2ex}\bm{A}}$
+\en{is skewsymmetric}\ru{кососимметричен}
+(\en{antisymmetric}\ru{антисимметричен}).
+
+\en{The~sum}\ru{Сумма}
+\en{of a~bivalent tensor}\ru{бивалентного тензора}~${\bm{C}}$
+\en{with }\ru{с~}\en{the~transpose}\ru{транспонированным}~${\bm{C}^{\hspace{.1ex}\T}\hspace{-0.2ex}}$
+\en{is always symmetric}\ru{всегда симметрична}\::
+${\bigl( \bm{C} \hspace{-0.1ex} + \bm{C}^{\hspace{.1ex}\T} \bigr)^{\hspace{-0.1ex}\T} \hspace{-0.4ex}
+= \bm{C}^{\hspace{.1ex}\T} \hspace{-0.3ex} + \bm{C}
+= \bm{C} \hspace{-0.1ex} + \bm{C}^{\hspace{.1ex}\T} \hspace{-0.3ex}}$
+${\hspace{.5ex} \forall \bm{C}}$,
+\en{while}\ru{тогда как}
+\en{the~difference}\ru{разность}
+${\bigl( \bm{C} \hspace{-0.1ex} - \bm{C}^{\hspace{.1ex}\T} \bigr)^{\hspace{-0.1ex}\T} \hspace{-0.4ex}
+= \bm{C}^{\hspace{.1ex}\T} \hspace{-0.3ex} - \bm{C}
+= - \bigl( \bm{C} \hspace{-0.1ex} - \bm{C}^{\hspace{.1ex}\T} \bigr)}$
+\en{is always}\ru{всегда}
+${\forall \bm{C}}$
+\en{antisymmetric}\ru{антисимметрична}.
+
+\en{Denoting}\ru{Обозначая}
+%
+\begin{equation}\label{symmetricandantisymmetricpartsofbivalent}
+\bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.22ex} \equiv \hspace{.1ex} \displaystyle \smalldisplaystyleonehalf \hspace{-0.2ex} \left( {\bm{C} + \bm{C}^{\hspace{.1ex}\T}}\hspace{.1ex} \right)
+\hspace{-0.2ex} , \hspace{.5em}
+\bm{C}^{\mathsf{\hspace{.1ex}A}} \hspace{-0.22ex} \equiv \hspace{.1ex} \displaystyle \smalldisplaystyleonehalf \hspace{-0.2ex} \left( {\bm{C} - \bm{C}^{\hspace{.1ex}\T}}\hspace{.1ex} \right)
+\end{equation}
+%
+---
+\en{the~symmetric}\ru{симметричная}~${\bm{C}^{\mathsf{\hspace{.1ex}S}}}$
+\en{and }\ru{и~}\en{the~antisymmetric}\ru{антисимметричная}~${\bm{C}^{\mathsf{\hspace{.1ex}A}}}$
+\en{parts}\ru{части}
+\en{of some bivalent tensor}\ru{какого-нибудь бивалентного тензора}~${\bm{C}}$,
+\en{any}\ru{любой}
+\en{bivalent}\ru{бивалентный}
+\en{tensor}\ru{тензор}
+\en{can be}\ru{может быть}
+\en{presented}\ru{представлен}
+\en{as}\ru{как}
+\en{the~sum}\ru{сумма}
+\en{of these}\ru{этих}
+\en{parts}\ru{частей}
+%
+\begin{equation}\label{bivalentasthesumofsymmetricandantisymmetricparts}
+\bm{C} = \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex} + \hspace{.1ex} \bm{C}^{\mathsf{\hspace{.1ex}A}}
+\hspace{-0.3ex} , \hspace{.5em}
 \bm{C}^{\hspace{.1ex}\T} \hspace{-0.33ex} = \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}-\hspace{.1ex} \bm{C}^{\mathsf{\hspace{.1ex}A}}
-\hspace{.2ex} ;
-\\[0.2em]
-\bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.22ex} \equiv \hspace{.1ex} \displaystyle \onehalf \left( {\bm{C} + \bm{C}^{\hspace{.1ex}\T}}\hspace{.1ex} \right)\!, \;
-\bm{C}^{\mathsf{\hspace{.1ex}A}} \hspace{-0.22ex} \equiv \hspace{.1ex} \displaystyle \onehalf \left( {\bm{C} - \bm{C}^{\hspace{.1ex}\T}}\hspace{.1ex} \right)\!.
-\end{array}\end{equation}
-
-\begin{otherlanguage}{russian}
+\hspace{-0.3ex} .
+\end{equation}
 
 \noindent
 \en{For}\ru{Для}
 \en{a~dyad}\ru{диады}
-${\bm{c}\bm{d} \hspace{.1ex} = \bm{c}\bm{d}^{\mathsf{\hspace{.25ex}S}} \hspace{-0.2ex} + \hspace{.1ex} \bm{c}\bm{d}^{\mathsf{\hspace{.25ex}A}} \hspace{-0.16ex} = \hspace{.1ex}
-\smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c}\bm{d} + \hspace{-0.1ex} \bm{d}\bm{c} \hspace{.1ex} \right)
-+ \hspace{.16ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c} \bm{d} - \hspace{-0.1ex} \bm{d} \bm{c} \hspace{.1ex} \right)}$.
-
-Произведение двух симметричных тензоров
-${\bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}}}$
-симметрично далеко не~всегда,
-а~лишь когда
-${\bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp\hspace{.12ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.2ex}=\hspace{.1ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}}\hspace{-0.4ex}}$,
-ведь по~\eqref{transposeofdotproductforbivalenttensors}
-${\left(\hspace{.08ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{.1ex}\right)^{\hspace{-0.32ex}\T} \hspace{-0.16ex} = \hspace{.1ex} \bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp\hspace{.12ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.4ex}}$.
-
-
-
-\textcolor{magenta}{В~нечётномерных пространствах любой антисимметричный тензор второй сложности необрат\'{и}м,}
-\textcolor{red}{определитель матрицы компонент}
-\textcolor{magenta}{для~него\:--- нулевой.}
-
-Существует взаимно\hbox{-}однозначное соответствие
-между
-антисимметричными тензорами
-второй сложности
-и~(псевдо)векторами.
-Компоненты кососимметричного тензора
-полностью определяются тройкой чисел
-(диагональные элементы матрицы компонент\:--- нули,
-недиагональные\:--- попарно противоположны).
-Dot product кососимметричного~${\hspace{-0.2ex}\bm{A}}$
-и~какого\hbox{-}нибудь тензора~${\hspace{-0.2ex}{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}}$
-однозначно соответствует cross product’у псевдовектора~$\bm{a}$
-и~того~же тензора~${\hspace{-0.2ex}{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}}$
-
-\nopagebreak\vspace{-0.1em}\begin{equation}\begin{array}{c}
-\hspace{1.2em} \bm{b} \hspace{.3ex}
-= \bm{A} \hspace{.2ex}\dotp\hspace{.1ex} {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}
-\;\,\Leftrightarrow\;
-\bm{a} \hspace{.1ex} \times {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}
-\hspace{.1ex} = \hspace{.15ex} \bm{b} \hspace{.1ex} \;\:\:
-\forall \bm{A} \!=\! \bm{A}^{\mathsf{\!\,A}} \;\;
-\forall \, {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \;\; \forall \,\mathrm{n \!>\! 0}
-\hspace{.15ex} ,
-\\[.2em]
 %
-\hspace{1.2em} \bm{d} \hspace{.3ex}
-= {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.2ex} \dotp \bm{A}
-\;\,\Leftrightarrow\;
-{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.2ex}\times \bm{a}
-\hspace{.1ex} = \hspace{.15ex} \bm{d} \hspace{.1ex} \;\:\:
-\forall \bm{A} \!=\! \bm{A}^{\mathsf{\!\,A}} \;\;
-\forall \, {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \;\; \forall \,\mathrm{n \!>\! 0}
-\hspace{.15ex} .
-\end{array}\end{equation}
+\begin{equation*}
+\bm{c}\bm{d}
+\hspace{.1ex} = \hspace{.1ex}
+\tikzmark{beginSymmetricPartOfDyad} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c}\bm{d} + \hspace{-0.1ex} \bm{d}\bm{c} \hspace{.1ex} \right)  \hspace{-0.3ex} \tikzmark{endSymmetricPartOfDyad}
++ \hspace{.2ex}
+\tikzmark{beginSkewsymmetricPartOfDyad} \smalldisplaystyleonehalf \hspace{-0.1ex} \left( \bm{c} \bm{d} - \hspace{-0.1ex} \bm{d} \bm{c} \hspace{.1ex} \right) \hspace{-0.3ex} \tikzmark{endSkewsymmetricPartOfDyad}
+.
+\end{equation*}%
+\AddOverBrace[line width=.75pt][-0.3ex,0.3em]{beginSymmetricPartOfDyad}{endSymmetricPartOfDyad}{${\scriptstyle%
+\bm{c}\bm{d}^{\mathsf{\hspace{.25ex}S}}%
+}$}
+\AddOverBrace[line width=.75pt][-0.3ex,0.3em]{beginSkewsymmetricPartOfDyad}{endSkewsymmetricPartOfDyad}{${\scriptstyle%
+\bm{c}\bm{d}^{\mathsf{\hspace{.25ex}A}}%
+}$}
 
-Раскроем это соответствие~${\bm{A} \narroweq \bm{A}(\bm{a})}$:
+\vspace{-1em}
+{\small
+\setlength{\parindent}{0pt}
+\begin{leftverticalbar}%%[oversize]
+%
+\en{The~product}\ru{Произведение}
+${\bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}}}$
+\en{of two}\ru{двух}
+\en{symmetric tensors}\ru{симметричных тензоров}
+${\bm{C}^{\mathsf{\hspace{.1ex}S}}}$
+\en{and}\ru{и}~${\bm{D}^{\mathsf{\hspace{.1ex}S}}}$
+\en{is symmetric}\ru{симметрично}
+\en{not always}\ru{не всегда},
+\en{but only when}\ru{но~лишь когда}
+${\bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp\hspace{.12ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.2ex}=\hspace{.1ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}}\hspace{-0.4ex}}$,
+\en{because}\ru{ведь}
+\en{by}\ru{по}~\eqref{transposeofdotproductforbivalenttensors}
+${\left(\hspace{.08ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp \bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{.1ex}\right)^{\hspace{-0.32ex}\T} \hspace{-0.3ex} = \hspace{.1ex} \bm{D}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.1ex}\dotp\hspace{.12ex} \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.4ex}}$.
 
-\nopagebreak\vspace{-0.1em}\begin{equation*}
+\end{leftverticalbar}
+\par}
+
+%%%В~трёхмерном (нечётномерном) пространстве любой антисимметричный тензор второй сложности необрат\'{и}м,
+%%%третий инвариант (определитель матрицы компонент) для~него\:--- нулевой.
+
+\en{With}\ru{С}~\eqref{commutativity.unitdyad-cross-vector}
+\en{and}\ru{и}~\eqref{theparticularcasefortheunitdyadwithvector},
+\en{the~skew symmetry}\ru{косая симметрия}
+\en{of the~}\hbox{\hspace{-0.2ex}\inquotes{${\hspace{-0.25ex}\times\hspace{-0.1ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}}
+\en{for}\ru{для}
+\en{the~unit dyad}\ru{единичной диады}
+\en{and}\ru{и}~\en{a~vector}\ru{вектора}
+\en{is obvious}\ru{очевидна}
+
+\nopagebreak\vspace{-0.5em}
+\begin{multline}\label{skewsymmetryofunitdiadcrossvector}
+\bigl( \UnitDyad \times \bm{a} \hspace{.1ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.4ex}
+= \hspace{-0.2ex} \bigl( \hspace{.1ex} %%\scalebox{.95}[1]{$
+    \bm{e}_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.25ex} \times \hspace{-0.2ex} a_i \bm{e}_i
+%%$}
+\hspace{.1ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.33ex}
+= \hspace{-0.2ex} \bigl( \hspace{-0.1ex} %%\scalebox{.95}[1]{$
+    - \hspace{.25ex} \bm{e}_{\hspace{-0.1ex}j} \hspace{.1ex} a_i \bm{e}_i \hspace{-0.3ex} \times \hspace{-0.3ex} \bm{e}_{\hspace{-0.1ex}j}
+%%$}
+\hspace{.1ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.33ex}
+= %%\scalebox{.95}[1]{$
+    - \hspace{.25ex} a_i \bm{e}_i \hspace{-0.3ex} \times \hspace{-0.3ex} \bm{e}_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j}
+%%$}
+\\[-0.1em]
+= - \hspace{.3ex}
+\bm{a} \times \UnitDyad
+= - \hspace{.25ex} \UnitDyad \times \bm{a}
+= \hspace{-0.1ex} \bigl( \bm{a} \times \UnitDyad \hspace{.1ex} \bigr)^{\hspace{-0.25ex}\T}
+\hspace{-0.4ex} .
+\hspace{1em}
+\end{multline}
+
+\en{In search}\ru{В~поисках}
+\en{for a~case when}\ru{случая, когда}
+\en{a~bivalent tensor}\ru{бивалентный тензор}~${\hspace{-0.2ex}\bm{A}}$
+\en{can be}\ru{может быть}
+\en{represented}\ru{представлен}
+%%(\en{and better}\ru{а~лучше},
+%%\emph{\en{reciprocally reversible}\ru{взаимно обратимо}}
+%%\en{represented}\ru{представлен})
+\en{by just a~single}\ru{всего одним}
+\en{vector}\ru{вектором}~$\bm{a}$,
+\en{in such a~way that}\ru{таким путём, что}
+\en{an~action}\ru{действие}
+\en{of~vector}\ru{вектора}~$\bm{a}$
+\en{on other objects}\ru{на другие объекты}
+\en{is exactly like}\ru{в~точности как}
+\en{an~action}\ru{действие}
+\en{of~bivalent}\ru{бивалентного}~${\hspace{-0.2ex}\bm{A}}$
+\en{on the~same objects}\ru{на те~же объекты},
+\en{perhaps}\ru{возможно}
+\en{there’s a~chance}\ru{есть шанс}
+\en{to find}\ru{найти}
+\en{such}\ru{такой}~${\bm{A} \narroweq \bm{A}(\bm{a})}$\ru{,}
+\en{that}\ru{чтобы}
+\en{for}\ru{для}~${\forall \hspace{.2ex} {^\mathrm{n}\hspace{-0.1ex}\bm{\xi}}}$~${\forall \mathrm{n \!>\! 0}}$
+%
+\begin{alignat*}{2}
+\bm{b} \hspace{.3ex}
+= \bm{A} \hspace{.2ex}\dotp\hspace{.1ex} {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}
+& \hspace{.4em} \Leftrightarrow \hspace{.5em} &
+\bm{a} \hspace{.1ex} \times {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}
+\hspace{.1ex} = \hspace{.15ex} \bm{b}
+& \hspace{.8em} \forall \hspace{.1ex} \bm{b}
+\hspace{.2ex} ,
+\\[-0.1em]
+%
+\bm{d} \hspace{.3ex}
+= {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.2ex} \dotp \hspace{-0.1ex} \bm{A}
+& \hspace{.4em} \Leftrightarrow \hspace{.5em} &
+{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.1ex} \times \bm{a}
+\hspace{.1ex} = \hspace{.15ex} \bm{d}
+& \hspace{.8em} \forall \bm{d}
+\end{alignat*}
+%
+\en{or}\ru{или},
+\en{in words}\ru{словами},
+\en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведение}}
+\en{of~bivalent}\ru{бивалентного}~${\hspace{-0.2ex}\bm{A}}$
+\en{and }\ru{и~}\en{some}\ru{какого\hbox{-}нибудь}
+\en{other}\ru{другого}
+\en{tensor}\ru{тензора}~${\hspace{-0.2ex}{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}}$
+\en{is equal to}\ru{равн\'{о}}
+\en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\hspace{-0.25ex}\times\hspace{-0.1ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведению}}
+\en{of~pseudovector}\ru{псевдовектора}~$\bm{a}$
+\en{and the~same}\ru{и~того~же}
+\en{tensor}\ru{тензора}~${\hspace{-0.2ex}{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}}$.
+
+\en{The~relation}\ru{Отношение}~${\bm{a} \mapsto \hspace{-0.2ex} \bm{A}}$
+\en{can be}\ru{может быть}
+\en{derived}\ru{получено}
+\en{from}\ru{из}~\eqref{definingpropertyoftheidentitytensor}
+\en{and}\ru{и}~\eqref{crossproductfortheunitdyadandsometensor}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{skewsymmetricbivalentfromvector}
+\begin{array}{c}
+\bm{A} = \bm{A} \hspace{.1ex} \dotp \UnitDyad = \hspace{.1ex} \bm{a} \times \hspace{-0.1ex} \UnitDyad = - \hspace{.3ex} \bm{a} \dotp \permutationsparitytensor
+\hspace{.1ex} ,
+\\[.1em]
+\bm{A} = \UnitDyad \hspace{.1ex} \dotp \bm{A} = \UnitDyad \times \bm{a} = - \hspace{.2ex} \permutationsparitytensor \dotp \bm{a}
+\hspace{.2ex} .
+\end{array}
+\end{equation}
+
+\noindent
+\en{Or}\ru{Или},
+\en{delving}\ru{копаясь}
+\en{into components}\ru{в~компонентах},
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation*}
 \begin{array}{r@{\hspace{1ex}}c@{\hspace{1ex}}l}
 \bm{A} \hspace{.2ex}\dotp\hspace{.1ex} {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} & = & \bm{a} \hspace{.1ex} \times {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}}
 \\
@@ -134,83 +275,396 @@ A_{hj} & = & \! - \, a_{i} \permutationsparitysymbols{ihj}
 \end{array}
 \end{equation*}
 
-Так~же из ${{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.2ex} \dotp \bm{A} = {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.2ex}\times \bm{a}}$ получается ${\bm{A} = - \hspace{.2ex} \permutationsparitytensor \dotp \bm{a}}$.
+\vspace{-0.5em}\noindent
+\en{and }\ru{и~}%
+\en{by similar way}\ru{похожим путём}
+\en{from}\ru{из}
+${{^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.2ex} \dotp \bm{A} = {^\mathrm{n}\hspace{-0.12ex}\bm{\xi}} \hspace{.2ex}\times \bm{a}}$
+\en{follows}\ru{следует}
+${\bm{A} = - \hspace{.2ex} \permutationsparitytensor \dotp \bm{a}\hspace{.1ex}}$.
 
-Или проще, согласно~\eqref{crossproductforanytwotensors}
+(\en{Pseudo}\ru{Псевдо})\en{vector}\ru{вектор}~$\bm{a}$
+\en{is sometimes}\ru{иногда}
+\en{named as}\ru{именуется как}
+\inquotes{\en{accompanying}\ru{сопутствующий}}
+\en{or}\ru{или}
+\inquotes{\en{companion}\ru{компаньон~(companion)}}
+\en{for}\ru{для}
+\en{tensor}\ru{тензора}~${\hspace{-0.2ex}\bm{A}}$.
 
-\nopagebreak\vspace{-0.1em}\begin{equation*}\begin{array}{c}
-\bm{A} = \bm{A} \hspace{.1ex} \dotp \UnitDyad = \hspace{.1ex} \bm{a} \times \hspace{-0.1ex} \UnitDyad = - \hspace{.3ex} \bm{a} \dotp \permutationsparitytensor
-\hspace{.1ex} ,
-\\[.1em]
-\bm{A} = \UnitDyad \hspace{.1ex} \dotp \bm{A} = \UnitDyad \times \bm{a} = - \hspace{.2ex} \permutationsparitytensor \dotp \bm{a}
-\hspace{.2ex} .
-\end{array}\end{equation*}
+\en{To components}\ru{К~компонентам}
 
-(Псевдо)вектор~$\bm{a}$ называется сопутствующим для тензора~${\hspace{-0.2ex}\bm{A}}$.
-
-В~общем, для взаимно\hbox{-}однозначного соответствия между~${\hspace{-0.2ex}\bm{A}}$ \en{and}\ru{и}~$\bm{a}$ имеем
-
-\end{otherlanguage}
-
-\nopagebreak\vspace{-0.25em}\begin{equation}\label{companionvector}
-\begin{array}{c}
-\bm{A} \hspace{.2ex} = \hspace{.1ex} - \hspace{.3ex} \bm{a} \dotp \permutationsparitytensor \hspace{.2ex} = \hspace{.2ex} \bm{a} \times\hspace{-0.1ex} \UnitDyad \hspace{.2ex} = \hspace{.1ex} - \hspace{.2ex} \permutationsparitytensor \dotp \bm{a} \hspace{.2ex} = \hspace{.1ex} \UnitDyad \times \bm{a}
-\hspace{.1ex} ,
-\\[.3em]
-%
-\bm{a} = \bm{a} \hspace{.1ex} \dotp \UnitDyad = \bm{a} \dotp \left( \hspace{-0.3ex} - \displaystyle \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex} \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor \right) \hspace{-0.4ex} = \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.32ex} \bm{A} \dotdotp \permutationsparitytensor
-\hspace{.1ex} .
-\end{array}
-\end{equation}
-
-\en{The components}\ru{Компоненты}
-\en{of a~skew-symmetric tensor}\ru{кососимметричного тензора}~${\hspace{-0.2ex}\bm{A}}$
-\en{thru}\ru{через}
-\en{the components}\ru{компоненты}
-\en{of the accompanying}\ru{сопутствующего}
-\en{pseudovector}\ru{псевдовектора}~$\bm{a}$
-
-\nopagebreak\vspace{-0.1em}\begin{equation*}
-\begin{array}{c}
-\bm{A} = - \, \permutationsparitytensor \dotp \bm{a} = - \hspace{.1ex} \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \bm{e}_i \bm{e}_j a_k ,
-\\[.3em]
-A_{i\hspace{-0.1ex}j} = - \hspace{.1ex} \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} a_k \hspace{.1em} = \hspace{-0.1em}
-\scalebox{0.9}[0.9]{$\left[ \begin{array}{ccc}
-0 & -a_3 & a_2 \\
-a_3 & 0 & -a_1 \\
--a_2 & a_1 & 0
-\end{array} \hspace{.25ex}\right]$}
+\nopagebreak\vspace{-0.8em}
+\begin{equation*}
+\begin{array}{r@{\hspace{.7ex}}c@{\hspace{.7ex}}l}
+\bm{A}
+& = &
+- \hspace{.2ex} \permutationsparitytensor \dotp \bm{a}
+\\[.2em]
+A_{i\hspace{-0.1ex}j} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
+& = &
+- \hspace{.1ex} \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} a_k
+\\[.4em]
+A_{i\hspace{-0.1ex}j} ( a_k ) \hspace{.4ex} \text{:} \hspace{.7em}
+A_{i\hspace{-0.1ex}j}
+& = &
+- \hspace{.1ex} \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} a_k
 \end{array}
 \end{equation*}
 
-\vspace{-0.4em}
-\noindent
-\en{and vice versa}\ru{и~наоборот}
+\vspace{-0.2em}\noindent
+\en{or}\ru{или},
+\en{written}\ru{записанное}
+\en{as}\ru{как}
+\en{a~matrix}\ru{матрица},
 
-\nopagebreak\vspace{-0.5em}\begin{equation*}\begin{array}{c}
-\bm{a} = \smalldisplaystyleonehalf \, \bm{A} \dotdotp \permutationsparitytensor =
-\smalldisplaystyleonehalf \hspace{.25ex} A_{j\hspace{-0.1ex}k} \permutationsparitysymbols{kj\hspace{-0.06ex}i} \hspace{.2ex} \bm{e}_i , \\[0.64em]
-a_{i} \hspace{-0.16ex} = \smalldisplaystyleonehalf \hspace{.32ex} \permutationsparitysymbols{ikj} \hspace{.1ex} A_{j\hspace{-0.1ex}k} = \hspace{.1em}
-\displaystyle \onehalf \scalebox{0.9}[0.9]{$\left[\hspace{-0.25ex} \begin{array}{c}
+\nopagebreak\vspace{-0.5em}
+\begin{alignat*}{2}
+\asmatrixwithdimensions{A_{i\hspace{-0.1ex}j}}{3}{3}
+& = \hspace{-0.1em}
+\scalebox{.9}{$\left[ \begin{array}{c@{\hspace{1em}}c@{\hspace{1em}}c}
+A_{1\hspace{-0.1ex}1} & A_{12} & A_{13} \\
+A_{21} & A_{22} & A_{23} \\
+A_{31} & A_{32} & A_{33}
+\end{array} \hspace{.25ex}\right]$}
+\hspace{-0.3ex} && = \hspace{-0.3ex}
+\scalebox{.88}{$\left[ \begin{array}{c@{\hspace{1em}}c@{\hspace{1em}}c}
+0 & - \permutationsparitysymbols{123} \hspace{.1ex} a_3 & - \permutationsparitysymbols{132} \hspace{.1ex} a_2 \\
+- \permutationsparitysymbols{213} \hspace{.1ex} a_3 & 0 & - \permutationsparitysymbols{231} a_1 \\
+- \permutationsparitysymbols{312} \hspace{.1ex} a_2 & - \permutationsparitysymbols{321} a_1 & 0
+\end{array} \hspace{.3ex}\right]$}
+\\[.2em]
+& && = \hspace{-0.1em}
+\scalebox{.93}{$\left[ \begin{array}{ccc}
+0 & - \hspace{-0.1ex} a_3 & a_2 \\
+a_3 & 0 & - \hspace{-0.1ex} a_1 \\
+- \hspace{-0.1ex} a_2 & a_1 & 0
+\end{array} \hspace{.25ex}\right]$}
+.
+\end{alignat*}
+
+\vspace{-0.1em}
+\en{That}\ru{То, что}
+\en{the~bivalent}\ru{бивалентный}~${\hspace{-0.2ex}\bm{A} \hspace{-0.1ex} = \bm{a} \hspace{-0.2ex} \times \hspace{-0.3ex} \UnitDyad = \hspace{-0.1ex} \UnitDyad \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a}}$
+\en{is skewsymmetric}\ru{кососимметричен}
+\en{was clear}\ru{было ясно}
+\en{since}\ru{со~времени}~\eqref{skewsymmetryofunitdiadcrossvector}.
+%
+\en{In the three-dimensional space}\ru{В~трёхмерном пространстве}\en{,}
+\en{any}\ru{у~любого}
+\en{antisymmetric}\ru{антисимметричного}
+\en{tensor}\ru{тензора}
+\en{of the~second complexity}\ru{второй сложности}
+\en{has only}\ru{только}
+\en{three}\ru{три}
+\en{independent}\ru{независимых}
+\en{components}\ru{компонента}
+\en{out of}\ru{из}~9\::
+${A_{ij} \hspace{-0.2ex} = - A_{\hspace{-0.1ex}j\hspace{-0.1ex}i}}$
+\en{and}\ru{и}~${A_{\hspace{-0.1ex}j\hspace{-0.1ex}j} = 0}$.
+
+\en{The~uniqueness of}\ru{Уникальность}~$\bm{a}$
+\en{for}\ru{для}
+\en{the~unique}\ru{уникального}~${\hspace{-0.2ex}\bm{A}}$,
+\en{that is}\ru{то есть}
+\en{if}\ru{если}
+${ \bm{a}' \hspace{-0.4ex} \times \hspace{-0.2ex} \bm{E} = \hspace{-0.2ex} \bm{A} }$
+\en{and}\ru{и}~%
+${ \bm{a}'\hspace{-0.15ex}' \hspace{-0.4ex} \times \hspace{-0.2ex} \bm{E} = \hspace{-0.2ex} \bm{A} }$
+(\en{or}\ru{или}~%
+${ \bm{a}' \hspace{-0.4ex} \times \hspace{-0.2ex} \bm{E}
+\hspace{.2ex} - \hspace{.2ex} \bm{a}'\hspace{-0.15ex}' \hspace{-0.4ex} \times \hspace{-0.2ex} \bm{E}
+= \hspace{-0.2ex} \bm{A} - \hspace{-0.2ex} \bm{A} }$)\ru{,}
+\en{then}\ru{то}
+${ \bm{a}' \hspace{-0.3ex} = \bm{a}'\hspace{-0.15ex}' \hspace{-0.2ex} }$
+\en{or}\ru{или}
+${ \bm{a}' \hspace{-0.3ex} - \bm{a}'\hspace{-0.15ex}' \hspace{-0.2ex} = \zerovector }$
+%
+\begin{equation*}
+\begin{array}{r@{\hspace{0ex}}c@{\hspace{.3ex}}r@{\hspace{.7ex}}c@{\hspace{.7ex}}l@{\hspace{0ex}}c@{\hspace{.3ex}}l}
+\bigl( \bm{a}' \hspace{-0.2ex} - \bm{a}'\hspace{-0.15ex}' \bigr) & \times & \bm{E}
+& = &
+\hspace{-0.2ex} \zerobivalent
+\\[.2em]
+\bigl( \bm{a}' \hspace{-0.2ex} - \bm{a}'\hspace{-0.15ex}' \bigr) & \dotp & \hspace{-0.4ex} \permutationsparitytensor
+& = &
+\zerovector \dotp \permutationsparitytensor
+\end{array}
+\end{equation*}
+%
+\en{follows}\ru{следует}
+\en{from}\ru{из}
+\en{the~equal}\ru{равных}
+\en{zeros}\ru{нулей}~${\zerovector \dotp \permutationsparitytensor = \zerobivalent}$
+\en{and }\ru{и~}\en{the~uniqueness}\ru{уникальности}
+\ru{результата}\en{of~the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}\en{’s result}}
+(%%${ \bm{c} \dotp \bm{b} = \bm{c} \dotp \bm{d} \hspace{.1ex} , \hspace{.2em} \bm{c} \neq \zerovector
+%%\hspace{.3em} \Leftrightarrow \hspace{.25em}
+%%\bm{b} = \bm{d} }$,
+${\bm{b} \dotp \bm{c} = \bm{d} \dotp \bm{c} \hspace{.1ex} , \hspace{.2em} \bm{c} \neq \zerovector
+\hspace{.2em} \Leftrightarrow \hspace{.15em}
+\bm{b} = \bm{d} }$,
+\en{including}\ru{включая}
+${\bm{b} \dotp \bm{c} = \zerovector \dotp \bm{c} \hspace{.1ex} , \hspace{.2em} \bm{c} \neq \zerovector
+\hspace{.2em} \Leftrightarrow \hspace{.15em}
+\bm{b} = \zerovector }$).
+\en{For}\ru{Для}~${\bm{a} = \zerovector}$,
+${\hspace{.2ex} \bm{A}(\zerovector) \hspace{-0.2ex} = \zerovector \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} = \zerobivalent}$.
+
+\begin{center}
+\pmb{\checkmark} $\bm{a}$\en{ is} \en{unique}\ru{уникален} \en{for}\ru{для}~${\hspace{-0.2ex}\bm{A}}$
+\end{center}
+
+\en{And yet}\ru{А~вот}
+\en{about}\ru{про}
+\en{the~reciprocal}\ru{обратное}
+\en{relation}\ru{соотношение}~${\hspace{-0.2ex}\bm{A} \mapsto \bm{a}\:: \hspace{.4em} \bm{a} \narroweq \bm{a}(\bm{A})}$.
+\en{By}\ru{По}~\eqref{thedirectrelationoftheunitdyadwiththepermutationsparity},
+\en{the~unit dyad}\ru{единичная диада}~${\hspace{-0.1ex}\UnitDyad}$
+\en{via}\ru{через}~${\hspace{-0.1ex}\permutationsparitytensor}$
+%
+\begin{equation*}
+\UnitDyad = - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex} \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor
+\hspace{.2ex} ,
+\end{equation*}
+%
+\en{and}\ru{и}~\en{it is}\ru{это}
+\en{neutral}\ru{нейтрально}~\eqref{definingpropertyoftheidentitytensor}
+\en{for}\ru{для}
+\en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}}
+%
+\begin{equation*}
+\bm{a}
+= \hspace{.1ex}
+%%\bm{a} \hspace{.2ex} \dotp \UnitDyad
+%%\hspace{.1ex} =
+%%\UnitDyad \hspace{.1ex} \dotp \hspace{.1ex} \bm{a}
+%%\\
+%%& = \hspace{.1ex}
+\tikzmark{beginUnitTensorViaPermutationsParityIsNeutralOnTheRightSide}
+\bm{a} \hspace{.1ex} \dotp \left( \hspace{-0.3ex} - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex} \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor \right)
+\hspace{-0.6ex} \tikzmark{endUnitTensorViaPermutationsParityIsNeutralOnTheRightSide}
+=
+\tikzmark{beginUnitTensorViaPermutationsParityIsNeutralOnTheLeftSide} \hspace{-0.6ex}
+\left( \hspace{-0.3ex} - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex} \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor \right) \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{a}
+\tikzmark{endUnitTensorViaPermutationsParityIsNeutralOnTheLeftSide}
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][-0.2ex,-1.5ex]%
+{beginUnitTensorViaPermutationsParityIsNeutralOnTheRightSide}{endUnitTensorViaPermutationsParityIsNeutralOnTheRightSide}{${\scriptstyle
+- \sfrac{1\hspace{-0.3ex}}{2} \hspace{.3ex}
+a_a \permutationsparitysymbols{abc} \permutationsparitysymbols{cbm} \bm{e}_m
+}$}%
+\AddUnderBrace[line width=.75pt][-0.1ex,-1.5ex]%
+{beginUnitTensorViaPermutationsParityIsNeutralOnTheLeftSide}{endUnitTensorViaPermutationsParityIsNeutralOnTheLeftSide}{${\scriptstyle
+- \sfrac{1\hspace{-0.3ex}}{2} \hspace{.3ex}
+\bm{e}_h \permutationsparitysymbols{hi\hspace{-0.1ex}j} \permutationsparitysymbols{j\hspace{-0.1ex}ik} a_k
+}$}
+
+\noindent
+\en{or}\ru{или}
+\en{without brackets}\ru{без скобок}
+%
+\begin{equation*}
+\bm{a}
+= \hspace{.1ex}
+- \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex}
+\permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor \dotp \hspace{.1ex} \bm{a}
+\hspace{.1ex} = \hspace{.1ex}
+- \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex}
+\bm{a} \dotp \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor
+\hspace{.2ex} .
+\end{equation*}
+
+\noindent
+\en{Bivalent}\ru{Бивалентный}~${\hspace{-0.2ex}\bm{A}}$
+\en{can be}\ru{может быть}
+\en{introduced}\ru{введён}
+\en{here}\ru{сюда}
+\en{as in}\ru{как в}~\eqref{skewsymmetricbivalentfromvector},
+${- \bm{A} \hspace{-0.12ex}
+= \bm{a} \dotp \permutationsparitytensor
+= \hspace{-0.2ex} \permutationsparitytensor \dotp \bm{a}}$,
+\en{and }\ru{и~}\en{then}\ru{тогда}
+%
+\begin{equation}\label{pseudovectorfromsomebivalent}
+%%\hspace{.6em} \Rightarrow \hspace{.5em}
+\bm{a}(\bm{A}) \hspace{-0.2ex}
+= \hspace{.1ex}
+\smalldisplaystyleonehalf \hspace{.2ex}
+\bm{A} \dotdotp \hspace{-0.1ex} \permutationsparitytensor
+= \hspace{.1ex}
+\smalldisplaystyleonehalf \hspace{.4ex}
+\permutationsparitytensor \dotdotp \hspace{-0.1ex} \bm{A}
+\hspace{.2ex} .
+\end{equation}
+
+...............
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation*}\begin{array}{c}
+a_{i} \bm{e}_i \hspace{-0.2ex}
+= \smalldisplaystyleonehalf \hspace{.25ex} A_{j\hspace{-0.1ex}k} \permutationsparitysymbols{kj\hspace{-0.06ex}i} \hspace{.2ex} \bm{e}_i \hspace{-0.2ex}
+= \smalldisplaystyleonehalf \hspace{.3ex} \permutationsparitysymbols{ikj} \hspace{.1ex} A_{j\hspace{-0.1ex}k} \hspace{.2ex} \bm{e}_i
+\hspace{.2ex} ,
+\\[.5em]
+a_{i} \hspace{-0.2ex} = \smalldisplaystyleonehalf \hspace{.3ex} \permutationsparitysymbols{ikj} \hspace{.1ex} A_{j\hspace{-0.1ex}k} = \hspace{.1em}
+\displaystyle \onehalf \scalebox{.9}{$\left[\hspace{-0.25ex} \begin{array}{c}
 \permutationsparitysymbols{123} \hspace{.1ex} A_{32} + \permutationsparitysymbols{132} \hspace{.1ex} A_{23} \\
 \permutationsparitysymbols{213} \hspace{.1ex} A_{31} + \permutationsparitysymbols{231} \hspace{.1ex} A_{13} \\
 \permutationsparitysymbols{312} \hspace{.1ex} A_{21} + \permutationsparitysymbols{321} \hspace{.1ex} A_{12}
 \end{array} \right]$} \hspace{-0.2em} = \hspace{.1em}
-\displaystyle \onehalf \scalebox{0.9}[0.9]{$\left[\hspace{-0.3ex} \begin{array}{c}
+\displaystyle \onehalf \scalebox{.9}{$\left[\hspace{-0.3ex} \begin{array}{c}
 A_{32} - A_{23} \\
 A_{13} - A_{31} \\
 A_{21} - A_{12}
 \end{array} \right]$} .
 \vspace{.1em}\end{array}\end{equation*}
 
-\en{The easy to memorize}\ru{Легко запоминающийся}
-\inquotes{\en{pseudovector invariant}\ru{псевдовекторный инвариант}}
+..............
+
+\vspace{1em}
+\begin{alignat*}{2}
+-2 \hspace{.2ex} a_{1} \hspace{-0.1ex}
+& = \hspace{.4ex} \tikzmark{permutationsparity123for1FROM} \hspace{-0.4ex} \permutationsparitysymbols{123} \hspace{-0.3ex} \tikzmark{permutationsparity123for1TO} \hspace{.3ex}
+\hspace{.4ex} \tikzmark{permutationsparity321for1FROM} \hspace{-0.4ex} \permutationsparitysymbols{321} \hspace{-0.3ex} \tikzmark{permutationsparity321for1TO} \hspace{.4ex}
+a_{1} \hspace{-0.1ex} \tikzmark{permutationsparity321with1ENDS}
++ \hspace{.4ex} \tikzmark{permutationsparity132for1FROM} \hspace{-0.4ex} \permutationsparitysymbols{132} \hspace{-0.3ex} \tikzmark{permutationsparity132for1TO} \hspace{.3ex}
+\hspace{.4ex} \tikzmark{permutationsparity231for1FROM} \hspace{-0.4ex} \permutationsparitysymbols{231} \hspace{-0.3ex} \tikzmark{permutationsparity231for1TO} \hspace{.4ex}
+a_{1} \hspace{-0.1ex} \tikzmark{permutationsparity231with1ENDS}
+%%\hspace{.2ex} ,
+\\[2.5em]
+-2 \hspace{.2ex} a_{2} \hspace{-0.1ex}
+& = \hspace{.4ex} \tikzmark{permutationsparity213for2FROM} \hspace{-0.4ex} \permutationsparitysymbols{213} \hspace{-0.3ex} \tikzmark{permutationsparity213for2TO} \hspace{.3ex}
+\hspace{.4ex} \tikzmark{permutationsparity312for2FROM} \hspace{-0.4ex} \permutationsparitysymbols{312} \hspace{-0.3ex} \tikzmark{permutationsparity312for2TO} \hspace{.5ex}
+a_{2} \hspace{-0.1ex} \tikzmark{permutationsparity312with2ENDS}
++ \hspace{.4ex} \tikzmark{permutationsparity231for2FROM} \hspace{-0.4ex} \permutationsparitysymbols{231} \hspace{-0.3ex} \tikzmark{permutationsparity231for2TO} \hspace{.3ex}
+\hspace{.4ex} \tikzmark{permutationsparity132for2FROM} \hspace{-0.4ex} \permutationsparitysymbols{132} \hspace{-0.3ex} \tikzmark{permutationsparity132for2TO} \hspace{.5ex}
+a_{2} \hspace{-0.1ex} \tikzmark{permutationsparity132with2ENDS}
+%%\hspace{.2ex} ,
+\\[2.5em]
+-2 \hspace{.2ex} a_{3} \hspace{-0.1ex}
+& = \hspace{.4ex} \tikzmark{permutationsparity312for3FROM} \hspace{-0.4ex} \permutationsparitysymbols{312} \hspace{-0.3ex} \tikzmark{permutationsparity312for3TO} \hspace{.3ex}
+\hspace{.4ex} \tikzmark{permutationsparity213for3FROM} \hspace{-0.4ex} \permutationsparitysymbols{213} \hspace{-0.3ex} \tikzmark{permutationsparity213for3TO} \hspace{.5ex}
+a_{3} \hspace{-0.1ex} \tikzmark{permutationsparity213with3ENDS}
++ \hspace{.4ex} \tikzmark{permutationsparity321for3FROM} \hspace{-0.4ex} \permutationsparitysymbols{321} \hspace{-0.3ex} \tikzmark{permutationsparity321for3TO} \hspace{.3ex}
+\hspace{.4ex} \tikzmark{permutationsparity123for3FROM} \hspace{-0.4ex} \permutationsparitysymbols{123} \hspace{-0.3ex} \tikzmark{permutationsparity123for3TO} \hspace{.5ex}
+a_{3} \hspace{-0.1ex} \tikzmark{permutationsparity123with3ENDS}
+%%\hspace{.2ex} ,
+\end{alignat*}%
+%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity123for1FROM}{permutationsparity123for1TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity321for1FROM}{permutationsparity321for1TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity132for1FROM}{permutationsparity132for1TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity231for1FROM}{permutationsparity231for1TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+\AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
+{permutationsparity321for1FROM}{permutationsparity321with1ENDS}{${\scalebox{.8}{$ - A_{32} $}}$}%
+\AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
+{permutationsparity231for1FROM}{permutationsparity231with1ENDS}{${\scalebox{.8}{$ - A_{23} $}}$}%
+%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity213for2FROM}{permutationsparity213for2TO}{${\scalebox{.66}{$ -1 $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity312for2FROM}{permutationsparity312for2TO}{${\scalebox{.66}{$ +1 $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity231for2FROM}{permutationsparity231for2TO}{${\scalebox{.66}{$ +1 $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity132for2FROM}{permutationsparity132for2TO}{${\scalebox{.66}{$ -1 $}}$}%
+\AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
+{permutationsparity312for2FROM}{permutationsparity312with2ENDS}{${\scalebox{.8}{$ - A_{31} $}}$}%
+\AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
+{permutationsparity132for2FROM}{permutationsparity132with2ENDS}{${\scalebox{.8}{$ - A_{13} $}}$}%
+%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity312for3FROM}{permutationsparity312for3TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity213for3FROM}{permutationsparity213for3TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity321for3FROM}{permutationsparity321for3TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+{permutationsparity123for3FROM}{permutationsparity123for3TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+\AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
+{permutationsparity213for3FROM}{permutationsparity213with3ENDS}{${\scalebox{.8}{$ - A_{21} $}}$}%
+\AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
+{permutationsparity123for3FROM}{permutationsparity123with3ENDS}{${\scalebox{.8}{$ - A_{12} $}}$}
+
+
+...........
+
+
+${%
+\bm{a}' \hspace{-0.4ex} \times \hspace{-0.2ex} \bm{E} = \hspace{-0.2ex} \bm{A}'
+\hspace{.6em} \text{\en{and}\ru{и}} \hspace{.6em}
+\bm{a}'\hspace{-0.15ex}' \hspace{-0.4ex} \times \hspace{-0.2ex} \bm{E} = \hspace{-0.2ex} \bm{A}'\hspace{-0.15ex}'%
+}$
+
+\textcolor{blue}{\textbold{PROVE IT}}
+$\bm{A}$\en{ is} \en{unique}\ru{уникален} \en{for}\ru{для}~${\hspace{-0.2ex}\bm{a}}$\
+\textcolor{blue}{\textbold{PROVE IT}}
+
+...............
+
+\textcolor{red}{\en{There is}\ru{Существует}}
+\textcolor{blue}{\textbold{PROVE THAT ONLY FOR SKEWSYMMETRIC ${\forall \bm{A} \!=\! \bm{A}^{\mathsf{\!\,A}}}$ IT IS BIJECTION}}
+\en{a~bijection}\ru{биекция}\footnote{%
+\inquotesx{\en{a~bijective}\ru{биективное} \en{relation}\ru{отношение}}[,]
+\inquotesx{\en{a~reciprocally}\ru{взаимно} \en{reversible}\ru{обратимое} \en{mapping}\ru{отображение}}[,]
+\inquotes{\en{\hbox{a one-to-one} correspondence}\ru{соответствие \hbox{один-к-одному}}}%
+}
+\en{between}\ru{между}
+\en{antisymmetric}\ru{антисимметричными}
+\en{bivalent}\ru{бивалентными}
+\en{tensors}\ru{тензорами}
+\en{and }\ru{и~}(\en{pseudo}\ru{псевдо})\en{vectors}\ru{векторами}.
+\en{The~components}\ru{Компоненты}
+\en{of a~skewsymmetric}\ru{кососимметричного}
+\en{tensor}\ru{тензора}
+\en{are fully described}\ru{полностью описываются}
+\en{by the~three numbers}\ru{тремя числами}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+.........
+
+\en{All in all}\ru{В~общем},
+\en{here is}\ru{вот}
+\en{the~bijection}\ru{биекция}~${\hspace{-0.2ex}\bm{A} \hspace{-0.3ex} \leftrightarrow \hspace{-0.2ex} \bm{a}}$
+
+\nopagebreak\vspace{-0.25em}
+\refstepcounter{equation}
+\begin{alignat*}{2}
+\bm{A}(\bm{a}) &
+= \hspace{.1ex}
+- \hspace{.3ex} \bm{a} \dotp \permutationsparitytensor
+\hspace{.2ex} = \hspace{.2ex}
+\bm{a} \times \hspace{-0.1ex} \UnitDyad
+\hspace{.2ex} = \hspace{.1ex}
+- \hspace{.2ex} \permutationsparitytensor \dotp \bm{a}
+\hspace{.2ex} = \hspace{.1ex}
+\UnitDyad \times \bm{a}
+\tag{$\theequation^{\raisemath{.15em}{A(a)}}$}\label{companionvector.bijection.pseudovector2skewsymmetricbivalent}
+\hspace{.2ex} ,
+\\[.3em]
+%
+\bm{a}(\bm{A}) &
+= \hspace{.1ex}
+\smalldisplaystyleonehalf \hspace{.3ex} \bm{A} \dotdotp \permutationsparitytensor
+= \hspace{.1ex}
+\smalldisplaystyleonehalf \hspace{.4ex} \permutationsparitytensor \dotdotp \hspace{-0.2ex} \bm{A}
+\tag{$\theequation^{\raisemath{.15em}{a(A)}}$}\label{companionvector.bijection.skewsymmetricbivalent2pseudovector}
+\hspace{.2ex} .
+\end{alignat*}
+
+\en{Easy to memorize}\ru{Легко запомнить},
+\en{the }\inquotes{\en{pseudovector invariant}\ru{псевдовекторный инвариант}}
 ${\!\bm{A}_{\!\bm{\times}}}$
 \en{comes from}\ru{происходит из}
-\en{the original tensor}\ru{оригинального тензора}~${\hspace{-0.2ex}\bm{A}}$
-\en{via replacing}\ru{заменой}
-\en{the dyadic product}\ru{диадного произведения}
-\en{by the cross product}\ru{на векторное произведение}
+\en{the~original tensor}\ru{оригинального тензора}~${\hspace{-0.2ex}\bm{A}}$
+\en{by replacing}\ru{заменой}
+\en{a~dyadic product}\ru{диадного произведения}
+\en{with a~cross product}\ru{на векторное произведение}
 
 \nopagebreak\vspace{-0.15em}
 \begin{equation}\label{pseudovectorinvariant}
@@ -266,11 +720,11 @@ ${\!\bm{A}_{\!\bm{\times}}}$
    \delta_{j\hspace{-0.1ex}k}
 }$}
 
-%%the accompanying vector
+%%the accompanying (companion) vector
 %%сопутствующий вектор
 
 \vspace{-0.6em}
-\en{The accompanying vector}\ru{Сопутствующий вектор}
+\en{The~companion vector}\ru{Сопутствующий вектор}
 \en{can be introduced}\ru{может быть введён}
 \en{for any}\ru{для любого}
 \en{bivalent tensor}\ru{бивалентного тензора}.
@@ -288,42 +742,51 @@ ${
 
 \en{For}\ru{Для}
 \en{a~symmetric tensor}\ru{симметричного тензора}\en{,}
-\en{the accompanying vector}\ru{сопутствующий вектор}
-\en{is zero}\ru{это нуль}:
+\en{the~companion vector}\ru{сопутствующий вектор}
+\en{is zero}\ru{нулевой}\::
 
 \noindent
 \begin{equation*}
 \bm{B}_{\Xcompanion} \hspace{-0.25ex}
-= \zerovector \hspace{.25ex} \Leftrightarrow
-\bm{B} = \bm{B}^{\T} \hspace{-0.32ex} = \bm{B}^{\mathsf{\hspace{.1ex}}}
+= \zerovector
+\hspace{.6em} \Leftrightarrow \hspace{.4em}
+\bm{B} = \bm{B}^{\T} \hspace{-0.32ex} = \bm{B}^{\mathsf{\hspace{.1ex}S}}
 \hspace{-0.32ex} .
 \end{equation*}
 
 \en{With}\ru{С}~\eqref{pseudovectorinvariant}
-\en{the decomposition of some tensor}\ru{разложение какого\hbox{-}либо тензора}~$\bm{C}$
-\en{on}\ru{на}
-\en{the symmetric}\ru{симметричную}
+\en{the~decomposition}\ru{разложение}
+\en{of some tensor}\ru{какого\hbox{-}либо тензора}~$\bm{C}$
+\en{into}\ru{на}
+\en{the~symmetric}\ru{симметричную}
 \en{and}\ru{и}
-\en{the antisymmetric}\ru{антисимметричную}
+\en{antisymmetric}\ru{антисимметричную}
 \en{parts}\ru{части}
 \en{looks like}\ru{выглядит как}
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{symmetricantisymmetricdecompositionofsometensor}
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{symmetricantisymmetricdecompositionofsometensor}
 \bm{C} = \bm{C}^{\mathsf{\hspace{.1ex}S}} \hspace{-0.32ex} - \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.32ex} \bm{C}_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.16ex} \times \hspace{-0.16ex} \UnitDyad
 \hspace{.1ex} .
 \end{equation}
 
-
-
-
 \vspace{-0.8em}\noindent
 \en{For}\ru{Для}
 \en{a~dyad}\ru{диады}
-
-\nopagebreak
-{\centering \eqref{vectorcrossvectorcrossidentity}~$\Rightarrow$~${\left( \bm{c} \hspace{-0.1ex} \times \hspace{-0.2ex} \bm{d} \hspace{.2ex} \right) \hspace{-0.12ex} \times \hspace{-0.25ex} \UnitDyad = \bm{d} \bm{c} - \hspace{-0.1ex} \bm{c} \bm{d} \hspace{.1ex} = \hspace{-0.1ex} - \hspace{.1ex} 2 \hspace{.15ex} \bm{c}\bm{d}^{\mathsf{\hspace{.3ex}A}}\hspace{-0.2ex}}$,\hspace{.32em}
-${\left( \bm{c} \bm{d} \hspace{.2ex} \right)_{\hspace{-0.15ex}\Xcompanion} \hspace{-0.32ex} =
-\hspace{.1ex} \bm{c} \hspace{-0.1ex} \times \hspace{-0.15ex} \bm{d} \hspace{.12ex}}$, \par}
+%
+\begin{equation*}
+\eqref{vectorcrossvectorcrossidentity}
+\hspace{.2em} \Rightarrow \hspace{.2em}
+\left( \bm{c} \hspace{-0.1ex} \times \hspace{-0.2ex} \bm{d} \hspace{.2ex} \right) \hspace{-0.12ex} \times \hspace{-0.25ex} \UnitDyad
+= \bm{d} \bm{c} - \hspace{-0.1ex} \bm{c} \bm{d} \hspace{.1ex}
+= \hspace{-0.1ex} - \hspace{.1ex} 2 \hspace{.15ex} \bm{c}\bm{d}^{\mathsf{\hspace{.3ex}A}}
+\hspace{-0.2ex} ,
+\hspace{.5em}
+\left( \bm{c} \bm{d} \hspace{.2ex} \right)_{\hspace{-0.15ex}\Xcompanion}
+\hspace{-0.3ex} = \hspace{.1ex}
+\bm{c} \hspace{-0.1ex} \times \hspace{-0.15ex} \bm{d}
+\hspace{.2ex} ,
+\end{equation*}
 
 \nopagebreak\vspace{-0.1em}\noindent
 \en{and its decomposition}\ru{и её разложение}

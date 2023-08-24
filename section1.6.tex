@@ -4,73 +4,147 @@
 
 \label{section:matrices+permutations+determinants}
 
-\en{The matrices}\ru{Матрицы}
-\en{are the convenient tool}\ru{это удобный инструмент}
-\en{for solving}\ru{для решения}
-\en{the systems of linear equations}\ru{систем линейных уравнений}
-\en{and for arranging of elements}\ru{и~для упорядочивания элементов}.
-\en{Any matrix has}\ru{У~любой матрицы}
-\en{the same number of elements}\ru{одно и то~же число элементов}
-\en{in each row}\ru{в~каждой строке}
-\en{and}\ru{и}
-\en{the same number of elements}\ru{одно и то~же число элементов}
-\en{in each column}\ru{в~каждом столбце}.
-
-\en{Do you need}\ru{Тебе нужны}
-\en{the two-dimensional arrays}\ru{двумерные массивы}?
-\en{The matrices}\ru{Матрицы}
-\en{can be presented}\ru{могут быть представлены}
-\en{as tables}\ru{как таблицы}\ru{,}
-\en{full of rows and columns}\ru{полные строк и~столбцов}.
-
-\en{Do you want}\ru{Ты хочешь}
-\en{a~rectangular arrangement}\ru{прямоугольное упорядочивание}
-\en{of your elements}\ru{твоих элементов}?
 \en{Matrices}\ru{Матрицы}
-\en{are full}\ru{полн\'{ы}}
-\en{of numbers and expressions}\ru{чисел и~выражений}
-\en{in the rows and columns}\ru{в~строках и~столбцах}.
+\en{are the~convenient tool}\ru{это удобный инструмент}
+\en{for}\ru{для}
+\en{arranging}\ru{упорядочивания}
+\en{of~elements}\ru{элементов}
+\en{and for}\ru{и~для}
+\en{solving}\ru{решения}
+\en{systems}\ru{систем}
+\en{of linear equations}\ru{линейных уравнений}.
 
-\ru{Ты знаешь}\en{Do you know}\ru{,}
+\en{Does the~reader know}\ru{Знает~ли читатель}\ru{,}
 \en{that}\ru{что}
 \en{matrices}\ru{матрицы}
 \en{are sometimes called}\ru{иногда называют}
-\en{arrays}\ru{массивами}?
+\inquotes{\en{arrays}\ru{массивами}}?
+\en{Does someone need}\ru{Кому-то нужны}
+\en{two-dimensional arrays}\ru{двумерные массивы}?
+\en{Matrices}\ru{Матрицы}
+\en{can be presented}\ru{могут быть представлены}
+\en{as tables}\ru{как таблицы}
+\en{full of rows and columns}\ru{полные строк и~столбцов}.
+\en{Any matrix has}\ru{У~любой матрицы}
+\en{the~same number of elements}\ru{одно и то~же число элементов}
+\en{in each row}\ru{в~каждой строке}
+\en{and}\ru{и}
+\en{the~same number of elements}\ru{одно и то~же число элементов}
+\en{in each column}\ru{в~каждом столбце}.
+\en{The~rectangular arrangement}\ru{Прямоугольное упорядочивание}
+\en{of~elements}\ru{элементов},
+\en{anyone}\ru{кто-нибудь}?
+\en{Matrices}\ru{Матрицы}
+\en{are full}\ru{полн\'{ы}}
+\en{of~numbers}\ru{чисел}
+\en{and }\ru{и~}\en{expressions}\ru{выражений}
+\en{in rows and columns}\ru{в~строках и~столбцах}.
+A~column
+arranges data
+vertically
+from top to bottom,
+while
+a~row
+arranges
+horizontally
+from left to right.
 
 %--------------------
 
 \subsection*{\en{Matrix dimensions}\ru{Размерности матрицы}}
 
 \en{Matrices}\ru{Матрицы}
-\en{come in all sizes}\ru{бывают всех размеров}\ru{,}
-\en{that are dimensions}
-\ru{которые и~есть размерности}.
+\en{come in all sizes}\ru{бывают всех размеров},
+\en{or}\ru{или}
+\inquotesx{\en{dimensions}\ru{размерностей}}[.]
 
-\en{The dimension of a~matrix}\ru{Размерность матрицы}
+By convention,
+rows are listed first,
+and columns second.
+
+\en{The~dimension of a~matrix}\ru{Размерность матрицы}
 \en{consists of}\ru{состоит из}
-\en{the number of rows}\ru{числ\'{а} строк},
+\en{the~number of~rows}\ru{числ\'{а} строк},
 \en{then}\ru{затем}
 \en{a~multiplication sign}\ru{знака умножения}
 (\inquotes{×} \en{is used}\ru{используется}
-\en{the most often}\ru{чаще всего})\en{,}
+\en{the~most often}\ru{чаще всего})\en{,}
 \en{and then}\ru{а~затем}
-\en{the number of columns}\ru{числ\'{а} столбцов}.
+\en{the~number of~columns}\ru{числ\'{а} столбцов}.
 
 {\small
 \noindent
-\en{Examples}\ru{Примеры}.
+\en{Here are examples}\ru{Вот примеры}
 
 \nopagebreak\vspace{.1em}
-\begin{gather*}
-\displaystyle
-\underset{ \raisemath{.1em}{ \scriptscriptstyle 3×3 } }{\bigl[ \hspace{.2ex} \mathcal{A} \hspace{.2ex} ]}
-\hspace{.1ex} = \hspace{-0.2ex} ......
-\end{gather*}
-
-Matrix ${[ \hspace{.2ex}\mathrm{A}\hspace{.2ex} ]}$ is a~${3{×}3}$ matrix, because it has 3~rows and 3~columns.
-Matrix ${[ \hspace{.2ex}\mathrm{B}\hspace{.2ex} ]}$ has 2~rows and 4~columns, so its dimension is~${2{×}4}$.
-Matrix ${[ \hspace{.2ex}\mathrm{C}\hspace{.2ex} ]}$ is a~column matrix (that is a~matrix with just one column), and its dimension is~${3{×}1}$.
-And ${[ \hspace{.2ex}\mathrm{D}\hspace{.2ex} ]}$ is a~row matrix with dimension~${1{×}6}$.
+\begin{alignat*}{2}
+\asmatrixwithdimensions{\mathcal{A}}{3}{3}
+= \hspace{-0.3ex} \scalebox{.9}{$%
+\left[ \begin{array}{c@{\hspace{1em}}c@{\hspace{1em}}c}
+A_{1\hspace{-0.1ex}1} & A_{12} & A_{13} \\
+A_{21} & A_{22} & A_{23} \\
+A_{31} & A_{32} & A_{33}
+\end{array} \hspace{.2ex}\right]%
+$}
+& \hspace{1em}
+\scalebox{.8}{$ \begin{array}{l@{\hspace{1em}}c}
+   \text{3~\en{rows}\ru{строки} \en{and}\ru{и} 3~\en{columns}\ru{столбца}}
+      & \text{\emph{\en{number}\ru{число} \en{of~rows}\ru{строк}}} \\
+   \ru{\text{матрица}~}3{×}3\en{~\text{matrix}}
+      & \text{\emph{\en{is the~same}\ru{такое~же}}} \\
+   \href{https://en.wikipedia.org/wiki/Square_matrix}{\text{\emph{\inquotes{\en{square}\ru{квадратная}}} \en{matrix}\ru{матрица}}}
+      & \text{\emph{\en{as columns}\ru{как и столбцов}}}
+\end{array} $}
+\\[.4em]
+%
+\asmatrixwithdimensions{\mathcal{B}}{2}{4}
+= \hspace{-0.3ex} \scalebox{.9}{$%
+\left[ \begin{array}{c@{\hspace{.9em}}c@{\hspace{.9em}}c@{\hspace{.9em}}c}
+B_{1\hspace{-0.1ex}1} & B_{12} & B_{13} & B_{14} \\
+B_{21} & B_{22} & B_{23} & B_{24}
+\end{array} \hspace{.2ex}\right]%
+$}
+& \hspace{1em}
+\scalebox{.8}{$ \begin{array}{l}
+\text{2~\en{rows}\ru{строки} \en{and}\ru{и} 4~\en{columns}\ru{столбца}}\\
+\text{\en{dimension}\ru{размерность}}~2{×}4
+\end{array} $}
+\\[.4em]
+%
+\asmatrixwithdimensions{\mathcal{C}}{3}{1}
+= \hspace{-0.3ex} \scalebox{.9}{$%
+\left[ \begin{array}{c}
+C_{1\hspace{-0.1ex}1} \\
+C_{21} \\
+C_{31}
+\end{array} \hspace{-0.2ex}\right]%
+$}
+& \hspace{1em}
+\scalebox{.8}{$ \begin{array}{l@{\hspace{1em}}c}
+\text{3~\en{rows}\ru{строки}, 1~\en{column}\ru{столбец}}
+   & \text{\emph{\en{a~matrix}\ru{матрица}}} \\
+3{×}1
+   & \text{\emph{\en{with just one}\ru{лишь с~одним}}} \\
+\text{\en{a\:}\emph{\inquotes{\en{column matrix}\ru{матрица-столбец}}}}
+   & \text{\emph{\en{column}\ru{столбцом}}}
+\end{array} $}
+\\[.4em]
+\asmatrixwithdimensions{\mathcal{D}}{1}{6}
+= \hspace{-0.3ex} \scalebox{.9}{$%
+\left[ \begin{array}{c@{\hspace{.5em}}c@{\hspace{.5em}}c@{\hspace{.5em}}c@{\hspace{.5em}}c@{\hspace{.5em}}c}
+D_{1\hspace{-0.1ex}1} & D_{12} & D_{13} & D_{14} & D_{15} & D_{16}
+\end{array} \hspace{-0.2ex}\right]%
+$}
+& \hspace{1em}
+\scalebox{.8}{$ \begin{array}{l@{\hspace{1em}}c}
+\text{1~\en{row}\ru{строка}, 6~\en{columns}\ru{столбцов}}
+   & \text{\emph{\en{a~matrix}\ru{матрица}}} \\
+1{×}6
+   & \text{\emph{\en{with just one}\ru{лишь с~одной}}} \\
+\text{\en{a\:}\emph{\inquotes{\en{row matrix}\ru{матрица-строка}}}}
+   & \text{\emph{\en{row}\ru{строкой}}}
+\end{array} $}
+\end{alignat*}
 \par}
 
 %--------------------
@@ -84,13 +158,13 @@ And ${[ \hspace{.2ex}\mathrm{D}\hspace{.2ex} ]}$ is a~row matrix with dimension~
 \en{and}\ru{и}
 \en{the multiplication by scalar}\ru{умножение на скаляр}.
 
-\en{The dimension of a~matrix}\ru{Размерность матрицы}
+\en{The~dimension of a~matrix}\ru{Размерность матрицы}
 \en{is essential}\ru{существенна}
-\en{for the binary operations}\ru{для бинарных операций},
+\en{for binary operations}\ru{для бинарных операций},
 \en{that is}\ru{то есть}
 \en{for operations}\ru{для операций}
 \en{involving}\ru{с~участием}
-\en{the two matrices}\ru{двух матриц}.
+\en{two matrices}\ru{двух матриц}.
 
 \en{An~addition}\ru{Сложение}
 \en{or}\ru{или}
@@ -104,14 +178,14 @@ And ${[ \hspace{.2ex}\mathrm{D}\hspace{.2ex} ]}$ is a~row matrix with dimension~
 
 %----
 
-\subsection{\en{The multiplication of matrices}\ru{Умножение матриц}}
+\subsection*{\en{The multiplication of matrices}\ru{Умножение матриц}}
 
 
 .................
 
 
 \nopagebreak\vspace{.1em}\begin{gather*}
-\displaystyle\underset{\raisemath{.1em}{\scriptscriptstyle m×n}}{[ \hspace{.2ex}\mathcal{A}\hspace{.2ex} ]} \hspace{.1ex}
+\asmatrixwithdimensions{\mathcal{A}}{m}{n} \hspace{.1ex}
 = \hspace{-0.2ex} \ldots
 \end{gather*}
 

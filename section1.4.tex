@@ -239,15 +239,34 @@ a'_{i} = D\hspace{.16ex}'_{\hspace{-0.32ex}kki} \hspace{-0.16ex}
 \en{operation}\ru{операция}
 \en{is applicable}\ru{применима}
 \en{to a~single tensor}\ru{к~одному тензору}
-\en{of~the~second and bigger complexities}\ru{второй и~б\'{о}льших сложностей}.
+\en{of~the~second}\ru{второй}\footnote{%
+\en{Transposing}\ru{Транспонирование}
+\en{a~vector}\ru{вектора}
+\en{makes no sense}\ru{не~имеет смысла}.}%
+\en{and }\ru{и~}\en{bigger complexities}\ru{б\'{о}льших сложностей}.
 \en{It}\ru{Оно}
 \en{is named}\ru{именуется}
 \en{as}\ru{как}
 \textbold{\ru{перестановка индексов~(}\en{the~}index swap\ru{)},
 \ru{жонглирование индексами~(}index juggling\ru{)},
 \ru{транспонирование~(}transposing\ru{)}}.
-\en{From}\ru{Из} \en{components}\ru{компонент} \en{of~a~tensor}\ru{тензора}\en{,} \ru{возникает }\en{the~new collection}\ru{новая совокупность}\en{ is emerged} \en{with another}\ru{с~другой} \en{sequence of~indices}\ru{последовательностью индексов}, \en{the result’s complexity stays the~same}\ru{сложность результата остаётся той~же}.
-\en{For example}\ru{Для примера}, \en{trivalent tensor}\ru{трёхвалентный тензор}~${^3\hspace{-0.16em}\bm{D}}$ \en{can give}\ru{может дать} \en{tensors}\ru{тензоры} ${^3\hspace{-0.28em}\bm{A}}$, ${^3\hspace{-0.15em}\bm{B}}$, ${^3\hspace{-0.05em}\bm{C}}$ \en{with components}\ru{с~компонентами}
+\en{From}\ru{Из}
+\en{components}\ru{компонент}
+\en{of~a~tensor}\ru{тензора}\en{,}
+\ru{возникает }\en{the~new collection}\ru{новая совокупность}\en{ emerges}
+\en{with another}\ru{с~другой}
+\en{sequence of~indices}\ru{последовательностью индексов},
+\en{and }\ru{а~}\en{the result’s complexity}\ru{сложность результата}
+\en{stays}\ru{остаётся}
+\en{the~same}\ru{той~же}.
+\en{For example}\ru{Для примера},
+\en{a~trivalent tensor}\ru{трёхвалентный тензор}~${^3\hspace{-0.16em}\bm{D}}$
+\en{can give}\ru{может дать}
+\en{tensors}\ru{тензоры}
+${^3\hspace{-0.28em}\bm{A}}$,
+${^3\hspace{-0.15em}\bm{B}}$,
+${^3\hspace{-0.05em}\bm{C}}$
+\en{with components}\ru{с~компонентами}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{tensoralgebra:transposing}
 \begin{array}{rcl}
@@ -269,27 +288,40 @@ C_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} = D_{ikj}
 \end{equation}
 
 \en{For a~bivalent tensor}\ru{Для бивалентного тензора}\en{,}
-\ru{возможно }\en{the~only one transposition}\ru{лишь одно транспонирование}\en{ is possible}:
+\ru{возможно }\en{the~only one transposition}\ru{лишь одно транспонирование}\en{ is possible}\::
 ${\bm{A}^{\hspace{-0.05em}\T} \hspace{-0.15ex} \equiv \bm{A}_{\indexjuggling{1}{2}} = \hspace{-0.1ex} \bm{B}
 \hspace{.4ex}\Leftrightarrow\hspace{.25ex}
 B_{i\hspace{-0.1ex}j} \hspace{-0.1ex} = A_{j\hspace{-0.06ex}i}}$.
 \en{Obviously}\ru{Очевидно},
 ${\bigl( \hspace{-0.1ex} \bm{A}^{\hspace{-0.05em}\T} \hspace{.15ex} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.2ex} = \bm{A}}$.
 
-\en{For}\ru{Для} \en{the~dyadic multiplication}\ru{диадного умножения} \en{of~two vectors}\ru{двух векторов}, ${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\hspace{-0.4ex}}$.
+\en{For}\ru{Для}
+\en{the~dyadic multiplication}\ru{диадного умножения}
+\en{of~two vectors}\ru{двух векторов},
+${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\hspace{-0.4ex}}$.
 
 % combining operations
 \subsection*{\en{Combining operations}\ru{Комбинирование операций}}
 
-\en{The~four presented operations (actions)}\ru{Четыре представленных операции (действия)}
-\en{can be combined}\ru{могут быть скомбинированы}
+\en{The~four}\ru{Четыре}
+\en{presented}\ru{представленные}
+\en{algebraic operations}\ru{алгебраические операции}
+(\en{actions})\ru{действия}
+\en{can be}\ru{могут быть}
+\en{combined}\ru{скомбинированы}
 \en{in various sequences}\ru{в~разных последовательностях}.
 
 \en{The~combination}\ru{Комбинация}
 \en{of~}\en{multiplication}\ru{умножения}~\eqref{tensoralgebra:multiplication}
 \en{and}\ru{и}~\en{contraction}\ru{свёртки}~\eqref{tensoralgebra:contraction}\:---
 \en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}-\en{product}\ru{произведение} (dot product)\:--- \en{is the~most frequently used}\ru{самая часто используемая}.
-\en{In the direct indexless notation}\ru{В~прямой безиндексной записи} \en{this is denoted}\ru{это обозначается} \en{by large dot}\ru{крупной точкой}~\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}, \en{which}\ru{которая} \en{shows}\ru{показывает} \en{the~contraction}\ru{свёртку} \en{by adjacent indices}\ru{по~соседним индексам}:
+\en{In the direct indexless notation}\ru{В~прямой безиндексной записи}
+\en{this is denoted}\ru{это обозначается}
+\en{by a~large dot}\ru{крупной точкой}~\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}},
+\en{which}\ru{которая}
+\en{shows}\ru{показывает}
+\en{the~contraction}\ru{свёртку}
+\en{by adjacent indices}\ru{по~соседним индексам}\::
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \label{tensoralgebra:dotproductexamples}
@@ -303,11 +335,18 @@ A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = B_{ik} C_{kj}
 \hspace{.1ex} .
 \end{equation}
 
-\en{The defining property}\ru{Определяющее свойство} \en{of the unit tensor}\ru{единичного тензора}\:--- \en{it is the neutral
-element}\ru{это нейтральный элемент} \en{for}\ru{для} \en{the~dyadic product}\ru{диадного произведения} \en{with the subsequent contraction}\ru{с~последующей свёрткой} \en{by adjacent indices}\ru{по~соседним индексам} (\inquotes{${\dotp\hspace{.25ex}}$}\hbox{\hspace{-0.2ex}-}\en{product}\ru{произведения})
+\en{The defining property}\ru{Определяющее свойство}
+\en{of the unit tensor}\ru{единичного тензора}\:---
+\en{it is neutral}\ru{он нейтрален}
+(\en{the~}\inquotes{\href{https://en.wikipedia.org/wiki/Identity_element}{identity element}})
+\en{for}\ru{для}
+\en{the~dyadic product}\ru{диадного произведения}
+\en{with the subsequent contraction}\ru{с~последующей свёрткой}
+\en{by adjacent indices}\ru{по~соседним индексам}
+(\en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}})
 
 \nopagebreak\vspace{-0.15em}\begin{equation}
-\label{definingpropertyofidentitytensor}
+\label{definingpropertyoftheidentitytensor}
 {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \dotp \UnitDyad
 = \UnitDyad \dotp \hspace{-0.15ex} {^\mathrm{n}\hspace{-0.2ex}\bm{a}}
 = {^\mathrm{n}\hspace{-0.2ex}\bm{a}} \;\:\:
@@ -315,7 +354,15 @@ element}\ru{это нейтральный элемент} \en{for}\ru{для} \e
 \hspace{.1ex} .
 \end{equation}
 
-\en{In the commutative}\ru{В~коммутативном} \en{scalar product}\ru{скалярном произведении} \en{of two vectors}\ru{двух векторов}\en{,} \en{the dot}\ru{точка} \en{represents}\ru{представляет} \en{the same}\ru{то же самое}: \en{the~dyadic product}\ru{диадное произведение} \en{and}\ru{и} \en{the subsequent contraction}\ru{последующая свёртка}
+\en{In the}\ru{В}~\textcolor{magenta}{\en{commutative}\ru{коммутативном}}
+\en{scalar product}\ru{скалярном произведении}
+\en{of two vectors}\ru{двух векторов}\en{,}
+\en{the~dot}\ru{точка}
+\en{represents}\ru{представляет}
+\en{the~same}\ru{то~же самое}\::
+\en{the~dyadic product}\ru{диадное произведение}
+\en{and}\ru{и}
+\en{the~subsequent contraction}\ru{последующую свёртку}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \label{transposeofdotproductforvectors}
@@ -328,9 +375,19 @@ element}\ru{это нейтральный элемент} \en{for}\ru{для} \e
 \hspace{.1ex} .
 \end{equation}
 
-\en{The following}\ru{Следующее} \en{identity}\ru{тождество} \en{describes}\ru{описывает} \en{how to swap multipliers}\ru{как обменять местами множители} \en{for}\ru{для} \en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}} (dot product\ru{’а}) \en{of two second complexity tensors}\ru{двух тензоров второй сложности}
+\en{The following}\ru{Следующее}
+\en{identity}\ru{тождество}
+\en{describes}\ru{описывает}
+\en{how to swap}\ru{как поменять местами}
+\en{multipliers}\ru{множители}
+\en{for}\ru{для}
+\en{the }\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведения}}~%
+(dot product\ru{’а})
+\en{of two}\ru{двух}
+\en{second complexity tensors}\ru{тензоров второй сложности}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{transposeofdotproductforbivalenttensors}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{transposeofdotproductforbivalenttensors}
 \begin{array}{c}
 \bm{B} \hspace{-0.1ex} \dotp \bm{Q} \hspace{.1ex} = \bigl( \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} \bigr)^{\hspace{-0.25ex}\T}
 \\[.1em]
@@ -340,7 +397,8 @@ element}\ru{это нейтральный элемент} \en{for}\ru{для} \e
 \end{equation}
 
 %%\noindent
-\en{For two dyads}\ru{Для двух диад} ${\bm{B} \hspace{-0.1ex} = \bm{b}\bm{d}}$ \en{and}\ru{и}~${\bm{Q} \hspace{-0.1ex} = \bm{p}\bm{q}}$
+\en{For two dyads}\ru{Для двух диад}
+${\bm{B} \hspace{-0.1ex} = \bm{b}\bm{d}}$ \en{and}\ru{и}~${\bm{Q} \hspace{-0.1ex} = \bm{p}\bm{q}}$
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}

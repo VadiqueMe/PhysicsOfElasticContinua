@@ -4,22 +4,45 @@
 
 \thispagestyle{empty}
 
-\label{chapter:thermoelasticity}
-
-%~%~%~% intro to the chapter "thermoelasticity"
-
 \newcommand{\temperaturefield}{\scalebox{0.9}[1]{$\varTheta$}} % {\hspace{.2ex} T}
 \newcommand{\temperaturegradient}{\boldnabla \temperaturefield}
 \newcommand{\heatfluxvector}{\bm{q}}
+
+\label{chapter:thermoelasticity}
+
+%~%~%~% intro to the chapter "thermoelasticity"
 
 \begin{changemargin}{\parindent}{\parindent}
 \vspace{-2.5em}
 {\noindent\small
 \setlength{\parskip}{\spacebetweenparagraphs}
 
+\en{Hitherto}\ru{До~сих~пор}\en{,}
+\en{modeling}\ru{моделирование}
+\en{in this book}\ru{в~этой книге}
+\en{was limited to}\ru{было ограничено}
+\en{just only}\ru{только лишь}
+\en{mechanics}\ru{механикой}.
+\en{Everyday experience}\ru{Повседневный опыт}
+\en{shows}\ru{показывает},
+\en{however}\ru{однако},
+\en{that}\ru{что}
+\en{changes in~temperature}\ru{изменения температуры}
+(\en{heating or cooling}\ru{нагрев\textcolor{gray}{ание} или охлаждение})
+\en{deform}\ru{деформируют}
+\en{bodies}\ru{тел\'{а}}.
+\en{Thermal}\ru{Тепловые}
+\en{deformations}\ru{деформации}
+\en{and}\ru{и}~\en{stresses}\ru{напряжения}
+\en{often}\ru{часто}
+\en{play}\ru{играют}
+\en{the~primary role}\ru{первичную роль}
+\en{and}\ru{и}~\en{can lead}\ru{могут вести}
+\en{to~a~breakage}\ru{к~поломке}.
+
 \hspace*{\fill}
-\en{In this chapter}\ru{В~этой главе}
-\ru{рассматривается }\en{only the~momentless model}\ru{лишь безмоментная модель}\en{ is considered}.
+\emph{(\en{In this chapter}\ru{В~этой главе}\en{,}
+\ru{рассматривается }\en{only the~momentless model}\ru{лишь безмоментная модель}\en{ is considered}.)}
 
 \par}
 \vspace{-1.2em}
@@ -33,22 +56,37 @@
 
 \label{section:firstlaw.thermoelasticity}
 
-\en{\dropcap{H}{itherto}}\ru{\dropcap{Д}{о}~сих~пор} \en{modeling}\ru{моделирование} \en{was limited to mechanics only}\ru{было ограничено только механикой}.
-\en{It is widely known}\ru{Широк\'{о} известно}, \en{however}\ru{однако}, \en{that}\ru{что} \en{a~change in~temperature}\ru{изменение температуры} \en{causes a~deformation}\ru{вызывает деформацию}.
-\en{Temperature}\ru{Температурная} \en{deformation}\ru{деформация} \en{and}\ru{и}~\en{stress}\ru{напряжение} \en{often}\ru{часто} \en{play}\ru{играют} \en{the~primary role}\ru{первичную роль} \en{and}\ru{и}~\en{can lead}\ru{могут приводить} \en{to~a~breakage}\ru{к~поломке}.
+\en{\dropcap{V}{ery}}\ru{\dropcap{О}{чень}}
+\en{successful}\ru{успешный}
+\en{in~mechanics}\ru{в~механике},
+\en{the principle of~virtual work}\ru{принцип виртуальной работы}
+\en{is not~applicable}\ru{не~примен\'{и}м}
+\en{to~thermomechanics}\ru{к~термо\-механике}%
+\footnote{\en{Analogue}\ru{Аналог}
+\en{of the~principle of virtual work}\ru{принципа виртуальной работы}
+\en{will be presented}\ru{будет представлен}
+\en{below}\ru{ниже}
+\en{in}\ru{в}~\sectionref{section:variationalformulations.thermoelasticity}.}\hbox{\hspace{-0.5ex}.}
+\en{Considering}\ru{Рассматривая}
+\en{thermal effects}\ru{тепловые эффекты},
+\en{it’s possible}\ru{возможно}
+\en{to~lean on}\ru{опираться на}~\en{the~two laws of~thermodynamics}\ru{два закона термодинамики}.
 
-\en{So effective in~mechanics}\ru{Столь эффективный в~механике}, \en{the principle of~virtual work}\ru{принцип виртуальной работы} \en{is not~applicable}\ru{не~примен\'{и}м} \en{to~thermomechanics}\ru{к~термо\-механике}%
-\footnote{\en{Analogue}\ru{Аналог} \en{of the~principle of virtual work}\ru{принципа виртуальной работы} \en{will be presented}\ru{будет представлен} \en{below}\ru{ниже} \en{in}\ru{в}~\sectionref{section:variationalformulations.thermoelasticity}.}\hbox{\hspace{-0.5ex}.}
-\en{Considering thermal effects}\ru{Рассматривая тепловые эффекты}, \en{it’s possible}\ru{возможно} \en{to~lean on}\ru{опираться на}~\en{the~two laws of~thermodynamics}\ru{два закона термодинамики}.
-
-\en{The~first}\ru{Первый}, \en{discovered by}\ru{открытый}
+\en{The~first}\ru{Первый},
+\en{discovered by}\ru{открытый}
 \href{https://en.wikipedia.org/wiki/James_Prescott_Joule}{Joule}\ru{’ем},
 \href{https://en.wikipedia.org/wiki/Julius_von_Mayer}{Mayer}\ru{’ом},
-\en{and}\ru{и}~\href{https://en.wikipedia.org/wiki/Hermann_von_Helmholtz}{Helmholtz}\ru{’ем}\:--- \ru{это есть}\en{this is} \en{the~adapted version}\ru{адаптированная версия} \en{of }\en{the~balance of~energy}\ru{баланса энергии}:
-\en{rate of internal energy change}\ru{скорость изменения внутренней энергии}~${\mathdotabove{E}\hspace{.1ex}}$
-\en{is equal to}\ru{равна} \en{the~sum}\ru{сумме} \en{of }\en{power of external forces}\ru{мощности внешних сил}~$P^{\smthexternal}$ \en{and}\ru{и}~\en{rate of heat supply}\ru{скорости подвода тепла}~$\mathdotabove{Q}$
+\en{and}\ru{и}~\href{https://en.wikipedia.org/wiki/Hermann_von_Helmholtz}{Helmholtz}\ru{’ем}\:---
+\ru{это}\en{is}
+\en{the~balance of~energy}\ru{баланс энергии}\::
+\en{the~rate of internal energy change}\ru{скорость изменения внутренней энергии}~${\mathdotabove{E}\hspace{.1ex}}$
+\en{is equal to}\ru{равна}
+\en{the~sum}\ru{сумме}
+\en{of }\en{the~power of external forces}\ru{мощности внешних сил}~$P^{\smthexternal}$
+\en{and}\ru{и}~\en{the~rate of heat supply}\ru{скорости подвода тепла}~$\mathdotabove{Q}$
 
-\nopagebreak\en{\vspace{-0.9em}}\begin{equation}\label{thefirstlawofthermodynamics}
+\nopagebreak
+\begin{equation}\label{thefirstlawofthermodynamics}
 \mathdotabove{E} = P^{\smthexternal} \hspace{-0.1ex} + \mathdotabove{Q}
 \hspace{.1ex} .
 \end{equation}
@@ -99,9 +137,11 @@ ${m \hspace{-0.1ex} = \hspace{-0.2ex} \scalebox{1.4}{$\integral$}_{\hspace{-0.5e
 \end{equation*}
 
 \vspace{-0.1em}\noindent
-\en{it’s easy to get}\ru{легко получить} \en{the~time derivative of~internal energy}\ru{производную внутренней энергии по~времени}
+\en{it’s easy to get}\ru{легко получить}
+\en{the~time derivative of the~internal energy}\ru{производную внутренней энергии по~времени}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{rateofinternalenergychange}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{rateofinternalenergychange}
 \mathdotabove{E} = \hspace{-0.44ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \hspace{.2ex} \Bigl(
 \mathdotdotabove{\currentlocationvector} \dotp \mathdotabove{\currentlocationvector} \hspace{.1ex}
 + \hspace{.1ex} \mathdotabove{e} \hspace{.1ex}
@@ -117,7 +157,8 @@ ${m \hspace{-0.1ex} = \hspace{-0.2ex} \scalebox{1.4}{$\integral$}_{\hspace{-0.5e
 \en{of a~momentless}\ru{безмоментного}
 \en{continuum}\ru{\rucontinuum{}а}
 
-\nopagebreak\vspace{-0.4em}\begin{multline}\label{powerofexternalforces}
+\nopagebreak\vspace{-0.4em}
+\begin{multline}\label{powerofexternalforces}
 P^{\smthexternal} \hspace{-0.1ex}
 = \hspace{-0.4ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \rho \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\currentlocationvector} \hspace{.25ex} d\mathcal{V}
 + \hspace{-0.1ex} \ointegral\displaylimits_{\mathclap{O(\boundary \mathcal{V})}} \hspace{-0.2ex} \currentunitnormal \dotp \hspace{-0.1ex} \cauchystress \hspace{.1ex} \dotp \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.25ex} dO
@@ -190,9 +231,16 @@ ${\currentunitnormal \dotp \hspace{-0.1ex} \cauchystress}$\ru{\:---}\en{ is} \en
 \heatfluxvector = - \hspace{.15ex} {^2\hspace{-0.16ex}\bm{k}} \dotp \hspace{-0.25ex} \temperaturegradient ,
 \end{equation}
 
-\vspace{-0.25em} \noindent \en{where}\ru{где}
-$\temperaturefield$\ru{\:---}\en{ is} \en{temperature}\ru{температура}~(\en{temperature field}\ru{поле температуры});
-${^2\hspace{-0.16ex}\bm{k}}$\ru{\:---}\en{ is} \en{thermal conductivity tensor}\ru{тензор коэффициентов теплопроводности} \en{as property of the~material}\ru{как свойство материала}, \en{for isotropic material}\ru{для~изотропного материала} ${\hspace{-0.12ex} {^2\hspace{-0.16ex}\bm{k}} = k \UnitDyad}$ \en{and}\ru{и}~${\heatfluxvector = - \hspace{.2ex} k \hspace{.2ex} \temperaturegradient \hspace{-0.2ex}}$.
+\vspace{-0.25em}\noindent
+\en{where}\ru{где}
+$\temperaturefield$\ru{\:---}\en{ is}
+\en{the~temperature}\ru{температура}~(\en{temperature field}\ru{поле температуры});
+${^2\hspace{-0.16ex}\bm{k}}$\ru{\:---}\en{ is}
+\en{the~thermal conductivity tensor}\ru{тензор коэффициентов теплопроводности}
+\en{as the~property of material}\ru{как свойство материала},
+\en{for an~isotropic material}\ru{для~изотропного материала}
+${\hspace{-0.12ex} {^2\hspace{-0.16ex}\bm{k}} = k \UnitDyad}$
+\en{and}\ru{и}~${\heatfluxvector = - \hspace{.2ex} k \hspace{.2ex} \temperaturegradient \hspace{-0.2ex}}$.
 
 \en{The~second way}\ru{Второй путь}\ru{\:---}\en{ is} \en{a~volume heat transfer}\ru{объёмная передача тепла} (\ru{тепловое излучение, }thermal radiation).
 \en{Solar energy}\ru{Солнечная энергия}, \en{flame of a~campfire}\ru{пламя костра}, \en{a~microwave oven}\ru{микроволновая печь}\ru{\:---}\en{ are} \en{familiar examples}\ru{знакомые примеры} \en{of~pervasive heating}\ru{проникающего нагрева} \en{by radiation}\ru{излучением}.
@@ -286,10 +334,39 @@ dE \hspace{-0.1ex} = \partial\hspace{.1ex}\externalwork\hspace{-0.2ex} + \partia
 \vspace{-0.28em}\noindent
 \en{Work}\ru{Работа}~${\partial\hspace{.1ex}\externalwork\hspace{-0.1ex}}$ \en{and}\ru{и}~\en{heat}\ru{теплота}~${\partial\hspace{.1ex}Q}$ \en{are}\ru{суть} \href{https://en.wikipedia.org/wiki/Inexact_differential}{\ru{неполные дифференциалы}\en{inexact differentials}}%
 \footnote{%
-\en{Because}\ru{Так~как} \en{work}\ru{работа} \en{and}\ru{и}~\en{heat}\ru{теплота} \en{depend}\ru{зависят} \en{on the~path of the~process}\ru{от~пути протекания процесса} (\en{are path functions}\ru{являются функциями пути}), \en{they}\ru{они} \en{can’t be}\ru{не~могут быть} \en{full (exact) differentials}\ru{полными (точными) дифференциалами}, \en{contrasting}\ru{контрастируя} \en{with the~idea}\ru{с~идеей} \en{of the~exact differential}\ru{полного дифференциала}, \en{expressed via}\ru{выражаемого через} \en{the~gradient of~another function}\ru{градиент другой функции} \en{and}\ru{и}~\en{therefore}\ru{потом\'{у}} \en{path independent}\ru{независимого от~пути}.
-}\hbox{\hspace{-0.5ex},} \en{but}\ru{но}~\en{quotient}\ru{частное}~${\raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$ \en{becomes}\ru{становится} \en{the~exact differential}\ru{полным дифференциалом}\:--- \en{differential}\ru{дифференциалом}~${dS}$ \en{of~the~entropy}\ru{энтропии}.
+\en{Because}\ru{Так~как}
+\en{work}\ru{работа}
+\en{and}\ru{и}~\en{heat}\ru{теплота}
+\en{depend}\ru{зависят}
+\en{on the~path of the~process}\ru{от~пути протекания процесса}
+(\en{they are path functions}\ru{они\:--- функции пути}),
+\en{they}\ru{они}
+\en{can’t be}\ru{не~могут быть}
+\en{the~full~(exact) differentials}\ru{полными (точными) дифференциалами},
+\en{contrasting}\ru{контрастируя}
+\en{with the~idea}\ru{с~идеей}
+\en{of the~exact differential}\ru{полного дифференциала},
+\en{expressed via}\ru{выражаемого через}
+\en{the~gradient of~another function}\ru{градиент другой функции}
+\en{and}\ru{и}~\en{therefore}\ru{потом\'{у}}
+\en{path independent}\ru{независимого от~пути}.
+}\hbox{\hspace{-0.5ex},}
+\en{but}\ru{но}~\en{the~quotient}\ru{частное}~${\raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$
+\en{becomes}\ru{становится}
+\en{the~exact differential}\ru{полным дифференциалом}\:---
+\en{the~differential}\ru{дифференциалом}~${dS}$
+\en{of~the~entropy}\ru{энтропии}.
 
-\en{Further,}\ru{Далее} \en{processes}\ru{процессы} \en{are divided into}\ru{делятся на} \en{reversible ones}\ru{обратимые}, \en{for which}\ru{для которых} ${dS \hspace{-0.2ex} = \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$, \en{and}\ru{и}~\en{irreversible ones}\ru{необратимые} \en{with characteristic}\ru{с~характерным} \ru{неравенством }Clausius\ru{’а}\en{ inequality} ${dS \hspace{-0.2ex} \geq \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$.
+\en{Further}\ru{Далее},
+\en{all processes}\ru{все процессы}
+\en{are divided into}\ru{делятся на}
+\en{the~reversible ones}\ru{обратимые},
+\en{for which}\ru{для которых}
+${dS \hspace{-0.2ex} = \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$,
+\en{and}\ru{и}~\en{the~irreversible ones}\ru{необратимые}
+\en{with the~characteristic}\ru{с~характерным}
+\ru{неравенством }Clausius\ru{’а}\en{ inequality}
+${dS \hspace{-0.2ex} \geq \hspace{-0.1ex} \raisemath{.16em}{\partial\hspace{.1ex}Q} \hspace{-0.15ex} / \raisemath{-0.16em}{\hspace{-0.1ex} \temperaturefield}}$.
 
 \en{But how}\ru{Но как}
 \en{to~adapt}\ru{адаптировать}
@@ -299,7 +376,14 @@ dE \hspace{-0.1ex} = \partial\hspace{.1ex}\externalwork\hspace{-0.2ex} + \partia
 \en{with an~inhomogeneous}\ru{с~неоднородным}
 \en{temperature field}\ru{полем температуры}?
 
-\en{Sometimes}\ru{Иногда} \en{a~process}\ru{процесс} \en{in an~infinitesimal volume}\ru{в~бесконечномалом объёме} \en{is thought of as}\ru{мыслится} \en{reversible}\ru{обратимым}, \en{then}\ru{тогда} \ru{предлагается }\en{the~equality}\ru{равенство} \en{like}\ru{типа}
+\en{Sometimes}\ru{Иногда}
+\en{a~process}\ru{процесс}
+\en{within an~infinitesimal volume}\ru{в~бесконечномалом объёме}
+\en{is thought of as}\ru{мыслится}
+\en{reversible}\ru{обратимым},
+\en{then}\ru{тогда}
+\ru{предлагается }\en{the~equality}\ru{равенство}
+\en{like}\ru{типа}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{reversibleprocessequality.differential}
 \rho \hspace{.2ex} \temperaturefield \mathdotabove{s}
@@ -411,49 +495,89 @@ a \narroweq a(\bm{C} \hspace{-0.1ex} , \temperaturefield)
 
 \label{section:heatequation}
 
-\en{In}\ru{В}~\en{mathematical physics,}\ru{математической физике}
-\en{a~parabolic differential equation}\ru{параболическое дифференциальное уравнение},
-\en{similar to}\ru{похожее на}
+\en{In}\ru{В}~\en{mathematical physics}\ru{математической физике}\en{,}
+\en{a~parabolic differential equation}\ru{параболическое дифференциальное уравнение}
+\en{like}\ru{вида}
 
 \nopagebreak\en{\vspace{-0.15em}}\ru{\vspace{-0.88em}}\begin{equation}\label{heatequation:mathematicalphysics}
-k \hspace{-0.1ex} \Laplacian \temperaturefield + \hspace{-0.1ex} B = c \hspace{.33ex} \mathdotabove{\temperaturefield} ,
+k \hspace{-0.1ex} \Laplacian \temperaturefield + \hspace{-0.1ex} B = c \hspace{.33ex} \mathdotabove{\temperaturefield}
 \end{equation}
 
 \nopagebreak\en{\vspace{-0.3em}}\ru{\vspace{-0.4em}}\noindent
 \en{is declared}\ru{объявляется}
-\en{as a~}\inquotesx{\en{heat equation}\ru{уравнением теплопроводности}}[.]
+\en{as the~}\inquotesx{\en{heat equation}\ru{уравнением теплопроводности}}[.]
 \en{Here}\ru{Здесь}
 $k$\en{ is}\ru{\:---} \en{thermal conductivity}\ru{тепло\-проводность},
-${B \hspace{-0.2ex} = \hspace{-0.33ex} \rho \hspace{.2ex} b}$\en{ is}\ru{\:---} \en{rate of~heat transfer by~radiation per volume unit}\ru{скорость передачи тепла излучением на единицу объёма},
-$c$\en{ is}\ru{\:---} \en{thermal capacity}\ru{тепло\-ёмкость} \en{per volume unit}\ru{на единицу объёма}.
-\en{Boundary conditions most often are}\ru{Краевые условия чаще всего\:---}
-\en{external temperature}\ru{внешняя температура}~${\temperaturefield^\smthexternal_{\hspace{-0.1ex}\raisemath{-0.1em}{1}}}$ \en{on}\ru{на}~\hbox{\en{part}\ru{части}}~${O_1}$ \en{of~the~surface}\ru{поверхности}
-\en{and}\ru{и}~\en{heat flux}\ru{поток тепла}~${q^{\raisemath{-0.15em}{\smthexternal}}}$ \en{from the~outside}\ru{снаружи} \hbox{\en{of~part}\ru{части}}~${O_2}$ \en{of~the~surface}\ru{поверхности}:
+${B \hspace{-0.2ex} = \hspace{-0.33ex} \rho \hspace{.2ex} b}$\en{ is}\ru{\:---}
+\en{the~rate of~heat transfer by~radiation per volume unit}\ru{скорость передачи тепла излучением на единицу объёма},
+$c$\en{ is}\ru{\:---}
+\en{the~thermal capacity}\ru{тепло\-ёмкость} \en{per volume unit}\ru{на единицу объёма}.
+\en{The~boundary conditions}\ru{Краевые условия}
+\en{most often}\ru{чаще всего}
+\en{are}\ru{таков\'{ы}}\::
+\en{the~external temperature}\ru{внешняя температура}~${\temperaturefield^\smthexternal_{\hspace{-0.1ex}\raisemath{-0.1em}{1}}}$
+\en{on}\ru{на}
+\ru{части~}${O_1}$\en{~part}
+\en{of~the~surface}\ru{поверхности}
 
-\nopagebreak\vspace{-0.22em}\begin{equation*}
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
 \temperaturefield \hspace{.1ex} \bigr|_{O_1} \hspace{-0.64ex} = \hspace{.2ex} \temperaturefield^\smthexternal_{\hspace{-0.1ex}\raisemath{-0.1em}{1}}
-\hspace{-0.2ex} ,
-\hspace{.77em}
+%
+\hspace{1em} \text{\en{and}\ru{и}} \hspace{1em}
 %
 k \hspace{.25ex} \partial_n \temperaturefield \bigr|_{O_2} \hspace{-0.64ex} = \hspace{.2ex} q^{\raisemath{-0.15em}{\smthexternal}}
-\hspace{-0.1ex} .
 \end{equation*}
+%
+--- \en{the~heat flux}\ru{поток тепла}~${q^{\raisemath{-0.15em}{\smthexternal}}}$
+\en{from the~outside}\ru{снаружи}
+\en{of}\ru{части}~${O_2}$\en{~part}
+\en{of~the~surface}\ru{поверхности}.
 
-\vspace{-0.15em}\noindent
-\en{Sometimes,}\ru{Иногда} \en{flux}\ru{поток}~${q^{\raisemath{-0.15em}{\smthexternal}}}$ \en{is thought to be}\ru{считается} \en{proportional}\ru{пропорциональным} \en{to the~difference}\ru{разности} \en{between}\ru{между} \ru{температурой}\en{temperature}~${\temperaturefield^\smthexternal\hspace{-0.25ex}}$ \en{of the~ambient}\ru{внешней среды} \en{and}\ru{и}~\en{body temperature}\ru{температурой тела}~$\temperaturefield$
+\en{Sometimes}\ru{Иногда}\en{,}
+\en{the~external flux}\ru{внешний поток}~${q^{\raisemath{-0.15em}{\smthexternal}}}$
+\en{is thought to be}\ru{считается}
+\en{proportional}\ru{пропорциональным}
+\en{with some coefficient}\ru{с~некоторым коэффициентом}~$\hcursive$
+\en{to the~difference}\ru{разности}
+\en{between}\ru{между}
+\ru{температурой}\en{the~ambient temperature}~${\temperaturefield^\smthexternal\hspace{-0.25ex}}$\ru{ внешней среды}
+\en{and}\ru{и}~\en{the~body temperature}\ru{температурой тела}~$\temperaturefield$
 
 \nopagebreak\vspace{-0.27em}\begin{equation*}
 k \hspace{.25ex} \partial_n \temperaturefield + \hcursive \hspace{-0.2ex} \Bigl( \temperaturefield - \temperaturefield^\smthexternal \hspace{.15ex} \Bigr) \hspace{-0.3ex} = \hspace{.1ex} 0
 \hspace{.1ex} .
 \end{equation*}
 
-\vspace{-0.27em} \noindent
-\en{If}\ru{Если} \en{heat transfer coefficient}\ru{коэффициент тепло\-обмена}~$\hcursive$ \en{is infinitely large}\ru{бесконечно большой}, \en{it turns into the~first condition}\ru{оно превращается в~первое условие} ${\temperaturefield = \temperaturefield^\smthexternal\hspace{-0.25ex}}$, \en{and}\ru{а}~\en{when}\ru{когда}~${\hcursive \hspace{-0.4ex} \to 0}$\:--- \en{into condition}\ru{в~условие}~${\partial_n \temperaturefield = 0}$ \en{of thermal insulation}\ru{тепло\-изоляции}.
+\vspace{-0.3em}\noindent
+\en{If}\ru{Если}
+\en{the~heat transfer coefficient}\ru{коэффициент тепло\-обмена}~$\hcursive$
+\en{is infinitely large}\ru{бесконечно большой},
+\en{it turns into the~first condition}\ru{оно превращается в~первое условие}
+${\temperaturefield = \temperaturefield^\smthexternal\hspace{-0.25ex}}$,
+\en{and}\ru{а}~\en{when}\ru{когда}~${\hcursive \hspace{-0.4ex} \to 0}$\:---
+\en{into the~condition}\ru{в~условие}~${\partial_n \temperaturefield = 0}$
+\en{of thermal insulation}\ru{тепло\-изоляции}.
 
-\en{But}\ru{Но} \en{how is equation}\ru{как уравнение}~\eqref{heatequation:mathematicalphysics} \ru{связано}\en{related} \en{to fundamental principles \hbox{of balance}}\ru{с~фундаментальными принципами \hbox{баланса}}?
-\en{Since}\ru{Ведь} \en{there’s no special}\ru{нет никакой особенной} \inquotesx{\en{thermal energy}\ru{тепловой энергии}}[,] \en{but}\ru{но} \en{there is}\ru{есть} \en{internal energy}\ru{внутренняя энергия}, \en{changing}\ru{меняющаяся} \en{according to}\ru{согласно} \en{the~first law of~thermodynamics}\ru{первому закону термодинамики} ...
+\en{But}\ru{Но}
+\en{how is equation}\ru{как уравнение}~\eqref{heatequation:mathematicalphysics}
+\ru{связано}\en{related}
+\en{to the~fundamental principles}\ru{с~фундаментальными принципами}
+\en{of~balance}\ru{баланса}?
+\en{Since}\ru{Ведь}
+\en{no}\ru{никакой}
+\en{special}\ru{особенной}
+\inquotes{\en{thermal energy}\ru{тепловой энергии}}
+\en{exists}\ru{не~существует},
+\en{but}\ru{но}
+\en{there is}\ru{есть}
+\en{the~internal energy}\ru{внутренняя энергия},
+\en{and it changes}\ru{и~она меняется}
+\en{according to}\ru{согласно}
+\en{the~first law of~thermodynamics}\ru{первому закону термодинамики}~%
+\eqref{thermodynamics:balanceofenergy.local}.
 
-...
+....
 
 \begin{equation*}
 e = a + \temperaturefield s
