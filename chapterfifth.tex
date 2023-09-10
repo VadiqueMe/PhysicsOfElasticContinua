@@ -285,16 +285,18 @@ ${ \variation{\boldnabla \hspace{-0.12ex} \fieldofrotations} \hspace{-0.1ex} = \
 \boldnabla \variation{\fieldofrotations} }$).
 
 \en{To build this model}\ru{Чтобы построить эту модель},
-\en{I use the principle of the virtual work}\ru{я использую принцип виртуальной работы}.
-\en{This principle says that}\ru{Этот принцип говорит, что}
-\en{the variation of work}\ru{вариация работы}
-\en{of the real external forces}\ru{реальных внешних сил}
-\en{on the virtual displacements}\ru{на виртуальных смещениях}
+\en{I use}\ru{я использую}
+\en{the~principle of virtual work}\ru{принцип виртуальной работы}.
+\en{This principle}\ru{Этот принцип}
+\en{says that}\ru{говорит, что}
+\en{the~variation of work}\ru{вариация работы}
+\en{of the~real external forces}\ru{реальных внешних сил}
+\en{on virtual displacements}\ru{на виртуальных смещениях}
 \en{is equal}\ru{равн\'{а}}
-\en{with the opposite sign}\ru{с~обратным знаком}
-\en{to the variation of work}\ru{вариации работы}
-\ru{of the internal forces}\ru{внутренних сил},
-\en{the real stresses}\ru{реальных напряжений}
+\en{with the~opposite sign}\ru{с~обратным знаком}
+\en{to the~variation of work}\ru{вариации работы}
+\ru{of the~internal forces}\ru{внутренних сил},
+\en{the~real stresses}\ru{реальных напряжений}
 \en{on virtual deformations}\ru{на~виртуальных деформациях}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
@@ -771,7 +773,10 @@ ${\variation{\potentialenergydensity} = \forcestresstensor \dotdotp \variation{\
 \end{equation*}
 
 \begin{equation*}
-\infinitesimaldeformation \equiv \distortiontensor^{\hspace{.2ex}\mathsf{S}} \hspace{-0.32ex} = \hspace{-0.2ex} \boldnabla {\fieldofdisplacements}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.25ex} , \:\:
+\infinitesimaldeformation \equiv \distortiontensor^{\hspace{.2ex}\mathsf{S}}
+\hspace{-0.3ex} = \hspace{-0.2ex}
+\boldnabla {\fieldofdisplacements}^{\hspace{.1ex}\mathsf{S}}
+\hspace{-0.25ex} , \:\:
 \end{equation*}
 
 ...
@@ -785,24 +790,23 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 ...
 
 
-\begin{otherlanguage}{russian}
-
-Соотношения~\eqref{micropolar.constitutiveequations}
-обращаются преобразованием Лежандра
+\en{Relations}\ru{Соотношения}~\eqref{micropolar.constitutiveequations}
+\en{are inverted}\ru{обращаются}
+\en{by the}\ru{преобразованием} Legendre\ru{’а}\en{ transformation}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \begin{array}{c}
-\distortiontensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potentialenergydensity}^{\mathstrut}}}{\partial \forcestresstensor}$}
+\distortiontensor = \scalebox{.92}{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \complementaryenergydensity^{\mathstrut}}}{\partial \forcestresstensor}$}
 \hspace{.15ex} ,
 \hspace{.8ex}
-\wrynesstensor = \scalebox{0.92}[0.92]{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \widehat{\potentialenergydensity}^{\mathstrut}}}{\partial \couplestresstensor}$}
+\wrynesstensor = \scalebox{.92}{$ \displaystyle \frac{\raisemath{-0.125em}{\partial\hspace{.1ex} \complementaryenergydensity^{\mathstrut}}}{\partial \couplestresstensor}$}
 \hspace{.2ex} ,
 \\[.8em]
 %
-\widehat{\potentialenergydensity}(\hspace{-0.1ex} \forcestresstensor, \couplestresstensor \hspace{.12ex}) \hspace{-0.12ex}
+\complementaryenergydensity(\hspace{-0.1ex} \forcestresstensor, \couplestresstensor \hspace{.12ex}) \hspace{-0.12ex}
 = \forcestresstensor \dotdotp \distortiontensor^{\T} \hspace{-0.25ex}
-+ \hspace{.1ex} \couplestresstensor \dotdotp \wrynesstensor^{\T} \hspace{-0.2ex}
-- \hspace{.1ex} \potentialenergydensity (\distortiontensor , \wrynesstensor \hspace{.12ex})
++ \hspace{.1ex} \couplestresstensor \dotdotp \wrynesstensor^{\T} \hspace{-0.25ex}
+- \hspace{.1ex} \potentialenergydensity (\distortiontensor , \wrynesstensor \hspace{.1ex})
 \hspace{.1ex} .
 \end{array}
 \end{equation}
@@ -810,6 +814,8 @@ even when assumed to be linear, homogeneous and isotropic, it requires six indep
 ...
 
 material’s intrinsic (internal) length scale $\elcursive$
+
+\begin{otherlanguage}{russian}
 
 Если устремить $\elcursive$ к~нулю,
 то исчезает вклад $\wrynesstensor$ в~$\potentialenergydensity$,

@@ -42,7 +42,7 @@ Working independently of Hellinger and Prange, Eric Reissner published his famou
 \shoveleft{\mathcal{R}( \bm{u}, \hspace{-0.32ex} \linearstress ) \hspace{.2ex} =
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex}
 \Bigl[
-\linearstress \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \hspace{.1ex} \widehat{\potentialenergydensity}(\hspace{-0.1ex}\linearstress\hspace{.1ex})\hspace{-0.1ex} -
+\linearstress \dotdotp \hspace{-0.16ex} \boldnabla {\bm{u}}^{\mathsf{S}} \hspace{-0.2ex} - \hspace{.1ex} \complementaryenergydensity(\hspace{-0.1ex}\linearstress\hspace{.1ex})\hspace{-0.1ex} -
 \bm{f} \hspace{-0.1ex} \dotp \bm{u}
 \hspace{.2ex} \Bigr] \hspace{-0.1ex} d\mathcal{V} \hspace{.5ex}
 - \hfill}
@@ -91,10 +91,21 @@ Working independently of Hellinger and Prange, Eric Reissner published his famou
 \hspace{.2ex} .
 \end{multline}
 
-Как и~в~принципе Рейсснера\hbox{--}Хеллингера, здесь нет ограничений ни~в~объёме, ни~на~поверхности, но добавляется третий независимый аргумент~$\infinitesimaldeformation$.
-Поскольку ${\widehat{\potentialenergydensity} = \linearstress \dotdotp \infinitesimaldeformation - \potentialenergydensity}$, то~\eqref{reissnerhellingervariationalprinciple} \en{and}\ru{и}~\eqref{huwashizuvariationalprinciple} кажутся почти одним и~тем~же.
+Как и~в~принципе Reissner’а--Hellinger’а,
+здесь нет ограничений ни~в~объёме, ни~на~поверхности,
+но добавляется третий независимый аргумент~$\infinitesimaldeformation$.
+Поскольку
+${\complementaryenergydensity = \linearstress \dotdotp \infinitesimaldeformation - \potentialenergydensity}$,
+то~\eqref{reissnerhellingervariationalprinciple}
+\en{and}\ru{и}~\eqref{huwashizuvariationalprinciple}
+кажутся почти одним и~тем~же.
 
-\en{From}\ru{Из} \ru{принципа }\en{the }Hu\hbox{--}Washizu\ru{~(Ху\hbox{--}Васидзу)}\en{ principle} \en{ensues}\ru{вытекает} \en{the complete system of equations}\ru{вся полная система уравнений} \en{with boundary conditions}\ru{с~краевыми условиями}, так~как
+\en{From}\ru{Из}
+\ru{принципа }\en{the }Hu\hbox{--}Washizu\ru{~(Ху\hbox{--}Васидзу)}\en{ principle}
+\en{ensues}\ru{вытекает}
+\en{the whole complete set of~equations}\ru{весь полный набор уравнений}
+\en{with boundary conditions}\ru{с~краевыми условиями},
+так~как
 
 .....
 

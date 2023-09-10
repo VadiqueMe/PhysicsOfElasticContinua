@@ -6,6 +6,8 @@
 \geometry{papersize={145mm,200mm}} % 60x84/16 is 145 mm x 200 mm
 \geometry{tmargin=1.5cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
 
+\usepackage{graphicx} % used here for \rotatebox
+
 \usepackage{bm} % bold math symbols
 
 \usepackage{amsmath}
@@ -33,6 +35,7 @@
 \newcommand\pliabilitytensor{\stiffnesstensorB}
 
 \newcommand\potentialenergydensity{\Pi}
+\newcommand\complementaryenergydensity{\rotatebox[origin=c]{180}{$\Pi$}} %% previously \widehat{\potentialenergydensity}
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -132,13 +135,13 @@
 \begin{equation*}\begin{array}{c}
 \variation{\hspace{.1ex}\bigl( \hspace{-0.2ex} \linearstress \dotdotp \infinitesimaldeformation \bigr)} \hspace{-0.2ex}
 = \linearstress \dotdotp \variation{\infinitesimaldeformation} + \variation{\hspace{-0.1ex}\linearstress} \dotdotp \infinitesimaldeformation
-= \variation{\potentialenergydensity} + \variation{\widehat{\potentialenergydensity}}
+= \variation{\potentialenergydensity} + \variation{\complementaryenergydensity}
 \\[.3em]
 %
 \variation{\potentialenergydensity} = \linearstress \dotdotp \variation{\infinitesimaldeformation}
 = \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \variation{\infinitesimaldeformation} ,
 \:\:
-\variation{\widehat{\potentialenergydensity}} = \variation{\hspace{-0.1ex}\linearstress} \dotdotp \infinitesimaldeformation
+\variation{\complementaryenergydensity} = \variation{\hspace{-0.1ex}\linearstress} \dotdotp \infinitesimaldeformation
 = \linearstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \variation{\hspace{-0.1ex}\linearstress}
 \end{array}\end{equation*}
 
@@ -172,7 +175,7 @@
 
 	\draw (0.3 * \epsilonlength, 0.7 * \taulength) circle (0.1)
 		node [color=black, anchor=center, shape=circle, fill=white, outer sep=5pt, inner sep=2pt]
-		{\scalebox{1.5}[1.5]{$\widehat{\potentialenergydensity}$}} ;
+		{\scalebox{1.5}[1.5]{$\complementaryenergydensity$}} ;
 
 \end{tikzpicture}
 \end{center}
@@ -183,7 +186,7 @@
 \linearstress \dotdotp \infinitesimaldeformation
 = \infinitesimaldeformation \dotdotp \linearstress
 = \hspace{.1ex}
-\potentialenergydensity (\infinitesimaldeformation) \hspace{-0.1ex} + \hspace{.1ex} \widehat{\potentialenergydensity}(\hspace{-0.1ex}\linearstress\hspace{.12ex})
+\potentialenergydensity (\infinitesimaldeformation) \hspace{-0.1ex} + \hspace{.1ex} \complementaryenergydensity(\hspace{-0.1ex}\linearstress\hspace{.12ex})
 \\[.4em]
 %
 \potentialenergydensity (\infinitesimaldeformation) \hspace{-0.1ex}
@@ -191,7 +194,7 @@
 = \smalldisplaystyleonehalf \hspace{.25ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \hspace{-0.1ex} \dotdotp \infinitesimaldeformation
 \\[.4em]
 %
-\widehat{\potentialenergydensity}(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
+\complementaryenergydensity(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
 = \smalldisplaystyleonehalf \hspace{.2ex} \linearstress \dotdotp \infinitesimaldeformation(\hspace{-0.1ex}\linearstress\hspace{.12ex}) \hspace{-0.1ex}
 = \smalldisplaystyleonehalf \hspace{.15ex} \linearstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \pliabilitytensor \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \linearstress
 \end{array}\end{equation*}

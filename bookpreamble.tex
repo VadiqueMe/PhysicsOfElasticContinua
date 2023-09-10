@@ -180,6 +180,8 @@
 
 \usepackage{upgreek}
 
+\usepackage{fontawesome}
+
 \newcommand\variation[1]{\ensuremath\updelta\hspace{-0.1ex}#1}
 \newcommand\secondvariation[1]{\ensuremath\updelta^{\hspace{-0.1ex}2}#1}
 
@@ -232,6 +234,9 @@
 \newcommand\permutationsparitysymbolsupper[1]{\raisemath{.2ex}{\scalebox{.93}{$\mathrm{\in}$}^{\raisemath{-0.2ex}{#1}}}\hspace{.08ex}}
 \newcommand\permutationsparitytensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
+\newcommand\dotproductinquotes{\hbox{\hspace{-0.2ex}\inquotes{${\dotp\hspace{.22ex}}$}\hspace{-0.2ex}}}
+\newcommand\crossproductinquotes{\hbox{\hspace{-0.2ex}\inquotes{${\hspace{-0.25ex}\times\hspace{-0.1ex}}$}\hspace{-0.2ex}}}
+
 \newcommand\rotationtensor{\bm{O}}
 \newcommand\orthogonaltensor{\bm{Q}}
 
@@ -278,11 +283,16 @@
 
 %~%
 
-\newcommand\inertiatensor{{\hspace{-0.1ex}^2}\bm{\mathfrak{I}}}
-\newcommand\inertiascalar{\mathfrak{I}}
-\newcommand{\inertiatensorcomponents}[1]{\mathfrak{I}_{\hspace{-0.1ex}#1}\hspace{.1ex}}
-\newcommand\inertiatensordotabove{{\hspace{-0.1ex}^2}\mathdotabove{\bm{\mathfrak{I}}}}
-\newcommand\inertiatensorcircabove{{\hspace{-0.1ex}^2}\mathcircabove{\bm{\mathfrak{I}}}}
+\newcommand\mathfrakI{\scalebox{1.03}[1]{$\mathfrak{I}$}}
+\newcommand\boldmathfrakI{\scalebox{.98}[1]{$\bm{\mathfrak{I}}$}}
+\newcommand\mathfrakJ{\scalebox{1.03}[1]{$\mathfrak{J}$}}
+\newcommand\boldmathfrakJ{\scalebox{.98}[1]{$\bm{\mathfrak{J}}$}}
+
+\newcommand\inertiatensor{{\hspace{-0.1ex}^2}\boldmathfrakI}
+\newcommand\inertiascalar{\mathfrakI}
+\newcommand\inertiatensorcomponents[1]{\mathfrakI_{\hspace{-0.1ex}#1}\hspace{.1ex}}
+\newcommand\inertiatensordotabove{\ensuremath{{\hspace{-0.1ex}^2}\mathdotabove{\boldmathfrakI}}}
+\newcommand\inertiatensorcircabove{\ensuremath{{\hspace{-0.1ex}^2}\mathcircabove{\boldmathfrakI}}}
 
 \newcommand\stiffnesstensorA{\hspace{.08ex}{^4\hspace{-0.7ex}\bm{\mathcal{A}}}\hspace{.08ex}}
 \newcommand\stiffnesstensorB{{^4\hspace{-0.2ex}\bm{\mathcal{B}}}}
@@ -358,18 +368,26 @@
 \newcommand\smthactive{{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}a\hspace{-0.1ex})}\hspace{-0.16ex}}}}
 
 \newcommand\smthexternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(\hspace{-0.1ex}e\hspace{-0.1ex})}\hspace{-0.16ex}}}}
-\newcommand\smthinternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(i)}\hspace{-0.16ex}}}}
+\newcommand\smthinternal{{\raisemath{.1ex}{\smash{\hspace{.12ex}(i\hspace{.1ex})}\hspace{-0.16ex}}}}
 
 \newcommand\internalwork{W^{\hspace{-0.12ex}\smthinternal}}
 \newcommand\externalwork{W^{\hspace{-0.12ex}\smthexternal}}
 
+\newcommand\potentialenergyinmechanics{\raisebox{-0.1ex}{\scalebox{1.1}[1]{$\Uppi$}}}
+
+\newcommand\complementaryenergyinmechanics{\raisebox{-0.1ex}{\rotatebox[origin=c]{180}{\scalebox{1.1}[1]{$\Uppi$}}}} %% previously \widehat{\potentialenergyinmechanics}
+
+\newcommand\kineticenergyinmechanics{\mathrm{K}\hspace{-0.12ex}}
+
 \newcommand\potentialenergydensity{\Pi}
 \newcommand\kineticenergydensity{\mathrm{K}\hspace{-0.12ex}}
+
+\newcommand\complementaryenergydensity{\rotatebox[origin=c]{180}{$\Pi$}} %% previously \widehat{\potentialenergydensity}
 
 \newcommand\differentialindex[1]{{\hspace{-0.1ex}\scalebox{.63}{$\mathcolor{black!70}{\partial}$} #1}}
 
 \newcommand\locationvector{\bm{r}}
-%%\newcommand\advancedlocationvector{\bm{R}}
+%%\newcommand\newlocationvector{\bm{R}}
 \newcommand\currentlocationvector{\locationvector}
 \newcommand\initiallocationvector{\mathcircabove{\locationvector}}
 
@@ -378,6 +396,8 @@
 \newcommand\unitnormalvector{\bm{n}}
 \newcommand\currentunitnormal{\unitnormalvector} % \mathboldN
 \newcommand\initialunitnormal{\mathcircabove{\unitnormalvector}}
+
+\newcommand\verynicefrac[2]{\raisebox{.11ex}{$ \raisebox{.3em}{\scalebox{.7}{$#1$}} \hspace{-0.4ex} / \hspace{-0.46ex} \raisebox{-0.25em}{\scalebox{.7}{$#2$}}\hspace{.15ex} $}}
 
 \newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
 \newcommand\smalldisplaystyleonehalf{\scalebox{.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
@@ -683,9 +703,9 @@ aboveskip=4mm,belowskip=2.5mm}
 \addto\captionsrussian{\renewcommand{\figurename}{рисунок}}
 %%\addto\captionsukrainian{\renewcommand{\figurename}{малюнок}}
 
-\addto\captionsenglish{\def\figureshortname{fig.}}
-\addto\captionsrussian{\def\figureshortname{рис.}} %%\def\figureshortname{фиг.}
-%%\addto\captionsukrainian{\def\figureshortname{мал.}}
+\addto\captionsenglish{\def\figureshortname{\figurename}} %%\def\figureshortname{fig.}
+\addto\captionsrussian{\def\figureshortname{\figurename}} %%\def\figureshortname{фиг.} %%\def\figureshortname{рис.}
+%%\addto\captionsukrainian{\def\figureshortname{\figurename}} %%\def\figureshortname{мал.}
 
 \addto\captionsenglish{\def\wordforbibliography{Bibliography}}
 \addto\captionsrussian{\def\wordforbibliography{Библиография}}
@@ -734,10 +754,10 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \renewcommand{\labelitemi}{\pmb{\checkmark}}
 
 \newlength\mylistlabelsep
-\setlength{\mylistlabelsep}{1.2mm} %% 2mm
+\setlength{\mylistlabelsep}{1.2mm}
 
 \newlength\listlabelwithsep
-\addtolength{\listlabelwithsep}{\mylistlabelsep} % add \labelsep
+\setlength{\listlabelwithsep}{\mylistlabelsep}
 \addtolength{\listlabelwithsep}{\widthof{\labelitemi}}
 
 \newlength\listleftindent
@@ -755,7 +775,8 @@ labelsep=period,justification=centering,singlelinecheck=off}
 	\topsep=1mm
 	\partopsep=0mm
 	\parsep=0mm
-	\itemsep=0.5mm}
+	\itemsep=.1em % vertical space between items
+}
 \makeatother
 
 %%\usepackage[defaultlines=2,all]{nowidow}
@@ -990,8 +1011,8 @@ labelsep=period,justification=centering,singlelinecheck=off}
 \newcommand{\inaltquotes}[1]{\altlquote{#1}\altrquote}
 
 \newcommandx*{\inquotesx}[2][2=]{\lquote{#1}\hbox{\rquote%
-\ifthenelse{\equal{#2}{.}}{\hspace{-0.4ex}.}{}%
-\ifthenelse{\equal{#2}{,}}{\hspace{-0.4ex},}{}%
+\ifthenelse{\equal{#2}{.}}{\hspace{-0.7ex}.\hspace{.3ex}}{}%
+\ifthenelse{\equal{#2}{,}}{\hspace{-0.7ex},\hspace{.3ex}}{}%
 \ifthenelse{\equal{#2}{---}}{\hspace{-0.5ex}~---}{}%
 }}
 

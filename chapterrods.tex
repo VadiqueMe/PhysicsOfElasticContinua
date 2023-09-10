@@ -231,12 +231,12 @@ ${%
 \en{Tangent}\ru{Касательный}~$\tangentvector$, \en{normal}\ru{нормальный}~$\normalvector$ \en{and}\ru{и} \en{binormal}\ru{бинормальный}~$\binormalvector$ \en{vectors}\ru{векторы}, \en{together called}\ru{вместе называемые} \en{the }\emph{\ru{системой }Frenet\hbox{--}Serret\en{ frame}}, \en{are defined as}\ru{определяются как}:
 %
 \begin{itemize}
-\item $\tangentvector$\en{ is}\ru{\:---} \en{the unit vector tangent to a~curve}\ru{единичный вектор, касательный к~кривой}. \en{The length}\ru{Длина} \en{of the tangent vector}\ru{касательного вектора} \en{is always one unit}\ru{всегда одна единица}, \en{if}\ru{если} \en{the natural (arc length) parametrization of~a~curve is used}\ru{используется естественная параметризация кривой (длиной дуги)}. \en{The tangent vector}\ru{Касательный вектор} \en{points to where}\ru{указывает туда, где} \en{a~curve}\ru{кривая} \en{continues further}\ru{продолжается дальше}.
+\item $\tangentvector$\en{ is}\ru{\:---} \en{the~unit vector tangent to a~curve}\ru{единичный вектор, касательный к~кривой}. \en{The length}\ru{Длина} \en{of the tangent vector}\ru{касательного вектора} \en{is always one unit}\ru{всегда одна единица}, \en{if}\ru{если} \en{the natural (arc length) parametrization of~a~curve is used}\ru{используется естественная параметризация кривой (длиной дуги)}. \en{The tangent vector}\ru{Касательный вектор} \en{points to where}\ru{указывает туда, где} \en{a~curve}\ru{кривая} \en{continues further}\ru{продолжается дальше}.
 %
-\item $\normalvector$\en{ is}\ru{\:---} \en{the normal unit vector}\ru{нормальный единичный вектор}, \en{the derivative}\ru{производная}\en{of}~$\tangentvector$ \en{by the curve’s parameter}\ru{по параметру кривой} (\en{for instance}\ru{например}, the arc length of a~curve). \en{The normal vector}\ru{Нормальный вектор} \en{is always}\ru{всегда} \en{perpendicular}\ru{перпендикулярен} \en{to the tangent vector}\ru{касательному вектору} \en{and }\ru{и~}\en{points towards the center of curvature}\ru{направлен к~центру кривизны}. \en{It is divided by its length}\ru{Он поделён на свою длину}~${\| \normalvector \|}$\ru{,} \en{to be the one unit long}\ru{чтобы быть длиной в~одну единицу}.
+\item $\normalvector$\en{ is}\ru{\:---} \en{the~normal unit vector}\ru{нормальный единичный вектор}, \en{the derivative}\ru{производная}\en{of}~$\tangentvector$ \en{by the curve’s parameter}\ru{по параметру кривой} (\en{for instance}\ru{например}, the arc length of a~curve). \en{The normal vector}\ru{Нормальный вектор} \en{is always}\ru{всегда} \en{perpendicular}\ru{перпендикулярен} \en{to the tangent vector}\ru{касательному вектору} \en{and }\ru{и~}\en{points towards the center of curvature}\ru{направлен к~центру кривизны}. \en{It is divided by its length}\ru{Он поделён на свою длину}~${\| \normalvector \|}$\ru{,} \en{to be the one unit long}\ru{чтобы быть длиной в~одну единицу}.
 %
-\item $\binormalvector$\en{ is}\ru{\:---} \en{the binormal unit vector}\ru{бинормальный единичный вектор}, 
-\en{the~}\hbox{\hspace{-0.2ex}\inquotes{${\hspace{-0.25ex}\times\hspace{-0.1ex}}$}\hspace{-0.2ex}-\en{product}\ru{произведение}} (\inquotes{cross product}) \en{of~}$\tangentvector$ \en{and}\ru{и}~$\normalvector$, ${\binormalvector \hspace{-0.1ex} \equiv \tangentvector \hspace{-0.15ex} \times \hspace{-0.3ex} \normalvector}$.
+\item $\binormalvector$\en{ is}\ru{\:---} \en{the~binormal unit vector}\ru{бинормальный единичный вектор},
+\en{the~}\crossproductinquotes\hbox{-}\en{product}\ru{произведение} (\inquotes{cross product}) \en{of~}$\tangentvector$ \en{and}\ru{и}~$\normalvector$, ${\binormalvector \hspace{-0.1ex} \equiv \tangentvector \hspace{-0.15ex} \times \hspace{-0.3ex} \normalvector}$.
 \end{itemize}
 
 \ru{Формулы }\en{The }Frenet\hbox{--}Serret\en{ formulas} \en{describe}\ru{описывают} \en{the derivatives}\ru{производные} \en{of }\en{tangent}\ru{касательного}, \en{normal}\ru{нормального} \en{and }\ru{и~}\en{binormal}\ru{бинормального} \en{unit vectors}\ru{единичных векторов}  \en{through relations with each other}\ru{через отношения друг с~другом}.
@@ -417,7 +417,7 @@ $\tangentvector$ \en{always}\ru{всегда} \en{has}\ru{имеет} \en{the un
 \binormalvector
 \end{array} \hspace{.1ex} \right] $}
 \hspace{-0.1ex} .
-\end{equation*} 
+\end{equation*}
 
 \en{Tensor}\ru{Тензор}~${^2\hspace{-0.2ex}\bm{d}}$\en{ is}\ru{\:---}
 \en{skewsymmetric}\ru{кососимметричный},
@@ -570,7 +570,11 @@ Cosserat\en{ continuum}.
 \en{There’s no more a~triple}\ru{Больше нет тройки} \en{of material coordinates}\ru{материальных координат}~${q_{\hspace{.1ex}i}}$, \en{but}\ru{но} \en{the only one}\ru{лишь одна}\:--- $s$.
 \en{It may be}\ru{Это может быть} \en{the arc length parameter}\ru{параметр длины дуги} \en{in the initial configuration}\ru{в~начальной конфигурации}.
 \en{The motion}\ru{Движение} \en{of a~particle}\ru{частицы} \en{over time}\ru{со~временем} \en{is described}\ru{описывается} \en{by the location vector}\ru{вектором положения}~${\locationvector(s,t)}$ \en{and}\ru{и} \en{the rotation tensor}\ru{тензором поворота}~${\rotationtensor(s,t)}$.
-\en{Linear}\ru{Линейная} \en{and}\ru{и}~\en{angular}\ru{угловая}~\eqrefwithchapterdotsection{angularvelocityvector}{chapter:mathapparatus}{section:rotationtensor} \en{velocities}\ru{скорости} \en{of a~rod’s particle}\ru{частицы стержня} \en{are}\ru{суть}
+\en{The~}\en{linear}\ru{Линейная}
+\en{and}\ru{и}~\en{angular}\ru{угловая}~\eqrefwithchapterdotsection{angularvelocityvector}{chapter:mathapparatus}{section:rotationtensors}
+\en{velocities}\ru{скорости}
+\en{of~a~rod’s particle}\ru{частицы стержня}
+\en{are}\ru{суть}
 
 \nopagebreak\vspace{-0.2em}\begin{gather}
 \mathdotabove{\locationvector} = \bm{v}
@@ -625,7 +629,7 @@ Cosserat\en{ continuum}.
 \en{of~a~body}\ru{тела}
 \en{as}\ru{как}
 \en{a~rigid whole}\ru{жёсткого целого}
-\textcolor{magenta}{(.... add some equation(s) here describing movements as a rigid whole .....)}.
+\textcolor{magenta}{(.... add some equation(s) here describing movements as a~rigid whole .....)}.
 
 \en{Further}\ru{Дальше}
 \en{we will clarify}\ru{мы проясним}
@@ -714,7 +718,7 @@ ${ \mathcircabove{\bm{e}}_{3} = \initiallocationvector{\hspace{.1ex}'} }$.
 
 \en{Possible loads}\ru{Возможные нагрузки}\ru{,} \en{acting}\ru{действующие} \en{on a~rod}\ru{на стержень} \en{as}\ru{как} \en{the~}\ru{линию }Cosserat\en{ line}\en{ are}\ru{\:---} \en{forces}\ru{\hbox{силы}} \en{and}\ru{и}~\en{moments}\ru{моменты}: \en{on~infinitesimal element}\ru{на~бесконечно-малый элемент}~$ds$ \en{of a~rod}\ru{стержня} \en{act}\ru{действуют} \en{external force}\ru{внешняя сила}~${\bm{q}ds}$ \en{and}\ru{и}~\en{external moment}\ru{внешний момент}~${\bm{m}ds}$.
 \en{The internal interactions}\ru{Внутренними взаимо\-действиями} \en{will be}\ru{будут} \en{force}\ru{сила}~${\internalforce(s)}$ \en{and }\ru{и~}\en{moment}\ru{момент}~${\internalmoment(s)}$\:--- \en{this is the action}\ru{это действие} \en{of the particle}\ru{частицы} \en{with coordinate}\ru{с~координатой}~${s\!+\!0}$ \en{on the particle}\ru{на частицу} \en{with}\ru{с}~${s\!-\!0}$.
-\en{The~action--re\-action principle}\ru{Принцип действия--про\-ти\-во\-действия} \en{gives that}\ru{даёт, что} 
+\en{The~action--re\-action principle}\ru{Принцип действия--про\-ти\-во\-действия} \en{gives that}\ru{даёт, что}
 \en{a~reverse}\ru{реверс} (\en{a~change of direction}\ru{перемена направления}) \en{of~}\en{coordinate}\ru{координаты}~$s$ \en{changes signs}\ru{меняет знаки} \en{of~}${\internalforce}$ \en{and}\ru{и}~${\internalmoment}$.
 
 ...
@@ -962,32 +966,66 @@ $}
 
 \label{section:rods.stiffnessbyenergy}
 
+\en{To find}\ru{Чтобы найти}
+\en{the~stiffness tensors}\ru{тензоры жёсткости}
+$\bm{a}$, $\bm{b}$ \en{and}\ru{и}~$\bm{c}$
+\en{for}\ru{для}
+\en{the~one\hbox{-}dimensional model}\ru{одномерной модели}
+\en{it’s enough}\ru{достаточно}
+\en{to have solutions}\ru{иметь решения}
+\en{of 3\hbox{-}dimensional problems}\ru{трёхмерных задач}
+\en{for}\ru{для}
+\en{a~rod}\ru{стержня}.
+\en{But}\ru{Но}
+\en{here}\ru{тут}
+\en{emerge}\ru{возникают}
+\en{the~two questions}\ru{два вопроса}\::
+\en{which specific problems}\ru{какие именно задачи}
+\en{to consider}\ru{рассматривать}
+\en{and what}\ru{и~что}
+\en{to~take}\ru{брать}
+\en{from solutions}\ru{из решений}?
+
 \begin{otherlanguage}{russian}
 
-Для определения тензоров жёсткости~$\bm{a}$, $\bm{b}$ и~$\bm{c}$ одномерной модели достаточно решений трёхмерных задач для стержня.
-Но тут возникают два вопроса: какие именно задачи рассматривать и что нужно взять из решений?
+\ru{Проблема }Saint\hbox{-\hspace{-0.2ex}}Venant’\en{s}\ru{а}\en{ problem}
+выделяется среди прочих,
+ведь оттуда
+берётся жёсткость на~кручение.
 
-\ru{Проблема }Saint\hbox{-\hspace{-0.2ex}}Venant’\en{s}\ru{а}\en{ problem} выделяется среди прочих, ведь оттуда берётся жёсткость на~кручение.
-
-Вдобавок есть много точных решений, получаемых таким путём: задаётся поле~${\bm{u}(\locationvector)}$, определяется~${\widearctoo{\cauchystress} = \stiffnesstensorC \dotdotp \hspace{-0.15ex} \boldnabla \bm{u}}$, затем находятся объёмные~${\bm{f} \hspace{-0.1ex} = - \hspace{.1ex} \boldnabla \dotp \widearctoo{\cauchystress}\hspace{.1ex}}$ и~поверхностные~${\bm{p} = \bm{n} \dotp \widearctoo{\cauchystress}\hspace{.1ex}}$ нагрузки.
+Вдобавок
+есть много точных решений,
+получаемых таким путём\::
+задаётся поле~${\bm{u}(\locationvector)}$,
+определяется~${\widearctoo{\cauchystress} = \stiffnesstensorC \dotdotp \hspace{-0.15ex} \boldnabla \bm{u}}$,
+затем находятся объёмные~${\bm{f} \hspace{-0.1ex} = - \hspace{.1ex} \boldnabla \dotp \widearctoo{\cauchystress}\hspace{.1ex}}$
+и~поверхностные~${\bm{p} = \bm{n} \dotp \widearctoo{\cauchystress}\hspace{.1ex}}$
+нагрузки.
 
 \en{But}\ru{Но}
-что делать с~решением?
-Ясно, что $\internalforce$ \en{and}\ru{и}~$\internalmoment$ в~стержне\:--- это интегралы по~сечению~(...).
-\en{And}\ru{И}
-совсем не~ясно,
+\en{what to~do}\ru{что делать}
+\en{with the~solution}\ru{с~решением}?
+\en{It’s clear that}\ru{Ясно, что}
+$\internalforce$ \en{and}\ru{и}~$\internalmoment$
+\en{in a~rod}\ru{в~стержне}\en{ are}\ru{\:--- это}
+\en{integrals}\ru{интегралы}
+\en{over the~rod’s section}\ru{по~сечению стержня} (...).
+\en{However}\ru{Однако}
+\en{it’s not clear at all}\ru{совсем не~ясно},
 \en{what}\ru{что}
-принять
-за смещение и~поворот
-\en{in a~one-dimensional}\ru{в~одномерной}
+\en{to consider}\ru{считать}
+\en{as displacement}\ru{смещением}
+\en{and what}\ru{и~что}
+\en{as rotation}\ru{поворотом}
+\en{in the~one-dimensional}\ru{в~одномерной}
 \en{model}\ru{модели}.
-Если взять,
-\en{for example}\ru{например},
-\en{such a~version}\ru{такую версию}
-(\en{the index}\ru{индекс}
+\en{Taking}\ru{Взяв},
+\en{for example}\ru{к~примеру},
+\en{the~following version}\ru{следующую версию}
+(\en{the~index}\ru{индекс}
 \en{of}\ru{у}~$\bm{u}$
 \en{shows}\ru{показывает}
-\en{the dimensions of the model}\ru{размерность модели})
+\en{the~model’s dimensions}\ru{размерность модели})
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \bm{u}_{\raisemath{-0.2ex}{1}}\hspace{-0.15ex}(z)
@@ -1006,18 +1044,34 @@ $}
 \bm{u}_{\raisemath{-0.2ex}{3}}
 \hspace{.2ex}
 d\rodsection
-\hspace{.15ex} ,
+\hspace{.2ex} ,
 \end{equation*}
 
 \vspace{-0.2em}\noindent
-то чем другие возможные представления хуже?
+\en{nevertheless}\ru{тем не~менее},
+\en{other}\ru{и~другие}
+\en{possible representations}\ru{возможные представления}
+\en{may be proposed as well}\ru{тоже могут быть предложены}.
 
-Помимо $\internalforce$ \en{and}\ru{и}~$\internalmoment$, есть ещё величина, не вызывающая сомнений\:--- упругая энергия.
-Естественно потребовать, чтобы в~одно\-мерной и в~трёх\-мерной моделях энергии на~единицу длины совпали.
-При этом, чтобы уйти от~различий в~трактовках ${\bm{u}_{\raisemath{-0.2ex}{1}}}$ и~$\bm{\theta}$, будем исходить из \en{complementary energy}\ru{дополнительной энергии}~${\widehat{\potentialenergydensity}(\internalmoment, \internalforce)}$:
+\en{Besides}\ru{Помимо}~$\internalforce$ \en{and}\ru{и}~$\internalmoment$,
+есть ещё величина,
+не вызывающая сомнений\:---
+упругая энергия.
+Естественно потребовать,
+чтобы в~одно\-мерной и в~трёх\-мерной моделях энергии на~единицу длины совпали.
+\en{And }\ru{А~}\en{to~avoid differences}\ru{чтобы уйти от~различий}
+\en{in interpretations}\ru{в~трактовках}
+\en{of~}${\bm{u}_{\raisemath{-0.2ex}{1}}}$ \en{and}\ru{и}~$\bm{\theta}$,
+\en{I propose to~proceed}\ru{я предлагаю}
+\en{from}\ru{из}
+\en{the~complementary energy}\ru{дополнительной энергии}~%
+${\complementaryenergydensity(\internalmoment, \internalforce)}$\::
 
-\nopagebreak\vspace{-0.1em}\begin{equation*}
-\widehat{\potentialenergydensity}(\internalmoment, \internalforce) = \hspace{-0.2ex} \integral\displaylimits_{\rodsection} \hspace{-0.4ex} \\potentialenergydensity_{\raisemath{-0.2ex}{3}} \hspace{.2ex} d\rodsection
+\nopagebreak\vspace{-0.1em}
+\begin{equation*}
+\complementaryenergydensity(\internalmoment, \internalforce)
+= \hspace{-0.2ex}
+\integral\displaylimits_{\rodsection} \hspace{-0.4ex} \potentialenergydensity_{\raisemath{-0.2ex}{3}} \hspace{.2ex} d\rodsection
 \end{equation*}
 
 ...
