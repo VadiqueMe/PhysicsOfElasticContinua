@@ -1,0 +1,248 @@
+\en{\section{The principle of virtual work}}
+
+\ru{\section{Принцип виртуальной работы}}
+
+\label{section:virtualworkprinciple.genericmechanics}
+
+\emph{Mécanique analytique} (1788--89) is a two volume French treatise on analytical mechanics, written by Joseph Louis Lagrange, and published 101 years following Isaac Newton’s \emph{Philosophiæ Naturalis Principia Mathematica}.
+
+\bookauthor{Joseph Louis Lagrange}.
+\href{https://play.google.com/books/reader?id=Q8MKAAAAYAAJ&pg=GBS.PP7}{Mécanique analytique. Nouvelle édition, revue et augmentée par l’auteur. Tome premier. Mme Ve Courcier, Paris, 1811.} \howmanypages{490 pages.}
+
+\bookauthor{Joseph Louis Lagrange}.
+\href{https://play.google.com/books/reader?id=TmMSAAAAIAAJ&pg=GBS.PP9}{Mécanique analytique. Troisième édition, revue, corrigée et annotée par M.\:J.\:Bertrand. Tome second. Mallet-Bachelier, Paris, 1855.} \howmanypages{416 pages.}
+
+The historical transition from geometrical methods, as presented in Newton’s Principia, to methods of mathematical analysis.
+
+{\small
+\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+Consider the~exact differential of any set of location vectors~${\locationvector_{\hspace{-0.1ex}i}}$, that are functions of other variable parameters (coordinates) ${q^{1} \hspace{-0.25ex}, q^{2} \hspace{-0.25ex}, ..., q^{n}}$ and time~$t$.
+
+The actual displacement is the differential
+\[
+\displaystyle d\locationvector_{\hspace{-0.1ex}i} = \frac{\partial \locationvector_{\hspace{-0.1ex}i}}{\partial t} \hspace{.16ex} dt \hspace{.2ex} + \sum_{j=1}^{n} {\frac{\partial \locationvector_{\hspace{-0.1ex}i}}{\partial q^{\hspace{.1ex}j}}} \hspace{.2ex} dq^{\hspace{.1ex}j}
+\]
+
+Now, imagine an arbitrary path through the configuration space/manifold. This means it has to satisfy the constraints of the system but not the actual applied forces
+\[
+\delta \locationvector_{\hspace{-0.1ex}i} = \displaystyle\sum_{j=1}^{n} {\displaystyle\frac {\partial \locationvector_{\hspace{-0.1ex}i}}{\partial q^{\hspace{.1ex}j}}} \hspace{.2ex} \delta q^{\hspace{.1ex}j}
+\]
+
+\par}
+
+A~virtual infinitesimal displacement of a~system of particles refers to a~change in the configuration of a~system as the result of any arbitrary infinitesimal change of location vectors (or coordinates) ${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$, consistent with the forces and constraints imposed on the system at the current/given instant~$t$.
+This displacement is called \inquotes{virtual} to distinguish it from an~actual displacement of the system occurring in a~time interval~${dt}$, during which the forces and constraints may be changing.
+
+Assume the system is in equilibrium, that is the full force on each particle vanishes, ${\bm{F}_i \hspace{-0.2ex} = \hspace{-0.1ex} \zerovector \hspace{.4em} \forall i}$.
+Then clearly the term ${\bm{F}_i \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_i}}$, which is the virtual work of force ${\bm{F}_i}$ in displacement ${\variation{\hspace{.1ex}\locationvector_i}}$, also vanishes for each particle, ${\bm{F}_i \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_i} \hspace{-0.1ex} = 0 \hspace{.4em} \forall i}$.
+The~sum of these vanishing products over all particles is likewise equal to zero:
+\[
+\displaystyle\sum_{\smash{i}} \bm{F}_i \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_i} \hspace{-0.1ex} = 0
+\hspace{.15ex} .
+\]
+
+Decompose
+the full force ${\bm{F}_i}$
+into the applied (active) force $\activeforcewithindex{i}$
+and the force of constraint $\constraintforcewithindex{i}$,
+\[
+\bm{F}_i \hspace{-0.1ex} = \hspace{-0.1ex} \activeforcewithindex{i} \hspace{-0.2ex} + \hspace{-0.1ex} \constraintforcewithindex{i}
+\]
+
+We now restrict ourselves to systems for which the net virtual work of the force of every constraint is zero:
+\[
+\displaystyle\sum_{\smash{i}} \constraintforcewithindex{i} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_i} \hspace{-0.1ex} = 0
+\hspace{.15ex} .
+\]
+
+We therefore have as the condition for equilibrium of a system that the virtual work of all applied forces vanishes:
+\[
+\displaystyle\sum_{\smash{i}} \activeforcewithindex{i} \hspace{-0.25ex} \dotp \variation{\hspace{.1ex}\locationvector_i} \hspace{-0.1ex} = 0
+\hspace{.15ex} .
+\]
+--- the principle of virtual work.
+
+Note that coefficients ${\activeforcewithindex{i}}$ can no longer be thought equal to zero: in common ${\activeforcewithindex{i} \hspace{-0.3ex} \neq \hspace{-0.1ex} 0}$, since ${\variation{\hspace{.1ex}\locationvector_i}}$ are not independent but are bound by constraints.
+
+\en{A~virtual displacement}\ru{Виртуальным смещением}
+\en{of~a~particle}\ru{частицы}
+\en{with vector radius}\ru{с~вектором\hbox{-}радиусом}~${\locationvector_{\hspace{-0.1ex}k}}$
+\en{is}\ru{это}
+\en{variation}\ru{вариация}
+${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$\:---
+\en{any}\ru{любое}
+\en{infinitesimal}\ru{бесконечно малое}
+\en{change}\ru{изменение}
+\en{of~vector}\ru{вектора}~${\locationvector_{\hspace{-0.1ex}k}}$,
+\en{which is}\ru{которое}
+\en{compatible}\ru{совместимо}
+\en{with the }\ru{со связями (}constraints\ru{)}.
+\en{If}\ru{Если}
+\en{the system is free}\ru{система свободна},
+\en{that is}\ru{то есть}
+\en{there are no constraints}\ru{связей нет},
+\en{then}\ru{тогда}
+\en{virtual displacements}\ru{виртуальные смещения}
+${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$
+\en{are perfectly random}\ru{совершенно случайны}.
+
+\begin{otherlanguage}{russian}
+
+Связи бывают
+голономные
+(holonomic, или геометрические),
+связывающие только положения~(смещения)\:---
+\en{they are functions}\ru{это функции}
+\en{of only}\ru{лишь}
+\en{the coordinates}\ru{координат}
+\en{and}\ru{и}\ru{,}
+\en{probably}\ru{возможно}\ru{,}
+\en{time}\ru{времени}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{holonomicconstraint}
+c\hspace{.2ex}(\locationvector, t) = 0
+\end{equation}
+
+\vspace{-0.1em}\noindent
+--- и~неголономные~(или дифференциальные),
+содержащие производные координат по~времени:
+${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$
+\en{and not}\ru{и~не} интегрируемые
+\en{till}\ru{до}
+\en{the geometrical constraints}\ru{геометрических связей}.
+
+\en{When}\ru{Когда}
+\en{all}\ru{все}
+\en{constraints}\ru{связи}
+\en{are holonomic}\ru{голономные},
+\en{then}\ru{тогда}
+\en{the virtual displacements}\ru{виртуальные смещения}
+\en{of~a~particle}\ru{частицы}
+\inquotes{${\hspace{.05ex}k\hspace{.25ex}}$}
+\en{satisfy}\ru{удовлетворяют}
+\en{the equation}\ru{уравнению}
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{requirementforvirtualdisplacements}
+\displaystyle \sum_{\smash{j=1}}^{m}
+\scalebox{.92}{$ \displaystyle
+   \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{j}}}{\partial \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k}} $}
+\hspace{-0.1ex} \dotp
+\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}
+\hspace{-0.1ex} =
+0
+\hspace{.1ex} .
+\vspace{-0.25em}\end{equation}
+
+\en{In constrained}\ru{В~связанных}~%
+(\en{non-free}\ru{несвободных})
+\en{systems}\ru{системах},
+\en{all forces}\ru{все силы}
+\en{can be}\ru{могут быть}
+\en{divided}\ru{поделен\'{ы}}
+\en{into two groups}\ru{на две группы}\::
+\en{the~active forces}\ru{активные силы}~${\activeforcewithindex{k}}$
+\en{and }\ru{и~}%
+\en{the~}\ru{силы }\en{constraint}\ru{связи}
+(\en{or}\ru{или}
+\en{reaction}\ru{реакции})\en{ forces}.
+
+Реакция~$\mathboldPhi_k$
+действует со~стороны всех материальных ограничителей
+на~частицу \inquotes{${\hspace{.05ex}k\hspace{.25ex}}$}
+и~меняется согласно уравнению~\eqref{holonomicconstraint}
+для каждой связи.
+
+\en{The~constraints}\ru{Связи}
+\en{are assumed}\ru{предполагаются}
+\en{to be ideal}\ru{идеальными},
+\en{that is}\ru{то есть}
+
+\nopagebreak
+\begin{equation}\label{theidealityofconstraints}
+\scalebox{.9}{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} \mathboldPhi_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.16ex} = 0
+%%\quad \textrm{---}
+\vspace{-0.25em}\end{equation}
+\noindent
+\:---
+\en{the~work}\ru{работа}
+\en{of~constraint~(reaction) forces}\ru{сил связи~(реакции)}
+\en{is equal to zero}\ru{равна нулю}
+\en{on~any}\ru{на~любых}
+\en{virtual displacements}\ru{виртуальных смещениях}.
+
+\en{The~principle of virtual work}\ru{Принцип виртуальной работы}
+\en{is}\ru{так\'{о}в}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{discrete:principleofvirtualwork}
+\displaystyle \sum_{\smash{k}} \hspace{-0.1ex} \Bigl( \hspace{-0.1ex}
+\activeforcewithindex{k} \hspace{-0.2ex} - m_k \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\Bigr) \hspace{-0.3ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.1ex} = 0
+\hspace{.1ex} ,
+\vspace{-0.3em}
+\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{where}\ru{где}~${\activeforcewithindex{k}}$\en{ are}\ru{\:---}
+\en{only}\ru{лишь}
+\en{active forces}\ru{активные силы},
+\en{without}\ru{без}
+\en{reactions}\ru{реакций}
+\en{of~constraints}\ru{связей}.
+
+\en{Differential}\ru{Дифференциальное}
+\en{variational}\ru{вариационное}
+\en{equation}\ru{уравнение}~\eqref{discrete:principleofvirtualwork}
+\en{may seem like}\ru{может показаться}
+\en{a~trivial consequence}\ru{тривиальным следствием}
+\en{of~the~}\ru{закона }Newton’\en{s}\ru{а}\en{ law}~\eqref{law:ofnewton}
+\en{and }\ru{и~}\en{the~ideality of~constraints}\ru{идеальности связей}~\eqref{theidealityofconstraints}.
+Однако
+содержание~\eqref{discrete:principleofvirtualwork}
+несравненно обширнее.
+Читатель вскоре увидит, что
+принцип~\eqref{discrete:principleofvirtualwork}
+может быть положен
+в~основу механики~\cite{gantmacher-analyticalmechanics}.
+\en{The~various models}\ru{Разные модели}
+\en{of~elastic media}\ru{упругих сред},
+\en{being described}\ru{описываемые}
+\en{in this book}\ru{в~этой книге},
+\en{are based}\ru{основаны}
+\en{on this}\ru{на~этом}
+\en{principle}\ru{принципе}.
+
+Для~примера рассмотрим совершенно жёсткое~(недеформируемое) твёрдое тело.
+
+.... \eqref{completelyrigidbody.locationvectorofanypointdecomposed} ${\Rightarrow}$
+${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{x}}}$
+
+(begin copied from \chapterdotsectionref{chapter:mathapparatus}{section:calculusofvariations})
+
+Варьируя тождество~\eqref{orthogonalityofrotationtensor}, получим ${\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!}$.
+Этот тензор антисимметричен, и~потому выражается через свой сопутствующий вектор~${\varvector{o}}$ как~${\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad}$.
+Приходим к~соотношениям
+
+\nopagebreak\vspace{-0.5em}\begin{equation}
+\variation{\rotationtensor} \hspace{-0.1ex} = \varvector{o} \hspace{-0.1ex} \times \hspace{-0.1ex} \rotationtensor , \:\:
+\varvector{o} = - \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $} \hspace{-0.1ex} \Bigl( \hspace{-0.1ex} \variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \Bigr)_{\hspace{-0.25em}\Xcompanion}
+\hspace{-0.1ex} ,
+\end{equation}
+
+(end of copied from \chapterdotsectionref{chapter:mathapparatus}{section:calculusofvariations})
+
+...
+
+
+Проявилась замечательная особенность~\eqref{discrete:principleofvirtualwork}\::
+это уравнение эквивалентно системе такого порядка,
+каково число степеней свободы системы,
+то~есть сколько независимых вариаций~${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$ мы имеем.
+Если система $N$~точек имеет $m$ связей,
+то число степеней свободы
+${n = 3N \hspace{-0.25ex} - m}$.
+
+...
+

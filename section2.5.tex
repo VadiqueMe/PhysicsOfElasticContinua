@@ -1,0 +1,457 @@
+\en{\section{Statics}}
+
+\ru{\section{Статика}}
+
+\label{section:statics}
+
+\en{Let there is}\ru{Пусть есть}
+\en{a~mechanical system}\ru{механическая система}
+\en{with }\en{stationary}\ru{со~}\ru{стационарными}~%
+(\en{constant over time}\ru{постоянными во~времени})
+\en{constraints}\ru{связями}
+\en{under}\ru{под}
+\en{the~action}\ru{действием}
+\en{of~static}\ru{статических}~%
+(\en{not changing with time}\ru{не~меняющихся со~временем})
+\en{active forces}\ru{активных сил}~${\bm{F}_k}$.
+\en{In~equilibrium}\ru{В~равновесии}
+\en{all}\ru{все}~${\locationvector_{\hspace{-0.1ex}k} \narroweq \hspace{.2ex} \boldconstant}$,
+\en{hence}\ru{отсюда}
+${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \narroweq \hspace{.2ex} \zerovector}$,
+${\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.1ex}{\partial \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k}}}{\raisemath{-0.1ex}{\partial q^i}} $}
+\hspace{.1ex} \narroweq \hspace{.2ex} \zerovector}$,
+\en{and }\ru{и~}\en{the~principle of~virtual work}\ru{принцип виртуальной работы}
+\en{is formulated}\ru{формулируется}
+\en{as}\ru{как}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{statics.discrete:principleofvirtualwork}
+\scalebox{.8}[.9]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.25ex}
+\bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.1ex} = 0
+\hspace{.8em} \Leftrightarrow \hspace{.6em}
+\scalebox{.92}[.96]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.25ex}
+\bm{F}_k \hspace{-0.1ex} \dotp \scalebox{.96}{$ \displaystyle \frac{\raisemath{-0.1ex}{\partial \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k}}}{\raisemath{-0.1ex}{\partial q^i}} $}
+= Q_{\hspace{-0.1ex}i} = 0
+\hspace{.1ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{Both pieces}\ru{Обе части}
+\en{are essential}\ru{существенны}\::
+\en{and }\ru{и~}\en{the~variational equation}\ru{вариационное уравнение},
+\en{and }\ru{и~}\en{zeros}\ru{нули}
+\en{in the~generalized forces}\ru{в~обобщённых силах}.
+
+\en{Relations}\ru{Соотношения}~\eqref{statics.discrete:principleofvirtualwork}\en{ are}\ru{\:--- это}
+\en{the~most}\ru{самые}
+\en{generic and universal}\ru{общие и универсальные}
+\en{equations}\ru{уравнения}
+\en{of~statics}\ru{статики}.
+\en{In literature}\ru{В~литературе}\en{,}
+\ru{распространено }\en{the~narrow}\ru{узкое}
+\en{conception}\ru{представление}
+\en{of the~equilibrium equations}\ru{уравнений равновесия}
+\en{as}\ru{как}
+\en{the~balance}\ru{баланса}
+\en{of~forces and moments}\ru{сил и~моментов}\en{ is widespread}.
+\en{But}\ru{Но}
+\en{in that case too}\ru{и~в~том случае},
+\en{as in any other}\ru{как и~в~любом},
+\en{the~set}\ru{набор}
+\en{of the~equilibrium equations}\ru{уравнений равновесия}
+\en{exactly matches}\ru{точно совпадает}
+\en{with }\ru{с~}\en{the~generalized coordinates}\ru{обобщёнными координатами}.
+\inquotes{\en{The~resultant force}\ru{Результирующая сила}}
+(\en{also referred to as}\ru{также упоминаемая как}
+\inquotes{\en{the~net~(full) force}\ru{равнодействующая, суммарная~(полная), \inquotes{нетто} сила}}
+\en{or}\ru{или}
+\inquotes{\en{the~net vector}\ru{суммарный, главный, \inquotes{нетто} вектор}})
+\en{and}\ru{и}~\inquotes{\en{the~resultant couple}\ru{результирующая пара сил}}~%
+(\inquotesx{\en{the~net couple}\ru{суммарная, главная, \inquotes{нетто} пара}}[,]
+\inquotes{\en{the~net moment}\ru{момент суммарный, нетто, главный}})
+\en{figure}\ru{фигурируют}
+\en{in the~equilibrium equations}\ru{в~уравнениях равновесия}\footnote{%
+\en{Since}\ru{Со~времён}
+\en{describing}\ru{описания}
+\en{the~reduction}\ru{сведения}
+\en{of~any set of forces}\ru{любого набора сил},
+\en{acting}\ru{действующих}
+\en{on the~same}\ru{на~одно и~то~же}
+\en{absolutely rigid body}\ru{совершенно жёсткое тело},
+\en{into the~single force}\ru{к~одной силе}
+\en{and }\ru{и~}\en{the~single couple}\ru{одной паре}
+\en{in the~book}\ru{в~книге}
+\href{https://gallica.bnf.fr/ark:/12148/bpt6k6213152z.texteImage}{\inquotes{Éléments de~statique}\:(1873)}
+\en{by }\href{https://en.wikipedia.org/wiki/Louis_Poinsot}{Louis\ru{’а} Poinsot}.%
+}
+\en{just because}\ru{просто потому, что}
+\en{the~system has}\ru{у~системы есть}
+\en{translational}\ru{трансляционные (поступательные)}
+\en{and }\ru{и~}\en{rotational}\ru{поворотные (вращательные)}
+\en{degrees o’freedom}\ru{степени свободы трансляции и~поворота}.
+\en{The~huge popularity}\ru{Огромная популярность}
+\en{of~forces}\ru{сил}
+\en{and }\ru{и~}\en{moments}\ru{моментов}~(\en{force couples}\ru{пар сил})
+\en{comes}\ru{идёт}
+\en{not as much}\ru{не~столько}
+\en{from}\ru{от}
+\en{the~prevalence}\ru{преобладания}
+\en{of~statics}\ru{статики}
+\en{of a~perfectly non-deformable}\ru{совершенно недеформируемого}~%
+(\en{ideally rigid}\ru{идеально жёсткого})
+\en{solid body}\ru{твёрдого тела},
+\en{but more}\ru{но больше}
+\en{from the~fact that}\ru{от того, что}
+\en{the~virtual work}\ru{виртуальная работа}
+\en{of~internal forces}\ru{внутренних сил}
+\en{on all movements}\ru{на всех движениях}
+\en{of~the~system}\ru{системы}
+\en{as a~rigid whole}\ru{как жёсткого целого}
+\en{is always}\ru{всегда}
+\en{equal to zero}\ru{равна нулю}
+\en{for any medium}\ru{для любой среды}.
+
+\en{Let}\ru{Пусть}
+\en{two kinds}\ru{два вида}
+\en{o’forces}\ru{сил}
+\en{act}\ru{действуют}
+\en{in the~system}\ru{в~системе}\::
+\en{potential}\ru{потенциальные},
+\en{with }\ru{с~}\en{the coordinate-dependent}\ru{зависящей от~координат}
+\en{energy}\ru{энергией}~${\potentialenergyinmechanics (q^i)}$,
+\en{and plus}\ru{а~также}
+\en{external ones}\ru{внешние}~${{\mathcircabove{Q_{\hspace{-0.2ex}j}}^{\hspace{-0.5ex}\smthexternal}} \hspace{-0.25ex} \equiv \hspace{-0.25ex} P_{\hspace{-0.2ex}j}}$.
+\en{From}\ru{Из}~\eqref{statics.discrete:principleofvirtualwork}
+\en{follow}\ru{следуют}
+\en{the~equilibrium equations}\ru{уравнения равновесия}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{staticequilibrium.withpotentialandexternalforces}
+\scalebox{.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potentialenergyinmechanics}}{\raisemath{-0.1em}{\partial q^i}} $} = P_{\hspace{-0.1ex}i}
+%%%\hspace{.2ex} ,
+\end{equation}
+
+\vspace{-0.5em}\noindent
+\en{and}\ru{и}
+\en{the~exact differential}\ru{точный~(полный) дифференциал}\en{ of}~${\potentialenergyinmechanics (q^i)}$
+(\en{time independent}\ru{независимого от~времени})
+\en{is}\ru{есть}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{fulldifferentialoftimeindependentpotentialenergy}
+d \hspace{.1ex} \potentialenergyinmechanics
+= \scalebox{.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex}
+\scalebox{.96}{$ \displaystyle \frac{\raisemath{-0.15em}{\partial \hspace{.1ex} \potentialenergyinmechanics}}{\raisemath{-0.1em}{\partial q^i}} $} \hspace{.2ex} dq^i
+= \raisebox{.1em}{\scalebox{.8}[.9]{$\displaystyle \sum_{\smash{i}}$}} \hspace{.2ex} P_{\hspace{-0.1ex}i} \hspace{.2ex} dq^i
+\hspace{-0.1ex} .
+\end{equation}
+
+\vspace{-0.5em}%%\noindent
+\en{Equations}\ru{Уравнения}~\eqref{staticequilibrium.withpotentialandexternalforces}
+\en{formulate}\ru{формулируют}
+\en{the~problem of~statics}\ru{проблему статики},
+\en{non-linear}\ru{нелинейную}
+\en{in~overall}\ru{в~общем},
+\en{about the~relation}\ru{об~отношении}
+\en{of~}\href{https://en.wikipedia.org/wiki/Mechanical_equilibrium}{\en{the~equilibrium position}\ru{положения равновесия}}~%
+${q_{\circ}^{\hspace{.1ex}i}}$
+\en{with the~external loads}\ru{с~внешними нагрузками}~${P_{\hspace{-0.1ex}i}}$.
+
+\en{A~linear system}\ru{Линейная система}
+\en{with }\ru{с~}\en{quadratic potential}\ru{квадратичным потенциалом}~$\potentialenergyinmechanics$
+\en{as a~function}\ru{как функцией}
+\en{of~coordinates}\ru{координат}
+%
+\begin{equation}\label{potentialenergyinmechanics.as.stiffnessbycoordinates}
+\potentialenergyinmechanics = \hspace{.1ex} \raisebox{.1em}{\smalldisplaystyleonehalf \hspace{-0.4ex} \scalebox{.8}[.9]{$\displaystyle \sum_{\smash{i,k}}$}} \hspace{.2ex} C_{ik} \hspace{.25ex} q^{i} \hspace{-0.1ex} q^{k}
+\end{equation}
+
+\nopagebreak\vspace{-1.25em}
+\begin{equation}\label{staticequilibrium.lineardiscretesystem}
+\raisebox{.1em}{\scalebox{.8}[.9]{$\displaystyle \sum_{\smash{k}}$}} \hspace{.2ex} C_{ik} \hspace{.12ex} q^k \hspace{-0.1ex}
+= \hspace{.1ex} P_{\hspace{-0.1ex}i} \hspace{.1ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{Here}\ru{Тут}
+\en{figure}\ru{фигурируют}
+\en{elements}\ru{элементы}~$C_{ik}$
+\en{of }\inquotesx{\en{the~stiffness matrix}\ru{матрицы жёсткости}}[,]
+\en{coordinates}\ru{координаты}~${q^k}$
+\en{and}\ru{и}~\en{external loads}\ru{внешние нагрузки}~${P_{\hspace{-0.1ex}i}}$.
+
+%% Above written is also applicable to linear elastic continua.
+%% Выше написанное применимо также и к линейным упругим континуумам.
+
+\en{Structures}\ru{Конструкции}
+(\en{both human\hbox{-}made artificial}\ru{и~сделанные человеком искусственные}\ru{,}
+\en{and in the~nature}\ru{и~в~природе})
+\en{most often have}\ru{чаще всего имеют} %naturally
+\en{a~positive-definite}\ru{положительно определённую}
+\en{stiffness matrix}\ru{матрицу жёсткости}~${C_{ik}}$.
+\en{Then}\ru{Тогда}
+${\operatorname{det} \hspace{.16ex} C_{ik} \hspace{-0.2ex} > 0}$,
+\en{the~solution}\ru{решение}
+\en{of a~linear algebraic system}\ru{линейной алгебраической системы}~\eqref{staticequilibrium.lineardiscretesystem}
+\en{is unique}\ru{единственно},
+\en{and this solution}\ru{и~это решение}
+\en{can be}\ru{может быть}
+\en{substituted}\ru{заменено}
+\en{by minimization}\ru{минимизацией}
+\en{of the~quadratic form}\ru{квадратичной формы}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation}\label{discrete:potentialenergyofsystem}
+\potentialenergyfunctional \hspace{.2ex} (q^{\hspace{.1ex}j}) %%(q^{1}\hspace{-0.5ex}, q^{2}\hspace{-0.5ex}, \ldots)
+\equiv \hspace{.1ex}
+\potentialenergyinmechanics - \raisebox{.1em}{\scalebox{.8}[.9]{$ \displaystyle \sum_{\smash{i}} $}} \hspace{.2ex}
+P_{\hspace{-0.1ex}i} \hspace{.12ex} q^{i}
+%
+= \hspace{.1ex}
+\raisebox{.1em}{\smalldisplaystyleonehalf \hspace{-0.4ex} \scalebox{.8}[.9]{$\displaystyle \sum_{\smash{i,k}}$}} \hspace{.2ex}
+\hspace{.1ex} q^{i} \hspace{.1ex} C_{ik} \hspace{.1ex} q^{k} \hspace{-0.2ex}
+- \raisebox{.1em}{\scalebox{.8}[.9]{$\displaystyle \sum_{\smash{i}}$}} \hspace{.2ex}
+P_{\hspace{-0.1ex}i} \hspace{.12ex} q^{i}
+%
+\hspace{.1em}\to\hspace{.2em} \mathrm{min}
+\hspace{.16ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.1em}
+\en{However}\ru{Однако},
+\en{the design}\ru{дизайн}
+\en{may be}\ru{может быть}
+\en{so unfortunate}\ru{столь неудачным}\ru{,}
+\en{that}\ru{что}
+\en{the~stiffness matrix}\ru{матрица жёсткости}
+\en{becomes}\ru{выходит}
+\en{singular}\ru{сингулярной}~(\en{noninvertible}\ru{необратимой})
+\en{with}\ru{с}~${\operatorname{det} \hspace{.16ex} C_{ik} = \hspace{.1ex} 0}$
+(\en{or}\ru{или~же}
+\en{the~determinant}\ru{детерминант}
+\en{is very close}\ru{очень близок}
+\en{to zero}\ru{к~нулю},
+${\operatorname{det} \hspace{.16ex} C_{ik} \approx \hspace{.1ex} 0}$\:---
+\en{the~nearly singular}\ru{почти сингулярная}
+\en{matrix}\ru{матрица}).
+\en{Then}\ru{Тогда}
+\en{the~solution}\ru{решение}
+\en{of~the~linear problem}\ru{линейной проблемы}
+\en{of~statics}\ru{статики}~\eqref{staticequilibrium.lineardiscretesystem}
+\en{exists}\ru{существует}
+\en{only}\ru{лишь}
+\en{when}\ru{когда}
+\en{external loads}\ru{внешние нагрузки}~${P_{\hspace{-0.1ex}i}}$
+\en{are orthogonal}\ru{ортогональны}
+\en{to all}\ru{всем}
+\en{linearly independent solutions}\ru{линейно независимым решениям}
+\en{of the~homogeneous conjugate system}\ru{однородной сопряжённой системы}
+
+...
+
+
+\en{The famous}\ru{Известные}
+\en{theorems}\ru{теоремы}
+\en{of~statics}\ru{статики}
+\en{for}\ru{для}
+\en{linear}\ru{линейных}
+\en{continua}\ru{\rucontinuum{}ов}~%
+(\chapterdotsectionref{chapter:linearclassicalelasticity}{section:theoremsofstatics})
+\en{can be}\ru{могут быть}
+\en{easily proved}\ru{легко доказаны}
+\en{for}\ru{для}
+\en{a~finite number}\ru{конечного числа}
+\en{of~degrees o’freedom}\ru{степеней свободы}.
+\en{The}\ru{Теорема} \href{https://en.wikipedia.org/wiki/Beno%C3%AEt_Paul_%C3%89mile_Clapeyron}{Clapeyron’\en{s}\ru{а}}\en{ theorem}
+\en{looks here like}\ru{выглядит здесь как}
+
+...
+
+
+\en{The~reciprocal work theorem}\ru{Теорема о~взаимности работ}
+(\inquotes{\en{the~work}\ru{работа}~${W_{\hspace{-0.1ex}12}}$
+\en{of the first set’s forces}\ru{сил первого набора}
+\en{on displacements}\ru{на смещениях}
+\en{from}\ru{от}
+\en{the~forces}\ru{сил}
+\en{of the~second}\ru{второго}
+\en{is equal to}\ru{равна}
+\en{the~work}\ru{работе}~${W_{\hspace{-0.15ex}21}}$
+\en{of the second set’s forces}\ru{сил второго набора}
+\en{on displacements}\ru{на смещениях}
+\en{from}\ru{от}
+\en{the~forces}\ru{сил}
+\en{of the~first}\ru{первого}})
+\en{instantly}\ru{мгновенно}
+\en{derives}\ru{выводится}
+\en{from}\ru{из}~\eqref{staticequilibrium.lineardiscretesystem}\::
+
+(....)
+
+\noindent
+\en{Here}\ru{Тут}
+\ru{существенна }\en{the~symmetry}\ru{симметрия}
+\en{of~the~stiffness matrix}\ru{матрицы жёсткости}~%
+${C_{i\hspace{-0.1ex}j} \hspace{-0.3ex} = \hspace{-0.2ex} C_{ji}}$\en{ is essential}\:---
+\en{that}\ru{то, что}
+\href{https://en.wikipedia.org/wiki/Conservative_system}{\en{the~system is conservative}\ru{система консервативна}}.
+
+.....
+
+\en{Turning back}\ru{Возвращаясь}
+\en{to the~problem}\ru{к~проблеме}~\eqref{staticequilibrium.withpotentialandexternalforces},
+\en{sometimes called}\ru{иногда называемой}
+\en{the}\ru{теоремой} Lagrange’\en{s}\ru{а}\en{ theorem}.
+\en{Inverted}\ru{Обращённая}
+\en{by}\ru{преобразованием} Legendre\ru{’а}\en{ transform(ation)},
+\en{it}\ru{она}
+\en{translates}\ru{переводится}
+\en{into}\ru{в}
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation*}
+\begin{array}{c}
+d \biggl( \hspace{-0.1ex} \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} P_{\hspace{-0.1ex}i} \hspace{.2ex} q^i \hspace{-0.12ex} \biggr) \hspace{-0.5ex}
+= \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.25ex} d \hspace{-0.25ex} \left( \hspace{-0.1ex} P_{\hspace{-0.1ex}i} \hspace{.2ex} q^i \right) \hspace{-0.3ex}
+= \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{-0.3ex} \left( \hspace{.1ex}
+q^i \hspace{.2ex} d P_{\hspace{-0.1ex}i}
++ P_{\hspace{-0.1ex}i} \hspace{.2ex} dq^i \right)
+\hspace{-0.3ex} ,
+\\[1em]
+%
+\scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.25ex} d \hspace{-0.25ex} \left( \hspace{-0.1ex} P_{\hspace{-0.1ex}i} \hspace{.2ex} q^i \right) \hspace{-0.2ex}
+- \hspace{.1ex} \tikzmark{beginDifferentialOfPotentialEnergy} \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} P_{\hspace{-0.1ex}i} \hspace{.2ex} dq^i \tikzmark{endDifferentialOfPotentialEnergy}
+= \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex} q^i \hspace{.2ex} dP_{\hspace{-0.1ex}i}
+\hspace{.3ex} ,
+\\[1.6em]
+%
+d \biggl( \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} P_{\hspace{-0.1ex}i} \hspace{.2ex} q^i - \potentialenergyinmechanics \hspace{-0.1ex} \biggr) \hspace{-0.4ex}
+= \hspace{-0.1ex} \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.32ex} q^i \hspace{.2ex} dP_{\hspace{-0.1ex}i}
+\hspace{.1ex} = \hspace{-0.2ex} \tikzmark{beginDifferentialOfComplementaryEnergy} \scalebox{.95}[1]{$\displaystyle \sum_{\smash{i}}$} \hspace{.4ex}
+\scalebox{.95}{$ \displaystyle \frac{\raisemath{-0.1em}{\partial \hspace{.1ex} \complementaryenergyinmechanics}}{\raisemath{-0.1em}{\partial P_{\hspace{-0.1ex}i}}} $}
+\hspace{.25ex} dP_{\hspace{-0.1ex}i} \tikzmark{endDifferentialOfComplementaryEnergy}
+%
+\hspace{.3ex} ,
+\end{array}\end{equation*}%
+\AddUnderBrace[line width=.75pt][-0.2ex,-0.7em][xshift=.1ex, yshift=.1em]%
+{beginDifferentialOfPotentialEnergy}{endDifferentialOfPotentialEnergy}%
+{\scalebox{.75}{${ d \hspace{.2ex} \potentialenergyinmechanics }$}}%
+\AddUnderBrace[line width=.75pt][-0.1ex,-0.9em][xshift=.2ex, yshift=.1em]%
+{beginDifferentialOfComplementaryEnergy}{endDifferentialOfComplementaryEnergy}%
+{\scalebox{.75}{${ d \hspace{.1ex} \complementaryenergyinmechanics }$}}
+
+\vspace{-0.1em}\noindent
+\en{where}\ru{где}
+\en{appears}\ru{появляется}
+\en{the~exact differential}\ru{полный~(точный) дифференциал}
+\en{of~the~so\hbox{-}called}\ru{так называемой}
+\inquotesx{\en{complementary energy}\ru{дополнительной энергии}}\:$\complementaryenergyinmechanics$
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}\label{Castigliano:theorem}
+q^i \hspace{-0.2ex} = \scalebox{.95}{$ \displaystyle \frac{\raisemath{-0.1em}{\partial \hspace{.1ex} \complementaryenergyinmechanics}}{\raisemath{-0.1em}{\partial P_{\hspace{-0.1ex}i}}} $} \hspace{.2ex} ,
+\:\;
+\complementaryenergyinmechanics (P_{\hspace{-0.1ex}i}) \hspace{-0.2ex}
+= \hspace{-0.2ex} \scalebox{.8}{$\displaystyle \sum_{\smash{i}}$} \hspace{.2ex} P_{\hspace{-0.1ex}i} \hspace{.12ex} q^i \hspace{-0.2ex} - \potentialenergyinmechanics
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.1em}\noindent
+\en{This is known as}\ru{Это известно как}
+\en{the}\ru{теорема} Castigliano\en{ theorem}\footnote{%
+\bookauthor{\href{https://it.wikipedia.org/wiki/Carlo_Alberto_Castigliano}{Carlo Alberto Castigliano}}.
+\href{https://architettura.unige.it/bma/PDF/Castigliano_1873_Tesi.pdf}{Intorno ai sistemi elastici,
+Dissertazione presentata da Castigliano Alberto alla Commissione Esaminatrice della R.\;Scuola d’Applicazione degli Ingegneri in Torino per ottenere la Laurea di Ingegnere Civile.
+Torino, Vincenzo Bona, 1873.}%
+}\hbox{\hspace{-0.5ex}.}
+\en{For}\ru{Для}
+\en{a~linear system}\ru{линейной системы}
+\eqref{staticequilibrium.lineardiscretesystem}~${\Rightarrow}$~%
+${\complementaryenergyinmechanics (P_{\hspace{-0.1ex}i}) \hspace{-0.2ex} = \potentialenergyinmechanics (q^i)}$.
+\en{Theorem}\ru{Теорема}~\eqref{Castigliano:theorem}
+\en{is sometimes very useful}\ru{иногда бывает очень полезна}\:---
+\en{when}\ru{когда}
+\en{the~complementary energy}\ru{дополнительную энергию}
+\en{as the~function}\ru{как функцию}
+\en{of external loads}\ru{внешних нагрузок}~${\complementaryenergyinmechanics(P_{\hspace{-0.1ex}i})}$
+\en{is easy to find}\ru{легко найти}.
+\en{Someone may come across}\ru{Кто\hbox{-}то может встретить}
+\en{the~so\hbox{-}called}\ru{так называемые}
+\inquotes{\en{statically determinate}\ru{статически определимые}}
+%%(\en{or}\ru{или} \inquotes{\en{isostatic}\ru{изостатические}})
+\en{structures}\ru{конструкции}~(\en{systems}\ru{системы}),
+\en{for which}\ru{для которых}
+\en{all internal forces}\ru{все внутренние силы}
+\en{can luckily be found}\ru{повезёт найти}
+\en{just only}\ru{просто лишь}
+\en{from}\ru{из}
+\ru{уравнений }\en{the~balance}\ru{баланса}~(\en{equilibrium}\ru{равновесия})\en{ equations}
+\en{for}\ru{для}
+\en{forces and moments}\ru{сил и~моментов}.
+\en{For such}\ru{Для таких}
+\en{structures}\ru{конструкций}\en{,}
+\eqref{Castigliano:theorem}
+\en{is effective}\ru{эффективна}.
+
+\en{Unlike}\ru{В~отличие от}
+\en{the~linear problem}\ru{линейной задачи}~\eqref{staticequilibrium.lineardiscretesystem},
+\en{the~nonlinear problem}\ru{нелинейная задача}~\eqref{staticequilibrium.withpotentialandexternalforces}
+\en{may}\ru{может}
+\en{have no solutions}\ru{не~иметь решений}
+\en{at all}\ru{в\'{о}все}
+\en{or may have}\ru{или~же иметь}
+\en{several of~them}\ru{их н\'{е}сколько}.
+
+....
+
+
+\newcommand\dAlembertsTraiteDeDynamique{%
+\href{https://books.google.ru/books?id=5R4OAAAAQAAJ&printsec=frontcover}{%
+Traité de Dynamique,
+dans lequel les Loix de l’Equilibre
+\& du mouvement des Corps sont réduites au plus petit nombre possible,
+\& démontrées d’une maniére nouvelle,
+\& où l’on donne un Principe général pour trouver le Mouvement de plusieurs Corps qui agissent les uns sur les autres,
+d’une maniére quelconque.
+Paris\:: David l’aîné, MDCCXLIII~(1743).%
+}%
+}
+
+\en{The~overview}\ru{Обзор}
+\en{of statics}\ru{статики}
+\en{in classical mechanics}\ru{в~классической механике}
+\en{I am ending with}\ru{я заканчиваю}
+\href{https://en.wikipedia.org/wiki/D%27Alembert%27s_principle}{\en{the}\ru{принципом} \hbox{d’\hspace{-0.2ex}Alembert’\en{s}\ru{а}}\en{ principle}}%
+\footnote{%
+\href{https://en.wikipedia.org/wiki/Jean_le_Rond_d'Alembert}{\bookauthor{Jean Le Rond d’Alembert}}.
+\dAlembertsTraiteDeDynamique
+}\,:
+\en{the~dynamic equations}\ru{динамические уравнения}
+\en{differ from}\ru{отличаются от}
+\en{the~static ones}\ru{статических}
+\en{only}\ru{лишь}
+\en{in~additional}\ru{дополнительными}
+\inquotes{\en{inertia forces}\ru{силами инерции}}~%
+(\inquotes{\en{fictitious forces}\ru{фиктивными силами}})~%
+${\hspace{-0.2ex}m_k \hspace{.1ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}}$.
+\en{The~}\ru{Принцип }\hbox{d’\hspace{-0.2ex}Alembert’\en{s}\ru{а}}\en{ principle}
+\en{is pretty obvious}\ru{весьма очевиден},
+\en{but}\ru{но}
+\en{applying it}\ru{применять его}
+\en{everytime\;\&\;everywhere}\ru{всегда и~везде}\en{ is}\ru{\:---}
+\en{a~mistake}\ru{ошибка}.
+\en{As example}\ru{Как пример},
+\href{https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations}{\en{the~equations}\ru{уравнения}
+\en{of~motion}\ru{движения}
+\en{for}\ru{для}
+\en{a~viscous fluid}\ru{вязкой жидкости}
+(\ru{уравнения }Navier\hbox{--}Stokes\ru{’а}\en{ equations})}
+\en{in statics and in dynamics}\ru{в~статике и~в~динамике}
+\en{differ}\ru{отличаются}
+\en{not only}\ru{не~только лишь}
+\en{in inertial adjunct}\ru{инерционной добавкой}.
+\en{Nevertheless}\ru{Тем не менее},
+\en{for}\ru{для}
+\en{solid elastic bodies}\ru{твёрдых упругих тел}
+\en{the~}\ru{принцип }\hbox{d’\hspace{-0.2ex}Alembert’\en{s}\ru{а}}\en{ principle}
+\en{always apply}\ru{всегда употребим}.

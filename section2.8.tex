@@ -1,0 +1,164 @@
+\en{\section{Mechanics of relative motion}}
+
+\ru{\section{Механика относительного движения}}
+
+\label{section:mechanicsofrelativemotion}
+
+\begin{otherlanguage}{russian}
+
+До~этого
+не~ставился
+вопрос
+о~системе отсчёта,
+всё рассматривалось
+в~некой \inquotes{абсолютной} системе
+или одной из инерциальных систем~(\sectionref{section:discreteapproach}).
+Теперь представим себе две системы:
+\inquotes{абсолютную} и~\inquotes{подвижную}
+
+...
+
+\begin{equation*}
+\begin{array}{c}
+\initiallocationvector = \locationvector + \bm{x}
+\\
+\locationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\hspace{.1ex} , \:\:
+\bm{x} = x_i \bm{e}_i
+\\
+\mathdotabove{\initiallocationvector} = \mathdotabove{\locationvector} + \mathdotabove{\bm{x}}
+\\
+\mathdotabove{\locationvector} = \hspace{-0.1ex}
+\mathdotabove{\rho}_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\hspace{.1ex} , \:\:
+\mathdotabove{\bm{x}} = \hspace{-0.15ex} \bigl( x_i \bm{e}_i \bigr)^{\hspace{-0.15ex}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+= \mathdotabove{x}_i \bm{e}_i \hspace{-0.1ex} + x_i \mathdotabove{\bm{e}}_i
+\end{array}
+\end{equation*}
+
+${x_i \hspace{-0.1ex} \neq \constant}$ $\Rightarrow$ ${\mathdotabove{x}_i \hspace{-0.1ex} \neq 0}$
+
+\en{By}\ru{По}~\eqrefwithchapterdotsection{angularvelocityandbasisvectors}{chapter:mathapparatus}{section:rotationtensors}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{e}_i
+\hspace{.33ex} \Rightarrow \hspace{.4ex}
+x_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} x_i \bm{e}_i \hspace{-0.1ex}
+= \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{x}
+\end{equation*}
+
+${
+\mathdotabove{\bm{x}} = \mathdotabove{x}_i \bm{e}_i + \hspace{.1ex} \bm{\omega} \hspace{-0.16ex} \times \hspace{-0.16ex} \bm{x}
+}$
+
+\begin{equation*}
+\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\initiallocationvector} = \mathdotabove{\locationvector} + \mathdotabove{\bm{x}}
+= \hspace{-0.2ex} \tikzmark{beginEVelocity} \hspace{.25ex} \mathdotabove{\locationvector} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \tikzmark{endEVelocity}
+\hspace{.4ex} \tikzmark{beginRelativeVelocity} \hspace{-0.4ex} - \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} + \hspace{.1ex} \mathdotabove{\bm{x}} \hspace{-0.33ex} \tikzmark{endRelativeVelocity}
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0,0]{beginEVelocity}{endEVelocity}{${ \scriptstyle \bm{v}_{\hspace{-0.1ex}e} }$}
+\AddUnderBrace[line width=.75pt][.4ex,0][xshift=.2ex]{beginRelativeVelocity}{endRelativeVelocity}{${ \scriptstyle \bm{v}_{r\kern-0.1exel} }$}
+
+${
+\mathdotabove{\bm{x}} \hspace{.1ex} - \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} = \mathdotabove{x}_i \bm{e}_i
+\equiv \hspace{.1ex} \bm{v}_{r\kern-0.1exel}
+}$\:--- relative velocity,
+${
+\mathdotabove{\locationvector} \hspace{.1ex} + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x}
+\equiv \hspace{.1ex} \bm{v}_{\hspace{-0.1ex}e}
+}$
+
+\begin{equation}
+\bm{v} = \bm{v}_{\hspace{-0.1ex}e} \hspace{-0.1ex} + \bm{v}_{r\kern-0.1exel}
+\end{equation}
+
+...
+
+\begin{equation*}
+\begin{array}{c}
+\mathdotabove{\initiallocationvector} = \mathdotabove{\locationvector} + \mathdotabove{\bm{x}}
+\\
+\mathdotdotabove{\initiallocationvector} = \mathdotdotabove{\locationvector} + \mathdotdotabove{\bm{x}}
+\\
+\bm{w} \equiv \hspace{.1ex} \mathdotabove{\bm{v}} = \hspace{-0.15ex} \mathdotdotabove{\initiallocationvector} = \mathdotdotabove{\locationvector} + \mathdotdotabove{\bm{x}}
+\\
+\mathdotdotabove{\locationvector} = \hspace{-0.1ex}
+\mathdotdotabove{\rho}_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\hspace{.1ex} , \:\:
+\mathdotdotabove{\bm{x}} = \hspace{-0.15ex} \bigl( x_i \bm{e}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); \hspace{.2ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.2ex}
+= \hspace{-0.15ex} \bigl( \mathdotabove{x}_i \bm{e}_i \hspace{-0.1ex} + x_i \mathdotabove{\bm{e}}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotdotabove{x}_i \bm{e}_i \hspace{-0.1ex} + \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
++ \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex} + x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+\end{array}
+\end{equation*}
+
+\nopagebreak\begin{equation*}
+\mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.12ex} \bm{e}_i
+\hspace{.33ex} \Rightarrow \hspace{.4ex}
+\mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+= \hspace{-0.15ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{.1ex} \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{-0.1ex} + \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{-0.1ex}
++ \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{.1ex} \bigr)
+\end{equation*}
+
+\nopagebreak\begin{equation*}
+x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+= x_i \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i \hspace{.1ex} \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.12ex} \times \hspace{-0.12ex} x_i \bm{e}_i
++ \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} x_i \bm{e}_i \hspace{.1ex} \bigr) \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.12ex} \times \hspace{-0.12ex} \bm{x}
++ \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr)
+\end{equation*}
+
+\nopagebreak\begin{equation*}
+\mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.12ex} \bm{e}_i
+\hspace{.33ex} \Rightarrow \hspace{.4ex}
+\mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
+= \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \mathdotabove{x}_i \bm{e}_i \hspace{-0.1ex}
+= \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{v}_{r\kern-0.1exel}
+\end{equation*}
+
+${
+\mathdotdotabove{x}_i \bm{e}_i
+\equiv \hspace{.1ex} \bm{w}_{r\kern-0.1exel}
+}$\:--- relative acceleration
+
+${
+2 \hspace{.2ex} \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex}
+= 2 \hspace{.33ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{v}_{r\kern-0.1exel} \hspace{-0.1ex}
+\equiv \hspace{.1ex} \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or}
+}$\:--- Coriolis acceleration
+
+\begin{equation*}
+\mathdotdotabove{\bm{x}}
+= \bm{w}_{r\kern-0.1exel} \hspace{-0.1ex}
++ \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or} \hspace{-0.1ex}
++ x_i \mathdotdotabove{\bm{e}}_i
+\end{equation*}
+
+\begin{equation*}
+\begin{array}{c}
+\bigl( x_i \mathdotabove{\bm{e}}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.1ex} + x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.12ex}
+= \hspace{.12ex} \smalldisplaystyleonehalf \hspace{.1ex} \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or} \hspace{-0.15ex} + x_i \mathdotdotabove{\bm{e}}_i \hspace{-0.1ex}
+\\[.2em]
+%
+\bigl( x_i \mathdotabove{\bm{e}}_i \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \hspace{-0.15ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr)^{ \hspace{-0.15ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); } \hspace{-0.15ex}
+= \mathdotabove{\bm{\omega}} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} + \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \mathdotabove{\bm{x}}
+\end{array}
+\end{equation*}
+
+\begin{equation*}
+\bm{\omega} \hspace{-0.12ex} \times \hspace{-0.12ex} \mathdotabove{\bm{x}}
+= \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \mathdotabove{x}_i \bm{e}_i + \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr) \hspace{-0.15ex}
+= \hspace{-0.2ex} \tikzmark{beginCoriolisHalf} \hspace{.2ex} \bm{\omega} \hspace{-0.1ex} \times \hspace{-0.1ex} \mathdotabove{x}_i \bm{e}_i \hspace{.2ex} \tikzmark{endCoriolisHalf} \hspace{-0.25ex}
++ \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.33ex} \bigl( \hspace{.1ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{x} \hspace{.1ex} \bigr)
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0,-0.1em]{beginCoriolisHalf}{endCoriolisHalf}{${\scalebox{0.8}{$ \mathdotabove{x}_i \mathdotabove{\bm{e}}_i \hspace{-0.15ex} = \smalldisplaystyleonehalf \hspace{.1ex} \bm{w}_{\hspace{-0.1ex}\raisemath{-0.16ex}{C}\hspace{-0.1ex}or} $}}$}
+
+...
+
+\end{otherlanguage}
+

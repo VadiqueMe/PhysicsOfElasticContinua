@@ -1,0 +1,359 @@
+\en{\section{Hamilton’s principle and Lagrange’s equations}}
+
+\ru{\section{Принцип Hamilton’а и уравнения Lagrange’а}}
+
+{\small
+\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+The two branches of analytical mechanics are
+Lagrangian mechanics
+(using generalized coordinates and corresponding generalized velocities in configuration space)
+and Hamiltonian mechanics
+(using coordinates and corresponding momenta in phase space).
+Both formulations are equivalent
+by a Legendre transformation
+on the generalized coordinates,
+velocities and momenta,
+therefore both contain the same information
+for describing the dynamics
+of a system.
+
+\par}
+
+\begin{otherlanguage}{russian}
+
+\en{Variational equation}\ru{Вариационное уравнение}~\eqref{discrete:principleofvirtualwork}
+\en{is satisfied}\ru{удовлетворяется}
+\en{at any moment}\ru{в~любой момент}
+\en{of~time}\ru{времени}.
+Проинтегрируем
+\textcolor{magenta}{его (оттуда лишь равенство F = ma)}\footnote{%
+${ \mathcolor{magenta}{\variation{\kineticenergyinmechanics}
+= \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\locationvector}_{\hspace{-0.1ex}k}}} \hspace{-0.5ex} }$ , \hspace{-0.1ex}
+${%
+\biggl(
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.4ex}
+\biggr)^{\hspace{-0.25em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+= \hspace{.2ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}
++ \hspace{-0.2ex} \tikzmark{beginVariationOfKinetic} \hspace{.32ex} \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\mathdotabove{\locationvector}_{\hspace{-0.1ex}k}} \tikzmark{endVariationOfKinetic}
+}$
+\\[.5em]
+${%
+\Rightarrow \hspace{.6em}
+\biggl[ \hspace{.2ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{.16ex}
+\biggr]_{\hspace{-0.25ex}t_1}^{\hspace{-0.25ex}t_2}
+= \hspace{-0.1ex}
+\scalebox{.95}{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.16ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{.25ex} dt \hspace{.4ex}
++ \hspace{-0.1ex} \scalebox{.95}{$ \displaystyle \integral\displaylimits_{\mathclap{t_1}}^{\raisemath{.12em}{\mathclap{t_2}}} $} \hspace{-0.1ex} \variation{\kineticenergyinmechanics} \hspace{.1ex} dt \hspace{.16ex}
+}$}%
+\AddUnderBrace[line width=.75pt][-0.1ex,-0.77em]{beginVariationOfKinetic}{endVariationOfKinetic}{${\scriptstyle \variation{\kineticenergyinmechanics}}$}
+%
+по~какому\hbox{-}либо промежутку
+${\left[\hspace{.15ex} t_1, t_2 \hspace{.15ex}\right]}$
+
+\nopagebreak\vspace{-0.25em}
+\begin{equation}
+\displaystyle \integral\displaylimits_{t_1}^{\raisemath{.12em}{t_2}}
+\hspace{-0.4ex}
+\biggl( \hspace{-0.25ex} \variation{\kineticenergyinmechanics}
++ \scalebox{.95}[.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.16ex} \bm{F}_k \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.4ex} \biggr) \hspace{-0.2ex} dt \hspace{.1ex}
+- \hspace{-0.2ex} \left[ \hspace{.2ex} \scalebox{.95}[.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex} m_k \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{.16ex} \right]_{\hspace{-0.32ex}t_1}^{\hspace{-0.32ex}t_2}
+\hspace{-0.8ex} = 0
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.16em}\noindent
+Без ущерба для общности
+можно принять
+${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}\hspace{.1ex}(t_1) \hspace{-0.1ex} = \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}\hspace{.1ex}(t_2) \hspace{-0.1ex} = \zerovector}$,
+\en{then}\ru{тогда}
+\en{the~non\hbox{-}integral term}\ru{внеинтегральный член}
+\en{vanishes}\ru{исчезает}.
+
+\ru{Вводятся }\en{Generalized coordinates}\ru{обобщённые координаты}~$q^i$~%
+(${i = 1, \ldots, n}$\:---
+\en{the~number of~degrees o’freedom}\ru{число степеней свободы})\en{ are introduced}.
+\en{Location vectors}\ru{Векторы положения}
+\en{become functions}\ru{становятся функциями}
+\hbox{\en{like}\ru{вида}}
+${\locationvector_{k}(q^i, t)}$,
+тождественно удовлетворяющими
+уравнениям связей~\eqref{holonomicconstraint}.
+Если связи стационарны,
+то~есть
+уравнения~\eqref{holonomicconstraint}
+не~содержат~$t$,
+то остаётся~${\locationvector_{k}(q^i)}$.
+\en{Kinetic energy}\ru{Кинетическая энергия}
+превращается
+в~функцию
+${\kineticenergyinmechanics \hspace{.1ex} (q^i, \mathdotabove{q}^{\hspace{.2ex}i}, t)}$,
+где явно входящее~$t$
+характерно лишь для нестационарных связей.
+
+\newcommand\partialoflocationbycoordinatewithbothindices[2]{%
+\scalebox{.93}{$ \displaystyle%
+   \frac{\raisemath{-0.08em}{\partial \hspace{.1ex} \locationvector_{#1}}}%
+        {\raisemath{-0.08em}{\partial q^{#2}}} $}}
+
+\en{Hello}\ru{Привет}
+\en{to the~essential}\ru{существенному}
+\en{concept}\ru{понятию}
+\en{of~generalized forces}\ru{обобщённых сил}.
+\en{They}\ru{Они}
+\en{originate from}\ru{происходят из}
+\en{the~virtual work}\ru{виртуальной работы}
+${ \bm{F}_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} }$.
+\en{With }\ru{С~}\en{variation}\ru{вариацией}~${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$
+\ru{вектора положения }\en{of the~}$k$\hbox{-}\en{th}\ru{ой}
+\en{point’s}\ru{точки}\en{ location vector},
+\en{expanded}\ru{развёрнутой}
+\en{for generalized coordinates}\ru{для обобщённых координат}~${q^i}$,
+
+\nopagebreak\vspace{-0.25em}
+\begin{equation}\label{locationexpandedforgeneralizedcoordinates}
+\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}
+= \hspace{-0.2ex}
+\scalebox{.95}[.98]{$ \displaystyle \sum_{\smash{i}} $} \hspace{.3ex}
+\partialoflocationbycoordinatewithbothindices{\hspace{-0.1ex}k}{i} \hspace{.2ex} \variation{q^i}
+\hspace{.2ex} ,
+\end{equation}
+
+\vspace{-0.33em}\noindent
+\en{the~virtual work}\ru{виртуальная работа}
+\en{can be}\ru{может быть}
+\en{written as}\ru{записана как}
+
+\nopagebreak\vspace{-0.25em}
+\begin{multline}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex}
+\bm{F}_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}
+=
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex}
+\bm{F}_k \dotp \hspace{-0.2ex} \scalebox{.95}[.98]{$ \displaystyle \sum_{\smash{i}} $} \hspace{.3ex}
+\partialoflocationbycoordinatewithbothindices{\hspace{-0.1ex}k}{i} \hspace{.2ex} \variation{q^i}
+\hspace{-0.1ex} = \hspace{-0.2ex}
+\scalebox{.95}[.98]{$ \displaystyle \sum_{\smash{i,k}} $} \hspace{.2ex}
+\bm{F}_k \hspace{-0.1ex} \dotp
+\partialoflocationbycoordinatewithbothindices{\hspace{-0.1ex}k}{i} \hspace{.2ex} \variation{q^i}
+\\
+%
+=
+\scalebox{.8}{$ \displaystyle \sum_{\smash{i}} $}
+\biggl( \scalebox{.95}[.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex}
+\bm{F}_k \hspace{-0.1ex} \dotp
+\partialoflocationbycoordinatewithbothindices{\hspace{-0.1ex}k}{i} \hspace{-0.2ex} \biggr) \hspace{-0.1ex} \variation{q^i}
+\hspace{-0.1ex} = \hspace{-0.1ex}
+\scalebox{.8}{$\displaystyle \sum_{i}$} \hspace{.16ex} Q_{\hspace{-0.1ex}i} \hspace{.12ex} \variation{q^i}
+\hspace{.1ex} ,
+\end{multline}
+
+\vspace{-0.25em}\noindent
+\en{where}\ru{где}
+
+\nopagebreak\vspace{-1em}
+\begin{equation}\label{whatisageneralizedforce.definition}
+Q_{\hspace{-0.1ex}i} \equiv
+\scalebox{.95}[.98]{$ \displaystyle \sum_{\smash{k}} $} \hspace{.2ex}
+\bm{F}_k \hspace{-0.1ex} \dotp
+\partialoflocationbycoordinatewithbothindices{\hspace{-0.1ex}k}{i}
+\hspace{.2ex} .
+\vspace{-0.1em}\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{It’s worth}\ru{Ст\'{о}ит}
+\en{to~accentuate}\ru{акцентировать}
+\en{once more}\ru{ещё раз}
+\en{the~origin}\ru{происхождение}
+\en{of~generalized forces}\ru{обобщённых сил}
+\en{from work}\ru{от~работы}.
+\en{Having chosen}\ru{Выбрав}
+\en{the~generalized coordinates}\ru{обобщённые координаты}~${q^i}$
+\en{for the~problem}\ru{для проблемы},
+\en{the~applied forces}\ru{приложенные силы}~${\bm{F}_k}$
+\en{are then grouped}\ru{группируются затем}
+\en{into the~sets}\ru{в~наборы}
+\en{of~generalized forces}\ru{обобщённых сил}~${Q_{\hspace{-0.1ex}i}}$.
+
+\en{The~particular case}\ru{Частный случай}
+\en{of~potential forces}\ru{потенциальных сил}
+\en{is very relevant}\ru{очень актуален}
+\en{for}\ru{для}
+\en{this book}\ru{этой книги}.
+%
+\en{A~force}\ru{Сила}
+\en{is }\emph{\en{potential}\ru{потенциальна}}\ru{,}
+\en{when}\ru{когда}
+\en{the~work done by it}\ru{совершённая ей работа}
+\en{depends only}\ru{зависит только}
+\en{on locations of~points}\ru{от положения точек},
+\en{but not}\ru{но не}
+\en{on paths between them}\ru{от путей между ними}.
+%
+\en{Then}\ru{Тогда}
+\en{the~potential energy}\ru{потенциальная энергия}~${\potentialenergyinmechanics}$
+\en{can be introduced}\ru{может быть введена}
+\en{as}\ru{как}
+\en{a~scalar field}\ru{скалярное поле},
+\en{also dubbed}\ru{также называемое}
+\en{a~}\inquotes{\en{potential field}\ru{потенциальным полем}}
+\en{or just}\ru{или просто}
+\inquotesx{\en{a~potential}\ru{потенциалом}}[,]
+\en{because it is}\ru{потому что это}
+\en{a~function}\ru{функция}
+\en{of~only}\ru{только}
+\en{coordinates}\ru{координат}~${\potentialenergyinmechanics \narroweq \potentialenergyinmechanics (q^i)}$
+(\en{and possibly time}\ru{и, возможно, времени},
+${\potentialenergyinmechanics (q^i \hspace{-0.3ex} , t)}$\:---
+\en{the~explicit dependence}\ru{явная зависимость}
+\en{on~time}\ru{от~времени}~$t$
+\en{may appear}\ru{может появиться}
+\en{due to}\ru{из\hbox{-}за}
+\en{non\hbox{-}stationary constraints}\ru{нестационарных связей}
+\en{or}\ru{или}
+\en{because}\ru{потому, что}
+\en{the~physical fields}\ru{физические поля}
+\en{themselves}\ru{сами по~себе}
+\en{depend}\ru{зависят}
+\en{on~time}\ru{от~времени}).
+%
+%%\en{In generalized coordinates}\ru{В~обобщённых координатах}
+${ \variation{\potentialenergyinmechanics}
+\hspace{-0.1ex} = \hspace{-0.2ex} \scalebox{.8}[1]{$\displaystyle \sum$} \hspace{.3ex}
+\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.3ex}{\partial \hspace{.2ex} \potentialenergyinmechanics}}{\raisemath{-0.1ex}{\partial q^i}} $} \hspace{.2ex} \variation{q^i} }$\en{ is}\ru{\:---}
+\en{a~variation}\ru{вариация}
+\en{of~energy}\ru{энергии}~$\potentialenergyinmechanics$.
+%
+\en{The~function}\ru{Функция}~${\potentialenergyinmechanics}$
+\en{is usually}\ru{обыкновенно}
+\en{defined}\ru{определяется}
+\en{so that}\ru{так, что}
+\en{a~positive work}\ru{положительная работа}\ru{\:---}
+\en{is a~reduction}\ru{это понижение}
+\en{in the~potential}\ru{потенциала}.
+%
+\en{Thus}\ru{Так},
+\en{if}\ru{если}
+\en{generalized forces}\ru{обобщённые силы}
+\en{are potential}\ru{потенциальны},
+\en{then}\ru{то}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{generalizedforcesarepotential}
+\scalebox{.8}{$\displaystyle \sum_{i}$} \hspace{.16ex} Q_{\hspace{-0.1ex}i} \hspace{.12ex} \variation{q^i} \hspace{-0.1ex}
+= - \hspace{.2ex} \variation{\potentialenergyinmechanics}
+\hspace{.1ex} ,
+\hspace{.8em}
+Q_{\hspace{-0.1ex}i} \hspace{-0.1ex} = - \hspace{.2ex} \scalebox{.96}{$ \displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} \potentialenergyinmechanics}}{\raisemath{-0.1em}{\partial q^i}} $}
+\hspace{.2ex} .
+\vspace{-0.1em}\end{equation}
+
+...
+
+\subsection*{\en{Lagrange’s equations of the first kind}\ru{Уравнения Lagrange’а первого рода}}
+
+\en{Since}\ru{Поскольку}
+\en{there are}\ru{существуют}
+\ru{уравнения }Lagrange’\en{s}\ru{а}\en{ equations}
+\inquotesx{\en{of~the~second}\ru{второго}
+\en{kind}\ru{рода}}[,]
+\en{the~reader}\ru{читатель}
+\en{may guess that}\ru{может догадаться, что}
+\en{equations}\ru{уравнения}
+\inquotes{\en{of the~first}\ru{первого}
+\en{kind}\ru{рода}}
+\en{exist too}\ru{тоже существуют}.
+%
+\en{Yes}\ru{Да},
+\en{they are known}\ru{они известны}.
+%
+\en{And}\ru{И}~\en{they are worth mentioning}\ru{о~них ст\'{о}ит упомянуть}
+\en{at least because}\ru{хотя бы потому, что}
+\en{the~derivation method}\ru{метод вывода},
+\en{founded}\ru{основанный}
+\en{on these equations}\ru{на этих уравнениях},
+\en{is used}\ru{используется}
+\en{in this book}\ru{в~этой книге}
+\en{many times}\ru{много раз}.
+
+\en{When}\ru{Когда}
+\en{constraints}\ru{связи}~\eqref{holonomicconstraint}
+\en{are imposed}\ru{наложены}
+\en{on a~system}\ru{на систему},
+\en{the~equality}\ru{равенство}
+${\bm{F}_k \hspace{-0.12ex} = m_k \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}}$
+\en{doesn’t follow}\ru{не~следует}
+\en{from}\ru{из}
+\en{the~variational equation}\ru{вариационного уравнения}~\eqref{discrete:principleofvirtualwork},
+\en{since}\ru{ведь}
+\en{virtual displacements}\ru{виртуальные смещения}~${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$
+\en{are then not independent}\ru{тогда не~независимы}.
+%
+\en{Having}\ru{Имея}
+$m$~\en{constraints}\ru{связей}
+\en{and therefore}\ru{и~поэтому}
+$m$~\en{conditions}\ru{условий}~\eqref{requirementforvirtualdisplacements}
+\en{for}\ru{для}
+\en{variations}\ru{вариаций},
+\en{each}\ru{каждое}
+\en{of these conditions}\ru{из этих условий}
+\en{is multiplied}\ru{умножается}
+\en{by some scalar}\ru{на~некий скаляр}~$\lambda_{a}$~(${a = 1, \ldots, m}$)
+\en{and}\ru{и}~\en{added}\ru{добавляется}
+\en{to}\ru{к}~\eqref{discrete:principleofvirtualwork},
+\en{turning into}\ru{превращаясь~в}
+
+\nopagebreak\vspace{-0.3em}\begin{equation}
+\scalebox{.92}[.96]{$ \displaystyle \sum_{k=1}^{N} $} \hspace{-0.1ex}
+\biggl( \hspace{-0.22ex}
+   \activeforcewithindex{k}
+   \hspace{-0.1ex} + \hspace{-0.2ex}
+   \scalebox{.92}[.96]{$ \displaystyle \sum_{a=1}^{m} $} \hspace{.1ex} \lambda_{a} \hspace{.2ex}
+   \scalebox{.9}{$\displaystyle \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{a}}}{\partial \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k}}$}
+   - m_k \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{-0.22ex} \biggr) \hspace{-0.4ex}
+\dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}
+\hspace{-0.2ex} = 0
+\hspace{.2ex} .
+\end{equation}
+
+\vspace{-0.1em}\noindent
+\en{Among}\ru{Среди}
+${3N \hspace{-0.2ex}}$~\en{components}\ru{компонент}
+\en{of~variations}\ru{вариаций}~${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$,
+$m$~\en{are dependent}\ru{зависимых}.
+\en{Aha}\ru{Ага},
+\en{and }\ru{а~}%
+\en{the~number}\ru{число}
+\en{of~}\ru{множителей }Lagrange\ru{’а}\en{ multipliers}~$\lambda_{a}$
+\en{is}\ru{тоже}~$m$\en{ too}.
+%
+Если выбрать $\lambda_{\alpha}$
+такие, что
+\en{coefficients}\ru{коэффициенты}\textcolor{red}{(??как\'{и}е?)}
+\en{for}\ru{для}
+\en{dependent variations}\ru{зависимых вариаций}
+обращаются в~нуль,
+то тогда
+у~остальных вариаций
+коэффициенты\textcolor{red}{(??)}
+также будут нулевые
+из\hbox{-}за независимости.
+Следовательно,
+все выражения
+в~скобках~${(\cdots\hspace{-0.2ex})}$
+равны нулю\:---
+это и~есть
+\ru{уравнения }Lagrange’\en{s}\ru{а}\en{ equations}
+\en{of~the~first kind}\ru{первого рода}.
+
+\en{Since}\ru{Поскольку}
+\en{for each particle}\ru{для каждой частицы}
+
+...
+
+
+
+\end{otherlanguage}
+

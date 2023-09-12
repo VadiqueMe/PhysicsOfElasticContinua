@@ -1,0 +1,433 @@
+\en{\section{Perfectly rigid undeformable solid body}}
+
+\ru{\section{Совершенно жёсткое недеформируемое твёрдое тело}}
+
+\begin{changemargin}{.4\textwidth}{\parindent}
+\vspace{-1em}
+{\noindent\small
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\inquotesx{\en{Absolutely rigid}\ru{Абсолютно жёсткое}}[,]
+\en{aka}\ru{оно~же}
+\inquotes{\en{absolutely solid}\ru{абсолютно твёрдое}}
+\en{and}\ru{и}~\inquotesx{\en{absolutely durable}\ru{абсолютно прочное}}[---]
+\en{the~pipe dream}\ru{несбыточная мечта}
+\en{of~any engineer}\ru{любого инженера}.
+
+\par}
+\vspace{.4em}
+\end{changemargin}
+
+% ~ %
+
+\label{section:absolutelyrigidundeformablesolidbody}
+
+\en{\dropcap{O}{ne}}\ru{\dropcap{Е}{щё}}
+\en{more}\ru{один}
+\en{concept}\ru{концепт},
+\en{modeled}\ru{моделируемый}
+\en{in~classical}\ru{в~классической}
+\en{generic}\ru{общей}
+\en{mechanics}\ru{механике},\en{ is}\ru{---}
+\href{https://en.wikipedia.org/wiki/Rigid_body}{\en{the~}(\en{perfectly}\ru{совершенно})
+\en{rigid}\ru{жёсткое}
+%%\en{undeformable}\ru{недеформируемое}
+\en{body}\ru{тело}}.
+%
+\en{That is}\ru{То есть}
+\en{a~solid}\ru{твёрдое}\footnote{%
+\inquotes{\en{Rigid}\ru{Жёсткое}}
+\en{is inelastic}\ru{это неупругое}
+\en{and not flexible}\ru{и~не~гибкое},
+\en{and}\ru{а}~\inquotes{\en{solid}\ru{твёрдое}}
+\en{is not fluid}\ru{это не~текучее}.
+\en{A~solid substance}\ru{Твёрдое вещество}
+\en{retains}\ru{сохраняет}
+\en{its size and shape}\ru{свой размер и~форму}
+\en{without a~container}\ru{без контейнера}
+(\en{as~opposed to}\ru{в~отличие от}
+\en{a~fluid substance}\ru{текучего вещества},
+\en{a~liquid}\ru{жидкости}
+\en{or}\ru{или}
+\en{a~gas}\ru{газа}).%
+}\hspace{-0.2ex}
+\en{body}\ru{тело},
+\en{in which}\ru{в~котором}
+\en{deformation}\ru{деформация}
+\en{is zero}\ru{нулевая}
+(\en{or}\ru{или}
+\en{is negligibly small}\ru{пренебрежимо мала}\:--- \
+\en{so small}\ru{так мала}\ru{,}
+\en{that it can be neglected}\ru{что ею можно пренебречь}).
+\en{The~distance}\ru{Расстояние}
+\en{between}\ru{между}
+\en{any two points}\ru{любыми двумя точками}
+\en{of~a~non-deformable}\ru{недеформируемого}
+\en{rigid body}\ru{жёсткого тела}
+\en{remains constant}\ru{остаётся постоянным}
+\en{regardless of external forces exerted on it}\ru{независимо от действующих на~него внешних сил}.
+
+\en{A~non-deformable}\ru{Недеформируемое}
+\en{rigid body}\ru{жёсткое тело}
+\en{is modeled}\ru{моделируется}\ru{,}
+\en{using}\ru{используя}
+\en{the~}\inquotesx{\en{continual approach}\ru{континуальный подход}}
+\en{as}\ru{как}
+\en{a~continuous distribution of~mass}\ru{непрерывное распределение массы}
+(\en{a~material continuum, a~continuous medium}\ru{материальный \rucontinuum, сплошная среда}),
+\en{rather than using}\ru{вместо использования}
+\en{the~}\inquotesx{\en{discrete approach}\ru{дискретного подхода}}
+(\en{that is}\ru{то есть}
+\en{modeling}\ru{моделирования}
+\en{a~body}\ru{т\'{е}ла}
+\en{as}\ru{как}
+\en{a~discrete collection}\ru{дискретной коллекции}
+\en{of particles}\ru{частиц},
+\sectionref{section:discreteapproach}).
+
+\en{The~mass}\ru{Масса}
+\en{of a~material continuum}\ru{материального \rucontinuum{}а}
+\en{is distributed}\ru{распределяется}
+\en{continuously}\ru{непрерывно}
+\en{throughout its volume}\ru{по~всем\'{у} своем\'{у} объёму},
+
+\nopagebreak\vspace{-1.1em}
+\begin{equation}\label{continuousdistributionofmass:materialcontinuum}
+dm \equiv \rho \hspace{.2ex} d\mathcal{V}
+%%\hspace{.1ex} ,
+\end{equation}
+
+\vspace{-0.2em}\noindent
+(${\rho\hspace{.1ex}}$\ru{\:---}\en{ is} \en{a~volume(tric) mass density}\ru{объёмная плотность массы} \en{and}\ru{и}~${d \mathcal{V}}$\ru{\:---}\en{ is} \en{an~infinitesimal volume}\ru{бесконечно\-м\'{а}лый объём}).
+
+\en{A~formula}\ru{Формула}
+\en{with summation}\ru{с~суммированием}
+\en{over}\ru{по}
+\en{discrete points}\ru{дискретным точкам}
+\en{becomes}\ru{становится}
+\en{a~formula}\ru{формулой}
+\en{for a~continuous body}\ru{для сплошного тела}
+\en{by replacing}\ru{заменой}
+\en{the~masses of~particles}\ru{масс частиц}
+\en{with the~mass}\ru{на~массу}~\eqref{continuousdistributionofmass:materialcontinuum}
+\en{of an~infinitesimal}\ru{бесконечно\-м\'{а}лого}
+\en{volume element}\ru{элемента объёма}~${d\mathcal{V}}$
+\en{with integration}\ru{с~интегрированием}
+\en{over}\ru{по}
+\en{the~entire volume}\ru{всему объёму}
+\en{of~a~body}\ru{т\'{е}ла}.
+\en{In~particular}\ru{В~частности},
+\en{here are}\ru{вот}
+\en{the~formulas}\ru{формулы}
+\en{for}\ru{для}
+\en{the~}(\en{linear}\ru{линейного})
+\en{momentum}\ru{импульса}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{thelinearmomentum.discreteandcontinual}
+\scalebox{.83}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.3ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{.66em} \text{\en{becomes}\ru{становится}} \hspace{.55em}
+\scalebox{.87}{$ \displaystyle\integral_{\mathcal{V}} $} \hspace{-0.1ex} \mathdotabove{\locationvector} \hspace{.15ex} dm
+\end{equation}
+
+\nopagebreak\vspace{-0.3em}\noindent
+\en{and for}\ru{и~для}
+\en{the~}\en{angular momentum}\ru{углового импульса}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{therotationalmomentum.discreteandcontinual}
+\scalebox{.83}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.3ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{.66em} \text{\en{becomes}\ru{становится}} \hspace{.55em}
+\scalebox{.87}{$ \displaystyle\integral_{\mathcal{V}} $} \hspace{-0.1ex} \locationvector \hspace{-0.2ex} \times \hspace{-0.2ex} \mathdotabove{\locationvector} \hspace{.15ex} dm
+\hspace{.2ex} .
+\end{equation}
+
+\en{To fully describe}\ru{Чтобы полностью опис\'{а}ть}
+\en{the~location}\ru{положение}
+(\en{position}\ru{позицию},
+\en{place}\ru{место})
+\en{of any non-deformable body}\ru{любого недеформируемого тела}
+\en{with all its points}\ru{со всеми своими точками},
+\en{it’s enough}\ru{достаточно}
+\en{to choose}\ru{выбрать}
+\en{some unique point}\ru{какую\hbox{-}либо уникальную точку}
+\en{as}\ru{за}
+\en{the~}\inquotesx{\en{pole}\ru{полюс}}[,]
+\en{to~find or to~set}\ru{найти или задать}
+\en{the~location}\ru{положение}
+${\positionofthepole \hspace{.1ex} \narroweq \hspace{.1ex} \positionofthepole(t)}$
+\en{of the~chosen point}\ru{выбранной точки},
+\en{as well as the~angular orientation}\ru{а~также угловую ориентацию}
+\en{of a~body}\ru{тела}
+\en{relative}\ru{относительно}
+\en{to the~pole}\ru{полюса}~(\figureref{fig:bodyoffsetandrotation}).
+\en{As a~result}\ru{Как результат},
+\en{any motion}\ru{любое движение}
+\en{of an~undeformable rigid body}\ru{недеформируемого твёрдого тела}
+\en{is}\ru{есть}
+\en{either}\ru{либо}
+\en{a~rotation}\ru{поворот}
+\en{around the~chosen pole}\ru{вокруг выбранного полюса},
+\en{or}\ru{либо}
+\en{an~equal displacement}\ru{равное смещение}
+\en{of~the~pole}\ru{полюса}
+\en{and }\ru{и~}\en{all body’s points}\ru{всех точек тела}\:---
+\en{a~translation}\ru{трансляция}~%
+(\en{a~linear motion}\ru{линейное движение})%
+\footnote{%
+\en{A~translation}\ru{Трансляция}
+\href{https://en.wikipedia.org/wiki/Instant_centre_of_rotation\#Pure_translation}{%
+\en{can also}\ru{может также}
+\en{be thought of as}\ru{быть мыслима как}
+\en{a~rotation}\ru{вращение}
+\en{with the~revolution center}\ru{с~центром переворота}
+\en{at infinity}\ru{на~бесконечности}}.%
+}\hbox{\hspace{-0.5ex},}
+\en{or}\ru{либо}
+\en{a~combination of~them both}\ru{комбинация их обоих}.
+
+%%\begin{wrapfigure}{o}{.5\textwidth}
+%%\makebox[.45\textwidth][c]{%
+%%\begin{minipage}[t]{.45\textwidth}
+\begin{figure}[htb!]
+\begin{center}
+\vspace{-0.2em}
+\scalebox{1.1}{
+\input{undeformablebody.tex}
+}
+\end{center}
+\vspace{-1.5em}\caption{}\label{fig:bodyoffsetandrotation}
+\vspace{-1.1em}\end{figure}
+%%\end{minipage}%%}
+%%\end{wrapfigure}
+
+${\mathcircabove{\bm{e}}_i}$\:---
+\en{the~triplet}\ru{тройка}
+\en{of~mutually perpendicular}\ru{взаимно перпендикулярных}
+\en{unit vectors}\ru{единичных векторов},
+\en{called}\ru{называемых}
+\en{the~}\inquotesx{\en{basis vectors}\ru{базисными векторами}}[,]
+\en{immovable}\ru{неподвижная}
+\en{relatively}\ru{относительно}
+\en{to the~absolute}\ru{абсолютной}
+(\en{or}\ru{или}
+\en{to any inertial}\ru{любой инерциальной})
+\en{reference system}\ru{системы отсчёта}
+
+\begin{itemize}
+   \item
+${\mathcircabove{\bm{e}}_i}$\en{ is}\ru{\:---}
+\en{the~}\en{immovable}\ru{неподвижный}~(\en{stationary}\ru{стационарный})
+\en{basis}\ru{базис}
+   \item
+${\bm{e}_i}$\en{ is}\ru{\:---}
+\en{the~}\en{basis}\ru{базис}\ru{,}
+\en{which}\ru{который}
+\en{moves}\ru{движется}
+\en{along with the~body}\ru{вместе с~телом}
+\end{itemize}
+
+\en{By adding}\ru{Добавив}
+\en{the~basis}\ru{базис}~${\bm{e}_i}$
+(\en{it}\ru{он}
+\en{moves}\ru{движется}
+\en{together with the~body}\ru{вместе с~телом}),
+\en{the~body’s angular orientation}\ru{угловая ориентация тела}
+\en{can be}\ru{может быть}
+\en{determined}\ru{определена}
+\en{by the~rotation tensor}\ru{тензором поворота}~${\rotationtensor \equiv \bm{e}_i \widetilde{\bm{e}}_i}$.
+
+\en{Then}\ru{Тогда}
+\en{any motion}\ru{любое движение}
+\en{of a~body}\ru{тела}
+\en{is completely described}\ru{полностью описывается}
+\en{by two functions}\ru{двумя функциями},
+${\positionofthepole(t)}$
+\en{and}\ru{и}~${\rotationtensor(t)}$.
+
+\en{The~location vector}\ru{Вектор положения}
+\en{of~some body’s point}\ru{некоторой точки тела}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{completelyrigidbody.locationvectorofanypointdecomposed}
+\locationvector = \positionofthepole + \bm{x}
+%%\hspace{.1ex} ,
+\end{equation}
+
+${\widetilde{\bm{x}} = x_i \hspace{.1ex} \widetilde{\bm{e}}_i}$,
+${\bm{x} = x_i \hspace{.1ex} \bm{e}_i}$
+
+\eqref{rodriguesrotationformula}, \chapterdotsectionref{chapter:mathapparatus}{section:rotationtensors}
+
+${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \widetilde{\bm{x}}}$
+
+\begin{equation*}
+\mathdotabove{\locationvector} = \mathdotabove{\positionofthepole} + \mathdotabove{\bm{x}}
+\hspace{.1ex} ,
+\end{equation*}
+
+\en{For a~non-deformable rigid body}\ru{Для недеформируемого жёсткого тела},
+\en{components}\ru{компоненты}~${x_i}$
+\en{don’t depend on time}\ru{не~зависят от времени}:
+${x_i \hspace{-0.16ex} = \constant(t)}$
+\en{and}\ru{и}~${\mathdotabove{\bm{x}} = x_i \hspace{.1ex} \mathdotabove{\bm{e}}_i}$
+
+${\mathdotabove{\bm{x}} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \hspace{.1ex} \mathcircabove{\bm{x}}}$
+
+${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp x_i \hspace{.1ex} \mathcircabove{\bm{e}}_i
+\:\Leftrightarrow\:
+\mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \mathcircabove{\bm{e}}_i}$
+
+...
+
+\en{The~linear momentum}\ru{Линейный импульс~(количество движения)}
+\en{and }\ru{и~}\en{the~rotational~(angular) momentum}\ru{угловой импульс~(момент импульса)}
+\en{of a~non-deformable continuous body}\ru{недеформируемого сплошного тела}
+\en{are described}\ru{описываются}
+\en{by the~following integrals}\ru{следующими интегралами}
+
+...
+
+...
+
+\hspace{-0.4ex}\begin{equation*}
+\displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} \positionofthepole \hspace{.2ex} dm
+= \hspace{.1ex} \positionofthepole \hspace{-0.5ex} \displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} dm
+= \hspace{.1ex} \positionofthepole \hspace{.2ex} m
+\end{equation*}
+
+\begin{equation*}
+\hspace{-0.4ex} \displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} \bm{x} \hspace{.1ex} dm = \hspace{.15ex} \bm{\Xi} \hspace{.2ex} m
+\hspace{.1ex} , \:\:
+\bm{\Xi} \hspace{.1ex} \equiv m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} \bm{x} \hspace{.1ex} dm
+\end{equation*}
+
+\en{Three}\ru{Три} \en{inertial characteristics}\ru{инерциальных характеристики} \en{of the~body}\ru{тела}:
+
+\nopagebreak\vspace{.2em}\begin{itemize}
+\item \en{integral mass}\ru{интегральная масса} ${m = \hspace{-0.25ex}\scalebox{1.4}{$ \textstyle\integral $}_{\hspace{-0.55ex}\mathcal{V}} \hspace{.3ex} dm = \hspace{-0.25ex}\scalebox{1.4}{$ \textstyle\integral $}_{\hspace{-0.55ex}\mathcal{V}} \hspace{.3ex} \rho \hspace{.2ex} d\mathcal{V}}$\:---
+\en{the~mass of the~whole body}\ru{масса всего тела},
+\vspace{.2em}
+\item \en{eccentricity vector}\ru{вектор экцентриситета}\hbox{~\hspace{.2ex}}$\bm{\Xi}$\:--- \en{measures}\ru{измеряет} \en{the~offset}\ru{смещение} \en{of the chosen pole}\ru{выбранного полюса} \en{from}\ru{от} \en{the body’s }{\inquotes{\en{center of mass}\ru{центра масс}}}\ru{ тела},
+%%\en{and}\ru{и}
+\vspace{.2em}
+\item \en{inertia tensor}\ru{тензор инерции}~${\inertiatensor}$.
+\end{itemize}
+
+\en{The eccentricity vector}\ru{Вектор экцентриситета} \en{is equal to}\ru{равняется} \en{the~null vector}\ru{нуль\hbox{-}вектору} \en{only when}\ru{только когда} \en{the chosen pole}\ru{выбранный полюс} \en{coincides with}\ru{совпадает с} \en{the~}\inquotesx{\en{center of~mass}\ru{центром масс}}[---] \en{the~unique point}\ru{уникальной точкой} \en{within a~body}\ru{внутри тела} \en{with }\ru{с~}\en{location vector}\ru{вектором положения}~${\mathboldrcursive\hspace{.2ex}}$, \en{in short}\ru{короче}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{\Xi} = \zerovector
+\hspace{.6ex} \Leftrightarrow \hspace{.5ex}
+\positionofthepole = \hspace{.1ex} \mathboldrcursive
+\hspace{.3ex} .
+\end{equation*}
+
+\begin{gather*}
+\bm{x} = \hspace{-0.1ex} \locationvector - \positionofthepole
+, \hspace{.6em}
+\bm{\Xi} \hspace{.2ex} m = \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \locationvector - \hspace{-0.1ex} \mathboldrcursive \hspace{.2ex} \bigr) dm = \hspace{.1ex} \zerovector
+\hspace{.1ex} ,
+\\[-0.4em]
+%
+\integral_{\mathcal{V}} \hspace{-0.7ex} \locationvector \hspace{.25ex} dm \hspace{.1ex}
+- \hspace{.2ex} \mathboldrcursive \hspace{-0.3ex} \integral_{\mathcal{V}} \hspace{-0.7ex} dm = \hspace{.1ex} \zerovector
+\hspace{.7ex} \Rightarrow \hspace{.7ex}
+\mathboldrcursive = m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \integral_{\mathcal{V}} \hspace{-0.7ex} \locationvector \hspace{.25ex} dm
+\end{gather*}
+
+...
+
+\en{Introducing}\ru{Вводя}
+\en{the~}(\en{pseudo}\ru{псевдо})\en{vector}\ru{вектор}
+\en{of~angular velocity}\ru{угловой скорости}~$\bm{\omega}$, ...
+
+\nopagebreak\begin{equation*}
+\mathdotabove{\bm{e}}_i \hspace{-0.16ex}
+= \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_i
+\end{equation*}
+
+...
+
+\en{inertia tensor}\ru{тензор инерции}~${\inertiatensor}$
+
+\nopagebreak\begin{equation*}
+\inertiatensor
+\equiv
+- \hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{x} \hspace{-0.1ex} \times \hspace{-0.22ex} \UnitDyad \hspace{.1ex} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.2ex} \bigl( \bm{x} \hspace{-0.1ex} \times \hspace{-0.22ex} \UnitDyad \hspace{.1ex} \bigr) \hspace{.1ex} dm
+=
+\hspace{-0.4ex} \integral_{\mathcal{V}} \hspace{-0.4ex} \bigl( \bm{x} \narrowdotp \bm{x} \UnitDyad - \bm{x} \bm{x} \bigr) \hspace{.1ex} dm
+\end{equation*}
+
+It is assumed \textcolor{magenta}{(can be proven?)} that the~inertia tensor changes only due to a~rotation
+
+\vspace{-0.1em}\begin{equation*}
+\inertiatensor = \rotationtensor \hspace{-0.1ex} \dotp \inertiatensorcircabove \dotp \rotationtensor^{\hspace{-0.1ex}\T}
+\end{equation*}
+
+\vspace{-0.1em}\noindent
+\en{and if}\ru{и~если}
+\en{some}\ru{какой-нибудь}
+\en{basis}\ru{базисе}~${\bm{e}_{\hspace{-0.1ex}j}}$
+\en{is moving}\ru{движется}
+\en{along}\ru{вместе}
+\en{with the~body}\ru{с~телом},
+\en{the~inertia components}\ru{компоненты инерции}
+\en{in that basis}\ru{в~том базисе}
+\en{don’t change}\ru{не~меняются}
+\en{over time}\ru{со временем}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\inertiatensor = \inertiatensorcomponents{ab} \hspace{.1ex} \bm{e}_a \bm{e}_b
+\hspace{.1ex} , \hspace{.8ex}
+\inertiatensorcomponents{ab} \hspace{-0.2ex} = \constant(t)
+\vspace{.1ex} ,
+\end{equation*}
+
+\vspace{-0.1em}\noindent
+\en{thus}\ru{поэтому}
+\en{the~time derivative}\ru{производная по~времени}
+\en{is}\ru{есть}
+
+\nopagebreak\vspace{-0.2em}\begin{multline*}
+\inertiatensordotabove
+= \inertiatensorcomponents{ab} \bigl( \hspace{.1ex}
+\mathdotabove{\bm{e}}_a \bm{e}_b \hspace{-0.1ex}
++ \bm{e}_a \mathdotabove{\bm{e}}_b
+\hspace{.1ex} \bigr) \hspace{-0.33ex}
+= \inertiatensorcomponents{ab} \hspace{-0.1ex} \bigl( \hspace{.1ex}
+\bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_a \bm{e}_b \hspace{-0.1ex}
++ \bm{e}_a \hspace{.2ex} \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{e}_b
+\hspace{.1ex} \bigr)
+\\[-0.1em]
+%
+= \bm{\omega} \hspace{-0.2ex} \times \hspace{-0.2ex} \inertiatensorcomponents{ab} \hspace{.1ex} \bm{e}_a \bm{e}_b \hspace{-0.1ex}
+- \inertiatensorcomponents{ab} \hspace{.1ex} \bm{e}_a \bm{e}_b \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{\omega}
+= \bm{\omega} \hspace{-0.1ex} \times \inertiatensor \hspace{.1ex}
+- \inertiatensor \times \bm{\omega}
+\end{multline*}
+
+\textcolor{magenta}{\en{Substitution of}\ru{Подстановка}}
+(....)
+\en{into}\ru{в}~\eqref{balanceoftranslationalmomentum.discretepoints}
+\en{and}\ru{и}~\eqref{balanceofrotationalmomentum.discretepoints}
+\en{gives}\ru{даёт}
+%%\en{fundamental}\ru{фундаментальные}
+\en{equations}\ru{уравнения}
+\en{of~balance}\ru{баланса}\:---
+\en{the~balance of linear momentum}\ru{баланс количества движения (линейного импульса)}
+\en{and}\ru{и}
+\en{the~balance of rotational momentum}\ru{баланс момента импульса (углового импульса}\:---
+\en{for}\ru{для}
+\en{the~model}\ru{модели}
+\en{of~a~continuous non-deformable rigid body}\ru{сплошного недеформируемого жёсткого тела}
+
+...
+
+\noindent
+\en{here}\ru{здесь}
+$\bm{f}$\en{ is}\ru{\:---} \en{the~external force}\ru{внешняя сила} \en{per mass unit}\ru{на единицу массы},
+$\bm{F}$\en{ is}\ru{\:---} \en{the~resultant of external forces}\ru{результанта внешних сил} (\en{also called}\ru{также называемая} \en{the~}\inquotes{\en{equally acting force}\ru{равнодействующей силой}} \en{or}\ru{или} \en{the~}\inquotes{\en{main vector}\ru{главным вектором}}),
+$\mathboldM$\en{ is}\ru{\:---} \en{the~resultant of external couples}\ru{результанта внешних пар сил} (\en{the~}\inquotes{\en{main couple}\ru{главная пара}}, \en{the~}\inquotes{\en{main moment}\ru{главный момент}}).
+
+...
+

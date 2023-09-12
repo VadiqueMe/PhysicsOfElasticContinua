@@ -1,0 +1,157 @@
+\en{\section{Balance of momentum, rotational momentum, and~energy}}
+
+\ru{\section{Баланс импульса, момента импульса и~энергии}}
+
+Эти уравнения баланса
+могут быть связаны
+со~свойствами
+пространства
+\en{and}\ru{и}~времени~\cite{landau.lifshitz-shortcourse}.
+Сохранение импульса
+(количества движения)
+в~з\'{а}мкнутой~(изолированной)%
+\footnote{\emph{З\'{а}мкнутая~(изолированная) система}
+это такая система частиц,
+которые
+взаимодействуют
+\en{only}\ru{только}
+друг с~другом,
+\en{but}\ru{но}
+ни с~какими другими телами.}\hspace{-0.25ex}
+системе выводится из~однородности пространства \emph{(при любом параллельном переносе\:--- трансляции\:--- замкнутой системы как целого свойства этой системы не~меняются)}.
+Сохранение момента импульса\:--- следствие изотропии пространства \emph{(свойства замкнутой системы не~меняются при любом повороте этой системы как целого)}.
+Энергия~же
+изолированной системы
+сохраняется,
+так~как
+время однородно%
+%
+\footnote{%
+Характеристики
+\inquotes{однородность}
+\en{and}\ru{и}~\inquotes{изотропность}
+пространства,
+\inquotes{однородность}
+времени
+не~фигурируют среди аксиом
+классической механики.
+}\hspace{-0.25ex} % end of footnote
+(\en{energy}\ru{энергия}
+${\mathrm{E} \hspace{.1ex} \equiv \kineticenergyinmechanics \hspace{.1ex} (q, \mathdotabove{q} \hspace{.2ex}) \hspace{-0.2ex} + \hspace{-0.1ex} \potentialenergyinmechanics (q)}$
+такой системы
+не~зависит явно от~времени).
+
+\en{The~balance equations}\ru{Уравнения баланса}
+\en{can be}\ru{могут быть}
+\en{derived}\ru{выведены}
+\en{from}\ru{из}
+\en{the~principle of~virtual work}\ru{принципа виртуальной работы}~\eqref{discrete:principleofvirtualwork}.
+Перепишем его,
+выделив
+внешние силы~${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$
+и~виртуальную работу
+внутренних сил
+${\variation{\internalwork} \hspace{-0.1ex} = \hspace{-0.2ex} \scalebox{.8}{$ \displaystyle \underset{\raisemath{.25ex}{\smash{k,\hspace{.1ex}j}}}{\sum} $} \hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{.1ex}}$
+
+\nopagebreak\vspace{-1em}
+\begin{equation}\label{discrete:principleofvirtualwork.externalinternal}
+\scalebox{.9}{$ \displaystyle \sum_{\smash{k}} $}
+\Bigl( \hspace{-0.25ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex} - m_k \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.2ex} \Bigr) \hspace{-0.32ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.1ex}
++ \variation{\internalwork} \hspace{-0.1ex} = 0
+\hspace{.1ex} .
+\vspace{-0.25em}\end{equation}
+
+\vspace{-0.1em}
+\en{It’s assumed that}\ru{Предполагается, что}
+\en{internal forces}\ru{внутренние силы}
+\en{don’t do any work}\ru{не~делают никакой работы}
+\en{on virtual displacements}\ru{на виртуальных смещениях}
+\en{of~a~system}\ru{системы}
+\en{as a~rigid whole}\ru{как жёсткого целого}
+(${\constvarvector{\hspace{-0.1ex}\bm{\rho}}}$
+\en{and}\ru{и}~${\constvarvector{\bm{o}}}$\en{ are}\ru{\:---}
+\en{some}\ru{некоторые}
+\en{constant vectors}\ru{постоянные векторы}\ru{,}
+\en{describing}\ru{описывающие}
+\en{translation}\ru{трансляцию}
+\en{and}\ru{и}~\en{rotation}\ru{поворот})
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{assumptionforvirtualwork}
+\begin{array}{l}
+\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.16ex}
+= \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.2ex} + \hspace{.12ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \locationvector_{\hspace{-0.1ex}k}
+\hspace{.1ex} ,
+\\
+\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant \hspace{.1ex} , \:
+\constvarvector{\bm{o}} = \boldconstant
+\end{array}
+\hspace{.3ex} \Rightarrow \hspace{.6ex}
+\variation{\internalwork} \hspace{-0.1ex} = 0 \hspace{.1ex}.
+\end{equation}
+
+\vspace{-0.1em}
+\en{Premises}\ru{Предпосылки}
+\en{and}\ru{и}~\en{considerations}\ru{соображения}
+\en{for this assumption}\ru{для~этого предположения}
+\en{are as follows}\ru{следующие}.
+%
+\en{The~first}\ru{Первое}\:---
+\en{for}\ru{для}
+\en{the~case}\ru{случая}
+\en{of~potential}\ru{потенциальных},
+\en{such as elastic}\ru{таких как упругие},
+\en{forces}\ru{сил}.
+\en{A~variation}\ru{Вариация}
+\en{of~the~work}\ru{работы}
+\en{of~potential internal forces}\ru{потенциальных внутренних сил}~$\internalwork$
+\en{is}\ru{есть}
+\en{a~variation}\ru{вариация}
+\en{of~the~potential}\ru{потенциала}~$\potentialenergyinmechanics$
+\en{with the~opposite sign}\ru{с~противоположным знаком},
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{variationofworkofpotentialinternalforces}
+\variation{\internalwork} = - \hspace{.1ex} \variation{\potentialenergyinmechanics}
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.4em}\noindent
+\en{And it’s quite obvious that}\ru{И~весьма очевидно, что}
+$\potentialenergyinmechanics$~\en{alters}\ru{меняется}
+\en{only}\ru{только}
+\en{by deforming}\ru{деформированием}.
+%
+\en{The~second consideration}\ru{Второе соображение}\:---
+\en{the~internal forces}\ru{внутренние силы}
+\en{are balanced}\ru{сбалансированы}
+\en{in the~sense that}\ru{в~том смысле, что}
+\en{the~net vector}\ru{суммарный \inquotes{нетто} вектор}~(\en{the~resultant force}\ru{результирующая сила})
+\en{and }\ru{и~}%
+\en{the~net moment}\ru{суммарный \inquotes{нетто} момент}~(\en{the~resultant couple}\ru{результирующая пара})
+\en{are}\ru{равны}~$\zerovector$\hbox{\hspace{.1ex},}
+
+\eqref{actionreactionprinciple.fordiscretepoints}~\&~\eqref{iternalinteractionsarecentral.betweenparticles}
+
+\begin{equation*}
+\sum \ldots
+\end{equation*}
+
+...
+
+Принимая~\eqref{assumptionforvirtualwork}
+и~подставляя в~\eqref{discrete:principleofvirtualwork.externalinternal}
+сначала ${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}}$
+(трансляция),
+а~затем ${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.16ex} = \hspace{-0.08ex} \constvarvector{\bm{o}} \hspace{-0.2ex} \times \hspace{-0.1ex} \locationvector_{\hspace{-0.1ex}k}}$
+(поворот),
+получаем баланс импульса~(...)
+\en{and}\ru{и}~%
+баланс момента импульса~(...).
+
+...
+
+
+
+\end{otherlanguage}
+

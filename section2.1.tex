@@ -1,0 +1,908 @@
+\en{\section{Discrete collection of particles}} %% Discrete approach
+
+\ru{\section{Дискретная совокупность частиц}} %% Дискретный подход
+
+\label{section:discreteapproach}
+
+\en{\dropcap{C}{lassical}}\ru{\dropcap{К}{лассическая}} %%\en{generic}\ru{общая}
+\en{mechanics}\ru{механика}
+\en{models}\ru{моделирует}
+\en{physical objects}\ru{физические объекты}\ru{,}
+\en{by discretizing them}\ru{дискретизируя их}
+\en{into }\ru{в~}\en{a~collection of~particles}\ru{совокупность частиц}
+(\inquotesx{\en{pointlike masses}\ru{точеч\-ных масс}}[,]
+\inquotes{\en{material points}\ru{материальных точек}}%
+\footnote{\en{The~}\en{point mass}\ru{Точечная масса}
+(\en{pointlike mass, material point}\ru{материальная точка})\en{ is}\ru{\:--- это}
+\en{the~concept}\ru{концепт}
+\en{of an~object}\ru{объекта},
+\en{typically}\ru{типично}
+\en{matter}\ru{материи},
+\en{that}\ru{который}
+\en{has}\ru{имеет}
+\en{the~nonzero mass}\ru{ненулевую массу}
+\en{and}\ru{и}~\en{is}\ru{является}~%
+(\en{or}\ru{или}
+\en{is being thought of as}\ru{мыслится})
+\en{infinitesimal}\ru{бесконечно-малым}
+\en{in~its}\ru{по~своем\'{у}}
+\en{volume}\ru{объёму}~(\en{dimensions}\ru{размерам}).%
+}).
+
+\en{In}\ru{В}~\en{a~collection}\ru{совокупности}
+\en{of~}${N\hspace{-0.25ex}}$~\en{particles}\ru{\hbox{частиц}}\en{,}
+\en{each}\ru{каждая}
+$k$\hbox{-}\en{th}\ru{ая}
+\en{particle}\ru{частица}
+\en{has its nonzero mass}\ru{имеет свою ненулевую массу}~${m_k \hspace{-0.25ex} = \hspace{-0.1ex} \constant > \hspace{-0.1ex} 0}$
+\en{and }\ru{и~}\en{the~motion function}\ru{функцию движения}~${\locationvector_{k}(t)}$.
+\en{The~function}\ru{Функция}~${\locationvector_{k}(t)}$
+\en{is measured}\ru{измеряется}
+\en{relative}\ru{относительно}
+\en{to the~chosen}\ru{выбранной}
+\en{reference system}\ru{системы отсчёта}.
+
+\vspace{.2em}
+%\hspace*{-\parindent}\begin{minipage}{\linewidth}
+\setlength{\parindent}{\horizontalindent}
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\begin{wrapfigure}[10]{r}{.4\textwidth}
+%%\makebox[.42\textwidth][c]{%%%\begin{minipage}[t]{.43\textwidth}
+\vspace{.2em}
+\scalebox{1.1}{
+\begin{tikzpicture}[scale=0.86]
+
+	\def\groundleft{-2.1}
+	\def\groundright{2.3}
+	\def\groundhatchstep{.29}
+	\pgfmathsetmacro\hatchfirst{\groundleft + (.77 * \groundhatchstep)}
+	\pgfmathsetmacro\hatchnext{\hatchfirst + \groundhatchstep}
+	\def\groundhatchdepth{-0.2}
+
+	\draw[line width=1.2pt, black] (0,0) -- (\groundright,0);
+	\draw[line width=1.2pt, black] (0,0) -- (\groundleft,0);
+	\foreach \xground in {\hatchfirst, \hatchnext, ..., \groundright}
+		\draw [line width=.4pt, black!80] (\xground,0) -- ++(\groundhatchdepth,\groundhatchdepth);
+
+	\def\clockat{1.48}
+	\path (\clockat, 0) node [shape=coordinate] (clocktower) {};
+	\def\clockradius{.4}
+	\def\clocksquare{\clockradius + .1}
+	\def\clockbase{\clockradius - .05}
+	\pgfmathrandominteger{\clockheightcents}{25}{55}
+	\pgfmathsetmacro\clockheight{ \clockheightcents / 100 }
+
+	\path (\clockat, \clockheight+\clocksquare) node [shape=coordinate] (clock) {};
+
+	\draw [line width=1.2pt, black] ($ (clocktower) + (\clockbase,0) $) -- ++(up:\clockheight);
+	\draw [line width=1.2pt, black] ($ (clocktower) - (\clockbase,0) $) -- ++(up:\clockheight);
+	\draw [line width=1.2pt, black, rounded corners=1.2pt] ($ (clock) + (\clocksquare,\clocksquare) $) rectangle ($ (clock) - (\clocksquare,\clocksquare) $);
+	\draw [line width=1.2pt, black] ($ (clock) + (\clockbase,\clocksquare) $) arc(0:180:\clockbase);
+
+	\draw [line width=1.2pt, blue] (clock) circle(\clockradius);
+	\draw [line width=1.2pt, blue, rotate around={33:(clock)}] (clock) -- ++(\clockradius - 0.1, 0);
+	\draw [line width=1.2pt, blue, rotate around={148:(clock)}] (clock) -- ++(\clockradius - 0.15, 0);
+
+	\path (0, 0.33) node [shape=coordinate] (O) {};
+	\path (O) node [inner sep=0mm, outer sep=1mm] ($mcirc$) {};
+	\path (O) -- ++(1.41, -0.8) node [shape=coordinate] (first) {};
+	\path (O) -- ++(-1.75, -0.67) node [shape=coordinate] (second) {};
+	\path (O) -- ++(0, 1.83) node [shape=coordinate] (third) {};
+
+	\path (O) node [right, inner sep=0mm, outer sep=1.8mm, yshift=1.8mm] { $o$ } ;
+
+	\tikzstyle{basis vector} =
+		[line width=1pt, blue, style=double, double distance=0.5mm, -{Triangle[open, angle=60:3.2mm]}]
+	\draw [basis vector] (O) -- (first)
+		node [pos=0.88, below right, inner sep=.88ex, outer sep=0] {$\bm{e}_1$};
+	\draw [basis vector] (O) -- (second)
+		node [pos=0.89, below left, inner sep=.85ex, outer sep=0] {$\bm{e}_2$};
+ 	\draw [basis vector] (O) -- (third)
+		node [pos=0.86, right, inner sep=1.33ex, outer sep=0] {$\bm{e}_3$};
+
+	\pgfmathrandominteger{\randomcentsx}{60}{140}
+	\pgfmathsetmacro\particleatx{ - \randomcentsx / 100 }
+	\pgfmathrandominteger{\randomcentsy}{140}{180}
+	\pgfmathsetmacro\particleaty{ \randomcentsy / 100 }
+
+	\path (\particleatx,\particleaty) node [shape=coordinate] (m) {};
+
+	\path (m) node [shape=circle, inner sep=1mm, outer sep=0] (mcirc) {};
+
+	\draw [line width=1.6pt, black, -{Stealth[round, length=5mm, width=3.6mm]}] (O) -- (mcirc)
+		node [pos=.54, below left, inner sep=0ex, outer sep=.8ex] {$\locationvector$} ;
+
+	\draw [line width=1.6pt, black, fill=black!50] (m) circle (1.6mm) ;
+
+	\path (mcirc) node [xshift=-3.2mm, yshift=3mm] {$m$} ;
+
+	\draw [line width=1pt, blue, fill=white] (O) circle (1.2mm) ;
+
+\end{tikzpicture}
+}
+\vspace{-1.4em}\caption{}\label{fig:referencesystem}
+%%%}
+\end{wrapfigure} %%%\end{minipage}
+
+\en{The~}\inquotes{\en{reference system}\ru{Система отсчёта}}~(\en{or }\inquotes{reference frame})
+\en{consists of}\ru{состоит из}~(\figureref{fig:referencesystem})
+
+\nopagebreak\vspace{.2em}
+\begin{itemize}
+  \item
+\en{some}\ru{н\'{е}которой}
+\inquotes{\en{null}\ru{нулевой}}
+\en{reference point}\ru{точки отсчёта}~${o}$,
+%
+  \item
+\en{a~set of coordinates}\ru{набора координат},
+\en{which}\ru{которые}
+\en{give}\ru{дают}
+\en{the~units}\ru{единицы}
+\en{of~spatial measurements}\ru{измерений пространства},
+%
+  \item
+\en{a~clock}\ru{часы}. %%~\faClockO
+\end{itemize}
+
+%%.... свойства реального физического пространства и~конкретные способы измерения времени ....
+
+%\vspace{-0.1em}\noindent
+%\inquotes{\emph{\en{Any}\ru{Любых}}} \en{clock}\ru{часов}\:--- \en{because}\ru{потому что}
+%\en{in}\ru{в}~\en{classical}\ru{классической} \en{generic}\ru{общей} \en{mechanics}\ru{механике}
+%\en{the~time}\ru{время}
+%\en{tick-tocks}\ru{тик-такает},
+%\en{flows}\ru{течёт}
+%\en{and }\ru{и~}\en{passes}\ru{проходит}
+%\en{identically}\ru{одинаково}
+%\en{in~any clock}\ru{в~любых часах}
+%\en{at~any place}\ru{в~любом месте},
+%\en{and }\ru{и~}\en{all clocks}\ru{все часы}
+%\en{are perfectly synchronized}\ru{идеально синхронизированы}.
+
+\vspace{.33em}
+%%%\end{minipage}
+
+\en{Long time ago}\ru{Когда\hbox{-}то давно},
+\en{the~reference system}\ru{системой отсчёта}
+\en{was}\ru{было}
+\en{some}\ru{некое}
+\inquotesx{\en{absolute space}\ru{абсолютное пространство}}[,]
+\en{empty at~first}\ru{сначала пустое},
+\en{and then}\ru{а~затем}
+\en{filled with}\ru{заполненное}
+\en{the~continuous}\ru{сплошной}
+\en{elastic medium}\ru{упругой средой}\:---
+\en{the~æther}\ru{эфиром~(æther)}.
+% the aether is a mechanical model
+\en{Later}\ru{Позже}\en{,}
+\en{it became clear}\ru{стало ясно}\ru{,}
+\en{that}\ru{что}
+\en{any frame of~reference}\ru{любая система отсчёта}
+\en{can be}\ru{может быть}
+\en{used}\ru{использована}
+\en{for classical mechanics}\ru{для классической механики},
+\en{but}\ru{но}
+\en{the~preference}\ru{предпочтение}
+\en{is given}\ru{даётся}
+\en{to the so~called}\ru{так называемым}
+\href{https://en.wikipedia.org/wiki/Inertial_frame_of_reference}{\inquotes{\en{inertial}\ru{инерциальным}}
+\en{frames}\ru{системам}},
+\en{where}\ru{где}
+\en{a~particle}\ru{частица}
+\en{in the~absence}\ru{в~отсутствие}
+\en{of~external interactions}\ru{внешних взаимодействий}
+(\en{or}\ru{или}
+\en{applied forces}\ru{приложенных сил})
+\en{moves}\ru{находится}
+\inquotesx{\en{in free motion}\ru{в~свободном движении}}[---]
+\textcolor{black!50}{\en{along a~straight line}\ru{вдоль прямой линии}}
+\en{with a~constant velocity}\ru{с~постоянной скоростью}~%
+(${\mathdotabove{\locationvector} = \hspace{-0.1ex} \boldconstant}$),
+\en{thence}\ru{оттого}
+\en{without acceleration}\ru{без~ускорения}~%
+(${\mathdotdotabove{\locationvector} = \hspace{-0.1ex} \zerovector}$)
+
+\nopagebreak\vspace{-0.8em}
+\begin{equation*}
+\mathdotabove{\locationvector} = \hspace{-0.1ex} \boldconstant = \mathdotabove{x}_i \hspace{.1ex} \bm{e}_i
+\hspace{.4em} \Rightarrow \hspace{.5em}
+\mathdotabove{x}_i \hspace{-0.2ex} = \hspace{-0.1ex} \constant
+\hspace{.5em} \Leftarrow \hspace{.4em}
+\bm{e}_i \hspace{-0.2ex} = \hspace{-0.1ex} \boldconstant
+\end{equation*}
+
+\vspace{-0.5em}
+\en{The~measure}\ru{Мера}
+\en{of~interaction}\ru{взаимодействия}
+\en{in~mechanics}\ru{в~механике}\en{ is}\ru{\:---}
+\en{the~vector of~force}\ru{вектор силы}~${\bm{F}\hspace{-0.2ex}}$.
+\en{In}\ru{В}~\en{the~widely known}\ru{широко известном}\footnote{%
+\inquotes{Axiomata sive Leges Motus} (\inquotes{Axioms or Laws of Motion})
+were written by Isaac Newton in his \href{http://www.gutenberg.org/files/28233/28233-pdf.pdf}{Philosophiæ Naturalis Principia Mathematica}, first published in 1687.
+%% http://www.gutenberg.org/ebooks/28233
+\href{https://archive.org/details/principia00newtuoft/page/n11/mode/2up}{Reprint (en Latin), 1871.}
+\href{https://archive.org/details/newtonspmathema00newtrich/page/n7/mode/2up}{Translated into English by Andrew Motte, 1846.}
+% Mathematical Principles of Natural Philosophy
+}\hbox{\hspace{-0.2ex}}
+\ru{уравнении }Newton’\en{s}\ru{а}\en{ equation}
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{law:ofnewton}
+m \hspace{.2ex} \mathdotdotabove{\locationvector} \hspace{.1ex} = \hspace{-0.1ex} \bm{F} ( \locationvector, \mathdotabove{\locationvector}, t )
+\end{equation}
+
+\vspace{-0.5em}\noindent
+\en{the~force}\ru{сила}~$\bm{F}$
+\en{can depend}\ru{может зависеть}
+\en{only on}\ru{лишь от}
+\en{position}\ru{положения},
+\en{velocity}\ru{скорости}
+\en{and}\ru{и}~\en{explicitly}\ru{явно}
+\en{on~time}\ru{от~времени},
+\en{whereas}\ru{тогда как}
+\en{acceleration}\ru{ускорение}~$\mathdotdotabove{\locationvector}$
+\en{is }\href{https://www.mathsisfun.com/algebra/directly-inversely-proportional.html}{\en{directly proportional}\ru{прямо пропорционально}}
+\en{to~force}\ru{силе}~$\bm{F}$
+\en{with coefficient}\ru{с~коэффициентом}~${\raisemath{-0.1em}{\scalebox{1.2}{$\nicefrac{1}{m}$}}\hspace{.1ex}}$.
+
+%%%%\vspace{.2em}
+%%%%\hspace*{-\parindent}\begin{minipage}{\linewidth}
+%%%%\setlength{\parindent}{\horizontalindent}
+%%%%\setlength{\parskip}{\spacebetweenparagraphs}
+
+\en{Here’re}\ru{Вот}
+\en{theses}\ru{тезисы}
+\en{of the~dynamics}\ru{динамики}
+\en{of a~collection of~particles}\ru{совокупности частиц}.
+
+\begin{wrapfigure}[15]{r}{.55\textwidth}
+\makebox[.6\textwidth][c]{\begin{minipage}[t]{.58\textwidth}
+\vspace{-1.3em}
+
+\begin{tikzpicture}[scale=1.05]
+
+% arguments: name, x, y, radius
+\newcommand{\setpointmass}[4]{%
+\path (#2, #3) node [shape=coordinate] (#1) {} ;
+\def\linewidth{1.6pt}
+\pgfmathsetmacro\radiusoffset{#4 - \linewidth}
+\path (#1) node [line width=1pt, minimum size=#4, circle, inner sep=\radiusoffset, outer sep=0] (#1circle) {} ;
+%%\draw [line width=\linewidth, black, fill=black!50] (#1) circle (#4) ;
+%%\path (#1circle) node [black, above left, inner sep=6pt, outer sep=0] {#1} ;
+}
+
+% arguments: name, radius, color
+\newcommand{\drawpointmass}[3]{%
+\def\linewidth{1.6pt}
+\draw [line width=\linewidth, #3, fill=#3!50] (#1) circle (#2) ;
+}
+
+% arguments: name, color, node options, text
+\newcommand{\labelpointmass}[4]{%
+\path (#1circle) node [#2, #3] {#4} ;
+}
+
+% arguments: name of point, name of force, vector length, vector angle in degrees, color
+\newcommand{\forceatpoint}[5]{
+\tikzstyle{force line} = [line width=1.25pt, line cap=round, -{Triangle[round, length=4.2mm, width=2.7mm]}]
+
+% (from)!length!angle:(to)
+\path ($ (#1)!#3!#4:($ (#1) + (0, #3) $) $) node [shape=coordinate] (#1#2force) {} ;
+
+\draw [force line, #5] (#1#2force) -- (#1circle) {} ;
+}
+
+% arguments: name of point, name of other point, name of force, force vector length, color
+\newcommand{\forcebetweenpoints}[5]{
+\tikzstyle{force line} = [line width=1.25pt, line cap=round, -{Triangle[round, length=4.2mm, width=2.7mm]}]
+
+\path ($ (#1)!#4!0:(#2) $) node [shape=coordinate] (#1#3force) {} ;
+
+\draw [force line, #5] (#1#3force) -- (#1circle) {} ;
+}
+
+% arguments: name of point, name of force, position, node options, text
+\newcommand{\labelforceatpoint}[5]{%
+\node at ($ (#1#2force)!#3!(#1) $) [#4] {#5} ;
+}
+
+\tikzset{%
+radiiline/.style={line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth, -{Stealth[round, length=3.8mm, width=2.7mm]}}%
+}
+
+\def\mthirdcolor{green!77!yellow!88!black}
+
+\setpointmass{m1}{35mm}{-28mm}{2mm}
+\setpointmass{m2}{27mm}{19mm}{2mm}
+\setpointmass{m3}{13mm}{-13mm}{2mm}
+
+\path (63mm, 8mm) node [shape=coordinate] (O) {} ;
+
+% draw position vectors
+
+\draw [radiiline, line width=1.2pt, black!55] (O) -- (m1circle)
+	node [red, pos=0.56, below right, inner sep=3pt, outer sep=0] {$\locationvector_1$} ;
+
+\draw [radiiline, line width=1.2pt, black!55] (O) -- (m2circle)
+	node [magenta, pos=0.54, above, inner sep=4.7pt, outer sep=0] {$\locationvector_2$} ;
+
+\draw [radiiline, line width=1.2pt, black!55] (m2circle) -- (m1circle)
+	node [black, pos=0.55, above right, inner sep=3.3pt, outer sep=0] {$\mathcolor{red}{\locationvector_1} \hspace{-0.25ex} - \mathcolor{magenta}{\locationvector_2}$} ;
+
+\draw [radiiline, line width=1.2pt, black!55] (m3circle) -- (m2circle)
+	node [black, pos=0.47, above left, inner sep=2.6pt, outer sep=0] {$\mathcolor{magenta}{\locationvector_2} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\locationvector_3}$} ;
+
+\draw [radiiline, line width=1.2pt, black!55] (m3circle) -- (m1circle)
+	node [black, pos=0.49, below left, inner sep=2.1pt, outer sep=0] {$\mathcolor{red}{\locationvector_1} \hspace{-0.25ex} - \mathcolor{\mthirdcolor}{\locationvector_3}$} ;
+
+% draw force vectors
+
+\forceatpoint{m1}{ext}{10mm}{263}{black}
+\labelforceatpoint{m1}{ext}{0.22}{below, outer sep=6.3pt, inner sep=0}{${\bm{F}^{\smthexternal}_{\hspace{-0.15ex}1}}$}
+
+\forceatpoint{m2}{ext}{13.5mm}{103}{black}
+\labelforceatpoint{m2}{ext}{0.17}{above, outer sep=3.3pt, inner sep=0}{${\bm{F}^{\smthexternal}_{\hspace{-0.15ex}2}}$}
+
+\forceatpoint{m3}{ext}{8.8mm}{22}{black}
+\labelforceatpoint{m3}{ext}{0.34}{left, outer sep=4.7pt, inner sep=0}{${\bm{F}^{\smthexternal}_{\hspace{-0.15ex}3}}$}
+
+\forcebetweenpoints{m1}{m2}{int12}{16mm}{magenta}{-2mm}
+\labelforceatpoint{m1}{int12}{0.27}{magenta, right, outer sep=3pt, inner sep=0}{${\bm{F}^{\smthinternal}_{\raisebox{-0.1em}{$\scriptstyle \hspace{-0.25ex}12$}}}$}
+
+\forcebetweenpoints{m2}{m1}{int21}{16mm}{red}{2mm}
+\labelforceatpoint{m2}{int21}{0.3}{red, right, outer sep=3pt, inner sep=0}{${\bm{F}^{\smthinternal}_{\raisebox{-0.1em}{$\scriptstyle \hspace{-0.25ex}21$}}}$}
+
+\forcebetweenpoints{m3}{m2}{int32}{12.5mm}{magenta}
+\labelforceatpoint{m3}{int32}{0.38}{magenta, right, outer sep=4pt, inner sep=0}{${\bm{F}^{\smthinternal}_{\raisebox{-0.1em}{$\scriptstyle \hspace{-0.25ex}32$}}}$}
+
+\forcebetweenpoints{m2}{m3}{int23}{12.5mm}{\mthirdcolor}
+\labelforceatpoint{m2}{int23}{0.63}{\mthirdcolor, below left, outer sep=7.2pt, inner sep=0}{${\bm{F}^{\smthinternal}_{\raisebox{-0.1em}{$\scriptstyle \hspace{-0.25ex}23$}}}$}
+
+\forcebetweenpoints{m1}{m3}{int13}{10.5mm}{\mthirdcolor}
+\labelforceatpoint{m1}{int13}{0.37}{\mthirdcolor, below left, outer sep=2.5pt, inner sep=0}{${\bm{F}^{\smthinternal}_{\raisebox{-0.1em}{$\scriptstyle \hspace{-0.25ex}13$}}}$}
+
+\forcebetweenpoints{m3}{m1}{int31}{10.5mm}{red}
+\labelforceatpoint{m3}{int31}{0.28}{red, above right, outer sep=0.8pt, inner sep=0}{${\bm{F}^{\smthinternal}_{\raisebox{-0.1em}{$\scriptstyle \hspace{-0.25ex}31$}}}$}
+
+% draw points
+
+\drawpointmass{m1}{1.8mm}{red}
+\labelpointmass{m1}{red}{below left, yshift=-2pt, inner sep=4.7pt, outer sep=0}{$m_1$}
+
+\drawpointmass{m2}{1.8mm}{magenta}
+\labelpointmass{m2}{magenta}{above left, xshift=1.4pt, inner sep=6.9pt, outer sep=0}{$m_2$}
+
+\drawpointmass{m3}{1.8mm}{\mthirdcolor}
+\labelpointmass{m3}{\mthirdcolor}{left, yshift=-2pt, inner sep=9pt, outer sep=0}{$m_3$}
+
+\draw [line width=1.2pt, blue, fill=white] (O) circle (1mm) ;
+
+\end{tikzpicture}
+
+\vspace{-0.3em}\caption{}\label{fig:particlesandforces}
+\end{minipage}}
+\end{wrapfigure}
+
+\en{The~force}\ru{Сила}~${\bm{F}_k}$,
+\en{acting}\ru{действующая}
+\en{on}\ru{на}
+\en{the~}$k$\hbox{-}\en{th}\ru{ую}
+\en{particle}\ru{частицу}~(\figureref{fig:particlesandforces})
+
+\nopagebreak\vspace{-0.3em}
+\begin{gather}
+m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.1ex}
+= \bm{F}_k \hspace{.1ex} ,
+\nonumber \\[.1em]
+%
+\bm{F}_k \hspace{-0.1ex}
+= \hspace{-0.1ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex}
++ \scalebox{.8}{$ \displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum} $} \hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+\hspace{-0.1ex} .
+\label{forceactingonparticle}
+\end{gather}
+
+\vspace{-0.66em}\noindent
+${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}}$ \en{is}\ru{есть} \en{the~external force}\ru{внешняя сила}\:---
+\en{such forces}\ru{такие силы}
+\en{emanate}\ru{исходят}
+\en{from \hbox{objects}}\ru{от объектов}
+\en{outside}\ru{вне}
+\en{the~system being considered}\ru{рассматриваемой системы}.
+\en{The~second addend}\ru{Второе слагаемое}\en{ is}\ru{\:---}
+\en{the~sum of internal forces}\ru{сумма внутренних сил}
+(\en{force}\ru{сила}
+${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}}$
+\en{is}\ru{есть}
+\en{the~interaction}\ru{взаимодействие}\ru{,}
+\en{induced}\ru{подаваемое}
+\en{by the~}$j$\hbox{-}\en{th}\ru{ой}
+\en{particle}\ru{частицей}
+\en{on}\ru{на}~\en{the~}$k$\hbox{-}\en{th}\ru{ую}
+\en{particle}\ru{частицу}).
+\en{Internal interactions}\ru{Внутренние взаимодействия}
+\en{happen}\ru{случаются}
+\en{only}\ru{только}
+\en{between}\ru{между}
+\en{elements}\ru{элементами}
+\en{of the~system}\ru{системы}
+\en{and}\ru{и}
+\en{don’t affect}\ru{не~влияют}
+(\en{mechanically}\ru{механически})
+\en{anything other}\ru{ни на что другое}.
+\en{Neither particle}\ru{Ни~одна частица}
+\en{interacts}\ru{не~взаимодействует}
+\en{with itself}\ru{сама с~собой},
+${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kk} \hspace{-0.25ex} = \hspace{-0.15ex} \zerovector \hspace{.3em} \forall k}$.
+
+% la force Fkj est l’interaction induite par la j-me particule sur la particule k-ème
+% induce (verb) = induire, inciter, amener, produire, provoquer, persuader
+% взаимодействие, подаваемое j-ой частицей на k-ую частицу
+
+......... Rene Descartes’ mechanics ...................
+
+\en{Measuring motions}\ru{Измерение движений}
+\en{in}\ru{в}~\en{mechanics}\ru{механике}\en{ is},
+\en{however}\ru{однако},
+\en{more controversial}\ru{противоречивее}
+\en{than measuring interactions}\ru{измерения взаимодействий}.
+%
+\en{The~discord}\ru{Разногласие}
+\en{and}\ru{и}~\en{the~}\en{extensive polemic}\ru{обширная полемика}
+\en{on this topic}\ru{по~этой теме}
+\en{dates back}\ru{восходит}
+\en{to the~times}\ru{ко временам}
+\en{of~}\href{https://en.wikipedia.org/wiki/Isaac_Newton}{Newton}\ru{’а}
+\en{and}\ru{и}~\href{https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz}{Leibniz}\ru{’а}.
+%
+\en{In~those days}\ru{В~те дни},
+\en{exploring}\ru{исследуя}
+\en{how}\ru{как}
+\en{objects}\ru{объекты}
+\en{of~various masses}\ru{разной массы}
+\en{change}\ru{меняют}
+\en{the~speed and~velocity\footnote{%
+\emph{Speed} is the~time rate of~motion, that is \emph{how fast} a~thing moves along some path, a~scalar.
+\emph{Velocity} is the~movement’s rate and direction, that’s \emph{how fast \textbf{and where}} a~thing moves, a~vector.%
+}\hspace{-0.4ex}}\ru{скорость}
+\en{of~their motion}\ru{своего движения}\ru{,}
+\en{when}\ru{когда}
+\ru{к~ней прикладываются }\en{various forces}\ru{разные силы}\en{ are applied to it},
+\en{both }\ru{и~}Newton\ru{,}
+\en{and}\ru{и}~Leibnitz
+\en{were looking for}\ru{искали}
+\en{a~useful invariant}\ru{полезный инвариант}\ru{,}
+\en{that would}\ru{который~бы}
+\en{fit the~observations}\ru{подходил к~наблюдениям}.
+
+%%\inquotes{an absolute quantity of motion which for the~universe remains constant}
+
+%%When the motion in one part is diminished, that in another is increased by a like amount.
+%%Motion, like matter, once created cannot be destroyed, and the same amount of motion remains in the universe.
+
+%%Rene Descartes, Principia philosophiae, in Oeuvres de Descartes, ed. Charles Adam and Paul Tannery, 13 vols. (Paris:Cerf, 1897-1913), Vol. VIII, p. 61.
+
+\newcommand\thoughtQuote{\smash{\raisebox{-.5\baselineskip}{\faLightbulbO}\hspace{.5em}\lquote}}
+
+\begin{itemize}%%[leftmargin=*]
+\setlength{\labelsep}{.2em}
+\setlength{\parskip}{.3ex}
+\item[\thoughtQuote]
+\textit{${m v}$,
+\en{the~product of~mass and velocity}\ru{произведение массы и~скорости}\en{, is}\ru{\:---}
+\en{a~useful quantity}\ru{полезное количество}\ru{,}
+\en{that is conserved}\ru{которое сохраняется}}\hbox{\hspace{\labelsep}\rquote}
+\en{thought}\ru{думал}
+Newton.
+\item[\thoughtQuote]
+\textit{${m v^2 \hspace{-0.4ex}}$,
+\en{the~product of~mass and velocity squared}\ru{произведение массы и~квадрата скорости}\en{, is}\ru{\:---}
+\en{a~useful quantity}\ru{полезное количество}\ru{,}
+\en{that is conserved}\ru{которое сохраняется}}\hbox{\hspace{\labelsep}\rquote}
+\en{thought}\ru{думал}
+Leibniz.
+\end{itemize}
+
+\en{And each of~them}\ru{И~каждый из~них}
+\en{believed that}\ru{верил, что}
+\en{the~quantity he proposed}\ru{предложенное им количество}
+\en{is more useful}\ru{более полезно},
+\en{more fundamental}\ru{более фундаментально}
+\en{and more}\ru{и~более}
+\inquotesx{fruitful}[.]
+
+Newton
+\en{named}\ru{именовал}
+${mv}$
+\en{as~}\inquotes{quantitas motus}~%
+(\inquotes{\en{quantity of~motion}\ru{количество движения}})
+
+momentum is a measure of mechanical motion of an object
+
+momentum depends on the weight (i.e. quantity) and velocity of an object.
+
+Momentum is the product of mass and velocity, so
+
+\en{when either an object’s mass or its velocity changes}
+\ru{когда изменяется либо масса объекта, либо его скорость},
+then the momentum will change
+
+..................
+
+what is momentum? The measure of movement in mechanics is called "momentum"
+
+BUT WHY?
+
+why "mass by velocity" measures the amount of movement ?
+there are two momenta known, the linear (translational) one and the angular (rotational) one, why?
+
+\href{https://physics.stackexchange.com/questions/577332/why-is-momentum-defined-as-mass-times-velocity}{Why is momentum defined as mass times velocity?}
+
+{\small
+
+https://physics.stackexchange.com/a/577486/377185
+
+Newton thought ${m v}$ was a~useful conserved quantity. Leibniz thought ${m v^2}$ was a~useful conserved quantity.
+
+If you read the history, you’ll find there was much discussion, rivalry, and even bad blood as each pushed the benefits of their particular view. Each thought that their quantity was more fundamental, or more important.
+
+Now, we see that both are useful, just in different contexts.
+
+I’m sure somebody briefly toyed with the expressions like ${m v^3}$ and maybe ${m^2 v}$ before quickly finding that they didn’t stay constant under any reasonable set of constraints, so had no predictive power. That’s why they’re not named, or used for anything.
+
+So why has the quantity ${m v}$ been given a name? Because it’s useful, it’s conserved, and it allows us to make predictions about some parameters of a mechanical system as it undergoes interactions with other things.
+
+\par}
+
+from \emph{Leibniz and the Vis Viva Controversy by Carolyn Iltis (1971)}
+
+Roger Boscovich in 1745 and Jean d’Alembert in 1758 both pointed out that vis viva ${mv^2}$ and momentum ${mv}$ were equally valid.
+
+The momentum of a body is actually the Newtonian force F acting through a time, since ${v = at}$ and ${mv = mat = Ft}$.
+
+The kinetic energy is the Newtonian force acting over a space, since ${v^2 = 2as}$ and ${mv^2 = 2mas}$ or ${\frac{1}{2} mv^2 = Fs}$.
+
+\en{The~amount of~movement}\ru{Количество движения}
+\en{of some object}\ru{некоего объекта}\en{ is}\ru{\:--- это}
+\en{the~product}\ru{произведение}
+\en{of~the~mass}\ru{массы}
+\en{and}\ru{и}~\en{velocity}\ru{скорости}
+\en{of~that object}\ru{того объекта}.
+
+When two objects collide, ..........
+
+\href{https://en.wikipedia.org/wiki/Momentum}{\en{the~}(\en{linear}\ru{линейный},
+\en{translational}\ru{трансляционный})
+\en{momentum}\ru{импульс}}
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}\label{linearmomentum.forparticleandsystem}
+\begin{array}{r@{\hspace{.3em}}l}
+m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+&
+\scalebox{.88}{ ---
+\en{for}\ru{для}
+\en{the~}$k$\hbox{-}\en{th}\ru{ой}
+\en{particle}\ru{частицы} }
+\hspace{-0.4ex} ,
+\\[.3em]
+%
+\hspace{1.4em}
+\scalebox{.83}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.3ex}
+m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+&
+\scalebox{.88}{ ---
+\en{for}\ru{для}
+\en{the~whole discrete system}\ru{целой дискретной системы} }
+%%\hspace{-0.4ex} .
+\end{array}
+\end{equation}
+
+\nopagebreak\vspace{-0.5em}\noindent
+\en{and}\ru{и}
+\href{https://en.wikipedia.org/wiki/Angular_momentum}{\en{the~}\en{angular (rotational) momentum}\ru{угловой импульс (момент импульса)}}
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}\label{angularmomentum.forparticleandsystem}
+\begin{array}{r@{\hspace{.3em}}l}
+\locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+&
+\scalebox{.88}{ ---
+\en{for}\ru{для}
+\en{the~}$k$\hbox{-}\en{th}\ru{ой}
+\en{particle}\ru{частицы} }
+\hspace{-0.4ex} ,
+\\[.3em]
+%
+\scalebox{.83}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.3ex}
+\locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+&
+\scalebox{.88}{ ---
+\en{for}\ru{для}
+\en{the~whole discrete system}\ru{целой дискретной системы} }
+\hspace{-0.4ex} .
+\end{array}
+\end{equation}
+
+\vspace{-0.2em}
+\en{From}\ru{Из}~\eqref{forceactingonparticle}
+\en{together with }\ru{вместе с~}\en{the~action--re\-action principle}\ru{принципом действия--противодействия}
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{actionreactionprinciple.fordiscretepoints}
+\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = - \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.4ex}jk}
+\hspace{.44em} \forall k,j
+\hspace{.4em} \Rightarrow \hspace{.5em}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k,\hspace{.1ex}j}} $} \hspace{.2ex}
+\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.2ex}
+= \hspace{-0.1ex} \zerovector
+%%\hspace{.1ex} ,
+\end{equation}
+
+%%%%\end{minipage}
+
+\vspace{-0.8em}\noindent
+\en{ensues}\ru{вытекает}
+\en{the~balance}\ru{баланс}
+\en{of~linear}\ru{линейного}
+\en{momentum}\ru{импульса}
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{balanceoftranslationalmomentum.discretepoints}
+\Bigl( \hspace{.2ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\Bigr)^{\hspace{-0.1em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+= \hspace{.1ex} \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex} m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}
+= \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}
+\hspace{-0.1ex} .
+\end{equation}
+
+\vspace{-0.6em}\noindent
+\en{And}\ru{А}~\en{here’s}\ru{вот}
+\en{the~balance}\ru{баланс}
+\en{of~angular}\ru{углового}
+\en{momentum}\ru{импульса}\footnote{${%
+\Bigl( \hspace{.2ex} \scalebox{.8}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.25ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.25ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.2ex} \Bigr)^{\hspace{-0.15em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.2ex}
+= \hspace{.1ex}
+\mathcolor{black!60}{ \scalebox{.8}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.25ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.25ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} } \hspace{-.1ex}
++ \scalebox{.8}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.25ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.25ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-.1ex}
+= \hspace{.1ex}
+\scalebox{.8}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.25ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.25ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}
+}$
+\\
+%%\en{the~}\crossproductinquotes\hbox{-}\en{product}\ru{произведение}
+%%\en{of~any two}\ru{любых двух}
+%%\en{equal}\ru{равных}
+%%\en{vectors}\ru{векторов}
+%%\en{is}\ru{есть}~$\zerovector$,
+\hspace*{3.3em}\scalebox{.8}{${\mathcolor{blue!50!black}{ \bm{a} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} = \zerovector \hspace{.6em} \forall \bm{a}
+\hspace{.4em} \Rightarrow \hspace{.33em}
+\mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.4ex} \times \hspace{-0.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.2ex} = \zerovector }}$}
+\\[-0.5em]
+}
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{balanceofangularmomentum.thesumofmoments.discretepoints}
+\Bigl( \hspace{.2ex} \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.1ex} \times \hspace{-0.1ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\Bigr)^{\hspace{-0.1em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+= \scalebox{.8}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.25ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.25ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\end{equation}
+
+\vspace{-0.6em}\noindent
+\:---
+\en{is}\ru{это}
+\en{the~sum}\ru{сумма}~${\raisebox{.1em}{\scalebox{.66}{$ \displaystyle \sum $}} \hspace{.2ex} \bm{M}_{\hspace{-0.1ex}k}}$
+\en{of~moments}\ru{моментов}.
+\en{The~moment}\ru{Момент}~${\bm{M}_{\hspace{-0.1ex}k}}$,
+\en{acting}\ru{действующий}
+\en{on}\ru{на}
+\en{the~}$k$\hbox{-}\en{th}\ru{ую}
+\en{particle}\ru{частицу}%%,
+%%\en{relative}\ru{относительно}
+%%\en{to the~reference point}\ru{точки отсчёта}~%
+%%${\bm{r}_{\hspace{-0.3ex}o} \hspace{-0.2ex} \equiv \zerovector}$
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{momentactingonparticle}
+\bm{M}_{\hspace{-0.1ex}k} \hspace{-0.1ex}
+= \locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} m_k \hspace{.2ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.1ex}
+= \locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{F}_k \hspace{-0.1ex}
+= \locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}
+\hspace{-0.2ex} + \hspace{.1ex}
+\locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} \scalebox{.8}{$ \displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum} $} \hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+\hspace{-0.1ex} .
+\end{equation}
+
+\vspace{-0.6em}\noindent
+\en{When}\ru{Когда}
+\en{in addition}\ru{вдобавок}
+\en{to the~action--re\-action principle}\ru{к~принципу действия--противодействия},
+\en{all internal interactions}\ru{все внутренние взаимодействия}
+\en{between particles}\ru{между частицами}
+\en{are assumed to be central}\ru{считаются центральными},
+\en{that~is}\ru{то~есть}
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{iternalinteractionsarecentral.betweenparticles}
+\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{.15ex} \parallel \hspace{.1ex} \bigl( \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \hspace{.1ex} \bigr)
+\hspace{.5em} \Leftrightarrow \hspace{.4em}
+\bigl( \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.15ex} - \locationvector_{\hspace{-0.16ex}j} \hspace{.1ex} \bigr) \hspace{-0.35ex} \times \hspace{-0.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = \zerovector
+\hspace{.1ex} ,
+\end{equation}
+
+\noindent
+\en{the~balance}\ru{баланс}
+\en{of~rotational~(angular) momentum}\ru{момента импульса (углового импульса)}
+\en{becomes}\ru{становится}\footnote{${
+\hspace*{.22em} \forall k,j \hspace{.44em}
+\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} = - \hspace{.12ex} \bm{F}^{\smthinternal}_{\hspace{-0.4ex}j\hspace{-0.05ex}k}
+\hspace{.55em} \text{\en{and}\ru{и}} \hspace{.55em}
+\bigl( \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} - \locationvector_{\hspace{-0.16ex}j} \bigr) \hspace{-0.35ex} \times \hspace{-0.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+= \zerovector
+\hspace{.4em} \Rightarrow
+}$
+\\[-1.6em]
+\begin{flushright}
+${
+%%\Rightarrow \hspace{.4em}
+\scalebox{.8}{$ \displaystyle\sum_{\smash{k}} $} \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.4ex} \times \hspace{-0.2ex}
+\scalebox{.8}{$ \displaystyle\sum_{\smash{j}} $} \hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+\hspace{-0.1ex} = \hspace{.2ex}
+\smalldisplaystyleonehalf \hspace{.3ex}
+\scalebox{.8}{$ \displaystyle\sum_{\smash{k,\hspace{.1ex}j}} $} \hspace{-.1ex}
+\bigl( \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.3ex} + \locationvector_{\hspace{-0.1ex}k} \bigr) \hspace{-.4ex} \times \hspace{-0.25ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+\hspace{-0.1ex} = \hspace{.2ex}
+\smalldisplaystyleonehalf \hspace{.3ex}
+\scalebox{.8}{$ \displaystyle\sum_{\smash{k,\hspace{.1ex}j}} $} \hspace{-.1ex}
+\bigl( \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.3ex} - \locationvector_{\hspace{-0.16ex}j} \bigr) \hspace{-.4ex} \times \hspace{-0.25ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+= \zerovector
+}$
+\\[.2em]
+\scalebox{.8}{${\mathcolor{blue!50!black}{
+\scalebox{.8}{$ \displaystyle\sum_{\smash{k,\hspace{.1ex}j}} $} \hspace{.2ex}
+\locationvector_{\hspace{-0.1ex}k} \hspace{-.4ex} \times \hspace{-0.25ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+\hspace{-0.1ex} =
+- \scalebox{.8}{$ \displaystyle\sum_{\smash{k,\hspace{.1ex}j}} $} \hspace{.2ex}
+\locationvector_{\hspace{-0.1ex}k} \hspace{-.4ex} \times \hspace{-0.25ex} \bm{F}^{\smthinternal}_{\hspace{-0.4ex}jk}
+\hspace{-0.1ex} =
+- \scalebox{.8}{$ \displaystyle\sum_{\smash{j,\hspace{.1ex}k}} $} \hspace{.2ex}
+\locationvector_{\hspace{-0.2ex}j} \hspace{-.4ex} \times \hspace{-0.25ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+\hspace{-0.1ex} =
+- \scalebox{.8}{$ \displaystyle\sum_{\smash{k,\hspace{.1ex}j}} $} \hspace{.2ex}
+\locationvector_{\hspace{-0.2ex}j} \hspace{-.4ex} \times \hspace{-0.25ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+}}$}\hspace*{2em}
+\end{flushright}%
+}
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{balanceofrotationalmomentum.onlyexternalforces.discretepoints}
+\Bigl( \hspace{.2ex} \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.1ex} \times \hspace{-0.1ex} m_k \hspace{.2ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\Bigr)^{\hspace{-0.1em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.15ex}
+= \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex} \locationvector_{\hspace{-0.1ex}k} \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}
+\hspace{-0.1ex} .
+\end{equation}
+
+\vspace{-0.3em}
+\en{Thus}\ru{Так},
+\en{all}\ru{все}
+\en{changes}\ru{изменения}
+\en{in the~linear}\ru{линейного}
+\en{and angular}\ru{и~углового}
+\en{momenta}\ru{импульсов}
+\en{are due}\ru{обусловлены}
+\en{only to external}\ru{только внешними}
+\en{forces}\ru{силами}~{${\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k}\hspace{-0.4ex}}$},
+\en{not internal ones}\ru{не~внутренними}.
+
+\en{Unlike for momenta}\ru{В~отличие от~импульсов},
+\en{the~balance}\ru{баланс}
+\en{of~kinetic energy}\ru{кинетической энергии}~${\kineticenergyinmechanics
+\equiv
+\verynicefrac{1}{2} \hspace{.2ex} \raisebox{.1em}{\scalebox{.66}{$ \displaystyle \sum $}} \hspace{.2ex}
+m_{k} \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.3ex} \dotp \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} }$
+($mv^2$\en{ is}\ru{\:---}
+\href{https://en.wikipedia.org/wiki/Vis_viva}{Leibniz’\en{s}\ru{а} \inquotes{vis viva}}) %% \en{or}\ru{или} \inquotes{\en{living force}\ru{живая сила}} \en{of~the~system}\ru{системы}
+\en{includes}\ru{включает}
+\en{the~power}\ru{мощность}
+\en{of~internal forces as~well}\ru{также~и внутренних сил}
+
+\nopagebreak\vspace{-0.3em}
+\begin{multline}\label{thebalanceofkineticenergy.derivation}
+\mathdotabove{\kineticenergyinmechanics} \hspace{.1ex}
+= \hspace{-0.2ex} \Bigl( \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.3ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex}
+m_{k} \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.3ex} \dotp \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\Bigr)^{\hspace{-0.15em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.2ex}
+\hspace{-0.1ex} = \hspace{.2ex}
+\smalldisplaystyleonehalf \hspace{.3ex} \scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \bigl( \hspace{.1ex}
+m_{k} \hspace{.1ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.3ex} \dotp \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.1ex}
++ m_{k} \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.3ex} \dotp \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\bigr)
+\\[-0.2em]
+%
+= \hspace{-0.1ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex}
+m_{k} \hspace{.1ex} \mathdotdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.3ex} \dotp \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+= \hspace{-0.1ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex}
+\bm{F}_k \hspace{-0.2ex} \dotp \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+= \hspace{-0.1ex}
+\scalebox{.85}[.9]{$ \displaystyle \sum_{\smash{k}} $}
+\Bigl( \hspace{-0.1ex} \bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.1ex}
++ \scalebox{.8}{$ \displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum} $} \hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj}
+\hspace{.1ex} \Bigr) \hspace{-0.4ex} \dotp \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\\
+%
+= \hspace{-0.1ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex}
+\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.4ex} \dotp \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
++ \scalebox{.8}{$ \displaystyle \sum_{\smash{k,\hspace{.1ex}j}} $} %%\scalebox{.8}{$ \displaystyle \underset{\raisemath{.25ex}{\smash{j}}}{\sum} $}
+\hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.4ex} \dotp \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\end{multline}
+
+\vspace{-0.3em}\noindent
+\en{or}\ru{или},
+\en{using}\ru{используя}
+\en{the~action--re\-action principle}\ru{принцип действия--противодействия}~\eqref{actionreactionprinciple.fordiscretepoints},
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
+\mathdotabove{\kineticenergyinmechanics} \hspace{.1ex}
+- \hspace{-0.1ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex}
+\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.4ex} \dotp \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{-0.2ex} = \hspace{.2ex}
+\smalldisplaystyleonehalf \hspace{.3ex} \scalebox{.8}{$ \displaystyle \sum_{\smash{k,\hspace{.1ex}j}} $}
+\hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.3ex} \dotp \hspace{-0.3ex}
+\bigl( \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \hspace{-0.2ex} + \hspace{-0.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k} \bigr)
+\hspace{-0.2ex} = \hspace{.2ex}
+\smalldisplaystyleonehalf \hspace{.3ex} \scalebox{.85}[.9]{$ \displaystyle \sum_{\smash{k,\hspace{.1ex}j}} $}
+\Bigl( \hspace{-0.1ex}
+\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.3ex} \dotp \hspace{.1ex}
+\mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{-0.2ex} -
+\bm{F}^{\smthinternal}_{\hspace{-0.4ex}jk} \hspace{-0.3ex} \dotp \hspace{.1ex}
+\mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{-0.1ex} \Bigr)
+\hspace{-0.1ex} ,
+\end{equation*}
+
+\vspace{-0.3em}\noindent
+\en{and since}\ru{и~так~как}
+${
+\raisebox{.1em}{\scalebox{.75}{$ \displaystyle \sum_{\smash{k,\hspace{.1ex}j}} $}}
+\hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.4ex}jk} \hspace{-0.3ex} \dotp \hspace{.1ex}
+\mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{-0.1ex} = \hspace{-0.1ex}
+\raisebox{.1em}{\scalebox{.75}{$ \displaystyle \sum_{\smash{j,\hspace{.1ex}k}} $}}
+\hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.3ex} \dotp \hspace{.1ex}
+\mathdotabove{\locationvector}_{\hspace{-0.2ex}j}
+\hspace{-0.1ex} = \hspace{-0.1ex}
+\raisebox{.1em}{\scalebox{.75}{$ \displaystyle \sum_{\smash{k,\hspace{.1ex}j}} $}}
+\hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.3ex} \dotp \hspace{.1ex}
+\mathdotabove{\locationvector}_{\hspace{-0.2ex}j}
+}$
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{thebalanceofkineticenergy.finally}
+\mathdotabove{\kineticenergyinmechanics} \hspace{.1ex}
+= \hspace{-0.1ex}
+\scalebox{.8}{$ \displaystyle \sum_{\smash{k}} $} \hspace{.3ex}
+\bm{F}^{\smthexternal}_{\hspace{-0.16ex}k} \hspace{-0.4ex} \dotp \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
++ \hspace{.2ex}
+\smalldisplaystyleonehalf \hspace{.3ex} \scalebox{.8}{$ \displaystyle \sum_{\smash{k,\hspace{.1ex}j}} $}
+\hspace{.2ex} \bm{F}^{\smthinternal}_{\hspace{-0.16ex}kj} \hspace{-0.3ex} \dotp \hspace{-0.3ex}
+\bigl( \hspace{.1ex} \mathdotabove{\locationvector}_{\hspace{-0.1ex}k}
+\hspace{-0.2ex} - \hspace{-0.1ex}
+\mathdotabove{\locationvector}_{\hspace{-0.2ex}j} \bigr)
+\hspace{.1ex} .
+\end{equation}
+
+.......
+
+all bodies that are limited in free motion possess potential energy
+
+.....
+

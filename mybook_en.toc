@@ -60,22 +60,22 @@
 \contentsline {section}{\numberline {20}Curvature tensors}{58}{section.1.20}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {2}Classical generic mechanics}{63}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Classical and analytical mechanics}{63}{chapter.2}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Discrete collection of particles}{63}{section.2.1}%
-\contentsline {section}{\numberline {2}Perfectly rigid undeformable solid body}{69}{section.2.2}%
-\contentsline {section}{\numberline {3}The principle of virtual work}{74}{section.2.3}%
+\contentsline {section}{\numberline {2}The principle of virtual work}{70}{section.2.2}%
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {4}Balance of momentum, rotational momentum, and~energy}{78}{section.2.4}%
+\contentsline {section}{\numberline {3}Balance of momentum, rotational momentum, and~energy}{74}{section.2.3}%
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Hamilton’s principle and Lagrange’s equations}{79}{section.2.5}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Statics}{82}{section.2.6}%
-\contentsline {section}{\numberline {7}Mechanics of relative motion}{85}{section.2.7}%
+\contentsline {section}{\numberline {4}Hamilton’s principle and Lagrange’s equations}{75}{section.2.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Small oscillations (vibrations)}{87}{section.2.8}%
+\contentsline {section}{\numberline {5}Statics}{78}{section.2.5}%
+\contentsline {section}{\numberline {6}Small oscillations (vibrations)}{81}{section.2.6}%
+\contentsline {section}{\numberline {7}Perfectly rigid undeformable solid body}{82}{section.2.7}%
+\contentsline {section}{\numberline {8}Mechanics of relative motion}{87}{section.2.8}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{89}{chapter.3}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Continuum and the two approaches to describe it}{89}{section.3.1}%

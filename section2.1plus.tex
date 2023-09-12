@@ -1,0 +1,87 @@
+%%\en{\section{Generic concepts of mechanics}}
+
+%%\ru{\section{Общие понятия механики}}
+
+%%\label{section:conceptsofmechanics}
+
+\subsection*{Work}
+
+\begin{equation*}
+W \hspace{-0.12ex} ( \hspace{-0.08ex} \bm{F} \hspace{-0.25ex}, \bm{u} ) \hspace{-0.1ex} = \bm{F} \hspace{-0.2ex} \dotp \bm{u}
+\end{equation*}
+
+as the~exact~(full) differential
+
+\nopagebreak\[
+d \hspace{.1ex} W \hspace{-0.33ex}  = \hspace{.08ex} \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \hspace{-0.1ex} \bm{F}} \hspace{-0.1ex} \dotp d \bm{F} + \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{u}} \hspace{-0.1ex} \dotp d \bm{u}
+\]
+
+by \inquotes{product rule}
+
+\nopagebreak\[
+d \hspace{.1ex} W \hspace{-0.33ex}
+= d \hspace{.15ex} \bigl( \hspace{-0.1ex} \bm{F} \hspace{-0.2ex} \dotp \bm{u} \bigr) \hspace{-0.25ex}
+= d\bm{F} \hspace{-0.1ex} \dotp \bm{u} \hspace{.12ex} + \bm{F} \hspace{-0.1ex} \dotp d\bm{u}
+\]
+
+${\displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \hspace{-0.1ex} \bm{F}} \hspace{-0.1ex} = \bm{u}}$,
+${\displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} W}}{\partial \bm{u}} \hspace{-0.1ex} = \bm{F}}$
+
+...
+
+\subsection*{Center of mass}
+
+\begin{itemize}
+\item This is the unique point at any time where the weighted relative position of the distributed mass sums to zero.
+\item This is the point to which a force may be applied to cause a linear acceleration without an angular acceleration.
+\item This is a hypothetical point where the entire mass of an object may be assumed to be concentrated to visualise its motion.
+\item This is the particle equivalent of a given object for application of Newton's laws of motion.
+\end{itemize}
+
+When formulated for the center of mass, formulas in mechanics are often simplified.
+
+...
+
+--- Are there any scenarios for which the center of mass is not almost exactly equivalent to the center of gravity?
+
+--- \href{http://en.wikipedia.org/wiki/Centers_of_gravity_in_non-uniform_fields}{Non-uniform gravity field.} In a uniform gravitational field, the center of mass is equal to the center of gravity.
+
+...
+
+\subsection*{Constraints}
+
+Imposed on the positions and velocities of particles, there are restrictions of a geometrical or kinematical nature, called constraints.
+
+Holonomic constraints are relations between position variables (and possibly time) which can be expressed as equality like
+\begin{equation*}
+f(q^{1} \hspace{-0.25ex}, q^{2} \hspace{-0.25ex}, q^{3} \hspace{-0.25ex}, \ldots, q^{n} \hspace{-0.25ex}, t) = 0
+\hspace{.1ex} ,
+\end{equation*}
+
+\noindent
+where ${q^{1} \hspace{-0.25ex}, q^{2} \hspace{-0.25ex}, q^{3} \hspace{-0.25ex}, \ldots, q^{n}}$ are $n$ parameters (coordinates) that fully describe the system.
+
+A~constraint that cannot be expressed as such is nonholonomic.
+
+Holonomic constraint depends only on coordinates and time.
+It does not depend on velocities or any higher time derivatives.
+
+Velocity-dependent constraints like
+\[
+f(q^{1} \hspace{-0.25ex}, q^{2} \hspace{-0.25ex}, \ldots, q^{n} \hspace{-0.25ex}, {\mathdotabove{q}}^{\hspace{.2ex}1} \hspace{-0.25ex}, {\mathdotabove{q}}^{\hspace{.2ex}2} \hspace{-0.25ex}, \ldots, {\mathdotabove{q}}^{\hspace{.2ex}n} \hspace{-0.25ex}, t) = 0
+\]
+are mostly not holonomic.
+
+For example, the motion of a particle constrained to lie on a~sphere’s surface is subject to a~holonomic constraint, but if the particle is able to fall off a~sphere under the influence of gravity, the constraint becomes non-holonomic.
+For the first case the holonomic constraint may be given by the equation: ${r^{2} - a^{2} = 0}$, where $r$ is the distance from the centre of a~sphere of radius~$a$.
+Whereas the second non-holonomic case may be given by: ${r^{2} - a^{2} \geq 0}$.
+
+Three examples of nonholonomic constraints are: when the constraint equations are nonintegrable, when the constraints have inequalities, or with complicated non-conservative forces like friction.
+
+\[
+\bm{r}_{i} \hspace{-0.1ex} = \bm{r}_{i}(q^{1} \hspace{-0.25ex}, q^{2} \hspace{-0.25ex}, \ldots, q^{n} \hspace{-0.25ex}, t)
+\]
+(assuming $n$ independent parameters/coordinates)
+
+.....
+
