@@ -148,6 +148,8 @@ $k$\hbox{-}\en{th}\ru{ая}
 
 %%.... свойства реального физического пространства и~конкретные способы измерения времени ....
 
+%% Newton’s picture of a universally ticking clock
+
 %\vspace{-0.1em}\noindent
 %\inquotes{\emph{\en{Any}\ru{Любых}}} \en{clock}\ru{часов}\:--- \en{because}\ru{потому что}
 %\en{in}\ru{в}~\en{classical}\ru{классической} \en{generic}\ru{общей} \en{mechanics}\ru{механике}
@@ -493,14 +495,14 @@ ${\bm{F}^{\smthinternal}_{\hspace{-0.16ex}kk} \hspace{-0.25ex} = \hspace{-0.15ex
 \textit{${m v}$,
 \en{the~product of~mass and velocity}\ru{произведение массы и~скорости}\en{, is}\ru{\:---}
 \en{a~useful quantity}\ru{полезное количество}\ru{,}
-\en{that is conserved}\ru{которое сохраняется}}\hbox{\hspace{\labelsep}\rquote}
+\en{that remains constant}\ru{которое остаётся постоянным}}\hbox{\hspace{\labelsep}\rquote} % that is conserved
 \en{thought}\ru{думал}
 Newton.
 \item[\thoughtQuote]
 \textit{${m v^2 \hspace{-0.4ex}}$,
 \en{the~product of~mass and velocity squared}\ru{произведение массы и~квадрата скорости}\en{, is}\ru{\:---}
 \en{a~useful quantity}\ru{полезное количество}\ru{,}
-\en{that is conserved}\ru{которое сохраняется}}\hbox{\hspace{\labelsep}\rquote}
+\en{that remains constant}\ru{которое остаётся постоянным}}\hbox{\hspace{\labelsep}\rquote}
 \en{thought}\ru{думал}
 Leibniz.
 \end{itemize}
@@ -531,11 +533,12 @@ then the momentum will change
 
 ..................
 
-what is momentum? The measure of movement in mechanics is called "momentum"
+what is momentum? The measure of motion in mechanics is called "momentum"...
 
-BUT WHY?
+\noindent
+....hmmmmm https://hsm.stackexchange.com/questions/769/when-and-by-whom-was-the-term-momentum-introduced
 
-why "mass by velocity" measures the amount of movement ?
+why "mass by velocity" measures the amount of motion ?
 there are two momenta known, the linear (translational) one and the angular (rotational) one, why?
 
 \href{https://physics.stackexchange.com/questions/577332/why-is-momentum-defined-as-mass-times-velocity}{Why is momentum defined as mass times velocity?}
@@ -543,8 +546,6 @@ there are two momenta known, the linear (translational) one and the angular (rot
 {\small
 
 https://physics.stackexchange.com/a/577486/377185
-
-Newton thought ${m v}$ was a~useful conserved quantity. Leibniz thought ${m v^2}$ was a~useful conserved quantity.
 
 If you read the history, you’ll find there was much discussion, rivalry, and even bad blood as each pushed the benefits of their particular view. Each thought that their quantity was more fundamental, or more important.
 
@@ -562,7 +563,37 @@ Roger Boscovich in 1745 and Jean d’Alembert in 1758 both pointed out that vis 
 
 The momentum of a body is actually the Newtonian force F acting through a time, since ${v = at}$ and ${mv = mat = Ft}$.
 
-The kinetic energy is the Newtonian force acting over a space, since ${v^2 = 2as}$ and ${mv^2 = 2mas}$ or ${\frac{1}{2} mv^2 = Fs}$.
+The kinetic energy is the Newtonian force acting over a space, since ${v^2 = 2 \hspace{.1ex} as}$ and ${mv^2 = 2 \hspace{.1ex} mas}$ or ${\frac{1}{2} \hspace{.1ex} mv^2 = Fs}$.
+
+\begin{alignat*}{2}
+\hspace*{5em}
+&& v \equiv \mathdotabove{s}
+\hspace{.1ex} , \hspace{.6em}
+a \equiv \mathdotabove{v} \equiv \mathdotdotabove{s}
+\\
+& \begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
+   ds & = & \mathdotabove{s} \hspace{.2ex} dt
+   \\[-0.2em]
+   & = & v \hspace{.1ex} dt
+\end{array}
+\hspace{1em}
+\begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
+   d \mathdotabove{s} & = & \mathdotdotabove{s} \hspace{.3ex} dt
+   \\[-0.2em]
+   dv & = & a \hspace{.1ex} dt
+\end{array}
+\\
+& \begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}c@{\hspace{.3em}}c@{\hspace{.3em}}c@{\hspace{.3em}}c@{\hspace{.3em}}l}
+v \hspace{.1ex} dv & = & v \hspace{.1ex} a \hspace{.1ex} dt & = & a \hspace{.1ex} v \hspace{.1ex} dt & = & a \hspace{.1ex} ds
+\\
+\mathdotabove{s} \hspace{.2ex} d \mathdotabove{s} & = & \mathdotabove{s} \hspace{.3ex} \mathdotdotabove{s} \hspace{.3ex} dt & = & \mathdotdotabove{s} \hspace{.3ex} \mathdotabove{s} \hspace{.2ex} dt & = & \mathdotdotabove{s} \hspace{.2ex} ds
+\end{array}
+\end{alignat*}
+
+${m \hspace{.1ex} dv = m \hspace{.1ex} a \hspace{.1ex} dt = F \hspace{-0.1ex} dt}$
+
+${d(v^2) = 2 \hspace{.1ex} v \hspace{.1ex} dv = 2 \hspace{.1ex} a \hspace{.1ex} ds}$
+and ${m \hspace{.1ex} d(v^2) = 2 \hspace{.1ex} m \hspace{.1ex} a \hspace{.1ex} ds = 2 \hspace{.1ex} F ds}$
 
 \en{The~amount of~movement}\ru{Количество движения}
 \en{of some object}\ru{некоего объекта}\en{ is}\ru{\:--- это}

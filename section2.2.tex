@@ -2,7 +2,7 @@
 
 \ru{\section{Принцип виртуальной работы}}
 
-\label{section:virtualworkprinciple.genericmechanics}
+\label{section:virtualworkprinciple.classicalmechanics}
 
 \emph{Mécanique analytique} (1788--89) is a two volume French treatise on analytical mechanics, written by Joseph Louis Lagrange, and published 101 years following Isaac Newton’s \emph{Philosophiæ Naturalis Principia Mathematica}.
 
@@ -87,44 +87,83 @@ ${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$\:---
 ${\variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}}}$
 \en{are perfectly random}\ru{совершенно случайны}.
 
-\begin{otherlanguage}{russian}
-
-Связи бывают
-голономные
-(holonomic, или геометрические),
-связывающие только положения~(смещения)\:---
-\en{they are functions}\ru{это функции}
+\en{A~constraint}\ru{Связь}
+\en{can be}\ru{может быть}
+\en{holonomic}\ru{голономная},
+\en{aka}\ru{она~же}
+\en{geometric}\ru{геометрическая},
+\en{bounding}\ru{ограничивающая}
+\en{only}\ru{только}
+\en{positions}\ru{положения}~%
+(\en{displacements}\ru{смещения})\:---
+\en{a~function}\ru{функция}
 \en{of only}\ru{лишь}
-\en{the coordinates}\ru{координат}
+\en{coordinates}\ru{координат}
 \en{and}\ru{и}\ru{,}
 \en{probably}\ru{возможно}\ru{,}
 \en{time}\ru{времени}
 
-\nopagebreak\vspace{-0.1em}
+\nopagebreak\vspace{-0.5em}
 \begin{equation}\label{holonomicconstraint}
 c\hspace{.2ex}(\locationvector, t) = 0
+\hspace{.2ex} .
 \end{equation}
 
-\vspace{-0.1em}\noindent
---- и~неголономные~(или дифференциальные),
-содержащие производные координат по~времени:
-${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$
-\en{and not}\ru{и~не} интегрируемые
-\en{till}\ru{до}
-\en{the geometrical constraints}\ru{геометрических связей}.
+\vspace{-0.3em}%\noindent
+\en{A~non\-holonomic}\ru{Не\-голономная},
+\en{or}\ru{или}
+\en{differential}\ru{дифференциальная},
+\en{constraint}\ru{связь}
+\en{includes}\ru{включает}
+\en{time derivatives}\ru{производные по~времени}
+\en{of~coordinates}\ru{от~координат}
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}\label{nonholonomicconstraint}
+c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0
+\end{equation}
+
+\vspace{-0.3em}\noindent
+\en{and is not}\ru{и~не}
+\en{integrable}\ru{интегрируется}
+\en{into}\ru{до}
+\en{a~geometric constraint}\ru{геометрической связи}.
+\href{https://en.wikipedia.org/wiki/Nonholonomic_system}{%
+\en{A~system}\ru{Система}
+\en{with }\ru{с~}%
+\en{non\-holonomic constraints}\ru{не\-голономными связями}}
+\en{depends on}\ru{зависит от}
+\en{the~path}\ru{пути}\:---
+\en{the~intermediate values}\ru{промежуточных значений}
+\en{of~trajectory}\ru{траектории},
+\en{not only}\ru{не~только}
+\en{upon the~initial and final locations}\ru{от начального и конечного положений},
+\en{and thus}\ru{и~потому}
+\en{cannot be}\ru{не~может быть}
+\en{represented}\ru{представлена}
+\en{by a~potential}\ru{потенциальной}
+\en{function}\ru{функцией}~$\potentialenergyinmechanics(\locationvector, t)$.
 
 \en{When}\ru{Когда}
 \en{all}\ru{все}
 \en{constraints}\ru{связи}
 \en{are holonomic}\ru{голономные},
 \en{then}\ru{тогда}
+\en{the~system}\ru{система}
+\en{is completely independent}\ru{всецело независима}
+\en{of the~trajectory of~transition}\ru{от траектории перехода},
+\en{of any}\ru{от любых}
+\en{intermediate values}\ru{промежуточных значений}
+\en{along the~path}\ru{по~пути}.
+\en{Here}\ru{Тут},
 \en{the virtual displacements}\ru{виртуальные смещения}
-\en{of~a~particle}\ru{частицы}
-\inquotes{${\hspace{.05ex}k\hspace{.25ex}}$}
+\en{of~the~}$k$\hbox{-}\en{th}\ru{ой}
+\en{particle}\ru{частицы}
 \en{satisfy}\ru{удовлетворяют}
-\en{the equation}\ru{уравнению}
+\en{the~equation}\ru{уравнению}
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{requirementforvirtualdisplacements}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{requirementforvirtualdisplacements}
 \displaystyle \sum_{\smash{j=1}}^{m}
 \scalebox{.92}{$ \displaystyle
    \frac{\raisemath{-0.12em}{\partial \hspace{.1ex} c_{j}}}{\partial \hspace{.1ex} \locationvector_{\hspace{-0.1ex}k}} $}
@@ -148,20 +187,25 @@ ${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$
 (\en{or}\ru{или}
 \en{reaction}\ru{реакции})\en{ forces}.
 
-Реакция~$\mathboldPhi_k$
-действует со~стороны всех материальных ограничителей
-на~частицу \inquotes{${\hspace{.05ex}k\hspace{.25ex}}$}
-и~меняется согласно уравнению~\eqref{holonomicconstraint}
-для каждой связи.
+\en{Reaction}\ru{Реакция}~$\constraintforcewithindex{k}$
+\en{acts}\ru{действует}
+\en{on}\ru{на}
+\en{the~}$k$\hbox{-}\en{th}\ru{ую}
+\en{particle}\ru{частицу}
+\en{from all material limiters}\ru{от всех материальных ограничителей}
+\en{and changes}\ru{и~меняется}
+\en{according}\ru{согласно}
+\en{to equation}\ru{уравнению}~\eqref{holonomicconstraint}
+\en{for each constraint}\ru{для каждой связи}.
 
 \en{The~constraints}\ru{Связи}
 \en{are assumed}\ru{предполагаются}
 \en{to be ideal}\ru{идеальными},
 \en{that is}\ru{то есть}
 
-\nopagebreak
+\nopagebreak\vspace{-0.3em}
 \begin{equation}\label{theidealityofconstraints}
-\scalebox{.9}{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} \mathboldPhi_k \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.16ex} = 0
+\scalebox{.9}{$\displaystyle \sum_{\smash{k}}$} \hspace{.2ex} \constraintforcewithindex{k} \hspace{-0.2ex} \dotp \variation{\hspace{.1ex}\locationvector_{\hspace{-0.1ex}k}} \hspace{-0.16ex} = 0
 %%\quad \textrm{---}
 \vspace{-0.25em}\end{equation}
 \noindent
@@ -169,8 +213,8 @@ ${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$
 \en{the~work}\ru{работа}
 \en{of~constraint~(reaction) forces}\ru{сил связи~(реакции)}
 \en{is equal to zero}\ru{равна нулю}
-\en{on~any}\ru{на~любых}
-\en{virtual displacements}\ru{виртуальных смещениях}.
+\en{on~any}\ru{на~любом}
+\en{virtual displacement}\ru{виртуальном смещении}.
 
 \en{The~principle of virtual work}\ru{Принцип виртуальной работы}
 \en{is}\ru{так\'{о}в}
@@ -199,42 +243,30 @@ ${c\hspace{.2ex}(\locationvector, \mathdotabove{\locationvector}, t) = 0}$
 \en{a~trivial consequence}\ru{тривиальным следствием}
 \en{of~the~}\ru{закона }Newton’\en{s}\ru{а}\en{ law}~\eqref{law:ofnewton}
 \en{and }\ru{и~}\en{the~ideality of~constraints}\ru{идеальности связей}~\eqref{theidealityofconstraints}.
-Однако
-содержание~\eqref{discrete:principleofvirtualwork}
-несравненно обширнее.
-Читатель вскоре увидит, что
-принцип~\eqref{discrete:principleofvirtualwork}
-может быть положен
-в~основу механики~\cite{gantmacher-analyticalmechanics}.
+\en{Nevertheless}\ru{Тем~не~менее},
+\en{the~contents of}\ru{содержание}~\eqref{discrete:principleofvirtualwork}
+\en{is incomparably}\ru{несравнимо}
+\en{broader}\ru{шире}.
+\en{In~this book}\ru{В~этой книге}
+\en{the~reader}\ru{читатель}
+\en{will see that}\ru{увидит, что}
+\en{principle}\ru{принцип}~\eqref{discrete:principleofvirtualwork}
+\en{can be}\ru{может быть}
+\en{put}\ru{положен}
+\en{in the~foundation}\ru{в~основу}
+\en{of~mechanics}\ru{механики}~\cite{gantmacher-analyticalmechanics}.
 \en{The~various models}\ru{Разные модели}
-\en{of~elastic media}\ru{упругих сред},
+\en{of~media}\ru{сред},
 \en{being described}\ru{описываемые}
 \en{in this book}\ru{в~этой книге},
 \en{are based}\ru{основаны}
-\en{on this}\ru{на~этом}
+\en{on that}\ru{на том}
 \en{principle}\ru{принципе}.
-
-Для~примера рассмотрим совершенно жёсткое~(недеформируемое) твёрдое тело.
-
-.... \eqref{completelyrigidbody.locationvectorofanypointdecomposed} ${\Rightarrow}$
-${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{x}}}$
-
-(begin copied from \chapterdotsectionref{chapter:mathapparatus}{section:calculusofvariations})
-
-Варьируя тождество~\eqref{orthogonalityofrotationtensor}, получим ${\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!}$.
-Этот тензор антисимметричен, и~потому выражается через свой сопутствующий вектор~${\varvector{o}}$ как~${\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad}$.
-Приходим к~соотношениям
-
-\nopagebreak\vspace{-0.5em}\begin{equation}
-\variation{\rotationtensor} \hspace{-0.1ex} = \varvector{o} \hspace{-0.1ex} \times \hspace{-0.1ex} \rotationtensor , \:\:
-\varvector{o} = - \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $} \hspace{-0.1ex} \Bigl( \hspace{-0.1ex} \variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \Bigr)_{\hspace{-0.25em}\Xcompanion}
-\hspace{-0.1ex} ,
-\end{equation}
-
-(end of copied from \chapterdotsectionref{chapter:mathapparatus}{section:calculusofvariations})
 
 ...
 
+
+\begin{otherlanguage}{russian}
 
 Проявилась замечательная особенность~\eqref{discrete:principleofvirtualwork}\::
 это уравнение эквивалентно системе такого порядка,
@@ -243,6 +275,8 @@ ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{
 Если система $N$~точек имеет $m$ связей,
 то число степеней свободы
 ${n = 3N \hspace{-0.25ex} - m}$.
+
+\end{otherlanguage}
 
 ...
 

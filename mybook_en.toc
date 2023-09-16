@@ -60,12 +60,16 @@
 \contentsline {section}{\numberline {20}Curvature tensors}{58}{section.1.20}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {2}Classical and analytical mechanics}{63}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Classical mechanics}{63}{chapter.2}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Discrete collection of particles}{63}{section.2.1}%
 \contentsline {section}{\numberline {2}The principle of virtual work}{70}{section.2.2}%
 \babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {3}Balance of momentum, rotational momentum, and~energy}{74}{section.2.3}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {4}Hamilton’s principle and Lagrange’s equations}{75}{section.2.4}%
 \babel@toc {russian}{}\relax 
@@ -73,446 +77,448 @@
 \contentsline {section}{\numberline {5}Statics}{78}{section.2.5}%
 \contentsline {section}{\numberline {6}Small oscillations (vibrations)}{81}{section.2.6}%
 \contentsline {section}{\numberline {7}Perfectly rigid undeformable solid body}{82}{section.2.7}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {8}Mechanics of relative motion}{87}{section.2.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{89}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{90}{chapter.3}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Continuum and the two approaches to describe it}{89}{section.3.1}%
+\contentsline {section}{\numberline {1}Continuum and the two approaches to describe it}{90}{section.3.1}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {2}Motion gradient}{93}{section.3.2}%
-\contentsline {section}{\numberline {3}Measures (tensors) of deformation}{94}{section.3.3}%
-\contentsline {section}{\numberline {4}Velocity field}{100}{section.3.4}%
-\contentsline {section}{\numberline {5}Area vector. Surface change}{101}{section.3.5}%
-\contentsline {section}{\numberline {6}Forces in continuum. Existence of the~Cauchy stress tensor}{102}{section.3.6}%
-\contentsline {section}{\numberline {7}Balance of momentum and angular momentum}{104}{section.3.7}%
+\contentsline {section}{\numberline {2}Motion gradient}{94}{section.3.2}%
+\contentsline {section}{\numberline {3}Measures (tensors) of deformation}{95}{section.3.3}%
+\contentsline {section}{\numberline {4}Velocity field}{101}{section.3.4}%
+\contentsline {section}{\numberline {5}Area vector. Surface change}{102}{section.3.5}%
+\contentsline {section}{\numberline {6}Forces in continuum. Existence of the~Cauchy stress tensor}{103}{section.3.6}%
+\contentsline {section}{\numberline {7}Balance of momentum and angular momentum}{105}{section.3.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Eigenvalues of the Cauchy stress tensor. Mohr’s circles}{106}{section.3.8}%
+\contentsline {section}{\numberline {8}Eigenvalues of the Cauchy stress tensor. Mohr’s circles}{107}{section.3.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {9}Principle of virtual work (without Lagrange multipliers)}{106}{section.3.9}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {10}Constitutive relations of elasticity}{108}{section.3.10}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {11}Piola\hbox {--}Kirchhoff stress tensors and other measures of~stress}{110}{section.3.11}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {12}Variation of present configuration}{115}{section.3.12}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {13}Internal constraints}{115}{section.3.13}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {14}Hollow sphere under pressure}{116}{section.3.14}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {15}Stresses as Lagrange multipliers}{117}{section.3.15}%
+\contentsline {section}{\numberline {9}Principle of virtual work (without Lagrange multipliers)}{107}{section.3.9}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {4}The classical linear elasticity}{119}{chapter.4}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {10}Constitutive relations of elasticity}{109}{section.3.10}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {11}Piola\hbox {--}Kirchhoff stress tensors and other measures of~stress}{111}{section.3.11}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {12}Variation of present configuration}{116}{section.3.12}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {13}Internal constraints}{116}{section.3.13}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {14}Hollow sphere under pressure}{117}{section.3.14}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {15}Stresses as Lagrange multipliers}{118}{section.3.15}%
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {4}The classical linear elasticity}{120}{chapter.4}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}The complete set of equations}{119}{section.4.1}%
-\contentsline {section}{\numberline {2}The uniqueness of the solution in dynamics}{122}{section.4.2}%
-\contentsline {section}{\numberline {3}Hooke’s law}{124}{section.4.3}%
-\contentsline {section}{\numberline {4}Hooke’s law for an~isotropic material}{129}{section.4.4}%
-\contentsline {section}{\numberline {5}Theorems of statics}{129}{section.4.5}%
+\contentsline {section}{\numberline {1}The complete set of equations}{120}{section.4.1}%
+\contentsline {section}{\numberline {2}The uniqueness of the solution in dynamics}{123}{section.4.2}%
+\contentsline {section}{\numberline {3}Hooke’s law}{125}{section.4.3}%
+\contentsline {section}{\numberline {4}Hooke’s law for an~isotropic material}{130}{section.4.4}%
+\contentsline {section}{\numberline {5}Theorems of statics}{130}{section.4.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Equations in displacements}{133}{section.4.6}%
+\contentsline {section}{\numberline {6}Equations in displacements}{134}{section.4.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Concentrated force in an infinite medium}{134}{section.4.7}%
-\contentsline {section}{\numberline {8}Finding displacements by deformations}{134}{section.4.8}%
-\contentsline {section}{\numberline {9}Equations in stresses}{136}{section.4.9}%
-\contentsline {section}{\numberline {10}The principle of the minimum potential energy}{136}{section.4.10}%
-\contentsline {section}{\numberline {11}The principle of the minimum complementary energy}{139}{section.4.11}%
-\contentsline {section}{\numberline {12}Mixed principles of stationarity}{139}{section.4.12}%
+\contentsline {section}{\numberline {7}Concentrated force in an infinite medium}{135}{section.4.7}%
+\contentsline {section}{\numberline {8}Finding displacements by deformations}{135}{section.4.8}%
+\contentsline {section}{\numberline {9}Equations in stresses}{137}{section.4.9}%
+\contentsline {section}{\numberline {10}The principle of the minimum potential energy}{137}{section.4.10}%
+\contentsline {section}{\numberline {11}The principle of the minimum complementary energy}{140}{section.4.11}%
+\contentsline {section}{\numberline {12}Mixed principles of stationarity}{140}{section.4.12}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {13}Antiplane shear}{141}{section.4.13}%
-\contentsline {section}{\numberline {14}The torsion of rods}{141}{section.4.14}%
+\contentsline {section}{\numberline {13}Antiplane shear}{142}{section.4.13}%
+\contentsline {section}{\numberline {14}The torsion of rods}{142}{section.4.14}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {15}Plane deformation}{143}{section.4.15}%
+\contentsline {section}{\numberline {15}Plane deformation}{144}{section.4.15}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {5}Micropolar three\hbox {-}dimensional continuum}{144}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Micropolar three\hbox {-}dimensional continuum}{145}{chapter.5}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Introduction to the linear micropolar theory}{144}{section.5.1}%
-\contentsline {section}{\numberline {2}Relations of elasticity}{148}{section.5.2}%
+\contentsline {section}{\numberline {1}Introduction to the linear micropolar theory}{145}{section.5.1}%
+\contentsline {section}{\numberline {2}Relations of elasticity}{149}{section.5.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}Compatibility equations}{150}{section.5.3}%
-\contentsline {section}{\numberline {4}Theorems of statics}{150}{section.5.4}%
-\contentsline {section}{\numberline {5}The Cosserat pseudocontinuum}{150}{section.5.5}%
-\contentsline {section}{\numberline {6}Plane deformation}{151}{section.5.6}%
+\contentsline {section}{\numberline {3}Compatibility equations}{151}{section.5.3}%
+\contentsline {section}{\numberline {4}Theorems of statics}{151}{section.5.4}%
+\contentsline {section}{\numberline {5}The Cosserat pseudocontinuum}{151}{section.5.5}%
+\contentsline {section}{\numberline {6}Plane deformation}{152}{section.5.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Nonlinear theory}{151}{section.5.7}%
+\contentsline {section}{\numberline {7}Nonlinear theory}{152}{section.5.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Nonlinear model with constrained rotation}{153}{section.5.8}%
+\contentsline {section}{\numberline {8}Nonlinear model with constrained rotation}{154}{section.5.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {6}Thermoelasticity}{155}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Thermoelasticity}{156}{chapter.6}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}The first law of thermodynamics}{155}{section.6.1}%
-\contentsline {section}{\numberline {2}The second law}{157}{section.6.2}%
-\contentsline {section}{\numberline {3}Constitutive equations}{159}{section.6.3}%
+\contentsline {section}{\numberline {1}The first law of thermodynamics}{156}{section.6.1}%
+\contentsline {section}{\numberline {2}The second law}{158}{section.6.2}%
+\contentsline {section}{\numberline {3}Constitutive equations}{160}{section.6.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}Heat equation}{159}{section.6.4}%
-\contentsline {section}{\numberline {5}Linear thermoelasticity}{160}{section.6.5}%
+\contentsline {section}{\numberline {4}Heat equation}{160}{section.6.4}%
+\contentsline {section}{\numberline {5}Linear thermoelasticity}{161}{section.6.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Equations in displacements}{160}{section.6.6}%
+\contentsline {section}{\numberline {6}Equations in displacements}{161}{section.6.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Thermal stress}{160}{section.6.7}%
+\contentsline {section}{\numberline {7}Thermal stress}{161}{section.6.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Variational formulations}{161}{section.6.8}%
+\contentsline {section}{\numberline {8}Variational formulations}{162}{section.6.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {7}Magnetoelasticity}{162}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Magnetoelasticity}{163}{chapter.7}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Electromagnetic field}{162}{section.7.1}%
-\contentsline {section}{\numberline {2}Electromagnetic waves}{166}{section.7.2}%
-\contentsline {section}{\numberline {3}Electrostatics}{168}{section.7.3}%
+\contentsline {section}{\numberline {1}Electromagnetic field}{163}{section.7.1}%
+\contentsline {section}{\numberline {2}Electromagnetic waves}{167}{section.7.2}%
+\contentsline {section}{\numberline {3}Electrostatics}{169}{section.7.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}Dielectrics}{168}{section.7.4}%
+\contentsline {section}{\numberline {4}Dielectrics}{169}{section.7.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Magnetostatics}{168}{section.7.5}%
+\contentsline {section}{\numberline {5}Magnetostatics}{169}{section.7.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Magnetics, or magnetic materials}{169}{section.7.6}%
+\contentsline {section}{\numberline {6}Magnetics, or magnetic materials}{170}{section.7.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Magnetic rigidity}{169}{section.7.7}%
+\contentsline {section}{\numberline {7}Magnetic rigidity}{170}{section.7.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {8}Perturbation methods (asymptotic methods)}{172}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Perturbation methods (asymptotic methods)}{173}{chapter.8}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Asymptotic decomposition}{172}{section.8.1}%
-\contentsline {section}{\numberline {2}Splitting in a linear algebraic system}{174}{section.8.2}%
+\contentsline {section}{\numberline {1}Asymptotic decomposition}{173}{section.8.1}%
+\contentsline {section}{\numberline {2}Splitting in a linear algebraic system}{175}{section.8.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}Poincar\'{e} method}{175}{section.8.3}%
-\contentsline {section}{\numberline {4}Van der~Pol averaging method}{175}{section.8.4}%
+\contentsline {section}{\numberline {3}Poincar\'{e} method}{176}{section.8.3}%
+\contentsline {section}{\numberline {4}Van der~Pol averaging method}{176}{section.8.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Coalescence of asymptotic decompositions}{175}{section.8.5}%
+\contentsline {section}{\numberline {5}Coalescence of asymptotic decompositions}{176}{section.8.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Multiple-scale analysis (method of multiple scales)}{176}{section.8.6}%
+\contentsline {section}{\numberline {6}Multiple-scale analysis (method of multiple scales)}{177}{section.8.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Equations with slowly varying parameters}{176}{section.8.7}%
+\contentsline {section}{\numberline {7}Equations with slowly varying parameters}{177}{section.8.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Thin bodies}{177}{section.8.8}%
+\contentsline {section}{\numberline {8}Thin bodies}{178}{section.8.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {9}Rods}{178}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Rods}{179}{chapter.9}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Initial concepts}{178}{section.9.1}%
-\contentsline {section}{\numberline {2}Kinematics of Cosserat lines}{184}{section.9.2}%
-\contentsline {section}{\numberline {3}Balance of forces and moments}{185}{section.9.3}%
-\contentsline {section}{\numberline {4}Principle of virtual work and consequences}{185}{section.9.4}%
-\contentsline {section}{\numberline {5}Classical Kirchhoff’s model}{186}{section.9.5}%
+\contentsline {section}{\numberline {1}Initial concepts}{179}{section.9.1}%
+\contentsline {section}{\numberline {2}Kinematics of Cosserat lines}{185}{section.9.2}%
+\contentsline {section}{\numberline {3}Balance of forces and moments}{186}{section.9.3}%
+\contentsline {section}{\numberline {4}Principle of virtual work and consequences}{186}{section.9.4}%
+\contentsline {section}{\numberline {5}Classical Kirchhoff’s model}{187}{section.9.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Euler’s problem about stability of rods}{186}{section.9.6}%
+\contentsline {section}{\numberline {6}Euler’s problem about stability of rods}{187}{section.9.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Variational equations}{186}{section.9.7}%
-\contentsline {section}{\numberline {8}Non-shear model with (ex)tension}{187}{section.9.8}%
-\contentsline {section}{\numberline {9}Mechanics of flexible thread}{187}{section.9.9}%
+\contentsline {section}{\numberline {7}Variational equations}{187}{section.9.7}%
+\contentsline {section}{\numberline {8}Non-shear model with (ex)tension}{188}{section.9.8}%
+\contentsline {section}{\numberline {9}Mechanics of flexible thread}{188}{section.9.9}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {10}Linear theory}{188}{section.9.10}%
+\contentsline {section}{\numberline {10}Linear theory}{189}{section.9.10}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {11}Case of small thickness}{188}{section.9.11}%
+\contentsline {section}{\numberline {11}Case of small thickness}{189}{section.9.11}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {12}Saint\hbox {-\hspace {-0.2ex}}Venant’s problem}{188}{section.9.12}%
+\contentsline {section}{\numberline {12}Saint\hbox {-\hspace {-0.2ex}}Venant’s problem}{189}{section.9.12}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {13}Finding stiffness by energy}{188}{section.9.13}%
+\contentsline {section}{\numberline {13}Finding stiffness by energy}{189}{section.9.13}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {14}Variational method of building one-dimensional model}{189}{section.9.14}%
+\contentsline {section}{\numberline {14}Variational method of building one-dimensional model}{190}{section.9.14}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {15}Asymptotic splitting of three-dimensional problem}{190}{section.9.15}%
-\contentsline {section}{\numberline {16}Thermal deformation and stress}{191}{section.9.16}%
+\contentsline {section}{\numberline {15}Asymptotic splitting of three-dimensional problem}{191}{section.9.15}%
+\contentsline {section}{\numberline {16}Thermal deformation and stress}{192}{section.9.16}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {10}Thin\hbox {-}walled rods}{193}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Thin\hbox {-}walled rods}{194}{chapter.10}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Variational approach}{193}{section.10.1}%
+\contentsline {section}{\numberline {1}Variational approach}{194}{section.10.1}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {2}Equations with small parameter}{193}{section.10.2}%
+\contentsline {section}{\numberline {2}Equations with small parameter}{194}{section.10.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}First step of the asymptotic procedure}{194}{section.10.3}%
+\contentsline {section}{\numberline {3}First step of the asymptotic procedure}{195}{section.10.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}Second step}{194}{section.10.4}%
+\contentsline {section}{\numberline {4}Second step}{195}{section.10.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Third step}{194}{section.10.5}%
+\contentsline {section}{\numberline {5}Third step}{195}{section.10.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Fourth step}{195}{section.10.6}%
+\contentsline {section}{\numberline {6}Fourth step}{196}{section.10.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Displacements}{195}{section.10.7}%
+\contentsline {section}{\numberline {7}Displacements}{196}{section.10.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Results of asymptotic analysis}{195}{section.10.8}%
+\contentsline {section}{\numberline {8}Results of asymptotic analysis}{196}{section.10.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {11}Shells and plates}{197}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Shells and plates}{198}{chapter.11}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Surface geometry}{197}{section.11.1}%
+\contentsline {section}{\numberline {1}Surface geometry}{198}{section.11.1}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {2}The model of a~shell}{199}{section.11.2}%
+\contentsline {section}{\numberline {2}The model of a~shell}{200}{section.11.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}The balance of forces and moments for a~shell}{200}{section.11.3}%
+\contentsline {section}{\numberline {3}The balance of forces and moments for a~shell}{201}{section.11.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}Shells: The relations of elasticity}{200}{section.11.4}%
+\contentsline {section}{\numberline {4}Shells: The relations of elasticity}{201}{section.11.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}The classical theory of shells}{200}{section.11.5}%
+\contentsline {section}{\numberline {5}The classical theory of shells}{201}{section.11.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Shells: A plate}{200}{section.11.6}%
+\contentsline {section}{\numberline {6}Shells: A plate}{201}{section.11.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Shells: Approach with Lagrange multipliers}{200}{section.11.7}%
+\contentsline {section}{\numberline {7}Shells: Approach with Lagrange multipliers}{201}{section.11.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Cylindrical shell}{201}{section.11.8}%
+\contentsline {section}{\numberline {8}Cylindrical shell}{202}{section.11.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {9}Shells: Common theorems}{201}{section.11.9}%
+\contentsline {section}{\numberline {9}Shells: Common theorems}{202}{section.11.9}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {10}Shells: Boundary conditions}{201}{section.11.10}%
+\contentsline {section}{\numberline {10}Shells: Boundary conditions}{202}{section.11.10}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {11}Shells of revolution}{201}{section.11.11}%
+\contentsline {section}{\numberline {11}Shells of revolution}{202}{section.11.11}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {12}Momentless theory of shells}{202}{section.11.12}%
+\contentsline {section}{\numberline {12}Momentless theory of shells}{203}{section.11.12}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {13}Shells: Nonlinear momentless theory}{202}{section.11.13}%
+\contentsline {section}{\numberline {13}Shells: Nonlinear momentless theory}{203}{section.11.13}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {14}Shells: Other variant of classical theory}{202}{section.11.14}%
+\contentsline {section}{\numberline {14}Shells: Other variant of classical theory}{203}{section.11.14}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {15}Plates: Overall concepts}{202}{section.11.15}%
+\contentsline {section}{\numberline {15}Plates: Overall concepts}{203}{section.11.15}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {16}Timoshenko-like model of a~plate (direct approach)}{203}{section.11.16}%
+\contentsline {section}{\numberline {16}Timoshenko-like model of a~plate (direct approach)}{204}{section.11.16}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {17}Kirchhoff’s classical theory of plates}{203}{section.11.17}%
+\contentsline {section}{\numberline {17}Kirchhoff’s classical theory of plates}{204}{section.11.17}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {18}Plates: Asymptotic matching of two-dimensional models}{203}{section.11.18}%
+\contentsline {section}{\numberline {18}Plates: Asymptotic matching of two-dimensional models}{204}{section.11.18}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {19}Plates: Variational transition from the three-dimensional model}{203}{section.11.19}%
+\contentsline {section}{\numberline {19}Plates: Variational transition from the three-dimensional model}{204}{section.11.19}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {20}Plates: Splitting of three-dimensional bending problem}{204}{section.11.20}%
+\contentsline {section}{\numberline {20}Plates: Splitting of three-dimensional bending problem}{205}{section.11.20}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {21}Circular plates}{204}{section.11.21}%
+\contentsline {section}{\numberline {21}Circular plates}{205}{section.11.21}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {22}Plates: Plane stress}{204}{section.11.22}%
+\contentsline {section}{\numberline {22}Plates: Plane stress}{205}{section.11.22}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {12}Oscillations and waves}{205}{chapter.12}%
+\contentsline {chapter}{\numberline {12}Oscillations and waves}{206}{chapter.12}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Vibrations of three-dimensional bodies}{205}{section.12.1}%
-\contentsline {section}{\numberline {2}Vibrations of rods}{207}{section.12.2}%
-\contentsline {section}{\numberline {3}Small perturbations of parameters}{207}{section.12.3}%
+\contentsline {section}{\numberline {1}Vibrations of three-dimensional bodies}{206}{section.12.1}%
+\contentsline {section}{\numberline {2}Vibrations of rods}{208}{section.12.2}%
+\contentsline {section}{\numberline {3}Small perturbations of parameters}{208}{section.12.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}Vibrations of shells}{207}{section.12.4}%
+\contentsline {section}{\numberline {4}Vibrations of shells}{208}{section.12.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Waves in an elastic continuum}{207}{section.12.5}%
+\contentsline {section}{\numberline {5}Waves in an elastic continuum}{208}{section.12.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Waves in a rod}{208}{section.12.6}%
+\contentsline {section}{\numberline {6}Waves in a rod}{209}{section.12.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Nonlinear oscillations}{208}{section.12.7}%
+\contentsline {section}{\numberline {7}Nonlinear oscillations}{209}{section.12.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {13}Stability}{209}{chapter.13}%
+\contentsline {chapter}{\numberline {13}Stability}{210}{chapter.13}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Various approaches to the problem of stability}{209}{section.13.1}%
-\contentsline {section}{\numberline {2}Classical problems with rods}{210}{section.13.2}%
+\contentsline {section}{\numberline {1}Various approaches to the problem of stability}{210}{section.13.1}%
+\contentsline {section}{\numberline {2}Classical problems with rods}{211}{section.13.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}“{Tracking}” loads}{210}{section.13.3}%
+\contentsline {section}{\numberline {3}“{Tracking}” loads}{211}{section.13.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}The role of additional pliabilities}{210}{section.13.4}%
+\contentsline {section}{\numberline {4}The role of additional pliabilities}{211}{section.13.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Variational formulations}{210}{section.13.5}%
+\contentsline {section}{\numberline {5}Variational formulations}{211}{section.13.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Nonconservative problems}{211}{section.13.6}%
+\contentsline {section}{\numberline {6}Nonconservative problems}{212}{section.13.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Case of multiple roots}{211}{section.13.7}%
+\contentsline {section}{\numberline {7}Case of multiple roots}{212}{section.13.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {14}Defects}{212}{chapter.14}%
+\contentsline {chapter}{\numberline {14}Defects}{213}{chapter.14}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Volterra dislocations}{212}{section.14.1}%
-\contentsline {section}{\numberline {2}Straight\hbox {-}line dislocations}{212}{section.14.2}%
+\contentsline {section}{\numberline {1}Volterra dislocations}{213}{section.14.1}%
+\contentsline {section}{\numberline {2}Straight\hbox {-}line dislocations}{213}{section.14.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}Action of stress field on dislocation}{212}{section.14.3}%
+\contentsline {section}{\numberline {3}Action of stress field on dislocation}{213}{section.14.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}About movement of dislocations}{212}{section.14.4}%
+\contentsline {section}{\numberline {4}About movement of dislocations}{213}{section.14.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Point defects}{213}{section.14.5}%
+\contentsline {section}{\numberline {5}Point defects}{214}{section.14.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Force acting on a~point defect}{213}{section.14.6}%
+\contentsline {section}{\numberline {6}Force acting on a~point defect}{214}{section.14.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Continuously distributed dislocations}{213}{section.14.7}%
+\contentsline {section}{\numberline {7}Continuously distributed dislocations}{214}{section.14.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Stress during winding of coil}{213}{section.14.8}%
+\contentsline {section}{\numberline {8}Stress during winding of coil}{214}{section.14.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {15}Fractures}{215}{chapter.15}%
+\contentsline {chapter}{\numberline {15}Fractures}{216}{chapter.15}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Traditional criteria of durability}{215}{section.15.1}%
+\contentsline {section}{\numberline {1}Traditional criteria of durability}{216}{section.15.1}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {2}Antiplane deformation of continuum with a~crack}{216}{section.15.2}%
+\contentsline {section}{\numberline {2}Antiplane deformation of continuum with a~crack}{217}{section.15.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}Crack in plane deformation}{216}{section.15.3}%
+\contentsline {section}{\numberline {3}Crack in plane deformation}{217}{section.15.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}Crack\hbox {-}driving force}{216}{section.15.4}%
+\contentsline {section}{\numberline {4}Crack\hbox {-}driving force}{217}{section.15.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Criterion of crack growth}{216}{section.15.5}%
+\contentsline {section}{\numberline {5}Criterion of crack growth}{217}{section.15.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}J-integral}{217}{section.15.6}%
+\contentsline {section}{\numberline {6}J-integral}{218}{section.15.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Stress intensity factors}{217}{section.15.7}%
+\contentsline {section}{\numberline {7}Stress intensity factors}{218}{section.15.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Barenblatt’s model}{217}{section.15.8}%
-\contentsline {section}{\numberline {9}Deformational criterion}{217}{section.15.9}%
+\contentsline {section}{\numberline {8}Barenblatt’s model}{218}{section.15.8}%
+\contentsline {section}{\numberline {9}Deformational criterion}{218}{section.15.9}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {10}Growth of cracks}{218}{section.15.10}%
+\contentsline {section}{\numberline {10}Growth of cracks}{219}{section.15.10}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {11}Elastic field ahead of a~moving crack}{218}{section.15.11}%
-\contentsline {section}{\numberline {12}Balance of energy for a moving crack}{218}{section.15.12}%
+\contentsline {section}{\numberline {11}Elastic field ahead of a~moving crack}{219}{section.15.11}%
+\contentsline {section}{\numberline {12}Balance of energy for a moving crack}{219}{section.15.12}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {16}Composites}{219}{chapter.16}%
+\contentsline {chapter}{\numberline {16}Composites}{220}{chapter.16}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Introductory thoughts}{219}{section.16.1}%
-\contentsline {section}{\numberline {2}Effective fields}{220}{section.16.2}%
-\contentsline {section}{\numberline {3}Boundary value problems for representative volume}{220}{section.16.3}%
-\contentsline {section}{\numberline {4}Hill’s fork}{221}{section.16.4}%
+\contentsline {section}{\numberline {1}Introductory thoughts}{220}{section.16.1}%
+\contentsline {section}{\numberline {2}Effective fields}{221}{section.16.2}%
+\contentsline {section}{\numberline {3}Boundary value problems for representative volume}{221}{section.16.3}%
+\contentsline {section}{\numberline {4}Hill’s fork}{222}{section.16.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Eshelby formulas}{221}{section.16.5}%
+\contentsline {section}{\numberline {5}Eshelby formulas}{222}{section.16.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {6}Effective moduli for material with spherical inclusions}{221}{section.16.6}%
+\contentsline {section}{\numberline {6}Effective moduli for material with spherical inclusions}{222}{section.16.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}Self-consistent method}{221}{section.16.7}%
+\contentsline {section}{\numberline {7}Self-consistent method}{222}{section.16.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Hashin\hbox {--}Shtrikman principle}{222}{section.16.8}%
+\contentsline {section}{\numberline {8}Hashin\hbox {--}Shtrikman principle}{223}{section.16.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {17}Periodic composites}{223}{chapter.17}%
+\contentsline {chapter}{\numberline {17}Periodic composites}{224}{chapter.17}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}One-dimensional problem}{223}{section.17.1}%
+\contentsline {section}{\numberline {1}One-dimensional problem}{224}{section.17.1}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {2}Three-dimensional continuum}{223}{section.17.2}%
+\contentsline {section}{\numberline {2}Three-dimensional continuum}{224}{section.17.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {3}Fibrous structure}{223}{section.17.3}%
+\contentsline {section}{\numberline {3}Fibrous structure}{224}{section.17.3}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {4}Statics of a periodic rod}{223}{section.17.4}%
+\contentsline {section}{\numberline {4}Statics of a periodic rod}{224}{section.17.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {18}Out of elasticity, or plasticity}{224}{chapter.18}%
+\contentsline {chapter}{\numberline {18}Out of elasticity, or plasticity}{225}{chapter.18}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}When elasticity is over}{224}{section.18.1}%
-\contentsline {section}{\numberline {2}Where goes the energy}{224}{section.18.2}%
-\contentsline {chapter}{List of publications}{225}{section.18.2}%
+\contentsline {section}{\numberline {1}When elasticity is over}{225}{section.18.1}%
+\contentsline {section}{\numberline {2}Where goes the energy}{225}{section.18.2}%
+\contentsline {chapter}{List of publications}{226}{section.18.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 

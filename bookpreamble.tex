@@ -433,7 +433,7 @@
 \newlength\negparindent
 \setlength{\negparindent}{-\parindent}
 
-\def\horizontalindentforchapterintro{2.5ex}
+\def\horizontalindentforchapterintro{2.7ex}
 
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
 \let\endchangemargin=\endlist
@@ -736,7 +736,9 @@ aboveskip=4mm,belowskip=2.5mm}
 %labelsep=newline,
 labelsep=period,justification=centering,singlelinecheck=off}
 
-\newcommandx*{\bookauthor}[3][2=,3=]{\mbox{\textbold{#1}}%
+\newcommand*\boldauthor[1]{\textbold{#1}}
+
+\newcommandx*{\bookauthor}[3][2=,3=]{\mbox{\boldauthor{#1}}%
 \ifthenelse{\equal{#2}{}}{}{~\mbox{\textbold{#2}}}%
 \ifthenelse{\equal{#3}{}}{}{\:\mbox{\textbold{#3}}}%
 }
@@ -1002,6 +1004,11 @@ labelsep=period,justification=centering,singlelinecheck=off}
 	before upper=\indent, parbox=false, #1}
 
 \setcounter{totalnumber}{100} % increase number of floats on one page
+
+\newcommand{\lsinglequote}[0]{‘}
+\newcommand{\rsinglequote}[0]{’}
+
+\newcommand\insinglequotes[1]{\lsinglequote{#1}\rsinglequote}
 
 \newcommand{\lquote}[0]{“} % {``}
 \newcommand{\rquote}[0]{”} % {''}
