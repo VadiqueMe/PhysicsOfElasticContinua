@@ -30,19 +30,19 @@
 \contentsline {section}{\numberline {6}Matrices, permutations and determinants}{18}{section.1.6}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {7}The cross product}{20}{section.1.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Symmetric and skewsymmetric tensors}{26}{section.1.8}%
-\contentsline {section}{\numberline {9}Polar decomposition}{31}{section.1.9}%
-\contentsline {section}{\numberline {10}Eigenvectors and eigenvalues}{32}{section.1.10}%
+\contentsline {section}{\numberline {7}The cross product}{22}{section.1.7}%
+\contentsline {section}{\numberline {8}Symmetric and skewsymmetric tensors}{27}{section.1.8}%
+\contentsline {section}{\numberline {9}Polar decomposition}{32}{section.1.9}%
+\contentsline {section}{\numberline {10}Eigenvectors and eigenvalues}{33}{section.1.10}%
 \contentsline {section}{\numberline {11}Collections of invariants of a~symmetric bivalent tensor}{35}{section.1.11}%
-\contentsline {section}{\numberline {12}Rotations via rotation tensors}{35}{section.1.12}%
+\contentsline {section}{\numberline {12}Rotations via rotation tensors}{36}{section.1.12}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {13}Rotations via quaternions}{43}{section.1.13}%
-\contentsline {section}{\numberline {14}Variations}{43}{section.1.14}%
-\contentsline {section}{\numberline {15}Polar decomposition}{44}{section.1.15}%
+\contentsline {section}{\numberline {14}Variations}{44}{section.1.14}%
+\contentsline {section}{\numberline {15}Polar decomposition}{45}{section.1.15}%
 \contentsline {section}{\numberline {16}In the oblique basis}{46}{section.1.16}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
