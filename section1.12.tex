@@ -249,7 +249,7 @@ ${\bm{k}}$\en{ is}\ru{\:---}
 \en{is representable as}\ru{представ\'{и}м как}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{eulerfiniterotation}
-\rotationtensor\hspace{.1ex}(\bm{k}, \vartheta) = \UnitDyad \operatorname{cos} \vartheta + \bm{k} \times\hspace{-0.2ex} \UnitDyad \operatorname{sin} \vartheta + \bm{k} \bm{k} \left( {1 - \operatorname{cos} \vartheta} \right)
+\rotationtensor\hspace{.1ex}(\bm{k}, \vartheta) = \UnitDyad \cosine \vartheta + \bm{k} \times\hspace{-0.2ex} \UnitDyad \sine \vartheta + \bm{k} \bm{k} \left( {1 - \cosine \vartheta} \right)
 \hspace{-0.2ex} .
 \end{equation}
 
@@ -260,7 +260,7 @@ ${\bm{k}}$\en{ is}\ru{\:---}
 Направление~${\bm{k}}$
 во~вр\'{е}мя поворота
 не~меняется~(${\rotationtensor \hspace{-0.2ex}\dotp \bm{k} = \bm{k}\hspace{.12ex}}$), поэтому на~оси поворота ${\mathcircabove{\bm{e}}_3 \hspace{-0.2ex} = \bm{e}_3 \hspace{-0.2ex} = \bm{k}}$.
-В~перпендикулярной плоскости~(\figureref{fig:eulerfiniterotation}) ${\mathcircabove{\bm{e}}_1 \hspace{-0.2ex} = \bm{e}_1 \operatorname{cos} \vartheta - \bm{e}_2 \operatorname{sin} \vartheta}$, ${\mathcircabove{\bm{e}}_2 \hspace{-0.2ex} = \bm{e}_1 \operatorname{sin} \vartheta + \bm{e}_2 \operatorname{cos} \vartheta}$, ${\rotationtensor = \bm{e}_i \mathcircabove{\bm{e}}_i \,\Rightarrow\hspace{.2ex}}$~\eqref{eulerfiniterotation}.
+В~перпендикулярной плоскости~(\figureref{fig:eulerfiniterotation}) ${\mathcircabove{\bm{e}}_1 \hspace{-0.2ex} = \bm{e}_1 \cosine \vartheta - \bm{e}_2 \sine \vartheta}$, ${\mathcircabove{\bm{e}}_2 \hspace{-0.2ex} = \bm{e}_1 \sine \vartheta + \bm{e}_2 \cosine \vartheta}$, ${\rotationtensor = \bm{e}_i \mathcircabove{\bm{e}}_i \,\Rightarrow\hspace{.2ex}}$~\eqref{eulerfiniterotation}.
 
 % ~ ~ ~ ~ ~
 \input{finiterotation.tex}
@@ -270,14 +270,14 @@ ${\bm{k}}$\en{ is}\ru{\:---}
 
 \nopagebreak\vspace{-0.3em}\begin{equation*}
 \locationvector \hspace{.3ex}
-= \hspace{.4ex} \initiallocationvector \operatorname{cos} \vartheta \hspace{.3ex} + \hspace{.3ex} \bm{k} \times \initiallocationvector \hspace{.2ex} \operatorname{sin} \vartheta \hspace{.3ex} + \hspace{.4ex} \bm{k} \bm{k} \dotp \hspace{.1ex} \initiallocationvector \left({1 - \operatorname{cos} \vartheta}\right)
+= \hspace{.4ex} \initiallocationvector \cosine \vartheta \hspace{.3ex} + \hspace{.3ex} \bm{k} \times \initiallocationvector \hspace{.2ex} \sine \vartheta \hspace{.3ex} + \hspace{.4ex} \bm{k} \bm{k} \dotp \hspace{.1ex} \initiallocationvector \left({1 - \cosine \vartheta}\right)
 \hspace{-0.25ex} .
 \end{equation*}
 
 \vspace{-0.2em}
 В~параметрах конечного поворота транспонирование, оно~же обращение, тензора~$\rotationtensor$ эквивалентно перемене направления поворота\:--- знака угла~$\vartheta$
 \[
-\rotationtensor^{\T} \hspace{-0.1ex}=\hspace{.1ex} \rotationtensor \hspace{.1ex} \bigr|_{\vartheta \,=\hspace{.1ex} -\vartheta} \hspace{-0.1ex} = \UnitDyad \operatorname{cos} \vartheta - \bm{k} \times\hspace{-0.2ex} \UnitDyad \operatorname{sin} \vartheta + \bm{k} \bm{k} \left({1 - \operatorname{cos} \vartheta}\right)
+\rotationtensor^{\T} \hspace{-0.1ex}=\hspace{.1ex} \rotationtensor \hspace{.1ex} \bigr|_{\vartheta \,=\hspace{.1ex} -\vartheta} \hspace{-0.1ex} = \UnitDyad \cosine \vartheta - \bm{k} \times\hspace{-0.2ex} \UnitDyad \sine \vartheta + \bm{k} \bm{k} \left({1 - \cosine \vartheta}\right)
 \hspace{-0.3ex} .
 \]
 
@@ -334,12 +334,12 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 \[
 \begin{array}{r@{\hspace{.33em}}c@{\hspace{.25em}}l}
 \mathdotabove{\rotationtensor} \hspace{.2em} & = & \hspace{.1em} \left(\rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex} +^{\mathstrut} \rotationtensor^{\mathsf{\hspace{.12ex}A}}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} =
-\hspace{.1em} \left(\hspace{.2ex} \tikzmark{StartBracePs} {\UnitDyad \operatorname{cos} \vartheta + \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{.32ex} +^{\mathstrut} \hspace{.2ex}
-\tikzmark{StartBracePa} {\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \operatorname{sin} \vartheta \hspace{.2ex}} \tikzmark{EndBracePa} {} \hspace{.16ex}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} \hspace{-0.05em} =
+\hspace{.1em} \left(\hspace{.2ex} \tikzmark{StartBracePs} {\UnitDyad \cosine \vartheta + \bm{k} \bm{k} \left({1 \!-\! \cosine \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{.32ex} +^{\mathstrut} \hspace{.2ex}
+\tikzmark{StartBracePa} {\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \sine \vartheta \hspace{.2ex}} \tikzmark{EndBracePa} {} \hspace{.16ex}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} \hspace{-0.05em} =
 \\[0.4em]
 %
-& = & \hspace{.2em} \tikzmark{StartBraceDotPs} {\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta + \hspace{-0.2ex} ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)} \tikzmark{EndBraceDotPs} \hspace{.64ex} + \\[0.64em]
-& & \hspace{13.2em} + \hspace{.72ex} \tikzmark{StartBraceDotPa} {\hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \operatorname{sin} \vartheta} \tikzmark{EndBraceDotPa}
+& = & \hspace{.2em} \tikzmark{StartBraceDotPs} {\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta + \hspace{-0.2ex} ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \cosine \vartheta}\right)} \tikzmark{EndBraceDotPs} \hspace{.64ex} + \\[0.64em]
+& & \hspace{13.2em} + \hspace{.72ex} \tikzmark{StartBraceDotPa} {\hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \cosine \vartheta + \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \sine \vartheta} \tikzmark{EndBraceDotPa}
 \hspace{.1em} .
 \end{array}\]%
 \vspace{-1.2em}
@@ -411,67 +411,67 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 \shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.25ex} = $} \hspace{2em} \hfill}
 \\[-0.25em]
 %
-\shoveleft{\scalebox{0.8}[0.82]{$= \hspace{.2ex} \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \UnitDyad \operatorname{cos} \vartheta +
-( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \dotp \UnitDyad \operatorname{cos} \vartheta \hspace{.32em} +$} \hfill}
+\shoveleft{\scalebox{0.8}[0.82]{$= \hspace{.2ex} \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta \dotp \UnitDyad \cosine \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \cosine \vartheta}\right) \dotp \UnitDyad \cosine \vartheta \hspace{.32em} +$} \hfill}
 \\[-0.2em]
-\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right)$} \hspace{.2ex} +
-( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}}
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta \dotp \bm{k} \bm{k} \left({1 \!-\! \cosine \vartheta}\right)$} \hspace{.2ex} +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \cosine \vartheta}\right) \hspace{-0.2ex} \dotp \bm{k} \bm{k} \left({1 \!-\! \cosine \vartheta}\right) =$}}
 \\
 %
-\scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
-+ ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.1ex} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) + ( \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k}$} + \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k} ) \left({1 \!-\! \operatorname{cos} \vartheta}\right)^{\hspace{-0.12ex}2} \hspace{-0.25ex} =$}
+\scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta \cosine \vartheta
++ ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.1ex} \cosine \vartheta \left({1 \!-\! \cosine \vartheta}\right) + ( \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k}$} + \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex}\dotp\hspace{-0.1ex} \bm{k} \bm{k} ) \left({1 \!-\! \cosine \vartheta}\right)^{\hspace{-0.12ex}2} \hspace{-0.25ex} =$}
 \\
 %
-\shoveleft{\scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta + \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \hfill}
+\shoveleft{\scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta \cosine \vartheta + \bm{k} \mathdotabove{\bm{k}} \cosine \vartheta \left({1 \!-\! \cosine \vartheta}\right) +$} \hfill}
 \\[-0.2em]
-\shoveright{\hfill \scalebox{0.8}[0.82]{$+ \hspace{.24em} \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta + \mathdotabove{\bm{k}} \bm{k} - 2 \, \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta =$}}\\
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+ \hspace{.24em} \mathdotabove{\bm{k}} \bm{k} \cosine \vartheta - \mathdotabove{\bm{k}} \bm{k} \cosine^{2\hspace{-0.4ex}} \vartheta + \mathdotabove{\bm{k}} \bm{k} - 2 \, \mathdotabove{\bm{k}} \bm{k} \cosine \vartheta + \mathdotabove{\bm{k}} \bm{k} \cosine^{2\hspace{-0.4ex}} \vartheta =$}}\\
 %
-%% \shoveright{\hfill \scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{.1ex}
-%% + \hspace{.1ex} \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)
+%% \shoveright{\hfill \scalebox{0.8}[0.82]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta \cosine \vartheta \hspace{.1ex}
+%% + \hspace{.1ex} \bm{k} \mathdotabove{\bm{k}} \cosine \vartheta \left({1 \!-\! \cosine \vartheta}\right)
 %% + \mathdotabove{\bm{k}} \bm{k}
-%% - \mathdotabove{\bm{k}} \bm{k} \operatorname{cos} \vartheta =$}}\\
+%% - \mathdotabove{\bm{k}} \bm{k} \cosine \vartheta =$}}\\
 %
-\shoveright{\hfill \hspace{4.8em} \scalebox{0.94}[0.96]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{.1ex}
-%% + \hspace{-0.1ex} ( \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right)
-+ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
-- \bm{k} \mathdotabove{\bm{k}} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta
-+ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}}
+\shoveright{\hfill \hspace{4.8em} \scalebox{0.94}[0.96]{$= \left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta \cosine \vartheta \hspace{.1ex}
+%% + \hspace{-0.1ex} ( \bm{k} \mathdotabove{\bm{k}} \cosine \vartheta + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \cosine \vartheta}\right)
++ \bm{k} \mathdotabove{\bm{k}} \cosine \vartheta
+- \bm{k} \mathdotabove{\bm{k}} \cosine^{2\hspace{-0.4ex}} \vartheta
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \cosine \vartheta}\right) \hspace{-0.16ex},$}}
 \end{multline*}
 \begin{multline*}
 \shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
 %
-\shoveleft{\scalebox{0.8}[0.82]{$= ( \hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
-( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \:+$} \hfill} \\[-0.2em]
-\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$ ( \hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.5ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) $} \hspace{.2ex} +
-( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) =$}} \\
+\shoveleft{\scalebox{0.8}[0.82]{$= ( \hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \cosine^{2\hspace{-0.4ex}} \vartheta +
+( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \sine \vartheta \cosine \vartheta \:+$} \hfill} \\[-0.2em]
+\shoveright{\hfill \scalebox{0.8}[0.82]{$+\; \tikzbackcancel[black!25]{$ ( \hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.2ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.5ex} \mathdotabove{\vartheta} \cosine \vartheta \left({1 \!-\! \cosine \vartheta}\right) $} \hspace{.2ex} +
+( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.2ex} \sine \vartheta \left({1 \!-\! \cosine \vartheta}\right) =$}} \\
 %
-\hspace{3.85em} \scalebox{0.94}[0.96]{$= \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{cos}^{2\hspace{-0.4ex}} \vartheta +
-\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta +
+\hspace{3.85em} \scalebox{0.94}[0.96]{$= \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \cosine^{2\hspace{-0.4ex}} \vartheta +
+\mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta \cosine \vartheta +
 %%\hspace{-0.12ex} ( \hspace{.12ex} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{-0.25ex} \dotp \hspace{-0.1ex} \bm{k} \bm{k} \hspace{.2ex}
 \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{.2ex}
-\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\sine \vartheta \left({1 \!-\! \cosine \vartheta}\right) \hspace{-0.16ex},$}
 \end{multline*}
 \begin{multline*}
 \shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex} = $} \hfill} \\[-0.25em]
 %
-\scalebox{0.8}[0.82]{$= ( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} ) \hspace{.25ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \operatorname{sin} \vartheta +
-( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex} \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \operatorname{sin} \vartheta =$} \\
+\scalebox{0.8}[0.82]{$= ( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} ) \hspace{.25ex} \mathdotabove{\vartheta} \sine \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \sine \vartheta +
+( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \cosine \vartheta}\right) \hspace{-0.1ex} \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \sine \vartheta =$} \\
 %
-\scalebox{0.78}[0.82]{$= \hspace{.2ex} \tikzbackcancel[black!25]{$\bm{k} \bm{k} \hspace{-0.12ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta$} \hspace{.12ex}
-- \hspace{-0.1ex} \UnitDyad \hspace{-0.16ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{.25ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
-+ \hspace{-0.2ex} \left( \hspace{-0.1ex} \bm{k} \mathdotabove{\bm{k}} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} + \hspace{.1ex} \tikzbackcancel[black!25]{$\mathdotabove{\bm{k}} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \UnitDyad$} ) \hspace{-0.12ex} \right) \hspace{-0.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta} \right) =$} \\[-0.25em]
+\scalebox{0.78}[0.82]{$= \hspace{.2ex} \tikzbackcancel[black!25]{$\bm{k} \bm{k} \hspace{-0.12ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{.32ex} \mathdotabove{\vartheta} \sine^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta$} \hspace{.12ex}
+- \hspace{-0.1ex} \UnitDyad \hspace{-0.16ex} \dotp \hspace{-0.12ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} ) \hspace{.25ex} \mathdotabove{\vartheta} \sine^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \hspace{-0.2ex} \left( \hspace{-0.1ex} \bm{k} \mathdotabove{\bm{k}} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} + \hspace{.1ex} \tikzbackcancel[black!25]{$\mathdotabove{\bm{k}} \bm{k} \dotp \hspace{-0.1ex} ( \bm{k} \hspace{-0.32ex}\times\hspace{-0.4ex} \UnitDyad$} ) \hspace{-0.12ex} \right) \hspace{-0.2ex} \sine \vartheta \left({1 \!-\! \cosine \vartheta} \right) =$} \\[-0.25em]
 %
-\hspace{13em} \scalebox{0.94}[0.96]{$= \hspace{-0.16ex} - \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
-+ \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \hspace{.2ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.16ex},$}
+\hspace{13em} \scalebox{0.94}[0.96]{$= \hspace{-0.16ex} - \hspace{.2ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \sine^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \hspace{.2ex} \sine \vartheta \left({1 \!-\! \cosine \vartheta}\right) \hspace{-0.16ex},$}
 \end{multline*}
 \begin{multline*}
 \shoveleft{\scalebox{0.94}[0.96]{$\mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex} =
 %
-( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{cos} \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \operatorname{sin} \vartheta + \hspace{-0.1ex}
-( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} \dotp \hspace{-0.16ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{.1ex} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta = $} \hfill} \\
+( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \cosine \vartheta \dotp ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \sine \vartheta + \hspace{-0.1ex}
+( \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{-0.16ex} \dotp \hspace{-0.16ex} ( \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad ) \hspace{.1ex} \sine^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta = $} \hfill} \\
 %
-\shoveright{\hfill \hspace{16em} \scalebox{0.94}[0.96]{$= ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
-+ \bm{k} \mathdotabove{\bm{k}} \operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta \hspace{.2ex};$}}
+\shoveright{\hfill \hspace{16em} \scalebox{0.94}[0.96]{$= ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \sine \vartheta \cosine \vartheta
++ \bm{k} \mathdotabove{\bm{k}} \sine^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta \hspace{.2ex};$}}
 \end{multline*}
 \end{fleqn}
 
@@ -483,38 +483,38 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 - \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.25ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}}
 - \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}} \hspace{-0.25ex} =$} \\[-0.25em]
 %
-\scalebox{0.8}[0.82]{$= {\color{black!50}{\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
-+ \bm{k} \mathdotabove{\bm{k}} \operatorname{cos} \vartheta
-- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
-+ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \operatorname{cos} \vartheta}\right) +$} \\[-0.2em]
+\scalebox{0.8}[0.82]{$= {\color{black!50}{\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta \cosine \vartheta}}
++ \bm{k} \mathdotabove{\bm{k}} \cosine \vartheta
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{.4ex}\cosine^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \bm{k} \left({1 \!-\! \cosine \vartheta}\right) +$} \\[-0.2em]
 %
-\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{.4ex}\operatorname{cos}^{2\hspace{-0.4ex}} \vartheta}}
-+ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta
-+ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{.2ex} {\color{green!50!black}{\hspace{.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{.4ex}}} +$} \\[-0.25em]
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{.4ex}\cosine^{2\hspace{-0.4ex}} \vartheta}}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta \cosine \vartheta
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{.2ex} {\color{green!50!black}{\hspace{.5ex}\sine \vartheta \left({1 \!-\! \cosine \vartheta}\right)\hspace{.4ex}}} +$} \\[-0.25em]
 %
-\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}}
-- \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} {\color{green!50!black}{\hspace{.5ex}\operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right)\hspace{.4ex}}}
-{\color{black!50}{-\hspace{.5ex} ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \operatorname{sin} \vartheta \operatorname{cos} \vartheta}}
-- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{.4ex}\operatorname{sin}^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}} =$} \\[-0.08em]
+\scalebox{0.8}[0.82]{$+\; {\color{blue!80!black}{\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}}} {\color{black!50}{\hspace{.4ex}\sine^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}}
+- \bm{k} \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.32ex} \bm{k} {\color{green!50!black}{\hspace{.5ex}\sine \vartheta \left({1 \!-\! \cosine \vartheta}\right)\hspace{.4ex}}}
+{\color{black!50}{-\hspace{.5ex} ( \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad ) \hspace{.32ex} \mathdotabove{\vartheta} \sine \vartheta \cosine \vartheta}}
+- {\color{magenta!80!black}{\bm{k} \mathdotabove{\bm{k}}}} {\color{black!50}{\hspace{.4ex}\sine^{\hspace{-0.1ex}2\hspace{-0.4ex}} \vartheta}} =$} \\[-0.08em]
 %
 \scalebox{0.79}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
-+ \hspace{-0.1ex} \hspace{-0.16ex} ( \hspace{.2ex} \mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex} - \hspace{-0.2ex} \bm{k} \mathdotabove{\bm{k}} \hspace{.2ex} ) \hspace{.1ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
-+ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
-+ \hspace{-0.1ex} ( \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{-0.12ex} - \hspace{-0.12ex} \bm{k} \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} ) \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
++ \hspace{-0.1ex} \hspace{-0.16ex} ( \hspace{.2ex} \mathdotabove{\bm{k}} \bm{k} \hspace{-0.2ex} - \hspace{-0.2ex} \bm{k} \mathdotabove{\bm{k}} \hspace{.2ex} ) \hspace{.1ex} ({1 \!-\! \cosine \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta \cosine \vartheta \hspace{-0.1ex}
++ \hspace{-0.1ex} ( \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} \bm{k} \hspace{-0.12ex} - \hspace{-0.12ex} \bm{k} \mathdotabove{\bm{k}} \hspace{-0.28ex}\times\hspace{-0.32ex} \bm{k} ) \sine \vartheta \left({1 \!-\! \cosine \vartheta}\right) = $} \\[-0.08em]
 %
 \scalebox{0.8}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
-+ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.25ex} ({1 \!-\! \operatorname{cos} \vartheta}) \hspace{-0.2ex}
-+ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
-+ \bm{k} \hspace{-0.25ex} \times \hspace{-0.32ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.2ex} \bm{k} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) = $} \\[-0.08em]
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.25ex} ({1 \!-\! \cosine \vartheta}) \hspace{-0.2ex}
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta \cosine \vartheta \hspace{-0.1ex}
++ \bm{k} \hspace{-0.25ex} \times \hspace{-0.32ex} ( \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.2ex} \bm{k} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta \left({1 \!-\! \cosine \vartheta}\right) = $} \\[-0.08em]
 %
 \scalebox{0.78}[0.82]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \hspace{-0.1ex}
-+ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \operatorname{cos} \vartheta \hspace{-0.1ex}
-+ \hspace{-0.16ex} ( \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \bm{k} \hspace{-0.1ex} - \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.16ex} \dotp \hspace{-0.1ex} \bm{k} \hspace{.1ex}$} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta \left({1 \!-\! \operatorname{cos} \vartheta}\right) \hspace{-0.1ex}
-+ \hspace{-0.1ex} \bm{k} \hspace{-0.32ex}\times\hspace{-0.25ex}  \mathdotabove{\bm{k}} \hspace{-0.25ex}\times\hspace{-0.42ex} \UnitDyad \hspace{.32ex} ({1 \!-\! \operatorname{cos} \vartheta}) = $} \\
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta \cosine \vartheta \hspace{-0.1ex}
++ \hspace{-0.16ex} ( \mathdotabove{\bm{k}} \bm{k} \hspace{-0.1ex} \dotp \hspace{-0.16ex} \bm{k} \hspace{-0.1ex} - \tikzbackcancel[black!25]{$\bm{k} \mathdotabove{\bm{k}} \hspace{-0.16ex} \dotp \hspace{-0.1ex} \bm{k} \hspace{.1ex}$} ) \hspace{-0.4ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta \left({1 \!-\! \cosine \vartheta}\right) \hspace{-0.1ex}
++ \hspace{-0.1ex} \bm{k} \hspace{-0.32ex}\times\hspace{-0.25ex}  \mathdotabove{\bm{k}} \hspace{-0.25ex}\times\hspace{-0.42ex} \UnitDyad \hspace{.32ex} ({1 \!-\! \cosine \vartheta}) = $} \\
 %
 \shoveright{\hfill \hspace{11.2em}\scalebox{.96}[.96]{$= \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta}
-+ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \operatorname{sin} \vartheta
-+ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.32ex} ({1 \hspace{-0.2ex} - \hspace{-0.2ex} \operatorname{cos} \vartheta})
++ \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.1ex} \sine \vartheta
++ \hspace{-0.1ex} \bm{k} \hspace{-0.2ex}\times\hspace{-0.2ex}  \mathdotabove{\bm{k}} \hspace{-0.2ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.32ex} ({1 \hspace{-0.2ex} - \hspace{-0.2ex} \cosine \vartheta})
 \hspace{.1ex} .
 $}}
 \end{multline*}
@@ -523,8 +523,8 @@ $}}
 
 \nopagebreak\vspace{-0.5em}\begin{equation}
 \bm{\omega} = \bm{k} \hspace{.2ex} \mathdotabove{\vartheta}
-+ \mathdotabove{\bm{k}} \operatorname{sin} \vartheta
-+ \bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}} \left( 1 - \operatorname{cos} \vartheta \right) \hspace{-0.4ex}.
++ \mathdotabove{\bm{k}} \sine \vartheta
++ \bm{k} \hspace{-0.1ex}\times\hspace{-0.1ex} \mathdotabove{\bm{k}} \left( 1 - \cosine \vartheta \right) \hspace{-0.4ex}.
 \end{equation}
 
 \vspace{-0.3em}\noindent

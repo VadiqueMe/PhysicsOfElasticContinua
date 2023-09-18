@@ -15,6 +15,9 @@
 
 \pagestyle{empty}
 
+\newcommand\cosine{\operatorname{cos} \hspace{-0.1ex}}
+\newcommand\sine{\operatorname{sin} \hspace{-0.1ex}}
+
 \begin{document}
 
 \newcommand\polygon[2][]{%
@@ -154,7 +157,7 @@
 
 \[\begin{array}{c}
 {\color{blue}s} = {\color{magenta}r} {\color{blue}\varphi} \\
-{\color{red}t} = \left( {\color{magenta}r} + {\color{orange}r^{\diamond}} \right) \operatorname{sin} {\color{blue}\varphi} = {\color{magenta}r} \, \textstyle\frac{\operatorname{sin} {\color{blue}\varphi}}{\operatorname{cos} {\color{blue}\varphi}}
+{\color{red}t} = \left( {\color{magenta}r} + {\color{orange}r^{\diamond}} \right) \sine {\color{blue}\varphi} = {\color{magenta}r} \, \textstyle\frac{\sine {\color{blue}\varphi}}{\cosine {\color{blue}\varphi}}
 \end{array}\]
 
 \[\begin{array}{c}
@@ -163,18 +166,18 @@
 \end{array}\]
 
 \[\begin{array}{c}
-\left( {\color{magenta}r} + {\color{orange}r^{\diamond}} \right) \operatorname{cos} {\color{blue}\varphi} = {\color{magenta}r} \\[0.2em]
-{\color{magenta}r} \left( 1 - {\operatorname{cos} {\color{blue}\varphi}} \right) = {\color{orange}r^{\diamond}} \operatorname{cos} {\color{blue}\varphi} \\[0.2em]
-{\color{orange}r^{\diamond}} = \textstyle\frac{\color{magenta}r}{\operatorname{cos} {\color{blue}\varphi}} - {\color{magenta}r} = \textstyle\frac{{\color{magenta}r} \left( 1 - {\operatorname{cos} {\color{blue}\varphi}} \right)}{\operatorname{cos} {\color{blue}\varphi}}
+\left( {\color{magenta}r} + {\color{orange}r^{\diamond}} \right) \cosine {\color{blue}\varphi} = {\color{magenta}r} \\[0.2em]
+{\color{magenta}r} \left( 1 - {\cosine {\color{blue}\varphi}} \right) = {\color{orange}r^{\diamond}} \cosine {\color{blue}\varphi} \\[0.2em]
+{\color{orange}r^{\diamond}} = \textstyle\frac{\color{magenta}r}{\cosine {\color{blue}\varphi}} - {\color{magenta}r} = \textstyle\frac{{\color{magenta}r} \left( 1 - {\cosine {\color{blue}\varphi}} \right)}{\cosine {\color{blue}\varphi}}
 \end{array}\]
 
 \[\begin{array}{c}
-{\color{red}t} = \sqrt{{\color{magenta}r}^2 + {\color{red}t}^2 \,} \operatorname{sin} {\color{blue}\varphi} \\[0.2em]
-{\color{red}t}^2 = \left( {\color{magenta}r}^2 + {\color{red}t}^2 \right) \operatorname{sin}^{2\!} {\color{blue}\varphi} \\[0.2em]
-{\color{red}t}^2 \! \left( 1 - \operatorname{sin}^{2\!} {\color{blue}\varphi} \right) = {\color{magenta}r}^2 \operatorname{sin}^{2\!} {\color{blue}\varphi} \\[0.2em]
-{\color{red}t}^2 \operatorname{cos}^{2\!} {\color{blue}\varphi} = {\color{magenta}r}^2 \operatorname{sin}^{2\!} {\color{blue}\varphi} \\[0.2em]
-{\color{red}t} \operatorname{cos} {\color{blue}\varphi} = {\color{magenta}r} \operatorname{sin} {\color{blue}\varphi} \\[0.2em]
-{\color{red}t} = {\color{magenta}r} \, \textstyle\frac{\operatorname{sin} {\color{blue}\varphi}}{\operatorname{cos} {\color{blue}\varphi}} \\[0.2em]
+{\color{red}t} = \sqrt{{\color{magenta}r}^2 + {\color{red}t}^2 \,} \sine {\color{blue}\varphi} \\[0.2em]
+{\color{red}t}^2 = \left( {\color{magenta}r}^2 + {\color{red}t}^2 \right) \sine^{2\!} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t}^2 \! \left( 1 - \sine^{2\!} {\color{blue}\varphi} \right) = {\color{magenta}r}^2 \sine^{2\!} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t}^2 \cosine^{2\!} {\color{blue}\varphi} = {\color{magenta}r}^2 \sine^{2\!} {\color{blue}\varphi} \\[0.2em]
+{\color{red}t} \cosine {\color{blue}\varphi} = {\color{magenta}r} \sine {\color{blue}\varphi} \\[0.2em]
+{\color{red}t} = {\color{magenta}r} \, \textstyle\frac{\sine {\color{blue}\varphi}}{\cosine {\color{blue}\varphi}} \\[0.2em]
 \end{array}\]
 
 \end{document}

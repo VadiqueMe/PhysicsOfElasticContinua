@@ -51,6 +51,9 @@
 \def\mathcolor#1#{\@mathcolor{#1}}
 \makeatother
 
+\newcommand\cosine{\operatorname{cos} \hspace{-0.1ex}}
+\newcommand\sine{\operatorname{sin} \hspace{-0.1ex}}
+
 \newcommand\cosinematrix[1]{o_{#1}}
 
 \definecolor{darkgray}{rgb}{0.33, 0.33, 0.33}
@@ -311,7 +314,7 @@ $}} ;
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 6.6*\interligne} ) {\scalebox{\textscale}{$
 \bm{e}_{\hspace{-.1ex}\alpha} \hspace{-.2ex} \dotp \bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o} \hspace{-.25ex}
 = \cosinematrix{\alpha \beta \hspace{-.1ex} o} \hspace{-.25ex}
-= \operatorname{cos} \hspace{-.2ex} \mathcolor{darkgray}{\scalebox{.88}{$\measuredangle$} (}\bm{e}_{\hspace{-.1ex}\alpha} \mathcolor{darkgray}{,} \hspace{-.15ex} \bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o} \mathcolor{darkgray}{)}
+= \cosine \hspace{-.2ex} \mathcolor{darkgray}{\scalebox{.88}{$\measuredangle$} (}\bm{e}_{\hspace{-.1ex}\alpha} \mathcolor{darkgray}{,} \hspace{-.15ex} \bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o} \mathcolor{darkgray}{)}
 \hspace{.2em} \Leftrightarrow \hspace{.2em}
 \bm{e}_{\hspace{-.1ex}\alpha} \hspace{-.25ex}
 = \cosinematrix{\alpha \beta \hspace{-.1ex} o} \hspace{.1ex} \bm{e}_{\hspace{-.1ex}\beta \hspace{-.1ex} o}
@@ -324,51 +327,51 @@ $}} ;
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 7.6*\interligne} ) {\scalebox{\textscale}{$
 \cosinematrix{\hspace{-.1ex}x x\hspace{-.1ex}o} \hspace{-.25ex}
-= \operatorname{cos} \mathcolor{magenta}{\omega}
+= \cosine \mathcolor{magenta}{\omega}
 $}} ;
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 8.5*\interligne} ) {\scalebox{\textscale}{$
 \cosinematrix{\hspace{-.1ex}x y\hspace{-.1ex}o} \hspace{-.25ex}
-= \operatorname{cos} \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} - \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
-= \operatorname{sin} \mathcolor{magenta}{\omega}
+= \cosine \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} - \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
+= \sine \mathcolor{magenta}{\omega}
 $}} ;
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 9.4*\interligne} ) {\scalebox{\textscale}{$
 \cosinematrix{\hspace{-.1ex}y x\hspace{-.1ex}o} \hspace{-.25ex}
-= \operatorname{cos} \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} + \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
-= - \operatorname{sin} \mathcolor{magenta}{\omega}
+= \cosine \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} + \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
+= - \sine \mathcolor{magenta}{\omega}
 $}} ;
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 10.3*\interligne} ) {\scalebox{\textscale}{$
 \cosinematrix{\hspace{-.1ex}y y\hspace{-.1ex}o} \hspace{-.25ex}
-= \operatorname{sin} \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} + \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
-= \operatorname{cos} \mathcolor{magenta}{\omega}
+= \sine \hspace{.1ex} (\hspace{-0.1ex} \frac{\pi}{2} \hspace{-.25ex} + \hspace{-.2ex} \mathcolor{magenta}{\omega}) \hspace{-.2ex}
+= \cosine \mathcolor{magenta}{\omega}
 $}} ;
 
 \pgfmathsetmacro\textx{0}
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 11.4*\interligne} ) {\scalebox{\textscale}{$
 \bm{e}_{x} \hspace{-.25ex}
-= \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
-+ \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y \hspace{-.1ex} o}
+= \cosine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
++ \sine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y \hspace{-.1ex} o}
 $}} ;
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( \textx, {\texty + 12.3*\interligne} ) {\scalebox{\textscale}{$
 \bm{e}_{y} \hspace{-.25ex}
-= - \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
-+ \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y \hspace{-.1ex} o}
+= - \sine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
++ \cosine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y \hspace{-.1ex} o}
 $}} ;
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( {\initialdx + \textx}, {\texty + 11.4*\interligne} ) {\scalebox{\textscale}{$
 \bm{e}_{x \hspace{-.1ex} o} \hspace{-.25ex}
-= \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x} \hspace{-.25ex}
-- \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y}
+= \cosine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x} \hspace{-.25ex}
+- \sine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y}
 $}} ;
 
 \node [ anchor=west, inner sep=0pt, outer sep=0pt ] at ( {\initialdx + \textx}, {\texty + 12.3*\interligne} ) {\scalebox{\textscale}{$
 \bm{e}_{y \hspace{-.1ex} o} \hspace{-.25ex}
-= \operatorname{sin} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x} \hspace{-.25ex}
-+ \operatorname{cos} \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y}
+= \sine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{x} \hspace{-.25ex}
++ \cosine \mathcolor{magenta}{\omega} \hspace{.1ex} \bm{e}_{y}
 $}} ;
 
 \end{tikzpicture}

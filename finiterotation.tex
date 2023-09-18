@@ -97,22 +97,22 @@
 \end{array} \right]$} \hspace{-0.32ex} = \hspace{-0.2ex}
 %
 \scalebox{0.8}[0.85]{$\left[ \hspace{-0.2ex} \begin{array}{ccc}
-\operatorname{cos} \vartheta & \hspace{-1ex} \operatorname{cos} \left( 90\degree \!+ \vartheta \right) & \operatorname{cos} 90\degree \\
-\operatorname{cos} \left( 90\degree \!- \vartheta \right) & \operatorname{cos} \vartheta & \operatorname{cos} 90\degree \\
-\operatorname{cos} 90\degree & \operatorname{cos} 90\degree & \operatorname{cos} 0\degree
+\cosine \vartheta & \hspace{-1ex} \cosine \left( 90\degree \!+ \vartheta \right) & \cosine 90\degree \\
+\cosine \left( 90\degree \!- \vartheta \right) & \cosine \vartheta & \cosine 90\degree \\
+\cosine 90\degree & \cosine 90\degree & \cosine 0\degree
 \end{array} \right]$} \hspace{-0.32ex} = \hspace{-0.2ex}
 %
 \scalebox{0.8}[0.85]{$\left[ \hspace{-0.1ex} \begin{array}{ccc}
-\operatorname{cos} \vartheta & - \operatorname{sin} \vartheta & 0 \\
-\operatorname{sin} \vartheta & \operatorname{cos} \vartheta & 0 \\
+\cosine \vartheta & - \sine \vartheta & 0 \\
+\sine \vartheta & \cosine \vartheta & 0 \\
 0 & 0 & 1
 \end{array} \right]$}
 \]
 
 \vspace{-0.8em}
 \[\begin{array}{c}
-\mathcircabove{\bm{e}}_1 \hspace{-0.16ex} = \bm{e}_1 \operatorname{cos} \vartheta \hspace{.1ex} - \hspace{.1ex} \bm{e}_2 \operatorname{sin} \vartheta \\[0.1em]
-\mathcircabove{\bm{e}}_2 \hspace{-0.16ex} = \bm{e}_1 \operatorname{sin} \vartheta \hspace{.1ex} + \hspace{.1ex} \bm{e}_2 \operatorname{cos} \vartheta \\[0.1em]
+\mathcircabove{\bm{e}}_1 \hspace{-0.16ex} = \bm{e}_1 \cosine \vartheta \hspace{.1ex} - \hspace{.1ex} \bm{e}_2 \sine \vartheta \\[0.1em]
+\mathcircabove{\bm{e}}_2 \hspace{-0.16ex} = \bm{e}_1 \sine \vartheta \hspace{.1ex} + \hspace{.1ex} \bm{e}_2 \cosine \vartheta \\[0.1em]
 \mathcircabove{\bm{e}}_3 \hspace{-0.16ex} = \bm{e}_3 = \bm{k}
 \end{array}\]
 
@@ -120,13 +120,13 @@
 \begin{multline*}
 \shoveleft{ \rotationtensor = \bm{e}_1 \hspace{-0.1ex} \mathcircabove{\bm{e}}_1 + \bm{e}_2 \mathcircabove{\bm{e}}_2 + \bm{e}_3 \mathcircabove{\bm{e}}_3 = \hfill }\\[1.5em]
 %
-= \hspace{.2ex} \tikzmark{StartBraceE1E1} {\bm{e}_1 \bm{e}_1 \operatorname{cos} \vartheta - \bm{e}_1 \bm{e}_2 \operatorname{sin} \vartheta \hspace{.2em}} \tikzmark{EndBraceE1E1} \hspace{-0.1ex} + \hspace{.1ex} \tikzmark{StartBraceE2E2} {\bm{e}_2 \bm{e}_1 \operatorname{sin} \vartheta + \bm{e}_2 \bm{e}_2 \operatorname{cos} \vartheta \hspace{.2em}} \tikzmark{EndBraceE2E2} \hspace{-0.1ex} + \tikzmark{StartBraceE3E3} {\hspace{.25ex} \bm{k} \bm{k} \hspace{.1ex}} \tikzmark{EndBraceE3E3} \hspace{.1ex}
+= \hspace{.2ex} \tikzmark{StartBraceE1E1} {\bm{e}_1 \bm{e}_1 \cosine \vartheta - \bm{e}_1 \bm{e}_2 \sine \vartheta \hspace{.2em}} \tikzmark{EndBraceE1E1} \hspace{-0.1ex} + \hspace{.1ex} \tikzmark{StartBraceE2E2} {\bm{e}_2 \bm{e}_1 \sine \vartheta + \bm{e}_2 \bm{e}_2 \cosine \vartheta \hspace{.2em}} \tikzmark{EndBraceE2E2} \hspace{-0.1ex} + \tikzmark{StartBraceE3E3} {\hspace{.25ex} \bm{k} \bm{k} \hspace{.1ex}} \tikzmark{EndBraceE3E3} \hspace{.1ex}
 =\\[0.32em]
 %
-= \hspace{.1ex} \UnitDyad \operatorname{cos} \vartheta - \hspace{-0.1ex} \tikzmark{StartBraceKk} {\hspace{.1ex}\bm{e}_3 \bm{e}_3\hspace{.1ex}} \tikzmark{EndBraceKk} \hspace{-0.25ex} \operatorname{cos} \vartheta \hspace{.1ex} + \tikzmark{StartBraceSkewsymmetry} {\left( \bm{e}_2 \bm{e}_1 - \bm{e}_1 \bm{e}_2 \right)} \tikzmark{EndBraceSkewsymmetry} \operatorname{sin} \vartheta + \bm{k} \bm{k} \hspace{.1ex}
+= \hspace{.1ex} \UnitDyad \cosine \vartheta - \hspace{-0.1ex} \tikzmark{StartBraceKk} {\hspace{.1ex}\bm{e}_3 \bm{e}_3\hspace{.1ex}} \tikzmark{EndBraceKk} \hspace{-0.25ex} \cosine \vartheta \hspace{.1ex} + \tikzmark{StartBraceSkewsymmetry} {\left( \bm{e}_2 \bm{e}_1 - \bm{e}_1 \bm{e}_2 \right)} \tikzmark{EndBraceSkewsymmetry} \sine \vartheta + \bm{k} \bm{k} \hspace{.1ex}
 =\\[1.5em]
 %
-\shoveright{ \hfill = \UnitDyad \operatorname{cos} \vartheta + \bm{k} \times \hspace{-0.2ex} \UnitDyad \operatorname{sin} \vartheta + \bm{k} \bm{k} \left({1 - \operatorname{cos} \vartheta}\right) }
+\shoveright{ \hfill = \UnitDyad \cosine \vartheta + \bm{k} \times \hspace{-0.2ex} \UnitDyad \sine \vartheta + \bm{k} \bm{k} \left({1 - \cosine \vartheta}\right) }
 \end{multline*}
 
 \AddOverBrace[line width=0.75pt]{StartBraceE1E1}{EndBraceE1E1}{${\scriptstyle \bm{e}_1 \mathcircabove{\bm{e}}_1}$}

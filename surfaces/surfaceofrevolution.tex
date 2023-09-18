@@ -36,6 +36,9 @@
 
 \newcommand\differentialindex[1]{{\hspace{-0.1ex}\scalebox{0.63}{$\mathcolor{black!70}{\partial}$} #1}}
 
+\newcommand\cosine{\operatorname{cos} \hspace{-0.1ex}}
+\newcommand\sine{\operatorname{sin} \hspace{-0.1ex}}
+
 \begin{document}
 
 %%\begin{center}
@@ -538,7 +541,7 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 \hspace{.1ex} , \:\:
 %%\bm{e}_{\hspace{-0.1ex}\rho} \hspace{-0.45ex}=\hspace{-0.32ex}
 \bm{e}_{\hspace{-0.1ex}\rho}(\varphi) \hspace{-0.2ex}
-= \bm{e}_y \hspace{-0.2ex} \operatorname{cos} \varphi + \bm{e}_{\hspace{-0.1ex}z} \hspace{-0.2ex} \operatorname{sin} \varphi
+= \bm{e}_y \hspace{-0.2ex} \cosine \varphi + \bm{e}_{\hspace{-0.1ex}z} \hspace{-0.2ex} \sine \varphi
 \end{array}\end{equation*}
 
 \begin{equation*}\begin{array}{c}
@@ -557,7 +560,7 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 \hspace{.1ex} , \:\,
 \bm{e}_{\varphi} \hspace{-0.2ex} \equiv
 \scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{\partial \bm{e}_{\hspace{-0.1ex}\rho}}}{\partial \varphi} $}
-= - \hspace{-0.2ex} \operatorname{sin} \varphi \hspace{.2ex} \bm{e}_y \hspace{-0.1ex} + \hspace{.1ex} \operatorname{cos} \varphi \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}z}
+= - \hspace{-0.2ex} \sine \varphi \hspace{.2ex} \bm{e}_y \hspace{-0.1ex} + \hspace{.1ex} \cosine \varphi \hspace{.2ex} \bm{e}_{\hspace{-0.1ex}z}
 \\[.8em]
 %
 \locationvector_\differentialindex{2} \hspace{-0.2ex} = \partial_2 \locationvector
@@ -646,10 +649,10 @@ q^{\hspace{.05ex}2} \hspace{-0.2ex} = s
 	\node [black, inner sep=0pt, outer sep=0pt] at ( .8, -0.66 )
 		{$ \begin{array}{c}
 		\scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{.1ex} \xi}}{d s} $}
-		\hspace{-0.1ex} = \operatorname{cos} \psi
+		\hspace{-0.1ex} = \cosine \psi
 		\\[.66em]
 		\scalebox{.85}{$ \displaystyle\frac{\raisemath{-0.15em}{d \hspace{-0.06ex} \rho}}{d s} $}
-		\hspace{-0.1ex} = \operatorname{sin} \psi
+		\hspace{-0.1ex} = \sine \psi
 		\end{array} $} ;
 
 \end{tikzpicture}

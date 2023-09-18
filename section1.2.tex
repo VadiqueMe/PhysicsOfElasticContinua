@@ -332,12 +332,12 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \en{and}\ru{и}~\en{each of the basis ones}\ru{каждым из базисных}:
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{anglesbetweenvectorandbasisvectors}
-\operatorname{cos} \measuredangle \bigl( \bm{v} \widehat{\phantom{w}} \bm{e}_i \bigr) %%( \bm{v}, \bm{e}_i )
+\cosine \measuredangle \bigl( \bm{v} \widehat{\phantom{w}} \bm{e}_i \bigr) %%( \bm{v}, \bm{e}_i )
 \hspace{-0.1ex}
 = \scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.16em}{\bm{v}}}{\raisemath{-0.05em}{\|\bm{v}\|}} $} \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{e}_i \hspace{-0.1ex}
 = \hspace{-0.1ex}\scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.12em}{v_i}}{\raisemath{-0.1em}{\sqrt{\vphantom{i} v_{\hspace{-0.1ex}j} v_{\hspace{-0.1ex}j}}}} $}
 \hspace{.4em}\Leftrightarrow\hspace{.4em}
-\tikzmark{beginComponentOfVectorThruLengthAndCosine} v_i \hspace{.3ex} \tikzmark{endComponentOfVectorThruLengthAndCosine} \hspace{-0.4ex} = \|\bm{v}\| \hspace{-0.1ex} \operatorname{cos} \measuredangle ({\bm{v}, \bm{e}_i})
+\tikzmark{beginComponentOfVectorThruLengthAndCosine} v_i \hspace{.3ex} \tikzmark{endComponentOfVectorThruLengthAndCosine} \hspace{-0.4ex} = \|\bm{v}\| \hspace{-0.1ex} \cosine \measuredangle ({\bm{v}, \bm{e}_i})
 \hspace{.1ex} .
 \end{equation}%
 \AddUnderBrace[line width=.75pt][-0.1ex, 0][xshift=.12em, yshift=.1em]%
@@ -363,7 +363,7 @@ is the same as the dot product of these vectors.
 \en{via dividing a~vector by its magnitude}\ru{делением вектора на его магнитуду}.
 
 \nopagebreak\vspace{-0.2em}\begin{gather*}
-\operatorname{cos} \measuredangle ({\bm{v}, \bm{w}}) \hspace{-0.1ex}
+\cosine \measuredangle ({\bm{v}, \bm{w}}) \hspace{-0.1ex}
 = \scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.16em}{\bm{v}}}{\raisemath{-0.05em}{\|\bm{v}\|}} $} \hspace{-0.1ex} \dotp \scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.16em}{\bm{w}}}{\raisemath{-0.05em}{\|\bm{w}\|}} $}
 \hspace{.2ex} .
 \end{gather*}
@@ -394,13 +394,13 @@ it is an orientation matrix.
 \en{According to}\ru{Согласно}~\eqref{anglesbetweenvectorandbasisvectors}
 
 \nopagebreak\vspace{-0.2em}\begin{gather*}
-\operatorname{cos} \measuredangle ({\bm{v}, \bm{e}_m}) \hspace{-0.1ex}
+\cosine \measuredangle ({\bm{v}, \bm{e}_m}) \hspace{-0.1ex}
 = \scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.16em}{\bm{v}}}{\raisemath{-0.05em}{\|\bm{v}\|}} $} \hspace{-0.1ex} \dotp \bm{e}_m \hspace{-0.1ex}
 = \hspace{-0.1ex}\scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.12em}{v_m}}{\raisemath{-0.1em}{\sqrt{\vphantom{i} v_{\hspace{-0.1ex}j} v_{\hspace{-0.1ex}j}}}} $}
 \hspace{.1ex} ,
 \\
 %
-\operatorname{cos} \measuredangle ({\bm{w}, \bm{e}_n}) \hspace{-0.1ex}
+\cosine \measuredangle ({\bm{w}, \bm{e}_n}) \hspace{-0.1ex}
 = \scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.16em}{\bm{w}}}{\raisemath{-0.05em}{\|\bm{w}\|}} $} \hspace{-0.1ex} \dotp \bm{e}_n \hspace{-0.1ex}
 = \hspace{-0.1ex}\scalebox{.9}{$ \displaystyle\frac{\hspace{.2ex}\raisemath{-0.12em}{w_n}}{\raisemath{-0.1em}{\sqrt{\vphantom{i} w_{\hspace{-0.1ex}k} w_{\hspace{-0.1ex}k}}}} $}
 \hspace{.1ex} .
@@ -540,12 +540,12 @@ ${
 \begin{gather*}
 \cosinematrix{k'\hspace{-0.1ex}i} \hspace{-0.2ex}
 = \bm{e}'_{k} \hspace{-0.2ex} \dotp \bm{e}_i
-= \operatorname{cos} \measuredangle (
+= \cosine \measuredangle (
     \bm{e}'_{k}
     \hspace{.1ex} , \hspace{-0.1ex}
     \bm{e}_i
 ) \hspace{-0.1ex}
-= \operatorname{cos} \measuredangle (
+= \cosine \measuredangle (
     \bm{e}_{i}
     \hspace{.1ex} , \hspace{-0.1ex}
     \bm{e}'_{k}
@@ -557,12 +557,12 @@ ${
 %
 \cosinematrix{ki'} \hspace{-0.25ex}
 = \bm{e}_k \hspace{-0.15ex} \dotp \bm{e}'_{i} \hspace{-0.25ex}
-= \operatorname{cos} \measuredangle (
+= \cosine \measuredangle (
     \bm{e}_k
     \hspace{.1ex} , \hspace{-0.1ex}
     \bm{e}'_{i}
 \hspace{.1ex} ) \hspace{-0.1ex}
-= \operatorname{cos} \measuredangle (
+= \cosine \measuredangle (
     \bm{e}'_{i}
     \hspace{.1ex} , \hspace{-0.1ex}
     \bm{e}_k

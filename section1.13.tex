@@ -27,27 +27,186 @@
 \en{volumes}\ru{в~томах}
 xxv\hbox{--}xxxvi\en{,}
 3\en{rd}\ru{ей}
-\en{Series}\ru{серии},
+\en{series}\ru{серии},
 1844\hbox{--}1850.%
 %%Each publication, including the last one, ended with the~words
 %%\insinglequotes{To be continued}\hbox{\hspace{-0.5ex}.}
 }\hbox{\hspace{-0.5ex}.}
 
+..........
 
-Lorem ipsum ....
+\subsection*{\en{Complex numbers}\ru{Комплексные числа}}
 
+\begin{gather*}
+p,q \in \mathbb{C}
+\\
+\begin{array}{r@{\hspace{.22em}}c@{\hspace{.22em}}l}
+p = & %%\scalebox{.8}{$\mathcolor{black!40}{(1\cdot)}\hspace{.4ex}$}
+\exponentofimaginary{\varphi} & = \cosine \varphi + i \sine \varphi
+\\
+q = & %%\scalebox{.8}{$\mathcolor{black!40}{(1\cdot)}\hspace{.4ex}$}
+\exponentofimaginary{\psi} & = \cosine \psi + i \sine \psi
+\end{array}
+\end{gather*}
+
+the~composition of two rotations
+\begin{equation*}
+p \hspace{.1ex} q = \exponentofimaginary{\varphi} \exponentofimaginary{\psi} \hspace{-0.2ex} = \exponentofimaginary{( \varphi + \psi )}
+\end{equation*}
+
+\begin{align*}
+\exponentofimaginary{(\varphi + \psi)} \hspace{-0.3ex}
+= & \cosine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi ) + i \sine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi )
+\\
+%
+\exponentofimaginary{\varphi} \exponentofimaginary{\psi} \hspace{-0.2ex}
+= & \hspace{.5ex} ( \cosine \varphi + i \sine \varphi ) ( \cosine \psi + i \sine \psi )
+\\
+%
+= & \hspace{.5ex} \begin{multlined}[t]
+( \cosine \varphi \cosine \psi - \sine \varphi \sine \psi )
+\\
+\hspace{2em} + i \hspace{.2ex} ( \sine \varphi \cosine \psi + \cosine \varphi \sine \psi )
+\end{multlined}
+\end{align*}
+
+\noindent
+from there also follows
+
+\begin{equation*}
+\begin{array}{r@{\hspace{.22em}}c@{\hspace{.25em}}l}
+\cosine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi )
+& = &
+\cosine \varphi \cosine \psi - \sine \varphi \sine \psi
+\\[.2em]
+%
+\sine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi )
+& = &
+\sine \varphi \cosine \psi + \cosine \varphi \sine \psi
+\end{array}
+\end{equation*}
+
+.............
+
+All rotations are \en{a~}\inquotes{\en{group}\ru{группа}}
+\en{in the~sense}\ru{в~смысле}
+\en{of~}\href{https://en.wikipedia.org/wiki/Group_theory}{\en{the~group theory}\ru{теории групп}}
+\en{in }\ru{в~}\href{https://en.wikipedia.org/wiki/Abstract_algebra}{\en{abstract algebra}\ru{абстрактной алгебре}}.
+
+\href{https://en.wikipedia.org/wiki/%C3%89variste_Galois}{Évariste Galois}
+
+\href{https://en.wikipedia.org/wiki/Permutation_group}{permutations are group} too
+
+\en{A~}\emph{\en{group}\ru{Группа}}~%
+\{\hspace{.3ex}$\mathcal{G}$,\hspace{-0.4ex} \inquotes{$\circ\hspace{.1ex}$}\hspace{.3ex}\}
+\en{is}\ru{это}
+\en{a~set}\ru{множество}~$\mathcal{G}$
+\en{with }\ru{с~}\en{a~binary operation}\ru{бинарной операцией}~\inquotes{$\circ\hspace{.1ex}$},
+\en{where}\ru{где}
+\textit{(i)}~\inquotes{$\circ\hspace{.1ex}$}~\en{is associative}\ru{ассоциативна},
+${( h \circ g ) \circ \hspace{-0.1ex} f \hspace{-0.1ex} = h \circ ( g \circ \hspace{-0.1ex} f )}$
+\en{for}\ru{для}
+\en{any}\ru{любых}
+${h, g, \hspace{-0.1ex} f \hspace{-0.1ex} \in \mathcal{G}}$,
+\textit{(ii)}~$\mathcal{G}$~\en{has}\ru{имеет} \en{a~two\hbox{-}sided}\ru{двухсторонний} \en{identity element}\ru{тождественный элемент},
+${\exists \hspace{.4ex} e {\hspace{.3ex} \in \hspace{.3ex}} \mathcal{G} \colon g \circ e = e \circ g = g \hspace{1ex} \forall g {\hspace{.2ex} \in \hspace{.2ex}} \mathcal{G}}$,
+\en{and }\ru{и~}\textit{(iii)}~\en{every element}\ru{каждый элемент} \en{of~}$\mathcal{G}$ \en{has}\ru{имеет} \en{an~inverse}\ru{обратный} \en{element}\ru{элемент},
+${\forall g {\hspace{.2ex} \in \hspace{.2ex}} \mathcal{G} \hspace{.8ex} \exists \hspace{.2ex} g^{\littleminusone} \colon g \circ g^{\littleminusone} \hspace{-0.25ex} = g^{\littleminusone} \hspace{-0.25ex} \circ g = e}$.
+
+Group operation~\inquotes{$\circ\hspace{.1ex}$}
+can be
+commutative
+or non-commutative.
+%
+A~group
+with a~commutative operation
+is called
+\en{commutative group}\ru{коммутативная группа},
+\en{or}\ru{или}
+\en{abelian group}\ru{абелева группа}.
+%
+If there exists
+at least one
+pair of elements ${a, b \in \mathcal{G}}$
+for which ${a \circ b \neq b \circ a}$,
+then this group is non-abelian (non-commutative).
+
+\en{A~}\emph{\en{field}\ru{Поле}}~%
+\{\hspace{.3ex}$\mathcal{F}$\hspace{-0.2ex},\hspace{-0.4ex} \inquotes{$+\hspace{.1ex}$},\hspace{-0.4ex} \inquotes{$*\hspace{.1ex}$}\hspace{.3ex}\}
+\en{is}\ru{это}
+\en{a~set}\ru{множество}~$\mathcal{F}$
+\en{with two}\ru{с~двумя}
+\en{binary operations}\ru{бинарными операциями}
+\inquotes{$+\hspace{.1ex}$}~and~\inquotes{$*\hspace{.1ex}$},
+\en{when}\ru{когда}
+\textit{(i)}~\{\hspace{.3ex}$\mathcal{F}$,\hspace{-0.4ex} \inquotes{$+\hspace{.1ex}$}\hspace{.3ex}\}\en{ is}\ru{\:---}
+\en{commutative group}\ru{коммутативная группа},
+${a + b = b + a}$ ${\forall a, \hspace{-0.2ex} b \hspace{-0.2ex} \in \hspace{-0.3ex} \mathcal{F}}$,
+\en{with }\ru{с~}\inquotes{\en{additive}\ru{аддитивным}} \en{identity}\ru{тождественным}
+${e_{0} {\hspace{.2ex} \in \hspace{.3ex}} \mathcal{F}}$,
+\textit{(ii)}~\{\hspace{.3ex}$\mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}$,\hspace{-0.4ex} \inquotes{$*\hspace{.1ex}$}\hspace{.3ex}\}\en{ is}\ru{\:---}
+\en{commutative group}\ru{коммутативная группа},
+${a * b = b * a}$ ${\forall a, \hspace{-0.2ex} b \hspace{-0.2ex} \in \hspace{-0.3ex} \mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}}$,
+\en{with }\ru{с~}\inquotes{\en{multiplicative}\ru{мультипликативным}} \en{identity}\ru{тождественным}
+${e_{1} {\hspace{.2ex} \in \hspace{.3ex}} \mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}}$
+(${e_{1} \hspace{-0.3ex} \neq \hspace{-0.2ex} e_{0}}$),
+${a, \hspace{-0.2ex} b \hspace{-0.2ex} \in \hspace{-0.3ex} \mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}}$
+$\Rightarrow$
+${a * b \hspace{-0.2ex} \neq \hspace{-0.2ex} e_{0}}$
+\en{for}\ru{для}~${\forall a {\hspace{.4ex} \neq \hspace{.4ex}} e_{0}}$
+\en{and}\ru{и}~${\forall \hspace{.2ex} b {\hspace{.4ex} \neq \hspace{.4ex}} e_{0}}$
+\textit{(iii)}~......
+
+
+..............
+
+Two imaginary units
+${j \neq i}$
+
+\begin{equation*}
+( a + b \hspace{.1ex} i ) ( c + d \hspace{.1ex} j )
+= ac + cb \hspace{.1ex} i + ad \hspace{.1ex} j + bd \hspace{.2ex} i \hspace{-0.1ex} j
+\end{equation*}
+
+By introducing
+third
+imaginary unit~$k$\::
+${i \hspace{-0.1ex} j = k}$
 
 \begin{equation}\label{theformulaforquaternions}
 i^2 \hspace{-0.1ex} = j^2 \hspace{-0.1ex} = k^2 \hspace{-0.1ex} = i \hspace{-0.1ex} j k = -1
 \hspace{.2ex} .
 \end{equation}
 
+\noindent
+and making multiplication
+not commutative but anticommutative
+
 \begin{equation}\label{moredefinitionalequationsforquaternions}
-ij = k = - \hspace{.1ex} ji \hspace{.1ex} , \hspace{.7em}
+i \hspace{-0.1ex} j = k = - \hspace{.1ex} ji \hspace{.1ex} , \hspace{.7em}
 jk = i = - \hspace{.1ex} kj \hspace{.1ex} , \hspace{.7em}
 k \hspace{.1ex} i = \hspace{-0.1ex} j = - \hspace{.2ex} ik \hspace{.1ex} ,
 \end{equation}
 
+\noindent
+meet quaternions.
+
+In fact there’s only two different imaginary units,
+and a third one is there just for short notation (${k = i \hspace{-0.1ex} j}$),
+say they’re only $i$~\en{and}\ru{и}~$j$, ${i^2 = j^2 = -1}$, ${i \neq j}$,
+and a~quaternion is ${q = a + b \hspace{.1ex} i + cj + d \hspace{.2ex} i \hspace{-0.1ex} j}$,
+with the really-easy-to-memorize equalities for multiplication
+${j i \hspace{-0.1ex} j = i}$, ${i \hspace{-0.1ex} j i = j}$
+and obvious
+${i \hspace{-0.1ex} j \hspace{-0.1ex} j = -i}$, ${ii \hspace{-0.1ex} j = -j}$,
+from there follows the anticommutativity itself,
+${ji = -i \hspace{-0.1ex} j}$.
+
+The following are absolutely the same,
+just a result of denoting ${k = i \hspace{-0.1ex} j}$,
+${i \hspace{-0.1ex} j i \hspace{-0.1ex} j = i \hspace{-0.1ex} j k = k^2}$
+and the \inquotes{really-easy-to-memorize} are derivable as well
+${i \hspace{-0.1ex} j i \hspace{-0.1ex} j = (i \hspace{-0.1ex} ji)j = j^2 = i(ji \hspace{-0.1ex} j) = i^2}$.
 
 ...
 
