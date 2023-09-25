@@ -271,32 +271,47 @@ v_i \hspace{-0.2ex} = \bm{v} \dotp \bm{e}_i
 \setlength{\parindent}{0pt}
 
 \begin{leftverticalbar}%%[oversize]
-\en{Here and hereinafter,}\ru{Здесь и~далее} \ru{принимается соглашение о~суммировании }\en{the~}Einstein’\en{s}\ru{а}\en{ summation convention is accepted}:
+\en{Here and hereinafter}\ru{Здесь и~далее}\en{,}
+\ru{принимается соглашение о~суммировании }\en{the~}Einstein’\en{s}\ru{а}\en{ summation convention is accepted}\::
 \en{an~index repeated twice~(and no~more than twice) in a~single term}\ru{повторённый дважды~(и~не~более чем дважды) в~одночлене индекс}
 \en{implies a~summation over this index}\ru{подразумевает суммирование по~этому индексу}.
 \en{And}\ru{А}~\en{a~non-repeating index}\ru{неповторяющийся индекс}
 \en{is called}\ru{называется}
 \inquotesx{\en{free}\ru{свободным}}[,]
 \en{and}\ru{и}
-\en{it is identical in the~both parts of~the~equation}\ru{он одинаков в~обеих частях равенства}.
-\en{These are examples}\ru{Это примеры}:
+\en{it is identical}\ru{он одинаков}
+\en{in the~both parts}\ru{в~обеих частях}
+\en{of~equality}\ru{равенства}.
+\en{These are examples}\ru{Вот примеры}
 
-\nopagebreak\vspace{-0.2em}
-\begin{equation*}
-\sigma = \mathtau_{ii} \hspace{.1ex}, \;\;
-p_{\hspace{-0.1ex}j} \hspace{-0.25ex} = n_i \mathtau_{i\hspace{-0.1ex}j}
-\hspace{.1ex} , \;\;
-m_i \hspace{-0.2ex} = e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.15ex} x_{\hspace{-0.1ex}j} \hspace{-0.1ex} f_{\hspace{-0.1ex}k}
-\hspace{.1ex} , \;\;
+\nopagebreak\vspace{-0.8em}
+\begin{align*}
 a_i \hspace{-0.2ex} = \hspace{-0.1ex} \lambda b_i \hspace{-0.2ex} + \hspace{-0.1ex} \mu c_i
+\hspace{.1ex} , & \hspace{.6em}
+%
+\sigma
+= \mathtau_{ii} \hspace{-0.2ex}
+= \raisebox{.1em}{\scalebox{.66}{$ \hspace{-0.2ex} \displaystyle \sum_{\smash{\scalebox{.9}{$i$}}} \hspace{.2ex} $}} \mathtau_{ii}
+\hspace{.1ex} ,
+\\[-0.4em]
+%
+p_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= n_i \mathtau_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \raisebox{.1em}{\scalebox{.66}{$ \hspace{-0.2ex} \displaystyle \sum_{\smash{\scalebox{.9}{$i$}}} \hspace{.2ex} $}} n_i \mathtau_{i\hspace{-0.1ex}j}
+\hspace{.1ex} , & \hspace{.6em}
+%
+m_i \hspace{-0.2ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.15ex} x_{\hspace{-0.1ex}j} \hspace{-0.1ex} f_{\hspace{-0.1ex}k} \hspace{-0.2ex}
+= \raisebox{.1em}{\scalebox{.66}{$ \hspace{-0.2ex} \displaystyle \sum_{\smash{\scalebox{.9}{$j,\hspace{-0.2ex}k$}}} \hspace{.2ex} $}}
+e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.15ex} x_{\hspace{-0.1ex}j} \hspace{-0.1ex} f_{\hspace{-0.1ex}k}
 \hspace{.1ex} .
-\end{equation*}
+\end{align*}
 
-\vspace{-1.1em}
-(\en{But equations}\ru{Равенства~же}
-${a = b_{k\hspace{-0.1ex}k\hspace{-0.1ex}k} \hspace{.1ex}}$,
-${c = f_{\hspace{-0.1ex}i} \hspace{-0.2ex} + \hspace{-0.1ex} g_k \hspace{.1ex}}$,
-${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0.1ex}j}}$
+\vspace{-1em}
+(\en{But equalities}\ru{Равенства~же}
+${a \mathcolor{black!50}{=} b_{k\hspace{-0.1ex}k\hspace{-0.1ex}k} \hspace{.1ex}}$,
+${c \mathcolor{black!50}{=} \hspace{-0.2ex} f_{\hspace{-0.1ex}i} \hspace{-0.2ex} + \hspace{-0.1ex} g_k \hspace{.1ex}}$,
+${d_{i\hspace{-0.1ex}j} \hspace{-0.2ex} \mathcolor{black!50}{=} k_i \hspace{.2ex} q_{i\hspace{-0.1ex}j}}$
 \en{are incorrect}\ru{некорректны}.)
 \end{leftverticalbar}
 \par}
@@ -311,8 +326,8 @@ ${a_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = k_i \hspace{.2ex} \gamma_{i\hspace{-0
 \nopagebreak\vspace{-0.15em}
 \begin{equation}\label{vectorlength}
 \bm{v} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{v} \hspace{-0.1ex}
-= v_i \bm{e}_i \hspace{-0.1ex} \dotp v_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.25ex}
-= v_i \hspace{.1ex} \KroneckerDelta{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.25ex}
+= v_i \bm{e}_i \hspace{-0.1ex} \dotp v_{\hspace{-0.1ex}j} \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= v_i \hspace{.1ex} \KroneckerDelta{i\hspace{-0.1ex}j} \hspace{.1ex} v_{\hspace{-0.1ex}j} \hspace{-0.2ex}
 = v_i v_i
 \hspace{.1ex} , \hspace{.5em}
 \| \bm{v} \| \hspace{-0.1ex}

@@ -28,10 +28,6 @@
 \contentsline {section}{\numberline {4}Tensor algebra, or operations with tensors}{13}{section.1.4}%
 \contentsline {section}{\numberline {5}Polyadic representation (decomposition)}{16}{section.1.5}%
 \contentsline {section}{\numberline {6}Matrices, permutations and determinants}{18}{section.1.6}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {7}The cross product}{22}{section.1.7}%
 \contentsline {section}{\numberline {8}Symmetric and skewsymmetric tensors}{27}{section.1.8}%
 \contentsline {section}{\numberline {9}Polar decomposition}{32}{section.1.9}%
@@ -308,14 +304,8 @@
 \contentsline {chapter}{\numberline {11}Shells and plates}{200}{chapter.11}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Surface geometry}{200}{section.11.1}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {2}The model of a~shell}{202}{section.11.2}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {3}The balance of forces and moments for a~shell}{203}{section.11.3}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {4}Shells: The relations of elasticity}{203}{section.11.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 

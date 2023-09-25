@@ -143,14 +143,14 @@ ${\bm{v} \dotp \bm{a}_i \hspace{-0.1ex} = \hspace{.1ex} v^{k} \bm{a}_k \hspace{-
 
 \vspace{-0.1em}\noindent
 Коэффициент~$\gamma$ получился равным (с~точностью до~знака для \inquotes{левой} тройки ${\bm{a}_i}$) объёму параллелепипеда, построенного на~векторах~$\bm{a}_i$.
-\en{In}\ru{В}~\sectionref{section:crossproduct} \en{the~same volume}\ru{тот~же объём} \en{was presented as}\ru{был представлен как}~${\hspace{-.22ex}\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{.16ex}}$, \en{and this is}\ru{и~это} \en{not without reason}\ru{не без причины}, \en{because}\ru{ведь} \en{it coincides with the~square root of}\ru{он совпад\'{а}ет с~квадратным корнем из}~\href{https://en.wikipedia.org/wiki/Gramian_matrix}{\en{gramian}\ru{грамиана}}~\hbox{$\textsl{g} \hspace{.1ex} \hspace{.25ex} \equiv \hspace{.2ex} \operatorname{det} \textsl{g}_{i\hspace{-0.1ex}j}$\hspace{-0.12ex}}\:--- \en{determinant of}\ru{определителя} \en{the~symmetric}\ru{симметричной} \ru{матрицы }\hbox{\href{https://en.wikipedia.org/wiki/J\%C3\%B8rgen_Pedersen_Gram}{J.\,P.\:Gram}\ru{’а}}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \equiv \hspace{.2ex} \bm{a}_i \dotp \bm{a}_j}$.
+\en{In}\ru{В}~\sectionref{section:crossproduct} \en{the~same volume}\ru{тот~же объём} \en{was presented as}\ru{был представлен как}~${\hspace{-.22ex}\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{.16ex}}$, \en{and this is}\ru{и~это} \en{not without reason}\ru{не без причины}, \en{because}\ru{ведь} \en{it coincides with the~square root of}\ru{он совпад\'{а}ет с~квадратным корнем из}~\href{https://en.wikipedia.org/wiki/Gramian_matrix}{\en{gramian}\ru{грамиана}}~\hbox{$\textsl{g} \hspace{.1ex} \hspace{.25ex} \equiv \hspace{.2ex} \determinant \textsl{g}_{i\hspace{-0.1ex}j}$\hspace{-0.12ex}}\:--- \en{determinant of}\ru{определителя} \en{the~symmetric}\ru{симметричной} \ru{матрицы }\hbox{\href{https://en.wikipedia.org/wiki/J\%C3\%B8rgen_Pedersen_Gram}{J.\,P.\:Gram}\ru{’а}}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \equiv \hspace{.2ex} \bm{a}_i \dotp \bm{a}_j}$.
 
 \noindent
 ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
 \hspace{.6em} }$
 \en{The~proof}\ru{Доказательство}
 \en{resembles}\ru{напоминает}
-\en{the~derivation}\ru{вывод}\en{ of}~\eqref{doublepermutationsymbols}.
+\en{the~derivation}\ru{вывод}\en{ of}~\eqref{theproductoftwopermutations}.
 \en{The~}\inquotes{\en{triple product}\ru{Тройное произведение}}
 ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex} \bm{a}_k}$
 \en{in some}\ru{в~каком\hbox{-}нибудь}
@@ -168,7 +168,7 @@ ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex}
 \begin{equation*}
 \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.1ex}
 \equiv \hspace{.16ex} \bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex} \bm{a}_k =
-\hspace{.1ex} \pm \hspace{.1ex} \operatorname{det}\hspace{-0.1ex}
+\hspace{.1ex} \pm \hspace{.1ex} \determinant\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 \bm{a}_i \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{e}_3 \\
 \bm{a}_j \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{e}_3 \\
@@ -184,7 +184,7 @@ ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex}
 \begin{equation*}
 \permutationsparitysymbols{pqr} \hspace{-0.15ex}
 \equiv \hspace{.16ex} \bm{a}_p \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_q \dotp \hspace{.1ex} \bm{a}_r =
-\hspace{.1ex} \pm \hspace{.1ex} \operatorname{det}\hspace{-0.1ex}
+\hspace{.1ex} \pm \hspace{.1ex} \determinant\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 \bm{a}_p \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_q \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_r \narrowdotp\hspace{.12ex} \bm{e}_1 \\
 \bm{a}_p \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_q \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_r \narrowdotp\hspace{.12ex} \bm{e}_2 \\
@@ -208,7 +208,7 @@ ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{a}_p \hspace{-0.2ex} \dotp \bm{e}_
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
 \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \permutationsparitysymbols{pqr} = \hspace{0.25ex}
-\operatorname{det}\hspace{-0.1ex}
+\determinant\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_p & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_q & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_r \\
 \bm{a}_j \narrowdotp\hspace{.12ex} \bm{a}_p & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{a}_q & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{a}_r \\
@@ -217,7 +217,7 @@ ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{a}_p \hspace{-0.2ex} \dotp \bm{e}_
 \end{equation*}
 
 \vspace{-0.1em} \noindent
-${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\permutationsparitysymbols{123} \hspace{.2ex} \permutationsparitysymbols{123} \hspace{-0.15ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, \textsl{g}_{i\hspace{-0.1ex}j}}$.
+${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\permutationsparitysymbols{123} \hspace{.2ex} \permutationsparitysymbols{123} \hspace{-0.15ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\determinant} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\determinant} \, \textsl{g}_{i\hspace{-0.1ex}j}}$.
 ${ \hspace{.6em}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex); }$
 
@@ -278,7 +278,7 @@ $}\end{equation*}
 \[
 \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} \hspace{.32ex} =
 - \hspace{.4ex} \bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 \hspace{.1ex} \dotp \hspace{.25ex} \bm{a}_3 \hspace{.2ex} =
-- \operatorname{det}\hspace{-0.1ex}
+- \determinant\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 1 & 1 & 0 \\
 1 & 0 & 1 \\
@@ -286,7 +286,7 @@ $}\end{equation*}
 \end{array}\hspace{-0.12ex}\right]$} \hspace{-0.5ex} = 2 \hspace{.25ex};
 \]
 \[
-- \hspace{.4ex} \bm{a}_2 \hspace{-0.2ex} \times \bm{a}_3 = \operatorname{det}\hspace{-0.1ex}
+- \hspace{.4ex} \bm{a}_2 \hspace{-0.2ex} \times \bm{a}_3 = \determinant\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
 1 & \bm{e}_1 & 0 \\
 0 & \bm{e}_2 & 1 \\
@@ -294,7 +294,7 @@ $}\end{equation*}
 \end{array}\hspace{-0.2ex}\right]$} \hspace{-0.5ex} = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_2 \hspace{-0.2ex} - \bm{e}_3 \hspace{.1ex},
 \]
 \[
-- \hspace{.4ex} \bm{a}_3 \hspace{-0.2ex} \times \bm{a}_1 = \operatorname{det}\hspace{-0.1ex}
+- \hspace{.4ex} \bm{a}_3 \hspace{-0.2ex} \times \bm{a}_1 = \determinant\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
 0 & \bm{e}_1 & 1 \\
 1 & \bm{e}_2 & 1 \\
@@ -302,7 +302,7 @@ $}\end{equation*}
 \end{array}\hspace{-0.2ex}\right]$} \hspace{-0.5ex} = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_3 \hspace{-0.2ex} - \bm{e}_2 \hspace{.1ex},
 \]
 \[
-- \hspace{.4ex} \bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 = \operatorname{det}\hspace{-0.1ex}
+- \hspace{.4ex} \bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 = \determinant\hspace{-0.1ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
 1 & \bm{e}_1 & 1 \\
 1 & \bm{e}_2 & 0 \\
@@ -433,7 +433,7 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 1 & 2 & 1 \\
 1 & 1 & 2
 \end{array}\hspace{-0.12ex}\right]$} \hspace{-0.2ex}, \:\:
-\operatorname{det} \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = 4 \hspace{.16ex}, \\
+\determinant \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = 4 \hspace{.16ex}, \\
 %
 \operatorname{adj} \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = \hspace{-0.16ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
@@ -442,7 +442,7 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 -1 & -1 & 3
 \end{array}\hspace{-0.12ex}\right]^{\hspace{-0.4ex}\scalebox{1.02}{$\T$}}$} \hspace{-0.8ex}, \\
 %
-\textsl{g}^{\hspace{.32ex}i\hspace{-0.1ex}j} \hspace{-0.25ex} = \textsl{g}_{i\hspace{-0.1ex}j}^{\hspace{.4ex}\expminusone} \hspace{-0.12ex} = \displaystyle \frac{\operatorname{adj} \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j}}{\operatorname{det} \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j}} =
+\textsl{g}^{\hspace{.32ex}i\hspace{-0.1ex}j} \hspace{-0.25ex} = \textsl{g}_{i\hspace{-0.1ex}j}^{\hspace{.4ex}\expminusone} \hspace{-0.12ex} = \displaystyle \frac{\operatorname{adj} \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j}}{\determinant \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j}} =
 \displaystyle \frac{1}{4} \hspace{.12ex}
 \scalebox{0.92}[0.92]{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
 3 & -1 & -1 \\

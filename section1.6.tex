@@ -7,7 +7,7 @@
 \en{Matrices}\ru{Матрицы}
 \en{are the~convenient tool}\ru{это удобный инструмент}
 \en{for}\ru{для}
-\en{arranging}\ru{упорядочивания}
+\en{arranging}\ru{расположения}
 \en{of~elements}\ru{элементов}
 \en{and for}\ru{и~для}
 \en{solving}\ru{решения}
@@ -24,30 +24,32 @@
 \en{Matrices}\ru{Матрицы}
 \en{can be presented}\ru{могут быть представлены}
 \en{as tables}\ru{как таблицы}
-\en{full of rows and columns}\ru{полные строк и~столбцов}.
+\en{full of rows and columns}\ru{полные строк и~колонок}.
 \en{Any matrix has}\ru{У~любой матрицы}
 \en{the~same number of elements}\ru{одно и то~же число элементов}
 \en{in each row}\ru{в~каждой строке}
-\en{and}\ru{и}
-\en{the~same number of elements}\ru{одно и то~же число элементов}
-\en{in each column}\ru{в~каждом столбце}.
-\en{The~rectangular arrangement}\ru{Прямоугольное упорядочивание}
-\en{of~elements}\ru{элементов},
-\en{anyone}\ru{кто-нибудь}?
+\en{and }\ru{и~}%
+\en{the~same number of elements}\ru{одно и~то~же число элементов}
+\en{in each column}\ru{в~каждой колонке}.
+\en{Rectangular}\ru{Прямоугольное}
+\en{arrangement}\ru{расположение}
+\en{of~items}\ru{элементов},
+\en{anyone}\ru{кому-нибудь}?
 \en{Matrices}\ru{Матрицы}
 \en{are full}\ru{полн\'{ы}}
 \en{of~numbers}\ru{чисел}
 \en{and }\ru{и~}\en{expressions}\ru{выражений}
-\en{in rows and columns}\ru{в~строках и~столбцах}.
-A~column
-arranges data
-vertically
-from top to bottom,
-while
-a~row
-arranges
-horizontally
-from left to right.
+\en{in rows}\ru{в~строках}
+\en{and columns}\ru{и~колонках}.
+\en{A~column}\ru{Колонка~(столбец)}
+\en{arranges elements}\ru{располагает элементы}
+\en{vertically}\ru{вертикально}
+\en{from top to bottom}\ru{сверху вниз},
+\en{while}\ru{тогда как}
+\en{a~row}\ru{строка~(ряд)}
+\en{arranges}\ru{располагает}
+\en{horizontally}\ru{горизонтально}
+\en{from left to right}\ru{слева направо}.
 
 %--------------------
 
@@ -121,11 +123,11 @@ C_{31}
 $}
 & \hspace{1em}
 \scalebox{.8}{$ \begin{array}{l@{\hspace{1em}}c}
-\text{3~\en{rows}\ru{строки}, 1~\en{column}\ru{столбец}}
+\text{3~\en{rows}\ru{строки}, 1~\en{column}\ru{колонка}}
    & \text{\emph{\en{a~matrix}\ru{матрица}}} \\
 3{×}1
    & \text{\emph{\en{with just one}\ru{лишь с~одним}}} \\
-\text{\en{a\:}\emph{\inquotes{\en{column matrix}\ru{матрица-столбец}}}}
+\text{\en{a\:}\emph{\inquotes{\en{column matrix}\ru{матрица-колонка}}}}
    & \text{\emph{\en{column}\ru{столбцом}}}
 \end{array} $}
 \\[.4em]
@@ -207,38 +209,27 @@ $}
 ....
 
 
-\subsection*{\en{Matrices and the one-dimensional arrays}\ru{Матрицы и одномерные массивы}}
+\subsection*{\en{Matrices and one-dimensional arrays}\ru{Матрицы и одномерные массивы}}
 
-\en{The two indices of a~table}\ru{Два индекса таблицы}\en{ is}\ru{\:---} \en{more than}\ru{больше, чем}
+\en{Two indices}\ru{Два индекса}
+\en{of~a~table}\ru{таблицы}\en{ are}\ru{\:---}
+\en{more than}\ru{больше, чем}
 \en{the single index}\ru{единственный индекс}
 \en{of a~one-dimensional array}\ru{одномерного массива}.
 \en{Due to this}\ru{Из-за этого}\en{,}
-\en{an~one-dimensional array}\ru{одномерный массив}
+\en{a~one-dimensional array}\ru{одномерный массив}
 \en{could be}\ru{может быть}
 \en{presented}\ru{представлен}
-\en{as}\ru{как}
-\en{a~table of rows}\ru{таблица строк}
+\inquotes{\en{vertically}\ru{вертикально}}
 \en{or}\ru{или}
+\inquotesx{\en{horizontally}\ru{горизонтально}}[,]
+\en{either}\ru{либо}
 \en{as}\ru{как}
-\en{a~table of columns}\ru{таблица столбцов}.
+\en{a~table}\ru{таблица}
+\en{of~rows}\ru{строк}
+\en{in~one column}\ru{в~одну колонку}
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\scalebox{.9}{$
-\left[ \hspace{-0.1ex}
-\begin{array}{c@{\hspace{.5em}}c@{\hspace{.5em}}c}
-h_{1\hspace{-0.1ex}1} & h_{12} & h_{13}
-\end{array}
-\hspace{-0.1ex} \right]
-$}
-\hspace{-0.1ex} ,
-\end{equation*}
-
-\vspace{-0.2em}\noindent
-\en{or}\ru{либо}
-\en{the vertical}\ru{вертикальные}
-\en{tables}\ru{таблицы}
-
-\nopagebreak\vspace{-0.2em}
+\nopagebreak\vspace{-0.5em}
 \begin{equation*}
 \scalebox{.9}{$
 \left[ \hspace{-0.1ex}
@@ -249,13 +240,27 @@ v_{31}
 \end{array}
 \hspace{-0.1ex} \right]
 $}
-\hspace{-0.2ex} .
+,
 \end{equation*}
 
-${
-\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \hspace{.4ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex} = 1
-}$
+\noindent
+\en{or}\ru{либо}
+\en{as}\ru{как}
+\en{a~table}\ru{таблица}
+\en{of~columns}\ru{колонок}
+\en{in~one row}\ru{в~одну строку}
 
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
+\scalebox{.9}{$
+\left[ \hspace{-0.1ex}
+\begin{array}{c@{\hspace{.5em}}c@{\hspace{.5em}}c}
+h_{1\hspace{-0.1ex}1} & h_{12} & h_{13}
+\end{array}
+\hspace{-0.1ex} \right]
+$}
+\hspace{.1ex} .
+\end{equation*}
 
 ....
 
@@ -266,7 +271,7 @@ ${
 \en{They}\ru{Их}
 \en{are often}\ru{часто}
 \en{associated}\ru{связывают}
-\en{with names}\ru{с~именами}
+\en{with the~names}\ru{с~именами}
 \en{of~}\href{https://en.wikipedia.org/wiki/Oswald_Veblen}{Oswald\ru{’а} Veblen\ru{’а}}
 \en{and}\ru{и}~%
 \href{https://en.wikipedia.org/wiki/Tullio_Levi-Civita}{Tullio Levi\hbox{-}Civita\ru{’ы}}.
@@ -288,19 +293,73 @@ e_{pqr} \hspace{-0.2ex}
 \begin{equation}\label{permutationsymbolasdeterminant}
 e_{pqr} \hspace{-0.1ex}
 = \hspace{.1ex}
-\operatorname{det}\hspace{-0.25ex} \scalebox{.92}{$\left[ \begin{array}{ccc}
+\determinant\hspace{-0.25ex} \scalebox{.92}{$\left[ \begin{array}{ccc}
 \delta_{1p} & \delta_{1q} & \delta_{1r} \\
 \delta_{2p} & \delta_{2q} & \delta_{2r} \\
 \delta_{3p} & \delta_{3q} & \delta_{3r}
 \end{array} \hspace{-0.1ex} \right]$} \hspace{-0.2ex}
 = \hspace{.1ex}
-\operatorname{det}\hspace{-0.25ex} \scalebox{.92}{$\left[ \begin{array}{ccc}
+\determinant\hspace{-0.25ex} \scalebox{.92}{$\left[ \begin{array}{ccc}
 \delta_{p1} & \delta_{p2} & \delta_{p3} \\
 \delta_{q1} & \delta_{q2} & \delta_{q3} \\
 \delta_{r1} & \delta_{r2} & \delta_{r3}
 \end{array} \hspace{-0.1ex} \right]$}
 \hspace{-0.2ex} .
 \end{equation}
+
+....
+
+\en{A~determinant}\ru{Определитель}
+\en{is not sensitive}\ru{не~чувствителен}
+\en{to transposing}\ru{к~транспонированию},
+
+\nopagebreak\vspace{-0.25em}
+\begin{equation*}
+\determinantby{i}{\hspace{.15ex}j} \, A_{i\hspace{-0.1ex}j} \hspace{-0.16ex}
+= \hspace{.1ex} \determinantby{i}{\hspace{.15ex}j} \, A_{j\hspace{-0.06ex}i} \hspace{-0.16ex}
+= \hspace{.1ex} \determinantby{j\hspace{-0.2ex}}{\hspace{.1ex}i} \, A_{i\hspace{-0.1ex}j}
+\hspace{.1ex} .
+\end{equation*}
+
+....
+
+\en{The~determinant}\ru{Определитель}
+\en{of the~matrix product}\ru{матричного произведения}
+\en{of two matrices}\ru{двух матриц}
+\en{is equal}\ru{равен}
+\en{to the~product}\ru{произведению}
+\en{of determinants}\ru{определителей}
+\en{of these matrices}\ru{этих матриц}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{determinantofmatrixproduct}
+\determinantby{i}{k} \, \somematrixelements{ik} \hspace{.4ex} \determinantby{k}{\hspace{.15ex}j} \, C_{kj} \hspace{-0.15ex}
+= \hspace{.1ex} \determinantby{i}{\hspace{.15ex}j} \, \somematrixelements{ik} \hspace{.1ex} C_{kj}
+\end{equation}
+
+\[
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \determinantby{m}{n} \, \somematrixelements{m\mathcolor{blue}{s}} \hspace{.1ex} C_{\mathcolor{blue}{s}n} \hspace{-0.2ex}
+= e_{pqr} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}\mathcolor{blue}{i}} C_{\mathcolor{blue}{i}p} \hspace{.1ex} \somematrixelements{\hspace{-0.1ex}g\mathcolor{blue}{j}} C_{\hspace{-0.1ex}\mathcolor{blue}{j}\hspace{-0.1ex}q} \hspace{.1ex} \somematrixelements{h\mathcolor{blue}{k}} C_{\mathcolor{blue}{k}r}
+\hspace{-0.2ex}
+\]
+
+\[
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \determinantby{m}{s} \, \somematrixelements{ms} \hspace{-0.2ex}
+= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}i} \somematrixelements{\hspace{-0.1ex}gj} \somematrixelements{hk}
+\hspace{-0.2ex}
+\]
+
+\[
+e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.33ex} \determinantby{s}{\hspace{.1ex}n} \, C_{sn} \hspace{-0.2ex}
+= e_{pqr} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
+\hspace{-0.2ex}
+\]
+
+\[
+e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!50}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.33ex} \determinantby{m}{s} \, \somematrixelements{ms} \hspace{.33ex} \determinantby{s}{\hspace{.1ex}n} \, C_{sn} \hspace{-0.2ex}
+= \mathcolor{black!50}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.2ex} e_{pqr} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}i} \somematrixelements{\hspace{-0.1ex}gj} \somematrixelements{hk} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
+\hspace{-0.2ex}
+\]
 
 ...
 
@@ -309,10 +368,10 @@ e_{pqr} \hspace{-0.1ex}
 \en{equality}\ru{равенство}
 
 \nopagebreak\vspace{-0.1em}
-\begin{equation}\label{doublepermutationsymbols}
+\begin{equation}\label{theproductoftwopermutations}
 e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{pqr}
 \hspace{-0.1ex} = \hspace{.1ex}
-\operatorname{det} \hspace{-0.25ex} \left[
+\determinant \hspace{-0.25ex} \left[
 \begin{array}{ccc}
 \delta_{ip} & \delta_{iq} & \delta_{ir} \\
 \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} & \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} & \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}r} \\
@@ -321,104 +380,107 @@ e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{pqr}
 \right]
 \end{equation}
 
-\begin{otherlanguage}{russian}
-
 \noindent
 ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
 \hspace{.6em} }$
-Доказательство
-начнём
-с~представления
-символов чётности перестановки
-как определителей~\eqref{permutationsymbolasdeterminant}.
-${ e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.2ex}
-= \pm \hspace{.4ex}
-\bm{e}_i \hspace{-0.36ex} \times \hspace{-0.2ex} \bm{e}_j \hspace{-0.15ex} \dotp \hspace{.1ex} \bm{e}_k }$ по строкам,
-${ e_{pqr} \hspace{-0.2ex}
-= \pm \hspace{.4ex}
-\bm{e}_p \hspace{-0.36ex} \times \hspace{-0.2ex} \bm{e}_q \hspace{-0.15ex} \dotp \hspace{.1ex} \bm{e}_r }$ по~столбцам,
-с~\inquotes{$-$} для~\inquotes{левой} тройки
+\en{Representing}\ru{Представляя}
+\en{the~permutation parity symbols}\ru{символы чётности перестановки}
+\en{via}\ru{через}
+\en{determinants}\ru{определители}~\eqref{permutationsymbolasdeterminant},
+${ e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} }$~\en{by~rows}\ru{по~строкам}
+\en{and}\ru{и}~${ e_{pqr} }$~\en{by~columns}\ru{по~колонкам}
 
-\nopagebreak\vspace{-0.25em}
+\nopagebreak\vspace{-0.2em}
 \begin{equation*}
 e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.1ex} = \hspace{.1ex}
-\operatorname{det}\hspace{-0.25ex} \scalebox{0.96}[0.96]{$\left[\begin{array}{ccc}
+\determinant\hspace{-0.25ex} \scalebox{0.96}[0.96]{$\left[\begin{array}{ccc}
 \delta_{i1} & \delta_{i2} & \delta_{i3} \\
 \delta_{\hspace{-0.1ex}j1} & \delta_{\hspace{-0.1ex}j2} & \delta_{\hspace{-0.1ex}j3} \\
 \delta_{k1} & \delta_{k2} & \delta_{k3}
-\end{array}\right]$} \hspace{-0.25ex}, \:\:
+\end{array}\right]$}
+\hspace{-0.2ex} , \hspace{.5em}
+%
 e_{pqr} \hspace{-0.1ex} = \hspace{.1ex}
-\operatorname{det}\hspace{-0.25ex} \scalebox{0.96}[0.96]{$\left[\begin{array}{ccc}
+\determinant\hspace{-0.25ex} \scalebox{0.96}[0.96]{$\left[\begin{array}{ccc}
 \delta_{p1} & \delta_{q1} & \delta_{r1} \\
 \delta_{p2} & \delta_{q2} & \delta_{r2} \\
 \delta_{p3} & \delta_{q3} & \delta_{r3}
 \end{array}\right]$}
-\hspace{-0.2ex} .
+\hspace{-0.2ex} ,
 \end{equation*}
 
-\vspace{-0.1em}\noindent
-Левая часть~\eqref{doublepermutationsymbols}
-есть произведение
+\vspace{-0.25em}\noindent
 ${e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{pqr}}$
-этих определителей.
-Но~${\operatorname{det} \hspace{.2ex} (\hspace{-0.1ex}AB\hspace{.1ex}) = (\operatorname{det} A)(\operatorname{det} B)}$\:---
-определитель произведения матриц равен произведению определителей~\eqref{determinantofmatrixproduct}.
-В~матрице\hbox{-}произведении
-элемент~${\left[{\,\cdots\,}\right]}_{1\hspace{-0.1ex}1}$
-равен~${\delta_{is} \delta_{ps} \hspace{-0.2ex} = \delta_{ip}}$,
-как~и~в~\eqref{doublepermutationsymbols};
-\textcolor{magenta}{легко проверить и~другие фрагменты}.
+\en{on the~left side of}\ru{в~левой части}~\eqref{theproductoftwopermutations}
+\en{appears as}\ru{предстаёт как}
+\en{the~product}\ru{произведение}
+\en{of~these determinants}\ru{этих определителей}.
+%
+\en{And then}\ru{И~тогда}~${\determinant \hspace{.2ex} (\hspace{-0.1ex}AB\hspace{.1ex}) = (\determinant A)(\determinant B)}$\:---
+\en{the~determinant}\ru{определитель}
+\en{of~matrix product}\ru{матричного произведения}
+\en{is equal}\ru{равен}
+\en{to the~product}\ru{произведению}
+\en{of~determinants}\ru{определителей}~\eqref{determinantofmatrixproduct}.
+%
+\en{In~the~product matrix}\ru{В~матрице-произведении}\en{,}
+\en{the~item}\ru{элемент}~${\left[{\,\cdots\,}\right]}_{1\hspace{-0.1ex}1}$
+\en{equals}\ru{равен}~${\delta_{is} \delta_{ps} \hspace{-0.2ex} = \delta_{ip}\hspace{.1ex}}$,
+\en{just like}\ru{совсем как}
+\en{on}\ru{в}~\en{the~right side}\ru{правой части}\en{ of}~\eqref{theproductoftwopermutations}\,;
+\en{same}\ru{так~же}
+\en{for all}\ru{и~для всех}
+\en{the~other items}\ru{других элементов}.
 ${ \hspace{.6em}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex); }$
 
-\end{otherlanguage}
-
-\en{The contraction of}\ru{Свёртка}~\eqref{doublepermutationsymbols}
+\en{The contraction of}\ru{Свёртка}~\eqref{theproductoftwopermutations}
 \en{leads to}\ru{ведёт к}~%
-\en{useful}\ru{полезным}
+\en{the~useful}\ru{полезным}
 \en{formulas}\ru{формулам}
 
 \nopagebreak\vspace{-0.2em}
-\begin{equation*}\begin{array}{c}
+\begin{multline*}
 e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{pqk} \hspace{-0.1ex} = \hspace{.2ex}
-\operatorname{det} \hspace{-0.25ex} \left[
+\determinant \hspace{-0.25ex} \left[
 \begin{array}{ccc}
 \delta_{ip} & \delta_{iq} & \delta_{ik} \\
 \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} & \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} & \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}k} \\
 \delta_{kp} & \delta_{kq} & \delta_{kk}
 \end{array}
 \right] \hspace{-0.5ex} = \hspace{.2ex}
-\operatorname{det} \hspace{-0.25ex} \left[
+\determinant \hspace{-0.25ex} \left[
 \begin{array}{ccc}
 \delta_{ip} & \delta_{iq} & \delta_{ik} \\
 \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} & \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} & \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}k} \\
 \delta_{kp} & \delta_{kq} & 3
 \end{array}
-\right] \hspace{-0.5ex} =
-\\[1.5em]
+\right] %% \hspace{-0.5ex} =
+\\[.2em]
 %
 = \hspace{.1ex} 3 \hspace{.2ex} \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{-0.1ex}
 + \delta_{iq} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}k} \delta_{kp} \hspace{-0.1ex}
 + \delta_{ik} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} \delta_{kq} \hspace{-0.1ex}
 - \delta_{ik} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} \delta_{kp} \hspace{-0.1ex}
 - \hspace{.1ex} 3 \hspace{.2ex} \delta_{iq} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} \hspace{-0.1ex}
-- \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}k} \delta_{kq} \hspace{-0.1ex} =
-\\[.25em]
+- \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}k} \delta_{kq} %% \hspace{-0.1ex} =
+\\
 %
 = \hspace{.1ex} 3 \hspace{.2ex} \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{-0.1ex}
 + \delta_{iq} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} \hspace{-0.1ex}
 + \delta_{iq} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} \hspace{-0.1ex}
 - \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{-0.1ex}
 - \hspace{.1ex} 3 \hspace{.2ex} \delta_{iq} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} \hspace{-0.1ex}
-- \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{-0.1ex} =
-\\[.25em]
+- \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} %% \hspace{-0.1ex} =
+\\
 %
 = \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{-0.1ex}
 - \hspace{.1ex} \delta_{iq} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p}
 \hspace{.2ex} ,
-\end{array}\end{equation*}
+\end{multline*}
 
-\nopagebreak\vspace{-0.15em}\begin{equation*}
+\nopagebreak\vspace{-0.8em}
+\begin{equation*}
 e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{pj\hspace{-0.1ex}k} \hspace{-0.15ex}
 = \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.12ex}j} \hspace{-0.2ex} - \hspace{.1ex} \delta_{i\hspace{-0.1ex}j} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p} \hspace{-0.15ex}
 = \hspace{.1ex} 3 \hspace{.2ex} \delta_{ip} \hspace{-0.2ex} - \delta_{ip} \hspace{-0.15ex}
@@ -426,18 +488,20 @@ e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{pj\hspace{-0.1ex}k} \hspa
 \hspace{.2ex} ,
 \end{equation*}
 
-\nopagebreak\vspace{-0.15em}\begin{equation*}
+\nopagebreak\vspace{-0.8em}
+\begin{equation*}
 e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.15ex}
 = \hspace{.1ex} 2 \hspace{.2ex} \delta_{ii} \hspace{-0.15ex}
 = \hspace{.1ex} 6
 %%\hspace{.2ex} .
 \end{equation*}
 
-\vspace{-0.33em}\noindent
+\vspace{-0.4em}\noindent
 \en{or}\ru{или}
 \en{in short}\ru{вкратце}
 
-\nopagebreak\vspace{-0.3em}\begin{equation}\label{doublepermutationscontracted}
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{doublepermutationscontracted}
 e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{pqk} \hspace{-0.25ex} = \delta_{ip} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}q} \hspace{-0.25ex} - \hspace{.1ex} \delta_{iq} \delta_{\hspace{-0.1ex}j\hspace{-0.1ex}p}
 \hspace{.2ex} ,
 \hspace{.5em}
@@ -452,69 +516,25 @@ e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} e_{i\hspace{-0.1ex}j\hspace{
 
 ....
 
-\en{Determinant}\ru{Определитель}
-\en{is not sensitive}\ru{не~чувствителен}
-\en{to transposing}\ru{к~транспонированию}\::
+${
+\determinantby{i}{\hspace{.15ex}j} \hspace{.4ex} \delta_{i\hspace{-0.1ex}j} \hspace{-0.15ex} = 3
+}$
 
-\nopagebreak\vspace{-0.25em}\begin{equation*}
-\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j} \hspace{-0.16ex}
-= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, A_{j\hspace{-0.06ex}i} \hspace{-0.16ex}
-= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$j\hspace{-0.2ex}$,$\hspace{.1ex}i$}}}{\operatorname{det}} \, A_{i\hspace{-0.1ex}j}
-\hspace{.1ex} .
-\end{equation*}
+.....
 
-...
-
-\inquotes{\en{The determinant}\ru{Определитель}
-\en{of the matrix product}\ru{матричного произведения}
-\en{of the two matrices}\ru{двух матриц}
-\en{is equal}\ru{равен}
-\en{to the product of determinants}\ru{произведению определителей}
-\en{of these matrices}\ru{этих матриц}}
-
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{determinantofmatrixproduct}
-\underset{\raisebox{.15em}{\scalebox{.7}{$i$,$k$}}}{\operatorname{det}} \, \somematrixelements{ik} \hspace{.4ex} \underset{\raisebox{.15em}{\scalebox{.7}{$k$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, C_{kj} \hspace{-0.15ex}
-= \hspace{.1ex} \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\operatorname{det}} \, \somematrixelements{ik} \hspace{.1ex} C_{kj}
-\end{equation}
-
-\[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$n$}}}{\operatorname{det}} \, \somematrixelements{m\mathcolor{blue}{s}} \hspace{.1ex} C_{\mathcolor{blue}{s}n} \hspace{-0.2ex}
-= e_{pqr} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}\mathcolor{blue}{i}} C_{\mathcolor{blue}{i}p} \hspace{.1ex} \somematrixelements{\hspace{-0.1ex}g\mathcolor{blue}{j}} C_{\hspace{-0.1ex}\mathcolor{blue}{j}\hspace{-0.1ex}q} \hspace{.1ex} \somematrixelements{h\mathcolor{blue}{k}} C_{\mathcolor{blue}{k}r}
-\hspace{-0.2ex}
-\]
-
-\[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, \somematrixelements{ms} \hspace{-0.2ex}
-= e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}i} \somematrixelements{\hspace{-0.1ex}gj} \somematrixelements{hk}
-\hspace{-0.2ex}
-\]
-
-\[
-e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
-= e_{pqr} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
-\hspace{-0.2ex}
-\]
-
-\[
-e_{\hspace{-0.25ex}f\hspace{-0.2ex}gh} \hspace{.2ex} \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$m$,$s$}}}{\operatorname{det}} \, \somematrixelements{ms} \hspace{.33ex} \underset{\raisebox{.15em}{\scalebox{.7}{$s$,$n$}}}{\operatorname{det}} \, C_{sn} \hspace{-0.2ex}
-= \mathcolor{black!66}{e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}} \hspace{.2ex} e_{pqr} \hspace{.1ex} \somematrixelements{\hspace{-0.25ex}f\hspace{-0.1ex}i} \somematrixelements{\hspace{-0.1ex}gj} \somematrixelements{hk} \hspace{.1ex} C_{ip} C_{\hspace{-0.1ex}j\hspace{-0.1ex}q} C_{kr}
-\hspace{-0.2ex}
-\]
-
-...
-
-\begin{otherlanguage}{russian}
-
-Определитель
-компонент
-\en{of a~bivalent tensor}\ru{бивалентного тензора}
+\en{The~determinant}\ru{Определитель}
+\en{of~components}\ru{компонент}
+\en{of~a~bivalent tensor}\ru{бивалентного тензора}
 \en{is invariant}\ru{инвариантен},
-он
-не~меняется
-с~поворотом базиса
+\en{it}\ru{он}
+\en{doesn’t change}\ru{не~меняется}
+\en{with a~rotation}\ru{с~поворотом}
+\en{of~the~basis}\ru{базиса}
 
-\end{otherlanguage}
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
 A'_{i\hspace{-0.1ex}j} \hspace{-0.16ex} = \cosinematrix{i'\hspace{-0.1ex}m} \hspace{.1ex} \cosinematrix{j'\hspace{-0.1ex}n} \hspace{.16ex} A_{mn}
 \end{equation*}
+
+....
+

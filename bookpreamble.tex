@@ -356,12 +356,13 @@
 \newcommand\elcursive{\smash{\scalebox{.9}{$\text{\textcursive{\slshape l}}$}\hspace{.5ex}}}
 \newcommand\elcursivesub[1]{\smash{\scalebox{.9}{$\text{\textcursive{\slshape l}}$}_{\raisemath{-0.22ex}{\hspace{.1ex}#1}}}}
 
-\newcommand\sine{\operatorname{sine}}
-\newcommand\cosine{\operatorname{cosine}}
-%%\newcommand\sineinshrt{\operatorname{sin}}
-%%\newcommand\cosineinshrt{\operatorname{cos}}
+\newcommand\sine{\operatorname{sin}} % \operatorname{sine}
+\newcommand\cosine{\operatorname{cos}} % \operatorname{cosine}
 
 \newcommand\trace[1]{\operatorname{trace}\hspace{.16ex}{#1}}
+
+\newcommand\determinant{\operatorname{det}}
+\newcommand\determinantby[2]{\underset{\raisebox{.15em}{\scalebox{.7}{${#1}$,${#2}$}}}{\determinant}}
 
 \newcommand\realpart[1]{\operatorname{{\Re}e}\hspace{.16ex}{#1}}
 \newcommand\imaginarypart[1]{\operatorname{{\Im}m}\hspace{.16ex}{#1}}
