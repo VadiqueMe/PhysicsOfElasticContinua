@@ -33,6 +33,9 @@
 %%\usepackage{calligra}
 \usepackage{frcursive}
 
+\usepackage{imfellEnglish}
+\renewcommand*\rmdefault{cmr} % imfellEnglish sets a new rmdefault, get the cmr back
+
 \usepackage[usenames,dvipsnames]{xcolor}
 
 \definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
@@ -561,7 +564,7 @@
 	}%
 }
 
-\newcommand\widearc[1]{%
+\newcommand\tikzwidearc[1]{%
 	\tikz[baseline=(wideArcAnchor.base)]{%
 		\node [inner sep=0] (wideArcAnchor) {$#1$};
 		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.33ex) $);
@@ -570,7 +573,7 @@
 			(wideArcAnchorA) to (wideArcAnchorB) ;
 }}
 
-\newcommand\widearctoo[1]{%
+\newcommand\tikzwidearctoo[1]{%
 	\tikz[baseline=(wideArcAnchor.base)]{%
 		\node [inner sep=0] (wideArcAnchor) {$#1$};
 		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.66ex) $);
@@ -579,7 +582,7 @@
 			(wideArcAnchorA) to (wideArcAnchorB) ;
 }}
 
-\newcommand\widearclowered[1]{%
+\newcommand\tikzwidearclowered[1]{%
 	\tikz[baseline=(wideArcAnchor.base)]{%
 		\node [inner sep=0] (wideArcAnchor) {$#1$};
 		\coordinate (wideArcAnchorA) at ($ (wideArcAnchor.north west) + (0.2ex, 0.2ex) $);

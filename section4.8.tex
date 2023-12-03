@@ -12,80 +12,340 @@
 \en{into the sum}\ru{на сумму}
 \en{of the symmetric and antisymmetric parts}\ru{симметричной и~антисимметричной частей}
 
-\nopagebreak\vspace{-0.1em}\begin{equation}
+\nopagebreak\vspace{.5em}\begin{equation}
 \label{lineartheory:displacementgradientdecomposed}
 \boldnabla \bm{u} \hspace{.2ex} = \tikzmark{beginSymmNablaU} \hspace{.3ex} \infinitesimaldeformation \hspace{.4ex} \tikzmark{endSymmNablaU} \hspace{-0.16ex} - \hspace{.25ex} \tikzmark{beginAsymmNablaU} \bm{\omega} \times \hspace{-0.1ex} \UnitDyad \tikzmark{endAsymmNablaU} \hspace{.1ex} , \:\;
-\bm{\omega} \equiv \displaystyle \onehalf \hspace{.3ex} \boldnabla \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{u} \hspace{.2ex},
+\bm{\omega} \equiv \displaystyle \scalebox{.9}{$ \onehalf $} \hspace{.3ex} \boldnabla \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{u}
+\hspace{.2ex} ,
 \end{equation}%
 \AddOverBrace[line width=.75pt][.1ex,0.1ex]%
 {beginSymmNablaU}{endSymmNablaU}{${\scriptstyle \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$}%
 \AddOverBrace[line width=.75pt][.2ex,0.1ex]%
 {beginAsymmNablaU}{endAsymmNablaU}{${\scriptstyle - \hspace{.1ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{A}}}$}
 
-\en{The symmetric part}\ru{Симметричная часть}
+\vspace{-1.5em} %%\noindent
+\en{The symmetric part}\ru{Симметричная часть}~%
 ${\boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$
 \en{is}\ru{есть}
 \en{the linear deformation tensor}\ru{тензор линейной деформации}~$\infinitesimaldeformation$.
 
-\en{The antisymmetric part}\ru{Антисимметричную часть} ${\boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{A}}}$ \en{we will denote as}\ru{обозначим как}~$\bm{\Omega}$ \en{and }\ru{и~}\en{will call it}\ru{назовём} \en{the tensor of small rotations}\ru{тензором малых поворотов}.
-\en{Any antisymmetric bivalent tensor}\ru{Любой антисимметричный бивалентный тензор} \en{can be represented by a~vector}\ru{может быть представлен вектором} (\chapterdotsectionref{chapter:mathapparatus}{section:tensors.symmetric+skewsymmetric}).
-\en{So}\ru{Итак}, \en{to find displacements}\ru{чтобы найти смещения}~$\bm{u}$ \en{by deformations}\ru{по~деформациям}~${\infinitesimaldeformation}$, \ru{нужно }\en{one more field}\ru{ещё одно поле}\en{ is needed}\:--- \en{the field of rotations}\ru{поле поворотов}~$\bm{\omega}(\bm{r})$.
+\en{The antisymmetric part}\ru{Антисимметричную часть}~%
+${\boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{A}}}$
+\en{can be denoted as}\ru{может быть обозначена как}~$\bm{\Omega}$
+\en{and }\ru{и~}\en{called}\ru{названа}
+\en{the~tensor of~small rotations}\ru{тензором малых поворотов}.
+\en{Since any}\ru{Так как любой}
+\en{skew-symmetric bivalent tensor}\ru{кососимметричный бивалентный тензор}
+\en{is uniquely representable}\ru{однозначно представляется}
+\en{by the~vector}\ru{вектором}~(\chapterdotsectionref{chapter:mathapparatus}{section:tensors.symmetric+skewsymmetric}),
+\en{the~one more field}\ru{ещё одно поле}\:---
+\en{the~vector field of~rotations}\ru{векторное поле поворотов}~$\bm{\omega}(\bm{r})$\:---
+\en{is needed}\ru{нужно}\ru{,}
+\en{to find displacements}\ru{чтобы найти смещения}~$\bm{u}$
+\en{by deformations}\ru{по~деформациям}~${\infinitesimaldeformation}$.
+
 
 ....
 
-\emph{\en{The compatibility conditions}\ru{Условия совместности}
+
+\subsection*{\en{The deformation compatibility condition}\ru{Условие совместности деформации}
 \en{in the linear elasticity}\ru{в~линейной упругости}}
 
-\en{The }\ru{Условия совместности }Saint\hbox{-\hspace{-0.2ex}}Venant’\en{s}\ru{а}\en{ compatibility conditions} \en{represent}\ru{представляют} \en{the integrability conditions}\ru{условия интегрируемости} \en{for}\ru{для} \en{a~symmetric}\ru{симметричного} \en{bivalent tensor field}\ru{бивалентного тензорного поля}.
+\en{The compatibility condition}\ru{Условие совместности}
+\en{represent}\ru{представляют} \en{the integrability conditions}\ru{условия интегрируемости} \en{for}\ru{для} \en{a~symmetric}\ru{симметричного} \en{bivalent tensor field}\ru{бивалентного тензорного поля}.
 \en{When such a~tensor field is compatible}\ru{Когда такое тензорное поле совместно}, \en{then it describes some deformation (strain)}\ru{тогда оно описывает какую-то деформацию}.
 
-\en{In }\ru{В~отношении }\en{the }\en{displacement}\ru{смещение}\hbox{$\hspace{.3ex}\mapsto\hspace{.3ex}$}\en{deformation}\ru{деформация}\en{ relation}~${\infinitesimaldeformation = \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$\en{,}
-\en{the six}\ru{шесть} \en{components}\ru{компонент}~${\infinitesimaldeformationcomponents{i\hspace{-0.1ex}j}}$ \en{of deformation}\ru{деформации}~${\infinitesimaldeformation}$ \en{originate from}\ru{происходят из} \en{only three components}\ru{лишь трёх компонент}~${u_{k}}$ \en{of the displacement vector}\ru{вектора смещений}~${\bm{u}}$.
-
-\en{The compatibility conditions}\ru{Условия совместности} \en{determine}\ru{определяют}\ru{,} \en{whether this deformation does not cause}\ru{не является ли эта деформация причиной} \en{any gaps and/or overlaps}\ru{каких-либо промежутков и/или перекрываний}.
-
-\noindent(~\textcolor{blue}{.... add a~picture here .....}~)
-
+\en{In }\ru{В~отношении }\en{the }\en{displacement}\ru{смещение}\hbox{$\hspace{.5ex}\mapsto\hspace{.5ex}$}\en{deformation}\ru{деформация}\en{ relation}~${\infinitesimaldeformation = \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$\en{,}
+\en{the six}\ru{шесть} \en{components}\ru{компонент}~${\infinitesimaldeformationcomponents{i\hspace{-0.1ex}j}}$
+\en{of deformation}\ru{деформации}~${\infinitesimaldeformation}$
+\en{originate from}\ru{происходят из}
+\en{the~only three components}\ru{лишь трёх компонент}~${u_{k}}$
+\en{of the~displacement vector}\ru{вектора смещений}~${\bm{u}}$.
 
 ...
 
 
 \begin{equation*}
-\operatorname{inc} \infinitesimaldeformation \hspace{-0.1ex}
+\operatorname{inc} \infinitesimaldeformation
 \equiv
 \hspace{-0.1ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.3ex} \bigl( \hspace{.1ex} \boldnabla \hspace{-0.2ex} \times \hspace{-0.15ex} \infinitesimaldeformation \hspace{.1ex} \bigr)^{\hspace{-0.2ex}\T}
+%
+\hspace{.9em} \text{\en{or}\ru{или}} \hspace{.8em}
+%
+\operatorname{inc} \infinitesimaldeformation
+\equiv
+\hspace{-0.1ex} \boldnabla \hspace{-0.3ex} \times \hspace{-0.2ex} \infinitesimaldeformation \hspace{-0.2ex} \times \hspace{-0.3ex} \boldnabla
 \end{equation*}
+
+
+....
+
 
 \en{A~contour}\ru{Контур}
 \en{here}\ru{здесь}
 \en{is arbitrary}\ru{произволен},
-\en{so}\ru{так что}
-\en{we have the relation}\ru{имеем отношение}
+\en{therefore}\ru{поэтому}
 
-\nopagebreak\vspace{-0.25em}\begin{equation}\label{incompatibilityequalszero}
+\nopagebreak\vspace{-0.25em}
+\begin{equation}\label{incompatibilityequalszero}
 \operatorname{inc} \infinitesimaldeformation = \hspace{-0.07ex} \zerobivalent
-\hspace{.1ex} ,
+\hspace{.1ex} .
 \end{equation}
 
 \vspace{-0.33em}\noindent
-\en{called}\ru{называемому}
-\en{the compatibility of deformations equation}\ru{уравнением совместности деформаций}.
+\en{This relation}\ru{Это отношение}
+\en{is called}\ru{называется}
+\en{the~deformation compatibility condition}\ru{условием совместности деформаций}
+\en{or}\ru{или}
+\en{the~deformation continuity equation(s)}\ru{уравнением(ями) неразрывности деформации}.
+
 
 ...
 
-\en{Expression}\ru{Выражение}~\eqref{incompatibilityequalszero} \en{provides}\ru{предоставляет} \en{constraints}\ru{ограничения} \en{on possible variants}\ru{на возможные варианты} \en{of a~deformation (strain) field}\ru{поля деформации}.
+\en{Expression}\ru{Выражение}~\eqref{incompatibilityequalszero}
+\en{constraints}\ru{ограничивает}
+\en{the possible types}\ru{возможные типы}
+\en{of the~deformation~(strain) field}\ru{поля деформации}.
+%
+\en{The compatibility (continuity) condition}\ru{Условие совместности (неразрывности)}
+\en{ensures that}\ru{гарантирует, что}
+\ru{в~результате деформации }\en{no gaps and/or overlaps appear}\ru{не появляются промежутки и/или наложения}\en{ as the~result of~deformation}.
 
-\noindent(~\textcolor{blue}{... the figure with cut squares ...}~)
+\noindent(~\textcolor{blue}{... add a~picture here, the figure where the~whole is cut into squares ...}~)
 
 ...
 
-\en{Tensor}\ru{Тензор}~${\operatorname{inc} \infinitesimaldeformation}$ \en{is symmetric}\ru{симметричен} \en{together with the }\ru{вместе с~}${\infinitesimaldeformation}$
+\en{Tensor}\ru{Тензор}~${\operatorname{inc} \infinitesimaldeformation}$ \en{is symmetric}\ru{симметричен} \en{together with }\ru{вместе с~}${\infinitesimaldeformation}$
 
-...
+....
 
-\en{All equations}\ru{Все уравнения} \en{of the linear theory}\ru{линейной теории} \en{have an~analogue (primary source)}\ru{имеют аналог (первоисточник)} \en{in the nonlinear theory}\ru{в~нелинейной теории}.
-\en{To find it for}\ru{Чтобы найти его для}~\eqref{incompatibilityequalszero}, \en{remember}\ru{вспомним} \en{the}\ru{тензор деформации} Cauchy\hbox{--}Green\ru{’а}\en{deformation tensor}~(\chapterdotsectionref{chapter:nonlinearcontinuum}{section:deformationtensors}) \en{and}\ru{и}~\en{curvature tensors}\ru{тензоры кривизны}~(\chapterdotsectionref{chapter:mathapparatus}{section:curvaturetensors})
 
-...................
+\subsection*{\en{The }\ru{Уравнения совместности }Saint\hbox{-\hspace{-0.2ex}}Venant’\en{s}\ru{а}\en{ compatibility equations}}
+
+\en{It was previously proven that}\ru{Ранее было доказано, что}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\operatorname{inc} \infinitesimaldeformation = \hspace{-0.07ex} \zerobivalent
+\hspace{.6em} \Leftrightarrow \hspace{.5em}
+\Laplacian \hspace{.2ex} \infinitesimaldeformation \hspace{.1ex} + \hspace{-0.1ex} \boldnabla \boldnabla \infinitesimaldeformation\tracedot
+\hspace{.2ex} = \hspace{.2ex}
+2 \hspace{.1ex} \bigl( \boldnabla \boldnabla \dotp \infinitesimaldeformation \bigr)^{\hspace{-0.1ex}\mathsf{S}}
+\end{equation*}
+
+\noindent
+\en{in index notation}\ru{в~индексной записи}
+\en{for rectangular coordinates}\ru{для прямоугольных координат}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+\partial_{m} \partial_{m} \infinitesimaldeformationcomponents{i\hspace{-0.1ex}j}
+\hspace{-0.1ex} + \hspace{.1ex}
+\partial_{i} \partial_{\hspace{-0.1ex}j} \infinitesimaldeformationcomponents{mm}
+=
+\bigl( \partial_{i} \partial_{m} \infinitesimaldeformationcomponents{m\hspace{-0.1ex}j}
+\hspace{-0.1ex} + \hspace{.1ex}
+\partial_{\hspace{-0.1ex}j} \partial_{m} \infinitesimaldeformationcomponents{mi} \bigr)
+\end{equation*}
+
+\noindent
+\en{with summations expanded}\ru{с~раскрытыми суммированиями}
+
+\nopagebreak\vspace{-0.2em}
+\begin{multline*}
+\biggl(
+\scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{i\hspace{-0.1ex}j}}{\partial x_1^2} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{i\hspace{-0.1ex}j}}{\partial x_2^2} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{i\hspace{-0.1ex}j}}{\partial x_3^2} $}
+\biggr)
+\hspace{-0.2ex} + \hspace{-0.2ex}
+\biggl(
+\scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{1\hspace{-0.1ex}1}}{\partial x_{i} \partial x_{\hspace{-0.1ex}j}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{22}}{\partial x_{i} \partial x_{\hspace{-0.1ex}j}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{33}}{\partial x_{i} \partial x_{\hspace{-0.1ex}j}} $}
+\biggr)
+\\
+%
+=
+\biggl(
+\scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{1 j}}{\partial x_{i} \partial x_{1}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{2 j}}{\partial x_{i} \partial x_{2}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{3 j}}{\partial x_{i} \partial x_{3}} $}
+\biggr)
+\hspace{-0.2ex} + \hspace{-0.2ex}
+\biggl(
+\scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{1 i}}{\partial x_{\hspace{-0.1ex}j} \partial x_{1}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{2 i}}{\partial x_{\hspace{-0.1ex}j} \partial x_{2}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{3 i}}{\partial x_{\hspace{-0.1ex}j} \partial x_{3}} $}
+\biggr)
+\end{multline*}
+
+\noindent
+\en{for}\ru{для}~${i \hspace{.1ex} \narroweq j \hspace{.33ex} ({} \hspace{-0.2ex} \narroweq a)}$
+
+\nopagebreak\vspace{-0.2em}
+\begin{multline*}
+\biggl(
+\scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{aa}}{\partial x_1^2} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{aa}}{\partial x_2^2} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{aa}}{\partial x_3^2} $}
+\biggr)
+\hspace{-0.2ex} + \hspace{-0.2ex}
+\biggl(
+\scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{1\hspace{-0.1ex}1}}{\partial x_{a}^2} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{22}}{\partial x_{a}^2} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{33}}{\partial x_{a}^2} $}
+\biggr)
+\\
+%
+= 2 \hspace{.1ex}
+\biggl(
+\scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{1 a}}{\partial x_{a} \partial x_{1}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{2 a}}{\partial x_{a} \partial x_{2}} $}
++ \scalebox{.9}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{3 a}}{\partial x_{a} \partial x_{3}} $}
+\biggr)
+\hspace{1em}
+\scalebox{.8}{$\tikzcancel[blue]{$\displaystyle\sum_a^{~}$}$}\:, \hspace{.33em} a \narroweq 1,2,3
+\end{multline*}
+
+.....
+
+\begin{equation*}
+\left\{
+\begin{array}{l}
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{22}}{\partial x_1^2} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{1\hspace{-0.1ex}1}}{\partial x_2^2} $}
+= 2 \hspace{.2ex}
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{21}}{\partial x_{1} \partial x_{2}} $}
+\\[1.2em]
+%
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{33}}{\partial x_2^2} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{22}}{\partial x_3^2} $}
+= 2 \hspace{.2ex}
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{32}}{\partial x_{2} \partial x_{3}} $}
+\\[1.2em]
+%
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{1\hspace{-0.1ex}1}}{\partial x_3^2} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{33}}{\partial x_1^2} $}
+= 2 \hspace{.2ex}
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{13}}{\partial x_{3} \partial x_{1}} $}
+\\[1.2em]
+%
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{23}}{\partial x_1^2} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{11}}{\partial x_{2} \partial x_{3}} $}
+=
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{13}}{\partial x_{2} \partial x_{1}} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{12}}{\partial x_{3} \partial x_{1}} $}
+\\[1.2em]
+%
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{13}}{\partial x_2^2} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{22}}{\partial x_{1} \partial x_{3}} $}
+=
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{23}}{\partial x_{1} \partial x_{2}} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{21}}{\partial x_{3} \partial x_{2}} $}
+\\[1.2em]
+%
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{12}}{\partial x_3^2} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{33}}{\partial x_{1} \partial x_{2}} $}
+=
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{32}}{\partial x_{1} \partial x_{3}} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{31}}{\partial x_{2} \partial x_{3}} $}
+\end{array}
+\right.
+\end{equation*}
+
+\noindent
+---
+\en{the~deformation continuity~(compatibility) equations}\ru{уравнения неразрывности~(совместности) деформаций}
+\en{in}\ru{в}~\inquotes{\en{classical}\ru{классической}} \en{notation}\ru{записи}
+\en{for rectangular coordinates}\ru{для прямоугольных координат}
+(\en{the~six}\ru{шесть}
+\ru{уравнений }Saint\hbox{-\hspace{-0.2ex}}Venant’\en{s}\ru{а}\en{ equations}).
+
+\en{The last three}\ru{Последние три}
+\en{can also be written as}\ru{могут также быть написаны как}
+
+\begin{equation*}
+\begin{array}{l}
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{11}}{\partial x_2 \partial x_3} $}
+= \scalebox{.83}{$ \displaystyle \frac{\partial}{\partial x_1} $} \biggl(
+\scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{13}}{\partial x_2} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{12}}{\partial x_3} $}
+- \scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{23}}{\partial x_1} $}
+\biggr)
+\\[1.2em]
+%
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{22}}{\partial x_{1} \partial x_{3}} $}
+= \scalebox{.83}{$ \displaystyle \frac{\partial}{\partial x_2} $} \biggl(
+\scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{23}}{\partial x_1} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{21}}{\partial x_3} $}
+- \scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{13}}{\partial x_2} $}
+\biggr)
+\\[1.2em]
+%
+\scalebox{.83}{$ \displaystyle \frac{\partial^2 \infinitesimaldeformationcomponents{33}}{\partial x_{1} \partial x_{2}} $}
+= \scalebox{.83}{$ \displaystyle \frac{\partial}{\partial x_3} $} \biggl(
+\scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{32}}{\partial x_1} $}
++ \scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{31}}{\partial x_2} $}
+- \scalebox{.83}{$ \displaystyle \frac{\partial \infinitesimaldeformationcomponents{12}}{\partial x_3} $}
+\biggr)
+\end{array}
+\end{equation*}
+
+%% ${ \upgamma_{\hspace{-0.2ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} = 2 \hspace{.1ex} \infinitesimaldeformationcomponents{i\hspace{-0.1ex}j} }$
+
+
+\begin{tcolorbox}[breakable, enhanced, colback = green!11, before upper={\parindent3.2ex}, parbox = false]
+\small%
+\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}%
+
+\noindent
+\bookauthor{Isaac Todhunter}. \href{https://archive.org/details/elasticalresear00todhgoog/page/n92/}{The Elastical Researches of Barré de Saint-Venant. Cambridge University Press, 1889.}
+\\[.55em]
+%
+\indent
+[110.]
+\emph{L’institut}, Vol.\;26, 1858, pp.\;178\hbox{--}9. Further results on Torsion communicated to the \emph{Société Philomathique} (April~24 and May~15, 1858) and afterwards incorporated in the \emph{Leçons de Navier} (pp.\;305\hbox{--}6, 273\hbox{--}4). They relate to cross-sections in the form of doubly symmetrical quartic curves and to torsion about an external axis\:: see our Arts. 49\:(c), 182\:(b), 181\:(d), and 182\:(a).
+
+[111.]
+Vol.\;27, 1860, of same Journal, pp.\;21\hbox{--}2. Saint-Venant presents to the \emph{Société Philomathique} the model \emph{de la surface décrite par une corde vibrante transportée d’un mouvement rapide perpendiculaire à son plan de~vibration}. Copies of this as well as some other of Saint-Venant’s models may still be obtained of M.\;Delagrave in Paris and are of considerable value for class-lectures on the vibration of elastic bodies.
+
+[112.]
+Vol.\;28, 1861, of same Journal, pp.\;294\hbox{--}5. This gives an~account of a~paper of Saint-Venant’s read before the \emph{Société Philomathique} (July~28, 1860). In this he deduces the \emph{conditions of~compatibility}, or the~six differential relations of the types\::
+
+\begin{equation*}
+\begin{array}{r@{\hspace{.7ex}}c@{\hspace{.7ex}}l}
+2 \hspace{.2ex} \scalebox{.8}{$ \displaystyle \frac{d^2 s_{x}}{dy \hspace{.3ex} dz} $}
+& = &
+\scalebox{.86}{$ \displaystyle \frac{d}{dx} $}
+\Bigl(
+\scalebox{.86}{$ \displaystyle \frac{d \sigma_{xz}}{dy} $}
++ \scalebox{.86}{$ \displaystyle \frac{d \sigma_{xy}}{dz} $}
+- \scalebox{.86}{$ \displaystyle \frac{d \sigma_{yz}}{dx} $}
+\Bigr)
+\\[.8em]
+%
+\scalebox{.86}{$ \displaystyle \frac{d^2 \sigma_{yz}}{dy \hspace{.3ex} dz} $}
+& = &
+\scalebox{.86}{$ \displaystyle \frac{d^2 s_{y}}{dz^2} $}
++ \scalebox{.86}{$ \displaystyle \frac{d^2 s_{z}}{dy^2} $}
+\end{array}
+\vspace{.2em}\end{equation*}
+
+\noindent
+which must be satisfied by the strain-components. These conditions enable us in many cases to dispense with the consideration of the shifts. A proof of these conditions by Boussinesq will be found in the \emph{Journal de~Liouville}, Vol.\;16, 1871, pp.\;132\hbox{--}4. At the same meeting Saint-Venant extended his results on torsion to\:: (1) prisms on any base with at each point only one plane of symmetry perpendicular to the sides, (2) prisms on an elliptic base with or without any plane of symmetry whatever\:; see our Art. 190\:(d).
+\par
+\end{tcolorbox}
+
+
+\subsection*{\en{What about nonlinear theory}\ru{Что насчёт нелинейной теории}?}
+
+\en{All equations}\ru{Все уравнения}
+\en{of the linear theory}\ru{линейной теории}
+\en{have an~analogue}\ru{имеют аналог}\:--- \en{the~primary source}\ru{первоисточник}\:---
+\en{in the nonlinear theory}\ru{в~нелинейной теории}.
+\en{To find it for}\ru{Чтобы найти его для}~\eqref{incompatibilityequalszero}, \en{remember}\ru{вспомним}
+\en{the~}\ru{тензор деформации }Cauchy\hbox{--}Green\ru{’а}\en{ deformation tensor}~(\chapterdotsectionref{chapter:nonlinearcontinuum}{section:deformationtensors})
+\en{and}\ru{и}~\en{the~curvature tensors}\ru{тензоры кривизны}~(\chapterdotsectionref{chapter:mathapparatus}{section:curvaturetensors})
 
 ...................
