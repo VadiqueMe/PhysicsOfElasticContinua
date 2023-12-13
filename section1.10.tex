@@ -9,13 +9,15 @@
 \en{some tensor}\ru{какого-нибудь тензора}~$\somebivalenttensor$
 \en{and}\ru{и}~\en{the~nonzero vector}\ru{ненулевого вектора}~${\bm{a}}$
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{eigenvalues equation}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{eigenvalues equation}
 \somebivalenttensor \dotp \bm{a} = \eigenvalue \bm{a}
 \hspace{.1ex} ,
 \:\:
 \bm{a} \neq \zerovector
 \end{equation}
-\vspace{-1.33em}\begin{equation*}
+\vspace{-1.33em}
+\begin{equation*}
 \scalebox{.92}{$%
 \somebivalenttensor \dotp \bm{a} = \eigenvalue \UnitDyad \dotp \bm{a}
 \hspace{.1ex} ,
@@ -33,7 +35,7 @@ $}
 \hspace{.1ex} ,
 \end{equation*}
 
-\vspace{-0.6em}\noindent
+\vspace{-0.1em}\noindent
 \en{then}\ru{то}
 $\eigenvalue$~\en{is called}\ru{называется}
 \en{the~eigenvalue}\ru{собственным числом}
@@ -65,14 +67,7 @@ ${ ( \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 \en{the determinant}\ru{определитель}
 \en{of a~matrix of~components}\ru{матрицы компонент}
 \begin{equation*}
-\smash{%
-   \underset{%
-      \raisebox{.15em}{%
-         \scalebox{.7}{ i, \hspace{.15ex}j }%
-      } %end of raisebox
-   } %end of underset's first parameter
-   { \determinant }%
-} %end of smash
+\determinantby{i}{\hspace{.15ex}j}
 \hspace{.3ex}
 ( \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \eigenvalue \delta_{ i \hspace{-0.1ex} j } )
 \end{equation*}
@@ -81,7 +76,7 @@ ${ ( \somebivalenttensorcomponents{i\hspace{-0.1ex}j} \hspace{-0.15ex}
 \nopagebreak\vspace{-0.1em}
 \begin{equation}\label{chardetequation}
 \determinant \hspace{-0.4ex}
-\scalebox{.9}[.92]{$
+\scalebox{.85}[.88]{$
    \left[
       \begin{array}{ccc}
          \somebivalenttensorcomponents{1\hspace{-0.1ex}1} \hspace{-0.16ex} - \eigenvalue & \somebivalenttensorcomponents{12} & \somebivalenttensorcomponents{13} \\
@@ -150,9 +145,9 @@ $} %end of scalebox
 \en{The roots}\ru{Корни}
 \en{of the characteristic equation}\ru{характеристического уравнения}~\eqref{chardetequation}\:--- \en{the eigenvalues}\ru{собственные числа}\:---
 \en{don’t depend}\ru{не~зависят}
-\en{on the basis}\ru{от~базиса}
+\en{on basis}\ru{от~базиса}
 \en{and therefore}\ru{и~потому}
-\en{are invariants}\ru{инварианты}.
+\en{are invariant}\ru{инварианты}.
 
 \en{The coefficients}\ru{Коэффициенты}~\en{of~}\eqref{invariants:2}
 \en{also}\ru{тоже}
@@ -173,7 +168,7 @@ $} %end of scalebox
 \en{earlier}\ru{ранее}
 \en{in}\ru{в}~\sectionref{section:operationswithtensors}.
 \textcolor{magenta}{%
-\en{The second invariant}\ru{Второй инвариант}~$\secondcharacteristicinvariant$
+\en{The second characteristic invariant}\ru{Второй характеристический инвариант}~$\secondcharacteristicinvariant$
 \en{is}\ru{это}
 \en{the trace}\ru{след}
 \en{of~the~adjugate}\ru{присоединённой~(взаимной, adjugate)}
@@ -228,7 +223,8 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \ru{Соответствует ему }\en{Eigenvector}\ru{собственный вектор}~$\lineover{\bm{a}}$ \en{with }\ru{с~}\en{the conjugate}\ru{сопряжёнными} \en{components}\ru{компонентами}\en{ corresponds to it}.
 \en{And then}\ru{И~тогда}
 
-\nopagebreak\vspace{-0.5em}\begin{multline*}
+\nopagebreak\vspace{-0.5em}
+\begin{multline*}
 \eqref{eigenvalues equation}
 \:\,\Rightarrow\:\,
 \left(\hspace{.25ex} {\lineover{\bm{a}} \, \dotp} \hspace{.25ex}\right)
@@ -281,8 +277,18 @@ ${\eigenvalue = \lineover{\eigenvalue}}$,
 {BeginEqualsZeroBrace}{EndEqualsZeroBrace}{${\scriptstyle =\;0}$}
 
 \vspace{-1.4em}
-\en{If}\ru{Если} \en{the roots}\ru{корни} \en{of the characteristic equation}\ru{характеристического уравнения} (\en{the eigenvalues}\ru{собственные числа}) \en{are different}\ru{различны}, \en{then}\ru{то} \en{one unit long eigenvectors}\ru{собственные векторы единичной длины}~${\mathboldae_i}$ \en{compose}\ru{составляют} \en{an~orthonormal basis}\ru{ортонормальный базис}.
-\en{What are}\ru{Каков\'{ы}~же} \en{tensor components}\ru{компоненты тензора} \en{in such a~basis}\ru{в~таком базисе}?
+\en{If}\ru{Если}
+\en{the roots}\ru{корни}
+\en{of the characteristic equation}\ru{характеристического уравнения}
+(\en{the eigenvalues}\ru{собственные числа})
+\en{are different}\ru{различны},
+\en{then}\ru{то}
+\en{the~one unit long eigenvectors}\ru{собственные векторы единичной длины}~${\mathboldae_i}$
+\en{compose}\ru{составляют}
+\en{an~orthonormal basis}\ru{ортонормальный базис}.
+\en{What are}\ru{Каков\'{ы}~же}
+\en{the tensor components}\ru{компоненты тензора}
+\en{in such a~basis}\ru{в~таком базисе}?
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}\begin{array}{c}
 \somebivalenttensor \dotp \mathboldae_k = \hspace{.2ex} \scalebox{.82}{$\tikzcancel[blue]{$\displaystyle\sum_k^{~}$}$}\: \eigenvalue_{\hspace{-0.15ex}k} \hspace{.1ex} \mathboldae_k \hspace{.1ex}, \:\: k =\hspace{-0.1ex} 1, 2, 3
@@ -345,7 +351,7 @@ ${\mathboldae_i \dotp \mathboldae_{\hspace{-0.1ex}j} \hspace{-0.15ex} = \delta_{
 \en{of vectors}\ru{векторов}
 ${\bm{a}_1}$ \en{and}\ru{и} ${\bm{a}_2}$
 \en{in the limit}\ru{в~пределе}
-\en{satisfies the equation}\ru{удовлетворяет уравнению}
+\en{satisfies the equation}\ru{удовлетворяет уравнению}~%
 \eqref{eigenvalues equation}.
 %
 \en{And then}\ru{И~тогда}
