@@ -116,28 +116,16 @@ ${
 \vspace{.1em}
 \en{Even}\ru{Даже}
 \en{in Cartesian coordinates}\ru{в~декартовых координатах}
-$x$,\:$y$,\:$z$
-\en{the quadratic form}\ru{квадратичная форма}
-\en{of elastic energy density}\ru{плотности упругой энергии}
-${\potentialenergydensity ( \hspace{-0.1ex}
-   \infinitesimaldeformation
-   \hspace{-0.1ex} )
-   \hspace{-0.2ex} = \hspace{.1ex}
-   \smallerdisplaystyleonehalf \hspace{.25ex}
-   \infinitesimaldeformation
-   \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
-   \stiffnesstensor
-   \dotdotp \hspace{-0.1ex}
-   \infinitesimaldeformation
-}$
+$x$,\:$y$,\:$z$,
+\en{the quadratic form}\ru{квадратичная форма}~\eqref{linear.potentialenergydensity.quadratic}
 \en{looks}\ru{в\'{ы}глядит}
 \en{pretty}\ru{весьма}
-\en{huge}\ru{громоздкой}:
+\en{huge}\ru{громоздко}\::
 
-\nopagebreak\vspace{-0.2em}
+\nopagebreak\vspace{-0.3em}
 \begin{equation}\label{elasticenergylooongcartesian}
-\begin{gathered}
-\hspace{-5em}
+\begin{multlined}
+\hspace{-1em}
 2 \hspace{.1ex} \potentialenergydensity
 = a_{11} \infinitesimaldeformationcomponents{x}^2 \hspace{-0.1ex}
 + a_{22} \infinitesimaldeformationcomponents{y}^2 \hspace{-0.1ex}
@@ -147,8 +135,8 @@ ${\potentialenergydensity ( \hspace{-0.1ex}
 + a_{66} \infinitesimaldeformationcomponents{yz}^2
 \\[-0.1em]
 %
-\hspace{.2em}
-+ 2 \hspace{.2ex} \bigl[ \hspace{.1ex}
+\hspace{.5em}
+{} + 2 \hspace{.2ex} \bigl[ \hspace{.1ex}
 %
 \infinitesimaldeformationcomponents{x} \hspace{.1ex}
 \bigl( a_{12} \infinitesimaldeformationcomponents{y} \hspace{-0.2ex}
@@ -158,7 +146,7 @@ ${\potentialenergydensity ( \hspace{-0.1ex}
 + a_{16} \infinitesimaldeformationcomponents{yz} \bigr)
 \\[-0.1em]
 %
-\hspace{3em}
+\hspace{.5em}
 + \infinitesimaldeformationcomponents{y} \hspace{.1ex} \bigl(
 a_{23} \infinitesimaldeformationcomponents{z} \hspace{-0.2ex}
 + a_{24} \infinitesimaldeformationcomponents{xy} \hspace{-0.2ex}
@@ -166,31 +154,32 @@ a_{23} \infinitesimaldeformationcomponents{z} \hspace{-0.2ex}
 + a_{26} \infinitesimaldeformationcomponents{yz} \bigr)
 \\[-0.1em]
 %
-\hspace{5em}
+\hspace{.5em}
 + \infinitesimaldeformationcomponents{z} \bigl(
 a_{34} \infinitesimaldeformationcomponents{xy} \hspace{-0.2ex}
 + a_{35} \infinitesimaldeformationcomponents{xz} \hspace{-0.2ex}
 + a_{36} \infinitesimaldeformationcomponents{yz} \bigr)
 \\[-0.1em]
 %
-\hspace{11em}
 + \infinitesimaldeformationcomponents{xy} \hspace{.1ex} \bigl(
 a_{45} \infinitesimaldeformationcomponents{xz} \hspace{-0.2ex}
 + a_{46} \infinitesimaldeformationcomponents{yz} \bigr) \hspace{-0.11ex}
 + a_{56} \infinitesimaldeformationcomponents{xz} \infinitesimaldeformationcomponents{yz}
 %
 \hspace{.1ex} \bigr]
-\hspace{.1ex}
-.
-\end{gathered}
+\hspace{.1ex} .
+\end{multlined}
 \end{equation}
 
+\noindent
 \en{When}\ru{Когда}
 \ru{добавляется }\en{a~material symmetry}\ru{материальная симметрия}\en{ is added},
 \en{then the number}\ru{тогда число}
 \en{of the independent moduli}\ru{независимых модулей}
 \en{of tensor}\ru{тензора}~${\stiffnesstensor}$
 \en{decreases}\ru{уменьшается}.
+
+\subsection*{\en{One plane of~material symmetry}\ru{Одна плоскость материальной симметрии}, \en{a~monoclinic material}\ru{моноклинный материал}}
 
 \en{For}\ru{Для}
 \en{a~material}\ru{материала}
@@ -208,11 +197,11 @@ ${z = \constant}$.
 \en{the~potential energy density}\ru{плотность потенциальной энергии}~$\potentialenergydensity$.
 %
 \en{And}\ru{А}
-\en{it’s possible}\ru{это возможно}
-\en{only}
+\en{this is possible}\ru{это возможно}
+\en{only}\ru{только}
 \en{when}\ru{когда}
 
-\noindent
+\nopagebreak\vspace{-0.2em}
 \begin{equation}\label{zeroconstants:oneplaneofsymmetry}
 \potentialenergydensity \hspace{.1ex}
 \raisemath{-0.2em} {
@@ -238,19 +227,21 @@ ${z = \constant}$.
    = a_{45} \hspace{-0.2ex}
    = a_{46}
 \end{array}
-\vspace{.1em}\end{equation}
+\end{equation}
 
-\noindent
+\vspace{-0.2em}\noindent
 ---
 \en{the~number}\ru{число}
 \en{of~independent coefficients}\ru{независимых коэффициентов}
 \en{lowers}\ru{падает}
 \en{to}\ru{до}~13.
 
+\subsection*{\en{An orthotropic}\ru{Ортотропный} \en{material}\ru{материал}}
+
 \en{Let there be then}\ru{Пусть далее будут тогда}
 \en{the two}\ru{две}
 \en{planes}\ru{плоскости}
-\en{of symmetry}\ru{симметрии}:
+\en{of symmetry}\ru{симметрии}\::
 ${z = \constant}$
 \en{and}\ru{и}
 ${y = \constant}$.
@@ -258,13 +249,13 @@ ${y = \constant}$.
 \en{energy}\ru{энергия}~$\potentialenergydensity$
 \en{in such a~case}\ru{в~таком случае}
 \en{is not sensitive}\ru{не~чувствительна}
-{\en{to the signs}\ru{к~знакам}\en{of}~$\infinitesimaldeformationcomponents{yx}$
+\en{to the~signs}\ru{к~знакам}\en{ of}~$\infinitesimaldeformationcomponents{yx}$
 \en{and}\ru{и}~$\infinitesimaldeformationcomponents{yz}$,
 \en{in addition}\ru{вдобавок}
 \en{to}\ru{к}~\eqref{zeroconstants:oneplaneofsymmetry}
 \en{we have}\ru{мы имеем}
 
-\nopagebreak\vspace{-0.22em}
+\nopagebreak\vspace{-0.3em}
 \begin{equation}\label{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}
 a_{14} \hspace{-0.2ex}
 = a_{24} \hspace{-0.2ex}
@@ -273,8 +264,9 @@ a_{14} \hspace{-0.2ex}
 = 0
 \end{equation}
 
-\vspace{-0.25em}\noindent
---- \en{9~constants are left}\ru{осталось 9~констант}.
+\vspace{-0.33em}\noindent
+---
+\en{9~constants remained}\ru{осталось 9~констант}.
 
 \en{A~material}\ru{Материал}
 \en{with}\ru{с}~\en{the three}\ru{тремя}
@@ -287,28 +279,29 @@ a_{14} \hspace{-0.2ex}
 $y$, $z$\en{ planes}\:---
 \en{is called}\ru{называется}
 \en{the orthotropic}\ru{ортотропным}
-(\en{orthogonally anisotropic}\ru{ортогонально анизотропным})
-.
+(\en{orthogonally anisotropic}\ru{ортогонально анизотропным}).
 %
 \en{It’s easy to see}\ru{Легко увидеть}\ru{,}
 \en{that}\ru{что}~\eqref{zeroconstants:oneplaneofsymmetry}
 \en{and}\ru{и}~\eqref{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}\:---
-\en{this is the whole set}\ru{это весь набор}
-\en{of null constants}\ru{нулевых констант}\en{,}
-\en{in this case too}\ru{и~в~этом случае}.
+\en{this is the~whole set}\ru{это весь набор}
+\en{of~zero constants}\ru{нулевых констант}\en{,}
+\en{in this case as well}\ru{и~в~этом случае}.
+%
 \en{So}\ru{Итак},
 \en{an orthotropic material}\ru{ортотропный материал}
 \en{is characterized}\ru{характеризуется}
-\en{by the nine}\ru{девятью}
-\en{constants}\ru{константами},
+\en{by the~nine}\ru{девятью}
+\en{elastic moduli}\ru{упругими модулями},
 \en{and}\ru{и}
 \en{for}\ru{для}
-\en{the orthotropy}\ru{ортотропности}
+\en{orthotropy}\ru{ортотропности}
 \ru{достаточны }\en{the two}\ru{две}
 \en{mutually perpendicular}\ru{взаимно перпендикулярные}
 \en{planes}\ru{плоскости}
-\en{of symmetry}\ru{симметрии}\en{ are enough}.
-\en{The expression}\ru{Выражение}
+\en{of~symmetry}\ru{симметрии}\en{ are enough}.
+%
+\en{The~expression}\ru{Выражение}
 \en{for}\ru{для}
 \en{the elastic energy density}\ru{плотности упругой энергии}
 \en{here}\ru{тут}
@@ -466,10 +459,10 @@ ${\bm{k} \equiv \bm{e}_z}$.
 \en{for}\ru{для}
 \en{any}\ru{любой}
 \en{infinitesimal deformation}\ru{бесконечномалой деформации}~$\infinitesimaldeformation$.
-\en{In components}\ru{В~компонентах}
+\en{In~components}\ru{В~компонентах}
 
 \noindent
-\begin{gather*}\label{equationforelasticmoduliforatransverselyisotropicmaterial}
+\begin{multline*}\label{equationforelasticmoduliforatransverselyisotropicmaterial}
 \bigl(
     a_{11} \infinitesimaldeformationcomponents{x}
   + a_{12} \infinitesimaldeformationcomponents{y}
@@ -493,9 +486,9 @@ ${\bm{k} \equiv \bm{e}_z}$.
 + 2 a_{66} \infinitesimaldeformationcomponents{yz} \infinitesimaldeformationcomponents{xz}
 = 0
 %.
-\end{gather*}
+\end{multline*}
 
-\nopagebreak\vspace{-0.25em}
+\nopagebreak\vspace{-1em}
 \begin{equation*}
 \Rightarrow \hspace{.5em}
 a_{11} \hspace{-.2ex} = a_{12} + a_{44} \hspace{-.2ex} = a_{22}
@@ -599,7 +592,7 @@ a_{13} \infinitesimaldeformationcomponents{\alpha \alpha}
 \hspace{.1ex} , \hspace{.5em}
 \withtheindexofperpendicularity{\hspace{.1ex}\UnitDyad} \hspace{-0.3ex}
 \equiv \bm{e}_{\alpha} \bm{e}_{\alpha} \hspace{-0.3ex}
-= \bm{i} \bm{i} + \bm{j} \bm{i} + \bm{i} \hspace{-0.1ex} \bm{j} + \bm{j} \hspace{-0.2ex} \bm{j}
+= \bm{i} \bm{i} + \mathcolor{red}{\bm{j} \bm{i} + \bm{i} \hspace{-0.1ex} \bm{j}} + \bm{j} \hspace{-0.2ex} \bm{j}
 \hspace{.5ex} \bigr)
 \end{multline*}
 
@@ -667,11 +660,12 @@ ${ \orthogonaltensor \dotp \hspace{.1ex} \orthogonaltensor^\T = \UnitDyad }$
 
 ............
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{legendretransformforlinearelasticenergy}
-2 \potentialenergydensity
-= \linearstress \dotdotp \infinitesimaldeformation
-\hspace{.1ex} ,
-\hspace{.8em}
+%
+% the complementary energy
+%
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{legendretransformforlinearelasticenergy}
 \infinitesimaldeformation ( \hspace{-0.1ex} \linearstress \hspace{.1ex} ) \hspace{-0.1ex}
 = \displaystyle\frac{\raisemath{-0.2em}{\partial\hspace{.1ex} \complementaryenergydensity}}{\raisemath{.04em}{\partial \linearstress}}
 = \hspace{-0.1ex} \pliabilitytensor \dotdotp \hspace{-0.1ex} \linearstress
@@ -682,9 +676,17 @@ ${ \orthogonaltensor \dotp \hspace{.1ex} \orthogonaltensor^\T = \UnitDyad }$
 \end{equation}
 
 \en{For}\ru{Для}
-\en{the~linear model}\ru{линейной модели},
-\inquotes{\en{the~complementary energy}\ru{добавочная~(дополнительная) энергия}}
-${\complementaryenergydensity = \potentialenergydensity = \smalldisplaystyleonehalf \hspace{.2ex} \linearstress \dotdotp \infinitesimaldeformation}$
+\en{the~linear model}\ru{линейной модели}
+\begin{equation}\label{complementaryequalspotential.energy}
+2 \potentialenergydensity
+= \linearstress \dotdotp \infinitesimaldeformation
+\hspace{.1ex} , \hspace{.8em}
+\complementaryenergydensity = \potentialenergydensity = \smalldisplaystyleonehalf \hspace{.2ex} \linearstress \dotdotp \infinitesimaldeformation
+\end{equation}
+---
+\en{the~complementary energy density}\ru{плотность добавочной~(дополнительной) энергии}
+\en{is numerically equal to}\ru{численно равна}
+\en{the~elastic potential energy density}\ru{плотности упругой потенциальной энергии}.
 
 .....................................
 
@@ -712,24 +714,14 @@ ${\complementaryenergydensity = \potentialenergydensity = \smalldisplaystyleoneh
 \item \en{piezoelectric effect}\ru{пьезоэлектрический эффект}.
 \end{itemize}
 
-\en{The traction vector}\ru{Вектор тракции}~$\bm{t}$
-\en{and its projections}\ru{и~его проекции},
-$\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparallelism{\bm{t}}$.
+Piezoelectricity (the piezoelectric effect) is the coupling (for example, linear) between the mechanical strain and the electric charge in a material,
+it is the transduction of electrical and mechanical energy.
 
-\begin{itemize}
-%%\item \en{the traction vector}\ru{вектор тяги~(тракции)}~$\bm{t}$,
-\item \en{the projection}\ru{проекция}
-\en{of the~traction vector}\ru{вектора тяги} %~$\bm{t}$
-\en{on the unit normal vector}\ru{на вектор единичной нормали} %~$\bm{n}$
-\begin{equation}\label{theprojection.ofthetractionvector.onthenormal}
-\withtheindexofperpendicularity{\bm{t}} = \bm{t}_{\bm{n}} = \bm{t} \dotp \bm{n}
-\end{equation}
-(\en{is perpendicular}\ru{перпендикулярна}
-\en{to the cross-section area}\ru{к~площадке поперечного сечения}),
-\item \en{the projection}\ru{проекция}
-\en{of the~traction vector}\ru{вектора тяги} %~$\bm{t}$
-\en{on the plane}\ru{на плоскость}
-\begin{equation}\label{theprojection.ofthetractionvector.ontheplane}
-\withtheindexofparallelism{\bm{t}} = \bm{t} - \withtheindexofperpendicularity{\bm{t}}
-\end{equation}
-\end{itemize}
+Certain materials generate an electrical charge when mechanical stress is applied to them.
+Piezoelectric materials directly transduce electrical and mechanical energy.
+The most famous piezoelectric material is quartz crystal.
+Certain ceramics are piezoelectric as well, piezoelectricity is often associated with ceramic materials.
+Piezoelectric behaviour is also observed in many polymers.
+And biomatter, such as bone and various proteins, too.
+
+

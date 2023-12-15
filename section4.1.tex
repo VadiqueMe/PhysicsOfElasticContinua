@@ -2,6 +2,9 @@
 
 \ru{\section{Полный набор уравнений}}
 
+\newcommand\volumeloadvector{\textbf{\textsl{g}}}
+\newcommand\massloadvector{\bm{f}}
+
 \label{section:wholesetofequations.lineartheory}
 
 \en{\dropcap{E}{quations}}\ru{\dropcap{У}{равнения}}
@@ -29,13 +32,12 @@
 \en{of~equations}\ru{уравнений}
 \en{of the classical linear theory}\ru{классической линейной теории}
 \en{in~the~direct invariant tensor notation}\ru{в~прямой инвариантной тензорной з\'{а}писи},
-\en{including}\ru{включающий}
+\en{consisting of}\ru{состоящий из}
 \begin{itemize}
-\item \en{the~balance of~forces}\ru{баланс сил}~(\en{of~momentum}\ru{импульса},
-\en{of~}\ru{количества движения, }\emph{vis~viva}),
+\item \en{the~balance of~forces}\ru{баланса сил}~(\en{of~momentum}\ru{импульса}),
 \item \ru{соотношения}\en{the} \en{stress}\ru{напряжение}--\en{strain}\ru{деформация}\en{ relations}
 \en{for a~material}\ru{для материала},
-\item ${\bm{u} \mapsto \infinitesimaldeformation}$,
+\item \en{absolute deformation}\ru{абсолютная деформация} ${\bm{u} \hspace{.2ex} \mapsto \infinitesimaldeformation}$ \en{relative deformation}\ru{относительная деформация},
 \end{itemize}
 
 \noindent
@@ -45,7 +47,7 @@
 %%%\hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}
 \label{lineartheory:wholesetofequations}
-\boldnabla \dotp \linearstress \hspace{.15ex} + \hspace{.15ex} \bm{v}
+\boldnabla \dotp \linearstress \hspace{.15ex} + \hspace{.15ex} \volumeloadvector
 \hspace{.1ex} = \hspace{.1ex}
 \zerovector
 \hspace{.1ex} ,
@@ -76,12 +78,15 @@ $}
 \en{Here}\ru{Здесь}
 $\linearstress$~\ru{это}\en{is}
 \en{the~linear stress tensor}\ru{линейный тензор напряжений},
-$\bm{v}$~\en{is}\ru{это}
+$\volumeloadvector$~\en{is}\ru{это}
 \en{the~resultant vector}\ru{результирующий вектор}
 \en{of volume loads}\ru{объёмных нагрузок},
+$\bm{u}$~\ru{это}\en{is}
+\en{the~vector}\ru{вектор}
+\en{of displacement~(absolute deformation)}\ru{смещения~(абсолютной деформации)},
 $\infinitesimaldeformation$~\ru{это}\en{is}
 \en{the~tensor}\ru{тензор}
- \en{of infinitesimal relative deformation~(strain)}\ru{бесконечномалой относительной деформации},
+\en{of infinitesimal relative deformation~(strain)}\ru{бесконечномалой относительной деформации},
 ${%
    \potentialenergydensity (
       \hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}
@@ -110,12 +115,10 @@ ${%
 \hspace{.2ex} .
 \end{equation*}
 
-\noindent
 \en{But}\ru{Но}
 \en{where does}\ru{откуда}
-\en{this set}\ru{этот набор}~(\en{system}\ru{система})
-\en{of~equations}\ru{уравнений}
-\en{follow from}\ru{следует}?
+\en{all this}\ru{всё это}
+\en{come from}\ru{берётся}?
 
 \en{The equations}\ru{Уравнения}~\eqref{lineartheory:wholesetofequations}
 \en{are exact}\ru{точные},
@@ -129,7 +132,7 @@ ${%
 \en{is~described in}\ru{описано в}~\chapterdotsectionref{chapter:nonlinearcontinuum}{section:variationofconfiguration}.
 \en{The~linear theory}\ru{Линейная теория}
 \ru{это}\en{is}
-\en{the~result of varying}\ru{результат варьирования}
+\en{the~result of~varying}\ru{результат варьирования}
 \en{from the~initial unstressed configuration}\ru{от~начальной ненапряжённой конфигурации},
 \en{when}\ru{когда}
 
@@ -159,7 +162,7 @@ ${%
 \:\:
 \boldnabla \dotp \varbivalent{\hspace{-0.2ex}\cauchystress}
 \hspace{.1ex} + \hspace{.1ex}
-\rho \hspace{.25ex} \variation{\hspace{-0.2ex}\bm{f}}
+\rho \hspace{.25ex} \variation{\hspace{-0.2ex}\massloadvector}
 = \hspace{.1ex}
 \zerovector
 \hspace{.11ex} .
@@ -171,15 +174,15 @@ ${%
 \begin{itemize}
 \item
    ${\variation{\currentlocationvector}}$
-   \en{to}\ru{на}
+   \hbox{\hspace{.25ex}\en{to}\ru{на}\hspace{.25ex}}
    $\bm{u}$,
 \item
    ${\variation{\hspace{.12ex}\bm{C}}}$
-   \en{to}\ru{на}
+   \hbox{\hspace{.25ex}\en{to}\ru{на}\hspace{.25ex}}
    $\infinitesimaldeformation$,
 \item
    $\varbivalent{\hspace{-0.15ex}\cauchystress}$
-   \en{to}\ru{на}
+   \hbox{\hspace{.25ex}\en{to}\ru{на}\hspace{.25ex}}
    $\linearstress$,
 \item ${%
    \scalebox{.95}{$%
@@ -191,17 +194,18 @@ ${%
       \hspace{.1ex}
       \partial \hspace{.1ex} \bm{C}
    $}} }$
-   \en{to}\ru{на}
+   \hbox{\hspace{.25ex}\en{to}\ru{на}\hspace{.25ex}}
    $\stiffnesstensor$,
 \item
    ${ \hspace{-0.1ex} \rho \hspace{.25ex}
-   \variation{\hspace{-0.2ex}\bm{f}} }$
-   \en{to}\ru{на}
-   ${ \hspace{-0.1ex} \bm{v} \hspace{-0.2ex} }$.
+   \variation{\hspace{-0.2ex}\massloadvector} }$
+   \hbox{\hspace{.25ex}\en{to}\ru{на}\hspace{.25ex}}
+   ${ \hspace{-0.1ex} \volumeloadvector \hspace{-0.2ex} }$.
 \end{itemize}
 
 \en{If}\ru{Если}
-\en{the derivation of}\ru{вывод}~\eqref{variationfrominitialconfiguration}
+\en{the~derivation}\ru{вывод}~\eqref{variationfrominitialconfiguration}
+\en{via varying}\ru{через варьирование}
 \en{seems abstruse to the~reader}\ru{кажется читателю малопонятным},
 \en{it’s possible}\ru{возможно}
 \en{to proceed}\ru{исходить}
@@ -211,7 +215,7 @@ ${%
 \nopagebreak\vspace{-0.25em}
 \begin{equation}\label{nonlinear:setofequations}
 \begin{array}{c}
-\boldnabla \dotp \cauchystress \hspace{.15ex} + \rho \bm{f} = \hspace{.1ex} \zerovector \hspace{.1ex},
+\boldnabla \dotp \cauchystress \hspace{.15ex} + \rho \massloadvector = \hspace{.1ex} \zerovector \hspace{.1ex},
 \:\:
 \boldnabla = \bm{F}^{-\T} \hspace{-0.2ex} \dotp \boldnablacircled ,
 \:\:
@@ -344,63 +348,53 @@ ${u_x \hspace{-0.25ex} = \nu \hspace{.1ex} (y , \hspace{-0.1ex} z)}$,
 ${\mathtau_{xy} \hspace{-0.2ex} = \mathtau_{xz} \hspace{-0.2ex} = 0}$
 (\en{the function}\ru{функция}~$\nu$ \en{is determined}\ru{определяется} \en{by the stamp’s shape}\ru{формой штампа}).
 
-\en{For}\ru{Для}
-\en{the dynamic problems}\ru{динамических проблем}
-\en{we have}\ru{мы имеем}
-${
-   \bm{f}
-   \hspace{-0.1ex} - \hspace{-0.1ex}
-   \rho \hspace{.2ex} \mathdotdotabove{\bm{u}}
-}$
-\en{instead of just}\ru{вместо просто}~$\bm{f}$.
-\en{And}\ru{А}
-\en{the initial conditions}\ru{начальные условия}
+\en{In dynamics}\ru{В~динамике},
+\en{vector}\ru{вектор}~$\volumeloadvector$
+\en{also includes}\ru{включает также}
+\en{the~inertial addend}\ru{инерционное слагаемое}~${ - \hspace{.2ex} \rho \hspace{.2ex} \mathdotdotabove{\bm{u}} }$.
+\en{And }\ru{А~}%
+\en{the~initial conditions}\ru{начальные условия}
 \en{for}\ru{для}
-\en{the dynamic problems}\ru{динамических задач}
-\en{are set}\ru{ставятся}
-\en{as it’s common}\ru{как обычно}
-\en{in~mechanics}\ru{в~механике}\:---
-\en{on the positions}\ru{на положения}
-\en{and}\ru{и}
-\en{on the velocities}\ru{на скорости}:
-\en{at the given moment}\ru{в~данный момент}
-\en{of~time}\ru{времени}~${t \narroweq \hspace{.1ex} 0}$
-\ru{известны }$\bm{u}$ \en{and}\ru{и}~$\mathdotabove{\bm{u}}$\en{ are known}.
-%
-\en{The linearity of the problems}\ru{Линейность задач}
+\en{dynamic problems}\ru{динамических задач}
+\en{commonly are}\ru{обычно таковы}\::
+\en{positions}\ru{положения}~$\bm{u}$
+\en{and velocities}\ru{и~скорости}~$\mathdotabove{\bm{u}}$,
+\ru{известные}\en{known}
+\en{at the specific}\ru{в~определенный}
+\en{moment of~time}\ru{момент времени}~${t \narroweq \hspace{.1ex} 0}$.
 
 \en{The linearity}\ru{Линейность}
 \en{gives}\ru{даёт}
-\en{the principle}\ru{принцип}
-\en{of superposition}\ru{суперпозиции}
-\en{(or independence)}\ru{(или независимости)}
-\en{of the action}\ru{действия}
-\en{of loads}\ru{нагрузок}.
+\en{the~principle}\ru{принцип}
+\en{of~superposition}\ru{суперпозиции}
+(\en{or independence}\ru{или независимости})
+\en{of the~action}\ru{действия}
+\en{of~loads}\ru{нагрузок}.
 \en{When}\ru{Когда}
 \en{there are several loads}\ru{нагрузок несколько},
-\en{the problem}\ru{проблема}
+\en{the~problem}\ru{проблема}
 \en{can be solved}\ru{может быть решена}
 \en{for}\ru{для}
-\en{the each load}\ru{для каждой нагрузки}
-\en{separately}\ru{отдельно}.
-\en{And then}\ru{И~тогда}
-\en{the complete}\ru{полное}
+\en{each load}\ru{каждой нагрузки}
+\en{separately}\ru{отдельно},
+\en{and}\ru{и}
+\en{the~complete}\ru{полное}
 \en{solution}\ru{решение}
-\en{can be}\ru{может быть}
-\en{obtained}\ru{получено}
-\en{by the summation}\ru{суммированием}.
+\en{is then obtained}\ru{тогда получается}
+\en{by summation}\ru{суммированием}.
 \en{For}\ru{Для}
 \en{statics}\ru{статики}
 \en{this}\ru{это}
 \en{means}\ru{значит},
 \en{for example}\ru{например},
-\en{the following}\ru{следующее}:
+\en{that}\ru{что}
 \en{if}\ru{если}
-\en{external loads}\ru{внешние нагрузки}~${\bm{f}}$ \en{and}\ru{и}~${\bm{p}}$
+\en{external loads}\ru{внешние нагрузки}
+$\volumeloadvector$ \en{and}\ru{и}~$\bm{p}$
 \en{increase}\ru{растут}
 \en{by}\ru{в}~$m$
 \en{times}\ru{раз}
-(\en{body}\ru{тело}
+(\en{the~body}\ru{тело}
 \en{is fixed on}\ru{закреплено на}~${o_1}$),
 \en{then}\ru{то}
 $\bm{u}$,
@@ -408,40 +402,45 @@ $\infinitesimaldeformation$
 \en{and}\ru{и}~$\linearstress$
 \en{will increase}\ru{вырастут}
 \ru{тоже }\en{by}\ru{в}~$m$ \en{times}\ru{раз}\en{ too}.
-\en{Potential energy density}\ru{Плотность потенциальной энергии}~$\potentialenergydensity$
+\en{The~potential energy}\ru{Потенциальная энергия}~$\potentialenergydensity$
 \en{will increase by}\ru{вырастет в}~$m^2$ \en{times}\ru{раз}.
-\en{In~reality}\ru{В~реальности}
-\en{such}\ru{такое}
+\en{In~reality}\ru{В~реальности},
+\en{this}\ru{это}
 \en{is observed}\ru{наблюдается}
 \en{only}\ru{лишь}
 \en{when}\ru{когда}
-\en{the loads}\ru{нагрузки}
+\en{the~loads}\ru{нагрузки}
 \en{are small}\ru{малые}.
 
-\en{The density}\ru{Плотность}
-\en{of the potential energy}\ru{потенциальной энергии}
-\en{of the elastic deformation}\ru{упругой деформации}~$\potentialenergydensity$
+\subsection*{Potential energy}
+
+\en{With linearity}\ru{С~линейностью}\en{,}
+\en{the~potential energy density}\ru{плотность потенциальной энергии}~$\potentialenergydensity$
+\en{as a~function}\ru{как функция}
+\en{of infinitesimal deformation}\ru{бесконечномалой деформации}~$\infinitesimaldeformation$
+\en{is}\ru{есть}
+\en{a~}\href{https://encyclopediaofmath.org/wiki/Quadratic_form}{\en{quadratic form}\ru{квадратичная форма}}
 
 \nopagebreak\vspace{-0.1em}
-\begin{equation*}
+\begin{equation}\label{linear.potentialenergydensity.quadratic}
 \potentialenergydensity ( \hspace{-0.1ex}
 \infinitesimaldeformation
 \hspace{-0.1ex} ) \hspace{-0.2ex}
 = \hspace{.1ex}
-\smash{\smalldisplaystyleonehalf} \hspace{.2ex}
+\smash{\smalldisplaystyleonehalf} \hspace{.3ex}
 \infinitesimaldeformation
 \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
 \stiffnesstensor
 \dotdotp \hspace{-0.1ex}
 \infinitesimaldeformation
-\end{equation*}
+\hspace{.2ex} ,
+\end{equation}
 
-\vspace{-0.4em}\noindent
-\en{and}\ru{и}
-\en{its variation}\ru{её вариация}
+\vspace{-0.5em}\noindent
+\en{the~variation of~which is}\ru{вариация которой}
 
-\nopagebreak\vspace{.3em}\begin{equation*}
-\begin{gathered}
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
 \variation{\potentialenergydensity}
 = \hspace{.1ex}
 \smash{\smalldisplaystyleonehalf} \hspace{.25ex}
@@ -455,14 +454,14 @@ $\infinitesimaldeformation$
 } \hspace{-0.25ex}
 = \hspace{.1ex}
 \smash{\smalldisplaystyleonehalf}
-\hspace{-0.1ex} \bigl(
+\hspace{-0.1ex} \bigl( \hspace{.2ex}
 \scalebox{.95}{$
    \variation{\infinitesimaldeformation}
    \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
    \stiffnesstensor
    \dotdotp \hspace{-0.1ex}
    \infinitesimaldeformation
-   +
+   \hspace{.1ex} + \hspace{.1ex}
    \infinitesimaldeformation
    \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
    \stiffnesstensor
@@ -478,8 +477,106 @@ $}
 \tikzmark{endLinearStressAsDeformationAndStiffness}
 \dotdotp
 \variation{\infinitesimaldeformation}
-\\[.3em]
+%%\hspace{.2ex} .
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0, -0.33ex][yshift = -0.1ex]%
+{beginLinearStressAsDeformationAndStiffness}{endLinearStressAsDeformationAndStiffness}%
+{${
+   \scalebox{.8}{$ \scalebox{.83}{$
+      \displaystyle\frac{\raisemath{-0.16em}{\partial \hspace{.1ex} \potentialenergydensity}}{\partial \infinitesimaldeformation}
+   $} \hspace{-0.3ex} = \hspace{-0.3ex} \linearstress $}
+}$}
+\vspace{-1.2em}
+
+\noindent
+\en{and the~second variation}\ru{и~вторая вариация}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\secondvariation{\hspace{.1ex}\potentialenergydensity}
+= \variation{\infinitesimaldeformation}
+\hspace{-0.1ex} \dotdotp
+\stiffnesstensor
+\dotdotp
+\variation{\infinitesimaldeformation}
+\hspace{.2ex} .
+\end{equation*}
+
+\vspace{-0.4em}\noindent
+\en{The relation}\ru{Отношение}
+\en{between}\ru{между}
+\en{the~stiffness tensor}\ru{тензором жёсткости}
+\en{and }\ru{и~}%
+\en{the~potential energy}\ru{потенциальной энергией}
+\en{of~elastic deformation}\ru{упругой деформации}
+\en{is now clear}\ru{теперь ясн\'{а}}\::
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation*}
+   \stiffnesstensor
+   \hspace{.1ex} =
+   \scalebox{.9}{$ \displaystyle\frac{
+      \raisemath{-0.1em}{ \partial^2 \hspace{.1ex} \potentialenergydensity }
+   }{
+      \raisemath{-0.1em}{
+         \partial \infinitesimaldeformation \hspace{.1ex}
+         \partial \infinitesimaldeformation
+      }
+   } $}
+   \hspace{.2ex} ,
+\end{equation*}
+
+\vspace{-0.3em}\noindent
+\en{because}\ru{потому что}
 %
+${ \variation{\hspace{.1ex}\potentialenergydensity}
+( \hspace{-0.1ex}
+    \infinitesimaldeformation
+\hspace{-0.1ex} ) \hspace{-0.2ex}
+= \smash{\scalebox{.9}{$
+    \displaystyle\frac{
+        \raisemath{-0.16em}
+        {\partial \hspace{.1ex} \potentialenergydensity}}
+        {\partial \infinitesimaldeformation}
+    $}} \hspace{-0.1ex}
+\dotdotp
+\variation{\infinitesimaldeformation} }$
+%
+\en{and}\ru{и}~%
+%
+${ \secondvariation{\hspace{.1ex}\potentialenergydensity}(\hspace{-0.1ex}
+\infinitesimaldeformation
+\hspace{-0.1ex}) \hspace{-0.2ex}
+= \variation{\infinitesimaldeformation}
+\hspace{-0.1ex} \dotdotp
+\smash{\scalebox{.9}{$ \displaystyle\frac{\raisemath{-0.16em}{\partial^2 \hspace{.1ex} \potentialenergydensity}}{ \partial \infinitesimaldeformation \hspace{.1ex} \partial \infinitesimaldeformation } $}}
+\hspace{-0.1ex} \dotdotp
+\variation{\infinitesimaldeformation}\hspace{.1ex} }$.
+
+\vspace{.3em}
+\en{Adding that here}\ru{Добавляя что тут},
+\en{as well as for}\ru{так~же, как~и для}
+\en{1\hbox{-}variable calculus}\ru{исчисления функций одной переменной}\footnote{%
+\en{for}\ru{для}\hspace{.5ex}~%
+${ y(x) = \hspace{.1ex} \smallerdisplaystyleonehalf \upalpha \hspace{.2ex} x^2 \hspace{-0.2ex} = \hspace{.1ex} \smallerdisplaystyleonehalf x \upalpha \hspace{.2ex} x }$
+\hspace{1em}\begin{minipage}[t]{.5\textwidth}
+${ dy = \hspace{.1ex} \smallerdisplaystyleonehalf \bigl( dx \upalpha \hspace{.2ex} x + x \upalpha \hspace{.2ex} dx \bigr) \hspace{-0.2ex} = x \upalpha \hspace{.2ex} dx }$
+\\
+${ d^2 y = dx \upalpha \hspace{.2ex} dx = \upalpha \hspace{.1ex} (dx)^2 }$
+\end{minipage}
+\\[-0.5em]
+\en{that is}\ru{то есть}\hspace{.5ex}~%
+${ d^2 y = 2 \hspace{.2ex} y(dx) }$
+}\hbox{\hspace{-0.6ex},}
+${
+\secondvariation{\hspace{.1ex}\potentialenergydensity} = 2 \hspace{.25ex} \potentialenergydensity (\variation{\infinitesimaldeformation})
+}$,
+\en{the~first and~second}\ru{первая и~вторая}
+\en{variations of}\ru{вариации}~$\potentialenergydensity$
+\en{may~be written as}\ru{могут быть записаны как}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{thefirstandsecondvariationsofpotentialenergydensity.linearelasticity}
+\begin{gathered}
 \variation{\hspace{.1ex}\potentialenergydensity}
 ( \hspace{-0.1ex}
     \infinitesimaldeformation
@@ -492,14 +589,15 @@ $}
     $} \hspace{-0.1ex}
 \dotdotp
 \variation{\infinitesimaldeformation}
-= \linearstress
-\dotdotp
-\variation{\infinitesimaldeformation}
 = \infinitesimaldeformation
 \hspace{-0.1ex} \dotdotp \hspace{-0.1ex}
 \stiffnesstensor
 \dotdotp
 \variation{\infinitesimaldeformation}
+= \linearstress
+\dotdotp
+\variation{\infinitesimaldeformation}
+\hspace{.2ex} ,
 \\
 %
 \secondvariation{\hspace{.1ex}\potentialenergydensity}(\hspace{-0.1ex}
@@ -515,37 +613,39 @@ $}
 \stiffnesstensor
 \dotdotp
 \variation{\infinitesimaldeformation}
-= 2 \potentialenergydensity (\variation{\infinitesimaldeformation})
+= 2 \hspace{.25ex} \potentialenergydensity (\variation{\infinitesimaldeformation})
+\hspace{.1ex} .
 \end{gathered}
-\end{equation*}%
-\AddUnderBrace[line width=.75pt][0, .1ex][yshift = .2ex]%
-{beginLinearStressAsDeformationAndStiffness}{endLinearStressAsDeformationAndStiffness}%
-{${
-   \scalebox{0.8}{$ \linearstress $}
-}$}
-\vspace{-0.5em}
+\end{equation}
 
-\en{As was noted}\ru{Как отмечалось}
-\en{in}\ru{в}~\chapterref{chapter:classicalmechanics},
-\en{the~principle of virtual work}\ru{принцип виртуальной работы}
-(\ru{принцип }\en{the~}\hbox{d’\hspace{-0.2ex}Alembert\ru{’а}--Lagrange\ru{’а}}\en{ principle})
-\en{can be put}\ru{может быть положен}
-\en{into the foundation}\ru{в~основу}
-\en{of mechanics}\ru{механики}.
-\en{This principle}\ru{Этот принцип}
-\en{is true}\ru{справедлив}
-\en{for the linear theory too}\ru{и~для линейной теории}
-(\en{the internal forces}\ru{внутренние силы}
-\en{in an~elastic medium}\ru{в~упругой среде}
+\subsection*{The principle of virtual work}
+
+\ru{Принцип}\en{The} \hbox{d’\hspace{-0.2ex}Alembert\ru{’а}--Lagrange\ru{’а}}\en{ principle}
+\en{of~virtual work}\ru{виртуальной работы}~%
+\eqrefwithchapterdotsection{discrete:principleofvirtualwork}{chapter:classicalmechanics}{section:virtualworkprinciple.classicalmechanics},
+\en{which}\ru{который}
+\en{can be used}\ru{может быть использован}
+\en{as the~foundation}\ru{как фундамент}
+\en{of~mechanics}\ru{механики},
+\en{applies}\ru{примен\'{и}м}
+\en{to the~linear theory as well}\ru{и~к~линейной теории тоже}.
+%
+\en{Since}\ru{Поскольку}
+\en{internal forces}\ru{внутренние силы}
+\en{in any elastic medium}\ru{в~любой упругой среде}
 \en{are potential}\ru{потенциальны}
-${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensity} }$)
+(${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensity} }$),
+\en{the~principle}\ru{принцип}
+\en{is formulated}\ru{формулируется}
+\en{as}\ru{как}
 
-\nopagebreak\vspace{-0.2em}
+\nopagebreak\vspace{-0.4em}
 \begin{equation}\label{lineartheory:principleofvirtualwork}
 \displaystyle\integral\displaylimits_{\mathcal{V}}
 \hspace{-0.2ex} \Bigl(
     \left(
-        \bm{f}
+        \hspace{.1ex}
+        \volumeloadvector
         \hspace{-0.1ex} - \hspace{-0.1ex}
         \rho \hspace{.1ex}
         \mathdotdotabove{\bm{u}}
@@ -559,51 +659,63 @@ ${ \variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensit
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \variation{\bm{u}} \hspace{.25ex} do \hspace{.1ex}
 = \hspace{.1ex} 0
 \hspace{.1ex} ,
-\hspace{.6em}
+\hspace{.8em}
 %
 \bm{u} \hspace{.1ex}
 \bigr|_{o_1}
 \hspace{-0.64ex} = \hspace{.1ex}
 \zerovector
-\hspace{.1ex} ,
+\hspace{.2ex} .
 \vspace{-0.2em}
 \end{equation}
 
-\noindent\vspace{-0.2em}
-\en{because}\ru{потому что}
+\vspace{-0.2em}\noindent
+\en{In~addition}\ru{Вдобавок},
+\en{if the~medium is elastic}\ru{если среда упруга}
+\emph{\en{linearly}\ru{линейно}},
+\en{then}\ru{то}
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}
+\nopagebreak\vspace{-0.4em}\begin{equation*}
 \begin{gathered}
+\variation{\infinitesimaldeformation} \hspace{-0.2ex}
+= \variation{\bigl( \hspace{.1ex} \boldnabla \bm{u}^{\hspace{.1ex}\mathsf{S}} \hspace{.2ex} \bigr)} \hspace{-0.3ex}
+= \hspace{-0.3ex} \boldnabla \bigl( \hspace{.1ex} \variation{\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{.2ex} \bigr) \hspace{-0.2ex}
+= \hspace{-0.3ex} \boldnabla \variation{\bm{u}}^{\hspace{.1ex}\mathsf{S}}
+\hspace{-0.1ex} ,
+\\[.4em]
+%
 \variation{\potentialenergydensity}
 = \linearstress \dotdotp \variation{\infinitesimaldeformation}
 = \linearstress \dotdotp \hspace{-0.12ex} \boldnabla \variation{\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.16ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \hspace{-0.1ex} \dotp \variation{\bm{u}} \hspace{.1ex} \right) - \boldnabla \dotp \linearstress \dotp \variation{\bm{u}}
 \hspace{.1ex} ,
-\\[.1em]
+\\[.4em]
 %
 \displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \variation{\potentialenergydensity} \hspace{.2ex} d\mathcal{V} =
 \ointegral\displaylimits_{\mathclap{o\hspace{.1ex}(\boundary \mathcal{V})}} \hspace{-0.2ex} \unitnormalvector \hspace{.1ex} \dotp \linearstress \dotp \variation{\bm{u}} \hspace{.32ex} do \hspace{.2ex} - \hspace{-0.1ex}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \linearstress \dotp \variation{\bm{u}} \hspace{.32ex} d\mathcal{V}
+\hspace{-0.1ex} ,
 \end{gathered}
 \end{equation*}
 
-\vspace{-0.2em}\noindent
-\en{and}\ru{и} \en{the left part of}\ru{левая часть}~\eqref{lineartheory:principleofvirtualwork}
+\vspace{-0.4em}\noindent
+\en{and}\ru{и}~\eqref{lineartheory:principleofvirtualwork}
 \en{becomes}\ru{становится}
+
+\nopagebreak\vspace{-0.4em}
 \begin{equation*}
-\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \boldnabla \dotp \linearstress \hspace{.1ex} + \bm{f} \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} \Bigr) \hspace{-0.3ex} \dotp \variation{\bm{u}} \hspace{.25ex} d\mathcal{V}
+\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \boldnabla \dotp \linearstress \hspace{.1ex} + \volumeloadvector \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} \Bigr) \hspace{-0.3ex} \dotp \variation{\bm{u}} \hspace{.25ex} d\mathcal{V}
 + \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \Bigl( \bm{p} - \unitnormalvector \dotp \linearstress \Bigr) \hspace{-0.3ex} \dotp \variation{\bm{u}} \hspace{.25ex} do
-\hspace{.1ex} ,
+\hspace{.2ex} = \hspace{.2ex} 0
+\hspace{.2ex} .
 \end{equation*}
 
 \vspace{-0.4em}\noindent
-\en{that}\ru{что}
-\en{is equal to zero}\ru{равно нулю}.
-\en{Notice}\ru{Отметим}
-\en{the boundary condition}\ru{краевое условие}
-${\bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \zerovector}$:
-\en{the virtual displacements}\ru{виртуальные смещения}
+\en{Here}\ru{Здесь}\en{,}
+\en{virtual displacements}\ru{виртуальные смещения}~$\variation{\bm{u}}$
 \en{are compatible}\ru{совместимы}
-\en{with this constraint}\ru{с~этой связью}
+\en{with }\ru{с~}\en{the boundary condition}\ru{краевым условием}
+\en{for displacements}\ru{для смещений}
+\en{in}\ru{в}~\eqref{lineartheory:principleofvirtualwork},
 ${ \variation{\bm{u}} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \zerovector }$.

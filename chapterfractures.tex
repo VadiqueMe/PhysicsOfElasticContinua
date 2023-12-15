@@ -1,4 +1,4 @@
-\en{\chapter{Fractures}} %% Fissures
+\en{\chapter{Fractures}} %% fissures, cracks, breaks
 
 \ru{\chapter{Трещины}}
 
@@ -9,42 +9,102 @@
 \newcommand{\tensilestrength}{\mathsigma_{\hspace{-0.2ex}*}}
 \newcommand{\stressdeviator}{\bm{s}}
 
-\en{\section{Traditional criteria of durability}} % of toughness
+%% durability = (longevity, endurance) долговечность
+%% toughness = (strength, hardness, solidity) прочность, твёрдость
+
+\en{\section{Traditional criteria of toughness}}
+
+%% criteria is plural for criterion (singular)
 
 \ru{\section{Традиционные критерии прочности}}
 
 \label{section:cracks.theoriesofailure}
 
+\en{\dropcap{A}{fter}}\ru{\dropcap{П}{осле}}
+\en{determining}\ru{определения}
+\en{the~stresses in the~body}\ru{напряжений в~теле},
+\en{how}\ru{как}
+\en{to estimate}\ru{оценить}
+\en{the~toughness}\ru{прочность}?
+%
+\en{When}\ru{Когда}
+\en{a~sample of~material}\ru{образец материала}
+\en{is uniaxially extended}\ru{одноосно растягивается}
+\en{during a~test}\ru{во~вр\'{е}мя теста},
+\en{there obviously is}\ru{то очевидно есть}
+\en{some limit}\ru{некий предел}\:---
+\en{the }\inquotes{\href{https://en.wikipedia.org/wiki/Ultimate_tensile_strength}{\en{tensile strength}\ru{предел прочности}}}~${\tensilestrength}$,
+\en{above which}\ru{выше которого}
+\en{the~material}\ru{материал}
+\en{is destroyed}\ru{разрушается}.
+%
+\en{So}\ru{Так что}
+\en{for}\ru{для}
+\en{uniaxial}\ru{одноосного}
+\en{(ex)tension}\ru{растяжения}
+\en{with stress}\ru{с~напряжением}~$\mathsigma$,
+\en{the~toughness}\ru{прочность}
+\en{is thought to be}\ru{мыслится}
+\en{sufficient}\ru{достаточной}\ru{,}
+\en{if}\ru{если}~${\mathsigma \hspace{.1ex} \leq \tensilestrength / \hspace{.1ex} k}$,
+\en{where}\ru{где}
+$k$~\en{is}\ru{есть}
+\en{the so-called}\ru{так называемый}
+\en{safety factor~(coefficient of~safety)}\ru{коэффициент~(фактор) запаса}.
+%
+\en{But this approach}\ru{Но такой подход}
+\en{isn’t very convincing}\ru{не~очень убедителен},
+\en{because}\ru{потому что}
+\en{the~values of}\ru{значения}~${\tensilestrength}$\ru{,}
+\en{obtained}\ru{полученные}
+\en{from}\ru{из}
+\en{uniaxial tension tests}\ru{опытов на~одноосное растяжение}\ru{,}
+\en{have a~big scatter}\ru{имеют большой разброс},
+\en{and the~choice of~safety factor}\ru{а~выбор коэффициента запаса}
+\en{is sometimes tied to bureaucracy}\ru{порой бывает завязан на бюрократии}.
+%
+\en{However}\ru{Однако},
+\en{such views on}\ru{такие взгляды на}
+\en{analysis}\ru{анализ}
+\en{of~toughness}\ru{прочности}
+\en{are quite widespread}\ru{весьма широк\'{о} распространены}.
+\en{Without criticizing}\ru{Не критикуя},
+\en{I will mention}\ru{я упомяну}
+\en{the~most popular}\ru{самые популярные}
+\en{of~them}\ru{из~них}.
+
+\textbold{\en{Maximum principal stress criterion}\ru{Критерий максимального главного напряжения}}\::
+\en{a~destruction occurs}\ru{разрушение происходит}\ru{,}
+\en{when}\ru{когда}
+\en{the~biggest}\ru{наибольшее}
+\en{eigenvalue}\ru{собственное}~%
+(\inquotes{\en{principal}\ru{главное}})
+\en{stress}\ru{напряжение}~${\mathsigma_1}$
+\en{reaches the~limit}\ru{достигает предела},
+${\mathsigma_1 \hspace{-0.2ex} = \tensilestrength}$.
+\en{But in the~case}\ru{Но в~случае}
+\en{of uniaxial compression}\ru{одноосного сжатия}
+\en{with}\ru{с}~${\mathsigma_1 \hspace{-0.2ex} = 0}$
+\en{this hypothesis is false}\ru{эта гипотеза ложна}.
+
 \begin{otherlanguage}{russian}
 
-\dropcap{К}{ак} судить о~прочности тела после определения напряжения в~нём?
-При одноосном растяжении напряжением~$\mathsigma$ есть, очевидно, некий \inquotes{предел прочности}~${\tensilestrength}$, выше которого материал разрушается.
-Прочность считают достаточной при~${\mathsigma \hspace{.1ex} \leq \tensilestrength / \hspace{.1ex} k}$, где $k$ есть так называемый коэффициент запаса.
-Но такой подход не~вполне удовлетворяет, поскольку получаемые из~опытов значения~${\tensilestrength}$ \en{have a~big scatter}\ru{имеют большой разброс}, а~выбор коэффициента запаса \en{sometimes becomes a~bureaucratic act}\ru{временами становится бюрократическим актом}.
-
-Тем не~менее, подобные взгляды на~анализ прочности широк\'{о} распространены.
-Воздерживаясь от критики, ст\'{о}ит упомянуть самые популярные из~них.
-
-%% criteria is plural for criterion (singular)
-
-\textbold{Критерий максимального нормального напряжения}:
-разрушение происходит при~${\mathsigma_1 \hspace{-0.15ex} = \tensilestrength}$ (наибольшее из главных напряжений достигает предельного значения).
-Но это положение несправедливо для одноосного сжатия, при котором ${\mathsigma_1 \hspace{-0.15ex} = 0}$.
-
 \textbold{Критерий максимального касательного напряжения (Tresca criterion)}:
-разрушение наступает при ${\mathsigma_1 \hspace{-0.15ex} - \mathsigma_3 \hspace{-0.1ex} = \tensilestrength}$ ($\mathsigma_3$\:--- наименьшее из главных напряжений).
+\en{destruction happens if}\ru{разрушение случится, если}
+${\mathsigma_1 \hspace{-0.2ex} - \mathsigma_3 \hspace{-0.1ex} = \tensilestrength}$ ($\mathsigma_3$\:--- наименьшее из собственных напряжений).
 Это более соответствует началу пластического течения.
 
-\textbold{Критерий максимального удлинения}: наибольшее из собственных значений тензора деформации ${\infinitesimaldeformationeigenvalue{1} \hspace{-0.2ex} = \infinitesimaldeformationeigenvalue{*}}$.
-Это приемлемо и~при~сжатии с~${\infinitesimaldeformationeigenvalue{1} \hspace{-0.12ex} > 0}$.
+\textbold{Критерий максимального удлинения}\::
+наибольшее из собственных значений тензора деформации ${\infinitesimaldeformationeigenvalue{1} \hspace{-0.2ex} = \infinitesimaldeformationeigenvalue{*}}$.
+Это приемлемо и~для~сжатия с~${\infinitesimaldeformationeigenvalue{1} \hspace{-0.12ex} > 0}$.
 
-\textbold{Критерий энергии деформации}:
-${\potentialenergydensity = \\potentialenergydensity_*}$.
+\textbold{Критерий энергии деформации}\::
+${\potentialenergydensity = \potentialenergydensity_*}$.
 Здесь учитывается, что разрушение требует энергии, а источником её может~быть лишь сам\'{о} деформированное тело.
 Однако достаточный запас энергии\:--- необходимое, но не~единственное условие разрушения; должен включиться некий механизм преобразования упругой энергии в~работу разрушения.
 
 %% maximum distortion energy criterion
-\textbold{Критерий энергии формоизменения (von~Mises yield criterion)}:
+\textbold{Критерий энергии формоизменения (von~Mises yield criterion)}\::
 ${\stressdeviator \dotdotp \stressdeviator = 2 \mathtau_{*}^{\hspace{.25ex}2}}$, ${\, \stressdeviator \equiv \cauchystress - \frac{1}{3} \hspace{.25ex} \UnitDyad \trace{\hspace{-0.1ex}\cauchystress}}$ (\inquotes{девиатор напряжений}).
 Здесь не~играет роли энергия объёмной деформации.
 \href{https://en.wikipedia.org/wiki/Richard_von_Mises}{Richard von~Mises} предложил\footnote{\bookauthor{R.}[von~Mises]. \href{https://gdz.sub.uni-goettingen.de/id/PPN252457811_1913?tify=\%7B"pages":\%5B602\%5D,"view":"info"\%7D}{Mechanik der festen K\"{o}rper im plastisch-deformablen Zustand. \emph{Nachrichten von der K\"{o}niglichen Gesellschaft der~Wis\-sen\-schaf\-ten zu~Göttingen, Mathematisch-physikalische Klasse.} 1913, Seiten 582\hbox{--}592.}}\hspace{-0.25ex}

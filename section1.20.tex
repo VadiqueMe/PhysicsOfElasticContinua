@@ -42,36 +42,71 @@ with \inquotes{flat} space.
 \nopagebreak\vspace{.12em}
 \end{changemargin}
 
-\begin{otherlanguage}{russian}
-
 \noindent
-Рассматривая тензорные поля в~криволинейных координатах~(\sectionref{section:spatialdifferentiationoftensorfields}), мы исходили из~представления вектора\hbox{-}радиуса~(вектора положения) точки функцией этих координат:
+\en{Dealing}\ru{Имея дело}
+\en{with tensor fields}\ru{с~тензорными полями}
+\en{in curvilinear coordinates}\ru{в~криволинейных координатах}~(\sectionref{section:spatialdifferentiationoftensorfields}),
+\en{the~location vector}\ru{вектор положения}~%
+(\en{radius vector}\ru{вектор радиуса})
+\en{of~a~point}\ru{точки}
+\en{was introduced}\ru{был введён}
+\en{as a~function}\ru{как функция}
+\en{of these coordinates}\ru{этих координат}\::
 ${\locationvector \hspace{-0.4ex} = \hspace{-0.4ex} \locationvector(q^{\hspace{.1ex}i}\hspace{.1ex})}$.
-Этим отношением порождаются выражения
+%
+\en{From this relation}\ru{Из этого отношения}
+\en{originate many others}\ru{происходят многие другие},
+\en{such as}\ru{такие как}
 
 \nopagebreak\begin{itemize}
-\item векторов локального касательного базиса ${%
-\locationvector_\differentialindex{i} \hspace{-0.16ex} \equiv \smash{ \raisemath{.16em}{\scalebox{0.8}{$ \partial \hspace{.1ex} \locationvector $}} \hspace{-0.3ex} / \hspace{-0.4ex} \raisemath{-0.32em}{\scalebox{0.8}{$ \partial q^{\hspace{.1ex}i} $}} } \hspace{-0.15ex} \equiv \partial_i \hspace{.1ex} \locationvector%
+\item
+\en{the vectors of local tangent basis}\ru{векторы локального касательного базиса}
+${%
+\locationvector_\differentialindex{i} \hspace{-0.16ex} \equiv \smash{ \raisemath{.16em}{\scalebox{.8}{$ \partial \hspace{.1ex} \locationvector $}} \hspace{-0.3ex} / \hspace{-0.4ex} \raisemath{-0.32em}{\scalebox{0.8}{$ \partial q^{\hspace{.1ex}i} $}} } \hspace{-0.15ex} \equiv \partial_i \hspace{.1ex} \locationvector%
 }$,
 %
-\item компонент ${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.24ex} \equiv \locationvector_\differentialindex{i} \hspace{-0.16ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j}}$ и~${\textsl{g}^{\hspace{.25ex}i\hspace{-0.1ex}j} \hspace{-0.32ex} \equiv \locationvector^i \hspace{-0.32ex} \dotp \locationvector^j \hspace{-0.32ex} = \smash{\textsl{g}_{i\hspace{-0.1ex}j}^{\hspace{.33ex}\expminusone}}}$ единичного \inquotes{метрического} тензора~${\UnitDyad = \locationvector_\differentialindex{i} \locationvector^i \hspace{-0.2ex} = \locationvector^i \locationvector_\differentialindex{i} \hspace{-0.15ex} = \textsl{g}_{j\hspace{-0.1ex}k} \hspace{.1ex} \locationvector^{\hspace{.1ex}j} \hspace{-0.1ex} \locationvector^{k} \hspace{-0.25ex} = \textsl{g}^{\hspace{.25ex}j\hspace{-0.1ex}k} \hspace{.1ex} \locationvector_\differentialindex{\hspace{-0.1ex}j} \locationvector_\differentialindex{k}}$,
+\item
+\en{the components}\ru{компоненты}
+${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.24ex} \equiv \locationvector_\differentialindex{i} \hspace{-0.16ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j}}$
+\en{and}\ru{и}~${\textsl{g}^{\hspace{.25ex}i\hspace{-0.1ex}j} \hspace{-0.32ex} \equiv \locationvector^i \hspace{-0.32ex} \dotp \locationvector^j \hspace{-0.32ex} = \smash{\textsl{g}_{i\hspace{-0.1ex}j}^{\hspace{.33ex}\expminusone}}}$
+\en{of the~unit}\ru{единичного}
+(\inquotes{\en{metric}\ru{метрического}})
+\en{tensor}\ru{тензора}~${\UnitDyad = \locationvector_\differentialindex{i} \locationvector^i \hspace{-0.2ex} = \locationvector^i \locationvector_\differentialindex{i} \hspace{-0.15ex} = \textsl{g}_{j\hspace{-0.1ex}k} \hspace{.1ex} \locationvector^{\hspace{.1ex}j} \hspace{-0.1ex} \locationvector^{k} \hspace{-0.25ex} = \textsl{g}^{\hspace{.25ex}j\hspace{-0.1ex}k} \hspace{.1ex} \locationvector_\differentialindex{\hspace{-0.1ex}j} \locationvector_\differentialindex{k}}$,
 %
-\item векторов локального взаимного кокасательного базиса ${\locationvector^i \hspace{-0.32ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.22ex} = \delta_{\hspace{-0.15ex}j}^{\hspace{.2ex}i}}$, ${\locationvector^i \hspace{-0.25ex} = \textsl{g}^{\hspace{.25ex}i\hspace{-0.1ex}j} \locationvector_\differentialindex{\hspace{-0.1ex}j}}$,
+\item
+\en{the vectors of local dual (reciprocal) cotangent basis}\ru{векторы локального дуального (взаимного) кокасательного базиса}
+${\locationvector^i \hspace{-0.32ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.22ex} = \delta_{\hspace{-0.15ex}j}^{\hspace{.2ex}i}}$, ${\locationvector^i \hspace{-0.25ex} = \textsl{g}^{\hspace{.25ex}i\hspace{-0.1ex}j} \locationvector_\differentialindex{\hspace{-0.1ex}j}}$,
 %
-\item диф\-ферен\-циаль\-ного набла\hbox{-}оператора Hamilton’а ${\smash{\boldnabla \equiv \locationvector^i \partial_i}}$,
+\item
+\en{the differential}\ru{диф\-ферен\-циаль\-ный}
+\en{nabla}\ru{набла}\hbox{-}\en{operator}\ru{оператор}
+(\ru{оператор }Hamilton’\en{s}\ru{а}\en{ operator}, Hamiltonian)
+${\smash{\boldnabla \equiv \locationvector^i \partial_i}}$,
 ${\UnitDyad = \hspace{-0.25ex} \smash{\boldnabla \locationvector}}$,
 %
-\item полного дифференциала ${d \bm{\xi} = d \locationvector \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.05ex} \bm{\xi} \hspace{.1ex}}$,
+\item
+\en{the full differential}\ru{полный дифференциал}
+${d \bm{\xi} = d \locationvector \dotp \hspace{-0.2ex} \boldnabla \hspace{-0.05ex} \bm{\xi} \hspace{.1ex}}$,
 %
-\item частных производных касательного \hbox{базиса} (вторых частных производных~$\locationvector$) ${\locationvector_{\differentialindex{i}\hspace{.2ex}\differentialindex{\hspace{-0.1ex}j}} \hspace{-0.2ex} \equiv \partial_i \partial_j \locationvector \hspace{-0.1ex} = \partial_i \hspace{.12ex} \locationvector_\differentialindex{\hspace{-0.1ex}j}}$,
+\item
+\en{the partial derivatives}\ru{частные производные}
+\en{of tangent basis vectors}\ru{векторов касательного \hbox{базиса}}
+(\en{the~second partial derivatives of}\ru{вторые частные производные}~$\locationvector$)
+${\locationvector_{\differentialindex{i}\hspace{.2ex}\differentialindex{\hspace{-0.1ex}j}} \hspace{-0.2ex} \equiv \partial_i \partial_j \locationvector \hspace{-0.1ex} = \partial_i \hspace{.12ex} \locationvector_\differentialindex{\hspace{-0.1ex}j}}$,
 %
-\item символов \inquotes{связности} \hbox{Христоффеля}~(\hbox{Christoffel} symbols) ${\Gamma_{\hspace{-0.25ex}i\hspace{-0.1ex}j}^{\hspace{.25ex}k} \hspace{-0.1ex} \equiv \locationvector_{\differentialindex{i}\hspace{.2ex} \differentialindex{\hspace{-0.1ex}j}} \hspace{-0.2ex} \dotp \locationvector^k
+\item
+\en{the}\ru{символы} \hbox{Christoffel}\ru{’я}\en{ symbols}
+\en{of metric connection}\ru{метрической связности}
+${\Gamma_{\hspace{-0.25ex}i\hspace{-0.1ex}j}^{\hspace{.25ex}k} \hspace{-0.1ex} \equiv \locationvector_{\differentialindex{i}\hspace{.2ex} \differentialindex{\hspace{-0.1ex}j}} \hspace{-0.2ex} \dotp \locationvector^k
 %%\hspace{-0.32ex} = \Gamma_{\hspace{-0.25ex}i\hspace{-0.1ex}j\mathdotbelow{n}} \hspace{.25ex} \textsl{g}^{\hspace{.25ex}nk}\hspace{-0.25ex}
-}$ и~${\Gamma_{\hspace{-0.25ex}i\hspace{-0.1ex}j\mathdotbelow{k}} \hspace{-0.16ex} \equiv \locationvector_{\differentialindex{i}\hspace{.2ex}\differentialindex{\hspace{-0.1ex}j}} \hspace{-0.2ex} \dotp \locationvector_\differentialindex{k}
+}$
+\en{and}\ru{и}~${\Gamma_{\hspace{-0.25ex}i\hspace{-0.1ex}j\mathdotbelow{k}} \hspace{-0.16ex} \equiv \locationvector_{\differentialindex{i}\hspace{.2ex}\differentialindex{\hspace{-0.1ex}j}} \hspace{-0.2ex} \dotp \locationvector_\differentialindex{k}
 %%\hspace{-0.2ex} = \Gamma_{\hspace{-0.25ex}i\hspace{-0.1ex}j}^{\hspace{.25ex}n} \hspace{.16ex} \textsl{g}_{nk}
 }$.
 \vspace{-0.2em}
 \end{itemize}
+
+\begin{otherlanguage}{russian}
 
 Представим теперь, что функция~${\locationvector(q^{\hspace{.1ex}k})}$ не~известна, но~\hbox{зат\'{о}} в~каждой точке пространства известны шесть независимых компонент положительно определённой (\en{all}\ru{все} \ru{матрицы }Gram\ru{’а}\en{ matrices} \en{are non-negative definite}\ru{определены неотрицательно}) симметричной метрической матрицы Gram\ru{’а}~${\textsl{g}_{i\hspace{-0.1ex}j}(q^{\hspace{.1ex}k})}$.
 
