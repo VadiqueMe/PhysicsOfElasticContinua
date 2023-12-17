@@ -105,7 +105,7 @@ int main ( void )
 		{
 			four< ushort > thisOne = indices[ iThis ];
 			four< ushort > thatOne = indices[ iThat ];
-	
+
 			if ( thisOne.first == thatOne.third && thisOne.second == thatOne.fourth &&
 				 thisOne.third == thatOne.first && thisOne.fourth == thatOne.second )
 			{
@@ -142,7 +142,7 @@ int main ( void )
 		{
 			four< ushort > thisOne = indices[ iThis ];
 			four< ushort > thatOne = indices[ iThat ];
-	
+
 			if ( thisOne.first == thatOne.second && thisOne.second == thatOne.first &&
 				 thisOne.third == thatOne.fourth && thisOne.fourth == thatOne.third )
 			{
@@ -176,7 +176,7 @@ int main ( void )
 		{
 			four< ushort > thisOne = indices[ iThis ];
 			four< ushort > thatOne = indices[ iThat ];
-	
+
 			if ( thisOne.first == thatOne.second && thisOne.second == thatOne.first &&
 				 thisOne.third == thatOne.third && thisOne.fourth == thatOne.fourth )
 			{
@@ -209,7 +209,7 @@ int main ( void )
 		{
 			four< ushort > thisOne = indices[ iThis ];
 			four< ushort > thatOne = indices[ iThat ];
-	
+
 			if ( thisOne.first == thatOne.first && thisOne.second == thatOne.second &&
 				 thisOne.third == thatOne.fourth && thisOne.fourth == thatOne.third )
 			{
@@ -397,9 +397,9 @@ int main ( void )
 
 	std::cout << "for LaTeX" << std::endl ;
 
-	std::cout << "\\begin{array}{l}" << std::endl ;
 	std::cout << "A^{abcd} = A^{cdab} = A^{bacd} = A^{abdc} \\\\" << std::endl ;
 	std::cout << "%" << std::endl ;
+	std::cout << "\\begin{aligned}" << std::endl ;
 
 	for ( size_t indexofset = 0 ; indexofset < allSymmetries.size () ; ++ indexofset )
 	{
@@ -408,12 +408,13 @@ int main ( void )
 		{
 			if ( ! first ) std::cout << " = " ;
 			std::cout << "A^{" << item << "}" ;
+			if ( first ) std::cout << " &" ;
 			first = false ;
 		}
 		std::cout << " \\\\" << std::endl ;
 	}
 
-	std::cout << "\\end{array}" << std::endl ;
+	std::cout << "\\end{aligned}" << std::endl ;
 
 	return EXIT_SUCCESS ;
 }

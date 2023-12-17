@@ -1,142 +1,91 @@
-\en{\section{Variations}}
+\en{\section{Polar decomposition}}
 
-\ru{\section{Вариации}}
+\ru{\section{Полярное разложение}}
 
-\label{section:calculusofvariations}
+\label{section:polardecomposition.anotherversion}
 
-\en{Further}\ru{Дальше}
-\en{in this book}\ru{в~этой книге}
-\en{pretty often}\ru{довольно часто}
-\en{will be used}\ru{будет использоваться}
-\en{the~operation}\ru{операция}
-\en{of~varying}\ru{варьирования}.
-\en{It is similar}\ru{Она похожа}
-\en{to the differentiation}\ru{на дифференцирование}.
-
-\en{Variations}\ru{Вариации}
-\en{are seen as}\ru{видятся как}
-\en{infinitesimal displacements}\ru{бесконечно малые смещения},
-\en{compatible}\ru{совместимые}
-\en{with the constraints}\ru{с~ограничениями}\ru{( \inquotes{связями} )}.
-\en{If}\ru{Если}
-\en{there are no constraints}\ru{ограничений}
-\en{for}\ru{для}
-\en{variable}\ru{переменной}~$x$\ru{ нет},
-\en{then}\ru{то}
-\en{variations}\ru{вариации}~${\variation{x}}$
-\en{are completely random}\ru{совершенно случайны}.
-\en{But when}\ru{Но когда}
-\begin{equation*}
-y \mapsto x \hspace{.2ex} \colon \hspace{.2em} x \narroweq x(y\hspace{-0.1ex})
-\end{equation*}
-\en{is}\ru{это}
-\en{a~function}\ru{функция}
-\en{of some}\ru{некоторого}
-\en{independent argument}\ru{независимого аргумента}~$y$,
-\en{then}\ru{тогда}
-\begin{equation*}
-\variation{x} = x'\hspace{-0.25ex}(y\hspace{-0.1ex}) \hspace{.1ex} \variation{y} .
-\end{equation*}
-
-\en{Variations}\ru{Вариации}\en{ are}
-\en{similar}\ru{похожи}
-\en{to differentials}\ru{на~дифференциалы}.
-\en{As example}\ru{Как пример},
-\en{for}\ru{для}
-${\variation{x}}$
-\en{and}\ru{и}~${\variation{y}}$
-\en{as}\ru{как}
-\en{variations of}\ru{вариаций}~$x$ \en{and}\ru{и}~$y$,
-\en{with }\ru{с~}\en{finite}\ru{кон\'{е}чными}
-$u$ \en{and}\ru{и}~$v$,
-${u \variation{x} + v \variation{y} = \variation{w}}$
-\en{is written}\ru{пишется}
-\en{even when}\ru{даже когда}
-${\variation{w}}$
-\en{is not a~variation of}\ru{это не вариация}~$w$.
-%
-\en{In such a~case}\ru{В~таком случае}\en{,}
-${\variation{w}}$~\en{is}\ru{это}
-\en{a~single symbol}\ru{одиночный символ}.
-
-\en{Surely}\ru{Разумеется}\ru{,}
-\en{if}\ru{если}
-${u \narroweq u(x,y)}$,
-${v \narroweq v(x,y)}$
-\en{and}\ru{и}~${\partial_x v = \partial_y u}$
-(${ \hspace{.16ex}
-   \frac{\partial}{\partial x} v = \frac{\partial}{\partial y} u
-\hspace{.16ex} }$),
-\en{then}\ru{то}
-\en{the~sum}\ru{сумма}~${\variation{w} = u \variation{x} + v \variation{y}}$
-\en{will be a~variation}\ru{будет вариацией}
-\en{of some}\ru{н\'{е}кой}~$w$.
-
-\en{Varying}\ru{Варьируя}
-\en{the identity}\ru{тождество}~\eqref{orthogonalityofrotationtensor},
-\en{we get}\ru{мы получаем}
-
-\begin{equation*}
-\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!
-.
-\end{equation*}
-
-\en{This tensor}\ru{Этот тензор}
-\en{is antisymmetric}\ru{антисимметричен},
-\en{and thus}\ru{и~потому}
-\en{is representable}\ru{представляется}
-\en{via}\ru{через}
-\en{its}\ru{свой}
-\en{companion}\ru{сопутствующий}
-\en{pseudovector}\ru{псевдовектор}~${\varvector{o}}$
+\en{Any tensor}\ru{Любой тензор}
+\en{of the~second complexity}\ru{второй сложности}~${\bm{F}}$
+\en{with}\ru{с}~${\determinant F_{i\hspace{-0.1ex}j} \hspace{-0.2ex} \neq 0}$,
+\en{that is}\ru{то есть}
+\en{a~not singular}\ru{не сингулярный}
+\en{tensor}\ru{тензор},
+\en{can be}\ru{может быть}
+\en{decomposed}\ru{разложен}
 \en{as}\ru{как}
 
+...
+
+\begin{tcolorbox}
+\small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+
+\emph{Example.} Polar decompose tensor~${\bm{C} = C_{i\hspace{-0.1ex}j} \bm{e}_i \bm{e}_j}$, where $\bm{e}_k$ are mutually perpendicular unit vectors of basis, and $C_{i\hspace{-0.1ex}j}$ are tensor’s components
+
 \begin{equation*}
-\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
-.
+C_{i\hspace{-0.1ex}j} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+-5 & 20 & 11 \\
+10 & -15 & 23 \\
+-3 & -5 & 10
+\end{array}\hspace{-0.2ex}\right]$}
 \end{equation*}
 
-\textcolor{magenta}{\en{We have}\ru{Мы имеем}}
-\en{the following}\ru{следующие}
-\en{relations}\ru{отношения}
+\begin{equation*}
+\rotationtensor = O_{i\hspace{-0.1ex}j} \bm{e}_i \bm{e}_j \hspace{-0.2ex}
+= \bm{O}_1 \hspace{-0.2ex} \dotp \bm{O}_2
+\end{equation*}
 
-\nopagebreak\vspace{-0.5em}
-\begin{equation}
-\variation{\rotationtensor}
-\hspace{-0.1ex} =
-\varvector{o}
-\hspace{-0.1ex} \times \hspace{-0.1ex}
-\rotationtensor
-,
-\:\:
-\varvector{o}
-=
-- \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $}
-\hspace{-0.1ex} \Bigl( \hspace{-0.1ex}
-\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T}
-\Bigr)_{\hspace{-0.25em}\Xcompanion}
-\hspace{-0.1ex} ,
-\end{equation}
+\begin{equation*}
+O_{i\hspace{-0.1ex}j} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+0 & \nicefrac{3}{5} & \nicefrac{4}{5} \\
+0 & \nicefrac{4}{5} & - \hspace{.2ex} \nicefrac{3}{5} \\
+-1 & 0 & 0
+\end{array}\hspace{-0.4ex}\right]$}
+\hspace{-0.25ex} = \hspace{-0.25ex}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+0 & \mathcolor{red!33!white}{0} & 1 \\
+\mathcolor{red!33!white}{0} & \mathcolor{red!77!black}{1} & \mathcolor{red!33!white}{0} \\
+-1 & \mathcolor{red!33!white}{0} & 0
+\end{array}\hspace{-0.2ex}\right]$}
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\mathcolor{red!77!black}{1} & \mathcolor{red!33!white}{0} & \mathcolor{red!33!white}{0} \\
+\mathcolor{red!33!white}{0} & \nicefrac{4}{5} & - \hspace{.2ex} \nicefrac{3}{5} \\
+\mathcolor{red!33!white}{0} & \nicefrac{3}{5} & \nicefrac{4}{5}
+\end{array}\hspace{-0.4ex}\right]$}
+\end{equation*}
 
-\vspace{-0.5em}\noindent
-\en{similar}\ru{похожие}
-\en{to}\ru{на}~\eqref{angularvelocityvector}.
-\en{Vector}\ru{Вектор}~${\varvector{o}}$
-\en{of an~infinitesimal rotation}\ru{бесконечно малого поворота}
-\en{is not}\ru{это не}
-\inquotesx{\en{a~variation of}\ru{вариация}~$\bm{\mathrm{o}}$},
-\en{but}\ru{но}
-\en{a~single}\ru{один}
-\en{symbol}\ru{символ}.
+\begin{equation*}\begin{array}{c}
+\bm{C} = \rotationtensor \hspace{-0.1ex} \dotp \bm{S_{\smash{\mathsf{R}}}}
+\hspace{.1ex} , \:\:
+\rotationtensor^{\T}\hspace{-0.5ex} \dotp \bm{C} = \bm{S_{\smash{\mathsf{R}}}}
+\end{array}\end{equation*}
 
-\en{An~infinitesimal rotation}\ru{Бесконечно малый поворот}
-\en{is defined}\ru{определяется}
-\en{by vector}\ru{вектором}~${\varvector{o}}$,
-\en{but}\ru{но}
-\en{a~finite rotation}\ru{конечный поворот}
-\en{is also}\ru{тоже}
-\en{possible to represent}\ru{возможно представить}
-\en{as a~vector}\ru{как вектор}
+\begin{equation*}\begin{array}{c}
+\bm{C} = \bm{S_{\smash{\mathsf{L}}}} \hspace{-0.25ex} \dotp \rotationtensor
+\hspace{.1ex} , \:\:
+\bm{C} \dotp \rotationtensor^{\T}\hspace{-0.5ex} = \bm{S_{\smash{\mathsf{L}}}}
+\end{array}\end{equation*}
+
+\begin{equation*}
+S_{\smash{\mathsf{R}}\hspace{.15ex}i\hspace{-0.1ex}j} \hspace{-0.1ex} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+3 & 5 & -10 \\
+5 & 0 & 25 \\
+-10 & 25 & -5
+\end{array}\hspace{-0.2ex}\right]$}
+\end{equation*}
+
+\begin{equation*}
+S_{\smash{\mathsf{L}}\hspace{.15ex}i\hspace{-0.1ex}j} \hspace{-0.1ex} =
+\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.6em}}c}
+\nicefrac{104}{5} & \nicefrac{47}{5} & 5 \\
+\nicefrac{47}{5} & - \hspace{.2ex} \nicefrac{129}{5} & -10 \\
+5 & -10 & 3
+\end{array}\hspace{-0.2ex}\right]$}
+\end{equation*}
+
+\par\end{tcolorbox}
 
 ...
 

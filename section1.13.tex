@@ -1,213 +1,142 @@
-\en{\section{Rotations via quaternions}}
+\en{\section{Variations}}
 
-\ru{\section{Повороты кватернионами}}
+\ru{\section{Вариации}}
 
-\label{section:quaternions}
+\label{section:calculusofvariations}
 
-\en{The~other way}\ru{Другой путь}
-\en{to describe}\ru{описать}
-\en{a~rotation}\ru{поворот~(вращение)}
-\en{in 3\hbox{-}dimensional space}\ru{в~трёхмерном пространстве}\en{ is}\ru{\:---}
-\en{using quaternions}\ru{использовать кватернионы}.
-\en{They}\ru{Они}
-\en{are very popular}\ru{очень популярны}
+\en{Further}\ru{Дальше}
+\en{in this book}\ru{в~этой книге}
+\en{pretty often}\ru{довольно часто}
+\en{will be used}\ru{будет использоваться}
+\en{the~operation}\ru{операция}
+\en{of~varying}\ru{варьирования}.
+\en{It is similar}\ru{Она похожа}
+\en{to the differentiation}\ru{на дифференцирование}.
+
+\en{Variations}\ru{Вариации}
+\en{are seen as}\ru{видятся как}
+\en{infinitesimal displacements}\ru{бесконечно малые смещения},
+\en{compatible}\ru{совместимые}
+\en{with the constraints}\ru{с~ограничениями}\ru{( \inquotes{связями} )}.
+\en{If}\ru{Если}
+\en{there are no constraints}\ru{ограничений}
 \en{for}\ru{для}
-\en{computer graphics}\ru{компьютерной графики}.
-
-\en{Quaternions}\ru{Кватернионы}
-\en{were invented}\ru{были изобретены}
-\en{by~}\href{https://en.wikipedia.org/wiki/William_Rowan_Hamilton}{William\ru{’ом} Rowan\ru{’ом} Hamilton\ru{’ом}}
-\en{in}\ru{в}~1843\footnote{%
-\href{https://www.maths.tcd.ie/pub/HistMath/People/Hamilton/OnQuat/OnQuat.pdf}{\emph{On Quaternions; or on a new System of Imaginaries in Algebra}}
-\en{by~}\href{https://en.wikipedia.org/wiki/William_Rowan_Hamilton}{\boldauthor{William\ru{’а} Rowan\ru{’а} Hamilton\ru{’а}}}
-\en{appeared}\ru{появилась}
-\en{in 18 publications}\ru{в~18 публикациях}
-\en{in}\ru{в~журнале}
-\insinglequotes{The London, Edinburgh and Dublin Philosophical Magazine and Journal of Science}\en{\hbox{\hspace{-0.5ex},}}
-\en{volumes}\ru{в~томах}
-xxv\hbox{--}xxxvi\en{,}
-3\en{rd}\ru{ей}
-\en{series}\ru{серии},
-1844\hbox{--}1850.%
-%%Each publication, including the last one, ended with the~words
-%%\insinglequotes{To be continued}\hbox{\hspace{-0.5ex}.}
-}\hbox{\hspace{-0.5ex}.}
-
-..........
-
-\subsection*{\en{Complex numbers}\ru{Комплексные числа}}
-
-\begin{gather*}
-p,q \in \mathbb{C}
-\\
-\begin{array}{r@{\hspace{.22em}}c@{\hspace{.22em}}l}
-p = & %%\scalebox{.8}{$\mathcolor{black!40}{(1\cdot)}\hspace{.4ex}$}
-\exponentofimaginary{\varphi} & = \cosine \varphi + i \sine \varphi
-\\
-q = & %%\scalebox{.8}{$\mathcolor{black!40}{(1\cdot)}\hspace{.4ex}$}
-\exponentofimaginary{\psi} & = \cosine \psi + i \sine \psi
-\end{array}
-\end{gather*}
-
-the~composition of two rotations
+\en{variable}\ru{переменной}~$x$\ru{ нет},
+\en{then}\ru{то}
+\en{variations}\ru{вариации}~${\variation{x}}$
+\en{are completely random}\ru{совершенно случайны}.
+\en{But when}\ru{Но когда}
 \begin{equation*}
-p \hspace{.1ex} q = \exponentofimaginary{\varphi} \exponentofimaginary{\psi} \hspace{-0.2ex} = \exponentofimaginary{( \varphi + \psi )}
+y \mapsto x \hspace{.2ex} \colon \hspace{.2em} x \narroweq x(y\hspace{-0.1ex})
 \end{equation*}
-
-\begin{align*}
-\exponentofimaginary{(\varphi + \psi)} \hspace{-0.3ex}
-= & \cosine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi ) + i \sine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi )
-\\
-%
-\exponentofimaginary{\varphi} \exponentofimaginary{\psi} \hspace{-0.2ex}
-= & \hspace{.5ex} ( \cosine \varphi + i \sine \varphi ) ( \cosine \psi + i \sine \psi )
-\\
-%
-= & \hspace{.5ex} \begin{multlined}[t]
-( \cosine \varphi \cosine \psi - \sine \varphi \sine \psi )
-\\
-\hspace{2em} + i \hspace{.2ex} ( \sine \varphi \cosine \psi + \cosine \varphi \sine \psi )
-\end{multlined}
-\end{align*}
-
-\noindent
-from there also follows
-
-\begin{equation*}
-\begin{array}{r@{\hspace{.22em}}c@{\hspace{.25em}}l}
-\cosine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi )
-& = &
-\cosine \varphi \cosine \psi - \sine \varphi \sine \psi
-\\[.2em]
-%
-\sine ( \varphi {\hspace{.1ex} + \hspace{.1ex}} \psi )
-& = &
-\sine \varphi \cosine \psi + \cosine \varphi \sine \psi
-\end{array}
-\end{equation*}
-
-.............
-
-All rotations are \en{a~}\inquotes{\en{group}\ru{группа}}
-\en{in the~sense}\ru{в~смысле}
-\en{of~}\href{https://en.wikipedia.org/wiki/Group_theory}{\en{the~group theory}\ru{теории групп}}
-\en{in }\ru{в~}\href{https://en.wikipedia.org/wiki/Abstract_algebra}{\en{abstract algebra}\ru{абстрактной алгебре}}.
-
-\href{https://en.wikipedia.org/wiki/%C3%89variste_Galois}{Évariste Galois}
-
-\href{https://en.wikipedia.org/wiki/Permutation_group}{permutations are group} too
-
-\en{A~}\emph{\en{group}\ru{Группа}}~%
-\{\hspace{.3ex}$\mathcal{G}$,\hspace{-0.4ex} \inquotes{$\circ\hspace{.1ex}$}\hspace{.3ex}\}
 \en{is}\ru{это}
-\en{a~set}\ru{множество}~$\mathcal{G}$
-\en{with }\ru{с~}\en{a~binary operation}\ru{бинарной операцией}~\inquotes{$\circ\hspace{.1ex}$},
-\en{where}\ru{где}
-\textit{(i)}~\inquotes{$\circ\hspace{.1ex}$}~\en{is associative}\ru{ассоциативна},
-${( h \circ g ) \circ \hspace{-0.1ex} f \hspace{-0.1ex} = h \circ ( g \circ \hspace{-0.1ex} f )}$
+\en{a~function}\ru{функция}
+\en{of some}\ru{некоторого}
+\en{independent argument}\ru{независимого аргумента}~$y$,
+\en{then}\ru{тогда}
+\begin{equation*}
+\variation{x} = x'\hspace{-0.25ex}(y\hspace{-0.1ex}) \hspace{.1ex} \variation{y} .
+\end{equation*}
+
+\en{Variations}\ru{Вариации}\en{ are}
+\en{similar}\ru{похожи}
+\en{to differentials}\ru{на~дифференциалы}.
+\en{As example}\ru{Как пример},
 \en{for}\ru{для}
-\en{any}\ru{любых}
-${h, g, \hspace{-0.1ex} f \hspace{-0.1ex} \in \mathcal{G}}$,
-\textit{(ii)}~$\mathcal{G}$~\en{has}\ru{имеет} \en{a~two\hbox{-}sided}\ru{двухсторонний} \en{identity element}\ru{тождественный элемент},
-${\exists \hspace{.4ex} e {\hspace{.3ex} \in \hspace{.3ex}} \mathcal{G} \colon g \circ e = e \circ g = g \hspace{1ex} \forall g {\hspace{.2ex} \in \hspace{.2ex}} \mathcal{G}}$,
-\en{and }\ru{и~}\textit{(iii)}~\en{every element}\ru{каждый элемент} \en{of~}$\mathcal{G}$ \en{has}\ru{имеет} \en{an~inverse}\ru{обратный} \en{element}\ru{элемент},
-${\forall g {\hspace{.2ex} \in \hspace{.2ex}} \mathcal{G} \hspace{.8ex} \exists \hspace{.2ex} g^{\littleminusone} \colon g \circ g^{\littleminusone} \hspace{-0.25ex} = g^{\littleminusone} \hspace{-0.25ex} \circ g = e}$.
-
-Group operation~\inquotes{$\circ\hspace{.1ex}$}
-can be
-commutative
-or non-commutative.
+${\variation{x}}$
+\en{and}\ru{и}~${\variation{y}}$
+\en{as}\ru{как}
+\en{variations of}\ru{вариаций}~$x$ \en{and}\ru{и}~$y$,
+\en{with }\ru{с~}\en{finite}\ru{кон\'{е}чными}
+$u$ \en{and}\ru{и}~$v$,
+${u \variation{x} + v \variation{y} = \variation{w}}$
+\en{is written}\ru{пишется}
+\en{even when}\ru{даже когда}
+${\variation{w}}$
+\en{is not a~variation of}\ru{это не вариация}~$w$.
 %
-A~group
-with a~commutative operation
-is called
-\en{commutative group}\ru{коммутативная группа},
-\en{or}\ru{или}
-\en{abelian group}\ru{абелева группа}.
-%
-If there exists
-at least one
-pair of elements ${a, b \in \mathcal{G}}$
-for which ${a \circ b \neq b \circ a}$,
-then this group is non-abelian (non-commutative).
+\en{In such a~case}\ru{В~таком случае}\en{,}
+${\variation{w}}$~\en{is}\ru{это}
+\en{a~single symbol}\ru{одиночный символ}.
 
-\en{A~}\emph{\en{field}\ru{Поле}}~%
-\{\hspace{.3ex}$\mathcal{F}$\hspace{-0.2ex},\hspace{-0.4ex} \inquotes{$+\hspace{.1ex}$},\hspace{-0.4ex} \inquotes{$*\hspace{.1ex}$}\hspace{.3ex}\}
-\en{is}\ru{это}
-\en{a~set}\ru{множество}~$\mathcal{F}$
-\en{with two}\ru{с~двумя}
-\en{binary operations}\ru{бинарными операциями}
-\inquotes{$+\hspace{.1ex}$}~and~\inquotes{$*\hspace{.1ex}$},
-\en{when}\ru{когда}
-\textit{(i)}~\{\hspace{.3ex}$\mathcal{F}$,\hspace{-0.4ex} \inquotes{$+\hspace{.1ex}$}\hspace{.3ex}\}\en{ is}\ru{\:---}
-\en{commutative group}\ru{коммутативная группа},
-${a + b = b + a}$ ${\forall a, \hspace{-0.2ex} b \hspace{-0.2ex} \in \hspace{-0.3ex} \mathcal{F}}$,
-\en{with }\ru{с~}\inquotes{\en{additive}\ru{аддитивным}} \en{identity}\ru{тождественным}
-${e_{0} {\hspace{.2ex} \in \hspace{.3ex}} \mathcal{F}}$,
-\textit{(ii)}~\{\hspace{.3ex}$\mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}$,\hspace{-0.4ex} \inquotes{$*\hspace{.1ex}$}\hspace{.3ex}\}\en{ is}\ru{\:---}
-\en{commutative group}\ru{коммутативная группа},
-${a * b = b * a}$ ${\forall a, \hspace{-0.2ex} b \hspace{-0.2ex} \in \hspace{-0.3ex} \mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}}$,
-\en{with }\ru{с~}\inquotes{\en{multiplicative}\ru{мультипликативным}} \en{identity}\ru{тождественным}
-${e_{1} {\hspace{.2ex} \in \hspace{.3ex}} \mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}}$
-(${e_{1} \hspace{-0.3ex} \neq \hspace{-0.2ex} e_{0}}$),
-${a, \hspace{-0.2ex} b \hspace{-0.2ex} \in \hspace{-0.3ex} \mathcal{F} \hspace{-0.3ex} \setminus \hspace{-0.5ex} e_{0}}$
-$\Rightarrow$
-${a * b \hspace{-0.2ex} \neq \hspace{-0.2ex} e_{0}}$
-\en{for}\ru{для}~${\forall a {\hspace{.4ex} \neq \hspace{.4ex}} e_{0}}$
-\en{and}\ru{и}~${\forall \hspace{.2ex} b {\hspace{.4ex} \neq \hspace{.4ex}} e_{0}}$
-\textit{(iii)}~......
+\en{Surely}\ru{Разумеется}\ru{,}
+\en{if}\ru{если}
+${u \narroweq u(x,y)}$,
+${v \narroweq v(x,y)}$
+\en{and}\ru{и}~${\partial_x v = \partial_y u}$
+(${ \hspace{.16ex}
+   \frac{\partial}{\partial x} v = \frac{\partial}{\partial y} u
+\hspace{.16ex} }$),
+\en{then}\ru{то}
+\en{the~sum}\ru{сумма}~${\variation{w} = u \variation{x} + v \variation{y}}$
+\en{will be a~variation}\ru{будет вариацией}
+\en{of some}\ru{н\'{е}кой}~$w$.
 
-
-..............
-
-Two imaginary units
-${j \neq i}$
+\en{Varying}\ru{Варьируя}
+\en{the identity}\ru{тождество}~\eqref{orthogonalityofrotationtensor},
+\en{we get}\ru{мы получаем}
 
 \begin{equation*}
-( a + b \hspace{.1ex} i ) ( c + d \hspace{.1ex} j )
-= ac + cb \hspace{.1ex} i + ad \hspace{.1ex} j + bd \hspace{.2ex} i \hspace{-0.1ex} j
+\variation{\rotationtensor} \hspace{-0.2ex} \dotp \rotationtensor^{\T} \hspace{-0.2ex} = - \hspace{.2ex} \rotationtensor \dotp \variation{\rotationtensor}^{\T}\!
+.
 \end{equation*}
 
-By introducing
-third
-imaginary unit~$k$\::
-${i \hspace{-0.1ex} j = k}$
+\en{This tensor}\ru{Этот тензор}
+\en{is antisymmetric}\ru{антисимметричен},
+\en{and thus}\ru{и~потому}
+\en{is representable}\ru{представляется}
+\en{via}\ru{через}
+\en{its}\ru{свой}
+\en{companion}\ru{сопутствующий}
+\en{pseudovector}\ru{псевдовектор}~${\varvector{o}}$
+\en{as}\ru{как}
 
-\begin{equation}\label{theformulaforquaternions}
-i^2 \hspace{-0.1ex} = j^2 \hspace{-0.1ex} = k^2 \hspace{-0.1ex} = i \hspace{-0.1ex} j k = -1
-\hspace{.2ex} .
+\begin{equation*}
+\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T} \hspace{-0.3ex} = \varvector{o} \hspace{-0.2ex} \times \hspace{-0.2ex} \UnitDyad
+.
+\end{equation*}
+
+\textcolor{magenta}{\en{We have}\ru{Мы имеем}}
+\en{the following}\ru{следующие}
+\en{relations}\ru{отношения}
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}
+\variation{\rotationtensor}
+\hspace{-0.1ex} =
+\varvector{o}
+\hspace{-0.1ex} \times \hspace{-0.1ex}
+\rotationtensor
+,
+\:\:
+\varvector{o}
+=
+- \hspace{.2ex} \scalebox{.93}{$ \displaystyle\onehalf $}
+\hspace{-0.1ex} \Bigl( \hspace{-0.1ex}
+\variation{\rotationtensor} \hspace{-0.1ex} \dotp \rotationtensor^{\T}
+\Bigr)_{\hspace{-0.25em}\Xcompanion}
+\hspace{-0.1ex} ,
 \end{equation}
 
-\noindent
-and making multiplication
-not commutative but anticommutative
+\vspace{-0.5em}\noindent
+\en{similar}\ru{похожие}
+\en{to}\ru{на}~\eqref{angularvelocityvector}.
+\en{Vector}\ru{Вектор}~${\varvector{o}}$
+\en{of an~infinitesimal rotation}\ru{бесконечно малого поворота}
+\en{is not}\ru{это не}
+\inquotesx{\en{a~variation of}\ru{вариация}~$\bm{\mathrm{o}}$},
+\en{but}\ru{но}
+\en{a~single}\ru{один}
+\en{symbol}\ru{символ}.
 
-\begin{equation}\label{moredefinitionalequationsforquaternions}
-i \hspace{-0.1ex} j = k = - \hspace{.1ex} ji \hspace{.1ex} , \hspace{.7em}
-jk = i = - \hspace{.1ex} kj \hspace{.1ex} , \hspace{.7em}
-k \hspace{.1ex} i = \hspace{-0.1ex} j = - \hspace{.2ex} ik \hspace{.1ex} ,
-\end{equation}
-
-\noindent
-meet quaternions.
-
-In fact there’s only two different imaginary units,
-and a third one is there just for short notation (${k = i \hspace{-0.1ex} j}$),
-say they’re only $i$~\en{and}\ru{и}~$j$, ${i^2 = j^2 = -1}$, ${i \neq j}$,
-and a~quaternion is ${q = a + b \hspace{.1ex} i + cj + d \hspace{.2ex} i \hspace{-0.1ex} j}$,
-with the really-easy-to-memorize equalities for multiplication
-${j i \hspace{-0.1ex} j = i}$, ${i \hspace{-0.1ex} j i = j}$
-and obvious
-${i \hspace{-0.1ex} j \hspace{-0.1ex} j = -i}$, ${ii \hspace{-0.1ex} j = -j}$,
-from there follows the anticommutativity itself,
-${ji = -i \hspace{-0.1ex} j}$.
-
-The following are absolutely the same,
-just a result of denoting ${k = i \hspace{-0.1ex} j}$,
-${i \hspace{-0.1ex} j i \hspace{-0.1ex} j = i \hspace{-0.1ex} j k = k^2}$
-and the \inquotes{really-easy-to-memorize} are derivable as well
-${i \hspace{-0.1ex} j i \hspace{-0.1ex} j = (i \hspace{-0.1ex} ji)j = j^2 = i(ji \hspace{-0.1ex} j) = i^2}$.
+\en{An~infinitesimal rotation}\ru{Бесконечно малый поворот}
+\en{is defined}\ru{определяется}
+\en{by vector}\ru{вектором}~${\varvector{o}}$,
+\en{but}\ru{но}
+\en{a~finite rotation}\ru{конечный поворот}
+\en{is also}\ru{тоже}
+\en{possible to represent}\ru{возможно представить}
+\en{as a~vector}\ru{как вектор}
 
 ...
-
 

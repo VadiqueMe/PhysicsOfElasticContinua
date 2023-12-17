@@ -2,9 +2,6 @@
 
 \ru{\section{Полный набор уравнений}}
 
-\newcommand\volumeloadvector{\textbf{\textsl{g}}}
-\newcommand\massloadvector{\bm{f}}
-
 \label{section:wholesetofequations.lineartheory}
 
 \en{\dropcap{E}{quations}}\ru{\dropcap{У}{равнения}}
@@ -37,13 +34,13 @@
 \item \en{the~balance of~forces}\ru{баланса сил}~(\en{of~momentum}\ru{импульса}),
 \item \ru{соотношения}\en{the} \en{stress}\ru{напряжение}--\en{strain}\ru{деформация}\en{ relations}
 \en{for a~material}\ru{для материала},
-\item \en{absolute deformation}\ru{абсолютная деформация} ${\bm{u} \hspace{.2ex} \mapsto \infinitesimaldeformation}$ \en{relative deformation}\ru{относительная деформация},
+\item \en{displacement}\ru{смещение} ${\bm{u} \hspace{.2ex} \mapsto \infinitesimaldeformation}$ \en{relative deformation}\ru{относительная деформация},
 \end{itemize}
 
 \noindent
 \en{is}\ru{есть}
 
-\nopagebreak\vspace{-0.8em}
+\nopagebreak\vspace{-1.2em}
 %%%\hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}
 \label{lineartheory:wholesetofequations}
@@ -58,7 +55,7 @@
    \frac{ \raisemath{-0.133em}{
       \partial \hspace{.1ex} \potentialenergydensity^{\mathstrut}
    }%close \raisemath
-   }%close 1st argument of \frac
+   }%close 1st part of \frac
    { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
 $}
 =
@@ -74,19 +71,51 @@ $}
 \hspace{-0.2ex} .
 \end{equation}
 
-\nopagebreak\noindent
+\nopagebreak\vspace{-0.2em}\noindent
 \en{Here}\ru{Здесь}
+%
 $\linearstress$~\ru{это}\en{is}
 \en{the~linear stress tensor}\ru{линейный тензор напряжений},
+%
 $\volumeloadvector$~\en{is}\ru{это}
 \en{the~resultant vector}\ru{результирующий вектор}
-\en{of volume loads}\ru{объёмных нагрузок},
+\en{of volume loads}\ru{объёмных нагрузок}\footnote{%
+\en{In linear theory}\ru{В~линейной теории}\en{,}
+\en{the}\ru{нагрузки} \inquotes{\en{per volume unit}\ru{на единицу объёма}}\en{ loads}~${\volumeloadvector \hspace{.1ex} d\mathcal{V}}$
+\en{are used much more often than}\ru{используются намного чаще, чем}
+\en{the }\inquotes{\en{per mass unit}\ru{на единицу массы}}~${\hspace{-0.2ex} \massloadvector \hspace{-0.1ex} dm}$\en{ ones}
+(${\hspace{.1ex} \volumeloadvector \hspace{.1ex} d\mathcal{V} \hspace{-0.2ex} = \hspace{-0.3ex} \massloadvector \hspace{-0.1ex} dm}$,
+${\hspace{.1ex} \volumeloadvector \hspace{-0.3ex} = \hspace{-0.3ex} \rho \hspace{-0.1ex} \massloadvector}$),
+\en{because}\ru{потому что}
+${d \mathcal{V} \hspace{-0.2ex} = d \mathcircabove{\mathcal{V}}}$,
+${\rho \hspace{.2ex} d \mathcal{V} \hspace{-0.1ex} = \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.2ex} d \mathcircabove{\mathcal{V}}}$
+\en{and}\ru{и}~%
+${
+\hspace{-0.2ex} \massloadvector \hspace{-0.1ex} dm
+= \hspace{-0.1ex}
+\massloadvector \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.2ex} d \mathcircabove{\mathcal{V}}
+\hspace{-0.2ex} = \hspace{-0.1ex}
+\massloadvector \hspace{-0.3ex} \rho \hspace{.2ex} d \mathcal{V}
+\hspace{-0.1ex} =
+\volumeloadvector \hspace{.1ex} d\mathcal{V}
+}$.%
+}\hbox{\hspace{-0.5ex},}
+%
 $\bm{u}$~\ru{это}\en{is}
 \en{the~vector}\ru{вектор}
-\en{of displacement~(absolute deformation)}\ru{смещения~(абсолютной деформации)},
+\en{of displacement}\ru{смещения}
+(\en{the~}\inquotes{\en{absolute}\ru{абсолютное}} \en{displacement}\ru{смещение}
+\en{or}\ru{или}~\en{absolute deformation}\ru{абсолютная деформация}),
+%
 $\infinitesimaldeformation$~\ru{это}\en{is}
 \en{the~tensor}\ru{тензор}
-\en{of infinitesimal relative deformation~(strain)}\ru{бесконечномалой относительной деформации},
+\en{of infinitesimal relative deformation}\ru{бесконечномалой относительной деформации}
+(\en{relative displacement}\ru{относительное смещение}, \en{or}\ru{или} strain\footnote{%
+\en{As written}\ru{Как написано}
+\en{in the~first sentence}\ru{в~первом предложении}
+\en{of~}\inquotes{Historical introduction}\ru{~(\inquotes{Исторического введения})}
+\en{in the~}\ru{в~книге }Augustus\ru{’а} Edward\ru{’а} Hough Love’\en{s}\ru{а}\en{ book}~\cite{love-mathematicaltheoryofelasticity}.%
+}),
 ${%
    \potentialenergydensity (
       \hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}
@@ -95,11 +124,13 @@ ${%
 \en{the potential energy}\ru{потенциальная энергия}
 \en{of deformation}\ru{деформации}
 \en{per volume unit}\ru{на единицу объёма}
+%
 \en{and}\ru{и}~$\stiffnesstensor$~\ru{это}\en{is}
 \en{the stiffness tensor}\ru{тензор жёсткости}.
+%
 \en{The~latter}\ru{Последний}
 \en{is tetravalent}\ru{четырёхвалентен}
-\en{with the following symmetry}\ru{со~следующей симметрией}
+\en{with the~following symmetry}\ru{со~следующей симметрией}
 \begin{equation*}
    \stiffnesstensor_{\hspace{.12ex} \indexjuggling{12}{34}}
    \hspace{-0.4ex} = \hspace{-0.1ex}
@@ -290,7 +321,7 @@ J = 1 + \hspace{-0.1ex} \smallparameter J^{\hspace{.1ex}\scalebox{0.66}{(1)}} \h
 \en{When}\ru{Когда},
 \en{as example}\ru{как пример},
 \en{I’m interested in}\ru{меня интересует}
-\en{a~relation}\ru{связь}
+\en{the~relation}\ru{связь}
 \en{between}\ru{между}
 \en{the~frequency}\ru{частотой}
 \en{of a~freely vibrating}\ru{свободно вибрирующего}

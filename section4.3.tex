@@ -2,21 +2,23 @@
 
 \ru{\section{Закон Hooke’а}}
 
-\nopagebreak\vspace{-2.4em}
+\label{section:hookelaw}
+
+\vspace{-2.4em}
+%%\hspace*{-\parindent}
+\begin{minipage}{\columnwidth}
+
 \noindent
-\small ${%
+{ \small ${%
 \linearstress
 \hspace{.1ex} =
 \displaystyle\frac{ \raisemath{-0.2em}{\partial \hspace{.1ex} \potentialenergydensity} }%
 { \partial \infinitesimaldeformation }
 = \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation
 = \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \stiffnesstensor
-}$
-\vspace{.5em}
+}$ }
 
-\label{section:hookelaw}
-
-\nopagebreak
+\nopagebreak\vspace{1em}
 \en{That}\ru{То}
 \en{relation}\ru{соотношение}
 \en{between}\ru{между}
@@ -27,13 +29,8 @@
 \en{in}\ru{в}~\en{the~}\hbox{XVII$^{\hspace{.15ex}\textrm{\en{th}\ru{ом}}}$\hspace{-0.12em}}~\en{century}\ru{веке}
 Robert Hooke\ru{~(Роберт Гук)}
 \en{could only phrase}\ru{мог высказать лишь}
-\en{pretty vaguely}\ru{весьма расплывчато}\footnote{%
-\hspace*{.2em}\inquotesx{\textit{ceiiinosssttuu, id est, Ut tensio sic vis}}[---]
-\bookauthor{Robert Hooke}.
-%%%https://play.google.com/books/reader?id=LAtPAAAAcAAJ&pg=GBS.PA1
-\href{https://www.google.com/books/edition/Lectures_de_Potentia_Restitutiva_Or_of_S/LAtPAAAAcAAJ}%
-{Lectures de Potentia Restitutiva, Or of Spring Explaining the Power of Springing Bodies. London, 1678. \howmanypages{56~pages.}}%
-}\hbox{\hspace{-0.32em},}\hspace{.2em}
+\en{pretty vaguely}\ru{весьма расплывчато}%
+\stepcounter{footnote}\setcounter{auxfootnotecounter}{\value{footnote}}\footnotemark[\value{auxfootnotecounter}]\hbox{\hspace{-0.5ex},}\hspace{.2em}
 \en{is written}\ru{записано}
 \en{as part}\ru{как часть}
 \en{of~the~complete set}\ru{полного набора}
@@ -44,6 +41,17 @@ Robert Hooke\ru{~(Роберт Гук)}
 \nopagebreak\vspace{-0.1em}
 \input{stiffnesstensor.tex}
 
+\vspace{\parskip}
+\end{minipage}
+
+\nicefootnotetext{auxfootnotecounter}{%
+\hspace*{.2em}\inquotesx{\textit{ceiiinosssttuu, id est, Ut tensio sic vis}}[---]
+\bookauthor{Robert Hooke}.
+%%%https://play.google.com/books/reader?id=LAtPAAAAcAAJ&pg=GBS.PA1
+\href{https://www.google.com/books/edition/Lectures_de_Potentia_Restitutiva_Or_of_S/LAtPAAAAcAAJ}%
+{Lectures de Potentia Restitutiva, Or of Spring Explaining the Power of Springing Bodies. London, 1678. \howmanypages{56~pages.}}%
+}
+
 \vspace{-0.1em}
 \en{The~stiffness tensor}\ru{Тензор жёсткости}
 \en{is}\ru{есть}
@@ -52,12 +60,11 @@ Robert Hooke\ru{~(Роберт Гук)}
 \en{elastic potential energy density}\ru{плотности упругой потенциальной энергии}~$\potentialenergydensity$
 \en{twice}\ru{дважды}
 \en{by}\ru{по}
-\en{the same}\ru{тому~же}
-\en{bivalent tensor}\ru{бивалентному тензору}
-\en{of infinitesimal deformation}\ru{бесконечно малой деформации}
-$\infinitesimaldeformation$.
+\en{the~same}\ru{тому~же}
+\en{bivalent}\ru{бивалентному}
+\en{infinitesimal deformation tensor}\ru{тензору бесконечномалой деформации}~$\infinitesimaldeformation$.
 \en{It is symmetric}\ru{Он симметричен}
-\en{in the pairs of~indices}\ru{по~парам индексов}:
+\en{in the pairs of~indices}\ru{по~парам индексов}\::
 ${
    \stiffnesstensor_{ \hspace{.12ex} \indexjuggling{12}{34} } \hspace{-0.25ex}
    = \hspace{-0.1ex}
@@ -68,7 +75,6 @@ ${
    A^{ k\hspace{.06ex}l\hspace{.06ex}i\hspace{-0.1ex}j }\hspace{-0.25ex}
 }$.
 \en{Therefrom}\ru{Оттог\'{о}}
-\en{we have}\ru{мы имеем}
 36~\en{constants}\ru{констант}
 \en{out of}\ru{из}
 ${ 3^4 \hspace{-0.25ex} = \hspace{-0.12ex} 81 }$
@@ -85,7 +91,7 @@ ${ 3^4 \hspace{-0.25ex} = \hspace{-0.12ex} 81 }$
 \en{the stiffness tensor}\ru{тензор жёсткости}~$\stiffnesstensor$
 \en{is symmetric}\ru{симметричен}
 \en{inside}\ru{внутри}
-\en{each pair of~indices}\ru{каждой пары индексов}:
+\en{each pair of~indices}\ru{каждой пары индексов}\::
 ${
    A^{i\hspace{-0.1ex}j\hspace{-0.06ex}k\hspace{.06ex}l} \hspace{-0.2ex}
    = A^{j\hspace{-0.06ex}ik\hspace{.06ex}l} \hspace{-0.2ex}
@@ -98,7 +104,7 @@ ${
 \en{the number}\ru{число}
 \en{of the independent constants}\ru{независимых констант}
 (\en{the }\inquotes{\en{elastic moduli}\ru{упругих модулей}})
-\en{to}\ru{до}~21:
+\en{to}\ru{до}~21\::
 
 \nopagebreak\vspace{-0.25em}
 \input{symmetryofstiffness.tex}
@@ -202,7 +208,7 @@ ${z = \constant}$.
 \en{when}\ru{когда}
 
 \nopagebreak\vspace{-0.2em}
-\begin{equation}\label{zeroconstants:oneplaneofsymmetry}
+\begin{equation}\label{zeroconstants:oneplaneofsymmetry:monoclinic}
 \potentialenergydensity \hspace{.1ex}
 \raisemath{-0.2em} {
     \Bigr\vert
@@ -252,7 +258,7 @@ ${y = \constant}$.
 \en{to the~signs}\ru{к~знакам}\en{ of}~$\infinitesimaldeformationcomponents{yx}$
 \en{and}\ru{и}~$\infinitesimaldeformationcomponents{yz}$,
 \en{in addition}\ru{вдобавок}
-\en{to}\ru{к}~\eqref{zeroconstants:oneplaneofsymmetry}
+\en{to}\ru{к}~\eqref{zeroconstants:oneplaneofsymmetry:monoclinic}
 \en{we have}\ru{мы имеем}
 
 \nopagebreak\vspace{-0.3em}
@@ -282,11 +288,11 @@ $y$, $z$\en{ planes}\:---
 (\en{orthogonally anisotropic}\ru{ортогонально анизотропным}).
 %
 \en{It’s easy to see}\ru{Легко увидеть}\ru{,}
-\en{that}\ru{что}~\eqref{zeroconstants:oneplaneofsymmetry}
-\en{and}\ru{и}~\eqref{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}\:---
-\en{this is the~whole set}\ru{это весь набор}
+\en{that}\ru{что}~\eqref{zeroconstants:oneplaneofsymmetry:monoclinic}
+\en{and}\ru{и}~\eqref{zeroconstants:2orthogonalplanesofsymmetry:orthotropic}
+\en{is the~whole set}\ru{это весь набор}
 \en{of~zero constants}\ru{нулевых констант}\en{,}
-\en{in this case as well}\ru{и~в~этом случае}.
+\en{in this case as well}\ru{и~в~этом случае тоже}.
 %
 \en{So}\ru{Итак},
 \en{an orthotropic material}\ru{ортотропный материал}

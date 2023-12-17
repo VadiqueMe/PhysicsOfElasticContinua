@@ -32,19 +32,19 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}
 \en{for the linear model}\ru{для линейной модели}
 \en{of the small displacements theory}\ru{теории м\'{а}лых смещений}
 
-\nopagebreak
+\nopagebreak\vspace{.5em}
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}\label{dynamicsoflineartheory:integralofenergy}
 \displaystyle\integral\displaylimits_{\mathcal{V}}
 \hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \kineticenergydensity + \potentialenergydensity \Bigr)^{\hspace{-0.33ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} d\mathcal{V}
 = \hspace{-0.2ex}
-\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.3ex} d\mathcal{V}
+\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \volumeloadvector \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.3ex} d\mathcal{V}
 + \hspace{-0.2ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \mathdotabove{\bm{u}} \hspace{.3ex} do
 \hspace{.15ex} ,
 \end{equation}
 %
-\nopagebreak\vspace{-0.25em}\begin{gather*}
+\nopagebreak\vspace{-1.8em}\begin{gather*}
 \bm{u} \hspace{.1ex} \bigr|_{o_1} \hspace{-0.64ex} = \hspace{.2ex} \zerovector
 \hspace{.1ex} ,
 \hspace{.6em}
@@ -63,7 +63,7 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}
 \end{gather*}
 \end{minipage}
 
-\vspace{.3em}
+\vspace{.8em}
 \en{For}\ru{Для}
 \en{the \hbox{left\textcolor{gray}{-hand}} side}\ru{левой части}
 \en{we have}\ru{мы имеем}
@@ -86,7 +86,7 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}
 %
 \hspace*{4em}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.15ex} \right)
-+ ( \hspace{.12ex} \bm{f} \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}}
++ ( \hspace{.12ex} \volumeloadvector \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}}
 %%\hspace{.2ex} .
 \end{array}
 \end{equation*}
@@ -95,17 +95,17 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}
 {${\scalebox{0.75}{$ 2 \hspace{.2ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \mathdotabove{\infinitesimaldeformation} $}}$}
 \AddUnderBrace[line width=.75pt][.16ex, .1ex][yshift = .2ex]%
 {NablaDotTauDynamicsBegin}{NablaDotTauDynamicsEnd}%
-{ \scalebox{.75}{$ - \hspace{.2ex} ( \hspace{.12ex} \bm{f} \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) $} }
+{ \scalebox{.75}{$ - \hspace{.2ex} ( \hspace{.12ex} \volumeloadvector \hspace{-0.2ex} - \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.15ex} ) $} }
 
 \nopagebreak\vspace{-0.6em}\noindent
 (\ru{использован }\en{the balance of~momentum}\ru{баланс импульса}
-${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f} - \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} = \zerovector}$\en{ is used}),
+${\hspace{-0.24ex}\boldnabla \dotp \linearstress \hspace{.15ex} + \volumeloadvector - \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} = \zerovector}$\en{ is used}),
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
 \mathdotabove{\kineticenergydensity} + \mathdotabove{\potentialenergydensity} \hspace{.1ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.15ex} \right)
-+ \bm{f} \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}}
++ \volumeloadvector \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}}
 \hspace{.2ex} .
 \end{equation*}
 
@@ -124,10 +124,19 @@ ${\unitnormalvector \dotp \linearstress = \bm{p}}$
 \en{on}\ru{на}~$o_2$,
 \en{we get}\ru{получаем}~\eqref{dynamicsoflineartheory:integralofenergy}.
 
-\en{From}\ru{Из}~\eqref{dynamicsoflineartheory:integralofenergy} \en{it follows that}\ru{следует, что} \en{without loads}\ru{без нагрузок} (\en{when}\ru{когда} \en{there’re no external forces}\ru{нет внешних сил}, \en{neither volume nor surface}\ru{ни объёмных, ни поверхностных}), \en{and}\ru{и} \en{the~full mechanical energy}\ru{полная механическая энергия} \en{doesn’t change}\ru{не изменяется}:
+\en{From}\ru{Из}~\eqref{dynamicsoflineartheory:integralofenergy}
+\en{it follows that}\ru{следует, что}
+\en{without loads}\ru{без нагрузок}
+(\en{when}\ru{когда}
+\en{there’re no external forces}\ru{нет внешних сил},
+\en{neither volume nor surface}\ru{ни объёмных, ни поверхностных}),
+\en{and}\ru{и}
+\en{the~full mechanical energy}\ru{полная механическая энергия}
+\en{doesn’t change}\ru{не изменяется}\::
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{dynamicsoflineartheory:fullenergyisconstantwithoutloads}
-\bm{f} \hspace{-0.1ex} = \zerovector
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{dynamicsoflineartheory:fullenergyisconstantwithoutloads}
+\volumeloadvector \hspace{-0.1ex} = \zerovector
 \hspace{1.1ex} \text{\en{and}\ru{и}} \hspace{1.2ex}
 \bm{p} = \zerovector
 %
@@ -141,14 +150,16 @@ ${\unitnormalvector \dotp \linearstress = \bm{p}}$
 \vspace{-0.1em}\noindent
 \en{If}\ru{Если} \en{at the~moment}\ru{в~момент}~${t \narroweq 0}$ \en{there was}\ru{был} \en{unstressed}\ru{ненапряжённый}\:(${\potentialenergydensity \narroweq \hspace{.1ex} 0}$) \en{rest}\ru{покой}\:(${\kineticenergydensity \narroweq \hspace{.1ex} 0}$), \en{then}\ru{то}
 
-\nopagebreak\vspace{-0.25em}\begin{equation*}
+\nopagebreak\vspace{-0.25em}
+\begin{equation*}
 \scalebox{.8}{$\displaystyle \integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \bigl( \hspace{.1ex} \kineticenergydensity + \potentialenergydensity \hspace{.1ex} \bigr) \hspace{.1ex} d\mathcal{V} = \hspace{.1ex} 0
 \hspace{.1ex} .
 \tag{\theequation \raisebox{.1em}{\textquotesingle}}\label{dynamicsoflineartheory:fullenergyiszero}
 \vspace{-0.25em}
 \end{equation*}
 
-\en{The kinetic energy}\ru{Кинетическая энергия} \en{is positive}\ru{положительна}:
+\en{The kinetic energy}\ru{Кинетическая энергия}
+\en{is positive}\ru{положительна}\::
 ${\kineticenergydensity \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\mathdotabove{\bm{u}} \hspace{-0.1ex} \neq \hspace{-0.1ex} \zerovector}$
 \en{and}\ru{и}~\en{vanishes}\ru{исчезает}
 (\en{nullifies}\ru{обнуляется})
@@ -156,13 +167,14 @@ ${\kineticenergydensity \hspace{-0.2ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{есл�
 \en{this ensues}\ru{это вытекает} \en{from its definition}\ru{из её определения}
 ${\kineticenergydensity \hspace{-0.1ex} \equiv \smallerdisplaystyleonehalf \hspace{.2ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}}$.
 \en{The potential energy}\ru{Потенциальная энергия},
-\en{being}\ru{будучи} \en{a~quadratic form}\ru{квадратичной формой} %%\en{of~}\en{an~infinitesimal linear deformation}\ru{бесконечномалой линейной деформации}
-${\potentialenergydensity (\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smash{\smallerdisplaystyleonehalf} \hspace{.2ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation}$,
-\en{is positive too}\ru{тоже положительна}:
+\en{being}\ru{будучи} \en{a~quadratic form}\ru{квадратичной формой}
+${\potentialenergydensity (\hspace{-0.1ex}\infinitesimaldeformation\hspace{-0.1ex}) \hspace{-0.2ex} = \hspace{.1ex} \smash{\smallerdisplaystyleonehalf} \hspace{.2ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation}$~%
+\eqref{linear.potentialenergydensity.quadratic},
+\en{is positive too}\ru{тоже положительна}\::
 ${\potentialenergydensity \hspace{-0.16ex} > \hspace{-0.2ex} 0}$ \en{if}\ru{если}~${\infinitesimaldeformation \hspace{-0.1ex} \neq \hspace{-0.1ex} \zerobivalent}$.
 %
 \en{Such is}\ru{Таков\'{о}} \en{a~priori requirement}\ru{априорное требование} \en{of~the~positive definiteness}\ru{положительной определённости} \en{for}\ru{для}~\en{stiffness tensor}\ru{тензора жёсткости}~$\stiffnesstensor$.
-\en{This is one of}\ru{Это одно из}~\inquotes{\en{additional inequalities in the~theory of~elasticity}\ru{дополнительных неравенств в~теории упругости}}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
+\en{This is one of the}\ru{Это одно из}~\inquotes{\en{additional inequalities in the~theory of~elasticity}\ru{дополнительных неравенств в~теории упругости}}~\cite{lurie-nonlinearelasticity, truesdell-firstcourse}.
 
 \en{Since}\ru{Так как}
 $\kineticenergydensity$ \en{and}\ru{и}~$\potentialenergydensity$
@@ -171,7 +183,6 @@ $\kineticenergydensity$ \en{and}\ru{и}~$\potentialenergydensity$
 \en{gives}\ru{даёт}
 
 \nopagebreak\vspace{-0.1em}
-\hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation*}
 \kineticenergydensity = 0 \hspace{.1ex}, \; \potentialenergydensity = 0
 \hspace{.7ex} \Rightarrow \hspace{.7ex}
@@ -184,9 +195,14 @@ $\kineticenergydensity$ \en{and}\ru{и}~$\potentialenergydensity$
 \bm{u} = \bm{u}^{\hspace{-0.1ex}\circ} \hspace{-0.3ex} + \hspace{.1ex} \bm{\omega}^{\circ} \hspace{-0.5ex} \times \locationvector
 \end{equation*}
 
-\nopagebreak\vspace{-0.1em}\noindent
-(${\smash{\bm{u}^{\hspace{-0.1ex}\circ}} \hspace{-0.3ex}}$ \en{and}\ru{и}~${\smash{\bm{\omega}^{\circ}} \hspace{-0.4ex}}$\en{ are}\ru{\:---} \en{some constants}\ru{некоторые константы} \en{of~}\en{translation}\ru{трансляции} \en{and}\ru{и}~\en{rotation}\ru{поворота}).
-\en{With an~immobile part}\ru{С~неподвижной частью} \en{of~the~surface}\ru{поверхности}
+\nopagebreak\vspace{-0.5em}\noindent
+(${\smash{\bm{u}^{\hspace{-0.1ex}\circ}} \hspace{-0.3ex}}$
+\en{and}\ru{и}~${\smash{\bm{\omega}^{\circ}} \hspace{-0.4ex}}$\en{ are}\ru{\:---}
+\en{some constants}\ru{некоторые константы}
+\en{of~}\en{translation}\ru{трансляции}
+\en{and}\ru{и}~\en{rotation}\ru{поворота}).
+\en{With an~immobile part}\ru{С~неподвижной частью}
+\en{of~the~surface}\ru{поверхности}
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
@@ -200,10 +216,10 @@ $\kineticenergydensity$ \en{and}\ru{и}~$\potentialenergydensity$
 %
 \bm{u} = \hspace{-0.1ex} \zerovector \hspace{1ex} \text{\en{everywhere}\ru{всюду}} .
 \end{equation*}
-\end{minipage}
 
+\vspace{-0.3em}
 \en{Now}\ru{Теперь}
-\en{remember two solutions}\ru{вспомним о~двух решениях}
+\en{back to the two solutions}\ru{вернёмся к~двум решениям},
 ${ \bm{u}_1\hspace{-0.25ex} }$
 \en{and}\ru{и}~${ \bm{u}_2 }$.
 \en{Their}\ru{Их}
@@ -218,12 +234,13 @@ ${\smash{
 }$
 \en{is}\ru{есть}
 \en{a~solution}\ru{решение}
-\en{of~an~entirely}\ru{полностью} \inquotes{\en{homogeneous}\ru{однородной}}
+\en{of the entirely}\ru{полностью}
+\inquotes{\en{homogeneous}\ru{однородной}}
 (\en{with no constant terms at~all}\ru{совсем без постоянных членов})
 \en{linear}\ru{линейной}
-\en{problem}\ru{задачи}:
+\en{problem}\ru{задачи}\::
 \en{in a~volume}\ru{в~объёме}
-${\bm{f} \hspace{-0.1ex} = \zerovector}$,
+${\volumeloadvector \hspace{-0.1ex} = \zerovector}$,
 \en{in boundary}\ru{в~краевых}
 \en{and }\ru{и~}\en{in initial}\ru{в~начальных} \en{conditions}\ru{условиях}\:---
 \en{zeroes}\ru{нули}.
@@ -281,7 +298,7 @@ ${ t \hspace{-0.1ex} + \hspace{-0.15ex} dt }$:
 \hspace{.1ex} ,
 \\[-0.1em]
 %
-\boldnabla \dotp \linearstress \hspace{.15ex} + \bm{f}
+\boldnabla \dotp \linearstress \hspace{.15ex} + \volumeloadvector
 = \rho \hspace{.2ex} \mathdotdotabove{\bm{u}}( \bm{r}, \hspace{.1ex} t \hspace{-0.3ex} + \hspace{-0.3ex} dt )
 \end{gather*}
 

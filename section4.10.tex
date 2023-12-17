@@ -37,7 +37,7 @@
 \potentialenergyfunctional \hspace{.2ex} (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \equiv \hspace{-0.2ex}
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
 \Bigl(
-\potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.1ex} - \bm{f} \hspace{-0.1ex} \dotp \bm{u}
+\potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.1ex} - \volumeloadvector \hspace{-0.1ex} \dotp \bm{u}
 \Bigr) \hspace{-0.1ex} d\mathcal{V} \hspace{.1ex}
 - \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex}
@@ -119,7 +119,7 @@ en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
    \potentialenergydensity ( \hspace{-0.1ex}\bm{u}\hspace{-0.1ex} ) \hspace{.2ex} d\mathcal{V} \hspace{.1ex}
    - \scalebox{.88}[1]{$ \biggl( $} \hspace{.1ex}
    \scalebox{.9}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
-   \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.3ex} d\mathcal{V}
+   \volumeloadvector \hspace{-0.1ex} \dotp \bm{u} \hspace{.3ex} d\mathcal{V}
    + \hspace{-0.3ex}
    \scalebox{.9}{$ \displaystyle \integral \displaylimits_{o_2} $} \hspace{-0.1ex}
    \bm{p} \dotp \bm{u} \hspace{.33ex}
@@ -154,7 +154,7 @@ en{of a~linear-elastic body}\ru{линейно-упругого т\'{е}ла},
       \potentialenergydensity (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
       - \potentialenergydensity (\hspace{-0.1ex} \bm{u} \hspace{-0.1ex})
       \hspace{-0.2ex} - \hspace{-0.2ex}
-      \bm{f} \hspace{-0.17ex} \dotp \hspace{-0.1ex}
+      \volumeloadvector \hspace{-0.17ex} \dotp \hspace{-0.1ex}
       ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} )
    \Bigr) \hspace{-0.1ex} d\mathcal{V}
    - \hspace{-0.3ex}
@@ -186,7 +186,7 @@ ${
    (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex})
 }$.
 
-${ \bm{f} \hspace{-0.2ex} = \hspace{-0.1ex} \boldconstant }$
+${ \volumeloadvector \hspace{-0.2ex} = \hspace{-0.1ex} \boldconstant }$
 \en{and}\ru{и}
 ${ \bm{p} \hspace{-0.1ex} = \hspace{-0.1ex} \boldconstant }$
 
@@ -198,7 +198,7 @@ ${\potentialenergydensity (\hspace{-0.1ex}\bm{a}\hspace{-0.1ex}) \hspace{-0.2ex}
 ${( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \bigr|_{o_1} \hspace{-0.8ex} = \bm{u}_{\raisemath{-0.1em}{0}} \hspace{-0.3ex} - \bm{u}_{\raisemath{-0.1em}{0}} \hspace{-0.22ex} = \zerovector}$.
 \en{External}\ru{Внешняя} \en{surface force}\ru{поверхностная сила} ${ \hspace{.1ex}\bm{p} \hspace{.15ex} \bigr|_{o_2} \hspace{-0.9ex} = \hspace{-0.1ex} \tractionvector{\currentunitnormal} \hspace{-0.1ex} = \currentunitnormal \dotp \linearstress }$ \en{on}\ru{на}~${o_2}$
 \en{and}\ru{и}~${{=} \hspace{.33ex} \zerovector}$ \en{elsewhere}\ru{где-либо ещё} \en{on}\ru{на}~${o(\boundary \mathcal{V})}$.
-${\linearstress \hspace{-0.1ex} = \hspace{-0.3ex} \boldnabla \bm{u} \dotdotp \stiffnesstensor \hspace{-0.1ex} = \hspace{-0.1ex} \constantbivalent}$ along with constant~$\bm{p}$ \en{and}\ru{и}~$\bm{f}$\hbox{\hspace{-0.2ex}.}
+${\linearstress \hspace{-0.1ex} = \hspace{-0.3ex} \boldnabla \bm{u} \dotdotp \stiffnesstensor \hspace{-0.1ex} = \hspace{-0.1ex} \constantbivalent}$ along with constant~$\bm{p}$ \en{and}\ru{и}~$\volumeloadvector$\hbox{\hspace{-0.2ex}.}
 \en{There\-fore}\ru{Поэтому}
 
 \nopagebreak\vspace{-0.3em}\begin{multline*}
@@ -242,7 +242,7 @@ ${\linearstress \hspace{-0.1ex} = \hspace{-0.3ex} \boldnabla \bm{u} \dotdotp \st
 \Bigl(
 \potentialenergydensity (\hspace{-0.1ex}\bm{u}'\hspace{.1ex}) \hspace{-0.2ex}
 - \potentialenergydensity (\hspace{-0.1ex}\bm{u}\hspace{-0.1ex}) \hspace{-0.2ex}
-- \hspace{-0.2ex} \bigl( \hspace{.1ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \linearstress + \hspace{-0.1ex} \bm{f} \hspace{.1ex} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.2ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.2ex}
+- \hspace{-0.2ex} \bigl( \hspace{.1ex} \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \linearstress + \hspace{-0.1ex} \volumeloadvector \hspace{.1ex} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.2ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.2ex}
 - \linearstress \dotdotp \hspace{-0.1ex} \boldnabla \hspace{.1ex} ( \bm{u}' \hspace{-0.4ex} - \hspace{-0.1ex} \bm{u} ) \hspace{-0.1ex}
 \Bigr) d\mathcal{V}
 .
@@ -257,7 +257,7 @@ ${ \hspace{-0.24ex}
 \boldnabla
 \hspace{-0.1ex} \dotp \hspace{-0.1ex}
 \linearstress
-+ \hspace{-0.1ex} \bm{f} \hspace{-0.15ex}
++ \hspace{-0.1ex} \volumeloadvector \hspace{-0.15ex}
 = \zerovector }$
 
 \nopagebreak\vspace{-0.2em}

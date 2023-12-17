@@ -12,7 +12,7 @@
 
 \en{In~equilibrium}\ru{В~равновесии}
 \en{with the external forces}\ru{с~внешними силами},
-\ru{объёмными}\en{the volume ones}~$\bm{f}$
+\ru{объёмными}\en{the volume ones}~$\volumeloadvector$
 \ru{и}\en{and}
 \en{the surface ones}\ru{поверхностными}
 $\bm{p}$,
@@ -41,7 +41,7 @@ Pagine~208\hbox{--}212.}
 2 \hspace{-0.2em}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \potentialenergydensity \hspace{.2ex} d\mathcal{V} \hspace{.12ex}
 = \hspace{-0.2ex}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex} d\mathcal{V}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \volumeloadvector \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex} d\mathcal{V}
 + \hspace{-0.3ex}
 \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \bm{u} \hspace{.25ex} do
 \hspace{.2ex} .
@@ -66,13 +66,13 @@ Pagine~208\hbox{--}212.}
 \tikzmark{endSurfaceLoad} \hspace{.1ex}
   \dotp \bm{u} \hspace{.25ex} do \hspace{.4ex}
 + \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
-  \bm{f} \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex}
+  \volumeloadvector \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex}
   d\mathcal{V} \hspace{2.25ex}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);
 \end{multline*}%
 \AddUnderBrace[line width=.75pt][.2ex, 0][yshift = .1em]%
 {beginMinusLoad}{endMinusLoad}{$
-    \scalebox{.75}{$ - \bm{f} $}
+    \scalebox{.75}{$ - \volumeloadvector $}
 $}%
 \AddUnderBrace[line width=.75pt][-0.1ex, 0][yshift = .1em]%
 {beginSurfaceLoad}{endSurfaceLoad}{$
@@ -371,12 +371,12 @@ Proposed by Enrico Betti\footnote{\bookauthor{Enrico Betti}.
 \en{For a~body}\ru{Для т\'{е}ла}
 \en{with a~fixed part}\ru{с~фиксированной частью}~${o_1}$
 \en{of the surface}\ru{поверхности}\en{,}
-\en{the two options are considered}\ru{рассматриваются две опции}\::
+\en{the two cases are considered}\ru{рассматриваются два случая}\::
 \en{the~first one}\ru{первая}
 \en{with loads}\ru{с~нагрузками}
-$\bm{f}_1$, $\bm{p}_1$
+$\volumeloadvector_1$, $\bm{p}_1$
 \en{and the~second one}\ru{и~вторая}
-\en{with loads}\ru{с~нагрузками} $\bm{f}_2$, $\bm{p}_2$.
+\en{with loads}\ru{с~нагрузками} $\volumeloadvector_2$, $\bm{p}_2$.
 \en{The~verbal formulation}\ru{Словесная формулировка}
 \en{of the~theorem}\ru{теоремы}
 \en{is the~same as in}\ru{та~же, что и~в}~\chapterdotsectionref{chapter:classicalmechanics}{section:statics}.
@@ -385,7 +385,7 @@ $\bm{f}_1$, $\bm{p}_1$
 \nopagebreak\vspace{1.3em}\begin{equation}\label{betti:reciprocalworktheorem}
 \tikzmark{beginReciprocalFirstVariant}
 \scalebox{.96}{$ \displaystyle %
-   \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f}_1 \hspace{-0.2ex} \dotp \bm{u}_2 \hspace{.25ex} d\mathcal{V} $}
+   \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \volumeloadvector_1 \hspace{-0.2ex} \dotp \bm{u}_2 \hspace{.25ex} d\mathcal{V} $}
 + \hspace{-0.3ex}
 \scalebox{.96}{$ \displaystyle %
    \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p}_1 \hspace{-0.2ex} \dotp \bm{u}_2 \hspace{.25ex} do $}
@@ -395,7 +395,7 @@ $\bm{f}_1$, $\bm{p}_1$
 %
 \tikzmark{beginReciprocalSecondVariant}
 \scalebox{.96}{$ \displaystyle %
-   \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \bm{f}_2 \hspace{-0.2ex} \dotp \bm{u}_1 \hspace{.25ex} d\mathcal{V} $}
+   \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \volumeloadvector_2 \hspace{-0.2ex} \dotp \bm{u}_1 \hspace{.25ex} d\mathcal{V} $}
 + \hspace{-0.3ex}
 \scalebox{.96}{$ \displaystyle %
    \integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p}_2 \hspace{-0.2ex} \dotp \bm{u}_1 \hspace{.25ex} do $}
@@ -410,7 +410,7 @@ $\bm{f}_1$, $\bm{p}_1$
 ...
 
 {\small
-The reciprocal work theorem, also known as the Betti’s theorem, claims that for a~linear elastic structure subject to two sets of forces $P$ and $Q$, the~work done by set~$P$ through displacements produced by set~$Q$ is equal to the~work done by set~$Q$ through displacements produced by set~$P$.
+The reciprocal work theorem, also known as the Betti’s theorem, claims that for a~linear elastic structure subject to the two sets of forces, $P$ and $Q$, the~work done by set~$P$ through displacements produced by set~$Q$ is equal to the~work done by set~$Q$ through displacements produced by set~$P$.
 This theorem has applications in structural engineering where it is used to define influence lines and derive the boundary element method.
 \par}
 
