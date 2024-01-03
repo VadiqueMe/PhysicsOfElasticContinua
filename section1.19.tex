@@ -45,7 +45,7 @@ with \inquotes{flat} space.
 \noindent
 \en{Dealing}\ru{Имея дело}
 \en{with tensor fields}\ru{с~тензорными полями}
-\en{in curvilinear coordinates}\ru{в~криволинейных координатах}~(\sectionref{section:spatialdifferentiationoftensorfields}),
+\en{in curvilinear coordinates}\ru{в~криволинейных координатах}~(\sectionref{section:spatialdifferentiation}),
 \en{the~location vector}\ru{вектор положения}~%
 (\en{radius vector}\ru{вектор радиуса})
 \en{of~a~point}\ru{точки}
@@ -297,14 +297,23 @@ d\locationvector_\differentialindex{k} \hspace{-0.2ex}
 \hspace{-0.4ex} .
 \]
 
-...
-
-Шесть независимых компонент:
-${\mathfrak{R}_{\hspace{.1ex}1212}}$, ${\mathfrak{R}_{\hspace{.1ex}1213}}$, ${\mathfrak{R}_{\hspace{.1ex}1223}}$, ${\mathfrak{R}_{\hspace{.1ex}1313}}$, ${\mathfrak{R}_{\hspace{.1ex}1323}}$, ${\mathfrak{R}_{\hspace{.1ex}2323}}$.
+\end{otherlanguage}
 
 ...
 
-\en{Symmetric}\ru{Симметричный} \en{bivalent}\ru{бивалентный} \href{https://en.wikipedia.org/wiki/Ricci_curvature}{\emph{\ru{тензор кривизны }Ricci\en{ curvature tensor}}}
+\en{The~six independent components}\ru{Шесть независимых компонент}
+${\mathfrak{R}_{\hspace{.1ex}1212}}$,
+${\mathfrak{R}_{\hspace{.1ex}1213}}$,
+${\mathfrak{R}_{\hspace{.1ex}1223}}$,
+${\mathfrak{R}_{\hspace{.1ex}1313}}$,
+${\mathfrak{R}_{\hspace{.1ex}1323}}$,
+${\mathfrak{R}_{\hspace{.1ex}2323}}$.
+
+...
+
+\en{The symmetric}\ru{Симметричный}
+\en{bivalent}\ru{бивалентный}
+\href{https://en.wikipedia.org/wiki/Ricci_curvature}{\emph{\ru{тензор кривизны }Ricci\en{ curvature tensor}}}
 %% after \href{https://en.wikipedia.org/wiki/Gregorio_Ricci-Curbastro}{\textbold{Gregorio Ricci\hbox{-}Curbastro}}
 
 \begin{equation*}
@@ -315,42 +324,61 @@ ${\mathfrak{R}_{\hspace{.1ex}1212}}$, ${\mathfrak{R}_{\hspace{.1ex}1213}}$, ${\m
 \end{equation*}
 
 \vspace{-0.2em} \noindent
-(\en{coefficient}\ru{коэффициент}~$\onefourth$ \en{is used here for convenience}\ru{используется тут для удобства}) \en{with components}\ru{с~компонентами}
+(\en{coefficient}\ru{коэффициент}~$\onefourth$
+\en{is used here for convenience}\ru{используется тут для удобства})
+\en{with components}\ru{с~компонентами}
 
 \vspace{.1em}\begin{equation*}
 \begin{array}{ccc}
 \mathscr{R}^{\hspace{.1ex}1\hspace{-0.1ex}1} \hspace{-0.3ex} =
-\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}2323}
+\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}2323}
 \hspace{.2ex} ,
 &
 &
 \\[.6em]
 %
 \mathscr{R}^{\hspace{.1ex}21} \hspace{-0.3ex} =
-\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1323}
+\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1323}
 \hspace{.2ex} ,
 &
 \mathscr{R}^{\hspace{.1ex}22} \hspace{-0.3ex} =
-\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1313}
+\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1313}
 \hspace{.2ex} ,
 &
 \\[.6em]
 %
 \mathscr{R}^{\hspace{.1ex}31} \hspace{-0.3ex} =
-\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1223}
+\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1223}
 \hspace{.2ex} ,
 &
 \mathscr{R}^{\hspace{.1ex}32} \hspace{-0.3ex} =
-\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1213}
+\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1213}
 \hspace{.2ex} ,
 &
 \mathscr{R}^{\hspace{.1ex}33} \hspace{-0.3ex} =
-\scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1212}
+\scalebox{.8}{$ \displaystyle \frac{\raisemath{-0.2em}{1}}{\raisemath{.15em}{\smash{\textsl{g}}}} $} \hspace{.4ex} \mathfrak{R}_{\hspace{.1ex}1212}
 \hspace{.2ex} .
 \end{array}
 \end{equation*}
 
-Равенство тензора Риччи нулю
-${\hspace{.1ex}\pmb{\scalebox{1.2}[1]{$\mathscr{R}$}} \hspace{-0.16ex} = \hspace{-0.2ex} \zerobivalent}$ (в~компонентах это шесть уравнений ${\hspace{.1ex}\mathscr{R}^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.3ex} = \mathscr{R}^{\hspace{.1ex}j\hspace{-0.06ex}i} \hspace{-0.3ex} = 0}$) \en{is}\ru{есть} \en{the~}\textcolor{magenta}{\en{necessary}\ru{необходимое}} \en{condition}\ru{условие} \en{of~integrability}\ru{интегрируемости}~(\ru{\inquotes{совместности}, }\inquotes{compatibility}) для нахождения вектора-радиуса~${\locationvector(q^{\hspace{.1ex}k})}$ по~полю~${\textsl{g}_{i\hspace{-0.1ex}j}(q^{\hspace{.1ex}k})}$.
+\en{The equality}\ru{Равенство}
+\en{of the}\ru{тензора} Ricci\en{ tensor}
+\en{to zero}\ru{нулю}
+${\hspace{.1ex}\pmb{\scalebox{1.2}[1]{$\mathscr{R}$}} \hspace{-0.16ex} = \hspace{-0.2ex} \zerobivalent}$
+(\en{in components}\ru{в~компонентах}
+\en{these are six equations}\ru{это шесть уравнений}
+${\hspace{.1ex}\mathscr{R}^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.3ex} = \mathscr{R}^{\hspace{.1ex}j\hspace{-0.06ex}i} \hspace{-0.3ex} = 0}$)
+\en{is}\ru{есть}
+\en{the~}\textcolor{magenta}{\en{necessary}\ru{необходимое}}
+\en{condition}\ru{условие}
+\en{of~integrability}\ru{интегрируемости}
+(\inquotes{compatibility}\ru{--- \inquotesx{совместимости}[,] \inquotes{совместности}})
+\en{for}\ru{для}
+\en{determining}\ru{определения}
+\en{the location}\ru{вектора положения}~(\inquotes{\en{radius}\ru{радиуса}})\en{ vector}~%
+${\locationvector(q^{\hspace{.1ex}k})}$
+\en{by the~known}\ru{по~известному}
+\en{field}\ru{полю}~%
+${\textsl{g}_{i\hspace{-0.1ex}j}(q^{\hspace{.1ex}k})}$.
 
-\end{otherlanguage}
+

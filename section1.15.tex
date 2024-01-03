@@ -4,24 +4,25 @@
 
 \ru{\section{В~косоугольном базисе}}
 
-\en{Until now}\ru{До~сих~пор}
+\en{Until now}\ru{До~сих~пор}\en{,}
 \ru{использовался }\en{a~basis}\ru{базис}
 \en{of the three}\ru{из трёх}
 \en{mutually perpendicular}\ru{взаимно перпендикулярных}
 \en{unit vectors}\ru{единичных векторов}
 $\bm{e}_i$\en{ was used}.
-\en{Now}\ru{Теперь}
-\en{we will take}\ru{мы возьмём}
-\en{a~basis}\ru{базис}
-\en{of any three}\ru{из~любых трёх}
-\en{linearly independent}\ru{линейно независимых}
-(\en{non\hbox{-}coplanar}\ru{некомпланарных})
-\en{vectors}\ru{векторов}
-$\bm{a}_i$.
+%
+\en{However}\ru{Однако},
+\en{such a~basis}\ru{такой базис}\en{ is}\ru{\:---}
+\en{not the~only possible one}\ru{не единственно возможный}.
+%
+\en{Any}\ru{Любые}
+\href{https://en.wikipedia.org/wiki/Linear_independence}{\en{linearly independent}\ru{линейно независимые}}
+(\en{non\hbox{-}coplanar}\ru{некомпланарные})
+\en{vectors}\ru{векторы}~$\bm{a}_i$
+\en{can be chosen}\ru{могут быть взяты}
+\en{as the~basis ones}\ru{как базисные}.
 
-%%\begin{figure}[!htbp]
-%%\begin{center}
-\begin{wrapfigure}[20]{R}{.48\textwidth}
+\begin{wrapfigure}[19]{R}{.48\textwidth}
 \makebox[.5\textwidth][c]{
 \begin{minipage}[t]{.5\textwidth}
 
@@ -30,15 +31,15 @@ $\bm{a}_i$.
 \vspace{-1.6em}\caption{}\label{fig:ObliqueCoordinates}
 \end{minipage}}
 \end{wrapfigure}
-%%\end{center}
-%%\end{figure}\vspace{-1.5em}
 
-\en{The decomposition}\ru{Декомпозиция~(разложение)}\
-\en{of~vector}\ru{вектора}~$\bm{v}$
-\en{in the basis}\ru{в~базисе}~${\bm{a}_i}$~(\figureref{fig:ObliqueCoordinates})
-\en{is the linear combination}\ru{есть линейная комбинация}
+\en{Then}\ru{Тогда},
+\en{some vector}\ru{некий вектор}~$\bm{v}$
+\en{can be represented}\ru{может быть представлен}
+\en{as a~linear combination}\ru{как линейная комбинация}
+\en{of basis vectors}\ru{базисных векторов}~$\bm{a}_i$
+\en{with scalar multipliers}\ru{со скалярными множителями}~$v^{i}$
 
-\nopagebreak\vspace{-0.2em}\en{\vspace{-0.8em}}
+\nopagebreak\vspace{-0.4em}
 \begin{equation}\label{decompositionbyobliquebasis}
 \bm{v} = v^{i} \hspace{-0.1ex} \bm{a}_i
 \hspace{.1ex} .
@@ -49,8 +50,13 @@ $\bm{a}_i$.
 %% if an~index is repeated once at the upper (superscript) level and once at the lower (subscript) level in the~same monomial, it implies summation over this index
 %% если индекс повторяется один раз на верхнем (надстрочном) уровне и один раз на нижнем (подстрочном) уровне в~том~же одночлене, это подразумевает суммирование по этому индексу
 %%
-\en{The~summation convention}\ru{Соглашение о~суммировании} \en{gains}\ru{обретает} \en{the~new conditions}\ru{новые положения}:
-\en{a~summation index}\ru{индекс суммирования} \en{is repeated}\ru{повторяется} \en{at different levels}\ru{на разных уровнях} \en{of the~same monomial}\ru{того~же одночлена},
+\en{The~summation convention}\ru{Соглашение о~суммировании}
+\en{gains}\ru{обретает}
+\en{the~new conditions}\ru{новые положения}\::
+\en{a~summation index}\ru{индекс суммирования}
+\en{is repeated}\ru{повторяется}
+\en{at the~different levels}\ru{на разных уровнях}
+\en{of the~same monomial}\ru{того~же одночлена},
 \en{and }\ru{а~}\en{a~free}\ru{свободный}
 \en{index}\ru{индекс}
 \en{stays}\ru{остаётся}
@@ -62,22 +68,27 @@ ${a_i \hspace{-0.2ex} = \hspace{.1ex} b_{kk}^{\hspace{.1ex}i}}$\ru{\:---}\en{ is
 \end{leftverticalbar}
 \par}
 
-\begin{otherlanguage}{russian}
+\vspace{.1em}
+\en{Here}\ru{Здесь}
+\en{the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведение}
+${\bm{v} \dotp \bm{a}_i}$
+\en{is no longer equal to the~component}\ru{уж\'{е} не~равно компоненте}~$v^{i}$\::
+${\bm{v} \dotp \bm{a}_i \hspace{-0.1ex} = \hspace{.1ex} v^{k} \bm{a}_k \hspace{-0.1ex} \dotp \bm{a}_i \neq \vspace{.2ex} v^{i}}$\hbox{\hspace{-0.3ex},}
+\en{since}\ru{ведь}
+${\bm{a}_i \hspace{-0.1ex} \dotp \bm{a}_k \neq\vspace{.2ex} \delta_{ik}}$.
 
-\vspace{-0.16em}
-В~таком базисе уж\'{е}
-${\bm{v} \dotp \bm{a}_i \hspace{-0.1ex} = \hspace{.1ex} v^{k} \bm{a}_k \hspace{-0.1ex} \dotp \bm{a}_i \neq\vspace{.2ex} v^{i}}$\hbox{\hspace{-0.25ex},}
-ведь~тут ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{a}_k \neq\vspace{.2ex} \delta_{ik}}$.
+\en{But perhaps}\ru{Но авось},
+\en{in addition to}\ru{вдобавок к}~${\bm{a}_i}$,
+\en{there’s another}\ru{есть ещё другая}\:---
+\en{the~}\inquotes{\en{superscript}\ru{надстрочная}}
+\en{triple of~vectors}\ru{тройка векторов}~${\bm{a}^{i}}$\:---
+\en{such that}\ru{таких, что}
 
-Дополним~же
-\hbox{\en{basic}\ru{базис}}~${\bm{a}_i}$ ещё другой тройкой векторов~\hbox{${\bm{a}^{\hspace{-0.05ex}i}}$\hspace{-0.25ex},}
-\hbox{называемых}
-кобазисом или~взаимным базисом, чтобы
-
-\nopagebreak\vspace{-0.3em}\begin{equation}\label{fundamentalpropertyofcobasis}
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{fundamentalpropertyofcobasis}
 \begin{array}{c}
 \bm{a}_i \dotp \bm{a}^{\hspace{.1ex}j} \hspace{-0.1ex} = \hspace{.1ex} \delta_i^{\hspace{.1ex}j} , \:\:
-\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \dotp \bm{a}_j \hspace{-0.1ex} = \hspace{.1ex} \delta_{\hspace{-0.1ex}j}^{\hspace{.1ex}i}
+\bm{a}^{i} \hspace{-0.1ex} \dotp \bm{a}_j \hspace{-0.1ex} = \hspace{.1ex} \delta_{\hspace{-0.1ex}j}^{\hspace{.1ex}i}
 \hspace{.16ex} ,
 \\[.2em]
 \UnitDyad = \bm{a}^{\hspace{-0.1ex}i} \hspace{-0.1ex} \bm{a}_i \hspace{-0.1ex} = \bm{a}_i \hspace{.1ex} \bm{a}^{\hspace{-0.1ex}i}
@@ -85,9 +96,19 @@ ${\bm{v} \dotp \bm{a}_i \hspace{-0.1ex} = \hspace{.1ex} v^{k} \bm{a}_k \hspace{-
 \end{array}
 \end{equation}
 
-\vspace{-0.1em}\noindent
-Это\:--- основное свойство кобазиса.
-Орто\-нормирован\-ный~(орто\-нормаль\-ный) базис может быть определён как совпад\'{а}ющий со~своим кобазисом: ${\bm{e}^{\hspace{.05ex}i} \hspace{-0.2ex} = \bm{e}_{i}}$.
+\vspace{-0.3em}\noindent
+\en{In this case}\ru{В~таком случае},
+\en{the~triple}\ru{тройка}~${\bm{a}^{i}}$
+\en{is called}\ru{называется}
+\en{cobasis}\ru{кобазисом}
+\en{or}\ru{или}
+\href{https://en.wikipedia.org/wiki/Dual_basis}{\en{reciprocal}\ru{взаимным}~(\en{dual}\ru{дуальным}) \en{basis}\ru{базисом}}.
+
+\begin{otherlanguage}{russian}
+
+\eqref{fundamentalpropertyofcobasis}\:--- основное свойство кобазиса.
+Орто\-нормирован\-ный~(орто\-нормаль\-ный) базис может быть определён как совпад\'{а}ющий со~своим кобазисом\::
+${\bm{e}^{\hspace{.05ex}i} \hspace{-0.2ex} = \bm{e}_{i}}$.
 
 %%\inquotes{В~декартовых координатах}, когда базис\:--- отронормальный правый:
 %%\begin{itemize}
@@ -142,7 +163,7 @@ ${\bm{v} \dotp \bm{a}_i \hspace{-0.1ex} = \hspace{.1ex} v^{k} \bm{a}_k \hspace{-
 \end{equation*}
 
 \vspace{-0.1em}\noindent
-Коэффициент~$\gamma$ получился равным (с~точностью до~знака для \inquotes{левой} тройки ${\bm{a}_i}$) объёму параллелепипеда, построенного на~векторах~$\bm{a}_i$.
+Коэффициент~$\gamma$ получился равным (с~точностью до~знака для тройки ${\bm{a}_i}$) объёму параллелепипеда, построенного на~векторах~$\bm{a}_i$.
 \en{In}\ru{В}~\sectionref{section:crossproduct} \en{the~same volume}\ru{тот~же объём} \en{was presented as}\ru{был представлен как}~${\hspace{-.22ex}\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{.16ex}}$, \en{and this is}\ru{и~это} \en{not without reason}\ru{не без причины}, \en{because}\ru{ведь} \en{it coincides with the~square root of}\ru{он совпад\'{а}ет с~квадратным корнем из}~\href{https://en.wikipedia.org/wiki/Gramian_matrix}{\en{gramian}\ru{грамиана}}~\hbox{$\textsl{g} \hspace{.1ex} \hspace{.25ex} \equiv \hspace{.2ex} \determinant \textsl{g}_{i\hspace{-0.1ex}j}$\hspace{-0.12ex}}\:--- \en{determinant of}\ru{определителя} \en{the~symmetric}\ru{симметричной} \ru{матрицы }\hbox{\href{https://en.wikipedia.org/wiki/J\%C3\%B8rgen_Pedersen_Gram}{J.\,P.\:Gram}\ru{’а}}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \equiv \hspace{.2ex} \bm{a}_i \dotp \bm{a}_j}$.
 
 \noindent
@@ -178,7 +199,7 @@ ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex}
 
 \vspace{-0.2em}\noindent
 \en{or}\ru{или}
-\en{by the~columns}\ru{по~столбцам}
+\en{by the~columns}\ru{по~колонкам}
 
 \nopagebreak\vspace{-0.4em}
 \begin{equation*}
@@ -216,12 +237,15 @@ ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{a}_p \hspace{-0.2ex} \dotp \bm{e}_
 \end{array}\hspace{-0.12ex}\right]$} ;
 \end{equation*}
 
-\vspace{-0.1em} \noindent
+\vspace{-0.1em}\noindent
 ${i \narroweq p \narroweq 1}$, ${j \narroweq q \narroweq 2}$, ${k \narroweq r \narroweq 3}$ ${\,\Rightarrow}$ ${\permutationsparitysymbols{123} \hspace{.2ex} \permutationsparitysymbols{123} \hspace{-0.15ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\determinant} \left( \bm{a}_i \dotp \bm{a}_j \right) \hspace{-0.1ex} = \underset{\raisebox{.15em}{\scalebox{.7}{$i$,$\hspace{.15ex}j$}}}{\determinant} \, \textsl{g}_{i\hspace{-0.1ex}j}}$.
 ${ \hspace{.6em}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex); }$
 
-\en{Representing}\ru{Представляя}~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$ \en{and other}\ru{и~другие} \en{cobasis vectors}\ru{векторы кобазиса} \en{as the sum}\ru{как сумму}
+\en{Representing}\ru{Представляя}~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$
+\en{and other}\ru{и~другие}
+\en{cobasis vectors}\ru{векторы кобазиса}
+\en{as the sum}\ru{как сумму}
 
 \nopagebreak\vspace{.8em}\begin{equation*}
 \begin{array}{l@{\hspace{.3em}}c@{\hspace{.36em}}r}
@@ -236,7 +260,7 @@ ${ \hspace{.6em}
 приходим к~общей формуле (с~\inquotes{$-$} для \inquotes{левой} тройки ${\bm{a}_i}$)
 
 \nopagebreak\begin{equation}\label{basisvectorstocobasisvectors}
-\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.2ex}
+\bm{a}^{i} \hspace{-0.2ex}
 = \displaystyle \pm \hspace{.2ex} \frac{\raisemath{-0.4ex}{1}}{2 \hspace{.1ex} \scalebox{0.95}[0.96]{$\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}$}} \hspace{.5ex} e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{.1ex} \bm{a}_j \hspace{-0.1ex} \times \bm{a}_k \hspace{.1ex},
 \:\:
 \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} \hspace{.25ex}
@@ -397,8 +421,12 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 \end{array}\end{equation}
 
 \vspace{.1em}\noindent
-Вдобавок к~\eqref{fundamentalpropertyofcobasis} и~\eqref{basisvectorstocobasisvectors} открылся ещё~один способ найти векторы кобазиса\:--- через матрицу~\hbox{$\textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j}$\hspace{-0.3ex}}, обратную матрице Грама~${\textsl{g}_{i\hspace{-0.1ex}j}}$.
-И~наоборот:
+Вдобавок к~\eqref{fundamentalpropertyofcobasis}
+\en{and}\ru{и}~\eqref{basisvectorstocobasisvectors}
+открылся ещё~один способ найти векторы кобазиса\:---
+через матрицу~\hbox{$\textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j}$\hspace{-0.3ex}},
+обратную матрице Gram\ru{’а}~${\textsl{g}_{i\hspace{-0.1ex}j}}$.
+\en{And vice versa}\ru{И~наоборот}\::
 
 \nopagebreak\vspace{-0.12em}
 \begin{equation}\begin{array}{c}

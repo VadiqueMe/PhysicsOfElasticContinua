@@ -1,6 +1,4 @@
-\en{\section{Matrices, permutations and determinants}}
-
-\ru{\section{Матрицы, перестановки и определители}}
+\section{\en{Matrices}\ru{Матрицы}, \en{permutations}\ru{перестановки} \en{and}\ru{и} \en{determinants}\ru{определители}}
 
 \label{section:matrices+permutations+determinants}
 
@@ -60,25 +58,27 @@
 \en{or}\ru{или}
 \inquotesx{\en{dimensions}\ru{размерностей}}[.]
 
-By convention,
-rows are listed first,
-and columns second.
-
+\en{By convention}\ru{По соглашению},
+\en{to avoid confusion}\ru{чтобы избежать путаницы},
+\en{the~rows are listed first}\ru{строки перечисляются первыми},
+\en{and the~columns second}\ru{а~колонки вторыми}.
+%
 \en{The~dimension of a~matrix}\ru{Размерность матрицы}
-\en{consists of}\ru{состоит из}
-\en{the~number of~rows}\ru{числ\'{а} строк},
+\en{is written}\ru{пишется}
+\en{as}\ru{как}
+\en{the~number of~rows}\ru{число строк},
 \en{then}\ru{затем}
-\en{a~multiplication sign}\ru{знака умножения}
+\en{a~multiplication sign}\ru{знак умножения}
 (\inquotes{×} \en{is used}\ru{используется}
-\en{the~most often}\ru{чаще всего})\en{,}
+\en{the~most often}\ru{чаще всего}),
 \en{and then}\ru{а~затем}
-\en{the~number of~columns}\ru{числ\'{а} столбцов}.
+\en{the~number of~columns}\ru{число колонок}.
 
-{\small
+%%{\small
 \noindent
 \en{Here are examples}\ru{Вот примеры}
 
-\nopagebreak\vspace{.1em}
+\nopagebreak\vspace{-0.2em}
 \begin{alignat*}{2}
 \asmatrixwithdimensions{\mathcal{A}}{3}{3}
 = \hspace{-0.3ex} \scalebox{.9}{$%
@@ -89,14 +89,18 @@ A_{31} & A_{32} & A_{33}
 \end{array} \hspace{.2ex}\right]%
 $}
 & \hspace{1em}
-\scalebox{.8}{$ \begin{array}{l@{\hspace{1em}}c}
-   \text{3~\en{rows}\ru{строки} \en{and}\ru{и} 3~\en{columns}\ru{столбца}}
-      & \text{\emph{\en{number}\ru{число} \en{of~rows}\ru{строк}}} \\
-   \ru{\text{матрица}~}3{×}3\en{~\text{matrix}}
-      & \text{\emph{\en{is the~same}\ru{такое~же}}} \\
-   \href{https://en.wikipedia.org/wiki/Square_matrix}{\text{\emph{\inquotes{\en{square}\ru{квадратная}}} \en{matrix}\ru{матрица}}}
-      & \text{\emph{\en{as columns}\ru{как и столбцов}}}
-\end{array} $}
+\scalebox{.8}{ \begin{minipage}{.3\textwidth}\small
+   $3$~\en{rows}\ru{строки} \en{and}\ru{и} $3$~\en{columns}\ru{колонки} \\
+   \en{a}\ru{матрица}~$3{×}3$\en{~matrix} \\
+   \en{it’s}\ru{это}
+   \en{a\:}\href{https://en.wikipedia.org/wiki/Square_matrix}{\emph{\inquotes{\en{square}\ru{квадратная}}} \en{matrix}\ru{матрица}}
+\end{minipage} }
+&&
+\scalebox{.8}{ \begin{minipage}{.25\textwidth}\centering\small
+   \emph{\en{the~number}\ru{число} \en{of~rows}\ru{строк}} \\
+   \emph{\en{is the~same}\ru{такое~же}} \\
+   \emph{\en{as of~columns}\ru{как и колонок}}
+\end{minipage} }
 \\[.4em]
 %
 \asmatrixwithdimensions{\mathcal{B}}{2}{4}
@@ -107,10 +111,11 @@ B_{21} & B_{22} & B_{23} & B_{24}
 \end{array} \hspace{.2ex}\right]%
 $}
 & \hspace{1em}
-\scalebox{.8}{$ \begin{array}{l}
-\text{2~\en{rows}\ru{строки} \en{and}\ru{и} 4~\en{columns}\ru{столбца}}\\
-\text{\en{dimension}\ru{размерность}}~2{×}4
-\end{array} $}
+\scalebox{.8}{ \begin{minipage}{.3\textwidth}\small
+   $2$~\en{rows}\ru{строки} \en{and}\ru{и} $4$~\en{columns}\ru{колонки} \\
+   \en{dimension}\ru{размерность}~$2{×}4$
+\end{minipage} }
+&& %%\hspace{1em}
 \\[.4em]
 %
 \asmatrixwithdimensions{\mathcal{C}}{3}{1}
@@ -122,15 +127,19 @@ C_{31}
 \end{array} \hspace{-0.2ex}\right]%
 $}
 & \hspace{1em}
-\scalebox{.8}{$ \begin{array}{l@{\hspace{1em}}c}
-\text{3~\en{rows}\ru{строки}, 1~\en{column}\ru{колонка}}
-   & \text{\emph{\en{a~matrix}\ru{матрица}}} \\
-3{×}1
-   & \text{\emph{\en{with just one}\ru{лишь с~одним}}} \\
-\text{\en{a\:}\emph{\inquotes{\en{column matrix}\ru{матрица-колонка}}}}
-   & \text{\emph{\en{column}\ru{столбцом}}}
-\end{array} $}
+\scalebox{.8}{ \begin{minipage}{.3\textwidth}\small
+   $3$~\en{rows}\ru{строки}, $1$~\en{column}\ru{колонка} \\
+   $3{×}1$ \\
+   \en{a\:}\emph{\inquotes{\en{column matrix}\ru{матрица-колонка}}}
+\end{minipage} }
+&&
+\scalebox{.8}{ \begin{minipage}{.2\textwidth}\centering\small
+   \emph{\en{a~matrix}\ru{матрица}} \\
+   \emph{\en{with just one}\ru{лишь с~одной}} \\
+   \emph{\en{column}\ru{колонкой}}
+\end{minipage} }
 \\[.4em]
+%
 \asmatrixwithdimensions{\mathcal{D}}{1}{6}
 = \hspace{-0.3ex} \scalebox{.9}{$%
 \left[ \begin{array}{c@{\hspace{.5em}}c@{\hspace{.5em}}c@{\hspace{.5em}}c@{\hspace{.5em}}c@{\hspace{.5em}}c}
@@ -138,16 +147,19 @@ D_{1\hspace{-0.1ex}1} & D_{12} & D_{13} & D_{14} & D_{15} & D_{16}
 \end{array} \hspace{-0.2ex}\right]%
 $}
 & \hspace{1em}
-\scalebox{.8}{$ \begin{array}{l@{\hspace{1em}}c}
-\text{1~\en{row}\ru{строка}, 6~\en{columns}\ru{столбцов}}
-   & \text{\emph{\en{a~matrix}\ru{матрица}}} \\
-1{×}6
-   & \text{\emph{\en{with just one}\ru{лишь с~одной}}} \\
-\text{\en{a\:}\emph{\inquotes{\en{row matrix}\ru{матрица-строка}}}}
-   & \text{\emph{\en{row}\ru{строкой}}}
-\end{array} $}
+\scalebox{.8}{ \begin{minipage}{.3\textwidth}\small
+   $1$~\en{row}\ru{строка}, $6$~\en{columns}\ru{колонок} \\
+   $1{×}6$ \\
+   \en{a\:}\emph{\inquotes{\en{row matrix}\ru{матрица-строка}}}
+\end{minipage} }
+&&
+\scalebox{.8}{ \begin{minipage}{.2\textwidth}\centering\small
+   \emph{\en{a~matrix}\ru{матрица}} \\
+   \emph{\en{with just one}\ru{лишь с~одной}} \\
+   \emph{\en{row}\ru{строкой}}
+\end{minipage} }
 \end{alignat*}
-\par}
+%%\par}
 
 %--------------------
 
@@ -197,7 +209,7 @@ $}
 \en{has}\ru{имеет}
 \en{the number of~rows}\ru{число строк}
 \en{of the first multiplier matrix}\ru{первой матрицы-сомножителя}
-\en{and the number of~columns}\ru{и~число столбцов}
+\en{and the number of~columns}\ru{и~число колонок}
 \en{of the second matrix}\ru{второй матрицы}.
 
 

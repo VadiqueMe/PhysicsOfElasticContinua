@@ -192,20 +192,41 @@ ${\bigl( \partial_{u} f \bigr)_{0}}$.
 \en{A~protestation like}\ru{Возражение типа} \inquotes{\en{infinitesimal parameters do not exist}\ru{бесконечно-малых параметров не~бывает}, \en{all quantities are finite}\ru{все величины конечны}} \en{is barely constructive here}\ru{едва~ли конструктивно здесь}.
 \en{The more relevant question is}\ru{Более актуален вопрос}: \en{what is a~small parameter}\ru{что такое малый параметр}?
 \en{Usually}\ru{Обычно} \en{a~problem}\ru{проблема} \en{is reformulated}\ru{переформулируется} \en{in }\ru{в~}\inquotes{\en{dimensionless}\ru{безразмерных}} \en{quantities}\ru{величинах}, \en{then}\ru{тогда} \en{that}\ru{тот} \inquotes{\en{dimensionless}\ru{безразмерный}} \en{parameter}\ru{параметер} \en{is taken}\ru{берётся} \en{as}\ru{за} \en{a~small parameter}\ru{малый параметр}~${\smallparameter}$, \en{which turns out to be small}\ru{который оказывается малым}.
-\en{But another way is possible too}\ru{Но возможен и~другой путь}: \en{if it’s known}\ru{если известно}\ru{,} \en{that some parameter}\ru{что некий параметр}~${\omega}$ \en{influences the~solution only a~little}\ru{лишь немного влияет на решение}, \en{then}\ru{то}, \en{redesignating it}\ru{переобозначив его} \en{as}\ru{как}~${\smallparameter \omega}$, \en{do asymptotic analysis}\ru{сделать асимптотический анализ} \en{for}\ru{для}~${\smallparameter \to 0}$.
+\en{But another way is possible too}\ru{Но возможен и~другой путь}\::
+\en{if it’s known that}\ru{если известно, что}
+\en{some parameter}\ru{некий параметр}~${\omega}$
+\en{influences the~solution only a~little}\ru{лишь немного влияет на решение},
+\en{then}\ru{то},
+\en{redesignating it}\ru{переобозначив его}
+\en{as}\ru{как}~${\smallparameter \omega}$,
+\textcolor{magenta}{\en{do asymptotic analysis}\ru{сделать асимптотический анализ}}
+\en{for}\ru{для}~${\smallparameter \to 0}$.
 
-\en{Surely}\ru{Разумеется}, \en{these are not \inquotes{laws} of~asymptotics}\ru{это не \inquotes{законы} асимптотики}, \en{not recommendations}\ru{не рекомендации}, \en{but only considerations}\ru{а~лишь соображения}.
-\en{There’s no common theory of asymptotic methods}\ru{Нет общей теории асимптотических методов}, \en{their application}\ru{их применение} \en{is to some extent}\ru{есть в~какой-то степени} \en{an art}\ru{искусство}.
+\en{Surely}\ru{Разумеется},
+\en{these are not \en{the\;}\inquotes{laws} of~asymptotics}\ru{это не \inquotes{законы} асимптотики},
+\en{but only considerations}\ru{а~лишь соображения}.
+\en{There’s no common theory}\ru{Нет общей теории}
+\en{of~asymptotic methods}\ru{асимптотических методов},
+\en{and}\ru{и}
+\en{their application}\ru{их применение}
+\en{is to some extent}\ru{это в~какой-то степени}
+\en{an art}\ru{искусство}.
 
-\en{A~deeper description}\ru{Более глубокое описание} \en{of asymptotic methods}\ru{асимптотических методов} \en{is written}\ru{написано} \en{in the books}\ru{в~книгах} \en{by }Ali Hasan\ru{’а} Nayfeh \cite{nayfeh-introtoperturbation, nayfeh-perturbation}.
+\en{The~deeper}\ru{Более глубокое}
+\en{description}\ru{описание}
+\en{of asymptotic methods}\ru{асимптотических методов}
+\en{is written}\ru{написано}
+\en{in the books}\ru{в~книгах}
+\en{by }Ali Hasan\ru{’а} Nayfeh~\cite{nayfeh-introtoperturbation, nayfeh-perturbation}.
 
 \en{\section{Splitting in a linear algebraic system}}
 
 \ru{\section{Расщепление в линейной алгебраической системе}}
 
-\en{This simple case}\ru{Этот простой случай} \ru{хорошо }\en{illustrates}\ru{иллюстрирует} \en{asymptotic methods}\ru{асимптотические методы}\en{ well}.
-
-\begin{otherlanguage}{russian}
+\en{This simple case}\ru{Этот простой случай}
+\en{well}\ru{отлично}
+\en{illustrates}\ru{иллюстрирует}
+\en{asymptotic methods}\ru{асимптотические методы}.
 
 \en{A~linear system is considered}\ru{Рассматривается линейная система}
 
@@ -215,9 +236,19 @@ C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = C_{i\hspace{-0.1ex}j}^{\hspace{0.2ex}\sc
 \end{equation}
 
 \noindent
-с~матрицей~$C_{i\hspace{-0.1ex}j}$ и~столбцами неизвестных~$u_j$ и~нагрузок~$f_i$.
-Процесс построения асимптотического решения определяется тем, вырождена матрица~${C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{0.66}{(0)}}}$ или~нет.
+\en{with }\ru{с~}\en{the~matrix}\ru{матрицей}~$C_{i\hspace{-0.1ex}j}$
+\en{and }\ru{и~}\en{the~sets}\ru{наборами}
+\en{of~unknowns}\ru{неизвестных}~$u_j$
+\en{and }\ru{и~}\en{loads}\ru{нагрузок}~$f_i$.
+\en{The~process}\ru{Процесс}
+\en{of~constructing}\ru{построения}
+\en{an~asymptotic solution}\ru{асимптотического решения}
+\en{is determined by}\ru{определяется тем}\ru{,}
+\en{whether}\ru{сингулярна (обратима)} \en{the matrix}\ru{матрица}~${C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{.66}{(0)}}}$\en{ is singular (invertible)}
+\en{or not}\ru{или нет}.
 \en{Three cases are possible}\ru{Возможны три случая}.
+
+\begin{otherlanguage}{russian}
 
 \indent
 \textboldextended{1$^{\hspace{-0.1ex}\circ}$\hspace{-1ex}.}\, ${\determinant \hspace{.16ex} C_{i\hspace{-0.1ex}j}^{\hspace{0.2ex}\scalebox{.66}{(0)}} \hspace{-0.25ex} \neq 0}$.
