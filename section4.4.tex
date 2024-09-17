@@ -1,63 +1,200 @@
 \section{\en{Hooke’s law}\ru{Закон Hooke’а}
-\en{for an~isotropic material}\ru{для изотропного материала}}
+\en{for isotropic medium}\ru{для изотропной среды}}
 
 \label{section:hooke.forisotropic}
 
-\en{For an~isotropic material}\ru{Для изотропного материала}\en{,}
-\eqref{Hooke.for-symmetric-crystals}
+\newcommand\thefirstlameparameter{\lambda}
+\newcommand\thesecondlameparameter{\mu}
+
+\newcommand\shearmodulus\thesecondlameparameter
+\newcommand\shearmodulusG{G}
+\newcommand\youngsmodulus{E}
+\newcommand\poissonratio{\nu}
+\newcommand\bulkmodulus{K}
+
+\en{If a~material is isotropic}\ru{Если материал изотропный},
+\eqref{Hooke.for-symmetric-crystals}~%
 \en{is satisfied}\ru{удовлетворяется}
-\en{a~priori}\ru{априори}
 \en{for any}\ru{для любого}
-\en{orthogonal tensor}\ru{ортогонального тензора}~$\bm{Q}$.
+\en{orthogonal tensor}\ru{ортогонального тензора}~$\orthogonaltensor$.
 %
-\en{Here}\ru{Здесь}
-\en{it’s easier to assume that}\ru{проще предположить, что}
+\en{So}\ru{Так что}
+\en{here}\ru{здесь},
+\en{for}\ru{для}
+\en{a~linear elastic}\ru{линейно упругой}
+\en{isotropic}\ru{изотропной}
+\en{medium}\ru{среды}/\en{body}\ru{т\'{е}ла},
+\en{it’s easier}\ru{проще}
+\en{to~assume that}\ru{предположить, что}
+\en{the~}\en{potential energy density}\ru{плотность потенциальной энергии}~%
 $\potentialenergydensity(\infinitesimaldeformation)$
-\en{becomes an~isotropic function}\ru{становится изотропной функцией},
-\en{which depends}\ru{которая зависит}
+\en{becomes an~isotropic function}\ru{становится изотропной функцией}\footnote{%
+\en{Such a~function}\ru{Такая функция}
+\en{depends}\ru{зависит}
 \en{only}\ru{лишь}
-\en{on the invariants from the solution}\ru{от инвариантов из решения}
-\en{of the characteristic equation}\ru{характеристического уравнения}~\chapterdotsectionref{chapter:mathapparatus}{section:eigenvectorseigenvalues}
+\en{on the~invariants}\ru{от инвариантов},
+\en{such as}\ru{таких как}
+\en{the~coefficients}\ru{коэффициенты}
+\en{from the~solution}\ru{из решения}
+\en{of~the~characteristic equation}\ru{характеристического уравнения}~%
+\eqrefwithchapterdotsection{theCharacteristicEquation}{chapter:mathapparatus}{section:eigenvectorseigenvalues}.
+\en{Any function}\ru{Любая функция}\ru{,}
+\en{whose arguments are}\ru{аргументы которой\:---}
+\en{only invariants}\ru{только инварианты}\ru{,}
+\en{is isotropic}\ru{изотропна}.}
 
 \begin{equation}
-2 \potentialenergydensity = A \bigl( \firstcharacteristicinvariant \bigr)^{\hspace{-0.2ex}2} + B \bigl( \secondcharacteristicinvariant \bigr)
+2 \hspace{.2ex} \potentialenergydensity
+= A {\bigl( \firstcharacteristicinvariant \bigr)}^{\hspace{-0.2ex}2} + B \bigl( \secondcharacteristicinvariant \bigr)
 .
 \end{equation}
 
-\begin{otherlanguage}{russian}
-
-$\potentialenergydensity(\infinitesimaldeformation)$ это квадратичная функция,
-функция с~членами степени не~выше второй,
-(или \inquotes{квадратичная форма})
-
-\end{otherlanguage}
-
-\begin{equation}
-2 \potentialenergydensity( \infinitesimaldeformation )
-= A \infinitesimaldeformation\tracedot \infinitesimaldeformation\tracedot
-+ B \infinitesimaldeformation \dotp \infinitesimaldeformation
-\end{equation}
-
-...........
+$\potentialenergydensity(\infinitesimaldeformation)$
+\en{is a~quadratic function}\ru{это квадратичная функция}
+(\en{or}\ru{или} \en{a~}\inquotes{\en{quadratic form}\ru{квадратичная форма}})
+\en{with terms}\ru{с~членами}
+\en{of the second degree}\ru{второй степени}.
 
 \noindent
-\begin{equation}\label{derivativeoftracebythetensoritself}
+\inquotes{\en{quadratic form}\ru{квадратичная форма}}
+$=$
+\inquotes{\en{homogeneous polynomial}\ru{однородный многочлен}
+\en{of~the~second degree}\ru{второй степени}}
+$=$
+\inquotes{\en{function}\ru{функция}
+\en{with quadratic terms only}\ru{с~только квадратичными членами}}
+
+\en{The isotropic}\ru{Изотропная}
+\en{function}\ru{функция}
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
+\anyfirstinvariant(\infinitesimaldeformation),
+\anysecondinvariant(\infinitesimaldeformation)
+\mapsto
+\potentialenergydensity(\infinitesimaldeformation)
+\hspace{.2ex} , \hspace{.7em}
+%
+\potentialenergydensity
+\narroweq
+\potentialenergydensity(\hspace{.2ex} \anyfirstinvariant, \anysecondinvariant \hspace{.2ex})
+\end{equation*}
+
+\vspace{-0.4em}\noindent
+\en{has the~terms}\ru{имеет члены}
+\en{of only}\ru{только}
+\en{the~}\hbox{2$^{\textrm{\en{nd}\ru{ой}}}$\hspace{-0.2ex}} \en{degree}\ru{степени},
+\en{not}\ru{не} \en{higher}\ru{выше}.
+\en{Therefore}\ru{Поэтому}
+\en{there’s no }\en{third invariant}\ru{третьего инварианта}~$\anythirdinvariant(\infinitesimaldeformation)$
+\en{among the~arguments of}\ru{среди аргументов}~$\potentialenergydensity$\ru{ нет}.
+
+\nopagebreak\vspace{-0.2em}
+\begin{gather*}
+\anyfirstinvariant(\infinitesimaldeformation) \hspace{-0.2ex}
+= \trace{\infinitesimaldeformation}
+= \infinitesimaldeformation\tracedot
+= \hspace{-0.2ex} \boldnabla \hspace{-0.2ex} \dotp \hspace{-0.1ex} \fieldofdisplacements
+\\
+%
+\anysecondinvariant(\infinitesimaldeformation) \hspace{-0.2ex}
+= \infinitesimaldeformation \hspace{-0.2ex} \dotdotp \hspace{-0.1ex} \infinitesimaldeformation
+\end{gather*}
+
+.....
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}
+2 \hspace{.2ex} \potentialenergydensity( \infinitesimaldeformation )
+=
+A \hspace{.2ex} \infinitesimaldeformation\tracedot \hspace{.2ex} \infinitesimaldeformation\tracedot
+\hspace{.1ex} + \hspace{-0.1ex}
+B \hspace{.1ex} \infinitesimaldeformation \hspace{-0.2ex} \dotdotp \hspace{-0.1ex} \infinitesimaldeformation
+\end{equation}
+
 ......
+
+\en{The derivative}\ru{Производная}
+\en{of}\ru{следа}~\ru{(}trace\ru{)}
+\en{by the tensor itself}\ru{по самом\'{у} тензору}
+\en{is the~unit dyad}\ru{есть единичная диада}
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{thederivativeoftracebythetensoritself}
+\scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \infinitesimaldeformation\tracedot
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
 =
 \UnitDyad
 \end{equation}
 
-\en{In the components}\ru{В~компонентах}
-\en{for an~isotropic medium}\ru{для изотропной среды}
-\en{we have}\ru{имеем}
+\en{An~isotropic medium}\ru{Изотропная среда}
+\en{is characterized}\ru{характеризуется}
+\en{by two}\ru{двумя}
+\en{non-zero}\ru{ненулевыми}
+\en{elastic constants}\ru{упругими константами}
+(\inquotes{\en{elastic moduli}\ru{упругими модулями}})
 
-\begin{equation}\label{componentsofthestiffnesstensor.foranisotropicbody}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{theelasticpotentialforanisotropicmedium}
+\potentialenergydensity(\infinitesimaldeformation) =
+\alpha \hspace{.2ex} \anyfirstinvariant^2 (\infinitesimaldeformation) \hspace{-0.2ex}
++ \beta \hspace{.2ex} \anysecondinvariant (\infinitesimaldeformation)
+\end{equation}
+
+\begin{equation*}
+\scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{ \partial \hspace{.1ex} \potentialenergydensity } }
+   { \raisemath{-0.07em}{ \partial \infinitesimaldeformation } }
+$}
+\end{equation*}
+
+\begin{gather*}
+   \scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \infinitesimaldeformation\tracedot
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+   $}
+   \dotdotp
+   \infinitesimaldeformation\tracedot
+   +
+   \infinitesimaldeformation\tracedot
+   \dotdotp
+   \scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \infinitesimaldeformation\tracedot
+   }%close \raisemath
+   }%close \frac
+   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+   $}
+\\
+%
+=
+2 \infinitesimaldeformation\tracedot \dotdotp \UnitDyad
+\end{gather*}
+
+.........
+
+\en{In components}\ru{В~компонентах}
+\en{for an~isotropic medium}\ru{для изотропной среды}
+
+\begin{equation}\label{componentsofthestiffnesstensor.forisotropic}
 A_{ijpq} \hspace{-0.2ex} =
-\lambda
+\thefirstlameparameter \hspace{.2ex}
 \KroneckerDelta{ij}
 \KroneckerDelta{pq} \hspace{-0.2ex}
 +
-\mu
+\thesecondlameparameter
 \bigl(
 \KroneckerDelta{ip}
 \KroneckerDelta{jq} \hspace{-0.2ex}
@@ -69,14 +206,160 @@ A_{ijpq} \hspace{-0.2ex} =
 \en{these are}\ru{это}
 \en{components}\ru{компоненты}
 \en{of an~isotropic tensor}\ru{изотропного тензора}
-\en{of the fourth complexity}\ru{четвёртой сложности}.
-\en{These components}\ru{Эти компоненты}
+\en{of the fourth complexity}\ru{четвёртой сложности},
+\en{which}\ru{которые}
 \en{don’t change}\ru{не меняются}
 \en{when}\ru{когда}
-\en{a~basis rotates}\ru{базис вращается}.
+\en{the~basis rotates}\ru{базис вращается}.
 
-..................
+.......
 
-\chapterdotsectionref{chapter:mathapparatus}{section:tensors.symmetric+skewsymmetric}
+\subsection*{\en{Pairs of elastic moduli}\ru{Пары модулей упругости}}
 
-\eqref{eigenvalues:eq}
+\en{There are}\ru{Вот}
+\en{versions}\ru{версии}
+\en{of the }\ru{закона }Hooke’\ru{а}\en{s}\en{ law}
+\en{for}\ru{для}
+\en{the various pairs}\ru{разных пар}
+\en{of elastic constants}\ru{упругих констант}
+(\en{elastic moduli}\ru{модулей упругости}).
+%
+$\thefirstlameparameter$ \en{and}\ru{и}~$\thesecondlameparameter$\en{ are}\ru{\:---}
+\href{https://en.wikipedia.org/wiki/Lam%C3%A9_parameters}{\en{the~}\ru{параметры }Lam\'{e}\en{ parameters}},
+$\shearmodulus$~(\en{sometimes}\ru{иногда}~$\shearmodulusG$)\en{ is}\ru{\:---}
+\href{https://en.wikipedia.org/wiki/Shear_modulus}{\en{the shear modulus}\ru{модуль сдвига}},
+$\youngsmodulus$\:---
+\href{https://en.wikipedia.org/wiki/Young%27s_modulus}{\en{the~}\ru{модуль }Young’\ru{а}\en{s}\en{ modulus}}~%
+(\en{the~modulus}\ru{модуль}
+\en{of~tension or~compression}\ru{растяжения или сжатия}),
+$\poissonratio$\en{ is}\ru{\:---}
+\href{https://en.wikipedia.org/wiki/Poisson%27s_ratio}{\en{the~}\ru{коэффициент }Poisson’\ru{а}\en{s}\en{ ratio}},
+$\bulkmodulus$\:---
+\href{https://en.wikipedia.org/wiki/Bulk_modulus}{\en{the~}\en{bulk}\ru{объёмный}
+\en{modulus}\ru{модуль}}.
+
+......
+
+\en{A\:priori}\ru{Априорные}
+\en{conditions}\ru{условия}
+\en{for values}\ru{для значений}
+\en{of the elastic moduli}\ru{модулей упругости}
+\en{are}\ru{таковы}
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{inequalitiesforelasticmoduli}
+\begin{array}{r@{\hspace{.5em}\text{---}\hspace{.8ex}}l}
+\youngsmodulus > 0 &
+\begin{minipage}[t]{.7\columnwidth}
+\en{if something is stretched}\ru{если что-то растягивается},
+\en{it elongates}\ru{оно удлиняется},
+\end{minipage}
+\vspace{.3em}
+\\
+%
+\shearmodulus > 0 &
+\begin{minipage}[t]{.7\columnwidth}
+\en{the~shear}\ru{сдвиг}
+\en{goes}\ru{идёт}
+\en{in~the~same way as}\ru{туда~же, куда и}
+\en{the }\en{tangential}\ru{касательная}~(\en{shear}\ru{сдвиговая})
+\en{stress component}\ru{компонента напряжения},
+\end{minipage}
+\vspace{.3em}
+\\
+%
+\bulkmodulus > 0 &
+\begin{minipage}[t]{.7\columnwidth}
+\en{due to external pressure}\ru{от внешнего давления}
+\en{the volume}\ru{объём}
+\en{decreases}\ru{уменьшается}.
+\end{minipage}
+\end{array}
+\end{equation}
+
+\vspace{-0.4em}\noindent
+\en{Inequalities}\ru{Неравенства}
+\en{for the~elastic moduli}\ru{для упругих модулей}~\eqref{inequalitiesforelasticmoduli}
+\en{are sufficient}\ru{достаточны}
+\en{for}\ru{для}
+\en{the~positivity of}\ru{позитивности}~$\potentialenergydensity$.
+
+\en{When}\ru{Когда}
+${ \poissonratio \hspace{-0.4ex} \to \hspace{-0.2ex} \smallerdisplaystyleonehalf }$,
+\en{the~material}\ru{материал}
+\en{becomes incompressible}\ru{становится несжимаемым}
+\en{with}\ru{с}~%
+\en{an~infinitely large}\ru{бесконечно больш\'{и}м}
+\en{bulk modulus}\ru{объёмным модулем}~%
+${ \bulkmodulus \hspace{-0.5ex} \to \hspace{-0.25ex} \infty }$.
+%
+\en{Negative values of}\ru{Отрицательные значения}~$\poissonratio$
+\en{are possible}\ru{возможны}\footnote{%
+\en{Such a~material}\ru{Такой материал},
+\en{called}\ru{называемый}
+\href{https://en.wikipedia.org/wiki/Auxetics}{\en{an~auxetic}\ru{ауксетиком}},
+\en{becomes}\ru{становится}
+\en{thicker}\ru{толще}
+\en{when it stretches}\ru{когда растягивается}.}
+\en{too}\ru{тоже}.
+
+.........
+
+\subsection*{Inverse relations, the complementary energy}
+
+\begin{equation}\label{invertedHooke.forisotropic}
+2 \potentialenergydensity = \linearstress \dotdotp \infinitesimaldeformation,
+\hspace{1em}
+\infinitesimaldeformation
+= \scalebox{.92}{$ \displaystyle
+   \frac{ \raisemath{-0.15em}{
+      \partial \hspace{.1ex} \complementaryenergydensity
+   } }{ \raisemath{.033em}{
+      \partial \linearstress
+   } }
+$}
+= \hspace{-0.1ex} \pliabilitytensor \dotdotp \linearstress
+\hspace{.1ex} =
+\linearstress \dotdotp \hspace{-0.1ex} \pliabilitytensor
+\hspace{.1ex} .
+\end{equation}
+
+the Legendre transform
+
+The complementary energy~$\complementaryenergydensity$
+
+\begin{equation}\label{someotherlabel.for.thecomplementaryenergy}
+\complementaryenergydensity( \hspace{-0.1ex} \linearstress \hspace{.12ex} ) \hspace{-0.1ex}
+= \linearstress \dotdotp \infinitesimaldeformation
+- \hspace{.1ex} \potentialenergydensity(\infinitesimaldeformation)
+\hspace{.1ex} .
+\end{equation}
+
+\en{In the~linear theory}\ru{В~линейной теории}\en{,}
+\en{the~}\inquotes{\en{complementary energy}\ru{дополнительная энергия}}
+\en{is numerically equal to}\ru{численно равна}
+\en{the }\en{elastic potential energy}\ru{упругой потенциальной энергии}
+
+\begin{equation*}
+\tikzmark{beginTwoElasticEnergies}
+2 \potentialenergydensity
+\tikzmark{endTwoElasticEnergies}
+-
+\tikzmark{beginOneElasticPotentialEnergy}
+\potentialenergydensity(\infinitesimaldeformation)
+\tikzmark{endOneElasticPotentialEnergy}
+= \complementaryenergydensity(\linearstress).
+\end{equation*}
+\AddUnderBrace[line width=.75pt][.1ex,-0.1ex][xshift=-0.1ex, yshift=-0.25em]%
+{beginTwoElasticEnergies}{endTwoElasticEnergies}%
+{\scalebox{.8}{$ \linearstress \hspace{-0.2ex} \dotdotp \hspace{-0.2ex} \infinitesimaldeformation $}}
+\AddUnderBrace[line width=.75pt][-0.1ex,-0.1ex][xshift=-0.1ex, yshift=-0.25em]%
+{beginOneElasticPotentialEnergy}{endOneElasticPotentialEnergy}%
+{\scalebox{.8}{$ \smash{\smalldisplaystyleonehalf} \hspace{.2ex} \linearstress \hspace{-0.2ex} \dotdotp \hspace{-0.2ex} \infinitesimaldeformation $}}
+
+\begin{equation*}
+\complementaryenergydensity(\linearstress) = \potentialenergydensity(\infinitesimaldeformation)
+\end{equation*}
+
+...........
+

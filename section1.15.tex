@@ -22,13 +22,13 @@ $\bm{e}_i$\en{ was used}.
 \en{can be chosen}\ru{могут быть взяты}
 \en{as the~basis ones}\ru{как базисные}.
 
-\begin{wrapfigure}[19]{R}{.48\textwidth}
+\begin{wrapfigure}[12]{R}{.48\textwidth}
 \makebox[.5\textwidth][c]{
 \begin{minipage}[t]{.5\textwidth}
 
 \input{vectorintheobliquebasis.tex}
 
-\vspace{-1.6em}\caption{}\label{fig:ObliqueCoordinates}
+\vspace{-1.2em}\caption{}\label{fig:ObliqueCoordinates}
 \end{minipage}}
 \end{wrapfigure}
 
@@ -77,12 +77,12 @@ ${\bm{v} \dotp \bm{a}_i \hspace{-0.1ex} = \hspace{.1ex} v^{k} \bm{a}_k \hspace{-
 \en{since}\ru{ведь}
 ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{a}_k \neq\vspace{.2ex} \delta_{ik}}$.
 
-\en{But perhaps}\ru{Но авось},
-\en{in addition to}\ru{вдобавок к}~${\bm{a}_i}$,
+\en{Fortunately}\ru{К счастью},
+\en{for any}\ru{для любых}~${\bm{a}_i}$
 \en{there’s another}\ru{есть ещё другая}\:---
-\en{the~}\inquotes{\en{superscript}\ru{надстрочная}}
-\en{triple of~vectors}\ru{тройка векторов}~${\bm{a}^{i}}$\:---
-\en{such that}\ru{таких, что}
+\en{the~}\inquotesx{\en{superscript}\ru{надстрочная}}[---]
+\en{triple of~vectors}\ru{тройка векторов}~${\bm{a}^{i}}$,
+\en{such that}\ru{таких что}
 
 \nopagebreak\vspace{-0.3em}
 \begin{equation}\label{fundamentalpropertyofcobasis}
@@ -96,19 +96,36 @@ ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{a}_k \neq\vspace{.2ex} \delta_{ik}}$.
 \end{array}
 \end{equation}
 
-\vspace{-0.3em}\noindent
-\en{In this case}\ru{В~таком случае},
-\en{the~triple}\ru{тройка}~${\bm{a}^{i}}$
+\vspace{-0.2em}\noindent
+\en{The~triple}\ru{Тройка}~${\bm{a}^{i}}$
 \en{is called}\ru{называется}
 \en{cobasis}\ru{кобазисом}
 \en{or}\ru{или}
 \href{https://en.wikipedia.org/wiki/Dual_basis}{\en{reciprocal}\ru{взаимным}~(\en{dual}\ru{дуальным}) \en{basis}\ru{базисом}}.
+%
+\eqref{fundamentalpropertyofcobasis}
+\en{is}\ru{есть}
+\en{the~defining}\ru{определяющее}
+\en{property}\ru{свойство}
+\en{of the~cobasis}\ru{кобазиса}.
 
-\begin{otherlanguage}{russian}
-
-\eqref{fundamentalpropertyofcobasis}\:--- основное свойство кобазиса.
-Орто\-нормирован\-ный~(орто\-нормаль\-ный) базис может быть определён как совпад\'{а}ющий со~своим кобазисом\::
-${\bm{e}^{\hspace{.05ex}i} \hspace{-0.2ex} = \bm{e}_{i}}$.
+\en{The~case}\ru{Случай}\ru{,}
+\en{when}\ru{когда}
+\en{a~basis}\ru{базис}
+\en{coincides}\ru{совпадает}
+\en{with its cobasis}\ru{со своим кобазисом}
+${\bm{e}^{\hspace{.05ex}i} \hspace{-0.2ex} = \bm{e}_{i}}$\ru{,}
+\en{is possible}\ru{возможен}
+\en{only when}\ru{только когда}
+\en{the basis vectors}\ru{базисные векторы}
+\en{are mutually perpendicular}\ru{взаимно перпендикулярны}
+\en{to one another}\ru{один другому}
+\en{and all}\ru{и~все}
+\en{are one unit long}\ru{длиной в~одну единицу}.
+%
+\en{Such a~basis}\ru{Такой базис}
+\en{is called}\ru{называется}
+\inquotesx{\en{cartesian}\ru{декартовым (cartesian)}}[.]
 
 %%\inquotes{В~декартовых координатах}, когда базис\:--- отронормальный правый:
 %%\begin{itemize}
@@ -135,12 +152,12 @@ ${\bm{e}^{\hspace{.05ex}i} \hspace{-0.2ex} = \bm{e}_{i}}$.
 \]
 \end{comment} %%
 
-\en{For}\ru{Для},
-\en{as example}\ru{к~примеру},
-\en{the~first}\ru{первого}
-\en{cobasis vector}\ru{вектора кобазиса}~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$
+\en{To get}\ru{Чтобы получить},
+\en{for example}\ru{для примера},
+\en{the~first}\ru{первый}
+\en{cobasis vector}\ru{вектор кобазиса}~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$
 
-\nopagebreak\vspace{-0.1em}\begin{equation*}
+\nopagebreak\vspace{-0.3em}\begin{equation*}
 \scalebox{.9}{$\left\{\hspace{-0.16em}\begin{array}{l}
 \bm{a}^{\hspace{-0.1ex}1} \hspace{-0.2ex} \dotp \bm{a}_{1} = 1 \\
 \bm{a}^{\hspace{-0.1ex}1} \hspace{-0.2ex} \dotp \bm{a}_{2} = 0 \\
@@ -162,9 +179,30 @@ ${\bm{e}^{\hspace{.05ex}i} \hspace{-0.2ex} = \bm{e}_{i}}$.
 \end{array}\right.$}
 \end{equation*}
 
-\vspace{-0.1em}\noindent
-Коэффициент~$\gamma$ получился равным (с~точностью до~знака для тройки ${\bm{a}_i}$) объёму параллелепипеда, построенного на~векторах~$\bm{a}_i$.
-\en{In}\ru{В}~\sectionref{section:crossproduct} \en{the~same volume}\ru{тот~же объём} \en{was presented as}\ru{был представлен как}~${\hspace{-.22ex}\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{.16ex}}$, \en{and this is}\ru{и~это} \en{not without reason}\ru{не без причины}, \en{because}\ru{ведь} \en{it coincides with the~square root of}\ru{он совпад\'{а}ет с~квадратным корнем из}~\href{https://en.wikipedia.org/wiki/Gramian_matrix}{\en{gramian}\ru{грамиана}}~\hbox{$\textsl{g} \hspace{.1ex} \hspace{.25ex} \equiv \hspace{.2ex} \determinant \textsl{g}_{i\hspace{-0.1ex}j}$\hspace{-0.12ex}}\:--- \en{determinant of}\ru{определителя} \en{the~symmetric}\ru{симметричной} \ru{матрицы }\hbox{\href{https://en.wikipedia.org/wiki/J\%C3\%B8rgen_Pedersen_Gram}{J.\,P.\:Gram}\ru{’а}}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \equiv \hspace{.2ex} \bm{a}_i \dotp \bm{a}_j}$.
+\vspace{-0.5em}\noindent
+\en{Here}\ru{Здесь},
+\en{the~coefficient}\ru{коэффициент}~$\gamma$
+\en{turned out to be equal}\ru{получился равным}
+(\ru{с~точностью до~знака}\en{up to a~sign})
+\en{to the~volume}\ru{объёму}
+\en{of~parallelepiped}\ru{параллелепипеда}\ru{,}
+\en{built}\ru{построенного}
+\en{on~vectors}\ru{на~векторах}~$\bm{a}_i$.
+%
+\en{The~coincidence that}\ru{Совпадение, что}
+\en{in}\ru{в}~\sectionref{section:crossproduct}
+\en{the~same volume}\ru{тот~же самый объём}
+\en{was presented}\ru{был представлен}
+\en{as}\ru{как}~${\hspace{-.22ex}\sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}}\hspace{.16ex}}$\ru{,}
+\en{is not accidental}\ru{не случайно}.
+%
+\en{Because}\ru{Ведь}~$\gamma$
+\en{equals to}\ru{равен}
+\en{the~square root}\ru{квадратному корню}
+\en{of}\ru{из}~\href{https://en.wikipedia.org/wiki/Gramian_matrix}{\en{the~gramian}\ru{грамиана}}~\hbox{$\textsl{g} \hspace{.1ex} \hspace{.25ex} \equiv \hspace{.2ex} \determinant \textsl{g}_{i\hspace{-0.1ex}j}$\hspace{-0.12ex}}\:---
+\en{the~determinant}\ru{определителя}
+\en{of the~symmetric}\ru{симметричной}
+\ru{матрицы }\hbox{\href{https://en.wikipedia.org/wiki/J\%C3\%B8rgen_Pedersen_Gram}{J.\,P.\:Gram}\ru{’а}}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.1ex} \equiv \hspace{.2ex} \bm{a}_i \dotp \bm{a}_j}$.
 
 \noindent
 ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
@@ -172,11 +210,13 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \en{The~proof}\ru{Доказательство}
 \en{resembles}\ru{напоминает}
 \en{the~derivation}\ru{вывод}\en{ of}~\eqref{theproductoftwopermutations}.
+%
 \en{The~}\inquotes{\en{triple product}\ru{Тройное произведение}}
 ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex} \bm{a}_k}$
 \en{in some}\ru{в~каком\hbox{-}нибудь}
 \en{orthonormal basis}\ru{орто\-нормаль\-ном базисе}~${\bm{e}_i}$
-\en{is computable}\ru{вычисл\'{и}мо}
+\en{can be}\ru{может быть}
+\en{calculated}\ru{посчитано}
 \en{as}\ru{как}
 \en{the~determinant}\ru{детерминант}
 (\en{with}\ru{с}~\inquotes{$-$}
@@ -190,7 +230,7 @@ ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex}
 \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.1ex}
 \equiv \hspace{.16ex} \bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex} \bm{a}_k =
 \hspace{.1ex} \pm \hspace{.1ex} \determinant\hspace{-0.1ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
+\scalebox{.92}{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 \bm{a}_i \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{e}_3 \\
 \bm{a}_j \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{e}_3 \\
 \bm{a}_k \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_k \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_k \narrowdotp\hspace{.12ex} \bm{e}_3
@@ -206,7 +246,7 @@ ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex}
 \permutationsparitysymbols{pqr} \hspace{-0.15ex}
 \equiv \hspace{.16ex} \bm{a}_p \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_q \dotp \hspace{.1ex} \bm{a}_r =
 \hspace{.1ex} \pm \hspace{.1ex} \determinant\hspace{-0.1ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
+\scalebox{.92}{$\left[\hspace{-0.2ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 \bm{a}_p \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_q \narrowdotp\hspace{.12ex} \bm{e}_1 & \bm{a}_r \narrowdotp\hspace{.12ex} \bm{e}_1 \\
 \bm{a}_p \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_q \narrowdotp\hspace{.12ex} \bm{e}_2 & \bm{a}_r \narrowdotp\hspace{.12ex} \bm{e}_2 \\
 \bm{a}_p \narrowdotp\hspace{.12ex} \bm{e}_3 & \bm{a}_q \narrowdotp\hspace{.12ex} \bm{e}_3 & \bm{a}_r \narrowdotp\hspace{.12ex} \bm{e}_3
@@ -214,23 +254,34 @@ ${\bm{a}_i \hspace{-0.25ex} \times \hspace{-0.25ex} \bm{a}_j \dotp \hspace{.1ex}
 \end{equation*}
 
 \vspace{.1em}\noindent
-Произведение определителей~${\permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \permutationsparitysymbols{pqr}}$
-равно
-определителю произведения матриц,
-\en{and}\ru{а}~\en{elements of~the~latter}\ru{элементы последнего}\ru{\:---}\en{ are}
-\en{sums}\ru{суммы}
+\en{As proven}\ru{Как доказано}
+\en{in}\ru{в}~\eqref{determinantofmatrixproduct},
+\en{the~determinant}\ru{определитель}
+\en{of the~matrix product}\ru{матричного произведения}
+\en{of~matrices}\ru{матриц}
+\en{is equal}\ru{равен}
+\en{to the~multiplication}\ru{перемножению}
+\en{of the~determinants}\ru{определителей}
+\en{of~each}\ru{каждой}
+\en{of~these}\ru{из~этих}
+\en{matrices}\ru{матриц},
+\en{here}\ru{здесь}~${\permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \permutationsparitysymbols{pqr}}$.
+%
+\en{The~elements}\ru{Элементы}
+\en{of the~matrix product}\ru{матричного произведения}\ru{\:---}\en{ are}
+\en{the~sums}\ru{суммы}
 \en{like}\ru{вида}
 ${\bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{a}_p \hspace{-0.2ex} \dotp \bm{e}_s \hspace{-0.2ex}
 = \bm{a}_i \hspace{-0.1ex} \dotp \bm{e}_s \bm{e}_s \hspace{-0.2ex} \dotp \bm{a}_p \hspace{-0.15ex}
 = \bm{a}_i \hspace{-0.1ex} \dotp \hspace{-0.1ex} \UnitDyad \dotp \bm{a}_p \hspace{-0.15ex}
 = \bm{a}_i \hspace{-0.1ex} \dotp \bm{a}_p}$,
-в~результате
+\en{therefore}\ru{поэтому}
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
 \permutationsparitysymbols{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \permutationsparitysymbols{pqr} = \hspace{0.25ex}
 \determinant\hspace{-0.1ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
+\scalebox{.92}{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_p & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_q & \bm{a}_i \narrowdotp\hspace{.12ex} \bm{a}_r \\
 \bm{a}_j \narrowdotp\hspace{.12ex} \bm{a}_p & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{a}_q & \bm{a}_j \narrowdotp\hspace{.12ex} \bm{a}_r \\
 \bm{a}_k \narrowdotp\hspace{.12ex} \bm{a}_p & \bm{a}_k \narrowdotp\hspace{.12ex} \bm{a}_q & \bm{a}_k \narrowdotp\hspace{.12ex} \bm{a}_r
@@ -243,9 +294,9 @@ ${ \hspace{.6em}
 \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex); }$
 
 \en{Representing}\ru{Представляя}~${\bm{a}^{\hspace{-0.1ex}1}\hspace{-0.1ex}}$
-\en{and other}\ru{и~другие}
+\en{and the~other}\ru{и~другие}
 \en{cobasis vectors}\ru{векторы кобазиса}
-\en{as the sum}\ru{как сумму}
+\en{as the~sum}\ru{как сумму}
 
 \nopagebreak\vspace{.8em}\begin{equation*}
 \begin{array}{l@{\hspace{.3em}}c@{\hspace{.36em}}r}
@@ -256,8 +307,13 @@ ${ \hspace{.6em}
 \AddOverBrace[line width=.75pt][0,-0.2ex]{BeginPlusToMinus}{EndPlusToMinus}%
 {${\scriptstyle {+ \hspace{.4ex} \bm{a}_2 \hspace{.1ex} \times \hspace{.2ex} \bm{a}_3}}$}
 
+\begin{otherlanguage}{russian}
+
 \vspace{-1.3em}\noindent
-приходим к~общей формуле (с~\inquotes{$-$} для \inquotes{левой} тройки ${\bm{a}_i}$)
+приходим к~общей формуле
+(\en{with}\ru{с}~\inquotes{$-$}
+\en{for}\ru{для}
+\inquotes{левой} тройки ${\bm{a}_i}$)
 
 \nopagebreak\begin{equation}\label{basisvectorstocobasisvectors}
 \bm{a}^{i} \hspace{-0.2ex}
@@ -270,9 +326,11 @@ ${ \hspace{.6em}
 \end{equation}
 
 \vspace{-0.2em}\noindent
-Здесь ${e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k}}$ по\hbox{-}прежнему символы чётности перестановки (${\pm 1}$ или~$0$):
+\en{Here}\ru{Здесь}
+${e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k}}$ по\hbox{-}прежнему символы чётности перестановки (${\pm 1}$ \en{or}\ru{или}~$0$):
 ${e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k} \hspace{-0.1ex} \equiv e_{i\hspace{-0.1ex}j\hspace{-0.1ex}k}}$.
-Произведение~${\bm{a}_j \hspace{-0.1ex} \times \bm{a}_k = \hspace{.1ex} \permutationsparitysymbols{j\hspace{-0.1ex}kn} \hspace{.2ex} \bm{a}^n\hspace{-0.12ex}}$, компоненты тензора Л\'{е}ви\hbox{-\!}Чив\'{и}ты~${ \permutationsparitysymbols{j\hspace{-0.1ex}kn} \hspace{-0.2ex} = \pm \hspace{.33ex} e_{j\hspace{-0.1ex}kn} \hspace{-0.1ex} \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} }$,
+Произведение~${\bm{a}_j \hspace{-0.1ex} \times \bm{a}_k = \hspace{.1ex} \permutationsparitysymbols{j\hspace{-0.1ex}kn} \hspace{.2ex} \bm{a}^n\hspace{-0.12ex}}$,
+компоненты тензора Л\'{е}ви\hbox{-\!}Чив\'{и}ты~${ \permutationsparitysymbols{j\hspace{-0.1ex}kn} \hspace{-0.2ex} = \pm \hspace{.33ex} e_{j\hspace{-0.1ex}kn} \hspace{-0.1ex} \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} }$,
 \en{and}\ru{а}~\en{by}\ru{по}~\eqref{doublepermutationscontracted}
 ${e^{i\hspace{-0.1ex}j\hspace{-0.1ex}k} e_{j\hspace{-0.1ex}kn} \hspace{-0.25ex} = 2 \hspace{.1ex} \delta_n^{\hspace{.1ex}i}}$.
 \en{Thus}\ru{Так что}
@@ -303,7 +361,7 @@ $}\end{equation*}
 \sqrt{\hspace{-0.36ex}\mathstrut{\textsl{g}}} \hspace{.32ex} =
 - \hspace{.4ex} \bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 \hspace{.1ex} \dotp \hspace{.25ex} \bm{a}_3 \hspace{.2ex} =
 - \determinant\hspace{-0.1ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
+\scalebox{.92}{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 1 & 1 & 0 \\
 1 & 0 & 1 \\
 0 & 1 & 1
@@ -311,7 +369,7 @@ $}\end{equation*}
 \]
 \[
 - \hspace{.4ex} \bm{a}_2 \hspace{-0.2ex} \times \bm{a}_3 = \determinant\hspace{-0.1ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
+\scalebox{.92}{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
 1 & \bm{e}_1 & 0 \\
 0 & \bm{e}_2 & 1 \\
 1 & \bm{e}_3 & 1
@@ -319,7 +377,7 @@ $}\end{equation*}
 \]
 \[
 - \hspace{.4ex} \bm{a}_3 \hspace{-0.2ex} \times \bm{a}_1 = \determinant\hspace{-0.1ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
+\scalebox{.92}{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
 0 & \bm{e}_1 & 1 \\
 1 & \bm{e}_2 & 1 \\
 1 & \bm{e}_3 & 0
@@ -327,7 +385,7 @@ $}\end{equation*}
 \]
 \[
 - \hspace{.4ex} \bm{a}_1 \hspace{-0.2ex} \times \bm{a}_2 = \determinant\hspace{-0.1ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
+\scalebox{.92}{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.6em}}c@{\hspace{.5em}}c}
 1 & \bm{e}_1 & 1 \\
 1 & \bm{e}_2 & 0 \\
 0 & \bm{e}_3 & 1
@@ -348,15 +406,27 @@ $}\end{equation*}
 
 \par\end{tcolorbox}
 
-Имея кобазис, возможно не~только разложить по~нему любой вектор~(\figureref{fig:DecompositionOfVector}), но~и найти коэффициенты разложения~\eqref{decompositionbyobliquebasis}:
+Имея кобазис,
+возможно
+не~только разложить по~нему
+любой вектор~(\figureref{fig:DecompositionOfVector}),
+но~и найти
+коэффициенты разложения~\eqref{decompositionbyobliquebasis}:
 \begin{equation}\begin{array}{c}
 \bm{v} = v^{i} \hspace{-0.1ex} \bm{a}_i = v_{i} \hspace{.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.25ex},
 \\[.16em]
 \bm{v} \dotp \bm{a}^{\hspace{-0.05ex}i} = v^{k} \hspace{-0.1ex} \bm{a}_k \hspace{-0.1ex} \dotp \bm{a}^{\hspace{-0.05ex}i} = v^{i} \hspace{-0.25ex}, \:\;
 v_{i} \hspace{-0.1ex} = \bm{v} \dotp \bm{a}_i \hspace{.1ex} .
 \end{array}\end{equation}
+
 \noindent
-Коэффициенты~${v_i}$ называются ко\-вариант\-ными компонентами вектора~$\bm{v}$, а~${v^i \hspace{-0.25ex}}$\:--- его контра\-вариант\-ными%
+Коэффициенты~${v_i}$
+называются
+ко\-вариант\-ными
+компонентами
+вектора~$\bm{v}$,
+а~${v^i \hspace{-0.25ex}}$\:---
+его контра\-вариант\-ными%
 \footnote{Потому что они меняются обратно~(contra) изменению длин базисных векторов~${\bm{a}_i}$.}\hspace{-0.2ex}
 компонентами.
 
@@ -365,12 +435,18 @@ v_{i} \hspace{-0.1ex} = \bm{v} \dotp \bm{a}_i \hspace{.1ex} .
 and различают ко\-вариант\-ные
 и~контра\-вариант\-ные...
 векторы~(\en{and}\ru{и}~\inquotes{\en{covectors}\ru{ковекторы}}, \inquotes{dual vectors}).
-Не~ст\'{о}ит вводить читателя в~заблуждение:
-\href{https://www.physicsforums.com/threads/is-a-vector-itself-contra-covariant-or-just-its-components.994318/}{вектор\hbox{-}то один и~тот~же}, просто разложение по~двум разным базисам даёт два набора компонент.
+Не~ст\'{о}ит вводить читателя в~заблуждение\::
+\href{https://www.physicsforums.com/threads/is-a-vector-itself-contra-covariant-or-just-its-components.994318/}{вектор\hbox{-}то один и~тот~же},
+просто разложение по~двум разным базисам
+даёт два набора компонент.
+
+\end{otherlanguage}
 
 % ~ ~ ~ ~ ~
 \input{decompositionviaobliquebasis.tex}
 % ~ ~ ~ ~ ~
+
+\begin{otherlanguage}{russian}
 
 От~векторов перейдём к~тензорам второй сложности.
 Имеем четыре комплекта диад:
@@ -394,16 +470,19 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 \end{array}\end{equation}
 
 \vspace{-0.1em}\noindent
-Для~двух видов смешанных компонент точка в~индексе это просто свободное место:
+\en{For}\ru{Для}
+двух видов
+смешанных компонент
+точка в~индексе это просто свободное место:
 у~${ \somebivalenttensorcomponents{\hspace{-0.2ex} \cdot j}^{\hspace{.1ex}i} }$
 верхний индекс~\inquotesx{$i\hspace{.25ex}$}[---]
 первый,
 а~ниж\-ний~\inquotesx{$\hspace{-0.1ex}j\hspace{.25ex}$}[---]
 второй.
 
-Компоненты
-единичного~(\inquotes{метрического})
-тензора~$\UnitDyad$
+\en{The~components}\ru{Компоненты}
+\en{of the~unit}\ru{единичного}~(\inquotes{\en{metric}\ru{метрического}})
+\en{tensor}\ru{тензора}~$\UnitDyad$
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\begin{array}{c}
 \UnitDyad = \bm{a}^{k} \hspace{-0.1ex} \bm{a}_{k} \hspace{-0.1ex} = \bm{a}_{k} \hspace{.1ex} \bm{a}^{k} \hspace{-0.2ex} = \textsl{g}_{j\hspace{-0.1ex}k} \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.1ex} \bm{a}^{k} \hspace{-0.2ex} = \textsl{g}^{\hspace{0.25ex}j\hspace{-0.1ex}k} \hspace{-0.1ex} \bm{a}_j \bm{a}_k \hspace{-0.32ex}: \\[0.2em]
@@ -416,16 +495,21 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 \bm{a}^{\hspace{-0.05ex}i} \dotp \UnitDyad \dotp \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.15ex} = \bm{a}^{\hspace{-0.05ex}i} \dotp \hspace{.1ex} \bm{a}^{\hspace{.1ex}j} \hspace{-0.15ex} \hspace{.1ex} \equiv \hspace{.16ex} \textsl{g}^{\hspace{0.2ex}i\hspace{-0.1ex}j} \hspace{.1ex} ;
 \\[0.2em]
 %
-\scalebox{0.96}[0.97]{$\UnitDyad \dotp \hspace{-0.1ex} \UnitDyad = \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.1ex} \dotp \hspace{.1ex} \textsl{g}^{\hspace{0.2ex}nk} \bm{a}_n \bm{a}_k \hspace{-0.1ex} = \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \textsl{g}^{\hspace{0.2ex}j\hspace{-0.1ex}k} \bm{a}^{\hspace{-0.05ex}i} \bm{a}_k \hspace{-0.1ex} = \UnitDyad$}
+\scalebox{.96}{$\UnitDyad \dotp \hspace{-0.1ex} \UnitDyad = \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}^{\hspace{0.05ex}j} \hspace{-0.1ex} \dotp \hspace{.1ex} \textsl{g}^{\hspace{0.2ex}nk} \bm{a}_n \bm{a}_k \hspace{-0.1ex} = \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \textsl{g}^{\hspace{0.2ex}j\hspace{-0.1ex}k} \bm{a}^{\hspace{-0.05ex}i} \bm{a}_k \hspace{-0.1ex} = \UnitDyad$}
 \:\Rightarrow\: \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \textsl{g}^{\hspace{.2ex}j\hspace{-0.1ex}k} \hspace{-0.25ex} = \delta_i^{\hspace{0.05ex}k} \hspace{-0.1ex}.
 \end{array}\end{equation}
 
-\vspace{.1em}\noindent
-Вдобавок к~\eqref{fundamentalpropertyofcobasis}
-\en{and}\ru{и}~\eqref{basisvectorstocobasisvectors}
-открылся ещё~один способ найти векторы кобазиса\:---
-через матрицу~\hbox{$\textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j}$\hspace{-0.3ex}},
-обратную матрице Gram\ru{’а}~${\textsl{g}_{i\hspace{-0.1ex}j}}$.
+\vspace{-0.2em}
+%%\en{In addition to}\ru{Вдобавок к}~
+\en{Besides}\ru{Кроме}~\eqref{fundamentalpropertyofcobasis}
+\en{and}\ru{и}~\eqref{basisvectorstocobasisvectors},
+\en{there’s one more}\ru{есть ещё один}
+\en{way}\ru{способ}
+\en{to find}\ru{найти}
+\en{the~cobasis vectors}\ru{векторы кобазиса}\:---
+\en{via matrix}\ru{через матрицу}~\hbox{$\textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j}$\hspace{-0.3ex}},
+\en{which is the~inverse}\ru{которая обратна}
+\en{of the~}\ru{матрице }Gram\ru{’а}\en{ matrix}~${\textsl{g}_{i\hspace{-0.1ex}j}}$.
 \en{And vice versa}\ru{И~наоборот}\::
 
 \nopagebreak\vspace{-0.12em}
@@ -447,7 +531,8 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 \begin{tcolorbox}
 \small\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
 
-\emph{Example.} Using reversed Gram matrix, get cobasis for basis~$\bm{a}_i$ when
+\emph{Example.} Using the~inverse of the~Gram matrix, get the~cobasis for basis~$\bm{a}_i$
+if
 \[ \begin{array}{l}
 \bm{a}_1 \hspace{-0.2ex} = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_2 \hspace{.1ex} , \\
 \bm{a}_2 \hspace{-0.2ex} = \bm{e}_1 \hspace{-0.2ex} + \bm{e}_3 \hspace{.1ex} , \\
@@ -456,7 +541,7 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 
 \[\begin{array}{c}
 \textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.32ex} = \bm{a}_i \dotp \bm{a}_j \hspace{-0.12ex} = \hspace{-0.16ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
+\scalebox{.92}{$\left[\hspace{-0.16ex}\begin{array}{c@{\hspace{.64em}}c@{\hspace{.64em}}c}
 2 & 1 & 1 \\
 1 & 2 & 1 \\
 1 & 1 & 2
@@ -464,7 +549,7 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 \determinant \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = 4 \hspace{.16ex}, \\
 %
 \operatorname{adj} \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.25ex} = \hspace{-0.16ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
+\scalebox{.92}{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
 3 & -1 & -1 \\
 -1 & 3 & -1 \\
 -1 & -1 & 3
@@ -472,7 +557,7 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 %
 \textsl{g}^{\hspace{.32ex}i\hspace{-0.1ex}j} \hspace{-0.25ex} = \textsl{g}_{i\hspace{-0.1ex}j}^{\hspace{.4ex}\expminusone} \hspace{-0.12ex} = \displaystyle \frac{\operatorname{adj} \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j}}{\determinant \hspace{.12ex} \textsl{g}_{i\hspace{-0.1ex}j}} =
 \displaystyle \frac{1}{4} \hspace{.12ex}
-\scalebox{0.92}[0.92]{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
+\scalebox{.92}{$\left[\hspace{-0.4ex}\begin{array}{r@{\hspace{.5em}}r@{\hspace{.5em}}r}
 3 & -1 & -1 \\
 -1 & 3 & -1 \\
 -1 & -1 & 3
@@ -495,7 +580,7 @@ ${\bm{a}^{\hspace{-0.05ex}i} \hspace{-0.1ex} \bm{a}_j}$.
 
 \par\end{tcolorbox}
 
-...
+....
 
 
 Единичный тензор
@@ -534,7 +619,9 @@ $\bm{P}^{\T} \hspace{-0.4ex} = \hspace{-0.1ex} \mathcircabove{\bm{a}}^i \bm{a}_i
 
 
 
-... Характеристическое уравнение~\eqref{chardetequation} быстро приводит к~тождеству К\kern-0.04em\'{э}ли\hbox{--}Г\kern-0.08em\'{а}мильтона~(Cayley\hbox{--}Hamilton)
+...
+Характеристическое уравнение~\eqref{theCharacteristicEquation}
+быстро приводит к~тождеству К\kern-0.04em\'{э}ли\hbox{--}Г\kern-0.08em\'{а}мильтона~(Cayley\hbox{--}Hamilton)
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{cayley-hamilton equation}
 \begin{array}{c}

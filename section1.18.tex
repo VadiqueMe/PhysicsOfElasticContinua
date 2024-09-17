@@ -32,38 +32,74 @@
 вектора
 через
 ограничивающую
-объём~$V$
-з\'{а}мкнутую поверхность~${\mathcal{O}(\boundary V)}$.
-Единичный вектор
-внешней нормали~$\bm{n}$
-к~поверхности~${\mathcal{O}(\boundary V)}$
+объём~$\mathcal{V}$
+з\'{а}мкнутую поверхность~${\mathcal{O}(\boundary \mathcal{V})}$...
 
-\nopagebreak\vspace{-0.1em}%
-\begin{equation}
-\ointegral \displaylimits_{ \mathclap{\mathcal{O}(\boundary V)} } \hspace{-0.1ex}
-\bm{n} \dotp \bm{a} \hspace{.4ex} d\mathcal{O} \hspace{.12ex}
-=
-\integral \displaylimits_{V} \hspace{-0.3ex}
-\boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.4ex} dV
-\hspace{-0.25ex} .
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{thedivergencetheorem.Gauss}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{O}(\boundary \mathcal{V})} } $} \hspace{.2ex}
+\bm{n} \dotp \bm{a} \hspace{.4ex} d\mathcal{O}
+\hspace{.1ex} = \hspace{-0.2ex}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+\boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.4ex} d \mathcal{V}
+\hspace{-0.1ex} ,
 \end{equation}
 
-Объём~$V$ нарезается тремя семействами координатных поверхностей на~множество бесконечно малых элементов. 
-Поток через поверхность ${\mathcal{O}(\boundary V)}$ равен сумме потоков через края получившихся элементов.
-В~бесконечной малости каждый такой элемент\:--- маленький локальный дифференциальный кубик~(параллелепипед).
-...
-Поток вектора~$\bm{a}$
-через грани малого кубика
-с~объёмом~$dV$
-равен
+\vspace{-0.7em}\noindent
+\en{the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведение}
+\en{always commutes}\ru{всегда коммутирует}
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{O}(\boundary \mathcal{V})} } $} \hspace{.2ex}
+\bm{a} \dotp \bm{n} \hspace{.2ex} d\mathcal{O}
+\hspace{.1ex} = \hspace{-0.2ex}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+\bm{a} \dotp \hspace{-0.2ex} \boldnabla \hspace{.1ex} d \mathcal{V}
+\hspace{-0.1ex} ,
+\end{equation*}
+
+\vspace{-0.7em}\noindent
+${\bm{n} \hspace{.2ex} d\mathcal{O} = d \bm{\mathcal{O}}}$
+
+\nopagebreak\vspace{-1.5em}
+\begin{equation*}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{O}(\boundary \mathcal{V})} } $} \hspace{.2ex}
+\bm{a} \dotp d \bm{\mathcal{O}}
+\hspace{.1ex} = \hspace{-0.2ex}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+\boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.4ex} d \mathcal{V}
+\hspace{-0.1ex} ,
+\end{equation*}
+
+\vspace{-0.8em}\noindent
+$\bm{n}$\en{ is}\ru{\:---}
+\en{the~unit vector}\ru{единичный вектор}
+\en{of~outward normal}\ru{внешней нормали}
+\en{to}\ru{к}~\en{surface}\ru{поверхности}~${\mathcal{O}(\boundary \mathcal{V})}$.
+
+\en{Volume}\ru{Объём}~$\mathcal{V}$
+нарезается тремя семействами координатных поверхностей на~множество бесконечно малых элементов. 
+Поток через поверхность ${\mathcal{O}(\boundary \mathcal{V})}$ равен сумме потоков через края получившихся элементов.
+В~бесконечной малости каждый такой элемент\:--- малюсенький локальный дифференциальный кубик~(параллелепипед).
+....
+\en{The~flux}\ru{Поток}
+\en{of~vector}\ru{вектора}~$\bm{a}$
+\en{through}\ru{через}
+\en{the~faces}\ru{грани}
+\en{of a~small cube}\ru{малого кубика} %%\en{of~volume}\ru{объёма}~${d \mathcal{V}}$
+\en{is equal to}\ru{равен}
 ${\sum_{i = 1}^{6} \bm{n}_i \dotp \bm{a} \hspace{.2ex} \mathcal{O}_i}$,
 а~поток
-через сам этот объём
+через объём~${d \mathcal{V}}$
+этого малого кубика
 равен
-${\boldnabla \dotp \bm{a} \hspace{.32ex} dV}$.
+${\boldnabla \dotp \bm{a} \hspace{.32ex} d \mathcal{V}}$.
 
-Похожая трактовка этой теоремы есть,
-для примера,
+\en{A~similar interpretation}\ru{Похожая трактовка}
+\en{of this theorem}\ru{этой теоремы}
+\en{is given}\ru{даётся},
+\en{for example}\ru{для примера},
 \en{in}\ru{в~лекциях} Richard\ru{’а} Feynman’\en{s}\ru{а}\en{ lectures}~\cite{feynman-lecturesonphysics}.
 
 \textcolor{magenta}{\emph{( рисунок с кубиками )}}
@@ -80,9 +116,43 @@ ${\boldnabla = \bm{n}_i \partial_i}$
 разложение вектора
 ${\bm{a} = a_i \bm{n}_i \hspace{.1ex}}$
 
-\subsection*{Теорема Stokes’а о~циркуляции}
+\subsection*{\en{The Stokes’ circulation theorem}\ru{Теорема Stokes’а о~циркуляции}}
 
-Эта теорема выражается равенством
+\href{https://en.wikipedia.org/wiki/Stokes%27_theorem}{(wikipedia) Stokes’ theorem}
+
+\en{This theorem}\ru{Эта теорема}
+\en{is formulated as}\ru{формулируется как}
+\en{the~equality}\ru{равенство}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{thecirculationtheorem.Stokes}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{C}(\boundary \mathcal{O})} } $} \hspace{.2ex}
+\bm{a} \dotp d \bm{\mathcal{C}}
+\hspace{.1ex} = \hspace{-0.2ex}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{O}} $} \hspace{-0.1ex}
+\bm{n} \dotp \hspace{-0.15ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} \bigr) \hspace{.2ex} d \mathcal{O}
+\hspace{-0.1ex} .
+\end{equation}
+
+\nopagebreak\vspace{-1.2em}
+\begin{equation*}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{C}(\boundary \mathcal{O})} } $} \hspace{.2ex}
+\bm{a} \dotp d \bm{\mathcal{C}}
+\hspace{.1ex} = \hspace{-0.2ex}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{O}} $} \hspace{-0.3ex}
+\bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.2ex} \dotp \hspace{.1ex} \bm{n} \hspace{.2ex} d \mathcal{O}
+\hspace{-0.1ex} .
+\end{equation*}
+
+\nopagebreak\vspace{-1.6em}
+\begin{equation*}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{C}(\boundary \mathcal{O})} } $} \hspace{.2ex}
+\bm{a} \dotp d \bm{\mathcal{C}}
+\hspace{.1ex} = \hspace{-0.2ex}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{O}} $} \hspace{-0.3ex}
+\bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.25ex} \dotp d \bm{\mathcal{O}}
+\hspace{-0.1ex} .
+\end{equation*}
 
 
 ...

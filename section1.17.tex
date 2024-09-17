@@ -2,14 +2,18 @@
 
 \label{section:spatialdifferentiation}
 
-\begin{changemargin}{\parindent}{\parindent}
-\vspace{-0.1em}
-\small
-\flushright
-\textit{\en{Tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is} \en{a~tensor}\ru{это тензор}\ru{,} \en{varying from~point to~point}\ru{меняющийся от~точки к~точке} (\en{variable in~space}\ru{переменный в~пространстве}, \en{coordinate dependent}\ru{зависящий от~координат}).
-
-\par\vspace{.3em}
-\end{changemargin}
+%%\begin{changemargin}{\parindent}{\parindent}
+%%\vspace{-0.1em}
+%%\small
+%%\flushright
+%%\textit{\en{Tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is}
+%%\en{a~tensor}\ru{это тензор}\ru{,}
+%%\en{varying from~point to~point}\ru{меняющийся от~точки к~точке}
+%%(\en{variable in~space}\ru{переменный в~пространстве},
+%%\en{coordinate dependent}\ru{зависящий от~координат}).
+%%
+%%\par\vspace{.3em}
+%%\end{changemargin}
 
 \noindent
 \en{Let}\ru{Пусть}
@@ -25,38 +29,95 @@ $\locationvector$\en{~is}\ru{\:---}
 (\ru{вектор }\inquotes{\en{radius}\ru{радиуса}}\en{ vector})
 \en{of~a~point}\ru{точки}
 \en{in~space}\ru{пространства}.
-
-\begin{otherlanguage}{russian}
-
+%
 \en{The variable}\ru{Переменная}~$\varsigma$
 \en{can be}\ru{может быть}
 \en{a~tensor of any complexity}\ru{тензором любой сложности}.
-Пример
-скалярного поля\:--- поле температуры в~среде,
-векторного поля\:--- скорости частиц жидкости.
+\en{An~example}\ru{Пример}
+\en{of~scalar field}\ru{скалярного поля}\:--- \en{the~temperature field}\ru{поле температуры} \en{in a~medium}\ru{в~среде},
+\en{of~vector field}\ru{векторного поля}\:--- \en{the~velocities of~liquid particles}\ru{скорости частиц жидкости}.
 
-Концепт тензорного поля никак не~связан с~концептом поля с~операциями $+$ и~$*$ с~11~свойствами этих операций.
-
-\end{otherlanguage}
+\en{So}\ru{Итак},
+\emph{\en{a~tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is}
+\en{a~tensor}\ru{это тензор}\ru{,}
+\en{varying from~point to~point}\ru{меняющийся от~точки к~точке}
+(\en{variable in~space}\ru{переменный в~пространстве},
+\en{coordinate dependent}\ru{зависящий от~координат}).
+%
+\href{https://en.wikipedia.org/wiki/Field_(physics)}{\en{The~concept}\ru{Концепт}
+\en{of a~tensor field}\ru{тензорного поля}}\en{ is}\ru{\:---}
+\en{not about}\ru{не про}
+\href{https://en.wikipedia.org/wiki/Field_(mathematics)}{\en{a~field in~algebra}\ru{поле в~алгебре}},
+\en{which}\ru{которое}
+\en{considers}\ru{рассматривает}
+\en{operations}\ru{операции}
+\inquotes{$+$} \en{and}\ru{и}~\inquotes{$*$}
+\en{with properties}\ru{со~свойствами}
+\en{of~these operations}\ru{этих операций}.
 
 % ~ ~ ~ ~ ~
 \input{curvilinear-coordinates.tex}
 % ~ ~ ~ ~ ~
 
-\begin{otherlanguage}{russian}
+\en{Not only}\ru{Не~только}
+\en{for}\ru{для}
+\en{solving applied problems}\ru{решения прикладных задач},
+\en{but often}\ru{но часто}
+\en{in}\ru{и~в}~\inquotesx{\en{pure theory}\ru{чистой тео\-рии}}[,]
+\en{instead of the~argument}\ru{вместо аргумента}~$\locationvector$\en{,}
+\ru{используется }\en{the~set}\ru{набор}
+\en{of~curvilinear coordinates}\ru{криво\-линей\-ных координат}~${q^{\hspace{.1ex}i}\hspace{-0.2ex}}$\en{ is used}.
+%
+\en{If}\ru{Если}
+\en{only one coordinate}\ru{только одна координата}
+\en{from the~set}\ru{из набора}
+\en{continuously}\ru{непрерывно}
+\en{changes}\ru{меняется},
+\en{this gives}\ru{это даёт}
+\en{a~coordinate line}\ru{координатную линию}.
+%
+\en{In three-dimensional space}\ru{В~трёхмерном пространстве},
+\en{a~point}\ru{точка}
+\en{is}\ru{есть}
+\en{an~intersection}\ru{пересечение}
+\en{of three coordinate lines}\ru{трёх координатных линий}
+(\figureref{fig:curvilinearcoordinates}).
+%
+\en{The~location vector}\ru{Вектор положения}
+\en{of~a~point}\ru{точки}
+\en{is}\ru{есть}
+\en{a~function}\ru{функция}
+\en{from}\ru{от}
+\en{the~set of~coordinates}\ru{набора координат}
 
-Не~только для~решения прикладных задач, но нередко и в~\inquotes{чистой тео\-рии} вместо аргумента~$\locationvector$ ис\-поль\-зу\-ет\-ся набор (какая-либо трой\-ка) криво\-линей\-ных координат~${q^{\hspace{.1ex}i}\hspace{-0.2ex}}$.
-Если непрерывно менять лишь одну координату из~трёх, получается координатная линия.
-Каждая точка трёхмерного пространства лежит на~пересечении трёх координатных линий (\figureref{fig:curvilinearcoordinates}).
-Вектор положения точки выражается через набор координат \en{as}\ru{как} \en{relation}\ru{отношение} ${\locationvector \hspace{-0.4ex} = \hspace{-0.4ex} \locationvector(q^{\hspace{.1ex}i}\hspace{.1ex})}$.
+\nopagebreak\vspace{-0.5em}
+\begin{equation}\label{locationvectorfromcoordinates}
+\locationvector \hspace{-0.4ex} = \hspace{-0.4ex} \locationvector(q^{\hspace{.1ex}i}\hspace{.1ex}).
+\end{equation}
 
-\end{otherlanguage}
-
-Commonly used \en{sets of~coordinates}\ru{наборы координат}<<<<<<
-\en{Rectangular}\ru{Прямоугольные} (\inquotes{\en{cartesian}\ru{декартовы}}), \en{spherical}\ru{сферические} \en{and }\ru{и~}\en{cylindrical}\ru{цилиндрические} \en{coordinates}\ru{координаты}\en{ are}\ru{\:---}
-
-Curvilinear coordinates may be derived from a~set of~rectangular~(\inquotes{cartesian}) coordinates by using a~transformation that is locally invertible (a~one-to-one map) at~each point.
-\en{Therefore}\ru{Поэтому} \en{rectangular coordinates}\ru{прямоугольные координаты} \en{of~any point}\ru{любой точки} \en{of~space}\ru{пространства} \en{can be converted}\ru{могут быть преобразованы} \en{to }\ru{в~}\en{some}\ru{какие-либо} \en{curvilinear coordinates}\ru{криволинейные координаты} \en{and}\ru{и}~\en{vice versa}\ru{обратно}.
+\vspace{-0.3em}
+\en{The most often used}\ru{Самые часто используемые}
+\en{sets of~coordinates}\ru{наборы координат}\en{ are}\ru{\:---}
+\en{rectangular}\ru{прямоугольные}
+(\inquotes{\en{cartesian}\ru{декартовы}})
+\en{coordinates}\ru{координаты},
+\en{spherical}\ru{сферические}
+\en{coordinates}\ru{координаты}
+\en{and }\ru{и~}\en{cylindrical}\ru{цилиндрические}
+\en{coordinates}\ru{координаты}.
+%
+\en{Any}\ru{Любые}
+\en{curvilinear coordinates}\ru{криволинейные координаты}
+\en{can be}\ru{могут быть}
+\en{converted}\ru{преобразованы}
+\en{to}\ru{в}~\en{the~rectangular}\ru{прямоугольные}
+\en{coordinates}\ru{координаты}
+\en{and}\ru{и}~\en{vice versa}\ru{обратно}
+\en{by means of}\ru{посредством}
+\en{a~locally invertible}\ru{локально обратимого}
+(\inquotes{\en{one-to-one}\ru{один-к-одному}})
+\en{mapping}\ru{отображения}
+\en{at~each point}\ru{в~каждой точке}.
 
 ...
 
@@ -64,15 +125,15 @@ The~differential of a~function presents a~change in the~linearization of this fu
 
 ...
 
-\en{partial derivative}\ru{частная производная}
+\en{partial derivatives}\ru{частные производные}
 
 \nopagebreak\vspace{-0.4em}\begin{equation*}
-\partial_i \equiv \scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial$}}{\raisebox{-0.1em}{$\partial q^i$}} $}
+\partial_i \equiv \scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial$}}{\raisebox{-0.1em}{$\partial q^i$}} $}
 \end{equation*}
 
 ...
 
-\en{differential}\ru{дифференциал} \en{of~}${\varsigma(q^i)}$
+\en{the~differential}\ru{дифференциал} \en{of~}${\varsigma(q^i)}$
 
 \nopagebreak\vspace{-0.4em}\begin{equation}
 d\varsigma \hspace{-0.1ex}
@@ -184,7 +245,9 @@ d\locationvector = d\locationvector \dotp \hspace{-0.2ex} \tikzmark{beginItsUnit
 
 ...
 
-\en{Divergence}\ru{Дивергенция} \en{of~the~dyadic product}\ru{диадного произведения} \en{of~two vectors}\ru{двух векторов}
+\en{Divergence}\ru{Дивергенция}
+\en{of~the~dyadic product}\ru{диадного произведения}
+\en{of~two vectors}\ru{двух векторов}
 
 \nopagebreak\vspace{-0.3em}\begin{multline}\label{divergenceofdyadicproducoftwovectors}
 \boldnabla \hspace{-0.16ex} \dotp \hspace{-0.2ex} \bigl( \hspace{-0.1ex} \bm{a} \bm{b} \hspace{.05ex} \bigr) \hspace{-0.33ex}
@@ -201,7 +264,13 @@ d\locationvector = d\locationvector \dotp \hspace{-0.2ex} \tikzmark{beginItsUnit
 \end{multline}
 
 \vspace{-0.2em}\noindent
---- \en{here’s no~need}\ru{тут нет нужды} \en{to~expand}\ru{разворачивать} \en{vectors}\ru{векторы}~$\bm{a}$ \en{and}\ru{и}~$\bm{b}$, \en{expanding just}\ru{развернув лишь} \en{differential operator}\ru{дифференциальный оператор}~${\hspace{-0.13ex}\boldnabla}$.
+--- \en{here’s no~need}\ru{тут нет нужды}
+\en{to~expand}\ru{разворачивать}
+\en{vectors}\ru{векторы}~$\bm{a}$
+\en{and}\ru{и}~$\bm{b}$,
+\en{expanding}\ru{развернув}
+\en{just}\ru{лишь}
+\en{the~differential operator}\ru{дифференциальный оператор}~${\hspace{-0.13ex}\boldnabla}$.
 
 ...
 
