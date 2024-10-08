@@ -9,7 +9,8 @@
 \en{a~rotation}\ru{поворот~(вращение)}
 \en{in 3\hbox{-}dimensional space}\ru{в~трёхмерном пространстве}\en{ is}\ru{\:---}
 \en{using quaternions}\ru{использовать кватернионы}.
-\en{They}\ru{Они}
+\en{Meanwhile}\ru{Между тем},
+\en{they}\ru{они}
 \en{are very popular}\ru{очень популярны}
 \en{for}\ru{для}
 \en{computer graphics}\ru{компьютерной графики}.
@@ -86,7 +87,113 @@ from there also follows
 \end{array}
 \end{equation*}
 
-.............
+\en{If}\ru{Если}
+\en{the~reader}\ru{читатель}
+\en{doubts that}\ru{сомневается, что}
+\en{the~multiplication of~two exponentiations}\ru{умножение двух экспоненцирований}
+${\exponentofimaginary{\varphi} \exponentofimaginary{\psi}}$
+\en{and }\ru{и~}\en{the~exponentiation of the~sum of~arguments}\ru{экспоненцирование суммы аргументов}
+${\exponentofimaginary{( \varphi + \psi )}}$
+\en{are equal}\ru{равн\'{ы}}
+%
+\vspace{-0.5em}\begin{equation*}
+\exponentofimaginary{\varphi} \exponentofimaginary{\psi} \hspace{-0.2ex} = \exponentofimaginary{( \varphi + \psi )}
+\hspace{-0.25ex} ,
+\vspace{-0.33em}\end{equation*}
+%
+\en{then here’s}\ru{то вот}
+\en{quite convincing proof of~that}\ru{вполне убедительное доказательство этого}
+\en{using}\ru{с~использованием}
+\en{the~linearity of~differentiation}\ru{линейности дифференцирования}.
+
+\newcommand\omninoaliquid{\scalebox{.66}{$ \raisemath{-0.52ex}{\stackrel{\hbox{omnino}}{\hbox{aliquid}}} $}}
+
+\noindent
+\tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex) ;
+\hspace{2.25ex}
+\en{At~first}\ru{Сперв\'{а}},
+\en{I’ll define}\ru{я определю}\ru{,}
+\en{what}\ru{что такое}
+\en{an~exponentiation}\ru{экспоненцирование}~${e^w}$\hbox{\hspace{-0.33ex},}
+\en{sometimes written as}\ru{иногда записываемое как}~${\operatorname{exp}(w)}$\en{, is}
+($w$~\en{for}\ru{для}
+\inquotesx{\en{whatever it is}\ru{что~бы это ни~было}}[,]
+\en{something}\ru{н\'{е}что}
+\en{of~absolutely any kind}\ru{совершенно любого вида}).
+
+%%%If frequent and long runs in the~mountains lead to a~loss of~comprehension of~what an~exponentiation is, then maybe it’s time to run in the mountains less, huh ;) ?
+
+{\vspace{-0.2em}\begin{leftverticalbar}
+${e^w}$\en{~is}\ru{\:---}
+\en{such and only such}\ru{это такая и~только такая}
+\en{function}\ru{функция}
+\en{whose differential}\ru{дифференциал}~${d(e^w)}$\ru{ которой}
+\en{is}\ru{есть}~${e^w dw}$.
+%
+\en{When}\ru{Когда}
+\en{for}\ru{для}
+\en{some function}\ru{какой-либо функции}
+${\omninoaliquid \mapsto \hspace{-0.2ex} f}$
+\en{the differential}\ru{дифференциал}~${df}$
+\en{equals to}\ru{равен}
+${f \hspace{-0.2ex} d \bigl( \omninoaliquid \bigr)}$,
+\en{then}\ru{тогда}
+\en{such a~function}\ru{такая функция}
+\en{is}\ru{есть}
+\en{an~exponentiation}\ru{экспоненцирование}\:---
+${\operatorname{exp} \bigl( \omninoaliquid \bigr)}$.
+\end{leftverticalbar}
+\par}
+
+\vspace{-0.1em}
+\en{The~differential}\ru{Дифференциал}
+\en{of a~product of~functions}\ru{произведения функций}
+\en{can be found as}\ru{может быть найден как}
+%
+\vspace{-0.5em}\begin{equation*}
+d( f_{\hspace{-0.1ex}1} f_{2} ) = (d f_{\hspace{-0.1ex}1}) f_{2} + f_{\hspace{-0.1ex}1} (d f_{2})
+\vspace{-0.5em}\end{equation*}
+%
+---
+\en{the }(Leibniz’\ru{а}) \inquotesx{\ru{правило произведения (}product rule\ru{)}}[.]
+\en{For}\ru{Для}
+\en{two exponentiations}\ru{двух экспоненцирований}
+(\en{the~imaginary unit}\ru{воображаемая единица}~$i$
+\en{is constant}\ru{постоянна},
+\en{thus}\ru{поэтому}
+${di \hspace{.3ex} \narroweq \hspace{.2ex} 0}$
+\en{and}\ru{и}
+${ \forall \xi \hspace{.75ex} d(i \xi) \hspace{.1ex} \narroweq \hspace{.1ex} \mathcolor{gray}{(di) \xi} \hspace{-0.1ex} + i (d\xi) \hspace{.1ex} \narroweq \hspace{.3ex} i \hspace{.1ex} d\xi }$)
+%
+\vspace{-0.8em}\begin{multline*}
+d \bigl( \exponentofimaginary{\varphi} \exponentofimaginary{\psi} \bigr) \hspace{-0.25ex}
+= \hspace{-0.25ex} \bigl( d \exponentofimaginary{\varphi} \bigr) \exponentofimaginary{\psi} \hspace{-0.25ex}
++ \hspace{.1ex} \exponentofimaginary{\varphi} \bigl( d \exponentofimaginary{\psi} \bigr)
+\\[-0.2em]
+= \exponentofimaginary{\varphi} d(i \hspace{.1ex} \varphi) \hspace{.2ex} \exponentofimaginary{\psi} \hspace{-0.25ex}
++ \hspace{.1ex} \exponentofimaginary{\varphi} \exponentofimaginary{\psi} d(i \hspace{.1ex} \psi)
+= \hspace{.1ex} \exponentofimaginary{\varphi} \exponentofimaginary{\psi} \hspace{.2ex} i \bigl( d \hspace{.1ex} \varphi + d \hspace{.1ex} \psi \bigr)
+.
+\end{multline*}
+
+\vspace{-0.7em}
+\en{For}\ru{Для}
+\en{an~exponentiation}\ru{экспоненцирования}
+\en{of the~sum of~arguments}\ru{суммы аргументов},
+\en{the differential}\ru{дифференциал}
+\en{is}\ru{есть}
+%
+\vspace{-0.5em}\begin{equation*}
+d \bigl( \exponentofimaginary{( \varphi + \psi )} \bigr) \hspace{-0.25ex}
+= \exponentofimaginary{( \varphi + \psi )} \hspace{.2ex} i \hspace{.2ex} d \bigl( \varphi + \psi \bigr)
+.
+\vspace{-0.5em}\end{equation*}
+
+.....
+\hspace{2.25ex}
+\tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);
+
+........
 
 All rotations are \en{a~}\inquotes{\en{group}\ru{группа}}
 \en{in the~sense}\ru{в~смысле}
