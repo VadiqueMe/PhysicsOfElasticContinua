@@ -14,7 +14,7 @@ The book is written using the compact and elegant direct indexless tensor notati
 
 I am writing this book simultaneously in the two languages, English and Russian. The reader is free to pick any language of the two.
 
-Everything in this book, along with the LATEX source code, I license under the terms of Creative Commons “Attribution–NonCommercial–ShareAlike” (CC “BY-NC-SA”) license. The source code is published on github.com/VadiqueMe/PhysicsOfElasticContinua
+Everything in this book, along with the LaTeX source code, I license under the terms of Creative Commons “Attribution–NonCommercial–ShareAlike” (CC “BY-NC-SA”) license. The source code is published on github.com/VadiqueMe/PhysicsOfElasticContinua
 
 # Физика упругих континуумов
 
