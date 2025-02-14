@@ -89,20 +89,25 @@
 \end{tikzpicture}
 \end{center}
 
+%%\def\quartercircle{90\degree\hspace{-0.2ex}}
+%%\def\zerodegrees{0\degree\hspace{-0.2ex}}
+\def\quartercircle{\verynicefrac{\pi\hspace{-0.2ex}}{2}}
+\def\zerodegrees{0}
+
 \vspace{-1em}\[
-\scalebox{0.8}[0.85]{$\left[ \begin{array}{ccc}
+\scalebox{.8}[.85]{$\left[ \begin{array}{ccc}
 \mathcircabove{\bm{e}}_1 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_1 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_1 \dotp \bm{e}_3 \\
 \mathcircabove{\bm{e}}_2 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_2 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_2 \dotp \bm{e}_3 \\
 \mathcircabove{\bm{e}}_3 \dotp \bm{e}_1 & \mathcircabove{\bm{e}}_3 \dotp \bm{e}_2 & \mathcircabove{\bm{e}}_3 \dotp \bm{e}_3
 \end{array} \right]$} \hspace{-0.32ex} = \hspace{-0.2ex}
 %
-\scalebox{0.8}[0.85]{$\left[ \hspace{-0.2ex} \begin{array}{ccc}
-\cosine \vartheta & \hspace{-1ex} \cosine \left( 90\degree \!+ \vartheta \right) & \cosine 90\degree \\
-\cosine \left( 90\degree \!- \vartheta \right) & \cosine \vartheta & \cosine 90\degree \\
-\cosine 90\degree & \cosine 90\degree & \cosine 0\degree
+\scalebox{.8}[.85]{$\left[ \hspace{-0.2ex} \begin{array}{ccc}
+\cosine \vartheta & \hspace{-1ex} \cosine \left( \quartercircle \hspace{-0.4ex} + \hspace{-0.2ex} \vartheta \right) & \cosine \quartercircle \\
+\cosine \left( \quartercircle \hspace{-0.4ex} - \hspace{-0.2ex} \vartheta \right) & \cosine \vartheta & \cosine \quartercircle \\
+\cosine \quartercircle & \cosine \quartercircle & \cosine \zerodegrees
 \end{array} \right]$} \hspace{-0.32ex} = \hspace{-0.2ex}
 %
-\scalebox{0.8}[0.85]{$\left[ \hspace{-0.1ex} \begin{array}{ccc}
+\scalebox{.8}[.85]{$\left[ \hspace{-0.1ex} \begin{array}{ccc}
 \cosine \vartheta & - \sine \vartheta & 0 \\
 \sine \vartheta & \cosine \vartheta & 0 \\
 0 & 0 & 1
@@ -123,17 +128,17 @@
 = \hspace{.2ex} \tikzmark{StartBraceE1E1} {\bm{e}_1 \bm{e}_1 \cosine \vartheta - \bm{e}_1 \bm{e}_2 \sine \vartheta \hspace{.2em}} \tikzmark{EndBraceE1E1} \hspace{-0.1ex} + \hspace{.1ex} \tikzmark{StartBraceE2E2} {\bm{e}_2 \bm{e}_1 \sine \vartheta + \bm{e}_2 \bm{e}_2 \cosine \vartheta \hspace{.2em}} \tikzmark{EndBraceE2E2} \hspace{-0.1ex} + \tikzmark{StartBraceE3E3} {\hspace{.25ex} \bm{k} \bm{k} \hspace{.1ex}} \tikzmark{EndBraceE3E3} \hspace{.1ex}
 =\\[0.32em]
 %
-= \hspace{.1ex} \UnitDyad \cosine \vartheta - \hspace{-0.1ex} \tikzmark{StartBraceKk} {\hspace{.1ex}\bm{e}_3 \bm{e}_3\hspace{.1ex}} \tikzmark{EndBraceKk} \hspace{-0.25ex} \cosine \vartheta \hspace{.1ex} + \tikzmark{StartBraceSkewsymmetry} {\left( \bm{e}_2 \bm{e}_1 - \bm{e}_1 \bm{e}_2 \right)} \tikzmark{EndBraceSkewsymmetry} \sine \vartheta + \bm{k} \bm{k} \hspace{.1ex}
+= \bigl( \UnitDyad \cosine \vartheta - \hspace{-0.1ex} \tikzmark{StartBraceKk} {\hspace{.1ex}\bm{e}_3 \bm{e}_3\hspace{.1ex}} \tikzmark{EndBraceKk} \hspace{-0.25ex} \cosine \vartheta \hspace{.2ex} \bigr) \hspace{-0.2ex} + \hspace{-0.2ex} \tikzmark{StartBraceSkewsymmetry} {\bigl( \bm{e}_2 \bm{e}_1 \hspace{-0.2ex} - \bm{e}_1 \bm{e}_2 \bigr)} \tikzmark{EndBraceSkewsymmetry} \sine \vartheta + \bm{k} \bm{k} \hspace{.1ex}
 =\\[1.5em]
 %
-\shoveright{ \hfill = \UnitDyad \cosine \vartheta + \bm{k} \times \hspace{-0.2ex} \UnitDyad \sine \vartheta + \bm{k} \bm{k} \left({1 - \cosine \vartheta}\right) }
+\shoveright{ \hfill = \UnitDyad \cosine \vartheta + \bm{k} \times \hspace{-0.2ex} \UnitDyad \sine \vartheta + \bm{k} \bm{k} \bigl({1 - \cosine \vartheta}\bigr) }
 \end{multline*}
 
 \AddOverBrace[line width=0.75pt]{StartBraceE1E1}{EndBraceE1E1}{${\scriptstyle \bm{e}_1 \mathcircabove{\bm{e}}_1}$}
 \AddOverBrace[line width=0.75pt]{StartBraceE2E2}{EndBraceE2E2}{${\scriptstyle \bm{e}_2 \mathcircabove{\bm{e}}_2}$}
 \AddOverBrace[line width=0.75pt]{StartBraceE3E3}{EndBraceE3E3}{${\scriptstyle \bm{e}_3 \mathcircabove{\bm{e}}_3}$}
 \AddUnderBrace[line width=0.75pt][-0.1ex,-0.2ex]{StartBraceKk}{EndBraceKk}{${\scriptstyle \bm{k}\bm{k}}$}
-\AddUnderBrace[line width=0.75pt][-0.1ex,-0.2ex][xshift=0.4ex]{StartBraceSkewsymmetry}{EndBraceSkewsymmetry}{${\scriptstyle \bm{e}_3 \times \bm{e}_i \bm{e}_i \:=\: \permutationsparitytensor_{3i\hspace{-0.1ex}j} \bm{e}_j \bm{e}_i}$}
+\AddUnderBrace[line width=0.75pt][-0.1ex,-0.2ex][xshift=.3ex,yshift=.2ex]{StartBraceSkewsymmetry}{EndBraceSkewsymmetry}{${\scriptstyle \bm{e}_3 \times \bm{e}_i \bm{e}_i \:=\: \permutationsparitysymbols{3i\hspace{-0.1ex}j} \bm{e}_j \bm{e}_i}$}
 
 \vspace{-0.5em}
 \caption{\inquotes{\en{Finite rotation}\ru{Конечный поворот}}}\label{fig:eulerfiniterotation}
