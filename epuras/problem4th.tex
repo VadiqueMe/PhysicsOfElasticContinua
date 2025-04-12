@@ -1,0 +1,369 @@
+\documentclass[tikz, margin=10mm]{standalone}
+
+\usepackage{tikz}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+
+\makeatletter
+\def\mathcolor#1#{\@mathcolor{#1}}
+\def\@mathcolor#1#2#3{%
+	\protect\leavevmode
+	\begingroup\color#1{#2}#3\endgroup
+}
+\makeatother
+
+\usepackage{xargs}
+\usepackage{xifthen}
+
+\usepackage{scalerel}
+\usepackage{rotating}
+\usepackage{amsopn}
+
+\DeclareMathOperator*{\integral}{\scalerel*{\rotatebox{12}{$\!\textstyle\int\!$}}{\int}} % \rotatebox{8} for vertical line
+
+\usepackage{accents}
+
+\newcommand{\scircabove}{\hbox{\fontfamily{lmr}\fontsize{6}{0}\selectfont$\,\circ$}}
+\DeclareRobustCommand{\mathcircabove}{\accentset{\scircabove}}
+
+\newcommand\verynicefrac[2]{\raisebox{.11ex}{$ \raisebox{.3em}{\scalebox{.7}{$#1$}} \hspace{-0.4ex} / \hspace{-0.46ex} \raisebox{-0.25em}{\scalebox{.7}{$#2$}}\hspace{.15ex} $}}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+
+\def\textscale{2}
+\pgfmathsetmacro\smallertextscale{.9*\textscale}
+\pgfmathsetmacro\evensmallertextscale{.75*\textscale}
+
+\def\beamlength{16}
+\pgfmathsetmacro\halfbeamlength{\beamlength / 2}
+\pgfmathsetmacro\quarterbeamlength{\beamlength / 4}
+
+%
+% the problem
+%
+
+\def\problempos{3.33}
+\newlength\problemwidth
+\setlength{\problemwidth}{12cm}
+
+\node [above, inner sep=0pt, outer sep=0pt] at (\halfbeamlength, \problempos)
+	{\scalebox{\evensmallertextscale}{ \parbox{\problemwidth}{%
+An absolutely rigid bracket with a~spring on one side rests on a~hinged beam.
+At what distance~$a$ should a~point force~$F$ be applied so that the~bracket does not tilt?
+The~length of the~beam~$\ell$,
+the~bending rigidity ${EJ}$ (constant along the~beam length)
+and the~spring stiffness coefficient ${k \hspace{-0.3ex} = \hspace{-0.4ex} \frac{EJ}{\ell^3}}$
+are known. }}
+	} ;
+
+%
+% the beam
+%
+
+\def\beamlinewidth{3pt}
+\tikzstyle{beam line} = [line width=\beamlinewidth, line cap=round, color=black]
+
+\tikzstyle{beam length} = [line width=.5pt, color=black, line cap=round]
+
+\newcommand{\halfell}{ \raisebox{.3em}{$\ell$} \hspace{-0.4ex} / \hspace{-0.36ex} \raisebox{-0.33em}{\scalebox{.88}{$2$}} }
+
+\def\lengthlineoffset{0.96}
+\pgfmathsetmacro\belowlengthlinelength{-\lengthlineoffset - 0.2}
+
+\draw [beam length] (0, 0) -- (0, \belowlengthlinelength) ;
+
+\draw [beam line] (0, 0) -- (\quarterbeamlength, 0) ;
+\draw [beam length] (0, -\lengthlineoffset) -- (\quarterbeamlength, -\lengthlineoffset)
+	node [pos=0.51, shape=circle, fill=white, inner sep=0pt, outer sep=11pt] {\scalebox{\textscale}{$ \ell $}} ;
+
+\draw [beam length] (\quarterbeamlength, 0) -- (\quarterbeamlength, \belowlengthlinelength) ;
+
+%%\draw [beam length] (\quarterbeamlength, 0) -- (\quarterbeamlength, \abovelengthlinelength) ;
+
+\draw [beam line] (\quarterbeamlength, 0) -- (\halfbeamlength, 0) ;
+\draw [beam length] (\quarterbeamlength, -\lengthlineoffset) -- (\halfbeamlength, -\lengthlineoffset)
+	node [pos=0.49, shape=circle, fill=white, inner sep=0pt, outer sep=11pt] {\scalebox{\textscale}{$ \ell $}} ;
+
+%%\draw [beam length] (\halfbeamlength, 0) -- (\halfbeamlength, \abovelengthlinelength) ;
+
+\draw [beam length] (\halfbeamlength, 0) -- (\halfbeamlength, \belowlengthlinelength) ;
+
+\draw [beam line] (\halfbeamlength, 0) -- (\beamlength, 0) ;
+\draw [beam length] (\halfbeamlength, -\lengthlineoffset) -- (\beamlength, -\lengthlineoffset)
+	node [pos=0.5, shape=circle, fill=white, inner sep=1pt, outer sep=11pt] {\scalebox{\textscale}{$ 2 \ell \hspace{-0.1ex} $}} ;
+
+\draw [beam length] (\beamlength, 0) -- (\beamlength, \belowlengthlinelength) ;
+
+\newcommand\redrawbeam{\draw [beam line] (0, 0) -- (\beamlength, 0) ;}
+
+%
+% the bracket
+%
+
+\def\bracketlinewidth{2pt}
+\tikzstyle{that bracket} = [line width=\bracketlinewidth, line cap=round, color=blue, fill=white]
+
+\def\bracketverticaloffset{.5}
+\def\bracketheight{.4}
+\pgfmathsetmacro\bracketbeyondcontact{.1 * \quarterbeamlength}
+
+\pgfmathsetmacro\brackethardtrianglesize{.066 * \quarterbeamlength}
+\draw [that bracket]
+	( \halfbeamlength, .5*\beamlinewidth )
+	-- ( \halfbeamlength + \brackethardtrianglesize, \bracketverticaloffset )
+	-- ( \halfbeamlength - \brackethardtrianglesize, \bracketverticaloffset )
+	-- cycle ;
+
+\def\springcenterat{\quarterbeamlength}
+\def\springhalfwidth{.25}
+\pgfmathsetmacro\springwidth{2 * \springhalfwidth}
+\def\springfirst{\bracketverticaloffset}
+\def\springcoils{4}
+\def\springbottom{0}
+\pgfmathsetmacro\springstep{(\springfirst - \springbottom) / \springcoils}
+\pgfmathsetmacro\springnext{\springfirst - \springstep}
+\pgfmathsetmacro\springlast{\springbottom + \springstep}
+
+\tikzstyle{the spring} = [line width=.66pt, color=magenta]
+
+\foreach \ycurrent in {\springfirst, \springnext, ..., \springlast}
+	\draw [the spring]
+		( \springcenterat - \springhalfwidth, \ycurrent )
+		-- ++( \springwidth, 0 ) -- ++( -\springwidth, -\springstep ) ;
+
+\draw [that bracket, rounded corners=2pt]
+	( \quarterbeamlength - \bracketbeyondcontact, \bracketverticaloffset )
+	rectangle ( \halfbeamlength + \bracketbeyondcontact, \bracketverticaloffset + \bracketheight ) ;
+
+%
+% external loads
+%
+
+\pgfmathsetmacro\justa{.7 * \quarterbeamlength}
+\pgfmathsetmacro\alength{\quarterbeamlength + \justa}
+
+\pgfmathsetmacro\abovelengthlineoffset{\bracketheight + \lengthlineoffset - 0.1}
+\pgfmathsetmacro\abovelengthlinelength{\abovelengthlineoffset + 0.23}
+
+\draw [beam length] (\quarterbeamlength, \bracketverticaloffset) -- ++(0, \abovelengthlinelength) ;
+%%\draw [beam length] (\alength, \bracketverticaloffset) -- ++(0, \abovelengthlinelength) ;
+\draw [beam length]
+	(\quarterbeamlength, \bracketverticaloffset + \abovelengthlineoffset) -- ++(\justa, 0)
+	node [pos=0.5, shape=circle, fill=white, inner sep=2pt, outer sep=11pt] {\scalebox{\textscale}{$ a $}} ;
+
+\def\pointloadheight{1.4}
+\tikzstyle{concentrated load line} =
+	[line width=2pt, red, line cap=round, -{Triangle[round, length=15pt, width=9pt]}]
+
+\pgfmathsetmacro\loadlinestart{\pointloadheight + \bracketverticaloffset + \bracketheight}
+\draw [concentrated load line]
+	([yshift=.5*\bracketlinewidth] \alength, \loadlinestart ) -- ++( 0, -\pointloadheight )
+	node [pos=0.4, above right, shape=circle, fill=white, inner sep=-2pt, outer sep=10pt] {\scalebox{2}{$ F $}} ;
+
+%
+% constraints
+%
+
+\input{constraints.include}
+
+% uncomment to see more constraints
+%%\addpinnedmidhingeat{(\quarterbeamlength, 0)}
+%%\addmovablehingeat{(.8*\beamlength, 0)}[mid]
+
+% redraw beam after loads and middle hinges before clamps
+\redrawbeam
+
+\addmovablehingeat{(0, 0)} %%\addpinnedendhingeat{(0, 0)}
+\addpinnedendhingeat{(\beamlength, 0)}[flip]
+
+%
+% the beam again with reactions of constraints
+%
+
+\def\beamwithreactionspos{-3.5}
+
+% extend the beam ends downwards
+
+\tikzstyle{epure aux} = [line width=1pt, color=black, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
+
+\def\auxlineoffset{.2}
+
+\draw [epure aux] (0, \belowlengthlinelength - \auxlineoffset) -- (0, \beamwithreactionspos + \auxlineoffset) ;
+\draw [epure aux] (\beamlength, \belowlengthlinelength - \auxlineoffset) -- (\beamlength, \beamwithreactionspos + \auxlineoffset) ;
+
+%%\draw [epure aux] (\alength, \bracketverticaloffset + \bracketheight) -- (\alength, \beamwithreactionspos) ;
+
+%%\draw [concentrated load line]
+%%	(\alength, \beamwithreactionspos + \pointloadheight) -- ++(0, -\pointloadheight)
+%%	node [pos=0.4, above right, shape=circle, fill=white, inner sep=-2pt, outer sep=10pt] {\scalebox{2}{$ F $}} ;
+
+\def\leftforce{P}
+\def\rightforce{R}
+
+\pgfmathsetmacro\leftloadheight{0.63 * \pointloadheight}
+\draw [epure aux]
+	( \quarterbeamlength, \belowlengthlinelength - \auxlineoffset )
+	-- ( \quarterbeamlength, \beamwithreactionspos + \leftloadheight + \auxlineoffset ) ;
+\draw [concentrated load line]
+	(\quarterbeamlength, \beamwithreactionspos + \leftloadheight) -- ++(0, -\leftloadheight)
+	node [pos=0.4, above right, shape=circle, fill=white, inner sep=-2pt, outer sep=10pt] {\scalebox{2}{$ \leftforce $}} ;
+
+\pgfmathsetmacro\rightloadheight{0.77 * \pointloadheight}
+\draw [epure aux]
+	( \halfbeamlength, \belowlengthlinelength - \auxlineoffset )
+	-- ( \halfbeamlength, \beamwithreactionspos + \rightloadheight + \auxlineoffset ) ;
+\draw [concentrated load line]
+	(\halfbeamlength, \beamwithreactionspos + \rightloadheight) -- ++(0, -\rightloadheight)
+	node [pos=0.4, above right, shape=circle, fill=white, inner sep=-2pt, outer sep=10pt] {\scalebox{2}{$ \rightforce $}} ;
+
+% reactions of constraints
+
+\def\leftreaction{\Upsilon}
+\def\rightreaction{\Phi}
+
+\def\reactionlength{1.4}
+
+\draw [concentrated load line, color=blue]
+	(\beamlength, \beamwithreactionspos - \reactionlength) -- ++(0, \reactionlength)
+	node [pos=0.25, right, shape=circle, fill=white, inner sep=0pt, outer sep=1pt]
+	{\scalebox{\smallertextscale}{$ \rightreaction $}} ;
+
+\def\zeroloadlength{.7}
+\draw [concentrated load line, color=blue]
+	(\beamlength + \zeroloadlength, \beamwithreactionspos) -- ++(-\zeroloadlength, 0)
+	node [pos=0.2, above, shape=circle, fill=white, inner sep=0pt, outer sep=8pt]
+	{\scalebox{\smallertextscale}{$0$}} ;
+
+\draw [concentrated load line, color=blue]
+	(0, \beamwithreactionspos - \reactionlength) -- ++(0, \reactionlength)
+	node [pos=0.25, left, shape=circle, fill=white, inner sep=0pt, outer sep=2pt]
+	{\scalebox{\smallertextscale}{$ \leftreaction $}} ;
+
+% the beam again
+\draw [beam line] (0, \beamwithreactionspos) -- ++(\beamlength, 0) ;
+
+%
+% the coordinates
+%
+
+\def\beamcoordinate{\zeta} %% \xi
+\pgfmathsetmacro\coordinatepos{\beamwithreactionspos + 0.5}
+
+\def\secondcoordinate{\eta}
+\def\coordinatelinelength{1.2}
+
+\tikzstyle{coordinate line} = [line width=.5pt, color=black, fill=white]
+
+% vertical
+\draw [ coordinate line, -{To[round, length=6pt, width=8pt]} ]
+	( 0, \coordinatepos ) -- ( 0, \coordinatepos + \coordinatelinelength )
+	node [ pos=0.8, left, inner sep=0pt, outer sep=7pt ]
+		{\scalebox{\evensmallertextscale}{$ \secondcoordinate $}} ;
+
+% left-to-right
+\draw [ coordinate line, -{To[round, length=6pt, width=8pt]} ]
+	( 0, \coordinatepos ) -- ( \coordinatelinelength, \coordinatepos )
+	node [ pos=0.88, above left, inner sep=0pt, outer sep=4pt ]
+		{\scalebox{\evensmallertextscale}{$ \beamcoordinate $}} ;
+\draw [ coordinate line ] ( 0, \coordinatepos ) circle ( 2.6pt ) ;
+
+% right-to-left
+%%\draw [ coordinate line, -{To[round, length=6pt, width=8pt]} ]
+%%	( \beamlength, \coordinatepos ) -- ( \beamlength - 2, \coordinatepos )
+%%	node [ pos=0.88, above right, inner sep=0pt, outer sep=4pt ]
+%%		{\scalebox{\evensmallertextscale}{$ \beamcoordinate $}} ;
+%%\draw [ coordinate line ] ( \beamlength, \coordinatepos ) circle ( 2.6pt ) ;
+
+%
+% text
+%
+
+\newcommand\ellsquared{ \ell^{\hspace{.1ex}\scalebox{.75}{\raisebox{.1em}{$2$}}} }
+
+\newcommand\internalshearforce{\scalebox{.9}[1]{$ \mathcal{Q} $}}
+\newcommand\internalmoment{\scalebox{.9}[1]{$ \mathcal{M} $}}
+\newcommand\sectionrotationangle{\vartheta}
+\newcommand\beamdeflection{v}
+
+\pgfmathsetmacro\textpos{\beamwithreactionspos - 1.2}
+
+\node [below, inner sep=0pt, outer sep=9pt] at (\halfbeamlength, \textpos)
+	{\scalebox{\evensmallertextscale}{$ \begin{array}{c}
+		\internalshearforce(\beamcoordinate) \hspace{-0.1ex}
+			= \hspace{-0.3ex} \biggl[
+				\leftreaction \hspace{-0.1ex} \mathcolor{gray}{\beamcoordinate^{0}} \hspace{-0.1ex}
+			\biggr]_{\hspace{-0.2ex} \scalebox{.75}{$ 0 $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\leftforce \mathcolor{gray}{( \beamcoordinate \hspace{-0.5ex} - \hspace{-0.25ex} \ell )^{\hspace{-0.1ex}0}} \hspace{-0.1ex}
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ \ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\rightforce \mathcolor{gray}{( \beamcoordinate \hspace{-0.5ex} - \hspace{-0.25ex} 2\ell )^{\hspace{-0.1ex}0}} \hspace{-0.1ex}
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ 2\ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.2ex}
+		\\[1em]
+		\internalshearforce(4 \ell) \hspace{-0.3ex} = \hspace{-0.2ex} - \hspace{.1ex} \rightreaction
+		\\[1em]
+		\internalmoment(\beamcoordinate) \hspace{-0.2ex}
+			= \hspace{-0.5ex}
+				\scalebox{1.5}{$\integral$} \hspace{-0.2ex} \internalshearforce \hspace{.2ex} d \beamcoordinate \hspace{-0.1ex}
+			= \hspace{-0.3ex} \biggl[
+				\leftreaction \hspace{-0.1ex} \beamcoordinate
+			\biggr]_{\hspace{-0.2ex} \scalebox{.75}{$ 0 $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\leftforce ( \beamcoordinate \hspace{-0.5ex} - \hspace{-0.25ex} \ell )
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ \ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\rightforce ( \beamcoordinate \hspace{-0.5ex} - \hspace{-0.25ex} 2\ell )
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ 2\ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.2ex}
+			+ \hspace{.25ex} \mathcircabove{\hspace{-0.25ex}\internalmoment}
+		\\[1em]
+		\mathcircabove{\hspace{-0.25ex}\internalmoment} \hspace{-0.2ex} = \hspace{-0.2ex} \internalmoment(0) \hspace{-0.3ex} = \hspace{-0.2ex} 0
+		\\[.2em]
+		\internalmoment(4 \ell) \hspace{-0.3ex} = \hspace{-0.2ex} 0
+		\\[1em]
+		E \hspace{-0.1ex} J \hspace{.1ex} \sectionrotationangle(\beamcoordinate) \hspace{-0.2ex}
+			= \hspace{-0.5ex}
+				\scalebox{1.5}{$\integral$} \hspace{-0.1ex} \internalmoment \hspace{.2ex} d \beamcoordinate \hspace{-0.1ex}
+			= \hspace{-0.3ex} \biggl[
+				\leftreaction \frac{\beamcoordinate^2}{2}
+			\biggr]_{\hspace{-0.2ex} \scalebox{.75}{$ 0 $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\leftforce \frac{( \beamcoordinate \hspace{-0.1ex} - \ell )^{\hspace{-0.1ex}2}}{2} \hspace{-0.2ex}
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ \ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\rightforce \frac{( \beamcoordinate \hspace{-0.1ex} - 2\ell )^{\hspace{-0.1ex}2}}{2} \hspace{-0.2ex}
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ 2\ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.2ex}
+			+ \hspace{.25ex} \mathcircabove{\hspace{-0.25ex}\internalmoment} \beamcoordinate \hspace{-0.1ex}
+			+ \hspace{-0.2ex} \mathcircabove{\hspace{.25ex}\sectionrotationangle}
+		\\[1em]
+		E \hspace{-0.1ex} J \hspace{.1ex} \beamdeflection(\beamcoordinate) \hspace{-0.2ex}
+			= \hspace{-0.5ex}
+				\scalebox{1.5}{$\integral$} \hspace{-0.2ex}
+				E \hspace{-0.1ex} J \hspace{.1ex} \sectionrotationangle \hspace{.2ex} d \beamcoordinate \hspace{-0.1ex}
+			= \hspace{-0.3ex} \biggl[
+				\leftreaction \frac{\beamcoordinate^3}{6}
+			\biggr]_{\hspace{-0.2ex} \scalebox{.75}{$ 0 $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\leftforce \frac{( \beamcoordinate \hspace{-0.1ex} - \ell )^{\hspace{-0.1ex}3}}{6} \hspace{-0.2ex}
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ \ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.25ex}
+			- \hspace{-0.3ex} \biggl[
+				\rightforce \frac{( \beamcoordinate \hspace{-0.1ex} - 2\ell )^{\hspace{-0.1ex}3}}{6} \hspace{-0.2ex}
+			\biggr]_{\hspace{-0.3ex} \scalebox{.75}{$ 2\ell $}}^{\hspace{-0.3ex} \scalebox{.75}{$ 4\ell $}} \hspace{-1.2ex}
+			+ \hspace{.25ex} \mathcircabove{\hspace{-0.25ex}\internalmoment} \frac{\beamcoordinate^2}{2}
+			+ \hspace{-0.2ex} \mathcircabove{\hspace{.25ex}\sectionrotationangle} \beamcoordinate \hspace{-0.1ex}
+			+ \hspace{-0.2ex} \mathcircabove{\hspace{.25ex}\beamdeflection}
+		\\[1em]
+		\mathcircabove{\hspace{.25ex}\beamdeflection} \hspace{-0.1ex} = \hspace{-0.1ex} \beamdeflection(0) \hspace{-0.2ex} = \hspace{-0.1ex} 0
+		\\[.1em]
+		\beamdeflection(4 \ell) \hspace{-0.3ex} = \hspace{-0.2ex} 0
+	\end{array} $}} ;
+
+%% .........
+%% ............
+%%
+
+\end{tikzpicture}
+
+\end{document}

@@ -36,10 +36,11 @@
 
 % external loads
 
-\tikzstyle{force line} =
+\def\concentratedloadheight{1.2}
+\tikzstyle{concentrated force line} =
 	[line width=2pt, red, line cap=round, -{Triangle[round, length=15pt, width=9pt]}]
 
-\draw [force line] (\beamlength, 1.2) -- (\beamlength, 0)
+\draw [concentrated force line] (\beamlength, \concentratedloadheight) -- (\beamlength, 0)
 	node [pos=0.7, above left, shape=circle, fill=white, inner sep=-2pt, outer sep=12pt] {\scalebox{2}{$F$}} ;
 
 % epure of bending moments

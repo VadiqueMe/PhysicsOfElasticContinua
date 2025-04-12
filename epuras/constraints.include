@@ -10,7 +10,8 @@
 \def\hatchsize{.27}
 \def\hatchstep{.33}
 
-\tikzstyle{constraint line} = [line width=2pt, color=blue, line cap=round]
+\def\constraintlinewidth{2pt}
+\tikzstyle{constraint line} = [line width=\constraintlinewidth, color=blue, line cap=round]
 \tikzstyle{constraint hatch} = [line width=.5pt, blue]
 
 \pgfmathsetmacro\flipsign{1}
@@ -40,8 +41,12 @@
 	\draw [constraint hatch] ($ #1 + (\hatchfirst - 2*\flipsign*\hatchstep, -\hingesize) $) -- ++(-\hatchsize, -\hatchsize) ;
 
 	% corner hatch
+	\pgfmathsetmacro\halfthesquarerootoftwo{sqrt(2) / 2}
+	\pgfmathsetmacro\hatchsizesloped{\halfthesquarerootoftwo * \hatchsize}
 	\ifthenelse{\isempty{#2}}
-		{\draw [constraint hatch] ($ #1 + (-\hingesize, -\hingesize) + (-0.7071 * \hatchsize, -0.7071 * \hatchsize) $) -- ++(\hatchsize, \hatchsize) ;}
+		{\draw [constraint hatch]
+			($ #1 - (\hingesize, \hingesize) - (\hatchsizesloped, \hatchsizesloped) $)
+			-- ++(\hatchsize, \hatchsize) ;}
 		{}
 
 	\pgfmathsetmacro\flippedoffsetx{\flipsign * \hingesize}

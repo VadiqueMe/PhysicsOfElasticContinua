@@ -26,21 +26,22 @@
 % beam
 %
 
-\newcommand{\halfell}{ \raisebox{.3em}{$\ell$} \hspace{-0.4ex} / \hspace{-0.4ex} \raisebox{-0.33em}{\scalebox{0.88}{$2$}} }
+\newcommand{\halfell}{ \raisebox{.3em}{$\ell$} \hspace{-0.4ex} / \hspace{-0.36ex} \raisebox{-0.33em}{\scalebox{.88}{$2$}} }
 
 \draw [beam line] (0, 0) -- (\beamlength, 0)
 	node [pos=0.49, below, shape=circle, fill=white, inner sep=-2pt, outer sep=11pt] {\scalebox{\textscale}{$ \ell $}} ;
 
 \newcommand\redrawbeam{\draw [beam line] (0, 0) -- (\beamlength, 0) ;}
 
-% parts of beam for epure
+% extend the beam ends downwards
 
-\def\epurepos{-6.6}
+\def\shearforcesepurepos{-6.5}
+\def\momentsepurepos{-10}
 
 \tikzstyle{epure aux} = [line width=1pt, color=black, line cap=round, dash pattern=on 0pt off 1.6\pgflinewidth]
 
-\draw [epure aux] (0, 0) -- (0, \epurepos) ;
-\draw [epure aux] (\beamlength, 0) -- (\beamlength, \epurepos) ;
+\draw [epure aux] (0, 0) -- (0, \momentsepurepos) ;
+\draw [epure aux] (\beamlength, 0) -- (\beamlength, \momentsepurepos) ;
 
 %
 % external loads
@@ -80,7 +81,7 @@
 
 \input{constraints.include}
 
-% uncomment to check constraints
+% uncomment to see more constraints
 %%\addpinnedmidhingeat{(.25*\beamlength, 0)}
 %%\addmovablehingeat{(.8*\beamlength, 0)}[mid]
 %%\addpinnedendhingeat{(\beamlength, -2*\hingesize)}
@@ -96,7 +97,7 @@
 %
 
 \def\beamwithreactionspos{-3}
-\def\continuousloadheight{.84}
+\def\continuousloadheight{.88}
 
 \pgfmathsetmacro\continuousstep{\halfbeamlength / 10}
 
@@ -132,33 +133,91 @@
 \draw [beam line] (0, \beamwithreactionspos) -- ++(\beamlength, 0) ;
 
 %
-% epure of bending moments
+% beam coordinate
+%
+
+\def\beamcoordinate{\xi} % \zeta
+\pgfmathsetmacro\coordinatepos{.22 + ( \shearforcesepurepos + \momentsepurepos ) / 2}
+
+\tikzstyle{epure parameter} = [line width=.5pt, color=black, fill=white]
+
+\draw [ epure aux ] (0, \momentsepurepos) -- (0, \coordinatepos) ;
+\draw [ epure parameter, -{To[round, length=6pt, width=8pt]} ]
+	( 0, \coordinatepos ) -- ( 2, \coordinatepos )
+	node [ pos=0.8, above left, inner sep=0pt, outer sep=4pt ]
+		{\scalebox{\evensmallertextscale}{$ \beamcoordinate $}} ;
+\draw [ epure parameter ] ( 0, \coordinatepos ) circle ( 2.6pt ) ;
+
+%%\draw [ epure aux ] (\beamlength, \momentsepurepos) -- (\beamlength, \coordinatepos) ;
+%%\draw [ epure parameter, -{To[round, length=6pt, width=8pt]} ]
+%%	( \beamlength, \coordinatepos ) -- ( \beamlength - 2, \coordinatepos )
+%%	node [ pos=0.8, above right, inner sep=0pt, outer sep=4pt ]
+%%		{\scalebox{\evensmallertextscale}{$ \beamcoordinate $}} ;
+%%\draw [ epure parameter ] ( \beamlength, \coordinatepos ) circle ( 2.6pt ) ;
+
+%
+% epuras
 %
 
 \tikzstyle{epure line} = [line width=1.5pt, color=black, line cap=round]
 \tikzstyle{epure hatch} = [line width=.5pt, color=black]
 
-\def\momentqll{10}
+\def\momentqll{12}
 \pgfmathsetmacro\justq{\momentqll / (\beamlength * \beamlength)}
 
-\newcommand\momentfunction[1]{ ( \justq * #1 * #1 / 2 ) - ( \justq * (\beamlength / 2) * #1 ) }
+\pgfmathsetmacro\epurehatchstep{\beamlength / 20}
+\pgfmathsetmacro\nextxhatch{\beamlength - \epurehatchstep}
 
-\begin{scope}[shift={(\beamlength, \epurepos)}]
-%%\draw [line width=.5pt, color=orange] plot [variable=\z, samples=100, domain=0:-\beamlength] (\z, - { \justq * \z * \z / 2 }) ;
+\newcommand\internalshearforce{\scalebox{.9}[1]{$ \mathcal{Q} $}}
+\newcommand\internalmoment{\scalebox{.9}[1]{$ \mathcal{M} $}}
+
+%
+% epure of internal shear forces
+%
+
+\pgfmathsetmacro\qforforce{2.66 * \justq}
+\pgfmathsetmacro\shearforceatzero{ \qforforce * ( \beamlength / 2 ) }
+\newcommand\shearforcefunction[1]{{ \shearforceatzero - ( \qforforce * #1 ) }}
+
+\begin{scope}[shift={(0, \shearforcesepurepos)}]
 \draw [epure line]
-	plot [variable=\z, samples=100, domain=0:-\beamlength]
-		(\z, - { \momentfunction{\z} }) ;
+	plot [variable=\z, samples=100, domain=0:\beamlength]
+		( \z, \shearforcefunction{\z} ) ;
 \end{scope}
 
-\pgfmathsetmacro\epurehatchstep{\beamlength / 15}
+\foreach \xhatch in {\beamlength, \nextxhatch, ..., 0}
+	\pgfmathsetmacro\righttoleftx{\beamlength - \xhatch}
+	\pgfmathsetmacro\currentshearforce{\shearforcefunction{\righttoleftx}}
+	\draw [epure hatch] (\xhatch, \shearforcesepurepos) -- ++(0, -\currentshearforce) ;
 
-\pgfmathsetmacro\nextxhatch{\beamlength - \epurehatchstep}
+\draw [epure line] (0, \shearforcesepurepos) -- ++(\beamlength, 0) ;
+
+\node [right, shape=circle, yshift=.2em, draw=black, line width=.5pt, fill=white, inner sep=2.5pt, outer sep=10pt]
+	at (\beamlength, \shearforcesepurepos)
+	{\scalebox{\textscale}{$ \internalshearforce $}} ;
+
+%
+% epure of internal bending moments
+%
+
+\newcommand\momentfunction[1]{{ ( \justq * ( \beamlength / 2 ) * #1 ) - ( \justq * #1 * #1 / 2 ) }}
+
+\begin{scope}[shift={(0, \momentsepurepos)}]
+\draw [epure line]
+	plot [variable=\z, samples=100, domain=0:\beamlength]
+		( \z, \momentfunction{\z} ) ;
+\end{scope}
+
 \foreach \xhatch in {\beamlength, \nextxhatch, ..., 0}
 	\pgfmathsetmacro\righttoleftx{\beamlength - \xhatch}
 	\pgfmathsetmacro\currentmoment{\momentfunction{\righttoleftx}}
-	\draw [epure hatch] (\xhatch, \epurepos) -- (\xhatch, \epurepos - \currentmoment) ;
+	\draw [epure hatch] (\xhatch, \momentsepurepos) -- ++(0, \currentmoment) ;
 
-\draw [epure line] (0, \epurepos) -- (\beamlength, \epurepos) ;
+\draw [epure line] (0, \momentsepurepos) -- ++(\beamlength, 0) ;
+
+\node [right, shape=circle, yshift=.2em, draw=black, line width=.5pt, fill=white, inner sep=2.5pt, outer sep=10pt]
+	at (\beamlength, \momentsepurepos)
+	{\scalebox{\textscale}{$ \internalmoment $}} ;
 
 %
 % text
@@ -168,46 +227,29 @@
 
 \newcommand\ellsquared{ \ell^{\hspace{.1ex}\scalebox{.75}{\raisebox{.1em}{$2$}}} }
 
-\newcommand\internalmoment{\scalebox{.9}[1]{$ \mathcal{M} $}}
-
-\tikzstyle{epure parameter} = [line width=.5pt, color=black, fill=white]
-
-\pgfmathsetmacro\zetapos{\epurepos - 1}
-
-\draw [ epure aux ] (0, \epurepos) -- (0, \zetapos) ;
-\draw [ epure parameter, -{To[round, length=6pt, width=8pt]} ]
-	( 0, \zetapos ) -- ( 2, \zetapos )
-	node [ pos=0.8, above left, inner sep=0pt, outer sep=4pt ]
-		{\scalebox{\evensmallertextscale}{$ \zeta $}} ;
-\draw [ epure parameter ] ( 0, \zetapos ) circle ( 2.6pt ) ;
-
-\draw [ epure aux ] (\beamlength, \epurepos) -- (\beamlength, \zetapos) ;
-\draw [ epure parameter, -{To[round, length=6pt, width=8pt]} ]
-	( \beamlength, \zetapos ) -- ( \beamlength - 2, \zetapos )
-	node [ pos=0.8, above right, inner sep=0pt, outer sep=4pt ]
-		{\scalebox{\evensmallertextscale}{$ \zeta $}} ;
-\draw [ epure parameter ] ( \beamlength, \zetapos ) circle ( 2.6pt ) ;
-
-\node [below, inner sep=0pt, outer sep=9pt] at (\halfbeamlength, \epurepos)
+\node [above, inner sep=0pt, outer sep=21pt] at (\halfbeamlength, \shearforcesepurepos)
 	{\scalebox{\evensmallertextscale}{$ \begin{array}{c}
-		\internalmoment(\hspace{-0.1ex}\zeta) \hspace{-0.3ex}
-			= \hspace{-0.3ex} - \textstyle\frac{q\zeta^2\hspace{-0.4ex}}{2} \hspace{-0.3ex}
-			+ \hspace{-0.3ex} \textstyle\frac{q\ell}{2} \zeta
+		\internalshearforce(\hspace{-0.1ex}\beamcoordinate) \hspace{-0.2ex}
+			= \hspace{-0.2ex} - \hspace{.1ex} q \hspace{.1ex} \beamcoordinate \hspace{-0.2ex}
+			+ \hspace{-0.2ex} \textstyle\frac{q\ell}{2}
+	\end{array} $}} ;
+
+\node [below, inner sep=0pt, outer sep=9pt] at (\halfbeamlength, \momentsepurepos)
+	{\scalebox{\evensmallertextscale}{$ \begin{array}{c}
+		\internalmoment(\hspace{-0.1ex}\beamcoordinate) \hspace{-0.2ex}
+			= \hspace{-0.2ex} - \textstyle\frac{q{\beamcoordinate}^2\hspace{-0.4ex}}{2} \hspace{-0.2ex}
+			+ \hspace{-0.2ex} \textstyle\frac{q\ell}{2} \beamcoordinate
 		\\[.25em]
-		\internalmoment_{\mathsf{max}} \hspace{-0.3ex}
-			= \hspace{-0.2ex} \internalmoment(\scalebox{0.88}{$\halfell$}\hspace{.1ex}) \hspace{-0.3ex}
+		\internalmoment_{\mathsf{max}} \hspace{-0.25ex}
+			= \hspace{-0.1ex} \internalmoment \bigl( \scalebox{.88}{$\halfell$}\hspace{.1ex} \bigr) \hspace{-0.25ex}
 			= \hspace{-0.1ex} \verynicefrac{1}{8} q \ellsquared
 	\end{array} $}} ;
 
 \pgfmathsetmacro\maxmoment{\momentfunction{\halfbeamlength}}
 \draw [epure line, color=orange!50!red]
-	(\halfbeamlength, \epurepos) -- (\halfbeamlength, \epurepos - \maxmoment)
+	(\halfbeamlength, \momentsepurepos) -- ++(0, \maxmoment)
 	node [pos=1, xshift=.33em, above, inner sep=0pt, outer sep=7pt]
 	{\scalebox{\textscale}{$ \verynicefrac{1}{8} q \ellsquared $}} ;
-
-\node [right, shape=circle, yshift=.2em, draw=black, line width=.5pt, fill=white, inner sep=2.5pt, outer sep=10pt]
-	at (\beamlength, \epurepos)
-	{\scalebox{\textscale}{$ \internalmoment $}} ;
 
 \end{tikzpicture}
 
