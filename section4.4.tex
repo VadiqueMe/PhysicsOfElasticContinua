@@ -38,9 +38,10 @@ $\potentialenergydensity(\infinitesimaldeformation)$
 \en{from the~solution}\ru{из решения}
 \en{of~the~characteristic equation}\ru{характеристического уравнения}~%
 \eqrefwithchapterdotsection{theCharacteristicEquation}{chapter:mathapparatus}{section:eigenvectorseigenvalues}.
-\en{Any function}\ru{Любая функция}\ru{,}
+\en{Any func\-tion}\ru{Любая функция}\ru{,}
 \en{whose arguments are}\ru{аргументы которой\:---}
-\en{only invariants}\ru{только инварианты}\ru{,}
+\en{only}\ru{только}
+\en{the~invariants}\ru{инварианты}\ru{,}
 \en{is isotropic}\ru{изотропна}.}
 
 \begin{equation}
@@ -81,10 +82,14 @@ $=$
 \end{equation*}
 
 \vspace{-0.4em}\noindent
-\en{has the~terms}\ru{имеет члены}
+\en{has terms}\ru{имеет члены}
 \en{of only}\ru{только}
-\en{the~}\hbox{2$^{\textrm{\en{nd}\ru{ой}}}$\hspace{-0.2ex}} \en{degree}\ru{степени},
-\en{not}\ru{не} \en{higher}\ru{выше}.
+\en{the~}\hbox{1$^{\textrm{\en{st}\ru{ой}}}$\hspace{-0.2ex}}
+\en{and }\ru{и~}%
+\en{the~}\hbox{2$^{\textrm{\en{nd}\ru{ой}}}$\hspace{-0.2ex}}
+\en{degree}\ru{степени},
+\en{not}\ru{не}
+\en{higher}\ru{выше}.
 \en{Therefore}\ru{Поэтому}
 \en{there’s no }\en{third invariant}\ru{третьего инварианта}~$\anythirdinvariant(\infinitesimaldeformation)$
 \en{among the~arguments of}\ru{среди аргументов}~$\potentialenergydensity$\ru{ нет}.
@@ -114,28 +119,64 @@ B \hspace{.1ex} \infinitesimaldeformation \hspace{-0.2ex} \dotdotp \hspace{-0.1e
 
 ......
 
-\en{The derivative}\ru{Производная}
+\en{Since}\ru{Поскольку}
+${ \infinitesimaldeformation\tracedot
+= \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \UnitDyad
+\hspace{-0.1ex} = \hspace{-0.2ex} \UnitDyad \dotdotp \infinitesimaldeformation }$~%
+\eqrefwithchapterdotsection{doubledotwiththeunitdyad.istrace}{chapter:mathapparatus}{section:operationswithtensors},
+\en{the derivative}\ru{производная}
 \en{of}\ru{следа}~\ru{(}trace\ru{)}
 \en{by the tensor itself}\ru{по самом\'{у} тензору}
 \en{is the~unit dyad}\ru{есть единичная диада}
 
-\nopagebreak\vspace{-0.3em}
-\begin{equation}\label{thederivativeoftracebythetensoritself}
+\nopagebreak\vspace{-0.66em}
+\begin{multline}\label{thederivativeoftracebythetensoritself}
 \scalebox{.92}{$
    \displaystyle
-   \frac{ \raisemath{-0.133em}{
-      \partial \infinitesimaldeformation\tracedot
-   }%close \raisemath
-   }%close \frac
+   \frac{\raisemath{-0.133em}{
+      \partial \bigl( \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \UnitDyad \hspace{.1ex} \bigr)
+   }}
    { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
 $}
 =
+\scalebox{.92}{$
+   \displaystyle
+   \frac{\raisemath{-0.133em}{ \partial \infinitesimaldeformation }}{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+   \dotdotp
+   \hspace{-0.1ex} \UnitDyad \hspace{.1ex}
+$}
++
+\infinitesimaldeformation \hspace{-0.2ex}
+\dotdotp
+\scalebox{.92}{$
+   \displaystyle
+   \frac{\raisemath{-0.133em}{ \partial \UnitDyad }}{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
+=
+\UnitDyad \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \UnitDyad
++
+\infinitesimaldeformation \hspace{-0.2ex} \dotdotp \hspace{-0.1ex} \zerobivalent
+=
+\UnitDyad + \hspace{-0.2ex} \zerobivalent
+%
+\\
+%
+\hspace{.4ex} \Rightarrow \hspace{.4ex}
+%
+\scalebox{.92}{$
+   \displaystyle
+   \frac{\raisemath{-0.133em}{
+      \partial \infinitesimaldeformation\tracedot
+   }}
+   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
+= \hspace{-0.1ex}
 \UnitDyad
-\end{equation}
+\end{multline}
 
 \en{An~isotropic medium}\ru{Изотропная среда}
 \en{is characterized}\ru{характеризуется}
-\en{by two}\ru{двумя}
+\en{by the~two}\ru{двумя}
 \en{non-zero}\ru{ненулевыми}
 \en{elastic constants}\ru{упругими константами}
 (\inquotes{\en{elastic moduli}\ru{упругими модулями}})
@@ -156,31 +197,30 @@ $}
 \end{equation*}
 
 \begin{gather*}
-   \scalebox{.92}{$
+\scalebox{.92}{$
    \displaystyle
-   \frac{ \raisemath{-0.133em}{
-      \partial \infinitesimaldeformation\tracedot
-   }%close \raisemath
-   }%close \frac
-   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
-   $}
-   \dotdotp
-   \infinitesimaldeformation\tracedot
-   +
-   \infinitesimaldeformation\tracedot
-   \dotdotp
-   \scalebox{.92}{$
-   \displaystyle
-   \frac{ \raisemath{-0.133em}{
-      \partial \infinitesimaldeformation\tracedot
-   }%close \raisemath
-   }%close \frac
-   { \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
-   $}
-\\
-%
+   \frac{\raisemath{-0.133em}{
+      \partial \bigl( \infinitesimaldeformation\tracedot \hspace{.2ex} \infinitesimaldeformation\tracedot \hspace{.2ex} \bigr)
+   }}{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
 =
-2 \infinitesimaldeformation\tracedot \dotdotp \UnitDyad
+\scalebox{.92}{$
+   \displaystyle
+   \frac{\raisemath{-0.133em}{
+      \partial \infinitesimaldeformation\tracedot
+   }}{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
+\hspace{.2ex} \infinitesimaldeformation\tracedot
++
+\infinitesimaldeformation\tracedot \hspace{.2ex}
+\scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{
+      \partial \infinitesimaldeformation\tracedot
+   }}{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
+\hspace{.1ex} =
+2 \hspace{.1ex} \infinitesimaldeformation\tracedot \hspace{.3ex} \UnitDyad
 \end{gather*}
 
 .........

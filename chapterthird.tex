@@ -258,7 +258,15 @@ ${
 
 \vspace{-0.4em}\noindent
 (\inquotes{$\upupsilon$ \en{is}\ru{есть} $\Upsilon$ \en{per mass unit}\ru{на~единицу массы}}).
-\en{Seemingly difficult}\ru{Кажущееся сложным} \en{calculation of}\ru{вычисление}~${\mathdotabove{\Upsilon}}$ (\en{since}\ru{ведь} $\mathcal{V}$ \en{is deforming}\ru{деформируется}) \en{is actually quite simple}\ru{на~с\'{а}мом деле весьма простое} \en{together}\ru{вместе} \en{with}\ru{с}~\eqref{thebalanceofmass}:
+\en{Seemingly difficult}\ru{Кажущееся сложным}
+\en{calculation of}\ru{вычисление}~${\mathdotabove{\Upsilon}}$
+(\en{since}\ru{ведь}
+$\mathcal{V}$
+\en{is deforming}\ru{деформируется})
+\en{is actually}\ru{на~с\'{а}мом деле}
+\en{quite simple}\ru{весьма простое}
+\en{with the}\ru{с}~%
+\en{balance of~mass}\ru{балансом массы}~\eqref{thebalanceofmass}\::
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{rateofvolumeintegralchange}
 \Upsilon = \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.1ex} \mathcircabove{\rho} \hspace{.19ex} \upupsilon \hspace{.11ex} d\mathcircabove{\mathcal{V}}
@@ -1482,7 +1490,9 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 \en{contained within}\ru{содержащийся внутри} \en{surface}\ru{поверхности}~${\mathcal{O}(\boundary \mathcal{V})}$.
 \en{It is loaded with external forces}\ru{Он нагружен внешними силами}, \en{surface contact ones}\ru{поверхностными контактными}~${\bm{p} \hspace{.2ex} d\mathcal{O}}$ \en{and}\ru{и} \en{body (mass or volume) ones}\ru{объёмными (или массовыми)}~${\massloadvector dm \hspace{-0.15ex} = \hspace{-0.1ex} \rho \hspace{-0.1ex} \massloadvector d\mathcal{V}}$.
 
-\en{The integral formulation}\ru{Интегральная формулировка} \en{of the balance of~momentum}\ru{баланса импульса (количества движения)} \en{is as follows}\ru{таков\'{а}}
+\en{The integral formulation}\ru{Интегральная формулировка}
+\en{of the balance of~momentum}\ru{баланса импульса (количества движения)}
+\en{is as follows}\ru{таков\'{а}}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{balanceoftranslationalmomentum.integral}
 \displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \rho \hspace{.2ex} \bm{v} \hspace{.1ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.3em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
@@ -1495,34 +1505,57 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 \noindent
 ... ${\bm{p} = \hspace{-0.1ex} \tractionvector{\currentunitnormal} \hspace{-0.1ex} = \currentunitnormal \dotp \cauchystress}$ ...
 
-\begin{otherlanguage}{russian}
-
 \noindent
-Импульс слева найдём по~\eqref{rateofvolumeintegralchange}, а~поверхностный интеграл превратим в~объёмный по~теореме о~дивергенции.
-Получим
+\en{The~derivative}\ru{Производная}
+\en{of the~momentum}\ru{импульса}
+\en{on the~left}\ru{слева}
+\en{can be found}\ru{может быть найдена}
+\en{as in}\ru{как в}~\eqref{rateofvolumeintegralchange},
+\en{and }\ru{а~}%
+\en{the~integral over the~surface}\ru{интеграл по поверхности}
+\en{turns into }\ru{превращается в~}%
+\en{the~volume integral}\ru{объёмный интеграл}
+\en{by}\ru{по}
+\en{the~divergence theorem}\ru{теореме о~дивергенции}.
+\en{This gives}\ru{Это даёт}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-\scalebox{.96}{$\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \left(^{\mathstrut} \hspace{-0.16ex} \boldnabla \dotp \cauchystress \hspace{.15ex}
-+ \rho \hspace{-0.1ex} \left( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \right) \right) \hspace{-0.33ex} d\mathcal{V}$} \hspace{.1ex}
+\scalebox{.96}{$ \displaystyle\integral\displaylimits_{\mathcal{V}} $} \hspace{-0.3ex} \Bigl( \hspace{-0.1ex} \boldnabla \dotp \cauchystress \hspace{.15ex}
++ \rho \bigl( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \bigr) \hspace{-0.25ex} \Bigr) d\mathcal{V}
 = \hspace{.1ex} \zerovector
 \hspace{.1ex} .
 \end{equation*}
 
 \vspace{-0.25em}\noindent
-Но объём~$\mathcal{V}$ случаен, поэтому равно нулю подынтегральное выражение.
-Приходим к~уравнению баланса импульса в~локальной~(дифференциальной) форме
+\en{But}\ru{Но}
+\en{volume}\ru{объём}~$\mathcal{V}$
+\en{is random}\ru{случаен},
+\en{and therefore}\ru{и~поэтому}
+\en{the integrand itself}\ru{сам\'{о} подынтегральное выражение}
+\en{is also equal}\ru{также равн\'{о}}
+\en{to the null vector}\ru{нулевому вектору}\:---
+\en{the equation}\ru{уравнение}
+\en{of balance}\ru{баланса}
+\en{of~momentum}\ru{импульса}
+(\en{forces}\ru{сил})
+\en{in }\ru{в~}\en{local}\ru{локальной}~(\en{differential}\ru{дифференциальной})
+\en{form}\ru{форме}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{balanceoftranslationalmomentum.local}
 \boldnabla \dotp \cauchystress \hspace{.15ex}
-+ \rho \hspace{-0.1ex} \left( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \right)
++ \rho \bigl( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \bigr) \hspace{-0.2ex}
 = \hspace{.1ex} \zerovector
 \hspace{.1ex} .
 \end{equation}
 
-...
+....
 
-\en{Now}\ru{Теперь} \en{about the balance}\ru{о~балансе} \en{of the angular (rotational) momentum}\ru{момента импульса (момента количества движения)}.
-\en{Here is the integral formulation}\ru{Вот интегральная формулировка}:
+\begin{otherlanguage}{russian}
+
+\en{Now}\ru{Теперь}
+\en{about the balance}\ru{о~балансе}
+\en{of the angular (rotational) momentum}\ru{момента импульса (момента количества движения)}.
+\en{Here is the integral formulation}\ru{Вот интегральная формулировка}\::
 
 \nopagebreak\vspace{-0.3em}\begin{equation}\label{balanceofrotationalmomentum.integral}
 \displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{.2ex} \bm{v} \hspace{0.1ex} d\mathcal{V} \hspace{-0.25ex} \right)^{\hspace{-0.32em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}

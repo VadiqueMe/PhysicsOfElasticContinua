@@ -1,13 +1,41 @@
-% in a~medium with no~limits
-% in a~limitless medium
-% in an infinite medium
+% A concentrated (point) force in an infinite medium
+% (in a limitless medium)
 
-\en{\section{Concentrated force in an infinite medium}}
+\section{%
+\en{Concentrated}\ru{Сосредоточенная}~%
+(\en{point}\ru{точечная})
+\en{force}\ru{сила}%
+}
 
-\ru{\section{Сосредоточенная сила в~бесконечной среде}}
+\label{section:point-force}
+
+%%\newcommand\thefirstlameparameter{\lambda}
+%%\newcommand\thesecondlameparameter{\mu}
 
 {\small
-A~concentrated force is a~useful mathematical idealization, but it cannot be found in the real world, where all forces are either body forces acting over a~volume or surface forces acting over an~area.
+\en{A~}\en{concentrated}\ru{Сосредоточенная}
+\en{force}\ru{сила}\ru{,}
+\en{acting}\ru{действующая}
+\en{on a~point}\ru{на точку}\en{ is}\ru{\:---}
+\en{a~handy abstraction}\ru{удобная абстракция}
+\en{to simplify}\ru{для упрощения}
+\en{reality}\ru{реальности}.
+\en{However}\ru{Однако},
+\en{it does not exist}\ru{её не существует}
+\en{in the~real world}\ru{в~реальном мире},
+\en{where}\ru{где}
+\en{all forces}\ru{все силы}
+\en{either}\ru{либо}
+\en{act}\ru{действуют}
+\en{in a~volume}\ru{в~объёме}\:---
+\en{volume}\ru{объёмные}
+\en{forces}\ru{силы},
+\en{or}\ru{либо}
+\en{act}\ru{действуют}
+\en{over an~area}\ru{по площади}\:---
+\en{surface}\ru{поверхностные}~%
+(\en{contact}\ru{контактные})
+\en{forces}\ru{силы}.
 \par}
 
 \en{Here is}\ru{Вот}
@@ -24,17 +52,63 @@ A~concentrated force is a~useful mathematical idealization, but it cannot be fou
 \en{The~book}\ru{Книга}~\cite{gordon-whyyoudontfallthru}
 \en{by }James\ru{’а} Gordon\ru{’а}
 \en{gives}\ru{даёт}
-\en{the following answer}\ru{следующий ответ}\::
+\en{the~following answer}\ru{следующий ответ}\::
 \en{the~body deforms}\ru{тело деформируется},
 \en{and thus}\ru{и~потому}
 \ru{появляются }\en{the internal forces}\ru{внутренние силы}\en{ appear},
 \en{called}\ru{называемые}
-\inquotesx{\en{the stresses}\ru{напряжениями}}[,]
+\inquotesx{\en{stresses}\ru{напряжениями}}[,]
 \en{which can}\ru{которые могут}
-\en{compensate}\ru{уравновесить} % уравновешивать (verb) = balance, equilibrate, compensate
+\en{compensate}\ru{компенсировать}~(\en{balance, equilibrate}\ru{уравновесить})
 \en{an external load}\ru{внешнюю нагрузку}.
+
+\en{But}\ru{Но}
+\en{a~}\en{linear elastic}\ru{линейно-упругое}
+\en{body}\ru{тело}
+\en{cannot}\ru{не~может}
+\en{take}\ru{воспринимать}
+\en{the~load}\ru{нагрузку}
+\en{of a~point force}\ru{точечной силой}.
+
+.... \en{in} \en{the~balance of~forces}\ru{балансе сил}~(\en{of~momentum}\ru{импульса})
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\scalebox{.81}{$ \displaystyle\integral\displaylimits_{\mathcal{V}} $} \hspace{-0.4ex}
+\scalebox{.95}{$ \bigl( \boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \linearstress
+    + \volumeloadvector \bigr) d\mathcal{V}
+    = \hspace{.1ex} \zerovector $}
+\end{equation*}
+
+\nopagebreak\vspace{-1em}\noindent
+\hfill
+${\mathcal{V} \sim r^3}$, ${\volumeloadvector \sim \frac{1}{r^3}}$, ${\linearstress \sim \frac{1}{r^2}}$
+
+\noindent
+\hfill
+${\linearstress
+= 2 \thesecondlameparameter \infinitesimaldeformation
+\hspace{-0.1ex} + \hspace{-0.1ex} \thefirstlameparameter \bigl( \trace{\infinitesimaldeformation} \hspace{-0.1ex} \bigr) \hspace{-0.1ex} \UnitDyad }$
+$\Rightarrow$
+${\infinitesimaldeformation \sim \frac{1}{r^2}}$, ${\bm{u} \sim \frac{1}{r}}$,
+thus ${\bm{u} \hspace{-0.33ex}\to\hspace{-0.33ex} \bm{\infty}}$ when ${r \hspace{-0.33ex}\to\hspace{-0.33ex} 0}$
 
 ...
 
-.......
+\noindent
+\emph{\en{the~solution}\ru{решение} \en{by }Kelvin\ru{’а}\hbox{--}Somigliana}
+(\href{https://en.wikipedia.org/wiki/Lord_Kelvin}{William Thompson aka Lord Kelvin}\footnote{%
+\href{https://en.wikipedia.org/wiki/Lord_Kelvin}{William \inquotes{Lord Kelvin} Thompson}.
+Note on~the~Integration of~the~Equations of~Equilibrium of~an~Elastic Solid.
+\href{https://ia904507.us.archive.org/25/items/sim_cambridge-and-dublin-mathematical-journal_1848_7/sim_cambridge-and-dublin-mathematical-journal_1848_7.pdf}{The Cambridge and Dublin Mathematical Journal, 1848 volume~iii~(vii)},
+pages 87\hbox{--}89
+}\hbox{\hspace{-0.55ex},}
+\href{https://en.wikipedia.org/wiki/Carlo_Somigliana}{Carlo Somigliana})
 
+... \en{in}\ru{в}~\en{an~infinite medium}\ru{бесконечной среде}
+
+......
+
+\noindent
+\emph{\en{the}\ru{принцип} Saint-Venant’\en{s}\ru{а}\en{ principle}}
+
+....
