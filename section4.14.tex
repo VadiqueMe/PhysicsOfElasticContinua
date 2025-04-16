@@ -73,7 +73,7 @@ ${x_1}$, ${x_2}$, ${z}$.
 \en{and}\ru{а}
 \en{the resultant couple}\ru{суммарная пара сил}
 \en{is directed}\ru{направлена}
-\en{along the}\ru{вдоль оси}~$z$\en{ axis}:
+\en{along the}\ru{вдоль оси}~$z$\en{ axis}\::
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
@@ -89,11 +89,10 @@ do
 \hspace{.1ex} .
 \end{equation*}
 
-\en{It is known that}\ru{Известно, что}
-\en{the torsion}\ru{кручение} \textcolor{magenta}{\en{gives}\ru{даёт}}
-\en{the tangential}\ru{касательные}
-\en{components}\ru{компоненты}
-\en{of stress}\ru{ напряжения}
+%%%\textcolor{red}{\en{It is known that}\ru{Известно, что}}
+\en{On torsion}\ru{От кручения}\en{,}
+\ru{возникают }\en{the tangential}\ru{касательные}
+\en{stress components}\ru{компоненты напряжения}
 ${
    \mathtau_{z1}
    \equiv \bm{k}
@@ -102,7 +101,7 @@ ${
    \dotp
    \bm{e}_1
 }$
-\en{and}\ru{и}
+\en{and}\ru{и}~%
 ${
    \mathtau_{z2}
    \equiv \bm{k}
@@ -110,11 +109,11 @@ ${
    \linearstress
    \dotp
    \bm{e}_2
-}$.
+}$\en{ arise}.
+%
 \en{Assuming that}\ru{Полагая, что}
 \en{only these}\ru{лишь эти}
-\en{components}\ru{компоненты}
-\en{of tensor}\ru{тензора}~$\linearstress$
+\en{components}\ru{компоненты}\en{ of}~$\linearstress$
 \en{are non-zero}\ru{ненулевые}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
@@ -133,21 +132,24 @@ ${
 \begin{align}
 \boldnabla \dotp \linearstress = \zerovector
 \hspace{.2em} \Rightarrow \hspace{.2em}
-\boldnabla_{\bot} \dotp \bm{s} = \zerovector
-(\boldnabla_{\bot} \equiv \bm{e}_{\alpha} \partial_{\alpha})
+\withtheindexofperpendicularity{\boldnabla}\hspace{-0.33ex} \dotp \bm{s} = \zerovector
+\hspace{1ex}
+(\withtheindexofperpendicularity{\boldnabla}\hspace{-0.4ex} \equiv \bm{e}_{\alpha} \partial_{\alpha})
 \hspace{.1ex} ,
+\hspace{.66ex}
 \partial_{z} \bm{s}
 = \zerovector
 \hspace{.1ex} ,
 \\
 %
-\boldnabla \dotp \boldnabla \linearstress
-+ \displaystyle\frac{1}{1 + \nu} \boldnabla \boldnabla \mathsigma
-= \zerobivalent
+\boldnabla \hspace{-0.2ex} \dotp \hspace{-0.25ex} \boldnabla \linearstress
++ \scalebox{.9}{$ \displaystyle\frac{1}{1 + \poissonratio} $} \boldnabla \boldnabla \mathsigma
+\hspace{.1ex} = \hspace{-0.2ex} \zerobivalent
 \hspace{.2em} \Rightarrow \hspace{.2em}
-\Laplacian_{\bot} \bm{s}
+\withtheindexofperpendicularity{\Laplacian}\hspace{-0.2ex} \bm{s}
 = \zerovector
-(\Laplacian_{\bot} \equiv \partial_{\alpha} \partial_{\alpha})
+\hspace{1ex}
+(\withtheindexofperpendicularity{\Laplacian}\hspace{-0.5ex} \equiv \partial_{\alpha} \partial_{\alpha})
 \hspace{.1ex} .
 \end{align}
 

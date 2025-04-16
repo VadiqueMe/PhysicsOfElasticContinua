@@ -12,7 +12,9 @@
 \newcommand\poissonratio{\nu}
 \newcommand\bulkmodulus{K}
 
-\en{If a~material is isotropic}\ru{Если материал изотропный},
+\en{When}\ru{Когда}
+\en{a~material}\ru{материал}
+\en{is isotropic}\ru{изотропный},
 \eqref{Hooke.for-symmetric-crystals}~%
 \en{is satisfied}\ru{удовлетворяется}
 \en{for any}\ru{для любого}
@@ -29,10 +31,10 @@
 \en{the~}\en{potential energy density}\ru{плотность потенциальной энергии}~%
 $\potentialenergydensity(\infinitesimaldeformation)$
 \en{becomes an~isotropic function}\ru{становится изотропной функцией}\footnote{%
-\en{Such a~function}\ru{Такая функция}
-\en{depends}\ru{зависит}
-\en{only}\ru{лишь}
-\en{on the~invariants}\ru{от инвариантов},
+\en{As a~function}\ru{Как функцией}\ru{,}
+\en{depending}\ru{зависящей}
+\en{only}\ru{только}
+\en{on invariants}\ru{от инвариантов},
 \en{such as}\ru{таких как}
 \en{the~coefficients}\ru{коэффициенты}
 \en{from the~solution}\ru{из решения}
@@ -45,10 +47,13 @@ $\potentialenergydensity(\infinitesimaldeformation)$
 \en{is isotropic}\ru{изотропна}.}
 
 \begin{equation}
-2 \hspace{.2ex} \potentialenergydensity
-= A {\bigl( \firstcharacteristicinvariant \bigr)}^{\hspace{-0.2ex}2} + B \bigl( \secondcharacteristicinvariant \bigr)
+\potentialenergydensity
+= \alpha \hspace{.2ex} \anyfirstinvariant^2 \hspace{-0.1ex}
++ \beta \hspace{.2ex} \anysecondinvariant
 .
 \end{equation}
+
+($\anysecondinvariant$ is not $\secondcharacteristicinvariant$)
 
 $\potentialenergydensity(\infinitesimaldeformation)$
 \en{is a~quadratic function}\ru{это квадратичная функция}
@@ -84,15 +89,62 @@ $=$
 \vspace{-0.4em}\noindent
 \en{has terms}\ru{имеет члены}
 \en{of only}\ru{только}
-\en{the~}\hbox{1$^{\textrm{\en{st}\ru{ой}}}$\hspace{-0.2ex}}
-\en{and }\ru{и~}%
 \en{the~}\hbox{2$^{\textrm{\en{nd}\ru{ой}}}$\hspace{-0.2ex}}
-\en{degree}\ru{степени},
-\en{not}\ru{не}
+\en{degree}\ru{степени}
+(${\anyfirstinvariant^2 \hspace{-0.2ex}}$
+\en{and}\ru{и}~$\anysecondinvariant$),
+\en{not of the}\ru{не}~\hbox{1$^{\textrm{\en{st}\ru{ой}}}$\hspace{-0.2ex}}
+\en{and}\ru{и}~%
+\en{not}\ru{не}~%
 \en{higher}\ru{выше}.
-\en{Therefore}\ru{Поэтому}
+%
+\en{And}\ru{И}~%
 \en{there’s no }\en{third invariant}\ru{третьего инварианта}~$\anythirdinvariant(\infinitesimaldeformation)$
-\en{among the~arguments of}\ru{среди аргументов}~$\potentialenergydensity$\ru{ нет}.
+\en{among}\ru{среди}
+\en{the~arguments}\ru{аргументов}\en{ of}~$\potentialenergydensity$\ru{ нет}.
+
+%----------
+{\small
+\setlength{\parindent}{0pt}
+
+\begin{leftverticalbar}%%[oversize]
+\textbf{\en{But why}\ru{Но почему бы}
+\en{not add}\ru{не добавить}~${\anythirdinvariant^{\frac{2}{3}}}$?}
+
+\textcolor{blue}{By excluding dependence on $\anythirdinvariant$, we simplify constitutive models
+while retaining accuracy for most practical applications.
+}
+
+\textcolor{blue}{For most isotropic elastic materials,
+it suffices to model their behavior using only ${\anyfirstinvariant}$ and~${\anysecondinvariant}$,
+which capture volumetric and distortional effects without explicitly including volume change through ${\anythirdinvariant}$.
+}
+
+\textcolor{blue}{In many cases of isotropic elastic materials,
+particularly those that are nearly incompressible
+(e.g., rubber-like materials),
+volume changes are negligible during deformation.
+There ${\anythirdinvariant = 1}$.
+}
+
+\textcolor{blue}{For small deformations or incompressibility constraints,
+changes in ${\potentialenergydensity(\anyfirstinvariant, \anysecondinvariant)}$
+already account for all physically relevant behaviors.
+Including ${\potentialenergydensity(\anythirdinvariant)}$
+would unnecessarily complicate calculations
+without adding meaningful information about material response.
+}
+
+\textcolor{blue}{The third invariant $\anythirdinvariant$,
+which relates directly to volume changes,
+becomes redundant unless large compressive or expansive deformations occur.
+In linear elasticity (small strains),
+dependence on only $\anyfirstinvariant$ and~$\anysecondinvariant$
+aligns with linear stress-strain relationships (the Hooke’s law).
+}
+\end{leftverticalbar}
+\par}
+%----------
 
 \nopagebreak\vspace{-0.2em}
 \begin{gather*}
@@ -184,7 +236,7 @@ $}
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{theelasticpotentialforanisotropicmedium}
 \potentialenergydensity(\infinitesimaldeformation) =
-\alpha \hspace{.2ex} \anyfirstinvariant^2 (\infinitesimaldeformation) \hspace{-0.2ex}
+\alpha \hspace{.2ex} \anyfirstinvariant^2 \hspace{-0.2ex} (\infinitesimaldeformation) \hspace{-0.2ex}
 + \beta \hspace{.2ex} \anysecondinvariant (\infinitesimaldeformation)
 \end{equation}
 
@@ -200,7 +252,7 @@ $}
 \scalebox{.92}{$
    \displaystyle
    \frac{\raisemath{-0.133em}{
-      \partial \bigl( \infinitesimaldeformation\tracedot \hspace{.2ex} \infinitesimaldeformation\tracedot \hspace{.2ex} \bigr)
+      \partial \bigl( \infinitesimaldeformation\tracedot \hspace{.2ex} \infinitesimaldeformation\tracedot \hspace{.2ex} \bigr) \hspace{-0.2ex}
    }}{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
 $}
 =
@@ -223,9 +275,32 @@ $}
 2 \hspace{.1ex} \infinitesimaldeformation\tracedot \hspace{.3ex} \UnitDyad
 \end{gather*}
 
-.........
+\noindent
+\en{or}\ru{или}
 
-\en{In components}\ru{В~компонентах}
+\nopagebreak\vspace{-1em}
+\begin{equation*}
+\scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{\partial \bigl( \anyfirstinvariant^2 \bigr)\hspace{-0.2ex}} }{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
+=
+2 \hspace{.2ex} \anyfirstinvariant \hspace{.2ex} \scalebox{.92}{$
+   \displaystyle
+   \frac{ \raisemath{-0.133em}{\partial \hspace{.2ex} \anyfirstinvariant} }{ \raisemath{-0.07em}{\partial \infinitesimaldeformation} }
+$}
+=
+2 \hspace{.2ex} \anyfirstinvariant \hspace{.2ex} \UnitDyad
+\hspace{1.1ex}
+\bigl( \hspace{.1ex}
+\text{\en{where}\ru{где}}\hspace{.8ex}
+\anyfirstinvariant \narroweq \infinitesimaldeformation\tracedot
+\hspace{.1ex} \bigr)
+\end{equation*}
+
+........
+
+\en{In}\ru{В}~\en{components}\ru{компонентах}
 \en{for an~isotropic medium}\ru{для изотропной среды}
 
 \begin{equation}\label{componentsofthestiffnesstensor.forisotropic}
