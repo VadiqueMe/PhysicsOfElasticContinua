@@ -514,30 +514,30 @@ a_{55} \hspace{-.2ex} = a_{66}
 \nopagebreak
 \begin{equation}\label{stress tensor for a transversely isotropic material}
 \linearstress
-= \withtheindexofperpendicularity{\linearstress}
+= \withtheindexofperpendicularity{\linearstress} \hspace{-0.2ex}
 + \bm{s} \bm{k}
 + \bm{k} \bm{s}
-+ \cauchystresscomponents{zz} \hspace{.1ex} \bm{k} \bm{k}
++ \linearstresscomponents{zz} \hspace{.1ex} \bm{k} \bm{k}
 \hspace{.1ex} ,
 \end{equation}
 
-\noindent
+\vspace{-0.8em}\noindent
 \en{where}\ru{где}
 
 \vspace{-1em}\nopagebreak
 \begin{gather*}
-\withtheindexofperpendicularity{\linearstress}
+\withtheindexofperpendicularity{\linearstress}\hspace{-0.2ex}
 \equiv
-\cauchystresscomponents{\alpha \beta} \hspace{.2ex}
+\linearstresscomponents{\alpha \beta} \hspace{.2ex}
 \bm{e}_{\alpha} \bm{e}_{\beta}
-= \cauchystresscomponents{x x} \hspace{.2ex} \bm{i} \bm{i}
-+ \cauchystresscomponents{x y} \bigl( \bm{i} \hspace{-0.1ex} \bm{j} + \bm{j} \bm{i} \hspace{.2ex} \bigr)
-+ \cauchystresscomponents{y y} \hspace{.2ex} \bm{j} \hspace{-0.2ex} \bm{j}
+= \linearstresscomponents{x x} \hspace{.2ex} \bm{i} \bm{i}
++ \linearstresscomponents{x y} \bigl( \bm{i} \hspace{-0.1ex} \bm{j} + \bm{j} \bm{i} \hspace{.2ex} \bigr)
++ \linearstresscomponents{y y} \hspace{.2ex} \bm{j} \hspace{-0.2ex} \bm{j}
 \hspace{.1ex} ,
 \\
 \bm{s}
-\equiv \cauchystresscomponents{\alpha z} \hspace{.2ex} \bm{e}_{\alpha}
-= \cauchystresscomponents{xz} \hspace{.2ex} \bm{i} + \cauchystresscomponents{yz} \hspace{.2ex} \bm{j}
+\equiv \linearstresscomponents{\alpha z} \hspace{.2ex} \bm{e}_{\alpha}
+= \linearstresscomponents{xz} \hspace{.2ex} \bm{i} + \linearstresscomponents{yz} \hspace{.2ex} \bm{j}
 \\[.1em]
 %
 \bigl( \hspace{.5ex}
@@ -575,7 +575,7 @@ a_{44} \withtheindexofperpendicularity{\infinitesimaldeformation}
 \bm{s} = a_{55} \hspace{.2ex} \bm{\epsilon}
 \hspace{.1ex} ,
 \hspace{.6em}
-\cauchystresscomponents{zz} \hspace{-0.2ex} =
+\linearstresscomponents{zz} \hspace{-0.2ex} =
 a_{33} \infinitesimaldeformationcomponents{z} +
 a_{13} \infinitesimaldeformationcomponents{\alpha \alpha}
 \end{equation}
@@ -598,7 +598,7 @@ a_{13} \infinitesimaldeformationcomponents{\alpha \alpha}
 \hspace{.1ex} , \hspace{.5em}
 \withtheindexofperpendicularity{\hspace{.1ex}\UnitDyad} \hspace{-0.3ex}
 \equiv \bm{e}_{\alpha} \bm{e}_{\alpha} \hspace{-0.3ex}
-= \bm{i} \bm{i} + \mathcolor{red}{\bm{j} \bm{i} + \bm{i} \hspace{-0.1ex} \bm{j}} + \bm{j} \hspace{-0.2ex} \bm{j}
+= \bm{i} \bm{i} + \bm{j} \hspace{-0.2ex} \bm{j}
 \hspace{.5ex} \bigr)
 \end{multline*}
 
@@ -610,27 +610,44 @@ a_{13} \infinitesimaldeformationcomponents{\alpha \alpha}
 \en{mutually independent}\ru{взаимно независимыми}
 \en{components}\ru{компонентами},
 \en{the elastic moduli}\ru{упругими модулями}
-${a_{12} \hspace{-0.2ex} = A^{\oneone 22} \hspace{.1ex}}$,
-${a_{13} \hspace{-0.2ex} = A^{\oneone 33} \hspace{.1ex}}$,
-${a_{33} \hspace{-0.2ex} = A^{3333} \hspace{.1ex}}$,
-${a_{44} \hspace{-0.2ex} = A^{1212} \hspace{.1ex}}$,
-${a_{55} \hspace{-0.2ex} = A^{1313} \hspace{.1ex}}$.
+${a_{12} \hspace{-0.2ex} = A^{\oneone 22}}$\hspace{-0.3ex},\hspace{.2ex}
+${a_{13} \hspace{-0.2ex} = A^{\oneone 33}}$\hspace{-0.3ex},\hspace{.2ex}
+${a_{33} \hspace{-0.2ex} = A^{3333}}$\hspace{-0.3ex},\hspace{.2ex}
+${a_{44} \hspace{-0.2ex} = A^{1212}}$\hspace{-0.3ex},\hspace{.2ex}
+${a_{55} \hspace{-0.2ex} = A^{1313}}$\hspace{-0.3ex}.
 
 \subsection*{\en{A\:crystal symmetry}\ru{Симметрия кристаллов}}
 
-\en{There are}\ru{Есть}
-\en{many different kinds}\ru{различные виды}
-\en{of a~crystal symmetry}\ru{симметрии кристаллов}\::
+\en{There are}\ru{Существует}
+\en{only}\ru{всего}
+\en{seven kinds}\ru{семь видов}
+\en{of various primitive parallelepiped lattices}\ru{разных примитивных решёток-параллелепипедов}
+(\href{https://en.wikipedia.org/wiki/Bravais_lattice}{\ru{решёток }Bravais\en{ lattices}})\:---
+\en{the seven syngonies}\ru{семь сингоний}\footnote{%
+\en{syngony}\ru{сингония}
+$=$
+\en{lattice system}\ru{система решёток}
+$=$
+\en{crystallographic system}\ru{кристаллографическая система}
+$=$
+\en{crystal symmetry}\ru{симметрия кристаллов}
+}\hbox{\hspace{-0.5ex},}
+\en{namely}\ru{а~\'{и}менно}
 \en{tri\-clinic}\ru{три\-клинная},
 \en{mono\-clinic}\ru{моно\-клинная},
-\en{rhombic}\ru{ромбическая},
-\en{tetra\-gonal}\ru{тетра\-гональная}
-\textcolor{magenta}{\en{and others}\ru{и~другие}~\cite{chernyh-anisotropicelasticity}}.
+\en{ortho\-rhombic}\ru{орто\-ромбическая} (\en{or}\ru{или} \en{just}\ru{просто} \en{rhombic}\ru{ромбическая}),
+\en{rhombo\-hedral}\ru{ромбо\-эдрическая} (\en{or}\ru{или} \en{tri\-gonal}\ru{три\-гональная}),
+\en{tetra\-gonal}\ru{тетра\-гональная},
+\en{hexa\-gonal}\ru{гекса\-гональная}
+\en{and}\ru{и}~\en{cubic}\ru{кубическая}.
+
+%%\cite{chernyh-anisotropicelasticity}}
+
 \en{Each}\ru{Каждый}
-\en{case of~symmetry}\ru{случай симметрии}
+\en{case of crystal symmetry}\ru{случай симметрии кристаллов}
 \en{is characterized}\ru{характеризуется}
 \en{by the~set}\ru{набором}
-\en{of orthogonal}\ru{ортогональных}\footnote{%
+\en{of ortho\-gonal}\ru{орто\-гональ\-ных}\footnote{%
 \en{Orthogonal tensors}\ru{Ортогональные тензоры}
 \en{are those that}\ru{это такие, которые}
 \en{satisfy}\ru{удовлетворяют}

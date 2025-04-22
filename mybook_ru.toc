@@ -67,9 +67,9 @@
 \contentsline {section}{\numberline {4}Принцип Hamilton’а и уравнения Lagrange’а}{83}{section.2.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {5}Статика}{85}{section.2.5}%
-\contentsline {section}{\numberline {6}Малые колебания (вибрации)}{89}{section.2.6}%
-\contentsline {section}{\numberline {7}Совершенно жёсткое недеформируемое твёрдое тело}{90}{section.2.7}%
+\contentsline {section}{\numberline {5}Статика}{86}{section.2.5}%
+\contentsline {section}{\numberline {6}Малые колебания (вибрации)}{90}{section.2.6}%
+\contentsline {section}{\numberline {7}Совершенно жёсткое недеформируемое твёрдое тело}{91}{section.2.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {8}Механика относительного движения}{95}{section.2.8}%

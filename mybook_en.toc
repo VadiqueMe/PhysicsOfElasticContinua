@@ -72,7 +72,7 @@
 \contentsline {section}{\numberline {7}Perfectly rigid undeformable solid body}{88}{section.2.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Mechanics of relative motion}{92}{section.2.8}%
+\contentsline {section}{\numberline {8}Mechanics of relative motion}{93}{section.2.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{95}{chapter.3}%
@@ -140,11 +140,11 @@
 \contentsline {section}{\numberline {12}Mixed principles of stationarity}{156}{section.4.12}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {13}Antiplane shear}{157}{section.4.13}%
-\contentsline {section}{\numberline {14}The torsion of rods}{158}{section.4.14}%
+\contentsline {section}{\numberline {13}Antiplane shear}{158}{section.4.13}%
+\contentsline {section}{\numberline {14}The torsion of rods}{159}{section.4.14}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {15}Plane deformation}{159}{section.4.15}%
+\contentsline {section}{\numberline {15}Plane deformation}{160}{section.4.15}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {5}Micropolar three\hbox {-}dimensional continuum}{161}{chapter.5}%
