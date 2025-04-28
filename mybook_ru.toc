@@ -123,7 +123,7 @@
 \contentsline {chapter}{\numberline {4}Классическая линейная упругость}{129}{chapter.4}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Полный набор уравнений}{129}{section.4.1}%
-\contentsline {section}{\numberline {2}Уникальность решения в~динамике}{133}{section.4.2}%
+\contentsline {section}{\numberline {2}Уникальность решения в~динамике}{134}{section.4.2}%
 \contentsline {section}{\numberline {3}Закон Hooke’а}{136}{section.4.3}%
 \contentsline {section}{\numberline {4}Закон Hooke’а для изотропной среды}{141}{section.4.4}%
 \contentsline {section}{\numberline {5}Теоремы статики}{145}{section.4.5}%
@@ -463,12 +463,12 @@
 \contentsline {chapter}{\numberline {16}Композиты}{246}{chapter.16}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Вводные размышления}{246}{section.16.1}%
-\contentsline {section}{\numberline {2}Эффективные поля}{247}{section.16.2}%
+\contentsline {section}{\numberline {2}Эффективные поля}{248}{section.16.2}%
 \contentsline {section}{\numberline {3}Краевые задачи для представительного объёма}{248}{section.16.3}%
 \contentsline {section}{\numberline {4}Вилка Hill’а}{248}{section.16.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {5}Формулы Eshelby}{248}{section.16.5}%
+\contentsline {section}{\numberline {5}Формулы Eshelby}{249}{section.16.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {6}Эффективные модули для материала со сферическими включениями}{249}{section.16.6}%
@@ -477,27 +477,15 @@
 \contentsline {section}{\numberline {7}Метод самосогласования}{249}{section.16.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {8}Принцип Хашина\hbox {--}Штрикмана}{249}{section.16.8}%
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {8}Принцип Хашина\hbox {--}Штрикмана}{250}{section.16.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \contentsline {chapter}{\numberline {17}Периодические композиты}{251}{chapter.17}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Одномерная задача}{251}{section.17.1}%
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {2}Трёхмерный контину\kern -0.11exу{}м}{251}{section.17.2}%
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {3}Волокнистая структура}{251}{section.17.3}%
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {4}Статика периодического стержня}{251}{section.17.4}%
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
 \contentsline {chapter}{\numberline {18}Вне упругости, или пластичность}{252}{chapter.18}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Когда упругость исч\'{е}рпана}{252}{section.18.1}%

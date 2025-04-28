@@ -188,6 +188,8 @@
 \newcommand\variation[1]{\ensuremath\updelta\hspace{-0.1ex}#1}
 \newcommand\secondvariation[1]{\ensuremath\updelta^{\hspace{-0.1ex}2}#1}
 
+\newcommand\averageof[1]{{\langle #1 \rangle}}
+
 \makeatletter
 \newcommand\boldvari@tion[2]{\ensuremath\mathcolor{#2}{\bm{\updelta}\hspace{-0.125ex}\bm{\mathrm{#1}}}}
 \newcommand\varvector[1]{\boldvari@tion{#1}{teal}}
@@ -545,6 +547,15 @@
 
 \newcommand\volumeloadvector{\textbf{\textsl{g}}}
 \newcommand\massloadvector{\bm{f}}
+
+\newcommand\thefirstlameparameter{\lambda}
+\newcommand\thesecondlameparameter{\mu}
+
+\newcommand\shearmodulus\thesecondlameparameter
+\newcommand\shearmodulusG{G}
+\newcommand\youngsmodulus{E}
+\newcommand\poissonratio{\nu}
+\newcommand\bulkmodulus{K}
 
 \newcommandx*{\tikzcancel}[2][1=black]{%
 	\tikz[baseline=(tocancel.base)]{%

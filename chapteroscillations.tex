@@ -78,13 +78,14 @@
 \en{The surface load}\ru{Поверхностная нагрузка}
 \en{on}\ru{на}~${o_2}$
 \en{is equal to zero}\ru{равна нулю}.
+%
 \ru{Тождество }\en{The~}Clapeyron’\en{s}\ru{а}\en{ identity}~\eqrefwithchapterdotsection{clapeyron:elasticitytheorem}{chapter:linearclassicalelasticity}{section:theoremsofstatics}
 \en{gives}\ru{даёт}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}
 \omega^2 \hspace{-0.2em}
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex}
-\rho \hspace{.33ex} \mathboldU \hspace{-0.15ex} \dotp \mathboldU
+\rho \hspace{.4ex} \mathboldU \hspace{-0.2ex} \dotp \mathboldU
 \hspace{.1ex} d\mathcal{V}
 = \hspace{.1ex}
 2 \hspace{-0.2em}
@@ -94,12 +95,14 @@
 
 \vspace{-0.2em}\noindent
 \en{It also means that}\ru{Это также значит, что}
-${\omega^2 \hspace{-0.2ex} \geq 0}$.
-\en{The~zero here}\ru{Здесь нуль}
-\en{means that}\ru{значит, что}
+${\omega^2 \hspace{-0.2ex} \geq 0}$,
+\en{and}\ru{и}~${{=}\hspace{.4ex}0}$
+\en{only if}\ru{только если}
 \en{a~continuum}\ru{\rucontinuum}
-\en{moves}\ru{движется}~$\mathboldU$
+\en{moves}\ru{движется}
+(\en{with}\ru{с}~${\mathboldU\hspace{.2ex}}$)
 \en{as a~rigid whole}\ru{как жёсткое целое}.
+%
 \en{When}\ru{Когда}
 \en{even}\ru{даже}
 \en{a~small part}\ru{малая часть}
@@ -203,17 +206,40 @@ d\mathcal{V}
 \en{and}\ru{а}~${\alpha_{k} ( t )}$ \en{are varying}\ru{варьируются}.
 \en{The solution}\ru{Решение}????\en{ is}\ru{\:---} \en{\textcolor{red}{a/?????the system}}\ru{система} \en{of ordinary equations}\ru{обыкновенных уравнений}
 
-...
+....
 
-\en{In place of}\ru{Вместо} \en{the principle of virtual work}\ru{принципа виртуальной работы}~\eqref{oscillations.variationalapproach} \en{one can use}\ru{можно использовать} \ru{смешанную формулировку } \en{the }Hellinger\ru{’а}\hbox{--}Reissner\ru{’а}\en{ mixed formulation} \en{with }\ru{с~}\en{an independent approximation}\ru{независимой аппроксимацией} \en{of~stresses}\ru{напряжений}.
+\en{In place}\ru{Вместо}
+\en{of the~principle}\ru{принципа}
+\en{of virtual work}\ru{виртуальной работы}~\eqref{oscillations.variationalapproach},
+\ru{смешанная формулировка }\en{the~}Hellinger\ru{’а}--Reissner’\en{s}\ru{а}\en{ mixed formulation}
+\en{with }\ru{с~}%
+\en{an independent approximation}\ru{независимой аппроксимацией}
+\en{of~stresses}\ru{напряжений}
+\en{can be}\ru{может быть}
+\en{applied}\ru{применена}.
 
-\en{In the dynamic theory of elasticity}\ru{В~динамической теории упругости}\en{,} \ru{часто применяется }\href{https://en.wikipedia.org/wiki/Laplace_transform}{\ru{интегральное преобразование }\en{the }Laplace\ru{’а}\en{ integral transform}}\en{ is often applied}.
+\en{In the dynamic theory of elasticity}\ru{В~динамической теории упругости}\en{,}
+\ru{часто применяется }\href{https://en.wikipedia.org/wiki/Laplace_transform}{\ru{интегральное преобразование }\en{the }Laplace\ru{’а}\en{ integral transform}}\en{ is often applied}.
 \en{For simple shaped bodies}\ru{Для тел простой формы} \en{it is }\en{sometimes}\ru{иногда} \en{possible}\ru{возможно} \en{to find}\ru{найти} \en{an analytical solution}\ru{аналитическое решение} \en{in transforms}\ru{в~трансформах}.
-\en{The original}\ru{Оригинал} \en{can be found}\ru{может быть найден} \en{by the numerical inversion}\ru{численным обращением}, \en{but sometimes}\ru{но иногда} \en{it’s possible}\ru{возможно} \en{to take}\ru{взять} \en{the }\ru{интеграл }Riemann\ru{’а}\hbox{--}Mellin\ru{’а}\en{ integral}\footnote{\ru{Интеграл }\en{The }Riemann\ru{’а}\hbox{--}Mellin\ru{’а}\en{ integral} \en{determines}\ru{определяет} \en{the inverse Laplace transform}\ru{обратное преобразование Лапласа} ${F(s) \mapsto f(t)}$.}\ru{,} \en{using}\ru{используя} \en{the }\inquotes{\en{saddle-point method}\ru{метод перевала}} (or \inquotes{\en{method of steepest descents}\ru{метод крутых спусков}}) \en{with a~deformation of~contour}\ru{с~деформацией контура} \en{in the complex plane}\ru{в~комплексной плоскости}~\cite{poruchikov-dynamicelasticity, slepyan-nonstationeryelasticwaves}.
+\en{The original}\ru{Оригинал} \en{can be found}\ru{может быть найден} \en{by the numerical inversion}\ru{численным обращением}, \en{but sometimes}\ru{но иногда} \en{it’s possible}\ru{возможно} \en{to take}\ru{взять} \en{the }\ru{интеграл }Riemann\ru{’а}\hbox{--}Mellin\ru{’а}\en{ integral}\footnote{%
+\ru{Интеграл }\en{The }Riemann\ru{’а}\hbox{--}Mellin\ru{’а}\en{ integral}
+\en{does}\ru{делает}
+\en{the inverse}\ru{обратное}
+\ru{преобразование }Laplace\ru{’а}\en{ transform}
+${F(s) \mapsto f(t)}$.
+}\ru{\hbox{\hspace{-0.5ex},}}
+\en{using}\ru{используя}
+\en{the }\inquotes{\en{saddle-point method}\ru{метод перевала}}
+(\en{or}\ru{или}
+\en{the }\inquotes{\en{method of steepest descents}\ru{метод крутых спусков}})
+\en{with a~deformation}\ru{с~деформацией}
+\en{of~contour}\ru{контура}
+\en{in the~complex plane}\ru{в~комплексной плоскости}~\cite{poruchikov-dynamicelasticity, slepyan-nonstationeryelasticwaves}.
 
-\en{\section{Vibrations of rods}}
-
-\ru{\section{Вибрации стержней}}
+\section{%
+\en{Vibrations}\ru{Вибрации}
+\en{of rods}\ru{стержней}%
+}
 
 \label{section:vibrations.rods}
 
@@ -245,26 +271,35 @@ d\mathcal{V}
 
 \begin{otherlanguage}{russian}
 
-Рассмотрим задачу об~определении собственных частот и~форм \en{with small perturbations}\ru{с~малыми возмущениями} масс и~жёсткостей:
+\en{With }\ru{С~}\en{small perturbations}\ru{малыми возмущениями}
+\en{of mass}\ru{массы}
+\en{and }\ru{и~}\en{rigidity}\ru{жёсткости},
+рассмотрим
+задачу
+об~определении
+собственных частот и~форм\::
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\begin{array}{c}
-\bigl( C_{i\hspace{-0.1ex}j} \hspace{-0.15ex} - \omega^2 \hspace{-0.2ex} A_{i\hspace{-0.1ex}j} \bigr) \hspace{.1ex} U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = 0 \hspace{.1ex} ,
-\\[.2em]
+\nopagebreak\vspace{-0.5em}\begin{equation}\begin{array}{c}
+\bigl( C_{i\hspace{-0.1ex}j} \hspace{-0.1ex} - \omega^2 \hspace{-0.2ex} A_{i\hspace{-0.1ex}j} \bigr) \hspace{.1ex} U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = 0 \hspace{.1ex} ,
+\\[.4em]
 %
-C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \hspace{.2ex} C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.4ex} ,
-\;\:
-A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \hspace{-0.2ex} A_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.2ex} + \smallparameter \hspace{-0.1ex} A_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.4ex} ,
-\;\:
-\smallparameter \hspace{-0.12ex} \to 0 \hspace{.1ex} .
+C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{.66}{(0)}} \hspace{-0.3ex} + \smallparameter \hspace{.2ex} C_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{.66}{(1)}}
+\hspace{-0.4ex} ,
+\hspace{1ex}
+A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \hspace{-0.2ex} A_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{.66}{(0)}} \hspace{-0.3ex} + \smallparameter \hspace{-0.1ex} A_{i\hspace{-0.1ex}j}^{\hspace{.2ex}\scalebox{.66}{(1)}}
+\hspace{-0.4ex} ,
+\hspace{1.5ex}
+\smallparameter \hspace{-0.12ex} \to 0
+\hspace{.1ex} .
 \end{array}\end{equation}
 
-\vspace{-0.2em}\noindent
+\vspace{-0.5em}\noindent
 Наход\'{я} решение в~виде
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\omega = \omega^{\hspace{.1ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.25ex} + \smallparameter \hspace{.2ex} \omega^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.25ex} + \ldots \hspace{.1ex} ,
+\omega = \omega^{\hspace{.1ex}\scalebox{.66}{(0)}} \hspace{-0.25ex} + \smallparameter \hspace{.2ex} \omega^{\hspace{.1ex}\scalebox{.66}{(1)}} \hspace{-0.25ex} + \ldots \hspace{.1ex} ,
 \;\;
-U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scalebox{0.66}[0.66]{(0)}} \hspace{-0.25ex} + \smallparameter \hspace{.2ex} U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scalebox{0.66}[0.66]{(1)}} \hspace{-0.25ex} + \ldots \hspace{.1ex} ,
+U_{\hspace{-0.2ex}j} \hspace{-0.15ex} = U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scalebox{.66}{(0)}} \hspace{-0.25ex} + \smallparameter \hspace{.2ex} U_{\hspace{-0.2ex}j}^{\hspace{.1ex}\scalebox{.66}{(1)}} \hspace{-0.25ex} + \ldots \hspace{.1ex} ,
 \end{equation*}
 
 \vspace{-0.25em}\noindent

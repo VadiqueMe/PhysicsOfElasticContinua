@@ -3,15 +3,6 @@
 
 \label{section:hooke.forisotropic}
 
-\newcommand\thefirstlameparameter{\lambda}
-\newcommand\thesecondlameparameter{\mu}
-
-\newcommand\shearmodulus\thesecondlameparameter
-\newcommand\shearmodulusG{G}
-\newcommand\youngsmodulus{E}
-\newcommand\poissonratio{\nu}
-\newcommand\bulkmodulus{K}
-
 \en{When}\ru{Когда}
 \en{a~material}\ru{материал}
 \en{is isotropic}\ru{изотропный},
@@ -245,6 +236,7 @@ $}
    \displaystyle
    \frac{ \raisemath{-0.133em}{ \partial \hspace{.1ex} \potentialenergydensity } }
    { \raisemath{-0.07em}{ \partial \infinitesimaldeformation } }
+   \hspace{.2ex} = \linearstress
 $}
 \end{equation*}
 
@@ -299,6 +291,14 @@ $}
 \end{equation*}
 
 ........
+
+\begin{equation*}
+\linearstress =
+\thefirstlameparameter \hspace{.2ex} \infinitesimaldeformation\tracedot \hspace{.3ex} \UnitDyad
++ 2 \hspace{.1ex} \thesecondlameparameter \hspace{.2ex} \infinitesimaldeformation
+\end{equation*}
+
+.....
 
 \en{In}\ru{В}~\en{components}\ru{компонентах}
 \en{for an~isotropic medium}\ru{для изотропной среды}
@@ -355,11 +355,12 @@ $\bulkmodulus$\:---
 
 ......
 
-\en{A\:priori}\ru{Априорные}
+\en{The a\;priori}\ru{Априорные}
 \en{conditions}\ru{условия}
-\en{for values}\ru{для значений}
-\en{of the elastic moduli}\ru{модулей упругости}
-\en{are}\ru{таковы}
+\en{for}\ru{для}
+\en{the values}\ru{значений}
+\en{of elastic moduli}\ru{модулей упругости}
+\en{are}\ru{таков\'{ы}}
 
 \nopagebreak\vspace{-0.4em}
 \begin{equation}\label{inequalitiesforelasticmoduli}

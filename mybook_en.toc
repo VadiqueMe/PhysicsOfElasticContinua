@@ -126,7 +126,7 @@
 \contentsline {section}{\numberline {2}The uniqueness of the solution in dynamics}{130}{section.4.2}%
 \contentsline {section}{\numberline {3}Hooke’s law}{133}{section.4.3}%
 \contentsline {section}{\numberline {4}Hooke’s law for isotropic medium}{138}{section.4.4}%
-\contentsline {section}{\numberline {5}Theorems of statics}{141}{section.4.5}%
+\contentsline {section}{\numberline {5}Theorems of statics}{142}{section.4.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {6}Equations in displacements}{146}{section.4.6}%
@@ -464,11 +464,11 @@
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Introductory thoughts}{243}{section.16.1}%
 \contentsline {section}{\numberline {2}Effective fields}{244}{section.16.2}%
-\contentsline {section}{\numberline {3}Boundary value problems for representative volume}{245}{section.16.3}%
+\contentsline {section}{\numberline {3}Boundary value problems for a~representative volume}{245}{section.16.3}%
 \contentsline {section}{\numberline {4}Hill’s fork}{245}{section.16.4}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {5}Eshelby formulas}{245}{section.16.5}%
+\contentsline {section}{\numberline {5}Eshelby formulas}{246}{section.16.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {6}Effective moduli for material with spherical inclusions}{246}{section.16.6}%
@@ -480,24 +480,12 @@
 \contentsline {section}{\numberline {8}Hashin\hbox {--}Shtrikman principle}{246}{section.16.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {17}Periodic composites}{248}{chapter.17}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}One-dimensional problem}{248}{section.17.1}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {2}Three-dimensional continuum}{248}{section.17.2}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {3}Fibrous structure}{248}{section.17.3}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {4}Statics of a periodic rod}{248}{section.17.4}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {18}Out of elasticity, or plasticity}{249}{chapter.18}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}When elasticity is over}{249}{section.18.1}%
