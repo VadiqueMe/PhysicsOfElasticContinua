@@ -1,7 +1,24 @@
 \section{\en{Hooke’s law}\ru{Закон Hooke’а}
-\en{for isotropic medium}\ru{для изотропной среды}}
+\en{for an isotropic medium}\ru{для изотропной среды}}
 
 \label{section:hooke.forisotropic}
+
+\en{Anisotropic materials}\ru{Анизотропные материалы}\en{ are}\ru{\:---}
+\en{crystals}\ru{кристаллов},
+\en{composites}\ru{композитов},
+\en{wood}\ru{древесины}
+\en{and others}\ru{и~других}.
+%
+\en{Besides}\ru{Помимо}
+\en{anisotropic materials}\ru{анизотропных материалов},
+\en{there are}\ru{существуют}
+\en{isotropic ones}\ru{и~изотропные}\:---
+\en{materials}\ru{материалы}\ru{,}
+\en{whose properties}\ru{свойства которых}
+\en{remain}\ru{остаются}
+\en{the~same}\ru{одинаковыми}
+\en{in any}\ru{в~любом}
+\en{direction}\ru{направлении}.
 
 \en{When}\ru{Когда}
 \en{a~material}\ru{материал}
@@ -11,46 +28,54 @@
 \en{for any}\ru{для любого}
 \en{orthogonal tensor}\ru{ортогонального тензора}~$\orthogonaltensor$.
 %
-\en{So}\ru{Так что}
+\en{And}\ru{И}~%
 \en{here}\ru{здесь},
 \en{for}\ru{для}
-\en{a~linear elastic}\ru{линейно упругой}
-\en{isotropic}\ru{изотропной}
-\en{medium}\ru{среды}/\en{body}\ru{т\'{е}ла},
+\en{an~isotropic}\ru{изотропной}
+\en{linear elastic}\ru{линейно упругой}
+\en{medium}\ru{среды}, %%\en{body}\ru{т\'{е}ла},
 \en{it’s easier}\ru{проще}
-\en{to~assume that}\ru{предположить, что}
-\en{the~}\en{potential energy density}\ru{плотность потенциальной энергии}~%
+\en{to introduce}\ru{ввести}
+\en{the }\en{potential energy density}\ru{плотность потенциальной энергии}~%
 $\potentialenergydensity(\infinitesimaldeformation)$
-\en{becomes an~isotropic function}\ru{становится изотропной функцией}\footnote{%
-\en{As a~function}\ru{Как функцией}\ru{,}
-\en{depending}\ru{зависящей}
+\en{as}\ru{как}
+\en{an~isotropic function}\ru{изотропную функцию}\ru{,}
+\en{depending}\ru{зависящую}
 \en{only}\ru{только}
-\en{on invariants}\ru{от инвариантов},
-\en{such as}\ru{таких как}
-\en{the~coefficients}\ru{коэффициенты}
-\en{from the~solution}\ru{из решения}
-\en{of~the~characteristic equation}\ru{характеристического уравнения}~%
-\eqrefwithchapterdotsection{theCharacteristicEquation}{chapter:mathapparatus}{section:eigenvectorseigenvalues}.
+\en{on the~invariants}\ru{от инвариантов}\footnote{%
 \en{Any func\-tion}\ru{Любая функция}\ru{,}
 \en{whose arguments are}\ru{аргументы которой\:---}
 \en{only}\ru{только}
-\en{the~invariants}\ru{инварианты}\ru{,}
+\en{invariants}\ru{инварианты}\ru{,}
 \en{is isotropic}\ru{изотропна}.}
 
+\nopagebreak\vspace{-0.5em}
 \begin{equation}
-\potentialenergydensity
+\potentialenergydensity(\infinitesimaldeformation) \hspace{-0.2ex}
+= \potentialenergydensity \bigl( \hspace{.1ex}
+     \anyfirstinvariant(\infinitesimaldeformation),
+     \anysecondinvariant(\infinitesimaldeformation) \bigr) \hspace{-0.3ex}
 = \alpha \hspace{.2ex} \anyfirstinvariant^2 \hspace{-0.1ex}
 + \beta \hspace{.2ex} \anysecondinvariant
 .
 \end{equation}
 
-($\anysecondinvariant$ is not $\secondcharacteristicinvariant$)
+\vspace{-0.5em}\noindent
+(\en{but}\ru{но}
+$\anysecondinvariant$
+\en{is not}\ru{это не}
+\en{coefficient}\ru{коэффициент}~$\secondcharacteristicinvariant$
+\en{from the~solution}\ru{из решения}
+\en{of~the~characteristic equation}\ru{характеристического уравнения}
+\eqrefwithchapterdotsection{theCharacteristicEquation}{chapter:mathapparatus}{section:eigenvectorseigenvalues}%
+)
 
-$\potentialenergydensity(\infinitesimaldeformation)$
+${\potentialenergydensity(\infinitesimaldeformation)}$
 \en{is a~quadratic function}\ru{это квадратичная функция}
 (\en{or}\ru{или} \en{a~}\inquotes{\en{quadratic form}\ru{квадратичная форма}})
 \en{with terms}\ru{с~членами}
-\en{of the second degree}\ru{второй степени}.
+\en{of only}\ru{только}
+\en{the~second degree}\ru{второй степени}.
 
 \noindent
 \inquotes{\en{quadratic form}\ru{квадратичная форма}}

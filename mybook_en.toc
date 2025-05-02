@@ -125,7 +125,7 @@
 \contentsline {section}{\numberline {1}The complete set of equations}{126}{section.4.1}%
 \contentsline {section}{\numberline {2}The uniqueness of the solution in dynamics}{130}{section.4.2}%
 \contentsline {section}{\numberline {3}Hooke’s law}{133}{section.4.3}%
-\contentsline {section}{\numberline {4}Hooke’s law for isotropic medium}{138}{section.4.4}%
+\contentsline {section}{\numberline {4}Hooke’s law for an isotropic medium}{138}{section.4.4}%
 \contentsline {section}{\numberline {5}Theorems of statics}{142}{section.4.5}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 

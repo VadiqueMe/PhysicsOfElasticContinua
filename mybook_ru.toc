@@ -93,7 +93,7 @@
 \contentsline {section}{\numberline {8}Собственные числа тензора напряжения Cauchy. Круги Mohr’а}{115}{section.3.8}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {9}Принцип виртуальной работы (без множителей Лагранжа)}{116}{section.3.9}%
+\contentsline {section}{\numberline {9}Принцип виртуальной работы (без множителей Lagrange’а)}{116}{section.3.9}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
@@ -115,7 +115,7 @@
 \contentsline {section}{\numberline {14}Полая сфера под давлением}{126}{section.3.14}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {15}Напряжения как множители Лагранжа}{127}{section.3.15}%
+\contentsline {section}{\numberline {15}Напряжения как множители Lagrange’а}{127}{section.3.15}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
