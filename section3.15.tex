@@ -4,6 +4,8 @@
 
 \label{section:stressesAsLagrangeMultipliers}
 
+\newcommand\bivalentlagrangemultiplier{{^2\hspace{-0.2ex}\bm{\lambda}}}
+
 \en{The~application}\ru{Применению}
 \en{of the~principle of~virtual work}\ru{принципа виртуальной работы},
 \en{described}\ru{описанному}
@@ -26,132 +28,203 @@
 \en{as well applied without any}\ru{применён и~в\'{о}все без}
 \en{tetrahedrons}\ru{тетраэдров}.
 
-\begin{otherlanguage}{russian}
+\en{Considering}\ru{Рассматривая}
+\en{a~continuum}\ru{\rucontinuum}/\en{body}\ru{тело}\:---
+\en{not~only}\ru{не~только}
+\en{elastic}\ru{упругое},
+\en{with any}\ru{с~любой}
+\en{virtual work}\ru{виртуальной работой}
+\en{of internal forces}\ru{внутренних сил}~${\variation{\internalwork} \hspace{-0.33ex}}$
+(\en{per unit mass}\ru{на~единицу массы})\:---
+\en{loaded with}\ru{нагруженное}
+\en{external forces}\ru{внешними силами},
+\en{mass ones}\ru{массовыми}~${\massloadvector dm \hspace{-0.1ex} = \hspace{-0.3ex} \massloadvector \hspace{-0.2ex} \massdensity \hspace{.2ex} d\mathcal{V} \hspace{-0.2ex}}$
+(\en{for}\ru{для}
+\en{brevity}\ru{краткости}
+\en{just}\ru{просто}~${\hspace{-0.2ex} \massloadvector \hspace{-0.33ex}}$,
+\en{meaning}\ru{имея в виду}
+${\massloadvector \hspace{-0.2ex} \equiv \hspace{-0.2ex} \massloadvector_{\hspace{-0.25ex}*} \hspace{-0.3ex} - \mathdotdotabove{\currentlocationvector}\hspace{.25ex}}$
+\en{in}\ru{в}~\en{dynamics}\ru{динамике})
+\en{and }\ru{и~}\en{surface ones}\ru{поверхностными}~${\bm{p} \hspace{.25ex} d\mathcal{O}}$.
+%
+\en{Then}\ru{Тогда}
+\en{the variational equa\-tion}\ru{вариационное уравнение}
+\en{of the~principle of~virtual work}\ru{принципа виртуальной работы}
+\en{is}\ru{есть}
 
-Рассмотрим тело\:---
-не~только~лишь упругое,
-с~любой виртуальной работой внутренних сил~${\variation{\internalwork}}$
-\en{per mass unit}\ru{на~единицу массы}\:---
-нагруженное массовыми~${\massloadvector dm}$
-(для~краткости пишем~$\massloadvector$ вместо~${\massloadvector \hspace{-0.2ex} - \hspace{-0.2ex} \mathdotdotabove{\currentlocationvector}}$,
-так что динамика присутствует)
-и~поверхностными~${\bm{p} \hspace{.25ex} d\mathcal{O}}$
-внешними силами.
-Имеем вариационное уравнение
-
-\nopagebreak\vspace{-0.1em}
+\nopagebreak\vspace{-0.4em}
 \begin{equation}\label{stressesAsLagrangeMultipliers:variations}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \rho \hspace{-0.2ex} \left(^{\mathstrut} \massloadvector \dotp \variation{\currentlocationvector} \hspace{.1ex} + \variation{\internalwork} \hspace{.15ex} \right) \hspace{-0.25ex} d\mathcal{V}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
+\massdensity
+\Bigl(
+   \massloadvector \dotp \variation{\currentlocationvector}
+   \hspace{.1ex} +
+   \variation{\internalwork}
+\hspace{.15ex} \Bigr)
+d\mathcal{V}
 \hspace{.1ex} + \hspace{-0.4ex}
-\integral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.4ex} \bm{p} \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{O}
+\integral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.4ex}
+\bm{p} \dotp \variation{\currentlocationvector}
+\hspace{.2ex} d\mathcal{O}
 = \hspace{.1ex} 0
 \hspace{.1ex} .
-\vspace{-0.25em}\end{equation}
+\end{equation}
 
-\en{It is assumed that}\ru{Предполагается, что}
-\en{the internal forces}\ru{внутренние силы}
-\en{don’t produce a~work}\ru{не~производят работу}\ru{,}
+\vspace{-0.7em}
+\en{Further}\ru{Далее}\en{,}
+\en{it’s assumed that}\ru{предполагается, что}
+\en{internal forces}\ru{внутренние силы}
+(\inquotes{\en{stresses}\ru{напряжения}})
+\en{do~not produce work}\ru{не~производят работу}\ru{,}
 \en{when}\ru{когда}
-\en{a~continuum}\ru{\rucontinuum}
-(\en{a~body}\ru{тело})
+\en{a~continuum}\ru{\rucontinuum}/\en{body}\ru{тело}
 \en{virtually}\ru{виртуально}
 \en{moves}\ru{движется}
-\en{with}\ru{с}~${\variation{\currentlocationvector}}$
+(\en{with}\ru{с}~${\variation{\currentlocationvector}}$)
 \en{as a~whole}\ru{как целое}
 \en{without}\ru{без}
 \en{deformations}\ru{деформаций}
-(${\infinimentpetitdeformationdevariation = \zerobivalent}$).
-\en{Then}\ru{Тогда}
+(\en{when}\ru{когда}
+${\infinimentpetitedeformationvariation \hspace{-0.1ex} \equiv \hspace{-0.1ex} \insideinfinitesimalstrainvariation = \hspace{-0.2ex} \zerobivalent}$),
+\en{that is}\ru{то есть}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{stressesAsLagrangeMultipliers:zerovirtualmovements}
-\infinimentpetitdeformationdevariation
-\hspace{-0.1ex} = \hspace{-0.1ex}
-\boldnabla \variation{\currentlocationvector}^{\mathsf{S}}
-\hspace{-0.2ex} = \hspace{-0.1ex}
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{stressesAsLagrangeMultipliers:zerovirtualmovements}
+\insideinfinitesimalstrainvariation
+= \hspace{-0.2ex}
 \zerobivalent
-\hspace{.5ex} \Rightarrow \hspace{.33ex}
+\hspace{1ex} \Rightarrow \hspace{.8ex}
 \variation{\internalwork}
 \hspace{-0.2ex} =
 0
 \hspace{.1ex} .
 \end{equation}
 
-\vspace{-0.1em}
-Отбросив~${\variation{\internalwork}}$ в~\eqref{stressesAsLagrangeMultipliers:variations}
-с~условием~\eqref{stressesAsLagrangeMultipliers:zerovirtualmovements},
-получим вариационное уравнение со~связью.
-Приём с~множителями Lagrange’а даёт возможность считать вариации~${\variation{\currentlocationvector}}$ независимыми.
-Поскольку в~каждой точке связь представлена симметричным тензором второй сложности,
-то таким~же тензором будут и~множители Lagrange’а~${\hspace{-0.16ex} ^2\hspace{-0.2ex}\bm{\lambda}}$.
-Приходим к~уравнению
+\vspace{-0.4em}\noindent
+\eqref{stressesAsLagrangeMultipliers:variations}
+\en{with condition}\ru{с~условием}~\eqref{stressesAsLagrangeMultipliers:zerovirtualmovements}
+\en{and }\ru{и~}\en{without}\ru{без}~${\variation{\internalwork}}$
+\en{becomes}\ru{становится}
+\en{a~variational equation}\ru{вариационным уравнением}
+\en{with constraint}\ru{со~связью}.
 
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{stressesAsLagrangeMultipliers:variationstoo}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Bigl( \rho \hspace{-0.1ex} \massloadvector \hspace{-0.15ex} \dotp \variation{\currentlocationvector} \hspace{.1ex} - \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.15ex} \boldnabla \variation{\currentlocationvector}^{\mathsf{S}} \Bigr) \hspace{-0.1ex} d\mathcal{V}
+\en{The~method of Lagrange multipliers}\ru{Метод множителей Lagrange’а}
+\en{makes}\ru{делает}~${\variation{\currentlocationvector}}$
+\en{random}\ru{случайными}
+(\en{independent}\ru{независимыми})
+\en{variations}\ru{вариациями}.
+%
+\en{Since}\ru{Поскольку}
+\en{at~each point}\ru{в~каждой точке}
+\en{the~constraint}\ru{связь}
+\en{appears as}\ru{представляет собой}
+\en{a~symmetric}\ru{симметричный}
+\en{bivalent}\ru{бивалентный} %\en{of second complexity}\ru{второй сложности}
+\en{tensor}\ru{тензор},
+\en{the}\ru{множитель} Lagrange\ru{’а}\en{ multiplier}~${\hspace{-0.16ex} \bivalentlagrangemultiplier}$
+\en{will likewise be}\ru{тоже будет}
+\en{such}\ru{таким~же}
+\en{a~tensor}\ru{тензором},
+\en{bivalent}\ru{двухвалентным}
+\en{and}\ru{и}~\en{symmetric}\ru{симметричным}.
+%
+\en{The~equation}\ru{Уравнение}
+\en{with this multiplier}\ru{с~этим множителем}
+\en{looks like}\ru{выглядит как}
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{stressesAsLagrangeMultipliers:equationwiththemultiplier}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Bigl( \massdensity \hspace{-0.1ex} \massloadvector \hspace{-0.15ex} \dotp \variation{\currentlocationvector} \hspace{.1ex} - \hspace{-0.1ex} \bivalentlagrangemultiplier \dotdotp \hspace{-0.15ex} \insideinfinitesimalstrainvariation \hspace{.2ex} \Bigr) \hspace{-0.1ex} d\mathcal{V}
 \hspace{.1ex} + \hspace{-0.4ex}
 \integral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.4ex} \bm{p} \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{O}
 = \hspace{.1ex} 0
 \hspace{.1ex} .
 \vspace{-0.25em}\end{equation}
 
-\vspace{-0.16em}
-Благодаря симметрии~${^2\hspace{-0.2ex}\bm{\lambda}}$ имеем\footnote{${%
+\vspace{-0.5em}
+\en{The~symmetry}\ru{Симметрия}\en{ of}~$\bivalentlagrangemultiplier$
+\en{gives}\ru{даёт}\footnote{${%
 \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \bm{X} \hspace{-0.2ex} =
 \hspace{.1ex} \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \bm{X}^{\T} \hspace{-0.4ex} =
 \hspace{.1ex} \bm{\Lambda}^{\hspace{-0.16ex}\mathsf{S}} \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \bm{X}^{\hspace{.1ex}\mathsf{S}}
 \hspace{-0.25ex}}$,
-\:\:
+\hspace{.66em}
 ${%
-\boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} {\bm{B}} \hspace{-0.1ex} \dotp \bm{a} \hspace{.16ex} \right)
-= \left( \hspace{.1ex} \boldnabla \dotp \hspace{-0.15ex} \bm{B} \hspace{.1ex} \right) \hspace{-0.1ex} \dotp \bm{a} \hspace{.1ex}
+\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.2ex} \bigl( \hspace{.1ex} {\bm{B}} \hspace{-0.1ex} \dotp \bm{a} \hspace{.16ex} \bigr)
+\hspace{-0.2ex} = \hspace{-0.2ex}
+\bigl( \hspace{.1ex} \boldnabla \dotp \hspace{-0.15ex} \bm{B} \hspace{.1ex} \bigr) \hspace{-0.2ex} \dotp \bm{a} \hspace{.1ex}
 + \bm{B}^{\T} \hspace{-0.3ex} \dotdotp \boldnabla \hspace{-0.15ex} \bm{a}
 }$}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-{^2\hspace{-0.2ex}\bm{\lambda}} = \hspace{-0.2ex} {^2\hspace{-0.2ex}\bm{\lambda}}^{\hspace{-0.33ex}\T}
-\: \Rightarrow \:
-\hspace{.12ex}{^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.15ex} \boldnabla \variation{\currentlocationvector}^{\mathsf{S}} \hspace{-0.2ex}
-= {^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.15ex} \boldnabla \variation{\currentlocationvector}^{\T}
+\bivalentlagrangemultiplier = \hspace{-0.2ex} \bivalentlagrangemultiplier^{\hspace{-0.33ex}\T}
+\hspace{.466em} \Rightarrow \hspace{.4em}
+\hspace{.12ex}\bivalentlagrangemultiplier \dotdotp \hspace{-0.15ex} \insideinfinitesimalstrainvariation
+= \bivalentlagrangemultiplier \dotdotp \hspace{-0.15ex} \boldnabla \variation{\currentlocationvector}^{\T}
 \hspace{-0.4ex} ,
 \end{equation*}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-{^2\hspace{-0.2ex}\bm{\lambda}} \dotdotp \hspace{-0.15ex} \boldnabla \variation{\currentlocationvector}^{\mathsf{S}} \hspace{-0.2ex} =
-\boldnabla^{\mathstrut} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \left( \hspace{.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \dotp \variation{\currentlocationvector} \hspace{.2ex} \right)
-- \boldnabla \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \dotp \variation{\currentlocationvector}
+\bivalentlagrangemultiplier \dotdotp \hspace{-0.15ex} \insideinfinitesimalstrainvariation
+=
+\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bigl( \hspace{.1ex} \bivalentlagrangemultiplier \dotp \variation{\currentlocationvector} \hspace{.1ex} \bigr) \hspace{-0.2ex}
+- \hspace{-0.1ex} \boldnabla \hspace{.1ex} \dotp \hspace{-0.1ex} \bivalentlagrangemultiplier \dotp \variation{\currentlocationvector}
 \hspace{.1ex} .
 \end{equation*}
 
 \vspace{-0.2em}\noindent
-Подставив это в~\eqref{stressesAsLagrangeMultipliers:variationstoo}
-и~применив
-теорему о~дивергенции,
-получаем
+\en{Substituting}\ru{Подставляя}
+\en{this}\ru{это}
+\en{into}\ru{в}~\eqref{stressesAsLagrangeMultipliers:equationwiththemultiplier}
+\en{and }\ru{и~}%
+\en{applying}\ru{применяя}
+\en{the~divergence theorem}\ru{теорему о~дивергенции}\footnote{${%
+\scalebox{.93}{$ \displaystyle \integral\displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.2ex} \bigl( \hspace{.1ex} \bivalentlagrangemultiplier \dotp \variation{\currentlocationvector} \bigr)
+d\mathcal{V}
+\hspace{.1ex} = \hspace{-0.4ex}
+\scalebox{.93}{$ \displaystyle \integral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} $} \hspace{-0.1ex}
+\currentunitnormal \dotp \hspace{-0.2ex} \bigl( \hspace{.1ex} \bivalentlagrangemultiplier \dotp \variation{\currentlocationvector} \bigr)
+d\mathcal{O}
+\hspace{.1ex} ,
+\hspace{.66em}
+%
+\currentunitnormal \dotp \hspace{-0.2ex} \bigl( \hspace{.1ex} \bivalentlagrangemultiplier \dotp \variation{\currentlocationvector} \bigr)
+\hspace{-0.2ex} = \hspace{-0.2ex} \bigl( \currentunitnormal \dotp \bivalentlagrangemultiplier \bigr) \hspace{-0.3ex} \dotp \variation{\currentlocationvector}
+= \currentunitnormal \dotp \hspace{-0.1ex} \bivalentlagrangemultiplier \dotp \variation{\currentlocationvector}
+}$}\hbox{\hspace{-0.5ex},}
+\en{and}\ru{и}
+\en{the variational equation with multiplier}\ru{вариационное уравнение с~множителем}~${\hspace{-0.2ex} \bivalentlagrangemultiplier}$
+\en{becomes}\ru{становится}
 
-\nopagebreak\vspace{-0.25em}\begin{equation*}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Bigl( \rho \hspace{-0.1ex} \massloadvector \hspace{.12ex} + \boldnabla \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \Bigr) \hspace{-0.33ex} \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{V}
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{stressesAsLagrangeMultipliers:equationwiththemultipliertoo}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Bigl( \massdensity \hspace{-0.1ex} \massloadvector \hspace{.12ex} + \boldnabla \dotp \hspace{-0.1ex} \bivalentlagrangemultiplier \Bigr) \hspace{-0.33ex} \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{V}
 \hspace{.1ex} + \hspace{-0.4ex}
-\integral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.5ex} \Bigl( \bm{p} \hspace{.2ex} - \currentunitnormal \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \Bigr) \hspace{-0.33ex} \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{O}
+\integral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.5ex} \Bigl( \bm{p} \hspace{.2ex} - \currentunitnormal \hspace{.1ex} \dotp \hspace{-0.1ex} \bivalentlagrangemultiplier \Bigr) \hspace{-0.33ex} \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{O}
 = \hspace{.1ex} 0
 \hspace{.1ex} .
-\vspace{-0.25em}\end{equation*}
+\vspace{-0.25em}\end{equation}
 
-\noindent
+\vspace{-0.4em}\noindent
 \en{But}\ru{Но}~$\variation{\currentlocationvector}$
 \en{is random}\ru{случайна}
 \en{both on a~surface}\ru{и~на~поверхности}\ru{,}
 \en{and}\ru{и}~\en{in a~volume}\ru{в~объёме},
 \en{thus}\ru{поэтому}
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\bm{p} \hspace{.1ex} = \currentunitnormal \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \hspace{.2ex},
-\:\:
-\boldnabla \hspace{.1ex} \dotp \hspace{-0.1ex} {^2\hspace{-0.2ex}\bm{\lambda}} \hspace{.2ex} + \hspace{.2ex} \rho \hspace{-0.1ex} \massloadvector \hspace{-0.1ex} = \hspace{.1ex} \zerovector
-\end{equation*}
+\nopagebreak\vspace{-0.3em}
+\begin{equation}\label{stressesAsLagrangeMultipliers:veryfamousequations}
+\bm{p} \hspace{.1ex} = \currentunitnormal \hspace{.1ex} \dotp \hspace{-0.1ex} \bivalentlagrangemultiplier \hspace{.2ex},
+\hspace{1em}
+%
+\boldnabla \dotp \hspace{-0.1ex} \bivalentlagrangemultiplier \hspace{.1ex} + \massdensity \hspace{-0.1ex} \massloadvector \hspace{-0.1ex} = \hspace{.1ex} \zerovector
+\end{equation}
 
-\vspace{-0.25em}\noindent
+\vspace{-0.33em}\noindent
 ---
 \en{the symmetric multiplier}\ru{симметричный множитель}~%
-${\hspace{-0.16ex} ^2\hspace{-0.2ex}\bm{\lambda}}$,
+${\hspace{-0.2ex} \bivalentlagrangemultiplier}$,
 \en{introduced}\ru{введённый}
 \en{formally}\ru{формально},
 \en{is}\ru{это}
@@ -164,16 +237,18 @@ ${\hspace{-0.16ex} ^2\hspace{-0.2ex}\bm{\lambda}}$,
 \en{was presented}\ru{было представлено}
 \en{in the~book}\ru{в~книге}~\cite{rabotnov-mechanicsofdeformable}.
 \en{Here are no new results}\ru{Тут нет новых результатов},
-но сам\'{а} возможность
-одно\-времен\-ного вывода
-тех уравнений механики \rucontinuum{}а,
-которые прежде считались независимыми,
-весьма интересна.
-В~следующих главах
-эта техника
-используется
-для построения
-новых
-континуальных моделей.
-
-\end{otherlanguage}
+\en{but}\ru{но}
+\en{the~very possibility}\ru{сам\'{а} возможность}
+\en{of simultaneously deriving}\ru{одно\-времен\-ного вывода}
+\en{those equations}\ru{тех уравнений}
+\en{of continuum mechanics}\ru{механики \rucontinuum{}а},
+\en{that were previously considered}\ru{которые прежде считались}
+\en{independent}\ru{независимыми},
+\en{is quite interesting}\ru{весьма интересна}.
+%
+\en{In}\ru{В}~\en{subsequent chapters}\ru{последующих главах}
+\en{this technique}\ru{эта техника}
+\en{is used}\ru{используется}
+\en{for building}\ru{для построения}
+\en{new}\ru{новых}
+\en{continuum models}\ru{континуальных моделей}.

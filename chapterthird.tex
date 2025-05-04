@@ -8,7 +8,7 @@
 
 \en{\section{Continuum and the two approaches to describe it}}
 
-\ru{\section{\ruContinuum{} и два подхода к его описанию}}
+\ru{\section{\ruContinuum{} и два подхода к описанию его}}
 
 \label{section:continuum}
 
@@ -1671,264 +1671,13 @@ ${\cauchystress = \bm{e}_{i} \tractionvector{i}\hspace{.1ex}}$, ${\bm{e}_i \hspa
 
 \end{otherlanguage}
 
-\en{\section{Principle of virtual work (without Lagrange multipliers)}}
-
-\ru{\section{Принцип виртуальной работы (без множителей Lagrange’а)}}
-
-\label{section:virtualworkprinciple.elastic}
-
-\en{According to the~principle of~virtual work for some finite volume of~continuum}
-
-\ru{Согласно принципу виртуальной работы для некоего конечного объёма сплошной среды}
-
-\nopagebreak\ru{\vspace{-0.1em}}\begin{equation}\label{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Bigl( \rho \hspace{-0.1ex} \massloadvector \dotp \variation{\currentlocationvector} + \variation{\internalwork} \Bigr) \hspace{-0.1ex} d\mathcal{V}
-+ \ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.2ex} \currentunitnormal \dotp \cauchystress \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{O} = \hspace{.1ex} 0
-\hspace{.1ex} .
-\end{equation}
-
-\vspace{-0.1em}\noindent
-\en{Here}\ru{Здесь}
-${\variation{\internalwork}}$\ru{\;---}\en{ is} \en{work of~internal forces per volume unit in the~current configuration}\ru{работа внутренних сил на~единицу объёма в~текущей конфигурации};
-$\massloadvector$\ru{\:---}\en{ is} \en{mass force}\ru{массовая сила}, \en{with dynamics}\ru{с~динамикой} ${\bigl( \hspace{.1ex} \massloadvector \hspace{-0.1ex} - \hspace{-0.2ex} \mathdotdotabove{\currentlocationvector} \hspace{.33ex} \bigr)\hspace{-0.16ex}}$;
-${\bm{p} = \hspace{-0.1ex} \tractionvector{\currentunitnormal} \hspace{-0.1ex} = \currentunitnormal \dotp \cauchystress}$\ru{\:---}\en{ is} \en{surface force}\ru{поверхностная сила}.
-
-\en{Applying the~divergence theorem to the~surface integral}\ru{Применяя к~поверхностному интегралу теорему о~дивергенции}, \en{using}\ru{используя}\footnote{%
-${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \partial_i \hspace{-0.1ex} \bigl( \hspace{-0.1ex} \cauchystress \dotp \variation{\currentlocationvector} \hspace{-0.1ex} \bigr) \hspace{-0.25ex}
-= \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.2ex} \bigl( \partial_i \cauchystress \hspace{.1ex} \bigr) \hspace{-0.25ex} \dotp \variation{\currentlocationvector}
-+ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystress \dotp \partial_i \hspace{-0.1ex} \bigl( \variation{\currentlocationvector} \hspace{-0.1ex} \bigr)
-\hspace{-0.1ex} , }$
-
-\hspace*{\fill}
-${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystress \dotp \partial_i \hspace{-0.1ex} \bigl( \variation{\currentlocationvector} \hspace{-0.1ex} \bigr) \hspace{-0.25ex}
-= \cauchystress \dotdotp \partial_i \hspace{-0.1ex} \bigl( \variation{\currentlocationvector} \hspace{-0.1ex} \bigr) \currentlocationvector^{i} \hspace{-0.2ex}
-= \cauchystress \dotdotp \hspace{-0.12ex} \bigl( \currentlocationvector^{i} \partial_i \hspace{.12ex} \variation{\currentlocationvector} \bigr)^{\raisemath{-0.1em}{\hspace{-0.4ex}\T}} }$%
-}
-
-\nopagebreak\vspace{-0.1em}\begin{equation*}
-\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \left( \cauchystress \dotp \variation{\currentlocationvector} \right) \hspace{-0.1ex}
-= \boldnabla \hspace{-0.1ex} \dotp \cauchystress \dotp \variation{\currentlocationvector}
-+ \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\T}
-\end{equation*}
-
-\vspace{-0.1em}\noindent
-\en{and randomness of}\ru{и~случайность}~${\mathcal{V}\hspace{-0.2ex}}$, \en{we get}\ru{получаем} \en{the~local differential version of}\ru{локальную дифференциальную версию}~\eqref{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
-
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
-\left(^{\mathstrut} \hspace{-0.2ex} \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \rho \hspace{-0.1ex} \massloadvector \right) \hspace{-0.4ex} \dotp \variation{\currentlocationvector}
-+ \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\T} \hspace{-0.33ex}
-+ \hspace{.1ex} \variation{\internalwork}
-= \hspace{.1ex} 0 \hspace{.1ex}.
-\end{equation}
-
-\vspace{-0.25em}
-\en{When}\ru{Когда}
-\en{a~body}\ru{тело}
-\en{virtually moves}\ru{виртуально движется}
-\en{as a~rigid whole}\ru{как жёсткое целое},
-\en{the~work}\ru{работа}
-\en{of~internal forces}\ru{внутренних сил}
-\en{nullifies}\ru{обнуляется}
-
-\nopagebreak\vspace{-0.25em}\begin{equation*}
-%\label{princlipleofvirtualwork.worknullifies:nonlinearmomentlesscontinuum}
-\begin{array}{c}
-\variation{\currentlocationvector} = \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} + \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector
-%%\hspace{.1ex} , \:
-%%\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant
-%%\hspace{.1ex} , \:
-%%\constvarvector{o} = \boldconstant
-\hspace{.66ex}\Rightarrow\hspace{.4ex}
-\variation{\internalwork} \hspace{-0.2ex} = 0
-\hspace{.1ex} ,
-\\[.2em]
-%
-\bigl( \hspace{.1ex} \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \rho \hspace{-0.1ex} \massloadvector \hspace{.16ex} \bigr)
-\hspace{-0.25ex} \dotp \hspace{-0.25ex}
-\bigl(  \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} + \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.16ex}
-+ \cauchystress^{\hspace{.16ex}\T} \hspace{-0.5ex}
-\dotdotp
-\hspace{-0.16ex} \boldnabla \hspace{.1ex} \bigl(
-\constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} +
-\constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.25ex}
-= 0 \hspace{.1ex} ,
-\\[.2em]
-%
-\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant
-\hspace{.4ex} \Rightarrow \hspace{.2ex}
-\boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}} =  \hspace{-0.12ex} \zerobivalent \hspace{.1ex} ,
-\;\:
-\constvarvector{o} = \boldconstant
-\hspace{.4ex} \Rightarrow \hspace{.2ex}
-\boldnabla \hspace{.1ex} \constvarvector{o} = \hspace{-0.12ex} \zerobivalent \hspace{.1ex} ,
-\\[.2em]
-%
-\boldnabla \hspace{.1ex} \bigl(
-\constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} +
-\constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.25ex}
-= \hspace{-0.1ex} \boldnabla \hspace{.1ex} \bigl(
-\constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.25ex}
-= \boldnabla \hspace{.1ex} \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector
-\hspace{.1ex} - \hspace{-0.2ex}
-\boldnabla \currentlocationvector \times \hspace{-0.2ex} \constvarvector{o} =
-\\[.1em] %
-\hspace*{\fill}
-= - \boldnabla \currentlocationvector \hspace{-0.1ex} \times \hspace{-0.2ex} \constvarvector{o}
-= - \hspace{.1ex} \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
-%%= - \hspace{.1ex} \constvarvector{o} \hspace{-0.3ex} \times \hspace{-0.33ex} \UnitDyad
-\\[.2em]
-%
-\cdots
-%%\hspace{.1ex} .
-\end{array}
-\end{equation*}
-
-\vspace{-0.2em}
-\en{Assuming}\ru{Полагая}
-${\constvarvector{o} \hspace{-0.1ex} = \zerovector}$
-(\en{just a~translation}\ru{лишь трансляция})
-${\Rightarrow}$~${\hspace{-0.1ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}
-= \hspace{-0.2ex} \boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}
-= \hspace{-0.12ex} \zerobivalent}$,
-\en{it turns into the~balance of~forces~(of~momentum)}\ru{оно превращается в~баланс сил~(импульса)}
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \rho \hspace{-0.1ex} \massloadvector \hspace{-0.1ex} = \zerovector
-\hspace{.1ex} .
-\end{equation*}
-
-\vspace{-0.1em}
-\en{If}\ru{Если} ${\variation{\currentlocationvector} = \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector}$ (\en{just rotation}\ru{лишь поворот}) \en{with}\ru{с}~${\constvarvector{o} \hspace{-0.1ex} = \boldconstant}$, \en{then}\ru{то}
-
-\nopagebreak\vspace{-0.1em}\begin{equation*}
-\begin{array}{r@{\hspace{.8ex}}l}
-\eqrefwithchapterdotsection{gradientofcrossproductoftwovectors}{chapter:mathapparatus}{section:spatialdifferentiation}
-\,\Rightarrow &
-\boldnabla \hspace{.1ex} \variation{\currentlocationvector}
-= \boldnabla \hspace{.1ex} \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector
-\hspace{.1ex} - \hspace{-0.2ex}
-\boldnabla \currentlocationvector \times \hspace{-0.2ex} \constvarvector{o}
-= - \hspace{.1ex} \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
-%%= - \hspace{.2ex} \constvarvector{o} \hspace{-0.3ex} \times \hspace{-0.33ex} \UnitDyad
-\hspace{.1ex} ,
-\\[.25em]
-%
-& \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\T} \hspace{-0.32ex}
-= \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
-%%= \constvarvector{o} \hspace{-0.3ex} \times \hspace{-0.33ex} \UnitDyad
-\end{array}
-\end{equation*}
-
-\noindent
-With
-
-\nopagebreak\vspace{-0.8em}\begin{equation*}
-\begin{array}{c}
-\eqrefwithchapterdotsection{pseudovectorinvariant}{chapter:mathapparatus}{section:tensors.symmetric+skewsymmetric} \:\Rightarrow\,
-\cauchystress_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.1ex} = - \hspace{.1ex} \cauchystress \hspace{.1ex} \dotdotp \permutationsparitytensor
-\hspace{.1ex} ,
-\\[.2em]
-%
-\cauchystress \dotdotp \hspace{-0.32ex} \left( \hspace{.1ex} \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o} \hspace{.1ex} \right) \hspace{-0.1ex}
-= \cauchystress \dotdotp \hspace{-0.4ex} \left( \hspace{-0.1ex} - \hspace{.2ex} \permutationsparitytensor \dotp \constvarvector{o} \hspace{.1ex} \right) \hspace{-0.1ex}
-= \left( \hspace{-0.1ex} - \hspace{.1ex} \cauchystress \dotdotp \permutationsparitytensor \hspace{.1ex} \right) \hspace{-0.3ex} \dotp \constvarvector{o} \hspace{.1ex}
-= \cauchystress_{\hspace{-0.1ex}\Xcompanion} \dotp \hspace{.1ex} \constvarvector{o}
-\end{array}
-\end{equation*}
-
-...
-
-\en{In an~elastic continuum}\ru{В~упругой среде}\en{,} \en{the~internal forces}\ru{внутренние силы}
-\en{are potential}\ru{потенциальны}
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\variation{\internalwork} = - \rho \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}}
-%%\hspace{.1ex} .
-\end{equation*}
-
-
-...
-
-
-
-
-%----------
-{\small
-\setlength{\parindent}{0pt}
-
-\begin{leftverticalbar}%%[oversize]
-
-\inquotes{The elastic potential energy density per volume unit},
-becomes when shorting
-\inquotes{The elastic potential ....}
-
-\begin{otherlanguage}{russian}
-Плотность
-упругой потенциальной энергии,
-запасённой|накопленной
-в~единице объёма тела (сред\'{ы}).
-\end{otherlanguage}
-
-\begin{otherlanguage}{russian}
-Дословный перевод
-c~english на~русский
-фразы
-\inquotesx{the elastic potential}
-даёт
-\inquotesx{упругий потенциал}[.]
-\end{otherlanguage}
-
-\end{leftverticalbar}
-\par}
-%----------
-
-
-....
-
-
-\begin{equation}
-\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\mathsf{S}} \hspace{-0.25ex}
-= \hspace{-0.2ex} - \hspace{.2ex} \variation{\internalwork}
-= \rho \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}}
-\end{equation}
-
-...
-
-\begin{otherlanguage}{russian}
-
-Вид потенциала ${\widetilde{\potentialenergydensity}}$ \en{per mass unit}\ru{на~единицу \hbox{массы}} пока неизвестен, но очевидно что ${\widetilde{\potentialenergydensity}}$ определяется деформацией.
-
-\en{With}\ru{С}~\en{the~balance of~mass}\ru{балансом массы} ${\rho \hspace{.2ex} J \hspace{-0.1ex} = \mathcircabove{\rho} \hspace{.5ex} \Leftrightarrow \hspace{.1ex} \rho = \hspace{-0.1ex} J^{\expminusone} \mathcircabove{\rho}}$
-(${J \hspace{-0.1ex} \equiv \determinant \bm{F}\hspace{-0.12ex}}$\en{ is}\ru{\:---} \en{the }Jacobian, \en{determinant of the motion gradient}\ru{определитель градиента движения}),
-потенциал на~единицу объёма в~недеформированной конфигурации~$\smash{\mathcircabove{\potentialenergydensity}}$ имеет вид
-
-\nopagebreak\vspace{-0.2em}\begin{equation}
-\begin{array}{c}
-\mathcircabove{\potentialenergydensity} \equiv \mathcircabove{\rho} \hspace{.4ex} \widetilde{\potentialenergydensity}
-\hspace{.4ex} \Rightarrow \hspace{.2ex}
-\variation{\mathcircabove{\potentialenergydensity}} = \mathcircabove{\rho} \hspace{.25ex} \variation{\widetilde{\potentialenergydensity}}
-\hspace{.1ex} ,
-\\[.1em]
-%
-\rho \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}} = \hspace{-0.1ex} J^{\expminusone} \hspace{.1ex} \variation{\mathcircabove{\potentialenergydensity}}
-\hspace{.1ex} .
-\end{array}
-\end{equation}
-
-\vspace{-0.25em}
-Полным аналогом~(...) является равенство
-
-...
-
-
-
-\end{otherlanguage}
+\input{section3.9.tex}
 
 \en{\section{Constitutive relations of elasticity}}
 
 \ru{\section{Определяющие отношения упругости}}
 
-\en{Fundamental relation of~elasticity}\ru{Фундаментальное соотношение упругости}~\eqref{fundamentalrelationofelasticity}
+\en{The fundamental relation of~elasticity}\ru{Фундаментальное соотношение упругости}~\eqref{fundamentalrelationofelasticity}
 
 ...
 
@@ -2185,7 +1934,10 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 \en{is unlikely useful}\ru{едва~ли полезен}
 \en{in~fluid mechanics}\ru{в~механике текучих сред}.
 
-\en{Principle of virtual work}\ru{Принцип виртуальной работы} \en{for an~arbitrary volume}\ru{для произвольного объёма}~$\mathcircabove{\mathcal{V}}$ \en{of~the~elastic}\ru{упругой} (${\variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensity}}$) \en{continuum}\ru{среды}:
+\en{The~principle of~virtual work}\ru{Принцип виртуальной работы}
+\en{for an~arbitrary volume}\ru{для произвольного объёма}~$\mathcircabove{\mathcal{V}}$
+\en{of elastic}\ru{упругой} (${\variation{\internalwork} = - \hspace{.2ex} \variation{\potentialenergydensity}}$)
+\en{continuum}\ru{среды}\::
 
 \nopagebreak\vspace{-0.16em}\ru{\vspace{-0.2em}}\begin{equation*}
 \begin{array}{c}
@@ -2269,22 +2021,34 @@ The 2nd~Piola\hbox{--}Kirchhoff stress tensor is energy conjugate to the Green\h
 
 \newpage
 
-\en{\section{Variation of present configuration}}
+\en{\section{Variation of the present configuration}}
 
 \ru{\section{Варьирование текущей конфигурации}}
 
 \label{section:variationofconfiguration}
 
-\en{Usually}\ru{Обыкновенно} \ru{рассматриваются }\en{the two configurations}\ru{две конфигурации} \en{of a~nonlinear elastic medium}\ru{нелинейной упругой среды}\en{ are considered}: \en{the initial one}\ru{начальная} \en{with location vectors}\ru{с~векторами положения}~$\initiallocationvector$ \en{and}\ru{и} \en{the current (present) one}\ru{текущая (актуальная)} \en{with}\ru{с}~$\currentlocationvector$.
+\en{Usually}\ru{Обыкновенно}
+\ru{рассматриваются }\en{the two configurations}\ru{две конфигурации} \en{of a~nonlinear elastic medium}\ru{нелинейной упругой среды}\en{ are considered}\::
+\en{the initial one}\ru{начальная}
+\en{with location vectors}\ru{с~векторами положения}~$\initiallocationvector$
+\en{and}\ru{и}
+\en{the present (current) one}\ru{текущая (актуальная)}
+\en{with}\ru{с}~$\currentlocationvector$.
 
-\en{And the following}\ru{А~следующие} \en{equations}\ru{уравнения} \en{describe}\ru{описывают} \en{a~small change}\ru{малое изменение} \en{of the current configuration}\ru{текущей конфигурации} \en{with infinitesimal changes}\ru{с~бесконечно-малыми изменениями}
+\en{And the following}\ru{А~следующие}
+\en{equations}\ru{уравнения}
+\en{describe}\ru{описывают}
+\en{a~small change}\ru{малое изменение}
+\en{of the current configuration}\ru{текущей конфигурации}
+\en{with infinitesimal changes}\ru{с~бесконечно-малыми изменениями}
 \en{to the location vector}\ru{вектора положения}~$\variation{\currentlocationvector}$,
 \en{to the vector of mass forces}\ru{вектора массовых сил}~${\variation{\hspace{-0.2ex}\massloadvector}\hspace{-0.2ex}}$,
 \en{to the first}\ru{первого} \ru{тензора напряжения }Piola\hbox{--}Kirchhoff\ru{’а}\en{ stress tensor}~${\variation{\hspace{.1ex}\firstpiolakirchhoffstress}}$
 \en{and}\ru{и}
 \en{to the deformation tensor}\ru{тензора деформации}~${\variation{\hspace{.1ex}\bm{C}}}$.
 
-\en{By varying}\ru{Варьируя} \eqref{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}, (......)\footnote{%
+\en{By varying}\ru{Варьируя}
+\eqref{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}, (......)\footnote{%
 ${\boldnabla \hspace{-0.08ex}
 = \hspace{-0.2ex} \boldnabla \dotp \hspace{-0.15ex} \boldnablacircled \initiallocationvector \hspace{-0.08ex}
 = \currentlocationvector^{i} \hspace{-0.1ex} \partial_{i} \hspace{-0.15ex} \dotp \initiallocationvector^j \hspace{-0.1ex} \partial_{\hspace{-0.1ex}j} \initiallocationvector \hspace{-0.1ex}
@@ -2324,10 +2088,10 @@ ${\boldnablacircled \hspace{-0.1ex}
 \hspace{-0.1ex} ,
 \\[.5em]
 %
-\variation{\hspace{.1ex}\bm{C}} = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex} \dotp \hspace{.1ex} \infinimentpetitdeformationdevariation \dotp \bm{F} ,
+\variation{\hspace{.1ex}\bm{C}} = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex} \dotp \hspace{.1ex} \infinimentpetitedeformationvariation \dotp \bm{F} ,
 \:\,
-\infinimentpetitdeformationdevariation \equiv \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\mathsf{S}}
-\hspace{-0.15ex} .
+\infinimentpetitedeformationvariation \equiv \insideinfinitesimalstrainvariation
+\hspace{.1ex} .
 \end{array}
 \end{equation}
 
@@ -2357,9 +2121,12 @@ ${\boldnablacircled \hspace{-0.1ex}
 \vspace{-0.2em}\noindent
 --- введённый так \en{tensor}\ru{тензор}~${\varbivalent{\hspace{-0.2ex}\cauchystress}}$ связан с~вариацией~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$ как $\cauchystress$ связан с~$\firstpiolakirchhoffstress$ (${\cauchystress = \hspace{-0.1ex} J^{\hspace{.1ex}\expminusone} \bm{F} \dotp \hspace{.15ex} \firstpiolakirchhoffstress\hspace{.2ex}}$). Из~\eqref{variationsforcurrentconfiguration} и ...
 
-...
+.....
 
-... корректируя коэффициенты линейной функции~${\varbivalent{\hspace{-0.2ex}\cauchystress}\hspace{.15ex}(\boldnabla \hspace{.1ex} \variation{\currentlocationvector}\hspace{.1ex})}$.
+...
+корректируя
+коэффициенты
+линейной функции~${\varbivalent{\hspace{-0.2ex}\cauchystress}\hspace{.15ex}( \infinimentpetitedeformationvariation )}$ ...
 
 \end{otherlanguage}
 

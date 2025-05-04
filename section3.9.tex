@@ -1,0 +1,268 @@
+\en{\section{Principle of virtual work (without Lagrange multipliers)}}
+
+\ru{\section{Принцип виртуальной работы (без множителей Lagrange’а)}}
+
+\label{section:virtualworkprinciple.elastic}
+
+\en{According}\ru{Согласно}
+\en{to the~principle of~virtual work}\ru{принципу виртуальной работы}
+\en{for}\ru{для}
+\en{some}\ru{некоего}
+\en{finite}\ru{конечного}
+\en{volume}\ru{объёма}
+\en{of~a~continuous medium}\ru{сплошной среды} %%\en{of~a~continuum}\ru{\rucontinuum{}а}
+
+\nopagebreak\ru{\vspace{-0.1em}}\begin{equation}\label{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \Bigl( \massdensity \hspace{-0.1ex} \massloadvector \dotp \variation{\currentlocationvector} + \variation{\internalwork} \Bigr) \hspace{-0.1ex} d\mathcal{V}
++ \ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.2ex} \currentunitnormal \dotp \cauchystress \dotp \variation{\currentlocationvector} \hspace{.2ex} d\mathcal{O} = \hspace{.1ex} 0
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.1em}\noindent
+\en{Here}\ru{Здесь}
+${\variation{\internalwork}}$\ru{\:---}\en{ is}
+\en{the~work of~internal forces}\ru{работа внутренних сил}
+\en{per volume unit}\ru{на~единицу объёма}
+\en{in the~current configuration}\ru{в~текущей конфигурации},
+%
+$\massloadvector$\ru{\:---}\en{ is}
+\en{the mass force}\ru{массовая сила}
+(\en{including dynamics}\ru{включая динамику},
+${\massloadvector \hspace{-0.2ex} \equiv \hspace{-0.2ex} \massloadvector_{\hspace{-0.25ex}*} \hspace{-0.3ex} - \mathdotdotabove{\currentlocationvector}\hspace{.25ex}}$),
+%
+${\bm{p} = \hspace{-0.1ex} \tractionvector{\currentunitnormal} \hspace{-0.1ex} = \currentunitnormal \dotp \cauchystress}$\ru{\:---}\en{ is}
+\en{the surface force}\ru{поверхностная сила}.
+
+\en{Applying the~divergence theorem to the~surface integral}\ru{Применяя к~поверхностному интегралу теорему о~дивергенции}, \en{using}\ru{используя}\footnote{%
+${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \partial_i \hspace{-0.1ex} \bigl( \hspace{-0.1ex} \cauchystress \dotp \variation{\currentlocationvector} \hspace{-0.1ex} \bigr) \hspace{-0.25ex}
+= \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.2ex} \bigl( \partial_i \cauchystress \hspace{.1ex} \bigr) \hspace{-0.25ex} \dotp \variation{\currentlocationvector}
++ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystress \dotp \partial_i \hspace{-0.1ex} \bigl( \variation{\currentlocationvector} \hspace{-0.1ex} \bigr)
+\hspace{-0.1ex} , }$
+
+\hspace*{\fill}
+${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystress \dotp \partial_i \hspace{-0.1ex} \bigl( \variation{\currentlocationvector} \hspace{-0.1ex} \bigr) \hspace{-0.25ex}
+= \cauchystress \dotdotp \partial_i \hspace{-0.1ex} \bigl( \variation{\currentlocationvector} \hspace{-0.1ex} \bigr) \currentlocationvector^{i} \hspace{-0.2ex}
+= \cauchystress \dotdotp \hspace{-0.12ex} \bigl( \currentlocationvector^{i} \partial_i \hspace{.12ex} \variation{\currentlocationvector} \bigr)^{\raisemath{-0.1em}{\hspace{-0.4ex}\T}} }$%
+}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\boldnabla \hspace{-0.1ex} \dotp \hspace{-0.1ex} \left( \cauchystress \dotp \variation{\currentlocationvector} \right) \hspace{-0.1ex}
+= \boldnabla \hspace{-0.1ex} \dotp \cauchystress \dotp \variation{\currentlocationvector}
++ \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\T}
+\end{equation*}
+
+\vspace{-0.4em}\noindent
+\en{and the~randomness of}\ru{и~случайность}~${\mathcal{V}\hspace{-0.2ex}}$,
+\en{here comes}\ru{получается}
+\en{the~local differential version of}\ru{локальную дифференциальную версию}~\eqref{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
+\Bigl( \hspace{-0.2ex} \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \massdensity \hspace{-0.1ex} \massloadvector \Bigr) \hspace{-0.4ex} \dotp \variation{\currentlocationvector}
++ \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\T} \hspace{-0.33ex}
++ \hspace{.1ex} \variation{\internalwork}
+= \hspace{.1ex} 0 \hspace{.1ex}.
+\end{equation}
+
+\vspace{-0.25em}
+\en{When}\ru{Когда}
+\en{a~body}\ru{тело}
+\en{virtually moves}\ru{виртуально движется}
+\en{as a~rigid whole}\ru{как жёсткое целое},
+\en{the~work}\ru{работа}
+\en{of~internal forces}\ru{внутренних сил}
+\en{nullifies}\ru{обнуляется}
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+%\label{princlipleofvirtualwork.worknullifies:nonlinearmomentlesscontinuum}
+\begin{array}{c}
+\variation{\currentlocationvector} = \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} + \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector
+%%\hspace{.1ex} , \:
+%%\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant
+%%\hspace{.1ex} , \:
+%%\constvarvector{o} = \boldconstant
+\hspace{.66ex}\Rightarrow\hspace{.4ex}
+\variation{\internalwork} \hspace{-0.2ex} = 0
+\hspace{.1ex} ,
+\\[.2em]
+%
+\bigl( \hspace{.1ex} \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{.16ex} \bigr)
+\hspace{-0.25ex} \dotp \hspace{-0.25ex}
+\bigl(  \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} + \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.16ex}
++ \cauchystress^{\hspace{.16ex}\T} \hspace{-0.5ex}
+\dotdotp
+\hspace{-0.16ex} \boldnabla \hspace{.1ex} \bigl(
+\constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} +
+\constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.25ex}
+= 0 \hspace{.1ex} ,
+\\[.2em]
+%
+\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant
+\hspace{.4ex} \Rightarrow \hspace{.2ex}
+\boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}} =  \hspace{-0.12ex} \zerobivalent \hspace{.1ex} ,
+\;\:
+\constvarvector{o} = \boldconstant
+\hspace{.4ex} \Rightarrow \hspace{.2ex}
+\boldnabla \hspace{.1ex} \constvarvector{o} = \hspace{-0.12ex} \zerobivalent \hspace{.1ex} ,
+\\[.2em]
+%
+\boldnabla \hspace{.1ex} \bigl(
+\constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} +
+\constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.25ex}
+= \hspace{-0.1ex} \boldnabla \hspace{.1ex} \bigl(
+\constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.25ex}
+= \boldnabla \hspace{.1ex} \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector
+\hspace{.1ex} - \hspace{-0.2ex}
+\boldnabla \currentlocationvector \times \hspace{-0.2ex} \constvarvector{o} =
+\\[.1em] %
+\hspace*{\fill}
+= - \boldnabla \currentlocationvector \hspace{-0.1ex} \times \hspace{-0.2ex} \constvarvector{o}
+= - \hspace{.1ex} \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
+%%= - \hspace{.1ex} \constvarvector{o} \hspace{-0.3ex} \times \hspace{-0.33ex} \UnitDyad
+\\[.2em]
+%
+\cdots
+%%\hspace{.1ex} .
+\end{array}
+\end{equation*}
+
+\vspace{-0.2em}
+\en{Assuming}\ru{Полагая}
+${\constvarvector{o} \hspace{-0.1ex} = \zerovector}$
+(\en{just a~translation}\ru{лишь трансляция})
+${\Rightarrow}$~${\hspace{-0.1ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}
+= \hspace{-0.2ex} \boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}
+= \hspace{-0.12ex} \zerobivalent}$,
+\en{it turns into the~balance of~forces~(of~momentum)}\ru{оно превращается в~баланс сил~(импульса)}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{-0.1ex} = \zerovector
+\hspace{.1ex} .
+\end{equation*}
+
+\vspace{-0.1em}
+\en{If}\ru{Если} ${\variation{\currentlocationvector} = \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector}$ (\en{just rotation}\ru{лишь поворот}) \en{with}\ru{с}~${\constvarvector{o} \hspace{-0.1ex} = \boldconstant}$, \en{then}\ru{то}
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\begin{array}{r@{\hspace{.8ex}}l}
+\eqrefwithchapterdotsection{gradientofcrossproductoftwovectors}{chapter:mathapparatus}{section:spatialdifferentiation}
+\,\Rightarrow &
+\boldnabla \hspace{.1ex} \variation{\currentlocationvector}
+= \boldnabla \hspace{.1ex} \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector
+\hspace{.1ex} - \hspace{-0.2ex}
+\boldnabla \currentlocationvector \times \hspace{-0.2ex} \constvarvector{o}
+= - \hspace{.1ex} \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
+%%= - \hspace{.2ex} \constvarvector{o} \hspace{-0.3ex} \times \hspace{-0.33ex} \UnitDyad
+\hspace{.1ex} ,
+\\[.25em]
+%
+& \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\T} \hspace{-0.32ex}
+= \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
+%%= \constvarvector{o} \hspace{-0.3ex} \times \hspace{-0.33ex} \UnitDyad
+\end{array}
+\end{equation*}
+
+\noindent
+With
+
+\nopagebreak\vspace{-0.8em}\begin{equation*}
+\begin{array}{c}
+\eqrefwithchapterdotsection{pseudovectorinvariant}{chapter:mathapparatus}{section:tensors.symmetric+skewsymmetric} \:\Rightarrow\,
+\cauchystress_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.1ex} = - \hspace{.1ex} \cauchystress \hspace{.1ex} \dotdotp \permutationsparitytensor
+\hspace{.1ex} ,
+\\[.2em]
+%
+\cauchystress \dotdotp \hspace{-0.32ex} \left( \hspace{.1ex} \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o} \hspace{.1ex} \right) \hspace{-0.1ex}
+= \cauchystress \dotdotp \hspace{-0.4ex} \left( \hspace{-0.1ex} - \hspace{.2ex} \permutationsparitytensor \dotp \constvarvector{o} \hspace{.1ex} \right) \hspace{-0.1ex}
+= \left( \hspace{-0.1ex} - \hspace{.1ex} \cauchystress \dotdotp \permutationsparitytensor \hspace{.1ex} \right) \hspace{-0.3ex} \dotp \constvarvector{o} \hspace{.1ex}
+= \cauchystress_{\hspace{-0.1ex}\Xcompanion} \dotp \hspace{.1ex} \constvarvector{o}
+\end{array}
+\end{equation*}
+
+...
+
+\en{In an~elastic continuum}\ru{В~упругой среде}\en{,} \en{the~internal forces}\ru{внутренние силы}
+\en{are potential}\ru{потенциальны}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\variation{\internalwork} = - \massdensity \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}}
+%%\hspace{.1ex} .
+\end{equation*}
+
+
+...
+
+
+
+
+%----------
+{\small
+\setlength{\parindent}{0pt}
+
+\begin{leftverticalbar}%%[oversize]
+
+\inquotes{The elastic potential energy density per volume unit},
+becomes when shorting
+\inquotes{The elastic potential ....}
+
+\begin{otherlanguage}{russian}
+Плотность
+упругой потенциальной энергии,
+запасённой|накопленной
+в~единице объёма тела (сред\'{ы}).
+\end{otherlanguage}
+
+\begin{otherlanguage}{russian}
+Дословный перевод
+c~english на~русский
+фразы
+\inquotesx{the elastic potential}
+даёт
+\inquotesx{упругий потенциал}[.]
+\end{otherlanguage}
+
+\end{leftverticalbar}
+\par}
+%----------
+
+
+....
+
+
+\begin{equation}
+\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\mathsf{S}} \hspace{-0.25ex}
+= \hspace{-0.2ex} - \hspace{.2ex} \variation{\internalwork}
+= \massdensity \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}}
+\end{equation}
+
+...
+
+\begin{otherlanguage}{russian}
+
+Вид потенциала ${\widetilde{\potentialenergydensity}}$ \en{per mass unit}\ru{на~единицу \hbox{массы}} пока неизвестен, но очевидно что ${\widetilde{\potentialenergydensity}}$ определяется деформацией.
+
+\en{With}\ru{С}~\en{the~balance of~mass}\ru{балансом массы}
+${\massdensity \hspace{.2ex} J \hspace{-0.1ex} = \initialmassdensity \hspace{.5ex} \Leftrightarrow \hspace{.1ex} \massdensity = \hspace{-0.1ex} J^{\expminusone} \initialmassdensity}$
+(${J \hspace{-0.1ex} \equiv \determinant \bm{F}\hspace{-0.12ex}}$\en{ is}\ru{\:---} \en{the }Jacobian, \en{determinant of the motion gradient}\ru{определитель градиента движения}),
+потенциал на~единицу объёма в~недеформированной конфигурации~$\smash{\mathcircabove{\potentialenergydensity}}$ имеет вид
+
+\nopagebreak\vspace{-0.2em}\begin{equation}
+\begin{array}{c}
+\mathcircabove{\potentialenergydensity} \equiv \initialmassdensity \hspace{.4ex} \widetilde{\potentialenergydensity}
+\hspace{.4ex} \Rightarrow \hspace{.2ex}
+\variation{\mathcircabove{\potentialenergydensity}} = \initialmassdensity \hspace{.25ex} \variation{\widetilde{\potentialenergydensity}}
+\hspace{.1ex} ,
+\\[.1em]
+%
+\massdensity \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}} = \hspace{-0.1ex} J^{\expminusone} \hspace{.1ex} \variation{\mathcircabove{\potentialenergydensity}}
+\hspace{.1ex} .
+\end{array}
+\end{equation}
+
+\vspace{-0.25em}
+Полным аналогом~(...) является равенство
+
+...
+
+
+
+\end{otherlanguage}
