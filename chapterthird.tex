@@ -1907,13 +1907,14 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 \noindent
 \en{or}\ru{или} \en{in the~local~(differential) version}\ru{в~локальной~(дифференциальной) версии}
 
-\nopagebreak\vspace{-0.25em}\begin{equation}\label{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}
+\nopagebreak\vspace{-0.25em}
+\begin{equation}\label{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}
 \boldnablacircled \dotp \hspace{.12ex} \firstpiolakirchhoffstress + \hspace{.1ex} \mathcircabove{\rho} \hspace{-0.1ex} \massloadvector
 = \hspace{.1ex} \zerovector \hspace{.12ex}.
 \end{equation}
 
 \en{Advantages of this equation}\ru{Преимущества этого уравнения}
-\en{in comparison with}\ru{в~сравнении с}~\eqref{balanceoftranslationalmomentum.local}\en{ are}:
+\en{in comparison with}\ru{в~сравнении с}~\eqref{balanceoftranslationalmomentum.local}\en{ are}\::
 \en{here}\ru{здесь}
 \en{figures}\ru{фигурирует}
 \en{the~known}\ru{известная}
@@ -2017,118 +2018,14 @@ If the material rotates without a change in stress (rigid rotation), the 2nd~Pio
 
 The 2nd~Piola\hbox{--}Kirchhoff stress tensor is energy conjugate to the Green\hbox{--}Lagrange finite strain tensor.
 
-...
+....
 
+%%-------
 \newpage
+%%-------
 
-\en{\section{Variation of the present configuration}}
+\input{section3.12.tex}
 
-\ru{\section{Варьирование текущей конфигурации}}
-
-\label{section:variationofconfiguration}
-
-\en{Usually}\ru{Обыкновенно}
-\ru{рассматриваются }\en{the two configurations}\ru{две конфигурации} \en{of a~nonlinear elastic medium}\ru{нелинейной упругой среды}\en{ are considered}\::
-\en{the initial one}\ru{начальная}
-\en{with location vectors}\ru{с~векторами положения}~$\initiallocationvector$
-\en{and}\ru{и}
-\en{the present (current) one}\ru{текущая (актуальная)}
-\en{with}\ru{с}~$\currentlocationvector$.
-
-\en{And the following}\ru{А~следующие}
-\en{equations}\ru{уравнения}
-\en{describe}\ru{описывают}
-\en{a~small change}\ru{малое изменение}
-\en{of the current configuration}\ru{текущей конфигурации}
-\en{with infinitesimal changes}\ru{с~бесконечно-малыми изменениями}
-\en{to the location vector}\ru{вектора положения}~$\variation{\currentlocationvector}$,
-\en{to the vector of mass forces}\ru{вектора массовых сил}~${\variation{\hspace{-0.2ex}\massloadvector}\hspace{-0.2ex}}$,
-\en{to the first}\ru{первого} \ru{тензора напряжения }Piola\hbox{--}Kirchhoff\ru{’а}\en{ stress tensor}~${\variation{\hspace{.1ex}\firstpiolakirchhoffstress}}$
-\en{and}\ru{и}
-\en{to the deformation tensor}\ru{тензора деформации}~${\variation{\hspace{.1ex}\bm{C}}}$.
-
-\en{By varying}\ru{Варьируя}
-\eqref{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}, (......)\footnote{%
-${\boldnabla \hspace{-0.08ex}
-= \hspace{-0.2ex} \boldnabla \dotp \hspace{-0.15ex} \boldnablacircled \initiallocationvector \hspace{-0.08ex}
-= \currentlocationvector^{i} \hspace{-0.1ex} \partial_{i} \hspace{-0.15ex} \dotp \initiallocationvector^j \hspace{-0.1ex} \partial_{\hspace{-0.1ex}j} \initiallocationvector \hspace{-0.1ex}
-\stackrel{?}{=} \currentlocationvector^{i} \hspace{-0.1ex} \partial_{i} \initiallocationvector \hspace{-0.1ex} \dotp \initiallocationvector^j \hspace{-0.1ex} \partial_{\hspace{-0.1ex}j} \hspace{-0.3ex}
-= \hspace{-0.2ex} \boldnabla \initiallocationvector \dotp \hspace{-0.15ex} \boldnablacircled \hspace{-0.1ex}
-= \hspace{-0.1ex} \bm{F}^{\hspace{.1ex}\expminusT} \hspace{-0.3ex} \dotp \hspace{-0.1ex} \boldnablacircled}$ \\
-%
-${\boldnablacircled \hspace{-0.1ex}
-= \hspace{-0.2ex} \boldnablacircled \dotp \hspace{-0.2ex} \boldnabla \currentlocationvector
-= \initiallocationvector^{i} \partial_{i} \hspace{-0.15ex} \dotp \hspace{-0.1ex} \currentlocationvector^{j} \hspace{-0.1ex} \partial_{\hspace{-0.1ex}j} \hspace{-0.1ex} \currentlocationvector
-\stackrel{?}{=} \initiallocationvector^{i} \partial_{i} \currentlocationvector \dotp \hspace{-0.25ex} \currentlocationvector^{j} \hspace{-0.1ex} \partial_{\hspace{-0.1ex}j} \hspace{-0.3ex}
-= \hspace{-0.3ex} \boldnablacircled \currentlocationvector \hspace{.1ex} \dotp \hspace{-0.15ex} \boldnabla \hspace{-0.25ex}
-= \hspace{-0.1ex} \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex} \dotp \hspace{-0.1ex} \boldnabla}$} \en{and}\ru{и}~(......), \en{we get}\ru{мы получаем}
-
-\nopagebreak\begin{equation}
-\label{variationsforcurrentconfiguration}
-\begin{array}{c}
-\mathcircabove{\rho} \hspace{.25ex} \variation{\hspace{-0.2ex}\massloadvector}
-+ \hspace{-0.1ex} \boldnablacircled \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
-= \zerovector
-\hspace{.1ex} , \:\,
-%
-\variation{\hspace{.1ex}\firstpiolakirchhoffstress} \hspace{-0.1ex}
-= \hspace{-0.2ex} \left( \hspace{.1ex} \scalebox{.88}{$ \displaystyle\frac{\partial^2 \hspace{.1ex} \potentialenergydensity}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.1ex}\bm{C}} \hspace{-0.15ex} \right) \hspace{-0.3ex} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.25ex}
-+ \hspace{.1ex}
-\displaystyle\frac{\partial \hspace{.1ex} \potentialenergydensity}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C}}} \dotp \variation{\bm{F}}^{\hspace{.1ex}\T}
-\hspace{-0.4ex} ,
-\\[1em]
-%
-\variation{\bm{F}}^{\hspace{.1ex}\T} \hspace{-0.5ex}
-= \variation{\hspace{.1ex} \boldnablacircled \currentlocationvector}
-= \hspace{-0.2ex} \boldnablacircled \hspace{.1ex} \variation{\currentlocationvector}
-= \hspace{-0.1ex} \bm{F}^{\hspace{.1ex}\T} \hspace{-0.25ex} \dotp \boldnabla \hspace{.1ex} \variation{\currentlocationvector} \hspace{.15ex} ,
-\:\,
-\variation{\bm{F}} \hspace{-0.2ex} = \variation{\hspace{.1ex} \boldnablacircled \currentlocationvector^{\T}} \hspace{-0.4ex}
-= \hspace{-0.2ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\hspace{.1ex}\T} \hspace{-0.25ex} \dotp \bm{F}
-\hspace{-0.1ex} ,
-\\[.5em]
-%
-\variation{\hspace{.1ex}\bm{C}} = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex} \dotp \hspace{.1ex} \infinimentpetitedeformationvariation \dotp \bm{F} ,
-\:\,
-\infinimentpetitedeformationvariation \equiv \insideinfinitesimalstrainvariation
-\hspace{.1ex} .
-\end{array}
-\end{equation}
-
-...
-
-\begin{equation*}\begin{array}{c}
-\eqref{areachange:nansonformula}
-\hspace{.4em} \Rightarrow \hspace{.4em}
-%
-\initialunitnormal \hspace{.1ex} do = J^{\hspace{.1ex}\expminusone} \currentunitnormal \hspace{.1ex} d\mathcal{O} \hspace{-0.1ex} \dotp \bm{F}
-\hspace{.4em} \Rightarrow \hspace{.4em}
-%
-\initialunitnormal \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} do
-= J^{\hspace{.12ex}\expminusone} \currentunitnormal \hspace{-0.1ex} \dotp \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} d\mathcal{O}
-\,\Rightarrow
-\\[.2em]
-%
-\Rightarrow\:
-\initialunitnormal \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} do
-= \currentunitnormal \dotp \varbivalent{\hspace{-0.2ex}\cauchystress} \hspace{.25ex} d\mathcal{O} ,
-\:\:
-\varbivalent{\hspace{-0.2ex}\cauchystress} \equiv J^{\hspace{.12ex}\expminusone} \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress}
-\end{array}\end{equation*}
-
-\begin{otherlanguage}{russian}
-
-\vspace{-0.2em}\noindent
---- введённый так \en{tensor}\ru{тензор}~${\varbivalent{\hspace{-0.2ex}\cauchystress}}$ связан с~вариацией~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$ как $\cauchystress$ связан с~$\firstpiolakirchhoffstress$ (${\cauchystress = \hspace{-0.1ex} J^{\hspace{.1ex}\expminusone} \bm{F} \dotp \hspace{.15ex} \firstpiolakirchhoffstress\hspace{.2ex}}$). Из~\eqref{variationsforcurrentconfiguration} и ...
-
-.....
-
-...
-корректируя
-коэффициенты
-линейной функции~${\varbivalent{\hspace{-0.2ex}\cauchystress}\hspace{.15ex}( \infinimentpetitedeformationvariation )}$ ...
-
-\end{otherlanguage}
 
 \en{\section{Internal constraints}}
 
