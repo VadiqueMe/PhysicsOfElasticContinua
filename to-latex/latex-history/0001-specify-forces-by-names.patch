@@ -1,0 +1,773 @@
+From 909a041661f0b124fc5e7cfc42767f9cc1a039bb Mon Sep 17 00:00:00 2001
+From: Vadique Myself <vadiquemyself@gmail.com>
+Date: Wed, 23 Dec 2020 02:17:08 +0300
+Subject: [PATCH 1/2] specify forces by names
+
+---
+ 3in1.pdf              | Bin 247490 -> 247490 bytes
+ Fbeam.tex             | 160 +++++++++++++++++-------------------------
+ beamfirst.tex         | 132 ++++++++++++++--------------------
+ commonforallbeams.tex |  22 ++++--
+ 4 files changed, 132 insertions(+), 182 deletions(-)
+
+diff --git a/3in1.pdf b/3in1.pdf
+index 4006269ef610515cec8871a8aa2a181e6216db4a..3b031f4d2ea0d64495b687538bffc548e7b6f0b4 100644
+GIT binary patch
+delta 115
+zcmX@q%YUeszoCV(g=q_O<^gtN14B~-6NBjm2bg7Gob8hjF#lk7G6zaonmbvVnprxV
+jxR{zd89Ny`xjLITSr`}_nj70G*q9Pfvi<B4=C6zZiDw`1
+
+delta 115
+zcmX@q%YUeszoCV(g=q_O<^gsiLqh{oW8>)s2bg7Gob8hjF#lk7GIlaHb9QkxH*~Xf
+kbau3KHg<6|G%_(VH#4&|FmpAtQ?M~5pk({mBg|hJ0iH7;Q~&?~
+
+diff --git a/Fbeam.tex b/Fbeam.tex
+index 7a208f1..0ebc5c2 100644
+--- a/Fbeam.tex
++++ b/Fbeam.tex
+@@ -145,9 +145,8 @@
+ 
+ 	\pgfmathsetmacro\xmax{\xsecond}
+ 	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+@@ -157,18 +156,16 @@
+ 	\drawtwistingoffsetlineat{\xfirst}{0}{0}
+ 	\drawtwistingoffsetlineat{\xsecond}{0}{0}
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{0}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -177,9 +174,8 @@
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xsecond}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{\xsecond}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -198,26 +194,23 @@
+ 	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+ 	\pgfmathsetmacro\znext{\zfrom + \zstep}
+ 	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+-		\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zhatch}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xsecond}{0}{\zhatch}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\drawepurelinesatpointalongz{\xsecond}{0}{\zhatch}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xsecond}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongz{\xsecond}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zsecond}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xsecond}{0}{\zsecond}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongz{\xsecond}{0}{\zsecond}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -232,9 +225,8 @@
+ 
+ 	\pgfmathsetmacro\xmax{\xfirst}
+ 	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{secondforcepoint}{secondforcevector}
+ 
+ 		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+@@ -243,18 +235,16 @@
+ 	\drawtwistingoffsetlineat{0}{0}{0}
+ 	\drawtwistingoffsetlineat{\xfirst}{0}{0}
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 	\drawepurelinesatpointalongx{0}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -270,26 +260,23 @@
+ 	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+ 	\pgfmathsetmacro\znext{\zfrom + \zstep}
+ 	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+-		\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zhatch}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xfirst}{0}{\zhatch}%
++			{secondforcepoint}{secondforcevector}
+ 
+ 		\drawepurelinesatpointalongz{\xfirst}{0}{\zhatch}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 	\drawepurelinesatpointalongz{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zfirst}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{\zfirst}%
++		{secondforcepoint}{secondforcevector}
+ 	\drawepurelinesatpointalongz{\xfirst}{0}{\zfirst}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -309,17 +296,15 @@
+ 	\pgfmathsetmacro\xnext{\xmin + \hatchstep}
+ 	\pgfmathsetmacro\xmax{\xfirst}
+ 	\foreach \xhatch in { \xmin, \xnext, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\pgfmathsetmacro\firstmomentx{\momentx}
+ 		\pgfmathsetmacro\firstmomenty{\momenty}
+ 		\pgfmathsetmacro\firstmomentz{\momentz}
+ 
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{secondforcepoint}{secondforcevector}
+ 
+ 		\pgfmathsetmacro\secondmomentx{\momentx}
+ 		\pgfmathsetmacro\secondmomenty{\momenty}
+@@ -333,17 +318,15 @@
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\pgfmathsetmacro\firstmomentx{\momentx}
+ 	\pgfmathsetmacro\firstmomenty{\momenty}
+ 	\pgfmathsetmacro\firstmomentz{\momentz}
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 
+ 	\pgfmathsetmacro\momentx{\momentx + \firstmomentx}
+ 	\pgfmathsetmacro\momenty{\momenty + \firstmomenty}
+@@ -360,17 +343,15 @@
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\pgfmathsetmacro\firstmomentx{\momentx}
+ 	\pgfmathsetmacro\firstmomenty{\momenty}
+ 	\pgfmathsetmacro\firstmomentz{\momentz}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 
+ 	\pgfmathsetmacro\momentx{\momentx + \firstmomentx}
+ 	\pgfmathsetmacro\momenty{\momenty + \firstmomenty}
+@@ -395,9 +376,8 @@
+ 	\pgfmathsetmacro\xnext{\xmin + \hatchstep}
+ 	\pgfmathsetmacro\xmax{\xsecond}
+ 	\foreach \xhatch in { \xmin, \xnext, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\pgfmathsetmacro\firstmomentx{\momentx}
+ 		\pgfmathsetmacro\firstmomenty{\momenty}
+@@ -418,9 +398,8 @@
+ 	\drawtwistingoffsetlineat{\xsecond}{0}{0}
+ 	\drawtwistingoffsetlineat{\xfirst}{0}{0}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+@@ -428,9 +407,8 @@
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xsecond}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\drawepurelinesatpointalongx{\xsecond}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+@@ -456,9 +434,8 @@
+ 		\pgfmathsetmacro\firstmomenty{0}
+ 		\pgfmathsetmacro\firstmomentz{0}
+ 
+-		\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zhatch}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xfirst}{0}{\zhatch}%
++			{secondforcepoint}{secondforcevector}
+ 
+ 		\pgfmathsetmacro\secondmomentx{\momentx}
+ 		\pgfmathsetmacro\secondmomenty{\momenty}
+@@ -472,9 +449,8 @@
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 
+ 	\drawepurelinesatpointalongz{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+@@ -482,9 +458,8 @@
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{\zfirst}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{\zfirst}%
++		{secondforcepoint}{secondforcevector}
+ 
+ 	\drawepurelinesatpointalongz{\xfirst}{0}{\zfirst}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+@@ -499,9 +474,8 @@
+ 	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+ 	\pgfmathsetmacro\znext{\zfrom + \zstep}
+ 	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+-		\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zhatch}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xsecond}{0}{\zhatch}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\pgfmathsetmacro\firstmomentx{\momentx}
+ 		\pgfmathsetmacro\firstmomenty{\momenty}
+@@ -519,9 +493,8 @@
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xsecond}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\drawepurelinesatpointalongz{\xsecond}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+@@ -529,9 +502,8 @@
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xsecond}{0}{\zsecond}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xsecond}{0}{\zsecond}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\drawepurelinesatpointalongz{\xsecond}{0}{\zsecond}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+@@ -547,26 +519,23 @@
+ 
+ 	\pgfmathsetmacro\xmax{\xsecond}
+ 	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+-			{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{thirdforcepoint}{thirdforcevector}
+ 
+ 		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-		{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+-		{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{thirdforcepoint}{thirdforcevector}
+ 	\drawepurelinesatpointalongx{0}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+-		{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{thirdforcepoint}{thirdforcevector}
+ 	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -576,9 +545,8 @@
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xsecond}{0}{0}%
+-		{\thirdforcepointx}{\thirdforcepointy}{\thirdforcepointz}%
+-		{\thirdforcevectorx}{\thirdforcevectory}{\thirdforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xsecond}{0}{0}%
++		{thirdforcepoint}{thirdforcevector}
+ 	\drawepurelinesatpointalongx{\xsecond}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+diff --git a/beamfirst.tex b/beamfirst.tex
+index 8d77129..15bae52 100644
+--- a/beamfirst.tex
++++ b/beamfirst.tex
+@@ -148,17 +148,15 @@
+ 
+ 	\pgfmathsetmacro\xmax{\xfirst}
+ 	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -178,9 +176,8 @@ F \hspace{-0.1ex} \ell
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{0}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -204,8 +201,7 @@ F \hspace{-0.1ex} \ell
+ 	% along y for second part
+ 
+ 	\drawepuresofmomentsalongybetween{\ysecond}{0}{\xfirst}{0}%
+-		{{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}}%
+-		{{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}}%
++		{firstforcevector}{firstforcepoint}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}
+ 
+ 	% along x for third part
+@@ -215,26 +211,23 @@ F \hspace{-0.1ex} \ell
+ 	\pgfmathsetmacro\xstep{\hatchstep * ( \xto - \xfrom ) / abs( \xto - \xfrom )}
+ 	\pgfmathsetmacro\xnext{\xfrom + \xstep}
+ 	\foreach \xhatch in { \xfrom, \xnext, ..., \xto } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{\ysecond}{0}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{\ysecond}{0}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\drawepurelinesatpointalongx{\xhatch}{\ysecond}{0}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{\ysecond}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{\ysecond}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{\xfirst}{\ysecond}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{\xthird}{\ysecond}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -249,26 +242,23 @@ F \hspace{-0.1ex} \ell
+ 	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+ 	\pgfmathsetmacro\znext{\zfrom + \zstep}
+ 	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+-		\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{\zhatch}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{\zhatch}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\drawepurelinesatpointalongz{\xthird}{\ysecond}{\zhatch}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongz{\xthird}{\ysecond}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{\zfourth}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{\zfourth}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongz{\xthird}{\ysecond}{\zfourth}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -283,9 +273,8 @@ F \hspace{-0.1ex} \ell
+ 
+ 	\pgfmathsetmacro\xmax{\xfirst}
+ 	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{secondforcepoint}{secondforcevector}
+ 
+ 		\drawepurelinesatpointalongx{\xhatch}{0}{0}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+@@ -294,18 +283,16 @@ F \hspace{-0.1ex} \ell
+ 	\drawtwistingoffsetlineat{0}{0}{0}
+ 	\drawtwistingoffsetlineat{\xfirst}{0}{0}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 	\drawepurelinesatpointalongx{\xfirst}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-		{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-		{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 	\drawepurelinesatpointalongx{0}{0}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -331,8 +318,7 @@ F \hspace{-0.1ex} \ell
+ 	% along y for second part
+ 
+ 	\drawepuresofmomentsalongybetween{\ysecond}{0}{\xfirst}{0}%
+-		{{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}}%
+-		{{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}}%
++		{secondforcevector}{secondforcepoint}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}
+ }
+ 
+@@ -351,17 +337,15 @@ F \hspace{-0.1ex} \ell
+ 
+ 	\pgfmathsetmacro\xmax{\xfirst}
+ 	\foreach \xhatch in { 0, \hatchstep, ..., \xmax } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\pgfmathsetmacro\firstmomentx{\momentx}
+ 		\pgfmathsetmacro\firstmomenty{\momenty}
+ 		\pgfmathsetmacro\firstmomentz{\momentz}
+ 
+-		\calculateinternalmomentatpointfromforce{\xhatch}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{0}{0}%
++			{secondforcepoint}{secondforcevector}
+ 
+ 		\pgfmathsetmacro\secondmomentx{\momentx}
+ 		\pgfmathsetmacro\secondmomenty{\momenty}
+@@ -375,17 +359,15 @@ F \hspace{-0.1ex} \ell
+ 			{#2}{#3}{#1}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\pgfmathsetmacro\firstmomentx{\momentx}
+ 	\pgfmathsetmacro\firstmomenty{\momenty}
+ 	\pgfmathsetmacro\firstmomentz{\momentz}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 
+ 	\pgfmathsetmacro\momentx{\momentx + \firstmomentx}
+ 	\pgfmathsetmacro\momenty{\momenty + \firstmomenty}
+@@ -397,17 +379,15 @@ F \hspace{-0.1ex} \ell
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{firstforcepoint}{firstforcevector}
+ 
+ 	\pgfmathsetmacro\firstmomentx{\momentx}
+ 	\pgfmathsetmacro\firstmomenty{\momenty}
+ 	\pgfmathsetmacro\firstmomentz{\momentz}
+ 
+-	\calculateinternalmomentatpointfromforce{0}{0}{0}%
+-			{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}%
+-			{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}
++	\calculateinternalmomentatpointfromforcename{0}{0}{0}%
++		{secondforcepoint}{secondforcevector}
+ 
+ 	\pgfmathsetmacro\momentx{\momentx + \firstmomentx}
+ 	\pgfmathsetmacro\momenty{\momenty + \firstmomenty}
+@@ -474,8 +454,7 @@ F \hspace{-0.1ex} \ell
+ 	\def\epurecolor{#2}
+ 
+ 	\drawepuresofmomentsalongybetween{\ysecond}{0}{\xfirst}{0}%
+-		{{\secondforcevectorx}{\secondforcevectory}{\secondforcevectorz}}%
+-		{{\secondforcepointx}{\secondforcepointy}{\secondforcepointz}}%
++		{secondforcevector}{secondforcepoint}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}
+ 
+ 	\def\epurecolor{#1}
+@@ -486,8 +465,7 @@ F \hspace{-0.1ex} \ell
+ 	\pgfmathsetmacro\twistingmomentmultiplierz{-\twistingmomentmultiplierz}
+ 
+ 	\drawepuresofmomentsalongybetween{\ysecond}{0}{\xfirst}{0}%
+-		{{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}}%
+-		{{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}}%
++		{firstforcevector}{firstforcepoint}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}
+ 
+ 	% along x for third part
+@@ -499,26 +477,23 @@ F \hspace{-0.1ex} \ell
+ 	\pgfmathsetmacro\xstep{\hatchstep * ( \xto - \xfrom ) / abs( \xto - \xfrom )}
+ 	\pgfmathsetmacro\xnext{\xfrom + \xstep}
+ 	\foreach \xhatch in { \xfrom, \xnext, ..., \xto } {
+-		\calculateinternalmomentatpointfromforce{\xhatch}{\ysecond}{0}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xhatch}{\ysecond}{0}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\drawepurelinesatpointalongx{\xhatch}{\ysecond}{0}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xfirst}{\ysecond}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xfirst}{\ysecond}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{\xfirst}{\ysecond}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongx{\xthird}{\ysecond}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+@@ -535,26 +510,23 @@ F \hspace{-0.1ex} \ell
+ 	\pgfmathsetmacro\zstep{\hatchstep * ( \zto - \zfrom ) / abs( \zto - \zfrom )}
+ 	\pgfmathsetmacro\znext{\zfrom + \zstep}
+ 	\foreach \zhatch in { \zfrom, \znext, ..., \zto } {
+-		\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{\zhatch}%
+-			{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-			{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++		\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{\zhatch}%
++			{firstforcepoint}{firstforcevector}
+ 
+ 		\drawepurelinesatpointalongz{\xthird}{\ysecond}{\zhatch}%
+ 			{\epurecolor}{\epurecolor}{\epurecolor}
+ 	}
+ 
+-	\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{0}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{0}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongz{\xthird}{\ysecond}{0}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+ 
+ 	\saveepureendpoints
+ 
+-	\calculateinternalmomentatpointfromforce{\xthird}{\ysecond}{\zfourth}%
+-		{\firstforcepointx}{\firstforcepointy}{\firstforcepointz}%
+-		{\firstforcevectorx}{\firstforcevectory}{\firstforcevectorz}
++	\calculateinternalmomentatpointfromforcename{\xthird}{\ysecond}{\zfourth}%
++		{firstforcepoint}{firstforcevector}
+ 	\drawepurelinesatpointalongz{\xthird}{\ysecond}{\zfourth}%
+ 		{\epurecolor}{\epurecolor}{\epurecolor}%
+ 		[thick]
+diff --git a/commonforallbeams.tex b/commonforallbeams.tex
+index ce23f6e..0efb89e 100644
+--- a/commonforallbeams.tex
++++ b/commonforallbeams.tex
+@@ -143,6 +143,16 @@
+ \def\twistingmomentmultipliery{0}
+ \def\twistingmomentmultiplierz{1}
+ 
++% #1,#2,#3 : rx,ry,rz of a point in question
++% #4 : name of force point
++% #5 : name of force vector
++% places result in \momentx, \momenty, \momentz
++\newcommand\calculateinternalmomentatpointfromforcename[5]{
++	\calculateinternalmomentatpointfromforce{#1}{#2}{#3}%
++		{\expandafter\csname\string#4x\endcsname}{\expandafter\csname\string#4y\endcsname}{\expandafter\csname\string#4z\endcsname}%
++		{\expandafter\csname\string#5x\endcsname}{\expandafter\csname\string#5y\endcsname}{\expandafter\csname\string#5z\endcsname}
++}
++
+ % #1,#2,#3 = x,y,z
+ % #4 = color
+ \newcommandx*\drawtwistingoffsetlineat[4][4=\epurecolor]{
+@@ -469,8 +479,8 @@
+ 
+ % #1 = begin y, #2 = end y
+ % #3, #4 = x, z
+-% #5 = force vector as {fx}{fy}{fz}
+-% #6 = force point as {x}{y}{z}
++% #5 = force vector name
++% #6 = force point name
+ % #7, #8, #9 = colorx, colory, colorz
+ \newcommand\drawepuresofmomentsalongybetween[9]{
+ 	\pgfmathsetmacro\yfrom{#1}
+@@ -483,12 +493,12 @@
+ 		\resetmaxmoments{\maxmomentx}{\maxmomenty}{\maxmomentz}
+ 
+ 		\pgfmathsetmacro\ybefore{\yline - \ystep}
+-		\calculateinternalmomentatpointfromforce{#3}{\ybefore}{#4}#6#5
++		\calculateinternalmomentatpointfromforcename{#3}{\ybefore}{#4}{#6}{#5}
+ 		\drawepurelinesatpointalongy{#3}{\ybefore}{#4}{#7}{#8}{#9}
+ 		\updatemaxmoments{\maxmomentx}{\maxmomenty}{\maxmomentz}
+ 		\saveepureendpoints
+ 
+-		\calculateinternalmomentatpointfromforce{#3}{\yline}{#4}#6#5
++		\calculateinternalmomentatpointfromforcename{#3}{\yline}{#4}{#6}{#5}
+ 		\drawepurelinesatpointalongy{#3}{\yline}{#4}{#7}{#8}{#9}
+ 		\updatemaxmoments{\maxmomentx}{\maxmomenty}{\maxmomentz}
+ 
+@@ -504,7 +514,7 @@
+ 
+ 	\pgfmathsetmacro\spiralishere{0} % 0: false, 1: true
+ 
+-	\calculateinternalmomentatpointfromforce{#3}{\yfrom}{#4}#6#5
++	\calculateinternalmomentatpointfromforcename{#3}{\yfrom}{#4}{#6}{#5}
+ 	\drawepurelinesatpointalongy{#3}{\yfrom}{#4}{#7}{#8}{#9}[thick]
+ 
+ 	\pgfmathparse{(abs(\momenty) > 0) ? 1 : 0}%
+@@ -513,7 +523,7 @@
+ 		\pgfmathsetmacro\spiralishere{1}
+ 	\fi
+ 
+-	\calculateinternalmomentatpointfromforce{#3}{\yto}{#4}#6#5
++	\calculateinternalmomentatpointfromforcename{#3}{\yto}{#4}{#6}{#5}
+ 	\drawepurelinesatpointalongy{#3}{\yto}{#4}{#7}{#8}{#9}[thick]
+ 
+ 	\pgfmathparse{(abs(\momenty) > 0) ? 1 : 0}%
+-- 
+2.45.2
+

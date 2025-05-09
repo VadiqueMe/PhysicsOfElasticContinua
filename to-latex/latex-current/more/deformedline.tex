@@ -1,0 +1,120 @@
+\documentclass[tikz, border=10mm]{standalone}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\renewcommand\thepage{\oldstylenums{\arabic{page}}}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{patterns}
+
+\usepackage[T2A, T1]{fontenc}
+\usepackage[english, russian]{babel}
+
+\def\horizontalindent{4ex}
+\setlength{\parindent}{\horizontalindent} % offset of the first line
+\usepackage{indentfirst}
+
+\usepackage{setspace}
+\setstretch{1.3} % spacing between lines
+
+\usepackage{tempora}
+\usepackage{upgreek}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{wasysym}
+
+\usepackage{xargs}
+\usepackage{xifthen}
+
+\newcommand{\lquote}[0]{«} % {<<}
+\newcommand{\rquote}[0]{»} % {>>}
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
+\usepackage{verbatim}
+
+\begin{document}
+
+\input{commonforallbeams.tex}
+
+\newlength{\savedparindent}
+\setlength{\savedparindent}{\parindent}
+
+\def\forcearrowscale{4}
+
+\begin{tikzpicture}[ scale = \reflength ]
+
+\def\valueofell{1}
+\def\valueofq{1}
+
+\def\beamcolor{gray!66!black}
+\def\dotscolor{black}
+
+\draw [ beam line, color=\beamcolor ]
+	( 0, 0 ) -- ++( -3*\valueofell, 0 ) ;
+
+\newcommand\vfirstpart[1]{%
+( (21 / 48) * \valueofq * \valueofell * \valueofell * \valueofell * \valueofell )%
+- ( (13 / 48) * \valueofq * \valueofell * \valueofell * \valueofell * (#1) )%
+- ( (1 / 6) * \valueofq * \valueofell * (#1) * (#1) * (#1) )%
+}
+
+\newcommand\vsecondpart[1]{%
+\vfirstpart{#1}%
++ ( \valueofq * \valueofell * \valueofell * (#1 - \valueofell) * (#1 - \valueofell) )%
++ ( (1 / 8) * \valueofq * \valueofell * (#1 - \valueofell) * (#1 - \valueofell) * (#1 - \valueofell) )%
+}
+
+\newcommand\vthirdpart[1]{%
+\vsecondpart{#1}%
+- ( (1 / 6) * \valueofq * \valueofell * (#1 - 2*\valueofell) * (#1 - 2*\valueofell) * (#1 - 2*\valueofell) )%
++ ( (1 / 24) * \valueofq * (#1 - 2*\valueofell) * (#1 - 2*\valueofell) * (#1 - 2*\valueofell) * (#1 - 2*\valueofell) )%
+}
+
+\def\numsamples{100}
+
+\pgfmathsetmacro\zfrom{0}
+\pgfmathsetmacro\zto{-\valueofell}
+\pgfmathsetmacro\zstep{(\zto - \zfrom) / \numsamples}
+\pgfmathsetmacro\znext{\zfrom + \zstep}
+
+\foreach \z in { \zfrom, \znext, ..., \zto } {
+	\pgfmathsetmacro\resv{\vfirstpart{-\z}}
+	\draw [ beam line, color=\dotscolor, fill=\dotscolor ] ( \z, \resv ) circle ( .05mm ) ;
+}
+
+%%\draw [ beam line, color=\dotscolor, fill=\dotscolor ]
+%%	plot [ domain=\zfrom:\zto, variable=\z, samples=\numsamples ]
+%%	{ \z, {( \vfirstpart{-\z} ) * \valueofq} } ;
+
+\pgfmathsetmacro\zfrom{-\valueofell}
+\pgfmathsetmacro\zto{-2*\valueofell}
+\pgfmathsetmacro\zstep{(\zto - \zfrom) / \numsamples}
+\pgfmathsetmacro\znext{\zfrom + \zstep}
+
+\foreach \z in { \zfrom, \znext, ..., \zto } {
+	\pgfmathsetmacro\resv{\vsecondpart{-\z}}
+	\draw [ beam line, color=\dotscolor, fill=\dotscolor ] ( \z, \resv ) circle ( .05pt ) ;
+}
+
+\pgfmathsetmacro\zfrom{-2*\valueofell}
+\pgfmathsetmacro\zto{-3*\valueofell}
+\pgfmathsetmacro\zstep{(\zto - \zfrom) / \numsamples}
+\pgfmathsetmacro\znext{\zfrom + \zstep}
+
+\foreach \z in { \zfrom, \znext, ..., \zto } {
+	\pgfmathsetmacro\resv{\vthirdpart{-\z}}
+	\draw [ beam line, color=\dotscolor, fill=\dotscolor ] ( \z, \resv ) circle ( .05pt ) ;
+}
+
+\end{tikzpicture}
+
+\end{document}
