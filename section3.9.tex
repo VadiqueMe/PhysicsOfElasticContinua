@@ -54,9 +54,10 @@ ${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystre
 \vspace{-0.4em}\noindent
 \en{and the~randomness of}\ru{и~случайность}~${\mathcal{V}\hspace{-0.2ex}}$,
 \en{here comes}\ru{получается}
-\en{the~local differential version of}\ru{локальную дифференциальную версию}~\eqref{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
+\en{the~local differential version of}\ru{локальная дифференциальная версия}~\eqref{princlipleofvirtualwork.integral:nonlinearmomentlesscontinuum}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
 \Bigl( \hspace{-0.2ex} \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \massdensity \hspace{-0.1ex} \massloadvector \Bigr) \hspace{-0.4ex} \dotp \variation{\currentlocationvector}
 + \cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\T} \hspace{-0.33ex}
 + \hspace{.1ex} \variation{\internalwork}
@@ -76,14 +77,12 @@ ${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystre
 %\label{princlipleofvirtualwork.worknullifies:nonlinearmomentlesscontinuum}
 \begin{array}{c}
 \variation{\currentlocationvector} = \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} + \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector
-%%\hspace{.1ex} , \:
-%%\constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant
-%%\hspace{.1ex} , \:
-%%\constvarvector{o} = \boldconstant
+%
 \hspace{.66ex}\Rightarrow\hspace{.4ex}
+%
 \variation{\internalwork} \hspace{-0.2ex} = 0
 \hspace{.1ex} ,
-\\[.2em]
+\\[.4em]
 %
 \bigl( \hspace{.1ex} \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{.16ex} \bigr)
 \hspace{-0.25ex} \dotp \hspace{-0.25ex}
@@ -94,7 +93,7 @@ ${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystre
 \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} +
 \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector \hspace{.2ex} \bigr) \hspace{-0.25ex}
 = 0 \hspace{.1ex} ,
-\\[.2em]
+\\[.4em]
 %
 \constvarvector{\hspace{-0.1ex}\bm{\rho}} = \boldconstant
 \hspace{.4ex} \Rightarrow \hspace{.2ex}
@@ -103,7 +102,7 @@ ${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystre
 \constvarvector{o} = \boldconstant
 \hspace{.4ex} \Rightarrow \hspace{.2ex}
 \boldnabla \hspace{.1ex} \constvarvector{o} = \hspace{-0.12ex} \zerobivalent \hspace{.1ex} ,
-\\[.2em]
+\\[.4em]
 %
 \boldnabla \hspace{.1ex} \bigl(
 \constvarvector{\hspace{-0.1ex}\bm{\rho}} \hspace{.1ex} +
@@ -118,7 +117,7 @@ ${ \currentlocationvector^{i} \hspace{-0.25ex} \dotp \hspace{-0.1ex} \cauchystre
 = - \boldnabla \currentlocationvector \hspace{-0.1ex} \times \hspace{-0.2ex} \constvarvector{o}
 = - \hspace{.1ex} \UnitDyad \hspace{-0.16ex} \times \hspace{-0.2ex} \constvarvector{o}
 %%= - \hspace{.1ex} \constvarvector{o} \hspace{-0.3ex} \times \hspace{-0.33ex} \UnitDyad
-\\[.2em]
+\\[.4em]
 %
 \cdots
 %%\hspace{.1ex} .
@@ -132,15 +131,21 @@ ${\constvarvector{o} \hspace{-0.1ex} = \zerovector}$
 ${\Rightarrow}$~${\hspace{-0.1ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}
 = \hspace{-0.2ex} \boldnabla \hspace{.1ex} \constvarvector{\hspace{-0.1ex}\bm{\rho}}
 = \hspace{-0.12ex} \zerobivalent}$,
-\en{it turns into the~balance of~forces~(of~momentum)}\ru{оно превращается в~баланс сил~(импульса)}
+\en{it turns into}\ru{оно превращается в}
+\en{the~balance of~forces}\ru{баланс сил}~(\en{of~momentum}\ru{импульса})
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{thebalanceofmomentum.nonlinear.withoutmultipliers}
 \boldnabla \dotp \cauchystress \hspace{.1ex} + \hspace{-0.1ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{-0.1ex} = \zerovector
 \hspace{.1ex} .
-\end{equation*}
+\end{equation}
 
 \vspace{-0.1em}
-\en{If}\ru{Если} ${\variation{\currentlocationvector} = \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector}$ (\en{just rotation}\ru{лишь поворот}) \en{with}\ru{с}~${\constvarvector{o} \hspace{-0.1ex} = \boldconstant}$, \en{then}\ru{то}
+\en{If}\ru{Если}
+${\variation{\currentlocationvector} = \constvarvector{o} \hspace{-0.33ex} \times \hspace{-0.33ex} \currentlocationvector}$
+(\en{just a~rotation}\ru{лишь поворот})
+\en{with}\ru{с}~${\constvarvector{o} \hspace{-0.1ex} = \boldconstant}$,
+\en{then}\ru{то}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \begin{array}{r@{\hspace{.8ex}}l}
@@ -162,7 +167,7 @@ ${\Rightarrow}$~${\hspace{-0.1ex} \boldnabla \hspace{.1ex} \variation{\currentlo
 \end{equation*}
 
 \noindent
-With
+\en{With}\ru{С}
 
 \nopagebreak\vspace{-0.8em}\begin{equation*}
 \begin{array}{c}
@@ -178,20 +183,84 @@ With
 \end{array}
 \end{equation*}
 
-...
+....
 
-\en{In an~elastic continuum}\ru{В~упругой среде}\en{,} \en{the~internal forces}\ru{внутренние силы}
+\en{In an~elastic continuum}\ru{В~упругой среде}\en{,}
+\en{the~internal forces}\ru{внутренние силы}
 \en{are potential}\ru{потенциальны}
 
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\variation{\internalwork} = - \massdensity \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}}
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{internalforcesarepotential.elastic:nonlinearmomentless}
+\variation{\internalwork} = \hspace{.1ex} - \hspace{.2ex} \massdensity \hspace{.2ex} \variation{\potentialenergypermassunit}
 %%\hspace{.1ex} .
+\end{equation}
+
+....
+
+
+\en{Variational equation}\ru{Вариационное уравнение}~\eqref{princlipleofvirtualwork.local:nonlinearmomentlesscontinuum}
+\en{with }\ru{с~}%
+\en{the~balance}\ru{балансом}~%
+\eqref{thebalanceofmomentum.nonlinear.withoutmultipliers}
+\en{of~linear momentum}\ru{импульса}
+(\en{of~forces}\ru{сил})
+\en{and }\ru{и~}%
+\en{the~balance}\ru{балансом}
+\en{of~angular momentum}\ru{момента импульса}
+${\cauchystress_{\hspace{-0.1ex}\Xcompanion} \hspace{-0.3ex} = \hspace{-0.1ex} 0}$
+${\hspace{.3ex}\Leftrightarrow}$
+${\cauchystress^{\hspace{.16ex}\T} \hspace{-0.5ex} = \hspace{-0.2ex} \cauchystress = \hspace{-0.2ex} \cauchystress^{\hspace{.22ex}\mathsf{S}}}$
+\en{for}\ru{для}
+\en{an~elastic}\ru{упругого}~\eqref{internalforcesarepotential.elastic:nonlinearmomentless}
+\en{continuum}\ru{\rucontinuum{}а}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{variationalequation.local.forelastic:nonlinearmomentless}
+\cauchystress \dotdotp \hspace{-0.2ex} \insideinfinitesimalstrainvariation
+= \hspace{-0.1ex} - \hspace{.2ex} \variation{\internalwork} \hspace{-0.2ex}
+= \massdensity \hspace{.2ex} \variation{\potentialenergypermassunit}
+\hspace{.2ex} .
+\end{equation}
+
+\vspace{-0.4em}
+\en{What}\ru{Как}
+\ru{выглядит }\en{the~potential energy}\ru{потенциальная энергия}~${\potentialenergypermassunit}$
+\en{per mass unit}\ru{на~единицу массы}\en{ looks like}\en{ is}\ru{\:---}
+\en{yet unknown}\ru{пока неизвестно},
+\en{but it’s obvious that}\ru{но очевидно, что}
+${\potentialenergypermassunit}$
+\en{is determined}\ru{определяется}
+\en{by~deformation}\ru{деформацией}.
+%
+\en{The~potential energy}\ru{Потенциальная энергия}
+\en{per unit volume}\ru{на~единицу объёма}~${\initialpotentialenergydensity}$
+\en{in the~undeformed configuration}\ru{в~недеформированной конфигурации}
+\en{can be}\ru{может быть}
+\en{presented}\ru{представлена}
+\en{as}\ru{как}
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{elasticpotentialenergydensityofundeformed:nonlinearmomentless}
+\initialpotentialenergydensity \equiv \initialmassdensity \hspace{.4ex} \potentialenergypermassunit
+\hspace{.7ex} \Rightarrow \hspace{.5ex}
+\variation{\initialpotentialenergydensity} = \initialmassdensity \hspace{.25ex} \variation{\potentialenergypermassunit}
+\hspace{.1ex} .
+\end{equation}
+
+\vspace{-0.4em}\noindent
+\en{With}\ru{С}~\en{the~balance of~mass}\ru{балансом массы}
+${\massdensity \hspace{.2ex} \Jacobian \hspace{-0.1ex} = \initialmassdensity
+\hspace{.5ex} \Leftrightarrow \hspace{.2ex}
+\massdensity = \hspace{-0.1ex} \inverseJacobian \initialmassdensity}$
+(${\Jacobian \hspace{-0.1ex} \equiv \determinant \bm{F}\hspace{-0.12ex}}$\en{ is}\ru{\:---}
+\en{the }Jacobian,
+\en{determinant}\ru{определитель}
+\en{of the motion gradient}\ru{градиента движения})
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\massdensity \hspace{.2ex} \variation{\potentialenergypermassunit} = \hspace{-0.1ex} \inverseJacobian \hspace{.1ex} \variation{\initialpotentialenergydensity}
+\hspace{.1ex} .
 \end{equation*}
-
-
-...
-
-
 
 
 %----------
@@ -225,44 +294,11 @@ c~english на~русский
 %----------
 
 
-....
-
-
-\begin{equation}
-\cauchystress \dotdotp \hspace{-0.12ex} \boldnabla \hspace{.1ex} \variation{\currentlocationvector}^{\mathsf{S}} \hspace{-0.25ex}
-= \hspace{-0.2ex} - \hspace{.2ex} \variation{\internalwork}
-= \massdensity \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}}
-\end{equation}
-
-...
-
 \begin{otherlanguage}{russian}
-
-Вид потенциала ${\widetilde{\potentialenergydensity}}$ \en{per mass unit}\ru{на~единицу \hbox{массы}} пока неизвестен, но очевидно что ${\widetilde{\potentialenergydensity}}$ определяется деформацией.
-
-\en{With}\ru{С}~\en{the~balance of~mass}\ru{балансом массы}
-${\massdensity \hspace{.2ex} J \hspace{-0.1ex} = \initialmassdensity \hspace{.5ex} \Leftrightarrow \hspace{.1ex} \massdensity = \hspace{-0.1ex} J^{\expminusone} \initialmassdensity}$
-(${J \hspace{-0.1ex} \equiv \determinant \bm{F}\hspace{-0.12ex}}$\en{ is}\ru{\:---} \en{the }Jacobian, \en{determinant of the motion gradient}\ru{определитель градиента движения}),
-потенциал на~единицу объёма в~недеформированной конфигурации~$\smash{\mathcircabove{\potentialenergydensity}}$ имеет вид
-
-\nopagebreak\vspace{-0.2em}\begin{equation}
-\begin{array}{c}
-\mathcircabove{\potentialenergydensity} \equiv \initialmassdensity \hspace{.4ex} \widetilde{\potentialenergydensity}
-\hspace{.4ex} \Rightarrow \hspace{.2ex}
-\variation{\mathcircabove{\potentialenergydensity}} = \initialmassdensity \hspace{.25ex} \variation{\widetilde{\potentialenergydensity}}
-\hspace{.1ex} ,
-\\[.1em]
-%
-\massdensity \hspace{.2ex} \variation{\widetilde{\potentialenergydensity}} = \hspace{-0.1ex} J^{\expminusone} \hspace{.1ex} \variation{\mathcircabove{\potentialenergydensity}}
-\hspace{.1ex} .
-\end{array}
-\end{equation}
 
 \vspace{-0.25em}
 Полным аналогом~(...) является равенство
 
 ...
-
-
 
 \end{otherlanguage}

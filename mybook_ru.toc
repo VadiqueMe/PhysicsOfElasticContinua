@@ -107,8 +107,6 @@
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {12}Варьирование текущей конфигурации}{125}{section.3.12}%
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {13}Внутренние связи}{125}{section.3.13}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 

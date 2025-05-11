@@ -195,6 +195,9 @@
 \newcommand\varvector[1]{\boldvari@tion{#1}{teal}}
 \newcommand\constvarvector[1]{\boldvari@tion{#1}{green!50!black}}
 \newcommand\varbivalent[1]{\boldvari@tion{#1}{cyan!66!black}}
+\newcommand\boldvari@tionwithcomplexity[3]{\ensuremath\mathcolor{#3}{^{#2}\hspace{-0.1ex}\bm{\updelta}\hspace{-0.1ex}\bm{\mathrm{#1}}}}
+\newcommand\varbivalentwithcomplexity[1]{\boldvari@tionwithcomplexity{#1}{2}{cyan!66!black}}
+\newcommand\vartetravalent[1]{\boldvari@tionwithcomplexity{#1}{4}{teal!66!black}}
 \makeatother
 
 \makeatletter
@@ -397,6 +400,10 @@
 \newcommand\kineticenergyinmechanics{\mathrm{K}\hspace{-0.12ex}}
 
 \newcommand\potentialenergydensity{\Uppi}
+%%\newcommand\initialpotentialenergydensity{\uppi}
+\newcommand\initialpotentialenergydensity{\smash{\hspace{-0.25ex}\mathcircabove{\hspace{.25ex}\potentialenergydensity}}}
+\newcommand\potentialenergypermassunit{\smash{\widetilde{\potentialenergydensity}}}
+
 \newcommand\kineticenergydensity{\mathrm{K}\hspace{-0.12ex}}
 
 \newcommand\complementaryenergydensity{\rotatebox[origin=c]{180}{$\Uppi$}} %% previously \widehat{\potentialenergydensity}
@@ -521,6 +528,8 @@
 \newcommand\cauchystress{\mathboldtau}
 \newcommand\cauchystresscomponents[1]{\mathtau_{#1}}
 
+\newcommand\variedcauchystress{\varbivalent{\hspace{-0.2ex}\cauchystress}}
+
 \newcommand\tractionvector[1]{{\bm{t}{\raisebox{-0.1em}{$\scriptstyle (#1)$}}\hspace{-0.1ex}}}
 \newcommand\tractionvectoritself{\bm{t}}
 
@@ -549,6 +558,9 @@
 
 \newcommand\massdensity{\rho}
 \newcommand\initialmassdensity{\mathcircabove{\rho}}
+
+\newcommand\Jacobian{J}
+\newcommand\inverseJacobian{J^{\hspace{.1ex}\expminusone}}
 
 \newcommand\volumeloadvector{\textbf{\textsl{g}}}
 \newcommand\massloadvector{\bm{f}}

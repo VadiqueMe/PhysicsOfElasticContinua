@@ -727,7 +727,8 @@ w_1 w_2 \hspace{.15ex} w_3
 \hspace{.1ex} , \dots
 \end{equation*}
 
-\en{Without a~deformation}\ru{Без деформации}
+\en{Without}\ru{Без}
+\en{deformation}\ru{деформации}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
 \bm{F} = \bm{U} \hspace{-0.3ex} = \bm{V} \hspace{-0.3ex} = \bm{G} = \mathboldPhi = {^2}\hspace{-0.4ex}\bm{f} = {^2}\hspace{-0.2ex}\bm{c} = \UnitDyad
@@ -823,12 +824,14 @@ I_{1} & \equiv \Phi_{ii} = \lambda_{1}^{2} + \lambda_{2}^{2} + \lambda_{3}^{2}
 I_{2} & \equiv \tfrac{1}{2} \bigl( \Phi_{ii}^{2} - \Phi_{jk}\Phi_{kj} \bigr) = \lambda_{1}^{2}\lambda_{2}^{2} + \lambda_{2}^{2}\lambda_{3}^{2} + \lambda_{3}^{2}\lambda_{1}^{2}
 \\
 %
-I_{3} & \equiv \det \mathboldPhi = J^{2} \hspace{-0.4ex} = \lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}
+I_{3} & \equiv \det \mathboldPhi = \Jacobian^{\hspace{.1ex}2} \hspace{-0.4ex} = \lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}
 \end{aligned}
 \end{equation*}
 
 \vspace{-0.2em}\noindent
-(${J \equiv \det{\bm{F}}}$\en{ is}\ru{\:---} \en{the Jacobian}\ru{якобиан}, \en{determinant of the motion gradient}\ru{определитель градиента движения})
+(${\Jacobian \equiv \det{\bm{F}}}$\en{ is}\ru{\:---}
+\en{the~Jacobian}\ru{якобиан},
+\en{determinant of the motion gradient}\ru{определитель градиента движения})
 
 \subsection*{The Cauchy deformation tensor}
 
@@ -1122,29 +1125,29 @@ G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
 \en{Applying}\ru{Применяя} \en{the~transformation of~volume}\ru{преобразование объёма}~\eqref{volumechange}, \en{we have}\ru{имеем}
 
 \nopagebreak\vspace{-0.4em}\begin{multline*}
-d\mathcal{V} \hspace{-0.1ex} = \hspace{-0.1ex} J d\mathcircabove{\mathcal{V}}
+d\mathcal{V} \hspace{-0.1ex} = \hspace{-0.1ex} \Jacobian d\mathcircabove{\mathcal{V}}
 \:\Rightarrow\:
 \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \times \hspace{-0.2ex} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \currentlocationvector_\differentialindex{k}
-= J \hspace{.1ex} \initiallocationvector_\differentialindex{i} \hspace{-0.16ex} \times \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \initiallocationvector_\differentialindex{k}
+= \Jacobian \hspace{.1ex} \initiallocationvector_\differentialindex{i} \hspace{-0.16ex} \times \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \initiallocationvector_\differentialindex{k}
 \:\Rightarrow
 \\
 %
 \Rightarrow\:
 \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \times \hspace{-0.2ex} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \currentlocationvector_\differentialindex{k} \currentlocationvector^k
-= J \hspace{.1ex} \initiallocationvector_\differentialindex{i} \hspace{-0.16ex} \times \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \initiallocationvector_\differentialindex{k} \currentlocationvector^k
+= \Jacobian \hspace{.1ex} \initiallocationvector_\differentialindex{i} \hspace{-0.16ex} \times \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \initiallocationvector_\differentialindex{k} \currentlocationvector^k
 \:\Rightarrow
 \\
 %
 \Rightarrow\:
 \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \times \hspace{-0.2ex} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
-= J \hspace{.1ex} \initiallocationvector_\differentialindex{i} \hspace{-0.16ex} \times \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \bm{F}^{\hspace{.1ex}\expminusone}
+= \Jacobian \hspace{.1ex} \initiallocationvector_\differentialindex{i} \hspace{-0.16ex} \times \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \dotp \bm{F}^{\hspace{.1ex}\expminusone}
 \hspace{-0.1ex} .
 \end{multline*}
 
 \en{Hence}\ru{Отсюда} \en{with}\ru{с}~\eqref{areavectorascrossproduct} \en{we come to~the~relation}\ru{мы приходим к~соотношению}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{areachange:nansonformula}
-\currentunitnormal \hspace{.1ex} d\mathcal{O} = J \hspace{.1ex} \initialunitnormal \hspace{.1ex} do \dotp \bm{F}^{\hspace{.1ex}\expminusone}
+\currentunitnormal \hspace{.1ex} d\mathcal{O} = \Jacobian \hspace{.1ex} \initialunitnormal \hspace{.1ex} do \dotp \bm{F}^{\hspace{.1ex}\expminusone}
 \hspace{-0.2ex} ,
 \end{equation}
 
@@ -1653,7 +1656,16 @@ ${\cauchystress = \bm{e}_{i} \tractionvector{i}\hspace{.1ex}}$, ${\bm{e}_i \hspa
 три вещественных собственных числ\'{а}~$\mathsigma_i$, а~также тройку взаимно перпендикулярных собственных векторов единичной длины~(\chapterdotsectionref{chapter:mathapparatus}{section:eigenvectorseigenvalues}).
 Собственные числа тензора~$\cauchystress$ называются главными напряжениями (principal stresses).
 
-\en{In~representation}\ru{В~представлении} ${\cauchystress = \hspace{-0.2ex} \sum \hspace{-0.15ex} \mathsigma_i \hspace{.15ex} \bm{e}_i \bm{e}_i}$ \en{most often}\ru{чаще всего} \en{indices}\ru{индексы} \en{are sorted descending}\ru{сортируются по убыванию} ${\mathsigma_1 \hspace{-0.1ex} \geq \mathsigma_2 \geq \mathsigma_3}$, а~тройка~${\bm{e}_i}$ ориентирована как \inquotesx{правая}[.]
+\en{In~the~representation}\ru{В~представлении}
+${\cauchystress = \hspace{-0.2ex} \sum \hspace{-0.15ex} \mathsigma_i \hspace{.15ex} \bm{e}_i \bm{e}_i}$\en{,}
+\en{the~values}\ru{значения} \en{of~}${\mathsigma_i}$\en{ are}
+\en{most often}\ru{чаще всего}
+\en{sorted descending}\ru{сортируются по~убыванию},
+${\mathsigma_1 \hspace{-0.1ex} \geq \mathsigma_2 \geq \mathsigma_3}$,
+\en{and}\ru{а}~\en{the~triple}\ru{тройка}~${\bm{e}_i}$
+\en{is oriented}\ru{ориентирована}
+\en{as}\ru{как}
+\inquotesx{\en{right}\ru{правая}}[.]
 
 Известна теорема о~кругах Мора (Mohr’s circles)%
 \footnote{Mohr’s circles, named after Christian Otto Mohr, is a~two-dimensional graphical representation of transformation for the Cauchy stress tensor.}
@@ -1749,21 +1761,24 @@ A~rubber\hbox{-}like material (an elastomer)
 
 \begin{otherlanguage}{russian}
 
-Соотношение Nanson’а ${\currentunitnormal \hspace{.1ex} d\mathcal{O} = J \hspace{.1ex} \initialunitnormal \hspace{.1ex} do \dotp \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.1ex}}$ между векторами бесконечно малой площ\'{а}дки в~начальной~(${\initialunitnormal \hspace{.1ex} do}$) и~в~текущей~(${\currentunitnormal \hspace{.1ex} d\mathcal{O}}$) конфигурациях%
+Соотношение Nanson’а ${\currentunitnormal \hspace{.1ex} d\mathcal{O} = \Jacobian \hspace{.1ex} \initialunitnormal \hspace{.1ex} do \dotp \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.1ex}}$ между векторами бесконечно малой площ\'{а}дки в~начальной~(${\initialunitnormal \hspace{.1ex} do}$) и~в~текущей~(${\currentunitnormal \hspace{.1ex} d\mathcal{O}}$) конфигурациях%
 \footnote{\en{Like before}\ru{По\hbox{-}прежнему},
 ${\bm{F} \hspace{-0.1ex}
 = \scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\raisemath{-0.1em}{\partial \initiallocationvector}} $}
 = \hspace{-0.1ex} \currentlocationvector_\differentialindex{i} \initiallocationvector^{i} \hspace{-0.2ex}
-= \hspace{-0.2ex} \boldnablacircled \currentlocationvector^{\T} \hspace{-0.2ex}}$\ru{\:---}\en{ is} \en{motion gradient}\ru{градиент движения}, ${J \hspace{-0.1ex} \equiv \determinant \bm{F}\hspace{-0.12ex}}$\en{ is}\ru{\:---} \en{the Jacobian}\ru{якобиан} (\en{the Jacobian determinant}\ru{определитель Якоби}).}
+= \hspace{-0.2ex} \boldnablacircled \currentlocationvector^{\T} \hspace{-0.2ex}}$\ru{\:---}\en{ is}
+\en{the~motion gradient}\ru{градиент движения},
+${\Jacobian \hspace{-0.1ex} \equiv \determinant \bm{F}\hspace{-0.12ex}}$\en{ is}\ru{\:---}
+\en{the~Jacobian}\ru{якобиан} (\en{the Jacobian determinant}\ru{определитель Якоби}).}
 
 \nopagebreak\vspace{-0.12em}\begin{equation*}
 \eqref{areachange:nansonformula}
 \:\Rightarrow\,
 \currentunitnormal \hspace{.1ex} d\mathcal{O} \dotp \cauchystress
-= J \hspace{.1ex} \initialunitnormal do \dotp \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress
+= \Jacobian \hspace{.1ex} \initialunitnormal do \dotp \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress
 \:\Rightarrow\,
 \currentunitnormal \dotp \cauchystress \hspace{.25ex} d\mathcal{O}
-= \hspace{.1ex} \initialunitnormal \dotp J \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.2ex} do
+= \hspace{.1ex} \initialunitnormal \dotp \Jacobian \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.2ex} do
 \end{equation*}
 
 \vspace{-0.2em} \noindent \en{gives the~dual expression of a~surface force}\ru{даёт двоякое выражение поверхностной силы}
@@ -1772,7 +1787,7 @@ ${\bm{F} \hspace{-0.1ex}
 \currentunitnormal \dotp \cauchystress \hspace{.25ex} d\mathcal{O}
 = \initialunitnormal \dotp \hspace{.12ex} \firstpiolakirchhoffstress \hspace{.1ex} do
 \hspace{.1ex}, \:\:
-\firstpiolakirchhoffstress \hspace{.1ex} \equiv J \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.1ex}.
+\firstpiolakirchhoffstress \hspace{.1ex} \equiv \Jacobian \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.1ex}.
 \end{equation}
 
 \vspace{-0.2em}
@@ -1780,16 +1795,16 @@ ${\bm{F} \hspace{-0.1ex}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \firstpiolakirchhoffstress^{\hspace{.1ex}\T} \hspace{-0.32ex}
-= J \cauchystress^{\hspace{.16ex}\T} \hspace{-0.32ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT} \hspace{-0.32ex}
-= J \cauchystress \hspace{.16ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT} \hspace{-0.25ex}.
+= \Jacobian \cauchystress^{\hspace{.16ex}\T} \hspace{-0.32ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT} \hspace{-0.32ex}
+= \Jacobian \cauchystress \hspace{.16ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT} \hspace{-0.25ex}.
 \end{equation*}
 
 Обращение~\eqref{dualexpressionofsurfaceforce}
 
 \begin{equation*}
-J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress = J^{\hspace{.12ex}\expminusone} \bm{F} \dotp J \bm{F}^{\hspace{.16ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress
+\inverseJacobian \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress = \inverseJacobian \bm{F} \dotp \Jacobian \bm{F}^{\hspace{.16ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress
 \:\,\Rightarrow\:
-\cauchystress = J^{\hspace{.12ex}\expminusone} \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress
+\cauchystress = \inverseJacobian \bm{F} \dotp \hspace{.16ex} \firstpiolakirchhoffstress
 \end{equation*}
 
 ...
@@ -1851,9 +1866,9 @@ d\bm{G} \hspace{-0.12ex} = 2 \hspace{.2ex} d \bm{C}
 и между тензором~$\secondpiolakirchhoffstress$ и~тензором напряжения Cauchy~$\cauchystress$
 
 \nopagebreak\vspace{-0.12em}\begin{equation*}
-\secondpiolakirchhoffstress = J \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.16ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT}
+\secondpiolakirchhoffstress = \Jacobian \bm{F}^{\hspace{.1ex}\expminusone} \hspace{-0.2ex} \dotp \cauchystress \hspace{.16ex} \dotp \bm{F}^{\hspace{.1ex}\expminusT}
 \hspace{.2ex} \Leftrightarrow \hspace{.5ex}
-J^{\hspace{.12ex}\expminusone} \bm{F} \hspace{-0.1ex} \dotp \secondpiolakirchhoffstress \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.32ex}
+\inverseJacobian \bm{F} \hspace{-0.1ex} \dotp \secondpiolakirchhoffstress \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.32ex}
 = \cauchystress \hspace{.1ex}.
 \end{equation*}
 
@@ -1880,7 +1895,7 @@ J^{\hspace{.12ex}\expminusone} \bm{F} \hspace{-0.1ex} \dotp \secondpiolakirchhof
 ...
 
 {\small
-The quantity ${\bm{\kappa} = J \cauchystress}$ is called the \emph{Kirchhoff stress tensor} and is used widely in numerical algorithms in metal plasticity (where there’s no change in volume during plastic deformation).
+The quantity ${\bm{\kappa} = \Jacobian \cauchystress}$ is called the \emph{Kirchhoff stress tensor} and is used widely in numerical algorithms in metal plasticity (where there’s no change in volume during plastic deformation).
 Another name for it is \emph{weighted Cauchy stress tensor}.
 \par}
 
@@ -1988,11 +2003,13 @@ There’s also popular Cauchy stress, which relates forces in the deformed confi
 The 1st Piola\hbox{--}Kirchhoff stress tensor~$\firstpiolakirchhoffstress$ relates forces in the current~(present, \inquotes{spatial}) configuration with areas in the initial~(\inquotes{material}) configuration
 
 \noindent\vspace{-0.2em}\begin{equation*}
-\firstpiolakirchhoffstress = J \, \cauchystress \dotp \bm{F}^{\expminusT}
+\firstpiolakirchhoffstress = \Jacobian \, \cauchystress \dotp \bm{F}^{\expminusT}
 \end{equation*}
 
 \vspace{-0.2em}\noindent
-\en{where}\ru{где} $\bm{F}$ \en{is}\ru{есть} \en{the motion gradient}\ru{градиент движения} \en{and}\ru{и}~${J \equiv \determinant \bm{F}}$ \en{is}\ru{есть} \ru{определитель }\en{the }Jacobi\en{ determinant}, Jacobian.
+\en{where}\ru{где}
+$\bm{F}$ \en{is}\ru{есть} \en{the motion gradient}\ru{градиент движения}
+\en{and}\ru{и}~${\Jacobian \equiv \determinant \bm{F}}$ \en{is}\ru{есть} \ru{определитель }\en{the }Jacobi\en{ determinant}, Jacobian.
 
 Because it relates different coordinate systems, the 1st~Piola\hbox{--}Kirchhoff stress is a~two\hbox{-}point tensor.
 Commonly, it’s not symmetric.
@@ -2009,7 +2026,7 @@ The 2nd~Piola\hbox{--}Kirchhoff stress tensor~$\secondpiolakirchhoffstress$ rela
 The force in the initial configuration is obtained via mapping that preserves the relative relationship between the force direction and the area normal in the initial configuration.
 
 \noindent\vspace{-0.2em}\begin{equation*}
-\secondpiolakirchhoffstress = J \, \bm{F}^{\expminusone} \dotp \cauchystress \dotp \bm{F}^{\expminusT}
+\secondpiolakirchhoffstress = \Jacobian \, \bm{F}^{\expminusone} \dotp \cauchystress \dotp \bm{F}^{\expminusT}
 \end{equation*}
 
 This tensor is a~one\hbox{-}point tensor and it is symmetric.

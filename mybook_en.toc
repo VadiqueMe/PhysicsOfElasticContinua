@@ -107,8 +107,6 @@
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {12}Variation of the present configuration}{122}{section.3.12}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {13}Internal constraints}{122}{section.3.13}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 

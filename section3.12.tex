@@ -69,7 +69,7 @@ ${\boldnablacircled \hspace{-0.1ex}
 %
 \variation{\hspace{.1ex}\bm{C}}
 = \smalldisplaystyleonehalf \hspace{.2ex} \variation{ \bigl( \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F} \bigr) } \hspace{-0.25ex}
-= \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex} \dotp \hspace{.1ex} \infinimentpetitedeformationvariation \dotp \bm{F} ,
+= \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \infinimentpetitedeformationvariation \dotp \bm{F} ,
 \:\,
 \infinimentpetitedeformationvariation \equiv \insideinfinitesimalstrainvariation
 \hspace{.1ex} .
@@ -82,38 +82,37 @@ ${\boldnablacircled \hspace{-0.1ex}
 \eqref{areachange:nansonformula}
 \hspace{.4em} \Rightarrow \hspace{.4em}
 %
-\initialunitnormal \hspace{.1ex} do = J^{\hspace{.1ex}\expminusone} \currentunitnormal \hspace{.1ex} d\mathcal{O} \hspace{-0.1ex} \dotp \bm{F}
+\initialunitnormal \hspace{.1ex} do = \inverseJacobian \currentunitnormal \hspace{.1ex} d\mathcal{O} \hspace{-0.1ex} \dotp \bm{F}
 \hspace{.4em} \Rightarrow \hspace{.4em}
 %
 \initialunitnormal \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} do
-= J^{\hspace{.12ex}\expminusone} \currentunitnormal \hspace{-0.1ex} \dotp \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} d\mathcal{O}
+= \inverseJacobian \currentunitnormal \hspace{-0.1ex} \dotp \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} d\mathcal{O}
 \\[.4em]
 %
 \text{\en{or}\ru{или}} \hspace{1.5ex}
 \initialunitnormal \dotp \variation{\firstpiolakirchhoffstress} \hspace{.1ex} do
-= \currentunitnormal \dotp \varbivalent{\hspace{-0.2ex}\cauchystress} \hspace{.25ex} d\mathcal{O} ,
+= \currentunitnormal \dotp \variedcauchystress \hspace{.25ex} d\mathcal{O} ,
 \:\:
-\varbivalent{\hspace{-0.2ex}\cauchystress} \equiv J^{\hspace{.12ex}\expminusone} \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress}
+\variedcauchystress \equiv \inverseJacobian \bm{F} \hspace{-0.1ex} \dotp \variation{\firstpiolakirchhoffstress}
 \end{array}\end{equation*}
-
-\begin{otherlanguage}{russian}
 
 \vspace{-0.2em}\noindent
 ---
-\ru{введённый здесь }\en{tensor}\ru{тензор}~${\varbivalent{\hspace{-0.2ex}\cauchystress}}$\en{ introduced here}
-связан с~вариацией~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$
-так же, как
-$\cauchystress$
-связан с~$\firstpiolakirchhoffstress$
-(${\cauchystress = \hspace{-0.1ex} J^{\hspace{.1ex}\expminusone} \bm{F} \dotp \hspace{.15ex} \firstpiolakirchhoffstress\hspace{.2ex}}$).
+\ru{введённый здесь }\en{tensor}\ru{тензор}~${\variedcauchystress}$\en{ introduced here}
+\en{is related to}\ru{связан с}~\en{variation}\ru{вариацией}~$\variation{\hspace{.1ex}\firstpiolakirchhoffstress}$
+\en{just alike}\ru{так же, как}
+${\hspace{-0.1ex} \cauchystress \hspace{.1ex}}$
+\en{is related to}\ru{связан с}~$\firstpiolakirchhoffstress$
+(${\cauchystress \hspace{.1ex} = \hspace{-0.1ex} \inverseJacobian \bm{F} \dotp \hspace{.15ex} \firstpiolakirchhoffstress\hspace{.2ex}}$).
 %
-Из~\eqref{variationsforthecurrentconfiguration} и ...
+\en{From}\ru{Из}~\eqref{variationsforthecurrentconfiguration}
+\en{and}\ru{и} ...
 
 .....
 
 ...
-корректируя
-коэффициенты
-линейной функции~${\varbivalent{\hspace{-0.2ex}\cauchystress}\hspace{.15ex}( \infinimentpetitedeformationvariation )}$ ...
-
-\end{otherlanguage}
+\en{and}\ru{и}~%
+\en{adjusting}\ru{адаптируя}
+\en{the~coefficients}\ru{коэффициенты}
+\en{of the linear function}\ru{линейной функции}
+${\variedcauchystress\hspace{.15ex}( \infinimentpetitedeformationvariation )}$ (...)
