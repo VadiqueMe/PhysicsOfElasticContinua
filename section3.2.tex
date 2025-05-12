@@ -1,0 +1,194 @@
+\en{\section{Motion gradient}}
+
+\ru{\section{Градиент движения}}
+
+\label{section:motiongradient}
+
+\en{Having}\ru{Имея}
+\en{the motion function}\ru{функцию движения}~%
+${\currentlocationvector \narroweq \hspace{-0.1ex} \currentlocationvector(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t)}$,
+${\initiallocationvector(q^{\hspace{.1ex}i}) \equiv \currentlocationvector(q^{\hspace{.1ex}i} \hspace{-0.3ex}, 0)}$,
+\en{the }\ru{операторы }\inquotes{\en{nabla}\ru{набла}}\en{ operators}
+${\boldnabla \hspace{-0.1ex} \equiv \currentlocationvector^{i} \partial_i}$,
+${\boldnablacircled \hspace{-0.1ex} \equiv \initiallocationvector^{i} \partial_i}$
+\en{and}\ru{и}
+\en{looking}\ru{гл\'{я}дя}
+\en{at differential relations}\ru{на дифференциальные отношения}
+\en{for}\ru{для}
+\en{a~certain}\ru{какого\hbox{-}либо}
+\en{infinitesimal vector}\ru{бесконечномалого вектора}
+\en{in two configurations}\ru{в~двух конфигурациях},
+\en{the~current}\ru{текущей}
+\en{with}\ru{с}~${d\currentlocationvector}$
+\en{and}\ru{и}~\en{the~initial}\ru{начальной}
+\en{with}\ru{с}~${d\initiallocationvector}$
+
+\nopagebreak\en{\vspace{1.3em}}\ru{\vspace{2.1em}}
+\begin{equation}
+\begin{array}{c}
+d\currentlocationvector = d\initiallocationvector \dotp \hspace{-0.2ex} \tikzmark{beginFtransposed} \boldnablacircled \currentlocationvector \tikzmark{endFtransposed} = \hspace{-0.2ex} \tikzmark{beginMotionGradient} \boldnablacircled \currentlocationvector^{\T} \tikzmark{endMotionGradient} \hspace{-0.44ex} \dotp d\initiallocationvector
+\\[.2em]
+%
+d\initiallocationvector = d\currentlocationvector \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \boldnabla \initiallocationvector \tikzmark{endFtransposedinverse} = \hspace{-0.2ex} \tikzmark{beginFinverse} \boldnabla \initiallocationvector^{\T} \hspace{-0.4ex} \tikzmark{endFinverse} \dotp d\currentlocationvector
+\end{array}
+\end{equation}%
+\AddOverBrace[line width=.75pt][0,0.6ex][yshift=.1em]%
+{beginFtransposed}{endFtransposed}{${\begin{array}{c}
+\hspace{.12em} \scalebox{.85}{$\bm{F}^{\hspace{.1ex}\T}$}
+\\[-0.33em]
+\scriptstyle \initiallocationvector^{i} \currentlocationvector_\differentialindex{i}
+\\[-0.36em]
+\end{array}}$}
+\AddOverBrace[line width=.75pt][0,0.6ex][yshift=.1em]%
+{beginMotionGradient}{endMotionGradient}{${\begin{array}{c}
+\scalebox{0.85}{$\bm{F}$}
+\\[-0.33em]
+\scriptstyle \currentlocationvector_\differentialindex{i} \initiallocationvector^{i}
+\\[-0.36em]
+\end{array}}$}
+\AddUnderBrace[line width=.75pt][0,0.2ex][yshift=.2em]%
+{beginFtransposedinverse}{endFtransposedinverse}{${\begin{array}{c}
+\scriptstyle \currentlocationvector^{i} \initiallocationvector_\differentialindex{i}
+\\[-0.1em]
+\scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\expminusT}$}
+\end{array}}$}
+\AddUnderBrace[line width=.75pt][0,0.2ex][yshift=.2em]%
+{beginFinverse}{endFinverse}{${\begin{array}{c}
+\scriptstyle \initiallocationvector_\differentialindex{i} \currentlocationvector^{i}
+\\[-0.1em]
+\scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\expminusone}$}
+\end{array}}$}
+
+\vspace{1.5em}
+
+\noindent
+\en{here comes to~mind}\ru{приходит на~ум}
+\en{to introduce}\ru{ввести}
+\en{the }\inquotes{\en{motion gradient}\ru{градиент движения}}\footnote{%
+   \en{Tensor}\ru{Тензору}~$\bm{F}$
+   \en{doesn’t well suit}\ru{не~вполне подходит}
+   \en{the~more popular}\ru{более популярное}
+   \en{name}\ru{название}
+   \inquotesx{\en{deformation gradient}\ru{градиент деформации}}[,]
+   \en{because}\ru{поскольку}
+   \en{this tensor}\ru{этот тензор}
+   \en{describes}\ru{описывает}
+   \en{not only the~deformation itself}\ru{не~только сам\'{у} деформацию},
+   \en{but also}\ru{но~и}
+   \en{the rotation of a~body}\ru{поворот тела}
+   \en{as a~whole without de\-for\-ma\-tion}\ru{как целого без деформации}.
+}\hbox{\hspace{-0.6ex},}
+\en{picking}\ru{взяв}
+\ru{для него }\en{one of these tensor multipliers}\ru{один из этих тензорных множителей}\en{ for it}\::
+${\bm{F} \equiv \hspace{-0.2ex} \boldnablacircled \currentlocationvector^{\T}
+\hspace{-0.33ex} =
+\currentlocationvector_\differentialindex{i} \initiallocationvector^{i} \hspace{-0.4ex}}$.
+
+\en{Why this one}\ru{Почему именно этот}?
+\en{The~reason}\ru{Причина}
+\en{to choose}\ru{выбрать}~${\hspace{-0.25ex}\boldnablacircled \currentlocationvector^{\T}\hspace{-0.2ex}}$\ru{\:---}\en{ is}
+\en{another expression}\ru{другое выражение}
+\en{for the~differential}\ru{для дифференциала}
+
+\begin{gather*}
+\begin{array}{c@{\hspace{2em}}c}
+d\currentlocationvector = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \initiallocationvector} $} \dotp d\initiallocationvector
+&
+\bm{F} \hspace{-0.1ex} = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \initiallocationvector} $}
+\end{array}
+\\
+%
+\begin{array}{c@{\hspace{2em}}c}
+d\initiallocationvector = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial \currentlocationvector} $} \dotp d\currentlocationvector
+&
+\bm{F}^{\expminusone} \hspace{-0.3ex} = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial \currentlocationvector} $}
+\end{array}
+\end{gather*}
+
+\begin{equation*}
+\scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{\zeta}}}{\partial \initiallocationvector} $} = \partial_i \bm{\zeta} \hspace{.1ex} \initiallocationvector^i
+\hspace{2em}
+\scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{\zeta}}}{\partial \currentlocationvector} $} = \partial_i \bm{\zeta} \currentlocationvector^{i}
+\end{equation*}
+
+
+....
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\UnitDyad
+= \tikzmark{unitTensorAsOriginalDerivativeBegin} \hspace{-0.25ex} \boldnablacircled \initiallocationvector \tikzmark{unitTensorAsOriginalDerivativeEnd}
+= \tikzmark{unitTensorAsCurrentDerivativeBegin} \hspace{-0.25ex} \boldnabla \currentlocationvector \tikzmark{unitTensorAsCurrentDerivativeEnd}
+\end{equation*}%
+\AddUnderBrace[line width=.75pt][0.1ex,0.2ex]%
+{unitTensorAsOriginalDerivativeBegin}{unitTensorAsOriginalDerivativeEnd}%
+{${ \scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial \initiallocationvector} $} }$}%
+\AddUnderBrace[line width=.75pt][0.1ex,0.2ex]%
+{unitTensorAsCurrentDerivativeBegin}{unitTensorAsCurrentDerivativeEnd}%
+{${ \scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \currentlocationvector} $} }$}
+
+...
+
+\en{For cartesian coordinates}\ru{Для декартовых координат} \en{with orthonormal basis}\ru{с~ортонормальным базисом} ${\bm{e}_i \hspace{-0.16ex} = \boldconstant}$
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\currentlocationvector = \hspace{-0.15ex} x_{i}(t) \hspace{.2ex} \bm{e}_i
+\hspace{.1ex} , \:\;
+\initiallocationvector = \hspace{-0.15ex} x_{i}(0) \hspace{.2ex} \bm{e}_i \hspace{-0.16ex} = \mathcircabove{x}_i \hspace{.1ex} \bm{e}_i
+\hspace{.1ex} , \:\:
+\mathcircabove{x}_i \hspace{-0.15ex} \equiv x_{i}(0)
+\hspace{.1ex} ,
+\end{equation*}
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+\boldnablacircled \hspace{-0.1ex}
+= \bm{e}_i \hspace{.2ex} \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial}}{\partial \mathcircabove{x}_i} $} \hspace{-0.1ex}
+= \bm{e}_i \hspace{.15ex} \mathcircabove{\partial}_i
+\hspace{.1ex} , \:\:
+%
+\boldnabla \hspace{-0.1ex}
+= \bm{e}_i \hspace{.2ex} \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial}}{\partial x_i} $} \hspace{-0.1ex}
+= \bm{e}_i \hspace{.15ex} \partial_i
+\hspace{.1ex} ,
+\end{equation*}
+
+\nopagebreak\vspace{-0.4em}\begin{equation*}
+\begin{array}{c}
+\boldnablacircled \currentlocationvector
+= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \mathcircabove{x}_i} $} \hspace{-0.1ex}
+= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} ( \hspace{-0.1ex} x_{\hspace{-0.1ex}j} \hspace{.2ex} \bm{e}_j )}}{\partial \mathcircabove{x}_i} $}
+=  \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial x_{\hspace{-0.1ex}j}}}{\partial \mathcircabove{x}_i} $} \hspace{.25ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \mathcircabove{\partial}_i \hspace{.1ex} x_{\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
+\hspace{.1ex} ,
+\\[.66em]
+%
+\boldnabla \initiallocationvector
+= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} \initiallocationvector}}{\partial x_{i}} $} \hspace{-0.1ex}
+= \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \mathcircabove{x}_{\hspace{-0.1ex}j}}}{\partial x_{i}} $} \hspace{.25ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \partial_i \hspace{.1ex} \mathcircabove{x}_{\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
+\end{array}
+\end{equation*}
+
+...
+
+\en{By the polar decomposition theorem}\ru{По теореме о~полярном разложении}~(\chapterdotsectionref{chapter:mathapparatus}{section:polardecomposition}),
+\en{the motion gradient}\ru{градиент движения}
+\en{decomposes into}\ru{разлож\'{и}м на}
+\en{the rotation tensor}\ru{тензор поворота}~$\rotationtensor$
+\en{and}\ru{и}~\en{the symmetric}\ru{симметричные}
+\en{positive}\ru{положительные}
+\en{stretch tensors}\ru{тензоры искажений}
+${\bm{U}\hspace{-0.25ex}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$:
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+ \bm{F} \hspace{-0.1ex} = \rotationtensor \dotp \hspace{.25ex} \bm{U} \hspace{-0.2ex} = \bm{V} \hspace{-0.3ex} \dotp \hspace{.15ex} \rotationtensor
+\end{equation*}
+
+...
+
+\en{When}\ru{Когда}
+\en{there’s no rotation}\ru{поворота нет}~(${\rotationtensor = \hspace{-0.1ex} \UnitDyad \hspace{.1ex}}$),
+\en{then}\ru{тогда}
+${\bm{F} \hspace{-0.1ex} = \hspace{.1ex} \bm{U} \hspace{-0.25ex} = \bm{V}\hspace{-0.3ex}}$.
+
+....

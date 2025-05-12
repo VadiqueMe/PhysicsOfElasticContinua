@@ -77,7 +77,7 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{95}{chapter.3}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Continuum and the two approaches to describe it}{95}{section.3.1}%
+\contentsline {section}{\numberline {1}Continuum and the two approaches to~describe~it}{95}{section.3.1}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {russian}{}\relax 

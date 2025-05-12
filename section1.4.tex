@@ -347,17 +347,16 @@ ${\bm{a} \bm{b} = \bm{b} \bm{a} ^{\hspace{-0.05em}\T}\hspace{-0.4ex}}$.
 \en{and}\ru{и}~\en{contraction}\ru{свёртки}~\eqref{tensoralgebra:contraction}\:---
 \en{the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведение}~(dot product)\:---
 \en{is the~most frequently used}\ru{самая часто используемая}.
-\en{In the~direct indexless notation}\ru{В~прямой безиндексной записи}
+\en{In the direct indexless notation}\ru{В~прямой безиндексной записи}
 \en{this is denoted}\ru{это обозначается}
-\en{by a~large dot}\ru{крупной точкой}~\dotproductinquotes,
+\en{by the~large dot}\ru{крупной точкой}~\hbox{\dotproductinquotes\hspace{-0.5ex},}
 \en{which}\ru{которая}
 \en{shows}\ru{показывает}
 \en{the~contraction}\ru{свёртку}
 \en{by adjacent indices}\ru{по соседним~(смежным) индексам}\::
 
 \nopagebreak\vspace{-0.2em}
-\begin{equation}
-\label{tensoralgebra:dotproductexamples}
+\begin{equation}\label{tensoralgebra:dotproductexamples}
 \bm{a} = \bm{B} \dotp \bm{c}
 \,\Leftrightarrow\,
 a_i \hspace{-0.15ex} = B_{i\hspace{-0.1ex}j} c_j
@@ -370,14 +369,14 @@ A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = B_{ik} C_{kj}
 
 \en{The defining property}\ru{Определяющее свойство}
 \en{of the unit tensor}\ru{единичного тензора}\:---
-\en{it is neutral}\ru{он нейтрален}
-(\en{the~}\inquotes{\href{https://en.wikipedia.org/wiki/Identity_element}{identity element}})
+\en{the~neutrality}\ru{нейтральность}
+(\en{it is}\ru{это}
+\en{the~}\inquotes{\href{https://en.wikipedia.org/wiki/Identity_element}{identity element}})
 \en{for}\ru{для}
-\en{the~tensor product}\ru{тензорного произведения}
-\en{with the~subsequent contraction}\ru{с~последующей свёрткой}
-\en{by adjacent indices}\ru{по соседним индексам}
-(\en{for}\ru{для}
-\en{the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведения})
+\en{the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведения}
+(\en{the~tensor product}\ru{тензорного произведения}
+\en{with the subsequent contraction}\ru{с~последующей свёрткой}
+\en{by adjacent indices}\ru{по соседним индексам})
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation}
@@ -389,7 +388,7 @@ A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = B_{ik} C_{kj}
 \hspace{.1ex} .
 \end{equation}
 
-\en{In the}\ru{В}~\textcolor{magenta}{\en{commutative}\ru{коммутативном}}
+\en{In the}\ru{В}~({\en{commutative}\ru{коммутативном}})
 \en{scalar product}\ru{скалярном произведении}
 \en{of two vectors}\ru{двух векторов}\en{,}
 \en{the~dot}\ru{точка}
@@ -403,31 +402,29 @@ A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = B_{ik} C_{kj}
 \begin{equation}
 \label{transposeofdotproductforvectors}
 \bm{a} \dotp \bm{b}
-= ( \bm{a} \bm{b} )\hspace{.1ex}\tracedot \hspace{-0.1ex}
-= a_i b_i \hspace{-0.2ex}
-= b_i a_i \hspace{-0.2ex}
-= ( \bm{b} \bm{a} )\hspace{.1ex}\tracedot \hspace{-0.1ex}
+= \hspace{-0.1ex} ( \bm{a} \bm{b} )\hspace{.1ex}\tracedot
+= a_i b_i \hspace{-0.1ex}
+= b_i a_i \hspace{-0.1ex}
+= \hspace{-0.1ex}( \bm{b} \bm{a} )\hspace{.1ex}\tracedot
 = \bm{b} \dotp \bm{a}
 \hspace{.1ex} .
 \end{equation}
 
-\en{The following}\ru{Следующее}
-\en{identity}\ru{тождество}
-\en{describes}\ru{описывает}
-\en{how to swap}\ru{как поменять местами}
-\en{multipliers}\ru{множители}
-\en{for}\ru{для}
-\en{the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведения}~%
+\en{And here’s}\ru{А~вот}
+\en{how}\ru{как}
+\en{the~multipliers}\ru{множители}
+\en{of the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведения}~%
 (dot product\ru{’а})
-\en{of two}\ru{двух}
+\en{of~two}\ru{двух}
 \en{second complexity tensors}\ru{тензоров второй сложности}
+\en{are swapped}\ru{меняются местами}
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{transposeofdotproductforbivalenttensors}
-\begin{array}{c}
-\bm{B} \hspace{-0.1ex} \dotp \bm{Q} \hspace{.1ex} = \bigl( \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} \bigr)^{\hspace{-0.25ex}\T}
+\begin{array}{r@{\hspace{.8ex}}c@{\hspace{.8ex}}l}
+\bm{B} \hspace{-0.1ex} \dotp \bm{Q} & = & \hspace{-0.2ex} \bigl( \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T} \bigr)^{\hspace{-0.25ex}\T}
 \\[.1em]
-\bigl( \bm{B} \hspace{-0.1ex} \dotp \bm{Q} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.4ex} = \hspace{.1ex} \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
+\bigl( \bm{B} \hspace{-0.1ex} \dotp \bm{Q} \bigr)^{\hspace{-0.25ex}\T} \hspace{-0.4ex} & \hspace{-0.4ex} = & \hspace{-0.3ex} \bm{Q}^{\T} \hspace{-0.2ex}\dotp \bm{B}^{\T}
 \hspace{-0.2ex} .
 \end{array}
 \end{equation}
@@ -440,8 +437,8 @@ ${\bm{B} \hspace{-0.1ex} = \bm{b} \hspace{.1ex} \bm{d}}$
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation*}
-\begin{array}{r@{\hspace{.3em}}c@{\hspace{.3em}}l}
-\left(\hspace{.1ex} \bm{b} \hspace{.1ex} \bm{d} \dotp \bm{p} \bm{q} \hspace{.1ex}\right)^{\hspace{-0.1ex}\T} & \hspace{-0.5ex} = & \hspace{-0.1ex} \bm{p} \bm{q}^{\T} \hspace{-0.4ex} \dotp \bm{b} \hspace{.1ex} \bm{d}^{\hspace{.1ex}\T}
+\begin{array}{r@{\hspace{.8ex}}c@{\hspace{.8ex}}l}
+\bigl(\hspace{.1ex} \bm{b} \hspace{.1ex} \bm{d} \dotp \bm{p} \bm{q} \hspace{.1ex}\bigr)^{\hspace{-0.25ex}\T} \hspace{-0.4ex} & \hspace{-0.4ex} = & \hspace{-0.1ex} \bm{p} \hspace{.1ex} \bm{q}^{\T} \hspace{-0.4ex} \dotp \bm{b} \hspace{.1ex} \bm{d}^{\hspace{.1ex}\T}
 \\[.2em]
 d_i  \hspace{.1ex} p_i \hspace{.25ex} \bm{b} \hspace{.1ex} \bm{q}^{\T} & \hspace{-0.5ex} = & \hspace{-0.1ex} \bm{q} \hspace{.1ex} \bm{p} \dotp \bm{d}  \hspace{.1ex} \bm{b}
 \\[.1em]

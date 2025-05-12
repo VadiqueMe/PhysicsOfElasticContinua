@@ -6,9 +6,9 @@
 
 \label{chapter:nonlinearcontinuum}
 
-\en{\section{Continuum and the two approaches to describe it}}
+\en{\section{Continuum and the two approaches to~describe~it}}
 
-\ru{\section{\ruContinuum{} и два подхода к описанию его}}
+\ru{\section{\ruContinuum{} и два подхода к~описанию~его}}
 
 \label{section:continuum}
 
@@ -57,14 +57,14 @@
 
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{themassofthevolume}
-m = \hspace{-0.5ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \rho \hspace{.25ex} d\mathcal{V}
+m = \hspace{-0.5ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \massdensity \hspace{.25ex} d\mathcal{V}
 , \hspace{.5em}
-dm = \rho \hspace{.2ex} d \mathcal{V} ,
+dm = \massdensity \hspace{.2ex} d \mathcal{V} ,
 \end{equation}
 
 \vspace{-0.25em}\noindent
 \en{here}\ru{здесь}
-${\rho\hspace{.1ex}}$\ru{\:---}\en{ is}
+${\massdensity\hspace{.1ex}}$\ru{\:---}\en{ is}
 \en{the~volume(tric) mass density}\ru{объёмная плотность массы}
 \en{and}\ru{и}~${d \mathcal{V}}$\ru{\:---}\en{ is}
 \en{the~infinitesimal volume element}\ru{бесконечно\-малый элемент объёма}.
@@ -106,14 +106,14 @@ ${\rho\hspace{.1ex}}$\ru{\:---}\en{ is}
 \nopagebreak\vspace{-0.2em}
 \begin{equation}\label{thebalanceofmass}
 dm \hspace{-0.15ex}
-= \hspace{-0.2ex} \rho \hspace{.2ex} d\mathcal{V} \hspace{-0.2ex}
-= \hspace{-0.2ex} \rho\hspace{.1ex}' \hspace{-0.2ex} d\mathcal{V}\hspace{.2ex}' \hspace{-0.5ex}
-= \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.22ex} d\mathcircabove{\mathcal{V}} ,
+= \hspace{-0.2ex} \massdensity \hspace{.2ex} d\mathcal{V} \hspace{-0.2ex}
+= \hspace{-0.2ex} \massdensity\hspace{.1ex}' \hspace{-0.2ex} d\mathcal{V}\hspace{.2ex}' \hspace{-0.5ex}
+= \hspace{-0.2ex} \initialmassdensity \hspace{.22ex} d\mathcircabove{\mathcal{V}} ,
 \hspace{.6em}
 %
-m = \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \rho \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex}
-= \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}\hspace{.12ex}'}$} \hspace{-0.2ex} \rho\hspace{.1ex}' \hspace{-0.2ex} d\mathcal{V}\hspace{.2ex}' \hspace{-0.4ex}
-= \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.22ex} d\mathcircabove{\mathcal{V}} .
+m = \hspace{-0.4ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.2ex} \massdensity \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex}
+= \hspace{-0.4ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}\hspace{.12ex}'}$} \hspace{-0.2ex} \massdensity\hspace{.1ex}' \hspace{-0.2ex} d\mathcal{V}\hspace{.2ex}' \hspace{-0.4ex}
+= \hspace{-0.4ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.2ex} \initialmassdensity \hspace{.22ex} d\mathcircabove{\mathcal{V}} .
 \vspace{-0.5em}\end{equation}
 
 \en{Introducing}\ru{Вводя} \en{some}\ru{какие\hbox{-}либо} \en{variable parameters}\ru{переменные параметры}~${q^{\hspace{.1ex}i}\hspace{-0.3ex}}$\:--- \en{the curvilinear coordinates}\ru{криволинейные координаты}, \en{we have a~relation}\ru{имеем отношение} \en{for locations of particles}\ru{для положений частиц}
@@ -187,21 +187,41 @@ Subsequent locations in space of particles are then dependent variables\:--- fun
 % the spatial (or Eulerian) description
 % introduced by d’Alembert
 
-\en{But}\ru{Но} \ru{может быть эффективен }\en{yet another approach}\ru{ещё иной подход}\en{ may be effective}\:---
-\emph{\en{the~spatial}\ru{пространственное}~(\en{or}\ru{или} \inquotes{\hbox{\en{Eulerian}\ru{эйлерово}}}) \en{description}\ru{опис\'{а}ние}},
+\en{But}\ru{Но}
+\ru{может быть эффективен }\en{yet another approach}\ru{ещё иной подход}\en{ may be effective}\:---
+\emph{\en{the~spatial}\ru{пространственное}~(\en{or}\ru{или} \inquotes{\hbox{\en{Eulerian}\ru{эйлерово}}})
+\en{description}\ru{опис\'{а}ние}},
 \en{when}\ru{когда}
-\en{instead of focusing on}\ru{вместо фокусирования на~том,} \en{how particles}\ru{как частицы} \en{of~a~continuum}\ru{\rucontinuum{}а} \en{move}\ru{движутся} \en{from the~initial configuration}\ru{из начальной конфигурации} \en{through space and~time}\ru{в~пространстве и~времени},
-\en{processes}\ru{процессы} \en{are~considered}\ru{рассматриваются} \en{at fixed points in~space}\ru{в~неподвижных точках пространства} \en{as~time progresses}\ru{с~течением времени}.
-\en{With relations}\ru{C~отношениями} \en{like}\ru{типа} ${\rho \hspace{-0.3ex} = \hspace{-0.44ex} \rho \hspace{.16ex} (\hspace{-0.1ex}\currentlocationvector, t)}$,
-\en{we track}\ru{мы следим} \en{what’s happening}\ru{за про\-ис\-хо\-дя\-щим} \en{exactly in this place}\ru{именно в~этом месте}.
-\en{Various particles}\ru{Разные частицы}, \en{continuously}\ru{непрерывно} \en{leaving and coming here}\ru{уходящие и~приходящие сюда}, \en{do not confuse us}\ru{не смущают нас}.
+\en{instead of focusing}\ru{вместо фокусирования}
+\en{on how}\ru{на~том, как}
+\en{particles}\ru{частицы}
+\en{of~a~continuum}\ru{\rucontinuum{}а}
+\en{move}\ru{движутся}
+\en{from the~initial configuration}\ru{из начальной конфигурации}
+\en{through space and~time}\ru{в~пространстве и~времени},
+\en{processes}\ru{процессы}
+\en{are~considered}\ru{рассматриваются}
+\en{at fixed points in~space}\ru{в~неподвижных точках пространства}
+\en{as time progresses}\ru{с~течением времени}.
+%
+\en{With relations}\ru{C~отношениями}
+\en{like}\ru{типа}
+${\massdensity \hspace{.2ex} \narroweq \massdensity \hspace{.2ex} (\hspace{-0.1ex}\currentlocationvector, t)}$,
+\en{we track}\ru{мы следим}
+\en{what’s happening}\ru{за про\-ис\-хо\-дя\-щим}
+\en{exactly in this place}\ru{именно в~этом месте}.
+%
+\en{Various particles}\ru{Разные частицы},
+\en{continuously}\ru{непрерывно}
+\en{leaving and coming here}\ru{уходящие и~приходящие сюда},
+\en{do not confuse us}\ru{не смущают нас}.
 
 ...
 
 \en{the~balance of~mass}\ru{баланс массы} \en{in~spatial description}\ru{в~пространственном описании}
 (\en{the~continuity equation}\ru{уравнение непрерывности~(сплошности, неразрывности)} \en{for}\ru{для} \en{mass}\ru{массы})
 
-...
+....
 
 Jaumann derivative (\inquotes{\textcolor{magenta}{corotational} time derivative}) was first introduced by \href{https://en.wikipedia.org/wiki/Gustav_Jaumann}{Gustav Jaumann}\footnote{%
 \bookauthor{Gustav Jaumann}. \href{http://www.physikdidaktik.uni-karlsruhe.de/download/jaumann_1911.pdf}{Geschlossenes System phy\-si\-ka\-li\-scher und che\-mi\-scher Differential\-gesetze (I.\;Mit\-teilung)~//~Sitzungs\-berichte der~Kaiser\-lichen Akademie der~Wissen\-schaften in~Wien, Mathematisch\hbox{-}natur\-wissen\-schaftliche Klasse, Abteilung~IIa, Band~CXX, 1911. Seiten 385\hbox{--}530.}}
@@ -253,7 +273,8 @@ ${
 
 \nopagebreak\vspace{-0.25em}\begin{equation*}
 \Upsilon
-\equiv \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.1ex} \rho \hspace{.19ex} \upupsilon \hspace{.11ex} d\mathcal{V}
+\equiv \hspace{-0.4ex}
+\scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.1ex} \massdensity \hspace{.2ex} \upupsilon \hspace{.11ex} d\mathcal{V}
 \end{equation*}
 
 \vspace{-0.4em}\noindent
@@ -269,19 +290,19 @@ $\mathcal{V}$
 \en{balance of~mass}\ru{балансом массы}~\eqref{thebalanceofmass}\::
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{rateofvolumeintegralchange}
-\Upsilon = \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.1ex} \mathcircabove{\rho} \hspace{.19ex} \upupsilon \hspace{.11ex} d\mathcircabove{\mathcal{V}}
+\Upsilon = \hspace{-0.4ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.1ex} \initialmassdensity \hspace{.2ex} \upupsilon \hspace{.11ex} d\mathcircabove{\mathcal{V}}
 \;\Rightarrow\;
 \mathdotabove{\Upsilon}
-= \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.1ex} \mathcircabove{\rho} \hspace{.19ex} \mathdotabove{\upupsilon} \hspace{.11ex} d\mathcircabove{\mathcal{V}}
-= \hspace{-0.4ex} \scalebox{0.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.1ex} \rho \hspace{.19ex} \mathdotabove{\upupsilon} \hspace{.11ex} d\mathcal{V} .
+= \hspace{-0.4ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcircabove{\mathcal{V}}}$} \hspace{-0.1ex} \initialmassdensity \hspace{.2ex} \mathdotabove{\upupsilon} \hspace{.11ex} d\mathcircabove{\mathcal{V}}
+= \hspace{-0.4ex} \scalebox{.9}{$\displaystyle\integral\displaylimits_{\mathcal{V}}$} \hspace{-0.1ex} \massdensity \hspace{.2ex} \mathdotabove{\upupsilon} \hspace{.11ex} d\mathcal{V} .
 \end{equation}
 
 \nopagebreak\begin{equation*}
-\Psi = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}}} \hspace{.3ex} \rho \hspace{.2ex} \psi \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex}
-= \hspace{-0.2ex} \scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}\hspace{.12ex}'}} \hspace{.2ex} \rho \hspace{.1ex}' \psi \hspace{.2ex} d\mathcal{V}\hspace{.2ex}'
+\Psi = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}}} \hspace{.3ex} \massdensity \hspace{.2ex} \psi \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex}
+= \hspace{-0.2ex} \scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}\hspace{.12ex}'}} \hspace{.2ex} \massdensity \hspace{.1ex}' \psi \hspace{.2ex} d\mathcal{V}\hspace{.2ex}'
 \hspace{.2ex} \Rightarrow \hspace{.33ex}
-\mathdotabove{\Psi} = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}}} \hspace{.3ex} \rho \hspace{.2ex} \mathdotabove{\psi} \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex}
-= \hspace{-0.2ex} \scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}\hspace{.12ex}'}} \hspace{.2ex} \rho \hspace{.1ex}' \mathdotabove{\psi} \hspace{.2ex} d\mathcal{V}\hspace{.2ex}'
+\mathdotabove{\Psi} = \hspace{-0.25ex}\scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}}} \hspace{.3ex} \massdensity \hspace{.2ex} \mathdotabove{\psi} \hspace{.2ex} d\mathcal{V} \hspace{-0.1ex}
+= \hspace{-0.2ex} \scalebox{1.4}{$\integral$}_{\hspace{-0.5ex}\raisemath{-0.05em}{\mathcal{V}\hspace{.12ex}'}} \hspace{.2ex} \massdensity \hspace{.1ex}' \mathdotabove{\psi} \hspace{.2ex} d\mathcal{V}\hspace{.2ex}'
 %%\hspace{-0.5ex} ,
 \end{equation*}
 
@@ -290,693 +311,13 @@ $\mathcal{V}$
 \en{It is not worth it}\ru{Не~ст\'{о}ит} \en{to contrapose}\ru{противопоставлять} \en{the material}\ru{материальное} \en{and}\ru{и}~\en{the spatial}\ru{пространственное} \en{descriptions}\ru{описания}.
 \en{In this book}\ru{В~этой книге} \en{both are used}\ru{используются оба}, \en{depending on the situation}\ru{в~зависимости от~ситуации}.
 
+%%-------
 \newpage
+%%-------
 
-\en{\section{Motion gradient}}
+\input{section3.2.tex}
 
-\ru{\section{Градиент движения}}
-
-\label{section:motiongradient}
-
-\en{Having}\ru{Имея}
-\en{the motion function}\ru{функцию движения}~%
-${\currentlocationvector \narroweq \hspace{-0.1ex} \currentlocationvector(q^{\hspace{.1ex}i} \hspace{-0.3ex}, t)}$,
-${\initiallocationvector(q^{\hspace{.1ex}i}) \equiv \currentlocationvector(q^{\hspace{.1ex}i} \hspace{-0.3ex}, 0)}$,
-\en{the }\ru{операторы }\inquotes{\en{nabla}\ru{набла}}\en{ operators}
-${\boldnabla \equiv \currentlocationvector^{i} \partial_i}$,
-${\boldnablacircled \equiv \initiallocationvector^{i} \partial_i}$
-\en{and}\ru{и}
-\en{looking}\ru{гл\'{я}дя}
-\en{at differential relations}\ru{на дифференциальные отношения}
-\en{for}\ru{для}
-\en{a~certain}\ru{какого\hbox{-}либо}
-\en{infinitesimal vector}\ru{бесконечномалого вектора}
-\en{in two configurations}\ru{в~двух конфигурациях},
-\en{the~current}\ru{текущей}
-\en{with}\ru{с}~${d\currentlocationvector}$
-\en{and}\ru{и}~\en{the~initial}\ru{начальной}
-\en{with}\ru{с}~${d\initiallocationvector}$
-
-\nopagebreak\en{\vspace{1.3em}}\ru{\vspace{2.1em}}
-\begin{equation}
-\begin{array}{c}
-d\currentlocationvector = d\initiallocationvector \dotp \hspace{-0.2ex} \tikzmark{beginFtransposed} \boldnablacircled \currentlocationvector \tikzmark{endFtransposed} = \hspace{-0.2ex} \tikzmark{beginMotionGradient} \boldnablacircled \currentlocationvector^{\T} \tikzmark{endMotionGradient} \hspace{-0.44ex} \dotp d\initiallocationvector
-\\[.2em]
-%
-d\initiallocationvector = d\currentlocationvector \dotp \hspace{-0.2ex} \tikzmark{beginFtransposedinverse} \boldnabla \initiallocationvector \tikzmark{endFtransposedinverse} = \hspace{-0.2ex} \tikzmark{beginFinverse} \boldnabla \initiallocationvector^{\T} \hspace{-0.4ex} \tikzmark{endFinverse} \dotp d\currentlocationvector
-\end{array}
-\end{equation}%
-\AddOverBrace[line width=.75pt][0,0.6ex][yshift=.1em]%
-{beginFtransposed}{endFtransposed}{${\begin{array}{c}
-\hspace{.12em} \scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\T}$}
-\\[-0.33em]
-\scriptstyle \initiallocationvector^{i} \hspace{-0.2ex} \currentlocationvector_\differentialindex{i}
-\\[-0.36em]
-\end{array}}$}
-\AddOverBrace[line width=.75pt][0,0.6ex][yshift=.1em]%
-{beginMotionGradient}{endMotionGradient}{${\begin{array}{c}
-\scalebox{0.85}{$\bm{F}$}
-\\[-0.33em]
-\scriptstyle \currentlocationvector_\differentialindex{i} \initiallocationvector^{i}
-\\[-0.36em]
-\end{array}}$}
-\AddUnderBrace[line width=.75pt][0,0.2ex][yshift=.2em]%
-{beginFtransposedinverse}{endFtransposedinverse}{${\begin{array}{c}
-\scriptstyle \currentlocationvector^{i} \initiallocationvector_\differentialindex{i}
-\\[-0.1em]
-\scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\expminusT}$}
-\end{array}}$}
-\AddUnderBrace[line width=.75pt][0,0.2ex][yshift=.2em]%
-{beginFinverse}{endFinverse}{${\begin{array}{c}
-\scriptstyle \initiallocationvector_\differentialindex{i} \currentlocationvector^{i}
-\\[-0.1em]
-\scalebox{0.85}{$\bm{F}^{\hspace{.1ex}\expminusone}$}
-\end{array}}$}
-
-\vspace{1.5em}
-
-\noindent
-\en{here comes to~mind}\ru{приходит на~ум} \en{to introduce}\ru{ввести} \en{the }\inquotes{\en{motion gradient}\ru{градиент движения}}\footnote{%
-\en{Tensor}\ru{Тензору}~$\bm{F}$ \en{doesn’t well suit}\ru{не~вполне подходит} \en{its}\ru{его} \en{more popular}\ru{более популярное} \en{name}\ru{название} \inquotesx{\en{deformation gradient}\ru{градиент деформации}}[,] \en{because}\ru{поскольку} \en{this tensor}\ru{этот тензор} \en{describes}\ru{описывает} \en{not only the~deformation itself}\ru{не~только сам\'{у} деформацию}, \en{but also the rotation of a~body as a~whole without de\-for\-ma\-tion}\ru{но~и поворот тела как~целого без деформации}.
-}%
-\hbox{\hspace{-0.6ex},} \en{picking}\ru{взяв} one of these tensor multipliers for it:
-${\bm{F} \equiv \hspace{-0.2ex} \boldnablacircled \currentlocationvector^{\T} \hspace{-0.33ex} = \currentlocationvector_\differentialindex{i} \initiallocationvector^{i} \hspace{-0.4ex}}$.
-
-\en{Why this one}\ru{Почему именно этот}?
-\en{The~reason}\ru{Причина}
-\en{to choose}\ru{выбрать}~${\hspace{-0.25ex}\boldnablacircled \currentlocationvector^{\T}\hspace{-0.2ex}}$\ru{\:---}\en{ is}
-\en{another expression}\ru{другое выражение}
-\en{for the~differential}\ru{для дифференциала}
-
-\begin{gather*}
-\begin{array}{c@{\hspace{2em}}c}
-d\currentlocationvector = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \initiallocationvector} $} \dotp d\initiallocationvector
-&
-\bm{F} \hspace{-0.1ex} = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \initiallocationvector} $}
-\end{array}
-\\
-%
-\begin{array}{c@{\hspace{2em}}c}
-d\initiallocationvector = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial \currentlocationvector} $} \dotp d\currentlocationvector
-&
-\bm{F}^{\expminusone} \hspace{-0.3ex} = \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial \currentlocationvector} $}
-\end{array}
-\end{gather*}
-
-\begin{equation*}
-\scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{\zeta}}}{\partial \initiallocationvector} $} = \partial_i \bm{\zeta} \hspace{.1ex} \initiallocationvector^i
-\hspace{2em}
-\scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{\zeta}}}{\partial \currentlocationvector} $} = \partial_i \bm{\zeta} \currentlocationvector^{i}
-\end{equation*}
-
-
-....
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\UnitDyad
-= \tikzmark{unitTensorAsOriginalDerivativeBegin} \hspace{-0.25ex} \boldnablacircled \initiallocationvector \tikzmark{unitTensorAsOriginalDerivativeEnd}
-= \tikzmark{unitTensorAsCurrentDerivativeBegin} \hspace{-0.25ex} \boldnabla \currentlocationvector \tikzmark{unitTensorAsCurrentDerivativeEnd}
-\end{equation*}%
-\AddUnderBrace[line width=.75pt][0.1ex,0.2ex]%
-{unitTensorAsOriginalDerivativeBegin}{unitTensorAsOriginalDerivativeEnd}%
-{${ \scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial \initiallocationvector} $} }$}%
-\AddUnderBrace[line width=.75pt][0.1ex,0.2ex]%
-{unitTensorAsCurrentDerivativeBegin}{unitTensorAsCurrentDerivativeEnd}%
-{${ \scalebox{0.8}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \currentlocationvector} $} }$}
-
-...
-
-\en{For cartesian coordinates}\ru{Для декартовых координат} \en{with orthonormal basis}\ru{с~ортонормальным базисом} ${\bm{e}_i \hspace{-0.16ex} = \boldconstant}$
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\currentlocationvector = \hspace{-0.15ex} x_{i}(t) \hspace{.2ex} \bm{e}_i
-\hspace{.1ex} , \:\;
-\initiallocationvector = \hspace{-0.15ex} x_{i}(0) \hspace{.2ex} \bm{e}_i \hspace{-0.16ex} = \mathcircabove{x}_i \hspace{.1ex} \bm{e}_i
-\hspace{.1ex} , \:\:
-\mathcircabove{x}_i \hspace{-0.15ex} \equiv x_{i}(0)
-\hspace{.1ex} ,
-\end{equation*}
-
-\nopagebreak\vspace{-0.25em}\begin{equation*}
-\boldnablacircled \hspace{-0.1ex}
-= \bm{e}_i \hspace{.2ex} \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial}}{\partial \mathcircabove{x}_i} $} \hspace{-0.1ex}
-= \bm{e}_i \hspace{.15ex} \mathcircabove{\partial}_i
-\hspace{.1ex} , \:\:
-%
-\boldnabla \hspace{-0.1ex}
-= \bm{e}_i \hspace{.2ex} \scalebox{0.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial}}{\partial x_i} $} \hspace{-0.1ex}
-= \bm{e}_i \hspace{.15ex} \partial_i
-\hspace{.1ex} ,
-\end{equation*}
-
-\nopagebreak\vspace{-0.4em}\begin{equation*}
-\begin{array}{c}
-\boldnablacircled \currentlocationvector
-= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \currentlocationvector}}{\partial \mathcircabove{x}_i} $} \hspace{-0.1ex}
-= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} ( \hspace{-0.1ex} x_{\hspace{-0.1ex}j} \hspace{.2ex} \bm{e}_j )}}{\partial \mathcircabove{x}_i} $}
-=  \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial x_{\hspace{-0.1ex}j}}}{\partial \mathcircabove{x}_i} $} \hspace{.25ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \mathcircabove{\partial}_i \hspace{.1ex} x_{\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
-\hspace{.1ex} ,
-\\[.66em]
-%
-\boldnabla \initiallocationvector
-= \bm{e}_i \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \hspace{.1ex} \initiallocationvector}}{\partial x_{i}} $} \hspace{-0.1ex}
-= \hspace{.2ex} \scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \mathcircabove{x}_{\hspace{-0.1ex}j}}}{\partial x_{i}} $} \hspace{.25ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \partial_i \hspace{.1ex} \mathcircabove{x}_{\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_{\hspace{-0.1ex}j}
-\end{array}
-\end{equation*}
-
-...
-
-\en{By the polar decomposition theorem}\ru{По теореме о~полярном разложении}~(\chapterdotsectionref{chapter:mathapparatus}{section:polardecomposition}), \en{the motion gradient}\ru{градиент движения} \en{decomposes into}\ru{разлож\'{и}м на} \en{the rotation tensor}\ru{тензор поворота}~$\rotationtensor$ \en{and}\ru{и}~\en{the symmetric}\ru{симметричные} \en{positive}\ru{положительные} \en{stretch tensors}\ru{тензоры искажений}~${\bm{U}\hspace{-0.25ex}}$ \en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$:
-
-\nopagebreak\vspace{-0.1em}\begin{equation*}
- \bm{F} \hspace{-0.1ex} = \rotationtensor \dotp \hspace{.25ex} \bm{U} \hspace{-0.2ex} = \bm{V} \hspace{-0.3ex} \dotp \hspace{.15ex} \rotationtensor
-\end{equation*}
-
-...
-
-\en{When}\ru{Когда} \en{there's no rotation}\ru{поворота нет}~(${\rotationtensor = \hspace{-0.1ex} \UnitDyad \hspace{.1ex}}$), \en{then}\ru{тогда} ${\bm{F} \hspace{-0.1ex} = \hspace{.1ex} \bm{U} \hspace{-0.25ex} = \bm{V}\hspace{-0.3ex}}$.
-
-...
-
-\en{\section{Measures (tensors) of deformation}}
-
-\ru{\section{Меры (тензоры) деформации}}
-
-\label{section:deformationtensors}
-
-\en{And this}\ru{А это}\en{ is}\ru{\:---} \en{where}\ru{где} \ru{возникает }\en{the extra complexity}\ru{сверх сложность}\en{ arose}.
-Although, the multivariance is often seen as a big gift.
-
-\en{Motion gradient}\ru{Градиент движения}~$\bm{F}$ \en{characterizes}\ru{характеризует}
-\en{both the~deformation of a~body}\ru{и~деформацию тела,}
-\en{and the~rotation of a~body as a~whole}\ru{и~поворот тела как~целого}.
-%
-\en{The deformation-only tensors}\ru{Тензорами лишь-деформации}
-\en{are}\ru{являются}
-\en{the stretch tensors}\ru{тензоры искажений}~${\bm{U}\hspace{-0.25ex}}$
-\en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$
-\en{from the polar decomposition}\ru{из полярного разложения}
-${\bm{F} \hspace{-0.1ex} = \rotationtensor \dotp \hspace{.25ex} \bm{U} \hspace{-0.2ex} = \bm{V} \hspace{-0.3ex} \dotp \hspace{.15ex} \rotationtensor}$,
-\en{as well as}\ru{так~же как и}~\en{another tensors}\ru{другие тензоры},
-\en{originating}\ru{происходящие}
-\en{from}\ru{от}~${\bm{U}\hspace{-0.25ex}}$
-\ru{или\,(и)}\en{or\,(and)}~${\bm{V}\hspace{-0.3ex}}$.
-
-\en{The widely used ones are}\ru{Широко используются}
-\en{the~}\inquotes{\en{squares}\ru{квадраты}}
-\en{of~}${\bm{U}\hspace{-0.25ex}}$
-\en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$
-
-\nopagebreak\vspace{-0.1em}\begin{equation}\label{deformationtensors.nonlinear}
-\begin{array}{c}
-\hspace*{-2.33em} \bigl( \hspace{.1ex} \bm{U}^{\hspace{.1ex}2} \hspace{-0.3ex} = \hspace{.22ex} \bigr) \hspace{.8ex}
-\bm{U} \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{U} \hspace{-0.2ex}
-= \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F}
-\equiv \bm{G}
-\hspace{.1ex} ,
-\\[.1em]
-%
-\hspace*{-2.33em} \bigl( \hspace{.1ex} \bm{V}^{\hspace{.04ex}2} \hspace{-0.3ex} = \hspace{.22ex} \bigr) \hspace{.8ex}
-\bm{V} \hspace{-0.3ex} \dotp \bm{V} \hspace{-0.25ex}
-= \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.36ex}
-\equiv \mathboldPhi
-\hspace{.1ex} .
-\end{array}
-\end{equation}
-
-\vspace{-0.25em}\noindent
-\en{These are}\ru{Это}
-\en{the }\ru{тензор деформации }Green’\en{s}\ru{а}\en{ deformation tensor}
-(\en{or}\ru{или}
-\en{the right}\ru{правый}
-\ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\bm{G}$
-\en{and}\ru{и}
-\en{the }\ru{тензор деформации }Finger’\en{s}\ru{а}\en{ deformation tensor}
-(\en{or}\ru{или}
-\en{the left}\ru{левый}
-\ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\mathboldPhi$.
-%
-\en{They have}\ru{У~них есть}
-\en{the~convenient link}\ru{удобная связь}
-\en{with}\ru{с}~\en{the motion gradient}\ru{градиентом движения}~$\bm{F}$,
-\en{without}\ru{без}
-\en{calculating square roots}\ru{вычисления квадратных корней}
-(\en{as}\ru{как}
-\en{it’s needed}\ru{это нужно}
-\en{for}\ru{для}~${\bm{U}\hspace{-0.25ex}}$
-\en{and}\ru{и}~${\bm{V}\hspace{-0.25ex}}$%
-).
-%
-\en{That’s}\ru{Таков\'{а}}
-\en{the big reason}\ru{больш\'{а}я причина}\ru{,}
-\en{why}\ru{почему}
-\en{tensors}\ru{тензоры}~$\bm{G}$
-\en{and}\ru{и}~$\mathboldPhi$
-\en{are so widely used}\ru{так широк\'{о} используются}.
-
-\en{Tensor}\ru{Тензор}~$\bm{G}$
-\en{was first used}\ru{впервые использовал}
-\en{by }George Green\hspace{-0.1ex}%
-\footnote{%
-\href{https://en.wikipedia.org/wiki/George_Green_(mathematician)}{\bookauthor{Green, George}}.
-\href{https://hdl.handle.net/2027/mdp.39015027059651?urlappend=\%3Bseq=133}{(1839) On the~propagation of~light in crystallized media. \emph{Transactions of the~Cambridge Philosophical Society.} 1842, vol.\:7, part~II, pages 121\hbox{--}140.}
-}\hspace{-0.5ex}.
-
-\en{An~inversion}\ru{Обращение}
-\en{of~}$\mathboldPhi$
-\en{and}\ru{и}~$\bm{G}$
-\en{gives}\ru{даёт} \en{the two more}\ru{ещё два} \en{deformation tensors}\ru{тензора деформации}
-
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{moredeformationtensors.nonlinear}
-\begin{array}{c}
-\bm{V}^{\expminustwo} \hspace{-0.25ex}
-= \mathboldPhi^{\expminusone} \hspace{-0.2ex}
-= \hspace{-0.1ex} \left( \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{.1ex} \right)^{\hspace{-0.33ex}\expminusone} \hspace{-0.4ex}
-= \bm{F}^{\expminusT} \hspace{-0.3ex} \dotp \bm{F}^{\expminusone} \hspace{-0.25ex}
-\equiv {^2\hspace{-0.2ex}\bm{c}}
-\hspace{.2ex} ,
-\\
-%
-\bm{U}^{\expminustwo} \hspace{-0.25ex}
-= \bm{G}^{\hspace{.12ex}\expminusone} \hspace{-0.2ex}
-= \hspace{-0.1ex} \left( \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F} \hspace{.2ex} \right)^{\hspace{-0.33ex}\expminusone} \hspace{-0.4ex}
-= \bm{F}^{\expminusone} \hspace{-0.3ex} \dotp \bm{F}^{\expminusT} \hspace{-0.3ex}
-\equiv {^2\hspace{-0.4ex}\bm{f}}
-\hspace{-0.1ex} ,
-\end{array}
-\end{equation}
-
-\vspace{-0.2em}\noindent
-\en{each of~which}\ru{каждый из~которых} \en{is sometimes called}\ru{иногда называется} \ru{тензором }\en{the~}\href{https://en.wikipedia.org/wiki/Gabrio_Piola}{Piola}\en{ tensor} \en{or}\ru{или} \ru{тензором }\en{the~}\href{https://en.wikipedia.org/wiki/Josef_Finger}{Finger}\ru{’а}\en{ tensor}.
-\en{The~inverse}\ru{Обратный} \en{of the left}\ru{к~левому} \ru{тензору }Cauchy--Green\ru{’а}\en{ tensor}~${\hspace{-0.1ex}\mathboldPhi\hspace{.1ex}}$\en{ is}\ru{\:---} \ru{тензор деформации }\en{the }Cauchy\en{ deformation tensor}~${\hspace{-0.2ex}{^2}\hspace{-0.2ex}\bm{c}}$.
-
-\en{The components}\ru{Компоненты}
-\en{of these tensors}\ru{этих тензоров}\en{ are}
-
-\nopagebreak\vspace{-0.1em}
-\begin{equation*}\label{componentsofdeformationtensors}
-\begin{array}{r@{\hspace{.5em}}l}
-\bm{G} = \initiallocationvector^i \hspace{-0.25ex} \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \initiallocationvector^j \hspace{-0.25ex}
-= G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{.1ex} \initiallocationvector^i \initiallocationvector^j
-\hspace{-0.3ex} , &
-G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
-\currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
-\hspace{.1ex} ,
-\\[.25em]
-%
-{{^2}\hspace{-0.4ex}\bm{f}} \hspace{-0.2ex} =  \initiallocationvector_\differentialindex{i} \currentlocationvector^{i} \hspace{-0.2ex} \dotp \hspace{-0.15ex} \currentlocationvector^j \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
-= G^{\hspace{.1ex}i\hspace{-0.1ex}j} \initiallocationvector_\differentialindex{i} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
-\hspace{.2ex} , &
-G^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
-\currentlocationvector^{i} \hspace{-0.2ex} \dotp \hspace{-0.15ex} \currentlocationvector^j
-\hspace{-0.3ex} ,
-\\[.25em]
-%
-{{^2}\hspace{-0.2ex}\bm{c}} = \hspace{-0.1ex} \currentlocationvector^{i} \initiallocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \hspace{.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \currentlocationvector^{j} \hspace{-0.25ex}
-= \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \currentlocationvector^{i} \hspace{-0.2ex} \currentlocationvector^{j}
-\hspace{-0.3ex} , &
-\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.15ex} \equiv
-\initiallocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \hspace{.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j}
-\hspace{.1ex} ,
-\\[.25em]
-%
-\mathboldPhi = \hspace{-0.1ex} \currentlocationvector_\differentialindex{i} \hspace{.1ex} \initiallocationvector^i \hspace{-0.15ex} \dotp \hspace{.1ex} \initiallocationvector^j \hspace{-0.25ex} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j} \currentlocationvector_\differentialindex{i} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
-\hspace{.1ex} , &
-\textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j} \hspace{-0.15ex} \equiv
-\initiallocationvector^{\hspace{.1ex}i} \hspace{-0.15ex} \dotp \hspace{.1ex} \initiallocationvector^{\hspace{.1ex}j}
-\hspace{.1ex} ,
-\end{array}
-\end{equation*}
-
-\vspace{-0.2em}\noindent
-\en{and }\ru{и~}\en{they}\ru{они}
-\en{coincide}\ru{совпадают}
-\en{with the components}\ru{с~компонентами}
-\en{of the unit}\ru{единичного}~(\en{metric}\ru{метрического})
-\en{tensor}\ru{тензора}
-
-\nopagebreak\vspace{-0.4em}
-\begin{multline*}
-\shoveleft{
-   \hspace{3em} \UnitDyad
-   = \hspace{-0.2ex}
-   \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \currentlocationvector^{i}
-   \hspace{-0.2ex} =
-   G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \currentlocationvector^{i} \hspace{-0.2ex} \currentlocationvector^j
-   \hspace{-0.25ex} = \hspace{-0.2ex}
-   \currentlocationvector^{i} \hspace{-0.2ex} \currentlocationvector_\differentialindex{i}
-   \hspace{-0.2ex} =
-   G^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \currentlocationvector_\differentialindex{i} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
-\hfill }
-\\[-0.2em]
-%
-= \initiallocationvector^i \initiallocationvector_\differentialindex{i} \hspace{-0.2ex}
-= \textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j} \initiallocationvector_\differentialindex{i} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \initiallocationvector_\differentialindex{i} \initiallocationvector^i \hspace{-0.25ex}
-= \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \initiallocationvector^i \initiallocationvector^j
-\hspace{-0.2ex} ,
-\end{multline*}
-
-\vspace{-0.2em}\noindent
-\en{but}\ru{но}
-\en{the components’ bases}\ru{базисы компонент}
-\en{are different}\ru{разные}.
-%
-\en{Using}\ru{Пользуясь}
-\en{only}\ru{только}
-\en{the~index notation}\ru{индексной записью},
-\en{it’s easy to get confused}\ru{легко запутаться}
-\en{due to the~differences}\ru{из\hbox{-}за различий}
-\en{between}\ru{между}
-\en{the~unit}\ru{единичным}
-\en{tensor}\ru{тензором}~$\UnitDyad$
-\en{and the~strain tensors}\ru{и~тензорами деформации}
-$\bm{G}$,
-$\mathboldPhi$,
-${{^2}\hspace{-0.4ex}\bm{f}\hspace{-0.1ex}}$,
-${{^2}\hspace{-0.2ex}\bm{c}}$.
-%
-\en{The direct indexless notation}\ru{Прямая безиндексная запись}
-\en{has}\ru{имеет}
-\ru{тут }\en{the obvious}\ru{явное}
-\en{advantage}\ru{преимущество}\en{ here}.
-
-\en{As was mentioned}\ru{Как упоминалось}
-\en{in}\ru{в}~\chapterdotsectionref{chapter:mathapparatus}{section:polardecomposition},
-\en{the~invariants}\ru{инварианты}
-\en{of~the~stretch tensors}\ru{тензоров искажений}
-$\bm{U}\hspace{-0.1em}$
-\en{and}\ru{и}~$\bm{V}\hspace{-0.1em}$
-\en{are the~same}\ru{одинаковые}.
-%
-\en{If}\ru{Если}
-${w_{i}}$~\en{are}\ru{это}
-\en{the~three eigenvalues}\ru{три собственных значения}
-\en{of~}${\bm{U}\hspace{-0.1em}}$
-\en{and}\ru{и}~${\bm{V}\hspace{-0.2em}}$,
-\en{that is}\ru{то есть}
-\en{the~roots}\ru{корни}
-\en{of the characteristic equations}\ru{характеристических уравнений}
-\en{for these tensors}\ru{для этих тензоров},
-\en{then}\ru{то}
-\en{here are}\ru{вот}
-\en{their}\ru{их}
-\en{invariants}\ru{инварианты}:
-
-\nopagebreak\vspace{-0.3em}
-\begin{gather*}
-\anyfirstinvariantof{\bm{U}}
-= \anyfirstinvariantof{\bm{V}}
-= \trace{\bm{U}} \hspace{-0.25ex}
-= \trace{\hspace{-0.2ex}\bm{V}} \hspace{-0.25ex}
-= \textstyle\sum \hspace{-0.2ex} U_{\hspace{-0.2ex}j\hspace{-0.2ex}j}
-= \textstyle\sum \hspace{-0.2ex} V_{\hspace{-0.1ex}j\hspace{-0.2ex}j}
-= \textstyle\sum \hspace{-0.2ex} w_{i}
-\hspace{.1ex} ,
-\\
-%
-\anysecondinvariantof{\bm{U}} \hspace{-0.2ex}
-= \anysecondinvariantof{\bm{V}} \hspace{-0.2ex}
-= \vphantom{\textstyle\sum}
-w_1 w_2 \hspace{-0.2ex}
-+ w_1 w_3 \hspace{-0.2ex}
-+ w_2 \hspace{.15ex} w_3
-\hspace{.1ex} ,
-\\
-%
-\anythirdinvariantof{\bm{U}} \hspace{-0.2ex}
-= \anythirdinvariantof{\bm{V}} \hspace{-0.2ex}
-= \vphantom{\textstyle\sum}
-w_1 w_2 \hspace{.15ex} w_3
-\hspace{.1ex} .
-\end{gather*}
-
-\en{The invariants}\ru{Инварианты}
-\en{of~}$\bm{G}$
-\en{and}\ru{и}~$\mathboldPhi$
-\en{coincide too}\ru{тоже совпадают}:
-
-\nopagebreak
-\begin{equation*}
-\anyfirstinvariantof{\bm{G}}
-\hspace{-0.2ex}
-= \anyfirstinvariantof{\mathboldPhi}
-\hspace{.1ex} , \dots
-\end{equation*}
-
-\en{Without}\ru{Без}
-\en{deformation}\ru{деформации}
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\bm{F} = \bm{U} \hspace{-0.3ex} = \bm{V} \hspace{-0.3ex} = \bm{G} = \mathboldPhi = {^2}\hspace{-0.4ex}\bm{f} = {^2}\hspace{-0.2ex}\bm{c} = \UnitDyad
-\hspace{.1ex}
-,
-\end{equation*}
-
-\vspace{-0.2em}\noindent
-\en{thus}\ru{поэтому}
-\en{as characteristics of~deformation}\ru{как характеристики деформации}
-\en{it’s worth taking}\ru{ст\'{о}ит взять}
-\en{the differences}\ru{разности}
-\en{like}\ru{типа}
-${\bm{U} \hspace{-0.2ex} - \UnitDyad}$,
-${\bm{U} \hspace{-0.3ex} \dotp \bm{U} \hspace{-0.2ex} - \UnitDyad}$, \dots
-
-...
-
-\subsection*{The right Cauchy\hbox{--}Green deformation tensor}
-
-George Green discovered a deformation tensor known as the right Cauchy\hbox{--}Green deformation tensor or Green’s deformation tensor
-
-\nopagebreak\begin{equation*}
-\bm{G}
-= \bm{F}^{\hspace{.1ex}\T} \hspace{-0.5ex} \dotp \bm{F}
-= \bm{U}^{2}
-\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
-G_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
-= F_{k' i} \hspace{.25ex} F_{k' \hspace{-0.15ex}j} \hspace{-0.15ex}
-= \frac{\partial \hspace{-0.1ex} x_{\hspace{-0.1ex}k'}}{\partial \mathcircabove{x}_{i}} \hspace{.15ex} \frac{\partial \hspace{-0.1ex} x_{\hspace{-0.1ex}k'}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}}
-\hspace{.1ex} .
-\end{equation*}
-
-This tensor \textcolor{magenta}{gives the~\inquotes{square} of local change in distances} due to deformation:
-${\displaystyle d\currentlocationvector \dotp d\currentlocationvector = d\initiallocationvector \dotp \bm{G} \dotp d\initiallocationvector}$
-
-The most popular invariants of~${\bm{G}}$ are
-%%used in expressions for the potential energy of elastic deformations of an~isotropic body.
-\[
-\begin{array}{r@{\hspace{.25em}}c@{\hspace{.33em}}l}
-\anyfirstinvariantof{\bm{G}} & \equiv &
-\trace{\bm{G}}
-= G_{ii} \hspace{-0.2ex} = \gamma_{1}^{2} + \gamma_{2}^{2} + \gamma_{3}^{2}
-\\[.25em]
-%
-\anysecondinvariantof{\bm{G}} & \equiv &
-\smalldisplaystyleonehalf \bigl( G_{\hspace{-0.2ex}j\hspace{-0.1ex}j}^{\hspace{.25ex}2} \hspace{-0.1ex} - G_{ik} G_{ki} \hspace{.1ex} \bigr) \hspace{-0.25ex}
-= \gamma_{1}^{2}\gamma_{2}^{2} + \gamma_{2}^{2}\gamma_{3}^{2} + \gamma_{3}^{2}\gamma_{1}^{2}
-\\[.4em]
-%
-\anythirdinvariantof{\bm{G}} & \equiv &
-\determinant \hspace{.1ex} \bm{G}
-= \gamma_{1}^{2}\gamma_{2}^{2}\gamma_{3}^{2}
-\end{array}
-\]
-where ${\gamma_{i}\hspace{-0.2ex}}$ are stretch ratios for unit fibers that are initially oriented along directions of eigenvectors of the right stretch tensor~${\bm{U}\hspace{-0.2ex}}$.
-
-\subsection*{The inverse of Green’s deformation tensor}
-
-Sometimes called the Finger tensor or the Piola tensor, the~inverse of the right Cauchy\hbox{--}Green deformation tensor
-
-\nopagebreak\vspace{-0.25em}\begin{equation*}
-{^2\hspace{-0.4ex}\bm{f}}
-= \bm{G}^{\expminusone} \hspace{-0.25ex}
-= \bm{F}^{\expminusone} \hspace{-0.4ex} \dotp \bm{F}^{\expminusT}
-\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
-f_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \frac{\partial \mathcircabove{x}_{i}}{\partial x_{\hspace{-0.1ex}k'}} \hspace{.15ex} \frac{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}}{\partial x_{\hspace{-0.1ex}k'}}
-\end{equation*}
-
-\subsection*{The left Cauchy\hbox{--}Green or Finger deformation tensor}
-
-Swapping multipliers in the formula for the right Green–Cauchy deformation tensor leads to the left Cauchy\hbox{--}Green deformation tensor, defined as
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\mathboldPhi
-= \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex}
-= \bm{V}^{2}
-\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
-\Phi_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \frac{\partial x_{i}}{\partial \mathcircabove{x}_{k}} \hspace{.15ex} \frac{\partial x_{\hspace{-0.15ex}j}}{\partial \mathcircabove{x}_{k}}
-\end{equation*}
-
-The left Cauchy\hbox{--}Green deformation tensor is often called the Finger’s deformation tensor, named after Josef Finger (1894).
-
-Invariants of ${\mathboldPhi}$ are also used in expressions for strain energy density functions.
-The conventional invariants are defined as
-
-\nopagebreak\begin{equation*}
-\begin{aligned}
-I_{1} & \equiv \Phi_{ii} = \lambda_{1}^{2} + \lambda_{2}^{2} + \lambda_{3}^{2}
-\\
-%
-I_{2} & \equiv \tfrac{1}{2} \bigl( \Phi_{ii}^{2} - \Phi_{jk}\Phi_{kj} \bigr) = \lambda_{1}^{2}\lambda_{2}^{2} + \lambda_{2}^{2}\lambda_{3}^{2} + \lambda_{3}^{2}\lambda_{1}^{2}
-\\
-%
-I_{3} & \equiv \det \mathboldPhi = \Jacobian^{\hspace{.1ex}2} \hspace{-0.4ex} = \lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}
-\end{aligned}
-\end{equation*}
-
-\vspace{-0.2em}\noindent
-(${\Jacobian \equiv \det{\bm{F}}}$\en{ is}\ru{\:---}
-\en{the~Jacobian}\ru{якобиан},
-\en{determinant of the motion gradient}\ru{определитель градиента движения})
-
-\subsection*{The Cauchy deformation tensor}
-
-The Cauchy deformation tensor is defined as the~inverse of the left Cauchy\hbox{--}Green deformation tensor
-
-\nopagebreak\vspace{-0.4em}\begin{equation*}
-{^2\hspace{-0.2ex}\bm{c}} = \mathboldPhi^{\expminusone} \hspace{-0.25ex}
-= \bm{F}^{\expminusT} \hspace{-0.4ex} \dotp \bm{F}^{\expminusone}
-\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
-c_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{i}} \hspace{.15ex} \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{\hspace{-0.15ex}j}}
-\end{equation*}
-
-${\displaystyle d\initiallocationvector \dotp d\initiallocationvector = d\currentlocationvector \dotp {^2\hspace{-0.2ex}\bm{c}} \dotp d\currentlocationvector}$
-
-This tensor is also called the Piola tensor or the Finger tensor in rheology and fluid dynamics literature.
-
-\subsection*{Finite strain tensors}
-
-The concept of \emph{strain} is used to evaluate how much a~given displacement differs locally from a~body displacement as a~whole (a~\inquotes{rigid body displacement}). One of such strains for large deformations is the \emph{Green strain tensor} (\emph{Green\hbox{--}Lagrangian strain tensor}, \emph{Green\hbox{--}Saint\hbox{-\hspace{-0.2ex}}Venant strain tensor}), defined as
-
-\nopagebreak\begin{equation*}
-\displaystyle \bm{C} = \smalldisplaystyleonehalf \bigl( \bm{G} - \UnitDyad \hspace{.1ex} \bigr)
-\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
-C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \Bigl( \frac{\partial x_{k'}}{\partial \mathcircabove{x}_{i}} \hspace{.15ex} \frac{\partial x_{k'}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}} - \delta_{i\hspace{-0.1ex}j} \Bigr)
-\end{equation*}
-
-\noindent
-or as the function of the displacement gradient tensor
-
-\nopagebreak\begin{equation*}
-\displaystyle \bm{C} = \smalldisplaystyleonehalf \hspace{-0.3ex} \left( \hspace{-0.1ex}
-\boldnablacircled\bm{u}
-+ \hspace{-0.1ex} \boldnablacircled\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
-+ \hspace{-0.1ex} \boldnablacircled\bm{u} \dotp \hspace{-0.1ex} \boldnablacircled\bm{u}^{\hspace{-0.1ex}\T}
-\right)
-\end{equation*}
-
-\noindent
-in cartesian coordinates
-
-\nopagebreak\begin{equation*}
-\displaystyle C_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \hspace{-0.25ex} \left(
-\frac{\partial u_{\hspace{-0.1ex}j}}{\partial \mathcircabove{x}_{i}}
-+ \frac{\partial u_{i}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}}
-+ \frac{\partial u_{k}}{\partial \mathcircabove{x}_{i}} \frac{\partial u_{k}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}}
-\right)
-\end{equation*}
-
-The Green strain tensor measures how much $\bm{G}$ differs from~$\UnitDyad$.
-
-The \emph{Almansi\hbox{--}Hamel strain tensor}, referenced to the deformed configuration (\inquotes{Eulerian description}), is defined as
-
-\nopagebreak\vspace{-0.5em}\begin{equation*}
-{^2\hspace{-0.2ex}\bm{a}} = \smalldisplaystyleonehalf \bigl( \UnitDyad - \hspace{-0.15ex} {^2\hspace{-0.2ex}\bm{c}} \hspace{.3ex} \bigr) \hspace{-0.3ex}
-= \smalldisplaystyleonehalf \bigl( \UnitDyad - \mathboldPhi^{\expminusone} \hspace{.2ex} \bigr)
-\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
-a_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
-= \onehalf \hspace{-0.25ex} \left( \hspace{-0.4ex} \delta _{i\hspace{-0.1ex}j} - \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{i}} \hspace{.15ex} \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{\hspace{-0.15ex}j}} \right)
-\end{equation*}
-
-\vspace{-0.4em}\noindent
-or as function of the displacement gradient
-
-\nopagebreak\begin{equation*}
-{^2}\hspace{-0.2ex}\bm{a} = \smalldisplaystyleonehalf \bigl(
-\boldnabla\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
-+ \hspace{-0.1ex} \boldnabla\bm{u}
-- \hspace{-0.1ex} \boldnabla\bm{u} \dotp \hspace{-0.1ex} \boldnabla\bm{u}^{\hspace{-0.1ex}\T}
-\bigr)
-\end{equation*}
-
-\nopagebreak\vspace{-0.2em}\begin{equation*}
-\displaystyle a_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \hspace{-0.25ex} \left(
-\frac{\partial u_{i}}{\partial x_{\hspace{-0.15ex}j}}
-+ \frac{\partial u_{\hspace{-0.1ex}j}}{\partial \hspace{-0.1ex} x_{i}}
-- \frac{\partial u_{k}}{\partial x_{i}} \frac{\partial u_{k}}{\partial x_{\hspace{-0.15ex}j}}
-\right)
-\end{equation*}
-
-\subsection*{Seth\hbox{--}Hill family of abstract strain tensors}
-
-B. R. Seth was the first to show that the Green and Almansi strain tensors are special cases of a more abstract measure of deformation.
-The idea was further expanded upon by Rodney Hill in~1968 \textcolor{red}{(publication??)}.
-The Seth\hbox{--}Hill family of strain measures (also called Doyle\hbox{--}Ericksen tensors) is expressed as
-
-\nopagebreak\vspace{-0.1em}\begin{equation*}
-\displaystyle \bm{D}_{(m)} \hspace{-0.2ex}
-= \frac{\raisebox{-0.2em}{1}}{2m} \left( \hspace{.1ex} \bm{U}^{2m} \hspace{-0.4ex} - \UnitDyad \hspace{.2ex} \right)
-= \frac{\raisebox{-0.2em}{1}}{2m} \left( \bm{G}^{m} \hspace{-0.4ex} - \UnitDyad \hspace{.1ex} \right) \end{equation*}
-
-\vspace{.1em} \noindent \en{For various}\ru{Для разных}~$m$
-\en{it gives}\ru{это даёт}
-
-\nopagebreak\begin{equation*}
-\begin{array}{r@{\hspace{0.1em}}ll}
-\bm{D}_{(1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \bm{U}^{2} \hspace{-0.25ex} - \UnitDyad \right) = \smalldisplaystyleonehalf (\bm{G} - \UnitDyad) & \text{\scalebox{0.9}{Green strain tensor}}
-\\[.4em]
-\bm{D}_{(\nicefrac{1}{2})} & = \bm{U} \hspace{-0.15ex} - \UnitDyad = \bm{G}^{\hspace{.1ex}\nicefrac{1}{2}} \hspace{-0.25ex} - \UnitDyad & \text{\scalebox{0.9}{Biot strain tensor}}
-\\[.4em]
-\bm{D}_{(0)} & = \ln \bm{U} = \smalldisplaystyleonehalf \ln \bm{G} & \text{\scalebox{0.9}{logarithmic strain, Hencky strain}}
-\\[.4em]
-\bm{D}_{(-\hspace{-0.1ex}1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \hspace{-0.1ex} \UnitDyad - \bm{U}^{-2} \hspace{.1ex} \right) & \text{\scalebox{0.9}{Almansi strain}}
-\end{array}
-\end{equation*}
-
-The second\hbox{-}order approximation of these tensors is
-\[ \bm{D}_{(m)} \hspace{-0.2ex} =
-\infinitesimaldeformation
-+ \smalldisplaystyleonehalf \hspace{.1ex} \boldnabla\bm{u} \dotp \hspace{-0.1ex} \boldnabla\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
-- (1 - m) \hspace{.2ex} \infinitesimaldeformation \dotp \infinitesimaldeformation \]
-
-\vspace{-0.25em}\noindent
-where ${\infinitesimaldeformation \equiv \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$ is the infinitesimal deformation tensor.
-
-Many other different definitions of measures~$\bm{D}$ are possible, provided that they satisfy these conditions:
-
-\begin{itemize}
-\item $\bm{D}$ vanishes for any movement of a~body as a~rigid whole
-\item dependence of~$\bm{D}$ on displacement gradient tensor~${\nabla \bm{u}}$ is continuous, continuously differentiable and monotonic
-\item it’s desired that $\bm{D}$ reduces to the infinitesimal linear deformation tensor~${\infinitesimaldeformation}$ when ${\boldnabla \bm{u} \to 0}$
-\end{itemize}
-
-\noindent For example, tensors from the set
-\[ \displaystyle \bm{D}^{(n)} \hspace{-0.32ex} = \left( {\bm{U}}^{n} \hspace{-0.4ex} - {\bm{U}}^{-n} \right) \hspace{-0.4ex} / \hspace{.25ex} 2n \]
-aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2nd\hbox{-}order approximation as Seth\hbox{--}Hill measures with~${m=0}$.
-
-\vspace{.4em} \noindent \hfill \textboldoblique{Wikipedia, the free encyclopedia}\:--- \href{https://en.wikipedia.org/wiki/Finite_strain_theory}{Finite strain theory}
-
-...
-
-
-\subsection*{\en{Logarithmic strain, Hencky’s strain}\ru{Логарифмическая деформация, деформация Hencky}}
-
-\href{https://en.wikipedia.org/wiki/Heinrich_Hencky}{%
-\bookauthor{Heinrich Hencky}%
-}.
-Über die Form des Elastizitätsgesetzes bei ideal elastischen Stoffen.
-Zeitschrift für technische Physik, Vol.\:9~(1928),
-Seiten~215\hbox{--}220.
-
-
-....
-
-
+\input{section3.3.tex}
 
 \en{\section{Velocity field}}
 
@@ -1110,13 +451,13 @@ G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
 \begin{equation}\label{areavectorascrossproduct}
 \begin{array}{c}
 \initialunitnormal \hspace{.1ex} do = d \initiallocationvector{'} \hspace{-0.5ex} \times \hspace{-0.1ex} d \initiallocationvector{''} \hspace{-0.5ex}
-= \scalebox{0.9}{$ \displaystyle\frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial q^i} $} \hspace{.2ex} d q^i \hspace{-0.1ex} \times \scalebox{0.9}{$ \displaystyle\frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial q^{j}} $} \hspace{.2ex} d q^{j}
+= \scalebox{.9}{$ \displaystyle\frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial q^i} $} \hspace{.2ex} d q^i \hspace{-0.1ex} \times \scalebox{.9}{$ \displaystyle\frac{\raisemath{-0.2em}{\partial \initiallocationvector}}{\partial q^{j}} $} \hspace{.2ex} d q^{j}
 = \initiallocationvector_\differentialindex{i} \hspace{-0.16ex} \times \hspace{-0.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{.2ex} dq^{i} dq^{j}
 \hspace{-0.2ex} ,
 \\[.8em]
 %
 \currentunitnormal \hspace{.1ex} d\mathcal{O} \hspace{-0.1ex} = d \currentlocationvector{'} \hspace{-0.4ex} \times \hspace{-0.1ex} d \currentlocationvector{''} \hspace{-0.5ex}
-= \scalebox{0.9}{$ \displaystyle\frac{\raisemath{-0.23em}{\partial \currentlocationvector}}{\partial q^i} $} \hspace{.2ex} d q^i \hspace{-0.12ex} \times \scalebox{0.9}{$ \displaystyle\frac{\raisemath{-0.23em}{\partial \currentlocationvector}}{\partial q^{j}} $} \hspace{.2ex} d q^{j}
+= \scalebox{.9}{$ \displaystyle\frac{\raisemath{-0.23em}{\partial \currentlocationvector}}{\partial q^i} $} \hspace{.2ex} d q^i \hspace{-0.12ex} \times \scalebox{.9}{$ \displaystyle\frac{\raisemath{-0.23em}{\partial \currentlocationvector}}{\partial q^{j}} $} \hspace{.2ex} d q^{j}
 = \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \times \hspace{-0.2ex} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{.2ex} dq^{i} dq^{j}
 \hspace{-0.2ex} .
 \end{array}
@@ -1238,14 +579,14 @@ dans
 \en{there’re no moments among generalized forces}\ru{среди обобщённых сил нет моментов},
 \en{and there can’t be any external force couples}\ru{и~никаких внешних пар сил быть не~может}.
 
-\en{Force}\ru{Сила}~${\rho \hspace{-0.1ex} \massloadvector d\mathcal{V}}$
+\en{Force}\ru{Сила}~${\massdensity \hspace{-0.1ex} \massloadvector d\mathcal{V}}$
 \en{acts}\ru{действует}
 \en{on infinitesimal}\ru{на бесконечно-малый}
 \en{volume}\ru{объём}~$d\mathcal{V}$.
 \en{If}\ru{Если}~$\massloadvector$\en{ is}\ru{\:---}
 \en{a~mass force}\ru{массовая сила}
 (\en{acting per unit of~mass}\ru{действующая на~единицу массы}),
-\en{then}\ru{то}~${\rho \hspace{-0.1ex} \massloadvector}$\en{ is}\ru{\:---}
+\en{then}\ru{то}~${\massdensity \hspace{-0.1ex} \massloadvector}$\en{ is}\ru{\:---}
 \en{a~volume one}\ru{объёмная}.
 \en{Such forces}\ru{Такие силы}
 \en{originate}\ru{происходят}
@@ -1491,16 +832,16 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 
 \en{Consider}\ru{Рассмотрим} \en{some random}\ru{какой\hbox{-}либо случайный} \en{finite volume}\ru{кон\'{е}чный объём}~$\mathcal{V}$ \en{of an~elastic medium}\ru{упругой среды},
 \en{contained within}\ru{содержащийся внутри} \en{surface}\ru{поверхности}~${\mathcal{O}(\boundary \mathcal{V})}$.
-\en{It is loaded with external forces}\ru{Он нагружен внешними силами}, \en{surface contact ones}\ru{поверхностными контактными}~${\bm{p} \hspace{.2ex} d\mathcal{O}}$ \en{and}\ru{и} \en{body (mass or volume) ones}\ru{объёмными (или массовыми)}~${\massloadvector dm \hspace{-0.15ex} = \hspace{-0.1ex} \rho \hspace{-0.1ex} \massloadvector d\mathcal{V}}$.
+\en{It is loaded with external forces}\ru{Он нагружен внешними силами}, \en{surface contact ones}\ru{поверхностными контактными}~${\bm{p} \hspace{.2ex} d\mathcal{O}}$ \en{and}\ru{и} \en{body (mass or volume) ones}\ru{объёмными (или массовыми)}~${\massloadvector dm \hspace{-0.15ex} = \hspace{-0.1ex} \massdensity \hspace{-0.1ex} \massloadvector d\mathcal{V}}$.
 
 \en{The integral formulation}\ru{Интегральная формулировка}
 \en{of the balance of~momentum}\ru{баланса импульса (количества движения)}
 \en{is as follows}\ru{таков\'{а}}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{balanceoftranslationalmomentum.integral}
-\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \rho \hspace{.2ex} \bm{v} \hspace{.1ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.3em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \massdensity \hspace{.2ex} \bm{v} \hspace{.1ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.3em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
 =
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.33ex} \rho \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.33ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V}
 \hspace{.25ex} + \hspace{.25ex}
 \ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.2ex} \bm{p} \hspace{.25ex} d\mathcal{O} .
 \end{equation}
@@ -1524,7 +865,7 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 \scalebox{.96}{$ \displaystyle\integral\displaylimits_{\mathcal{V}} $} \hspace{-0.3ex} \Bigl( \hspace{-0.1ex} \boldnabla \dotp \cauchystress \hspace{.15ex}
-+ \rho \bigl( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \bigr) \hspace{-0.25ex} \Bigr) d\mathcal{V}
++ \massdensity \bigl( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \bigr) \hspace{-0.25ex} \Bigr) d\mathcal{V}
 = \hspace{.1ex} \zerovector
 \hspace{.1ex} .
 \end{equation*}
@@ -1546,7 +887,7 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{balanceoftranslationalmomentum.local}
 \boldnabla \dotp \cauchystress \hspace{.15ex}
-+ \rho \bigl( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \bigr) \hspace{-0.2ex}
++ \massdensity \bigl( \massloadvector \hspace{-0.2ex} - \mathdotabove{\bm{v}} \bigr) \hspace{-0.2ex}
 = \hspace{.1ex} \zerovector
 \hspace{.1ex} .
 \end{equation}
@@ -1561,8 +902,8 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 \en{Here is the integral formulation}\ru{Вот интегральная формулировка}\::
 
 \nopagebreak\vspace{-0.3em}\begin{equation}\label{balanceofrotationalmomentum.integral}
-\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{.2ex} \bm{v} \hspace{0.1ex} d\mathcal{V} \hspace{-0.25ex} \right)^{\hspace{-0.32em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
-= \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V}
+\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.2ex} \bm{v} \hspace{0.1ex} d\mathcal{V} \hspace{-0.25ex} \right)^{\hspace{-0.32em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+= \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V}
 \hspace{.25ex} + \hspace{.25ex}
 \ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.25ex} \currentlocationvector \times \hspace{-0.05ex} \bm{p} \hspace{.25ex} d\mathcal{O} .
 \end{equation}
@@ -1571,11 +912,11 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 Дифференцируя левую часть (${\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\currentlocationvector}\hspace{.2ex}}$)
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.3em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.3em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
 =
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.32ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.32ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V}
 \hspace{.3ex} +
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \tikzmark{RdotCrossRdotBegin} \mathdotabove{\currentlocationvector} \times \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.1ex} \tikzmark{RdotCrossRdotEnd} \hspace{.3ex} d\mathcal{V} ,
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \tikzmark{RdotCrossRdotBegin} \mathdotabove{\currentlocationvector} \times \hspace{-0.2ex} \massdensity \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.1ex} \tikzmark{RdotCrossRdotEnd} \hspace{.3ex} d\mathcal{V} ,
 \end{equation*}
 \AddUnderBrace[line width=.75pt][0, -0.1ex][yshift=0.11em]%
 {RdotCrossRdotBegin}{RdotCrossRdotEnd}{${\scalebox{.8}{$ \zerovector $}}$}
@@ -1600,13 +941,13 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 ...
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V} \hspace{.22ex}
-= \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{-0.1ex} \massloadvector \hspace{0.1ex} d\mathcal{V} \hspace{.2ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V} \hspace{.22ex}
+= \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{0.1ex} d\mathcal{V} \hspace{.2ex}
 - \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \left( \cauchystress \times \hspace{-0.24ex} \currentlocationvector \hspace{.2ex} \right) \hspace{-0.1ex} d\mathcal{V} ,
 \end{equation*}
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \rho \hspace{.15ex} \bigl( \massloadvector \hspace{-0.1ex} - \hspace{-0.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.2ex} \bigr) \hspace{.1ex} d\mathcal{V} \hspace{.12ex}
+\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.15ex} \bigl( \massloadvector \hspace{-0.1ex} - \hspace{-0.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.2ex} \bigr) \hspace{.1ex} d\mathcal{V} \hspace{.12ex}
 - \hspace{-0.2ex} \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \boldnabla \dotp \left( \cauchystress \times \hspace{-0.24ex} \currentlocationvector \hspace{.2ex} \right) \hspace{-0.1ex} d\mathcal{V} \hspace{.1ex}
 = \hspace{.15ex} \zerovector
 \hspace{.1ex} ,
@@ -1908,14 +1249,14 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 \ru{Вот баланс сил~(импульса) с~тензором~${\hspace{.1ex}\firstpiolakirchhoffstress}$ для любого недеформированного объёма~$\mathcircabove{\mathcal{V}}$}
 
 \nopagebreak\ru{\vspace{-0.12em}}\begin{equation*}
-\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \rho \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V} $} + \hspace{-0.2ex}
+\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V} $} + \hspace{-0.2ex}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.5ex} \currentunitnormal \hspace{-0.12ex} \dotp \hspace{-0.1ex} \cauchystress \hspace{.2ex} d\mathcal{O} $}
 = \hspace{-0.2ex}
-\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.4ex} \mathcircabove{\rho} \hspace{-0.1ex} \massloadvector \hspace{.12ex} d \mathcircabove{\mathcal{V}} $} + \hspace{-0.2ex}
+\scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.4ex} \initialmassdensity \hspace{-0.1ex} \massloadvector \hspace{.12ex} d \mathcircabove{\mathcal{V}} $} + \hspace{-0.2ex}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{o \hspace{.1ex} (\boundary \smash{\mathcircabove{\mathcal{V}}})}} \hspace{-0.5ex} \initialunitnormal \hspace{-0.12ex} \dotp \firstpiolakirchhoffstress \hspace{.2ex} do $}
 = \hspace{-0.2ex}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.5ex}
-\left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \hspace{-0.1ex} \massloadvector \hspace{-0.12ex} + \hspace{-0.4ex} \boldnablacircled \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} d \mathcircabove{\mathcal{V}} $} \hspace{-0.25ex}
+\left(^{\mathstrut} \hspace{-0.1ex} \initialmassdensity \hspace{-0.1ex} \massloadvector \hspace{-0.12ex} + \hspace{-0.4ex} \boldnablacircled \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} d \mathcircabove{\mathcal{V}} $} \hspace{-0.25ex}
 = \zerovector
 \vspace{-0.25em}\end{equation*}
 
@@ -1924,7 +1265,7 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 
 \nopagebreak\vspace{-0.25em}
 \begin{equation}\label{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}
-\boldnablacircled \dotp \hspace{.12ex} \firstpiolakirchhoffstress + \hspace{.1ex} \mathcircabove{\rho} \hspace{-0.1ex} \massloadvector
+\boldnablacircled \dotp \hspace{.12ex} \firstpiolakirchhoffstress + \hspace{.1ex} \initialmassdensity \hspace{-0.1ex} \massloadvector
 = \hspace{.1ex} \zerovector \hspace{.12ex}.
 \end{equation}
 
@@ -1933,7 +1274,7 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 \en{here}\ru{здесь}
 \en{figures}\ru{фигурирует}
 \en{the~known}\ru{известная}
-\en{mass density}\ru{плотность}~${\hspace{-0.1ex}\mathcircabove{\rho}}$\ru{ массы}
+\en{mass density}\ru{плотность}~${\hspace{-0.1ex}\initialmassdensity}$\ru{ массы}
 \en{of an~undeformed volume}\ru{недеформированного объёма}~${\hspace{-0.1ex}\mathcircabove{\mathcal{V}}\hspace{-0.25ex}}$,
 \en{and }\ru{и~}\en{the~operator}\ru{оператор}~${\hspace{-0.16ex}\boldnablacircled \equiv \initiallocationvector^i \partial_i}$
 \en{is defined}\ru{определяется}
@@ -1958,7 +1299,7 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 \nopagebreak\vspace{-0.16em}\ru{\vspace{-0.2em}}\begin{equation*}
 \begin{array}{c}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathcircabove{\mathcal{V}}} \hspace{-0.5ex}
-\left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \hspace{-0.1ex} \massloadvector \dotp \variation{\currentlocationvector} - \variation{\potentialenergydensity} \right) \hspace{-0.4ex} d \mathcircabove{\mathcal{V}} $}
+\left(^{\mathstrut} \hspace{-0.1ex} \initialmassdensity \hspace{-0.1ex} \massloadvector \dotp \variation{\currentlocationvector} - \variation{\potentialenergydensity} \right) \hspace{-0.4ex} d \mathcircabove{\mathcal{V}} $}
 \hspace{-0.1ex} + \hspace{-0.25ex}
 \scalebox{0.96}[0.94]{$ \displaystyle \integral\displaylimits_{\mathclap{o \hspace{.1ex} (\boundary \smash{\mathcircabove{\mathcal{V}}})}} \hspace{-0.4ex} \initialunitnormal \dotp \firstpiolakirchhoffstress \hspace{-0.16ex} \dotp \variation{\currentlocationvector} \hspace{.4ex} do $}
 = 0 \hspace{.1ex} ,
@@ -1973,7 +1314,7 @@ Another name for it is \emph{weighted Cauchy stress tensor}.
 \\[.25em]
 %
 \variation{\potentialenergydensity}
-= \hspace{-0.15ex} \left(^{\mathstrut} \hspace{-0.1ex} \mathcircabove{\rho} \hspace{-0.1ex} \massloadvector + \hspace{-0.25ex} \boldnablacircled \hspace{-0.1ex} \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} \dotp \variation{\currentlocationvector}
+= \hspace{-0.15ex} \left(^{\mathstrut} \hspace{-0.1ex} \initialmassdensity \hspace{-0.1ex} \massloadvector + \hspace{-0.25ex} \boldnablacircled \hspace{-0.1ex} \dotp \firstpiolakirchhoffstress \right) \hspace{-0.4ex} \dotp \variation{\currentlocationvector}
 \hspace{.1ex}
 + \firstpiolakirchhoffstress \hspace{-0.1ex} \dotdotp \hspace{-0.2ex} \boldnablacircled \hspace{.1ex} \variation{\currentlocationvector}^{\hspace{.1ex}\T}
 \end{array}

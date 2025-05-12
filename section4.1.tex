@@ -85,17 +85,17 @@ $\volumeloadvector$~\en{is}\ru{это}
 \en{are used much more often than}\ru{используются намного чаще, чем}
 \en{the }\inquotes{\en{per mass unit}\ru{на единицу массы}}~${\hspace{-0.2ex} \massloadvector \hspace{-0.1ex} dm}$\en{ ones}
 (${\hspace{.1ex} \volumeloadvector \hspace{.1ex} d\mathcal{V} \hspace{-0.2ex} = \hspace{-0.3ex} \massloadvector \hspace{-0.1ex} dm}$,
-${\hspace{.1ex} \volumeloadvector \hspace{-0.3ex} = \hspace{-0.3ex} \rho \hspace{-0.1ex} \massloadvector}$),
+${\hspace{.1ex} \volumeloadvector \hspace{-0.3ex} = \hspace{-0.3ex} \massdensity \hspace{-0.1ex} \massloadvector}$),
 \en{because}\ru{потому что}
 ${d \mathcal{V} \hspace{-0.2ex} = d \mathcircabove{\mathcal{V}}}$,
-${\rho \hspace{.2ex} d \mathcal{V} \hspace{-0.1ex} = \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.2ex} d \mathcircabove{\mathcal{V}}}$
+${\massdensity \hspace{.2ex} d \mathcal{V} \hspace{-0.1ex} = \hspace{-0.2ex} \initialmassdensity \hspace{.2ex} d \mathcircabove{\mathcal{V}}}$
 \en{and}\ru{и}~%
 ${
 \hspace{-0.2ex} \massloadvector \hspace{-0.1ex} dm
 = \hspace{-0.1ex}
-\massloadvector \hspace{-0.2ex} \mathcircabove{\rho} \hspace{.2ex} d \mathcircabove{\mathcal{V}}
+\massloadvector \hspace{-0.2ex} \initialmassdensity \hspace{.2ex} d \mathcircabove{\mathcal{V}}
 \hspace{-0.2ex} = \hspace{-0.1ex}
-\massloadvector \hspace{-0.3ex} \rho \hspace{.2ex} d \mathcal{V}
+\massloadvector \hspace{-0.3ex} \massdensity \hspace{.2ex} d \mathcal{V}
 \hspace{-0.1ex} =
 \volumeloadvector \hspace{.1ex} d\mathcal{V}
 }$.%
@@ -199,7 +199,7 @@ ${%
 \:\:
 \boldnabla \dotp \variedcauchystress
 \hspace{.1ex} + \hspace{.1ex}
-\rho \hspace{.25ex} \variation{\hspace{-0.2ex}\massloadvector}
+\massdensity \hspace{.25ex} \variation{\hspace{-0.2ex}\massloadvector}
 = \hspace{.1ex}
 \zerovector
 \hspace{.11ex} .
@@ -234,7 +234,7 @@ ${%
    \hbox{\hspace{.25ex}\en{to}\ru{на}\hspace{.25ex}}
    $\stiffnesstensor$\hbox{\hspace{.2ex},}
 \item
-   ${ \hspace{-0.1ex} \rho \hspace{.25ex}
+   ${ \hspace{-0.1ex} \massdensity \hspace{.25ex}
    \variation{\hspace{-0.2ex}\massloadvector} }$
    \hbox{\hspace{.25ex}\en{to}\ru{на}\hspace{.25ex}}
    ${ \hspace{-0.1ex} \volumeloadvector \hspace{-0.1ex} }$.
@@ -252,7 +252,7 @@ ${%
 \nopagebreak\vspace{-0.25em}
 \begin{equation}\label{nonlinear:setofequations}
 \begin{array}{c}
-\boldnabla \dotp \cauchystress \hspace{.15ex} + \rho \massloadvector = \hspace{.1ex} \zerovector \hspace{.1ex},
+\boldnabla \dotp \cauchystress \hspace{.15ex} + \massdensity \massloadvector = \hspace{.1ex} \zerovector \hspace{.1ex},
 \:\:
 \boldnabla = \bm{F}^{-\T} \hspace{-0.2ex} \dotp \boldnablacircled ,
 \:\:
@@ -391,9 +391,9 @@ ${\mathtau_{xy} \hspace{-0.2ex} = \mathtau_{xz} \hspace{-0.2ex} = 0}$
 
 \en{In dynamics}\ru{В~динамике},
 \en{vector}\ru{вектор}~$\volumeloadvector$
-\en{also includes}\ru{включает также}
+\en{includes}\ru{включает}
 \en{the~inertial addend}\ru{инерционную добавку}
-${ - \hspace{.2ex} \rho \hspace{.2ex} \mathdotdotabove{\bm{u}} }$.
+${ - \hspace{.2ex} \massdensity \hspace{.2ex} \mathdotdotabove{\bm{u}} }$.
 %
 \en{The~conditions}\ru{Условия}
 \en{on the~surface}\ru{на поверхности}
@@ -692,20 +692,20 @@ ${
 \nopagebreak\vspace{-0.4em}
 \begin{equation}\label{lineartheory:principleofvirtualwork}
 \displaystyle\integral\displaylimits_{\mathcal{V}}
-\hspace{-0.2ex} \Bigl(
-    \left(
+\hspace{-0.2ex} \Bigl( \hspace{-0.1ex}
+    \bigl(
         \hspace{.1ex}
         \volumeloadvector
         \hspace{-0.1ex} - \hspace{-0.1ex}
-        \rho \hspace{.1ex}
+        \massdensity \hspace{.1ex}
         \mathdotdotabove{\bm{u}}
         \hspace{.2ex}
-    \right)
-    \hspace{-0.1ex}
+    \bigr)
+    \hspace{-0.3ex}
     \dotp
     \variation{\bm{u}} - \variation{\potentialenergydensity}
 \hspace{.1ex} \Bigr) d\mathcal{V}
-+ \hspace{-0.3ex}
+\hspace{.1ex} + \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \bm{p} \dotp \variation{\bm{u}} \hspace{.25ex} do \hspace{.1ex}
 = \hspace{.1ex} 0
 \hspace{.1ex} ,
@@ -727,10 +727,11 @@ ${
 
 \nopagebreak\vspace{-0.4em}\begin{equation*}
 \begin{gathered}
-\variation{\infinitesimaldeformation} \hspace{-0.2ex}
-= \variation{\bigl( \hspace{.1ex} \boldnabla \bm{u}^{\hspace{.1ex}\mathsf{S}} \hspace{.2ex} \bigr)} \hspace{-0.3ex}
-= \hspace{-0.3ex} \boldnabla \bigl( \hspace{.1ex} \variation{\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{.2ex} \bigr) \hspace{-0.2ex}
-= \hspace{-0.3ex} \boldnabla \variation{\bm{u}}^{\hspace{.1ex}\mathsf{S}}
+\variation{\infinitesimaldeformation} \hspace{-0.1ex}
+= \hspace{.1ex} \variation{\bigl( \hspace{.1ex} \boldnabla \bm{u}^{\hspace{.1ex}\mathsf{S}} \hspace{.2ex} \bigr)} \hspace{-0.2ex}
+= \hspace{-0.2ex} \boldnabla \bigl( \hspace{.1ex} \variation{\bm{u}} \bigr)^{\hspace{-0.2ex}\mathsf{S}}
+\hspace{.5em} \text{\en{or just}\ru{или просто}} \hspace{.4em}
+\boldnabla \variation{\bm{u}}^{\hspace{.1ex}\mathsf{S}}
 \hspace{-0.1ex} ,
 \\[.4em]
 %
@@ -754,7 +755,7 @@ ${
 
 \nopagebreak\vspace{-0.4em}
 \begin{equation*}
-\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \boldnabla \dotp \linearstress \hspace{.1ex} + \volumeloadvector \hspace{-0.1ex} - \hspace{-0.1ex} \rho \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} \Bigr) \hspace{-0.3ex} \dotp \variation{\bm{u}} \hspace{.25ex} d\mathcal{V}
+\displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \boldnabla \dotp \linearstress \hspace{.1ex} + \volumeloadvector \hspace{-0.1ex} - \hspace{-0.1ex} \massdensity \hspace{.1ex} \mathdotdotabove{\bm{u}} \hspace{.1ex} \Bigr) \hspace{-0.3ex} \dotp \variation{\bm{u}} \hspace{.25ex} d\mathcal{V}
 + \hspace{-0.3ex}
 \displaystyle\integral\displaylimits_{o_2} \hspace{-0.4ex} \Bigl( \bm{p} - \unitnormalvector \dotp \linearstress \Bigr) \hspace{-0.3ex} \dotp \variation{\bm{u}} \hspace{.25ex} do
 \hspace{.2ex} = \hspace{.2ex} 0

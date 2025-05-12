@@ -22,10 +22,11 @@
 \en{to the vector of mass forces}\ru{вектора массовых сил}~${\variation{\hspace{-0.2ex}\massloadvector}\hspace{-0.2ex}}$,
 \en{to the first}\ru{первого} \ru{тензора напряжения }Piola\hbox{--}Kirchhoff\ru{’а}\en{ stress tensor}~${\variation{\hspace{.1ex}\firstpiolakirchhoffstress}}$
 \en{and}\ru{и}
-\en{to the deformation tensor}\ru{тензора деформации}~${\variation{\hspace{.1ex}\bm{C}}}$.
+\en{to the}\ru{тензора деформации}~Green\ru{’а}\en{ strain tensor}~${\variation{\hspace{.1ex}\bm{C}}}$.
 
-\en{By varying}\ru{Варьируя}
-\eqref{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}, (......)\footnote{%
+\en{Varying}\ru{Варьирование}
+\eqref{balanceoftranslationalmomentum.local.withfirstpiolakirchhoffstress}, (....)
+\en{and}\ru{и}~\eqref{theGreenFiniteStrainTensor}\footnote{%
 ${\boldnabla \hspace{-0.08ex}
 = \hspace{-0.2ex} \boldnabla \dotp \hspace{-0.15ex} \boldnablacircled \initiallocationvector \hspace{-0.08ex}
 = \currentlocationvector^{i} \hspace{-0.1ex} \partial_{i} \hspace{-0.15ex} \dotp \initiallocationvector^j \hspace{-0.1ex} \partial_{\hspace{-0.1ex}j} \initiallocationvector \hspace{-0.1ex}
@@ -39,23 +40,23 @@ ${\boldnablacircled \hspace{-0.1ex}
 \stackrel{?}{=} \initiallocationvector^{i} \partial_{i} \currentlocationvector \dotp \hspace{-0.25ex} \currentlocationvector^{j} \hspace{-0.1ex} \partial_{\hspace{-0.1ex}j} \hspace{-0.3ex}
 = \hspace{-0.3ex} \boldnablacircled \currentlocationvector \hspace{.1ex} \dotp \hspace{-0.15ex} \boldnabla \hspace{-0.25ex}
 = \hspace{-0.1ex} \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex} \dotp \hspace{-0.1ex} \boldnabla}$}
-\en{and}\ru{и}~(......),
-\en{we get}\ru{мы получаем}
+\en{gives}\ru{даёт}
 
 \nopagebreak\vspace{-0.4em}
 \begin{equation}\label{variationsforthecurrentconfiguration}
 \begin{array}{c}
-\boldnablacircled \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress} \hspace{-0.1ex}
-+ \mathcircabove{\rho} \hspace{.25ex} \variation{\hspace{-0.2ex}\massloadvector} \hspace{-0.1ex}
+\boldnablacircled \hspace{-0.1ex} \dotp \variation{\hspace{.1ex}\firstpiolakirchhoffstress}
++ \hspace{.1ex} \mathcircabove{\rho} \hspace{.25ex} \variation{\hspace{-0.2ex}\massloadvector}
 = \zerovector
-\hspace{.1ex} , \:\,
+\hspace{.1ex} ,
+\\[.4em]
 %
 \variation{\hspace{.1ex}\firstpiolakirchhoffstress} \hspace{-0.1ex}
-= \hspace{-0.2ex} \left( \hspace{.1ex} \scalebox{.93}{$ \displaystyle\frac{\partial^2 \hspace{.1ex} \potentialenergydensity}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.1ex}\bm{C}} \hspace{-0.15ex} \right) \hspace{-0.3ex} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex}
+= \hspace{-0.3ex} \biggl( \hspace{.1ex} \scalebox{.93}{$ \displaystyle\frac{\partial^2 \hspace{.1ex} \potentialenergydensity}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C} \hspace{.1ex} \partial \hspace{.1ex} \bm{C}}} $} \dotdotp \variation{\hspace{.1ex}\bm{C}} \hspace{-0.15ex} \biggr) \hspace{-0.3ex} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.3ex}
 + \hspace{.1ex}
-\displaystyle\frac{\partial \hspace{.1ex} \potentialenergydensity}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C}}} \dotp \variation{\bm{F}}^{\hspace{.1ex}\T}
+\scalebox{.93}{$ \displaystyle\frac{\partial \hspace{.1ex} \potentialenergydensity}{\raisemath{-0.1em}{\partial \hspace{.1ex} \bm{C}}} $} \dotp \variation{\bm{F}}^{\hspace{.1ex}\T}
 \hspace{-0.4ex} ,
-\\[1em]
+\\[1.2em]
 %
 \variation{\bm{F}}^{\hspace{.1ex}\T} \hspace{-0.5ex}
 = \variation{\hspace{.1ex} \boldnablacircled \currentlocationvector}
@@ -67,12 +68,21 @@ ${\boldnablacircled \hspace{-0.1ex}
 \hspace{-0.1ex} ,
 \\[.5em]
 %
+\begin{multlined}
 \variation{\hspace{.1ex}\bm{C}}
-= \smalldisplaystyleonehalf \hspace{.2ex} \variation{ \bigl( \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F} \bigr) } \hspace{-0.25ex}
+= \smalldisplaystyleonehalf \hspace{.2ex} \variation{ \bigl( \bm{F}^{\hspace{.1ex}\T} \hspace{-0.6ex} \dotp \hspace{-0.2ex} \bm{F} \bigr) } \hspace{-0.25ex}
+= \smalldisplaystyleonehalf \hspace{-0.1ex} \Bigl( \hspace{-0.1ex}
+     \bigl( \variation{\bm{F}^{\hspace{.1ex}\T}} \bigr) \hspace{-0.4ex} \dotp \hspace{-0.3ex} \bm{F}
+     + \bm{F}^{\hspace{.1ex}\T} \hspace{-0.5ex} \dotp \hspace{-0.4ex} \bigl( \variation{\bm{F}} \bigr)
+\hspace{-0.1ex} \Bigr) \hspace{-0.1ex} ,
+\\[-1em]
+%
+\variation{\hspace{.1ex}\bm{C}}
 = \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \infinimentpetitedeformationvariation \dotp \bm{F} ,
 \:\,
 \infinimentpetitedeformationvariation \equiv \insideinfinitesimalstrainvariation
 \hspace{.1ex} .
+\end{multlined}
 \end{array}
 \end{equation}
 

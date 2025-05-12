@@ -1,0 +1,541 @@
+\en{\section{Measures (tensors) of deformation}}
+
+\ru{\section{Меры (тензоры) деформации}}
+
+\label{section:deformationtensors}
+
+\en{And this}\ru{А это}\en{ is}\ru{\:---}
+\en{where}\ru{где}
+\ru{возникает }\en{the extra complexity}\ru{экстра сложность}\en{ arose}.
+%
+\en{Although}\ru{Хотя},
+\en{multi\-variance}\ru{многовариантность}
+\en{is often seen}\ru{нередко видится}
+\en{as a~big gift}\ru{как большой дар}.
+
+\en{The motion gradient}\ru{Градиент движения}~$\bm{F}$
+\en{characterizes}\ru{характеризует}
+\en{both the~deformation of a~body}\ru{и~деформацию тела}\ru{,}
+\en{and the~rotation of a~body as a~whole}\ru{и~поворот тела как~целого}.
+%
+\en{The deformation-only tensors}\ru{Тензорами лишь-деформации}
+\en{are}\ru{являются}
+\en{the stretch tensors}\ru{тензоры искажений}~${\bm{U}\hspace{-0.25ex}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$
+\en{from the polar decomposition}\ru{из полярного разложения}
+${\bm{F} \hspace{-0.1ex} = \rotationtensor \dotp \hspace{.25ex} \bm{U} \hspace{-0.2ex} = \bm{V} \hspace{-0.3ex} \dotp \hspace{.15ex} \rotationtensor}$,
+\en{as well as}\ru{так~же как и}~\en{another tensors}\ru{другие тензоры},
+\en{originating}\ru{происходящие}
+\en{from}\ru{от}~${\bm{U}\hspace{-0.25ex}}$
+\ru{или\,(и)}\en{or\,(and)}~${\bm{V}\hspace{-0.3ex}}$.
+
+\en{The widely used ones are}\ru{Широко используются}
+\en{the~}\inquotes{\en{squares}\ru{квадраты}}
+\en{of~}${\bm{U}\hspace{-0.25ex}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.1ex}}$
+
+\nopagebreak\vspace{-0.1em}\begin{equation}\label{deformationtensors.nonlinear}
+\begin{array}{c}
+\hspace*{-2.33em} \bigl( \hspace{.1ex} \bm{U}^{\hspace{.1ex}2} \hspace{-0.3ex} = \hspace{.22ex} \bigr) \hspace{.8ex}
+\bm{U} \hspace{-0.3ex} \dotp \hspace{.1ex} \bm{U} \hspace{-0.2ex}
+= \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F}
+\equiv \bm{G}
+\hspace{.1ex} ,
+\\[.1em]
+%
+\hspace*{-2.33em} \bigl( \hspace{.1ex} \bm{V}^{\hspace{.04ex}2} \hspace{-0.3ex} = \hspace{.22ex} \bigr) \hspace{.8ex}
+\bm{V} \hspace{-0.3ex} \dotp \bm{V} \hspace{-0.25ex}
+= \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.36ex}
+\equiv \mathboldPhi
+\hspace{.1ex} .
+\end{array}
+\end{equation}
+
+\vspace{-0.25em}\noindent
+\en{These are}\ru{Это}
+\en{the }\ru{тензор деформации }Green’\en{s}\ru{а}\en{ deformation tensor}
+(\en{or}\ru{или}
+\en{the right}\ru{правый}
+\ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\bm{G}$
+\en{and}\ru{и}
+\en{the }\ru{тензор деформации }Finger’\en{s}\ru{а}\en{ deformation tensor}
+(\en{or}\ru{или}
+\en{the left}\ru{левый}
+\ru{тензор }Cauchy--Green\ru{’а}\en{ tensor})~$\mathboldPhi$.
+%
+\en{They have}\ru{У~них есть}
+\en{the~convenient link}\ru{удобная связь}
+\en{with}\ru{с}~\en{the motion gradient}\ru{градиентом движения}~$\bm{F}$,
+\en{without}\ru{без}
+\en{calculating square roots}\ru{вычисления квадратных корней}
+(\en{as}\ru{как}
+\en{it’s needed}\ru{это нужно}
+\en{for}\ru{для}~${\bm{U}\hspace{-0.25ex}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.25ex}}$%
+).
+%
+\en{That’s}\ru{Таков\'{а}}
+\en{the big reason}\ru{больш\'{а}я причина}\ru{,}
+\en{why}\ru{почему}
+\en{tensors}\ru{тензоры}~$\bm{G}$
+\en{and}\ru{и}~$\mathboldPhi$
+\en{are so widely used}\ru{так широк\'{о} используются}.
+
+\en{Tensor}\ru{Тензор}~$\bm{G}$
+\en{was first used}\ru{впервые использовал}
+\en{by }George Green\hspace{-0.1ex}%
+\footnote{%
+\href{https://en.wikipedia.org/wiki/George_Green_(mathematician)}{\bookauthor{Green, George}}.
+\href{https://hdl.handle.net/2027/mdp.39015027059651?urlappend=\%3Bseq=133}{(1839) On the~propagation of~light in crystallized media. \emph{Transactions of the~Cambridge Philosophical Society.} 1842, vol.\:7, part~II, pages 121\hbox{--}140.}
+}\hspace{-0.5ex}.
+
+\en{An~inversion}\ru{Обращение}
+\en{of~}$\mathboldPhi$
+\en{and}\ru{и}~$\bm{G}$
+\en{gives}\ru{даёт} \en{the two more}\ru{ещё два} \en{deformation tensors}\ru{тензора деформации}
+
+\nopagebreak\vspace{-0.2em}\begin{equation}\label{moredeformationtensors.nonlinear}
+\begin{array}{c}
+\bm{V}^{\expminustwo} \hspace{-0.25ex}
+= \mathboldPhi^{\expminusone} \hspace{-0.2ex}
+= \hspace{-0.1ex} \left( \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{.1ex} \right)^{\hspace{-0.33ex}\expminusone} \hspace{-0.4ex}
+= \bm{F}^{\expminusT} \hspace{-0.3ex} \dotp \bm{F}^{\expminusone} \hspace{-0.25ex}
+\equiv {^2\hspace{-0.2ex}\bm{c}}
+\hspace{.2ex} ,
+\\
+%
+\bm{U}^{\expminustwo} \hspace{-0.25ex}
+= \bm{G}^{\hspace{.12ex}\expminusone} \hspace{-0.2ex}
+= \hspace{-0.1ex} \left( \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex} \dotp \bm{F} \hspace{.2ex} \right)^{\hspace{-0.33ex}\expminusone} \hspace{-0.4ex}
+= \bm{F}^{\expminusone} \hspace{-0.3ex} \dotp \bm{F}^{\expminusT} \hspace{-0.3ex}
+\equiv {^2\hspace{-0.4ex}\bm{f}}
+\hspace{-0.1ex} ,
+\end{array}
+\end{equation}
+
+\vspace{-0.2em}\noindent
+\en{each of~which}\ru{каждый из~которых}
+\en{is sometimes called}\ru{иногда называется}
+\ru{тензором }\en{the~}\href{https://en.wikipedia.org/wiki/Gabrio_Piola}{Piola}\en{ tensor}
+\en{or}\ru{или}
+\ru{тензором }\en{the~}\href{https://en.wikipedia.org/wiki/Josef_Finger}{Finger}\ru{’а}\en{ tensor}.
+%
+\en{The~inverse}\ru{Обратный}
+\en{of the left}\ru{к~левому}
+\ru{тензору }Cauchy--Green\ru{’а}\en{ tensor}~${\hspace{-0.1ex}\mathboldPhi\hspace{.1ex}}$
+\en{is known as}\ru{известен как}
+\ru{тензор деформации }\en{the }Cauchy\en{ deformation tensor}~${\hspace{-0.2ex}{^2}\hspace{-0.2ex}\bm{c}}$.
+
+\en{The~components}\ru{Компоненты}
+\en{of these tensors}\ru{этих тензоров}\en{ are}
+
+\nopagebreak\vspace{-0.1em}
+\begin{equation*}\label{componentsofdeformationtensors}
+\begin{array}{r@{\hspace{.66em}}l}
+\bm{G} = \initiallocationvector^i \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \initiallocationvector^j \hspace{-0.25ex}
+= G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{.1ex} \initiallocationvector^i \initiallocationvector^j
+\hspace{-0.3ex} , &
+G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
+\currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
+\hspace{.1ex} ,
+\\[.25em]
+%
+{{^2}\hspace{-0.4ex}\bm{f}} \hspace{-0.2ex} = \initiallocationvector_\differentialindex{i} \currentlocationvector^{i} \hspace{-0.2ex} \dotp \currentlocationvector^j \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= G^{\hspace{.1ex}i\hspace{-0.1ex}j} \initiallocationvector_\differentialindex{i} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j}
+, &
+G^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \equiv
+\currentlocationvector^{i} \hspace{-0.2ex} \dotp \hspace{-0.15ex} \currentlocationvector^j
+\hspace{-0.3ex} ,
+\\[.25em]
+%
+{{^2}\hspace{-0.2ex}\bm{c}} = \hspace{-0.1ex} \currentlocationvector^{i} \initiallocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \hspace{.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \currentlocationvector^{j} \hspace{-0.25ex}
+= \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \currentlocationvector^{i} \currentlocationvector^{j}
+\hspace{-0.3ex} , &
+\textsl{g}_{i\hspace{-0.1ex}j} \hspace{-0.15ex} \equiv
+\initiallocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \hspace{.1ex} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j}
+\hspace{.1ex} ,
+\\[.25em]
+%
+\mathboldPhi = \hspace{-0.1ex} \currentlocationvector_\differentialindex{i} \hspace{.1ex} \initiallocationvector^i \hspace{-0.15ex} \dotp \hspace{.1ex} \initiallocationvector^j \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j} \currentlocationvector_\differentialindex{i} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
+\hspace{.1ex} , &
+\textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j} \hspace{-0.15ex} \equiv
+\initiallocationvector^{\hspace{.1ex}i} \hspace{-0.15ex} \dotp \hspace{.1ex} \initiallocationvector^{\hspace{.1ex}j}
+\hspace{-0.3ex} ,
+\end{array}
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{and }\ru{и~}\en{they}\ru{они}
+\en{coincide}\ru{совпадают}
+\en{with the components}\ru{с~компонентами}
+\en{of the unit}\ru{единичного}~(\en{metric}\ru{метрического})
+\en{tensor}\ru{тензора}
+
+\nopagebreak\vspace{-0.4em}
+\begin{multline*}
+\shoveleft{
+   \hspace{3em} \UnitDyad
+   = \hspace{-0.2ex}
+   \currentlocationvector_\differentialindex{i} \currentlocationvector^{i}
+   \hspace{-0.2ex} =
+   G_{\hspace{-0.15ex}i\hspace{-0.1ex}j} \currentlocationvector^{i} \currentlocationvector^j
+   \hspace{-0.25ex} = \hspace{-0.2ex}
+   \currentlocationvector^{i} \currentlocationvector_\differentialindex{i}
+   \hspace{-0.2ex} =
+   G^{\hspace{.1ex}i\hspace{-0.1ex}j} \hspace{-0.2ex} \currentlocationvector_\differentialindex{i} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
+\hfill }
+\\[-0.2em]
+%
+= \initiallocationvector^i \initiallocationvector_\differentialindex{i} \hspace{-0.2ex}
+= \textsl{g}^{\hspace{.2ex}i\hspace{-0.1ex}j} \initiallocationvector_\differentialindex{i} \initiallocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \initiallocationvector_\differentialindex{i} \initiallocationvector^i \hspace{-0.25ex}
+= \textsl{g}_{i\hspace{-0.1ex}j} \hspace{.1ex} \initiallocationvector^i \initiallocationvector^j
+\hspace{-0.2ex} ,
+\end{multline*}
+
+\vspace{-0.2em}\noindent
+\en{but}\ru{но}
+\en{the components’ bases}\ru{базисы компонент}
+\en{are different}\ru{разные}.
+%
+\en{Using}\ru{Пользуясь}
+\en{only}\ru{только}
+\en{the~index notation}\ru{индексной записью},
+\en{it’s easy to get confused}\ru{легко запутаться}
+\en{due to the~similarity}\ru{из\hbox{-}за сходства}
+\en{between}\ru{между}
+\en{the~unit}\ru{единичным}
+\en{tensor}\ru{тензором}~$\UnitDyad$
+\en{and the~strain tensors}\ru{и~тензорами деформации}
+$\bm{G}$,
+$\mathboldPhi$,
+${{^2}\hspace{-0.4ex}\bm{f}\hspace{-0.1ex}}$,
+${{^2}\hspace{-0.2ex}\bm{c}}$.
+%
+\en{The direct indexless notation}\ru{Прямая безиндексная запись}
+\en{has}\ru{имеет}
+\ru{тут }\en{the obvious}\ru{явное}
+\en{advantage}\ru{преимущество}\en{ here}.
+
+\en{As was mentioned}\ru{Как упоминалось}
+\en{in}\ru{в}~\chapterdotsectionref{chapter:mathapparatus}{section:polardecomposition},
+\en{the~invariants}\ru{инварианты}
+\en{of~the~stretch tensors}\ru{тензоров искажений}
+$\bm{U}\hspace{-0.1em}$
+\en{and}\ru{и}~$\bm{V}\hspace{-0.1em}$
+\en{are the~same}\ru{одинаковые}.
+%
+\en{If}\ru{Если}
+${w_{i}}$~\en{are}\ru{это}
+\en{the~three eigenvalues}\ru{три собственных значения}
+\en{of~}${\bm{U}\hspace{-0.1em}}$
+\en{and}\ru{и}~${\bm{V}\hspace{-0.2em}}$,
+\en{that is}\ru{то есть}
+\en{the~roots}\ru{корни}
+\en{of the characteristic equations}\ru{характеристических уравнений}
+\en{for these tensors}\ru{для этих тензоров},
+\en{then}\ru{то}
+\en{here are}\ru{вот}
+\en{their}\ru{их}
+\en{invariants}\ru{инварианты}:
+
+\nopagebreak\vspace{-0.3em}
+\begin{gather*}
+\anyfirstinvariantof{\bm{U}}
+= \anyfirstinvariantof{\bm{V}}
+= \trace{\bm{U}} \hspace{-0.25ex}
+= \trace{\hspace{-0.2ex}\bm{V}} \hspace{-0.25ex}
+= \textstyle\sum \hspace{-0.2ex} U_{\hspace{-0.2ex}j\hspace{-0.2ex}j}
+= \textstyle\sum \hspace{-0.2ex} V_{\hspace{-0.1ex}j\hspace{-0.2ex}j}
+= \textstyle\sum \hspace{-0.2ex} w_{i}
+\hspace{.1ex} ,
+\\
+%
+\anysecondinvariantof{\bm{U}} \hspace{-0.2ex}
+= \anysecondinvariantof{\bm{V}} \hspace{-0.2ex}
+= \vphantom{\textstyle\sum}
+w_1 w_2 \hspace{-0.2ex}
++ w_1 w_3 \hspace{-0.2ex}
++ w_2 \hspace{.15ex} w_3
+\hspace{.1ex} ,
+\\
+%
+\anythirdinvariantof{\bm{U}} \hspace{-0.2ex}
+= \anythirdinvariantof{\bm{V}} \hspace{-0.2ex}
+= \vphantom{\textstyle\sum}
+w_1 w_2 \hspace{.15ex} w_3
+\hspace{.1ex} .
+\end{gather*}
+
+\en{The invariants}\ru{Инварианты}
+\en{of~}$\bm{G}$
+\en{and}\ru{и}~$\mathboldPhi$
+\en{coincide too}\ru{тоже совпадают}:
+
+\nopagebreak
+\begin{equation*}
+\anyfirstinvariantof{\bm{G}}
+\hspace{-0.2ex}
+= \anyfirstinvariantof{\mathboldPhi}
+\hspace{.1ex} , \dots
+\end{equation*}
+
+\en{Without}\ru{Без}
+\en{deformation}\ru{деформации}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\bm{F} = \bm{U} \hspace{-0.3ex} = \bm{V} \hspace{-0.3ex} = \bm{G} = \mathboldPhi = {^2}\hspace{-0.4ex}\bm{f} = {^2}\hspace{-0.2ex}\bm{c} = \UnitDyad
+\hspace{.1ex}
+,
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+\en{thus}\ru{поэтому}
+\en{as characteristics of~deformation}\ru{как характеристики деформации}
+\en{it’s worth taking}\ru{ст\'{о}ит взять}
+\en{the differences}\ru{разности}
+\en{like}\ru{типа}
+${\bm{U} \hspace{-0.2ex} - \UnitDyad}$,
+${\bm{U} \hspace{-0.3ex} \dotp \bm{U} \hspace{-0.2ex} - \UnitDyad}$, \dots
+
+...
+
+\subsection*{The right Cauchy\hbox{--}Green deformation tensor}
+
+George Green discovered a deformation tensor known as the right Cauchy\hbox{--}Green deformation tensor or Green’s deformation tensor
+
+\nopagebreak\begin{equation*}
+\bm{G}
+= \bm{F}^{\hspace{.1ex}\T} \hspace{-0.5ex} \dotp \bm{F}
+= \bm{U}^{2}
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+G_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= F_{k' i} \hspace{.25ex} F_{k' \hspace{-0.15ex}j} \hspace{-0.15ex}
+= \frac{\partial \hspace{-0.1ex} x_{\hspace{-0.1ex}k'}}{\partial \mathcircabove{x}_{i}} \hspace{.15ex} \frac{\partial \hspace{-0.1ex} x_{\hspace{-0.1ex}k'}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}}
+\hspace{.1ex} .
+\end{equation*}
+
+This tensor \textcolor{magenta}{gives the~\inquotes{square} of local change in distances} due to deformation:
+${\displaystyle d\currentlocationvector \dotp d\currentlocationvector = d\initiallocationvector \dotp \bm{G} \dotp d\initiallocationvector}$
+
+The most popular invariants of~${\bm{G}}$ are
+%%used in expressions for the potential energy of elastic deformations of an~isotropic body.
+\[
+\begin{array}{r@{\hspace{.25em}}c@{\hspace{.33em}}l}
+\anyfirstinvariantof{\bm{G}} & \equiv &
+\trace{\bm{G}}
+= G_{ii} \hspace{-0.2ex} = \gamma_{1}^{2} + \gamma_{2}^{2} + \gamma_{3}^{2}
+\\[.25em]
+%
+\anysecondinvariantof{\bm{G}} & \equiv &
+\smalldisplaystyleonehalf \bigl( G_{\hspace{-0.2ex}j\hspace{-0.1ex}j}^{\hspace{.25ex}2} \hspace{-0.1ex} - G_{ik} G_{ki} \hspace{.1ex} \bigr) \hspace{-0.25ex}
+= \gamma_{1}^{2}\gamma_{2}^{2} + \gamma_{2}^{2}\gamma_{3}^{2} + \gamma_{3}^{2}\gamma_{1}^{2}
+\\[.4em]
+%
+\anythirdinvariantof{\bm{G}} & \equiv &
+\determinant \hspace{.1ex} \bm{G}
+= \gamma_{1}^{2}\gamma_{2}^{2}\gamma_{3}^{2}
+\end{array}
+\]
+where ${\gamma_{i}\hspace{-0.2ex}}$ are stretch ratios for unit fibers that are initially oriented along directions of eigenvectors of the right stretch tensor~${\bm{U}\hspace{-0.2ex}}$.
+
+\subsection*{The inverse of Green’s deformation tensor}
+
+Sometimes called the Finger tensor or the Piola tensor, the~inverse of the right Cauchy\hbox{--}Green deformation tensor
+
+\nopagebreak\vspace{-0.25em}\begin{equation*}
+{^2\hspace{-0.4ex}\bm{f}}
+= \bm{G}^{\expminusone} \hspace{-0.25ex}
+= \bm{F}^{\expminusone} \hspace{-0.4ex} \dotp \bm{F}^{\expminusT}
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+f_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \frac{\partial \mathcircabove{x}_{i}}{\partial x_{\hspace{-0.1ex}k'}} \hspace{.15ex} \frac{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}}{\partial x_{\hspace{-0.1ex}k'}}
+\end{equation*}
+
+\subsection*{The left Cauchy\hbox{--}Green or Finger deformation tensor}
+
+Swapping multipliers in the formula for the right Green–Cauchy deformation tensor leads to the left Cauchy\hbox{--}Green deformation tensor, defined as
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\mathboldPhi
+= \bm{F} \dotp \bm{F}^{\hspace{.1ex}\T} \hspace{-0.4ex}
+= \bm{V}^{2}
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+\Phi_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \frac{\partial x_{i}}{\partial \mathcircabove{x}_{k}} \hspace{.15ex} \frac{\partial x_{\hspace{-0.15ex}j}}{\partial \mathcircabove{x}_{k}}
+\end{equation*}
+
+The left Cauchy\hbox{--}Green deformation tensor is often called the Finger’s deformation tensor, named after Josef Finger (1894).
+
+Invariants of ${\mathboldPhi}$ are also used in expressions for strain energy density functions.
+The conventional invariants are defined as
+
+\nopagebreak\begin{equation*}
+\begin{aligned}
+I_{1} & \equiv \Phi_{ii} = \lambda_{1}^{2} + \lambda_{2}^{2} + \lambda_{3}^{2}
+\\
+%
+I_{2} & \equiv \tfrac{1}{2} \bigl( \Phi_{ii}^{2} - \Phi_{jk}\Phi_{kj} \bigr) = \lambda_{1}^{2}\lambda_{2}^{2} + \lambda_{2}^{2}\lambda_{3}^{2} + \lambda_{3}^{2}\lambda_{1}^{2}
+\\
+%
+I_{3} & \equiv \det \mathboldPhi = \Jacobian^{\hspace{.1ex}2} \hspace{-0.4ex} = \lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}
+\end{aligned}
+\end{equation*}
+
+\vspace{-0.2em}\noindent
+(${\Jacobian \equiv \det{\bm{F}}}$\en{ is}\ru{\:---}
+\en{the~Jacobian}\ru{якобиан},
+\en{determinant of the motion gradient}\ru{определитель градиента движения})
+
+\subsection*{The Cauchy deformation tensor}
+
+The Cauchy deformation tensor is defined as the~inverse of the left Cauchy\hbox{--}Green deformation tensor
+
+\nopagebreak\vspace{-0.4em}\begin{equation*}
+{^2\hspace{-0.2ex}\bm{c}} = \mathboldPhi^{\expminusone} \hspace{-0.25ex}
+= \bm{F}^{\expminusT} \hspace{-0.4ex} \dotp \bm{F}^{\expminusone}
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+c_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{i}} \hspace{.15ex} \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{\hspace{-0.15ex}j}}
+\end{equation*}
+
+${\displaystyle d\initiallocationvector \dotp d\initiallocationvector = d\currentlocationvector \dotp {^2\hspace{-0.2ex}\bm{c}} \dotp d\currentlocationvector}$
+
+This tensor is also called the Piola tensor or the Finger tensor in rheology and fluid dynamics literature.
+
+\subsection*{Finite strain tensors}
+
+The concept of \emph{strain} is used to evaluate how much a~given displacement differs locally from a~body displacement as a~whole (a~\inquotes{rigid body displacement}).
+One of such strains for large (finite) deformations is the \emph{Green strain tensor}
+(\emph{Green\hbox{--}Lagrangian strain tensor}, \emph{Green\hbox{--}Saint\hbox{-\hspace{-0.2ex}}Venant strain tensor}).
+It measures how much $\bm{G}$ differs from~$\UnitDyad$
+
+\nopagebreak\begin{equation}
+\label{theGreenFiniteStrainTensor}
+\displaystyle \bm{C}
+= \hspace{.1ex} \smalldisplaystyleonehalf \bigl( \bm{G} - \hspace{-0.1ex} \UnitDyad \hspace{.2ex} \bigr) \hspace{-0.3ex}
+= \hspace{.1ex} \smalldisplaystyleonehalf \bigl( \bm{F}^{\hspace{.1ex}\T} \hspace{-0.6ex} \dotp \hspace{-0.2ex} \bm{F} - \UnitDyad \hspace{.2ex} \bigr)
+\end{equation}
+
+\noindent
+or as the function of the displacement gradient tensor
+
+\nopagebreak\begin{equation*}
+\displaystyle \bm{C} = \hspace{.1ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \Bigl( \hspace{-0.1ex}
+     \boldnablacircled\bm{u}
+     + \hspace{-0.1ex} \boldnablacircled\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
+     + \hspace{-0.1ex} \boldnablacircled\bm{u} \dotp \hspace{-0.1ex} \boldnablacircled\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.1ex}
+\Bigr)
+\hspace{-0.1ex} ,
+\end{equation*}
+
+\noindent
+in cartesian coordinates
+
+\nopagebreak\begin{equation*}
+\displaystyle C_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \hspace{.1ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \Bigl(
+     \scalebox{.8}{$ \displaystyle \frac{\partial x_{k'}}{\partial \mathcircabove{x}_{i}} $} \hspace{.1ex}
+     \scalebox{.8}{$ \displaystyle \frac{\partial x_{k'}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}} $}
+     - \delta_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+\Bigr) \hspace{-0.3ex}
+= \hspace{.1ex} \smalldisplaystyleonehalf \hspace{-0.1ex} \Bigl( \hspace{.1ex}
+     \scalebox{.8}{$ \displaystyle \frac{\partial u_{\hspace{-0.1ex}j}}{\partial \mathcircabove{x}_{i}} $}
+     + \scalebox{.8}{$ \displaystyle \frac{\partial u_{i}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}} $}
+     + \scalebox{.8}{$ \displaystyle \frac{\partial u_{k}}{\partial \mathcircabove{x}_{i}} \frac{\partial u_{k}}{\partial \mathcircabove{x}_{\hspace{-0.2ex}j}} $}
+\Bigr)
+\hspace{-0.1ex} .
+\end{equation*}
+
+The \emph{Almansi\hbox{--}Hamel strain tensor}, referenced to the deformed configuration (\inquotes{Eulerian description}), is defined as
+
+\nopagebreak\vspace{-0.5em}\begin{equation*}
+{^2\hspace{-0.2ex}\bm{a}} = \smalldisplaystyleonehalf \bigl( \UnitDyad - \hspace{-0.15ex} {^2\hspace{-0.2ex}\bm{c}} \hspace{.3ex} \bigr) \hspace{-0.3ex}
+= \smalldisplaystyleonehalf \bigl( \UnitDyad - \mathboldPhi^{\expminusone} \hspace{.2ex} \bigr)
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{1em}
+a_{i\hspace{-0.1ex}j} \hspace{-0.2ex}
+= \onehalf \hspace{-0.25ex} \left( \hspace{-0.4ex} \delta _{i\hspace{-0.1ex}j} - \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{i}} \hspace{.15ex} \frac{\partial \mathcircabove{x}_{k}}{\partial \hspace{-0.1ex} x_{\hspace{-0.15ex}j}} \right)
+\end{equation*}
+
+\vspace{-0.4em}\noindent
+or as function of the displacement gradient
+
+\nopagebreak\begin{equation*}
+{^2}\hspace{-0.2ex}\bm{a} = \smalldisplaystyleonehalf \bigl(
+\boldnabla\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
++ \hspace{-0.1ex} \boldnabla\bm{u}
+- \hspace{-0.1ex} \boldnabla\bm{u} \dotp \hspace{-0.1ex} \boldnabla\bm{u}^{\hspace{-0.1ex}\T}
+\bigr)
+\end{equation*}
+
+\nopagebreak\vspace{-0.2em}\begin{equation*}
+\displaystyle a_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = \onehalf \hspace{-0.25ex} \left(
+\frac{\partial u_{i}}{\partial x_{\hspace{-0.15ex}j}}
++ \frac{\partial u_{\hspace{-0.1ex}j}}{\partial \hspace{-0.1ex} x_{i}}
+- \frac{\partial u_{k}}{\partial x_{i}} \frac{\partial u_{k}}{\partial x_{\hspace{-0.15ex}j}}
+\right)
+\end{equation*}
+
+\subsection*{Seth\hbox{--}Hill family of abstract strain tensors}
+
+B. R. Seth was the first to show that the Green and Almansi strain tensors are special cases of a more abstract measure of deformation.
+The idea was further expanded upon by Rodney Hill in~1968 \textcolor{red}{(publication??)}.
+The Seth\hbox{--}Hill family of strain measures (also called Doyle\hbox{--}Ericksen tensors) is expressed as
+
+\nopagebreak\vspace{-0.1em}\begin{equation*}
+\displaystyle \bm{D}_{(m)} \hspace{-0.2ex}
+= \frac{\raisebox{-0.2em}{1}}{2m} \left( \hspace{.1ex} \bm{U}^{2m} \hspace{-0.4ex} - \UnitDyad \hspace{.2ex} \right)
+= \frac{\raisebox{-0.2em}{1}}{2m} \left( \bm{G}^{m} \hspace{-0.4ex} - \UnitDyad \hspace{.1ex} \right) \end{equation*}
+
+\vspace{.1em} \noindent \en{For various}\ru{Для разных}~$m$
+\en{it gives}\ru{это даёт}
+
+\nopagebreak\begin{equation*}
+\begin{array}{r@{\hspace{0.1em}}ll}
+\bm{D}_{(1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \bm{U}^{2} \hspace{-0.25ex} - \UnitDyad \right) = \smalldisplaystyleonehalf (\bm{G} - \UnitDyad) & \text{\scalebox{.9}{Green strain tensor}}
+\\[.4em]
+\bm{D}_{(\nicefrac{1}{2})} & = \bm{U} \hspace{-0.15ex} - \UnitDyad = \bm{G}^{\hspace{.1ex}\nicefrac{1}{2}} \hspace{-0.25ex} - \UnitDyad & \text{\scalebox{.9}{Biot strain tensor}}
+\\[.4em]
+\bm{D}_{(0)} & = \ln \bm{U} = \smalldisplaystyleonehalf \ln \bm{G} & \text{\scalebox{.9}{logarithmic strain, Hencky strain}}
+\\[.4em]
+\bm{D}_{(-\hspace{-0.1ex}1)} & = \smalldisplaystyleonehalf \hspace{-0.25ex} \left( \hspace{-0.1ex} \UnitDyad - \bm{U}^{-2} \hspace{.1ex} \right) & \text{\scalebox{.9}{Almansi strain}}
+\end{array}
+\end{equation*}
+
+The second\hbox{-}order approximation of these tensors is
+\[ \bm{D}_{(m)} \hspace{-0.2ex} =
+\infinitesimaldeformation
++ \smalldisplaystyleonehalf \hspace{.1ex} \boldnabla\bm{u} \dotp \hspace{-0.1ex} \boldnabla\bm{u}^{\hspace{-0.1ex}\T} \hspace{-0.3ex}
+- (1 - m) \hspace{.2ex} \infinitesimaldeformation \dotp \infinitesimaldeformation \]
+
+\vspace{-0.25em}\noindent
+where ${\infinitesimaldeformation \equiv \hspace{-0.2ex} \boldnabla {\bm{u}}^{\hspace{.1ex}\mathsf{S}}}$ is the infinitesimal deformation tensor.
+
+Many other different definitions of measures~$\bm{D}$ are possible, provided that they satisfy these conditions:
+
+\begin{itemize}
+\item $\bm{D}$ vanishes for any movement of a~body as a~rigid whole
+\item dependence of~$\bm{D}$ on displacement gradient tensor~${\nabla \bm{u}}$ is continuous, continuously differentiable and monotonic
+\item it’s desired that $\bm{D}$ reduces to the infinitesimal linear deformation tensor~${\infinitesimaldeformation}$ when ${\boldnabla \bm{u} \to 0}$
+\end{itemize}
+
+\noindent For example, tensors from the set
+\[ \displaystyle \bm{D}^{(n)} \hspace{-0.32ex} = \left( {\bm{U}}^{n} \hspace{-0.4ex} - {\bm{U}}^{-n} \right) \hspace{-0.4ex} / \hspace{.25ex} 2n \]
+aren’t from the Seth\hbox{--}Hill family, but for any~$n$ they have the same 2nd\hbox{-}order approximation as Seth\hbox{--}Hill measures with~${m=0}$.
+
+\vspace{.4em} \noindent \hfill \textboldoblique{Wikipedia, the free encyclopedia}\:--- \href{https://en.wikipedia.org/wiki/Finite_strain_theory}{Finite strain theory}
+
+...
+
+
+\subsection*{\en{Logarithmic strain, Hencky’s strain}\ru{Логарифмическая деформация, деформация Hencky}}
+
+\href{https://en.wikipedia.org/wiki/Heinrich_Hencky}{%
+\bookauthor{Heinrich Hencky}%
+}.
+Über die Form des Elastizitätsgesetzes bei ideal elastischen Stoffen.
+Zeitschrift für technische Physik, Vol.\:9~(1928),
+Seiten~215\hbox{--}220.
+
+....
+

@@ -77,7 +77,7 @@
 \babel@toc {russian}{}\relax 
 \contentsline {chapter}{\numberline {3}Нелинейно\hbox {-\hspace {-0.2ex}}упругая безмоментная среда}{98}{chapter.3}%
 \vspace {.2em}
-\contentsline {section}{\numberline {1}Контину\kern -0.11exу{}м{} и два подхода к описанию его}{98}{section.3.1}%
+\contentsline {section}{\numberline {1}Контину\kern -0.11exу{}м{} и два подхода к~описанию~его}{98}{section.3.1}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
