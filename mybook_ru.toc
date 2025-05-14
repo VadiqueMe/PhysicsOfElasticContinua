@@ -47,10 +47,10 @@
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {17}Пространственное дифференцирование}{59}{section.1.17}%
-\contentsline {section}{\numberline {18}Интегральные теоремы}{62}{section.1.18}%
+\contentsline {section}{\numberline {18}Интегральные теоремы}{63}{section.1.18}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {19}Тензоры кривизны}{64}{section.1.19}%
+\contentsline {section}{\numberline {19}Тензоры кривизны}{65}{section.1.19}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
 \contentsline {chapter}{\numberline {2}Классическая механика}{69}{chapter.2}%

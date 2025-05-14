@@ -43,15 +43,12 @@
 \addto\captionsenglish{\def\figureshortname{fig.}}
 \newcommand\figureref[1]{\figureshortname~\ref{#1}}
 
+\makeatletter
+\newcommand\infinitesim@lity{\infty^{\hspace{-0.4ex}\expminusone}}
+\newcommand\infinitesimalof[1]{\scalebox{.9}{$\infinitesim@lity$}\hspace{-0.2ex}{#1}}
+\makeatother
+
 \newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
-
-\newcommand\thepermutationsparity{\raisemath{.2ex}{\mathrm{\in}}}
-
-\newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
-\newcommand\smalldisplaystyleonehalf{\scalebox{0.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
-
-\newcommand\expminusone{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
-\newcommand\expminusT{\hspace{.16ex}\scalebox{0.8}[1]{\hbox{--}}\T}
 
 \newcommand{\lquote}[0]{``}
 \newcommand{\rquote}[0]{''}
@@ -62,7 +59,15 @@
 \newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
 \makeatother
 
-\newcommand\permutationsparitysymbols[1]{\raisemath{.2ex}{\mathrm{\in}_[1]}}
+\newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
+\newcommand\smalldisplaystyleonehalf{\scalebox{.8}{$\displaystyle \onehalf$}\hspace{.1ex}}
+
+\newcommand\expminusone{\hspace{.16ex}\scalebox{.8}[1]{\hbox{--}}\raisemath{.1ex}{1}}
+\newcommand\expminusT{\hspace{.16ex}\scalebox{.8}[1]{\hbox{--}}\T}
+
+\newcommand\permutationsparitysymbolslower[1]{\raisemath{.2ex}{\scalebox{.93}{$\mathrm{\in}$}_{\raisemath{-0.2ex}{#1}}}\hspace{.08ex}}
+\newcommand\permutationsparitysymbols[1]{\permutationsparitysymbolslower{#1}}
+\newcommand\permutationsparitysymbolsupper[1]{\raisemath{.2ex}{\scalebox{.93}{$\mathrm{\in}$}^{\raisemath{-0.2ex}{#1}}}\hspace{.08ex}}
 \newcommand\permutationsparitytensor{{^3\hspace{-0.25ex}\bm{\epsilon}}\hspace{.05ex}}
 
 \pagestyle{empty}
@@ -343,24 +348,24 @@
 	\draw [line width=1.6pt, blue, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
 		($ (a) + (0, \semilengthofside, 0) $) -- ($ (aplusday) + (0, \semilengthofside, 0) $)
 		node [pos=0.5, above right, inner sep=1pt, outer sep=3pt]
-			{$\smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 \hspace{-0.2ex}
-				+ \hspace{-0.16ex} \scalebox{.9}{$\infty^{\hspace{-0.4ex}\expminusone}$}(d\bm{a})$} ;
+			{$ \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 \hspace{-0.2ex}
+				+ \hspace{-0.16ex} \infinitesimalof{(d\bm{a})} $} ;
 
 	\draw [line width=1.6pt, blue, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
 		($ (a) + (0, -\semilengthofside, 0) $) -- ($ (aminusday) + (0, -\semilengthofside, 0) $)
 		node [pos=2.5, above right, inner sep=1pt, outer sep=-5pt]
-			{$- \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 \hspace{-0.2ex}
-				+ \hspace{-0.16ex} \scalebox{0.9}{$\infty^{\hspace{-0.4ex}\expminusone}$}(d\bm{a})$} ;
+			{$ - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 \hspace{-0.2ex}
+				+ \hspace{-0.16ex} \infinitesimalof{(d\bm{a})} $} ;
 
 	\draw [line width=1.6pt, black, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
 		($ (aplusdayexitxy) + (0, \semilengthofside, 0) $) -- ($ (aplusday) + (0, \semilengthofside, 0) $)
 		node [pos=0.44, above right, inner sep=1pt, outer sep=19pt]
-			{$\bm{a} + \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1$} ;
+			{$ \bm{a} + \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 $} ;
 
 	\draw [line width=1.6pt, black, line cap = round, -{Stealth[round, length=5mm, width=2.8mm]}]
 		($ (aminusdayexitxy) + (0, -\semilengthofside, 0) $) -- ($ (aminusday) + (0, -\semilengthofside, 0) $)
 		node [pos=0.73, above left, inner sep=1pt, outer sep=3pt]
-			{$\bm{a} - \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1$} ;
+			{$ \bm{a} - \smalldisplaystyleonehalf \hspace{.12ex} d\bm{a} \dotp \bm{n}_1 \bm{n}_1 $} ;
 
 	% incremented vector
 
@@ -468,12 +473,12 @@ d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \hspace{-0.16ex}
 d\bm{a} \dotp \hspace{-0.1ex} \UnitDyad
 = d\bm{a} \dotp \hspace{.1ex}
 \smalldisplaystyleonehalf \hspace{.1ex}
-\bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \thepermutationsparitysymbols{i\hspace{-0.1ex}jk} \hspace{.2ex}
+\bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \permutationsparitysymbolslower{i\hspace{-0.1ex}jk} \hspace{.2ex}
 \bm{n}^j \hspace{-0.32ex} \times \hspace{-0.16ex} \bm{n}^k \hspace{-0.2ex}
 = d\bm{a} \dotp \hspace{.1ex}
 \smalldisplaystyleonehalf \hspace{.1ex}
-\bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \thepermutationsparitysymbols{i\hspace{-0.1ex}jk}
-\thepermutationsparity^{jkh} \hspace{.1ex}
+\bm{n}^{\hspace{-0.16ex}i} \hspace{.1ex} \permutationsparitysymbolslower{i\hspace{-0.1ex}jk}
+\permutationsparitysymbolsupper{jkh} \hspace{.1ex}
 \bm{n}_h \hspace{-0.2ex}
 = d\bm{a} \dotp \bm{n}^{\hspace{-0.16ex}i} \bm{n}_i
 \end{array}

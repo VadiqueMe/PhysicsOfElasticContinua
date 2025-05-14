@@ -2,19 +2,6 @@
 
 \label{section:spatialdifferentiation}
 
-%%\begin{changemargin}{\parindent}{\parindent}
-%%\vspace{-0.1em}
-%%\small
-%%\flushright
-%%\textit{\en{Tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is}
-%%\en{a~tensor}\ru{это тензор}\ru{,}
-%%\en{varying from~point to~point}\ru{меняющийся от~точки к~точке}
-%%(\en{variable in~space}\ru{переменный в~пространстве},
-%%\en{coordinate dependent}\ru{зависящий от~координат}).
-%%
-%%\par\vspace{.3em}
-%%\end{changemargin}
-
 \noindent
 \en{Let}\ru{Пусть}
 \en{at each point}\ru{в~каждой точке}
@@ -33,12 +20,13 @@ $\locationvector$\en{~is}\ru{\:---}
 \en{The variable}\ru{Переменная}~$\varsigma$
 \en{can be}\ru{может быть}
 \en{a~tensor of any complexity}\ru{тензором любой сложности}.
+%
 \en{An~example}\ru{Пример}
 \en{of~scalar field}\ru{скалярного поля}\:--- \en{the~temperature field}\ru{поле температуры} \en{in a~medium}\ru{в~среде},
 \en{of~vector field}\ru{векторного поля}\:--- \en{the~velocities of~liquid particles}\ru{скорости частиц жидкости}.
 
 \en{So}\ru{Итак},
-\emph{\en{a~tensor field}\ru{Тензорное поле}}\ru{\:---}\en{ is}
+\en{a~}\emph{\en{tensor field}\ru{тензорное поле}}\ru{\:---}\en{ is}
 \en{a~tensor}\ru{это тензор}\ru{,}
 \en{varying from~point to~point}\ru{меняющийся от~точки к~точке}
 (\en{variable in~space}\ru{переменный в~пространстве},
@@ -47,13 +35,11 @@ $\locationvector$\en{~is}\ru{\:---}
 \href{https://en.wikipedia.org/wiki/Field_(physics)}{\en{The~concept}\ru{Концепт}
 \en{of a~tensor field}\ru{тензорного поля}}\en{ is}\ru{\:---}
 \en{not about}\ru{не про}
-\href{https://en.wikipedia.org/wiki/Field_(mathematics)}{\en{a~field in~algebra}\ru{поле в~алгебре}},
-\en{which}\ru{которое}
-\en{considers}\ru{рассматривает}
+\href{https://en.wikipedia.org/wiki/Field_(mathematics)}{\en{a~field in~algebra}\ru{поле в~алгебре}}\ru{,}
+\en{that considers}\ru{рассматривающее}
 \en{operations}\ru{операции}
 \inquotes{$+$} \en{and}\ru{и}~\inquotes{$*$}
-\en{with properties}\ru{со~свойствами}
-\en{of~these operations}\ru{этих операций}.
+\en{with the~specific properties}\ru{с~определёнными свойствами}.
 
 % ~ ~ ~ ~ ~
 \input{curvilinear-coordinates.tex}
@@ -121,11 +107,16 @@ $\locationvector$\en{~is}\ru{\:---}
 
 ...
 
-The~differential of a~function presents a~change in the~linearization of this function.
+\en{The~differential}\ru{Дифференциал}
+\en{of a~function}\ru{функции}
+\en{presents}\ru{представляет собой}
+\en{the~change}\ru{изменение}
+\en{in linearization}\ru{линеаризации}
+\en{of that function}\ru{той функции}.
 
-...
+....
 
-\en{partial derivatives}\ru{частные производные}
+\en{partial derivatives}\ru{частичные~(частные) производные}
 
 \nopagebreak\vspace{-0.4em}\begin{equation*}
 \partial_i \equiv \scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial$}}{\raisebox{-0.1em}{$\partial q^i$}} $}
@@ -145,30 +136,89 @@ d\varsigma \hspace{-0.1ex}
 
 \en{Linearity}\ru{Линейность}
 
-\nopagebreak\vspace{-0.4em}\begin{equation}\label{linearityordifferentiation}
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{linearityordifferentiation}
 \partial_i \bigl( \lambda \hspace{.1ex} p + \hspace{-0.2ex} \mu \hspace{.1ex} q \hspace{.1ex} \bigr) \hspace{-0.2ex}
 = \lambda \bigl( \partial_i \hspace{.1ex} p \hspace{.1ex} \bigr) \hspace{-0.2ex} + \hspace{.1ex}
 \mu \bigl( \partial_i \hspace{.1ex} q \hspace{.1ex} \bigr)
 \end{equation}
 
-\inquotes{Product rule}
+\en{The~}\inquotes{\ru{Правило произведения~(}product rule\ru{)}}\en{ is}\ru{---}
+\en{about}\ru{про}
+\en{the~differentiation}\ru{дифференцирование}
+\en{of~}${p \hspace{-0.2ex} \circ \hspace{-0.2ex} q}$,
+\en{the~product}\ru{произведения}
+\en{of~}$p$ \en{and}\ru{и}~$q$\::
 
-\nopagebreak\vspace{-0.4em}\begin{equation}\label{productrulefordifferentiation}
-\partial_i \bigl( \hspace{.15ex} p \circ q \hspace{.1ex} \bigr) \hspace{-0.2ex}
-= \hspace{-0.2ex} \bigl( \partial_i \hspace{.1ex} p \hspace{.1ex} \bigr) \hspace{-0.25ex} \circ q \hspace{.12ex} +
-\hspace{.1ex} p \circ \hspace{-0.25ex} \bigl( \partial_i \hspace{.1ex} q \hspace{.1ex} \bigr)
+\nopagebreak\vspace{-0.4em}
+\begin{equation*}
+d \bigl( \hspace{.15ex} p \circ q \hspace{.1ex} \bigr)
+\hspace{-0.1ex} = \hspace{-0.1ex}
+\bigl( p + dp \bigr) \hspace{-0.4ex} \circ \hspace{-0.4ex} \bigl( q + dq \bigr) \hspace{-0.2ex} - \hspace{.1ex} p \circ q
+\hspace{.1ex} = \hspace{.1ex}
+dp \circ q \hspace{.2ex} + \hspace{.2ex} p \circ dq \hspace{.2ex} + \hspace{.2ex} dp \circ dq
+\hspace{.2ex} ,
+\end{equation*}
+
+\vspace{-0.5em}\noindent
+\en{where}\ru{где}
+${dp \circ dq = \hspace{-0.2ex} \infinitesimalof{\bigl(dp, dq\bigr)}}$\:---
+\en{the~product}\ru{произведение}~${dp \hspace{-0.2ex} \circ \hspace{-0.2ex} dq}$
+\en{of two infinitesimals}\ru{двух бесконечном\'{а}лых}
+\en{is~considered to be}\ru{считается}
+\en{infinitesimally smaller}\ru{бесконечном\'{а}ло м\'{е}ньшим}\ru{,}
+\en{than}\ru{чем}
+\en{either}\ru{каждое из}
+\en{infinitesimal}\ru{бесконечном\'{а}лых}~(${dp}$ \en{or}\ru{или}~${dq}$)
+\en{alone}\ru{в~одиночку}.
+%
+\en{Thus}\ru{Так что},
+\en{the~term}\ru{член}
+${dp \hspace{-0.2ex} \circ \hspace{-0.2ex} dq}$
+\en{can be}\ru{может быть}
+\en{dropped}\ru{отброшен}
+\en{as negligible}\ru{как пренебрежимый}
+\en{compared to terms}\ru{по~сравнению с~членами}
+\en{with one infinitesimal}\ru{с~одной бесконечном\'{а}лой}.
+%
+\en{And then}\ru{И~тогда}
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{theproductrule.differentiation}
+d \bigl( \hspace{.15ex} p \circ q \hspace{.1ex} \bigr)
+\hspace{-0.2ex} = \hspace{-0.2ex}
+\bigl( dp \bigr) \hspace{-0.3ex} \circ q \hspace{.1ex} + \hspace{.1ex} p \circ \hspace{-0.3ex} \bigl( dq \bigr)
+.
+\end{equation}
+
+\en{For}\ru{Для}
+\en{a~partial derivative}\ru{частичной~(частной) производной}
+${ \partial_i \equiv \scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial$}}{\raisebox{-0.1em}{$\partial q^i$}} $} }$
+
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{theproductrule.partialderivative}
+\partial_i \bigl( \hspace{.15ex} p \circ q \hspace{.1ex} \bigr)
+\hspace{-0.2ex} = \hspace{-0.2ex}
+\bigl( \partial_i \hspace{.1ex} p \hspace{.1ex} \bigr) \hspace{-0.3ex} \circ q \hspace{.12ex} +
+\hspace{.1ex} p \circ \hspace{-0.3ex} \bigl( \partial_i \hspace{.1ex} q \hspace{.1ex} \bigr)
+.
 \end{equation}
 
 ...
 
-Local basis ${\locationvector_\differentialindex{i}}$
+\subsection*{%
+Local basis
+${\locationvector_\differentialindex{i}}$%
+}
 
-\en{The~differential}\ru{Дифференциал} \en{of~location vector}\ru{вектора положения}~${\locationvector(q^{\hspace{.1ex}i}\hspace{.1ex})}$ \en{is}\ru{есть}
+\en{The~differential}\ru{Дифференциал}
+\en{of the~location vector}\ru{вектора положения}~${\locationvector(q^{\hspace{.1ex}i}\hspace{.1ex})}$
+\en{is}\ru{есть}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{differentialoflocationvector}
 d\locationvector
 =
-\scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \partial \hspace{.15ex} \locationvector $}}{\partial q^{\hspace{.1ex}i}} $} \hspace{.2ex} dq^i \hspace{-0.1ex}
+\scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$ \partial \hspace{.15ex} \locationvector $}}{\partial q^{\hspace{.1ex}i}} $} \hspace{.2ex} dq^i \hspace{-0.1ex}
 =
 dq^i \locationvector_\differentialindex{i}
 \hspace{.1ex} , \hspace{.5em}
@@ -178,26 +228,33 @@ dq^i \locationvector_\differentialindex{i}
 
 ...
 
-Local cobasis ${\locationvector^i}$, ${\locationvector^i \hspace{-0.32ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.22ex} = \delta_{\hspace{-0.15ex}j}^{\hspace{.2ex}i}}$
+\subsection*{%
+Local cobasis
+${\locationvector^i}$%
+}
 
-...
+${\locationvector^i \hspace{-0.3ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex} = \delta_{\hspace{-0.15ex}j}^{\hspace{.2ex}i}}$
 
-\begin{equation*}
-\displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\partial \locationvector}
+The (spatial) differential of something
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{spatialdifferentialofsomething}
+\begin{gathered}
+\displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.1ex} \varsigma$}}{\partial \locationvector}
 =
-\displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\raisebox{-0.1em}{$\partial q^i$}} \hspace{.1ex} \locationvector^i \hspace{-0.25ex}
+\displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.1ex} \varsigma$}}{\raisebox{-0.1em}{$\partial q^i$}} \hspace{.1ex} \locationvector^i \hspace{-0.25ex}
 =
 \partial_i \varsigma \hspace{.2ex} \locationvector^i
-\end{equation*}
-
-\begin{equation}
+\\
+%
 d \varsigma \hspace{-0.1ex}
 =
-\scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\partial \locationvector} $} \dotp d\locationvector \hspace{-0.1ex}
+\scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.1ex} \varsigma$}}{\partial \locationvector} $} \dotp d\locationvector \hspace{-0.1ex}
 =
-\partial_i \varsigma \hspace{.2ex} \locationvector^i \hspace{-0.15ex} \dotp dq^{\hspace{.12ex}j} \hspace{-0.1ex} \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.2ex}
+\partial_i \varsigma \hspace{.2ex} \locationvector^i \hspace{-0.3ex} \dotp \locationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{.2ex} dq^{\hspace{.12ex}j} \hspace{-0.3ex}
 =
-\partial_i \varsigma \hspace{.15ex} dq^i
+\partial_i \varsigma \hspace{.2ex} dq^i
+\end{gathered}
 \end{equation}
 
 ...
@@ -212,7 +269,7 @@ d \varsigma \hspace{-0.1ex}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}
 \UnitDyad
-= \locationvector^i \locationvector_\differentialindex{i} \hspace{-0.15ex}
+= \locationvector^i \locationvector_\differentialindex{i} \hspace{-0.1ex}
 = \tikzmark{beginOriginOfNabla} \locationvector^i \partial_i \tikzmark{endOriginOfNabla} \hspace{.1ex} \locationvector = \hspace{-0.16ex} \boldnabla \locationvector ,
 \end{equation}
 \AddUnderBrace[line width=.75pt][0,-0.1ex]%
@@ -220,22 +277,37 @@ d \varsigma \hspace{-0.1ex}
 {${\scriptstyle \boldnabla}$}
 
 \vspace{-0.4em}\noindent
-\en{where appears}\ru{где появляется} \en{the~}\en{differential}\ru{дифференциальный} \ru{оператор }\inquotes{\en{nabla}\ru{набла}}\en{ operator}
+\en{where}\ru{где}
+\en{appears}\ru{появляется}
+\en{the~}\en{differential}\ru{дифференциальный}
+\ru{оператор }\inquotes{\en{nabla}\ru{набла}}\en{ operator}
 
-\nopagebreak\vspace{-0.2em}\begin{equation}
+\nopagebreak\vspace{-0.4em}
+\begin{equation}\label{whatisthenablaoperator}
 \boldnabla \equiv \locationvector^i \partial_i \hspace{.1ex} .
 \end{equation}
 
 ...
 
-\begin{equation}
+\en{With}\ru{С}~${\boldnabla}$,
+the spatial differential of something is
+
+\nopagebreak\vspace{-0.2em}
+\begin{equation}\label{spatialdifferentialofsomething.with-nabla}
+\begin{gathered}
+\scalebox{.9}{$ \displaystyle \frac{\raisemath{-0.2em}{\partial \bm{\zeta}}}{\partial \currentlocationvector} $} = \partial_i \bm{\zeta} \currentlocationvector^{i}
+\\
+%
 d \varsigma \hspace{-0.1ex}
 =
-\scalebox{0.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.15ex} \varsigma$}}{\raisebox{-0.05em}{$\partial \locationvector$}} $} \dotp d\locationvector \hspace{-0.1ex}
+\scalebox{.9}{$ \displaystyle\frac{\raisebox{-0.2em}{$\partial \hspace{.1ex} \varsigma$}}{\raisebox{-0.05em}{$\partial \locationvector$}} $}
+\dotp
+d\locationvector \hspace{-0.1ex}
 =
 d\locationvector \dotp \hspace{-0.11ex} \boldnabla \varsigma \hspace{-0.1ex}
 =
 \partial_i \varsigma \hspace{.15ex} dq^i
+\end{gathered}
 \end{equation}
 
 \vspace{1.1em}${
@@ -272,12 +344,19 @@ d\locationvector = d\locationvector \dotp \hspace{-0.2ex} \tikzmark{beginItsUnit
 \en{just}\ru{лишь}
 \en{the~differential operator}\ru{дифференциальный оператор}~${\hspace{-0.13ex}\boldnabla}$.
 
-...
+....
 
-\en{Gradient of cross product of two vectors}\ru{Градиент векторного произведения двух векторов},
-\en{applying}\ru{применяя} \inquotes{product rule}~\eqref{productrulefordifferentiation}
-\en{and}\ru{и}~\en{relation}\ru{соотношение}~\eqref{crossproductoftwovectors} \en{for any two vectors}\ru{для любых двух векторов}
-(\en{partial derivative}\ru{частная производная}~$\partial_i$ \en{of~some~vector by scalar coordinate}\ru{некоторого вектора по скалярной координате}~$q^i\hspace{-0.1ex}$ \en{is a~vector too}\ru{это тоже вектор})
+\en{The~gradient}\ru{Градиент}
+\en{of the~}\crossproductinquotes\hbox{-}\en{product}\ru{произведения}
+\en{of two vectors}\ru{двух векторов},
+\en{applying}\ru{применяя}
+\inquotes{\en{the~}product rule}~\eqref{theproductrule.partialderivative}
+\en{and}\ru{и}~\en{relation}\ru{соотношение}~\eqref{crossproductoftwovectors}
+\en{for any two vectors}\ru{для любых двух векторов}
+(\en{a~partial derivative}\ru{частная производная}~$\partial_i$
+\en{of~some vector}\ru{некоторого вектора}
+\en{by scalar coordinate}\ru{по скалярной координате}~$q^i\hspace{-0.1ex}$
+\en{is a~vector too}\ru{это тоже вектор})
 
 \nopagebreak\vspace{-0.4em}\begin{multline}\label{gradientofcrossproductoftwovectors}
 \boldnabla \hspace{-0.2ex} \left( \bm{a} \hspace{-0.1ex} \times \hspace{-0.1ex} \bm{b} \right) \hspace{-0.2ex}
@@ -299,7 +378,9 @@ d\locationvector = d\locationvector \dotp \hspace{-0.2ex} \tikzmark{beginItsUnit
 
 ...
 
-\en{Gradient}\ru{Градиент} \en{of }dot product\ru{’а} \en{of two vectors}\ru{двух векторов}
+\en{The~gradient}\ru{Градиент}
+\en{of the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведения}
+\en{of two vectors}\ru{двух векторов}
 
 \nopagebreak\vspace{-0.4em}\begin{multline}\label{gradientofdotproductoftwovectors}
 \boldnabla \hspace{.1ex} \bigl( \hspace{-0.05ex} \bm{a} \hspace{-0.1ex} \dotp \hspace{-0.1ex} \bm{b} \hspace{.05ex} \bigr) \hspace{-0.3ex}

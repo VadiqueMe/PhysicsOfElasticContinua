@@ -162,6 +162,11 @@
 \DeclareMathOperator*{\integral}{\scalerel*{\rotatebox{12}{$\!\textstyle\int\!$}}{\int}} % \rotatebox{8} for vertical line
 \DeclareMathOperator*{\ointegral}{\scalerel*{\rotatebox{12}{$\!\textstyle\oint\!$}}{\oint}} % \rotatebox{8} for vertical line
 
+\makeatletter
+\newcommand\infinitesim@lity{\infty^{\hspace{-0.4ex}\expminusone}}
+\newcommand\infinitesimalof[1]{\scalebox{.9}{$\infinitesim@lity$}\hspace{-0.2ex}{#1}}
+\makeatother
+
 \newcommand{\boldnabla}{\bm{\nabla}\hspace{-0.2ex}}
 \newcommand{\boldnablacircled}{\mathcircabove{\bm{\nabla}}\hspace{-0.2ex}}
 

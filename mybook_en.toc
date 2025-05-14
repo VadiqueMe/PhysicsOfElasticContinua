@@ -47,10 +47,10 @@
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {17}Spatial differentiation}{57}{section.1.17}%
-\contentsline {section}{\numberline {18}The integral theorems}{60}{section.1.18}%
+\contentsline {section}{\numberline {18}The integral theorems}{61}{section.1.18}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {19}Curvature tensors}{62}{section.1.19}%
+\contentsline {section}{\numberline {19}Curvature tensors}{63}{section.1.19}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {2}Classical mechanics}{67}{chapter.2}%
