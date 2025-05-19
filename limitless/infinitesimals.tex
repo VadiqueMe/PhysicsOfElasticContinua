@@ -1,0 +1,122 @@
+\documentclass[11pt, twoside]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+
+\usepackage[english, greek, russian]{babel}
+
+\usepackage{bm} % bold math symbols
+
+\usepackage{amsmath}
+
+%%\usepackage{accents}
+
+%%\newcommand{\scircabove}{\hbox{\fontfamily{lmr}\fontsize{6}{0}\selectfont$\,\circ$}}
+%%\DeclareRobustCommand{\mathcircleabove}{\accentset{\scircabove}}
+
+\def\spacebetweenparagraphs{4mm minus0.5mm}
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\newcommand\sine{\operatorname{sin}} % \operatorname{sine}
+\newcommand\cosine{\operatorname{cos}} % \operatorname{cosine}
+
+\RequirePackage{ifthen}
+\newif\ifen
+\newif\ifru
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\ru}[1]{\ifru#1\fi}
+
+%%\entrue
+\rutrue
+
+\begin{document}
+
+\en{\selectlanguage{english}}
+\ru{\selectlanguage{russian}}
+
+%% \en{}\ru{}
+%% \en{}\ru{}
+
+\en{Let}\ru{Пусть}~$dx$
+\en{be}\ru{будет}
+\en{a~small change}\ru{м\'{а}лым изменением}
+\en{in the~variable}\ru{переменной}~$x$
+%
+\begin{equation}\label{asmallchangeinx}
+dx = x' \hspace{-0.4ex} - x
+\hspace{.2ex} ,
+\end{equation}
+%
+\en{where}\ru{где}
+${x'}$
+\en{is not far}\ru{не~далек\'{о}}
+\en{from}\ru{от}~$x$,
+%%\en{approaches}\ru{подходит~к}~$x$,
+\en{but}\ru{но}
+${x' \hspace{-0.33ex} \neq x}$
+\en{and hence}\ru{и~отсюда}
+${dx \neq 0}$.
+
+\en{The~change}\ru{Изменение}~$dx$
+\en{is}\ru{есть}
+\emph{\en{infinitesimal}\ru{бесконечном\'{а}лое}}\ru{,}
+\en{if}\ru{если}
+\en{it}\ru{оно}
+\en{approaches zero}\ru{подходит к~нулю}
+\en{being}\ru{будучи}
+\en{not exactly zero}\ru{не в~точности нулём},
+\en{while}\ru{в~то время как}
+\en{higher powers}\ru{более высокие степени}
+\en{of~}$dx$,
+\en{such as}\ru{такие как}
+${(dx)^2}$\hbox{\hspace{-0.33ex},}
+${(dx)^3}$\hbox{\hspace{-0.33ex},}
+${(dx)^4}$
+\en{and so on}\ru{и~так далее},
+%%\en{are negligible}\ru{пренебрежимы}
+%%\en{compared to}\ru{по~сравнению с}~%
+\en{are infinitesimally smaller than}\ru{бесконечном\'{а}ло м\'{е}ньше}~%
+$dx$.
+%
+\en{Thus}\ru{Так что}
+%
+\begin{equation}\label{whatmeansinfinitesimal}
+dx \neq 0
+\hspace{.1ex} , \hspace{.66em}
+\text{\en{but}\ru{но}}
+\hspace{.5em}
+(dx)^2 \hspace{-0.2ex} = 0
+\hspace{.1ex} , \hspace{.33em}
+(dx)^3 \hspace{-0.2ex} = 0
+\hspace{.1ex} , \hspace{.33em}
+\ldots
+\end{equation}
+%
+---
+\en{as}\ru{как}
+\en{the~definition}\ru{определение}
+\en{of~infinitesimality}\ru{бесконечномалости}.
+%
+\en{An~infinitesimal change}\ru{Бесконечном\'{а}лое изменение}
+\en{is called}\ru{называется}
+\en{a~}\emph{\en{differential}\ru{дифференциалом}}.
+
+....
+
+\en{For}\ru{Для}
+\en{infinitesimal}\ru{бесконечном\'{а}лых}~$dx$\en{,}
+\en{the~sine function}\ru{функция синуса}
+${\sine(dx)}$
+\en{behaves linearly}\ru{ведёт себя линейно}
+\en{and}\ru{и}\ru{,}
+%%\en{can therefore be}\ru{может поэтому быть}
+%%\en{approximated by}\ru{аппроксимирована}
+\en{is therefore equal to}\ru{следовательно, равна}
+\en{its argument}\ru{своему аргументу}\::
+%
+\begin{equation}\label{sinedxequalsdx}
+\sine(dx) = dx
+.
+\end{equation}
+
+\end{document}
