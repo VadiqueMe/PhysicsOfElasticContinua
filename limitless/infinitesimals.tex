@@ -8,6 +8,9 @@
 \usepackage{bm} % bold math symbols
 
 \usepackage{amsmath}
+\usepackage{amsfonts} % for \mathbb
+
+\usepackage{xcolor} % for \textcolor
 
 %%\usepackage{accents}
 
@@ -48,7 +51,7 @@ dx = x' \hspace{-0.4ex} - x
 \end{equation}
 %
 \en{where}\ru{где}
-${x'}$
+${x' \hspace{-0.33ex} = x + dx}$
 \en{is not far}\ru{не~далек\'{о}}
 \en{from}\ru{от}~$x$,
 %%\en{approaches}\ru{подходит~к}~$x$,
@@ -103,6 +106,25 @@ dx \neq 0
 
 ....
 
+$\Rightarrow$ ${\forall \lambda,\mu \in \mathbb{R} \hspace{.5ex} ({\neq}\infty)}$
+${\sine(\lambda dx + \mu dx) = (\lambda + \mu) \sine(dx)}$
+
+%%✨из аддитивности f(x + y) = x + y получается, что
+%%для бесконечнома́лых~$dx$
+%%функция синуса $\sine(dx)$
+%%ведёт себя линейно,
+%%f(x) = kx + e,
+%%а из гомогенности f(cx) = cf(x) следует e = 0
+%%➡f(x) = kx,
+%%➡sin dx = kdx, k=?
+
+%%чтобы функция была равна своему аргументу
+%%sin dx = dx,
+%%нужно дополнительное условие (extra condition)
+%%типа f(1) = 1
+
+%%но как это сделать для бесконечнома́лого аргумента?..🤔
+
 \en{For}\ru{Для}
 \en{infinitesimal}\ru{бесконечном\'{а}лых}~$dx$\en{,}
 \en{the~sine function}\ru{функция синуса}
@@ -111,12 +133,12 @@ ${\sine(dx)}$
 \en{and}\ru{и}\ru{,}
 %%\en{can therefore be}\ru{может поэтому быть}
 %%\en{approximated by}\ru{аппроксимирована}
-\en{is therefore equal to}\ru{следовательно, равна}
+\textcolor{red}{\en{is therefore equal to}\ru{следовательно, равна}}
 \en{its argument}\ru{своему аргументу}\::
 %
 \begin{equation}\label{sinedxequalsdx}
 \sine(dx) = dx
-.
+\hspace{.2ex} .
 \end{equation}
 
 \end{document}

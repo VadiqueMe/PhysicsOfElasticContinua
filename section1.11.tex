@@ -333,12 +333,15 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 \vspace{.3em}%
 \[
 \begin{array}{r@{\hspace{.33em}}c@{\hspace{.25em}}l}
-\mathdotabove{\rotationtensor} \hspace{.2em} & = & \hspace{.1em} \left(\rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex} +^{\mathstrut} \rotationtensor^{\mathsf{\hspace{.12ex}A}}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} =
-\hspace{.1em} \left(\hspace{.2ex} \tikzmark{StartBracePs} {\UnitDyad \cosine \vartheta + \bm{k} \bm{k} \left({1 \!-\! \cosine \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{.32ex} +^{\mathstrut} \hspace{.2ex}
-\tikzmark{StartBracePa} {\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \sine \vartheta \hspace{.2ex}} \tikzmark{EndBracePa} {} \hspace{.16ex}\right)^{\hspace{-0.2ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);} \hspace{-0.05em} =
-\\[0.4em]
+\mathdotabove{\rotationtensor} \hspace{.2em} & = & \hspace{.1em} \bigl( \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex} +^{\mathstrut} \rotationtensor^{\mathsf{\hspace{.12ex}A}} \bigr)^{\timederivativedot}
+= \hspace{-0.1ex} \bigl( \hspace{.2ex} \tikzmark{StartBracePs} {\UnitDyad \cosine \vartheta + \bm{k} \bm{k} \left({1 \!-\! \cosine \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{.32ex} +^{\mathstrut} \hspace{.2ex}
+\tikzmark{StartBracePa} {\bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \sine \vartheta \hspace{.2ex}} \tikzmark{EndBracePa} {} \hspace{.16ex} \bigr)^{\timederivativedot}
+%%%\hspace{-0.1ex} =
+\\[.4em]
 %
-& = & \hspace{.2em} \tikzmark{StartBraceDotPs} {\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta + \hspace{-0.2ex} ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \cosine \vartheta}\right)} \tikzmark{EndBraceDotPs} \hspace{.64ex} + \\[0.64em]
+& = & \hspace{.2em} \tikzmark{StartBraceDotPs} {\left( \hspace{.1ex} \bm{k} \bm{k} \hspace{-0.1ex} - \hspace{-0.2ex} \UnitDyad \hspace{.1ex} \right) \hspace{-0.1ex} \mathdotabove{\vartheta} \sine \vartheta + \hspace{-0.2ex} ( \bm{k} \mathdotabove{\bm{k}} + \mathdotabove{\bm{k}} \bm{k} ) \hspace{-0.2ex} \left({1 \!-\! \cosine \vartheta}\right)} \tikzmark{EndBraceDotPs}
+%%%\hspace{.64ex} +
+\\[.64em]
 & & \hspace{13.2em} + \hspace{.72ex} \tikzmark{StartBraceDotPa} {\hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \cosine \vartheta + \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \sine \vartheta} \tikzmark{EndBraceDotPa}
 \hspace{.1em} .
 \end{array}\]%
@@ -349,14 +352,17 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 \AddUnderBrace[line width=0.75pt]{StartBraceDotPs}{EndBraceDotPs}{${\scriptstyle \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}}}$}
 \AddUnderBrace[line width=0.75pt][-0.1ex,0.1ex]{StartBraceDotPa}{EndBraceDotPa}{${\scriptstyle \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}}}$}
 
-\vspace{-1.32em} \noindent Находим
+\vspace{-1.32em} \noindent
+Находим
 \vspace{.2em}\[\begin{array}{r@{\hspace{.25em}}c@{\hspace{.4em}}l}
-\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} & = & (\hspace{.1em} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} + \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{.05em}) \hspace{-0.1ex} \dotp \hspace{-0.1ex} (\hspace{.1em} \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} - \rotationtensor^{\mathsf{\hspace{.12ex}A}} \hspace{.1ex} \hspace{.05em}) =
-\\[0.25em]
+\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} & = & (\hspace{.1em} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} + \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{.05em}) \hspace{-0.1ex} \dotp \hspace{-0.1ex} (\hspace{.1em} \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} - \rotationtensor^{\mathsf{\hspace{.12ex}A}} \hspace{.1ex} \hspace{.05em})
+%%%=
+\\[.25em]
 & = & \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}S}}
 + \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}S}}
 - \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}}
-- \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}} ,
+- \hspace{.2ex} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{-0.2ex}\dotp \rotationtensor^{\mathsf{\hspace{.12ex}A}}
+,
 \end{array}\]
 
 \vspace{-0.5em}\noindent

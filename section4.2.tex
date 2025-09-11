@@ -36,7 +36,7 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}
 \hspace*{-\parindent}\begin{minipage}{\linewidth}
 \begin{equation}\label{dynamicsoflineartheory:integralofenergy}
 \displaystyle\integral\displaylimits_{\mathcal{V}}
-\hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \kineticenergydensity + \potentialenergydensity \Bigr)^{\hspace{-0.33ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} d\mathcal{V}
+\hspace{-0.4ex} \Bigl( \hspace{-0.1ex} \kineticenergydensity + \potentialenergydensity \Bigr)^{\hspace{-0.2ex} \timederivativedot} d\mathcal{V}
 = \hspace{-0.2ex}
 \displaystyle\integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \volumeloadvector \hspace{-0.1ex} \dotp \mathdotabove{\bm{u}} \hspace{.3ex} d\mathcal{V}
 + \hspace{-0.2ex}
@@ -70,14 +70,14 @@ ${\smash{\bm{u}^{\hspace{-0.1ex}*}} \hspace{-0.2ex} \equiv \hspace{.12ex} \bm{u}
 
 \nopagebreak\begin{equation*}
 \begin{array}{c}
-\mathdotabove{\kineticenergydensity} = \smalldisplaystyleonehalf \bigl( \hspace{.1ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}} \hspace{.1ex} \bigr)^{\hspace{-0.2ex}\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.2ex}
+\mathdotabove{\kineticenergydensity} = \smalldisplaystyleonehalf \bigl( \hspace{.1ex} \rho \hspace{.2ex} \mathdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}} \hspace{.1ex} \bigr)^{\timederivativedot} \hspace{-0.1ex}
 = \smalldisplaystyleonehalf \hspace{.2ex} \rho \hspace{.2ex} \bigl( \mathdotabove{\bm{u}} \dotp \mathdotdotabove{\bm{u}} + \mathdotdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}} \hspace{.1ex} \bigr)
 \hspace{-0.22ex} =
 \rho \hspace{.2ex} \mathdotdotabove{\bm{u}} \dotp \mathdotabove{\bm{u}}
 \hspace{.2ex} ,
 \\[.5em]
 %
-\mathdotabove{\potentialenergydensity} \hspace{.1ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{-0.25ex} \tikzmark{beginDerivativeOfPotentialEnergyDensity} \left( \hspace{.1ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation \hspace{.1ex} \right)^{\tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-1.2ex} \tikzmark{endDerivativeOfPotentialEnergyDensity} \hspace{.7ex}
+\mathdotabove{\potentialenergydensity} \hspace{.1ex} = \hspace{.1ex} \smash{\smalldisplaystyleonehalf} \hspace{-0.25ex} \tikzmark{beginDerivativeOfPotentialEnergyDensity} \left( \hspace{.1ex} \infinitesimaldeformation \hspace{-0.1ex} \dotdotp \hspace{-0.1ex} \stiffnesstensor \dotdotp \hspace{-0.1ex} \infinitesimaldeformation \hspace{.1ex} \right)^{\timederivativedot} \hspace{-1ex} \tikzmark{endDerivativeOfPotentialEnergyDensity} \hspace{.7ex}
 = \linearstress \dotdotp \mathdotabove{\infinitesimaldeformation}
 = \linearstress \hspace{.1ex} \dotdotp \hspace{-0.12ex} \boldnabla \mathdotabove{\bm{u}}^{\hspace{.1ex}\mathsf{S}} \hspace{-0.12ex}
 = \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \mathdotabove{\bm{u}} \hspace{.15ex} \right) -
@@ -276,7 +276,7 @@ ${ \smash{\bm{u}^{\hspace{-0.1ex}*}}
 \en{Then}\ru{Далее},
 \en{moving}\ru{переходя}
 \ru{на}\en{to the} \inquotes{\en{next time layer}\ru{следующий временн\'{о}й слой}}
-${ t \hspace{-0.1ex} + \hspace{-0.15ex} dt }$:
+${ t \hspace{-0.1ex} + \hspace{-0.15ex} dt }$\::
 
 \nopagebreak
 \begin{gather*}

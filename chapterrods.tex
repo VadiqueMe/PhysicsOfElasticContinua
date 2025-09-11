@@ -127,7 +127,8 @@ ${\bm{c}(s)}$ is a~parametric curve parameterized by the arc length (the natural
 
 \en{If}\ru{Если} \ru{используется }\en{the arc length (natural) parametrization}\ru{параметризация длиной дуги (естественная)}~${\locationvector \narroweq \locationvector(s)}$\en{ is used}, \en{then}\ru{то} \en{the length}\ru{длина} \en{of derivative}\ru{производной} ${ \locationvector'(s) \hspace{-0.2ex} \equiv \scalebox{.8}{$ \displaystyle\frac{\raisemath{-0.2em}{d \hspace{.1ex} \locationvector(s)}}{\raisemath{.05em}{ds}} $} }$ (\en{of the tangent vector}\ru{касательного вектора}) \en{is always equal to}\ru{всегда равна} \en{the one unit of length}\ru{одной единице длины}:
 
-\nopagebreak\vspace{-0.2em}\begin{gather*}
+\nopagebreak\vspace{-0.2em}
+\begin{gather*}
 %%\tikz[baseline=-1ex] \draw[line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
 %%\hspace{2.25ex}
 %%\\
@@ -810,11 +811,15 @@ $\bm{b}$\en{ is}\ru{\:---} \en{the~tensor of~stiffness for (ex)tension and~shear
 
 \en{In the nonlinear mechanics of elastic media}\ru{В~нелинейной механике упругих сред} \ru{полезны }\en{variational equations}\ru{вариационные уравнения}\en{ are useful}, \en{which describe}\ru{которые описывают} \en{a~small change}\ru{малое изменение} \en{in the current configuration}\ru{текущей конфигурации}~(\chapterdotsectionref{chapter:nonlinearcontinuum}{section:variationofconfiguration}).
 
-\en{Variating}\ru{Варьируя} \en{equations}\ru{уравнения} \en{of the complete system}\ru{полной системы} \en{of the }\ru{модели }Cosserat\en{ model}, \en{we get}\ru{мы получаем}
+\en{Varying}\ru{Варьируя}
+\en{equations}\ru{уравнения}
+\en{of the~complete system}\ru{полной системы}
+\en{of the~}\ru{модели }Cosserat\en{ model},
+\en{we get}\ru{мы получаем}
 
 \nopagebreak\vspace{-0.2em}\begin{gather*}
 \variation{\hspace{.1ex}\internalforce}{\hspace{.25ex}'} \hspace{-0.3ex} + \variation{\bm{q}}
-= \hspace{-0.1ex} \rho \hspace{.15ex} \bigl( \fieldofdisplacements + \variedcauchystress \hspace{-0.2ex} \times \hspace{-0.3ex} \infinitesimaldeformation \bigr)^{ \hspace{-0.1ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); \hspace{.25ex} \tikz[baseline=-0.2ex] \draw[black, fill=black] (0,0) circle (.28ex); }
+= \hspace{-0.1ex} \rho \hspace{.15ex} \bigl( \fieldofdisplacements + \variedcauchystress \hspace{-0.2ex} \times \hspace{-0.3ex} \infinitesimaldeformation \bigr)^{\secondtimederivativedotdot}
 \hspace{-0.2ex} ,
 \\
 %

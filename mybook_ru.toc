@@ -72,9 +72,7 @@
 \contentsline {section}{\numberline {7}Совершенно жёсткое недеформируемое твёрдое тело}{91}{section.2.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {8}Механика относительного движения}{95}{section.2.8}%
-\babel@toc {russian}{}\relax 
-\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {8}Механика относительного движения}{96}{section.2.8}%
 \contentsline {chapter}{\numberline {3}Нелинейно\hbox {-\hspace {-0.2ex}}упругая безмоментная среда}{98}{chapter.3}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Контину\kern -0.11exу{}м{} и два подхода к~описанию~его}{98}{section.3.1}%

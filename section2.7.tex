@@ -26,7 +26,7 @@
 \en{more}\ru{один}
 \en{concept}\ru{концепт},
 \en{modeled}\ru{моделируемый}
-\en{in~classical}\ru{в~классической}
+\en{in the~classical}\ru{в~классической}
 \en{generic}\ru{общей}
 \en{mechanics}\ru{механике},\en{ is}\ru{---}
 \href{https://en.wikipedia.org/wiki/Rigid_body}{\en{the~}(\en{perfectly}\ru{совершенно})
@@ -65,7 +65,8 @@
 \en{of~a~non-deformable}\ru{недеформируемого}
 \en{rigid body}\ru{жёсткого тела}
 \en{remains constant}\ru{остаётся постоянным}
-\en{regardless of external forces exerted on it}\ru{независимо от действующих на~него внешних сил}.
+\en{regardless}\ru{независимо}
+\en{of external forces exerted on it}\ru{от действующих на~него внешних сил}.
 
 \en{A~non-deformable}\ru{Недеформируемое}
 \en{rigid body}\ru{жёсткое тело}
@@ -201,24 +202,26 @@ ${\positionofthepole \hspace{.1ex} \narroweq \hspace{.1ex} \positionofthepole(t)
 %%\end{minipage}%%}
 %%\end{wrapfigure}
 
-${\mathcircabove{\bm{e}}_i}$\:---
-\en{the~triplet}\ru{тройка}
+\en{Here are figured}\ru{Здесь изображены}
+\en{the following}\ru{следующие}
+\en{triplets}\ru{тройки}
 \en{of~mutually perpendicular}\ru{взаимно перпендикулярных}
-\en{unit vectors}\ru{единичных векторов},
-\en{called}\ru{называемых}
-\en{the~}\inquotesx{\en{basis vectors}\ru{базисными векторами}}[,]
-\en{immovable}\ru{неподвижная}
-\en{relatively}\ru{относительно}
-\en{to the~absolute}\ru{абсолютной}
-(\en{or}\ru{или}
-\en{to any inertial}\ru{любой инерциальной})
-\en{reference system}\ru{системы отсчёта}
+\en{unit vectors}\ru{единичных векторов}
+(\en{the~}\inquotesx{\en{basis vectors}\ru{базисными векторами}})
 
 \begin{itemize}
    \item
 ${\mathcircabove{\bm{e}}_i}$\en{ is}\ru{\:---}
 \en{the~}\en{immovable}\ru{неподвижный}~(\en{stationary}\ru{стационарный})
-\en{basis}\ru{базис}
+\en{basis}\ru{базис}\footnote{%
+\en{immovable}\ru{неподвижная}
+\en{relatively}\ru{относительно}
+\en{to the~absolute}\ru{абсолютной}
+(\en{or}\ru{или}
+\en{to any inertial}\ru{любой инерциальной})
+\en{reference system}\ru{системы отсчёта}%
+}
+   \item ${\widetilde{\bm{e}}_i \hspace{-0.1ex} = \mathcircabove{\bm{e}}_i}$
    \item
 ${\bm{e}_i}$\en{ is}\ru{\:---}
 \en{the~}\en{basis}\ru{базис}\ru{,}
@@ -227,47 +230,68 @@ ${\bm{e}_i}$\en{ is}\ru{\:---}
 \en{along with the~body}\ru{вместе с~телом}
 \end{itemize}
 
-\en{By adding}\ru{Добавив}
-\en{the~basis}\ru{базис}~${\bm{e}_i}$
-(\en{it}\ru{он}
-\en{moves}\ru{движется}
-\en{together with the~body}\ru{вместе с~телом}),
-\en{the~body’s angular orientation}\ru{угловая ориентация тела}
+\en{Having}\ru{Имея}
+\en{the~}\en{stationary}\ru{стационарный}
+\en{basis}\ru{базис}~${\mathcircabove{\bm{e}}_i}$
+\en{and}\ru{и}
+\en{the~}\en{moving}\ru{движущийся}
+\en{basis}\ru{базис}~${\bm{e}_i}$,
+\en{the body’s angular orientation}\ru{угловая ориентация тела}
 \en{can be}\ru{может быть}
-\en{determined}\ru{определена}
-\en{by the~rotation tensor}\ru{тензором поворота}~${\rotationtensor \equiv \bm{e}_i \widetilde{\bm{e}}_i}$.
+\en{described}\ru{описана}
+\en{by the~rotation tensor}\ru{тензором поворота}
+${\rotationtensor \equiv \bm{e}_i \widetilde{\bm{e}}_i \hspace{-0.1ex} = \bm{e}_i \mathcircabove{\bm{e}}_i}$\::
+
+\nopagebreak\vspace{-0.6em}
+\begin{equation}\label{completelyrigidbody.rotatedwithtensor}
+\widetilde{\bm{x}} = x_i \hspace{.1ex} \widetilde{\bm{e}}_i
+\hspace{.1ex} , \hspace{.5em}
+\bm{x} = x_i \hspace{.1ex} \bm{e}_i
+\hspace{.1ex} , \hspace{.66em}
+%
+\bm{x}
+= x_i \hspace{.1ex} \bm{e}_i \hspace{.1ex} \widetilde{\bm{e}}_i \hspace{-0.1ex} \dotp \widetilde{\bm{e}}_i \hspace{-0.1ex}
+= \bm{e}_i \widetilde{\bm{e}}_i \hspace{-0.1ex} \dotp x_i \hspace{.1ex} \widetilde{\bm{e}}_i \hspace{-0.1ex}
+= \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \widetilde{\bm{x}}
+\hspace*{1em}
+\end{equation}
+
+\nopagebreak\vspace{-0.5em}\noindent
+\eqrefwithchapterdotsection{rodriguesrotationformula}{chapter:mathapparatus}{section:rotationtensors},
+\en{and}\ru{а}~%
+${\widetilde{\bm{x}} = \mathcircabove{\bm{x}} = x_i \hspace{.1ex} \mathcircabove{\bm{e}}_i}$\en{ are}\ru{\:---}
+\en{known locations}\ru{известные положения}
+\en{of body points}\ru{точек тела}.
 
 \en{Then}\ru{Тогда}
 \en{any motion}\ru{любое движение}
-\en{of a~body}\ru{тела}
-\en{is completely described}\ru{полностью описывается}
-\en{by two functions}\ru{двумя функциями},
+\en{of the~body}\ru{тела}
+\en{is completely determined}\ru{полностью определяется}
+\en{by the~two functions}\ru{двумя функциями},
 ${\positionofthepole(t)}$
-\en{and}\ru{и}~${\rotationtensor(t)}$.
+\en{and}\ru{и}~${\rotationtensor(t)}$
 
-\en{The~location vector}\ru{Вектор положения}
-\en{of~some body’s point}\ru{некоторой точки тела}
-
-\nopagebreak\vspace{-0.2em}\begin{equation}\label{completelyrigidbody.locationvectorofanypointdecomposed}
+\nopagebreak\vspace{-0.6em}
+\begin{equation}\label{completelyrigidbody.locationvectorofanypoint}
 \locationvector = \positionofthepole + \bm{x}
+= \positionofthepole + \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \mathcircabove{\bm{x}}
 %%\hspace{.1ex} ,
 \end{equation}
 
-${\widetilde{\bm{x}} = x_i \hspace{.1ex} \widetilde{\bm{e}}_i}$,
-${\bm{x} = x_i \hspace{.1ex} \bm{e}_i}$
+\nopagebreak\vspace{-0.5em}\noindent
+---
+\en{the~}\en{location vector}\ru{вектор положения}
+\en{of~some body’s point}\ru{некоторой точки тела}.
 
-\eqref{rodriguesrotationformula}, \chapterdotsectionref{chapter:mathapparatus}{section:rotationtensors}
-
-${\bm{x} = \rotationtensor \hspace{-0.15ex} \dotp \hspace{.1ex} \widetilde{\bm{x}}}$
-
-\begin{equation*}
+\begin{equation}
 \mathdotabove{\locationvector} = \mathdotabove{\positionofthepole} + \mathdotabove{\bm{x}}
-\hspace{.1ex} ,
-\end{equation*}
+%%\hspace{.1ex} ,
+\end{equation}
 
-\en{For a~non-deformable rigid body}\ru{Для недеформируемого жёсткого тела},
+\en{For}\ru{Для}
+\en{a~non-deformable rigid body}\ru{недеформируемого жёсткого тела},
 \en{components}\ru{компоненты}~${x_i}$
-\en{don’t depend on time}\ru{не~зависят от времени}:
+\en{don’t depend on time}\ru{не~зависят от времени}\::
 ${x_i \hspace{-0.16ex} = \constant(t)}$
 \en{and}\ru{и}~${\mathdotabove{\bm{x}} = x_i \hspace{.1ex} \mathdotabove{\bm{e}}_i}$
 
@@ -301,7 +325,9 @@ ${x_i \mathdotabove{\bm{e}}_i \hspace{-0.12ex} = \mathdotabove{\rotationtensor} 
 \bm{\Xi} \hspace{.1ex} \equiv m^{\hspace{-0.1ex}\expminusone} \hspace{-0.5ex} \displaystyle\integral_{\mathcal{V}} \hspace{-0.6ex} \bm{x} \hspace{.1ex} dm
 \end{equation*}
 
-\en{Three}\ru{Три} \en{inertial characteristics}\ru{инерциальных характеристики} \en{of the~body}\ru{тела}:
+\en{Three}\ru{Три}
+\en{inertial characteristics}\ru{инерциальных характеристики}
+\en{of the~body}\ru{тела}\::
 
 \nopagebreak\vspace{.2em}\begin{itemize}
 \item \en{integral mass}\ru{интегральная масса} ${m = \hspace{-0.25ex}\scalebox{1.4}{$ \textstyle\integral $}_{\hspace{-0.55ex}\mathcal{V}} \hspace{.3ex} dm = \hspace{-0.25ex}\scalebox{1.4}{$ \textstyle\integral $}_{\hspace{-0.55ex}\mathcal{V}} \hspace{.3ex} \rho \hspace{.2ex} d\mathcal{V}}$\:---
@@ -436,7 +462,7 @@ $\mathboldM$\en{ is}\ru{\:---} \en{the~resultant of external couples}\ru{рез�
 Рассмотрим моделирование совершенно жёсткого~(недеформируемого) твёрдого тела
 по принципу виртуальной работы~\eqref{discrete:principleofvirtualwork}
 
-.... \eqref{completelyrigidbody.locationvectorofanypointdecomposed} ${\Rightarrow}$
+.... \eqref{completelyrigidbody.locationvectorofanypoint} ${\Rightarrow}$
 ${\variation{\locationvector} = \variation{\positionofthepole} + \variation{\bm{x}}}$
 
 (begin copied from \chapterdotsectionref{chapter:mathapparatus}{section:calculusofvariations})

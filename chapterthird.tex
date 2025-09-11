@@ -401,7 +401,7 @@ $}
 = \hspace{.1ex} \smalldisplaystyleonehalf \hspace{.1ex} \bigl( \mathdotabove{\currentlocationvector}_\differentialindex{i} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \currentlocationvector_\differentialindex{\hspace{-0.1ex}j} \hspace{-0.1ex} + \hspace{-0.1ex} \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \hspace{-0.15ex} \mathdotabove{\currentlocationvector}_\differentialindex{\hspace{-0.1ex}j} \bigr) \hspace{-0.3ex}
 = \hspace{.1ex} \smalldisplaystyleonehalf \Bigl( \hspace{-0.2ex}
 \currentlocationvector_\differentialindex{i} \hspace{-0.1ex} \dotp \currentlocationvector_\differentialindex{\hspace{-0.1ex}j}
-\hspace{-0.2ex} \Bigr)^{\hspace{-0.3ex}\tikz[baseline=-0.5ex]\draw[black, fill=black] (0,0) circle (.266ex);}
+\hspace{-0.2ex} \Bigr)^{\hspace{-0.1ex} \timederivativedot}
 }
 \end{multline*}
 
@@ -839,7 +839,7 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 \en{is as follows}\ru{таков\'{а}}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{balanceoftranslationalmomentum.integral}
-\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \massdensity \hspace{.2ex} \bm{v} \hspace{.1ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.3em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \massdensity \hspace{.2ex} \bm{v} \hspace{.1ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.25em}\timederivativedot}
 =
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.33ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V}
 \hspace{.25ex} + \hspace{.25ex}
@@ -894,25 +894,26 @@ $\withtheindexofperpendicularity{\bm{t}}$ \en{and}\ru{и}~$\withtheindexofparall
 
 ....
 
-\begin{otherlanguage}{russian}
-
 \en{Now}\ru{Теперь}
 \en{about the balance}\ru{о~балансе}
 \en{of the angular (rotational) momentum}\ru{момента импульса (момента количества движения)}.
 \en{Here is the integral formulation}\ru{Вот интегральная формулировка}\::
 
 \nopagebreak\vspace{-0.3em}\begin{equation}\label{balanceofrotationalmomentum.integral}
-\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.2ex} \bm{v} \hspace{0.1ex} d\mathcal{V} \hspace{-0.25ex} \right)^{\hspace{-0.32em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.3ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.2ex} \bm{v} \hspace{0.1ex} d\mathcal{V} \hspace{-0.25ex} \right)^{\hspace{-0.25em} \timederivativedot}
 = \integral\displaylimits_{\mathcal{V}} \hspace{-0.5ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{-0.1ex} \massloadvector \hspace{.1ex} d\mathcal{V}
 \hspace{.25ex} + \hspace{.25ex}
 \ointegral\displaylimits_{\mathclap{\mathcal{O}(\boundary \mathcal{V})}} \hspace{-0.25ex} \currentlocationvector \times \hspace{-0.05ex} \bm{p} \hspace{.25ex} d\mathcal{O} .
 \end{equation}
 
+\begin{otherlanguage}{russian}
+
 \vspace{-0.1em}
-Дифференцируя левую часть (${\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\currentlocationvector}\hspace{.2ex}}$)
+Дифференцируя левую часть
+(${\bm{v} \equiv \hspace{-0.1ex} \mathdotabove{\currentlocationvector}\hspace{.2ex}}$)
 
 \nopagebreak\vspace{-0.2em}\begin{equation*}
-\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.3em}\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.28ex);} \hspace{-0.1ex}
+\displaystyle\left( \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.1ex} \mathdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V} \hspace{-0.2ex} \right)^{\hspace{-0.25em} \timederivativedot}
 =
 \integral\displaylimits_{\mathcal{V}} \hspace{-0.32ex} \currentlocationvector \times \hspace{-0.2ex} \massdensity \hspace{.1ex} \mathdotdotabove{\currentlocationvector} \hspace{.4ex} d\mathcal{V}
 \hspace{.3ex} +

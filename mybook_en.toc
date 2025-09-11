@@ -56,7 +56,7 @@
 \contentsline {chapter}{\numberline {2}Classical mechanics}{67}{chapter.2}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Discrete collection of particles}{67}{section.2.1}%
-\contentsline {section}{\numberline {2}The principle of virtual work}{76}{section.2.2}%
+\contentsline {section}{\numberline {2}The principle of virtual work}{75}{section.2.2}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {3}Balance of~momentum, angular momentum, and~energy}{79}{section.2.3}%
@@ -72,9 +72,7 @@
 \contentsline {section}{\numberline {7}Perfectly rigid undeformable solid body}{88}{section.2.7}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {8}Mechanics of relative motion}{93}{section.2.8}%
-\babel@toc {russian}{}\relax 
-\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {8}Mechanics of relative motion}{92}{section.2.8}%
 \contentsline {chapter}{\numberline {3}Nonlinear elastic momentless continuum}{95}{chapter.3}%
 \vspace {.2em}
 \contentsline {section}{\numberline {1}Continuum and the two approaches to~describe~it}{95}{section.3.1}%
