@@ -46,7 +46,11 @@ ${\bm{e}_i}$ \en{and}\ru{и}~${\mathcircabove{\bm{e}}_i}$
 \AddUnderBrace[line width=.75pt][.1ex,-0.2ex]%
 {beginEqualsKroneckerDelta}{endEqualsKroneckerDelta}{${\scriptstyle \delta_{j\hspace{-0.06ex}i}}$}
 
-\en{Components of}\ru{Компоненты}~$\rotationtensor$ \en{both }\ru{и~в~начальном}\en{in an~initial}~${\mathcircabove{\bm{e}}_i}$\ru{,} \en{and}\ru{и}~\en{in a~rotated}\ru{в~повёрнутом}~${\bm{e}_i}$ \en{bases}\ru{базисах} \en{are the same}\ru{одни и~те~же}
+\en{Components of}\ru{Компоненты}~$\rotationtensor$
+\en{both }\ru{и~в~начальном}\en{in the~initial}~${\mathcircabove{\bm{e}}_i}$\ru{,}
+\en{and}\ru{и}~\en{in the~rotated}\ru{в~повёрнутом}~${\bm{e}_i}$
+\en{bases}\ru{базисах}
+\en{are the same}\ru{одни и~те~же}
 
 \nopagebreak\vspace{-0.2em}\begin{equation}\label{componentsofrotationtensor}
 \begin{array}{c}
@@ -68,40 +72,64 @@ ${\bm{e}_i}$ \en{and}\ru{и}~${\mathcircabove{\bm{e}}_i}$
 {beginEqualsKroneckerDeltaPast}{endEqualsKroneckerDeltaPast}{${\scriptstyle \delta_{kj}}$}
 
 \vspace{.4em}\noindent
-\en{In the~matrix notation}\ru{В~матричной записи}\en{,}
-\en{these components}\ru{эти компоненты}
+\en{These components}\ru{Эти компоненты}
 \en{present}\ru{представляют}
-\en{the~matrix of~cosines}\ru{матрицу косинусов}~${\cosinematrix{\!j\mathcircabove{i}} = \hspace{.1ex} \mathcircabove{\bm{e}}_i \dotp \bm{e}_j}$\hspace{.1ex}:
+\en{the~matrix of~cosines}\ru{матрицу косинусов}~${\cosinematrix{\!j\mathcircabove{i}} = \hspace{.1ex} \mathcircabove{\bm{e}}_i \dotp \bm{e}_j}$
 
-\nopagebreak\vspace{-0.3em}\begin{equation*}
+\nopagebreak\vspace{-0.5em}\begin{equation*}
 \rotationtensor = \cosinematrix{\!j\mathcircabove{i}} \hspace{.5ex} {\bm{e}}_{i} {\bm{e}}_{j} = \cosinematrix{\!j\mathcircabove{i}} \hspace{.5ex} \mathcircabove{\bm{e}}_{i} \mathcircabove{\bm{e}}_{j}
 \hspace{.1ex} .
 \end{equation*}
 
 {\small
-Spatial transformations in the 3-dimensional Euclidean space ${\mathbb{R}^{3}}$ are distinguished into active or alibi transformations, and passive or alias transformations.
-An active transformation is a transformation which actually changes the physical position (alibi, elsewhere) of objects, which can be defined in the absence of a coordinate system; whereas a passive transformation is merely a change in the coordinate system in which the object is described (alias, other name) (change of coordinates, or change of basis). By transformation, math texts usually refer to active transformations.
+Spatial transformations are distinguished into active or alibi transformations, and passive or alias transformations.
+An active transformation is a transformation which actually changes the physical position (alibi, elsewhere) of objects, which can be defined in the absence of a coordinate system; whereas a passive transformation (alias, other name) is merely a change in the coordinate system in which the object is described (change of coordinates, or change of basis).
 \par}
 
-\en{Tensor}\ru{Тензор}~$\rotationtensor$ \en{relates}\ru{соотносит} \en{the two vectors}\ru{два вектора}\:--- \inquotes{\en{before rotation}\ru{до~поворота}}~${\initiallocationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i}$ \en{and}\ru{и}~\inquotes{\en{after rotation}\ru{после поворота}}~${\locationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \bm{e}_i}$.
-\en{Components}\ru{Компоненты}~${\rho_i \hspace{-0.2ex} = \hspace{-0.1ex} \constant}$ \en{of}\ru{у}~$\locationvector$ \en{in rotated basis}\ru{в~повёрнутом базисе}~${\bm{e}_i}$\en{ are}\ru{\:---} \en{the same}\ru{такие~же} \en{as}\ru{как} \en{of}\ru{у}~${\initiallocationvector}$ \en{in immobile basis}\ru{в~неподвижном базисе}~${\mathcircabove{\bm{e}}_i}$.
-\en{So that}\ru{Так что} \en{the rotation tensor}\ru{тензор поворота} \en{describes}\ru{описывает} \en{the rotation of the vector together with the basis}\ru{вращение вектора вместе с~базисом}.
-\en{And since}\ru{И~поскольку} ${\bm{e}_i = \bm{e}_j \mathcircabove{\bm{e}}_j \hspace{-0.15ex} \dotp \mathcircabove{\bm{e}}_i
+\en{Tensor}\ru{Тензор}~$\rotationtensor$
+\en{relates}\ru{соотносит}
+\en{the two vectors}\ru{два вектора},
+\inquotes{\en{before rotation}\ru{до~поворота}}~${\initiallocationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \mathcircabove{\bm{e}}_i}$
+\en{and}\ru{и}~\inquotes{\en{after rotation}\ru{после поворота}}~${\locationvector = \hspace{-0.1ex} \rho_i \hspace{.1ex} \bm{e}_i}$.
+%
+\en{Components}\ru{Компоненты}~${\rho_i \hspace{-0.2ex} = \hspace{-0.1ex} \constant}$
+\en{are the~same}\ru{одинаковы}
+\en{for both}\ru{и~для}~${\locationvector}$
+\en{in the~rotated basis}\ru{в~повёрнутом базисе}~${\bm{e}_i}$\ru{,}
+\en{and}\ru{и~для}~${\initiallocationvector}$
+\en{in the~immobile basis}\ru{в~неподвижном базисе}~${\mathcircabove{\bm{e}}_i}$.
+%
+\en{So that}\ru{Так что}
+\en{the rotation tensor}\ru{тензор поворота}
+\en{describes}\ru{описывает}
+\en{the rotation of the vector}\ru{вращение вектора}
+\en{together with the basis}\ru{вместе с~базисом}.
+%
+\en{And since}\ru{И~поскольку}
+${\bm{e}_i = \bm{e}_j \mathcircabove{\bm{e}}_j \hspace{-0.15ex} \dotp \mathcircabove{\bm{e}}_i
 \:\Leftrightarrow\,
-\rho_i \hspace{.1ex} \bm{e}_i \hspace{-0.2ex} = \bm{e}_j \mathcircabove{\bm{e}}_j \hspace{-0.15ex} \dotp \rho_i \hspace{.1ex} \mathcircabove{\bm{e}_i}}$, \en{then}\ru{то}
+\rho_i \hspace{.1ex} \bm{e}_i \hspace{-0.2ex} = \bm{e}_j \mathcircabove{\bm{e}}_j \hspace{-0.15ex} \dotp \rho_i \hspace{.1ex} \mathcircabove{\bm{e}_i}}$,
+\en{then}\ru{то}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}\label{rodriguesrotationformula}
 \locationvector = \rotationtensor \dotp\hspace{.2ex} \initiallocationvector
 \end{equation}
 
 \vspace{-0.4em}\noindent
-(\en{this is}\ru{это} \en{the }\href{https://fr.wikipedia.org/wiki/Rotation_vectorielle#Cas_g%C3%A9n%C3%A9ral}{\ru{формула поворота }Rodrigues\ru{’а}\en{ rotation formula}}).
-
+(\en{this is}\ru{это} \en{the }\href{https://fr.wikipedia.org/wiki/Rotation_vectorielle#Cas_g%C3%A9n%C3%A9ral}{\ru{формула поворота }Rodrigues\ru{’а}\en{ rotation formula}}%
+\footnote{%
 \bookauthor{Olinde Rodrigues}.
-\href{http://sites.mathdoc.fr/JMPA/PDF/JMPA_1840_1_5_A39_0.pdf}{Des lois géométriques qui régissent les déplacements d’un système solide dans l’espace, et de la variation des coordonnées provenant de ces déplacements considérés indépendants des causes qui peuvent les produire. \emph{Journal de mathématiques pures et appliquées}, tome~5~(1840), pages~380\hbox{--}440.}
+\href{http://sites.mathdoc.fr/JMPA/PDF/JMPA_1840_1_5_A39_0.pdf}{Des lois géométriques qui régissent les déplacements d’un système solide dans l’espace, et de la variation des coordonnées provenant de ces déplacements considérés indépendants des causes qui peuvent les produire. \emph{Journal de mathématiques pures et appliquées}, tome~5~(1840), pages~380\hbox{--}440.}%
+}).
 
 \vspace{-0.1em}
-\en{For}\ru{Для} \en{a~second complexity tensor}\ru{тензора второй сложности} ${\mathcircabove{\bm{C}} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$\en{,} \en{a~rotation}\ru{поворот} \en{into the current position}\ru{в~текущую позицию} ${\bm{C} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_j}$ \en{looks like}\ru{выглядит как}
+\en{For}\ru{Для}
+\en{a~second complexity tensor}\ru{тензора второй сложности}
+${\mathcircabove{\bm{C}} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \mathcircabove{\bm{e}}_i \mathcircabove{\bm{e}}_j}$\en{,}
+\en{a~rotation}\ru{поворот}
+\en{into the current position}\ru{в~текущую позицию}
+${\bm{C} = C_{i\hspace{-0.1ex}j} \hspace{.1ex} \bm{e}_i \bm{e}_j}$
+\en{looks like}\ru{выглядит как}
 
 \nopagebreak\vspace{-0.25em}\begin{equation}
 \bm{e}_i C_{i\hspace{-0.1ex}j} \bm{e}_j \hspace{-0.2ex}
@@ -152,7 +180,7 @@ ${\rotationtensor^{\T} \hspace{-0.32ex} = \rotationtensor^{\expminusone} \Leftri
 \en{An~orthogonal tensor}\ru{Ортогональный тензор}
 \en{retains}\ru{сохраняет}
 \en{lengths and~angles}\ru{дл\'{и}ны и~углы}
-(\en{the~metric}\ru{метрику})\ru{,}
+(\inquotes{\en{the~metric}\ru{метрику}})\ru{,}
 \en{because}\ru{потому что}
 \en{it}\ru{он}
 \en{does not change}\ru{не~меняет}
@@ -170,13 +198,13 @@ ${\rotationtensor^{\T} \hspace{-0.32ex} = \rotationtensor^{\expminusone} \Leftri
 
 \en{For all}\ru{Для всех}
 \en{orthogonal tensors}\ru{ортогональных тензоров}
-${\left(\determinant \orthogonaltensor\hspace{.1ex}\right)^2 \hspace{-0.1ex} = 1}$:
+${\left(\determinant \orthogonaltensor\hspace{.1ex}\right)^2 \hspace{-0.2ex} = 1}$\::
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
 1 = \determinant \UnitDyad = \determinant \left({\hspace{-0.1ex} \orthogonaltensor \dotp \orthogonaltensor^{\T} \hspace{.2ex}}\right) \hspace{-0.3ex}
 = \left({\determinant \orthogonaltensor \hspace{.1ex}}\right) \left({\determinant \orthogonaltensor^{\T} \hspace{.2ex}}\right) \hspace{-0.3ex}
 = \left(\determinant \orthogonaltensor \hspace{.1ex} \right)^{2}
-\hspace{.1ex} .
+\hspace{-0.5ex} .
 \end{equation*}
 
 \en{A~rotation tensor}\ru{Тензор поворота}
@@ -208,37 +236,46 @@ ${\rotationtensor = -\UnitDyad \dotp \rotationtensor}$
 \en{in the three-dimensional}\ru{в~трёхмерном}~(3D)
 \en{space}\ru{пространстве}\en{ has}
 \en{at least}\ru{как минимум}
-\en{one eigenvalue}\ru{одно собственное число}\:---
-\en{the~root of}\ru{корень}~\eqref{theCharacteristicEquation}\:---
-\en{is }\en{non-complex}\ru{некомпл\'{е}ксное},
-\en{or}\ru{или}
-\ru{действительное}\ru{~(}real\ru{)}.
+\en{one}\ru{одно}
+\en{non-complex}\ru{некомпл\'{е}ксное}
+(\ru{действительное, }real)
+\en{eigenvalue}\ru{собственное число}\:---
+\en{the~root of}\ru{корень}~\eqref{theCharacteristicEquation}.
+%
 \en{For}\ru{Для}
 \en{a~rotation tensor}\ru{тензора поворота}\en{,}
 \en{it is equal to one}\ru{оно равно единице}
 
-\nopagebreak\vspace{1em}\begin{equation*}
+\nopagebreak\vspace{.5em}
+\begin{equation*}
 \begin{array}{c}
 \rotationtensor \dotp \bm{a} = \eigenvalue \bm{a}
 \:\Rightarrow\:
-\tikzmark{BeginPaBrace} \bm{a} \hspace{.16ex} \dotp \tikzmark{BeginEBrace} \rotationtensor^{\T} \tikzmark{EndPaBrace} \hspace{-0.4ex} \dotp \rotationtensor \hspace{-0.32ex}\tikzmark{EndEBrace}\hspace{.32ex} \dotp \hspace{.16ex} \bm{a} = \eigenvalue \bm{a} \dotp \eigenvalue \bm{a}
-\:\Rightarrow\: \eigenvalue^{2} \hspace{-0.2ex} = 1 \hspace{.1ex} .
+\eigenvalue \bm{a} \dotp \eigenvalue \bm{a}
+=
+\tikzmark{BeginPaBrace} \bm{a} \hspace{.16ex} \dotp \tikzmark{BeginEBrace} \rotationtensor^{\T} \tikzmark{EndPaBrace} \hspace{-0.4ex} \dotp \rotationtensor \hspace{-0.32ex}\tikzmark{EndEBrace}\hspace{.32ex} \dotp \hspace{.16ex} \bm{a}
+= \bm{a} \dotp \bm{a}
+\:\Rightarrow\:
+\eigenvalue^{2} \hspace{-0.2ex} = 1
+\hspace{.1ex} .
 \end{array}
 \end{equation*}
 \AddOverBrace[line width=.75pt][0.1ex,0.4ex]{BeginPaBrace}{EndPaBrace}{${\scriptstyle \rotationtensor \:\dotp\; \bm{a}}$}
 \AddUnderBrace[line width=.75pt][-0.1ex,0.1ex]{BeginEBrace}{EndEBrace}{${\scriptstyle \UnitDyad}$}
 
-\vspace{-0.5em}\noindent
+\vspace{-0.6em}\noindent
 \en{The~corresponding}\ru{Соответствующий}
 \en{eigenvector}\ru{собственный вектор}
 \en{is called}\ru{называется}
 \en{the~axis of~rotation}\ru{осью поворота}.
-\href{https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem}{%
+%
+\href{https://www.17centurymaths.com/contents/euler/e478tr.pdf}{%
 \en{The~}\ru{Теорема }Euler’\en{s}\ru{а}\en{ theorem}
 \en{on finite rotation}\ru{о~конечном повороте}}
+(\href{https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem}{\ru{теорема вращения }Euler’\en{s}\ru{а}\en{ rotation theorem}})
 \en{is just about that}\ru{и~есть про~то, что}
-\en{such an~axis exists}\ru{такая ось существует}
-[http://eulerarchive.maa.org/docs/originals/E478.pdf].
+\en{such an~axis exists}\ru{такая ось существует}.
+%
 \en{If}\ru{Если}
 ${\bm{k}}$\en{ is}\ru{\:---}
 \en{the~unit vector of that axis}\ru{единичный вектор той оси},
@@ -253,58 +290,149 @@ ${\bm{k}}$\en{ is}\ru{\:---}
 \hspace{-0.2ex} .
 \end{equation}
 
-\begin{otherlanguage}{russian}
-
 \vspace{-0.1em}
-Доказывается эта формула так.
-Направление~${\bm{k}}$
-во~вр\'{е}мя поворота
-не~меняется~(${\rotationtensor \hspace{-0.2ex}\dotp \bm{k} = \bm{k}\hspace{.12ex}}$), поэтому на~оси поворота ${\mathcircabove{\bm{e}}_3 \hspace{-0.2ex} = \bm{e}_3 \hspace{-0.2ex} = \bm{k}}$.
-В~перпендикулярной плоскости~(\figureref{fig:eulerfiniterotation}) ${\mathcircabove{\bm{e}}_1 \hspace{-0.2ex} = \bm{e}_1 \cosine \vartheta - \bm{e}_2 \sine \vartheta}$, ${\mathcircabove{\bm{e}}_2 \hspace{-0.2ex} = \bm{e}_1 \sine \vartheta + \bm{e}_2 \cosine \vartheta}$, ${\rotationtensor = \bm{e}_i \mathcircabove{\bm{e}}_i \,\Rightarrow\hspace{.2ex}}$~\eqref{eulerfiniterotation}.
+\en{This formula is proved}\ru{Доказывается эта формула}
+\en{like this}\ru{так}.
+%
+\en{During rotation}\ru{Во~вр\'{е}мя поворота}
+${\bm{k}}$
+\en{doesn’t change}\ru{не~меняется}
+(${\rotationtensor \hspace{-0.2ex}\dotp \bm{k} = \bm{k}\hspace{.12ex}}$),
+\en{therefore}\ru{поэтому}
+\en{on the~axis of~rotation}\ru{на~оси поворота}
+${\mathcircabove{\bm{e}}_3 \hspace{-0.2ex} = \bm{e}_3 \hspace{-0.2ex} = \bm{k}}$.
+%
+\en{In the~perpendicular plane}\ru{В~перпендикулярной плоскости}~(\figureref{fig:eulerfiniterotation})
+${\mathcircabove{\bm{e}}_1 \hspace{-0.2ex} = \bm{e}_1 \cosine \vartheta - \bm{e}_2 \sine \vartheta}$,
+${\mathcircabove{\bm{e}}_2 \hspace{-0.2ex} = \bm{e}_1 \sine \vartheta + \bm{e}_2 \cosine \vartheta}$.
+%
+\en{Composing}\ru{Составляя}
+\en{the~tensor}\ru{тензор}~${\rotationtensor = \bm{e}_i \mathcircabove{\bm{e}}_i
+\,\Rightarrow\hspace{.2ex}}$~\eqref{eulerfiniterotation}.
 
 % ~ ~ ~ ~ ~
 \input{finiterotation.tex}
 % ~ ~ ~ ~ ~
 
-Из~\eqref{eulerfiniterotation} и~\eqref{rodriguesrotationformula} получаем формулу поворота Родрига в~параметрах~$\bm{k}$ и~$\vartheta$:
+\en{From}\ru{Из}~\eqref{eulerfiniterotation}
+\en{and}\ru{и}~\eqref{rodriguesrotationformula}
+\en{follows}\ru{следует}
+\href{https://fr.wikipedia.org/wiki/Rotation_vectorielle#Cas_g%C3%A9n%C3%A9ral}{\en{the}\ru{формула поворота} Rodrigues\ru{’а}\en{ rotation formula}}
+\en{in~parameters}\ru{в~параметрах}~$\bm{k}$
+\en{and}\ru{и}~$\vartheta$\::
 
-\nopagebreak\vspace{-0.3em}\begin{equation*}
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
 \locationvector \hspace{.3ex}
 = \hspace{.4ex} \initiallocationvector \cosine \vartheta \hspace{.3ex} + \hspace{.3ex} \bm{k} \times \initiallocationvector \hspace{.2ex} \sine \vartheta \hspace{.3ex} + \hspace{.4ex} \bm{k} \bm{k} \dotp \hspace{.1ex} \initiallocationvector \left({1 - \cosine \vartheta}\right)
 \hspace{-0.25ex} .
 \end{equation*}
 
 \vspace{-0.2em}
-В~параметрах конечного поворота транспонирование, оно~же обращение, тензора~$\rotationtensor$ эквивалентно перемене направления поворота\:--- знака угла~$\vartheta$
-\[
-\rotationtensor^{\T} \hspace{-0.1ex}=\hspace{.1ex} \rotationtensor \hspace{.1ex} \bigr|_{\vartheta \,=\hspace{.1ex} -\vartheta} \hspace{-0.1ex} = \UnitDyad \cosine \vartheta - \bm{k} \times\hspace{-0.2ex} \UnitDyad \sine \vartheta + \bm{k} \bm{k} \left({1 - \cosine \vartheta}\right)
-\hspace{-0.3ex} .
-\]
 
-Пусть теперь тензор поворота меняется со~временем:
-${\rotationtensor \narroweq \rotationtensor(t)}$.
-Псевдовектор угловой скорости~${\bm{\omega}}$ вводится через тензор поворота~$\rotationtensor$ таким путём.
-Дифференцируем тождество ортогональности~\eqref{orthogonalityofrotationtensor} по~времени%
-\footnote{\en{Various notations are used}\ru{Используются различные записи} \en{to designate the~time derivative}\ru{для обозначения производной по времени}.
-\en{In~addition}\ru{Вдобавок} \en{to}\ru{к~записи} \en{the }Leibniz’\en{s}\ru{а}\en{ notation} ${\scalebox{.9}{$ \raisemath{.3em}{dx} $} \hspace{-0.3ex} / \hspace{-0.4ex} \scalebox{.9}{$ \raisemath{-.3em}{dt} $}\hspace{.1ex}}$, \en{the~very popular one is}\ru{очень популярна запись} \en{the~}\inquotes{\en{dot above}\ru{точка сверху}} Newton’\en{s}\ru{а}\en{ notation}~${\mathdotabove{x}}$.}
+\en{In the~parameters}\ru{В~параметрах}
+\en{of~finite rotation}\ru{конечного поворота}\en{,}
+\en{transposing}\ru{транспонирование}
+(\en{which is here also}\ru{которое здесь также и}
+\en{inversing}\ru{обращение})
+\en{the~tensor}\ru{тензора}~$\rotationtensor$
+\en{is equivalent}\ru{эквивалентно}
+\en{to changing}\ru{перемене}
+\en{the~direction}\ru{направления}
+\en{of~rotation}\ru{поворота}\:---
+\en{the~sign}\ru{знака}
+\en{of~angle}\ru{угла}~$\vartheta$
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
+\rotationtensor^{\T} \hspace{-0.1ex}
+= \hspace{.1ex} \rotationtensor \hspace{.1ex} \bigr|_{\vartheta \, = \hspace{.1ex} -\vartheta} \hspace{-0.1ex}
+= \UnitDyad \cosine \vartheta - \bm{k} \times\hspace{-0.2ex} \UnitDyad \sine \vartheta + \bm{k} \bm{k} \left({1 - \cosine \vartheta}\right)
+\hspace{-0.3ex} .
+\end{equation*}
+
+\en{Now let}\ru{Пусть теперь}
+\en{the~rotation tensor}\ru{тензор поворота}
+\en{change}\ru{меняется}
+\en{over time}\ru{со~временем},
+${\rotationtensor \narroweq \hspace{.1ex} \rotationtensor(t)}$.
+%
+\en{The~time derivative}\ru{Производная по~времени}
+${\mathdotabove{\rotationtensor} = \hspace{-0.3ex} \bigl( \bm{e}_i \mathcircabove{\bm{e}}_i \bigr)^{\timederivativedot} \hspace{-0.1ex}
+= \mathdotabove{\bm{e}}_i \mathcircabove{\bm{e}}_i \hspace{-0.2ex}}$
+(\en{since}\ru{ведь}
+${\mathcircabove{\bm{e}}_i \hspace{-0.3ex} = \hspace{-0.2ex} \boldconstant}$),
+${\mathdotabove{\bm{e}}_i \hspace{-0.1ex} = \mathdotabove{\rotationtensor} \hspace{-0.15ex} \dotp \mathcircabove{\bm{e}}_i}$.
+
+\en{For}\ru{Для}
+\en{a~unit vector}\ru{единичного вектора}~${\bm{e}}$\ru{,}
+\en{that doesn’t change length}\ru{который не меняет длину}
+${\bm{e} \dotp \bm{e} = 1^2 \hspace{-0.1ex} = \constant}$,
+\en{and}\ru{и}~\en{the~derivative}\ru{производная}~${\mathdotabove{\bm{e}}}$
+\en{is orthogonal}\ru{ортогональна}~(\en{perpendicular}\ru{перпендикулярна})
+\en{to it}\ru{ему}
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation}
+\bigl( \bm{e} \dotp \bm{e} \bigr)^{\timederivativedot}
+= \mathdotabove{\bm{e}} \dotp \bm{e} + \bm{e} \dotp \mathdotabove{\bm{e}} = 0
+\hspace{1ex} \Rightarrow \hspace{1ex}
+\mathdotabove{\bm{e}} \dotp \bm{e} = 0
+\hspace{.1ex} .
+\end{equation}
+
+
+....
+
+
+\en{The~pseudo\-vector}\ru{Псевдо\-вектор}
+\en{of~angular velocity}\ru{угловой скорости}~${\bm{\omega}}$
+\en{comes out}\ru{получается}
+\en{from}\ru{из}
+\en{the~rotation tensor}\ru{тензор поворота}~$\rotationtensor$
+\en{in this way}\ru{таким путём}.
+%
+\en{Differentiating}\ru{Дифференцирование}
+\en{the~orthogonality identity}\ru{тождества ортогональности}~\eqref{orthogonalityofrotationtensor}
+\en{by~time}\ru{по~времени}%
+\footnote{%
+\en{Various notations are used}\ru{Используются различные записи}
+\en{to designate the~time derivative}\ru{для обозначения производной по времени}.
+\en{In~addition}\ru{Вдобавок}
+\en{to}\ru{к~записи} \en{the }Leibniz’\en{s}\ru{а}\en{ notation}
+${\scalebox{.9}{$ \raisemath{.3em}{dx} $} \hspace{-0.3ex} / \hspace{-0.4ex} \scalebox{.9}{$ \raisemath{-.3em}{dt} $}\hspace{.1ex}}$,
+\en{the~very popular one is}\ru{очень популярна}
+\ru{запись }\en{the~}\inquotes{\en{dot above}\ru{точка сверху}}
+Newton’\en{s}\ru{а}\en{ notation}~${\mathdotabove{x}}$.}
+\en{gives}\ru{даёт}
 
 \nopagebreak\vspace{-0.1em}\begin{equation*}
-\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} \hspace{-0.1ex} + \hspace{.25ex} \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T} \hspace{-0.1ex} = \hspace{.1ex} \zerobivalent
+\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} \hspace{-0.1ex} + \hspace{.25ex} \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T}
+\hspace{-0.1ex} = \hspace{.1ex}
+\zerobivalent
 \hspace{.1ex} .
 \end{equation*}
 
-По~\eqref{transposeofdotproductforbivalenttensors}
-${\left({ \mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} }\right)^{\raisemath{-0.25em}{\!\T}} \hspace{-0.4ex} = \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T}}$,
-поэтому
-тензор~${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!}}$
-оказывается анти\-сим\-метрич\-ным.
-Тогда
-согласно~\eqref{companionvector.bijection.pseudovector2skewsymmetricbivalent}
-он представ\'{и}м
-через сопутствующий вектор
-как
-${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \times \UnitDyad = \bm{\omega} \times \rotationtensor \dotp \rotationtensor^{\T}}$\!.
-То~есть
+\en{By}\ru{По}~\eqref{transposeofdotproductforbivalenttensors}
+${\left({ \mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} }\right)^{\raisemath{-0.25em}{\!\T}} \hspace{-0.4ex} = \rotationtensor \dotp \mathdotabove{\rotationtensor}^{\T}}$\hspace{-0.4ex},
+\en{therefore}\ru{поэтому}
+\en{tensor}\ru{тензор}~${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!}}$
+\en{happens to~be}\ru{оказывается}
+\en{antisymmetric}\ru{анти\-сим\-метрич\-ным}.
+%
+\en{Then}\ru{Тогда},
+\en{according to}\ru{согласно}~\eqref{companionvector.bijection.pseudovector2skewsymmetricbivalent},
+\en{it}\ru{он}
+\en{can be represented}\ru{может быть представлен}
+\en{via}\ru{через}
+\en{the~companion vector}\ru{сопутствующий вектор}
+\en{as}\ru{как}
+${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} \hspace{-0.4ex}
+= \bm{\omega} \times \UnitDyad
+= \bm{\omega} \times \rotationtensor \dotp \rotationtensor^{\T}}$
+\hspace{-0.4ex} .
+%
+\en{That~is}\ru{То~есть}
 
 \nopagebreak\vspace{-0.1em}
 \begin{equation}\label{angularvelocityvector}
@@ -318,20 +446,26 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 \en{for}\ru{для}
 \en{the~}(\en{pseudo}\ru{псевдо})\en{vector}\ru{вектора}~${\bm{\omega}}$,
 \en{there are others too}\ru{есть и~другие}.
-\en{For example}\ru{Например},
+%
+\en{As}\ru{Как},
+\en{for example}\ru{для примера},
 \en{via}\ru{через}
-\en{two parameters}\ru{два параметра}
-\en{of~the~finite rotation}\ru{конечного поворота}.
+\en{the~two}\ru{два}
+\en{finite rotation parameters}\ru{параметра конечного поворота}.
 
-Производная~${\mathdotabove{\rotationtensor}}$
-в~параметрах конечного поворота
-в~общем случае,
-когда оба параметра\:---
-и~единичный вектор~$\bm{k}$,
-и~угол~$\vartheta$\:---
-переменны во~времени\::
-\vspace{.3em}%
-\[
+\en{The~derivative}\ru{Производная}~${\mathdotabove{\rotationtensor}}$
+\en{in the finite rotation parameters}\ru{в~параметрах конечного поворота}
+\en{in the~broadest case}\ru{в~с\'{а}мом широком случае},
+\en{when}\ru{когда}
+\en{both}\ru{оба}
+\en{parameters}\ru{параметра}\:---
+\en{and}\ru{и}~\en{the~unit vector}\ru{единичный вектор}~$\bm{k}$,
+\en{and}\ru{и}~\en{the~angle}\ru{угол}~$\vartheta$\:---
+\en{are variable over time}\ru{переменны во~времени},
+\en{is}\ru{есть}
+
+\nopagebreak\vspace{-0.3em}
+\begin{equation*}
 \begin{array}{r@{\hspace{.33em}}c@{\hspace{.25em}}l}
 \mathdotabove{\rotationtensor} \hspace{.2em} & = & \hspace{.1em} \bigl( \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.2ex} +^{\mathstrut} \rotationtensor^{\mathsf{\hspace{.12ex}A}} \bigr)^{\timederivativedot}
 = \hspace{-0.1ex} \bigl( \hspace{.2ex} \tikzmark{StartBracePs} {\UnitDyad \cosine \vartheta + \bm{k} \bm{k} \left({1 \!-\! \cosine \vartheta}\right)} \hspace{-0.2ex} \tikzmark{EndBracePs} \hspace{.32ex} +^{\mathstrut} \hspace{.2ex}
@@ -344,15 +478,17 @@ ${\mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T\!} = \bm{\omega} \tim
 \\[.64em]
 & & \hspace{13.2em} + \hspace{.72ex} \tikzmark{StartBraceDotPa} {\hspace{.12ex} \bm{k} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \hspace{.4ex} \mathdotabove{\vartheta} \cosine \vartheta + \mathdotabove{\bm{k}} \hspace{-0.24ex}\times\hspace{-0.4ex} \UnitDyad \sine \vartheta} \tikzmark{EndBraceDotPa}
 \hspace{.1em} .
-\end{array}\]%
-\vspace{-1.2em}
-
+\end{array}
+\end{equation*}
+%
 \AddOverBrace[line width=0.75pt][0.12ex,0]{StartBracePs}{EndBracePs}{${\scriptstyle \rotationtensor^{\mathsf{\hspace{.12ex}S}}}$}
 \AddOverBrace[line width=0.75pt][-0.12ex,0]{StartBracePa}{EndBracePa}{${\scriptstyle \rotationtensor^{\mathsf{\hspace{.12ex}A}}}$}
 \AddUnderBrace[line width=0.75pt]{StartBraceDotPs}{EndBraceDotPs}{${\scriptstyle \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}}}$}
 \AddUnderBrace[line width=0.75pt][-0.1ex,0.1ex]{StartBraceDotPa}{EndBraceDotPa}{${\scriptstyle \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}}}$}
 
-\vspace{-1.32em} \noindent
+\begin{otherlanguage}{russian}
+
+\vspace{-1.2em} \noindent
 Находим
 \vspace{.2em}\[\begin{array}{r@{\hspace{.25em}}c@{\hspace{.4em}}l}
 \mathdotabove{\rotationtensor} \dotp \rotationtensor^{\T} & = & (\hspace{.1em} \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} + \mathdotabove{\rotationtensor}^{\mathsf{\hspace{.12ex}A}} \hspace{.05em}) \hspace{-0.1ex} \dotp \hspace{-0.1ex} (\hspace{.1em} \rotationtensor^{\mathsf{\hspace{.12ex}S}} \hspace{-0.16ex} - \rotationtensor^{\mathsf{\hspace{.12ex}A}} \hspace{.1ex} \hspace{.05em})
