@@ -35,9 +35,9 @@
 \contentsline {section}{\numberline {11}Rotations via rotation tensors}{37}{section.1.11}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {12}Rotations via quaternions}{44}{section.1.12}%
-\contentsline {section}{\numberline {13}Variations}{47}{section.1.13}%
-\contentsline {section}{\numberline {14}Polar decomposition}{48}{section.1.14}%
+\contentsline {section}{\numberline {12}Rotations via quaternions}{45}{section.1.12}%
+\contentsline {section}{\numberline {13}Variations}{48}{section.1.13}%
+\contentsline {section}{\numberline {14}Polar decomposition}{49}{section.1.14}%
 \contentsline {section}{\numberline {15}In the oblique basis}{50}{section.1.15}%
 \babel@toc {russian}{}\relax 
 \babel@toc {english}{}\relax 
