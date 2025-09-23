@@ -217,19 +217,21 @@ ${ \thirdcharacteristicinvariant\hspace{.16ex}( \hspace{.1ex} \somebivalenttenso
 \indent 2$^{\circ}$\hspace{-1ex}.\, \en{The characteristic axes~(directions)}\ru{Характеристические оси~(направления)} \en{for different eigenvalues}\ru{для различных собственных значений} \en{are orthogonal}\ru{ортогональны} \en{to each other}\ru{друг другу}.
 
 \noindent
-${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
-\hspace{.6em} }$
+${ \theproofbegins }$
 \en{The first statement}\ru{Первое утверждение} \en{is proved}\ru{доказывается} \en{by contradiction}\ru{от~противного}.
+%
 \en{If}\ru{Если}~$\eigenvalue$\ru{\:---}\en{ is}
 \en{a~complex root}\ru{компл\'{е}ксный корень}\en{ of}~\eqref{theCharacteristicEquation}\ru{,}
 \en{corresponding to eigenvector}\ru{соответствующий собственному вектору}~$\bm{a}$,
 \en{then}\ru{то}
 \en{conjugate number}\ru{сопряжённое число}~$\lineover{\eigenvalue}$
 \en{will also be}\ru{тоже будет}
-\en{the root}\ru{корнем}\en{ of}~\eqref{theCharacteristicEquation}.
+\en{the~root}\ru{корнем}\en{ of}~\eqref{theCharacteristicEquation}.
+%
 \ru{Соответствует ему }\en{Eigenvector}\ru{собственный вектор}~$\lineover{\bm{a}}$
 \en{with }\ru{с~}\en{the conjugate}\ru{сопряжёнными}
 \en{components}\ru{компонентами}\en{ corresponds to it}.
+%
 \en{And then}\ru{И~тогда}
 
 \nopagebreak\vspace{-0.5em}
@@ -243,7 +245,7 @@ ${ \tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) 
 \left(\hspace{.2ex}{\bm{a} \, \dotp}\hspace{.2ex}\right)
 \hspace{.5ex}
 \somebivalenttensor \dotp \lineover{\bm{a}} \hspace{.2ex} = \hspace{.1ex} \lineover{\eigenvalue} \, \lineover{\bm{a}}
-\:\;\Rightarrow
+%%\:\;\Rightarrow
 \\[-0.1em]
 %
 \Rightarrow\;\:
@@ -274,13 +276,13 @@ ${\eigenvalue = \lineover{\eigenvalue}}$,
 \tikzmark{BeginEqualsZeroBrace} {\bm{a}_2 \dotp \somebivalenttensor \dotp \bm{a}_1 - \bm{a}_1 \dotp \somebivalenttensor \dotp \bm{a}_2} \hspace{.1ex} \tikzmark{EndEqualsZeroBrace}
 = \hspace{.12ex} \left(\hspace{.1ex}{\eigenvalue_1 \hspace{-0.25ex} - \eigenvalue_2}\right) \bm{a}_1 \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a}_2 \hspace{.1ex} , \;
 \eigenvalue_1 \hspace{-0.1ex} \neq \hspace{.1ex} \eigenvalue_2
-\;\Rightarrow
+%%\;\Rightarrow
 \\
 %
 \Rightarrow\;
 \bm{a}_1 \hspace{-0.1ex} \dotp \hspace{.1ex} \bm{a}_2 = 0
 \hspace{.1ex} .
-\hspace{4em} \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);
+\hspace{1em} \theproofends
 \end{multline*}
 \AddUnderBrace[line width=.75pt][0.1ex,-0.1ex]%
 {BeginEqualsZeroBrace}{EndEqualsZeroBrace}{${\scriptstyle =\;0}$}

@@ -360,7 +360,7 @@ a_3 & 0 & - \hspace{-0.1ex} a_1 \\
 \en{independent}\ru{независимых}
 \en{components}\ru{компонента}
 \en{out of}\ru{из}~9\::
-${A_{ij} \hspace{-0.2ex} = - A_{\hspace{-0.1ex}j\hspace{-0.1ex}i}}$
+${A_{i\hspace{-0.1ex}j} \hspace{-0.2ex} = - A_{\hspace{-0.1ex}j\hspace{-0.1ex}i}}$
 \en{and}\ru{и}~${A_{\hspace{-0.1ex}j\hspace{-0.1ex}j} = 0}$.
 
 \en{The~uniqueness of}\ru{Уникальность}~$\bm{a}$
@@ -386,30 +386,47 @@ ${ \bm{a}' \hspace{-0.3ex} - \bm{a}'\hspace{-0.15ex}' \hspace{-0.2ex} = \zerovec
 & = &
 \hspace{-0.2ex} \zerobivalent
 \\[.2em]
-\bigl( \bm{a}' \hspace{-0.2ex} - \bm{a}'\hspace{-0.15ex}' \bigr) & \dotp & \hspace{-0.4ex} \permutationsparitytensor
+\bigl( \bm{a}' \hspace{-0.2ex} - \bm{a}'\hspace{-0.15ex}' \bigr) & \dotp & \permutationsparitytensor
 & = &
-\zerovector \dotp \permutationsparitytensor
+\zerovector \dotp \hspace{-0.1ex} \permutationsparitytensor
 \end{array}
 \end{equation*}
 %
 \en{follows}\ru{следует}
 \en{from}\ru{из}
-\en{the~equal}\ru{равных}
-\en{zeros}\ru{нулей}~${\zerovector \dotp \permutationsparitytensor = \zerobivalent}$
-\en{and }\ru{и~}\textcolor{magenta}{\en{the~uniqueness}\ru{уникальности}
-\ru{результата }\en{of~the~}\dotproductinquotes\hbox{-}\en{product}\ru{произведения}\en{’s result}}
-(%%${ \bm{c} \dotp \bm{b} = \bm{c} \dotp \bm{d} \hspace{.1ex} , \hspace{.2em} \bm{c} \neq \zerovector
-%%\hspace{.3em} \Leftrightarrow \hspace{.25em}
-%%\bm{b} = \bm{d} }$,
-${\bm{b} \dotp \bm{c} = \bm{d} \dotp \bm{c} \hspace{.1ex} , \hspace{.2em} \bm{c} \neq \zerovector
-\hspace{.2em} \Leftrightarrow \hspace{.15em}
-\bm{b} = \bm{d} }$,
-\en{including}\ru{включая}
-${\bm{b} \dotp \bm{c} = \zerovector \dotp \bm{c} \hspace{.1ex} , \hspace{.2em} \bm{c} \neq \zerovector
-\hspace{.2em} \Leftrightarrow \hspace{.15em}
-\bm{b} = \zerovector }$).
+\en{the~equality}\ru{равенства}
+\en{of~zeros}\ru{нулей}
+${\zerovector \dotp \hspace{-0.1ex} \permutationsparitytensor = \zerobivalent}$
+\en{and }\ru{и~}%
+\en{the~fact that}\ru{того факта, что}
+
+\nopagebreak\vspace{-0.5em}
+\begin{equation*}
+\bm{b} \dotp \hspace{-0.1ex}^\mathrm{n}\hspace{-0.2ex}\bm{c} = \bm{d} \dotp \hspace{-0.1ex}^\mathrm{n}\hspace{-0.2ex}\bm{c}
+\hspace{.1ex} , \hspace{.3em}
+^\mathrm{n}\hspace{-0.2ex}\bm{c} \neq \nulloftheNthcomplexity{\mathrm{n}}
+\hspace{.33em} \Leftrightarrow \hspace{.2em}
+\bigl( \bm{b} - \bm{d} \hspace{.1ex} \bigr) \hspace{-0.3ex} \dotp \hspace{-0.1ex}^\mathrm{n}\hspace{-0.2ex}\bm{c}
+= \hspace{-0.1ex} \nulloftheNthcomplexity{\mathrm{n} - 1}
+\hspace{.3em} \Leftrightarrow \hspace{.25em}
+\bm{b} = \bm{d}
+\hspace{.2ex} .
+\end{equation*}
+
+\vspace{-0.5em}\noindent
+\en{This}\ru{Это}
+\en{includes}\ru{включает}
+\en{the~case}\ru{случай}
+${ \bm{b} \dotp \hspace{-0.1ex}^\mathrm{n}\hspace{-0.2ex}\bm{c}
+= \hspace{-0.1ex} \nulloftheNthcomplexity{\mathrm{n} - 1}
+= \zerovector \dotp \hspace{-0.1ex}^\mathrm{n}\hspace{-0.2ex}\bm{c}
+\hspace{.1ex} , \hspace{.3em}
+^\mathrm{n}\hspace{-0.2ex}\bm{c} \neq \nulloftheNthcomplexity{\mathrm{n}}
+\hspace{.3em} \Leftrightarrow \hspace{.25em}
+\bm{b} = \zerovector }$.
+%
 \en{For}\ru{Для}~${\bm{a} = \zerovector}$,
-${\hspace{.2ex} \bm{A}(\zerovector) \hspace{-0.2ex} = \zerovector \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} = \zerobivalent}$.
+${ \bm{A}( \bm{a} ) \hspace{-0.2ex} = \hspace{-0.2ex} \bm{A}(\zerovector) \hspace{-0.2ex} = \zerovector \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{E} = \zerobivalent }$.
 
 \begin{center}
 \pmb{\checkmark} $\bm{a}$\en{ is} \en{unique}\ru{уникален} \en{for}\ru{для}~${\hspace{-0.2ex}\bm{A}}$
@@ -422,12 +439,15 @@ ${\hspace{.2ex} \bm{A}(\zerovector) \hspace{-0.2ex} = \zerovector \hspace{-0.2ex
 \en{By}\ru{По}~\eqref{thedirectrelationoftheunitdyadwiththepermutationsparity},
 \en{the~unit dyad}\ru{единичная диада}~${\hspace{-0.1ex}\UnitDyad}$
 \en{via}\ru{через}~${\hspace{-0.1ex}\permutationsparitytensor}$
-%
+\en{is}\ru{есть}
+
+\nopagebreak\vspace{-0.5em}
 \begin{equation*}
 \UnitDyad = - \hspace{.2ex} \smalldisplaystyleonehalf \hspace{.4ex} \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor
 \hspace{.2ex} ,
 \end{equation*}
-%
+
+\nopagebreak\vspace{-0.5em}\noindent
 \en{and}\ru{и}~\en{it is}\ru{это}
 \en{neutral}\ru{нейтрально}~\eqref{definingpropertyoftheidentitytensor}
 \en{for}\ru{для}
@@ -522,7 +542,48 @@ A_{21} - A_{12}
 
 ..............
 
-\vspace{1em}
+${ \bm{a} \mapsto \hspace{-0.2ex} \bm{A} \mapsto \bm{a} }$,
+\en{or}\ru{или}
+${ \bm{a} \bigl( \bm{A} ( \bm{a} ) \bigr) }$,\ru{\,---}\en{ is}
+\en{identity}\ru{тождество}.
+
+\vspace{-0.5em}
+\begin{gather*}
+\theproofbegins \hspace{1em}
+%
+\eqref{skewsymmetricbivalentfromvector}
+\hspace{.2em} \Rightarrow \hspace{.2em}
+\permutationsparitytensor \dotp \bm{a} = \bm{a} \dotp \hspace{-0.1ex} \permutationsparitytensor
+= - \bm{A}
+\hspace{.2ex} ,
+\\
+\eqref{pseudovectorfromsomebivalent}
+\hspace{.2em} \Rightarrow \hspace{.2em}
+\permutationsparitytensor \dotdotp \hspace{-0.1ex} \bm{A}
+= \hspace{-0.1ex} \bm{A} \dotdotp \hspace{-0.1ex} \permutationsparitytensor
+= 2 \hspace{.1ex} \bm{a}
+\hspace{.2ex} ,
+\\[.8em]
+\eqref{thedirectrelationoftheunitdyadwiththepermutationsparity}
+\hspace{.2em} \Rightarrow \hspace{.2em}
+\tikzmark{beginminustwounittensors} \hspace{.2ex} \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor \tikzmark{endminustwounittensors} \dotp \hspace{.1ex} \bm{a}
+\hspace{.1ex} = \hspace{.1ex}
+\bm{a} \dotp \hspace{-0.3ex} \tikzmark{beginminustwounittensorstoo} \hspace{.2ex} \permutationsparitytensor \dotdotp \hspace{-0.1ex} \permutationsparitytensor \tikzmark{endminustwounittensorstoo}
+= - 2 \hspace{.1ex} \bm{a}
+\hspace{.2ex} .
+%
+\hspace{1em} \theproofends
+\end{gather*}
+%
+\AddOverBrace[line width=.75pt][-0.1ex,0.1ex][yshift=-0.3ex]{beginminustwounittensors}{endminustwounittensors}%
+{${\scalebox{.66}{$ -2 \UnitDyad $}}$}%
+\AddOverBrace[line width=.75pt][-0.1ex,0.1ex][yshift=-0.3ex]{beginminustwounittensorstoo}{endminustwounittensorstoo}%
+{${\scalebox{.66}{$ -2 \UnitDyad $}}$}
+
+\vspace{-1.8em}\noindent
+\en{In components}\ru{В компонентах}
+
+\nopagebreak\vspace{-1em}
 \begin{alignat*}{2}
 -2 \hspace{.2ex} a_{1} \hspace{-0.1ex}
 & = \hspace{.4ex} \tikzmark{permutationsparity123for1FROM} \hspace{-0.4ex} \permutationsparitysymbols{123} \hspace{-0.3ex} \tikzmark{permutationsparity123for1TO} \hspace{.3ex}
@@ -532,7 +593,7 @@ a_{1} \hspace{-0.1ex} \tikzmark{permutationsparity321with1ENDS}
 \hspace{.4ex} \tikzmark{permutationsparity231for1FROM} \hspace{-0.4ex} \permutationsparitysymbols{231} \hspace{-0.3ex} \tikzmark{permutationsparity231for1TO} \hspace{.4ex}
 a_{1} \hspace{-0.1ex} \tikzmark{permutationsparity231with1ENDS}
 %%\hspace{.2ex} ,
-\\[2.5em]
+\\[1.5em]
 -2 \hspace{.2ex} a_{2} \hspace{-0.1ex}
 & = \hspace{.4ex} \tikzmark{permutationsparity213for2FROM} \hspace{-0.4ex} \permutationsparitysymbols{213} \hspace{-0.3ex} \tikzmark{permutationsparity213for2TO} \hspace{.3ex}
 \hspace{.4ex} \tikzmark{permutationsparity312for2FROM} \hspace{-0.4ex} \permutationsparitysymbols{312} \hspace{-0.3ex} \tikzmark{permutationsparity312for2TO} \hspace{.5ex}
@@ -541,7 +602,7 @@ a_{2} \hspace{-0.1ex} \tikzmark{permutationsparity312with2ENDS}
 \hspace{.4ex} \tikzmark{permutationsparity132for2FROM} \hspace{-0.4ex} \permutationsparitysymbols{132} \hspace{-0.3ex} \tikzmark{permutationsparity132for2TO} \hspace{.5ex}
 a_{2} \hspace{-0.1ex} \tikzmark{permutationsparity132with2ENDS}
 %%\hspace{.2ex} ,
-\\[2.5em]
+\\[1.5em]
 -2 \hspace{.2ex} a_{3} \hspace{-0.1ex}
 & = \hspace{.4ex} \tikzmark{permutationsparity312for3FROM} \hspace{-0.4ex} \permutationsparitysymbols{312} \hspace{-0.3ex} \tikzmark{permutationsparity312for3TO} \hspace{.3ex}
 \hspace{.4ex} \tikzmark{permutationsparity213for3FROM} \hspace{-0.4ex} \permutationsparitysymbols{213} \hspace{-0.3ex} \tikzmark{permutationsparity213for3TO} \hspace{.5ex}
@@ -553,13 +614,13 @@ a_{3} \hspace{-0.1ex} \tikzmark{permutationsparity123with3ENDS}
 \end{alignat*}%
 %
 \AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity123for1FROM}{permutationsparity123for1TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+{permutationsparity123for1FROM}{permutationsparity123for1TO}{${\scalebox{.66}{$ +1 $}}$}%
+%%\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+%%{permutationsparity321for1FROM}{permutationsparity321for1TO}{${\scalebox{.66}{$ -1 $}}$}%
 \AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity321for1FROM}{permutationsparity321for1TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
-\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity132for1FROM}{permutationsparity132for1TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
-\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity231for1FROM}{permutationsparity231for1TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+{permutationsparity132for1FROM}{permutationsparity132for1TO}{${\scalebox{.66}{$ -1 $}}$}%
+%%\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+%%{permutationsparity231for1FROM}{permutationsparity231for1TO}{${\scalebox{.66}{$ +1 $}}$}%
 \AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
 {permutationsparity321for1FROM}{permutationsparity321with1ENDS}{${\scalebox{.8}{$ - A_{32} $}}$}%
 \AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
@@ -567,30 +628,29 @@ a_{3} \hspace{-0.1ex} \tikzmark{permutationsparity123with3ENDS}
 %
 \AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
 {permutationsparity213for2FROM}{permutationsparity213for2TO}{${\scalebox{.66}{$ -1 $}}$}%
-\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity312for2FROM}{permutationsparity312for2TO}{${\scalebox{.66}{$ +1 $}}$}%
+%%\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+%%{permutationsparity312for2FROM}{permutationsparity312for2TO}{${\scalebox{.66}{$ +1 $}}$}%
 \AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
 {permutationsparity231for2FROM}{permutationsparity231for2TO}{${\scalebox{.66}{$ +1 $}}$}%
-\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity132for2FROM}{permutationsparity132for2TO}{${\scalebox{.66}{$ -1 $}}$}%
+%%\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+%%{permutationsparity132for2FROM}{permutationsparity132for2TO}{${\scalebox{.66}{$ -1 $}}$}%
 \AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
 {permutationsparity312for2FROM}{permutationsparity312with2ENDS}{${\scalebox{.8}{$ - A_{31} $}}$}%
 \AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
 {permutationsparity132for2FROM}{permutationsparity132with2ENDS}{${\scalebox{.8}{$ - A_{13} $}}$}%
 %
 \AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity312for3FROM}{permutationsparity312for3TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+{permutationsparity312for3FROM}{permutationsparity312for3TO}{${\scalebox{.66}{$ +1 $}}$}%
+%%\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+%%{permutationsparity213for3FROM}{permutationsparity213for3TO}{${\scalebox{.66}{$ -1 $}}$}%
 \AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity213for3FROM}{permutationsparity213for3TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
-\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity321for3FROM}{permutationsparity321for3TO}{${\scalebox{.66}{$ \left( -1 \right) $}}$}%
-\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
-{permutationsparity123for3FROM}{permutationsparity123for3TO}{${\scalebox{.66}{$ \left( +1 \right) $}}$}%
+{permutationsparity321for3FROM}{permutationsparity321for3TO}{${\scalebox{.66}{$ -1 $}}$}%
+%%\AddOverBrace[line width=.75pt][-0.1ex,-0.3ex][yshift=-0.4ex]%
+%%{permutationsparity123for3FROM}{permutationsparity123for3TO}{${\scalebox{.66}{$ +1 $}}$}%
 \AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
 {permutationsparity213for3FROM}{permutationsparity213with3ENDS}{${\scalebox{.8}{$ - A_{21} $}}$}%
 \AddUnderBrace[line width=.75pt][.1ex,-0.1ex][yshift=.1ex]%
-{permutationsparity123for3FROM}{permutationsparity123with3ENDS}{${\scalebox{.8}{$ - A_{12} $}}$}
-
+{permutationsparity123for3FROM}{permutationsparity123with3ENDS}{${\scalebox{.8}{$ - A_{12} $}}$}%
 
 ...........
 
@@ -605,7 +665,7 @@ ${%
 $\bm{A}$\en{ is} \en{unique}\ru{уникален} \en{for}\ru{для}~${\hspace{-0.2ex}\bm{a}}$\
 \textcolor{blue}{\textbold{PROVE IT}}
 
-...............
+............
 
 \textcolor{red}{\en{There is}\ru{Существует}}
 \textcolor{blue}{\textbold{PROVE THAT ONLY FOR SKEWSYMMETRIC ${\forall \bm{A} \!=\! \bm{A}^{\mathsf{\!\,A}}}$ IT IS BIJECTION}}
@@ -619,6 +679,7 @@ $\bm{A}$\en{ is} \en{unique}\ru{уникален} \en{for}\ru{для}~${\hspace{
 \en{bivalent}\ru{бивалентными}
 \en{tensors}\ru{тензорами}
 \en{and }\ru{и~}(\en{pseudo}\ru{псевдо})\en{vectors}\ru{векторами}.
+%
 \en{The~components}\ru{Компоненты}
 \en{of a~skewsymmetric}\ru{кососимметричного}
 \en{tensor}\ru{тензора}

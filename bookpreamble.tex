@@ -354,6 +354,9 @@
 \newcommand\timederivativedot{\hspace{-0.15ex} {\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.266ex);} \hspace{-0.15ex}}
 \newcommand\secondtimederivativedotdot{\hspace{-0.15ex} {\tikz[baseline=-0.2ex]\draw[black, fill=black] (0,0) circle (.266ex) (.8ex,0) circle (.266ex);} \hspace{-0.15ex}}
 
+\newcommand\theproofbegins{\ensuremath{\tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex); \hspace{.6em}}}
+\newcommand\theproofends{\ensuremath{\hspace{.6em} \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);}}
+
 \newcommand\cosinematrix[1]{o_{#1}} % or \alpha
 \newcommand\cosinematrixdotted[1]{\mathdotabove{o}_{#1}}
 
@@ -514,15 +517,13 @@
 
 \newcommand\nullofthefirstcomplexity{{\bm{0}}}
 \newcommand\zerovector{\nullofthefirstcomplexity}
-%\newcommand\nullvector{\nullofthefirstcomplexity}
-%\newcommand\nilvector{\nullofthefirstcomplexity}
 
-\newcommand\nullofthesecondcomplexity{{^2\bm{0}}}
+\newcommand\nulloftheNthcomplexity[1]{{^{#1}\bm{0}}}
+
+\newcommand\nullofthesecondcomplexity{\nulloftheNthcomplexity{2}}
 \newcommand\zerobivalent{\nullofthesecondcomplexity}
-%\newcommand\nullbivalent{\nullofthesecondcomplexity}
-%\newcommand\nilbivalent{\nullofthesecondcomplexity}
 
-\newcommand\nullofthefourthcomplexity{{^4\bm{0}}}
+\newcommand\nullofthefourthcomplexity{\nulloftheNthcomplexity{4}}
 \newcommand\zerotetravalent{\nullofthefourthcomplexity}
 
 \newcommand\mathboldPhi{\scalebox{.98}[1]{\tikzsl{\ensuremath{\hspace{-0.16ex}\bm{\Phi}\hspace{-0.2ex}}}}}

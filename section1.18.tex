@@ -9,11 +9,50 @@
 \ru{теорема }Stokes’\ru{а}
 \en{circulation theorem}\ru{о~циркуляции}.
 
-\noindent\leavevmode{\indent}{\small Gauss’ theorem (divergence theorem) enables an~integral taken over a~volume to be replaced by one taken over the closed surface bounding that volume, and vice versa.\par}
+\noindent\leavevmode{\indent}{\small The Gauss’ theorem (divergence theorem) enables an~integral taken over a~volume to be replaced by one taken over the closed surface bounding that volume, and vice versa.\par}
 
-\noindent\leavevmode{\indent}{\small Stokes’ theorem enables an~integral taken around a closed curve to be replaced by one taken over \emph{any} surface bounded by that curve. Stokes’ theorem relates a~line integral around a closed path to a surface integral over what is called a~\emph{capping surface} of the path.\par}
+\noindent\leavevmode{\indent}{\small The Stokes’ theorem enables an~integral taken around a closed curve to be replaced by one taken over \emph{any} surface bounded by that curve.
+The~Stokes’ theorem relates a~line integral around a closed path to a surface integral over what is called a~\emph{capping surface} of the path.\par}
 
-\subsection*{\en{The Gauss’s divergence theorem}\ru{Теорема Gauss’а о~дивергенции}}
+\subsection*{\en{The Gauss’ divergence theorem}\ru{Теорема Gauss’а о~дивергенции}}
+
+\nopagebreak\vspace{-0.7em}
+\begin{equation*}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+\boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.4ex} d \mathcal{V}
+\hspace{.1ex} = \hspace{-0.1ex}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{O}(\boundary \mathcal{V})} } $} \hspace{.2ex}
+\bm{n} \dotp \bm{a} \hspace{.4ex} d\mathcal{O}
+%
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{.8em}
+%
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{V}} $} \hspace{-0.2ex}
+\boldnabla \hspace{-0.12ex} \dotp \bm{a} \hspace{.4ex} d \mathcal{V}
+\hspace{.1ex} = \hspace{-0.1ex}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{O}(\boundary \mathcal{V})} } $} \hspace{.2ex}
+\bm{a} \dotp d \bm{\mathcal{O}}
+\end{equation*}
+
+\subsection*{\en{The Stokes’ circulation theorem}\ru{Теорема Stokes’а о~циркуляции}}
+
+\nopagebreak\vspace{-0.7em}
+\begin{equation*}
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{O}} $} \hspace{-0.1ex}
+\bm{n} \dotp \hspace{-0.15ex} \bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} \bigr) \hspace{.1ex} d \mathcal{O}
+\hspace{.1ex} = \hspace{-0.1ex}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{C}(\boundary \mathcal{O})} } $} \hspace{.2ex}
+\bm{a} \dotp d \bm{\mathcal{C}}
+%
+\hspace{1em} \text{\en{or}\ru{или}} \hspace{.8em}
+%
+\scalebox{.93}{$ \displaystyle \integral \displaylimits_{\mathcal{O}} $} \hspace{-0.3ex}
+\bigl( \boldnabla \hspace{-0.2ex} \times \hspace{-0.2ex} \bm{a} \bigr) \hspace{-0.3ex} \dotp d \bm{\mathcal{O}}
+\hspace{.1ex} = \hspace{-0.1ex}
+\scalebox{.93}{$ \displaystyle \ointegral \displaylimits_{ \mathclap{\mathcal{C}(\boundary \mathcal{O})} } $} \hspace{.2ex}
+\bm{a} \dotp d \bm{\mathcal{C}}
+\end{equation*}
+
+\subsection*{\en{The Gauss’ divergence theorem}\ru{Теорема Gauss’а о~дивергенции}}
 
 \href{https://en.wikipedia.org/wiki/Divergence_theorem}{(wikipedia) Divergence theorem}
 

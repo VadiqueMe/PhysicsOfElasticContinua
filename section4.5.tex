@@ -23,7 +23,7 @@ $\bm{p}$,
 \en{forces}\ru{сил}
 \en{on the actual displacements}\ru{на~актуальных смещениях}
 \ru{равна}\en{is equal to}
-\en{the double of}\ru{удвоенной}\footnote{%
+\en{the~double}\ru{удвоенной}\footnote{%
 %%\emph{(i)}~\bookauthor{Gabriel Lam\'{e}} et \bookauthor{Benoît Paul \'{E}mile Clapeyron}.
 %%\href{https://gallica.bnf.fr/ark:/12148/bpt6k33093/f475.image}{M\'{e}moire sur l'\'{e}quilibre int\'{e}rieur des~corps solides homog\'{e}nes. \emph{Memoires present\'{e}s par Divers Savants}, IV, 1833. Pagine~465\hbox{--}562.}
 %%\emph{(ii)}~
@@ -35,7 +35,7 @@ $\bm{p}$,
 Tome\;XLVI, Janvier--Juin 1858.
 Pagine~208\hbox{--}212.}
 }\hspace{-0.4ex}
-\en{the energy of~deformation}\ru{энергии деформации}
+\en{of the~energy of~deformation}\ru{энергии деформации}
 
 \nopagebreak\vspace{-0.1em}\begin{equation}\label{clapeyron:elasticitytheorem}
 2 \hspace{-0.2em}
@@ -48,12 +48,13 @@ Pagine~208\hbox{--}212.}
 \end{equation}
 
 \vspace{-0.55em}\begin{multline*}
-\tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex);
-\hspace{2.25ex}
+\theproofbegins \hspace{1ex}
+%
 2 \hspace{.1ex} \potentialenergydensity \hspace{.1ex} = \linearstress \dotdotp \infinitesimaldeformation =
 \linearstress \hspace{.1ex} \dotdotp \hspace{-0.12ex} \boldnabla \bm{u}^{\mathsf{S}} \hspace{-0.12ex} =
 \boldnabla \hspace{-0.1ex} \dotp \left( \hspace{.1ex} \linearstress \dotp \bm{u} \hspace{.1ex} \right) -
-\tikzmark{beginMinusLoad} \boldnabla \dotp \linearstress \tikzmark{endMinusLoad} \dotp \bm{u} \;\Rightarrow
+\tikzmark{beginMinusLoad} \boldnabla \dotp \linearstress \tikzmark{endMinusLoad} \dotp \bm{u}
+%%\;\Rightarrow
 \\[.5em]
 %
 \Rightarrow\;\,
@@ -68,8 +69,9 @@ Pagine~208\hbox{--}212.}
 + \integral\displaylimits_{\mathcal{V}} \hspace{-0.4ex}
   \volumeloadvector \hspace{-0.1ex} \dotp \bm{u} \hspace{.25ex}
   d\mathcal{V}
-\hspace{2.25ex}
-\tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);
+%
+\hspace{1ex}
+\theproofends
 \end{multline*}%
 \AddUnderBrace[line width=.75pt][.2ex, 0][yshift = .1em]%
 {beginMinusLoad}{endMinusLoad}{$
@@ -82,8 +84,9 @@ $}
 
 \vspace{-0.2em}
 \en{From}\ru{Из}~\eqref{clapeyron:elasticitytheorem}
-\en{also follows}\ru{следует также},
-\en{that without loading}\ru{что без нагрузки}
+\en{also follows}\ru{следует также}\ru{,}
+\en{that}\ru{что}
+\en{without loading}\ru{без нагрузки}
 ${\hspace{-0.25ex}
 \scalebox{1.4}{$ \integral $}_
 { \hspace{-0.5ex}
@@ -92,13 +95,14 @@ ${\hspace{-0.25ex}
 \potentialenergydensity \hspace{.2ex} d\mathcal{V}
 = 0
 }$.
-\en{Because}\ru{Поскольку} $\potentialenergydensity$
-\en{is positive}\ru{положителен},
-\en{then the stress}\ru{то~и~напряжение}~$\linearstress$,
-\en{and}\ru{и}
-\en{deformation}\ru{деформация}~$\infinitesimaldeformation$
+%
+\en{Since}\ru{Поскольку}
+$\potentialenergydensity$
+\en{is positive}\ru{положительна},
+\en{both the~stress}\ru{то~и~напряжение}~$\linearstress$\ru{,}
+\en{and }\ru{и~}\en{the~deformation}\ru{деформация}~$\infinitesimaldeformation$
 \en{without a~load}\ru{без нагрузки}
-\en{are equal to zero}\ru{равны нулю}.
+\en{are equal to~zero}\ru{равны нулю}.
 
 \begin{align*}
 2 \hspace{.1ex} \potentialenergydensity \hspace{.1ex} &= \linearstress \dotdotp \infinitesimaldeformation
@@ -226,7 +230,7 @@ $2\potentialenergydensity$.
 \en{to the~variation}\ru{вариации}
 \en{of the elastic potential energy density}\ru{плотности упругой потенциальной энергии}
 
-\nopagebreak\vspace{-0.5em}
+\nopagebreak\vspace{-0.3em}
 \begin{equation*}
 \variation{\externalwork} \hspace{-0.25ex}
 = \linearstress \dotdotp \variation{\infinitesimaldeformation}
@@ -289,10 +293,6 @@ ${
 ..........
 \end{equation}
 
-%%%%%%%%%%
-\newpage
-%%%%%%%%%%
-
 %%%\hspace*{-\parindent}
 %%%\begin{minipage}{\linewidth}
 
@@ -310,15 +310,11 @@ ${
 \end{wrapfigure}
 % ~ ~ ~ ~ ~
 
-%%%%%%%%%%
-\newpage
-%%%%%%%%%%
-
 \hspace{\horizontalindent}%
 \en{The~uniqueness}\ru{Уникальность}
 \en{of the~solution}\ru{решения},
 \en{dis\-covered}\ru{открытая}
-\en{by~}Gustav\ru{’ом} Kirchhoff\ru{’ом}
+\en{by~}\href{https://en.wikipedia.org/wiki/Gustav_Kirchhoff}{Gustav\ru{’ом} Kirchhoff\ru{’ом}}
 \en{for bodies}\ru{для тел}
 \en{with }\ru{с~}\en{the simply connected}\ru{одно\-св\'{я}зным}
 \en{contour}\ru{контуром}%
@@ -326,14 +322,16 @@ ${
 \en{is contrary to}\ru{противоречит},
 \en{as it seems}\ru{\hbox{казалось~бы}},
 \en{the everyday experience}\ru{повседневному опыту}.
+%
 \en{Imagine}\ru{Вообразим}
 \en{a~straight rod}\ru{прямой стержень}\en{,}
 \en{clamped}\ru{зажатый}
 \en{at the one end}\ru{на одном конц\'{е}}
-(the \inquotes{ \en{cantilever}\ru{конс\'{о}льный} })
+(the~\inquotes{\en{cantilever}\ru{конс\'{о}льный}})
 \en{and compressed}\ru{и~сжимаемый}
 \en{at the second end}\ru{на~втором конц\'{е}}
 \en{with a~longitudinal force}\ru{продольной силой}~(\figureref{fig:deformedrod}).
+%
 \en{When}\ru{Когда}
 \en{the~load}\ru{нагрузка}
 \en{is large enough}\ru{достаточно больш\'{а}я},
@@ -341,11 +339,15 @@ ${
 \en{has}\ru{имеет}
 \en{the two solutions}\ru{два решения},
 \inquotes{\en{straight}\ru{прямое}} \en{and}\ru{и}~\inquotesx{\en{bent}\ru{изогнутое}}.
+%
 \en{Such a~contradiction}\ru{такое противоречие}
 \en{with the~uniqueness theorem}\ru{с~теоремой единственности}
 \en{comes from}\ru{происходит от}
-\en{the nonlinearity of this problem}\ru{нелинейности этой задачи}.
-\en{If a~load is small}\ru{Если нагрузка мал\'{а}}
+\en{the~nonlinearity}\ru{нелинейности}
+\en{of this problem}\ru{этой задачи}.
+%
+\en{If the~load}\ru{Если нагрузка}
+\en{is small}\ru{мал\'{а}}
 (\en{infinitesimal}\ru{бесконечно мал\'{а}}),
 \en{then}\ru{то}
 \en{the~solution}\ru{решение}
@@ -361,7 +363,14 @@ ${
 
 %%%\end{minipage}
 
-\nicefootnotetext{auxfootnotecounter}{\bookauthor{Gustav Robert Kirchhoff}. \href{https://opacplus.bsb-muenchen.de/Vta2/bsb10525510/bsb:2960444?page=291}{Über das~Gleich\-gewicht und die~Bewe\-gung eines unendlich dünnen elastischen Stabes. \emph{Journal für die reine und angewandte Mathematik (Crelle’s journal)}, 56.\:Band (1859). Seiten 285\hbox{--}313.} (Seite 291)}
+\nicefootnotetext{auxfootnotecounter}{\bookauthor{Gustav Robert Kirchhoff}.
+\href{https://opacplus.bsb-muenchen.de/Vta2/bsb10525510/bsb:2960444?page=291}{Über das~Gleich\-gewicht und die~Bewe\-gung eines unendlich dünnen elastischen Stabes.
+\emph{Journal für die reine und angewandte Mathematik (Crelle’s journal)}, 56.\:Band (1859).
+Seiten 285\hbox{--}313.} (Seite 291)}
+
+%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%
 
 \subsection*{\en{Reciprocal work theorem}\ru{Теорема взаимности работ}}
 
