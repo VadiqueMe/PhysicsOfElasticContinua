@@ -5,20 +5,74 @@
 
 \usepackage[english, greek, russian]{babel}
 
+\usepackage[usenames]{xcolor}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.67}
+
+\usepackage[unicode=true, pdfusetitle,%
+	bookmarks=true, bookmarksnumbered=false, bookmarksopen=true, linktocpage=true,%
+	breaklinks=false, pdfborder={0 0 0}, backref=false,%
+	colorlinks=true, linkcolor=darkblue, citecolor=darkmagenta, urlcolor=darkgray]%
+{hyperref}
+
 \usepackage{bm} % bold math symbols
 
 \usepackage{amsmath}
 \usepackage{amsfonts} % for \mathbb
-
-\usepackage{xcolor} % for \textcolor
 
 %%\usepackage{accents}
 
 %%\newcommand{\scircabove}{\hbox{\fontfamily{lmr}\fontsize{6}{0}\selectfont$\,\circ$}}
 %%\DeclareRobustCommand{\mathcircleabove}{\accentset{\scircabove}}
 
-\def\spacebetweenparagraphs{4mm minus0.5mm}
+\def\spacebetweenparagraphs{2mm minus0.5mm}
 \setlength{\parskip}{\spacebetweenparagraphs}
+
+\def\horizontalindent{1.6em}
+\setlength{\parindent}{\horizontalindent} % offset of the first line
+\newlength\negparindent
+\setlength{\negparindent}{-\parindent}
+
+\renewcommand*\footnoterule{} % no line before footnotes
+
+\usepackage[symbol, bottom]{footmisc} % use symbols instead of numbers and place footnotes at the very bottom of page
+\setlength{\skip\footins}{1em plus1em} % \footins is the space between the text body and the footnotes
+
+\setlength{\footnotesep}{\baselineskip} % space between footnotes
+
+\makeatletter
+\def\@fnsymbol#1{\ensuremath{\ifcase #1 %
+	\or {*} %
+	\or {*}\hspace{-0.2ex}{*} %
+	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
+	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
+	\else {\infty} %% \else \@ctrerr
+\fi}}
+\def\@makefnmark{\raisebox{.8ex}{\hbox{\normalfont\@thefnmark}}}
+\makeatother
+
+\usepackage{perpage}
+\MakePerPage{footnote} % reset footnote numbering on every page
+
+\newcommand{\lquote}[0]{“} % {``}
+\newcommand{\rquote}[0]{”} % {''}
+
+\newcommand{\altlquote}[0]{«} % {<<}
+\newcommand{\altrquote}[0]{»} % {>>}
+
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+\newcommand{\inaltquotes}[1]{\altlquote{#1}\altrquote}
+
+\usepackage{xargs} % \newcommandx
+
+\newcommandx*{\inquotesx}[2][2=]{\lquote{#1}\hbox{\rquote%
+\ifthenelse{\equal{#2}{.}}{\hspace{-0.7ex}.\hspace{.3ex}}{}%
+\ifthenelse{\equal{#2}{,}}{\hspace{-0.7ex},\hspace{.3ex}}{}%
+\ifthenelse{\equal{#2}{---}}{\hspace{-0.5ex}~---}{}%
+}}
+
+\usepackage{graphicx} % \scalebox and others
+
+\newcommand\constant{\scalebox{.92}[.98]{\ensuremath{\mathsf{constant}}}}
 
 \newcommand\sine{\operatorname{sin}} % \operatorname{sine}
 \newcommand\cosine{\operatorname{cos}} % \operatorname{cosine}
@@ -51,13 +105,12 @@ dx = x' \hspace{-0.4ex} - x
 \end{equation}
 %
 \en{where}\ru{где}
-${x' \hspace{-0.33ex} = x + dx}$
-\en{is not far}\ru{не~далек\'{о}}
-\en{from}\ru{от}~$x$,
-%%\en{approaches}\ru{подходит~к}~$x$,
+${x + dx = x'}$
+\en{is near}\ru{близко~к}~$x$,
 \en{but}\ru{но}
+\en{nonetheless}\ru{всё~же}
 ${x' \hspace{-0.33ex} \neq x}$
-\en{and hence}\ru{и~отсюда}
+\en{and}\ru{и}~%
 ${dx \neq 0}$.
 
 \en{The~change}\ru{Изменение}~$dx$
@@ -76,9 +129,9 @@ ${(dx)^2}$\hbox{\hspace{-0.33ex},}
 ${(dx)^3}$\hbox{\hspace{-0.33ex},}
 ${(dx)^4}$
 \en{and so on}\ru{и~так далее},
-%%\en{are negligible}\ru{пренебрежимы}
-%%\en{compared to}\ru{по~сравнению с}~%
-\en{are infinitesimally smaller than}\ru{бесконечном\'{а}ло м\'{е}ньше}~%
+\en{are infinitesimally smaller than}\ru{бесконечном\'{а}ло м\'{е}ньше}
+%%(\en{are negligible}\ru{пренебрежимы}
+%%\en{compared to}\ru{по~сравнению~с})
 $dx$.
 %
 \en{Thus}\ru{Так что}
@@ -101,12 +154,71 @@ dx \neq 0
 \en{of~infinitesimality}\ru{бесконечномалости}.
 %
 \en{An~infinitesimal change}\ru{Бесконечном\'{а}лое изменение}
+(\en{infinitesimal difference}\ru{бесконечном\'{а}лая разница})
 \en{is called}\ru{называется}
-\en{a~}\emph{\en{differential}\ru{дифференциалом}}.
+\en{a~}\emph{\ru{дифференциалом \hspace{-0.25ex}(}differential\ru{\hspace{.2ex}\footnote{difference\:--- разница, разность}\hbox{\hspace{-0.4ex})}}}.
+
+\en{The~properties}\ru{Свойства}
+\en{of~differential}\ru{дифференциала}\::
+\nopagebreak\vspace{-0.75em}
+\begin{flalign*}
+& \begin{array}{c@{\hspace{.5ex}}l}
+\checkmark &
+\text{\en{linearity}\ru{линейность}}\hspace{1ex}
+d\bigl( \lambda p + \mu q \bigr) \hspace{-0.2ex} = \lambda \hspace{.2ex} dp + \mu \hspace{.2ex} dq
+\\
+\checkmark &
+d(\constant) \hspace{-0.2ex} = 0
+\end{array} &
+\end{flalign*}
+\vspace{-1.5em}
+
+\inquotes{\en{The product rule}\ru{Правило произведения}}\::
+\nopagebreak\vspace{-0.75em}
+\begin{flalign*}
+& \begin{array}{c@{\hspace{.5ex}}l}
+\checkmark &
+d(uv) = (u \hspace{-0.2ex} + \hspace{-0.2ex} du)(v \hspace{-0.2ex} + \hspace{-0.2ex} dv) \hspace{-0.2ex} - uv
+= (du)v + u(dv) \hspace{-0.2ex} + \hspace{-0.2ex} (du)(dv),
+\hspace{.5em}
+(du)(dv) \hspace{-0.2ex} = 0
+\end{array} &
+\end{flalign*}
+\vspace{-2em}
+
+\en{Differential}\ru{Дифференциал}
+\en{of~the~square}\ru{квадрата}~${d\bigl( w^2 \bigr)\hspace{-0.2ex}}$\::
+\nopagebreak\vspace{-0.75em}
+\begin{flalign*}
+& \begin{array}{c@{\hspace{.5ex}}l}
+\checkmark &
+d\bigl( w^2 \bigr) \hspace{-0.25ex}
+= (w + dw)^2 \hspace{-0.1ex} - w^2 \hspace{-0.1ex}
+= 2 \hspace{.1ex} w \hspace{.1ex} dw + (dw)^2 \hspace{-0.1ex}
+= 2 \hspace{.1ex} w \hspace{.1ex} dw
+\end{array} &
+\\[-0.25em]
+& \hspace{\horizontalindent}
+\text{%
+\en{or}\ru{или},
+\en{applying}\ru{применяя}
+\inquotesx{\en{the product rule}\ru{правило произведения}}[,]%
+} &
+\\[-0.25em]
+& \begin{array}{c@{\hspace{.5ex}}l}
+\checkmark &
+d\bigl( w^2 \bigr) \hspace{-0.25ex}
+= d(ww) \hspace{-0.1ex}
+= (dw)w + w(dw) \hspace{-0.1ex}
+= 2 \hspace{.1ex} w \hspace{.1ex} dw
+\end{array} &
+\end{flalign*}
+\vspace{-1.5em}
+
 
 ....
 
-$\Rightarrow$ ${\forall \lambda,\mu \in \mathbb{R} \hspace{.5ex} ({\neq}\infty)}$
+$\Rightarrow$ ${\forall \lambda,\mu \hspace{-0.33ex} \in \hspace{-0.33ex} \mathbb{R} \hspace{.33ex} ({\neq}\infty)}$
 ${\sine(\lambda dx + \mu dx) = (\lambda + \mu) \sine(dx)}$
 
 %%✨из аддитивности f(x + y) = x + y получается, что
