@@ -83,8 +83,9 @@
 \newcommand{\en}[1]{\ifen#1\fi}
 \newcommand{\ru}[1]{\ifru#1\fi}
 
+%%lang%%
 %%\entrue
-\rutrue
+%%\rutrue
 
 \begin{document}
 
@@ -109,33 +110,38 @@ ${x + dx = x'}$
 \en{is near}\ru{близко~к}~$x$,
 \en{but}\ru{но}
 \en{nonetheless}\ru{всё~же}
-${x' \hspace{-0.33ex} \neq x}$
-\en{and}\ru{и}~%
-${dx \neq 0}$.
+${x' \hspace{-0.33ex} \neq x
+\hspace{.33ex} \Leftrightarrow \hspace{.33ex}
+dx \neq 0}$.
 
 \en{The~change}\ru{Изменение}~$dx$
 \en{is}\ru{есть}
 \emph{\en{infinitesimal}\ru{бесконечном\'{а}лое}}\ru{,}
 \en{if}\ru{если}
 \en{it}\ru{оно}
-\en{approaches zero}\ru{подходит к~нулю}
+\en{approaches zero}\ru{сближается с~нулём}\ru{,}
 \en{being}\ru{будучи}
+\en{very}\ru{очень}
+(\inquotes{\en{vanishingly}\ru{исчезающе}})
+\en{small}\ru{маленьким},
+\en{but}\ru{но}
 \en{not exactly zero}\ru{не в~точности нулём},
 \en{while}\ru{в~то время как}
-\en{higher powers}\ru{более высокие степени}
+\en{the~higher powers}\ru{более высокие степени}
 \en{of~}$dx$,
 \en{such as}\ru{такие как}
 ${(dx)^2}$\hbox{\hspace{-0.33ex},}
 ${(dx)^3}$\hbox{\hspace{-0.33ex},}
 ${(dx)^4}$
 \en{and so on}\ru{и~так далее},
-\en{are infinitesimally smaller than}\ru{бесконечном\'{а}ло м\'{е}ньше}
-%%(\en{are negligible}\ru{пренебрежимы}
-%%\en{compared to}\ru{по~сравнению~с})
-$dx$.
+\en{are infinitesimally}\ru{бесконечном\'{а}ло}
+\en{smaller than}\ru{м\'{е}ньше}~$dx$\:---
+\en{and therefore}\ru{и~поэтому}
+\en{are equal to zero}\ru{равн\'{ы} нулю}.
 %
-\en{Thus}\ru{Так что}
+\en{Here}\ru{Здесь}
 %
+\nopagebreak\vspace{-0.3em}
 \begin{equation}\label{whatmeansinfinitesimal}
 dx \neq 0
 \hspace{.1ex} , \hspace{.66em}
@@ -147,19 +153,36 @@ dx \neq 0
 \hspace{.1ex} , \hspace{.33em}
 \ldots
 \end{equation}
+\vspace{-2.2em}
+
+\noindent
+\en{is what}\ru{и~есть то, что}
+\en{defines}\ru{определяет}
+\en{the~infinitesimality of}\ru{бесконечномалость}~$dx$.
 %
----
-\en{as}\ru{как}
-\en{the~definition}\ru{определение}
-\en{of~infinitesimality}\ru{бесконечномалости}.
+\en{Elements}\ru{Элементы}\ru{,}
+\en{defined}\ru{определённые}
+\en{in this way}\ru{так}\ru{,}
+\en{are known as}\ru{известны как}
+\emph{\ru{нуль\-квадрат\-ные~\hspace{-0.25ex}(}nil\-square\ru{)}}
+\en{or}\ru{или}~%
+\emph{\ru{нуль\-потент\-ные~\hspace{-0.25ex}(}nil\-potent\ru{)}}
+\en{of~the~second degree}\ru{второй степени}.
 %
 \en{An~infinitesimal change}\ru{Бесконечном\'{а}лое изменение}
 (\en{infinitesimal difference}\ru{бесконечном\'{а}лая разница})
-\en{is called}\ru{называется}
-\en{a~}\emph{\ru{дифференциалом \hspace{-0.25ex}(}differential\ru{\hspace{.2ex}\footnote{difference\:--- разница, разность}\hbox{\hspace{-0.4ex})}}}.
+\en{is also called}\ru{также называется}
+\en{a~}\emph{\ru{дифференциалом \hspace{-0.25ex}(}dif\-fer\-en\-tial\ru{\hspace{.2ex}\footnote{difference\:--- разница, разность}\hbox{\hspace{-0.4ex})}}},
+\en{and}\ru{а}
+\en{the~operation}\ru{операция}
+\en{of~obtaining}\ru{получения}
+\en{an~infinitesimal}\ru{бесконечном\'{а}лой}
+\en{difference}\ru{разности}\:---
+\emph{\en{differentiation}\ru{дифференцированием}}.
 
 \en{The~properties}\ru{Свойства}
-\en{of~differential}\ru{дифференциала}\::
+\en{of~differentiation}\ru{дифференцирования}\::
+%
 \nopagebreak\vspace{-0.75em}
 \begin{flalign*}
 & \begin{array}{c@{\hspace{.5ex}}l}
@@ -174,20 +197,32 @@ d(\constant) \hspace{-0.2ex} = 0
 \vspace{-1.5em}
 
 \inquotes{\en{The product rule}\ru{Правило произведения}}\::
+%
 \nopagebreak\vspace{-0.75em}
 \begin{flalign*}
 & \begin{array}{c@{\hspace{.5ex}}l}
 \checkmark &
 d(uv) = (u \hspace{-0.2ex} + \hspace{-0.2ex} du)(v \hspace{-0.2ex} + \hspace{-0.2ex} dv) \hspace{-0.2ex} - uv
 = (du)v + u(dv) \hspace{-0.2ex} + \hspace{-0.2ex} (du)(dv),
-\hspace{.5em}
-(du)(dv) \hspace{-0.2ex} = 0
+\\[.2em]
+&
+(du)(dv) \hspace{-0.2ex}
+= \hspace{-0.2ex} \scalebox{.9}{$ (du) $} \frac{du}{du} \scalebox{.9}{$ (dv) $} \hspace{-0.2ex}
+= \hspace{-0.2ex} \scalebox{.9}{$ (du)^2 $} \bigl( \frac{dv}{du} \bigr) \hspace{-0.2ex}
+= 0
+\hspace{.5em} \text{\en{or}\ru{или}} \hspace{.5em}
+\hspace{-0.66ex} = \hspace{-0.2ex} \scalebox{.9}{$ (du) $} \frac{dv}{dv} \scalebox{.9}{$  (dv) $} \hspace{-0.2ex}
+= \hspace{-0.2ex} \bigl( \frac{du}{dv} \bigr) \scalebox{.9}{$ (dv)^2 $} \hspace{-0.2ex}
+= 0
 \end{array} &
 \end{flalign*}
-\vspace{-2em}
+\vspace{-1.5em}
 
-\en{Differential}\ru{Дифференциал}
-\en{of~the~square}\ru{квадрата}~${d\bigl( w^2 \bigr)\hspace{-0.2ex}}$\::
+\en{For example}\ru{Для примера},
+\en{differential}\ru{дифференциал}
+\en{of~the~square}\ru{квадрата}~\scalebox{.9}{${ d\bigl( w^2 \bigr)\hspace{-0.2ex} }$}
+\en{is}\ru{есть}
+%
 \nopagebreak\vspace{-0.75em}
 \begin{flalign*}
 & \begin{array}{c@{\hspace{.5ex}}l}
