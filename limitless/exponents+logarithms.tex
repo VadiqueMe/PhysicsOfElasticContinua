@@ -1,0 +1,139 @@
+\documentclass[11pt, twoside]{book}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}
+
+\usepackage{amsmath}
+
+\def\spacebetweenparagraphs{2mm minus0.5mm}
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\def\horizontalindent{1.6em}
+\setlength{\parindent}{\horizontalindent} % offset of the first line
+\newlength\negparindent
+\setlength{\negparindent}{-\parindent}
+
+\usepackage{perpage}
+\MakePerPage{footnote} % reset footnote numbering on every page
+
+\begin{document}
+
+$e = (1 + dx)^{(1/dx)}$ can be easily derived from the definition of the function $f = e^x$ as the one having the property $df = fdx$
+\begin{gather*}
+d (e^x) = e^x dx \\
+\Rightarrow e^{(x + dx)} \, – \, e^x = e^x dx \\
+\Rightarrow e^x e^{dx} \, – \, e^x = e^x dx \\
+\Rightarrow e^x (e^{dx} – 1) = e^x dx \\
+\Rightarrow e^{dx} – 1 = dx \\
+\Rightarrow e^{dx} = 1 + dx \\
+\Rightarrow \operatorname{ln}(e^{dx}) = \operatorname{ln}(1 + dx) \\
+\Rightarrow dx = \operatorname{ln}(1 + dx) \\
+\Rightarrow 1 = (1/dx)\operatorname{ln}(1 + dx) \\
+\Rightarrow 1 = \operatorname{ln}(1 + dx)^{(1/dx)} \\
+\Rightarrow e = e^1 = (1 + dx)^{(1/dx)}
+\end{gather*}
+where $dx$ is an invertible infinitesimal ($dx \!\neq\! 0$ in the “classical” sense, and $dx \cdot \frac{1}{dx} = \frac{dx}{dx} = 1$) since the presented derivation doesn’t rely on nilpotency at all.
+
+If in doubt, the function $\operatorname{ln}(x)$ is defined as the inverse function of $e^x$
+\begin{gather*}
+\operatorname{ln}(e^x) = e^{\operatorname{ln}(x)} = x,\\
+y = \operatorname{ln}(x) \Leftrightarrow x = e^y
+\end{gather*}
+with the differential
+\begin{gather*}
+dx = d(e^y) = e^y dy,\\
+dy = dx/e^y,\\
+d \operatorname{ln}(x) = dx / x
+\end{gather*}
+and for the product $\operatorname{ln}(uv)$ it is
+\begin{equation*}\begin{split}
+d \operatorname{ln}(uv) & = \frac{d(uv)}{uv}
+= \frac{ (du)v + u(dv) }{uv}
+= \frac{du}{u} + \frac{dv}{v} \\
+& = d \operatorname{ln}(u) + d \operatorname{ln}(v)
+= d( \operatorname{ln}(u) + \operatorname{ln}(v) ),
+\end{split}\end{equation*}
+then by the linearity of differentiation
+\begin{equation*}
+d \bigl( \operatorname{ln}(uv) \, – \, (\operatorname{ln}(u) + \operatorname{ln}(v)) \bigr) = 0,
+\end{equation*}
+thus $\operatorname{ln}(uv) \, – \, (\operatorname{ln}(u) + \operatorname{ln}(v)) = c$, where $c$ is a constant,
+and since $e^0 = 1 \Leftrightarrow 0 = \operatorname{ln}(1)$ either $u=1$ or $v=1$ (or both) gives $c=0$,
+therefore
+\begin{equation*}
+\operatorname{ln}(uv) = \operatorname{ln}(u) + \operatorname{ln}(v)
+\end{equation*}
+
+Having that and placing $u = e^x$, $v = e^y$,
+\begin{gather*}
+\operatorname{ln}( e^x e^y ) = \operatorname{ln}(e^x) + \operatorname{ln}(e^y) = x + y,\\
+e^{ln( e^x e^y )} = e^{(x + y)}
+\end{gather*}
+and finally
+\begin{equation*}
+e^x e^y = e^{(x + y)}
+\end{equation*}
+proves the property used as $e^{(x+dx)} = e^x e^{dx}$.
+
+$e^x = \sum_{i=0}^{\infty} \frac{x^i}{i!}$ I know as the proof of existence of the function $f = e^x$ by the definition $d(e^x) = e^x dx$.
+Presenting an example of such a function proves its existence.
+The function $e^x$ is represented as the infinite sum of addends $a_i$
+\begin{equation*}
+e^x = a_0 + a_1 + a_2 + a_3 + \ldots
+\end{equation*}
+whose differential is
+\begin{equation*}
+df = d(a_0 + a_1 + a_2 + a_3 + \ldots)
+= da_0 + da_1 + da_2 + da_3 + \ldots
+\end{equation*}
+
+Let
+$da_0 = 0$ so $a_0$ is constant and is equal to 1 since $e^0 = 1$, and for the subsequent addends
+\begin{equation*}
+da_{(i+1)} = a_i dx,
+\end{equation*}
+then there will be $df = fdx$, as is needed.
+
+It is known (if not, I can derive it as well) that $d\bigl( x^{(i+1)} \bigr) = (i+1) x^i dx$. Therefore let the common addend be $a_i = \eta_i x^i$ where each $\eta_i$ is constant
+(and for $a_0 = \eta_0 x^0 = 1 \Rightarrow \eta_0 = 1$),
+then $da_{(i+1)} = a_i dx$ gives
+\begin{gather*}
+\eta_{(i+1)} d\bigl( x^{(i+1)} \bigr) = \eta_i x^i dx \\
+\Rightarrow \eta_{(i+1)} (i+1) x^i dx = \eta_i x^i dx \\
+\Rightarrow \eta_{(i+1)} = \frac{\eta_i}{i+1}
+\end{gather*}
+
+Thus
+$\eta_1 = \frac{\eta_0}{0+1} = 1$,
+$\eta_2 = \frac{\eta_1}{1+1} = \frac{1}{2}$,
+$\eta_3 = \frac{\eta_2}{2+1} = \frac{1}{2 \cdot 3}$, $\eta_4 = \frac{\eta_3}{3+1} = \frac{1}{2 \cdot 3 \cdot 4}$, $\,\ldots$ and in common
+\begin{gather*}
+\eta_i = \frac{1}{i!}, \,\, a_i = \frac{x^i}{i!},\\
+e^x = \sum_{i=0}^{\infty} a_i = \sum_{i=0}^{\infty} \frac{x^i}{i!}
+\end{gather*}
+
+Checking the differential
+\begin{gather*}
+d \Biggl( \sum_{i=0}^{\infty} \frac{x^i}{i!} \Biggr) = d(1) + d \Biggl( \sum_{i=1}^{\infty} \frac{x^i}{i!} \Biggr) \\
+= 0 + \sum_{i=1}^{\infty} d \Bigl( \frac{x^i}{i!} \Bigr)
+= \sum_{i=1}^{\infty} \frac{d(x^i)}{i!} \\
+= \sum_{i=1}^{\infty} \frac{i x^{(i–1)} dx}{i!}
+= \sum_{i=1}^{\infty} \frac{x^{(i–1)}}{(i–1)!} dx
+= \sum_{i=0}^{\infty} \frac{x^i}{i!} dx
+\end{gather*}
+
+Hence the function with the defining property $df = fdx$ really exists.
+
+Assume there is also another representation $e^x = \varphi(x)$ for which $d\varphi(x) = \varphi(x) dx = e^x dx$ as well.
+Then the differential of the difference
+\begin{equation*}
+d \Biggl( \varphi(x) - \sum_{i=0}^{\infty} \frac{x^i}{i!} \Biggr) \!
+= d \varphi(x) - d \Biggl( \sum_{i=0}^{\infty} \frac{x^i}{i!} \Biggr)
+= e^x dx - e^x dx = 0
+\end{equation*}
+and therefore $\varphi(x) = c + \sum_{i=0}^{\infty} \frac{x^i}{i!}$.
+Because $\varphi(x) = e^x$ for all $x$, $c = e^x - e^x = 0$ and $\varphi(x) = \sum_{i=0}^{\infty} \frac{x^i}{i!}$.
+Thus the representation $e^x = \sum_{i=0}^{\infty} \frac{x^i}{i!}$ is unique.
+
+\end{document}
