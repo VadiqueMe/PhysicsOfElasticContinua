@@ -1,0 +1,198 @@
+\documentclass[11pt, twoside]{book}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}
+
+\usepackage{amsmath}
+
+\def\spacebetweenparagraphs{2mm minus0.5mm}
+\setlength{\parskip}{\spacebetweenparagraphs}
+
+\def\horizontalindent{1.6em}
+\setlength{\parindent}{\horizontalindent} % offset of the first line
+\newlength\negparindent
+\setlength{\negparindent}{-\parindent}
+
+\renewcommand*\footnoterule{} % no line before footnotes
+
+\usepackage{perpage}
+\MakePerPage{footnote} % reset footnote numbering on every page
+
+\usepackage[symbol,bottom,hang,flushmargin]{footmisc}
+
+\setlength{\skip\footins}{2em plus1em} % space between the text body and the footnotes
+
+\setlength{\footnotesep}{\baselineskip} % space between footnotes
+
+\makeatletter
+\def\@fnsymbol#1{\ensuremath{\ifcase #1 %
+	\or {*} %
+	\or {*}\hspace{-0.2ex}{*} %
+	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
+	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
+	\else {\infty} %% \else \@ctrerr
+\fi}}
+\def\@makefnmark{\raisebox{.8ex}{\hbox{\normalfont\@thefnmark}}}
+
+\renewcommand\footnotesize{%
+   \@setfontsize\footnotesize\@ixpt{11}%
+   \abovedisplayskip 8\p@ \@plus2\p@ \@minus4\p@
+   \abovedisplayshortskip \z@ \@plus\p@
+   \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+   \def\@listi{\leftmargin\leftmargini
+               \topsep 4\p@ \@plus2\p@ \@minus2\p@
+               \parsep 2\p@ \@plus\p@ \@minus\p@
+               \itemsep \parsep}%
+   \belowdisplayskip \abovedisplayskip
+}
+\makeatother
+
+\let\originalfootnote\footnote
+\renewcommand{\footnote}[1]{\originalfootnote{\hspace{.25em}\parbox[t]{.88\textwidth}{#1}}}
+
+\newcommand\domain{\mathcal{A}}
+\newcommand\polynomialring[1]{\domain[#1]}
+\newcommand\ring{\mathcal{R}}
+\newcommand\cin{\hspace{-0.2ex}\in\hspace{-0.2ex}}
+\newcommand\ceq{\hspace{-0.2ex}=\hspace{-0.2ex}}
+\newcommand\cge{\hspace{-0.2ex}\ge\hspace{-0.2ex}}
+
+\newcommand{\textsb}[1]{{\fontseries{sb}\selectfont #1}}
+
+\usepackage{tikz}
+
+\newcommand\theproofbegins{\ensuremath{\tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex); \hspace{.6em}}}
+\newcommand\theproofends{\ensuremath{\hspace{.6em} \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);}}
+
+\begin{document}
+
+\noindent
+\textsc{Theorem}.
+{\itshape
+In an integral domain~$\domain$,
+for every polynomial~$P$ in the variable~$x$ with coefficients in~$\domain$, ${P \cin \polynomialring{x}}$,
+and every ${r \cin \domain}$,
+there exist unique ${Q \cin \polynomialring{x}}$ %in the same polynomial ring
+and~${R \cin \domain}$
+such that
+}
+\begin{equation*}
+P(x) = (x - r) \hspace{.2ex} Q(x) + R
+\hspace{.2ex} ,
+\end{equation*}
+%
+where
+%
+\begin{equation*}
+R = P(r)
+\hspace{.1ex} .
+\end{equation*}
+
+\noindent
+\textsc{Lemma}.
+{\itshape
+From any difference of two $n$-th powers, ${x^n \! - c^n}$
+(where ${n \cge 1}$%,
+%$c$~belongs to a commutative ring with identity~$\ring$,
+%and $x$ is an indeterminate over~$\ring$%
+),
+${(x - c)}$ can be factored out.
+That is, there exists a~polynomial ${Q_{n-1}(x)}$
+such that\footnote{%
+Explicitly,
+$Q_{n-1}(x)
+= \displaystyle\sum_{k=0}^{n-1} x^{n-1-k} c^k
+= \hspace{.2ex} x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1}$
+}%
+}
+\begin{equation*}
+x^n \! - c^n = (x - c) \hspace{.2ex} Q_{n-1}(x)
+\hspace{.1ex} .
+\end{equation*}
+
+\noindent\theproofbegins
+(by mathematical induction on $n$)
+
+The \textsb{base case} ${n \ceq 1}$ holds since
+%
+\begin{equation*}
+x^1 \! - c^1 = (x - c) \hspace{.2ex} (1)
+\hspace{.2ex} ,
+\end{equation*}
+%
+where the constant ${1 = Q_0(x)}$ is a~polynomial as well.
+
+\textsb{Inductive Hypothesis}.
+Assume for some arbitrary positive integer~${k \cge 1}$
+there exists a~polynomial $Q_{k-1}(x)$ such that
+%
+\begin{equation*}
+x^k \! - c^k = (x - c) \hspace{.2ex} Q_{k-1}(x)
+\hspace{.2ex} .
+\end{equation*}
+
+\textsb{Induction Step}.
+To show that the lemma holds for~${k + 1}$ (assuming it holds for~$k$),
+%(then it is true for all ${n \cge 1}$)
+consider
+%
+\begin{equation*}
+x^{k+1} \! - c^{k+1}
+,
+\end{equation*}
+%
+that can be rewritten by adding ${0 = - x c^k + c^k x}$ and grouping as
+%
+\begin{equation*}
+x^{k+1} \! - x c^k + c^k x - c^{k+1}
+= \bigl( x^{k+1} \! - x c^k \bigr) + \bigl( c^k x - c^{k+1} \bigr)
+\hspace{.1ex} .
+\end{equation*}
+%
+Factoring out the common components from each group gives
+%
+\begin{equation*}
+x \bigl( x^k \! - c^k \bigr) + c^k(x - c)
+\hspace{.2ex} .
+\end{equation*}
+%
+Applying the inductive hypothesis to substitute ${(x - c) \hspace{.2ex} Q_{k-1}(x)}$ for ${\bigl( x^k \! - c^k \bigr)}$ yields
+%
+\begin{equation*}
+x (x - c) \hspace{.2ex} Q_{k-1}(x) + c^k(x - c)
+\hspace{.2ex} .
+\end{equation*}
+%
+Factoring out the common multiplier $(x - c)$ results in
+%
+\begin{equation*}
+(x - c) \Bigl( x \hspace{.2ex} Q_{k-1}(x) + c^k \Bigr)
+,
+\end{equation*}
+%
+where ${Q_k(x) = x \hspace{.2ex} Q_{k-1}(x) + c^k}$ is a~polynomial\footnote{%
+Since ${Q_{k-1}(x)}$ is a~polynomial by the inductive hypothesis,
+and polynomials are closed under multiplication by $x$ and addition of constants,
+${Q_k(x) = x \hspace{.2ex} Q_{k-1}(x) + c^k}$
+is also a~polynomial.
+}\hbox{\hspace{-1ex}.}
+
+This completes the induction step, proving the lemma for all ${n \cge 1}$.
+\theproofends
+
+
+
+
+\vspace{3em}
+
+
+
+Let ${P_n(x)}$ be a~polynomial in $\polynomialring{x}$ of degree~$n$,
+\begin{equation*}
+P_n(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+\hspace{.2ex} ,
+\end{equation*}
+where each coefficient ${a_i \cin \domain}$.
+
+\end{document}
