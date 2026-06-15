@@ -90,6 +90,22 @@ R = P(r)
 \end{equation*}
 
 \noindent
+\theproofbegins
+%
+Let ${P_n(x)}$ be a~polynomial in $\polynomialring{x}$ of degree~$n$,
+\begin{equation*}
+P_n(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+\hspace{.2ex} ,
+\end{equation*}
+where each coefficient ${a_i \cin \domain}$.
+
+\vspace{3em}
+
+
+
+\newpage
+
+\noindent
 \textsc{Lemma}.
 {\itshape
 From any difference of two $n$-th powers, ${x^n \! - c^n}$
@@ -99,12 +115,7 @@ From any difference of two $n$-th powers, ${x^n \! - c^n}$
 ),
 ${(x - c)}$ can be factored out.
 That is, there exists a~polynomial ${Q_{n-1}(x)}$
-such that\footnote{%
-Explicitly,
-$Q_{n-1}(x)
-= \displaystyle\sum_{k=0}^{n-1} x^{n-1-k} c^k
-= \hspace{.2ex} x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1}$
-}%
+such that
 }
 \begin{equation*}
 x^n \! - c^n = (x - c) \hspace{.2ex} Q_{n-1}(x)
@@ -171,28 +182,65 @@ Factoring out the common multiplier $(x - c)$ results in
 ,
 \end{equation*}
 %
-where ${Q_k(x) = x \hspace{.2ex} Q_{k-1}(x) + c^k}$ is a~polynomial\footnote{%
-Since ${Q_{k-1}(x)}$ is a~polynomial by the inductive hypothesis,
-and polynomials are closed under multiplication by $x$ and addition of constants,
-${Q_k(x) = x \hspace{.2ex} Q_{k-1}(x) + c^k}$
-is also a~polynomial.
-}\hbox{\hspace{-1ex}.}
+where ${x \hspace{.2ex} Q_{k-1}(x) + c^k = Q_k(x)}$ is a~polynomial
+---
+since ${Q_{k-1}(x)}$ is a~polynomial by the inductive hypothesis
+and polynomials are closed under multiplication by $x$ and addition of constants.
 
 This completes the induction step, proving the lemma for all ${n \cge 1}$.
 \theproofends
 
+\vspace{.5em}
 
+\scalebox{.8}{Explicitly, the~$Q(x)$ polynomials are}
 
+\nopagebreak\vspace{-0.5em}
+\noindent
+\scalebox{.8}{$
+\begin{alignedat}{2}
+& 1 &\hspace{1ex} = Q_0(x) \\
+x(1) + c^1 &= x + c &\hspace{1ex} = Q_1(x) \\
+x (x + c) + c^2 &= x^2 + xc + c^2 &\hspace{1ex} = Q_2(x) \\
+x \bigl( x^2 + xc + c^2 \bigr) + c^3 &= x^3 + x^2c + xc^2 + c^3 &\hspace{1ex} = Q_3(x) \\
+x \bigl( x^3 + x^2c + xc^2 + c^3 \bigr) + c^4 &= x^4 + x^3c + x^2c^2 + xc^3 + c^4 &\hspace{1ex} = Q_4(x) \\
+& \cdots \\
+x \bigl( x^{n-2} + x^{n-3} c + \dots + x c^{n-3} + c^{n-2} \bigr) + c^{n-1}
+&= x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} &\hspace{1ex} = Q_{n-1}(x)\\
+x \bigl( x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \bigr) + c^n
+&= x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n} &\hspace{1ex} = Q_n(x)
+\end{alignedat}
+$}
+
+\noindent
+\scalebox{.8}{In more compact notation with the summation symbol}
+%
+\vspace{-0.8em}\begin{equation*}
+\scalebox{.8}{$%
+Q_{n}(x)
+= \hspace{.2ex} x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n}
+= \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
+$}
+\vspace{-1.75em}
+\end{equation*}
+
+\noindent
+\scalebox{.8}{and}
+
+\vspace{-0.25em}
+\scalebox{.8}{$
+\begin{aligned}
+x \hspace{.2ex} Q_{n-1}(x) + c^n
+& = x \, \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-1-i} c^i + c^n
+= \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-i} c^i + c^n
+= \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
+= Q_{n}(x)
+\end{aligned}
+$}
 
 \vspace{3em}
 
 
 
-Let ${P_n(x)}$ be a~polynomial in $\polynomialring{x}$ of degree~$n$,
-\begin{equation*}
-P_n(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
-\hspace{.2ex} ,
-\end{equation*}
-where each coefficient ${a_i \cin \domain}$.
+....
 
 \end{document}
