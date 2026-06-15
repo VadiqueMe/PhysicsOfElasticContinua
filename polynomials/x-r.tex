@@ -50,7 +50,7 @@
 \makeatother
 
 \let\originalfootnote\footnote
-\renewcommand{\footnote}[1]{\originalfootnote{\hspace{.25em}\parbox[t]{.88\textwidth}{#1}}}
+\renewcommand{\footnote}[1]{\originalfootnote{\hspace{.25em}\parbox[t]{\textwidth}{#1}}}
 
 \newcommand\domain{\mathsf{A}}
 \newcommand\polynomialring[1]{\domain[#1]}
@@ -88,7 +88,7 @@ P(x) = (x - r) \hspace{.2ex} \mathcal{Q}(x) + \mathcal{R}
 %
 \vspace{-2em}
 \begin{flalign*}
-\makebox[0pt][l]{\text{where}}
+\makebox[0pt][l]{\text{\itshape where}}
 &&
 \mathcal{R} = P(r)
 \hspace{.1ex} .
@@ -218,8 +218,8 @@ Factoring out the common multiplier $(x - c)$ results in
 %
 where ${x \hspace{.2ex} Q_{k-1}(x,c) + c^k = Q_k(x,c)}$ is a~polynomial
 ---
-since ${Q_{k-1}(x,c)}$ is a~polynomial by the inductive hypothesis
-and polynomials are closed under multiplication by $x$ and addition of constants.
+since ${Q_{k-1}(x,c)}$ is a~polynomial by the inductive hypothesis,
+and polynomial rings are closed under multiplication and addition.
 
 This completes the induction step, proving the lemma for all ${n \cge 1}$.
 \hfill
