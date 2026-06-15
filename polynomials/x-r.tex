@@ -5,6 +5,7 @@
 \usepackage[english]{babel}
 
 \usepackage{amsmath}
+\usepackage{mathtools}
 
 \def\spacebetweenparagraphs{2mm minus0.5mm}
 \setlength{\parskip}{\spacebetweenparagraphs}
@@ -51,9 +52,10 @@
 \let\originalfootnote\footnote
 \renewcommand{\footnote}[1]{\originalfootnote{\hspace{.25em}\parbox[t]{.88\textwidth}{#1}}}
 
-\newcommand\domain{\mathcal{A}}
+\newcommand\domain{\mathsf{A}}
 \newcommand\polynomialring[1]{\domain[#1]}
-\newcommand\ring{\mathcal{R}}
+\newcommand\polynomialringintwo[2]{\domain[#1,#2]}
+\newcommand\ring{\mathsf{R}}
 \newcommand\cin{\hspace{-0.2ex}\in\hspace{-0.2ex}}
 \newcommand\ceq{\hspace{-0.2ex}=\hspace{-0.2ex}}
 \newcommand\cge{\hspace{-0.2ex}\ge\hspace{-0.2ex}}
@@ -65,6 +67,8 @@
 \newcommand\theproofbegins{\ensuremath{\tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex); \hspace{.6em}}}
 \newcommand\theproofends{\ensuremath{\hspace{.6em} \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);}}
 
+%%%%%%%%%%%%
+
 \begin{document}
 
 \noindent
@@ -73,52 +77,82 @@
 In an integral domain~$\domain$,
 for every polynomial~$P$ in the variable~$x$ with coefficients in~$\domain$, ${P \cin \polynomialring{x}}$,
 and every ${r \cin \domain}$,
-there exist unique ${Q \cin \polynomialring{x}}$ %in the same polynomial ring
-and~${R \cin \domain}$
+there exist unique ${\mathcal{Q} \cin \polynomialring{x}}$ %in the same polynomial ring
+and~${\mathcal{R} \cin \domain}$
 such that
 }
 \begin{equation*}
-P(x) = (x - r) \hspace{.2ex} Q(x) + R
+P(x) = (x - r) \hspace{.2ex} \mathcal{Q}(x) + \mathcal{R}
 \hspace{.2ex} ,
 \end{equation*}
 %
-where
-%
-\begin{equation*}
-R = P(r)
+\vspace{-2em}
+\begin{flalign*}
+\makebox[0pt][l]{\text{where}}
+&&
+\mathcal{R} = P(r)
 \hspace{.1ex} .
-\end{equation*}
+&&
+\end{flalign*}
 
 \noindent
 \theproofbegins
 %
-Let ${P_n(x)}$ be a~polynomial in $\polynomialring{x}$ of degree~$n$,
+\textsb{1. The existence}
+
+\nopagebreak
+Let ${P(x)}$ be a~polynomial in $\polynomialring{x}$ of degree~$n$,
+%
 \begin{equation*}
-P_n(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
-\hspace{.2ex} ,
+P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i x^i
+,
 \end{equation*}
-where each coefficient ${a_i \cin \domain}$.
+where each coefficient ${a_i \cin \domain}$. Evaluating it at ${x \ceq r}$ gives
+%
+\begin{equation*}
+P(r) = a_n r^n + a_{n-1} r^{n-1} + \dots + a_1 r + a_0 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i r^i
+.
+\end{equation*}
+%
+Consider the difference
+%
+\begin{equation*}
+P(x) - P(r)
+= \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i x^i - \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i r^i .
+\end{equation*}
+%
+By the linearity of summation, the two expressions can be combined term-by-term.
+Moreover, the constant terms for ${i \ceq 0}$ cancel out
+(${x^0 \hspace{-0.2ex} = r^0 \hspace{-0.2ex} = 1}$ $\Rightarrow$
+${a_0 x^0 \hspace{-0.2ex} - a_0 r^0 \ceq a_0 \hspace{-0.2ex} - a_0 \ceq 0}$).
+The difference ${P(x) - P(r)}$ becomes
+%
+\begin{align*}
+\scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i x^i - \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i r^i
+&= (a_0 \hspace{-0.2ex} - a_0) + \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \Bigl( a_i x^i \hspace{-0.2ex} - a_i r^i \Bigr) \\
+&= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x^i \hspace{-0.2ex} - r^i \bigr)
+.
+\end{align*}
 
-\vspace{3em}
+\vspace{-0.5em}
+Each term ${x^i \hspace{-0.2ex} - r^i}$ in the above sum is a difference of two $i$-th powers.
+The following lemma on the factorization of ${x^n \! - c^n}$ for any ${n \cge 1}$ shows that every such difference can be factored by ${(x - r)}$.
+Applying the lemma term-by-term exposes a~common factor ${(x - r)}$ across all the terms, so it can be factored out of the~entire expression.
 
-
-
+%%%%%%%%%%%%
 \newpage
+%%%%%%%%%%%%
 
 \noindent
 \textsc{Lemma}.
 {\itshape
-From any difference of two $n$-th powers, ${x^n \! - c^n}$
-(where ${n \cge 1}$%,
-%$c$~belongs to a commutative ring with identity~$\ring$,
-%and $x$ is an indeterminate over~$\ring$%
-),
-${(x - c)}$ can be factored out.
-That is, there exists a~polynomial ${Q_{n-1}(x)}$
+For any integer $n \cge 1$, the difference of two $n$-th powers, ${x^n \! - c^n}$,
+can be factored by $(x - c)$.
+That is, there exists a~polynomial ${Q_{n-1}(x,c)}$
 such that
 }
 \begin{equation*}
-x^n \! - c^n = (x - c) \hspace{.2ex} Q_{n-1}(x)
+x^n \! - c^n = (x - c) \hspace{.2ex} Q_{n-1}(x,c)
 \hspace{.1ex} .
 \end{equation*}
 
@@ -132,14 +166,14 @@ x^1 \! - c^1 = (x - c) \hspace{.2ex} (1)
 \hspace{.2ex} ,
 \end{equation*}
 %
-where the constant ${1 = Q_0(x)}$ is a~polynomial as well.
+where the constant ${1 = Q_0(x,c)}$ is a~polynomial as well.
 
 \textsb{Inductive Hypothesis}.
 Assume for some arbitrary positive integer~${k \cge 1}$
-there exists a~polynomial $Q_{k-1}(x)$ such that
+there exists a~polynomial $Q_{k-1}(x,c)$ such that
 %
 \begin{equation*}
-x^k \! - c^k = (x - c) \hspace{.2ex} Q_{k-1}(x)
+x^k \! - c^k = (x - c) \hspace{.2ex} Q_{k-1}(x,c)
 \hspace{.2ex} .
 \end{equation*}
 
@@ -168,46 +202,47 @@ x \bigl( x^k \! - c^k \bigr) + c^k(x - c)
 \hspace{.2ex} .
 \end{equation*}
 %
-Applying the inductive hypothesis to substitute ${(x - c) \hspace{.2ex} Q_{k-1}(x)}$ for ${\bigl( x^k \! - c^k \bigr)}$ yields
+Applying the inductive hypothesis to substitute ${(x - c) \hspace{.2ex} Q_{k-1}(x,c)}$ for ${\bigl( x^k \! - c^k \bigr)}$ yields
 %
 \begin{equation*}
-x (x - c) \hspace{.2ex} Q_{k-1}(x) + c^k(x - c)
+x (x - c) \hspace{.2ex} Q_{k-1}(x,c) + c^k(x - c)
 \hspace{.2ex} .
 \end{equation*}
 %
 Factoring out the common multiplier $(x - c)$ results in
 %
 \begin{equation*}
-(x - c) \Bigl( x \hspace{.2ex} Q_{k-1}(x) + c^k \Bigr)
+(x - c) \Bigl( x \hspace{.2ex} Q_{k-1}(x,c) + c^k \Bigr)
 ,
 \end{equation*}
 %
-where ${x \hspace{.2ex} Q_{k-1}(x) + c^k = Q_k(x)}$ is a~polynomial
+where ${x \hspace{.2ex} Q_{k-1}(x,c) + c^k = Q_k(x,c)}$ is a~polynomial
 ---
-since ${Q_{k-1}(x)}$ is a~polynomial by the inductive hypothesis
+since ${Q_{k-1}(x,c)}$ is a~polynomial by the inductive hypothesis
 and polynomials are closed under multiplication by $x$ and addition of constants.
 
 This completes the induction step, proving the lemma for all ${n \cge 1}$.
+\hfill
 \theproofends
 
 \vspace{.5em}
 
-\scalebox{.8}{Explicitly, the~$Q(x)$ polynomials are}
+\scalebox{.8}{Explicitly, the~$Q(x,c)$ polynomials are}
 
 \nopagebreak\vspace{-0.5em}
 \noindent
 \scalebox{.8}{$
 \begin{alignedat}{2}
-& 1 &\hspace{1ex} = Q_0(x) \\
-x(1) + c^1 &= x + c &\hspace{1ex} = Q_1(x) \\
-x (x + c) + c^2 &= x^2 + xc + c^2 &\hspace{1ex} = Q_2(x) \\
-x \bigl( x^2 + xc + c^2 \bigr) + c^3 &= x^3 + x^2c + xc^2 + c^3 &\hspace{1ex} = Q_3(x) \\
-x \bigl( x^3 + x^2c + xc^2 + c^3 \bigr) + c^4 &= x^4 + x^3c + x^2c^2 + xc^3 + c^4 &\hspace{1ex} = Q_4(x) \\
+& 1 &\hspace{1ex} = Q_0 \\
+x(1) + c^1 &= x + c & {}= Q_1 \\
+x (x + c) + c^2 &= x^2 + xc + c^2 & {}= Q_2 \\
+x \bigl( x^2 + xc + c^2 \bigr) + c^3 &= x^3 + x^2c + xc^2 + c^3 & {}= Q_3 \\
+x \bigl( x^3 + x^2c + xc^2 + c^3 \bigr) + c^4 &= x^4 + x^3c + x^2c^2 + xc^3 + c^4 & {}= Q_4 \\
 & \cdots \\
 x \bigl( x^{n-2} + x^{n-3} c + \dots + x c^{n-3} + c^{n-2} \bigr) + c^{n-1}
-&= x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} &\hspace{1ex} = Q_{n-1}(x)\\
+&= x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \hspace{-0.2ex} & {}= Q_{n-1} \\
 x \bigl( x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \bigr) + c^n
-&= x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n} &\hspace{1ex} = Q_n(x)
+&= x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n} & {}= Q_n
 \end{alignedat}
 $}
 
@@ -216,7 +251,7 @@ $}
 %
 \vspace{-0.8em}\begin{equation*}
 \scalebox{.8}{$%
-Q_{n}(x)
+Q_{n}(x,c)
 = \hspace{.2ex} x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n}
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
 $}
@@ -229,18 +264,109 @@ $}
 \vspace{-0.25em}
 \scalebox{.8}{$
 \begin{aligned}
-x \hspace{.2ex} Q_{n-1}(x) + c^n
+x \hspace{.2ex} Q_{n-1}(x,c) + c^n
 & = x \, \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-1-i} c^i + c^n
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-i} c^i + c^n
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
-= Q_{n}(x)
+= Q_{n}(x,c)
+\hspace{.2ex} .
 \end{aligned}
 $}
 
-\vspace{3em}
+\vspace{-1em}
+\begin{flalign*}
+\makebox[0pt][l]{\scalebox{.8}{The exact factorization is}}
+&&
+\scalebox{.8}{$
+x^n \! - c^n = (x - c) \hspace{.2ex} \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-1-i} c^i
+.
+$}
+&&
+\end{flalign*}
 
+%%%%%%%%%%%%
 
+\vspace{-0.5em}
+\begin{flalign*}
+\makebox[0pt][l]{\hspace{\parindent}\text{Returning to}}
+&&
+P(x) - P(r)
+= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x^i \hspace{-0.2ex} - r^i \bigr)
+,
+&&
+\end{flalign*}
+%
+the lemma yields\footnote{%
+From a~deeper algebraic viewpoint,
+${Q_{i-1}(x,c)}$ from the lemma belongs to the~polynomial ring $\polynomialringintwo{x}{c}$.
+Replacing the~indeterminate~$c$ by the~element ${r \cin \domain}$ is the evaluation homomorphism ${\polynomialringintwo{x}{c} \to \polynomialring{x}}$.
+Thus ${Q_{i-1}(x,r)}$ is a~polynomial in~${\polynomialring{x}}$.
+}
+%
+\begin{equation*}
+x^i \hspace{-0.2ex} - r^i = (x - r) \hspace{.2ex} Q_{i-1}(x,r)
+\end{equation*}
+%
+for every ${i \cge 1}$.
+Substituting these factorizations term-by-term gives
+%
+\begin{equation*}
+P(x) - P(r)
+= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x - r \bigr) Q_{i-1}(x,r)
+= \bigl( x - r \bigr) \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} Q_{i-1}(x,r)
+.
+\end{equation*}
 
+\vspace{-0.5em}
+Since each $Q_{i-1}(x,r)$ is a~polynomial in~${\polynomialring{x}}$ and polynomial sums are polynomials,
+${ \sum_{i=1}^{n} a_i \hspace{.2ex} Q_{i-1}(x,r) }$
+belongs to the~same polynomial ring~$\polynomialring{x}$.
+%
+Define
+%
+\vspace{-0.1em}
+\begin{equation*}
+\scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} Q_{i-1}(x,r) = \mathcal{Q}(x) \in \polynomialring{x}
+\hspace{.2ex} .
+\end{equation*}
+
+\vspace{-1.25em}
+\begin{flalign*}
+\makebox[0pt][l]{\hspace{\parindent}\text{Hence}}
+&&
+P(x) - P(r)
+= \bigl( x - r \bigr) \mathcal{Q}(x)
+&&
+\end{flalign*}
+%
+\begin{flalign*}
+\makebox[0pt][l]{\text{or equivalently}}
+&&
+P(x) = \bigl( x - r \bigr) \mathcal{Q}(x) + P(r)
+\hspace{.1ex} .
+&&
+\end{flalign*}
+
+\vspace{-1em}
+The latter exhibits the required representation with ${\mathcal{R} = P(r) \in \domain \hspace{.2ex}}$.
+Ergo there exist
+${\mathcal{Q} \cin \polynomialring{x}}$ and~${\mathcal{R} \cin \domain}$.
+\hfill
+\theproofends
+
+%%%%%%%%%%%%
+
+\vspace{.5em}
+
+\noindent
+\theproofbegins
+%
+\textsb{2. The uniqueness}
+
+\nopagebreak
 ....
+
+
+
 
 \end{document}
