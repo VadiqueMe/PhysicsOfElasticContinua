@@ -5,6 +5,7 @@
 \usepackage[english]{babel}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{mathtools}
 
 \def\spacebetweenparagraphs{2mm minus0.5mm}
@@ -50,7 +51,9 @@
 \makeatother
 
 \let\originalfootnote\footnote
-\renewcommand{\footnote}[1]{\originalfootnote{\hspace{.25em}\parbox[t]{\textwidth}{#1}}}
+\renewcommand{\footnote}[1]{\originalfootnote{\hspace{.25em}\parbox[t]{.96\textwidth}{#1}}}
+
+\renewcommand{\labelitemi}{\raisebox{-0.2ex}{\pmb{\checkmark}}}
 
 \newcommand\domain{\mathsf{A}}
 \newcommand\polynomialring[1]{\domain[#1]}
@@ -148,11 +151,11 @@ Applying the lemma term-by-term exposes a~common factor ${(x - r)}$ across all t
 {\itshape
 For any integer $n \cge 1$, the difference of two $n$-th powers, ${x^n \! - c^n}$,
 can be factored by $(x - c)$.
-That is, there exists a~polynomial ${Q_{n-1}(x,c)}$
+That is, there exists a~polynomial ${S_{n-1}(x,c)}$
 such that
 }
 \begin{equation*}
-x^n \! - c^n = (x - c) \hspace{.2ex} Q_{n-1}(x,c)
+x^n \! - c^n = (x - c) \hspace{.2ex} S_{n-1}(x,c)
 \hspace{.1ex} .
 \end{equation*}
 
@@ -166,14 +169,14 @@ x^1 \! - c^1 = (x - c) \hspace{.2ex} (1)
 \hspace{.2ex} ,
 \end{equation*}
 %
-where the constant ${1 = Q_0(x,c)}$ is a~polynomial as well.
+where the constant ${1 = S_0(x,c)}$ is a~polynomial as well.
 
 \textsb{Inductive Hypothesis}.
 Assume for some arbitrary positive integer~${k \cge 1}$
-there exists a~polynomial $Q_{k-1}(x,c)$ such that
+there exists a~polynomial $S_{k-1}(x,c)$ such that
 %
 \begin{equation*}
-x^k \! - c^k = (x - c) \hspace{.2ex} Q_{k-1}(x,c)
+x^k \! - c^k = (x - c) \hspace{.2ex} S_{k-1}(x,c)
 \hspace{.2ex} .
 \end{equation*}
 
@@ -187,11 +190,11 @@ x^{k+1} \! - c^{k+1}
 ,
 \end{equation*}
 %
-that can be rewritten by adding ${0 = - x c^k + c^k x}$ and grouping as
+that can be rewritten by adding ${0 = - x \hspace{.1ex} c^k + c^k x}$ and grouping as
 %
 \begin{equation*}
-x^{k+1} \! - x c^k + c^k x - c^{k+1}
-= \bigl( x^{k+1} \! - x c^k \bigr) + \bigl( c^k x - c^{k+1} \bigr)
+x^{k+1} \hspace{-0.2ex} - x \hspace{.1ex} c^k \hspace{-0.2ex} + c^k x - c^{k+1} \hspace{-0.2ex}
+= \bigl( x^{k+1} \! - x \hspace{.1ex} c^k \bigr) + \bigl( c^k x - c^{k+1} \bigr)
 \hspace{.1ex} .
 \end{equation*}
 %
@@ -202,23 +205,23 @@ x \bigl( x^k \! - c^k \bigr) + c^k(x - c)
 \hspace{.2ex} .
 \end{equation*}
 %
-Applying the inductive hypothesis to substitute ${(x - c) \hspace{.2ex} Q_{k-1}(x,c)}$ for ${\bigl( x^k \! - c^k \bigr)}$ yields
+Applying the inductive hypothesis to substitute ${(x - c) \hspace{.2ex} S_{k-1}(x,c)}$ for ${\bigl( x^k \! - c^k \bigr)}$ yields
 %
 \begin{equation*}
-x (x - c) \hspace{.2ex} Q_{k-1}(x,c) + c^k(x - c)
+x (x - c) \hspace{.2ex} S_{k-1}(x,c) + c^k(x - c)
 \hspace{.2ex} .
 \end{equation*}
 %
 Factoring out the common multiplier $(x - c)$ results in
 %
 \begin{equation*}
-(x - c) \Bigl( x \hspace{.2ex} Q_{k-1}(x,c) + c^k \Bigr)
+(x - c) \Bigl( x \hspace{.2ex} S_{k-1}(x,c) + c^k \Bigr)
 ,
 \end{equation*}
 %
-where ${x \hspace{.2ex} Q_{k-1}(x,c) + c^k = Q_k(x,c)}$ is a~polynomial
+where ${x \hspace{.2ex} S_{k-1}(x,c) + c^k \hspace{-0.2ex} = S_k(x,c)}$ is a~polynomial
 ---
-since ${Q_{k-1}(x,c)}$ is a~polynomial by the inductive hypothesis,
+since ${S_{k-1}(x,c)}$ is a~polynomial by the inductive hypothesis,
 and polynomial rings are closed under multiplication and addition.
 
 This completes the induction step, proving the lemma for all ${n \cge 1}$.
@@ -227,22 +230,25 @@ This completes the induction step, proving the lemma for all ${n \cge 1}$.
 
 \vspace{.5em}
 
-\scalebox{.8}{Explicitly, the~$Q(x,c)$ polynomials are}
+%
+% the polynomials, explicitly
+%
+\scalebox{.8}{Explicitly, the~$S(x,c)$ polynomials are}
 
 \nopagebreak\vspace{-0.5em}
 \noindent
 \scalebox{.8}{$
 \begin{alignedat}{2}
-& 1 &\hspace{1ex} = Q_0 \\
-x(1) + c^1 &= x + c & {}= Q_1 \\
-x (x + c) + c^2 &= x^2 + xc + c^2 & {}= Q_2 \\
-x \bigl( x^2 + xc + c^2 \bigr) + c^3 &= x^3 + x^2c + xc^2 + c^3 & {}= Q_3 \\
-x \bigl( x^3 + x^2c + xc^2 + c^3 \bigr) + c^4 &= x^4 + x^3c + x^2c^2 + xc^3 + c^4 & {}= Q_4 \\
-& \cdots \\
+& 1 &\hspace{1ex} = S_0 \\[-0.2em]
+x(1) + c^1 &= x + c & {}= S_1 \\[-0.2em]
+x (x + c) + c^2 &= x^2 + xc + c^2 & {}= S_2 \\[-0.2em]
+x \bigl( x^2 + xc + c^2 \bigr) + c^3 &= x^3 + x^2c + xc^2 + c^3 & {}= S_3 \\[-0.2em]
+x \bigl( x^3 + x^2c + xc^2 + c^3 \bigr) + c^4 &= x^4 + x^3c + x^2c^2 + xc^3 + c^4 & {}= S_4 \\[-0.4em]
+& \cdots \\[-0.4em]
 x \bigl( x^{n-2} + x^{n-3} c + \dots + x c^{n-3} + c^{n-2} \bigr) + c^{n-1}
-&= x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \hspace{-0.2ex} & {}= Q_{n-1} \\
+&= x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \hspace{-0.2ex} & {}= S_{n-1} \\[-0.2em]
 x \bigl( x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \bigr) + c^n
-&= x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n} & {}= Q_n
+&= x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n} & {}= S_n
 \end{alignedat}
 $}
 
@@ -251,7 +257,7 @@ $}
 %
 \vspace{-0.8em}\begin{equation*}
 \scalebox{.8}{$%
-Q_{n}(x,c)
+S_{n}(x,c)
 = \hspace{.2ex} x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n}
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
 $}
@@ -264,16 +270,19 @@ $}
 \vspace{-0.25em}
 \scalebox{.8}{$
 \begin{aligned}
-x \hspace{.2ex} Q_{n-1}(x,c) + c^n
+x \hspace{.2ex} S_{n-1}(x,c) + c^n
 & = x \, \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-1-i} c^i + c^n
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-i} c^i + c^n
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
-= Q_{n}(x,c)
+= S_{n}(x,c)
 \hspace{.2ex} .
 \end{aligned}
 $}
 
-\vspace{-1em}
+%
+% the exact factorization
+%
+\vspace{-1.25em}
 \begin{flalign*}
 \makebox[0pt][l]{\scalebox{.8}{The exact factorization is}}
 &&
@@ -284,8 +293,70 @@ $}
 &&
 \end{flalign*}
 
+%
+% the properties
+%
+\vspace{-0.75em}
+\noindent
+\scalebox{.8}{%
+\parbox[t]{\dimexpr(\linewidth)/8*10\relax}{%
+Several interesting properties characterize ${ S_{n}(x,c) = \textstyle\sum_{i=0}^{n} x^{n-i} c^i }$
+as a~\emph{complete homogeneous symmetric polynomial} in two variables\::
+}}
+\vspace{-1.2em}
+\begin{itemize}
+\item
+\scalebox{.8}{%
+\parbox[t]{\dimexpr(\linewidth-\leftmargin)/8*10\relax}{%
+it is \emph{symmetric}, since
+${ S_{n}(x,c) = \textstyle\sum_{i=0}^{n} x^{n-i} c^i
+= \textstyle\sum_{i=0}^{n} c^{n-i} x^i = S_{n}(c,x) }$,
+}}
+\vspace{-0.6em}
+\item
+\scalebox{.8}{%
+\parbox[t]{\dimexpr(\linewidth-\leftmargin)/8*10\relax}{%
+it is \emph{homogeneous} of~degree~$n$,
+because the degree of each monomial ${x^{n-i} c^i}$ is exactly ${n \!-\! i + i = n}$
+for all~$i$,
+}}
+\vspace{-0.4em}
+\item
+\scalebox{.8}{%
+\parbox[t]{\dimexpr(\linewidth-\leftmargin)/8*10\relax}{%
+it is \emph{complete}
+in the~sense that it contains every possible \hbox{$n$-th} degree monomial in the variables~$x$ and~$c$
+exactly once, each with a~coefficient of~$1$.
+}}
+\end{itemize}
+
+%
+% the dual recurrence
+%
+\vspace{-0.5em}
+\noindent
+\scalebox{.8}{%
+\parbox[t]{\dimexpr(\linewidth)/8*10\relax}{%
+The~symmetry of~$S_{n}(x,c)$ is already hinted~at in the~induction step.
+The~proof inserts the~zero ${0 = -x \hspace{.1ex} c^k + c^k x}$, but one may equally insert the~zero ${0 = -x^k c + c \hspace{.1ex} x^k}$.
+Then ${x^{k+1} \hspace{-0.2ex} - x^k c + c \hspace{.1ex} x^k \hspace{-0.2ex} - c^{k+1} \hspace{-0.2ex} = x^k(x - c) + c \bigl( x^k - c^k \bigr)}$
+and the resulting recurrence will be
+%
+\vspace{-0.66em}\begin{equation*}
+S_k(x,c) = x^k \hspace{-0.2ex} + c \hspace{.2ex} S_{k-1}(x,c)
+\hspace{.2ex} .
+\vspace{-0.5em}
+\end{equation*}
+%
+The~recurrences
+${x^k \hspace{-0.2ex} + c \hspace{.2ex} S_{k-1}(x,c)}$
+and~${x \hspace{.2ex} S_{k-1}(x,c) + c^k \hspace{-0.2ex}}$
+are dual under the~swap ${x \hspace{-0.25ex} \leftrightarrow \hspace{-0.25ex} c \hspace{.2ex}}$.
+}}
+
 %%%%%%%%%%%%
 
+\noindent
 \vspace{-0.5em}
 \begin{flalign*}
 \makebox[0pt][l]{\hspace{\parindent}\text{Returning to}}
@@ -298,57 +369,56 @@ P(x) - P(r)
 %
 the lemma yields\footnote{%
 From a~deeper algebraic viewpoint,
-${Q_{i-1}(x,c)}$ from the lemma belongs to the~polynomial ring $\polynomialringintwo{x}{c}$.
+${S_{i-1}(x,c)}$ from the lemma belongs to the~polynomial ring $\polynomialringintwo{x}{c}$.
 Replacing the~indeterminate~$c$ by the~element ${r \cin \domain}$ is the evaluation homomorphism ${\polynomialringintwo{x}{c} \to \polynomialring{x}}$.
-Thus ${Q_{i-1}(x,r)}$ is a~polynomial in~${\polynomialring{x}}$.
+Thus ${S_{i-1}(x,r)}$ is a~polynomial in~${\polynomialring{x}}$.
 }
 %
 \begin{equation*}
-x^i \hspace{-0.2ex} - r^i = (x - r) \hspace{.2ex} Q_{i-1}(x,r)
+x^i \hspace{-0.2ex} - r^i = (x - r) \hspace{.2ex} S_{i-1}(x,r)
+\tag*{\makebox[0pt][r]{for every ${i \cge 1 \hspace{.2ex}}$.}}
 \end{equation*}
 %
-for every ${i \cge 1}$.
 Substituting these factorizations term-by-term gives
 %
 \begin{equation*}
 P(x) - P(r)
-= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x - r \bigr) Q_{i-1}(x,r)
-= \bigl( x - r \bigr) \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} Q_{i-1}(x,r)
+= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x - r \bigr) S_{i-1}(x,r)
+= \bigl( x - r \bigr) \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} S_{i-1}(x,r)
 .
 \end{equation*}
 
 \vspace{-0.5em}
-Since each $Q_{i-1}(x,r)$ is a~polynomial in~${\polynomialring{x}}$ and polynomial sums are polynomials,
-${ \sum_{i=1}^{n} a_i \hspace{.2ex} Q_{i-1}(x,r) }$
+Since each $S_{i-1}(x,r)$ is a~polynomial in~${\polynomialring{x}}$ and polynomial sums are polynomials,
+the~sum ${ \sum_{i=1}^{n} a_i \hspace{.2ex} S_{i-1}(x,r) }$
 belongs to the~same polynomial ring~$\polynomialring{x}$.
 %
 Define
 %
 \vspace{-0.1em}
 \begin{equation*}
-\scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} Q_{i-1}(x,r) = \mathcal{Q}(x) \in \polynomialring{x}
+\scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} S_{i-1}(x,r) = \mathcal{Q}(x) \in \polynomialring{x}
 \hspace{.2ex} .
 \end{equation*}
 
-\vspace{-1.25em}
+\vspace{-1.75em}
 \begin{flalign*}
 \makebox[0pt][l]{\hspace{\parindent}\text{Hence}}
 &&
 P(x) - P(r)
 = \bigl( x - r \bigr) \mathcal{Q}(x)
 &&
-\end{flalign*}
-%
-\begin{flalign*}
+\\[.2em]
 \makebox[0pt][l]{\text{or equivalently}}
 &&
 P(x) = \bigl( x - r \bigr) \mathcal{Q}(x) + P(r)
-\hspace{.1ex} .
+%%\hspace{.1ex} .
 &&
 \end{flalign*}
 
 \vspace{-1em}
-The latter exhibits the required representation with ${\mathcal{R} = P(r) \in \domain \hspace{.2ex}}$.
+\noindent
+--- the latter exhibits the required representation with ${\mathcal{R} = P(r) \in \domain \hspace{.2ex}}$.
 Ergo there exist
 ${\mathcal{Q} \cin \polynomialring{x}}$ and~${\mathcal{R} \cin \domain}$.
 \hfill
