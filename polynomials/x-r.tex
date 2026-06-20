@@ -55,6 +55,9 @@
 
 \renewcommand{\labelitemi}{\raisebox{-0.2ex}{\pmb{\checkmark}}}
 
+\newcommand*{\sprime}{^{\mkern1.5mu\prime}\mkern-2mu}
+\newcommand*{\dprime}{^{\mkern1.5mu\prime\prime}\mkern-2mu}
+
 \newcommand\domain{\mathsf{A}}
 \newcommand\polynomialring[1]{\domain[#1]}
 \newcommand\polynomialringintwo[2]{\domain[#1,#2]}
@@ -149,7 +152,7 @@ Applying the lemma term-by-term exposes a~common factor ${(x - r)}$ across all t
 \noindent
 \textsc{Lemma}.
 {\itshape
-For any integer $n \cge 1$, the difference of two $n$-th powers, ${x^n \! - c^n}$,
+For any integer $n \cge 1$, the difference of two $n$-th powers, ${x^n \! - c^n\hspace{-0.2ex}}$,
 can be factored by $(x - c)$.
 That is, there exists a~polynomial ${S_{n-1}(x,c)}$
 such that
@@ -408,25 +411,28 @@ Define
 P(x) - P(r)
 = \bigl( x - r \bigr) \mathcal{Q}(x)
 &&
-\\[.2em]
+\\[.4em]
 \makebox[0pt][l]{\text{or equivalently}}
 &&
 P(x) = \bigl( x - r \bigr) \mathcal{Q}(x) + P(r)
-%%\hspace{.1ex} .
 &&
 \end{flalign*}
 
-\vspace{-1em}
+\vspace{-0.75em}
 \noindent
---- the latter exhibits the required representation with ${\mathcal{R} = P(r) \in \domain \hspace{.2ex}}$.
-Ergo there exist
-${\mathcal{Q} \cin \polynomialring{x}}$ and~${\mathcal{R} \cin \domain}$.
+--- the latter exhibits the intended representation with ${\mathcal{R} = P(r) \in \domain \hspace{.2ex}}$.
+Ergo, such~${\mathcal{Q} \cin \polynomialring{x}}$ and~${\mathcal{R} \cin \domain}$ exist.
 \hfill
 \theproofends
 
+\vspace{.25em}
+It remains to show that
+${\mathcal{Q}(x)}$ and~${\mathcal{R}}$
+are unique.
+
 %%%%%%%%%%%%
 
-\vspace{.5em}
+\vspace{.75em}
 
 \noindent
 \theproofbegins
@@ -434,9 +440,113 @@ ${\mathcal{Q} \cin \polynomialring{x}}$ and~${\mathcal{R} \cin \domain}$.
 \textsb{2. The uniqueness}
 
 \nopagebreak
-....
+Assume that there exist polynomials
+${Q\sprime, Q\dprime \cin \polynomialring{x}}$
+and constants
+${R\sprime, R\dprime \cin \domain}$
+such that
+%
+\vspace{-0.5em}
+\begin{equation*}
+P(x) = (x-r) \hspace{.2ex} Q\sprime(x) + R\sprime
+\quad \text{and} \quad
+P(x) = (x-r) \hspace{.2ex} Q\dprime(x) + R\dprime
+.
+\end{equation*}
+%
+Subtracting the~second representation from the~first gives
+%
+\begin{equation*}
+(x-r) \hspace{.2ex} Q\sprime(x) + R\sprime
+- (x-r) \hspace{.2ex} Q\dprime(x) - R\dprime
+= 0
+\hspace{.2ex} ,
+\end{equation*}
+%
+which simplifies to
+%
+\vspace{-0.5em}
+\begin{equation*}
+(x-r) \bigl( Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x) \bigr) \hspace{-0.2ex}
+= R\dprime \hspace{-0.2ex} - R\sprime
+.
+\end{equation*}
 
+\vspace{-0.5em}
+Evaluating this polynomial identity at~${x \ceq r}$,
+the~factor ${x - r}$ becomes ${r - r = 0}$,
+so the~left-hand side vanishes
+and reveals that the constant difference is zero\::
+%
+\vspace{-0.25em}
+\begin{equation*}
+0 = R\dprime \hspace{-0.2ex} - R\sprime ,
+\end{equation*}
+%
+\vspace{-2.5em}
+\begin{flalign*}
+\makebox[0pt][l]{\text{that is}}
+&&
+R\sprime \hspace{-0.2ex} = R\dprime .
+&&
+\end{flalign*}
 
+\vspace{-0.5em}
+Returning to the polynomial identity before evaluation
+and putting ${R\sprime \ceq R\dprime}$ into it
+yields
+%
+\vspace{-0.25em}
+\begin{equation*}
+(x - r) \bigl(Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x)\bigr) \hspace{-0.2ex} = 0
+\hspace{.2ex} .
+\end{equation*}
 
+\vspace{-0.25em}
+Because $\domain$ is an~integral domain,
+the polynomial ring~$\polynomialring{x}$ is an~integral domain as well
+and therefore has no zero divisors.
+Moreover, ${(x - r)}$ is a~nonzero polynomial in~$\polynomialring{x}$.
+Since its product with
+${Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x)}$
+is the zero polynomial,
+the absence of zero divisors in~$\polynomialring{x}$
+implies that
+%
+\vspace{-0.25em}
+\begin{equation*}
+Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x) \hspace{-0.1ex} = 0
+\hspace{.2ex} ,
+\end{equation*}
+%
+\vspace{-2.5em}
+\begin{flalign*}
+\makebox[0pt][l]{\text{giving}}
+&&
+Q\sprime(x) \hspace{-0.1ex} = Q\dprime(x)
+\hspace{.1ex} .
+&&
+\end{flalign*}
+
+\vspace{-2.5em}
+\begin{flalign*}
+\makebox[0pt][l]{\hspace{\parindent}\text{Thus}}
+&&
+Q\sprime \ceq Q\dprime
+\quad \text{and} \quad
+R\sprime \ceq R\dprime
+,
+&&
+\end{flalign*}
+%
+showing that the intended representation
+%
+\begin{equation*}
+P(x) = (x - r) \hspace{.2ex} \mathcal{Q}(x) + \mathcal{R}
+\end{equation*}
+%
+is unique in the~choice of~$\mathcal{Q}$ and~$\mathcal{R}$.
+\hfill
+\theproofends
 
 \end{document}
