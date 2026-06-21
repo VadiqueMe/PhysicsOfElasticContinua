@@ -432,7 +432,7 @@ are unique.
 
 %%%%%%%%%%%%
 
-\vspace{.75em}
+\vspace{.5em}
 
 \noindent
 \theproofbegins
@@ -446,21 +446,24 @@ and constants
 ${R\sprime, R\dprime \cin \domain}$
 such that
 %
-\vspace{-0.5em}
+\vspace{-0.25em}
 \begin{equation*}
 P(x) = (x-r) \hspace{.2ex} Q\sprime(x) + R\sprime
 \quad \text{and} \quad
 P(x) = (x-r) \hspace{.2ex} Q\dprime(x) + R\dprime
 .
+\vspace{-0.2em}
 \end{equation*}
 %
 Subtracting the~second representation from the~first gives
 %
+\vspace{-0.25em}
 \begin{equation*}
 (x-r) \hspace{.2ex} Q\sprime(x) + R\sprime
 - (x-r) \hspace{.2ex} Q\dprime(x) - R\dprime
 = 0
 \hspace{.2ex} ,
+\vspace{-0.25em}
 \end{equation*}
 %
 which simplifies to
@@ -476,18 +479,29 @@ which simplifies to
 Evaluating this polynomial identity at~${x \ceq r}$,
 the~factor~${(x - r)}$ becomes ${r - r = 0}$,
 so the~left-hand side vanishes
-and reveals that the constant difference is zero\::
+and reveals\footnote{%
+Since ${R\sprime, R\dprime \cin \domain}$,
+the~difference~${R\dprime \hspace{-0.2ex} - R\sprime}$ is an~element of~$\domain$ itself\:---
+equivalently, a~constant polynomial in~$\polynomialring{x}$.
+Accordingly, once evaluation at~${x \ceq r}$ yields
+${0 = R\dprime \hspace{-0.2ex} - R\sprime}$,
+it follows that ${R\sprime \ceq R\dprime}$ as elements of~$\domain$.
+In other words,
+${R\sprime \ceq R\dprime}$ is an equality in~$\domain$ itself,
+not merely equality obtained after evaluating the polynomial identity at~${x \ceq r}$.
+}
+that the constant difference is zero\::
 %
 \vspace{-0.25em}
 \begin{equation*}
 0 = R\dprime \hspace{-0.2ex} - R\sprime ,
 \end{equation*}
 %
-\vspace{-2.5em}
+\vspace{-2em}
 \begin{flalign*}
 \makebox[0pt][l]{\text{that is}}
 &&
-R\sprime \hspace{-0.2ex} = R\dprime .
+R\sprime = R\dprime .
 &&
 \end{flalign*}
 
@@ -513,13 +527,12 @@ is the zero polynomial,
 the absence of zero divisors in~$\polynomialring{x}$
 implies that
 %
-\vspace{-0.25em}
 \begin{equation*}
 Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x) \hspace{-0.1ex} = 0
 \hspace{.2ex} ,
 \end{equation*}
 %
-\vspace{-2.5em}
+\vspace{-2em}
 \begin{flalign*}
 \makebox[0pt][l]{\text{giving}}
 &&
@@ -528,7 +541,7 @@ Q\sprime(x) \hspace{-0.1ex} = Q\dprime(x)
 &&
 \end{flalign*}
 
-\vspace{-2.5em}
+\vspace{-2.25em}
 \begin{flalign*}
 \makebox[0pt][l]{\hspace{\parindent}\text{Thus}}
 &&
