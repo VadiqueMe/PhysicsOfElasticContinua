@@ -532,7 +532,7 @@ Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x) \hspace{-0.1ex} = 0
 \hspace{.2ex} ,
 \end{equation*}
 %
-\vspace{-2em}
+\vspace{-1.75em}
 \begin{flalign*}
 \makebox[0pt][l]{\text{giving}}
 &&
@@ -541,7 +541,7 @@ Q\sprime(x) \hspace{-0.1ex} = Q\dprime(x)
 &&
 \end{flalign*}
 
-\vspace{-2.25em}
+\vspace{-1.75em}
 \begin{flalign*}
 \makebox[0pt][l]{\hspace{\parindent}\text{Thus}}
 &&
@@ -561,5 +561,80 @@ P(x) = (x - r) \hspace{.2ex} \mathcal{Q}(x) + \mathcal{R}
 is unique in the~choice of~$\mathcal{Q}$ and~$\mathcal{R}$.
 \hfill
 \theproofends
+
+\vspace{1em}
+
+%
+% the definition of root
+%
+
+\noindent
+\textsc{Definition}.
+{\itshape
+Let ${P \cin \polynomialring{x}}$ and ${r \cin \domain}$.
+If ${P(r) \ceq 0}$, then ${r}$ is called a~\textbf{root} (or \textbf{zero}) of the polynomial~$P$.
+Equivalently, ${r}$ is a~solution of the polynomial equation ${P(x) \hspace{-0.2ex} = 0}$.
+}
+
+\vspace{.5em}
+
+%
+% R=0 for a root
+%
+
+\noindent
+\textsc{Corollary}.
+{\itshape
+If ${r \cin \domain}$ is a~root~(solution) of the polynomial equation ${P(x) \hspace{-0.2ex} = 0}$,
+then there exists unique ${\mathcal{Q} \cin \polynomialring{x}}$ such that
+}
+\begin{equation*}
+P(x) = (x-r) \mathcal{Q}(x)
+\hspace{.1ex} .
+\end{equation*}
+
+\vspace{-0.25em}
+\noindent
+\theproofbegins
+By the previous theorem,
+there exists unique ${\mathcal{Q} \cin \polynomialring{x}}$ such that
+%
+\begin{equation*}
+P(x) = (x-r) \mathcal{Q}(x) + P(r)
+\hspace{.1ex} .
+\end{equation*}
+%
+Since ${r}$ is a~root, ${P(r) \ceq 0}$.
+Therefore
+%
+\begin{equation*}
+P(x) = (x-r) \mathcal{Q}(x)
+\hspace{.1ex} .
+\tag*{\theproofends}
+\end{equation*}
+
+%
+% analogue with numerical division
+%
+
+In this case, $(x-r)$ is called a~\emph{factor} of~$P(x)$,
+just as one says that a~number~$b$ is a~factor of another number~$a$ when~$b$ divides~$a$.
+Hence every root~$r \in \domain$ gives a~linear factor~$(x-r)$ of~the~polynomial.
+
+\vspace{.5em}
+
+%
+% mention that roots may appear only after enlarging the domain to a suitable extension field
+%
+
+\noindent
+\textsc{Remark}.
+The above definition concerns roots that belong to the same coefficient domain~$\domain$.
+However, a~polynomial in $\domain[x]$ may fail to have roots inside~$\domain$
+and acquire them only in a~larger domain or~field containing~$\domain$.
+For instance, ${x^2 - 2 = 0}$ has no root in~$\mathbb{Q}$ but has the~roots ${\pm \sqrt{2}}$ in~$\mathbb{R}$.
+Whenever a~root~$r$ exists in such an~extension, the~same theorem gives factorization
+${P(x) = (x-r) \mathcal{Q}(x)}$
+in the polynomial ring over that larger domain.
 
 \end{document}
