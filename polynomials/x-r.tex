@@ -1,4 +1,5 @@
 \documentclass[11pt, twoside]{book}
+\raggedbottom
 
 \usepackage[utf8]{inputenc}
 
@@ -7,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{nicefrac}
 
 \def\spacebetweenparagraphs{2mm minus0.5mm}
 \setlength{\parskip}{\spacebetweenparagraphs}
@@ -27,12 +29,17 @@
 
 \setlength{\footnotesep}{\baselineskip} % space between footnotes
 
+\newcommand\fex{\hspace{.2ex}} % one fifth of the ex
+\newcommand\nfex{\hspace{-0.2ex}} % negative one fifth
+\newcommand\thex{\hspace{.1ex}} % one tenth of the ex
+\newcommand\nthex{\hspace{-0.1ex}} % negative one tenth
+
 \makeatletter
 \def\@fnsymbol#1{\ensuremath{\ifcase #1 %
 	\or {*} %
-	\or {*}\hspace{-0.2ex}{*} %
-	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
-	\or {*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*}\hspace{-0.2ex}{*} %
+	\or {*}\nfex{*} %
+	\or {*}\nfex{*}\nfex{*} %
+	\or {*}\nfex{*}\nfex{*}\nfex{*} %
 	\else {\infty} %% \else \@ctrerr
 \fi}}
 \def\@makefnmark{\raisebox{.8ex}{\hbox{\normalfont\@thefnmark}}}
@@ -55,6 +62,17 @@
 
 \renewcommand{\labelitemi}{\raisebox{-0.2ex}{\pmb{\checkmark}}}
 
+\newcommand{\textsb}[1]{{\fontseries{sb}\selectfont #1}}
+
+\newlength{\globalparindent}
+\setlength{\globalparindent}{\parindent}
+
+\newcommand{\indentpar}{\hspace*{\globalparindent}}
+
+\newcommand{\lquote}[0]{“} % {``}
+\newcommand{\rquote}[0]{”} % {''}
+\newcommand{\inquotes}[1]{\lquote{#1}\rquote}
+
 \newcommand*{\sprime}{^{\mkern1.5mu\prime}\mkern-2mu}
 \newcommand*{\dprime}{^{\mkern1.5mu\prime\prime}\mkern-2mu}
 
@@ -62,11 +80,28 @@
 \newcommand\polynomialring[1]{\domain[#1]}
 \newcommand\polynomialringintwo[2]{\domain[#1,#2]}
 \newcommand\ring{\mathsf{R}}
-\newcommand\cin{\hspace{-0.2ex}\in\hspace{-0.2ex}}
-\newcommand\ceq{\hspace{-0.2ex}=\hspace{-0.2ex}}
-\newcommand\cge{\hspace{-0.2ex}\ge\hspace{-0.2ex}}
+\newcommand\cin{\nfex\in\nfex}
+\newcommand\csubset{\nfex\subset\nfex}
+\newcommand\ceq{\nfex=\nfex}
+\newcommand\cneq{\nfex\neq\nfex}
+\newcommand\cge{\nfex\ge\nfex}
 
-\newcommand{\textsb}[1]{{\fontseries{sb}\selectfont #1}}
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\newcommand\onehalf{\raisemath{.02em}{\frac{\raisemath{-0.16em}{1}}{2}}}
+\newcommand\smalldisplaystyleonehalf{\scalebox{.8}{$\displaystyle \onehalf$}\thex}
+\newcommand\smallerdisplaystyleonehalf{\scalebox{.7}{$\raisemath{.1em}{\displaystyle \onehalf}$}\thex}
+
+%%%%%%\newcommand\imaginaryunit{\scalebox{.9}{$ \sqrt{\scalebox{1}[.98]{$\raisemath{-0.5em}{-1}$}} $}\thex}
+
+\newcommand\imaginaryunit{%
+  \raisebox{.1ex}{\scalebox{.9}{$%
+    \hspace{-0.1em}\sqrt{\mathstrut\raisebox{-0.1ex}{$ \hspace{-0.1em} -1 $}}%
+  $}\thex}%
+}
 
 \usepackage{tikz}
 
@@ -88,8 +123,8 @@ and~${\mathcal{R} \cin \domain}$
 such that
 }
 \begin{equation*}
-P(x) = (x - r) \hspace{.2ex} \mathcal{Q}(x) + \mathcal{R}
-\hspace{.2ex} ,
+P(x) = (x - r) \fex \mathcal{Q}(x) + \mathcal{R}
+\fex ,
 \end{equation*}
 %
 \vspace{-2em}
@@ -97,7 +132,7 @@ P(x) = (x - r) \hspace{.2ex} \mathcal{Q}(x) + \mathcal{R}
 \makebox[0pt][l]{\text{\itshape where}}
 &&
 \mathcal{R} = P(r)
-\hspace{.1ex} .
+\thex .
 &&
 \end{flalign*}
 
@@ -129,20 +164,20 @@ P(x) - P(r)
 %
 By the linearity of summation, the two expressions can be combined term-by-term.
 Moreover, the constant terms for ${i \ceq 0}$ cancel out
-(${x^0 \hspace{-0.2ex} = r^0 \hspace{-0.2ex} = 1}$ $\Rightarrow$
-${a_0 x^0 \hspace{-0.2ex} - a_0 r^0 \ceq a_0 \hspace{-0.2ex} - a_0 \ceq 0}$).
+(${x^0 \nfex = r^0 \nfex = 1}$ $\Rightarrow$
+${a_0 x^0 \nfex - a_0 r^0 \ceq a_0 \nfex - a_0 \ceq 0}$).
 The difference ${P(x) - P(r)}$ becomes
 %
 \begin{align*}
 \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i x^i - \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i r^i
-&= (a_0 \hspace{-0.2ex} - a_0) + \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \Bigl( a_i x^i \hspace{-0.2ex} - a_i r^i \Bigr) \\
-&= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x^i \hspace{-0.2ex} - r^i \bigr)
+&= (a_0 \nfex - a_0) + \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \Bigl( a_i x^i \nfex - a_i r^i \Bigr) \\
+&= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x^i \nfex - r^i \bigr)
 .
 \end{align*}
 
 \vspace{-0.5em}
-Each term ${x^i \hspace{-0.2ex} - r^i}$ in the above sum is a difference of two $i$-th powers.
-The following lemma on the factorization of ${x^n \! - c^n}$ for any ${n \cge 1}$ shows that every such difference can be factored by ${(x - r)}$.
+Each term ${x^i \nfex - r^i}$ in the above sum is a difference of two $i$-th powers.
+The following lemma on the factorization of ${x^n \nfex - c^n}$ for any ${n \cge 1}$ shows that every such difference can be factored by ${(x - r)}$.
 Applying the lemma term-by-term exposes a~common factor ${(x - r)}$ across all the terms, so it can be factored out of the~entire expression.
 
 %%%%%%%%%%%%
@@ -152,14 +187,14 @@ Applying the lemma term-by-term exposes a~common factor ${(x - r)}$ across all t
 \noindent
 \textsc{Lemma}.
 {\itshape
-For any integer $n \cge 1$, the difference of two $n$-th powers, ${x^n \! - c^n\hspace{-0.2ex}}$,
+For any integer $n \cge 1$, the difference of two $n$-th powers, ${x^n \nfex - c^n\nfex}$,
 can be factored by $(x - c)$.
 That is, there exists a~polynomial ${S_{n-1}(x,c)}$
 such that
 }
 \begin{equation*}
-x^n \! - c^n = (x - c) \hspace{.2ex} S_{n-1}(x,c)
-\hspace{.1ex} .
+x^n \nfex - c^n = (x - c) \fex S_{n-1}(x,c)
+\thex .
 \end{equation*}
 
 \noindent\theproofbegins
@@ -168,8 +203,8 @@ x^n \! - c^n = (x - c) \hspace{.2ex} S_{n-1}(x,c)
 The \textsb{base case} ${n \ceq 1}$ holds since
 %
 \begin{equation*}
-x^1 \! - c^1 = (x - c) \hspace{.2ex} (1)
-\hspace{.2ex} ,
+x^1 \nfex - c^1 = (x - c) \fex (1)
+\fex ,
 \end{equation*}
 %
 where the constant ${1 = S_0(x,c)}$ is a~polynomial as well.
@@ -179,8 +214,8 @@ Assume for some arbitrary positive integer~${k \cge 1}$
 there exists a~polynomial $S_{k-1}(x,c)$ such that
 %
 \begin{equation*}
-x^k \! - c^k = (x - c) \hspace{.2ex} S_{k-1}(x,c)
-\hspace{.2ex} .
+x^k \nfex - c^k = (x - c) \fex S_{k-1}(x,c)
+\fex .
 \end{equation*}
 
 \textsb{Induction Step}.
@@ -189,40 +224,40 @@ To show that the lemma holds for~${k + 1}$ (assuming it holds for~$k$),
 consider
 %
 \begin{equation*}
-x^{k+1} \! - c^{k+1}
+x^{k+1} \nfex - c^{k+1}
 ,
 \end{equation*}
 %
-that can be rewritten by adding ${0 = - x \hspace{.1ex} c^k + c^k x}$ and grouping as
+that can be rewritten by adding ${0 = - x \thex c^k + c^k x}$ and grouping as
 %
 \begin{equation*}
-x^{k+1} \hspace{-0.2ex} - x \hspace{.1ex} c^k \hspace{-0.2ex} + c^k x - c^{k+1} \hspace{-0.2ex}
-= \bigl( x^{k+1} \! - x \hspace{.1ex} c^k \bigr) + \bigl( c^k x - c^{k+1} \bigr)
-\hspace{.1ex} .
+x^{k+1} \nfex - x \thex c^k \nfex + c^k x - c^{k+1} \nfex
+= \bigl( x^{k+1} \nfex - x \thex c^k \bigr) + \bigl( c^k x - c^{k+1} \bigr)
+\thex .
 \end{equation*}
 %
 Factoring out the common components from each group gives
 %
 \begin{equation*}
-x \bigl( x^k \! - c^k \bigr) + c^k(x - c)
-\hspace{.2ex} .
+x \bigl( x^k \nfex - c^k \bigr) + c^k(x - c)
+\fex .
 \end{equation*}
 %
-Applying the inductive hypothesis to substitute ${(x - c) \hspace{.2ex} S_{k-1}(x,c)}$ for ${\bigl( x^k \! - c^k \bigr)}$ yields
+Applying the inductive hypothesis to substitute ${(x - c) \fex S_{k-1}(x,c)}$ for ${\bigl( x^k \nfex - c^k \bigr)}$ yields
 %
 \begin{equation*}
-x (x - c) \hspace{.2ex} S_{k-1}(x,c) + c^k(x - c)
-\hspace{.2ex} .
+x (x - c) \fex S_{k-1}(x,c) + c^k(x - c)
+\fex .
 \end{equation*}
 %
 Factoring out the common multiplier $(x - c)$ results in
 %
 \begin{equation*}
-(x - c) \Bigl( x \hspace{.2ex} S_{k-1}(x,c) + c^k \Bigr)
+(x - c) \Bigl( x \fex S_{k-1}(x,c) + c^k \Bigr)
 ,
 \end{equation*}
 %
-where ${x \hspace{.2ex} S_{k-1}(x,c) + c^k \hspace{-0.2ex} = S_k(x,c)}$ is a~polynomial
+where ${x \fex S_{k-1}(x,c) + c^k \nfex = S_k(x,c)}$ is a~polynomial
 ---
 since ${S_{k-1}(x,c)}$ is a~polynomial by the inductive hypothesis,
 and polynomial rings are closed under multiplication and addition.
@@ -249,7 +284,7 @@ x \bigl( x^2 + xc + c^2 \bigr) + c^3 &= x^3 + x^2c + xc^2 + c^3 & {}= S_3 \\[-0.
 x \bigl( x^3 + x^2c + xc^2 + c^3 \bigr) + c^4 &= x^4 + x^3c + x^2c^2 + xc^3 + c^4 & {}= S_4 \\[-0.4em]
 & \cdots \\[-0.4em]
 x \bigl( x^{n-2} + x^{n-3} c + \dots + x c^{n-3} + c^{n-2} \bigr) + c^{n-1}
-&= x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \hspace{-0.2ex} & {}= S_{n-1} \\[-0.2em]
+&= x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \nfex & {}= S_{n-1} \\[-0.2em]
 x \bigl( x^{n-1} + x^{n-2} c + \dots + x c^{n-2} + c^{n-1} \bigr) + c^n
 &= x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n} & {}= S_n
 \end{alignedat}
@@ -261,7 +296,7 @@ $}
 \vspace{-0.8em}\begin{equation*}
 \scalebox{.8}{$%
 S_{n}(x,c)
-= \hspace{.2ex} x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n}
+= \fex x^{n} + x^{n-1} c + \dots + x c^{n-1} + c^{n}
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
 $}
 \vspace{-1.75em}
@@ -273,12 +308,12 @@ $}
 \vspace{-0.25em}
 \scalebox{.8}{$
 \begin{aligned}
-x \hspace{.2ex} S_{n-1}(x,c) + c^n
+x \fex S_{n-1}(x,c) + c^n
 & = x \, \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-1-i} c^i + c^n
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-i} c^i + c^n
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, x^{n-i} c^i
 = S_{n}(x,c)
-\hspace{.2ex} .
+\fex .
 \end{aligned}
 $}
 
@@ -290,7 +325,7 @@ $}
 \makebox[0pt][l]{\scalebox{.8}{The exact factorization is}}
 &&
 \scalebox{.8}{$
-x^n \! - c^n = (x - c) \hspace{.2ex} \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-1-i} c^i
+x^n \nfex - c^n = (x - c) \fex \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n-1} $} \, x^{n-1-i} c^i
 .
 $}
 &&
@@ -341,20 +376,20 @@ exactly once, each with a~coefficient of~$1$.
 \scalebox{.8}{%
 \parbox[t]{\dimexpr(\linewidth)/8*10\relax}{%
 The~symmetry of~$S_{n}(x,c)$ is already hinted~at in the~induction step.
-The~proof inserts the~zero ${0 = -x \hspace{.1ex} c^k + c^k x}$, but one may equally insert the~zero ${0 = -x^k c + c \hspace{.1ex} x^k}$.
-Then ${x^{k+1} \hspace{-0.2ex} - x^k c + c \hspace{.1ex} x^k \hspace{-0.2ex} - c^{k+1} \hspace{-0.2ex} = x^k(x - c) + c \bigl( x^k - c^k \bigr)}$
+The~proof inserts the~zero ${0 = -x \thex c^k + c^k x}$, but one may equally insert the~zero ${0 = -x^k c + c \thex x^k}$.
+Then ${x^{k+1} \nfex - x^k c + c \thex x^k \nfex - c^{k+1} \nfex = x^k(x - c) + c \bigl( x^k - c^k \bigr)}$
 and the resulting recurrence will be
 %
 \vspace{-0.66em}\begin{equation*}
-S_k(x,c) = x^k \hspace{-0.2ex} + c \hspace{.2ex} S_{k-1}(x,c)
-\hspace{.2ex} .
+S_k(x,c) = x^k \nfex + c \fex S_{k-1}(x,c)
+\fex .
 \vspace{-0.5em}
 \end{equation*}
 %
 The~recurrences
-${x^k \hspace{-0.2ex} + c \hspace{.2ex} S_{k-1}(x,c)}$
-and~${x \hspace{.2ex} S_{k-1}(x,c) + c^k \hspace{-0.2ex}}$
-are dual under the~swap ${x \hspace{-0.25ex} \leftrightarrow \hspace{-0.25ex} c \hspace{.2ex}}$.
+${x^k \nfex + c \fex S_{k-1}(x,c)}$
+and~${x \fex S_{k-1}(x,c) + c^k \nfex}$
+are dual under the~swap ${x \nfex \leftrightarrow \nfex c \fex}$.
 }}
 
 %%%%%%%%%%%%
@@ -362,10 +397,10 @@ are dual under the~swap ${x \hspace{-0.25ex} \leftrightarrow \hspace{-0.25ex} c 
 \noindent
 \vspace{-0.5em}
 \begin{flalign*}
-\makebox[0pt][l]{\hspace{\parindent}\text{Returning to}}
+\makebox[0pt][l]{\indentpar\text{Returning to}}
 &&
 P(x) - P(r)
-= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x^i \hspace{-0.2ex} - r^i \bigr)
+= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x^i \nfex - r^i \bigr)
 ,
 &&
 \end{flalign*}
@@ -378,8 +413,8 @@ Thus ${S_{i-1}(x,r)}$ is a~polynomial in~${\polynomialring{x}}$.
 }
 %
 \begin{equation*}
-x^i \hspace{-0.2ex} - r^i = (x - r) \hspace{.2ex} S_{i-1}(x,r)
-\tag*{\makebox[0pt][r]{for every ${i \cge 1 \hspace{.2ex}}$.}}
+x^i \nfex - r^i = (x - r) \fex S_{i-1}(x,r)
+\tag*{\makebox[0pt][r]{for every ${i \cge 1 \fex}$.}}
 \end{equation*}
 %
 Substituting these factorizations term-by-term gives
@@ -387,26 +422,26 @@ Substituting these factorizations term-by-term gives
 \begin{equation*}
 P(x) - P(r)
 = \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x - r \bigr) S_{i-1}(x,r)
-= \bigl( x - r \bigr) \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} S_{i-1}(x,r)
+= \bigl( x - r \bigr) \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \fex S_{i-1}(x,r)
 .
 \end{equation*}
 
 \vspace{-0.5em}
 Since each $S_{i-1}(x,r)$ is a~polynomial in~${\polynomialring{x}}$ and polynomial sums are polynomials,
-the~sum ${ \sum_{i=1}^{n} a_i \hspace{.2ex} S_{i-1}(x,r) }$
+the~sum ${ \sum_{i=1}^{n} a_i \fex S_{i-1}(x,r) }$
 belongs to the~same polynomial ring~$\polynomialring{x}$.
 %
 Define
 %
 \vspace{-0.1em}
 \begin{equation*}
-\scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \hspace{.2ex} S_{i-1}(x,r) = \mathcal{Q}(x) \in \polynomialring{x}
-\hspace{.2ex} .
+\scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \fex S_{i-1}(x,r) = \mathcal{Q}(x) \in \polynomialring{x}
+\fex .
 \end{equation*}
 
 \vspace{-1.75em}
 \begin{flalign*}
-\makebox[0pt][l]{\hspace{\parindent}\text{Hence}}
+\makebox[0pt][l]{\indentpar\text{Hence}}
 &&
 P(x) - P(r)
 = \bigl( x - r \bigr) \mathcal{Q}(x)
@@ -420,7 +455,7 @@ P(x) = \bigl( x - r \bigr) \mathcal{Q}(x) + P(r)
 
 \vspace{-0.75em}
 \noindent
---- the latter exhibits the intended representation with ${\mathcal{R} = P(r) \in \domain \hspace{.2ex}}$.
+--- the latter exhibits the intended representation with ${\mathcal{R} = P(r) \in \domain \fex}$.
 Ergo, such~${\mathcal{Q} \cin \polynomialring{x}}$ and~${\mathcal{R} \cin \domain}$ exist.
 \hfill
 \theproofends
@@ -448,9 +483,9 @@ such that
 %
 \vspace{-0.25em}
 \begin{equation*}
-P(x) = (x-r) \hspace{.2ex} Q\sprime(x) + R\sprime
+P(x) = (x-r) \fex Q\sprime(x) + R\sprime
 \quad \text{and} \quad
-P(x) = (x-r) \hspace{.2ex} Q\dprime(x) + R\dprime
+P(x) = (x-r) \fex Q\dprime(x) + R\dprime
 .
 \vspace{-0.2em}
 \end{equation*}
@@ -459,10 +494,10 @@ Subtracting the~second representation from the~first gives
 %
 \vspace{-0.25em}
 \begin{equation*}
-(x-r) \hspace{.2ex} Q\sprime(x) + R\sprime
-- (x-r) \hspace{.2ex} Q\dprime(x) - R\dprime
+(x-r) \fex Q\sprime(x) + R\sprime
+- (x-r) \fex Q\dprime(x) - R\dprime
 = 0
-\hspace{.2ex} ,
+\fex ,
 \vspace{-0.25em}
 \end{equation*}
 %
@@ -470,8 +505,8 @@ which simplifies to
 %
 \vspace{-0.5em}
 \begin{equation*}
-(x-r) \bigl( Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x) \bigr) \hspace{-0.2ex}
-= R\dprime \hspace{-0.2ex} - R\sprime
+(x-r) \bigl( Q\sprime(x) \nfex - Q\dprime(x) \bigr) \nfex
+= R\dprime \nfex - R\sprime
 .
 \end{equation*}
 
@@ -481,10 +516,10 @@ the~factor~${(x - r)}$ becomes ${r - r = 0}$,
 so the~left-hand side vanishes
 and reveals\footnote{%
 Since ${R\sprime, R\dprime \cin \domain}$,
-the~difference~${R\dprime \hspace{-0.2ex} - R\sprime}$ is an~element of~$\domain$ itself\:---
+the~difference~${R\dprime \nfex - R\sprime}$ is an~element of~$\domain$ itself\:---
 equivalently, a~constant polynomial in~$\polynomialring{x}$.
 Accordingly, once evaluation at~${x \ceq r}$ yields
-${0 = R\dprime \hspace{-0.2ex} - R\sprime}$,
+${0 = R\dprime \nfex - R\sprime}$,
 it follows that ${R\sprime \ceq R\dprime}$ as elements of~$\domain$.
 In other words,
 ${R\sprime \ceq R\dprime}$ is an equality in~$\domain$ itself,
@@ -494,7 +529,7 @@ that the constant difference is zero\::
 %
 \vspace{-0.25em}
 \begin{equation*}
-0 = R\dprime \hspace{-0.2ex} - R\sprime ,
+0 = R\dprime \nfex - R\sprime ,
 \end{equation*}
 %
 \vspace{-2em}
@@ -512,8 +547,8 @@ yields
 %
 \vspace{-0.25em}
 \begin{equation*}
-(x - r) \bigl(Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x)\bigr) \hspace{-0.2ex} = 0
-\hspace{.2ex} .
+(x - r) \bigl(Q\sprime(x) \nfex - Q\dprime(x)\bigr) \nfex = 0
+\fex .
 \end{equation*}
 
 \vspace{-0.25em}
@@ -522,28 +557,28 @@ the polynomial ring~$\polynomialring{x}$ is an~integral domain as well
 and therefore has no zero divisors.
 Moreover, ${x - r}$ is a~nonzero polynomial in~$\polynomialring{x}$.
 Since its product with
-${Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x)}$
+${Q\sprime(x) \nfex - Q\dprime(x)}$
 is the zero polynomial,
 the absence of zero divisors in~$\polynomialring{x}$
 implies that
 %
 \begin{equation*}
-Q\sprime(x) \hspace{-0.2ex} - Q\dprime(x) \hspace{-0.1ex} = 0
-\hspace{.2ex} ,
+Q\sprime(x) \nfex - Q\dprime(x) \nthex = 0
+\fex ,
 \end{equation*}
 %
 \vspace{-1.75em}
 \begin{flalign*}
 \makebox[0pt][l]{\text{giving}}
 &&
-Q\sprime(x) \hspace{-0.1ex} = Q\dprime(x)
-\hspace{.1ex} .
+Q\sprime(x) \nthex = Q\dprime(x)
+\thex .
 &&
 \end{flalign*}
 
 \vspace{-1.75em}
 \begin{flalign*}
-\makebox[0pt][l]{\hspace{\parindent}\text{Thus}}
+\makebox[0pt][l]{\indentpar\text{Thus}}
 &&
 Q\sprime \ceq Q\dprime
 \quad \text{and} \quad
@@ -555,7 +590,7 @@ R\sprime \ceq R\dprime
 showing that the intended representation
 %
 \begin{equation*}
-P(x) = (x - r) \hspace{.2ex} \mathcal{Q}(x) + \mathcal{R}
+P(x) = (x - r) \fex \mathcal{Q}(x) + \mathcal{R}
 \end{equation*}
 %
 is unique in the~choice of~$\mathcal{Q}$ and~$\mathcal{R}$.
@@ -573,7 +608,7 @@ is unique in the~choice of~$\mathcal{Q}$ and~$\mathcal{R}$.
 {\itshape
 Let ${P \cin \polynomialring{x}}$ and ${r \cin \domain}$.
 If ${P(r) \ceq 0}$, then ${r}$ is called a~\textbf{root} (or \textbf{zero}) of the polynomial~$P$.
-Equivalently, ${r}$ is a~solution of the polynomial equation ${P(x) \hspace{-0.2ex} = 0}$.
+Equivalently, ${r}$ is a~solution of the polynomial equation ${P(x) \nfex = 0}$.
 }
 
 \vspace{.5em}
@@ -585,12 +620,12 @@ Equivalently, ${r}$ is a~solution of the polynomial equation ${P(x) \hspace{-0.2
 \noindent
 \textsc{Corollary}.
 {\itshape
-If ${r \cin \domain}$ is a~root~(solution) of the polynomial equation ${P(x) \hspace{-0.2ex} = 0}$,
+If ${r \cin \domain}$ is a~root~(solution) of the polynomial equation ${P(x) \nfex = 0}$,
 then there exists unique ${\mathcal{Q} \cin \polynomialring{x}}$ such that
 }
 \begin{equation*}
 P(x) = (x-r) \mathcal{Q}(x)
-\hspace{.1ex} .
+\thex .
 \end{equation*}
 
 \vspace{-0.25em}
@@ -601,7 +636,7 @@ there exists unique ${\mathcal{Q} \cin \polynomialring{x}}$ such that
 %
 \begin{equation*}
 P(x) = (x-r) \mathcal{Q}(x) + P(r)
-\hspace{.1ex} .
+\thex .
 \end{equation*}
 %
 Since ${r}$ is a~root, ${P(r) \ceq 0}$.
@@ -609,7 +644,7 @@ Therefore
 %
 \begin{equation*}
 P(x) = (x-r) \mathcal{Q}(x)
-\hspace{.1ex} .
+\thex .
 \tag*{\theproofends}
 \end{equation*}
 
@@ -632,9 +667,267 @@ Hence every root~$r \in \domain$ gives a~linear factor~$(x-r)$ of~the~polynomial
 The above definition concerns roots that belong to the same coefficient domain~$\domain$.
 However, a~polynomial in $\domain[x]$ may fail to have roots inside~$\domain$
 and acquire them only in a~larger domain or~field containing~$\domain$.
-For instance, ${x^2 - 2 = 0}$ has no root in~$\mathbb{Q}$ but has the~roots ${\pm \sqrt{2}}$ in~$\mathbb{R}$.
+For instance, ${x^2 \nfex - 2 = 0}$ has no root in~$\mathbb{Q}$ but has the~roots ${\pm \sqrt{2}}$ in~$\mathbb{R}$.
 Whenever a~root~$r$ exists in such an~extension, the~same theorem gives factorization
 ${P(x) = (x-r) \mathcal{Q}(x)}$
 in the polynomial ring over that larger domain.
+
+\newpage
+
+%
+% example
+%
+
+\noindent
+\textsc{Example}
+{\itshape
+of how to factor a~polynomial into all of its linear factors via sequential domain extension.
+}
+
+\vspace{.5em}
+
+\noindent
+Consider the polynomial
+%
+\begin{equation*}
+P(x) = 2x^3 \nfex - x^2 \nfex - 4x + 2
+\fex ,
+\end{equation*}
+%
+whose coefficients all belong to~$\mathbb{Z}$.
+Thus initially
+${P \cin \mathbb{Z}[x]}$.
+
+\vspace{.25em}
+
+\noindent
+\textsb{1. Over the integers $\mathbb{Z}$}
+
+By grouping the terms and applying the distributive property,
+\begin{equation*}
+2x^3 \nfex - x^2 \nfex - 4x + 2
+= 2x \bigl(x^2 \nfex - 2\bigr) - \bigl(x^2 \nfex - 2\bigr)
+= (2x - 1) \bigl(x^2 \nfex - 2\bigr)
+\thex .
+\end{equation*}
+%
+The factor ${(2x - 1)}$ suggests the candidate root ${x \ceq \nicefrac{1}{2}}$,
+but ${\nicefrac{1}{2} \notin \mathbb{Z}}$.
+Likewise, the factor ${(x^2 \nfex - 2)}$ suggests the candidate roots ${\pm \sqrt{2}}$,
+but ${\pm \sqrt{2} \notin \mathbb{Z}}$.
+Hence the polynomial equation ${P(x) \nfex = 0}$ has no roots in~$\mathbb{Z}$.
+
+\vspace{.25em}
+
+\noindent
+\textsb{2. Enlarging the domain from~$\mathbb{Z}$ to~$\mathbb{Q}$}
+
+Now regard the same polynomial as an element of~$\mathbb{Q}[x]$, ${\mathbb{Z} \csubset \mathbb{Q}}$.
+Then
+%
+\begin{equation*}
+P \Bigl( \smalldisplaystyleonehalf \Bigr) \nfex = 0
+\fex ,
+\end{equation*}
+%
+so ${\nicefrac{1}{2}}$ is a~root in~$\mathbb{Q}$.
+By the previous corollary,
+there exists a~polynomial ${Q \cin \mathbb{Q}[x]}$
+such that
+%
+\begin{equation*}
+P(x) = \Bigl( x - \smalldisplaystyleonehalf \Bigr)Q(x)
+\thex .
+\end{equation*}
+%
+Indeed,
+%
+\vspace{-0.5em}
+\begin{equation*}
+2x - 1 = \Bigl( x - \smalldisplaystyleonehalf \Bigr) \bigl(2\bigr)
+\thex .
+\end{equation*}
+%
+Thereby, after enlarging the coefficient domain to~$\mathbb{Q}$,
+the polynomial
+%
+\begin{equation*}
+P(x) = (2x - 1)\bigl(x^2 \nfex - 2\bigr) = 2 \bigl(x - \nicefrac{1}{2}\bigr)\bigl(x^2 \nfex - 2\bigr)
+\end{equation*}
+%
+acquires the rational root ${\nicefrac{1}{2}}$ and the corresponding linear factor
+${\bigl(x - \nicefrac{1}{2}\bigr)}$.
+
+\vspace{.25em}
+
+\noindent
+\textsb{3. Enlarging the domain further from~$\mathbb{Q}$ to~$\mathbb{R}$}
+
+The remaining factor ${(x^2 \nfex - 2)}$ still has no root in~$\mathbb{Q}$,
+since ${\sqrt{2} \notin \mathbb{Q}}$.
+However, in~$\mathbb{R}$ it has the two roots
+%
+\vspace{-0.25em}
+\begin{equation*}
+x^2 \nfex - 2 = \bigl(x - \sqrt{2}\fex\bigr)\bigl(x + \sqrt{2}\fex\bigr)
+.
+\vspace{-0.5em}
+\end{equation*}
+%
+Therefore, in~$\mathbb{R}[x]$,
+%
+\nopagebreak\vspace{-0.5em}
+\begin{equation*}
+P(x)
+= 2 \Bigl(x - \smalldisplaystyleonehalf\Bigr) \Bigl(x - \sqrt{2}\fex\Bigr) \Bigl(x + \sqrt{2}\fex\Bigr)
+.
+\end{equation*}
+
+After the second enlargement of the coefficient domain,
+the polynomial splits completely into linear factors and all of its roots become visible\::
+%
+\begin{equation*}
+\smalldisplaystyleonehalf,\quad \sqrt{2},\quad -\sqrt{2}
+\thex .
+\end{equation*}
+
+\vspace{-0.5em}
+This example illustrates a~phenomenon\::
+a~polynomial may fail to have roots in its original coefficient domain,
+yet acquire them one by one as the domain is enlarged.
+At each stage, every newly obtained root produces a~new linear factor of~the~polynomial.
+
+%
+% afterexample
+%
+
+\vspace{.5em}
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
+\indentpar
+The second enlargement above, from~$\mathbb{Q}$ to~$\mathbb{R}$, is not the smallest possible one.
+To factor the remaining quadratic term ${x^2 \nfex - 2}$, it already suffices to adjoin the single irrational number~${\sqrt{2}}$ to~$\mathbb{Q}$.
+This produces the~field
+%
+\begin{equation*}
+\mathbb{Q}\bigl(\sqrt{2}\bigr)
+= \bigl\{\, a + b\sqrt{2} \hspace{1ex} \big|\; a,b \in \mathbb{Q} \,\bigr\}
+\thex .
+\end{equation*}
+%
+Every element of this field has the form ${a+b\sqrt{2}}$ with rational coefficients ${a,b}$.
+It is an extension of~$\mathbb{Q}$ since it contains all the original rational numbers~$\mathbb{Q}$ when ${b \ceq 0}$.
+Moreover, it is closed under the four arithmetic operations\:---
+anyone can add, subtract, multiply and divide elements of~${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$
+and always get another number from~${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$ that fits the~same ${a + b\sqrt{2}}$ pattern\::
+%
+\vspace{-0.25em}
+\begin{equation*}
+\begin{aligned}
+\bigl(a + b\sqrt{2}\bigr) + \bigl(c + d\sqrt{2}\bigr)
+&= (a+c) + (b+d)\sqrt{2},
+\\%%[.2em]
+\bigl(a + b\sqrt{2}\bigr) - \bigl(c + d\sqrt{2}\bigr)
+&= (a-c) + (b-d)\sqrt{2},
+\\%%[.2em]
+\bigl(a + b\sqrt{2}\bigr) \nfex \bigl(c + d\sqrt{2}\bigr)
+&= (ac + 2bd) + (ad+bc)\sqrt{2},
+\end{aligned}
+\vspace{-0.25em}
+\end{equation*}
+%
+division works too, because the~denominator can always be \inquotes{rationalized} by multiplying by the~conjugate ${a - b\sqrt{2}}$
+%
+\vspace{-1em}
+\begin{equation*}
+\begin{aligned}
+\scalebox{.93}{$ \displaystyle\frac{1}{a+b\sqrt{2}} $}
+&=
+\scalebox{.93}{$ \displaystyle\frac{a-b\sqrt{2}}{(a+b\sqrt{2})(a-b\sqrt{2})} $}
+=
+\scalebox{.93}{$ \displaystyle\frac{a-b\sqrt{2}}{a^2 \nfex - 2b^2} $}
+\\
+&=
+\scalebox{.93}{$ \displaystyle\frac{a}{a^2 \nfex - 2b^2} $} - \scalebox{.9}{$ \displaystyle\frac{b}{a^2 \nfex - 2b^2}\sqrt{2} $}
+\fex ,
+\end{aligned}
+\vspace{-0.5em}
+\end{equation*}
+%
+provided ${a + b\sqrt{2} \neq 0}$, that is ${a}$ and~${b}$ are not both zero. %% ${a \cneq 0}$ or~${b \cneq 0}$
+\end{minipage}
+} % close scalebox
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
+\indentpar
+Since ${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$ is a~field containing~$\mathbb{Q}$ and the roots ${\pm\sqrt{2}}$ of ${x^2 \nfex - 2}$,
+the polynomial from the~example splits completely already in~${\mathbb{Q}\bigl(\sqrt{2}\bigr)[x]}$,
+%
+\vspace{-0.33em}
+\begin{equation*}
+P(x) = 2 \bigl(x - \smalldisplaystyleonehalf\bigr) \bigl(x - \sqrt{2}\bigr) \bigl(x + \sqrt{2}\bigr)
+\thex .
+\end{equation*}
+\end{minipage}
+}
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
+\indentpar
+The field ${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$ also carries a~natural symmetry and can equally well be written as ${\mathbb{Q}\bigl(-\sqrt{2}\bigr)}$,
+where ${\sqrt{2}}$ and ${-\sqrt{2}}$ can be swapped without changing the field itself.
+Under this interchange, the two linear factors ${\bigl(x - \sqrt{2}\bigr)}$ and~${\bigl(x + \sqrt{2}\bigr)}$ are exchanged,
+while their product
+${\bigl(x + \sqrt{2}\bigr) \bigl(x - \sqrt{2}\bigr) \nfex = \thex x^2 \nfex - 2}$
+remains the same.
+Thus the two roots play completely symmetric roles inside the splitting field.
+\end{minipage}
+}
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
+\indentpar
+What emerges here is a~central idea of advanced algebra\:---
+rather than enlarging the coefficient domain arbitrarily, one often seeks the \emph{smallest} field extension in which a~polynomial splits into linear factors.
+Such a~minimal field, called a~\emph{splitting field}, contains exactly the~roots and the arithmetic combinations generated by them,
+making the intrinsic symmetries among the roots visible without distraction of a~much larger ambient field.
+In the present example, the~splitting field of~${(x^2 \nfex - 2)}$ over~$\mathbb{Q}$ is precisely ${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$.
+\end{minipage}
+}
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
+\indentpar
+Another familiar example of such an~extension is the passage from~$\mathbb{R}$ to~$\mathbb{C}$.
+The~polynomial ${x^2 \nfex + 1}$ has no root in~$\mathbb{R}$,
+but adjoining a~root of it, $\imaginaryunit$, produces the larger field
+${\mathbb{C} = \mathbb{R}\bigl(\imaginaryunit\bigr)}$,
+in which ${x^2 \nfex + 1}$ splits into linear factors,
+%
+\vspace{-0.5em}
+\begin{equation*}
+x^2 \nfex + 1 = \fex\thex \Bigl(x - \imaginaryunit\Bigr) \fex\thex \Bigl(x + \imaginaryunit\Bigr)
+\nthex .
+\end{equation*}
+\end{minipage}
+}
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
+\indentpar
+The systematic study of such splitting fields,
+of the symmetries that permute polynomial roots while preserving the surrounding algebraic structure,
+and of what those symmetries reveal about the polynomial itself,
+leads to~\emph{Galois theory}.
+\end{minipage}
+}
 
 \end{document}
