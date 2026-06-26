@@ -5,10 +5,12 @@
 
 \usepackage[english]{babel}
 
+\usepackage{microtype}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{nicefrac}
+\usepackage{pifont}
 
 \def\spacebetweenparagraphs{2mm minus0.5mm}
 \setlength{\parskip}{\spacebetweenparagraphs}
@@ -29,6 +31,8 @@
 
 \setlength{\footnotesep}{\baselineskip} % space between footnotes
 
+\newcommand\oex{\hspace{1ex}} % horizontal space of the one ex
+\newcommand\hex{\hspace{.5ex}} % one half of the ex
 \newcommand\fex{\hspace{.2ex}} % one fifth of the ex
 \newcommand\nfex{\hspace{-0.2ex}} % negative one fifth
 \newcommand\thex{\hspace{.1ex}} % one tenth of the ex
@@ -277,7 +281,7 @@ This completes the induction step, proving the lemma for all ${n \cge 1}$.
 \noindent
 \scalebox{.8}{$
 \begin{alignedat}{2}
-& 1 &\hspace{1ex} = S_0 \\[-0.2em]
+& \oex 1 &{}= S_0 \\[-0.2em]
 x(1) + c^1 &= x + c & {}= S_1 \\[-0.2em]
 x (x + c) + c^2 &= x^2 + xc + c^2 & {}= S_2 \\[-0.2em]
 x \bigl( x^2 + xc + c^2 \bigr) + c^3 &= x^3 + x^2c + xc^2 + c^3 & {}= S_3 \\[-0.2em]
@@ -662,21 +666,139 @@ Hence every root~$r \in \domain$ gives a~linear factor~$(x-r)$ of~the~polynomial
 % mention that roots may appear only after enlarging the domain to a suitable extension field
 %
 
-\noindent
-\textsc{Remark}.
+%%\noindent
+%%\textsc{Remark}.
 The above definition concerns roots that belong to the same coefficient domain~$\domain$.
 However, a~polynomial in $\domain[x]$ may fail to have roots inside~$\domain$
 and acquire them only in a~larger domain or~field containing~$\domain$.
-For instance, ${x^2 \nfex - 2 = 0}$ has no root in~$\mathbb{Q}$ but has the~roots ${\pm \sqrt{2}}$ in~$\mathbb{R}$.
+%%For instance, ${x^2 \nfex - 2 = 0}$ has no root in~$\mathbb{Q}$ but has the~roots ${\pm \sqrt{2}}$ in~$\mathbb{R}$.
 Whenever a~root~$r$ exists in such an~extension, the~same theorem gives factorization
 ${P(x) = (x-r) \mathcal{Q}(x)}$
 in the polynomial ring over that larger domain.
 
-\newpage
+\vspace{.5em}
+
+%
+% reducibility / irreducibility
+%
+
+\noindent
+\textsc{Definition}.
+{\itshape
+A~nonconstant polynomial ${P \cin \domain[x]}$ is called \textbf{reducible over~$\domain$}
+if there exist nonconstant polynomials
+${A(x), B(x) \cin \domain[x]}$
+such that
+}
+\vspace{-0.25em}
+\begin{equation*}
+P(x) = A(x) \thex B(x)
+\hspace{.1ex} .
+\vspace{-0.25em}
+\end{equation*}
+{\itshape
+If no such factorization exists, then ${P}$ is called \textbf{irreducible over~$\domain$}.
+}
+
+\vspace{.5em}
+
+\noindent
+\textsc{Remark}.
+Reducibility is always relative to the chosen coefficient domain.
+A~polynomial may be irreducible over one domain and reducible over a~larger one.
+
+\noindent
+\ding{118}\oex
+For example, the~polynomial ${2x - 1}$ is irreducible over~$\mathbb{Z}$,
+because it cannot be written as a~product of two nonconstant polynomials in~$\mathbb{Z}[x]$.
+However, it has the~root~${\nicefrac{1}{2}}$ in~$\mathbb{Q}$, and therefore over~$\mathbb{Q}$ it factors as
+%
+\vspace{-0.25em}
+\begin{equation*}
+2x - 1 = \Bigl( x - \smalldisplaystyleonehalf \Bigr) \bigl(2\bigr)
+.
+\vspace{-0.25em}
+\end{equation*}
+
+\vspace{-0.5em}
+\noindent
+\ding{118}\oex
+Likewise, the polynomial ${x^2 \nfex - 2}$ is irreducible over~$\mathbb{Q}$,
+because it has no rational root and therefore cannot split into linear factors in~$\mathbb{Q}[x]$.
+But it has the~roots ${\pm \sqrt{2}}$ in the real numbers,
+and over~$\mathbb{R}$ the same polynomial becomes reducible\footnote{%
+Although ${x^2 \nfex - 2}$ splits into linear factors over the~reals,
+the~field~$\mathbb{R}$ is not the~\emph{smallest} extension of~$\mathbb{Q}$ in which this factorization becomes possible.
+A~smaller field already suffices, namely ${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$.
+This will~be explained after the~example below.}
+%
+\vspace{-0.5em}
+\begin{equation*}
+x^2 \nfex - 2 \fex = \bigl(x - \sqrt{2}\bigr) \bigl(x + \sqrt{2}\bigr)
+.
+\end{equation*}
+
+\vspace{-0.5em}
+Thus, a~factorization that is impossible in one coefficient domain can be achieved by passing to a~larger domain that accommodates the~roots.
+
+\vspace{.5em}
+
+%
+% reducibility when a root in the domain
+%
+
+\noindent
+\textsc{Corollary}.
+{\itshape
+If a~polynomial ${P \cin \domain[x]}$ has a~root~${r \cin \domain}$ and the~degree of~$P$ is at~least~$2$,
+then ${P}$ is reducible over~$\domain$.
+}
+
+\nopagebreak
+\noindent
+\theproofbegins\oex
+If ${r \cin \domain}$ is a~root of ${P(x) \nfex = 0}$,
+then by the first corollary there exists ${\mathcal{Q} \cin \domain[x]}$
+such that
+%
+\begin{equation*}
+P(x) = (x-r)\mathcal{Q}(x)
+\hspace{.1ex} .
+\end{equation*}
+%
+Since the~degree of~$P$ is at~least~$2$, the~polynomial ${\mathcal{Q}}$ is nonconstant.
+Thus ${P}$ is a~product of two nonconstant polynomials in~$\domain[x]$,
+so it is reducible over~$\domain$.
+\hfill
+\theproofends
+
+\vspace{.5em}
+
+%
+% reducible doesn’t mean it has a root in the domain
+%
+
+\noindent
+\textsc{Remark}.
+The~existence of a~root in~$\domain$ implies reducibility over~$\domain$,
+but reducibility does not necessarily mean that a~polynomial has a~root in~$\domain$.
+For example, over~$\mathbb{R}$ the~polynomial
+%
+\vspace{-0.25em}
+\begin{equation*}
+x^4 \nfex + 4
+=
+\bigl(x^2 \nfex - 2x + 2\bigr)\bigl(x^2 \nfex + 2x + 2\bigr)
+\vspace{-0.25em}
+\end{equation*}
+%
+is reducible, although it has no real root.
 
 %
 % example
 %
+
+\vspace{.5em}
 
 \noindent
 \textsc{Example}
@@ -684,14 +806,16 @@ in the polynomial ring over that larger domain.
 of how to factor a~polynomial into all of its linear factors via sequential domain extension.
 }
 
-\vspace{.5em}
+%%\vspace{.25em}
 
 \noindent
 Consider the polynomial
 %
+\vspace{-0.25em}
 \begin{equation*}
 P(x) = 2x^3 \nfex - x^2 \nfex - 4x + 2
 \fex ,
+\vspace{-0.25em}
 \end{equation*}
 %
 whose coefficients all belong to~$\mathbb{Z}$.
@@ -704,11 +828,14 @@ ${P \cin \mathbb{Z}[x]}$.
 \textsb{1. Over the integers $\mathbb{Z}$}
 
 By grouping the terms and applying the distributive property,
+%
+\vspace{-0.25em}
 \begin{equation*}
 2x^3 \nfex - x^2 \nfex - 4x + 2
 = 2x \bigl(x^2 \nfex - 2\bigr) - \bigl(x^2 \nfex - 2\bigr)
 = (2x - 1) \bigl(x^2 \nfex - 2\bigr)
-\thex .
+.
+\vspace{-0.25em}
 \end{equation*}
 %
 The factor ${(2x - 1)}$ suggests the candidate root ${x \ceq \nicefrac{1}{2}}$,
@@ -725,16 +852,19 @@ Hence the polynomial equation ${P(x) \nfex = 0}$ has no roots in~$\mathbb{Z}$.
 Now regard the same polynomial as an element of~$\mathbb{Q}[x]$, ${\mathbb{Z} \csubset \mathbb{Q}}$.
 Then
 %
+\vspace{-0.25em}
 \begin{equation*}
-P \Bigl( \smalldisplaystyleonehalf \Bigr) \nfex = 0
+P \bigl( \fex \smallerdisplaystyleonehalf \thex \bigr) \nfex = 0
 \fex ,
+\vspace{-0.25em}
 \end{equation*}
 %
 so ${\nicefrac{1}{2}}$ is a~root in~$\mathbb{Q}$.
-By the previous corollary,
+By the first corollary,
 there exists a~polynomial ${Q \cin \mathbb{Q}[x]}$
 such that
 %
+\vspace{-0.25em}
 \begin{equation*}
 P(x) = \Bigl( x - \smalldisplaystyleonehalf \Bigr)Q(x)
 \thex .
@@ -742,21 +872,25 @@ P(x) = \Bigl( x - \smalldisplaystyleonehalf \Bigr)Q(x)
 %
 Indeed,
 %
-\vspace{-0.5em}
+\vspace{-0.75em}
 \begin{equation*}
-2x - 1 = \Bigl( x - \smalldisplaystyleonehalf \Bigr) \bigl(2\bigr)
+2x - 1 = \nfex \Bigl( x - \smalldisplaystyleonehalf \Bigr) \bigl(2\bigr)
 \thex .
 \end{equation*}
 %
+\begin{minipage}{\linewidth}
 Thereby, after enlarging the coefficient domain to~$\mathbb{Q}$,
 the polynomial
 %
+\vspace{-0.25em}
 \begin{equation*}
 P(x) = (2x - 1)\bigl(x^2 \nfex - 2\bigr) = 2 \bigl(x - \nicefrac{1}{2}\bigr)\bigl(x^2 \nfex - 2\bigr)
+\vspace{-0.25em}
 \end{equation*}
 %
 acquires the rational root ${\nicefrac{1}{2}}$ and the corresponding linear factor
 ${\bigl(x - \nicefrac{1}{2}\bigr)}$.
+\end{minipage}
 
 \vspace{.25em}
 
@@ -787,14 +921,13 @@ After the second enlargement of the coefficient domain,
 the polynomial splits completely into linear factors and all of its roots become visible\::
 %
 \begin{equation*}
-\smalldisplaystyleonehalf,\quad \sqrt{2},\quad -\sqrt{2}
-\thex .
+\smalldisplaystyleonehalf \fex, \quad \sqrt{2} \fex, \quad -\sqrt{2}
+\fex .
 \end{equation*}
 
 \vspace{-0.5em}
-This example illustrates a~phenomenon\::
-a~polynomial may fail to have roots in its original coefficient domain,
-yet acquire them one by one as the domain is enlarged.
+This example explores a~phenomenon where a~polynomial may fail to~have roots in its original coefficient domain,
+yet acquire them one by one as the~domain is enlarged.
 At each stage, every newly obtained root produces a~new linear factor of~the~polynomial.
 
 %
@@ -813,7 +946,7 @@ This produces the~field
 %
 \begin{equation*}
 \mathbb{Q}\bigl(\sqrt{2}\bigr)
-= \bigl\{\, a + b\sqrt{2} \hspace{1ex} \big|\; a,b \in \mathbb{Q} \,\bigr\}
+= \bigl\{\, a + b\sqrt{2} \oex \big|\; a,b \in \mathbb{Q} \,\bigr\}
 \thex .
 \end{equation*}
 %
@@ -893,7 +1026,7 @@ Thus the two roots play completely symmetric roles inside the splitting field.
 \scalebox{.8}{%
 \begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
 \indentpar
-What emerges here is a~central idea of advanced algebra\:---
+What emerges here is a~core idea of advanced algebra\:---
 rather than enlarging the coefficient domain arbitrarily, one often seeks the \emph{smallest} field extension in which a~polynomial splits into linear factors.
 Such a~minimal field, called a~\emph{splitting field}, contains exactly the~roots and the arithmetic combinations generated by them,
 making the intrinsic symmetries among the roots visible without distraction of a~much larger ambient field.
