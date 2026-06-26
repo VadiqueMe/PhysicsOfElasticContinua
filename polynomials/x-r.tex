@@ -112,9 +112,46 @@
 \newcommand\theproofbegins{\ensuremath{\tikz[baseline=-1ex] \draw [line width=.5pt, color=black, fill=white] (0, 0) circle (.8ex); \hspace{.6em}}}
 \newcommand\theproofends{\ensuremath{\hspace{.6em} \tikz[baseline=-0.6ex] \draw [color=black, fill=black] (0, 0) circle (.8ex);}}
 
+\usepackage{lettrine}
+
+%%\input Nouveaud.fd
+%%\newcommand*\nouveauinit{\usefont{U}{Nouveaud}{xl}{n}}
+\input Zallman.fd
+\newcommand*\zallmaninit{\usefont{U}{Zallman}{xl}{n}}
+
 %%%%%%%%%%%%
 
 \begin{document}
+
+\thispagestyle{empty}
+
+%
+% intro
+%
+
+\noindent
+\begin{center}
+\scalebox{.95}{%
+\begin{minipage}{\dimexpr(\linewidth)/95*100\relax}
+\lettrine[lines=2, findent=.25ex]{\zallmaninit P}{olynomial}
+\textls[-10]{%
+division by a~linear polynomial lies at the~heart of~many results in~algebra.
+Beginning with the~proof of the polynomial remainder theorem,
+this note explores the~nature of roots, factors, and reducibility of~polynomials.
+It then shows that the~ability to factor a~polynomial depends on the~choice of~co\-ef\-fi\-cient domain
+and how passing to extension fields uncovers additional roots.
+The~concluding example shows these ideas in~action and introduces the~concepts of splitting fields and root symmetries,
+providing a~first glimpse of Galois theory.
+}
+\end{minipage}
+}
+\end{center}
+
+\vspace{.25em}
+
+%
+% the polynomial remainder theorem
+%
 
 \noindent
 \textsc{Theorem}.
@@ -126,6 +163,7 @@ there exist unique ${\mathcal{Q} \cin \polynomialring{x}}$ %in the same polynomi
 and~${\mathcal{R} \cin \domain}$
 such that
 }
+\vspace{-0.1em}
 \begin{equation*}
 P(x) = (x - r) \fex \mathcal{Q}(x) + \mathcal{R}
 \fex ,
@@ -142,28 +180,33 @@ P(x) = (x - r) \fex \mathcal{Q}(x) + \mathcal{R}
 
 \noindent
 \theproofbegins
-%
 \textsb{1. The existence}
 
 \nopagebreak
 Let ${P(x)}$ be a~polynomial in $\polynomialring{x}$ of degree~$n$,
 %
+\vspace{-0.5em}
 \begin{equation*}
 P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i x^i
 ,
+\vspace{-0.25em}
 \end{equation*}
 where each coefficient ${a_i \cin \domain}$. Evaluating it at ${x \ceq r}$ gives
 %
+\vspace{-0.25em}
 \begin{equation*}
 P(r) = a_n r^n + a_{n-1} r^{n-1} + \dots + a_1 r + a_0 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i r^i
 .
+\vspace{-0.25em}
 \end{equation*}
 %
 Consider the difference
 %
+\vspace{-0.5em}
 \begin{equation*}
 P(x) - P(r)
 = \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i x^i - \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i r^i .
+%%\vspace{-0.25em}
 \end{equation*}
 %
 By the linearity of summation, the two expressions can be combined term-by-term.
@@ -172,15 +215,18 @@ Moreover, the constant terms for ${i \ceq 0}$ cancel out
 ${a_0 x^0 \nfex - a_0 r^0 \ceq a_0 \nfex - a_0 \ceq 0}$).
 The difference ${P(x) - P(r)}$ becomes
 %
+\vspace{-0.25em}
 \begin{align*}
 \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i x^i - \scalebox{.88}{$ \displaystyle\sum_{i=0}^{n} $} \, a_i r^i
-&= (a_0 \nfex - a_0) + \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \Bigl( a_i x^i \nfex - a_i r^i \Bigr) \\
+&= (a_0 \nfex - a_0) + \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \Bigl( a_i x^i \nfex - a_i r^i \Bigr)
+\\[-0.33em]
 &= \scalebox{.88}{$ \displaystyle\sum_{i=1}^{n} $} \, a_i \bigl( x^i \nfex - r^i \bigr)
 .
+\vspace{-0.25em}
 \end{align*}
 
-\vspace{-0.5em}
-Each term ${x^i \nfex - r^i}$ in the above sum is a difference of two $i$-th powers.
+\vspace{-0.75em}
+Each term ${x^i \nfex - r^i}$ in the above sum is a~difference of two $i$-th powers.
 The following lemma on the factorization of ${x^n \nfex - c^n}$ for any ${n \cge 1}$ shows that every such difference can be factored by ${(x - r)}$.
 Applying the lemma term-by-term exposes a~common factor ${(x - r)}$ across all the terms, so it can be factored out of the~entire expression.
 
