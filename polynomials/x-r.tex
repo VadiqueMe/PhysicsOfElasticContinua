@@ -755,42 +755,50 @@ A~polynomial may be irreducible over one domain and reducible over a~larger one.
 
 \noindent
 \ding{118}\oex
-For example, the~polynomial ${2x - 1}$ is irreducible over~$\mathbb{Z}$,
-because it cannot be written as a~product of two nonconstant polynomials in~$\mathbb{Z}[x]$.
-However, it has the~root~${\nicefrac{1}{2}}$ in~$\mathbb{Q}$, and therefore over~$\mathbb{Q}$ it factors as
-%
-\vspace{-0.25em}
-\begin{equation*}
-2x - 1 = \Bigl( x - \smalldisplaystyleonehalf \Bigr) \bigl(2\bigr)
-.
-\vspace{-0.25em}
-\end{equation*}
-
-\vspace{-0.5em}
-\noindent
-\ding{118}\oex
-Likewise, the polynomial ${x^2 \nfex - 2}$ is irreducible over~$\mathbb{Q}$,
-because it has no rational root and therefore cannot split into linear factors in~$\mathbb{Q}[x]$.
-But it has the~roots ${\pm \sqrt{2}}$ in the real numbers,
+For example, the polynomial ${x^2 \nfex - 2}$ is irreducible over~$\mathbb{Q}$.
+Since it is quadratic, any nontrivial factorization would have to be into two linear factors.
+But it has no rational root, hence no linear factor in~$\mathbb{Q}[x]$.
+However, it has the~roots ${\pm \sqrt{2}}$ in the real numbers,
 and over~$\mathbb{R}$ the same polynomial becomes reducible\footnote{%
 Although ${x^2 \nfex - 2}$ splits into linear factors over the~reals,
 the~field~$\mathbb{R}$ is not the~\emph{smallest} extension of~$\mathbb{Q}$ in which this factorization becomes possible.
 A~smaller field already suffices, namely ${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$.
 This will~be explained after the~example below.}
 %
-\vspace{-0.5em}
+\vspace{-1em}
 \begin{equation*}
 x^2 \nfex - 2 \fex = \bigl(x - \sqrt{2}\bigr) \bigl(x + \sqrt{2}\bigr)
 .
+\vspace{-0.25em}
 \end{equation*}
+%
+Thus, a~factorization that is impossible over one coefficient domain may become possible after passing to a~larger domain containing the~roots.
 
+\noindent
+\ding{118}\oex
+In contrast, the~polynomial ${2x - 1}$ is irreducible over~$\mathbb{Z}$.
+Yet it has the~rational root~${\nicefrac{1}{2}}$,
+therefore over~$\mathbb{Q}$ it factors as
+%
 \vspace{-0.5em}
-Thus, a~factorization that is impossible in one coefficient domain can be achieved by passing to a~larger domain that accommodates the~roots.
+\begin{equation*}
+2x - 1 = \Bigl( x - \smalldisplaystyleonehalf \Bigr) \nthex \bigl(2\bigr)
+,
+\vspace{-0.5em}
+\end{equation*}
+%
+but the second factor is a~constant polynomial.
+Over~$\mathbb{Q}$, ${2x - 1}$ remains irreducible,
+because it cannot be written as a~product of two nonconstant polynomials.
+Here, enlarging the coefficient domain uncovers the~root, but doesn’t produce a~nonconstant factorization, so the polynomial can’t become reducible.
+
+Every nonconstant linear polynomial has degree~1 and is irreducible over any integral domain.
+Thus, only polynomials of~degree two or~higher can become reducible by acquiring a~linear factor through one of their roots.
 
 \vspace{.5em}
 
 %
-% reducibility when a root in the domain
+% reducibility when a root in the domain and the degree is at least two
 %
 
 \noindent
@@ -812,10 +820,10 @@ P(x) = (x-r)\mathcal{Q}(x)
 \hspace{.1ex} .
 \end{equation*}
 %
-Since the~degree of~$P$ is at~least~$2$, the~polynomial ${\mathcal{Q}}$ is nonconstant.
-Thus ${P}$ is a~product of two nonconstant polynomials in~$\domain[x]$,
-so it is reducible over~$\domain$.
-\hfill
+Since the~degree of~$P$ is at~least~$2$, both ${x-r}$ and the~polynomial~${\mathcal{Q}}$ are nonconstant.
+That is, ${P}$ is a~product of two nonconstant polynomials in~$\domain[x]$,
+therefore it is reducible over~$\domain$.
+\hspace*{\fill}
 \theproofends
 
 \vspace{.5em}
@@ -852,9 +860,19 @@ is reducible, although it has no real root.
 of how to factor a~polynomial into all of its linear factors via sequential domain extension.
 }
 
-%%\vspace{.25em}
-
 \noindent
+\scalebox{.95}{%
+\begin{minipage}{\dimexpr(\linewidth)/95*100\relax}
+\textls[-10]{%
+This example explores a~phenomenon where a~polynomial may fail to~have roots in its original coefficient domain,
+yet acquire them one by one as the~domain is enlarged.
+At each stage, every newly obtained root produces a~new linear factor of~the~polynomial.
+}
+\end{minipage}
+}
+
+\vspace{.25em}
+
 Consider the polynomial
 %
 \vspace{-0.25em}
@@ -910,7 +928,7 @@ By the first corollary,
 there exists a~polynomial ${Q \cin \mathbb{Q}[x]}$
 such that
 %
-\vspace{-0.25em}
+\nopagebreak\vspace{-0.25em}
 \begin{equation*}
 P(x) = \Bigl( x - \smalldisplaystyleonehalf \Bigr)Q(x)
 \thex .
@@ -923,7 +941,9 @@ Indeed,
 2x - 1 = \nfex \Bigl( x - \smalldisplaystyleonehalf \Bigr) \bigl(2\bigr)
 \thex .
 \end{equation*}
-%
+
+\vspace{-0.25em}
+\noindent
 \begin{minipage}{\linewidth}
 Thereby, after enlarging the coefficient domain to~$\mathbb{Q}$,
 the polynomial
@@ -943,7 +963,7 @@ ${\bigl(x - \nicefrac{1}{2}\bigr)}$.
 \noindent
 \textsb{3. Enlarging the domain further from~$\mathbb{Q}$ to~$\mathbb{R}$}
 
-The remaining factor ${(x^2 \nfex - 2)}$ still has no root in~$\mathbb{Q}$,
+In~$\mathbb{Q}$, the remaining factor ${(x^2 \nfex - 2)}$ still lacks roots,
 since ${\sqrt{2} \notin \mathbb{Q}}$.
 However, in~$\mathbb{R}$ it has the two roots
 %
@@ -954,15 +974,16 @@ x^2 \nfex - 2 = \bigl(x - \sqrt{2}\fex\bigr)\bigl(x + \sqrt{2}\fex\bigr)
 \vspace{-0.5em}
 \end{equation*}
 %
-Therefore, in~$\mathbb{R}[x]$,
+Therefore, in~$\mathbb{R}[x]$
 %
 \nopagebreak\vspace{-0.5em}
 \begin{equation*}
 P(x)
-= 2 \Bigl(x - \smalldisplaystyleonehalf\Bigr) \Bigl(x - \sqrt{2}\fex\Bigr) \Bigl(x + \sqrt{2}\fex\Bigr)
+= 2 \Bigl(x - \smalldisplaystyleonehalf\Bigr) \nfex \Bigl(x - \sqrt{2}\fex\Bigr) \nfex \Bigl(x + \sqrt{2}\fex\Bigr)
 .
 \end{equation*}
 
+\vspace{-0.5em}
 After the second enlargement of the coefficient domain,
 the polynomial splits completely into linear factors and all of its roots become visible\::
 %
@@ -971,16 +992,11 @@ the polynomial splits completely into linear factors and all of its roots become
 \fex .
 \end{equation*}
 
-\vspace{-0.5em}
-This example explores a~phenomenon where a~polynomial may fail to~have roots in its original coefficient domain,
-yet acquire them one by one as the~domain is enlarged.
-At each stage, every newly obtained root produces a~new linear factor of~the~polynomial.
-
 %
 % afterexample
 %
 
-\vspace{.5em}
+%%\vspace{.5em}
 
 \noindent
 \scalebox{.8}{%
@@ -1048,8 +1064,8 @@ the polynomial from the~example splits completely already in~${\mathbb{Q}\bigl(\
 %
 \vspace{-0.33em}
 \begin{equation*}
-P(x) = 2 \bigl(x - \smalldisplaystyleonehalf\bigr) \bigl(x - \sqrt{2}\bigr) \bigl(x + \sqrt{2}\bigr)
-\thex .
+P(x) = 2 \Bigl(x - \smalldisplaystyleonehalf\Bigr) \nfex \Bigl(x - \sqrt{2}\fex\Bigr) \nfex \Bigl(x + \sqrt{2}\fex\Bigr)
+.
 \end{equation*}
 \end{minipage}
 }
