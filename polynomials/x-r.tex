@@ -85,6 +85,7 @@
 \newcommand\polynomialringintwo[2]{\domain[#1,#2]}
 \newcommand\ring{\mathsf{R}}
 \newcommand\cin{\nfex\in\nfex}
+\newcommand\cnotin{\nfex\notin\nfex}
 \newcommand\csubset{\nfex\subset\nfex}
 \newcommand\ceq{\nfex=\nfex}
 \newcommand\cneq{\nfex\neq\nfex}
@@ -763,7 +764,7 @@ and over~$\mathbb{R}$ the same polynomial becomes reducible\footnote{%
 Although ${x^2 \nfex - 2}$ splits into linear factors over the~reals,
 the~field~$\mathbb{R}$ is not the~\emph{smallest} extension of~$\mathbb{Q}$ in which this factorization becomes possible.
 A~smaller field already suffices, namely ${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$.
-This will~be explained after the~example below.}
+This will~be explained after the concluding example.}
 %
 \vspace{-1em}
 \begin{equation*}
@@ -864,14 +865,13 @@ of how to factor a~polynomial into all of its linear factors via sequential doma
 \scalebox{.95}{%
 \begin{minipage}{\dimexpr(\linewidth)/95*100\relax}
 \textls[-10]{%
-This example explores a~phenomenon where a~polynomial may fail to~have roots in its original coefficient domain,
-yet acquire them one by one as the~domain is enlarged.
-At each stage, every newly obtained root produces a~new linear factor of~the~polynomial.
+This example explores how the~factorization and~reducibility of a~polynomial depend on the chosen coefficient domain.
+As the~domain is enlarged, the~polynomial acquires new roots, and each newly obtained root translates into a~new linear factor.
 }
 \end{minipage}
 }
 
-\vspace{.25em}
+\vspace{.5em}
 
 Consider the polynomial
 %
@@ -886,51 +886,49 @@ whose coefficients all belong to~$\mathbb{Z}$.
 Thus initially
 ${P \cin \mathbb{Z}[x]}$.
 
-\vspace{.25em}
+\vspace{.5em}
 
 \noindent
 \textsb{1. Over the integers $\mathbb{Z}$}
 
 By grouping the terms and applying the distributive property,
 %
-\vspace{-0.25em}
+\vspace{-0.2em}
 \begin{equation*}
 2x^3 \nfex - x^2 \nfex - 4x + 2
 = 2x \bigl(x^2 \nfex - 2\bigr) - \bigl(x^2 \nfex - 2\bigr)
 = (2x - 1) \bigl(x^2 \nfex - 2\bigr)
 .
-\vspace{-0.25em}
+\vspace{-0.2em}
 \end{equation*}
 %
-The factor ${(2x - 1)}$ suggests the candidate root ${x \ceq \nicefrac{1}{2}}$,
-but ${\nicefrac{1}{2} \notin \mathbb{Z}}$.
-Likewise, the factor ${(x^2 \nfex - 2)}$ suggests the candidate roots ${\pm \sqrt{2}}$,
-but ${\pm \sqrt{2} \notin \mathbb{Z}}$.
-Hence the polynomial equation ${P(x) \nfex = 0}$ has no roots in~$\mathbb{Z}$.
+While the~factor ${(2x - 1)}$ suggests ${x \ceq \nicefrac{1}{2}}$ as a~candidate root
+and ${(x^2 \nfex - 2)}$ becomes zero at~${x \ceq \pm \sqrt{2}}$, none of these values belong to~$\mathbb{Z}$.
+Hence the~polynomial~$P(x)$ is reducible over~$\mathbb{Z}$ yet has no roots in~$\mathbb{Z}$.
 
-\vspace{.25em}
+\vspace{.5em}
 
 \noindent
 \textsb{2. Enlarging the domain from~$\mathbb{Z}$ to~$\mathbb{Q}$}
 
-Now regard the same polynomial as an element of~$\mathbb{Q}[x]$, ${\mathbb{Z} \csubset \mathbb{Q}}$.
+Now regard the same polynomial as an~element of~$\mathbb{Q}[x]$, ${\mathbb{Z} \csubset \mathbb{Q}}$.
 Then
 %
-\vspace{-0.25em}
+\vspace{-0.5em}
 \begin{equation*}
-P \bigl( \fex \smallerdisplaystyleonehalf \thex \bigr) \nfex = 0
+P \bigl( \thex \nicefrac{1}{2} \thex \bigr) \nfex = 0
 \fex ,
-\vspace{-0.25em}
+\vspace{-0.5em}
 \end{equation*}
 %
-so ${\nicefrac{1}{2}}$ is a~root in~$\mathbb{Q}$.
+thus ${\nicefrac{1}{2}}$ is a~root in~$\mathbb{Q}$.
 By the first corollary,
 there exists a~polynomial ${Q \cin \mathbb{Q}[x]}$
 such that
 %
 \nopagebreak\vspace{-0.25em}
 \begin{equation*}
-P(x) = \Bigl( x - \smalldisplaystyleonehalf \Bigr)Q(x)
+P(x) = \Bigl( x - \smalldisplaystyleonehalf \Bigr) \thex Q(x)
 \thex .
 \end{equation*}
 %
@@ -938,34 +936,37 @@ Indeed,
 %
 \vspace{-0.75em}
 \begin{equation*}
-2x - 1 = \nfex \Bigl( x - \smalldisplaystyleonehalf \Bigr) \bigl(2\bigr)
+2x - 1 = \nfex \Bigl( x - \smalldisplaystyleonehalf \Bigr) \nthex \bigl(2\bigr)
 \thex .
 \end{equation*}
 
 \vspace{-0.25em}
 \noindent
 \begin{minipage}{\linewidth}
-Thereby, after enlarging the coefficient domain to~$\mathbb{Q}$,
+Thereby, after extending the coefficient domain to~$\mathbb{Q}$,
 the polynomial
 %
 \vspace{-0.25em}
 \begin{equation*}
 P(x) = (2x - 1)\bigl(x^2 \nfex - 2\bigr) = 2 \bigl(x - \nicefrac{1}{2}\bigr)\bigl(x^2 \nfex - 2\bigr)
+,
 \vspace{-0.25em}
 \end{equation*}
 %
-acquires the rational root ${\nicefrac{1}{2}}$ and the corresponding linear factor
-${\bigl(x - \nicefrac{1}{2}\bigr)}$.
+remains reducible over~$\mathbb{Q}$.
+%
+The~first enlargement of the coefficient domain doesn’t change the~reducibility of~$P$, as it was already reducible over~$\mathbb{Z}$.
+It merely replaces the linear factor ${(2x - 1)}$ by its monic associate ${\bigl(x - \nicefrac{1}{2}\bigr)}$,
+while the quadratic factor remains irreducible over~$\mathbb{Q}$.
 \end{minipage}
 
-\vspace{.25em}
+\vspace{.5em}
 
 \noindent
 \textsb{3. Enlarging the domain further from~$\mathbb{Q}$ to~$\mathbb{R}$}
 
-In~$\mathbb{Q}$, the remaining factor ${(x^2 \nfex - 2)}$ still lacks roots,
-since ${\sqrt{2} \notin \mathbb{Q}}$.
-However, in~$\mathbb{R}$ it has the two roots
+In~$\mathbb{Q}$, the remaining factor ${(x^2 \nfex - 2)}$ still lacks roots because ${\pm\sqrt{2} \cnotin \mathbb{Q}}$.
+However, in~$\mathbb{R}$ it splits as
 %
 \vspace{-0.25em}
 \begin{equation*}
@@ -984,9 +985,10 @@ P(x)
 \end{equation*}
 
 \vspace{-0.5em}
-After the second enlargement of the coefficient domain,
-the polynomial splits completely into linear factors and all of its roots become visible\::
+After the~second enlargement of the coefficient domain, every irreducible factor is linear.
+The~polynomial now splits completely into linear factors, and all of its roots become visible\::
 %
+\vspace{-0.25em}
 \begin{equation*}
 \smalldisplaystyleonehalf \fex, \quad \sqrt{2} \fex, \quad -\sqrt{2}
 \fex .
@@ -996,43 +998,56 @@ the polynomial splits completely into linear factors and all of its roots become
 % afterexample
 %
 
-%%\vspace{.5em}
+\vspace{-0.5em}
 
 \noindent
 \scalebox{.8}{%
 \begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
 \indentpar
-The second enlargement above, from~$\mathbb{Q}$ to~$\mathbb{R}$, is not the smallest possible one.
+The~second extension above, from~$\mathbb{Q}$ to~$\mathbb{R}$, is not the smallest possible one.
 To factor the remaining quadratic term ${x^2 \nfex - 2}$, it already suffices to adjoin the single irrational number~${\sqrt{2}}$ to~$\mathbb{Q}$.
 This produces the~field
 %
+\vspace{-0.75em}
 \begin{equation*}
 \mathbb{Q}\bigl(\sqrt{2}\bigr)
 = \bigl\{\, a + b\sqrt{2} \oex \big|\; a,b \in \mathbb{Q} \,\bigr\}
 \thex .
+\vspace{-0.2em}
 \end{equation*}
-%
+\end{minipage}
+}
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
 Every element of this field has the form ${a+b\sqrt{2}}$ with rational coefficients ${a,b}$.
 It is an extension of~$\mathbb{Q}$ since it contains all the original rational numbers~$\mathbb{Q}$ when ${b \ceq 0}$.
 Moreover, it is closed under the four arithmetic operations\:---
 anyone can add, subtract, multiply and divide elements of~${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$
 and always get another number from~${\mathbb{Q}\bigl(\sqrt{2}\bigr)}$ that fits the~same ${a + b\sqrt{2}}$ pattern\::
 %
-\vspace{-0.25em}
+\vspace{-0.5em}
 \begin{equation*}
 \begin{aligned}
-\bigl(a + b\sqrt{2}\bigr) + \bigl(c + d\sqrt{2}\bigr)
-&= (a+c) + (b+d)\sqrt{2},
-\\%%[.2em]
-\bigl(a + b\sqrt{2}\bigr) - \bigl(c + d\sqrt{2}\bigr)
-&= (a-c) + (b-d)\sqrt{2},
-\\%%[.2em]
-\bigl(a + b\sqrt{2}\bigr) \nfex \bigl(c + d\sqrt{2}\bigr)
-&= (ac + 2bd) + (ad+bc)\sqrt{2},
+\bigl(a + b\sqrt{2}\bigr) \nfex + \nfex \bigl(c + d\sqrt{2}\bigr)
+&= (a+c) + (b+d)\sqrt{2}
+\fex , \\%%[.2em]
+\bigl(a + b\sqrt{2}\bigr) \nfex - \nfex \bigl(c + d\sqrt{2}\bigr)
+&= (a-c) + (b-d)\sqrt{2}
+\fex , \\%%[.2em]
+\bigl(a + b\sqrt{2}\bigr) \nthex \bigl(c + d\sqrt{2}\bigr)
+&= (ac + 2bd) + (ad+bc)\sqrt{2}
+\fex ,
 \end{aligned}
-\vspace{-0.25em}
+\vspace{-0.1em}
 \end{equation*}
-%
+\end{minipage}
+}
+
+\noindent
+\scalebox{.8}{%
+\begin{minipage}{\dimexpr(\linewidth)/8*10\relax}
 division works too, because the~denominator can always be \inquotes{rationalized} by multiplying by the~conjugate ${a - b\sqrt{2}}$
 %
 \vspace{-1em}
@@ -1053,7 +1068,7 @@ division works too, because the~denominator can always be \inquotes{rationalized
 %
 provided ${a + b\sqrt{2} \neq 0}$, that is ${a}$ and~${b}$ are not both zero. %% ${a \cneq 0}$ or~${b \cneq 0}$
 \end{minipage}
-} % close scalebox
+}
 
 \noindent
 \scalebox{.8}{%
@@ -1064,8 +1079,9 @@ the polynomial from the~example splits completely already in~${\mathbb{Q}\bigl(\
 %
 \vspace{-0.33em}
 \begin{equation*}
-P(x) = 2 \Bigl(x - \smalldisplaystyleonehalf\Bigr) \nfex \Bigl(x - \sqrt{2}\fex\Bigr) \nfex \Bigl(x + \sqrt{2}\fex\Bigr)
+P(x) \nthex = \thex 2 \Bigl(x - \smalldisplaystyleonehalf\Bigr) \nfex \Bigl(x - \sqrt{2}\fex\Bigr) \nfex \Bigl(x + \sqrt{2}\fex\Bigr)
 .
+\vspace{-0.1em}
 \end{equation*}
 \end{minipage}
 }
@@ -1103,13 +1119,13 @@ In the present example, the~splitting field of~${(x^2 \nfex - 2)}$ over~$\mathbb
 Another familiar example of such an~extension is the passage from~$\mathbb{R}$ to~$\mathbb{C}$.
 The~polynomial ${x^2 \nfex + 1}$ has no root in~$\mathbb{R}$,
 but adjoining a~root of it, $\imaginaryunit$, produces the larger field
-${\mathbb{C} = \mathbb{R}\bigl(\imaginaryunit\bigr)}$,
+${\mathbb{C} \ceq \mathbb{R}\bigl(\imaginaryunit\bigr)\nthex}$,
 in which ${x^2 \nfex + 1}$ splits into linear factors,
 %
-\vspace{-0.5em}
+\vspace{-0.67em}
 \begin{equation*}
-x^2 \nfex + 1 = \fex\thex \Bigl(x - \imaginaryunit\Bigr) \fex\thex \Bigl(x + \imaginaryunit\Bigr)
-\nthex .
+x^2 \nfex + 1 = \nfex \bigl( x - \imaginaryunit \fex \bigr) \bigl( x + \imaginaryunit \fex \bigr)
+.
 \end{equation*}
 \end{minipage}
 }
