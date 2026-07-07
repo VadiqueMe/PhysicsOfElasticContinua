@@ -123,9 +123,10 @@ This framework successfully policed boundaries but did so by entirely eliminatin
 
 \subsection{Motivation: The Inversion Problem and Pedagogical Intractability}
 
-The modern pedagogical reliance on the Cauchy-Weierstrass framework introduces a~severe analytical friction point. To prove convergence under the standard definition, one must structurally invert a~discrete function mapping $\mathbb{N} \cto \mathbb{R}$. However, for the vast majority of non-trivial or transcendental series, finding an~exact inverse function $N(\varepsilon)$ is analytically intractable. Consequently, modern mathematical practice relies on loose metric upper bounds, integral approximations, or pre-calculated remainder coefficients ($R_n$) to satisfy the definition after the fact.
+The modern pedagogical reliance on the Cauchy--Weierstrass framework introduces a~severe analytical friction point. To prove convergence under the standard definition, one must structurally invert a~discrete function mapping $\mathbb{N} \cto \mathbb{R}$. However, for the vast majority of non-trivial or transcendental series, finding an~exact inverse function~$N(\varepsilon)$ is analytically intractable. Consequently, modern mathematical practice relies on loose metric upper bounds, integral approximations, or pre-calculated remainder coefficients~($R_n$) to satisfy the~definition after the~fact.
 
-This paper proposes that this inversion process is an~artificial requirement of metric distance tracking. By evaluating the infinite series directly at a~completed transfinite boundary ($\aleph$), we eliminate the need for metric inversion functions, resolving classical divergences into stable structural coordinates.
+This paper proposes that this inversion process is an~artificial requirement of metric distance tracking.
+Direct evaluation of the infinite series at a~completed transfinite boundary~($\aleph$) obviates the need for metric inversion functions, resolving classical divergences into stable structural coordinates.
 
 \section{Philosophical and Topological Framework}
 
@@ -169,7 +170,7 @@ The operational grammar of $\mathbb{W}_{\mathbb{F}}$ relaxes classical field can
 
 \begin{axiom}[Linear Shift Invariance]
 \begin{equation}
-\aleph \pm n = \aleph \quad \forall n \in \mathbb{Z}
+\aleph \pm n = \aleph \quad \forall n \cin \mathbb{Z}
 \end{equation}
 Stepping backward or forward by a~finite integer step does not alter the coordinate of the completed path at the transfinite boundary.
 \end{axiom}
@@ -183,7 +184,7 @@ Reversing the structural direction of a~completed transfinite path yields an~iso
 
 \begin{axiom}[Global Exponentiation Idempotency]
 \begin{equation}
-x^0 = 1 \quad \forall x \in \mathbb{W}_{\mathbb{F}}
+x^0 = 1 \quad \forall x \cin \mathbb{W}_{\mathbb{F}}
 \end{equation}
 This identity holds unconditionally for all finite and transfinite quantities, including zero $(0^0 = 1)$.
 \end{axiom}
@@ -288,9 +289,9 @@ The series $\sum \frac{1}{n^2 \sin^2(n)}$ constitutes a~famous pathological nigh
 
 \subsection{Derivation I: The Geometric Boundary Condition and the Variable Constant $c^2$}
 
-Because $\pi \notin \mathbb{Q}$, it is an~absolute number-theoretic identity that for any integer index $n \in \mathbb{Z}$, an~integer can never perfectly equal a~multiple of radians matching the zero-crossings of the wave:
+Because $\pi \notin \mathbb{Q}$, it is an~absolute number-theoretic identity that for any integer index ${n \cin \mathbb{Z}}$, an~integer can never perfectly equal a~multiple of radians matching the zero-crossings of the wave:
 \begin{equation}
-n \neq k\pi \quad \forall n, k \in \mathbb{Z} \implies \sin^2(n) \neq 0 \quad \forall n \in \mathbb{N}
+n \neq k\pi \quad \forall n, k \cin \mathbb{Z} \implies \sin^2(n) \neq 0 \quad \forall n \cin \mathbb{N}
 \end{equation}
 When evaluated at the completed transfinite coordinate $\aleph$, the index ceases to be a~wandering variable. Under the identity $\aleph = \aleph - 1$, the index is frozen into a~static boundary state, smoothing out the chaotic oscillations. Therefore, the boundary term $\sin^2(\aleph)$ must stabilize into a~non-zero transfinite constant, which we denote as $c^2$.
 Accumulating $\aleph$ copies of these quadratically dampened terms reveals that the total mass scales as
