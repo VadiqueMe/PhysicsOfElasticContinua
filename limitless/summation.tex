@@ -28,11 +28,16 @@
 \setlength{\skip\footins}{2em plus1em} % space between the text body and the footnotes
 \setlength{\footnotesep}{\baselineskip} % space between footnotes
 
+\newcommand\oex{\hspace{1ex}} % horizontal space of the one ex
+\newcommand\noex{\hspace{-1ex}} % negative one ex
+\newcommand\hex{\hspace{.5ex}} % one half of the ex
+\newcommand\nhex{\hspace{-0.5ex}} % negative one half
 \newcommand\fex{\hspace{.2ex}} % one fifth of the ex
 \newcommand\nfex{\hspace{-0.2ex}} % negative one fifth
 \newcommand\thex{\hspace{.1ex}} % one tenth of the ex
 \newcommand\nthex{\hspace{-0.1ex}} % negative one tenth
 
+\newcommand\ceq{\nfex=\nfex}
 \newcommand\cin{\nfex\in\nfex}
 \newcommand\cto{\nfex\to\nfex}
 
@@ -103,7 +108,7 @@ The expression was treated as an~operational recipe generating infinite discrete
 
 \subsubsection{The Eulerian Era: Infinite Polynomials and Formal Algebra}
 
-Following the development of calculus by Newton and Leibniz, the 17th and 18th centuries treated infinite series using formal algebraic grammar. Mathematicians such as Leonhard Euler and the Bernoulli brothers explicitly operated on infinite series as "infinite polynomials." They did not restrict operations to domains of convergence. Euler famously solved the Basel Problem ($\sum \frac{1}{n^2} = \frac{\pi^2}{6}$) by factoring the infinite Taylor expansion of $\sin(x)$ into an~infinite product of its roots, treating the transfinite string exactly like a~finite algebraic expression.
+Following the development of calculus by Newton and Leibniz, the 17th and 18th centuries treated infinite series using formal algebraic grammar. Mathematicians such as Leonhard Euler and the Bernoulli brothers explicitly operated on infinite series as ``infinite polynomials''\noex\thex. They did not restrict operations to domains of convergence. Euler famously solved the Basel Problem ($\sum \frac{1}{n^2} = \frac{\pi^2}{6}$) by factoring the infinite power series expansion of $\sin(x)$ into an~infinite product of its roots, treating the transfinite string exactly like a~finite algebraic expression.
 
 \subsection{The 19th-Century Metric Takeover}
 
@@ -158,9 +163,9 @@ By definition of Diophantine sparsity, $\log(\aleph)$ acts as a~structural densi
 \subsection{Closure and Domain Formalization}
 
 To guarantee complete algebraic closure under transfinite operations, the output space of the summation operator is extended beyond the base scalar field $\mathbb{F}$.
-We define the Generalized Field-Wheel Extension $\mathbb{W}_{\mathbb{F}}$ as:
+We define the Generalized Field-Wheel Extension $\mathbb{W}_{\mathbb{F}}$ as
 \begin{equation}
-\mathbb{W}_{\mathbb{F}} = \mathbb{F} \cup \{ \log(\aleph), \aleph, 2^\aleph \} \cup \{ \%, \infty \}
+\mathbb{W}_{\mathbb{F}} = \mathbb{F} \cup \{ \aleph , 2^\aleph \nfex, \log(\aleph) \} \cup \{ \%, \infty \}
 \end{equation}
 where $\%$ represents the nullary un-evaluatable zero (``nullity'' $\frac{0}{0}$), and $\infty$ represents the absolute infinity.
 
@@ -307,27 +312,33 @@ where the plain, unmodified index counters cancel to yield
 
 \subsection{Derivation II: Multi-Layer Infinite Series Decomposition}
 
-To verify the structural mechanics of $c^2$, we decouple the denominator by expanding $\sin^2(n) = \frac{1}{2} - \frac{1}{2}\cos(2n)$ into its formal Taylor power series, evaluating it at the unlinked nested infinite boundaries $n = \aleph$ and $k = \aleph$:
+To verify the structural mechanics of $c^2$, we decouple the denominator by expanding $\sin^2(n) = \frac{1}{2} - \frac{1}{2}\cos(2n)$ into its formal power series
 \begin{equation}
-\sin^2(n) = \sum_{k=1}^{\infty} (-1)^{k-1} \frac{2^{2k-1}}{(2k)!} n^{2k}
+\sin^2(n) = \sum_{k=1}^{\infty} \fex (-1)^{k-1} \fex \frac{2^{2k-1}}{(2k)!} \fex n^{2k}
+%%\nfex ,
 \end{equation}
-Following the \textbf{Cantor-Bernstein-Schröder Theorem (Bernstein, 1898)}, the transfinite factorial acts as a~higher-tier exponential infinity, satisfying the structural bijection ${\aleph! = \aleph^\aleph = 2^\aleph}$.
-
-At the boundary layer, the coefficients yield the free transfinite ratio $\frac{2^{2\aleph-1}}{(2\aleph)!} \implies \frac{\infty}{\infty}$, representing a~stable transfinite rational mass. Substituting our boundary coordinate $n = \aleph$ into the nested expansion creates a~direct interaction with the exponential denominators ($\aleph^\aleph = \infty$):
+and evaluating it at the unlinked nested infinite boundaries ${n \ceq \aleph}$ and ${k \ceq \aleph}$.
+Following the Cantor--Bernstein--Schröder Theorem (Bernstein, 1898), the transfinite factorial acts as a~higher-tier exponential infinity, satisfying the structural bijection ${\aleph! = \aleph^\aleph = 2^\aleph}$.
+Evaluating at~${k \ceq \aleph}$, the coefficient expression $\frac{2^{2\aleph-1}}{(2\aleph)!}$ yields the transfinite ratio $\frac{2^\aleph}{2^\aleph}$
 \begin{equation}
-\sin^2(\aleph) \implies \left(\frac{\aleph}{\aleph}\right) \cdot (-1)^\aleph \cdot \left(\frac{\infty}{\infty^2}\right)
+\sin^2(\aleph) = \sum_\aleph \fex (-1)^\aleph \fex \biggl(\frac{2^\aleph}{2^\aleph}\biggr) \fex n^\aleph
 \end{equation}
-Under our Axiom of Scale Dominance, the quadratic exponential tier ($\infty^2$) in the denominator completely outscales the linear transfinite components and the boundary oscillation $(-1)^\aleph$ in the numerator, forcing the free tail ratio to resolve to an~absolute structural zero:
+On the outer layer, substituting $n \ceq \aleph$ into the~$n\text{-th}$ term of~the~series
 \begin{equation}
-\left(\frac{\aleph}{\aleph}\right) \cdot (-1)^\aleph \cdot \left(\frac{\infty}{\infty^2}\right) \equiv 0
+\biggl. \frac{1}{n^2 \sin^2(n)} \biggr|_{n = \aleph} \noex = \frac{1}{\aleph^2} \, \frac{1}{\sin^2(\aleph)}
+= \frac{1}{\aleph^2} \, \frac{1}{\aleph \fex (-1)^\aleph \bigl(\frac{2^\aleph}{2^\aleph}\bigr) \aleph^\aleph}
 \end{equation}
-The volatile, oscillating tail terms of the sine expansion are crushed to zero by the factorial hierarchy, forcing $\sin^2(\aleph)$ to stabilize into a~non-zero transfinite constant.
+and summing it backwards $\aleph$~times gives
+\begin{equation}
+\frac{1}{\aleph^2} \fex \biggl(\frac{\aleph}{\aleph}\biggr) \fex (-1)^\aleph \biggl(\frac{2^\aleph}{2^\aleph}\biggr) \frac{1}{2^\aleph}
+\end{equation}
+Here, $\frac{1}{2^\aleph}$ completely outscales the linear transfinite ratios $\frac{\aleph}{\aleph}$ and~$\frac{2^\aleph}{2^\aleph}$, along with the boundary oscillation $(-1)^\aleph$.
 
 \subsection{Derivation III: The Finitist Dirichlet Objection and the Peak Threshold}
 
-A classical objector applying Archimedean metric logic states that by Dirichlet's Approximation Theorem, there exist infinitely many integer spikes where $a_n > \frac{1}{16}$. They claim that a~partial sum must eventually contain $16S$ such terms, forcing the sum to exceed any bound $S$, thereby proving divergence without invoking infinity.
+A classical objector applying Archimedean metric logic states that by Dirichlet's Approximation Theorem, there exist infinitely many integer spikes where $a_n \nfex\nfex > \nfex \frac{1}{16}$. They claim that a~partial sum must eventually contain $16S$ such terms, forcing the sum to exceed any bound $S$, thereby proving divergence without invoking infinity.
 
-However, by the laws of Diophantine approximation (\cite{khinchin1964}), the spacing between these extraordinary peaks grows at an~exponential rate (\cite{rockett1992}). To accumulate a~finite count of $16S$ peaks, the partial sum's index must expand exponentially to a~threshold of $n = 2^{16S}$. This displacement is not finite; it sits precisely at the completed counting continuum $\aleph$. Because the total count of these sparse peaks up to the boundary is defined by our Structural Logarithm operator, we set the required peak threshold equal to the structural density of the highway:
+However, by the laws of Diophantine approximation (Khinchin, 1964\cite{khinchin1964}), the spacing between these extraordinary peaks grows at an~exponential rate (Rockett and~Szüsz, 1992\cite{rockett1992}). To accumulate a~finite count of $16S$ peaks, the partial sum's index must expand exponentially to a~threshold of $n = 2^{16S}$. This displacement is not finite, it sits precisely at the completed counting continuum $\aleph$. Because the total count of these sparse peaks up to the boundary is defined by our Structural Logarithm operator, we set the required peak threshold equal to the structural density of the highway:
 \begin{equation}
 16S = \log(\aleph) \implies S = \log(\aleph)
 \end{equation}
@@ -372,7 +383,7 @@ This zero-resolution proves that the extra power in the cubic denominator comple
 
 This paper has demonstrated that by treating the infinite series as a~primary, standalone mapping operator into the closed field-wheel extension $\mathbb{W}_{\mathbb{F}}$, we restore algebraic fluency to transfinite boundaries. Far from causing contradictions, Limitless Summation regularizes classically divergent expressions into precise transfinite identities.
 
-The regularization of transfinite summation mass achieved in this work forms the baseline framework for a~broader restructuring of mathematical analysis. By demonstrating that variables can safely carry their bound structural path identities through boundary states—such as our definition of the dynamic variable zero ($\frac{x}{x}=1$ at $x=0$)—we establish the operational grammar required to bypass limits entirely. Future work will demonstrate that the differential and integral apparatus of calculus can be executed as pure, algebraic operator grammar via the shift operator $E = \exp(d)$, reclaiming the elegant, structural fluency pioneered by Leibniz and Euler.
+The regularization of transfinite summation mass achieved in this work forms the baseline framework for a~broader restructuring of mathematical analysis. By demonstrating that variables can safely carry their bound structural path identities through boundary states—such as our definition of the dynamic variable zero ($\frac{x}{x} \ceq 1$ at $x \ceq 0$)—we establish the operational grammar required to bypass limits entirely. Future work will demonstrate that the differential and integral apparatus of calculus can be executed as pure, algebraic operator grammar via the shift operator ${E \ceq \exp(d)}$, reclaiming the elegant, structural fluency pioneered by Leibniz and Euler.
 
 \begin{thebibliography}{99}
 
@@ -396,10 +407,10 @@ A.~Kock.
 \newblock {\em Synthetic Differential Geometry}, volume 333.
 \newblock Cambridge University Press, 2006.
 
-\bibitem{robinson1966}
-A.~Robinson.
-\newblock {\em Non-standard Analysis}.
-\newblock North-Holland Publishing Company, 1966.
+%%\bibitem{robinson1966}
+%%A.~Robinson.
+%%\newblock {\em Non-standard Analysis}.
+%%\newblock North-Holland Publishing Company, 1966.
 
 \bibitem{alekseyev2011}
 M.~A. Alekseyev.
