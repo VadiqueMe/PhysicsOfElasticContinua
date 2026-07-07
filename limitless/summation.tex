@@ -18,6 +18,16 @@
     citecolor=blue,
 }
 
+\usepackage{perpage}
+\MakePerPage{footnote} % reset footnote numbering on every page
+
+\renewcommand*\footnoterule{} % no line before footnotes
+
+\usepackage[symbol,bottom,hang,flushmargin]{footmisc}
+
+\setlength{\skip\footins}{2em plus1em} % space between the text body and the footnotes
+\setlength{\footnotesep}{\baselineskip} % space between footnotes
+
 \newcommand\fex{\hspace{.2ex}} % one fifth of the ex
 \newcommand\nfex{\hspace{-0.2ex}} % negative one fifth
 \newcommand\thex{\hspace{.1ex}} % one tenth of the ex
@@ -45,19 +55,23 @@
 \newtheorem{lemma}[theorem]{Lemma}
 
 \title{\textbf{Limitless Summation}}
-\author{\textbf{Abstract} \\[.5em]
-\small In classical analysis, the concept of an infinite series is conflated with its metric evaluation, \\
-\small typically defined via the limit of its partial sums. This paper presents an alternative \\
-\small framework that decouples the infinite sum as a~formal algebraic object from its final numerical value. \\
-\small By treating the infinite series as a~primary, standalone structural entity, we shift the foundational \\
-\small paradigm from metric distance measurements (the theory of limits) to pure algebraic syntax. \\
-\small Within this operator-based grammar, we establish a~consistent arithmetic for transfinite elements \\
-\small ($\aleph$) and variable zeros, effectively bypassing historical paradoxes and singularities.}
-\date{}
+
+\author{Vadique, with the assistance of electronic intelligence}
+\date{\today}
 
 \begin{document}
 
 \maketitle
+
+\begin{abstract}
+In traditional analysis, the concept of an~infinite series is conflated with its metric evaluation,
+typically defined via the limit of its partial sums. This paper presents an~alternative framework
+that decouples the infinite sum as a~formal algebraic object from its final numerical value.
+By treating the infinite series as a~primary, standalone structural entity, the foundational paradigm
+shifts from metric distance measurements defined by the theory of~limits to pure algebraic syntax.
+Within this framework, a~consistent arithmetic for transfinite elements is introduced,
+effectively bypassing historical paradoxes and singularities.
+\end{abstract}
 
 \thispagestyle{empty}
 
@@ -65,7 +79,11 @@
 
 \subsection{The Classical Conflation: Syntax vs. Metric Semantics}
 
-In traditional modern analysis, an expression representing an infinite addition is not permitted to exist as an independent algebraic entity. Standard arithmetic defines addition strictly as a~binary operation, meaning that an infinite sequence of additions cannot be computed through step-by-step evaluation. To assign meaning to an infinite series $\sum a_n$, Cauchy and his successors bound the structural string to a~metric valuation tool: the limit of a~sequence of finite partial sums. If this metric limit fails to settle upon a~single finite scalar, the algebraic string is declared "divergent" and stripped of mathematical utility. This creates a~fundamental conflation between the syntax of an infinite expression and its semantic measurement on a~real line.
+In textbook mathematical analysis, an~expression representing an~infinite addition is not imagined as an~independent algebraic entity, precluded from existing outside its limit value.
+Since standard arithmetic defines addition as a~binary operation, an~infinite sequence of~additions cannot be computed through step-by-step evaluation.
+To assign meaning to an~infinite series $\sum a_n$, Cauchy and his successors bound the structural string to a~metric valuation tool, namely the limit of a~sequence of finite ``partial'' sums.
+If this metric limit fails to settle upon a~single finite value, the infinite sum is declared ``divergent'' and dismissed as mathematically intractable.
+This creates a~fundamental conflation between the syntax of an~infinite expression and its semantic measurement on a~real line.
 
 \subsection{Historical Evolution of Infinite Summation}
 
@@ -73,31 +91,31 @@ The treatment of infinite addition has evolved through three major paradigms bef
 
 \subsubsection{Antiquity and the Method of Exhaustion}
 
-In ancient Greek mathematics, actual infinity was structurally taboo, driven by the logical paradoxes of Zeno of Elea. When Archimedes of Syracuse computed the area under a~parabolic segment (c. 250 BCE) via the geometric progression $1 + \frac{1}{4} + \frac{1}{16} + \dots = \frac{4}{3}$, he did not define an infinite sum. Instead, he utilized the Method of Exhaustion—a double-contradiction proof demonstrating that the geometric area could neither be strictly greater than nor strictly less than $\frac{4}{3}$. Infinity was bypassed by maintaining strictly finite, arbitrarily large metric bounds.
+In ancient Greek mathematics, actual infinity was structurally taboo, driven by the logical paradoxes of Zeno of Elea. When Archimedes of Syracuse computed the area under a~parabolic segment (c. 250 BCE) via the geometric progression $1 + \frac{1}{4} + \frac{1}{16} + \dots = \frac{4}{3}$, he did not define an~infinite sum. Instead, he utilized the Method of Exhaustion—a double-contradiction proof demonstrating that the geometric area could neither be strictly greater than nor strictly less than $\frac{4}{3}$. Infinity was bypassed by maintaining strictly finite, arbitrarily large metric bounds.
 
 \subsubsection{The Merton School, Oresme, and Structural Groupings}
 
-In the 14th century, the study of kinematics forced Scholastic calculators to analyze continuous motion. The Oxford Calculators at Merton College attempted to track total distance as an aggregate of changing velocities. Concurrently, Nicole Oresme (c. 1350) provided the first formal proof of the divergence of the Harmonic series. Crucially, Oresme did not use limits; he utilized a~pure structural grouping technique:
+In the 14th century, the study of kinematics forced Scholastic calculators to analyze continuous motion. The Oxford Calculators at Merton College attempted to track total distance as an~aggregate of changing velocities. Concurrently, Nicole Oresme (c. 1350) provided the first formal proof of the divergence of the Harmonic series. Crucially, Oresme did not use limits; he utilized a~pure structural grouping technique:
 \begin{equation}
 1 + \frac{1}{2} + \biggl(\frac{1}{3} + \frac{1}{4}\biggr) + \biggl(\frac{1}{5} + \dots + \frac{1}{8}\biggr) > 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \dots
 \end{equation}
-The expression was treated as an operational recipe generating infinite discrete blocks of mass, proving properties of the string through its global arrangement rather than localized values.
+The expression was treated as an~operational recipe generating infinite discrete blocks of mass, proving properties of the string through its global arrangement rather than localized values.
 
 \subsubsection{The Eulerian Era: Infinite Polynomials and Formal Algebra}
 
-Following the development of calculus by Newton and Leibniz, the 17th and 18th centuries treated infinite series using formal algebraic grammar. Mathematicians such as Leonhard Euler and the Bernoulli brothers explicitly operated on infinite series as "infinite polynomials." They did not restrict operations to domains of convergence. Euler famously solved the Basel Problem ($\sum \frac{1}{n^2} = \frac{\pi^2}{6}$) by factoring the infinite Taylor expansion of $\sin(x)$ into an infinite product of its roots, treating the transfinite string exactly like a~finite algebraic expression.
+Following the development of calculus by Newton and Leibniz, the 17th and 18th centuries treated infinite series using formal algebraic grammar. Mathematicians such as Leonhard Euler and the Bernoulli brothers explicitly operated on infinite series as "infinite polynomials." They did not restrict operations to domains of convergence. Euler famously solved the Basel Problem ($\sum \frac{1}{n^2} = \frac{\pi^2}{6}$) by factoring the infinite Taylor expansion of $\sin(x)$ into an~infinite product of its roots, treating the transfinite string exactly like a~finite algebraic expression.
 
 \subsection{The 19th-Century Metric Takeover}
 
 This unconstrained algebraic fluency eventually caused systemic paradoxes, most famously illustrated by Grandi's alternating series $1 - 1 + 1 - 1 \dots$, which could be grouped to equal $0$, $1$, or $\frac{1}{2}$ depending on shifting parentheses. Panicked by these contradictions, 19th-century analysis enacted a~complete metric takeover.
 
-Augustin-Louis Cauchy, in his \textit{Cours d'analyse} (1821), redefined the infinite series by tethering it to a~finite value, calling a~series convergent (\textit{série convergente}) if its partial sums approached a~fixed limit indefinitely. This dynamic view can be formulated topologically as
+Augustin-Louis Cauchy, in his famous \textit{Cours d'analyse} (1821), redefined the infinite series by tethering it to a~finite value, calling a~series convergent (\textit{série convergente}) if its partial sums approached a~fixed limit indefinitely. This dynamic view can be formulated topologically as
 \begin{equation}
-\textstyle\sum_{k=1}^{\infty} a_k = s \iff n \uparrow \;\Rightarrow \Bigl( \textstyle\sum_{k=1}^{n} a_k - s \Bigr) \cin \forall\fex \mathsf{U}
+\textstyle\sum_{k=1}^{\infty} a_k = s \iff n \nfex\uparrow \:\: \Rightarrow \Bigl( \textstyle\sum_{k=1}^{n} a_k - s \Bigr) \nfex\cin \forall\fex \mathsf{U}
 \end{equation}
-where ${\forall\fex \mathsf{U}}$ is any open neighborhood of 0.
+where ${\forall\fex \mathsf{U}}$ is any~(\textit{indéfiniment}) open neighborhood of~$0$.
 
-Later, during his university lectures in Berlin (c. 1859–1861), Karl Weierstrass arithmetized this definition. Instead of publishing a~formal standalone paper, Weierstrass introduced his parameters through oral pedagogical networks. He inverted Cauchy's dynamic phrase \textit{``des valeurs de n toujours croissantes''} into a~static, functional constraint requiring the determination of an inverse threshold function $N(\varepsilon)$ such that for all $n > N$:
+Later, during his university lectures in Berlin (c. 1859–1861), Karl Weierstrass arithmetized this definition. Instead of publishing a~formal standalone paper, Weierstrass introduced his parameters through oral pedagogical networks. He inverted Cauchy's dynamic phrase \textit{``des valeurs de n toujours croissantes''} into a~static, functional constraint requiring the determination of an~inverse threshold function $N(\varepsilon)$ such that for all $n > N$:
 \begin{equation}
 \left|\, \sum_{k=1}^{n} a_k - s \,\right| < \varepsilon
 \end{equation}
@@ -105,19 +123,19 @@ This framework successfully policed boundaries but did so by entirely eliminatin
 
 \subsection{Motivation: The Inversion Problem and Pedagogical Intractability}
 
-The modern pedagogical reliance on the Cauchy-Weierstrass framework introduces a~severe analytical friction point. To prove convergence under the standard definition, one must structurally invert a~discrete function mapping $\mathbb{N} \cto \mathbb{R}$. However, for the vast majority of non-trivial or transcendental series, finding an exact inverse function $N(\varepsilon)$ is analytically intractable. Consequently, modern mathematical practice relies on loose metric upper bounds, integral approximations, or pre-calculated remainder coefficients ($R_n$) to satisfy the definition after the fact.
+The modern pedagogical reliance on the Cauchy-Weierstrass framework introduces a~severe analytical friction point. To prove convergence under the standard definition, one must structurally invert a~discrete function mapping $\mathbb{N} \cto \mathbb{R}$. However, for the vast majority of non-trivial or transcendental series, finding an~exact inverse function $N(\varepsilon)$ is analytically intractable. Consequently, modern mathematical practice relies on loose metric upper bounds, integral approximations, or pre-calculated remainder coefficients ($R_n$) to satisfy the definition after the fact.
 
-This paper proposes that this inversion process is an artificial requirement of metric distance tracking. By evaluating the infinite series directly at a~completed transfinite boundary ($\aleph$), we eliminate the need for metric inversion functions, resolving classical divergences into stable structural coordinates.
+This paper proposes that this inversion process is an~artificial requirement of metric distance tracking. By evaluating the infinite series directly at a~completed transfinite boundary ($\aleph$), we eliminate the need for metric inversion functions, resolving classical divergences into stable structural coordinates.
 
 \section{Philosophical and Topological Framework}
 
 \subsection{The Concept of the Completed Path Continuum}
 
-We reject the notion that an infinite sum is an endless, incomplete chronological addition process. Instead, we model an infinite series as a~completed path continuum. Just as modern set theory accepts a~countable infinity as a~completed set ($\mathbb{N}$), we accept the operations over that set as a~completed transfinite object.
+We reject the notion that an~infinite sum is an~endless, incomplete chronological addition process. Instead, we model an~infinite series as a~completed path continuum. Just as modern set theory accepts a~countable infinity as a~completed set ($\mathbb{N}$), we accept the operations over that set as a~completed transfinite object.
 
 \subsection{Defining the Infinite Sum as a~Primary Standalone Mapping Object}
 
-Let $\mathbb{F}$ represent a~standard base field ($\mathbb{Q}$, $\mathbb{R}$, or $\mathbb{C}$), and let $\mathbb{Z}$ represent the index domain. An infinite series is defined as a~functional discrete mapping $f: \mathbb{Z} \to \mathbb{F}$. We define the \textit{Limitless Summation Operator}, denoted by $\mathcal{S}$, as a~primary, standalone structural operator:
+Let $\mathbb{F}$ represent a~standard base field ($\mathbb{Q}$, $\mathbb{R}$, or $\mathbb{C}$), and let $\mathbb{Z}$ represent the index domain. An~infinite series is defined as a~functional discrete mapping $f: \mathbb{Z} \to \mathbb{F}$. We define the \textit{Limitless Summation Operator}, denoted by $\mathcal{S}$, as a~primary, standalone structural operator:
 \begin{equation}
 \mathcal{S}: (\mathbb{Z} \to \mathbb{F}) \longrightarrow \mathbb{W}_{\mathbb{F}}
 \end{equation}
@@ -127,7 +145,7 @@ where $\mathbb{W}_{\mathbb{F}}$ is a~generalized non-Archimedean field-wheel ext
 
 To govern sub-sampled collections of terms without changing the underlying variable matrix, we introduce a~novel structural operator.
 \begin{definition}
-The \textit{Structural Transfinite Logarithm}, denoted by $\log(\aleph)$, is defined as the cardinal count of the sparse subset of indices $n \le \aleph$ that satisfy the Diophantine approximation threshold dictated by Dirichlet’s Approximation Theorem for an irrational constant. 
+The \textit{Structural Transfinite Logarithm}, denoted by $\log(\aleph)$, is defined as the cardinal count of the sparse subset of indices $n \le \aleph$ that satisfy the Diophantine approximation threshold dictated by Dirichlet’s Approximation Theorem for an~irrational constant.
 \end{definition}
 By definition of Diophantine sparsity, $\log(\aleph)$ acts as a~structural density coefficient mapping the relative distance between elements along the linear continuum, satisfying the scale dominance identity:
 \begin{equation}
@@ -160,7 +178,7 @@ Stepping backward or forward by a~finite integer step does not alter the coordin
 \begin{equation}
 \aleph \cdot (-1) = \aleph
 \end{equation}
-Reversing the structural direction of a~completed transfinite path yields an isomorphic, identical object. This topologically closes the transfinite edge into an unsigned projective pole.
+Reversing the structural direction of a~completed transfinite path yields an~isomorphic, identical object. This topologically closes the transfinite edge into an~unsigned projective pole.
 \end{axiom}
 
 \begin{axiom}[Global Exponentiation Idempotency]
@@ -212,7 +230,7 @@ Because completing this path requires exactly $\aleph$ steps, the term $\frac{1}
 \mathcal{S}\left[\frac{1}{n}\right] = \frac{\aleph}{\aleph}
 \end{equation}
 
-The Harmonic series does not blow up into an unmeasurable void; it maps cleanly to a~stable, unreduced transfinite rational coordinate within $\mathbb{W}_{\mathbb{F}}$.
+The Harmonic series does not blow up into an~unmeasurable void, it maps cleanly to a~stable, unreduced transfinite rational coordinate within $\mathbb{W}_{\mathbb{F}}$.
 
 \subsection{The Euler-Basel Series: Boundary Mass Decay}
 
@@ -228,11 +246,11 @@ Accumulating this uniform quadratic field across $\aleph$ transfinite steps isol
 \begin{equation}
 \text{Total Boundary Mass} = \aleph \cdot \left(\frac{1}{\aleph^2}\right) = \frac{\aleph}{\aleph^2} = \frac{1}{\aleph}
 \end{equation}
-Under our scale dominance rules, an expression leaving the linear counter strictly in the denominator constitutes an infinitesimal that resolves to a~structural zero ($\frac{1}{\aleph} \equiv 0$). The quadratic dampening completely neutralizes the transfinite boundary mass, allowing the series to shed all transfinite residue and collapse smoothly into a~standard finite value inside the base field $\mathbb{F}$ (measured classically as $\frac{\pi^2}{6}$).
+Under our scale dominance rules, an~expression leaving the linear counter strictly in the denominator constitutes an~infinitesimal that resolves to a~structural zero ($\frac{1}{\aleph} \equiv 0$). The quadratic dampening completely neutralizes the transfinite boundary mass, allowing the series to shed all transfinite residue and collapse smoothly into a~standard finite value inside the base field $\mathbb{F}$ (measured classically as $\frac{\pi^2}{6}$).
 
 \subsection{The Indeterminate Geometric Series: Algebraic Reciprocity}
 
-We analyze the geometric progression $\Gamma(n)$ in an indeterminate variable $x$:
+We analyze the geometric progression $\Gamma(n)$ in an~indeterminate variable~$x$:
 \begin{equation}
 \Gamma(n) = 1 + x + x^2 + x^3 + x^4 + \dots + x^n
 \end{equation}
@@ -263,7 +281,7 @@ The series $\sum \frac{1}{n^2 \sin^2(n)}$ constitutes a~famous pathological nigh
 
 \subsection{Derivation I: The Geometric Boundary Condition and the Variable Constant $c^2$}
 
-Because $\pi \notin \mathbb{Q}$, it is an absolute number-theoretic identity that for any integer index $n \in \mathbb{Z}$, an integer can never perfectly equal a~multiple of radians matching the zero-crossings of the wave:
+Because $\pi \notin \mathbb{Q}$, it is an~absolute number-theoretic identity that for any integer index $n \in \mathbb{Z}$, an~integer can never perfectly equal a~multiple of radians matching the zero-crossings of the wave:
 \begin{equation}
 n \neq k\pi \quad \forall n, k \in \mathbb{Z} \implies \sin^2(n) \neq 0 \quad \forall n \in \mathbb{N}
 \end{equation}
@@ -284,7 +302,7 @@ At the boundary layer, the coefficients yield the free transfinite ratio $\frac{
 \begin{equation}
 \sin^2(\aleph) \implies \left(\frac{\aleph}{\aleph}\right) \cdot (-1)^\aleph \cdot \left(\frac{\infty}{\infty^2}\right)
 \end{equation}
-Under our Axiom of Scale Dominance, the quadratic exponential tier ($\infty^2$) in the denominator completely outscales the linear transfinite components and the boundary oscillation $(-1)^\aleph$ in the numerator, forcing the free tail ratio to resolve to an absolute structural zero:
+Under our Axiom of Scale Dominance, the quadratic exponential tier ($\infty^2$) in the denominator completely outscales the linear transfinite components and the boundary oscillation $(-1)^\aleph$ in the numerator, forcing the free tail ratio to resolve to an~absolute structural zero:
 \begin{equation}
 \left(\frac{\aleph}{\aleph}\right) \cdot (-1)^\aleph \cdot \left(\frac{\infty}{\infty^2}\right) \equiv 0
 \end{equation}
@@ -294,7 +312,7 @@ The volatile, oscillating tail terms of the sine expansion are crushed to zero b
 
 A classical objector applying Archimedean metric logic states that by Dirichlet's Approximation Theorem, there exist infinitely many integer spikes where $a_n > \frac{1}{16}$. They claim that a~partial sum must eventually contain $16S$ such terms, forcing the sum to exceed any bound $S$, thereby proving divergence without invoking infinity.
 
-However, by the laws of Diophantine approximation (\cite{khinchin1964}), the spacing between these extraordinary peaks grows at an exponential rate (\cite{rockett1992}). To accumulate a~finite count of $16S$ peaks, the partial sum's index must expand exponentially to a~threshold of $n = 2^{16S}$. This displacement is not finite; it sits precisely at the completed counting continuum $\aleph$. Because the total count of these sparse peaks up to the boundary is defined by our Structural Logarithm operator, we set the required peak threshold equal to the structural density of the highway:
+However, by the laws of Diophantine approximation (\cite{khinchin1964}), the spacing between these extraordinary peaks grows at an~exponential rate (\cite{rockett1992}). To accumulate a~finite count of $16S$ peaks, the partial sum's index must expand exponentially to a~threshold of $n = 2^{16S}$. This displacement is not finite; it sits precisely at the completed counting continuum $\aleph$. Because the total count of these sparse peaks up to the boundary is defined by our Structural Logarithm operator, we set the required peak threshold equal to the structural density of the highway:
 \begin{equation}
 16S = \log(\aleph) \implies S = \log(\aleph)
 \end{equation}
@@ -310,9 +328,9 @@ The boundary constant of the sine wave is exactly balanced by the product of the
 
 \subsection{The Resolution of the Finitist Dilemma}
 
-The confrontation between the two frameworks is revealed to be a~semantic shift at the transfinite boundary rather than an arithmetic error. To gather $16S$ terms greater than $\frac{1}{16}$, one must push the index matrix to $n = 2^{16S} = \aleph$. At this coordinate, the total accumulated mass of the peak subset evaluates precisely to the structural transfinite logarithm, $\log(\aleph)$.
+The confrontation between the two frameworks is revealed to be a~semantic shift at the transfinite boundary rather than an~arithmetic error. To gather $16S$ terms greater than $\frac{1}{16}$, one must push the index matrix to $n = 2^{16S} = \aleph$. At this coordinate, the total accumulated mass of the peak subset evaluates precisely to the structural transfinite logarithm, $\log(\aleph)$.
 \begin{itemize}
-\item \textbf{The Classical Framework:} Lacks the algebraic grammar to process transfinite operators as stable destinations, conflates $\log(\aleph)$ with an unmanageable divergent infinity ($\infty$), and marks the series as \textbf{divergent}.
+\item \textbf{The Classical Framework:} Lacks the algebraic grammar to process transfinite operators as stable destinations, conflates $\log(\aleph)$ with an~unmanageable divergent infinity ($\infty$), and marks the series as \textbf{divergent}.
 \item \textbf{The Operator Framework:} Recognizes $\log(\aleph)$ as a~well-defined, structurally regularized non-Archimedean transfinite coordinate. The series converges structurally to the transfinite value $\log(\aleph)$.
 \end{itemize}
 
@@ -369,7 +387,7 @@ M.~A. Alekseyev.
 
 \bibitem{zeilberger2020}
 D.~Zeilberger and W.~Zudilin.
-\newblock An $\varepsilon$-improvement to the irrationality measure of $\pi$.
+\newblock An~$\varepsilon$-improvement to the irrationality measure of~$\pi$.
 \newblock {\em Mathematical Notes}, 108(3):450--454, 2020.
 
 \end{thebibliography}
