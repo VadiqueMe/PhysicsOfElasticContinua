@@ -13,7 +13,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
     citecolor=blue,
 }
@@ -206,9 +206,10 @@ Because the variable carries its structural path history with it, fractions must
 Arithmetic operations within the field-wheel extension follow a~strict hierarchical calculus:
 \begin{enumerate}
 \item \textbf{The Principle of Finite-Stage Priority:} All algebraic factorizations, cancellations, and simplifications must be fully applied at the finite variable stage ($n$) before the substitution of the transfinite coordinate $\aleph$.
-\item \textbf{The Non-Cancellation of Free Ratios:} Unlinked transfinite boundary operators do not satisfy field cancellation. The linear mass ratio $\frac{\aleph}{\aleph} \neq 1$, and the exponential mass ratio $\frac{2^\aleph}{2^\aleph} \neq 1$. They represent independent unreduced transfinite rational expressions.
+\item \textbf{The Non-Cancellation of Free Ratios vs. Bound Variables:} Unlinked transfinite elements do not satisfy field cancellation. For example, the free transfinite mass ratio of~unlinked layers satisfies $\frac{\aleph}{\aleph} \neq 1$ and represents independent unreduced transfinite rational expression. However, if the numerator and denominator are bound to the \textit{exact same variable within a~single monomial mapping} originating from the finite stage, cancellation remains valid upon transfinite substitution, for example, $\aleph \text{ times } \bigl[ \frac{1}{n^2} \bigr]_{n=\aleph} \nfex = \frac{\aleph}{\aleph^2} = \frac{1}{\aleph}$.
 \item \textbf{Non-Invertibility of Scale Dominance:} The scale dominance identity $\frac{\aleph}{2^\aleph} = 0$ is non-invertible due to the absorbing nature of wheel zeros. It does not imply $2^\aleph \cdot 0 = \aleph$, nor does it imply $2^\aleph = \frac{\aleph}{0}$. Under wheel rules, division by zero is defined via the projective boundary ($\frac{\aleph}{0} = \aleph$).
-\item \textbf{Constant Scale Absorption:} For any finite non-zero scalar $k \in \mathbb{F}$, the counting path absorbs density scaling: $k\aleph = \aleph$.\end{enumerate}
+\item \textbf{Constant Scale Absorption:} For any finite non-zero scalar~${k \cin \mathbb{F}}$, the counting path absorbs density scaling: $k\aleph = \aleph$.
+\end{enumerate}
 
 \section{Foundational Structural Evaluations}
 
@@ -232,7 +233,7 @@ Because completing this path requires exactly $\aleph$ steps, the term $\frac{1}
 
 The Harmonic series does not blow up into an~unmeasurable void, it maps cleanly to a~stable, unreduced transfinite rational coordinate within $\mathbb{W}_{\mathbb{F}}$.
 
-\subsection{The Euler-Basel Series: Boundary Mass Decay}
+\subsection{The Euler--Basel Series: Boundary Mass Decay}
 
 We apply the backward tail technique to the reciprocal squares series:
 \begin{equation}
@@ -242,11 +243,17 @@ Transitioning to the transfinite coordinate $\aleph$ and executing the backward 
 \begin{equation}
 \text{Tail Mass} = \frac{1}{\aleph^2} + \frac{1}{(\aleph-1)^2} + \frac{1}{(\aleph-2)^2} + \dots \implies \sum_{k=1}^{\aleph} \frac{1}{\aleph^2}
 \end{equation}
+
 Accumulating this uniform quadratic field across $\aleph$ transfinite steps isolates the total mass profile at the edge of the universe:
 \begin{equation}
-\text{Total Boundary Mass} = \aleph \cdot \left(\frac{1}{\aleph^2}\right) = \frac{\aleph}{\aleph^2} = \frac{1}{\aleph}
+\text{Total Boundary Mass} = \aleph \cdot \left(\frac{1}{\aleph^2}\right) = \frac{\aleph}{\aleph^2}
 \end{equation}
-Under our scale dominance rules, an~expression leaving the linear counter strictly in the denominator constitutes an~infinitesimal that resolves to a~structural zero ($\frac{1}{\aleph} \equiv 0$). The quadratic dampening completely neutralizes the transfinite boundary mass, allowing the series to shed all transfinite residue and collapse smoothly into a~standard finite value inside the base field $\mathbb{F}$ (measured classically as $\frac{\pi^2}{6}$).
+Because both terms in the ratio $\frac{\aleph}{\aleph^2}$ are bound to the identical, unmodified index variable~$n$ inherited from the finite stage, this constitutes a~valid structural identity cancellation, reducing the expression cleanly to
+\begin{equation}
+\frac{\aleph}{\aleph^2} \equiv \frac{1}{\aleph}
+\end{equation}
+
+Under scale dominance axioms, an~expression leaving the linear counter strictly in the denominator constitutes an~infinitesimal that resolves to a~structural zero ($\frac{1}{\aleph} \equiv 0$). The quadratic dampening completely neutralizes the transfinite boundary mass, allowing the series to shed all transfinite residue and collapse smoothly into a~standard finite value inside the base field $\mathbb{F}$ (measured classically as $\frac{\pi^2}{6}$).
 
 \subsection{The Indeterminate Geometric Series: Algebraic Reciprocity}
 
@@ -285,9 +292,16 @@ Because $\pi \notin \mathbb{Q}$, it is an~absolute number-theoretic identity tha
 \begin{equation}
 n \neq k\pi \quad \forall n, k \in \mathbb{Z} \implies \sin^2(n) \neq 0 \quad \forall n \in \mathbb{N}
 \end{equation}
-When evaluated at the completed transfinite coordinate $\aleph$, the index ceases to be a~wandering variable. Under the identity $\aleph = \aleph - 1$, the index is frozen into a~static boundary state, smoothing out the chaotic oscillations. Therefore, the boundary term $\sin^2(\aleph)$ must stabilize into a~non-zero transfinite constant, which we denote as $c^2$. Accumulating $\aleph$ copies of these quadratically dampened terms reveals that the total mass scales as:
+When evaluated at the completed transfinite coordinate $\aleph$, the index ceases to be a~wandering variable. Under the identity $\aleph = \aleph - 1$, the index is frozen into a~static boundary state, smoothing out the chaotic oscillations. Therefore, the boundary term $\sin^2(\aleph)$ must stabilize into a~non-zero transfinite constant, which we denote as $c^2$.
+Accumulating $\aleph$ copies of these quadratically dampened terms reveals that the total mass scales as
 \begin{equation}
-\text{Total Mass} = \frac{\aleph}{\aleph^2 c^2} = \frac{1}{\aleph c^2}
+\text{Total Mass} = \frac{\aleph}{\aleph^2 c^2}
+\fex ,
+\end{equation}
+where the plain, unmodified index counters cancel to yield
+\begin{equation}
+\frac{\aleph}{\aleph^2 c^2} \equiv \frac{1}{\aleph c^2}
+%%\fex .
 \end{equation}
 
 \subsection{Derivation II: Multi-Layer Infinite Series Decomposition}
@@ -336,9 +350,15 @@ The confrontation between the two frameworks is revealed to be a~semantic shift 
 
 \subsection{The Definiteness of Boundary Mass: Quadratic vs. Cubic Variations}
 
-We test the predictive power of this identity by evaluating the cubic variation $\sum \frac{1}{n^3 \sin^2(n)}$. Substituting our derived boundary constant $c^2 = [\aleph \log(\aleph)]^{-1}$ into the cubic mass template yields:
+We test the predictive power of this identity by evaluating the cubic variation $\sum \frac{1}{n^3 \sin^2(n)}$.
+Substituting our derived boundary constant $c^2 = [\aleph \log(\aleph)]^{-1}$ into the cubic mass template yields
 \begin{equation}
-\text{Total Cubic Mass} = \frac{\aleph}{\aleph^3 c^2} = \frac{1}{\aleph^2 \cdot \frac{1}{\aleph \log(\aleph)}} = \frac{\aleph \log(\aleph)}{\aleph^2} = \frac{\log(\aleph)}{\aleph}
+\text{Total Cubic Mass} = \frac{\aleph}{\aleph^3 c^2} = \frac{\aleph}{\aleph^3 \cdot \frac{1}{\aleph \log(\aleph)}} = \frac{\aleph^2 \log(\aleph)}{\aleph^3}
+\end{equation}
+Because the $\aleph^2$ in the numerator and the $\aleph^3$ in the denominator are strictly bound to mono-variate transformations of the identical finite index $n$, they undergo valid identity reduction.
+The~expression simplifies cleanly to
+\begin{equation}
+\frac{\aleph^2 \log(\aleph)}{\aleph^3} \equiv \frac{\log(\aleph)}{\aleph}
 \end{equation}
 Under our Tier 3 Scale Dominance axioms, the linear counter dominantly outscales the structural logarithm, forcing the entire transfinite boundary expression to resolve to a~clean, absolute zero:
 \begin{equation}
