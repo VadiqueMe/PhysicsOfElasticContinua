@@ -18,6 +18,8 @@
     citecolor=blue,
 }
 
+\usepackage{comment}
+
 \usepackage{perpage}
 \MakePerPage{footnote} % reset footnote numbering on every page
 
@@ -171,7 +173,7 @@ where $\%$ represents the nullary un-evaluatable zero (``nullity'' $\frac{0}{0}$
 
 \subsection{The Primary Structural Axioms}
 
-The operational grammar of $\mathbb{W}_{\mathbb{F}}$ relaxes classical field cancellation rules to allow division by zero and boundary stabilization, governed by three primary axioms.
+%%% The operational grammar of $\mathbb{W}_{\mathbb{F}}$ relaxes classical field cancellation rules to allow division by zero and boundary stabilization, governed by three primary axioms.
 
 \begin{axiom}[Linear Shift Invariance]
 \begin{equation}
@@ -187,25 +189,25 @@ Stepping backward or forward by a~finite integer step does not alter the coordin
 Reversing the structural direction of a~completed transfinite path yields an~isomorphic, identical object. This topologically closes the transfinite edge into an~unsigned projective pole.
 \end{axiom}
 
-\begin{axiom}[Global Exponentiation Idempotency]
-\begin{equation}
-x^0 = 1 \quad \forall x \cin \mathbb{W}_{\mathbb{F}}
-\end{equation}
-This identity holds unconditionally for all finite and transfinite quantities, including zero $(0^0 = 1)$.
-\end{axiom}
+%%% \begin{axiom}[Global Exponentiation Idempotency]
+%%% \begin{equation}
+%%% x^0 = 1 \quad \forall x \cin \mathbb{W}_{\mathbb{F}}
+%%% \end{equation}
+%%% This identity holds unconditionally for all finite and transfinite quantities, including zero $(0^0 = 1)$.
+%%% \end{axiom}
 
-\subsection{The Variable Zero and Path Preservation}
+%%% \subsection{The Variable Zero and Path Preservation}
 
-To bypass Bishop Berkeley’s historical ``ghosts of departed quantities'' critique of early calculus, we establish a~rigid distinction between a~dead constant zero and a~dynamic variable zero.
+%%% To bypass Bishop Berkeley’s historical ``ghosts of departed quantities'' critique of early calculus, we establish a~rigid distinction between a~dead constant zero and a~dynamic variable zero.
 
-\begin{axiom}
-Let $x$ represent a~continuous algebraic variable mapping through a~boundary threshold. The identity expression satisfies:
-\begin{equation}
-\frac{x}{x} = 1
-\end{equation}
-globally, including at the evaluation point $x = 0$.
-\end{axiom}
-Because the variable carries its structural path history with it, fractions must be simplified algebraically prior to static coordinate evaluation, neutralizing singularities and removing holes from the functional continuum.
+%%% \begin{axiom}
+%%% Let $x$ represent a~continuous algebraic variable mapping through a~boundary threshold. The identity expression satisfies:
+%%% \begin{equation}
+%%% \frac{x}{x} = 1
+%%% \end{equation}
+%%% globally, including at the evaluation point $x = 0$.
+%%% \end{axiom}
+%%% Because the variable carries its structural path history with it, fractions must be simplified algebraically prior to static coordinate evaluation, neutralizing singularities and removing holes from the functional continuum.
 
 \subsection{Working with Transfinite Fractions}
 
@@ -263,24 +265,24 @@ Under scale dominance axioms, an~expression leaving the linear counter strictly 
 
 \subsection{The Indeterminate Geometric Series: Algebraic Reciprocity}
 
-We analyze the geometric progression $\Gamma(n)$ in an~indeterminate variable~$x$:
+Analyzing the geometric progression $\Gamma(n)$ in an~indeterminate variable~$x$,
 \begin{equation}
 \Gamma(n) = 1 + x + x^2 + x^3 + x^4 + \dots + x^n
 \end{equation}
-We establish two simultaneous structural identities for the finite sequence:
+we have two simultaneous structural identities for the finite sequence:
 \begin{align}
-\text{Identity }\mathbf{A}: \quad \Gamma(n) &= \Gamma(n-1) + x^n \\
-\text{Identity }\mathbf{B}: \quad \Gamma(n) &= 1 + x\Gamma(n-1)\end{align}
+\text{Identity~}\mathbf{A}: \quad \Gamma(n) &= \Gamma(n-1) + x^n \\
+\text{Identity~}\mathbf{B}: \quad \Gamma(n) &= 1 + x\Gamma(n-1)\end{align}
 Equating both expressions via substitution yields the finite relation:
 \begin{equation}
 x^n - 1 = (x-1)\Gamma(n-1)
 \end{equation}
 
-We now evaluate this system at the completed transfinite boundary $n = \aleph$. Utilizing Identity $\mathbf{A}$ at the boundary, our shift invariance axiom mandates that $\Gamma(\aleph) = \Gamma(\aleph-1)$. Substituting this identity directly into Identity $\mathbf{A}$ reduces the system to:
+We now evaluate this system at the completed transfinite boundary $n = \aleph$. Utilizing Identity~$\mathbf{A}$ at the boundary, our shift invariance axiom mandates that $\Gamma(\aleph) = \Gamma(\aleph-1)$. Substituting this identity directly into Identity~$\mathbf{A}$ reduces the system to
 \begin{equation}
 \mathbf{A}(\aleph): \quad \Gamma(\aleph) - \Gamma(\aleph) = x^\aleph \implies x^\aleph = 0
 \end{equation}
-This establishes a~strict structural constraint: for the geometric sum to maintain algebraic closure, the boundary term $x^\aleph$ must act as a~nilpotent-like element resolving to zero. Evaluating Identity $\mathbf{B}$ at the transfinite boundary under this constraint yields:
+This establishes a~strict structural constraint: for the geometric sum to maintain algebraic closure, the boundary term $x^\aleph$ must act as a~nilpotent-like element resolving to zero. Evaluating Identity~$\mathbf{B}$ at the transfinite boundary under this constraint yields
 \begin{equation}
 \mathbf{B}(\aleph): \quad 0 - 1 = (x-1)\Gamma(\aleph) \implies \Gamma(\aleph) = \frac{1}{1-x}
 \end{equation}
@@ -292,7 +294,7 @@ The expression $\frac{1}{1-x}$ is derived as a~global algebraic identity indepen
 
 The series $\sum \frac{1}{n^2 \sin^2(n)}$ constitutes a~famous pathological nightmare in classical limit theory. Because the integer argument is in radians, and the constant $\pi$ is irrational, the denominator periodically approaches zero when $n$ hits a~near-multiple of $\pi$. Classical limits are forced to track these chaotic metric spikes via Diophantine approximations, causing the standard series to violently diverge. We now demonstrate how our transfinite wheel regularizes this expression.
 
-\subsection{Derivation I: The Geometric Boundary Condition and the Variable Constant $c^2$}
+\subsection{Derivation~I: The Geometric Boundary Condition and the Variable Constant $c^2$}
 
 Because $\pi \notin \mathbb{Q}$, it is an~absolute number-theoretic identity that for any integer index ${n \cin \mathbb{Z}}$, an~integer can never perfectly equal a~multiple of radians matching the zero-crossings of the wave:
 \begin{equation}
@@ -310,7 +312,9 @@ where the plain, unmodified index counters cancel to yield
 %%\fex .
 \end{equation}
 
-\subsection{Derivation II: Multi-Layer Infinite Series Decomposition}
+\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Derivation Plus: Multi-Layer Infinite Series Decomposition}
 
 To verify the structural mechanics of $c^2$, we decouple the denominator by expanding $\sin^2(n) = \frac{1}{2} - \frac{1}{2}\cos(2n)$ into its formal power series
 \begin{equation}
@@ -333,8 +337,10 @@ and summing it backwards $\aleph$~times gives
 \frac{1}{\aleph^2} \fex \biggl(\frac{\aleph}{\aleph}\biggr) \fex (-1)^\aleph \biggl(\frac{2^\aleph}{2^\aleph}\biggr) \frac{1}{2^\aleph}
 \end{equation}
 Here, $\frac{1}{2^\aleph}$ completely outscales the linear transfinite ratios $\frac{\aleph}{\aleph}$ and~$\frac{2^\aleph}{2^\aleph}$, along with the boundary oscillation $(-1)^\aleph$.
+%%%%%%%%%%%%%%%%%%%%%%
+\end{comment}
 
-\subsection{Derivation III: The Finitist Dirichlet Objection and the Peak Threshold}
+\subsection{Derivation~II: The Finitist Dirichlet Objection and the Peak Threshold}
 
 A classical objector applying Archimedean metric logic states that by Dirichlet's Approximation Theorem, there exist infinitely many integer spikes where $a_n \nfex\nfex > \nfex \frac{1}{16}$. They claim that a~partial sum must eventually contain $16S$ such terms, forcing the sum to exceed any bound $S$, thereby proving divergence without invoking infinity.
 
@@ -344,7 +350,7 @@ However, by the laws of Diophantine approximation (Khinchin, 1964\cite{khinchin1
 \end{equation}
 by transfinite constant absorption rules.
 
-\subsection{Synthesis: Resolving the Boundary Constant $c^2$}We unify all three derivations to solve for our missing geometric constant. By setting the total mass from Derivation I equal to the structural value derived from Derivation III, we obtain the fundamental identity of the series:
+\subsection{Synthesis: Resolving the Boundary Constant $c^2$}We unify the above derivations to solve for the missing geometric constant. By setting the total mass from Derivation~I equal to the structural value derived from Derivation~II, we obtain the fundamental identity of the series:
 \begin{equation}
 \frac{1}{\aleph c^2} = \log(\aleph) \implies c^2 = \frac{1}{\aleph \log(\aleph)}
 \end{equation}
